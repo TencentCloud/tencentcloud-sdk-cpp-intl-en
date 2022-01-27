@@ -23,10 +23,11 @@ set(cbs_public_header_model
   include/tencentcloud/cbs/v20170312/model/DetachDisksRequest.h
   include/tencentcloud/cbs/v20170312/model/DescribeDiskOperationLogsResponse.h
   include/tencentcloud/cbs/v20170312/model/ResizeDiskRequest.h
+  include/tencentcloud/cbs/v20170312/model/ModifyDiskAttributesRequest.h
   include/tencentcloud/cbs/v20170312/model/Price.h
   include/tencentcloud/cbs/v20170312/model/DescribeSnapshotSharePermissionResponse.h
   include/tencentcloud/cbs/v20170312/model/SharePermission.h
-  include/tencentcloud/cbs/v20170312/model/ModifyDiskExtraPerformanceRequest.h
+  include/tencentcloud/cbs/v20170312/model/InitializeDisksRequest.h
   include/tencentcloud/cbs/v20170312/model/ModifyDiskAttributesResponse.h
   include/tencentcloud/cbs/v20170312/model/TerminateDisksRequest.h
   include/tencentcloud/cbs/v20170312/model/DescribeDisksRequest.h
@@ -61,6 +62,7 @@ set(cbs_public_header_model
   include/tencentcloud/cbs/v20170312/model/PrepayPrice.h
   include/tencentcloud/cbs/v20170312/model/DeleteSnapshotsResponse.h
   include/tencentcloud/cbs/v20170312/model/DetachDisksResponse.h
+  include/tencentcloud/cbs/v20170312/model/ModifyDiskExtraPerformanceRequest.h
   include/tencentcloud/cbs/v20170312/model/Filter.h
   include/tencentcloud/cbs/v20170312/model/InquiryPriceCreateDisksRequest.h
   include/tencentcloud/cbs/v20170312/model/DescribeSnapshotsResponse.h
@@ -82,7 +84,7 @@ set(cbs_public_header_model
   include/tencentcloud/cbs/v20170312/model/DescribeDiskAssociatedAutoSnapshotPolicyResponse.h
   include/tencentcloud/cbs/v20170312/model/Image.h
   include/tencentcloud/cbs/v20170312/model/DescribeDiskConfigQuotaResponse.h
-  include/tencentcloud/cbs/v20170312/model/ModifyDiskAttributesRequest.h
+  include/tencentcloud/cbs/v20170312/model/InitializeDisksResponse.h
   include/tencentcloud/cbs/v20170312/model/CreateSnapshotRequest.h
   include/tencentcloud/cbs/v20170312/model/AttachDetail.h
   include/tencentcloud/cbs/v20170312/model/InquiryPriceResizeDiskResponse.h
@@ -104,10 +106,11 @@ set(cbs_src
   src/v20170312/model/DetachDisksRequest.cpp
   src/v20170312/model/DescribeDiskOperationLogsResponse.cpp
   src/v20170312/model/ResizeDiskRequest.cpp
+  src/v20170312/model/ModifyDiskAttributesRequest.cpp
   src/v20170312/model/Price.cpp
   src/v20170312/model/DescribeSnapshotSharePermissionResponse.cpp
   src/v20170312/model/SharePermission.cpp
-  src/v20170312/model/ModifyDiskExtraPerformanceRequest.cpp
+  src/v20170312/model/InitializeDisksRequest.cpp
   src/v20170312/model/ModifyDiskAttributesResponse.cpp
   src/v20170312/model/TerminateDisksRequest.cpp
   src/v20170312/model/DescribeDisksRequest.cpp
@@ -142,6 +145,7 @@ set(cbs_src
   src/v20170312/model/PrepayPrice.cpp
   src/v20170312/model/DeleteSnapshotsResponse.cpp
   src/v20170312/model/DetachDisksResponse.cpp
+  src/v20170312/model/ModifyDiskExtraPerformanceRequest.cpp
   src/v20170312/model/Filter.cpp
   src/v20170312/model/InquiryPriceCreateDisksRequest.cpp
   src/v20170312/model/DescribeSnapshotsResponse.cpp
@@ -163,7 +167,7 @@ set(cbs_src
   src/v20170312/model/DescribeDiskAssociatedAutoSnapshotPolicyResponse.cpp
   src/v20170312/model/Image.cpp
   src/v20170312/model/DescribeDiskConfigQuotaResponse.cpp
-  src/v20170312/model/ModifyDiskAttributesRequest.cpp
+  src/v20170312/model/InitializeDisksResponse.cpp
   src/v20170312/model/CreateSnapshotRequest.cpp
   src/v20170312/model/AttachDetail.cpp
   src/v20170312/model/InquiryPriceResizeDiskResponse.cpp
