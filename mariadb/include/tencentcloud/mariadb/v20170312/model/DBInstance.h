@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/mariadb/v20170312/model/ResourceTag.h>
 
 
 namespace TencentCloud
@@ -1002,6 +1003,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool InstanceTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Instance tag information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return ResourceTags Instance tag information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<ResourceTag> GetResourceTags() const;
+
+                    /**
+                     * 设置Instance tag information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param ResourceTags Instance tag information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetResourceTags(const std::vector<ResourceTag>& _resourceTags);
+
+                    /**
+                     * 判断参数 ResourceTags 是否已赋值
+                     * @return ResourceTags 是否已赋值
+                     */
+                    bool ResourceTagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1317,6 +1340,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_instanceType;
                     bool m_instanceTypeHasBeenSet;
+
+                    /**
+                     * Instance tag information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<ResourceTag> m_resourceTags;
+                    bool m_resourceTagsHasBeenSet;
 
                 };
             }

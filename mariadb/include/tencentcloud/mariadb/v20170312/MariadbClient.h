@@ -35,6 +35,8 @@
 #include <tencentcloud/mariadb/v20170312/model/CopyAccountPrivilegesResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/CreateAccountRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/CreateAccountResponse.h>
+#include <tencentcloud/mariadb/v20170312/model/CreateHourDBInstanceRequest.h>
+#include <tencentcloud/mariadb/v20170312/model/CreateHourDBInstanceResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/DeleteAccountRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/DeleteAccountResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeAccountPrivilegesRequest.h>
@@ -107,6 +109,8 @@
 #include <tencentcloud/mariadb/v20170312/model/OpenDBExtranetAccessResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/ResetAccountPasswordRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/ResetAccountPasswordResponse.h>
+#include <tencentcloud/mariadb/v20170312/model/SwitchDBInstanceHARequest.h>
+#include <tencentcloud/mariadb/v20170312/model/SwitchDBInstanceHAResponse.h>
 
 
 namespace TencentCloud
@@ -139,6 +143,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateAccountResponse> CreateAccountOutcome;
                 typedef std::future<CreateAccountOutcome> CreateAccountOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::CreateAccountRequest&, CreateAccountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAccountAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateHourDBInstanceResponse> CreateHourDBInstanceOutcome;
+                typedef std::future<CreateHourDBInstanceOutcome> CreateHourDBInstanceOutcomeCallable;
+                typedef std::function<void(const MariadbClient*, const Model::CreateHourDBInstanceRequest&, CreateHourDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateHourDBInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteAccountResponse> DeleteAccountOutcome;
                 typedef std::future<DeleteAccountOutcome> DeleteAccountOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::DeleteAccountRequest&, DeleteAccountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAccountAsyncHandler;
@@ -247,6 +254,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ResetAccountPasswordResponse> ResetAccountPasswordOutcome;
                 typedef std::future<ResetAccountPasswordOutcome> ResetAccountPasswordOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::ResetAccountPasswordRequest&, ResetAccountPasswordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetAccountPasswordAsyncHandler;
+                typedef Outcome<Core::Error, Model::SwitchDBInstanceHAResponse> SwitchDBInstanceHAOutcome;
+                typedef std::future<SwitchDBInstanceHAOutcome> SwitchDBInstanceHAOutcomeCallable;
+                typedef std::function<void(const MariadbClient*, const Model::SwitchDBInstanceHARequest&, SwitchDBInstanceHAOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SwitchDBInstanceHAAsyncHandler;
 
 
 
@@ -304,6 +314,15 @@ Note: accounts with the same username but different hosts are different accounts
                 CreateAccountOutcome CreateAccount(const Model::CreateAccountRequest &request);
                 void CreateAccountAsync(const Model::CreateAccountRequest& request, const CreateAccountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateAccountOutcomeCallable CreateAccountCallable(const Model::CreateAccountRequest& request);
+
+                /**
+                 *This API is used to create pay-as-you-go instances.
+                 * @param req CreateHourDBInstanceRequest
+                 * @return CreateHourDBInstanceOutcome
+                 */
+                CreateHourDBInstanceOutcome CreateHourDBInstance(const Model::CreateHourDBInstanceRequest &request);
+                void CreateHourDBInstanceAsync(const Model::CreateHourDBInstanceRequest& request, const CreateHourDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateHourDBInstanceOutcomeCallable CreateHourDBInstanceCallable(const Model::CreateHourDBInstanceRequest& request);
 
                 /**
                  *This API is used to delete a TencentDB account, which is uniquely identified by username and host.
@@ -638,6 +657,15 @@ Note: accounts with the same username but different hosts are different accounts
                 ResetAccountPasswordOutcome ResetAccountPassword(const Model::ResetAccountPasswordRequest &request);
                 void ResetAccountPasswordAsync(const Model::ResetAccountPasswordRequest& request, const ResetAccountPasswordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ResetAccountPasswordOutcomeCallable ResetAccountPasswordCallable(const Model::ResetAccountPasswordRequest& request);
+
+                /**
+                 *This API is used to start a primary-replica switch of instances.
+                 * @param req SwitchDBInstanceHARequest
+                 * @return SwitchDBInstanceHAOutcome
+                 */
+                SwitchDBInstanceHAOutcome SwitchDBInstanceHA(const Model::SwitchDBInstanceHARequest &request);
+                void SwitchDBInstanceHAAsync(const Model::SwitchDBInstanceHARequest& request, const SwitchDBInstanceHAAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SwitchDBInstanceHAOutcomeCallable SwitchDBInstanceHACallable(const Model::SwitchDBInstanceHARequest& request);
 
             };
         }

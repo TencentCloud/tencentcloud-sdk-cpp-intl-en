@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/mariadb/v20170312/model/DescribeProjectSecurityGroupsResponse.h>
+#include <tencentcloud/mariadb/v20170312/model/CreateHourDBInstanceResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,13 +23,13 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mariadb::V20170312::Model;
 using namespace std;
 
-DescribeProjectSecurityGroupsResponse::DescribeProjectSecurityGroupsResponse() :
-    m_groupsHasBeenSet(false),
-    m_totalHasBeenSet(false)
+CreateHourDBInstanceResponse::CreateHourDBInstanceResponse() :
+    m_dealNameHasBeenSet(false),
+    m_instanceIdsHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome DescribeProjectSecurityGroupsResponse::Deserialize(const string &payload)
+CoreInternalOutcome CreateHourDBInstanceResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -63,67 +63,58 @@ CoreInternalOutcome DescribeProjectSecurityGroupsResponse::Deserialize(const str
     }
 
 
-    if (rsp.HasMember("Groups") && !rsp["Groups"].IsNull())
+    if (rsp.HasMember("DealName") && !rsp["DealName"].IsNull())
     {
-        if (!rsp["Groups"].IsArray())
-            return CoreInternalOutcome(Core::Error("response `Groups` is not array type"));
-
-        const rapidjson::Value &tmpValue = rsp["Groups"];
-        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        if (!rsp["DealName"].IsString())
         {
-            SecurityGroup item;
-            CoreInternalOutcome outcome = item.Deserialize(*itr);
-            if (!outcome.IsSuccess())
-            {
-                outcome.GetError().SetRequestId(requestId);
-                return outcome;
-            }
-            m_groups.push_back(item);
+            return CoreInternalOutcome(Core::Error("response `DealName` IsString=false incorrectly").SetRequestId(requestId));
         }
-        m_groupsHasBeenSet = true;
+        m_dealName = string(rsp["DealName"].GetString());
+        m_dealNameHasBeenSet = true;
     }
 
-    if (rsp.HasMember("Total") && !rsp["Total"].IsNull())
+    if (rsp.HasMember("InstanceIds") && !rsp["InstanceIds"].IsNull())
     {
-        if (!rsp["Total"].IsUint64())
+        if (!rsp["InstanceIds"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `InstanceIds` is not array type"));
+
+        const rapidjson::Value &tmpValue = rsp["InstanceIds"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
-            return CoreInternalOutcome(Core::Error("response `Total` IsUint64=false incorrectly").SetRequestId(requestId));
+            m_instanceIds.push_back((*itr).GetString());
         }
-        m_total = rsp["Total"].GetUint64();
-        m_totalHasBeenSet = true;
+        m_instanceIdsHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string DescribeProjectSecurityGroupsResponse::ToJsonString() const
+string CreateHourDBInstanceResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_groupsHasBeenSet)
+    if (m_dealNameHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Groups";
+        string key = "DealName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_dealName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_instanceIdsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceIds";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
-        int i=0;
-        for (auto itr = m_groups.begin(); itr != m_groups.end(); ++itr, ++i)
+        for (auto itr = m_instanceIds.begin(); itr != m_instanceIds.end(); ++itr)
         {
-            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
-            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
-    }
-
-    if (m_totalHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Total";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_total, allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -138,24 +129,24 @@ string DescribeProjectSecurityGroupsResponse::ToJsonString() const
 }
 
 
-vector<SecurityGroup> DescribeProjectSecurityGroupsResponse::GetGroups() const
+string CreateHourDBInstanceResponse::GetDealName() const
 {
-    return m_groups;
+    return m_dealName;
 }
 
-bool DescribeProjectSecurityGroupsResponse::GroupsHasBeenSet() const
+bool CreateHourDBInstanceResponse::DealNameHasBeenSet() const
 {
-    return m_groupsHasBeenSet;
+    return m_dealNameHasBeenSet;
 }
 
-uint64_t DescribeProjectSecurityGroupsResponse::GetTotal() const
+vector<string> CreateHourDBInstanceResponse::GetInstanceIds() const
 {
-    return m_total;
+    return m_instanceIds;
 }
 
-bool DescribeProjectSecurityGroupsResponse::TotalHasBeenSet() const
+bool CreateHourDBInstanceResponse::InstanceIdsHasBeenSet() const
 {
-    return m_totalHasBeenSet;
+    return m_instanceIdsHasBeenSet;
 }
 
 

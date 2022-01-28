@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/mariadb/v20170312/model/DescribeProjectSecurityGroupsResponse.h>
+#include <tencentcloud/mariadb/v20170312/model/SwitchDBInstanceHAResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,13 +23,12 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Mariadb::V20170312::Model;
 using namespace std;
 
-DescribeProjectSecurityGroupsResponse::DescribeProjectSecurityGroupsResponse() :
-    m_groupsHasBeenSet(false),
-    m_totalHasBeenSet(false)
+SwitchDBInstanceHAResponse::SwitchDBInstanceHAResponse() :
+    m_flowIdHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome DescribeProjectSecurityGroupsResponse::Deserialize(const string &payload)
+CoreInternalOutcome SwitchDBInstanceHAResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -63,67 +62,32 @@ CoreInternalOutcome DescribeProjectSecurityGroupsResponse::Deserialize(const str
     }
 
 
-    if (rsp.HasMember("Groups") && !rsp["Groups"].IsNull())
+    if (rsp.HasMember("FlowId") && !rsp["FlowId"].IsNull())
     {
-        if (!rsp["Groups"].IsArray())
-            return CoreInternalOutcome(Core::Error("response `Groups` is not array type"));
-
-        const rapidjson::Value &tmpValue = rsp["Groups"];
-        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        if (!rsp["FlowId"].IsInt64())
         {
-            SecurityGroup item;
-            CoreInternalOutcome outcome = item.Deserialize(*itr);
-            if (!outcome.IsSuccess())
-            {
-                outcome.GetError().SetRequestId(requestId);
-                return outcome;
-            }
-            m_groups.push_back(item);
+            return CoreInternalOutcome(Core::Error("response `FlowId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
-        m_groupsHasBeenSet = true;
-    }
-
-    if (rsp.HasMember("Total") && !rsp["Total"].IsNull())
-    {
-        if (!rsp["Total"].IsUint64())
-        {
-            return CoreInternalOutcome(Core::Error("response `Total` IsUint64=false incorrectly").SetRequestId(requestId));
-        }
-        m_total = rsp["Total"].GetUint64();
-        m_totalHasBeenSet = true;
+        m_flowId = rsp["FlowId"].GetInt64();
+        m_flowIdHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string DescribeProjectSecurityGroupsResponse::ToJsonString() const
+string SwitchDBInstanceHAResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_groupsHasBeenSet)
+    if (m_flowIdHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Groups";
+        string key = "FlowId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
-
-        int i=0;
-        for (auto itr = m_groups.begin(); itr != m_groups.end(); ++itr, ++i)
-        {
-            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
-            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
-        }
-    }
-
-    if (m_totalHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Total";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_total, allocator);
+        value.AddMember(iKey, m_flowId, allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -138,24 +102,14 @@ string DescribeProjectSecurityGroupsResponse::ToJsonString() const
 }
 
 
-vector<SecurityGroup> DescribeProjectSecurityGroupsResponse::GetGroups() const
+int64_t SwitchDBInstanceHAResponse::GetFlowId() const
 {
-    return m_groups;
+    return m_flowId;
 }
 
-bool DescribeProjectSecurityGroupsResponse::GroupsHasBeenSet() const
+bool SwitchDBInstanceHAResponse::FlowIdHasBeenSet() const
 {
-    return m_groupsHasBeenSet;
-}
-
-uint64_t DescribeProjectSecurityGroupsResponse::GetTotal() const
-{
-    return m_total;
-}
-
-bool DescribeProjectSecurityGroupsResponse::TotalHasBeenSet() const
-{
-    return m_totalHasBeenSet;
+    return m_flowIdHasBeenSet;
 }
 
 
