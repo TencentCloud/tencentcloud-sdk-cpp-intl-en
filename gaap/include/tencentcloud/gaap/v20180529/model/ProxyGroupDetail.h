@@ -395,17 +395,17 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool IPAddressVersionHasBeenSet() const;
 
                     /**
-                     * 获取Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+                     * 获取Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (game accelerator connection group), and `CrossBorder` (cross-MLC-border connection group).
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return PackageType Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+                     * @return PackageType Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (game accelerator connection group), and `CrossBorder` (cross-MLC-border connection group).
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetPackageType() const;
 
                     /**
-                     * 设置Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+                     * 设置Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (game accelerator connection group), and `CrossBorder` (cross-MLC-border connection group).
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param PackageType Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+                     * @param PackageType Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (game accelerator connection group), and `CrossBorder` (cross-MLC-border connection group).
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetPackageType(const std::string& _packageType);
@@ -415,6 +415,36 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      * @return PackageType 是否已赋值
                      */
                     bool PackageTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies whether to enable HTTP3. Valid values:
+`0`: disable;
+`1`: enable.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return Http3Supported Specifies whether to enable HTTP3. Valid values:
+`0`: disable;
+`1`: enable.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetHttp3Supported() const;
+
+                    /**
+                     * 设置Specifies whether to enable HTTP3. Valid values:
+`0`: disable;
+`1`: enable.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param Http3Supported Specifies whether to enable HTTP3. Valid values:
+`0`: disable;
+`1`: enable.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetHttp3Supported(const int64_t& _http3Supported);
+
+                    /**
+                     * 判断参数 Http3Supported 是否已赋值
+                     * @return Http3Supported 是否已赋值
+                     */
+                    bool Http3SupportedHasBeenSet() const;
 
                 private:
 
@@ -531,11 +561,20 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_iPAddressVersionHasBeenSet;
 
                     /**
-                     * Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+                     * Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (game accelerator connection group), and `CrossBorder` (cross-MLC-border connection group).
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_packageType;
                     bool m_packageTypeHasBeenSet;
+
+                    /**
+                     * Specifies whether to enable HTTP3. Valid values:
+`0`: disable;
+`1`: enable.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_http3Supported;
+                    bool m_http3SupportedHasBeenSet;
 
                 };
             }

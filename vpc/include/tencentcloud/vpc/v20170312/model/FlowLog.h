@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/vpc/v20170312/model/Tag.h>
+#include <tencentcloud/vpc/v20170312/model/FlowLogStorage.h>
 
 
 namespace TencentCloud
@@ -48,14 +49,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the VPC instance
-                     * @return VpcId ID of the VPC instance
+                     * 获取ID of the VPC instance.
+                     * @return VpcId ID of the VPC instance.
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置ID of the VPC instance
-                     * @param VpcId ID of the VPC instance
+                     * 设置ID of the VPC instance.
+                     * @param VpcId ID of the VPC instance.
                      */
                     void SetVpcId(const std::string& _vpcId);
 
@@ -120,14 +121,14 @@ namespace TencentCloud
                     bool ResourceTypeHasBeenSet() const;
 
                     /**
-                     * 获取The unique ID of the resource.
-                     * @return ResourceId The unique ID of the resource.
+                     * 获取The unique ID of the resource
+                     * @return ResourceId The unique ID of the resource
                      */
                     std::string GetResourceId() const;
 
                     /**
-                     * 设置The unique ID of the resource.
-                     * @param ResourceId The unique ID of the resource.
+                     * 设置The unique ID of the resource
+                     * @param ResourceId The unique ID of the resource
                      */
                     void SetResourceId(const std::string& _resourceId);
 
@@ -156,14 +157,14 @@ namespace TencentCloud
                     bool TrafficTypeHasBeenSet() const;
 
                     /**
-                     * 获取The storage ID of the flow log.
-                     * @return CloudLogId The storage ID of the flow log.
+                     * 获取The storage ID of the flow log
+                     * @return CloudLogId The storage ID of the flow log
                      */
                     std::string GetCloudLogId() const;
 
                     /**
-                     * 设置The storage ID of the flow log.
-                     * @param CloudLogId The storage ID of the flow log.
+                     * 设置The storage ID of the flow log
+                     * @param CloudLogId The storage ID of the flow log
                      */
                     void SetCloudLogId(const std::string& _cloudLogId);
 
@@ -174,14 +175,14 @@ namespace TencentCloud
                     bool CloudLogIdHasBeenSet() const;
 
                     /**
-                     * 获取The storage ID status of the flow log.
-                     * @return CloudLogState The storage ID status of the flow log.
+                     * 获取Flow log storage ID status.
+                     * @return CloudLogState Flow log storage ID status.
                      */
                     std::string GetCloudLogState() const;
 
                     /**
-                     * 设置The storage ID status of the flow log.
-                     * @param CloudLogState The storage ID status of the flow log.
+                     * 设置Flow log storage ID status.
+                     * @param CloudLogState Flow log storage ID status.
                      */
                     void SetCloudLogState(const std::string& _cloudLogState);
 
@@ -228,14 +229,14 @@ namespace TencentCloud
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
-                     * 获取Tag list, such as [{"Key": "city", "Value": "shanghai"}]
-                     * @return TagSet Tag list, such as [{"Key": "city", "Value": "shanghai"}]
+                     * 获取Tag list, such as [{"Key": "city", "Value": "shanghai"}].
+                     * @return TagSet Tag list, such as [{"Key": "city", "Value": "shanghai"}].
                      */
                     std::vector<Tag> GetTagSet() const;
 
                     /**
-                     * 设置Tag list, such as [{"Key": "city", "Value": "shanghai"}]
-                     * @param TagSet Tag list, such as [{"Key": "city", "Value": "shanghai"}]
+                     * 设置Tag list, such as [{"Key": "city", "Value": "shanghai"}].
+                     * @param TagSet Tag list, such as [{"Key": "city", "Value": "shanghai"}].
                      */
                     void SetTagSet(const std::vector<Tag>& _tagSet);
 
@@ -245,10 +246,72 @@ namespace TencentCloud
                      */
                     bool TagSetHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable. `true`: yes; `false`: no.
+                     * @return Enable Whether to enable. `true`: yes; `false`: no.
+                     */
+                    bool GetEnable() const;
+
+                    /**
+                     * 设置Whether to enable. `true`: yes; `false`: no.
+                     * @param Enable Whether to enable. `true`: yes; `false`: no.
+                     */
+                    void SetEnable(const bool& _enable);
+
+                    /**
+                     * 判断参数 Enable 是否已赋值
+                     * @return Enable 是否已赋值
+                     */
+                    bool EnableHasBeenSet() const;
+
+                    /**
+                     * 获取Consumer end types: cls and ckafka
+Note: this field may return `null`, indicating that no valid value can be found.
+                     * @return StorageType Consumer end types: cls and ckafka
+Note: this field may return `null`, indicating that no valid value can be found.
+                     */
+                    std::string GetStorageType() const;
+
+                    /**
+                     * 设置Consumer end types: cls and ckafka
+Note: this field may return `null`, indicating that no valid value can be found.
+                     * @param StorageType Consumer end types: cls and ckafka
+Note: this field may return `null`, indicating that no valid value can be found.
+                     */
+                    void SetStorageType(const std::string& _storageType);
+
+                    /**
+                     * 判断参数 StorageType 是否已赋值
+                     * @return StorageType 是否已赋值
+                     */
+                    bool StorageTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Information of the consumer, which is returned when the consumer type is `ckafka`.
+Note: this field may return `null`, indicating that no valid value can be found.
+                     * @return FlowLogStorage Information of the consumer, which is returned when the consumer type is `ckafka`.
+Note: this field may return `null`, indicating that no valid value can be found.
+                     */
+                    FlowLogStorage GetFlowLogStorage() const;
+
+                    /**
+                     * 设置Information of the consumer, which is returned when the consumer type is `ckafka`.
+Note: this field may return `null`, indicating that no valid value can be found.
+                     * @param FlowLogStorage Information of the consumer, which is returned when the consumer type is `ckafka`.
+Note: this field may return `null`, indicating that no valid value can be found.
+                     */
+                    void SetFlowLogStorage(const FlowLogStorage& _flowLogStorage);
+
+                    /**
+                     * 判断参数 FlowLogStorage 是否已赋值
+                     * @return FlowLogStorage 是否已赋值
+                     */
+                    bool FlowLogStorageHasBeenSet() const;
+
                 private:
 
                     /**
-                     * ID of the VPC instance
+                     * ID of the VPC instance.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
@@ -272,7 +335,7 @@ namespace TencentCloud
                     bool m_resourceTypeHasBeenSet;
 
                     /**
-                     * The unique ID of the resource.
+                     * The unique ID of the resource
                      */
                     std::string m_resourceId;
                     bool m_resourceIdHasBeenSet;
@@ -284,13 +347,13 @@ namespace TencentCloud
                     bool m_trafficTypeHasBeenSet;
 
                     /**
-                     * The storage ID of the flow log.
+                     * The storage ID of the flow log
                      */
                     std::string m_cloudLogId;
                     bool m_cloudLogIdHasBeenSet;
 
                     /**
-                     * The storage ID status of the flow log.
+                     * Flow log storage ID status.
                      */
                     std::string m_cloudLogState;
                     bool m_cloudLogStateHasBeenSet;
@@ -308,10 +371,30 @@ namespace TencentCloud
                     bool m_createdTimeHasBeenSet;
 
                     /**
-                     * Tag list, such as [{"Key": "city", "Value": "shanghai"}]
+                     * Tag list, such as [{"Key": "city", "Value": "shanghai"}].
                      */
                     std::vector<Tag> m_tagSet;
                     bool m_tagSetHasBeenSet;
+
+                    /**
+                     * Whether to enable. `true`: yes; `false`: no.
+                     */
+                    bool m_enable;
+                    bool m_enableHasBeenSet;
+
+                    /**
+                     * Consumer end types: cls and ckafka
+Note: this field may return `null`, indicating that no valid value can be found.
+                     */
+                    std::string m_storageType;
+                    bool m_storageTypeHasBeenSet;
+
+                    /**
+                     * Information of the consumer, which is returned when the consumer type is `ckafka`.
+Note: this field may return `null`, indicating that no valid value can be found.
+                     */
+                    FlowLogStorage m_flowLogStorage;
+                    bool m_flowLogStorageHasBeenSet;
 
                 };
             }

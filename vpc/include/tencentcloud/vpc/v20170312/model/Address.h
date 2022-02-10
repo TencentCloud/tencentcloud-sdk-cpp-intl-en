@@ -247,14 +247,14 @@ namespace TencentCloud
                     bool IsEipDirectConnectionHasBeenSet() const;
 
                     /**
-                     * 获取The resource type of the EIP. This includes `CalcIP`, `WanIP`, `EIP`, and `AnycastEIP`. Among these, `CalcIP` indicates the device IP, `WanIP` indicates the common public IP, `EIP` indicates Elastic IP, and `AnycastEip` indicates accelerated EIP.
-                     * @return AddressType The resource type of the EIP. This includes `CalcIP`, `WanIP`, `EIP`, and `AnycastEIP`. Among these, `CalcIP` indicates the device IP, `WanIP` indicates the common public IP, `EIP` indicates Elastic IP, and `AnycastEip` indicates accelerated EIP.
+                     * 获取EIP resource type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (elastic IP) and `AnycastEIP` (accelerated EIP).
+                     * @return AddressType EIP resource type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (elastic IP) and `AnycastEIP` (accelerated EIP).
                      */
                     std::string GetAddressType() const;
 
                     /**
-                     * 设置The resource type of the EIP. This includes `CalcIP`, `WanIP`, `EIP`, and `AnycastEIP`. Among these, `CalcIP` indicates the device IP, `WanIP` indicates the common public IP, `EIP` indicates Elastic IP, and `AnycastEip` indicates accelerated EIP.
-                     * @param AddressType The resource type of the EIP. This includes `CalcIP`, `WanIP`, `EIP`, and `AnycastEIP`. Among these, `CalcIP` indicates the device IP, `WanIP` indicates the common public IP, `EIP` indicates Elastic IP, and `AnycastEip` indicates accelerated EIP.
+                     * 设置EIP resource type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (elastic IP) and `AnycastEIP` (accelerated EIP).
+                     * @param AddressType EIP resource type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (elastic IP) and `AnycastEIP` (accelerated EIP).
                      */
                     void SetAddressType(const std::string& _addressType);
 
@@ -361,7 +361,27 @@ Note: this field may return `null`, indicating that no valid value was found.
                     /**
                      * 获取Network billing mode of EIP. The EIP for the bill-by-CVM account will return `null`.
 Note: this field may return `null`, indicating that no valid value was found.
+Including:
+<li><strong>BANDWIDTH_PREPAID_BY_MONTH</strong></li>
+<p style="padding-left: 30px;">Prepaid by monthly-subscribed bandwidth.</p>
+<li><strong>TRAFFIC_POSTPAID_BY_HOUR</strong></li>
+<p style="padding-left: 30px;">Pay-as-you-go billing by hourly traffic.</p>
+<li><strong>BANDWIDTH_POSTPAID_BY_HOUR</strong></li>
+<p style="padding-left: 30px;">Pay-as-you-go billing by hourly bandwidth.</p>
+<li><strong>BANDWIDTH_PACKAGE</strong></li>
+<p style="padding-left: 30px;">Bandwidth package.</p>
+Note: this field may return `null`, indicating that no valid value was found.
                      * @return InternetChargeType Network billing mode of EIP. The EIP for the bill-by-CVM account will return `null`.
+Note: this field may return `null`, indicating that no valid value was found.
+Including:
+<li><strong>BANDWIDTH_PREPAID_BY_MONTH</strong></li>
+<p style="padding-left: 30px;">Prepaid by monthly-subscribed bandwidth.</p>
+<li><strong>TRAFFIC_POSTPAID_BY_HOUR</strong></li>
+<p style="padding-left: 30px;">Pay-as-you-go billing by hourly traffic.</p>
+<li><strong>BANDWIDTH_POSTPAID_BY_HOUR</strong></li>
+<p style="padding-left: 30px;">Pay-as-you-go billing by hourly bandwidth.</p>
+<li><strong>BANDWIDTH_PACKAGE</strong></li>
+<p style="padding-left: 30px;">Bandwidth package.</p>
 Note: this field may return `null`, indicating that no valid value was found.
                      */
                     std::string GetInternetChargeType() const;
@@ -369,7 +389,27 @@ Note: this field may return `null`, indicating that no valid value was found.
                     /**
                      * 设置Network billing mode of EIP. The EIP for the bill-by-CVM account will return `null`.
 Note: this field may return `null`, indicating that no valid value was found.
+Including:
+<li><strong>BANDWIDTH_PREPAID_BY_MONTH</strong></li>
+<p style="padding-left: 30px;">Prepaid by monthly-subscribed bandwidth.</p>
+<li><strong>TRAFFIC_POSTPAID_BY_HOUR</strong></li>
+<p style="padding-left: 30px;">Pay-as-you-go billing by hourly traffic.</p>
+<li><strong>BANDWIDTH_POSTPAID_BY_HOUR</strong></li>
+<p style="padding-left: 30px;">Pay-as-you-go billing by hourly bandwidth.</p>
+<li><strong>BANDWIDTH_PACKAGE</strong></li>
+<p style="padding-left: 30px;">Bandwidth package.</p>
+Note: this field may return `null`, indicating that no valid value was found.
                      * @param InternetChargeType Network billing mode of EIP. The EIP for the bill-by-CVM account will return `null`.
+Note: this field may return `null`, indicating that no valid value was found.
+Including:
+<li><strong>BANDWIDTH_PREPAID_BY_MONTH</strong></li>
+<p style="padding-left: 30px;">Prepaid by monthly-subscribed bandwidth.</p>
+<li><strong>TRAFFIC_POSTPAID_BY_HOUR</strong></li>
+<p style="padding-left: 30px;">Pay-as-you-go billing by hourly traffic.</p>
+<li><strong>BANDWIDTH_POSTPAID_BY_HOUR</strong></li>
+<p style="padding-left: 30px;">Pay-as-you-go billing by hourly bandwidth.</p>
+<li><strong>BANDWIDTH_PACKAGE</strong></li>
+<p style="padding-left: 30px;">Bandwidth package.</p>
 Note: this field may return `null`, indicating that no valid value was found.
                      */
                     void SetInternetChargeType(const std::string& _internetChargeType);
@@ -471,7 +511,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_isEipDirectConnectionHasBeenSet;
 
                     /**
-                     * The resource type of the EIP. This includes `CalcIP`, `WanIP`, `EIP`, and `AnycastEIP`. Among these, `CalcIP` indicates the device IP, `WanIP` indicates the common public IP, `EIP` indicates Elastic IP, and `AnycastEip` indicates accelerated EIP.
+                     * EIP resource type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (elastic IP) and `AnycastEIP` (accelerated EIP).
                      */
                     std::string m_addressType;
                     bool m_addressTypeHasBeenSet;
@@ -509,6 +549,16 @@ Note: this field may return `null`, indicating that no valid value was found.
 
                     /**
                      * Network billing mode of EIP. The EIP for the bill-by-CVM account will return `null`.
+Note: this field may return `null`, indicating that no valid value was found.
+Including:
+<li><strong>BANDWIDTH_PREPAID_BY_MONTH</strong></li>
+<p style="padding-left: 30px;">Prepaid by monthly-subscribed bandwidth.</p>
+<li><strong>TRAFFIC_POSTPAID_BY_HOUR</strong></li>
+<p style="padding-left: 30px;">Pay-as-you-go billing by hourly traffic.</p>
+<li><strong>BANDWIDTH_POSTPAID_BY_HOUR</strong></li>
+<p style="padding-left: 30px;">Pay-as-you-go billing by hourly bandwidth.</p>
+<li><strong>BANDWIDTH_PACKAGE</strong></li>
+<p style="padding-left: 30px;">Bandwidth package.</p>
 Note: this field may return `null`, indicating that no valid value was found.
                      */
                     std::string m_internetChargeType;

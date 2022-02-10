@@ -44,13 +44,17 @@ namespace TencentCloud
 
                     /**
                      * 获取List of groups to be searched in (up to 100). The array element value is the `GroupId` in the `CreateGroup` API.
+You cannot search for groups using different algorithm model versions (`FaceModelVersion`) at a time.
                      * @return GroupIds List of groups to be searched in (up to 100). The array element value is the `GroupId` in the `CreateGroup` API.
+You cannot search for groups using different algorithm model versions (`FaceModelVersion`) at a time.
                      */
                     std::vector<std::string> GetGroupIds() const;
 
                     /**
                      * 设置List of groups to be searched in (up to 100). The array element value is the `GroupId` in the `CreateGroup` API.
+You cannot search for groups using different algorithm model versions (`FaceModelVersion`) at a time.
                      * @param GroupIds List of groups to be searched in (up to 100). The array element value is the `GroupId` in the `CreateGroup` API.
+You cannot search for groups using different algorithm model versions (`FaceModelVersion`) at a time.
                      */
                     void SetGroupIds(const std::vector<std::string>& _groupIds);
 
@@ -298,6 +302,7 @@ If the image quality does not meet the requirement, the returned result will pro
 
                     /**
                      * List of groups to be searched in (up to 100). The array element value is the `GroupId` in the `CreateGroup` API.
+You cannot search for groups using different algorithm model versions (`FaceModelVersion`) at a time.
                      */
                     std::vector<std::string> m_groupIds;
                     bool m_groupIdsHasBeenSet;

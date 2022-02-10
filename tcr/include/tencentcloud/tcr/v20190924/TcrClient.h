@@ -27,6 +27,8 @@
 #include <tencentcloud/tcr/v20190924/model/CheckInstanceResponse.h>
 #include <tencentcloud/tcr/v20190924/model/CreateImmutableTagRulesRequest.h>
 #include <tencentcloud/tcr/v20190924/model/CreateImmutableTagRulesResponse.h>
+#include <tencentcloud/tcr/v20190924/model/CreateInstanceTokenRequest.h>
+#include <tencentcloud/tcr/v20190924/model/CreateInstanceTokenResponse.h>
 #include <tencentcloud/tcr/v20190924/model/CreateMultipleSecurityPolicyRequest.h>
 #include <tencentcloud/tcr/v20190924/model/CreateMultipleSecurityPolicyResponse.h>
 #include <tencentcloud/tcr/v20190924/model/CreateReplicationInstanceRequest.h>
@@ -69,6 +71,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateImmutableTagRulesResponse> CreateImmutableTagRulesOutcome;
                 typedef std::future<CreateImmutableTagRulesOutcome> CreateImmutableTagRulesOutcomeCallable;
                 typedef std::function<void(const TcrClient*, const Model::CreateImmutableTagRulesRequest&, CreateImmutableTagRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateImmutableTagRulesAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateInstanceTokenResponse> CreateInstanceTokenOutcome;
+                typedef std::future<CreateInstanceTokenOutcome> CreateInstanceTokenOutcomeCallable;
+                typedef std::function<void(const TcrClient*, const Model::CreateInstanceTokenRequest&, CreateInstanceTokenOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateInstanceTokenAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateMultipleSecurityPolicyResponse> CreateMultipleSecurityPolicyOutcome;
                 typedef std::future<CreateMultipleSecurityPolicyOutcome> CreateMultipleSecurityPolicyOutcomeCallable;
                 typedef std::function<void(const TcrClient*, const Model::CreateMultipleSecurityPolicyRequest&, CreateMultipleSecurityPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateMultipleSecurityPolicyAsyncHandler;
@@ -122,6 +127,15 @@ namespace TencentCloud
                 CreateImmutableTagRulesOutcome CreateImmutableTagRules(const Model::CreateImmutableTagRulesRequest &request);
                 void CreateImmutableTagRulesAsync(const Model::CreateImmutableTagRulesRequest& request, const CreateImmutableTagRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateImmutableTagRulesOutcomeCallable CreateImmutableTagRulesCallable(const Model::CreateImmutableTagRulesRequest& request);
+
+                /**
+                 *This API is used to create a temporary or long-term instance access credential.
+                 * @param req CreateInstanceTokenRequest
+                 * @return CreateInstanceTokenOutcome
+                 */
+                CreateInstanceTokenOutcome CreateInstanceToken(const Model::CreateInstanceTokenRequest &request);
+                void CreateInstanceTokenAsync(const Model::CreateInstanceTokenRequest& request, const CreateInstanceTokenAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateInstanceTokenOutcomeCallable CreateInstanceTokenCallable(const Model::CreateInstanceTokenRequest& request);
 
                 /**
                  *This API is used to create multiple public network access allowlist policies of the TCR instance.

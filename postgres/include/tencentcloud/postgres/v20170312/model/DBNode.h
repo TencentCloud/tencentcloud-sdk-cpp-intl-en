@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Instance node information including node type and AZ.
                 */
                 class DBNode : public AbstractModel
                 {
@@ -47,14 +47,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Role 
+                     * 获取Node type. Valid values:
+`Primary`;
+`Standby`.
+                     * @return Role Node type. Valid values:
+`Primary`;
+`Standby`.
                      */
                     std::string GetRole() const;
 
                     /**
-                     * 设置
-                     * @param Role 
+                     * 设置Node type. Valid values:
+`Primary`;
+`Standby`.
+                     * @param Role Node type. Valid values:
+`Primary`;
+`Standby`.
                      */
                     void SetRole(const std::string& _role);
 
@@ -65,14 +73,14 @@ namespace TencentCloud
                     bool RoleHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Zone 
+                     * 获取AZ where the node resides, such as ap-guangzhou-1.
+                     * @return Zone AZ where the node resides, such as ap-guangzhou-1.
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置
-                     * @param Zone 
+                     * 设置AZ where the node resides, such as ap-guangzhou-1.
+                     * @param Zone AZ where the node resides, such as ap-guangzhou-1.
                      */
                     void SetZone(const std::string& _zone);
 
@@ -85,13 +93,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Node type. Valid values:
+`Primary`;
+`Standby`.
                      */
                     std::string m_role;
                     bool m_roleHasBeenSet;
 
                     /**
-                     * 
+                     * AZ where the node resides, such as ap-guangzhou-1.
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;

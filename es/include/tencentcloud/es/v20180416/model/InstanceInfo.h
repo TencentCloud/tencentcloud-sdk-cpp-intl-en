@@ -1473,6 +1473,28 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     bool FrozenDiskSizeHasBeenSet() const;
 
+                    /**
+                     * 获取Cluster health status. `-1`: Unknown; `0`: Green; `1`: Yellow; `2`: Red
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return HealthStatus Cluster health status. `-1`: Unknown; `0`: Green; `1`: Yellow; `2`: Red
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    int64_t GetHealthStatus() const;
+
+                    /**
+                     * 设置Cluster health status. `-1`: Unknown; `0`: Green; `1`: Yellow; `2`: Red
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param HealthStatus Cluster health status. `-1`: Unknown; `0`: Green; `1`: Yellow; `2`: Red
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetHealthStatus(const int64_t& _healthStatus);
+
+                    /**
+                     * 判断参数 HealthStatus 是否已赋值
+                     * @return HealthStatus 是否已赋值
+                     */
+                    bool HealthStatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1935,6 +1957,13 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     uint64_t m_frozenDiskSize;
                     bool m_frozenDiskSizeHasBeenSet;
+
+                    /**
+                     * Cluster health status. `-1`: Unknown; `0`: Green; `1`: Yellow; `2`: Red
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    int64_t m_healthStatus;
+                    bool m_healthStatusHasBeenSet;
 
                 };
             }

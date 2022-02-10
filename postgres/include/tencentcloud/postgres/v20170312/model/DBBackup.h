@@ -244,6 +244,28 @@ namespace TencentCloud
                      */
                     bool ExternalAddrHasBeenSet() const;
 
+                    /**
+                     * 获取Backup set ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return SetId Backup set ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetSetId() const;
+
+                    /**
+                     * 设置Backup set ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param SetId Backup set ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetSetId(const std::string& _setId);
+
+                    /**
+                     * 判断参数 SetId 是否已赋值
+                     * @return SetId 是否已赋值
+                     */
+                    bool SetIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -311,6 +333,13 @@ namespace TencentCloud
                      */
                     std::string m_externalAddr;
                     bool m_externalAddrHasBeenSet;
+
+                    /**
+                     * Backup set ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_setId;
+                    bool m_setIdHasBeenSet;
 
                 };
             }

@@ -516,6 +516,36 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool BanStatusHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Http3Supported Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetHttp3Supported() const;
+
+                    /**
+                     * 设置Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param Http3Supported Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetHttp3Supported(const int64_t& _http3Supported);
+
+                    /**
+                     * 判断参数 Http3Supported 是否已赋值
+                     * @return Http3Supported 是否已赋值
+                     */
+                    bool Http3SupportedHasBeenSet() const;
+
                 private:
 
                     /**
@@ -664,6 +694,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_banStatus;
                     bool m_banStatusHasBeenSet;
+
+                    /**
+                     * Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_http3Supported;
+                    bool m_http3SupportedHasBeenSet;
 
                 };
             }

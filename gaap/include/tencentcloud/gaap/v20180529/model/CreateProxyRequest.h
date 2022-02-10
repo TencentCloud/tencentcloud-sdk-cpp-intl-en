@@ -304,14 +304,14 @@ The connection is to be replicated if this parameter is set.
                     bool PackageTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Http3Supported 
+                     * 获取Specifies whether to enable HTTP3. Valid values: `0` (disable HTTP3); `1` (enable HTTP3). Note: If HTTP3 is enabled for a connection, TCP/UDP access will not be allowed. After the connection is created, you cannot change your HTTP3 setting.
+                     * @return Http3Supported Specifies whether to enable HTTP3. Valid values: `0` (disable HTTP3); `1` (enable HTTP3). Note: If HTTP3 is enabled for a connection, TCP/UDP access will not be allowed. After the connection is created, you cannot change your HTTP3 setting.
                      */
                     int64_t GetHttp3Supported() const;
 
                     /**
-                     * 设置
-                     * @param Http3Supported 
+                     * 设置Specifies whether to enable HTTP3. Valid values: `0` (disable HTTP3); `1` (enable HTTP3). Note: If HTTP3 is enabled for a connection, TCP/UDP access will not be allowed. After the connection is created, you cannot change your HTTP3 setting.
+                     * @param Http3Supported Specifies whether to enable HTTP3. Valid values: `0` (disable HTTP3); `1` (enable HTTP3). Note: If HTTP3 is enabled for a connection, TCP/UDP access will not be allowed. After the connection is created, you cannot change your HTTP3 setting.
                      */
                     void SetHttp3Supported(const int64_t& _http3Supported);
 
@@ -410,7 +410,7 @@ The connection is to be replicated if this parameter is set.
                     bool m_packageTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Specifies whether to enable HTTP3. Valid values: `0` (disable HTTP3); `1` (enable HTTP3). Note: If HTTP3 is enabled for a connection, TCP/UDP access will not be allowed. After the connection is created, you cannot change your HTTP3 setting.
                      */
                     int64_t m_http3Supported;
                     bool m_http3SupportedHasBeenSet;

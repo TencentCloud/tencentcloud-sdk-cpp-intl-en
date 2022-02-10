@@ -186,6 +186,40 @@ namespace TencentCloud
                      */
                     bool GroupIdHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: If HTTP3 is enabled for a connection, the listener will use the port that is originally accessed to UDP, and a UDP listener with the same port cannot be created.
+After the connection is created, you cannot change your HTTP3 setting.
+                     * @return Http3Supported Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: If HTTP3 is enabled for a connection, the listener will use the port that is originally accessed to UDP, and a UDP listener with the same port cannot be created.
+After the connection is created, you cannot change your HTTP3 setting.
+                     */
+                    int64_t GetHttp3Supported() const;
+
+                    /**
+                     * 设置Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: If HTTP3 is enabled for a connection, the listener will use the port that is originally accessed to UDP, and a UDP listener with the same port cannot be created.
+After the connection is created, you cannot change your HTTP3 setting.
+                     * @param Http3Supported Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: If HTTP3 is enabled for a connection, the listener will use the port that is originally accessed to UDP, and a UDP listener with the same port cannot be created.
+After the connection is created, you cannot change your HTTP3 setting.
+                     */
+                    void SetHttp3Supported(const int64_t& _http3Supported);
+
+                    /**
+                     * 判断参数 Http3Supported 是否已赋值
+                     * @return Http3Supported 是否已赋值
+                     */
+                    bool Http3SupportedHasBeenSet() const;
+
                 private:
 
                     /**
@@ -235,6 +269,16 @@ namespace TencentCloud
                      */
                     std::string m_groupId;
                     bool m_groupIdHasBeenSet;
+
+                    /**
+                     * Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: If HTTP3 is enabled for a connection, the listener will use the port that is originally accessed to UDP, and a UDP listener with the same port cannot be created.
+After the connection is created, you cannot change your HTTP3 setting.
+                     */
+                    int64_t m_http3Supported;
+                    bool m_http3SupportedHasBeenSet;
 
                 };
             }

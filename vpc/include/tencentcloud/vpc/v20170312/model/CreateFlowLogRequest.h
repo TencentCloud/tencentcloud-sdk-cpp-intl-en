@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/vpc/v20170312/model/Tag.h>
+#include <tencentcloud/vpc/v20170312/model/FlowLogStorage.h>
 
 
 namespace TencentCloud
@@ -116,24 +117,6 @@ namespace TencentCloud
                     bool TrafficTypeHasBeenSet() const;
 
                     /**
-                     * 获取The storage ID of the flow log.
-                     * @return CloudLogId The storage ID of the flow log.
-                     */
-                    std::string GetCloudLogId() const;
-
-                    /**
-                     * 设置The storage ID of the flow log.
-                     * @param CloudLogId The storage ID of the flow log.
-                     */
-                    void SetCloudLogId(const std::string& _cloudLogId);
-
-                    /**
-                     * 判断参数 CloudLogId 是否已赋值
-                     * @return CloudLogId 是否已赋值
-                     */
-                    bool CloudLogIdHasBeenSet() const;
-
-                    /**
                      * 获取The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the `ResourceType` is set to `CCN`.
                      * @return VpcId The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the `ResourceType` is set to `CCN`.
                      */
@@ -170,6 +153,24 @@ namespace TencentCloud
                     bool FlowLogDescriptionHasBeenSet() const;
 
                     /**
+                     * 获取The storage ID of the flow log.
+                     * @return CloudLogId The storage ID of the flow log.
+                     */
+                    std::string GetCloudLogId() const;
+
+                    /**
+                     * 设置The storage ID of the flow log.
+                     * @param CloudLogId The storage ID of the flow log.
+                     */
+                    void SetCloudLogId(const std::string& _cloudLogId);
+
+                    /**
+                     * 判断参数 CloudLogId 是否已赋值
+                     * @return CloudLogId 是否已赋值
+                     */
+                    bool CloudLogIdHasBeenSet() const;
+
+                    /**
                      * 获取Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
                      * @return Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
                      */
@@ -186,6 +187,42 @@ namespace TencentCloud
                      * @return Tags 是否已赋值
                      */
                     bool TagsHasBeenSet() const;
+
+                    /**
+                     * 获取Consumer types: `cls` and `ckafka`
+                     * @return StorageType Consumer types: `cls` and `ckafka`
+                     */
+                    std::string GetStorageType() const;
+
+                    /**
+                     * 设置Consumer types: `cls` and `ckafka`
+                     * @param StorageType Consumer types: `cls` and `ckafka`
+                     */
+                    void SetStorageType(const std::string& _storageType);
+
+                    /**
+                     * 判断参数 StorageType 是否已赋值
+                     * @return StorageType 是否已赋值
+                     */
+                    bool StorageTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Information of the flow log consumer, which is required when the consumer type is `ckafka`.
+                     * @return FlowLogStorage Information of the flow log consumer, which is required when the consumer type is `ckafka`.
+                     */
+                    FlowLogStorage GetFlowLogStorage() const;
+
+                    /**
+                     * 设置Information of the flow log consumer, which is required when the consumer type is `ckafka`.
+                     * @param FlowLogStorage Information of the flow log consumer, which is required when the consumer type is `ckafka`.
+                     */
+                    void SetFlowLogStorage(const FlowLogStorage& _flowLogStorage);
+
+                    /**
+                     * 判断参数 FlowLogStorage 是否已赋值
+                     * @return FlowLogStorage 是否已赋值
+                     */
+                    bool FlowLogStorageHasBeenSet() const;
 
                 private:
 
@@ -214,12 +251,6 @@ namespace TencentCloud
                     bool m_trafficTypeHasBeenSet;
 
                     /**
-                     * The storage ID of the flow log.
-                     */
-                    std::string m_cloudLogId;
-                    bool m_cloudLogIdHasBeenSet;
-
-                    /**
                      * The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the `ResourceType` is set to `CCN`.
                      */
                     std::string m_vpcId;
@@ -232,10 +263,28 @@ namespace TencentCloud
                     bool m_flowLogDescriptionHasBeenSet;
 
                     /**
+                     * The storage ID of the flow log.
+                     */
+                    std::string m_cloudLogId;
+                    bool m_cloudLogIdHasBeenSet;
+
+                    /**
                      * Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * Consumer types: `cls` and `ckafka`
+                     */
+                    std::string m_storageType;
+                    bool m_storageTypeHasBeenSet;
+
+                    /**
+                     * Information of the flow log consumer, which is required when the consumer type is `ckafka`.
+                     */
+                    FlowLogStorage m_flowLogStorage;
+                    bool m_flowLogStorageHasBeenSet;
 
                 };
             }

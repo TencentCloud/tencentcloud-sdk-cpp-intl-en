@@ -140,6 +140,36 @@ This field or the `ClientCertificateId` field is required for mutual authenticat
                      */
                     bool PolyClientCertificateIdsHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+HTTP3 is not enabled by default. You can enable it with this field SetDomainHttp3.
+                     * @return Http3Supported Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+HTTP3 is not enabled by default. You can enable it with this field SetDomainHttp3.
+                     */
+                    int64_t GetHttp3Supported() const;
+
+                    /**
+                     * 设置Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+HTTP3 is not enabled by default. You can enable it with this field SetDomainHttp3.
+                     * @param Http3Supported Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+HTTP3 is not enabled by default. You can enable it with this field SetDomainHttp3.
+                     */
+                    void SetHttp3Supported(const int64_t& _http3Supported);
+
+                    /**
+                     * 判断参数 Http3Supported 是否已赋值
+                     * @return Http3Supported 是否已赋值
+                     */
+                    bool Http3SupportedHasBeenSet() const;
+
                 private:
 
                     /**
@@ -173,6 +203,15 @@ This field or the `ClientCertificateId` field is required for mutual authenticat
                      */
                     std::vector<std::string> m_polyClientCertificateIds;
                     bool m_polyClientCertificateIdsHasBeenSet;
+
+                    /**
+                     * Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+HTTP3 is not enabled by default. You can enable it with this field SetDomainHttp3.
+                     */
+                    int64_t m_http3Supported;
+                    bool m_http3SupportedHasBeenSet;
 
                 };
             }

@@ -126,6 +126,49 @@ TcrClient::CreateImmutableTagRulesOutcomeCallable TcrClient::CreateImmutableTagR
     return task->get_future();
 }
 
+TcrClient::CreateInstanceTokenOutcome TcrClient::CreateInstanceToken(const CreateInstanceTokenRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateInstanceToken");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateInstanceTokenResponse rsp = CreateInstanceTokenResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateInstanceTokenOutcome(rsp);
+        else
+            return CreateInstanceTokenOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateInstanceTokenOutcome(outcome.GetError());
+    }
+}
+
+void TcrClient::CreateInstanceTokenAsync(const CreateInstanceTokenRequest& request, const CreateInstanceTokenAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateInstanceToken(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TcrClient::CreateInstanceTokenOutcomeCallable TcrClient::CreateInstanceTokenCallable(const CreateInstanceTokenRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateInstanceTokenOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateInstanceToken(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TcrClient::CreateMultipleSecurityPolicyOutcome TcrClient::CreateMultipleSecurityPolicy(const CreateMultipleSecurityPolicyRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateMultipleSecurityPolicy");

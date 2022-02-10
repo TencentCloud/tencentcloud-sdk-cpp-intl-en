@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Availability status. UNAVAILABLE: unavailable, AVAILABLE: available
-                     * @return ZoneState Availability status. UNAVAILABLE: unavailable, AVAILABLE: available
+                     * 获取Availability status. Valid values: `UNAVAILABLE`, `AVAILABLE`, `SELLOUT`
+                     * @return ZoneState Availability status. Valid values: `UNAVAILABLE`, `AVAILABLE`, `SELLOUT`
                      */
                     std::string GetZoneState() const;
 
                     /**
-                     * 设置Availability status. UNAVAILABLE: unavailable, AVAILABLE: available
-                     * @param ZoneState Availability status. UNAVAILABLE: unavailable, AVAILABLE: available
+                     * 设置Availability status. Valid values: `UNAVAILABLE`, `AVAILABLE`, `SELLOUT`
+                     * @param ZoneState Availability status. Valid values: `UNAVAILABLE`, `AVAILABLE`, `SELLOUT`
                      */
                     void SetZoneState(const std::string& _zoneState);
 
@@ -136,6 +136,28 @@ namespace TencentCloud
                      */
                     bool ZoneSupportIpv6HasBeenSet() const;
 
+                    /**
+                     * 获取AZs that can be used as standby when this AZ is primary
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return StandbyZoneSet AZs that can be used as standby when this AZ is primary
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> GetStandbyZoneSet() const;
+
+                    /**
+                     * 设置AZs that can be used as standby when this AZ is primary
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param StandbyZoneSet AZs that can be used as standby when this AZ is primary
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetStandbyZoneSet(const std::vector<std::string>& _standbyZoneSet);
+
+                    /**
+                     * 判断参数 StandbyZoneSet 是否已赋值
+                     * @return StandbyZoneSet 是否已赋值
+                     */
+                    bool StandbyZoneSetHasBeenSet() const;
+
                 private:
 
                     /**
@@ -157,7 +179,7 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Availability status. UNAVAILABLE: unavailable, AVAILABLE: available
+                     * Availability status. Valid values: `UNAVAILABLE`, `AVAILABLE`, `SELLOUT`
                      */
                     std::string m_zoneState;
                     bool m_zoneStateHasBeenSet;
@@ -167,6 +189,13 @@ namespace TencentCloud
                      */
                     uint64_t m_zoneSupportIpv6;
                     bool m_zoneSupportIpv6HasBeenSet;
+
+                    /**
+                     * AZs that can be used as standby when this AZ is primary
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_standbyZoneSet;
+                    bool m_standbyZoneSetHasBeenSet;
 
                 };
             }

@@ -29,6 +29,7 @@ set(tcr_public_header_model
   include/tencentcloud/tcr/v20190924/model/ManageReplicationRequest.h
   include/tencentcloud/tcr/v20190924/model/ModifyImmutableTagRulesRequest.h
   include/tencentcloud/tcr/v20190924/model/CreateReplicationInstanceResponse.h
+  include/tencentcloud/tcr/v20190924/model/CreateInstanceTokenRequest.h
   include/tencentcloud/tcr/v20190924/model/ReplicationRule.h
   include/tencentcloud/tcr/v20190924/model/CreateMultipleSecurityPolicyRequest.h
   include/tencentcloud/tcr/v20190924/model/DescribeReplicationInstancesResponse.h
@@ -53,6 +54,7 @@ set(tcr_public_header_model
   include/tencentcloud/tcr/v20190924/model/ReplicationLog.h
   include/tencentcloud/tcr/v20190924/model/SecurityPolicy.h
   include/tencentcloud/tcr/v20190924/model/ReplicationFilter.h
+  include/tencentcloud/tcr/v20190924/model/CreateInstanceTokenResponse.h
   )
 
 set(tcr_src
@@ -67,6 +69,7 @@ set(tcr_src
   src/v20190924/model/ManageReplicationRequest.cpp
   src/v20190924/model/ModifyImmutableTagRulesRequest.cpp
   src/v20190924/model/CreateReplicationInstanceResponse.cpp
+  src/v20190924/model/CreateInstanceTokenRequest.cpp
   src/v20190924/model/ReplicationRule.cpp
   src/v20190924/model/CreateMultipleSecurityPolicyRequest.cpp
   src/v20190924/model/DescribeReplicationInstancesResponse.cpp
@@ -91,6 +94,7 @@ set(tcr_src
   src/v20190924/model/ReplicationLog.cpp
   src/v20190924/model/SecurityPolicy.cpp
   src/v20190924/model/ReplicationFilter.cpp
+  src/v20190924/model/CreateInstanceTokenResponse.cpp
   )
 
 set(tcr_include

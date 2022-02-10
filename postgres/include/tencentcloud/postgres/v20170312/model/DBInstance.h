@@ -713,14 +713,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool DBMajorVersionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DBNodeSet 
+                     * 获取Instance node information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return DBNodeSet Instance node information
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<DBNode> GetDBNodeSet() const;
 
                     /**
-                     * 设置
-                     * @param DBNodeSet 
+                     * 设置Instance node information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param DBNodeSet Instance node information
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetDBNodeSet(const std::vector<DBNode>& _dBNodeSet);
 
@@ -951,7 +955,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_dBMajorVersionHasBeenSet;
 
                     /**
-                     * 
+                     * Instance node information
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<DBNode> m_dBNodeSet;
                     bool m_dBNodeSetHasBeenSet;

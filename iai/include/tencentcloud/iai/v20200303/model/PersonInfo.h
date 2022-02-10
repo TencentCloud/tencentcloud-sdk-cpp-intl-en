@@ -137,18 +137,18 @@ namespace TencentCloud
                     bool FaceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Person creation time and date (`CreationTimestamp`), whose value is the number of milliseconds between the UNIX epoch time and the group creation time. 
-The UNIX epoch time is 00:00:00, Thursday, January 1, 1970, Coordinated Universal Time (UTC). For more information, please see the UNIX time document.
-                     * @return CreationTimestamp Person creation time and date (`CreationTimestamp`), whose value is the number of milliseconds between the UNIX epoch time and the group creation time. 
-The UNIX epoch time is 00:00:00, Thursday, January 1, 1970, Coordinated Universal Time (UTC). For more information, please see the UNIX time document.
+                     * 获取Person creation time, measured in the number of milliseconds elapsed since the Unix epoch 
+The Unix epoch is 00:00:00, Thursday, January 1, 1970, Coordinated Universal Time (UTC). For more information, please see the Unix time document.
+                     * @return CreationTimestamp Person creation time, measured in the number of milliseconds elapsed since the Unix epoch 
+The Unix epoch is 00:00:00, Thursday, January 1, 1970, Coordinated Universal Time (UTC). For more information, please see the Unix time document.
                      */
                     uint64_t GetCreationTimestamp() const;
 
                     /**
-                     * 设置Person creation time and date (`CreationTimestamp`), whose value is the number of milliseconds between the UNIX epoch time and the group creation time. 
-The UNIX epoch time is 00:00:00, Thursday, January 1, 1970, Coordinated Universal Time (UTC). For more information, please see the UNIX time document.
-                     * @param CreationTimestamp Person creation time and date (`CreationTimestamp`), whose value is the number of milliseconds between the UNIX epoch time and the group creation time. 
-The UNIX epoch time is 00:00:00, Thursday, January 1, 1970, Coordinated Universal Time (UTC). For more information, please see the UNIX time document.
+                     * 设置Person creation time, measured in the number of milliseconds elapsed since the Unix epoch 
+The Unix epoch is 00:00:00, Thursday, January 1, 1970, Coordinated Universal Time (UTC). For more information, please see the Unix time document.
+                     * @param CreationTimestamp Person creation time, measured in the number of milliseconds elapsed since the Unix epoch 
+The Unix epoch is 00:00:00, Thursday, January 1, 1970, Coordinated Universal Time (UTC). For more information, please see the Unix time document.
                      */
                     void SetCreationTimestamp(const uint64_t& _creationTimestamp);
 
@@ -191,8 +191,8 @@ The UNIX epoch time is 00:00:00, Thursday, January 1, 1970, Coordinated Universa
                     bool m_faceIdsHasBeenSet;
 
                     /**
-                     * Person creation time and date (`CreationTimestamp`), whose value is the number of milliseconds between the UNIX epoch time and the group creation time. 
-The UNIX epoch time is 00:00:00, Thursday, January 1, 1970, Coordinated Universal Time (UTC). For more information, please see the UNIX time document.
+                     * Person creation time, measured in the number of milliseconds elapsed since the Unix epoch 
+The Unix epoch is 00:00:00, Thursday, January 1, 1970, Coordinated Universal Time (UTC). For more information, please see the Unix time document.
                      */
                     uint64_t m_creationTimestamp;
                     bool m_creationTimestampHasBeenSet;

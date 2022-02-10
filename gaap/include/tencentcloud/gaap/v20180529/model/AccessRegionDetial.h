@@ -173,14 +173,58 @@ namespace TencentCloud
                     bool IDCTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FeatureBitmap 
+                     * 获取Feature bitmap. Valid values:
+`0`: disable the feature;
+`1`: enable the feature.
+Each bit in the bitmap represents a feature:
+1st bit: layer-4 acceleration;
+2nd bit: layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: dedicated BGP access;
+6th bit: non-BGP access;
+7th bit: QoS acceleration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return FeatureBitmap Feature bitmap. Valid values:
+`0`: disable the feature;
+`1`: enable the feature.
+Each bit in the bitmap represents a feature:
+1st bit: layer-4 acceleration;
+2nd bit: layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: dedicated BGP access;
+6th bit: non-BGP access;
+7th bit: QoS acceleration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     int64_t GetFeatureBitmap() const;
 
                     /**
-                     * 设置
-                     * @param FeatureBitmap 
+                     * 设置Feature bitmap. Valid values:
+`0`: disable the feature;
+`1`: enable the feature.
+Each bit in the bitmap represents a feature:
+1st bit: layer-4 acceleration;
+2nd bit: layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: dedicated BGP access;
+6th bit: non-BGP access;
+7th bit: QoS acceleration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param FeatureBitmap Feature bitmap. Valid values:
+`0`: disable the feature;
+`1`: enable the feature.
+Each bit in the bitmap represents a feature:
+1st bit: layer-4 acceleration;
+2nd bit: layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: dedicated BGP access;
+6th bit: non-BGP access;
+7th bit: QoS acceleration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetFeatureBitmap(const int64_t& _featureBitmap);
 
@@ -235,7 +279,18 @@ namespace TencentCloud
                     bool m_iDCTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Feature bitmap. Valid values:
+`0`: disable the feature;
+`1`: enable the feature.
+Each bit in the bitmap represents a feature:
+1st bit: layer-4 acceleration;
+2nd bit: layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: dedicated BGP access;
+6th bit: non-BGP access;
+7th bit: QoS acceleration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     int64_t m_featureBitmap;
                     bool m_featureBitmapHasBeenSet;

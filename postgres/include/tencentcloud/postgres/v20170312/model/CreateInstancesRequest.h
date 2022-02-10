@@ -459,14 +459,14 @@ namespace TencentCloud
                     bool DBKernelVersionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DBNodeSet 
+                     * 获取Instance node information, which is required if you purchase a multi-AZ deployed instance.
+                     * @return DBNodeSet Instance node information, which is required if you purchase a multi-AZ deployed instance.
                      */
                     std::vector<DBNode> GetDBNodeSet() const;
 
                     /**
-                     * 设置
-                     * @param DBNodeSet 
+                     * 设置Instance node information, which is required if you purchase a multi-AZ deployed instance.
+                     * @param DBNodeSet Instance node information, which is required if you purchase a multi-AZ deployed instance.
                      */
                     void SetDBNodeSet(const std::vector<DBNode>& _dBNodeSet);
 
@@ -617,7 +617,7 @@ namespace TencentCloud
                     bool m_dBKernelVersionHasBeenSet;
 
                     /**
-                     * 
+                     * Instance node information, which is required if you purchase a multi-AZ deployed instance.
                      */
                     std::vector<DBNode> m_dBNodeSet;
                     bool m_dBNodeSetHasBeenSet;

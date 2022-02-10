@@ -62,14 +62,14 @@ namespace TencentCloud
                     bool AutoScalingGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取List of application CLBs to modify.Up to 50 CLBs allowed.
-                     * @return ForwardLoadBalancers List of application CLBs to modify.Up to 50 CLBs allowed.
+                     * 获取List of application CLBs to modify. Up to 50 CLBs allowed.
+                     * @return ForwardLoadBalancers List of application CLBs to modify. Up to 50 CLBs allowed.
                      */
                     std::vector<ForwardLoadBalancer> GetForwardLoadBalancers() const;
 
                     /**
-                     * 设置List of application CLBs to modify.Up to 50 CLBs allowed.
-                     * @param ForwardLoadBalancers List of application CLBs to modify.Up to 50 CLBs allowed.
+                     * 设置List of application CLBs to modify. Up to 50 CLBs allowed.
+                     * @param ForwardLoadBalancers List of application CLBs to modify. Up to 50 CLBs allowed.
                      */
                     void SetForwardLoadBalancers(const std::vector<ForwardLoadBalancer>& _forwardLoadBalancers);
 
@@ -88,7 +88,7 @@ namespace TencentCloud
                     bool m_autoScalingGroupIdHasBeenSet;
 
                     /**
-                     * List of application CLBs to modify.Up to 50 CLBs allowed.
+                     * List of application CLBs to modify. Up to 50 CLBs allowed.
                      */
                     std::vector<ForwardLoadBalancer> m_forwardLoadBalancers;
                     bool m_forwardLoadBalancersHasBeenSet;
