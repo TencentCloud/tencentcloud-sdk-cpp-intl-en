@@ -178,14 +178,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool HealthyInfoHasBeenSet() const;
 
                     /**
-                     * 获取Cluster status. 0: creating; 1: normal; 2: deleting; 3: deleted; 5. creation failed; 6: deletion failed
-                     * @return Status Cluster status. 0: creating; 1: normal; 2: deleting; 3: deleted; 5. creation failed; 6: deletion failed
+                     * 获取Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
+                     * @return Status Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Cluster status. 0: creating; 1: normal; 2: deleting; 3: deleted; 5. creation failed; 6: deletion failed
-                     * @param Status Cluster status. 0: creating; 1: normal; 2: deleting; 3: deleted; 5. creation failed; 6: deletion failed
+                     * 设置Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
+                     * @param Status Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
                      */
                     void SetStatus(const int64_t& _status);
 
@@ -617,7 +617,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_healthyInfoHasBeenSet;
 
                     /**
-                     * Cluster status. 0: creating; 1: normal; 2: deleting; 3: deleted; 5. creation failed; 6: deletion failed
+                     * Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;

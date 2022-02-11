@@ -1846,42 +1846,85 @@ TdmqClient::DescribeEnvironmentsOutcomeCallable TdmqClient::DescribeEnvironments
     return task->get_future();
 }
 
-TdmqClient::DescribeProducersOutcome TdmqClient::DescribeProducers(const DescribeProducersRequest &request)
+TdmqClient::DescribePublisherSummaryOutcome TdmqClient::DescribePublisherSummary(const DescribePublisherSummaryRequest &request)
 {
-    auto outcome = MakeRequest(request, "DescribeProducers");
+    auto outcome = MakeRequest(request, "DescribePublisherSummary");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        DescribeProducersResponse rsp = DescribeProducersResponse();
+        DescribePublisherSummaryResponse rsp = DescribePublisherSummaryResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return DescribeProducersOutcome(rsp);
+            return DescribePublisherSummaryOutcome(rsp);
         else
-            return DescribeProducersOutcome(o.GetError());
+            return DescribePublisherSummaryOutcome(o.GetError());
     }
     else
     {
-        return DescribeProducersOutcome(outcome.GetError());
+        return DescribePublisherSummaryOutcome(outcome.GetError());
     }
 }
 
-void TdmqClient::DescribeProducersAsync(const DescribeProducersRequest& request, const DescribeProducersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void TdmqClient::DescribePublisherSummaryAsync(const DescribePublisherSummaryRequest& request, const DescribePublisherSummaryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
     auto fn = [this, request, handler, context]()
     {
-        handler(this, request, this->DescribeProducers(request), context);
+        handler(this, request, this->DescribePublisherSummary(request), context);
     };
 
     Executor::GetInstance()->Submit(new Runnable(fn));
 }
 
-TdmqClient::DescribeProducersOutcomeCallable TdmqClient::DescribeProducersCallable(const DescribeProducersRequest &request)
+TdmqClient::DescribePublisherSummaryOutcomeCallable TdmqClient::DescribePublisherSummaryCallable(const DescribePublisherSummaryRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeProducersOutcome()>>(
+    auto task = std::make_shared<std::packaged_task<DescribePublisherSummaryOutcome()>>(
         [this, request]()
         {
-            return this->DescribeProducers(request);
+            return this->DescribePublisherSummary(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TdmqClient::DescribePublishersOutcome TdmqClient::DescribePublishers(const DescribePublishersRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribePublishers");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribePublishersResponse rsp = DescribePublishersResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribePublishersOutcome(rsp);
+        else
+            return DescribePublishersOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribePublishersOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DescribePublishersAsync(const DescribePublishersRequest& request, const DescribePublishersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribePublishers(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TdmqClient::DescribePublishersOutcomeCallable TdmqClient::DescribePublishersCallable(const DescribePublishersRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribePublishersOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribePublishers(request);
         }
     );
 

@@ -78,6 +78,24 @@ namespace TencentCloud
                      */
                     bool MetricNameHasBeenSet() const;
 
+                    /**
+                     * 获取Filter by dimension. This parameter is optional.
+                     * @return Dimensions Filter by dimension. This parameter is optional.
+                     */
+                    std::vector<std::string> GetDimensions() const;
+
+                    /**
+                     * 设置Filter by dimension. This parameter is optional.
+                     * @param Dimensions Filter by dimension. This parameter is optional.
+                     */
+                    void SetDimensions(const std::vector<std::string>& _dimensions);
+
+                    /**
+                     * 判断参数 Dimensions 是否已赋值
+                     * @return Dimensions 是否已赋值
+                     */
+                    bool DimensionsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -91,6 +109,12 @@ namespace TencentCloud
                      */
                     std::string m_metricName;
                     bool m_metricNameHasBeenSet;
+
+                    /**
+                     * Filter by dimension. This parameter is optional.
+                     */
+                    std::vector<std::string> m_dimensions;
+                    bool m_dimensionsHasBeenSet;
 
                 };
             }

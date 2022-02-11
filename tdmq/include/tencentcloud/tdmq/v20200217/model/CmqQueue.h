@@ -632,6 +632,72 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool NamespaceNameHasBeenSet() const;
 
+                    /**
+                     * 获取Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return Status Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetStatus() const;
+
+                    /**
+                     * 设置Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param Status Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetStatus(const int64_t& _status);
+
+                    /**
+                     * 判断参数 Status 是否已赋值
+                     * @return Status 是否已赋值
+                     */
+                    bool StatusHasBeenSet() const;
+
+                    /**
+                     * 获取The maximum number of unacknowledged messages.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return MaxUnackedMsgNum The maximum number of unacknowledged messages.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetMaxUnackedMsgNum() const;
+
+                    /**
+                     * 设置The maximum number of unacknowledged messages.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param MaxUnackedMsgNum The maximum number of unacknowledged messages.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetMaxUnackedMsgNum(const int64_t& _maxUnackedMsgNum);
+
+                    /**
+                     * 判断参数 MaxUnackedMsgNum 是否已赋值
+                     * @return MaxUnackedMsgNum 是否已赋值
+                     */
+                    bool MaxUnackedMsgNumHasBeenSet() const;
+
+                    /**
+                     * 获取Maximum size of heaped messages in bytes.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return MaxMsgBacklogSize Maximum size of heaped messages in bytes.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetMaxMsgBacklogSize() const;
+
+                    /**
+                     * 设置Maximum size of heaped messages in bytes.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param MaxMsgBacklogSize Maximum size of heaped messages in bytes.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetMaxMsgBacklogSize(const int64_t& _maxMsgBacklogSize);
+
+                    /**
+                     * 判断参数 MaxMsgBacklogSize 是否已赋值
+                     * @return MaxMsgBacklogSize 是否已赋值
+                     */
+                    bool MaxMsgBacklogSizeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -819,6 +885,27 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_namespaceName;
                     bool m_namespaceNameHasBeenSet;
+
+                    /**
+                     * Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_status;
+                    bool m_statusHasBeenSet;
+
+                    /**
+                     * The maximum number of unacknowledged messages.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_maxUnackedMsgNum;
+                    bool m_maxUnackedMsgNumHasBeenSet;
+
+                    /**
+                     * Maximum size of heaped messages in bytes.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_maxMsgBacklogSize;
+                    bool m_maxMsgBacklogSizeHasBeenSet;
 
                 };
             }

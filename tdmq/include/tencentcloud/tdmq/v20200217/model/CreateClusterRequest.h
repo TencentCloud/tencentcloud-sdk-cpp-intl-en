@@ -98,14 +98,14 @@ namespace TencentCloud
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取List of cluster tags
-                     * @return Tags List of cluster tags
+                     * 获取Cluster tag list (deprecated).
+                     * @return Tags Cluster tag list (deprecated).
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置List of cluster tags
-                     * @param Tags List of cluster tags
+                     * 设置Cluster tag list (deprecated).
+                     * @param Tags Cluster tag list (deprecated).
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
@@ -154,7 +154,7 @@ namespace TencentCloud
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * List of cluster tags
+                     * Cluster tag list (deprecated).
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;

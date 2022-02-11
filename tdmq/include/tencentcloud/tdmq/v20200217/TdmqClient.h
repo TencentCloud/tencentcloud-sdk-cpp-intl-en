@@ -107,8 +107,10 @@
 #include <tencentcloud/tdmq/v20200217/model/DescribeEnvironmentRolesResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeEnvironmentsRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeEnvironmentsResponse.h>
-#include <tencentcloud/tdmq/v20200217/model/DescribeProducersRequest.h>
-#include <tencentcloud/tdmq/v20200217/model/DescribeProducersResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribePublisherSummaryRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribePublisherSummaryResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribePublishersRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribePublishersResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQClusterRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQClusterResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQClustersRequest.h>
@@ -307,9 +309,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeEnvironmentsResponse> DescribeEnvironmentsOutcome;
                 typedef std::future<DescribeEnvironmentsOutcome> DescribeEnvironmentsOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DescribeEnvironmentsRequest&, DescribeEnvironmentsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeEnvironmentsAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeProducersResponse> DescribeProducersOutcome;
-                typedef std::future<DescribeProducersOutcome> DescribeProducersOutcomeCallable;
-                typedef std::function<void(const TdmqClient*, const Model::DescribeProducersRequest&, DescribeProducersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProducersAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribePublisherSummaryResponse> DescribePublisherSummaryOutcome;
+                typedef std::future<DescribePublisherSummaryOutcome> DescribePublisherSummaryOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::DescribePublisherSummaryRequest&, DescribePublisherSummaryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePublisherSummaryAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribePublishersResponse> DescribePublishersOutcome;
+                typedef std::future<DescribePublishersOutcome> DescribePublishersOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::DescribePublishersRequest&, DescribePublishersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePublishersAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeRocketMQClusterResponse> DescribeRocketMQClusterOutcome;
                 typedef std::future<DescribeRocketMQClusterOutcome> DescribeRocketMQClusterOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DescribeRocketMQClusterRequest&, DescribeRocketMQClusterOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRocketMQClusterAsyncHandler;
@@ -779,13 +784,22 @@ namespace TencentCloud
                 DescribeEnvironmentsOutcomeCallable DescribeEnvironmentsCallable(const Model::DescribeEnvironmentsRequest& request);
 
                 /**
-                 *This API is used to get the list of producers. Only online producers will be displayed.
-                 * @param req DescribeProducersRequest
-                 * @return DescribeProducersOutcome
+                 *This API is used to obtain message production overview information.
+                 * @param req DescribePublisherSummaryRequest
+                 * @return DescribePublisherSummaryOutcome
                  */
-                DescribeProducersOutcome DescribeProducers(const Model::DescribeProducersRequest &request);
-                void DescribeProducersAsync(const Model::DescribeProducersRequest& request, const DescribeProducersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeProducersOutcomeCallable DescribeProducersCallable(const Model::DescribeProducersRequest& request);
+                DescribePublisherSummaryOutcome DescribePublisherSummary(const Model::DescribePublisherSummaryRequest &request);
+                void DescribePublisherSummaryAsync(const Model::DescribePublisherSummaryRequest& request, const DescribePublisherSummaryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribePublisherSummaryOutcomeCallable DescribePublisherSummaryCallable(const Model::DescribePublisherSummaryRequest& request);
+
+                /**
+                 *This API is used to obtain the list of producer information.
+                 * @param req DescribePublishersRequest
+                 * @return DescribePublishersOutcome
+                 */
+                DescribePublishersOutcome DescribePublishers(const Model::DescribePublishersRequest &request);
+                void DescribePublishersAsync(const Model::DescribePublishersRequest& request, const DescribePublishersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribePublishersOutcomeCallable DescribePublishersCallable(const Model::DescribePublishersRequest& request);
 
                 /**
                  *This API is used to get the information of a specific RocketMQ cluster.
