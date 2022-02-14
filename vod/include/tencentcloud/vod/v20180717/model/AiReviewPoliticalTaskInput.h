@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input parameter type of politically sensitive information detection task in content audit
+                * Input parameters for intelligent recognition of politically sensitive content
                 */
                 class AiReviewPoliticalTaskInput : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Politically sensitive information detection template ID.
-                     * @return Definition Politically sensitive information detection template ID.
+                     * 获取ID of the template for recognition of politically sensitive content
+                     * @return Definition ID of the template for recognition of politically sensitive content
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置Politically sensitive information detection template ID.
-                     * @param Definition Politically sensitive information detection template ID.
+                     * 设置ID of the template for recognition of politically sensitive content
+                     * @param Definition ID of the template for recognition of politically sensitive content
                      */
                     void SetDefinition(const uint64_t& _definition);
 
@@ -67,7 +67,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Politically sensitive information detection template ID.
+                     * ID of the template for recognition of politically sensitive content
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

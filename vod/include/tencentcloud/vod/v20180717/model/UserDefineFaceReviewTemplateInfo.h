@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Control parameter of custom figure audit task
+                * Parameters for custom facial recognition
                 */
                 class UserDefineFaceReviewTemplateInfo : public AbstractModel
                 {
@@ -47,22 +47,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Switch of custom figure audit task. Valid values:
-<li>ON: enables custom figure audit task;</li>
-<li>OFF: disables custom figure audit task.</li>
-                     * @return Switch Switch of custom figure audit task. Valid values:
-<li>ON: enables custom figure audit task;</li>
-<li>OFF: disables custom figure audit task.</li>
+                     * 获取Whether to enable custom facial recognition. Valid values:
+<li>ON</li>
+<li>OFF</li>
+                     * @return Switch Whether to enable custom facial recognition. Valid values:
+<li>ON</li>
+<li>OFF</li>
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Switch of custom figure audit task. Valid values:
-<li>ON: enables custom figure audit task;</li>
-<li>OFF: disables custom figure audit task.</li>
-                     * @param Switch Switch of custom figure audit task. Valid values:
-<li>ON: enables custom figure audit task;</li>
-<li>OFF: disables custom figure audit task.</li>
+                     * 设置Whether to enable custom facial recognition. Valid values:
+<li>ON</li>
+<li>OFF</li>
+                     * @param Switch Whether to enable custom facial recognition. Valid values:
+<li>ON</li>
+<li>OFF</li>
                      */
                     void SetSwitch(const std::string& _switch);
 
@@ -73,18 +73,18 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Custom figure filter tag. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. To use the tag filtering feature, you need to add the corresponding tag when adding materials for the custom figure library.
-There can be up to 10 tags, each with a length limit of 16 characters.
-                     * @return LabelSet Custom figure filter tag. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. To use the tag filtering feature, you need to add the corresponding tag when adding materials for the custom figure library.
-There can be up to 10 tags, each with a length limit of 16 characters.
+                     * 获取Filter labels for custom facial recognition. Results containing the specified labels are returned. If no labels are specified, all results are returned. To filter by labels, specify the labels when adding custom facial libraries.
+Up to 10 labels are allowed, each containing no more than 16 characters.
+                     * @return LabelSet Filter labels for custom facial recognition. Results containing the specified labels are returned. If no labels are specified, all results are returned. To filter by labels, specify the labels when adding custom facial libraries.
+Up to 10 labels are allowed, each containing no more than 16 characters.
                      */
                     std::vector<std::string> GetLabelSet() const;
 
                     /**
-                     * 设置Custom figure filter tag. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. To use the tag filtering feature, you need to add the corresponding tag when adding materials for the custom figure library.
-There can be up to 10 tags, each with a length limit of 16 characters.
-                     * @param LabelSet Custom figure filter tag. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. To use the tag filtering feature, you need to add the corresponding tag when adding materials for the custom figure library.
-There can be up to 10 tags, each with a length limit of 16 characters.
+                     * 设置Filter labels for custom facial recognition. Results containing the specified labels are returned. If no labels are specified, all results are returned. To filter by labels, specify the labels when adding custom facial libraries.
+Up to 10 labels are allowed, each containing no more than 16 characters.
+                     * @param LabelSet Filter labels for custom facial recognition. Results containing the specified labels are returned. If no labels are specified, all results are returned. To filter by labels, specify the labels when adding custom facial libraries.
+Up to 10 labels are allowed, each containing no more than 16 characters.
                      */
                     void SetLabelSet(const std::vector<std::string>& _labelSet);
 
@@ -95,14 +95,14 @@ There can be up to 10 tags, each with a length limit of 16 characters.
                     bool LabelSetHasBeenSet() const;
 
                     /**
-                     * 获取Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 97 will be used by default. Value range: 0-100.
-                     * @return BlockConfidence Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 97 will be used by default. Value range: 0-100.
+                     * 获取Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `97` will be used by default. Value range: 0-100
+                     * @return BlockConfidence Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `97` will be used by default. Value range: 0-100
                      */
                     int64_t GetBlockConfidence() const;
 
                     /**
-                     * 设置Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 97 will be used by default. Value range: 0-100.
-                     * @param BlockConfidence Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 97 will be used by default. Value range: 0-100.
+                     * 设置Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `97` will be used by default. Value range: 0-100
+                     * @param BlockConfidence Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `97` will be used by default. Value range: 0-100
                      */
                     void SetBlockConfidence(const int64_t& _blockConfidence);
 
@@ -113,14 +113,14 @@ There can be up to 10 tags, each with a length limit of 16 characters.
                     bool BlockConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 95 will be used by default. Value range: 0-100.
-                     * @return ReviewConfidence Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 95 will be used by default. Value range: 0-100.
+                     * 获取Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `95` will be used by default. Value range: 0-100
+                     * @return ReviewConfidence Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `95` will be used by default. Value range: 0-100
                      */
                     int64_t GetReviewConfidence() const;
 
                     /**
-                     * 设置Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 95 will be used by default. Value range: 0-100.
-                     * @param ReviewConfidence Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 95 will be used by default. Value range: 0-100.
+                     * 设置Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `95` will be used by default. Value range: 0-100
+                     * @param ReviewConfidence Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `95` will be used by default. Value range: 0-100
                      */
                     void SetReviewConfidence(const int64_t& _reviewConfidence);
 
@@ -133,28 +133,28 @@ There can be up to 10 tags, each with a length limit of 16 characters.
                 private:
 
                     /**
-                     * Switch of custom figure audit task. Valid values:
-<li>ON: enables custom figure audit task;</li>
-<li>OFF: disables custom figure audit task.</li>
+                     * Whether to enable custom facial recognition. Valid values:
+<li>ON</li>
+<li>OFF</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Custom figure filter tag. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. To use the tag filtering feature, you need to add the corresponding tag when adding materials for the custom figure library.
-There can be up to 10 tags, each with a length limit of 16 characters.
+                     * Filter labels for custom facial recognition. Results containing the specified labels are returned. If no labels are specified, all results are returned. To filter by labels, specify the labels when adding custom facial libraries.
+Up to 10 labels are allowed, each containing no more than 16 characters.
                      */
                     std::vector<std::string> m_labelSet;
                     bool m_labelSetHasBeenSet;
 
                     /**
-                     * Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 97 will be used by default. Value range: 0-100.
+                     * Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `97` will be used by default. Value range: 0-100
                      */
                     int64_t m_blockConfidence;
                     bool m_blockConfidenceHasBeenSet;
 
                     /**
-                     * Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 95 will be used by default. Value range: 0-100.
+                     * Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `95` will be used by default. Value range: 0-100
                      */
                     int64_t m_reviewConfidence;
                     bool m_reviewConfidenceHasBeenSet;

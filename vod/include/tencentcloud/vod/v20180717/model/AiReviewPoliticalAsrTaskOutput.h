@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * ASR-detected politically sensitive information in speech
+                * Output for ASR-based recognition of politically sensitive content
                 */
                 class AiReviewPoliticalAsrTaskOutput : public AbstractModel
                 {
@@ -48,14 +48,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Score of ASR-detected politically sensitive information in speech between 0 and 100.
-                     * @return Confidence Score of ASR-detected politically sensitive information in speech between 0 and 100.
+                     * 获取Confidence score for the ASR-detected politically sensitive content. Value range: 0-100
+                     * @return Confidence Confidence score for the ASR-detected politically sensitive content. Value range: 0-100
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Score of ASR-detected politically sensitive information in speech between 0 and 100.
-                     * @param Confidence Score of ASR-detected politically sensitive information in speech between 0 and 100.
+                     * 设置Confidence score for the ASR-detected politically sensitive content. Value range: 0-100
+                     * @param Confidence Confidence score for the ASR-detected politically sensitive content. Value range: 0-100
                      */
                     void SetConfidence(const double& _confidence);
 
@@ -66,26 +66,26 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Suggestion for ASR-detected politically sensitive information in speech. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-                     * @return Suggestion Suggestion for ASR-detected politically sensitive information in speech. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+                     * 获取Processing suggestion for the ASR-detected politically sensitive content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
+                     * @return Suggestion Processing suggestion for the ASR-detected politically sensitive content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
                      */
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置Suggestion for ASR-detected politically sensitive information in speech. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-                     * @param Suggestion Suggestion for ASR-detected politically sensitive information in speech. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+                     * 设置Processing suggestion for the ASR-detected politically sensitive content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
+                     * @param Suggestion Processing suggestion for the ASR-detected politically sensitive content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
                      */
                     void SetSuggestion(const std::string& _suggestion);
 
@@ -96,17 +96,17 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取List of video segments that contain ASR-detected politically sensitive information
+                     * 获取List of video segments that contain ASR-detected politically sensitive content
 <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
-                     * @return SegmentSet List of video segments that contain ASR-detected politically sensitive information
+                     * @return SegmentSet List of video segments that contain ASR-detected politically sensitive content
 <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
                      */
                     std::vector<MediaContentReviewAsrTextSegmentItem> GetSegmentSet() const;
 
                     /**
-                     * 设置List of video segments that contain ASR-detected politically sensitive information
+                     * 设置List of video segments that contain ASR-detected politically sensitive content
 <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
-                     * @param SegmentSet List of video segments that contain ASR-detected politically sensitive information
+                     * @param SegmentSet List of video segments that contain ASR-detected politically sensitive content
 <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
                      */
                     void SetSegmentSet(const std::vector<MediaContentReviewAsrTextSegmentItem>& _segmentSet);
@@ -118,14 +118,14 @@ namespace TencentCloud
                     bool SegmentSetHasBeenSet() const;
 
                     /**
-                     * 获取URL to the file for video segments that contain ASR-detected politically sensitive information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
-                     * @return SegmentSetFileUrl URL to the file for video segments that contain ASR-detected politically sensitive information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+                     * 获取URL to the file for video segments that contain ASR-detected politically sensitive content. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+                     * @return SegmentSetFileUrl URL to the file for video segments that contain ASR-detected politically sensitive content. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
                      */
                     std::string GetSegmentSetFileUrl() const;
 
                     /**
-                     * 设置URL to the file for video segments that contain ASR-detected politically sensitive information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
-                     * @param SegmentSetFileUrl URL to the file for video segments that contain ASR-detected politically sensitive information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+                     * 设置URL to the file for video segments that contain ASR-detected politically sensitive content. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+                     * @param SegmentSetFileUrl URL to the file for video segments that contain ASR-detected politically sensitive content. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
                      */
                     void SetSegmentSetFileUrl(const std::string& _segmentSetFileUrl);
 
@@ -136,14 +136,14 @@ namespace TencentCloud
                     bool SegmentSetFileUrlHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time of the URL to the file for video segments that contain ASR-detected politically sensitive information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
-                     * @return SegmentSetFileUrlExpireTime Expiration time of the URL to the file for video segments that contain ASR-detected politically sensitive information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+                     * 获取Expiration time of the URL to the file for video segments that contain ASR-detected politically sensitive content, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+                     * @return SegmentSetFileUrlExpireTime Expiration time of the URL to the file for video segments that contain ASR-detected politically sensitive content, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
                      */
                     std::string GetSegmentSetFileUrlExpireTime() const;
 
                     /**
-                     * 设置Expiration time of the URL to the file for video segments that contain ASR-detected politically sensitive information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
-                     * @param SegmentSetFileUrlExpireTime Expiration time of the URL to the file for video segments that contain ASR-detected politically sensitive information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+                     * 设置Expiration time of the URL to the file for video segments that contain ASR-detected politically sensitive content, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+                     * @param SegmentSetFileUrlExpireTime Expiration time of the URL to the file for video segments that contain ASR-detected politically sensitive content, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
                      */
                     void SetSegmentSetFileUrlExpireTime(const std::string& _segmentSetFileUrlExpireTime);
 
@@ -156,35 +156,35 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Score of ASR-detected politically sensitive information in speech between 0 and 100.
+                     * Confidence score for the ASR-detected politically sensitive content. Value range: 0-100
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * Suggestion for ASR-detected politically sensitive information in speech. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+                     * Processing suggestion for the ASR-detected politically sensitive content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
                      */
                     std::string m_suggestion;
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * List of video segments that contain ASR-detected politically sensitive information
+                     * List of video segments that contain ASR-detected politically sensitive content
 <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
                      */
                     std::vector<MediaContentReviewAsrTextSegmentItem> m_segmentSet;
                     bool m_segmentSetHasBeenSet;
 
                     /**
-                     * URL to the file for video segments that contain ASR-detected politically sensitive information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+                     * URL to the file for video segments that contain ASR-detected politically sensitive content. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
                      */
                     std::string m_segmentSetFileUrl;
                     bool m_segmentSetFileUrlHasBeenSet;
 
                     /**
-                     * Expiration time of the URL to the file for video segments that contain ASR-detected politically sensitive information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+                     * Expiration time of the URL to the file for video segments that contain ASR-detected politically sensitive content, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
                      */
                     std::string m_segmentSetFileUrlExpireTime;
                     bool m_segmentSetFileUrlExpireTimeHasBeenSet;

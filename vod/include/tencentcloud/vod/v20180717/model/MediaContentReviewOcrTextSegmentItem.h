@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Suspected segment identified during OCR-based text audit in content audit
+                * Video segment containing OCR-detected suspicious content
                 */
                 class MediaContentReviewOcrTextSegmentItem : public AbstractModel
                 {
@@ -113,30 +113,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Suggestion for suspected segment audit. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Suggestion Suggestion for suspected segment audit. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Processing suggestion for the detected suspicious content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
+                     * @return Suggestion Processing suggestion for the detected suspicious content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
                      */
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置Suggestion for suspected segment audit. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Suggestion Suggestion for suspected segment audit. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Processing suggestion for the detected suspicious content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
+                     * @param Suggestion Processing suggestion for the detected suspicious content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
                      */
                     void SetSuggestion(const std::string& _suggestion);
 
@@ -254,11 +250,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * Suggestion for suspected segment audit. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Processing suggestion for the detected suspicious content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
                      */
                     std::string m_suggestion;
                     bool m_suggestionHasBeenSet;

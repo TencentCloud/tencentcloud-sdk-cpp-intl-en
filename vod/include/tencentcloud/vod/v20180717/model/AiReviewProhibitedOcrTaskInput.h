@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input parameter type of OCR-based prohibited information detection in text task in content audit
+                * Input parameters for OCR-based recognition of banned content
                 */
                 class AiReviewProhibitedOcrTaskInput : public AbstractModel
                 {

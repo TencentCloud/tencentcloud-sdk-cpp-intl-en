@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Summary metadata of WeChat Mini Program audit.
+                *  
                 */
                 class MediaMiniProgramReviewElem : public AbstractModel
                 {

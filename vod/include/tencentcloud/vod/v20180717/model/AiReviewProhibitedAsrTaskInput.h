@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input parameter type of ASR-based prohibited information detection in speech task in content audit
+                * Input parameters for ASR-based recognition of banned content
                 */
                 class AiReviewProhibitedAsrTaskInput : public AbstractModel
                 {

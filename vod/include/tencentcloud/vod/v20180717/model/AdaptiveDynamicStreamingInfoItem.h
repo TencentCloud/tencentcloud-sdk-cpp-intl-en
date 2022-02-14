@@ -118,6 +118,36 @@ namespace TencentCloud
                      */
                     bool UrlHasBeenSet() const;
 
+                    /**
+                     * 获取File size (bytes)
+<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
+<li>If the file is a DASH file, the value of this parameter is the sum of the size of the MPD and segment files.</li>
+<li><font color=red>Note</font>: For adaptive bitrate streaming files generated before 2022-01-10T16:00:00Z, the value of this parameter is `0`.</li>
+                     * @return Size File size (bytes)
+<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
+<li>If the file is a DASH file, the value of this parameter is the sum of the size of the MPD and segment files.</li>
+<li><font color=red>Note</font>: For adaptive bitrate streaming files generated before 2022-01-10T16:00:00Z, the value of this parameter is `0`.</li>
+                     */
+                    int64_t GetSize() const;
+
+                    /**
+                     * 设置File size (bytes)
+<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
+<li>If the file is a DASH file, the value of this parameter is the sum of the size of the MPD and segment files.</li>
+<li><font color=red>Note</font>: For adaptive bitrate streaming files generated before 2022-01-10T16:00:00Z, the value of this parameter is `0`.</li>
+                     * @param Size File size (bytes)
+<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
+<li>If the file is a DASH file, the value of this parameter is the sum of the size of the MPD and segment files.</li>
+<li><font color=red>Note</font>: For adaptive bitrate streaming files generated before 2022-01-10T16:00:00Z, the value of this parameter is `0`.</li>
+                     */
+                    void SetSize(const int64_t& _size);
+
+                    /**
+                     * 判断参数 Size 是否已赋值
+                     * @return Size 是否已赋值
+                     */
+                    bool SizeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -143,6 +173,15 @@ namespace TencentCloud
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
+
+                    /**
+                     * File size (bytes)
+<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
+<li>If the file is a DASH file, the value of this parameter is the sum of the size of the MPD and segment files.</li>
+<li><font color=red>Note</font>: For adaptive bitrate streaming files generated before 2022-01-10T16:00:00Z, the value of this parameter is `0`.</li>
+                     */
+                    int64_t m_size;
+                    bool m_sizeHasBeenSet;
 
                 };
             }

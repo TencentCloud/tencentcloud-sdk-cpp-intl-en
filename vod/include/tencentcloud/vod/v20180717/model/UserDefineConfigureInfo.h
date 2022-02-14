@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Control parameter of custom audit task
+                * Parameters for custom recognition
                 */
                 class UserDefineConfigureInfo : public AbstractModel
                 {
@@ -50,18 +50,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Control parameter of custom figure audit.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return FaceReviewInfo Control parameter of custom figure audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Parameters for custom facial recognition
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @return FaceReviewInfo Parameters for custom facial recognition
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     UserDefineFaceReviewTemplateInfo GetFaceReviewInfo() const;
 
                     /**
-                     * 设置Control parameter of custom figure audit.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param FaceReviewInfo Control parameter of custom figure audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Parameters for custom facial recognition
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @param FaceReviewInfo Parameters for custom facial recognition
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     void SetFaceReviewInfo(const UserDefineFaceReviewTemplateInfo& _faceReviewInfo);
 
@@ -72,18 +72,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool FaceReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取Control parameter of custom speech audit.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return AsrReviewInfo Control parameter of custom speech audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Parameters for custom ASR-based recognition
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @return AsrReviewInfo Parameters for custom ASR-based recognition
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     UserDefineAsrTextReviewTemplateInfo GetAsrReviewInfo() const;
 
                     /**
-                     * 设置Control parameter of custom speech audit.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AsrReviewInfo Control parameter of custom speech audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Parameters for custom ASR-based recognition
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @param AsrReviewInfo Parameters for custom ASR-based recognition
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     void SetAsrReviewInfo(const UserDefineAsrTextReviewTemplateInfo& _asrReviewInfo);
 
@@ -94,18 +94,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool AsrReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取Control parameter of custom text audit.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return OcrReviewInfo Control parameter of custom text audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Parameters for custom OCR-based recognition
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @return OcrReviewInfo Parameters for custom OCR-based recognition
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     UserDefineOcrTextReviewTemplateInfo GetOcrReviewInfo() const;
 
                     /**
-                     * 设置Control parameter of custom text audit.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param OcrReviewInfo Control parameter of custom text audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Parameters for custom OCR-based recognition
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @param OcrReviewInfo Parameters for custom OCR-based recognition
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     void SetOcrReviewInfo(const UserDefineOcrTextReviewTemplateInfo& _ocrReviewInfo);
 
@@ -118,22 +118,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Control parameter of custom figure audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Parameters for custom facial recognition
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     UserDefineFaceReviewTemplateInfo m_faceReviewInfo;
                     bool m_faceReviewInfoHasBeenSet;
 
                     /**
-                     * Control parameter of custom speech audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Parameters for custom ASR-based recognition
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     UserDefineAsrTextReviewTemplateInfo m_asrReviewInfo;
                     bool m_asrReviewInfoHasBeenSet;
 
                     /**
-                     * Control parameter of custom text audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Parameters for custom OCR-based recognition
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     UserDefineOcrTextReviewTemplateInfo m_ocrReviewInfo;
                     bool m_ocrReviewInfoHasBeenSet;

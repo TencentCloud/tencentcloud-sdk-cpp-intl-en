@@ -266,18 +266,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MediaProcessResultSetHasBeenSet() const;
 
                     /**
-                     * 获取Execution status and result of video content audit task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return AiContentReviewResultSet Execution status and result of video content audit task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Status and result of an intelligent recognition task
+                     * @return AiContentReviewResultSet Status and result of an intelligent recognition task
                      */
                     std::vector<AiContentReviewResult> GetAiContentReviewResultSet() const;
 
                     /**
-                     * 设置Execution status and result of video content audit task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AiContentReviewResultSet Execution status and result of video content audit task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Status and result of an intelligent recognition task
+                     * @param AiContentReviewResultSet Status and result of an intelligent recognition task
                      */
                     void SetAiContentReviewResultSet(const std::vector<AiContentReviewResult>& _aiContentReviewResultSet);
 
@@ -501,8 +497,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_mediaProcessResultSetHasBeenSet;
 
                     /**
-                     * Execution status and result of video content audit task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Status and result of an intelligent recognition task
                      */
                     std::vector<AiContentReviewResult> m_aiContentReviewResultSet;
                     bool m_aiContentReviewResultSetHasBeenSet;

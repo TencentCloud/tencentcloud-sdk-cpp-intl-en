@@ -31,6 +31,8 @@
 #include <tencentcloud/tem/v20210701/model/CreateEnvironmentResponse.h>
 #include <tencentcloud/tem/v20210701/model/CreateResourceRequest.h>
 #include <tencentcloud/tem/v20210701/model/CreateResourceResponse.h>
+#include <tencentcloud/tem/v20210701/model/DeleteApplicationRequest.h>
+#include <tencentcloud/tem/v20210701/model/DeleteApplicationResponse.h>
 #include <tencentcloud/tem/v20210701/model/DeleteIngressRequest.h>
 #include <tencentcloud/tem/v20210701/model/DeleteIngressResponse.h>
 #include <tencentcloud/tem/v20210701/model/DeployApplicationRequest.h>
@@ -53,8 +55,14 @@
 #include <tencentcloud/tem/v20210701/model/ModifyEnvironmentResponse.h>
 #include <tencentcloud/tem/v20210701/model/ModifyIngressRequest.h>
 #include <tencentcloud/tem/v20210701/model/ModifyIngressResponse.h>
+#include <tencentcloud/tem/v20210701/model/RestartApplicationRequest.h>
+#include <tencentcloud/tem/v20210701/model/RestartApplicationResponse.h>
 #include <tencentcloud/tem/v20210701/model/RestartApplicationPodRequest.h>
 #include <tencentcloud/tem/v20210701/model/RestartApplicationPodResponse.h>
+#include <tencentcloud/tem/v20210701/model/RollingUpdateApplicationByVersionRequest.h>
+#include <tencentcloud/tem/v20210701/model/RollingUpdateApplicationByVersionResponse.h>
+#include <tencentcloud/tem/v20210701/model/StopApplicationRequest.h>
+#include <tencentcloud/tem/v20210701/model/StopApplicationResponse.h>
 
 
 namespace TencentCloud
@@ -81,6 +89,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateResourceResponse> CreateResourceOutcome;
                 typedef std::future<CreateResourceOutcome> CreateResourceOutcomeCallable;
                 typedef std::function<void(const TemClient*, const Model::CreateResourceRequest&, CreateResourceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateResourceAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteApplicationResponse> DeleteApplicationOutcome;
+                typedef std::future<DeleteApplicationOutcome> DeleteApplicationOutcomeCallable;
+                typedef std::function<void(const TemClient*, const Model::DeleteApplicationRequest&, DeleteApplicationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteApplicationAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteIngressResponse> DeleteIngressOutcome;
                 typedef std::future<DeleteIngressOutcome> DeleteIngressOutcomeCallable;
                 typedef std::function<void(const TemClient*, const Model::DeleteIngressRequest&, DeleteIngressOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteIngressAsyncHandler;
@@ -114,9 +125,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyIngressResponse> ModifyIngressOutcome;
                 typedef std::future<ModifyIngressOutcome> ModifyIngressOutcomeCallable;
                 typedef std::function<void(const TemClient*, const Model::ModifyIngressRequest&, ModifyIngressOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyIngressAsyncHandler;
+                typedef Outcome<Core::Error, Model::RestartApplicationResponse> RestartApplicationOutcome;
+                typedef std::future<RestartApplicationOutcome> RestartApplicationOutcomeCallable;
+                typedef std::function<void(const TemClient*, const Model::RestartApplicationRequest&, RestartApplicationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RestartApplicationAsyncHandler;
                 typedef Outcome<Core::Error, Model::RestartApplicationPodResponse> RestartApplicationPodOutcome;
                 typedef std::future<RestartApplicationPodOutcome> RestartApplicationPodOutcomeCallable;
                 typedef std::function<void(const TemClient*, const Model::RestartApplicationPodRequest&, RestartApplicationPodOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RestartApplicationPodAsyncHandler;
+                typedef Outcome<Core::Error, Model::RollingUpdateApplicationByVersionResponse> RollingUpdateApplicationByVersionOutcome;
+                typedef std::future<RollingUpdateApplicationByVersionOutcome> RollingUpdateApplicationByVersionOutcomeCallable;
+                typedef std::function<void(const TemClient*, const Model::RollingUpdateApplicationByVersionRequest&, RollingUpdateApplicationByVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RollingUpdateApplicationByVersionAsyncHandler;
+                typedef Outcome<Core::Error, Model::StopApplicationResponse> StopApplicationOutcome;
+                typedef std::future<StopApplicationOutcome> StopApplicationOutcomeCallable;
+                typedef std::function<void(const TemClient*, const Model::StopApplicationRequest&, StopApplicationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopApplicationAsyncHandler;
 
 
 
@@ -155,6 +175,18 @@ namespace TencentCloud
                 CreateResourceOutcome CreateResource(const Model::CreateResourceRequest &request);
                 void CreateResourceAsync(const Model::CreateResourceRequest& request, const CreateResourceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateResourceOutcomeCallable CreateResourceCallable(const Model::CreateResourceRequest& request);
+
+                /**
+                 *This API is used to delete an application.
+  - Stop the application if it’s running
+  - Delete resources associated with this application
+  - Delele the application
+                 * @param req DeleteApplicationRequest
+                 * @return DeleteApplicationOutcome
+                 */
+                DeleteApplicationOutcome DeleteApplication(const Model::DeleteApplicationRequest &request);
+                void DeleteApplicationAsync(const Model::DeleteApplicationRequest& request, const DeleteApplicationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteApplicationOutcomeCallable DeleteApplicationCallable(const Model::DeleteApplicationRequest& request);
 
                 /**
                  *This API is used to delete an ingress rule.
@@ -256,6 +288,15 @@ namespace TencentCloud
                 ModifyIngressOutcomeCallable ModifyIngressCallable(const Model::ModifyIngressRequest& request);
 
                 /**
+                 *This API is used to restart an application.
+                 * @param req RestartApplicationRequest
+                 * @return RestartApplicationOutcome
+                 */
+                RestartApplicationOutcome RestartApplication(const Model::RestartApplicationRequest &request);
+                void RestartApplicationAsync(const Model::RestartApplicationRequest& request, const RestartApplicationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RestartApplicationOutcomeCallable RestartApplicationCallable(const Model::RestartApplicationRequest& request);
+
+                /**
                  *This API is used to restart an application pod.
                  * @param req RestartApplicationPodRequest
                  * @return RestartApplicationPodOutcome
@@ -263,6 +304,24 @@ namespace TencentCloud
                 RestartApplicationPodOutcome RestartApplicationPod(const Model::RestartApplicationPodRequest &request);
                 void RestartApplicationPodAsync(const Model::RestartApplicationPodRequest& request, const RestartApplicationPodAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 RestartApplicationPodOutcomeCallable RestartApplicationPodCallable(const Model::RestartApplicationPodRequest& request);
+
+                /**
+                 *This API is used to configure the rolling update policy for an application.
+                 * @param req RollingUpdateApplicationByVersionRequest
+                 * @return RollingUpdateApplicationByVersionOutcome
+                 */
+                RollingUpdateApplicationByVersionOutcome RollingUpdateApplicationByVersion(const Model::RollingUpdateApplicationByVersionRequest &request);
+                void RollingUpdateApplicationByVersionAsync(const Model::RollingUpdateApplicationByVersionRequest& request, const RollingUpdateApplicationByVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RollingUpdateApplicationByVersionOutcomeCallable RollingUpdateApplicationByVersionCallable(const Model::RollingUpdateApplicationByVersionRequest& request);
+
+                /**
+                 *This API is used to stop an application.
+                 * @param req StopApplicationRequest
+                 * @return StopApplicationOutcome
+                 */
+                StopApplicationOutcome StopApplication(const Model::StopApplicationRequest &request);
+                void StopApplicationAsync(const Model::StopApplicationRequest& request, const StopApplicationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                StopApplicationOutcomeCallable StopApplicationCallable(const Model::StopApplicationRequest& request);
 
             };
         }

@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Result type of porn information detection task in content audit
+                * Result for intelligent recognition of pornographic content
                 */
                 class AiReviewTaskPornResult : public AbstractModel
                 {
@@ -125,14 +125,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Input of porn information detection task in content audit.
-                     * @return Input Input of porn information detection task in content audit.
+                     * 获取Input for intelligent recognition of pornographic content
+                     * @return Input Input for intelligent recognition of pornographic content
                      */
                     AiReviewPornTaskInput GetInput() const;
 
                     /**
-                     * 设置Input of porn information detection task in content audit.
-                     * @param Input Input of porn information detection task in content audit.
+                     * 设置Input for intelligent recognition of pornographic content
+                     * @param Input Input for intelligent recognition of pornographic content
                      */
                     void SetInput(const AiReviewPornTaskInput& _input);
 
@@ -143,18 +143,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output of porn information detection task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Output Output of porn information detection task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Output for intelligent recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @return Output Output for intelligent recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     AiReviewPornTaskOutput GetOutput() const;
 
                     /**
-                     * 设置Output of porn information detection task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Output Output of porn information detection task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Output for intelligent recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @param Output Output for intelligent recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     void SetOutput(const AiReviewPornTaskOutput& _output);
 
@@ -192,14 +192,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Input of porn information detection task in content audit.
+                     * Input for intelligent recognition of pornographic content
                      */
                     AiReviewPornTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output of porn information detection task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Output for intelligent recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     AiReviewPornTaskOutput m_output;
                     bool m_outputHasBeenSet;

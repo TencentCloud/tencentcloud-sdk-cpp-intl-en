@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Control parameter of politically sensitive information detection task
+                * Parameters for recognition of politically sensitive content
                 */
                 class PoliticalConfigureInfo : public AbstractModel
                 {
@@ -50,18 +50,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Control parameter of politically sensitive information detection in video image.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ImgReviewInfo Control parameter of politically sensitive information detection in video image.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Parameters for recognition of politically sensitive content in images
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @return ImgReviewInfo Parameters for recognition of politically sensitive content in images
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     PoliticalImgReviewTemplateInfo GetImgReviewInfo() const;
 
                     /**
-                     * 设置Control parameter of politically sensitive information detection in video image.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ImgReviewInfo Control parameter of politically sensitive information detection in video image.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Parameters for recognition of politically sensitive content in images
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @param ImgReviewInfo Parameters for recognition of politically sensitive content in images
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     void SetImgReviewInfo(const PoliticalImgReviewTemplateInfo& _imgReviewInfo);
 
@@ -72,18 +72,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ImgReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取Control parameter of politically sensitive information detection in speech.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return AsrReviewInfo Control parameter of politically sensitive information detection in speech.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Parameters for ASR-based recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @return AsrReviewInfo Parameters for ASR-based recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     PoliticalAsrReviewTemplateInfo GetAsrReviewInfo() const;
 
                     /**
-                     * 设置Control parameter of politically sensitive information detection in speech.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AsrReviewInfo Control parameter of politically sensitive information detection in speech.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Parameters for ASR-based recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @param AsrReviewInfo Parameters for ASR-based recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     void SetAsrReviewInfo(const PoliticalAsrReviewTemplateInfo& _asrReviewInfo);
 
@@ -94,18 +94,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool AsrReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取Control parameter of politically sensitive information detection in text.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return OcrReviewInfo Control parameter of politically sensitive information detection in text.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Parameters for OCR-based recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @return OcrReviewInfo Parameters for OCR-based recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     PoliticalOcrReviewTemplateInfo GetOcrReviewInfo() const;
 
                     /**
-                     * 设置Control parameter of politically sensitive information detection in text.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param OcrReviewInfo Control parameter of politically sensitive information detection in text.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Parameters for OCR-based recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @param OcrReviewInfo Parameters for OCR-based recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     void SetOcrReviewInfo(const PoliticalOcrReviewTemplateInfo& _ocrReviewInfo);
 
@@ -118,22 +118,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Control parameter of politically sensitive information detection in video image.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Parameters for recognition of politically sensitive content in images
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     PoliticalImgReviewTemplateInfo m_imgReviewInfo;
                     bool m_imgReviewInfoHasBeenSet;
 
                     /**
-                     * Control parameter of politically sensitive information detection in speech.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Parameters for ASR-based recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     PoliticalAsrReviewTemplateInfo m_asrReviewInfo;
                     bool m_asrReviewInfoHasBeenSet;
 
                     /**
-                     * Control parameter of politically sensitive information detection in text.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Parameters for OCR-based recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     PoliticalOcrReviewTemplateInfo m_ocrReviewInfo;
                     bool m_ocrReviewInfoHasBeenSet;

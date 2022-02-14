@@ -62,14 +62,14 @@ namespace TencentCloud
                     bool BizIdHasBeenSet() const;
 
                     /**
-                     * 获取Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, politically sensitive, advertising, terrorism, and prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
-                     * @return Scenes Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, politically sensitive, advertising, terrorism, and prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
+                     * 获取Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, advertising, and other prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
+                     * @return Scenes Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, advertising, and other prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
                      */
                     std::vector<std::string> GetScenes() const;
 
                     /**
-                     * 设置Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, politically sensitive, advertising, terrorism, and prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
-                     * @param Scenes Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, politically sensitive, advertising, terrorism, and prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
+                     * 设置Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, advertising, and other prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
+                     * @param Scenes Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, advertising, and other prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
                      */
                     void SetScenes(const std::vector<std::string>& _scenes);
 
@@ -141,6 +141,24 @@ namespace TencentCloud
                      */
                     bool CallbackHasBeenSet() const;
 
+                    /**
+                     * 获取The language. `jp` represents Japanese
+                     * @return Lang The language. `jp` represents Japanese
+                     */
+                    std::string GetLang() const;
+
+                    /**
+                     * 设置The language. `jp` represents Japanese
+                     * @param Lang The language. `jp` represents Japanese
+                     */
+                    void SetLang(const std::string& _lang);
+
+                    /**
+                     * 判断参数 Lang 是否已赋值
+                     * @return Lang 是否已赋值
+                     */
+                    bool LangHasBeenSet() const;
+
                 private:
 
                     /**
@@ -150,7 +168,7 @@ namespace TencentCloud
                     bool m_bizIdHasBeenSet;
 
                     /**
-                     * Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, politically sensitive, advertising, terrorism, and prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
+                     * Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, advertising, and other prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
                      */
                     std::vector<std::string> m_scenes;
                     bool m_scenesHasBeenSet;
@@ -174,6 +192,12 @@ namespace TencentCloud
                      */
                     std::string m_callback;
                     bool m_callbackHasBeenSet;
+
+                    /**
+                     * The language. `jp` represents Japanese
+                     */
+                    std::string m_lang;
+                    bool m_langHasBeenSet;
 
                 };
             }

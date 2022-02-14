@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Result type of ASR-based prohibited information detection in speech task in content audit
+                * Result for ASR-based recognition of banned content
                 */
                 class AiReviewTaskProhibitedAsrResult : public AbstractModel
                 {
@@ -121,14 +121,14 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Input of ASR-based prohibited information detection in speech task in content audit
-                     * @return Input Input of ASR-based prohibited information detection in speech task in content audit
+                     * 获取Input for ASR-based recognition of banned content
+                     * @return Input Input for ASR-based recognition of banned content
                      */
                     AiReviewProhibitedAsrTaskInput GetInput() const;
 
                     /**
-                     * 设置Input of ASR-based prohibited information detection in speech task in content audit
-                     * @param Input Input of ASR-based prohibited information detection in speech task in content audit
+                     * 设置Input for ASR-based recognition of banned content
+                     * @param Input Input for ASR-based recognition of banned content
                      */
                     void SetInput(const AiReviewProhibitedAsrTaskInput& _input);
 
@@ -139,18 +139,18 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output of ASR-based prohibited information detection in speech task in content audit
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Output Output of ASR-based prohibited information detection in speech task in content audit
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Output for ASR-based recognition of banned content
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @return Output Output for ASR-based recognition of banned content
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     AiReviewProhibitedAsrTaskOutput GetOutput() const;
 
                     /**
-                     * 设置Output of ASR-based prohibited information detection in speech task in content audit
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Output Output of ASR-based prohibited information detection in speech task in content audit
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Output for ASR-based recognition of banned content
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @param Output Output for ASR-based recognition of banned content
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     void SetOutput(const AiReviewProhibitedAsrTaskOutput& _output);
 
@@ -187,14 +187,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Input of ASR-based prohibited information detection in speech task in content audit
+                     * Input for ASR-based recognition of banned content
                      */
                     AiReviewProhibitedAsrTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output of ASR-based prohibited information detection in speech task in content audit
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Output for ASR-based recognition of banned content
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     AiReviewProhibitedAsrTaskOutput m_output;
                     bool m_outputHasBeenSet;

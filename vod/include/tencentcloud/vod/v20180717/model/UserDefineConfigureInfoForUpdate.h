@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Control parameter of custom audit task.
+                * Parameters for custom recognition
                 */
                 class UserDefineConfigureInfoForUpdate : public AbstractModel
                 {
@@ -50,14 +50,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Control parameter of custom figure audit.
-                     * @return FaceReviewInfo Control parameter of custom figure audit.
+                     * 获取Parameters for custom facial recognition
+                     * @return FaceReviewInfo Parameters for custom facial recognition
                      */
                     UserDefineFaceReviewTemplateInfoForUpdate GetFaceReviewInfo() const;
 
                     /**
-                     * 设置Control parameter of custom figure audit.
-                     * @param FaceReviewInfo Control parameter of custom figure audit.
+                     * 设置Parameters for custom facial recognition
+                     * @param FaceReviewInfo Parameters for custom facial recognition
                      */
                     void SetFaceReviewInfo(const UserDefineFaceReviewTemplateInfoForUpdate& _faceReviewInfo);
 
@@ -68,14 +68,14 @@ namespace TencentCloud
                     bool FaceReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取Control parameter of custom speech audit.
-                     * @return AsrReviewInfo Control parameter of custom speech audit.
+                     * 获取Parameters for custom ASR-based recognition
+                     * @return AsrReviewInfo Parameters for custom ASR-based recognition
                      */
                     UserDefineAsrTextReviewTemplateInfoForUpdate GetAsrReviewInfo() const;
 
                     /**
-                     * 设置Control parameter of custom speech audit.
-                     * @param AsrReviewInfo Control parameter of custom speech audit.
+                     * 设置Parameters for custom ASR-based recognition
+                     * @param AsrReviewInfo Parameters for custom ASR-based recognition
                      */
                     void SetAsrReviewInfo(const UserDefineAsrTextReviewTemplateInfoForUpdate& _asrReviewInfo);
 
@@ -86,14 +86,14 @@ namespace TencentCloud
                     bool AsrReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取Control parameter of custom text audit.
-                     * @return OcrReviewInfo Control parameter of custom text audit.
+                     * 获取Parameters for custom OCR-based recognition
+                     * @return OcrReviewInfo Parameters for custom OCR-based recognition
                      */
                     UserDefineOcrTextReviewTemplateInfoForUpdate GetOcrReviewInfo() const;
 
                     /**
-                     * 设置Control parameter of custom text audit.
-                     * @param OcrReviewInfo Control parameter of custom text audit.
+                     * 设置Parameters for custom OCR-based recognition
+                     * @param OcrReviewInfo Parameters for custom OCR-based recognition
                      */
                     void SetOcrReviewInfo(const UserDefineOcrTextReviewTemplateInfoForUpdate& _ocrReviewInfo);
 
@@ -106,19 +106,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Control parameter of custom figure audit.
+                     * Parameters for custom facial recognition
                      */
                     UserDefineFaceReviewTemplateInfoForUpdate m_faceReviewInfo;
                     bool m_faceReviewInfoHasBeenSet;
 
                     /**
-                     * Control parameter of custom speech audit.
+                     * Parameters for custom ASR-based recognition
                      */
                     UserDefineAsrTextReviewTemplateInfoForUpdate m_asrReviewInfo;
                     bool m_asrReviewInfoHasBeenSet;
 
                     /**
-                     * Control parameter of custom text audit.
+                     * Parameters for custom OCR-based recognition
                      */
                     UserDefineOcrTextReviewTemplateInfoForUpdate m_ocrReviewInfo;
                     bool m_ocrReviewInfoHasBeenSet;

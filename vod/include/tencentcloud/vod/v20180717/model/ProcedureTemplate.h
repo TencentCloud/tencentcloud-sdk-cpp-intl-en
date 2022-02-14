@@ -136,18 +136,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MediaProcessTaskHasBeenSet() const;
 
                     /**
-                     * 获取Parameter of AI-based content audit task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return AiContentReviewTask Parameter of AI-based content audit task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Intelligent recognition task
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @return AiContentReviewTask Intelligent recognition task
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     AiContentReviewTaskInput GetAiContentReviewTask() const;
 
                     /**
-                     * 设置Parameter of AI-based content audit task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AiContentReviewTask Parameter of AI-based content audit task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Intelligent recognition task
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @param AiContentReviewTask Intelligent recognition task
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     void SetAiContentReviewTask(const AiContentReviewTaskInput& _aiContentReviewTask);
 
@@ -289,8 +289,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_mediaProcessTaskHasBeenSet;
 
                     /**
-                     * Parameter of AI-based content audit task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Intelligent recognition task
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     AiContentReviewTaskInput m_aiContentReviewTask;
                     bool m_aiContentReviewTaskHasBeenSet;

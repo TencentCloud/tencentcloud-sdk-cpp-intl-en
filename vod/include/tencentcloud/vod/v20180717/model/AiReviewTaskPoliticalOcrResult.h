@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Result type of OCR-based politically sensitive information detection in text task in content audit
+                * Result for OCR-based recognition of politically sensitive content
                 */
                 class AiReviewTaskPoliticalOcrResult : public AbstractModel
                 {
@@ -125,14 +125,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Input of OCR-based politically sensitive information detection in text task in content audit.
-                     * @return Input Input of OCR-based politically sensitive information detection in text task in content audit.
+                     * 获取Input for OCR-based recognition of politically sensitive content
+                     * @return Input Input for OCR-based recognition of politically sensitive content
                      */
                     AiReviewPoliticalOcrTaskInput GetInput() const;
 
                     /**
-                     * 设置Input of OCR-based politically sensitive information detection in text task in content audit.
-                     * @param Input Input of OCR-based politically sensitive information detection in text task in content audit.
+                     * 设置Input for OCR-based recognition of politically sensitive content
+                     * @param Input Input for OCR-based recognition of politically sensitive content
                      */
                     void SetInput(const AiReviewPoliticalOcrTaskInput& _input);
 
@@ -143,18 +143,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output of OCR-based politically sensitive information detection in text task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Output Output of OCR-based politically sensitive information detection in text task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Output for OCR-based recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @return Output Output for OCR-based recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     AiReviewPoliticalOcrTaskOutput GetOutput() const;
 
                     /**
-                     * 设置Output of OCR-based politically sensitive information detection in text task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Output Output of OCR-based politically sensitive information detection in text task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Output for OCR-based recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @param Output Output for OCR-based recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     void SetOutput(const AiReviewPoliticalOcrTaskOutput& _output);
 
@@ -192,14 +192,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Input of OCR-based politically sensitive information detection in text task in content audit.
+                     * Input for OCR-based recognition of politically sensitive content
                      */
                     AiReviewPoliticalOcrTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output of OCR-based politically sensitive information detection in text task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Output for OCR-based recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     AiReviewPoliticalOcrTaskOutput m_output;
                     bool m_outputHasBeenSet;

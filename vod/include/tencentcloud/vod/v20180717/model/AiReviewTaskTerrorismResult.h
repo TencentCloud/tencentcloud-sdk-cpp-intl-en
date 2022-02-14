@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Result type of terrorism information detection task in content audit
+                * Result for intelligent recognition of terrorism content
                 */
                 class AiReviewTaskTerrorismResult : public AbstractModel
                 {
@@ -125,14 +125,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Input of terrorism information detection task in content audit.
-                     * @return Input Input of terrorism information detection task in content audit.
+                     * 获取Input for intelligent recognition of terrorism content
+                     * @return Input Input for intelligent recognition of terrorism content
                      */
                     AiReviewTerrorismTaskInput GetInput() const;
 
                     /**
-                     * 设置Input of terrorism information detection task in content audit.
-                     * @param Input Input of terrorism information detection task in content audit.
+                     * 设置Input for intelligent recognition of terrorism content
+                     * @param Input Input for intelligent recognition of terrorism content
                      */
                     void SetInput(const AiReviewTerrorismTaskInput& _input);
 
@@ -143,18 +143,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output of terrorism information detection task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Output Output of terrorism information detection task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Output for intelligent recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @return Output Output for intelligent recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     AiReviewTerrorismTaskOutput GetOutput() const;
 
                     /**
-                     * 设置Output of terrorism information detection task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Output Output of terrorism information detection task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Output for intelligent recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @param Output Output for intelligent recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     void SetOutput(const AiReviewTerrorismTaskOutput& _output);
 
@@ -192,14 +192,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Input of terrorism information detection task in content audit.
+                     * Input for intelligent recognition of terrorism content
                      */
                     AiReviewTerrorismTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output of terrorism information detection task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Output for intelligent recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     AiReviewTerrorismTaskOutput m_output;
                     bool m_outputHasBeenSet;

@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Result type of ASR-based porn information detection in speech task in content audit
+                * Result for ASR-based recognition of pornographic content
                 */
                 class AiReviewTaskPornAsrResult : public AbstractModel
                 {
@@ -125,14 +125,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Input of ASR-based porn information detection in speech task in content audit.
-                     * @return Input Input of ASR-based porn information detection in speech task in content audit.
+                     * 获取Input for ASR-based recognition of pornographic content
+                     * @return Input Input for ASR-based recognition of pornographic content
                      */
                     AiReviewPornAsrTaskInput GetInput() const;
 
                     /**
-                     * 设置Input of ASR-based porn information detection in speech task in content audit.
-                     * @param Input Input of ASR-based porn information detection in speech task in content audit.
+                     * 设置Input for ASR-based recognition of pornographic content
+                     * @param Input Input for ASR-based recognition of pornographic content
                      */
                     void SetInput(const AiReviewPornAsrTaskInput& _input);
 
@@ -143,18 +143,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output of ASR-based porn information detection in speech task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Output Output of ASR-based porn information detection in speech task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Output for ASR-based recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @return Output Output for ASR-based recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     AiReviewPornAsrTaskOutput GetOutput() const;
 
                     /**
-                     * 设置Output of ASR-based porn information detection in speech task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Output Output of ASR-based porn information detection in speech task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Output for ASR-based recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @param Output Output for ASR-based recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     void SetOutput(const AiReviewPornAsrTaskOutput& _output);
 
@@ -192,14 +192,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Input of ASR-based porn information detection in speech task in content audit.
+                     * Input for ASR-based recognition of pornographic content
                      */
                     AiReviewPornAsrTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output of ASR-based porn information detection in speech task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Output for ASR-based recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     AiReviewPornAsrTaskOutput m_output;
                     bool m_outputHasBeenSet;

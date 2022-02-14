@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Suspected porn/terrorism segment identified in content audit
+                * Video segment containing detected pornographic or terrorism content
                 */
                 class MediaContentReviewSegmentItem : public AbstractModel
                 {
@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取Score of a suspected porn segment.
-                     * @return Confidence Score of a suspected porn segment.
+                     * 获取Confidence score for the detected pornographic content
+                     * @return Confidence Confidence score for the detected pornographic content
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Score of a suspected porn segment.
-                     * @param Confidence Score of a suspected porn segment.
+                     * 设置Confidence score for the detected pornographic content
+                     * @param Confidence Confidence score for the detected pornographic content
                      */
                     void SetConfidence(const double& _confidence);
 
@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Tag of porn information detection result of a suspected segment.
-                     * @return Label Tag of porn information detection result of a suspected segment.
+                     * 获取Label for the detected pornographic content
+                     * @return Label Label for the detected pornographic content
                      */
                     std::string GetLabel() const;
 
                     /**
-                     * 设置Tag of porn information detection result of a suspected segment.
-                     * @param Label Tag of porn information detection result of a suspected segment.
+                     * 设置Label for the detected pornographic content
+                     * @param Label Label for the detected pornographic content
                      */
                     void SetLabel(const std::string& _label);
 
@@ -119,26 +119,26 @@ namespace TencentCloud
                     bool LabelHasBeenSet() const;
 
                     /**
-                     * 获取Suggestion for porn information detection of a suspected segment. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-                     * @return Suggestion Suggestion for porn information detection of a suspected segment. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+                     * 获取Processing suggestion for the detected pornographic content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
+                     * @return Suggestion Processing suggestion for the detected pornographic content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
                      */
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置Suggestion for porn information detection of a suspected segment. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-                     * @param Suggestion Suggestion for porn information detection of a suspected segment. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+                     * 设置Processing suggestion for the detected pornographic content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
+                     * @param Suggestion Processing suggestion for the detected pornographic content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
                      */
                     void SetSuggestion(const std::string& _suggestion);
 
@@ -221,22 +221,22 @@ namespace TencentCloud
                     bool m_endTimeOffsetHasBeenSet;
 
                     /**
-                     * Score of a suspected porn segment.
+                     * Confidence score for the detected pornographic content
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * Tag of porn information detection result of a suspected segment.
+                     * Label for the detected pornographic content
                      */
                     std::string m_label;
                     bool m_labelHasBeenSet;
 
                     /**
-                     * Suggestion for porn information detection of a suspected segment. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+                     * Processing suggestion for the detected pornographic content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
                      */
                     std::string m_suggestion;
                     bool m_suggestionHasBeenSet;

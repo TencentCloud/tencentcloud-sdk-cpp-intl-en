@@ -212,6 +212,49 @@ TemClient::CreateResourceOutcomeCallable TemClient::CreateResourceCallable(const
     return task->get_future();
 }
 
+TemClient::DeleteApplicationOutcome TemClient::DeleteApplication(const DeleteApplicationRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteApplication");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteApplicationResponse rsp = DeleteApplicationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteApplicationOutcome(rsp);
+        else
+            return DeleteApplicationOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteApplicationOutcome(outcome.GetError());
+    }
+}
+
+void TemClient::DeleteApplicationAsync(const DeleteApplicationRequest& request, const DeleteApplicationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteApplication(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TemClient::DeleteApplicationOutcomeCallable TemClient::DeleteApplicationCallable(const DeleteApplicationRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteApplicationOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteApplication(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TemClient::DeleteIngressOutcome TemClient::DeleteIngress(const DeleteIngressRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteIngress");
@@ -685,6 +728,49 @@ TemClient::ModifyIngressOutcomeCallable TemClient::ModifyIngressCallable(const M
     return task->get_future();
 }
 
+TemClient::RestartApplicationOutcome TemClient::RestartApplication(const RestartApplicationRequest &request)
+{
+    auto outcome = MakeRequest(request, "RestartApplication");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RestartApplicationResponse rsp = RestartApplicationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RestartApplicationOutcome(rsp);
+        else
+            return RestartApplicationOutcome(o.GetError());
+    }
+    else
+    {
+        return RestartApplicationOutcome(outcome.GetError());
+    }
+}
+
+void TemClient::RestartApplicationAsync(const RestartApplicationRequest& request, const RestartApplicationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->RestartApplication(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TemClient::RestartApplicationOutcomeCallable TemClient::RestartApplicationCallable(const RestartApplicationRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<RestartApplicationOutcome()>>(
+        [this, request]()
+        {
+            return this->RestartApplication(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TemClient::RestartApplicationPodOutcome TemClient::RestartApplicationPod(const RestartApplicationPodRequest &request)
 {
     auto outcome = MakeRequest(request, "RestartApplicationPod");
@@ -721,6 +807,92 @@ TemClient::RestartApplicationPodOutcomeCallable TemClient::RestartApplicationPod
         [this, request]()
         {
             return this->RestartApplicationPod(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TemClient::RollingUpdateApplicationByVersionOutcome TemClient::RollingUpdateApplicationByVersion(const RollingUpdateApplicationByVersionRequest &request)
+{
+    auto outcome = MakeRequest(request, "RollingUpdateApplicationByVersion");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RollingUpdateApplicationByVersionResponse rsp = RollingUpdateApplicationByVersionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RollingUpdateApplicationByVersionOutcome(rsp);
+        else
+            return RollingUpdateApplicationByVersionOutcome(o.GetError());
+    }
+    else
+    {
+        return RollingUpdateApplicationByVersionOutcome(outcome.GetError());
+    }
+}
+
+void TemClient::RollingUpdateApplicationByVersionAsync(const RollingUpdateApplicationByVersionRequest& request, const RollingUpdateApplicationByVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->RollingUpdateApplicationByVersion(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TemClient::RollingUpdateApplicationByVersionOutcomeCallable TemClient::RollingUpdateApplicationByVersionCallable(const RollingUpdateApplicationByVersionRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<RollingUpdateApplicationByVersionOutcome()>>(
+        [this, request]()
+        {
+            return this->RollingUpdateApplicationByVersion(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TemClient::StopApplicationOutcome TemClient::StopApplication(const StopApplicationRequest &request)
+{
+    auto outcome = MakeRequest(request, "StopApplication");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        StopApplicationResponse rsp = StopApplicationResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return StopApplicationOutcome(rsp);
+        else
+            return StopApplicationOutcome(o.GetError());
+    }
+    else
+    {
+        return StopApplicationOutcome(outcome.GetError());
+    }
+}
+
+void TemClient::StopApplicationAsync(const StopApplicationRequest& request, const StopApplicationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->StopApplication(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TemClient::StopApplicationOutcomeCallable TemClient::StopApplicationCallable(const StopApplicationRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<StopApplicationOutcome()>>(
+        [this, request]()
+        {
+            return this->StopApplication(request);
         }
     );
 

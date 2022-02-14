@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Result information of porn information detection
+                * Output for intelligent recognition of pornographic content
                 */
                 class AiReviewPornTaskOutput : public AbstractModel
                 {
@@ -48,18 +48,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Score of detected porn information in video between 0 and 100.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Confidence Score of detected porn information in video between 0 and 100.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Confidence score for the detected pornographic content. Value range: 0-100
+                     * @return Confidence Confidence score for the detected pornographic content. Value range: 0-100
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Score of detected porn information in video between 0 and 100.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Confidence Score of detected porn information in video between 0 and 100.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Confidence score for the detected pornographic content. Value range: 0-100
+                     * @param Confidence Confidence score for the detected pornographic content. Value range: 0-100
                      */
                     void SetConfidence(const double& _confidence);
 
@@ -70,30 +66,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Suggestion for detected porn information. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Suggestion Suggestion for detected porn information. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Processing suggestion for the detected pornographic content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
+                     * @return Suggestion Processing suggestion for the detected pornographic content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
                      */
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置Suggestion for detected porn information. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Suggestion Suggestion for detected porn information. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Processing suggestion for the detected pornographic content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
+                     * @param Suggestion Processing suggestion for the detected pornographic content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
                      */
                     void SetSuggestion(const std::string& _suggestion);
 
@@ -104,34 +96,30 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取Tag of detected porn information in video. Valid values:
-<li>porn: porn.</li>
-<li>sexy: sexiness.</li>
-<li>vulgar: vulgarity.</li>
-<li>intimacy: intimacy.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Label Tag of detected porn information in video. Valid values:
-<li>porn: porn.</li>
-<li>sexy: sexiness.</li>
-<li>vulgar: vulgarity.</li>
-<li>intimacy: intimacy.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Labels for the detected pornographic content. Valid values:
+<li>porn</li>
+<li>sexy</li>
+<li>vulgar</li>
+<li>intimacy</li>
+                     * @return Label Labels for the detected pornographic content. Valid values:
+<li>porn</li>
+<li>sexy</li>
+<li>vulgar</li>
+<li>intimacy</li>
                      */
                     std::string GetLabel() const;
 
                     /**
-                     * 设置Tag of detected porn information in video. Valid values:
-<li>porn: porn.</li>
-<li>sexy: sexiness.</li>
-<li>vulgar: vulgarity.</li>
-<li>intimacy: intimacy.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Label Tag of detected porn information in video. Valid values:
-<li>porn: porn.</li>
-<li>sexy: sexiness.</li>
-<li>vulgar: vulgarity.</li>
-<li>intimacy: intimacy.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Labels for the detected pornographic content. Valid values:
+<li>porn</li>
+<li>sexy</li>
+<li>vulgar</li>
+<li>intimacy</li>
+                     * @param Label Labels for the detected pornographic content. Valid values:
+<li>porn</li>
+<li>sexy</li>
+<li>vulgar</li>
+<li>intimacy</li>
                      */
                     void SetLabel(const std::string& _label);
 
@@ -142,17 +130,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool LabelHasBeenSet() const;
 
                     /**
-                     * 获取List of video segments that contain porn information
+                     * 获取List of video segments that contain detected pornographic content
 <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
-                     * @return SegmentSet List of video segments that contain porn information
+                     * @return SegmentSet List of video segments that contain detected pornographic content
 <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
                      */
                     std::vector<MediaContentReviewSegmentItem> GetSegmentSet() const;
 
                     /**
-                     * 设置List of video segments that contain porn information
+                     * 设置List of video segments that contain detected pornographic content
 <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
-                     * @param SegmentSet List of video segments that contain porn information
+                     * @param SegmentSet List of video segments that contain detected pornographic content
 <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
                      */
                     void SetSegmentSet(const std::vector<MediaContentReviewSegmentItem>& _segmentSet);
@@ -164,14 +152,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SegmentSetHasBeenSet() const;
 
                     /**
-                     * 获取URL to the file for video segments that contain porn information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
-                     * @return SegmentSetFileUrl URL to the file for video segments that contain porn information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+                     * 获取URL to the file for video segments that contain detected pornographic content. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+                     * @return SegmentSetFileUrl URL to the file for video segments that contain detected pornographic content. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
                      */
                     std::string GetSegmentSetFileUrl() const;
 
                     /**
-                     * 设置URL to the file for video segments that contain porn information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
-                     * @param SegmentSetFileUrl URL to the file for video segments that contain porn information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+                     * 设置URL to the file for video segments that contain detected pornographic content. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+                     * @param SegmentSetFileUrl URL to the file for video segments that contain detected pornographic content. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
                      */
                     void SetSegmentSetFileUrl(const std::string& _segmentSetFileUrl);
 
@@ -182,14 +170,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SegmentSetFileUrlHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time of the URL to the file of for video segments that contain porn information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
-                     * @return SegmentSetFileUrlExpireTime Expiration time of the URL to the file of for video segments that contain porn information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+                     * 获取Expiration time of the URL to the file for video segments that contain detected pornographic content, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+                     * @return SegmentSetFileUrlExpireTime Expiration time of the URL to the file for video segments that contain detected pornographic content, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
                      */
                     std::string GetSegmentSetFileUrlExpireTime() const;
 
                     /**
-                     * 设置Expiration time of the URL to the file of for video segments that contain porn information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
-                     * @param SegmentSetFileUrlExpireTime Expiration time of the URL to the file of for video segments that contain porn information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+                     * 设置Expiration time of the URL to the file for video segments that contain detected pornographic content, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+                     * @param SegmentSetFileUrlExpireTime Expiration time of the URL to the file for video segments that contain detected pornographic content, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
                      */
                     void SetSegmentSetFileUrlExpireTime(const std::string& _segmentSetFileUrlExpireTime);
 
@@ -202,48 +190,45 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Score of detected porn information in video between 0 and 100.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Confidence score for the detected pornographic content. Value range: 0-100
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * Suggestion for detected porn information. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Processing suggestion for the detected pornographic content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
                      */
                     std::string m_suggestion;
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * Tag of detected porn information in video. Valid values:
-<li>porn: porn.</li>
-<li>sexy: sexiness.</li>
-<li>vulgar: vulgarity.</li>
-<li>intimacy: intimacy.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Labels for the detected pornographic content. Valid values:
+<li>porn</li>
+<li>sexy</li>
+<li>vulgar</li>
+<li>intimacy</li>
                      */
                     std::string m_label;
                     bool m_labelHasBeenSet;
 
                     /**
-                     * List of video segments that contain porn information
+                     * List of video segments that contain detected pornographic content
 <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
                      */
                     std::vector<MediaContentReviewSegmentItem> m_segmentSet;
                     bool m_segmentSetHasBeenSet;
 
                     /**
-                     * URL to the file for video segments that contain porn information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+                     * URL to the file for video segments that contain detected pornographic content. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
                      */
                     std::string m_segmentSetFileUrl;
                     bool m_segmentSetFileUrlHasBeenSet;
 
                     /**
-                     * Expiration time of the URL to the file of for video segments that contain porn information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+                     * Expiration time of the URL to the file for video segments that contain detected pornographic content, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
                      */
                     std::string m_segmentSetFileUrlExpireTime;
                     bool m_segmentSetFileUrlExpireTimeHasBeenSet;

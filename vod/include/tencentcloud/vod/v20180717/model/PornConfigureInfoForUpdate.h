@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Control parameter of porn detection task.
+                * Parameters for recognition of pornographic content
                 */
                 class PornConfigureInfoForUpdate : public AbstractModel
                 {
@@ -50,14 +50,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Control parameter of porn detection in video image.
-                     * @return ImgReviewInfo Control parameter of porn detection in video image.
+                     * 获取Parameters for recognition of pornographic content in images
+                     * @return ImgReviewInfo Parameters for recognition of pornographic content in images
                      */
                     PornImgReviewTemplateInfoForUpdate GetImgReviewInfo() const;
 
                     /**
-                     * 设置Control parameter of porn detection in video image.
-                     * @param ImgReviewInfo Control parameter of porn detection in video image.
+                     * 设置Parameters for recognition of pornographic content in images
+                     * @param ImgReviewInfo Parameters for recognition of pornographic content in images
                      */
                     void SetImgReviewInfo(const PornImgReviewTemplateInfoForUpdate& _imgReviewInfo);
 
@@ -68,14 +68,14 @@ namespace TencentCloud
                     bool ImgReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取Control parameter of porn detection in speech.
-                     * @return AsrReviewInfo Control parameter of porn detection in speech.
+                     * 获取Parameters for ASR-based recognition of pornographic content
+                     * @return AsrReviewInfo Parameters for ASR-based recognition of pornographic content
                      */
                     PornAsrReviewTemplateInfoForUpdate GetAsrReviewInfo() const;
 
                     /**
-                     * 设置Control parameter of porn detection in speech.
-                     * @param AsrReviewInfo Control parameter of porn detection in speech.
+                     * 设置Parameters for ASR-based recognition of pornographic content
+                     * @param AsrReviewInfo Parameters for ASR-based recognition of pornographic content
                      */
                     void SetAsrReviewInfo(const PornAsrReviewTemplateInfoForUpdate& _asrReviewInfo);
 
@@ -86,14 +86,14 @@ namespace TencentCloud
                     bool AsrReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取Control parameter of porn detection in text.
-                     * @return OcrReviewInfo Control parameter of porn detection in text.
+                     * 获取Parameters for OCR-based recognition of pornographic content
+                     * @return OcrReviewInfo Parameters for OCR-based recognition of pornographic content
                      */
                     PornOcrReviewTemplateInfoForUpdate GetOcrReviewInfo() const;
 
                     /**
-                     * 设置Control parameter of porn detection in text.
-                     * @param OcrReviewInfo Control parameter of porn detection in text.
+                     * 设置Parameters for OCR-based recognition of pornographic content
+                     * @param OcrReviewInfo Parameters for OCR-based recognition of pornographic content
                      */
                     void SetOcrReviewInfo(const PornOcrReviewTemplateInfoForUpdate& _ocrReviewInfo);
 
@@ -106,19 +106,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Control parameter of porn detection in video image.
+                     * Parameters for recognition of pornographic content in images
                      */
                     PornImgReviewTemplateInfoForUpdate m_imgReviewInfo;
                     bool m_imgReviewInfoHasBeenSet;
 
                     /**
-                     * Control parameter of porn detection in speech.
+                     * Parameters for ASR-based recognition of pornographic content
                      */
                     PornAsrReviewTemplateInfoForUpdate m_asrReviewInfo;
                     bool m_asrReviewInfoHasBeenSet;
 
                     /**
-                     * Control parameter of porn detection in text.
+                     * Parameters for OCR-based recognition of pornographic content
                      */
                     PornOcrReviewTemplateInfoForUpdate m_ocrReviewInfo;
                     bool m_ocrReviewInfoHasBeenSet;

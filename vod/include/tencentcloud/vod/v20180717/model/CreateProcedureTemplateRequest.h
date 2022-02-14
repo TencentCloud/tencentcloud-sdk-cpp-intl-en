@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool MediaProcessTaskHasBeenSet() const;
 
                     /**
-                     * 获取Parameter of AI-based content audit task.
-                     * @return AiContentReviewTask Parameter of AI-based content audit task.
+                     * 获取Intelligent recognition task
+                     * @return AiContentReviewTask Intelligent recognition task
                      */
                     AiContentReviewTaskInput GetAiContentReviewTask() const;
 
                     /**
-                     * 设置Parameter of AI-based content audit task.
-                     * @param AiContentReviewTask Parameter of AI-based content audit task.
+                     * 设置Intelligent recognition task
+                     * @param AiContentReviewTask Intelligent recognition task
                      */
                     void SetAiContentReviewTask(const AiContentReviewTaskInput& _aiContentReviewTask);
 
@@ -193,7 +193,7 @@ namespace TencentCloud
                     bool m_mediaProcessTaskHasBeenSet;
 
                     /**
-                     * Parameter of AI-based content audit task.
+                     * Intelligent recognition task
                      */
                     AiContentReviewTaskInput m_aiContentReviewTask;
                     bool m_aiContentReviewTaskHasBeenSet;

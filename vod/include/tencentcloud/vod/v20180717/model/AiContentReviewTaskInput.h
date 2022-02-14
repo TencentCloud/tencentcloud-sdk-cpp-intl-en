@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Task type of intelligent content audit
+                * Type of intelligent recognition task
                 */
                 class AiContentReviewTaskInput : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Video content audit template ID.
-                     * @return Definition Video content audit template ID.
+                     * 获取Intelligent recognition template ID
+                     * @return Definition Intelligent recognition template ID
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置Video content audit template ID.
-                     * @param Definition Video content audit template ID.
+                     * 设置Intelligent recognition template ID
+                     * @param Definition Intelligent recognition template ID
                      */
                     void SetDefinition(const uint64_t& _definition);
 
@@ -67,7 +67,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Video content audit template ID.
+                     * Intelligent recognition template ID
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

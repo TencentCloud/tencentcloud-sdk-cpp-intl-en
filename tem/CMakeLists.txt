@@ -22,7 +22,10 @@ set(tem_public_header
 set(tem_public_header_model
   include/tencentcloud/tem/v20210701/model/MountedSettingConf.h
   include/tencentcloud/tem/v20210701/model/RestartApplicationPodResponse.h
+  include/tencentcloud/tem/v20210701/model/DeleteApplicationRequest.h
   include/tencentcloud/tem/v20210701/model/CreateResourceRequest.h
+  include/tencentcloud/tem/v20210701/model/RestartApplicationResponse.h
+  include/tencentcloud/tem/v20210701/model/StopApplicationRequest.h
   include/tencentcloud/tem/v20210701/model/HealthCheckConfig.h
   include/tencentcloud/tem/v20210701/model/ModifyEnvironmentRequest.h
   include/tencentcloud/tem/v20210701/model/EsInfo.h
@@ -54,15 +57,18 @@ set(tem_public_header_model
   include/tencentcloud/tem/v20210701/model/CreateCosTokenResponse.h
   include/tencentcloud/tem/v20210701/model/IngressRule.h
   include/tencentcloud/tem/v20210701/model/CronHorizontalAutoscaler.h
-  include/tencentcloud/tem/v20210701/model/StorageConf.h
+  include/tencentcloud/tem/v20210701/model/RollingUpdateApplicationByVersionResponse.h
+  include/tencentcloud/tem/v20210701/model/RollingUpdateApplicationByVersionRequest.h
   include/tencentcloud/tem/v20210701/model/RunVersionPod.h
   include/tencentcloud/tem/v20210701/model/IngressRuleValue.h
   include/tencentcloud/tem/v20210701/model/CreateResourceResponse.h
   include/tencentcloud/tem/v20210701/model/ModifyApplicationInfoRequest.h
   include/tencentcloud/tem/v20210701/model/ModifyApplicationInfoResponse.h
+  include/tencentcloud/tem/v20210701/model/DeleteApplicationResponse.h
   include/tencentcloud/tem/v20210701/model/IngressRulePath.h
   include/tencentcloud/tem/v20210701/model/CreateEnvironmentResponse.h
   include/tencentcloud/tem/v20210701/model/NamespacePage.h
+  include/tencentcloud/tem/v20210701/model/RestartApplicationRequest.h
   include/tencentcloud/tem/v20210701/model/CreateApplicationResponse.h
   include/tencentcloud/tem/v20210701/model/HorizontalAutoscaler.h
   include/tencentcloud/tem/v20210701/model/StorageMountConf.h
@@ -71,9 +77,11 @@ set(tem_public_header_model
   include/tencentcloud/tem/v20210701/model/DescribeIngressRequest.h
   include/tencentcloud/tem/v20210701/model/CreateCosTokenRequest.h
   include/tencentcloud/tem/v20210701/model/DescribeEnvironmentsRequest.h
+  include/tencentcloud/tem/v20210701/model/StopApplicationResponse.h
   include/tencentcloud/tem/v20210701/model/EksService.h
   include/tencentcloud/tem/v20210701/model/CronHorizontalAutoscalerSchedule.h
   include/tencentcloud/tem/v20210701/model/DeployApplicationResponse.h
+  include/tencentcloud/tem/v20210701/model/StorageConf.h
   include/tencentcloud/tem/v20210701/model/CreateEnvironmentRequest.h
   include/tencentcloud/tem/v20210701/model/Pair.h
   include/tencentcloud/tem/v20201221/model/MountedSettingConf.h
@@ -136,7 +144,10 @@ set(tem_src
   src/v20201221/TemClient.cpp
   src/v20210701/model/MountedSettingConf.cpp
   src/v20210701/model/RestartApplicationPodResponse.cpp
+  src/v20210701/model/DeleteApplicationRequest.cpp
   src/v20210701/model/CreateResourceRequest.cpp
+  src/v20210701/model/RestartApplicationResponse.cpp
+  src/v20210701/model/StopApplicationRequest.cpp
   src/v20210701/model/HealthCheckConfig.cpp
   src/v20210701/model/ModifyEnvironmentRequest.cpp
   src/v20210701/model/EsInfo.cpp
@@ -168,15 +179,18 @@ set(tem_src
   src/v20210701/model/CreateCosTokenResponse.cpp
   src/v20210701/model/IngressRule.cpp
   src/v20210701/model/CronHorizontalAutoscaler.cpp
-  src/v20210701/model/StorageConf.cpp
+  src/v20210701/model/RollingUpdateApplicationByVersionResponse.cpp
+  src/v20210701/model/RollingUpdateApplicationByVersionRequest.cpp
   src/v20210701/model/RunVersionPod.cpp
   src/v20210701/model/IngressRuleValue.cpp
   src/v20210701/model/CreateResourceResponse.cpp
   src/v20210701/model/ModifyApplicationInfoRequest.cpp
   src/v20210701/model/ModifyApplicationInfoResponse.cpp
+  src/v20210701/model/DeleteApplicationResponse.cpp
   src/v20210701/model/IngressRulePath.cpp
   src/v20210701/model/CreateEnvironmentResponse.cpp
   src/v20210701/model/NamespacePage.cpp
+  src/v20210701/model/RestartApplicationRequest.cpp
   src/v20210701/model/CreateApplicationResponse.cpp
   src/v20210701/model/HorizontalAutoscaler.cpp
   src/v20210701/model/StorageMountConf.cpp
@@ -185,9 +199,11 @@ set(tem_src
   src/v20210701/model/DescribeIngressRequest.cpp
   src/v20210701/model/CreateCosTokenRequest.cpp
   src/v20210701/model/DescribeEnvironmentsRequest.cpp
+  src/v20210701/model/StopApplicationResponse.cpp
   src/v20210701/model/EksService.cpp
   src/v20210701/model/CronHorizontalAutoscalerSchedule.cpp
   src/v20210701/model/DeployApplicationResponse.cpp
+  src/v20210701/model/StorageConf.cpp
   src/v20210701/model/CreateEnvironmentRequest.cpp
   src/v20210701/model/Pair.cpp
   src/v20201221/model/MountedSettingConf.cpp

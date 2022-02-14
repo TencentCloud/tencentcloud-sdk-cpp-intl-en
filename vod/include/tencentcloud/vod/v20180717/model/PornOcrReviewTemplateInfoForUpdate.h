@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Control parameter of porn detection in text task.
+                * Parameters for OCR-based recognition of pornographic content
                 */
                 class PornOcrReviewTemplateInfoForUpdate : public AbstractModel
                 {
@@ -47,22 +47,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Switch of porn detection in text task. Valid values:
-<li>ON: enables porn detection in text task;</li>
-<li>OFF: disables porn detection in text task.</li>
-                     * @return Switch Switch of porn detection in text task. Valid values:
-<li>ON: enables porn detection in text task;</li>
-<li>OFF: disables porn detection in text task.</li>
+                     * 获取Whether to enable OCR-based recognition of pornographic content. Valid values:
+<li>ON</li>
+<li>OFF</li>
+                     * @return Switch Whether to enable OCR-based recognition of pornographic content. Valid values:
+<li>ON</li>
+<li>OFF</li>
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Switch of porn detection in text task. Valid values:
-<li>ON: enables porn detection in text task;</li>
-<li>OFF: disables porn detection in text task.</li>
-                     * @param Switch Switch of porn detection in text task. Valid values:
-<li>ON: enables porn detection in text task;</li>
-<li>OFF: disables porn detection in text task.</li>
+                     * 设置Whether to enable OCR-based recognition of pornographic content. Valid values:
+<li>ON</li>
+<li>OFF</li>
+                     * @param Switch Whether to enable OCR-based recognition of pornographic content. Valid values:
+<li>ON</li>
+<li>OFF</li>
                      */
                     void SetSwitch(const std::string& _switch);
 
@@ -111,9 +111,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Switch of porn detection in text task. Valid values:
-<li>ON: enables porn detection in text task;</li>
-<li>OFF: disables porn detection in text task.</li>
+                     * Whether to enable OCR-based recognition of pornographic content. Valid values:
+<li>ON</li>
+<li>OFF</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

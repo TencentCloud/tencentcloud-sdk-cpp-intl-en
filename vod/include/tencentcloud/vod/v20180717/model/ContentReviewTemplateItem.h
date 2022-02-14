@@ -40,7 +40,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Content audit template details
+                * Intelligent recognition template details
                 */
                 class ContentReviewTemplateItem : public AbstractModel
                 {
@@ -52,14 +52,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique ID of content audit template.
-                     * @return Definition Unique ID of content audit template.
+                     * 获取Unique ID of an intelligent recognition template
+                     * @return Definition Unique ID of an intelligent recognition template
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Unique ID of content audit template.
-                     * @param Definition Unique ID of content audit template.
+                     * 设置Unique ID of an intelligent recognition template
+                     * @param Definition Unique ID of an intelligent recognition template
                      */
                     void SetDefinition(const int64_t& _definition);
 
@@ -70,14 +70,14 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Content audit template name. Length limit: 64 characters.
-                     * @return Name Content audit template name. Length limit: 64 characters.
+                     * 获取Name of an intelligent recognition template. Max 64 characters
+                     * @return Name Name of an intelligent recognition template. Max 64 characters
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Content audit template name. Length limit: 64 characters.
-                     * @param Name Content audit template name. Length limit: 64 characters.
+                     * 设置Name of an intelligent recognition template. Max 64 characters
+                     * @param Name Name of an intelligent recognition template. Max 64 characters
                      */
                     void SetName(const std::string& _name);
 
@@ -88,14 +88,14 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Content audit template description. Length limit: 256 characters.
-                     * @return Comment Content audit template description. Length limit: 256 characters.
+                     * 获取Description of an intelligent recognition template. Max 256 characters
+                     * @return Comment Description of an intelligent recognition template. Max 256 characters
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置Content audit template description. Length limit: 256 characters.
-                     * @param Comment Content audit template description. Length limit: 256 characters.
+                     * 设置Description of an intelligent recognition template. Max 256 characters
+                     * @param Comment Description of an intelligent recognition template. Max 256 characters
                      */
                     void SetComment(const std::string& _comment);
 
@@ -106,18 +106,18 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取Porn information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return PornConfigure Porn information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Parameters for recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @return PornConfigure Parameters for recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     PornConfigureInfo GetPornConfigure() const;
 
                     /**
-                     * 设置Porn information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PornConfigure Porn information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Parameters for recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @param PornConfigure Parameters for recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     void SetPornConfigure(const PornConfigureInfo& _pornConfigure);
 
@@ -128,18 +128,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PornConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Terrorism information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TerrorismConfigure Terrorism information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Parameters for recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @return TerrorismConfigure Parameters for recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     TerrorismConfigureInfo GetTerrorismConfigure() const;
 
                     /**
-                     * 设置Terrorism information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TerrorismConfigure Terrorism information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Parameters for recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @param TerrorismConfigure Parameters for recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     void SetTerrorismConfigure(const TerrorismConfigureInfo& _terrorismConfigure);
 
@@ -150,18 +150,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TerrorismConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Politically sensitive information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return PoliticalConfigure Politically sensitive information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Parameters for recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @return PoliticalConfigure Parameters for recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     PoliticalConfigureInfo GetPoliticalConfigure() const;
 
                     /**
-                     * 设置Politically sensitive information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PoliticalConfigure Politically sensitive information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Parameters for recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @param PoliticalConfigure Parameters for recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     void SetPoliticalConfigure(const PoliticalConfigureInfo& _politicalConfigure);
 
@@ -202,18 +202,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ProhibitedConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Custom content audit control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return UserDefineConfigure Custom content audit control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Custom recognition parameters
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @return UserDefineConfigure Custom recognition parameters
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     UserDefineConfigureInfo GetUserDefineConfigure() const;
 
                     /**
-                     * 设置Custom content audit control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param UserDefineConfigure Custom content audit control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Custom recognition parameters
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @param UserDefineConfigure Custom recognition parameters
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     void SetUserDefineConfigure(const UserDefineConfigureInfo& _userDefineConfigure);
 
@@ -224,22 +224,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool UserDefineConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Switch controlling whether to add audit result to review list (for human review).
-<li>ON: yes;</li>
-<li>OFF: no.</li>
-                     * @return ReviewWallSwitch Switch controlling whether to add audit result to review list (for human review).
-<li>ON: yes;</li>
-<li>OFF: no.</li>
+                     * 获取Whether to subject the recognition result to human review
+<li>ON</li>
+<li>OFF</li>
+                     * @return ReviewWallSwitch Whether to subject the recognition result to human review
+<li>ON</li>
+<li>OFF</li>
                      */
                     std::string GetReviewWallSwitch() const;
 
                     /**
-                     * 设置Switch controlling whether to add audit result to review list (for human review).
-<li>ON: yes;</li>
-<li>OFF: no.</li>
-                     * @param ReviewWallSwitch Switch controlling whether to add audit result to review list (for human review).
-<li>ON: yes;</li>
-<li>OFF: no.</li>
+                     * 设置Whether to subject the recognition result to human review
+<li>ON</li>
+<li>OFF</li>
+                     * @param ReviewWallSwitch Whether to subject the recognition result to human review
+<li>ON</li>
+<li>OFF</li>
                      */
                     void SetReviewWallSwitch(const std::string& _reviewWallSwitch);
 
@@ -306,40 +306,40 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Unique ID of content audit template.
+                     * Unique ID of an intelligent recognition template
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Content audit template name. Length limit: 64 characters.
+                     * Name of an intelligent recognition template. Max 64 characters
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Content audit template description. Length limit: 256 characters.
+                     * Description of an intelligent recognition template. Max 256 characters
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * Porn information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Parameters for recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     PornConfigureInfo m_pornConfigure;
                     bool m_pornConfigureHasBeenSet;
 
                     /**
-                     * Terrorism information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Parameters for recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     TerrorismConfigureInfo m_terrorismConfigure;
                     bool m_terrorismConfigureHasBeenSet;
 
                     /**
-                     * Politically sensitive information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Parameters for recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     PoliticalConfigureInfo m_politicalConfigure;
                     bool m_politicalConfigureHasBeenSet;
@@ -354,16 +354,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_prohibitedConfigureHasBeenSet;
 
                     /**
-                     * Custom content audit control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Custom recognition parameters
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     UserDefineConfigureInfo m_userDefineConfigure;
                     bool m_userDefineConfigureHasBeenSet;
 
                     /**
-                     * Switch controlling whether to add audit result to review list (for human review).
-<li>ON: yes;</li>
-<li>OFF: no.</li>
+                     * Whether to subject the recognition result to human review
+<li>ON</li>
+<li>OFF</li>
                      */
                     std::string m_reviewWallSwitch;
                     bool m_reviewWallSwitchHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Control parameter of terrorism information detection in video image task
+                * Parameters for recognition of terrorism content in images
                 */
                 class TerrorismImgReviewTemplateInfo : public AbstractModel
                 {
@@ -47,22 +47,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Switch of terrorism information detection in video image task. Valid values:
-<li>ON: enables terrorism information detection in video image task;</li>
-<li>OFF: disables terrorism information detection in video image task.</li>
-                     * @return Switch Switch of terrorism information detection in video image task. Valid values:
-<li>ON: enables terrorism information detection in video image task;</li>
-<li>OFF: disables terrorism information detection in video image task.</li>
+                     * 获取Whether to enable recognition of terrorism content in images. Valid values:
+<li>ON</li>
+<li>OFF</li>
+                     * @return Switch Whether to enable recognition of terrorism content in images. Valid values:
+<li>ON</li>
+<li>OFF</li>
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Switch of terrorism information detection in video image task. Valid values:
-<li>ON: enables terrorism information detection in video image task;</li>
-<li>OFF: disables terrorism information detection in video image task.</li>
-                     * @param Switch Switch of terrorism information detection in video image task. Valid values:
-<li>ON: enables terrorism information detection in video image task;</li>
-<li>OFF: disables terrorism information detection in video image task.</li>
+                     * 设置Whether to enable recognition of terrorism content in images. Valid values:
+<li>ON</li>
+<li>OFF</li>
+                     * @param Switch Whether to enable recognition of terrorism content in images. Valid values:
+<li>ON</li>
+<li>OFF</li>
                      */
                     void SetSwitch(const std::string& _switch);
 
@@ -73,21 +73,21 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Filter tags for terrorism information detection in images. If a moderation result contains a selected tag, it will be returned. If no filter tag is specified, all moderation results will be returned. Valid values:
+                     * 获取Filter labels for recognition of terrorism content in images. Results containing the specified labels are returned. If no labels are specified, all results are returned. Valid values:
 <li>`guns`: weapons and guns</li>
-<li>`crowd`: crowds</li>
-<li>`bloody`: bloody images</li>
-<li>`police`: police forces</li>
+<li>`crowd`: crowd</li>
+<li>`bloody`: bloody scenes</li>
+<li>`police`: police force</li>
 <li>`banners`: terrorism flags</li>
 <li>`militant`: militants</li>
 <li>`explosion`: explosions and fires</li>
 <li>`terrorists`: terrorists</li>
 <li>`scenario`: terrorism images</li>
-                     * @return LabelSet Filter tags for terrorism information detection in images. If a moderation result contains a selected tag, it will be returned. If no filter tag is specified, all moderation results will be returned. Valid values:
+                     * @return LabelSet Filter labels for recognition of terrorism content in images. Results containing the specified labels are returned. If no labels are specified, all results are returned. Valid values:
 <li>`guns`: weapons and guns</li>
-<li>`crowd`: crowds</li>
-<li>`bloody`: bloody images</li>
-<li>`police`: police forces</li>
+<li>`crowd`: crowd</li>
+<li>`bloody`: bloody scenes</li>
+<li>`police`: police force</li>
 <li>`banners`: terrorism flags</li>
 <li>`militant`: militants</li>
 <li>`explosion`: explosions and fires</li>
@@ -97,21 +97,21 @@ namespace TencentCloud
                     std::vector<std::string> GetLabelSet() const;
 
                     /**
-                     * 设置Filter tags for terrorism information detection in images. If a moderation result contains a selected tag, it will be returned. If no filter tag is specified, all moderation results will be returned. Valid values:
+                     * 设置Filter labels for recognition of terrorism content in images. Results containing the specified labels are returned. If no labels are specified, all results are returned. Valid values:
 <li>`guns`: weapons and guns</li>
-<li>`crowd`: crowds</li>
-<li>`bloody`: bloody images</li>
-<li>`police`: police forces</li>
+<li>`crowd`: crowd</li>
+<li>`bloody`: bloody scenes</li>
+<li>`police`: police force</li>
 <li>`banners`: terrorism flags</li>
 <li>`militant`: militants</li>
 <li>`explosion`: explosions and fires</li>
 <li>`terrorists`: terrorists</li>
 <li>`scenario`: terrorism images</li>
-                     * @param LabelSet Filter tags for terrorism information detection in images. If a moderation result contains a selected tag, it will be returned. If no filter tag is specified, all moderation results will be returned. Valid values:
+                     * @param LabelSet Filter labels for recognition of terrorism content in images. Results containing the specified labels are returned. If no labels are specified, all results are returned. Valid values:
 <li>`guns`: weapons and guns</li>
-<li>`crowd`: crowds</li>
-<li>`bloody`: bloody images</li>
-<li>`police`: police forces</li>
+<li>`crowd`: crowd</li>
+<li>`bloody`: bloody scenes</li>
+<li>`police`: police force</li>
 <li>`banners`: terrorism flags</li>
 <li>`militant`: militants</li>
 <li>`explosion`: explosions and fires</li>
@@ -127,14 +127,14 @@ namespace TencentCloud
                     bool LabelSetHasBeenSet() const;
 
                     /**
-                     * 获取Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 90 will be used by default. Value range: 0-100.
-                     * @return BlockConfidence Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 90 will be used by default. Value range: 0-100.
+                     * 获取Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `90` will be used by default. Value range: 0-100
+                     * @return BlockConfidence Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `90` will be used by default. Value range: 0-100
                      */
                     int64_t GetBlockConfidence() const;
 
                     /**
-                     * 设置Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 90 will be used by default. Value range: 0-100.
-                     * @param BlockConfidence Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 90 will be used by default. Value range: 0-100.
+                     * 设置Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `90` will be used by default. Value range: 0-100
+                     * @param BlockConfidence Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `90` will be used by default. Value range: 0-100
                      */
                     void SetBlockConfidence(const int64_t& _blockConfidence);
 
@@ -145,14 +145,14 @@ namespace TencentCloud
                     bool BlockConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 80 will be used by default. Value range: 0-100.
-                     * @return ReviewConfidence Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 80 will be used by default. Value range: 0-100.
+                     * 获取Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `80` will be used by default. Value range: 0-100
+                     * @return ReviewConfidence Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `80` will be used by default. Value range: 0-100
                      */
                     int64_t GetReviewConfidence() const;
 
                     /**
-                     * 设置Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 80 will be used by default. Value range: 0-100.
-                     * @param ReviewConfidence Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 80 will be used by default. Value range: 0-100.
+                     * 设置Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `80` will be used by default. Value range: 0-100
+                     * @param ReviewConfidence Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `80` will be used by default. Value range: 0-100
                      */
                     void SetReviewConfidence(const int64_t& _reviewConfidence);
 
@@ -165,19 +165,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Switch of terrorism information detection in video image task. Valid values:
-<li>ON: enables terrorism information detection in video image task;</li>
-<li>OFF: disables terrorism information detection in video image task.</li>
+                     * Whether to enable recognition of terrorism content in images. Valid values:
+<li>ON</li>
+<li>OFF</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Filter tags for terrorism information detection in images. If a moderation result contains a selected tag, it will be returned. If no filter tag is specified, all moderation results will be returned. Valid values:
+                     * Filter labels for recognition of terrorism content in images. Results containing the specified labels are returned. If no labels are specified, all results are returned. Valid values:
 <li>`guns`: weapons and guns</li>
-<li>`crowd`: crowds</li>
-<li>`bloody`: bloody images</li>
-<li>`police`: police forces</li>
+<li>`crowd`: crowd</li>
+<li>`bloody`: bloody scenes</li>
+<li>`police`: police force</li>
 <li>`banners`: terrorism flags</li>
 <li>`militant`: militants</li>
 <li>`explosion`: explosions and fires</li>
@@ -188,13 +188,13 @@ namespace TencentCloud
                     bool m_labelSetHasBeenSet;
 
                     /**
-                     * Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 90 will be used by default. Value range: 0-100.
+                     * Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `90` will be used by default. Value range: 0-100
                      */
                     int64_t m_blockConfidence;
                     bool m_blockConfidenceHasBeenSet;
 
                     /**
-                     * Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 80 will be used by default. Value range: 0-100.
+                     * Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `80` will be used by default. Value range: 0-100
                      */
                     int64_t m_reviewConfidence;
                     bool m_reviewConfidenceHasBeenSet;

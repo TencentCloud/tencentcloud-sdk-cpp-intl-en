@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Suspected politically sensitive segment identified in content audit
+                * Video segment containing detected politically sensitive content
                 */
                 class MediaContentReviewPoliticalSegmentItem : public AbstractModel
                 {
@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取Score of a suspected politically sensitive segment.
-                     * @return Confidence Score of a suspected politically sensitive segment.
+                     * 获取Confidence score for the detected politically sensitive content
+                     * @return Confidence Confidence score for the detected politically sensitive content
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Score of a suspected politically sensitive segment.
-                     * @param Confidence Score of a suspected politically sensitive segment.
+                     * 设置Confidence score for the detected politically sensitive content
+                     * @param Confidence Confidence score for the detected politically sensitive content
                      */
                     void SetConfidence(const double& _confidence);
 
@@ -101,26 +101,26 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Suggestion for politically sensitive information detection of a suspected segment. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-                     * @return Suggestion Suggestion for politically sensitive information detection of a suspected segment. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+                     * 获取Processing suggestion for the detected politically sensitive content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
+                     * @return Suggestion Processing suggestion for the detected politically sensitive content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
                      */
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置Suggestion for politically sensitive information detection of a suspected segment. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-                     * @param Suggestion Suggestion for politically sensitive information detection of a suspected segment. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+                     * 设置Processing suggestion for the detected politically sensitive content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
+                     * @param Suggestion Processing suggestion for the detected politically sensitive content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
                      */
                     void SetSuggestion(const std::string& _suggestion);
 
@@ -131,14 +131,14 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取Name of a politically sensitive figure or violating photo.
-                     * @return Name Name of a politically sensitive figure or violating photo.
+                     * 获取Name of the politically sensitive content or banned images
+                     * @return Name Name of the politically sensitive content or banned images
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Name of a politically sensitive figure or violating photo.
-                     * @param Name Name of a politically sensitive figure or violating photo.
+                     * 设置Name of the politically sensitive content or banned images
+                     * @param Name Name of the politically sensitive content or banned images
                      */
                     void SetName(const std::string& _name);
 
@@ -149,106 +149,106 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Tags for the results of politically sensitive information detection of suspected video segments. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
+                     * 获取Labels for the detected politically sensitive content. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) is as follows:
 violation_photo:
-<li>violation_photo: violating photo.</li>
+<li>`violation_photo`: banned images</li>
 politician:
-<li>nation_politician: head of state/government;</li>
-<li>province_politician: province/state leader;</li>
-<li>bureau_politician: ministry leader;</li>
-<li>county_politician: county/city leader;</li>
-<li>rural_politician: town leader;</li>
-<li>sensitive_politician: politically sensitive figure;</li>
-<li>foreign_politician: head of a foreign country/government.</li>
+<li>`nation_politician`: state leader of China</li>
+<li>`province_politician`: provincial officials</li>
+<li>`bureau_politician`: bureau-level officials</li>
+<li>`county_politician`: county-level officials</li>
+<li>`rural_politician`: township-level officials</li>
+<li>`sensitive_politician`: politically sensitive people</li>
+<li>`foreign_politician`: state leaders of other countries</li>
 entertainment:
-<li>sensitive_entertainment: sensitive entertainment celebrity.</li>
+<li>`sensitive_entertainment`: banned people in the entertainment industry</li>
 sport:
-<li>sensitive_sport: sensitive sports figure.</li>
+<li>`sensitive_sport`: banned sports celebrities</li>
 entrepreneur:
-<li>sensitive_entrepreneur: sensitive business figure.</li>
+<li>`sensitive_entrepreneur`: banned businesspeople</li>
 scholar:
-<li>sensitive_scholar: sensitive educator.</li>
+<li>sensitive_scholar: banned scholars</li>
 celebrity:
-<li>sensitive_celebrity: sensitive well-known figure;</li>
-<li>historical_celebrity: well-known historical figures.</li>
+<li>sensitive_celebrity: banned celebrities</li>
+<li>historical_celebrity: banned historical figures</li>
 military:
-<li>sensitive_military: militarily sensitive figure.</li>
-                     * @return Label Tags for the results of politically sensitive information detection of suspected video segments. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
+<li>sensitive_military: banned people in military</li>
+                     * @return Label Labels for the detected politically sensitive content. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) is as follows:
 violation_photo:
-<li>violation_photo: violating photo.</li>
+<li>`violation_photo`: banned images</li>
 politician:
-<li>nation_politician: head of state/government;</li>
-<li>province_politician: province/state leader;</li>
-<li>bureau_politician: ministry leader;</li>
-<li>county_politician: county/city leader;</li>
-<li>rural_politician: town leader;</li>
-<li>sensitive_politician: politically sensitive figure;</li>
-<li>foreign_politician: head of a foreign country/government.</li>
+<li>`nation_politician`: state leader of China</li>
+<li>`province_politician`: provincial officials</li>
+<li>`bureau_politician`: bureau-level officials</li>
+<li>`county_politician`: county-level officials</li>
+<li>`rural_politician`: township-level officials</li>
+<li>`sensitive_politician`: politically sensitive people</li>
+<li>`foreign_politician`: state leaders of other countries</li>
 entertainment:
-<li>sensitive_entertainment: sensitive entertainment celebrity.</li>
+<li>`sensitive_entertainment`: banned people in the entertainment industry</li>
 sport:
-<li>sensitive_sport: sensitive sports figure.</li>
+<li>`sensitive_sport`: banned sports celebrities</li>
 entrepreneur:
-<li>sensitive_entrepreneur: sensitive business figure.</li>
+<li>`sensitive_entrepreneur`: banned businesspeople</li>
 scholar:
-<li>sensitive_scholar: sensitive educator.</li>
+<li>sensitive_scholar: banned scholars</li>
 celebrity:
-<li>sensitive_celebrity: sensitive well-known figure;</li>
-<li>historical_celebrity: well-known historical figures.</li>
+<li>sensitive_celebrity: banned celebrities</li>
+<li>historical_celebrity: banned historical figures</li>
 military:
-<li>sensitive_military: militarily sensitive figure.</li>
+<li>sensitive_military: banned people in military</li>
                      */
                     std::string GetLabel() const;
 
                     /**
-                     * 设置Tags for the results of politically sensitive information detection of suspected video segments. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
+                     * 设置Labels for the detected politically sensitive content. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) is as follows:
 violation_photo:
-<li>violation_photo: violating photo.</li>
+<li>`violation_photo`: banned images</li>
 politician:
-<li>nation_politician: head of state/government;</li>
-<li>province_politician: province/state leader;</li>
-<li>bureau_politician: ministry leader;</li>
-<li>county_politician: county/city leader;</li>
-<li>rural_politician: town leader;</li>
-<li>sensitive_politician: politically sensitive figure;</li>
-<li>foreign_politician: head of a foreign country/government.</li>
+<li>`nation_politician`: state leader of China</li>
+<li>`province_politician`: provincial officials</li>
+<li>`bureau_politician`: bureau-level officials</li>
+<li>`county_politician`: county-level officials</li>
+<li>`rural_politician`: township-level officials</li>
+<li>`sensitive_politician`: politically sensitive people</li>
+<li>`foreign_politician`: state leaders of other countries</li>
 entertainment:
-<li>sensitive_entertainment: sensitive entertainment celebrity.</li>
+<li>`sensitive_entertainment`: banned people in the entertainment industry</li>
 sport:
-<li>sensitive_sport: sensitive sports figure.</li>
+<li>`sensitive_sport`: banned sports celebrities</li>
 entrepreneur:
-<li>sensitive_entrepreneur: sensitive business figure.</li>
+<li>`sensitive_entrepreneur`: banned businesspeople</li>
 scholar:
-<li>sensitive_scholar: sensitive educator.</li>
+<li>sensitive_scholar: banned scholars</li>
 celebrity:
-<li>sensitive_celebrity: sensitive well-known figure;</li>
-<li>historical_celebrity: well-known historical figures.</li>
+<li>sensitive_celebrity: banned celebrities</li>
+<li>historical_celebrity: banned historical figures</li>
 military:
-<li>sensitive_military: militarily sensitive figure.</li>
-                     * @param Label Tags for the results of politically sensitive information detection of suspected video segments. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
+<li>sensitive_military: banned people in military</li>
+                     * @param Label Labels for the detected politically sensitive content. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) is as follows:
 violation_photo:
-<li>violation_photo: violating photo.</li>
+<li>`violation_photo`: banned images</li>
 politician:
-<li>nation_politician: head of state/government;</li>
-<li>province_politician: province/state leader;</li>
-<li>bureau_politician: ministry leader;</li>
-<li>county_politician: county/city leader;</li>
-<li>rural_politician: town leader;</li>
-<li>sensitive_politician: politically sensitive figure;</li>
-<li>foreign_politician: head of a foreign country/government.</li>
+<li>`nation_politician`: state leader of China</li>
+<li>`province_politician`: provincial officials</li>
+<li>`bureau_politician`: bureau-level officials</li>
+<li>`county_politician`: county-level officials</li>
+<li>`rural_politician`: township-level officials</li>
+<li>`sensitive_politician`: politically sensitive people</li>
+<li>`foreign_politician`: state leaders of other countries</li>
 entertainment:
-<li>sensitive_entertainment: sensitive entertainment celebrity.</li>
+<li>`sensitive_entertainment`: banned people in the entertainment industry</li>
 sport:
-<li>sensitive_sport: sensitive sports figure.</li>
+<li>`sensitive_sport`: banned sports celebrities</li>
 entrepreneur:
-<li>sensitive_entrepreneur: sensitive business figure.</li>
+<li>`sensitive_entrepreneur`: banned businesspeople</li>
 scholar:
-<li>sensitive_scholar: sensitive educator.</li>
+<li>sensitive_scholar: banned scholars</li>
 celebrity:
-<li>sensitive_celebrity: sensitive well-known figure;</li>
-<li>historical_celebrity: well-known historical figures.</li>
+<li>sensitive_celebrity: banned celebrities</li>
+<li>historical_celebrity: banned historical figures</li>
 military:
-<li>sensitive_military: militarily sensitive figure.</li>
+<li>sensitive_military: banned people in military</li>
                      */
                     void SetLabel(const std::string& _label);
 
@@ -281,14 +281,14 @@ military:
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取Zone coordinates (at the pixel level) of a politically sensitive figure or violating photo: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
-                     * @return AreaCoordSet Zone coordinates (at the pixel level) of a politically sensitive figure or violating photo: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
+                     * 获取Coordinates (pixel) of the detected politically sensitive content or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
+                     * @return AreaCoordSet Coordinates (pixel) of the detected politically sensitive content or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
                      */
                     std::vector<int64_t> GetAreaCoordSet() const;
 
                     /**
-                     * 设置Zone coordinates (at the pixel level) of a politically sensitive figure or violating photo: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
-                     * @param AreaCoordSet Zone coordinates (at the pixel level) of a politically sensitive figure or violating photo: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
+                     * 设置Coordinates (pixel) of the detected politically sensitive content or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
+                     * @param AreaCoordSet Coordinates (pixel) of the detected politically sensitive content or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
                      */
                     void SetAreaCoordSet(const std::vector<int64_t>& _areaCoordSet);
 
@@ -349,51 +349,51 @@ military:
                     bool m_endTimeOffsetHasBeenSet;
 
                     /**
-                     * Score of a suspected politically sensitive segment.
+                     * Confidence score for the detected politically sensitive content
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * Suggestion for politically sensitive information detection of a suspected segment. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+                     * Processing suggestion for the detected politically sensitive content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
                      */
                     std::string m_suggestion;
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * Name of a politically sensitive figure or violating photo.
+                     * Name of the politically sensitive content or banned images
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Tags for the results of politically sensitive information detection of suspected video segments. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
+                     * Labels for the detected politically sensitive content. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) is as follows:
 violation_photo:
-<li>violation_photo: violating photo.</li>
+<li>`violation_photo`: banned images</li>
 politician:
-<li>nation_politician: head of state/government;</li>
-<li>province_politician: province/state leader;</li>
-<li>bureau_politician: ministry leader;</li>
-<li>county_politician: county/city leader;</li>
-<li>rural_politician: town leader;</li>
-<li>sensitive_politician: politically sensitive figure;</li>
-<li>foreign_politician: head of a foreign country/government.</li>
+<li>`nation_politician`: state leader of China</li>
+<li>`province_politician`: provincial officials</li>
+<li>`bureau_politician`: bureau-level officials</li>
+<li>`county_politician`: county-level officials</li>
+<li>`rural_politician`: township-level officials</li>
+<li>`sensitive_politician`: politically sensitive people</li>
+<li>`foreign_politician`: state leaders of other countries</li>
 entertainment:
-<li>sensitive_entertainment: sensitive entertainment celebrity.</li>
+<li>`sensitive_entertainment`: banned people in the entertainment industry</li>
 sport:
-<li>sensitive_sport: sensitive sports figure.</li>
+<li>`sensitive_sport`: banned sports celebrities</li>
 entrepreneur:
-<li>sensitive_entrepreneur: sensitive business figure.</li>
+<li>`sensitive_entrepreneur`: banned businesspeople</li>
 scholar:
-<li>sensitive_scholar: sensitive educator.</li>
+<li>sensitive_scholar: banned scholars</li>
 celebrity:
-<li>sensitive_celebrity: sensitive well-known figure;</li>
-<li>historical_celebrity: well-known historical figures.</li>
+<li>sensitive_celebrity: banned celebrities</li>
+<li>historical_celebrity: banned historical figures</li>
 military:
-<li>sensitive_military: militarily sensitive figure.</li>
+<li>sensitive_military: banned people in military</li>
                      */
                     std::string m_label;
                     bool m_labelHasBeenSet;
@@ -406,7 +406,7 @@ military:
                     bool m_urlHasBeenSet;
 
                     /**
-                     * Zone coordinates (at the pixel level) of a politically sensitive figure or violating photo: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
+                     * Coordinates (pixel) of the detected politically sensitive content or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
                      */
                     std::vector<int64_t> m_areaCoordSet;
                     bool m_areaCoordSetHasBeenSet;

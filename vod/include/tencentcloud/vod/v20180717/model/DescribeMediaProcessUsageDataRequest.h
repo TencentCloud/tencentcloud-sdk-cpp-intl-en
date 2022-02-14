@@ -79,38 +79,42 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取This API is used to query video processing task types. Valid values:
-<li>Transcoding: basic transcoding</li>
-<li>Transcoding-TESHD: TESHD transcoding</li>
-<li>Editing: video editing</li>
-<li>AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
-<li>ContentAudit: content moderation</li>
-<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing. This value is not recommended.</li>
-                     * @return Type This API is used to query video processing task types. Valid values:
-<li>Transcoding: basic transcoding</li>
-<li>Transcoding-TESHD: TESHD transcoding</li>
-<li>Editing: video editing</li>
-<li>AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
-<li>ContentAudit: content moderation</li>
-<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing. This value is not recommended.</li>
+                     * 获取Type of media processing task. Valid values:
+<li>`Transcoding`: basic transcoding</li>
+<li>`Transcoding-TESHD`: TESHD transcoding</li>
+<li>`Editing`: video editing</li>
+<li>`AdaptiveBitrateStreaming`: adaptive bitrate streaming</li>
+<li>`ContentAudit`: content moderation</li>
+<li>`RemoveWatermark`: watermark removal</li>
+<li>`Transcode`: transcoding, including basic transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
+                     * @return Type Type of media processing task. Valid values:
+<li>`Transcoding`: basic transcoding</li>
+<li>`Transcoding-TESHD`: TESHD transcoding</li>
+<li>`Editing`: video editing</li>
+<li>`AdaptiveBitrateStreaming`: adaptive bitrate streaming</li>
+<li>`ContentAudit`: content moderation</li>
+<li>`RemoveWatermark`: watermark removal</li>
+<li>`Transcode`: transcoding, including basic transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置This API is used to query video processing task types. Valid values:
-<li>Transcoding: basic transcoding</li>
-<li>Transcoding-TESHD: TESHD transcoding</li>
-<li>Editing: video editing</li>
-<li>AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
-<li>ContentAudit: content moderation</li>
-<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing. This value is not recommended.</li>
-                     * @param Type This API is used to query video processing task types. Valid values:
-<li>Transcoding: basic transcoding</li>
-<li>Transcoding-TESHD: TESHD transcoding</li>
-<li>Editing: video editing</li>
-<li>AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
-<li>ContentAudit: content moderation</li>
-<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing. This value is not recommended.</li>
+                     * 设置Type of media processing task. Valid values:
+<li>`Transcoding`: basic transcoding</li>
+<li>`Transcoding-TESHD`: TESHD transcoding</li>
+<li>`Editing`: video editing</li>
+<li>`AdaptiveBitrateStreaming`: adaptive bitrate streaming</li>
+<li>`ContentAudit`: content moderation</li>
+<li>`RemoveWatermark`: watermark removal</li>
+<li>`Transcode`: transcoding, including basic transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
+                     * @param Type Type of media processing task. Valid values:
+<li>`Transcoding`: basic transcoding</li>
+<li>`Transcoding-TESHD`: TESHD transcoding</li>
+<li>`Editing`: video editing</li>
+<li>`AdaptiveBitrateStreaming`: adaptive bitrate streaming</li>
+<li>`ContentAudit`: content moderation</li>
+<li>`RemoveWatermark`: watermark removal</li>
+<li>`Transcode`: transcoding, including basic transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
                      */
                     void SetType(const std::string& _type);
 
@@ -153,13 +157,14 @@ namespace TencentCloud
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * This API is used to query video processing task types. Valid values:
-<li>Transcoding: basic transcoding</li>
-<li>Transcoding-TESHD: TESHD transcoding</li>
-<li>Editing: video editing</li>
-<li>AdaptiveBitrateStreaming: adaptive bitrate streaming</li>
-<li>ContentAudit: content moderation</li>
-<li>Transcode: transcoding types, including basic transcoding, TESHD transcoding and video editing. This value is not recommended.</li>
+                     * Type of media processing task. Valid values:
+<li>`Transcoding`: basic transcoding</li>
+<li>`Transcoding-TESHD`: TESHD transcoding</li>
+<li>`Editing`: video editing</li>
+<li>`AdaptiveBitrateStreaming`: adaptive bitrate streaming</li>
+<li>`ContentAudit`: content moderation</li>
+<li>`RemoveWatermark`: watermark removal</li>
+<li>`Transcode`: transcoding, including basic transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Result type of ASR-based politically sensitive information detection in speech task in content audit
+                * Result for ASR-based recognition of politically sensitive content
                 */
                 class AiReviewTaskPoliticalAsrResult : public AbstractModel
                 {
@@ -125,14 +125,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Input of ASR-based politically sensitive information detection in speech task in content audit.
-                     * @return Input Input of ASR-based politically sensitive information detection in speech task in content audit.
+                     * 获取Input for ASR-based recognition of politically sensitive content
+                     * @return Input Input for ASR-based recognition of politically sensitive content
                      */
                     AiReviewPoliticalAsrTaskInput GetInput() const;
 
                     /**
-                     * 设置Input of ASR-based politically sensitive information detection in speech task in content audit.
-                     * @param Input Input of ASR-based politically sensitive information detection in speech task in content audit.
+                     * 设置Input for ASR-based recognition of politically sensitive content
+                     * @param Input Input for ASR-based recognition of politically sensitive content
                      */
                     void SetInput(const AiReviewPoliticalAsrTaskInput& _input);
 
@@ -143,14 +143,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output of ASR-based politically sensitive information detection in speech task in content audit.
-                     * @return Output Output of ASR-based politically sensitive information detection in speech task in content audit.
+                     * 获取Output for ASR-based recognition of politically sensitive content
+                     * @return Output Output for ASR-based recognition of politically sensitive content
                      */
                     AiReviewPoliticalAsrTaskOutput GetOutput() const;
 
                     /**
-                     * 设置Output of ASR-based politically sensitive information detection in speech task in content audit.
-                     * @param Output Output of ASR-based politically sensitive information detection in speech task in content audit.
+                     * 设置Output for ASR-based recognition of politically sensitive content
+                     * @param Output Output for ASR-based recognition of politically sensitive content
                      */
                     void SetOutput(const AiReviewPoliticalAsrTaskOutput& _output);
 
@@ -188,13 +188,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Input of ASR-based politically sensitive information detection in speech task in content audit.
+                     * Input for ASR-based recognition of politically sensitive content
                      */
                     AiReviewPoliticalAsrTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output of ASR-based politically sensitive information detection in speech task in content audit.
+                     * Output for ASR-based recognition of politically sensitive content
                      */
                     AiReviewPoliticalAsrTaskOutput m_output;
                     bool m_outputHasBeenSet;
