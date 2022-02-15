@@ -95,6 +95,8 @@
 #include <tencentcloud/dcdb/v20180411/model/OpenDBExtranetAccessResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/ResetAccountPasswordRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/ResetAccountPasswordResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/SwitchDBInstanceHARequest.h>
+#include <tencentcloud/dcdb/v20180411/model/SwitchDBInstanceHAResponse.h>
 
 
 namespace TencentCloud
@@ -217,6 +219,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ResetAccountPasswordResponse> ResetAccountPasswordOutcome;
                 typedef std::future<ResetAccountPasswordOutcome> ResetAccountPasswordOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::ResetAccountPasswordRequest&, ResetAccountPasswordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetAccountPasswordAsyncHandler;
+                typedef Outcome<Core::Error, Model::SwitchDBInstanceHAResponse> SwitchDBInstanceHAOutcome;
+                typedef std::future<SwitchDBInstanceHAOutcome> SwitchDBInstanceHAOutcomeCallable;
+                typedef std::function<void(const DcdbClient*, const Model::SwitchDBInstanceHARequest&, SwitchDBInstanceHAOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SwitchDBInstanceHAAsyncHandler;
 
 
 
@@ -549,6 +554,15 @@ Note: accounts with the same username but different hosts are different accounts
                 ResetAccountPasswordOutcome ResetAccountPassword(const Model::ResetAccountPasswordRequest &request);
                 void ResetAccountPasswordAsync(const Model::ResetAccountPasswordRequest& request, const ResetAccountPasswordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ResetAccountPasswordOutcomeCallable ResetAccountPasswordCallable(const Model::ResetAccountPasswordRequest& request);
+
+                /**
+                 *This API is used to start a source-replica switch of instances.
+                 * @param req SwitchDBInstanceHARequest
+                 * @return SwitchDBInstanceHAOutcome
+                 */
+                SwitchDBInstanceHAOutcome SwitchDBInstanceHA(const Model::SwitchDBInstanceHARequest &request);
+                void SwitchDBInstanceHAAsync(const Model::SwitchDBInstanceHARequest& request, const SwitchDBInstanceHAAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SwitchDBInstanceHAOutcomeCallable SwitchDBInstanceHACallable(const Model::SwitchDBInstanceHARequest& request);
 
             };
         }

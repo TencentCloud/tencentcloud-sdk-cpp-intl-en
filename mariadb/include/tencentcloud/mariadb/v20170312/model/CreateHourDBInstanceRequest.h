@@ -45,14 +45,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取AZs to deploy instance nodes. You can specify up to two AZs. If each shard has one primary node and two replica nodes, two of the three will be deployed in the first AZ you have specified.
-                     * @return Zones AZs to deploy instance nodes. You can specify up to two AZs. If each shard has one primary node and two replica nodes, two of the three will be deployed in the first AZ you have specified.
+                     * 获取AZs to deploy instance nodes. You can specify up to two AZs.
+                     * @return Zones AZs to deploy instance nodes. You can specify up to two AZs.
                      */
                     std::vector<std::string> GetZones() const;
 
                     /**
-                     * 设置AZs to deploy instance nodes. You can specify up to two AZs. If each shard has one primary node and two replica nodes, two of the three will be deployed in the first AZ you have specified.
-                     * @param Zones AZs to deploy instance nodes. You can specify up to two AZs. If each shard has one primary node and two replica nodes, two of the three will be deployed in the first AZ you have specified.
+                     * 设置AZs to deploy instance nodes. You can specify up to two AZs.
+                     * @param Zones AZs to deploy instance nodes. You can specify up to two AZs.
                      */
                     void SetZones(const std::vector<std::string>& _zones);
 
@@ -387,7 +387,7 @@ If this parameter is left empty, `10.1.9` will be used.
                 private:
 
                     /**
-                     * AZs to deploy instance nodes. You can specify up to two AZs. If each shard has one primary node and two replica nodes, two of the three will be deployed in the first AZ you have specified.
+                     * AZs to deploy instance nodes. You can specify up to two AZs.
                      */
                     std::vector<std::string> m_zones;
                     bool m_zonesHasBeenSet;
