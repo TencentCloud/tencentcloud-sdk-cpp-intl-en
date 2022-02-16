@@ -118,6 +118,24 @@ namespace TencentCloud
                      */
                     bool EngineVersionHasBeenSet() const;
 
+                    /**
+                     * 获取Parameter template type
+                     * @return TemplateType Parameter template type
+                     */
+                    std::string GetTemplateType() const;
+
+                    /**
+                     * 设置Parameter template type
+                     * @param TemplateType Parameter template type
+                     */
+                    void SetTemplateType(const std::string& _templateType);
+
+                    /**
+                     * 判断参数 TemplateType 是否已赋值
+                     * @return TemplateType 是否已赋值
+                     */
+                    bool TemplateTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -143,6 +161,12 @@ namespace TencentCloud
                      */
                     std::string m_engineVersion;
                     bool m_engineVersionHasBeenSet;
+
+                    /**
+                     * Parameter template type
+                     */
+                    std::string m_templateType;
+                    bool m_templateTypeHasBeenSet;
 
                 };
             }

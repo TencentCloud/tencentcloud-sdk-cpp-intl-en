@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return EngineVersions 
+                     * 获取Engine version. If it is left empty, all parameter templates will be queried.
+                     * @return EngineVersions Engine version. If it is left empty, all parameter templates will be queried.
                      */
                     std::vector<std::string> GetEngineVersions() const;
 
                     /**
-                     * 设置
-                     * @param EngineVersions 
+                     * 设置Engine version. If it is left empty, all parameter templates will be queried.
+                     * @param EngineVersions Engine version. If it is left empty, all parameter templates will be queried.
                      */
                     void SetEngineVersions(const std::vector<std::string>& _engineVersions);
 
@@ -63,7 +63,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Engine version. If it is left empty, all parameter templates will be queried.
                      */
                     std::vector<std::string> m_engineVersions;
                     bool m_engineVersionsHasBeenSet;
