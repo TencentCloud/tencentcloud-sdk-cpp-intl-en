@@ -246,6 +246,24 @@ namespace TencentCloud
                      */
                     bool FilterDamDDoSStatusHasBeenSet() const;
 
+                    /**
+                     * 获取Filters by status of bound resources. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+                     * @return FilterStatus Filters by status of bound resources. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+                     */
+                    std::string GetFilterStatus() const;
+
+                    /**
+                     * 设置Filters by status of bound resources. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+                     * @param FilterStatus Filters by status of bound resources. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+                     */
+                    void SetFilterStatus(const std::string& _filterStatus);
+
+                    /**
+                     * 判断参数 FilterStatus 是否已赋值
+                     * @return FilterStatus 是否已赋值
+                     */
+                    bool FilterStatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -313,6 +331,12 @@ namespace TencentCloud
                      */
                     int64_t m_filterDamDDoSStatus;
                     bool m_filterDamDDoSStatusHasBeenSet;
+
+                    /**
+                     * Filters by status of bound resources. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+                     */
+                    std::string m_filterStatus;
+                    bool m_filterStatusHasBeenSet;
 
                 };
             }

@@ -112,6 +112,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool TriggerCronConfigHasBeenSet() const;
 
+                    /**
+                     * 获取The provision type. Value: `Default`
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @return ProvisionedType The provision type. Value: `Default`
+Note: This field may return `null`, indicating that no valid value can be found.
+                     */
+                    std::string GetProvisionedType() const;
+
+                    /**
+                     * 设置The provision type. Value: `Default`
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @param ProvisionedType The provision type. Value: `Default`
+Note: This field may return `null`, indicating that no valid value can be found.
+                     */
+                    void SetProvisionedType(const std::string& _provisionedType);
+
+                    /**
+                     * 判断参数 ProvisionedType 是否已赋值
+                     * @return ProvisionedType 是否已赋值
+                     */
+                    bool ProvisionedTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -134,6 +156,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_triggerCronConfig;
                     bool m_triggerCronConfigHasBeenSet;
+
+                    /**
+                     * The provision type. Value: `Default`
+Note: This field may return `null`, indicating that no valid value can be found.
+                     */
+                    std::string m_provisionedType;
+                    bool m_provisionedTypeHasBeenSet;
 
                 };
             }

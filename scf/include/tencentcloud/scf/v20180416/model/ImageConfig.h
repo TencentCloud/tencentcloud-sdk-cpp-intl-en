@@ -127,17 +127,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool EntryPointHasBeenSet() const;
 
                     /**
-                     * 获取entrypoint execution command
+                     * 获取The command to start up the container, such as `python`. If it’s not specified, Entrypoint in Dockerfile is used.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Command entrypoint execution command
+                     * @return Command The command to start up the container, such as `python`. If it’s not specified, Entrypoint in Dockerfile is used.
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetCommand() const;
 
                     /**
-                     * 设置entrypoint execution command
+                     * 设置The command to start up the container, such as `python`. If it’s not specified, Entrypoint in Dockerfile is used.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Command entrypoint execution command
+                     * @param Command The command to start up the container, such as `python`. If it’s not specified, Entrypoint in Dockerfile is used.
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetCommand(const std::string& _command);
@@ -149,18 +149,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool CommandHasBeenSet() const;
 
                     /**
-                     * 获取Command parameters
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Args Command parameters
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取The parameters to start up the container. Separate parameters with spaces, such as `u app.py`. If it’s not specified, `CMD in Dockerfile is used.
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @return Args The parameters to start up the container. Separate parameters with spaces, such as `u app.py`. If it’s not specified, `CMD in Dockerfile is used.
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     std::string GetArgs() const;
 
                     /**
-                     * 设置Command parameters
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Args Command parameters
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置The parameters to start up the container. Separate parameters with spaces, such as `u app.py`. If it’s not specified, `CMD in Dockerfile is used.
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @param Args The parameters to start up the container. Separate parameters with spaces, such as `u app.py`. If it’s not specified, `CMD in Dockerfile is used.
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     void SetArgs(const std::string& _args);
 
@@ -199,15 +199,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_entryPointHasBeenSet;
 
                     /**
-                     * entrypoint execution command
+                     * The command to start up the container, such as `python`. If it’s not specified, Entrypoint in Dockerfile is used.
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_command;
                     bool m_commandHasBeenSet;
 
                     /**
-                     * Command parameters
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * The parameters to start up the container. Separate parameters with spaces, such as `u app.py`. If it’s not specified, `CMD in Dockerfile is used.
+Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     std::string m_args;
                     bool m_argsHasBeenSet;

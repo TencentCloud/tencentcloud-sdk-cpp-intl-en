@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool NamespaceHasBeenSet() const;
 
                     /**
-                     * 获取Start time of the query, for example `2017-05-16 20:00:00`. If it’s left empty, it defaults to the current time minus 24 hours.
-                     * @return StartTime Start time of the query, for example `2017-05-16 20:00:00`. If it’s left empty, it defaults to the current time minus 24 hours.
+                     * 获取Start time of the query, for example `2017-05-16 20:00:00`. If it’s left empty, it defaults to 15 minutes before the current time.
+                     * @return StartTime Start time of the query, for example `2017-05-16 20:00:00`. If it’s left empty, it defaults to 15 minutes before the current time.
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Start time of the query, for example `2017-05-16 20:00:00`. If it’s left empty, it defaults to the current time minus 24 hours.
-                     * @param StartTime Start time of the query, for example `2017-05-16 20:00:00`. If it’s left empty, it defaults to the current time minus 24 hours.
+                     * 设置Start time of the query, for example `2017-05-16 20:00:00`. If it’s left empty, it defaults to 15 minutes before the current time.
+                     * @param StartTime Start time of the query, for example `2017-05-16 20:00:00`. If it’s left empty, it defaults to 15 minutes before the current time.
                      */
                     void SetStartTime(const std::string& _startTime);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time of the query, for example `2017-05-16 20:59:59`. If it’s left empty, it defaults to the current time. Note that the EndTime should be later than the StartTime
-                     * @return EndTime End time of the query, for example `2017-05-16 20:59:59`. If it’s left empty, it defaults to the current time. Note that the EndTime should be later than the StartTime
+                     * 获取End time of the query. such as `2017-05-16 20:59:59`. If `StartTime` is not specified, `EndTime` defaults to the current time. If `StartTime` is specified, `EndTime` is required, and it need to be later than the `StartTime`.
+                     * @return EndTime End time of the query. such as `2017-05-16 20:59:59`. If `StartTime` is not specified, `EndTime` defaults to the current time. If `StartTime` is specified, `EndTime` is required, and it need to be later than the `StartTime`.
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time of the query, for example `2017-05-16 20:59:59`. If it’s left empty, it defaults to the current time. Note that the EndTime should be later than the StartTime
-                     * @param EndTime End time of the query, for example `2017-05-16 20:59:59`. If it’s left empty, it defaults to the current time. Note that the EndTime should be later than the StartTime
+                     * 设置End time of the query. such as `2017-05-16 20:59:59`. If `StartTime` is not specified, `EndTime` defaults to the current time. If `StartTime` is specified, `EndTime` is required, and it need to be later than the `StartTime`.
+                     * @param EndTime End time of the query. such as `2017-05-16 20:59:59`. If `StartTime` is not specified, `EndTime` defaults to the current time. If `StartTime` is specified, `EndTime` is required, and it need to be later than the `StartTime`.
                      */
                     void SetEndTime(const std::string& _endTime);
 
@@ -153,13 +153,13 @@ namespace TencentCloud
                     bool m_namespaceHasBeenSet;
 
                     /**
-                     * Start time of the query, for example `2017-05-16 20:00:00`. If it’s left empty, it defaults to the current time minus 24 hours.
+                     * Start time of the query, for example `2017-05-16 20:00:00`. If it’s left empty, it defaults to 15 minutes before the current time.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time of the query, for example `2017-05-16 20:59:59`. If it’s left empty, it defaults to the current time. Note that the EndTime should be later than the StartTime
+                     * End time of the query. such as `2017-05-16 20:59:59`. If `StartTime` is not specified, `EndTime` defaults to the current time. If `StartTime` is specified, `EndTime` is required, and it need to be later than the `StartTime`.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;

@@ -168,6 +168,42 @@ namespace TencentCloud
                      */
                     bool FilterLineHasBeenSet() const;
 
+                    /**
+                     * 获取Filters by instance status. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+                     * @return FilterStatus Filters by instance status. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+                     */
+                    std::string GetFilterStatus() const;
+
+                    /**
+                     * 设置Filters by instance status. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+                     * @param FilterStatus Filters by instance status. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+                     */
+                    void SetFilterStatus(const std::string& _filterStatus);
+
+                    /**
+                     * 判断参数 FilterStatus 是否已赋值
+                     * @return FilterStatus 是否已赋值
+                     */
+                    bool FilterStatusHasBeenSet() const;
+
+                    /**
+                     * 获取Filters by binding status. `bounding`: the instance is bound; `failed`: the binding failed.
+                     * @return FilterBoundStatus Filters by binding status. `bounding`: the instance is bound; `failed`: the binding failed.
+                     */
+                    std::string GetFilterBoundStatus() const;
+
+                    /**
+                     * 设置Filters by binding status. `bounding`: the instance is bound; `failed`: the binding failed.
+                     * @param FilterBoundStatus Filters by binding status. `bounding`: the instance is bound; `failed`: the binding failed.
+                     */
+                    void SetFilterBoundStatus(const std::string& _filterBoundStatus);
+
+                    /**
+                     * 判断参数 FilterBoundStatus 是否已赋值
+                     * @return FilterBoundStatus 是否已赋值
+                     */
+                    bool FilterBoundStatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -211,6 +247,18 @@ namespace TencentCloud
                      */
                     uint64_t m_filterLine;
                     bool m_filterLineHasBeenSet;
+
+                    /**
+                     * Filters by instance status. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+                     */
+                    std::string m_filterStatus;
+                    bool m_filterStatusHasBeenSet;
+
+                    /**
+                     * Filters by binding status. `bounding`: the instance is bound; `failed`: the binding failed.
+                     */
+                    std::string m_filterBoundStatus;
+                    bool m_filterBoundStatusHasBeenSet;
 
                 };
             }

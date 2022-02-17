@@ -156,14 +156,14 @@ namespace TencentCloud
                     bool TempCosObjectNameHasBeenSet() const;
 
                     /**
-                     * 获取Git address
-                     * @return GitUrl Git address
+                     * 获取(Disused) Git address
+                     * @return GitUrl (Disused) Git address
                      */
                     std::string GetGitUrl() const;
 
                     /**
-                     * 设置Git address
-                     * @param GitUrl Git address
+                     * 设置(Disused) Git address
+                     * @param GitUrl (Disused) Git address
                      */
                     void SetGitUrl(const std::string& _gitUrl);
 
@@ -174,14 +174,14 @@ namespace TencentCloud
                     bool GitUrlHasBeenSet() const;
 
                     /**
-                     * 获取Git user name
-                     * @return GitUserName Git user name
+                     * 获取(Disused) Git username
+                     * @return GitUserName (Disused) Git username
                      */
                     std::string GetGitUserName() const;
 
                     /**
-                     * 设置Git user name
-                     * @param GitUserName Git user name
+                     * 设置(Disused) Git username
+                     * @param GitUserName (Disused) Git username
                      */
                     void SetGitUserName(const std::string& _gitUserName);
 
@@ -192,14 +192,14 @@ namespace TencentCloud
                     bool GitUserNameHasBeenSet() const;
 
                     /**
-                     * 获取Git password
-                     * @return GitPassword Git password
+                     * 获取(Disused) Git password
+                     * @return GitPassword (Disused) Git password
                      */
                     std::string GetGitPassword() const;
 
                     /**
-                     * 设置Git password
-                     * @param GitPassword Git password
+                     * 设置(Disused) Git password
+                     * @param GitPassword (Disused) Git password
                      */
                     void SetGitPassword(const std::string& _gitPassword);
 
@@ -210,14 +210,14 @@ namespace TencentCloud
                     bool GitPasswordHasBeenSet() const;
 
                     /**
-                     * 获取Git password after encryption. In general, this value is not required.
-                     * @return GitPasswordSecret Git password after encryption. In general, this value is not required.
+                     * 获取(Disused) Git password after encryption. It’s usually not required.
+                     * @return GitPasswordSecret (Disused) Git password after encryption. It’s usually not required.
                      */
                     std::string GetGitPasswordSecret() const;
 
                     /**
-                     * 设置Git password after encryption. In general, this value is not required.
-                     * @param GitPasswordSecret Git password after encryption. In general, this value is not required.
+                     * 设置(Disused) Git password after encryption. It’s usually not required.
+                     * @param GitPasswordSecret (Disused) Git password after encryption. It’s usually not required.
                      */
                     void SetGitPasswordSecret(const std::string& _gitPasswordSecret);
 
@@ -228,14 +228,14 @@ namespace TencentCloud
                     bool GitPasswordSecretHasBeenSet() const;
 
                     /**
-                     * 获取Git branch
-                     * @return GitBranch Git branch
+                     * 获取(Disused) Git branch
+                     * @return GitBranch (Disused) Git branch
                      */
                     std::string GetGitBranch() const;
 
                     /**
-                     * 设置Git branch
-                     * @param GitBranch Git branch
+                     * 设置(Disused) Git branch
+                     * @param GitBranch (Disused) Git branch
                      */
                     void SetGitBranch(const std::string& _gitBranch);
 
@@ -246,14 +246,14 @@ namespace TencentCloud
                     bool GitBranchHasBeenSet() const;
 
                     /**
-                     * 获取Code path in Git repository
-                     * @return GitDirectory Code path in Git repository
+                     * 获取(Disused) Directory to the codes in the Git repository. 
+                     * @return GitDirectory (Disused) Directory to the codes in the Git repository. 
                      */
                     std::string GetGitDirectory() const;
 
                     /**
-                     * 设置Code path in Git repository
-                     * @param GitDirectory Code path in Git repository
+                     * 设置(Disused) Directory to the codes in the Git repository. 
+                     * @param GitDirectory (Disused) Directory to the codes in the Git repository. 
                      */
                     void SetGitDirectory(const std::string& _gitDirectory);
 
@@ -264,14 +264,14 @@ namespace TencentCloud
                     bool GitDirectoryHasBeenSet() const;
 
                     /**
-                     * 获取Version to be pulled
-                     * @return GitCommitId Version to be pulled
+                     * 获取(Disused) 
+                     * @return GitCommitId (Disused) 
                      */
                     std::string GetGitCommitId() const;
 
                     /**
-                     * 设置Version to be pulled
-                     * @param GitCommitId Version to be pulled
+                     * 设置(Disused) 
+                     * @param GitCommitId (Disused) 
                      */
                     void SetGitCommitId(const std::string& _gitCommitId);
 
@@ -282,14 +282,14 @@ namespace TencentCloud
                     bool GitCommitIdHasBeenSet() const;
 
                     /**
-                     * 获取Git user name after encryption. In general, this value is not required.
-                     * @return GitUserNameSecret Git user name after encryption. In general, this value is not required.
+                     * 获取(Disused) Git username after encryption. It’s usually not required.
+                     * @return GitUserNameSecret (Disused) Git username after encryption. It’s usually not required.
                      */
                     std::string GetGitUserNameSecret() const;
 
                     /**
-                     * 设置Git user name after encryption. In general, this value is not required.
-                     * @param GitUserNameSecret Git user name after encryption. In general, this value is not required.
+                     * 设置(Disused) Git username after encryption. It’s usually not required.
+                     * @param GitUserNameSecret (Disused) Git username after encryption. It’s usually not required.
                      */
                     void SetGitUserNameSecret(const std::string& _gitUserNameSecret);
 
@@ -356,49 +356,49 @@ namespace TencentCloud
                     bool m_tempCosObjectNameHasBeenSet;
 
                     /**
-                     * Git address
+                     * (Disused) Git address
                      */
                     std::string m_gitUrl;
                     bool m_gitUrlHasBeenSet;
 
                     /**
-                     * Git user name
+                     * (Disused) Git username
                      */
                     std::string m_gitUserName;
                     bool m_gitUserNameHasBeenSet;
 
                     /**
-                     * Git password
+                     * (Disused) Git password
                      */
                     std::string m_gitPassword;
                     bool m_gitPasswordHasBeenSet;
 
                     /**
-                     * Git password after encryption. In general, this value is not required.
+                     * (Disused) Git password after encryption. It’s usually not required.
                      */
                     std::string m_gitPasswordSecret;
                     bool m_gitPasswordSecretHasBeenSet;
 
                     /**
-                     * Git branch
+                     * (Disused) Git branch
                      */
                     std::string m_gitBranch;
                     bool m_gitBranchHasBeenSet;
 
                     /**
-                     * Code path in Git repository
+                     * (Disused) Directory to the codes in the Git repository. 
                      */
                     std::string m_gitDirectory;
                     bool m_gitDirectoryHasBeenSet;
 
                     /**
-                     * Version to be pulled
+                     * (Disused) 
                      */
                     std::string m_gitCommitId;
                     bool m_gitCommitIdHasBeenSet;
 
                     /**
-                     * Git user name after encryption. In general, this value is not required.
+                     * (Disused) Git username after encryption. It’s usually not required.
                      */
                     std::string m_gitUserNameSecret;
                     bool m_gitUserNameSecretHasBeenSet;

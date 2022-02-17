@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Layer name
-                     * @return LayerName Layer name
+                     * 获取Name of the layer to bind. Leave it blank if you want to unbind layers
+                     * @return LayerName Name of the layer to bind. Leave it blank if you want to unbind layers
                      */
                     std::string GetLayerName() const;
 
                     /**
-                     * 设置Layer name
-                     * @param LayerName Layer name
+                     * 设置Name of the layer to bind. Leave it blank if you want to unbind layers
+                     * @param LayerName Name of the layer to bind. Leave it blank if you want to unbind layers
                      */
                     void SetLayerName(const std::string& _layerName);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool LayerNameHasBeenSet() const;
 
                     /**
-                     * 获取Version number
-                     * @return LayerVersion Version number
+                     * 获取Version ID f the layer to bind/unbind. If the layer version to unbind is the only layer version of the function version, enter `0`.
+                     * @return LayerVersion Version ID f the layer to bind/unbind. If the layer version to unbind is the only layer version of the function version, enter `0`.
                      */
                     int64_t GetLayerVersion() const;
 
                     /**
-                     * 设置Version number
-                     * @param LayerVersion Version number
+                     * 设置Version ID f the layer to bind/unbind. If the layer version to unbind is the only layer version of the function version, enter `0`.
+                     * @param LayerVersion Version ID f the layer to bind/unbind. If the layer version to unbind is the only layer version of the function version, enter `0`.
                      */
                     void SetLayerVersion(const int64_t& _layerVersion);
 
@@ -85,13 +85,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Layer name
+                     * Name of the layer to bind. Leave it blank if you want to unbind layers
                      */
                     std::string m_layerName;
                     bool m_layerNameHasBeenSet;
 
                     /**
-                     * Version number
+                     * Version ID f the layer to bind/unbind. If the layer version to unbind is the only layer version of the function version, enter `0`.
                      */
                     int64_t m_layerVersion;
                     bool m_layerVersionHasBeenSet;
