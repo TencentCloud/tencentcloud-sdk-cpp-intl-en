@@ -92,14 +92,16 @@ namespace TencentCloud
                     bool SexHasBeenSet() const;
 
                     /**
-                     * 获取Alarm code
--9103	Alarm for photographed document
--9102	Alarm for photocopied document
--9106       Alarm for covered card
-                     * @return Warn Alarm code
--9103	Alarm for photographed document
--9102	Alarm for photocopied document
--9106       Alarm for covered card
+                     * 获取Warning code
+-9103 Warning for spoofed card
+-9102 Warning for photocopied card
+-9106 Warning for covered card
+-9107 Warning for blurry image
+                     * @return Warn Warning code
+-9103 Warning for spoofed card
+-9102 Warning for photocopied card
+-9106 Warning for covered card
+-9107 Warning for blurry image
                      */
                     std::vector<int64_t> GetWarn() const;
 
@@ -214,10 +216,11 @@ MyKid   Kid card
                     bool m_sexHasBeenSet;
 
                     /**
-                     * Alarm code
--9103	Alarm for photographed document
--9102	Alarm for photocopied document
--9106       Alarm for covered card
+                     * Warning code
+-9103 Warning for spoofed card
+-9102 Warning for photocopied card
+-9106 Warning for covered card
+-9107 Warning for blurry image
                      */
                     std::vector<int64_t> m_warn;
                     bool m_warnHasBeenSet;
