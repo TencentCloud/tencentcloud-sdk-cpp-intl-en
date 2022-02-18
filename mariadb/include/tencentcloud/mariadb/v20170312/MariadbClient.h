@@ -63,6 +63,8 @@
 #include <tencentcloud/mariadb/v20170312/model/DescribeDBSecurityGroupsResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeDBSlowLogsRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeDBSlowLogsResponse.h>
+#include <tencentcloud/mariadb/v20170312/model/DescribeDatabaseTableRequest.h>
+#include <tencentcloud/mariadb/v20170312/model/DescribeDatabaseTableResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeDatabasesRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeDatabasesResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeDcnDetailRequest.h>
@@ -185,6 +187,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeDBSlowLogsResponse> DescribeDBSlowLogsOutcome;
                 typedef std::future<DescribeDBSlowLogsOutcome> DescribeDBSlowLogsOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::DescribeDBSlowLogsRequest&, DescribeDBSlowLogsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBSlowLogsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDatabaseTableResponse> DescribeDatabaseTableOutcome;
+                typedef std::future<DescribeDatabaseTableOutcome> DescribeDatabaseTableOutcomeCallable;
+                typedef std::function<void(const MariadbClient*, const Model::DescribeDatabaseTableRequest&, DescribeDatabaseTableOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDatabaseTableAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDatabasesResponse> DescribeDatabasesOutcome;
                 typedef std::future<DescribeDatabasesOutcome> DescribeDatabasesOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::DescribeDatabasesRequest&, DescribeDatabasesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDatabasesAsyncHandler;
@@ -442,6 +447,15 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
                 DescribeDBSlowLogsOutcome DescribeDBSlowLogs(const Model::DescribeDBSlowLogsRequest &request);
                 void DescribeDBSlowLogsAsync(const Model::DescribeDBSlowLogsRequest& request, const DescribeDBSlowLogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeDBSlowLogsOutcomeCallable DescribeDBSlowLogsCallable(const Model::DescribeDBSlowLogsRequest& request);
+
+                /**
+                 *This API is used to query the table information of a TencentDB instance.
+                 * @param req DescribeDatabaseTableRequest
+                 * @return DescribeDatabaseTableOutcome
+                 */
+                DescribeDatabaseTableOutcome DescribeDatabaseTable(const Model::DescribeDatabaseTableRequest &request);
+                void DescribeDatabaseTableAsync(const Model::DescribeDatabaseTableRequest& request, const DescribeDatabaseTableAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDatabaseTableOutcomeCallable DescribeDatabaseTableCallable(const Model::DescribeDatabaseTableRequest& request);
 
                 /**
                  *This API is used to query the list of databases of a TencentDB instance.

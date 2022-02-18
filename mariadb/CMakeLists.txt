@@ -73,10 +73,12 @@ set(mariadb_public_header_model
   include/tencentcloud/mariadb/v20170312/model/ModifyDBParametersResponse.h
   include/tencentcloud/mariadb/v20170312/model/CopyAccountPrivilegesRequest.h
   include/tencentcloud/mariadb/v20170312/model/SecurityGroup.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeDatabaseTableRequest.h
   include/tencentcloud/mariadb/v20170312/model/OpenDBExtranetAccessResponse.h
   include/tencentcloud/mariadb/v20170312/model/DescribeDcnDetailResponse.h
   include/tencentcloud/mariadb/v20170312/model/ModifyDBInstanceNameRequest.h
   include/tencentcloud/mariadb/v20170312/model/ModifyBackupTimeRequest.h
+  include/tencentcloud/mariadb/v20170312/model/TableColumn.h
   include/tencentcloud/mariadb/v20170312/model/SecurityGroupBound.h
   include/tencentcloud/mariadb/v20170312/model/ColumnPrivilege.h
   include/tencentcloud/mariadb/v20170312/model/ModifySyncTaskAttributeRequest.h
@@ -120,6 +122,7 @@ set(mariadb_public_header_model
   include/tencentcloud/mariadb/v20170312/model/DisassociateSecurityGroupsRequest.h
   include/tencentcloud/mariadb/v20170312/model/DBAccount.h
   include/tencentcloud/mariadb/v20170312/model/CreateHourDBInstanceRequest.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeDatabaseTableResponse.h
   include/tencentcloud/mariadb/v20170312/model/DescribeAccountPrivilegesRequest.h
   include/tencentcloud/mariadb/v20170312/model/DescribeDBPerformanceDetailsResponse.h
   include/tencentcloud/mariadb/v20170312/model/DescribeAccountsResponse.h
@@ -191,10 +194,12 @@ set(mariadb_src
   src/v20170312/model/ModifyDBParametersResponse.cpp
   src/v20170312/model/CopyAccountPrivilegesRequest.cpp
   src/v20170312/model/SecurityGroup.cpp
+  src/v20170312/model/DescribeDatabaseTableRequest.cpp
   src/v20170312/model/OpenDBExtranetAccessResponse.cpp
   src/v20170312/model/DescribeDcnDetailResponse.cpp
   src/v20170312/model/ModifyDBInstanceNameRequest.cpp
   src/v20170312/model/ModifyBackupTimeRequest.cpp
+  src/v20170312/model/TableColumn.cpp
   src/v20170312/model/SecurityGroupBound.cpp
   src/v20170312/model/ColumnPrivilege.cpp
   src/v20170312/model/ModifySyncTaskAttributeRequest.cpp
@@ -238,6 +243,7 @@ set(mariadb_src
   src/v20170312/model/DisassociateSecurityGroupsRequest.cpp
   src/v20170312/model/DBAccount.cpp
   src/v20170312/model/CreateHourDBInstanceRequest.cpp
+  src/v20170312/model/DescribeDatabaseTableResponse.cpp
   src/v20170312/model/DescribeAccountPrivilegesRequest.cpp
   src/v20170312/model/DescribeDBPerformanceDetailsResponse.cpp
   src/v20170312/model/DescribeAccountsResponse.cpp
