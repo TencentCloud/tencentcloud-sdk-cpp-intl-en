@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取CLB instance ID
-                     * @return LoadBalancerId CLB instance ID
+                     * 获取CLB instance ID.
+                     * @return LoadBalancerId CLB instance ID.
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
-                     * 设置CLB instance ID
-                     * @param LoadBalancerId CLB instance ID
+                     * 设置CLB instance ID.
+                     * @param LoadBalancerId CLB instance ID.
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
-                     * 获取CLB listener ID
-                     * @return ListenerId CLB listener ID
+                     * 获取CLB listener ID.
+                     * @return ListenerId CLB listener ID.
                      */
                     std::string GetListenerId() const;
 
                     /**
-                     * 设置CLB listener ID
-                     * @param ListenerId CLB listener ID
+                     * 设置CLB listener ID.
+                     * @param ListenerId CLB listener ID.
                      */
                     void SetListenerId(const std::string& _listenerId);
 
@@ -117,13 +117,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * CLB instance ID
+                     * CLB instance ID.
                      */
                     std::string m_loadBalancerId;
                     bool m_loadBalancerIdHasBeenSet;
 
                     /**
-                     * CLB listener ID
+                     * CLB listener ID.
                      */
                     std::string m_listenerId;
                     bool m_listenerIdHasBeenSet;

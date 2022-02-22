@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/clb/v20180317/model/CreateLoadBalancerResponse.h>
+#include <tencentcloud/clb/v20180317/model/DescribeCrossTargetsResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,13 +23,13 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Clb::V20180317::Model;
 using namespace std;
 
-CreateLoadBalancerResponse::CreateLoadBalancerResponse() :
-    m_loadBalancerIdsHasBeenSet(false),
-    m_dealNameHasBeenSet(false)
+DescribeCrossTargetsResponse::DescribeCrossTargetsResponse() :
+    m_totalCountHasBeenSet(false),
+    m_crossTargetSetHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome CreateLoadBalancerResponse::Deserialize(const string &payload)
+CoreInternalOutcome DescribeCrossTargetsResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -63,58 +63,67 @@ CoreInternalOutcome CreateLoadBalancerResponse::Deserialize(const string &payloa
     }
 
 
-    if (rsp.HasMember("LoadBalancerIds") && !rsp["LoadBalancerIds"].IsNull())
+    if (rsp.HasMember("TotalCount") && !rsp["TotalCount"].IsNull())
     {
-        if (!rsp["LoadBalancerIds"].IsArray())
-            return CoreInternalOutcome(Core::Error("response `LoadBalancerIds` is not array type"));
-
-        const rapidjson::Value &tmpValue = rsp["LoadBalancerIds"];
-        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        if (!rsp["TotalCount"].IsUint64())
         {
-            m_loadBalancerIds.push_back((*itr).GetString());
+            return CoreInternalOutcome(Core::Error("response `TotalCount` IsUint64=false incorrectly").SetRequestId(requestId));
         }
-        m_loadBalancerIdsHasBeenSet = true;
+        m_totalCount = rsp["TotalCount"].GetUint64();
+        m_totalCountHasBeenSet = true;
     }
 
-    if (rsp.HasMember("DealName") && !rsp["DealName"].IsNull())
+    if (rsp.HasMember("CrossTargetSet") && !rsp["CrossTargetSet"].IsNull())
     {
-        if (!rsp["DealName"].IsString())
+        if (!rsp["CrossTargetSet"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `CrossTargetSet` is not array type"));
+
+        const rapidjson::Value &tmpValue = rsp["CrossTargetSet"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
-            return CoreInternalOutcome(Core::Error("response `DealName` IsString=false incorrectly").SetRequestId(requestId));
+            CrossTargets item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_crossTargetSet.push_back(item);
         }
-        m_dealName = string(rsp["DealName"].GetString());
-        m_dealNameHasBeenSet = true;
+        m_crossTargetSetHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string CreateLoadBalancerResponse::ToJsonString() const
+string DescribeCrossTargetsResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_loadBalancerIdsHasBeenSet)
+    if (m_totalCountHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "LoadBalancerIds";
+        string key = "TotalCount";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_totalCount, allocator);
+    }
+
+    if (m_crossTargetSetHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CrossTargetSet";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
-        for (auto itr = m_loadBalancerIds.begin(); itr != m_loadBalancerIds.end(); ++itr)
+        int i=0;
+        for (auto itr = m_crossTargetSet.begin(); itr != m_crossTargetSet.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
-    }
-
-    if (m_dealNameHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "DealName";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_dealName.c_str(), allocator).Move(), allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -129,24 +138,24 @@ string CreateLoadBalancerResponse::ToJsonString() const
 }
 
 
-vector<string> CreateLoadBalancerResponse::GetLoadBalancerIds() const
+uint64_t DescribeCrossTargetsResponse::GetTotalCount() const
 {
-    return m_loadBalancerIds;
+    return m_totalCount;
 }
 
-bool CreateLoadBalancerResponse::LoadBalancerIdsHasBeenSet() const
+bool DescribeCrossTargetsResponse::TotalCountHasBeenSet() const
 {
-    return m_loadBalancerIdsHasBeenSet;
+    return m_totalCountHasBeenSet;
 }
 
-string CreateLoadBalancerResponse::GetDealName() const
+vector<CrossTargets> DescribeCrossTargetsResponse::GetCrossTargetSet() const
 {
-    return m_dealName;
+    return m_crossTargetSet;
 }
 
-bool CreateLoadBalancerResponse::DealNameHasBeenSet() const
+bool DescribeCrossTargetsResponse::CrossTargetSetHasBeenSet() const
 {
-    return m_dealNameHasBeenSet;
+    return m_crossTargetSetHasBeenSet;
 }
 
 

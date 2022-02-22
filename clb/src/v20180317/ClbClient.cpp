@@ -1330,6 +1330,49 @@ ClbClient::DescribeClsLogSetOutcomeCallable ClbClient::DescribeClsLogSetCallable
     return task->get_future();
 }
 
+ClbClient::DescribeCrossTargetsOutcome ClbClient::DescribeCrossTargets(const DescribeCrossTargetsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCrossTargets");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCrossTargetsResponse rsp = DescribeCrossTargetsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCrossTargetsOutcome(rsp);
+        else
+            return DescribeCrossTargetsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCrossTargetsOutcome(outcome.GetError());
+    }
+}
+
+void ClbClient::DescribeCrossTargetsAsync(const DescribeCrossTargetsRequest& request, const DescribeCrossTargetsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeCrossTargets(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+ClbClient::DescribeCrossTargetsOutcomeCallable ClbClient::DescribeCrossTargetsCallable(const DescribeCrossTargetsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeCrossTargetsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeCrossTargets(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 ClbClient::DescribeCustomizedConfigAssociateListOutcome ClbClient::DescribeCustomizedConfigAssociateList(const DescribeCustomizedConfigAssociateListRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeCustomizedConfigAssociateList");
@@ -2140,6 +2183,49 @@ ClbClient::ManualRewriteOutcomeCallable ClbClient::ManualRewriteCallable(const M
         [this, request]()
         {
             return this->ManualRewrite(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+ClbClient::MigrateClassicalLoadBalancersOutcome ClbClient::MigrateClassicalLoadBalancers(const MigrateClassicalLoadBalancersRequest &request)
+{
+    auto outcome = MakeRequest(request, "MigrateClassicalLoadBalancers");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        MigrateClassicalLoadBalancersResponse rsp = MigrateClassicalLoadBalancersResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return MigrateClassicalLoadBalancersOutcome(rsp);
+        else
+            return MigrateClassicalLoadBalancersOutcome(o.GetError());
+    }
+    else
+    {
+        return MigrateClassicalLoadBalancersOutcome(outcome.GetError());
+    }
+}
+
+void ClbClient::MigrateClassicalLoadBalancersAsync(const MigrateClassicalLoadBalancersRequest& request, const MigrateClassicalLoadBalancersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->MigrateClassicalLoadBalancers(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+ClbClient::MigrateClassicalLoadBalancersOutcomeCallable ClbClient::MigrateClassicalLoadBalancersCallable(const MigrateClassicalLoadBalancersRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<MigrateClassicalLoadBalancersOutcome()>>(
+        [this, request]()
+        {
+            return this->MigrateClassicalLoadBalancers(request);
         }
     );
 

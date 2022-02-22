@@ -87,14 +87,14 @@ Note: if the name of a new CLB instance already exists, a default name will be g
                     bool LoadBalancerNameHasBeenSet() const;
 
                     /**
-                     * 获取ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API. If this parameter is not passed in, the default project will be used.
-                     * @return ProjectId ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API. If this parameter is not passed in, the default project will be used.
+                     * 获取Project ID of the CLB instance, which can be obtained through the [`DescribeProject`](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) API. If this field is not specified, it will default to the default project.
+                     * @return ProjectId Project ID of the CLB instance, which can be obtained through the [`DescribeProject`](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) API. If this field is not specified, it will default to the default project.
                      */
                     int64_t GetProjectId() const;
 
                     /**
-                     * 设置ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API. If this parameter is not passed in, the default project will be used.
-                     * @param ProjectId ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API. If this parameter is not passed in, the default project will be used.
+                     * 设置Project ID of the CLB instance, which can be obtained through the [`DescribeProject`](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) API. If this field is not specified, it will default to the default project.
+                     * @param ProjectId Project ID of the CLB instance, which can be obtained through the [`DescribeProject`](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) API. If this field is not specified, it will default to the default project.
                      */
                     void SetProjectId(const int64_t& _projectId);
 
@@ -106,17 +106,17 @@ Note: if the name of a new CLB instance already exists, a default name will be g
 
                     /**
                      * 获取Sets the primary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`, which is applicable only to public network CLB.
-Note: A primary AZ is the default AZ that carries traffic. When it fails, the optimal secondary AZ is chosen automatically to take its place. 
+Note: A primary AZ carries traffic by default, while a secondary AZ does not. It only works when the primary AZ is faulty.
                      * @return MasterZoneId Sets the primary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`, which is applicable only to public network CLB.
-Note: A primary AZ is the default AZ that carries traffic. When it fails, the optimal secondary AZ is chosen automatically to take its place. 
+Note: A primary AZ carries traffic by default, while a secondary AZ does not. It only works when the primary AZ is faulty.
                      */
                     std::string GetMasterZoneId() const;
 
                     /**
                      * 设置Sets the primary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`, which is applicable only to public network CLB.
-Note: A primary AZ is the default AZ that carries traffic. When it fails, the optimal secondary AZ is chosen automatically to take its place. 
+Note: A primary AZ carries traffic by default, while a secondary AZ does not. It only works when the primary AZ is faulty.
                      * @param MasterZoneId Sets the primary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`, which is applicable only to public network CLB.
-Note: A primary AZ is the default AZ that carries traffic. When it fails, the optimal secondary AZ is chosen automatically to take its place. 
+Note: A primary AZ carries traffic by default, while a secondary AZ does not. It only works when the primary AZ is faulty.
                      */
                     void SetMasterZoneId(const std::string& _masterZoneId);
 
@@ -329,14 +329,14 @@ Note: A secondary AZ carries traffic when the primary AZ fails.
                     bool ClusterIdsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SlaType 
+                     * 获取Guaranteed performance specification.
+                     * @return SlaType Guaranteed performance specification.
                      */
                     std::string GetSlaType() const;
 
                     /**
-                     * 设置
-                     * @param SlaType 
+                     * 设置Guaranteed performance specification.
+                     * @param SlaType Guaranteed performance specification.
                      */
                     void SetSlaType(const std::string& _slaType);
 
@@ -416,14 +416,14 @@ Note: if the name of a new CLB instance already exists, a default name will be g
                     bool m_loadBalancerNameHasBeenSet;
 
                     /**
-                     * ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API. If this parameter is not passed in, the default project will be used.
+                     * Project ID of the CLB instance, which can be obtained through the [`DescribeProject`](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) API. If this field is not specified, it will default to the default project.
                      */
                     int64_t m_projectId;
                     bool m_projectIdHasBeenSet;
 
                     /**
                      * Sets the primary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`, which is applicable only to public network CLB.
-Note: A primary AZ is the default AZ that carries traffic. When it fails, the optimal secondary AZ is chosen automatically to take its place. 
+Note: A primary AZ carries traffic by default, while a secondary AZ does not. It only works when the primary AZ is faulty.
                      */
                     std::string m_masterZoneId;
                     bool m_masterZoneIdHasBeenSet;
@@ -496,7 +496,7 @@ Note: A secondary AZ carries traffic when the primary AZ fails.
                     bool m_clusterIdsHasBeenSet;
 
                     /**
-                     * 
+                     * Guaranteed performance specification.
                      */
                     std::string m_slaType;
                     bool m_slaTypeHasBeenSet;

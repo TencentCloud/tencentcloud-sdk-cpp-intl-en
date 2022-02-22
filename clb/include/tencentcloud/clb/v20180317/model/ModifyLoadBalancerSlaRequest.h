@@ -44,14 +44,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the LCU-supported CLB instance, and the target specification
-                     * @return LoadBalancerSla ID of the LCU-supported CLB instance, and the target specification
+                     * 获取CLB instance information
+                     * @return LoadBalancerSla CLB instance information
                      */
                     std::vector<SlaUpdateParam> GetLoadBalancerSla() const;
 
                     /**
-                     * 设置ID of the LCU-supported CLB instance, and the target specification
-                     * @param LoadBalancerSla ID of the LCU-supported CLB instance, and the target specification
+                     * 设置CLB instance information
+                     * @param LoadBalancerSla CLB instance information
                      */
                     void SetLoadBalancerSla(const std::vector<SlaUpdateParam>& _loadBalancerSla);
 
@@ -64,7 +64,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the LCU-supported CLB instance, and the target specification
+                     * CLB instance information
                      */
                     std::vector<SlaUpdateParam> m_loadBalancerSla;
                     bool m_loadBalancerSlaHasBeenSet;

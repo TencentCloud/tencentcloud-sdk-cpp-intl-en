@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Parameter for instance specification adjustment
+                * Instance specification adjustment parameters
                 */
                 class SlaUpdateParam : public AbstractModel
                 {
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
-                     * 获取Target instance specification
-                     * @return SlaType Target instance specification
+                     * 获取To upgrade to LCU-supported CLB instances. It must be `SLA`.
+                     * @return SlaType To upgrade to LCU-supported CLB instances. It must be `SLA`.
                      */
                     std::string GetSlaType() const;
 
                     /**
-                     * 设置Target instance specification
-                     * @param SlaType Target instance specification
+                     * 设置To upgrade to LCU-supported CLB instances. It must be `SLA`.
+                     * @param SlaType To upgrade to LCU-supported CLB instances. It must be `SLA`.
                      */
                     void SetSlaType(const std::string& _slaType);
 
@@ -91,7 +91,7 @@ namespace TencentCloud
                     bool m_loadBalancerIdHasBeenSet;
 
                     /**
-                     * Target instance specification
+                     * To upgrade to LCU-supported CLB instances. It must be `SLA`.
                      */
                     std::string m_slaType;
                     bool m_slaTypeHasBeenSet;

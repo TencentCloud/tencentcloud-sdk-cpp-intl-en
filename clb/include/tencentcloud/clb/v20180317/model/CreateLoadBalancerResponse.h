@@ -55,6 +55,20 @@ namespace TencentCloud
                      */
                     bool LoadBalancerIdsHasBeenSet() const;
 
+                    /**
+                     * 获取Order ID.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return DealName Order ID.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetDealName() const;
+
+                    /**
+                     * 判断参数 DealName 是否已赋值
+                     * @return DealName 是否已赋值
+                     */
+                    bool DealNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -62,6 +76,13 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_loadBalancerIds;
                     bool m_loadBalancerIdsHasBeenSet;
+
+                    /**
+                     * Order ID.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_dealName;
+                    bool m_dealNameHasBeenSet;
 
                 };
             }

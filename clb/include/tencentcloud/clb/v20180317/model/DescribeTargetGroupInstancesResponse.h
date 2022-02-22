@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of results in current query
-                     * @return TotalCount Number of results in current query
+                     * 获取Number of results returned for the current query
+                     * @return TotalCount Number of results returned for the current query
                      */
                     uint64_t GetTotalCount() const;
 
@@ -69,8 +69,8 @@ namespace TencentCloud
                     bool TargetGroupInstanceSetHasBeenSet() const;
 
                     /**
-                     * 获取Actual statistics, which are not affected by `Limit`, `Offset`, and `CAM`.
-                     * @return RealCount Actual statistics, which are not affected by `Limit`, `Offset`, and `CAM`.
+                     * 获取The actual total number of bound instances, which is not affected by the setting of `Limit`, `Offset` and the CAM permissions.
+                     * @return RealCount The actual total number of bound instances, which is not affected by the setting of `Limit`, `Offset` and the CAM permissions.
                      */
                     uint64_t GetRealCount() const;
 
@@ -83,7 +83,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of results in current query
+                     * Number of results returned for the current query
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
@@ -95,7 +95,7 @@ namespace TencentCloud
                     bool m_targetGroupInstanceSetHasBeenSet;
 
                     /**
-                     * Actual statistics, which are not affected by `Limit`, `Offset`, and `CAM`.
+                     * The actual total number of bound instances, which is not affected by the setting of `Limit`, `Offset` and the CAM permissions.
                      */
                     uint64_t m_realCount;
                     bool m_realCountHasBeenSet;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/clb/v20180317/model/CreateLoadBalancerResponse.h>
+#include <tencentcloud/clb/v20180317/model/MigrateClassicalLoadBalancersResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,13 +23,11 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Clb::V20180317::Model;
 using namespace std;
 
-CreateLoadBalancerResponse::CreateLoadBalancerResponse() :
-    m_loadBalancerIdsHasBeenSet(false),
-    m_dealNameHasBeenSet(false)
+MigrateClassicalLoadBalancersResponse::MigrateClassicalLoadBalancersResponse()
 {
 }
 
-CoreInternalOutcome CreateLoadBalancerResponse::Deserialize(const string &payload)
+CoreInternalOutcome MigrateClassicalLoadBalancersResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -63,59 +61,15 @@ CoreInternalOutcome CreateLoadBalancerResponse::Deserialize(const string &payloa
     }
 
 
-    if (rsp.HasMember("LoadBalancerIds") && !rsp["LoadBalancerIds"].IsNull())
-    {
-        if (!rsp["LoadBalancerIds"].IsArray())
-            return CoreInternalOutcome(Core::Error("response `LoadBalancerIds` is not array type"));
-
-        const rapidjson::Value &tmpValue = rsp["LoadBalancerIds"];
-        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
-        {
-            m_loadBalancerIds.push_back((*itr).GetString());
-        }
-        m_loadBalancerIdsHasBeenSet = true;
-    }
-
-    if (rsp.HasMember("DealName") && !rsp["DealName"].IsNull())
-    {
-        if (!rsp["DealName"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `DealName` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_dealName = string(rsp["DealName"].GetString());
-        m_dealNameHasBeenSet = true;
-    }
-
 
     return CoreInternalOutcome(true);
 }
 
-string CreateLoadBalancerResponse::ToJsonString() const
+string MigrateClassicalLoadBalancersResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
-
-    if (m_loadBalancerIdsHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "LoadBalancerIds";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
-
-        for (auto itr = m_loadBalancerIds.begin(); itr != m_loadBalancerIds.end(); ++itr)
-        {
-            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
-        }
-    }
-
-    if (m_dealNameHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "DealName";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_dealName.c_str(), allocator).Move(), allocator);
-    }
 
     rapidjson::Value iKey(rapidjson::kStringType);
     string key = "RequestId";
@@ -128,25 +82,5 @@ string CreateLoadBalancerResponse::ToJsonString() const
     return buffer.GetString();
 }
 
-
-vector<string> CreateLoadBalancerResponse::GetLoadBalancerIds() const
-{
-    return m_loadBalancerIds;
-}
-
-bool CreateLoadBalancerResponse::LoadBalancerIdsHasBeenSet() const
-{
-    return m_loadBalancerIdsHasBeenSet;
-}
-
-string CreateLoadBalancerResponse::GetDealName() const
-{
-    return m_dealName;
-}
-
-bool CreateLoadBalancerResponse::DealNameHasBeenSet() const
-{
-    return m_dealNameHasBeenSet;
-}
 
 

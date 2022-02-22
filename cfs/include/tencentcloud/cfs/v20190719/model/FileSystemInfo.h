@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cfs/v20190719/model/PGroup.h>
+#include <tencentcloud/cfs/v20190719/model/TagInfo.h>
 
 
 namespace TencentCloud
@@ -389,6 +390,24 @@ namespace TencentCloud
                      */
                     bool CapacityHasBeenSet() const;
 
+                    /**
+                     * 获取File system tag list
+                     * @return Tags File system tag list
+                     */
+                    std::vector<TagInfo> GetTags() const;
+
+                    /**
+                     * 设置File system tag list
+                     * @param Tags File system tag list
+                     */
+                    void SetTags(const std::vector<TagInfo>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -504,6 +523,12 @@ namespace TencentCloud
                      */
                     uint64_t m_capacity;
                     bool m_capacityHasBeenSet;
+
+                    /**
+                     * File system tag list
+                     */
+                    std::vector<TagInfo> m_tags;
+                    bool m_tagsHasBeenSet;
 
                 };
             }
