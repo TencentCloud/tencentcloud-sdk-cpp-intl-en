@@ -776,6 +776,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool TargetHealthHasBeenSet() const;
 
+                    /**
+                     * 获取List o domain names associated with the forwarding rule
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Domains List o domain names associated with the forwarding rule
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetDomains() const;
+
+                    /**
+                     * 设置List o domain names associated with the forwarding rule
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param Domains List o domain names associated with the forwarding rule
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetDomains(const std::string& _domains);
+
+                    /**
+                     * 判断参数 Domains 是否已赋值
+                     * @return Domains 是否已赋值
+                     */
+                    bool DomainsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1008,6 +1030,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_targetHealth;
                     bool m_targetHealthHasBeenSet;
+
+                    /**
+                     * List o domain names associated with the forwarding rule
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_domains;
+                    bool m_domainsHasBeenSet;
 
                 };
             }

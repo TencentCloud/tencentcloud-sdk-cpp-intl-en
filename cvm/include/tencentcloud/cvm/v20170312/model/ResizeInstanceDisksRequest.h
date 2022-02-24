@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cvm/v20170312/model/DataDisk.h>
+#include <tencentcloud/cvm/v20170312/model/SystemDisk.h>
 
 
 namespace TencentCloud
@@ -97,6 +98,42 @@ namespace TencentCloud
                      */
                     bool ForceStopHasBeenSet() const;
 
+                    /**
+                     * 获取Configuration of the system disk to be expanded. Only cloud disks are supported.
+                     * @return SystemDisk Configuration of the system disk to be expanded. Only cloud disks are supported.
+                     */
+                    SystemDisk GetSystemDisk() const;
+
+                    /**
+                     * 设置Configuration of the system disk to be expanded. Only cloud disks are supported.
+                     * @param SystemDisk Configuration of the system disk to be expanded. Only cloud disks are supported.
+                     */
+                    void SetSystemDisk(const SystemDisk& _systemDisk);
+
+                    /**
+                     * 判断参数 SystemDisk 是否已赋值
+                     * @return SystemDisk 是否已赋值
+                     */
+                    bool SystemDiskHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the cloud disk is expanded online.
+                     * @return ResizeOnline Whether the cloud disk is expanded online.
+                     */
+                    bool GetResizeOnline() const;
+
+                    /**
+                     * 设置Whether the cloud disk is expanded online.
+                     * @param ResizeOnline Whether the cloud disk is expanded online.
+                     */
+                    void SetResizeOnline(const bool& _resizeOnline);
+
+                    /**
+                     * 判断参数 ResizeOnline 是否已赋值
+                     * @return ResizeOnline 是否已赋值
+                     */
+                    bool ResizeOnlineHasBeenSet() const;
+
                 private:
 
                     /**
@@ -116,6 +153,18 @@ namespace TencentCloud
                      */
                     bool m_forceStop;
                     bool m_forceStopHasBeenSet;
+
+                    /**
+                     * Configuration of the system disk to be expanded. Only cloud disks are supported.
+                     */
+                    SystemDisk m_systemDisk;
+                    bool m_systemDiskHasBeenSet;
+
+                    /**
+                     * Whether the cloud disk is expanded online.
+                     */
+                    bool m_resizeOnline;
+                    bool m_resizeOnlineHasBeenSet;
 
                 };
             }

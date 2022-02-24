@@ -61,14 +61,18 @@ namespace TencentCloud
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Instance name. You can specify any name you like, but its length cannot exceed 60 characters.
-                     * @return InstanceName Instance name. You can specify any name you like, but its length cannot exceed 60 characters.
+                     * 获取The instance name, which can not exceed 60 characters
+<dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they can not be both specified.</dx-alert>
+                     * @return InstanceName The instance name, which can not exceed 60 characters
+<dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they can not be both specified.</dx-alert>
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name. You can specify any name you like, but its length cannot exceed 60 characters.
-                     * @param InstanceName Instance name. You can specify any name you like, but its length cannot exceed 60 characters.
+                     * 设置The instance name, which can not exceed 60 characters
+<dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they can not be both specified.</dx-alert>
+                     * @param InstanceName The instance name, which can not exceed 60 characters
+<dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they can not be both specified.</dx-alert>
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
@@ -79,14 +83,14 @@ namespace TencentCloud
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取ID list of security groups of the instance. The instance will be associated with the specified security groups and will be disassociated from the original security groups.
-                     * @return SecurityGroups ID list of security groups of the instance. The instance will be associated with the specified security groups and will be disassociated from the original security groups.
+                     * 获取IDs of security groups associated with the specified instance. You can associate with a security group by adding its ID, or cancel the association with a security group by removing its ID. <dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they cannot be both set.</dx-alert>
+                     * @return SecurityGroups IDs of security groups associated with the specified instance. You can associate with a security group by adding its ID, or cancel the association with a security group by removing its ID. <dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they cannot be both set.</dx-alert>
                      */
                     std::vector<std::string> GetSecurityGroups() const;
 
                     /**
-                     * 设置ID list of security groups of the instance. The instance will be associated with the specified security groups and will be disassociated from the original security groups.
-                     * @param SecurityGroups ID list of security groups of the instance. The instance will be associated with the specified security groups and will be disassociated from the original security groups.
+                     * 设置IDs of security groups associated with the specified instance. You can associate with a security group by adding its ID, or cancel the association with a security group by removing its ID. <dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they cannot be both set.</dx-alert>
+                     * @param SecurityGroups IDs of security groups associated with the specified instance. You can associate with a security group by adding its ID, or cancel the association with a security group by removing its ID. <dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they cannot be both set.</dx-alert>
                      */
                     void SetSecurityGroups(const std::vector<std::string>& _securityGroups);
 
@@ -95,6 +99,24 @@ namespace TencentCloud
                      * @return SecurityGroups 是否已赋值
                      */
                     bool SecurityGroupsHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return DisableApiTermination 
+                     */
+                    bool GetDisableApiTermination() const;
+
+                    /**
+                     * 设置
+                     * @param DisableApiTermination 
+                     */
+                    void SetDisableApiTermination(const bool& _disableApiTermination);
+
+                    /**
+                     * 判断参数 DisableApiTermination 是否已赋值
+                     * @return DisableApiTermination 是否已赋值
+                     */
+                    bool DisableApiTerminationHasBeenSet() const;
 
                 private:
 
@@ -105,16 +127,23 @@ namespace TencentCloud
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * Instance name. You can specify any name you like, but its length cannot exceed 60 characters.
+                     * The instance name, which can not exceed 60 characters
+<dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they can not be both specified.</dx-alert>
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * ID list of security groups of the instance. The instance will be associated with the specified security groups and will be disassociated from the original security groups.
+                     * IDs of security groups associated with the specified instance. You can associate with a security group by adding its ID, or cancel the association with a security group by removing its ID. <dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they cannot be both set.</dx-alert>
                      */
                     std::vector<std::string> m_securityGroups;
                     bool m_securityGroupsHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_disableApiTermination;
+                    bool m_disableApiTerminationHasBeenSet;
 
                 };
             }

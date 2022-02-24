@@ -31,6 +31,7 @@
 #include <tencentcloud/cvm/v20170312/model/VirtualPrivateCloud.h>
 #include <tencentcloud/cvm/v20170312/model/LoginSettings.h>
 #include <tencentcloud/cvm/v20170312/model/Tag.h>
+#include <tencentcloud/cvm/v20170312/model/GPUInfo.h>
 
 
 namespace TencentCloud
@@ -701,6 +702,28 @@ Note: this field may return null, indicating that no valid value was found.
                      */
                     bool IsolatedSourceHasBeenSet() const;
 
+                    /**
+                     * 获取GPU information. This field is only returned for GPU instances.
+Note: this field may return null, indicating that no valid value was found.
+                     * @return GPUInfo GPU information. This field is only returned for GPU instances.
+Note: this field may return null, indicating that no valid value was found.
+                     */
+                    GPUInfo GetGPUInfo() const;
+
+                    /**
+                     * 设置GPU information. This field is only returned for GPU instances.
+Note: this field may return null, indicating that no valid value was found.
+                     * @param GPUInfo GPU information. This field is only returned for GPU instances.
+Note: this field may return null, indicating that no valid value was found.
+                     */
+                    void SetGPUInfo(const GPUInfo& _gPUInfo);
+
+                    /**
+                     * 判断参数 GPUInfo 是否已赋值
+                     * @return GPUInfo 是否已赋值
+                     */
+                    bool GPUInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -915,6 +938,13 @@ Note: this field may return null, indicating that no valid value was found.
                      */
                     std::string m_isolatedSource;
                     bool m_isolatedSourceHasBeenSet;
+
+                    /**
+                     * GPU information. This field is only returned for GPU instances.
+Note: this field may return null, indicating that no valid value was found.
+                     */
+                    GPUInfo m_gPUInfo;
+                    bool m_gPUInfoHasBeenSet;
 
                 };
             }

@@ -82,6 +82,50 @@ namespace TencentCloud
                      */
                     bool ValueHasBeenSet() const;
 
+                    /**
+                     * 获取`default``: Custom. `reserved`: System variable. `referenced`: Referenced configuration item.
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @return Type `default``: Custom. `reserved`: System variable. `referenced`: Referenced configuration item.
+Note: This field may return `null`, indicating that no valid value can be found.
+                     */
+                    std::string GetType() const;
+
+                    /**
+                     * 设置`default``: Custom. `reserved`: System variable. `referenced`: Referenced configuration item.
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @param Type `default``: Custom. `reserved`: System variable. `referenced`: Referenced configuration item.
+Note: This field may return `null`, indicating that no valid value can be found.
+                     */
+                    void SetType(const std::string& _type);
+
+                    /**
+                     * 判断参数 Type 是否已赋值
+                     * @return Type 是否已赋值
+                     */
+                    bool TypeHasBeenSet() const;
+
+                    /**
+                     * 获取Configuration name
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @return Config Configuration name
+Note: This field may return `null`, indicating that no valid value can be found.
+                     */
+                    std::string GetConfig() const;
+
+                    /**
+                     * 设置Configuration name
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @param Config Configuration name
+Note: This field may return `null`, indicating that no valid value can be found.
+                     */
+                    void SetConfig(const std::string& _config);
+
+                    /**
+                     * 判断参数 Config 是否已赋值
+                     * @return Config 是否已赋值
+                     */
+                    bool ConfigHasBeenSet() const;
+
                 private:
 
                     /**
@@ -95,6 +139,20 @@ namespace TencentCloud
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;
+
+                    /**
+                     * `default``: Custom. `reserved`: System variable. `referenced`: Referenced configuration item.
+Note: This field may return `null`, indicating that no valid value can be found.
+                     */
+                    std::string m_type;
+                    bool m_typeHasBeenSet;
+
+                    /**
+                     * Configuration name
+Note: This field may return `null`, indicating that no valid value can be found.
+                     */
+                    std::string m_config;
+                    bool m_configHasBeenSet;
 
                 };
             }

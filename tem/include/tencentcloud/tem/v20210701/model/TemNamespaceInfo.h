@@ -338,6 +338,24 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool EnableTswTraceServiceHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the environment is locked. `1`: locked; `0`: not locked
+                     * @return Locked Whether the environment is locked. `1`: locked; `0`: not locked
+                     */
+                    int64_t GetLocked() const;
+
+                    /**
+                     * 设置Whether the environment is locked. `1`: locked; `0`: not locked
+                     * @param Locked Whether the environment is locked. `1`: locked; `0`: not locked
+                     */
+                    void SetLocked(const int64_t& _locked);
+
+                    /**
+                     * 判断参数 Locked 是否已赋值
+                     * @return Locked 是否已赋值
+                     */
+                    bool LockedHasBeenSet() const;
+
                 private:
 
                     /**
@@ -436,6 +454,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool m_enableTswTraceService;
                     bool m_enableTswTraceServiceHasBeenSet;
+
+                    /**
+                     * Whether the environment is locked. `1`: locked; `0`: not locked
+                     */
+                    int64_t m_locked;
+                    bool m_lockedHasBeenSet;
 
                 };
             }

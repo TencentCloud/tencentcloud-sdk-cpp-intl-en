@@ -133,14 +133,14 @@ namespace TencentCloud
                     bool FromHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DeployStrategyType 
+                     * 获取The deployment policy. Values: `AUTO` (automatically deploy), `BETA` (deploy a small batch first to test the result, and deploy the rest automatically) and `MANUAL` (manually deploy)
+                     * @return DeployStrategyType The deployment policy. Values: `AUTO` (automatically deploy), `BETA` (deploy a small batch first to test the result, and deploy the rest automatically) and `MANUAL` (manually deploy)
                      */
                     std::string GetDeployStrategyType() const;
 
                     /**
-                     * 设置
-                     * @param DeployStrategyType 
+                     * 设置The deployment policy. Values: `AUTO` (automatically deploy), `BETA` (deploy a small batch first to test the result, and deploy the rest automatically) and `MANUAL` (manually deploy)
+                     * @param DeployStrategyType The deployment policy. Values: `AUTO` (automatically deploy), `BETA` (deploy a small batch first to test the result, and deploy the rest automatically) and `MANUAL` (manually deploy)
                      */
                     void SetDeployStrategyType(const std::string& _deployStrategyType);
 
@@ -151,14 +151,14 @@ namespace TencentCloud
                     bool DeployStrategyTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TotalBatchCount 
+                     * 获取Total number of batches
+                     * @return TotalBatchCount Total number of batches
                      */
                     int64_t GetTotalBatchCount() const;
 
                     /**
-                     * 设置
-                     * @param TotalBatchCount 
+                     * 设置Total number of batches
+                     * @param TotalBatchCount Total number of batches
                      */
                     void SetTotalBatchCount(const int64_t& _totalBatchCount);
 
@@ -169,14 +169,14 @@ namespace TencentCloud
                     bool TotalBatchCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BatchInterval 
+                     * 获取Interval between the batches
+                     * @return BatchInterval Interval between the batches
                      */
                     int64_t GetBatchInterval() const;
 
                     /**
-                     * 设置
-                     * @param BatchInterval 
+                     * 设置Interval between the batches
+                     * @param BatchInterval Interval between the batches
                      */
                     void SetBatchInterval(const int64_t& _batchInterval);
 
@@ -187,14 +187,14 @@ namespace TencentCloud
                     bool BatchIntervalHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BetaBatchNum 
+                     * 获取Number of instances in a beta batch
+                     * @return BetaBatchNum Number of instances in a beta batch
                      */
                     int64_t GetBetaBatchNum() const;
 
                     /**
-                     * 设置
-                     * @param BetaBatchNum 
+                     * 设置Number of instances in a beta batch
+                     * @param BetaBatchNum Number of instances in a beta batch
                      */
                     void SetBetaBatchNum(const int64_t& _betaBatchNum);
 
@@ -205,14 +205,14 @@ namespace TencentCloud
                     bool BetaBatchNumHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MinAvailable 
+                     * 获取Minimum number of available instances during the deployment
+                     * @return MinAvailable Minimum number of available instances during the deployment
                      */
                     int64_t GetMinAvailable() const;
 
                     /**
-                     * 设置
-                     * @param MinAvailable 
+                     * 设置Minimum number of available instances during the deployment
+                     * @param MinAvailable Minimum number of available instances during the deployment
                      */
                     void SetMinAvailable(const int64_t& _minAvailable);
 
@@ -255,31 +255,31 @@ namespace TencentCloud
                     bool m_fromHasBeenSet;
 
                     /**
-                     * 
+                     * The deployment policy. Values: `AUTO` (automatically deploy), `BETA` (deploy a small batch first to test the result, and deploy the rest automatically) and `MANUAL` (manually deploy)
                      */
                     std::string m_deployStrategyType;
                     bool m_deployStrategyTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Total number of batches
                      */
                     int64_t m_totalBatchCount;
                     bool m_totalBatchCountHasBeenSet;
 
                     /**
-                     * 
+                     * Interval between the batches
                      */
                     int64_t m_batchInterval;
                     bool m_batchIntervalHasBeenSet;
 
                     /**
-                     * 
+                     * Number of instances in a beta batch
                      */
                     int64_t m_betaBatchNum;
                     bool m_betaBatchNumHasBeenSet;
 
                     /**
-                     * 
+                     * Minimum number of available instances during the deployment
                      */
                     int64_t m_minAvailable;
                     bool m_minAvailableHasBeenSet;

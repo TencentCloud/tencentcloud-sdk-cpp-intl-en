@@ -493,6 +493,7 @@ This is an async API. After it is returned successfully, you can call the Descri
 
                 /**
                  *This API is used to add an SNAT IP for an SnatPro CLB instance. If SnatPro is not enabled for CLB, it will be automatically enabled after the SNAT IP is added.
+This is an async API. After it is returned successfully, you can check the task result by calling `DescribeTaskStatus` with the returned `RequestID`.
                  * @param req CreateLoadBalancerSnatIpsRequest
                  * @return CreateLoadBalancerSnatIpsOutcome
                  */
@@ -560,6 +561,7 @@ This is an async API. After it is returned successfully, you can call the `Descr
 
                 /**
                  *This API is used to delete the SNAT IP for an SnatPro CLB instance.
+This is an async API. After it is returned successfully, you can check the task result by calling `DescribeTaskStatus` with the returned `RequestID`.
                  * @param req DeleteLoadBalancerSnatIpsRequest
                  * @return DeleteLoadBalancerSnatIpsOutcome
                  */
@@ -921,6 +923,7 @@ This is an async API. After it is returned successfully, you can call the Descri
 
                 /**
                  *This API is used to modify the attributes of a CLB instance such as name and cross-region attributes.
+This is an async API. After it is returned successfully, you can check the task result by calling `DescribeTaskStatus` with the returned `RequestID`.
                  * @param req ModifyLoadBalancerAttributesRequest
                  * @return ModifyLoadBalancerAttributesOutcome
                  */

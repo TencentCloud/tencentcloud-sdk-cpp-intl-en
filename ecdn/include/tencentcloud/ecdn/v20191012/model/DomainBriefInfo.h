@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/ecdn/v20191012/model/Origin.h>
+#include <tencentcloud/ecdn/v20191012/model/Tag.h>
 
 
 namespace TencentCloud
@@ -263,6 +264,28 @@ namespace TencentCloud
                      */
                     bool ReadonlyHasBeenSet() const;
 
+                    /**
+                     * 获取Domain name tag
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @return Tag Domain name tag
+Note: This field may return `null`, indicating that no valid value can be found.
+                     */
+                    std::vector<Tag> GetTag() const;
+
+                    /**
+                     * 设置Domain name tag
+Note: This field may return `null`, indicating that no valid value can be found.
+                     * @param Tag Domain name tag
+Note: This field may return `null`, indicating that no valid value can be found.
+                     */
+                    void SetTag(const std::vector<Tag>& _tag);
+
+                    /**
+                     * 判断参数 Tag 是否已赋值
+                     * @return Tag 是否已赋值
+                     */
+                    bool TagHasBeenSet() const;
+
                 private:
 
                     /**
@@ -336,6 +359,13 @@ namespace TencentCloud
                      */
                     std::string m_readonly;
                     bool m_readonlyHasBeenSet;
+
+                    /**
+                     * Domain name tag
+Note: This field may return `null`, indicating that no valid value can be found.
+                     */
+                    std::vector<Tag> m_tag;
+                    bool m_tagHasBeenSet;
 
                 };
             }

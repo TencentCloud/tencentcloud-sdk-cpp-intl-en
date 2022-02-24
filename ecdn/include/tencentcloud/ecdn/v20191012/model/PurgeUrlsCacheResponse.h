@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Purge task ID. The first ten digits are the UTC time when the task is submitted.
-                     * @return TaskId Purge task ID. The first ten digits are the UTC time when the task is submitted.
+                     * 获取Purge task ID
+                     * @return TaskId Purge task ID
                      */
                     std::string GetTaskId() const;
 
@@ -58,7 +58,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Purge task ID. The first ten digits are the UTC time when the task is submitted.
+                     * Purge task ID
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;

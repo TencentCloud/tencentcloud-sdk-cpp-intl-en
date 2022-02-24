@@ -125,30 +125,30 @@ request: number of requests
                     bool MetricsHasBeenSet() const;
 
                     /**
-                     * 获取Time granularity, which can be:
-1 day	 1, 5, 15, 30, 60, 120, 240, 1440 
-2-3 days 15, 30, 60, 120, 240, 1440
-4-7 days 30, 60, 120, 240, 1440
-8-90 days	 60, 120, 240, 1440
-                     * @return Interval Time granularity, which can be:
-1 day	 1, 5, 15, 30, 60, 120, 240, 1440 
-2-3 days 15, 30, 60, 120, 240, 1440
-4-7 days 30, 60, 120, 240, 1440
-8-90 days	 60, 120, 240, 1440
+                     * 获取Sampling interval in minutes. The available options vary for different query period. See below: 
+1 day: `1`, `5`, `15`, `30`, `60`, `120`, `240`, `1440` 
+2 to 3 days: `15`, `30`, `60`, `120`, `240`, `1440`
+4 to 7 days: `30`, `60`, `120`, `240`, `1440`
+8 to 31 days: `60`, `120`, `240`, `1440`
+                     * @return Interval Sampling interval in minutes. The available options vary for different query period. See below: 
+1 day: `1`, `5`, `15`, `30`, `60`, `120`, `240`, `1440` 
+2 to 3 days: `15`, `30`, `60`, `120`, `240`, `1440`
+4 to 7 days: `30`, `60`, `120`, `240`, `1440`
+8 to 31 days: `60`, `120`, `240`, `1440`
                      */
                     int64_t GetInterval() const;
 
                     /**
-                     * 设置Time granularity, which can be:
-1 day	 1, 5, 15, 30, 60, 120, 240, 1440 
-2-3 days 15, 30, 60, 120, 240, 1440
-4-7 days 30, 60, 120, 240, 1440
-8-90 days	 60, 120, 240, 1440
-                     * @param Interval Time granularity, which can be:
-1 day	 1, 5, 15, 30, 60, 120, 240, 1440 
-2-3 days 15, 30, 60, 120, 240, 1440
-4-7 days 30, 60, 120, 240, 1440
-8-90 days	 60, 120, 240, 1440
+                     * 设置Sampling interval in minutes. The available options vary for different query period. See below: 
+1 day: `1`, `5`, `15`, `30`, `60`, `120`, `240`, `1440` 
+2 to 3 days: `15`, `30`, `60`, `120`, `240`, `1440`
+4 to 7 days: `30`, `60`, `120`, `240`, `1440`
+8 to 31 days: `60`, `120`, `240`, `1440`
+                     * @param Interval Sampling interval in minutes. The available options vary for different query period. See below: 
+1 day: `1`, `5`, `15`, `30`, `60`, `120`, `240`, `1440` 
+2 to 3 days: `15`, `30`, `60`, `120`, `240`, `1440`
+4 to 7 days: `30`, `60`, `120`, `240`, `1440`
+8 to 31 days: `60`, `120`, `240`, `1440`
                      */
                     void SetInterval(const int64_t& _interval);
 
@@ -268,11 +268,11 @@ request: number of requests
                     bool m_metricsHasBeenSet;
 
                     /**
-                     * Time granularity, which can be:
-1 day	 1, 5, 15, 30, 60, 120, 240, 1440 
-2-3 days 15, 30, 60, 120, 240, 1440
-4-7 days 30, 60, 120, 240, 1440
-8-90 days	 60, 120, 240, 1440
+                     * Sampling interval in minutes. The available options vary for different query period. See below: 
+1 day: `1`, `5`, `15`, `30`, `60`, `120`, `240`, `1440` 
+2 to 3 days: `15`, `30`, `60`, `120`, `240`, `1440`
+4 to 7 days: `30`, `60`, `120`, `240`, `1440`
+8 to 31 days: `60`, `120`, `240`, `1440`
                      */
                     int64_t m_interval;
                     bool m_intervalHasBeenSet;

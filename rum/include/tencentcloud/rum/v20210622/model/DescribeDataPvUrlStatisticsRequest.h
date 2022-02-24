@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Type: "allcount", "falls", "samp", "version", "ext3", "nettype", "platform", "isp", "region", "device", "browser", "ext1", "ext2"
-                     * @return Type Type: "allcount", "falls", "samp", "version", "ext3", "nettype", "platform", "isp", "region", "device", "browser", "ext1", "ext2"
+                     * 获取`allcount`; performance view; `day`: 14-day data, `vp`: performance; `ckuv`: UV; `ckpv`: PV; `condition`: condition list; `nettype`/`version`/`platform`/`isp`/`region`/`device`/`browser`/`ext1`/`ext2`/`ext3`/`ret`/`status`/`from`/`url`/`env`: network/platform view; version view; device view; ISP view; region view; browser view; custom view, and so on.
+                     * @return Type `allcount`; performance view; `day`: 14-day data, `vp`: performance; `ckuv`: UV; `ckpv`: PV; `condition`: condition list; `nettype`/`version`/`platform`/`isp`/`region`/`device`/`browser`/`ext1`/`ext2`/`ext3`/`ret`/`status`/`from`/`url`/`env`: network/platform view; version view; device view; ISP view; region view; browser view; custom view, and so on.
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Type: "allcount", "falls", "samp", "version", "ext3", "nettype", "platform", "isp", "region", "device", "browser", "ext1", "ext2"
-                     * @param Type Type: "allcount", "falls", "samp", "version", "ext3", "nettype", "platform", "isp", "region", "device", "browser", "ext1", "ext2"
+                     * 设置`allcount`; performance view; `day`: 14-day data, `vp`: performance; `ckuv`: UV; `ckpv`: PV; `condition`: condition list; `nettype`/`version`/`platform`/`isp`/`region`/`device`/`browser`/`ext1`/`ext2`/`ext3`/`ret`/`status`/`from`/`url`/`env`: network/platform view; version view; device view; ISP view; region view; browser view; custom view, and so on.
+                     * @param Type `allcount`; performance view; `day`: 14-day data, `vp`: performance; `ckuv`: UV; `ckpv`: PV; `condition`: condition list; `nettype`/`version`/`platform`/`isp`/`region`/`device`/`browser`/`ext1`/`ext2`/`ext3`/`ret`/`status`/`from`/`url`/`env`: network/platform view; version view; device view; ISP view; region view; browser view; custom view, and so on.
                      */
                     void SetType(const std::string& _type);
 
@@ -429,7 +429,7 @@ namespace TencentCloud
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Type: "allcount", "falls", "samp", "version", "ext3", "nettype", "platform", "isp", "region", "device", "browser", "ext1", "ext2"
+                     * `allcount`; performance view; `day`: 14-day data, `vp`: performance; `ckuv`: UV; `ckpv`: PV; `condition`: condition list; `nettype`/`version`/`platform`/`isp`/`region`/`device`/`browser`/`ext1`/`ext2`/`ext3`/`ret`/`status`/`from`/`url`/`env`: network/platform view; version view; device view; ISP view; region view; browser view; custom view, and so on.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

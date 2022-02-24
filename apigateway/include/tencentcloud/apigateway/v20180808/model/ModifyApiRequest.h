@@ -918,6 +918,114 @@ namespace TencentCloud
                      */
                     bool Base64EncodedTriggerRulesHasBeenSet() const;
 
+                    /**
+                     * 获取Event bus ID.
+                     * @return EventBusId Event bus ID.
+                     */
+                    std::string GetEventBusId() const;
+
+                    /**
+                     * 设置Event bus ID.
+                     * @param EventBusId Event bus ID.
+                     */
+                    void SetEventBusId(const std::string& _eventBusId);
+
+                    /**
+                     * 判断参数 EventBusId 是否已赋值
+                     * @return EventBusId 是否已赋值
+                     */
+                    bool EventBusIdHasBeenSet() const;
+
+                    /**
+                     * 获取SCF function type, which takes effect when the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
+                     * @return ServiceScfFunctionType SCF function type, which takes effect when the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
+                     */
+                    std::string GetServiceScfFunctionType() const;
+
+                    /**
+                     * 设置SCF function type, which takes effect when the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
+                     * @param ServiceScfFunctionType SCF function type, which takes effect when the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
+                     */
+                    void SetServiceScfFunctionType(const std::string& _serviceScfFunctionType);
+
+                    /**
+                     * 判断参数 ServiceScfFunctionType 是否已赋值
+                     * @return ServiceScfFunctionType 是否已赋值
+                     */
+                    bool ServiceScfFunctionTypeHasBeenSet() const;
+
+                    /**
+                     * 获取EIAM application type.
+                     * @return EIAMAppType EIAM application type.
+                     */
+                    std::string GetEIAMAppType() const;
+
+                    /**
+                     * 设置EIAM application type.
+                     * @param EIAMAppType EIAM application type.
+                     */
+                    void SetEIAMAppType(const std::string& _eIAMAppType);
+
+                    /**
+                     * 判断参数 EIAMAppType 是否已赋值
+                     * @return EIAMAppType 是否已赋值
+                     */
+                    bool EIAMAppTypeHasBeenSet() const;
+
+                    /**
+                     * 获取EIAM application authentication type. Valid values: `AuthenticationOnly`, `Authentication`, `Authorization`.
+                     * @return EIAMAuthType EIAM application authentication type. Valid values: `AuthenticationOnly`, `Authentication`, `Authorization`.
+                     */
+                    std::string GetEIAMAuthType() const;
+
+                    /**
+                     * 设置EIAM application authentication type. Valid values: `AuthenticationOnly`, `Authentication`, `Authorization`.
+                     * @param EIAMAuthType EIAM application authentication type. Valid values: `AuthenticationOnly`, `Authentication`, `Authorization`.
+                     */
+                    void SetEIAMAuthType(const std::string& _eIAMAuthType);
+
+                    /**
+                     * 判断参数 EIAMAuthType 是否已赋值
+                     * @return EIAMAuthType 是否已赋值
+                     */
+                    bool EIAMAuthTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Validity of the EIAM application token. Unit: second. Default value: `7200`.
+                     * @return EIAMAppId Validity of the EIAM application token. Unit: second. Default value: `7200`.
+                     */
+                    std::string GetEIAMAppId() const;
+
+                    /**
+                     * 设置Validity of the EIAM application token. Unit: second. Default value: `7200`.
+                     * @param EIAMAppId Validity of the EIAM application token. Unit: second. Default value: `7200`.
+                     */
+                    void SetEIAMAppId(const std::string& _eIAMAppId);
+
+                    /**
+                     * 判断参数 EIAMAppId 是否已赋值
+                     * @return EIAMAppId 是否已赋值
+                     */
+                    bool EIAMAppIdHasBeenSet() const;
+
+                    /**
+                     * 获取EIAM application ID.
+                     * @return TokenTimeout EIAM application ID.
+                     */
+                    int64_t GetTokenTimeout() const;
+
+                    /**
+                     * 设置EIAM application ID.
+                     * @param TokenTimeout EIAM application ID.
+                     */
+                    void SetTokenTimeout(const int64_t& _tokenTimeout);
+
+                    /**
+                     * 判断参数 TokenTimeout 是否已赋值
+                     * @return TokenTimeout 是否已赋值
+                     */
+                    bool TokenTimeoutHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1207,6 +1315,42 @@ namespace TencentCloud
                      */
                     std::vector<Base64EncodedTriggerRule> m_base64EncodedTriggerRules;
                     bool m_base64EncodedTriggerRulesHasBeenSet;
+
+                    /**
+                     * Event bus ID.
+                     */
+                    std::string m_eventBusId;
+                    bool m_eventBusIdHasBeenSet;
+
+                    /**
+                     * SCF function type, which takes effect when the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
+                     */
+                    std::string m_serviceScfFunctionType;
+                    bool m_serviceScfFunctionTypeHasBeenSet;
+
+                    /**
+                     * EIAM application type.
+                     */
+                    std::string m_eIAMAppType;
+                    bool m_eIAMAppTypeHasBeenSet;
+
+                    /**
+                     * EIAM application authentication type. Valid values: `AuthenticationOnly`, `Authentication`, `Authorization`.
+                     */
+                    std::string m_eIAMAuthType;
+                    bool m_eIAMAuthTypeHasBeenSet;
+
+                    /**
+                     * Validity of the EIAM application token. Unit: second. Default value: `7200`.
+                     */
+                    std::string m_eIAMAppId;
+                    bool m_eIAMAppIdHasBeenSet;
+
+                    /**
+                     * EIAM application ID.
+                     */
+                    int64_t m_tokenTimeout;
+                    bool m_tokenTimeoutHasBeenSet;
 
                 };
             }

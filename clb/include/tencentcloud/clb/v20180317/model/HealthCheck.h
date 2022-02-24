@@ -378,18 +378,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HttpVersionHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the source IP for health check. `0`: use the CLB VIP as the source IP; `1`: IP range starting with 100.64 serving as the source IP. Default: `0`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return SourceIpType Specifies the source IP for health check. `0`: use the CLB VIP as the source IP; `1`: IP range starting with 100.64 serving as the source IP. Default: `0`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Specifies the type of IP for health check. `0` (default): Use the CLB VIP as the source IP. `1`: Use the IP range starting with 100.64 as the source IP.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return SourceIpType Specifies the type of IP for health check. `0` (default): Use the CLB VIP as the source IP. `1`: Use the IP range starting with 100.64 as the source IP.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     int64_t GetSourceIpType() const;
 
                     /**
-                     * 设置Specifies the source IP for health check. `0`: use the CLB VIP as the source IP; `1`: IP range starting with 100.64 serving as the source IP. Default: `0`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param SourceIpType Specifies the source IP for health check. `0`: use the CLB VIP as the source IP; `1`: IP range starting with 100.64 serving as the source IP. Default: `0`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Specifies the type of IP for health check. `0` (default): Use the CLB VIP as the source IP. `1`: Use the IP range starting with 100.64 as the source IP.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param SourceIpType Specifies the type of IP for health check. `0` (default): Use the CLB VIP as the source IP. `1`: Use the IP range starting with 100.64 as the source IP.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetSourceIpType(const int64_t& _sourceIpType);
 
@@ -507,8 +507,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_httpVersionHasBeenSet;
 
                     /**
-                     * Specifies the source IP for health check. `0`: use the CLB VIP as the source IP; `1`: IP range starting with 100.64 serving as the source IP. Default: `0`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Specifies the type of IP for health check. `0` (default): Use the CLB VIP as the source IP. `1`: Use the IP range starting with 100.64 as the source IP.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     int64_t m_sourceIpType;
                     bool m_sourceIpTypeHasBeenSet;

@@ -23,9 +23,10 @@ set(ecdn_public_header_model
   include/tencentcloud/ecdn/v20191012/model/DescribeEcdnStatisticsRequest.h
   include/tencentcloud/ecdn/v20191012/model/StartEcdnDomainRequest.h
   include/tencentcloud/ecdn/v20191012/model/DescribeDomainsConfigResponse.h
-  include/tencentcloud/ecdn/v20191012/model/Https.h
+  include/tencentcloud/ecdn/v20191012/model/AdvanceHttps.h
   include/tencentcloud/ecdn/v20191012/model/PurgeUrlsCacheRequest.h
   include/tencentcloud/ecdn/v20191012/model/ResourceData.h
+  include/tencentcloud/ecdn/v20191012/model/Https.h
   include/tencentcloud/ecdn/v20191012/model/Cache.h
   include/tencentcloud/ecdn/v20191012/model/ForceRedirect.h
   include/tencentcloud/ecdn/v20191012/model/DescribePurgeQuotaResponse.h
@@ -85,9 +86,10 @@ set(ecdn_src
   src/v20191012/model/DescribeEcdnStatisticsRequest.cpp
   src/v20191012/model/StartEcdnDomainRequest.cpp
   src/v20191012/model/DescribeDomainsConfigResponse.cpp
-  src/v20191012/model/Https.cpp
+  src/v20191012/model/AdvanceHttps.cpp
   src/v20191012/model/PurgeUrlsCacheRequest.cpp
   src/v20191012/model/ResourceData.cpp
+  src/v20191012/model/Https.cpp
   src/v20191012/model/Cache.cpp
   src/v20191012/model/ForceRedirect.cpp
   src/v20191012/model/DescribePurgeQuotaResponse.cpp

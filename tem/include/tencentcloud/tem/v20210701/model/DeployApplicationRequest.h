@@ -361,7 +361,11 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
                      * 获取JDK version
 - KONA: use KONA JDK
 - OPEN: use open JDK
+- KONA: use KONA JDK
+- OPEN: use open JDK
                      * @return JdkVersion JDK version
+- KONA: use KONA JDK
+- OPEN: use open JDK
 - KONA: use KONA JDK
 - OPEN: use open JDK
                      */
@@ -371,7 +375,11 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
                      * 设置JDK version
 - KONA: use KONA JDK
 - OPEN: use open JDK
+- KONA: use KONA JDK
+- OPEN: use open JDK
                      * @param JdkVersion JDK version
+- KONA: use KONA JDK
+- OPEN: use open JDK
 - KONA: use KONA JDK
 - OPEN: use open JDK
                      */
@@ -707,6 +715,60 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
                      */
                     bool LogEnableHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the configuration is modified (except for the image configuration)
+                     * @return ConfEdited Whether the configuration is modified (except for the image configuration)
+                     */
+                    bool GetConfEdited() const;
+
+                    /**
+                     * 设置Whether the configuration is modified (except for the image configuration)
+                     * @param ConfEdited Whether the configuration is modified (except for the image configuration)
+                     */
+                    void SetConfEdited(const bool& _confEdited);
+
+                    /**
+                     * 判断参数 ConfEdited 是否已赋值
+                     * @return ConfEdited 是否已赋值
+                     */
+                    bool ConfEditedHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the application acceleration is enabled 
+                     * @return SpeedUp Whether the application acceleration is enabled 
+                     */
+                    bool GetSpeedUp() const;
+
+                    /**
+                     * 设置Whether the application acceleration is enabled 
+                     * @param SpeedUp Whether the application acceleration is enabled 
+                     */
+                    void SetSpeedUp(const bool& _speedUp);
+
+                    /**
+                     * 判断参数 SpeedUp 是否已赋值
+                     * @return SpeedUp 是否已赋值
+                     */
+                    bool SpeedUpHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable probing
+                     * @return StartupProbe Whether to enable probing
+                     */
+                    HealthCheckConfig GetStartupProbe() const;
+
+                    /**
+                     * 设置Whether to enable probing
+                     * @param StartupProbe Whether to enable probing
+                     */
+                    void SetStartupProbe(const HealthCheckConfig& _startupProbe);
+
+                    /**
+                     * 判断参数 StartupProbe 是否已赋值
+                     * @return StartupProbe 是否已赋值
+                     */
+                    bool StartupProbeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -811,6 +873,8 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
 
                     /**
                      * JDK version
+- KONA: use KONA JDK
+- OPEN: use open JDK
 - KONA: use KONA JDK
 - OPEN: use open JDK
                      */
@@ -924,6 +988,24 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
                      */
                     int64_t m_logEnable;
                     bool m_logEnableHasBeenSet;
+
+                    /**
+                     * Whether the configuration is modified (except for the image configuration)
+                     */
+                    bool m_confEdited;
+                    bool m_confEditedHasBeenSet;
+
+                    /**
+                     * Whether the application acceleration is enabled 
+                     */
+                    bool m_speedUp;
+                    bool m_speedUpHasBeenSet;
+
+                    /**
+                     * Whether to enable probing
+                     */
+                    HealthCheckConfig m_startupProbe;
+                    bool m_startupProbeHasBeenSet;
 
                 };
             }

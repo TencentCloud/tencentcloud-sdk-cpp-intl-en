@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/ecdn/v20191012/model/AdvanceHttps.h>
 
 
 namespace TencentCloud
@@ -182,6 +183,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool BackupOriginTypeHasBeenSet() const;
 
+                    /**
+                     * 获取HTTPS advanced origin-pull configuration
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return AdvanceHttps HTTPS advanced origin-pull configuration
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    AdvanceHttps GetAdvanceHttps() const;
+
+                    /**
+                     * 设置HTTPS advanced origin-pull configuration
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param AdvanceHttps HTTPS advanced origin-pull configuration
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetAdvanceHttps(const AdvanceHttps& _advanceHttps);
+
+                    /**
+                     * 判断参数 AdvanceHttps 是否已赋值
+                     * @return AdvanceHttps 是否已赋值
+                     */
+                    bool AdvanceHttpsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -226,6 +249,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_backupOriginType;
                     bool m_backupOriginTypeHasBeenSet;
+
+                    /**
+                     * HTTPS advanced origin-pull configuration
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    AdvanceHttps m_advanceHttps;
+                    bool m_advanceHttpsHasBeenSet;
 
                 };
             }

@@ -80,14 +80,14 @@ namespace TencentCloud
                     bool ListenerIdHasBeenSet() const;
 
                     /**
-                     * 获取Domain name, which must be under a created forwarding rule.
-                     * @return Domain Domain name, which must be under a created forwarding rule.
+                     * 获取The domain name, which must be associated with an existing forwarding rule. If there are multiple domain names, you only need to specify one.
+                     * @return Domain The domain name, which must be associated with an existing forwarding rule. If there are multiple domain names, you only need to specify one.
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置Domain name, which must be under a created forwarding rule.
-                     * @param Domain Domain name, which must be under a created forwarding rule.
+                     * 设置The domain name, which must be associated with an existing forwarding rule. If there are multiple domain names, you only need to specify one.
+                     * @param Domain The domain name, which must be associated with an existing forwarding rule. If there are multiple domain names, you only need to specify one.
                      */
                     void SetDomain(const std::string& _domain);
 
@@ -98,14 +98,14 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取New domain name
-                     * @return NewDomain New domain name
+                     * 获取The one domain name to modify. `NewDomain` and `NewDomains` can not be both specified.
+                     * @return NewDomain The one domain name to modify. `NewDomain` and `NewDomains` can not be both specified.
                      */
                     std::string GetNewDomain() const;
 
                     /**
-                     * 设置New domain name
-                     * @param NewDomain New domain name
+                     * 设置The one domain name to modify. `NewDomain` and `NewDomains` can not be both specified.
+                     * @param NewDomain The one domain name to modify. `NewDomain` and `NewDomains` can not be both specified.
                      */
                     void SetNewDomain(const std::string& _newDomain);
 
@@ -170,14 +170,14 @@ namespace TencentCloud
                     bool DefaultServerHasBeenSet() const;
 
                     /**
-                     * 获取A listener must be configured with a default domain name. If you need to disable the default domain name, you must specify another one as the new default domain name.
-                     * @return NewDefaultServerDomain A listener must be configured with a default domain name. If you need to disable the default domain name, you must specify another one as the new default domain name.
+                     * 获取Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
+                     * @return NewDefaultServerDomain Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
                      */
                     std::string GetNewDefaultServerDomain() const;
 
                     /**
-                     * 设置A listener must be configured with a default domain name. If you need to disable the default domain name, you must specify another one as the new default domain name.
-                     * @param NewDefaultServerDomain A listener must be configured with a default domain name. If you need to disable the default domain name, you must specify another one as the new default domain name.
+                     * 设置Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
+                     * @param NewDefaultServerDomain Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
                      */
                     void SetNewDefaultServerDomain(const std::string& _newDefaultServerDomain);
 
@@ -186,6 +186,24 @@ namespace TencentCloud
                      * @return NewDefaultServerDomain 是否已赋值
                      */
                     bool NewDefaultServerDomainHasBeenSet() const;
+
+                    /**
+                     * 获取The new domain names to modify. `NewDomain` and `NewDomains` can not be both specified.
+                     * @return NewDomains The new domain names to modify. `NewDomain` and `NewDomains` can not be both specified.
+                     */
+                    std::vector<std::string> GetNewDomains() const;
+
+                    /**
+                     * 设置The new domain names to modify. `NewDomain` and `NewDomains` can not be both specified.
+                     * @param NewDomains The new domain names to modify. `NewDomain` and `NewDomains` can not be both specified.
+                     */
+                    void SetNewDomains(const std::vector<std::string>& _newDomains);
+
+                    /**
+                     * 判断参数 NewDomains 是否已赋值
+                     * @return NewDomains 是否已赋值
+                     */
+                    bool NewDomainsHasBeenSet() const;
 
                 private:
 
@@ -202,13 +220,13 @@ namespace TencentCloud
                     bool m_listenerIdHasBeenSet;
 
                     /**
-                     * Domain name, which must be under a created forwarding rule.
+                     * The domain name, which must be associated with an existing forwarding rule. If there are multiple domain names, you only need to specify one.
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
 
                     /**
-                     * New domain name
+                     * The one domain name to modify. `NewDomain` and `NewDomains` can not be both specified.
                      */
                     std::string m_newDomain;
                     bool m_newDomainHasBeenSet;
@@ -232,10 +250,16 @@ namespace TencentCloud
                     bool m_defaultServerHasBeenSet;
 
                     /**
-                     * A listener must be configured with a default domain name. If you need to disable the default domain name, you must specify another one as the new default domain name.
+                     * Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
                      */
                     std::string m_newDefaultServerDomain;
                     bool m_newDefaultServerDomainHasBeenSet;
+
+                    /**
+                     * The new domain names to modify. `NewDomain` and `NewDomains` can not be both specified.
+                     */
+                    std::vector<std::string> m_newDomains;
+                    bool m_newDomainsHasBeenSet;
 
                 };
             }

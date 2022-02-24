@@ -468,6 +468,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool QuicStatusHasBeenSet() const;
 
+                    /**
+                     * 获取List of domain names associated with the forwarding rule
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Domains List of domain names associated with the forwarding rule
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> GetDomains() const;
+
+                    /**
+                     * 设置List of domain names associated with the forwarding rule
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param Domains List of domain names associated with the forwarding rule
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetDomains(const std::vector<std::string>& _domains);
+
+                    /**
+                     * 判断参数 Domains 是否已赋值
+                     * @return Domains 是否已赋值
+                     */
+                    bool DomainsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -605,6 +627,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_quicStatus;
                     bool m_quicStatusHasBeenSet;
+
+                    /**
+                     * List of domain names associated with the forwarding rule
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_domains;
+                    bool m_domainsHasBeenSet;
 
                 };
             }

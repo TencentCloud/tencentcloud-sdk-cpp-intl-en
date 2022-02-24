@@ -43,24 +43,6 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Logset retention period in days; max value: 90
-                     * @return Period Logset retention period in days; max value: 90
-                     */
-                    uint64_t GetPeriod() const;
-
-                    /**
-                     * 设置Logset retention period in days; max value: 90
-                     * @param Period Logset retention period in days; max value: 90
-                     */
-                    void SetPeriod(const uint64_t& _period);
-
-                    /**
-                     * 判断参数 Period 是否已赋值
-                     * @return Period 是否已赋值
-                     */
-                    bool PeriodHasBeenSet() const;
-
-                    /**
                      * 获取Logset name, which must be unique among all CLS logsets; default value: clb_logset
                      * @return LogsetName Logset name, which must be unique among all CLS logsets; default value: clb_logset
                      */
@@ -77,6 +59,24 @@ namespace TencentCloud
                      * @return LogsetName 是否已赋值
                      */
                     bool LogsetNameHasBeenSet() const;
+
+                    /**
+                     * 获取Logset retention period (in days)
+                     * @return Period Logset retention period (in days)
+                     */
+                    uint64_t GetPeriod() const;
+
+                    /**
+                     * 设置Logset retention period (in days)
+                     * @param Period Logset retention period (in days)
+                     */
+                    void SetPeriod(const uint64_t& _period);
+
+                    /**
+                     * 判断参数 Period 是否已赋值
+                     * @return Period 是否已赋值
+                     */
+                    bool PeriodHasBeenSet() const;
 
                     /**
                      * 获取Logset type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
@@ -99,16 +99,16 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Logset retention period in days; max value: 90
-                     */
-                    uint64_t m_period;
-                    bool m_periodHasBeenSet;
-
-                    /**
                      * Logset name, which must be unique among all CLS logsets; default value: clb_logset
                      */
                     std::string m_logsetName;
                     bool m_logsetNameHasBeenSet;
+
+                    /**
+                     * Logset retention period (in days)
+                     */
+                    uint64_t m_period;
+                    bool m_periodHasBeenSet;
 
                     /**
                      * Logset type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).

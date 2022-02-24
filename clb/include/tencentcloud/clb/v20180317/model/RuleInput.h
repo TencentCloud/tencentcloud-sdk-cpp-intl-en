@@ -49,24 +49,6 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Domain name of the forwarding rule. Length: 1-80.
-                     * @return Domain Domain name of the forwarding rule. Length: 1-80.
-                     */
-                    std::string GetDomain() const;
-
-                    /**
-                     * 设置Domain name of the forwarding rule. Length: 1-80.
-                     * @param Domain Domain name of the forwarding rule. Length: 1-80.
-                     */
-                    void SetDomain(const std::string& _domain);
-
-                    /**
-                     * 判断参数 Domain 是否已赋值
-                     * @return Domain 是否已赋值
-                     */
-                    bool DomainHasBeenSet() const;
-
-                    /**
                      * 获取Forwarding rule path. Length: 1-200.
                      * @return Url Forwarding rule path. Length: 1-200.
                      */
@@ -83,6 +65,24 @@ namespace TencentCloud
                      * @return Url 是否已赋值
                      */
                     bool UrlHasBeenSet() const;
+
+                    /**
+                     * 获取The domain name associated with the forwarding rule. It can contain 1-80 characters. Only one domain name can be entered. If you need to enter multiple domain names, use `Domains`.
+                     * @return Domain The domain name associated with the forwarding rule. It can contain 1-80 characters. Only one domain name can be entered. If you need to enter multiple domain names, use `Domains`.
+                     */
+                    std::string GetDomain() const;
+
+                    /**
+                     * 设置The domain name associated with the forwarding rule. It can contain 1-80 characters. Only one domain name can be entered. If you need to enter multiple domain names, use `Domains`.
+                     * @param Domain The domain name associated with the forwarding rule. It can contain 1-80 characters. Only one domain name can be entered. If you need to enter multiple domain names, use `Domains`.
+                     */
+                    void SetDomain(const std::string& _domain);
+
+                    /**
+                     * 判断参数 Domain 是否已赋值
+                     * @return Domain 是否已赋值
+                     */
+                    bool DomainHasBeenSet() const;
 
                     /**
                      * 获取Session persistence time in seconds. Value range: 30-3,600. Setting it to 0 indicates that session persistence is disabled.
@@ -286,19 +286,37 @@ They represent weighted round robin, least connections, and IP hash, respectivel
                      */
                     bool QuicHasBeenSet() const;
 
-                private:
+                    /**
+                     * 获取The domain name associated with the forwarding rule. Each contain 1-80 characters. If you only need to enter one domain name, use `Domain` instead.
+                     * @return Domains The domain name associated with the forwarding rule. Each contain 1-80 characters. If you only need to enter one domain name, use `Domain` instead.
+                     */
+                    std::vector<std::string> GetDomains() const;
 
                     /**
-                     * Domain name of the forwarding rule. Length: 1-80.
+                     * 设置The domain name associated with the forwarding rule. Each contain 1-80 characters. If you only need to enter one domain name, use `Domain` instead.
+                     * @param Domains The domain name associated with the forwarding rule. Each contain 1-80 characters. If you only need to enter one domain name, use `Domain` instead.
                      */
-                    std::string m_domain;
-                    bool m_domainHasBeenSet;
+                    void SetDomains(const std::vector<std::string>& _domains);
+
+                    /**
+                     * 判断参数 Domains 是否已赋值
+                     * @return Domains 是否已赋值
+                     */
+                    bool DomainsHasBeenSet() const;
+
+                private:
 
                     /**
                      * Forwarding rule path. Length: 1-200.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
+
+                    /**
+                     * The domain name associated with the forwarding rule. It can contain 1-80 characters. Only one domain name can be entered. If you need to enter multiple domain names, use `Domains`.
+                     */
+                    std::string m_domain;
+                    bool m_domainHasBeenSet;
 
                     /**
                      * Session persistence time in seconds. Value range: 30-3,600. Setting it to 0 indicates that session persistence is disabled.
@@ -366,6 +384,12 @@ They represent weighted round robin, least connections, and IP hash, respectivel
                      */
                     bool m_quic;
                     bool m_quicHasBeenSet;
+
+                    /**
+                     * The domain name associated with the forwarding rule. Each contain 1-80 characters. If you only need to enter one domain name, use `Domain` instead.
+                     */
+                    std::vector<std::string> m_domains;
+                    bool m_domainsHasBeenSet;
 
                 };
             }

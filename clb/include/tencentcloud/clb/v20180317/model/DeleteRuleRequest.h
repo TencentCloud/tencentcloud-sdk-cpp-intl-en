@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool LocationIdsHasBeenSet() const;
 
                     /**
-                     * 获取Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
-                     * @return Domain Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
+                     * 获取Specifies the target domain name. Only one domain name is allowed. This field is invalid when `LocationIds` is specified.
+                     * @return Domain Specifies the target domain name. Only one domain name is allowed. This field is invalid when `LocationIds` is specified.
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
-                     * @param Domain Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
+                     * 设置Specifies the target domain name. Only one domain name is allowed. This field is invalid when `LocationIds` is specified.
+                     * @param Domain Specifies the target domain name. Only one domain name is allowed. This field is invalid when `LocationIds` is specified.
                      */
                     void SetDomain(const std::string& _domain);
 
@@ -133,14 +133,14 @@ namespace TencentCloud
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取A listener must be configured with a default domain name. If you need to delete the default domain name, you can specify another one as the new default domain name.
-                     * @return NewDefaultServerDomain A listener must be configured with a default domain name. If you need to delete the default domain name, you can specify another one as the new default domain name.
+                     * 获取Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
+                     * @return NewDefaultServerDomain Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
                      */
                     std::string GetNewDefaultServerDomain() const;
 
                     /**
-                     * 设置A listener must be configured with a default domain name. If you need to delete the default domain name, you can specify another one as the new default domain name.
-                     * @param NewDefaultServerDomain A listener must be configured with a default domain name. If you need to delete the default domain name, you can specify another one as the new default domain name.
+                     * 设置Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
+                     * @param NewDefaultServerDomain Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
                      */
                     void SetNewDefaultServerDomain(const std::string& _newDefaultServerDomain);
 
@@ -171,7 +171,7 @@ namespace TencentCloud
                     bool m_locationIdsHasBeenSet;
 
                     /**
-                     * Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
+                     * Specifies the target domain name. Only one domain name is allowed. This field is invalid when `LocationIds` is specified.
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
@@ -183,7 +183,7 @@ namespace TencentCloud
                     bool m_urlHasBeenSet;
 
                     /**
-                     * A listener must be configured with a default domain name. If you need to delete the default domain name, you can specify another one as the new default domain name.
+                     * Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
                      */
                     std::string m_newDefaultServerDomain;
                     bool m_newDefaultServerDomainHasBeenSet;

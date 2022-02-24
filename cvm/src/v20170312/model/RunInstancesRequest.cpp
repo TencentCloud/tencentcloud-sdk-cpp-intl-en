@@ -46,7 +46,9 @@ RunInstancesRequest::RunInstancesRequest() :
     m_userDataHasBeenSet(false),
     m_dryRunHasBeenSet(false),
     m_camRoleNameHasBeenSet(false),
-    m_hpcClusterIdHasBeenSet(false)
+    m_hpcClusterIdHasBeenSet(false),
+    m_launchTemplateHasBeenSet(false),
+    m_chcIdsHasBeenSet(false)
 {
 }
 
@@ -280,6 +282,28 @@ string RunInstancesRequest::ToJsonString() const
         string key = "HpcClusterId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_hpcClusterId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_launchTemplateHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LaunchTemplate";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_launchTemplate.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_chcIdsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ChcIds";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_chcIds.begin(); itr != m_chcIds.end(); ++itr)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
     }
 
 
@@ -672,6 +696,38 @@ void RunInstancesRequest::SetHpcClusterId(const string& _hpcClusterId)
 bool RunInstancesRequest::HpcClusterIdHasBeenSet() const
 {
     return m_hpcClusterIdHasBeenSet;
+}
+
+LaunchTemplate RunInstancesRequest::GetLaunchTemplate() const
+{
+    return m_launchTemplate;
+}
+
+void RunInstancesRequest::SetLaunchTemplate(const LaunchTemplate& _launchTemplate)
+{
+    m_launchTemplate = _launchTemplate;
+    m_launchTemplateHasBeenSet = true;
+}
+
+bool RunInstancesRequest::LaunchTemplateHasBeenSet() const
+{
+    return m_launchTemplateHasBeenSet;
+}
+
+vector<string> RunInstancesRequest::GetChcIds() const
+{
+    return m_chcIds;
+}
+
+void RunInstancesRequest::SetChcIds(const vector<string>& _chcIds)
+{
+    m_chcIds = _chcIds;
+    m_chcIdsHasBeenSet = true;
+}
+
+bool RunInstancesRequest::ChcIdsHasBeenSet() const
+{
+    return m_chcIdsHasBeenSet;
 }
 
 

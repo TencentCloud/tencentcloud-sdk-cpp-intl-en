@@ -118,6 +118,24 @@ namespace TencentCloud
                      */
                     bool BatchIntervalHasBeenSet() const;
 
+                    /**
+                     * 获取The minimum number of available pods
+                     * @return MinAvailable The minimum number of available pods
+                     */
+                    int64_t GetMinAvailable() const;
+
+                    /**
+                     * 设置The minimum number of available pods
+                     * @param MinAvailable The minimum number of available pods
+                     */
+                    void SetMinAvailable(const int64_t& _minAvailable);
+
+                    /**
+                     * 判断参数 MinAvailable 是否已赋值
+                     * @return MinAvailable 是否已赋值
+                     */
+                    bool MinAvailableHasBeenSet() const;
+
                 private:
 
                     /**
@@ -143,6 +161,12 @@ namespace TencentCloud
                      */
                     int64_t m_batchInterval;
                     bool m_batchIntervalHasBeenSet;
+
+                    /**
+                     * The minimum number of available pods
+                     */
+                    int64_t m_minAvailable;
+                    bool m_minAvailableHasBeenSet;
 
                 };
             }

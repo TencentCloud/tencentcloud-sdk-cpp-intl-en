@@ -47,14 +47,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取WebSocket configuration switch, which can be `on` or `off`.
-                     * @return Switch WebSocket configuration switch, which can be `on` or `off`.
+                     * 获取Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
+
+* WebSocket is now only available for beta users. To use it, please submit a ticket.
+                     * @return Switch Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
+
+* WebSocket is now only available for beta users. To use it, please submit a ticket.
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置WebSocket configuration switch, which can be `on` or `off`.
-                     * @param Switch WebSocket configuration switch, which can be `on` or `off`.
+                     * 设置Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
+
+* WebSocket is now only available for beta users. To use it, please submit a ticket.
+                     * @param Switch Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
+
+* WebSocket is now only available for beta users. To use it, please submit a ticket.
                      */
                     void SetSwitch(const std::string& _switch);
 
@@ -89,7 +97,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * WebSocket configuration switch, which can be `on` or `off`.
+                     * Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
+
+* WebSocket is now only available for beta users. To use it, please submit a ticket.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

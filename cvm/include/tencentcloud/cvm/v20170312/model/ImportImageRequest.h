@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cvm/v20170312/model/TagSpecification.h>
 
 
 namespace TencentCloud
@@ -186,6 +187,24 @@ namespace TencentCloud
                      */
                     bool ForceHasBeenSet() const;
 
+                    /**
+                     * 获取Tag description list. This parameter is used to bind a tag to a custom image.
+                     * @return TagSpecification Tag description list. This parameter is used to bind a tag to a custom image.
+                     */
+                    std::vector<TagSpecification> GetTagSpecification() const;
+
+                    /**
+                     * 设置Tag description list. This parameter is used to bind a tag to a custom image.
+                     * @param TagSpecification Tag description list. This parameter is used to bind a tag to a custom image.
+                     */
+                    void SetTagSpecification(const std::vector<TagSpecification>& _tagSpecification);
+
+                    /**
+                     * 判断参数 TagSpecification 是否已赋值
+                     * @return TagSpecification 是否已赋值
+                     */
+                    bool TagSpecificationHasBeenSet() const;
+
                 private:
 
                     /**
@@ -235,6 +254,12 @@ namespace TencentCloud
                      */
                     bool m_force;
                     bool m_forceHasBeenSet;
+
+                    /**
+                     * Tag description list. This parameter is used to bind a tag to a custom image.
+                     */
+                    std::vector<TagSpecification> m_tagSpecification;
+                    bool m_tagSpecificationHasBeenSet;
 
                 };
             }

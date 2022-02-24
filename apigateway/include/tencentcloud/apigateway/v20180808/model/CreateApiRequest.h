@@ -882,6 +882,24 @@ namespace TencentCloud
                     bool IsBase64EncodedHasBeenSet() const;
 
                     /**
+                     * 获取Event bus ID.
+                     * @return EventBusId Event bus ID.
+                     */
+                    std::string GetEventBusId() const;
+
+                    /**
+                     * 设置Event bus ID.
+                     * @param EventBusId Event bus ID.
+                     */
+                    void SetEventBusId(const std::string& _eventBusId);
+
+                    /**
+                     * 判断参数 EventBusId 是否已赋值
+                     * @return EventBusId 是否已赋值
+                     */
+                    bool EventBusIdHasBeenSet() const;
+
+                    /**
                      * 获取SCF function type, which takes effect if the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
                      * @return ServiceScfFunctionType SCF function type, which takes effect if the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
                      */
@@ -1248,6 +1266,12 @@ namespace TencentCloud
                      */
                     bool m_isBase64Encoded;
                     bool m_isBase64EncodedHasBeenSet;
+
+                    /**
+                     * Event bus ID.
+                     */
+                    std::string m_eventBusId;
+                    bool m_eventBusIdHasBeenSet;
 
                     /**
                      * SCF function type, which takes effect if the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.

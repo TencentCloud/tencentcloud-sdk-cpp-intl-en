@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tke/v20180525/model/Filter.h>
 
 
 namespace TencentCloud
@@ -60,6 +61,96 @@ namespace TencentCloud
                      */
                     bool ClusterIdHasBeenSet() const;
 
+                    /**
+                     * 获取·  NodePoolsName
+    Filters by the node pool name
+    Type: String
+    Required: No
+
+·  NodePoolsId
+    Filters by the node pool ID
+    Type: String
+    Required: No
+
+·  tags
+    Filters by key-value pairs of tags
+    Type: String
+    Required: No
+
+·  tag:tag-key
+    Filters by key-value pairs of tags
+    Type: String
+    Required: No
+                     * @return Filters ·  NodePoolsName
+    Filters by the node pool name
+    Type: String
+    Required: No
+
+·  NodePoolsId
+    Filters by the node pool ID
+    Type: String
+    Required: No
+
+·  tags
+    Filters by key-value pairs of tags
+    Type: String
+    Required: No
+
+·  tag:tag-key
+    Filters by key-value pairs of tags
+    Type: String
+    Required: No
+                     */
+                    std::vector<Filter> GetFilters() const;
+
+                    /**
+                     * 设置·  NodePoolsName
+    Filters by the node pool name
+    Type: String
+    Required: No
+
+·  NodePoolsId
+    Filters by the node pool ID
+    Type: String
+    Required: No
+
+·  tags
+    Filters by key-value pairs of tags
+    Type: String
+    Required: No
+
+·  tag:tag-key
+    Filters by key-value pairs of tags
+    Type: String
+    Required: No
+                     * @param Filters ·  NodePoolsName
+    Filters by the node pool name
+    Type: String
+    Required: No
+
+·  NodePoolsId
+    Filters by the node pool ID
+    Type: String
+    Required: No
+
+·  tags
+    Filters by key-value pairs of tags
+    Type: String
+    Required: No
+
+·  tag:tag-key
+    Filters by key-value pairs of tags
+    Type: String
+    Required: No
+                     */
+                    void SetFilters(const std::vector<Filter>& _filters);
+
+                    /**
+                     * 判断参数 Filters 是否已赋值
+                     * @return Filters 是否已赋值
+                     */
+                    bool FiltersHasBeenSet() const;
+
                 private:
 
                     /**
@@ -67,6 +158,30 @@ namespace TencentCloud
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
+
+                    /**
+                     * ·  NodePoolsName
+    Filters by the node pool name
+    Type: String
+    Required: No
+
+·  NodePoolsId
+    Filters by the node pool ID
+    Type: String
+    Required: No
+
+·  tags
+    Filters by key-value pairs of tags
+    Type: String
+    Required: No
+
+·  tag:tag-key
+    Filters by key-value pairs of tags
+    Type: String
+    Required: No
+                     */
+                    std::vector<Filter> m_filters;
+                    bool m_filtersHasBeenSet;
 
                 };
             }
