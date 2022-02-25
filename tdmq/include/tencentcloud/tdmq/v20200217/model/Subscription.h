@@ -414,6 +414,72 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool UpdateTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Subscription type. Valid values: `Exclusive`, `Shared`, `Failover`, and `Key_Shared`. An empty string or `NULL`: Unknown.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return SubType Subscription type. Valid values: `Exclusive`, `Shared`, `Failover`, and `Key_Shared`. An empty string or `NULL`: Unknown.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetSubType() const;
+
+                    /**
+                     * 设置Subscription type. Valid values: `Exclusive`, `Shared`, `Failover`, and `Key_Shared`. An empty string or `NULL`: Unknown.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param SubType Subscription type. Valid values: `Exclusive`, `Shared`, `Failover`, and `Key_Shared`. An empty string or `NULL`: Unknown.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetSubType(const std::string& _subType);
+
+                    /**
+                     * 判断参数 SubType 是否已赋值
+                     * @return SubType 是否已赋值
+                     */
+                    bool SubTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Whether messages are blocked as the limit of unacknowledged messages has been reached.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return BlockedSubscriptionOnUnackedMsgs Whether messages are blocked as the limit of unacknowledged messages has been reached.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool GetBlockedSubscriptionOnUnackedMsgs() const;
+
+                    /**
+                     * 设置Whether messages are blocked as the limit of unacknowledged messages has been reached.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param BlockedSubscriptionOnUnackedMsgs Whether messages are blocked as the limit of unacknowledged messages has been reached.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetBlockedSubscriptionOnUnackedMsgs(const bool& _blockedSubscriptionOnUnackedMsgs);
+
+                    /**
+                     * 判断参数 BlockedSubscriptionOnUnackedMsgs 是否已赋值
+                     * @return BlockedSubscriptionOnUnackedMsgs 是否已赋值
+                     */
+                    bool BlockedSubscriptionOnUnackedMsgsHasBeenSet() const;
+
+                    /**
+                     * 获取Maximum number of unacknowledged messages.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return MaxUnackedMsgNum Maximum number of unacknowledged messages.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetMaxUnackedMsgNum() const;
+
+                    /**
+                     * 设置Maximum number of unacknowledged messages.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param MaxUnackedMsgNum Maximum number of unacknowledged messages.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetMaxUnackedMsgNum(const int64_t& _maxUnackedMsgNum);
+
+                    /**
+                     * 判断参数 MaxUnackedMsgNum 是否已赋值
+                     * @return MaxUnackedMsgNum 是否已赋值
+                     */
+                    bool MaxUnackedMsgNumHasBeenSet() const;
+
                 private:
 
                     /**
@@ -532,6 +598,27 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
+
+                    /**
+                     * Subscription type. Valid values: `Exclusive`, `Shared`, `Failover`, and `Key_Shared`. An empty string or `NULL`: Unknown.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_subType;
+                    bool m_subTypeHasBeenSet;
+
+                    /**
+                     * Whether messages are blocked as the limit of unacknowledged messages has been reached.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool m_blockedSubscriptionOnUnackedMsgs;
+                    bool m_blockedSubscriptionOnUnackedMsgsHasBeenSet;
+
+                    /**
+                     * Maximum number of unacknowledged messages.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_maxUnackedMsgNum;
+                    bool m_maxUnackedMsgNumHasBeenSet;
 
                 };
             }

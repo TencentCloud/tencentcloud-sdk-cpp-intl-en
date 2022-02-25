@@ -571,6 +571,36 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool TagsHasBeenSet() const;
 
+                    /**
+                     * 获取Billing mode:
+`0`: Pay-as-you-go
+`1`: Monthly subscription
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return PayMode Billing mode:
+`0`: Pay-as-you-go
+`1`: Monthly subscription
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetPayMode() const;
+
+                    /**
+                     * 设置Billing mode:
+`0`: Pay-as-you-go
+`1`: Monthly subscription
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param PayMode Billing mode:
+`0`: Pay-as-you-go
+`1`: Monthly subscription
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetPayMode(const int64_t& _payMode);
+
+                    /**
+                     * 判断参数 PayMode 是否已赋值
+                     * @return PayMode 是否已赋值
+                     */
+                    bool PayModeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -742,6 +772,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * Billing mode:
+`0`: Pay-as-you-go
+`1`: Monthly subscription
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_payMode;
+                    bool m_payModeHasBeenSet;
 
                 };
             }

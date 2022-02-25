@@ -61,24 +61,6 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Filename. The file must be a .sql file uploaded to Tencent Cloud.
-                     * @return FileName Filename. The file must be a .sql file uploaded to Tencent Cloud.
-                     */
-                    std::string GetFileName() const;
-
-                    /**
-                     * 设置Filename. The file must be a .sql file uploaded to Tencent Cloud.
-                     * @param FileName Filename. The file must be a .sql file uploaded to Tencent Cloud.
-                     */
-                    void SetFileName(const std::string& _fileName);
-
-                    /**
-                     * 判断参数 FileName 是否已赋值
-                     * @return FileName 是否已赋值
-                     */
-                    bool FileNameHasBeenSet() const;
-
-                    /**
                      * 获取TencentDB username
                      * @return User TencentDB username
                      */
@@ -95,6 +77,24 @@ namespace TencentCloud
                      * @return User 是否已赋值
                      */
                     bool UserHasBeenSet() const;
+
+                    /**
+                     * 获取Filename. The file must be a .sql file uploaded to Tencent Cloud.
+                     * @return FileName Filename. The file must be a .sql file uploaded to Tencent Cloud.
+                     */
+                    std::string GetFileName() const;
+
+                    /**
+                     * 设置Filename. The file must be a .sql file uploaded to Tencent Cloud.
+                     * @param FileName Filename. The file must be a .sql file uploaded to Tencent Cloud.
+                     */
+                    void SetFileName(const std::string& _fileName);
+
+                    /**
+                     * 判断参数 FileName 是否已赋值
+                     * @return FileName 是否已赋值
+                     */
+                    bool FileNameHasBeenSet() const;
 
                     /**
                      * 获取Password of a TencentDB instance user account
@@ -132,6 +132,24 @@ namespace TencentCloud
                      */
                     bool DbNameHasBeenSet() const;
 
+                    /**
+                     * 获取URL of a .sql file stored in COS. Either `FileName` or `CosUrl` must be specified.
+                     * @return CosUrl URL of a .sql file stored in COS. Either `FileName` or `CosUrl` must be specified.
+                     */
+                    std::string GetCosUrl() const;
+
+                    /**
+                     * 设置URL of a .sql file stored in COS. Either `FileName` or `CosUrl` must be specified.
+                     * @param CosUrl URL of a .sql file stored in COS. Either `FileName` or `CosUrl` must be specified.
+                     */
+                    void SetCosUrl(const std::string& _cosUrl);
+
+                    /**
+                     * 判断参数 CosUrl 是否已赋值
+                     * @return CosUrl 是否已赋值
+                     */
+                    bool CosUrlHasBeenSet() const;
+
                 private:
 
                     /**
@@ -141,16 +159,16 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Filename. The file must be a .sql file uploaded to Tencent Cloud.
-                     */
-                    std::string m_fileName;
-                    bool m_fileNameHasBeenSet;
-
-                    /**
                      * TencentDB username
                      */
                     std::string m_user;
                     bool m_userHasBeenSet;
+
+                    /**
+                     * Filename. The file must be a .sql file uploaded to Tencent Cloud.
+                     */
+                    std::string m_fileName;
+                    bool m_fileNameHasBeenSet;
 
                     /**
                      * Password of a TencentDB instance user account
@@ -163,6 +181,12 @@ namespace TencentCloud
                      */
                     std::string m_dbName;
                     bool m_dbNameHasBeenSet;
+
+                    /**
+                     * URL of a .sql file stored in COS. Either `FileName` or `CosUrl` must be specified.
+                     */
+                    std::string m_cosUrl;
+                    bool m_cosUrlHasBeenSet;
 
                 };
             }

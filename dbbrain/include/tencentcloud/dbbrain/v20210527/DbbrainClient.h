@@ -63,6 +63,8 @@
 #include <tencentcloud/dbbrain/v20210527/model/DescribeMailProfileResponse.h>
 #include <tencentcloud/dbbrain/v20210527/model/DescribeMySqlProcessListRequest.h>
 #include <tencentcloud/dbbrain/v20210527/model/DescribeMySqlProcessListResponse.h>
+#include <tencentcloud/dbbrain/v20210527/model/DescribeProxySessionKillTasksRequest.h>
+#include <tencentcloud/dbbrain/v20210527/model/DescribeProxySessionKillTasksResponse.h>
 #include <tencentcloud/dbbrain/v20210527/model/DescribeSecurityAuditLogDownloadUrlsRequest.h>
 #include <tencentcloud/dbbrain/v20210527/model/DescribeSecurityAuditLogDownloadUrlsResponse.h>
 #include <tencentcloud/dbbrain/v20210527/model/DescribeSecurityAuditLogExportTasksRequest.h>
@@ -161,6 +163,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeMySqlProcessListResponse> DescribeMySqlProcessListOutcome;
                 typedef std::future<DescribeMySqlProcessListOutcome> DescribeMySqlProcessListOutcomeCallable;
                 typedef std::function<void(const DbbrainClient*, const Model::DescribeMySqlProcessListRequest&, DescribeMySqlProcessListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMySqlProcessListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeProxySessionKillTasksResponse> DescribeProxySessionKillTasksOutcome;
+                typedef std::future<DescribeProxySessionKillTasksOutcome> DescribeProxySessionKillTasksOutcomeCallable;
+                typedef std::function<void(const DbbrainClient*, const Model::DescribeProxySessionKillTasksRequest&, DescribeProxySessionKillTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProxySessionKillTasksAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeSecurityAuditLogDownloadUrlsResponse> DescribeSecurityAuditLogDownloadUrlsOutcome;
                 typedef std::future<DescribeSecurityAuditLogDownloadUrlsOutcome> DescribeSecurityAuditLogDownloadUrlsOutcomeCallable;
                 typedef std::function<void(const DbbrainClient*, const Model::DescribeSecurityAuditLogDownloadUrlsRequest&, DescribeSecurityAuditLogDownloadUrlsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSecurityAuditLogDownloadUrlsAsyncHandler;
@@ -379,6 +384,15 @@ namespace TencentCloud
                 DescribeMySqlProcessListOutcome DescribeMySqlProcessList(const Model::DescribeMySqlProcessListRequest &request);
                 void DescribeMySqlProcessListAsync(const Model::DescribeMySqlProcessListRequest& request, const DescribeMySqlProcessListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeMySqlProcessListOutcomeCallable DescribeMySqlProcessListCallable(const Model::DescribeMySqlProcessListRequest& request);
+
+                /**
+                 *This API is used to query the result of the session killing task executed by the Redis proxy node. The async task ID (an input parameter) is obtained after the API `CreateProxySessionKillTask` is successfully called. Currently, the only valid value of `product` is `redis`.
+                 * @param req DescribeProxySessionKillTasksRequest
+                 * @return DescribeProxySessionKillTasksOutcome
+                 */
+                DescribeProxySessionKillTasksOutcome DescribeProxySessionKillTasks(const Model::DescribeProxySessionKillTasksRequest &request);
+                void DescribeProxySessionKillTasksAsync(const Model::DescribeProxySessionKillTasksRequest& request, const DescribeProxySessionKillTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeProxySessionKillTasksOutcomeCallable DescribeProxySessionKillTasksCallable(const Model::DescribeProxySessionKillTasksRequest& request);
 
                 /**
                  *This API is used to query the download link of a security audit log export file. Currently, log file download only provides a Tencent Cloud private network address. Please download it by using a CVM instance in the Guangzhou region.

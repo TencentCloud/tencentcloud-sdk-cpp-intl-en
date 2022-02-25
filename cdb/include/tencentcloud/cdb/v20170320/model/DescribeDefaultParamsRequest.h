@@ -60,6 +60,24 @@ namespace TencentCloud
                      */
                     bool EngineVersionHasBeenSet() const;
 
+                    /**
+                     * 获取Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+                     * @return TemplateType Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+                     */
+                    std::string GetTemplateType() const;
+
+                    /**
+                     * 设置Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+                     * @param TemplateType Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+                     */
+                    void SetTemplateType(const std::string& _templateType);
+
+                    /**
+                     * 判断参数 TemplateType 是否已赋值
+                     * @return TemplateType 是否已赋值
+                     */
+                    bool TemplateTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -67,6 +85,12 @@ namespace TencentCloud
                      */
                     std::string m_engineVersion;
                     bool m_engineVersionHasBeenSet;
+
+                    /**
+                     * Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+                     */
+                    std::string m_templateType;
+                    bool m_templateTypeHasBeenSet;
 
                 };
             }

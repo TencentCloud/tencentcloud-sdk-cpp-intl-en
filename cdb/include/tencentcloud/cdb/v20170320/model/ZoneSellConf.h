@@ -49,14 +49,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取AZ status. Value range: 0 (not available), 1 (available), 2 (purchasable), 3 (not purchasable), 4 (not displayed)
-                     * @return Status AZ status. Value range: 0 (not available), 1 (available), 2 (purchasable), 3 (not purchasable), 4 (not displayed)
+                     * 获取AZ status used to indicate whether instances are purchasable. Value range: `1` (purchasable), `3` (not purchasable), `4` (AZ not displayed)
+                     * @return Status AZ status used to indicate whether instances are purchasable. Value range: `1` (purchasable), `3` (not purchasable), `4` (AZ not displayed)
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置AZ status. Value range: 0 (not available), 1 (available), 2 (purchasable), 3 (not purchasable), 4 (not displayed)
-                     * @param Status AZ status. Value range: 0 (not available), 1 (available), 2 (purchasable), 3 (not purchasable), 4 (not displayed)
+                     * 设置AZ status used to indicate whether instances are purchasable. Value range: `1` (purchasable), `3` (not purchasable), `4` (AZ not displayed)
+                     * @param Status AZ status used to indicate whether instances are purchasable. Value range: `1` (purchasable), `3` (not purchasable), `4` (AZ not displayed)
                      */
                     void SetStatus(const int64_t& _status);
 
@@ -340,10 +340,72 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool RemoteRoZoneHasBeenSet() const;
 
+                    /**
+                     * 获取AZ status used to indicate whether dedicated instances are purchasable. Valid values: `1 (purchasable), `3` (not purchasable), `4` (AZ not displayed)
+                     * @return ExClusterStatus AZ status used to indicate whether dedicated instances are purchasable. Valid values: `1 (purchasable), `3` (not purchasable), `4` (AZ not displayed)
+                     */
+                    int64_t GetExClusterStatus() const;
+
+                    /**
+                     * 设置AZ status used to indicate whether dedicated instances are purchasable. Valid values: `1 (purchasable), `3` (not purchasable), `4` (AZ not displayed)
+                     * @param ExClusterStatus AZ status used to indicate whether dedicated instances are purchasable. Valid values: `1 (purchasable), `3` (not purchasable), `4` (AZ not displayed)
+                     */
+                    void SetExClusterStatus(const int64_t& _exClusterStatus);
+
+                    /**
+                     * 判断参数 ExClusterStatus 是否已赋值
+                     * @return ExClusterStatus 是否已赋值
+                     */
+                    bool ExClusterStatusHasBeenSet() const;
+
+                    /**
+                     * 获取AZ information of the cross-AZ deployed read-only instances which are associated with a dedicated instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return ExClusterRemoteRoZone AZ information of the cross-AZ deployed read-only instances which are associated with a dedicated instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> GetExClusterRemoteRoZone() const;
+
+                    /**
+                     * 设置AZ information of the cross-AZ deployed read-only instances which are associated with a dedicated instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param ExClusterRemoteRoZone AZ information of the cross-AZ deployed read-only instances which are associated with a dedicated instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetExClusterRemoteRoZone(const std::vector<std::string>& _exClusterRemoteRoZone);
+
+                    /**
+                     * 判断参数 ExClusterRemoteRoZone 是否已赋值
+                     * @return ExClusterRemoteRoZone 是否已赋值
+                     */
+                    bool ExClusterRemoteRoZoneHasBeenSet() const;
+
+                    /**
+                     * 获取AZ information of a multi-AZ deployed dedicated instance.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return ExClusterZoneConf AZ information of a multi-AZ deployed dedicated instance.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    ZoneConf GetExClusterZoneConf() const;
+
+                    /**
+                     * 设置AZ information of a multi-AZ deployed dedicated instance.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param ExClusterZoneConf AZ information of a multi-AZ deployed dedicated instance.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetExClusterZoneConf(const ZoneConf& _exClusterZoneConf);
+
+                    /**
+                     * 判断参数 ExClusterZoneConf 是否已赋值
+                     * @return ExClusterZoneConf 是否已赋值
+                     */
+                    bool ExClusterZoneConfHasBeenSet() const;
+
                 private:
 
                     /**
-                     * AZ status. Value range: 0 (not available), 1 (available), 2 (purchasable), 3 (not purchasable), 4 (not displayed)
+                     * AZ status used to indicate whether instances are purchasable. Value range: `1` (purchasable), `3` (not purchasable), `4` (AZ not displayed)
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
@@ -438,6 +500,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<std::string> m_remoteRoZone;
                     bool m_remoteRoZoneHasBeenSet;
+
+                    /**
+                     * AZ status used to indicate whether dedicated instances are purchasable. Valid values: `1 (purchasable), `3` (not purchasable), `4` (AZ not displayed)
+                     */
+                    int64_t m_exClusterStatus;
+                    bool m_exClusterStatusHasBeenSet;
+
+                    /**
+                     * AZ information of the cross-AZ deployed read-only instances which are associated with a dedicated instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_exClusterRemoteRoZone;
+                    bool m_exClusterRemoteRoZoneHasBeenSet;
+
+                    /**
+                     * AZ information of a multi-AZ deployed dedicated instance.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    ZoneConf m_exClusterZoneConf;
+                    bool m_exClusterZoneConfHasBeenSet;
 
                 };
             }

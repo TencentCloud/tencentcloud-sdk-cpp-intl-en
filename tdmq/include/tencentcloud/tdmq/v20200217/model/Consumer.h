@@ -134,6 +134,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool ClientVersionHasBeenSet() const;
 
+                    /**
+                     * 获取Serial number of the topic partition connected to the consumer.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Partition Serial number of the topic partition connected to the consumer.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetPartition() const;
+
+                    /**
+                     * 设置Serial number of the topic partition connected to the consumer.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param Partition Serial number of the topic partition connected to the consumer.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetPartition(const int64_t& _partition);
+
+                    /**
+                     * 判断参数 Partition 是否已赋值
+                     * @return Partition 是否已赋值
+                     */
+                    bool PartitionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -163,6 +185,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_clientVersion;
                     bool m_clientVersionHasBeenSet;
+
+                    /**
+                     * Serial number of the topic partition connected to the consumer.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_partition;
+                    bool m_partitionHasBeenSet;
 
                 };
             }

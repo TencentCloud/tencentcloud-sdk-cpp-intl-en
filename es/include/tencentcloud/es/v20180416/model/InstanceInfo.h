@@ -1495,6 +1495,50 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     bool HealthStatusHasBeenSet() const;
 
+                    /**
+                     * 获取Private URL of the HTTPS cluster
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return EsPrivateUrl Private URL of the HTTPS cluster
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string GetEsPrivateUrl() const;
+
+                    /**
+                     * 设置Private URL of the HTTPS cluster
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param EsPrivateUrl Private URL of the HTTPS cluster
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetEsPrivateUrl(const std::string& _esPrivateUrl);
+
+                    /**
+                     * 判断参数 EsPrivateUrl 是否已赋值
+                     * @return EsPrivateUrl 是否已赋值
+                     */
+                    bool EsPrivateUrlHasBeenSet() const;
+
+                    /**
+                     * 获取Private domain of the HTTPS cluster
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return EsPrivateDomain Private domain of the HTTPS cluster
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string GetEsPrivateDomain() const;
+
+                    /**
+                     * 设置Private domain of the HTTPS cluster
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param EsPrivateDomain Private domain of the HTTPS cluster
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetEsPrivateDomain(const std::string& _esPrivateDomain);
+
+                    /**
+                     * 判断参数 EsPrivateDomain 是否已赋值
+                     * @return EsPrivateDomain 是否已赋值
+                     */
+                    bool EsPrivateDomainHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1964,6 +2008,20 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     int64_t m_healthStatus;
                     bool m_healthStatusHasBeenSet;
+
+                    /**
+                     * Private URL of the HTTPS cluster
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string m_esPrivateUrl;
+                    bool m_esPrivateUrlHasBeenSet;
+
+                    /**
+                     * Private domain of the HTTPS cluster
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string m_esPrivateDomain;
+                    bool m_esPrivateDomainHasBeenSet;
 
                 };
             }

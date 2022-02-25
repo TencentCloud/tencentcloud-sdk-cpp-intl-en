@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tdmq/v20200217/model/Tag.h>
 
 
 namespace TencentCloud
@@ -312,6 +313,24 @@ namespace TencentCloud
                      */
                     bool TraceHasBeenSet() const;
 
+                    /**
+                     * 获取Tag array.
+                     * @return Tags Tag array.
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 设置Tag array.
+                     * @param Tags Tag array.
+                     */
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -403,6 +422,12 @@ namespace TencentCloud
                      */
                     bool m_trace;
                     bool m_traceHasBeenSet;
+
+                    /**
+                     * Tag array.
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
 
                 };
             }

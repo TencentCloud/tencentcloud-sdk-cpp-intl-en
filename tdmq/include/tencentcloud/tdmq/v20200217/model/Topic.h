@@ -533,6 +533,40 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool ConsumerLimitHasBeenSet() const;
 
+                    /**
+                     * 获取`0`: Non-persistent and non-partitioned
+`1`: Non-persistent and partitioned
+`2`: Persistent and non-partitioned
+`3`: Persistent and partitioned
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return PulsarTopicType `0`: Non-persistent and non-partitioned
+`1`: Non-persistent and partitioned
+`2`: Persistent and non-partitioned
+`3`: Persistent and partitioned
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetPulsarTopicType() const;
+
+                    /**
+                     * 设置`0`: Non-persistent and non-partitioned
+`1`: Non-persistent and partitioned
+`2`: Persistent and non-partitioned
+`3`: Persistent and partitioned
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param PulsarTopicType `0`: Non-persistent and non-partitioned
+`1`: Non-persistent and partitioned
+`2`: Persistent and non-partitioned
+`3`: Persistent and partitioned
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetPulsarTopicType(const int64_t& _pulsarTopicType);
+
+                    /**
+                     * 判断参数 PulsarTopicType 是否已赋值
+                     * @return PulsarTopicType 是否已赋值
+                     */
+                    bool PulsarTopicTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -687,6 +721,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_consumerLimit;
                     bool m_consumerLimitHasBeenSet;
+
+                    /**
+                     * `0`: Non-persistent and non-partitioned
+`1`: Non-persistent and partitioned
+`2`: Persistent and non-partitioned
+`3`: Persistent and partitioned
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_pulsarTopicType;
+                    bool m_pulsarTopicTypeHasBeenSet;
 
                 };
             }

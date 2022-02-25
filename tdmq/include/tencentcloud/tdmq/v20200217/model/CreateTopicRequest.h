@@ -97,6 +97,24 @@ namespace TencentCloud
                     bool PartitionsHasBeenSet() const;
 
                     /**
+                     * 获取Remarks (up to 128 characters).
+                     * @return Remark Remarks (up to 128 characters).
+                     */
+                    std::string GetRemark() const;
+
+                    /**
+                     * 设置Remarks (up to 128 characters).
+                     * @param Remark Remarks (up to 128 characters).
+                     */
+                    void SetRemark(const std::string& _remark);
+
+                    /**
+                     * 判断参数 Remark 是否已赋值
+                     * @return Remark 是否已赋值
+                     */
+                    bool RemarkHasBeenSet() const;
+
+                    /**
                      * 获取0: general message;
 1: globally sequential message;
 2: partitionally sequential message;
@@ -131,24 +149,6 @@ namespace TencentCloud
                     bool TopicTypeHasBeenSet() const;
 
                     /**
-                     * 获取Remarks (up to 128 characters).
-                     * @return Remark Remarks (up to 128 characters).
-                     */
-                    std::string GetRemark() const;
-
-                    /**
-                     * 设置Remarks (up to 128 characters).
-                     * @param Remark Remarks (up to 128 characters).
-                     */
-                    void SetRemark(const std::string& _remark);
-
-                    /**
-                     * 判断参数 Remark 是否已赋值
-                     * @return Remark 是否已赋值
-                     */
-                    bool RemarkHasBeenSet() const;
-
-                    /**
                      * 获取Pulsar cluster ID
                      * @return ClusterId Pulsar cluster ID
                      */
@@ -165,6 +165,40 @@ namespace TencentCloud
                      * @return ClusterId 是否已赋值
                      */
                     bool ClusterIdHasBeenSet() const;
+
+                    /**
+                     * 获取Pulsar topic type.
+`0`: Non-persistent and non-partitioned
+`1`: Non-persistent and partitioned
+`2`: Persistent and non-partitioned
+`3`: Persistent and partitioned
+                     * @return PulsarTopicType Pulsar topic type.
+`0`: Non-persistent and non-partitioned
+`1`: Non-persistent and partitioned
+`2`: Persistent and non-partitioned
+`3`: Persistent and partitioned
+                     */
+                    int64_t GetPulsarTopicType() const;
+
+                    /**
+                     * 设置Pulsar topic type.
+`0`: Non-persistent and non-partitioned
+`1`: Non-persistent and partitioned
+`2`: Persistent and non-partitioned
+`3`: Persistent and partitioned
+                     * @param PulsarTopicType Pulsar topic type.
+`0`: Non-persistent and non-partitioned
+`1`: Non-persistent and partitioned
+`2`: Persistent and non-partitioned
+`3`: Persistent and partitioned
+                     */
+                    void SetPulsarTopicType(const int64_t& _pulsarTopicType);
+
+                    /**
+                     * 判断参数 PulsarTopicType 是否已赋值
+                     * @return PulsarTopicType 是否已赋值
+                     */
+                    bool PulsarTopicTypeHasBeenSet() const;
 
                 private:
 
@@ -187,6 +221,12 @@ namespace TencentCloud
                     bool m_partitionsHasBeenSet;
 
                     /**
+                     * Remarks (up to 128 characters).
+                     */
+                    std::string m_remark;
+                    bool m_remarkHasBeenSet;
+
+                    /**
                      * 0: general message;
 1: globally sequential message;
 2: partitionally sequential message;
@@ -197,16 +237,20 @@ namespace TencentCloud
                     bool m_topicTypeHasBeenSet;
 
                     /**
-                     * Remarks (up to 128 characters).
-                     */
-                    std::string m_remark;
-                    bool m_remarkHasBeenSet;
-
-                    /**
                      * Pulsar cluster ID
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
+
+                    /**
+                     * Pulsar topic type.
+`0`: Non-persistent and non-partitioned
+`1`: Non-persistent and partitioned
+`2`: Persistent and non-partitioned
+`3`: Persistent and partitioned
+                     */
+                    int64_t m_pulsarTopicType;
+                    bool m_pulsarTopicTypeHasBeenSet;
 
                 };
             }
