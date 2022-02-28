@@ -23,6 +23,8 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/cloudaudit/v20190319/model/DescribeAuditTracksRequest.h>
+#include <tencentcloud/cloudaudit/v20190319/model/DescribeAuditTracksResponse.h>
 #include <tencentcloud/cloudaudit/v20190319/model/DescribeEventsRequest.h>
 #include <tencentcloud/cloudaudit/v20190319/model/DescribeEventsResponse.h>
 
@@ -39,11 +41,23 @@ namespace TencentCloud
                 CloudauditClient(const Credential &credential, const std::string &region);
                 CloudauditClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
+                typedef Outcome<Core::Error, Model::DescribeAuditTracksResponse> DescribeAuditTracksOutcome;
+                typedef std::future<DescribeAuditTracksOutcome> DescribeAuditTracksOutcomeCallable;
+                typedef std::function<void(const CloudauditClient*, const Model::DescribeAuditTracksRequest&, DescribeAuditTracksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAuditTracksAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeEventsResponse> DescribeEventsOutcome;
                 typedef std::future<DescribeEventsOutcome> DescribeEventsOutcomeCallable;
                 typedef std::function<void(const CloudauditClient*, const Model::DescribeEventsRequest&, DescribeEventsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeEventsAsyncHandler;
 
 
+
+                /**
+                 *This API is used to query the CloudAudit tracking set list.
+                 * @param req DescribeAuditTracksRequest
+                 * @return DescribeAuditTracksOutcome
+                 */
+                DescribeAuditTracksOutcome DescribeAuditTracks(const Model::DescribeAuditTracksRequest &request);
+                void DescribeAuditTracksAsync(const Model::DescribeAuditTracksRequest& request, const DescribeAuditTracksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAuditTracksOutcomeCallable DescribeAuditTracksCallable(const Model::DescribeAuditTracksRequest& request);
 
                 /**
                  *This API is used to query CloudAudit logs.

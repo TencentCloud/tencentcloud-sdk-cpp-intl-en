@@ -63,26 +63,64 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Switch of DRM-protected adaptive bitstream playback:
-<li>ON: enabled, indicating to play back only output adaptive bitstreams protected by DRM;</li>
-<li>OFF: disabled, indicating to play back unencrypted output adaptive bitstreams.</li>
-Default value: OFF.
-                     * @return DrmSwitch Switch of DRM-protected adaptive bitstream playback:
-<li>ON: enabled, indicating to play back only output adaptive bitstreams protected by DRM;</li>
-<li>OFF: disabled, indicating to play back unencrypted output adaptive bitstreams.</li>
-Default value: OFF.
+                     * 获取Type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming</li>
+<li>Transcode</li>
+<li>Original</li>
+Default value: `AdaptiveDynamicStream`
+                     * @return AudioVideoType Type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming</li>
+<li>Transcode</li>
+<li>Original</li>
+Default value: `AdaptiveDynamicStream`
+                     */
+                    std::string GetAudioVideoType() const;
+
+                    /**
+                     * 设置Type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming</li>
+<li>Transcode</li>
+<li>Original</li>
+Default value: `AdaptiveDynamicStream`
+                     * @param AudioVideoType Type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming</li>
+<li>Transcode</li>
+<li>Original</li>
+Default value: `AdaptiveDynamicStream`
+                     */
+                    void SetAudioVideoType(const std::string& _audioVideoType);
+
+                    /**
+                     * 判断参数 AudioVideoType 是否已赋值
+                     * @return AudioVideoType 是否已赋值
+                     */
+                    bool AudioVideoTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to allow only adaptive bitrate streaming playback protected by DRM. Valid values:
+<li>`ON`: allow only adaptive bitrate streaming playback protected by DRM</li>
+<li>`OFF`: allow adaptive bitrate streaming playback not protected by DRM</li>
+Default value: `OFF`
+This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
+                     * @return DrmSwitch Whether to allow only adaptive bitrate streaming playback protected by DRM. Valid values:
+<li>`ON`: allow only adaptive bitrate streaming playback protected by DRM</li>
+<li>`OFF`: allow adaptive bitrate streaming playback not protected by DRM</li>
+Default value: `OFF`
+This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
                      */
                     std::string GetDrmSwitch() const;
 
                     /**
-                     * 设置Switch of DRM-protected adaptive bitstream playback:
-<li>ON: enabled, indicating to play back only output adaptive bitstreams protected by DRM;</li>
-<li>OFF: disabled, indicating to play back unencrypted output adaptive bitstreams.</li>
-Default value: OFF.
-                     * @param DrmSwitch Switch of DRM-protected adaptive bitstream playback:
-<li>ON: enabled, indicating to play back only output adaptive bitstreams protected by DRM;</li>
-<li>OFF: disabled, indicating to play back unencrypted output adaptive bitstreams.</li>
-Default value: OFF.
+                     * 设置Whether to allow only adaptive bitrate streaming playback protected by DRM. Valid values:
+<li>`ON`: allow only adaptive bitrate streaming playback protected by DRM</li>
+<li>`OFF`: allow adaptive bitrate streaming playback not protected by DRM</li>
+Default value: `OFF`
+This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
+                     * @param DrmSwitch Whether to allow only adaptive bitrate streaming playback protected by DRM. Valid values:
+<li>`ON`: allow only adaptive bitrate streaming playback protected by DRM</li>
+<li>`OFF`: allow adaptive bitrate streaming playback not protected by DRM</li>
+Default value: `OFF`
+This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
                      */
                     void SetDrmSwitch(const std::string& _drmSwitch);
 
@@ -93,14 +131,22 @@ Default value: OFF.
                     bool DrmSwitchHasBeenSet() const;
 
                     /**
-                     * 获取ID of the unencrypted adaptive bitrate streaming template that allows output, which is required if `DrmSwitch` is `OFF`.
-                     * @return AdaptiveDynamicStreamingDefinition ID of the unencrypted adaptive bitrate streaming template that allows output, which is required if `DrmSwitch` is `OFF`.
+                     * 获取ID of the adaptive bitrate streaming template allowed for playback not protected by DRM.
+
+This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`.
+                     * @return AdaptiveDynamicStreamingDefinition ID of the adaptive bitrate streaming template allowed for playback not protected by DRM.
+
+This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`.
                      */
                     uint64_t GetAdaptiveDynamicStreamingDefinition() const;
 
                     /**
-                     * 设置ID of the unencrypted adaptive bitrate streaming template that allows output, which is required if `DrmSwitch` is `OFF`.
-                     * @param AdaptiveDynamicStreamingDefinition ID of the unencrypted adaptive bitrate streaming template that allows output, which is required if `DrmSwitch` is `OFF`.
+                     * 设置ID of the adaptive bitrate streaming template allowed for playback not protected by DRM.
+
+This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`.
+                     * @param AdaptiveDynamicStreamingDefinition ID of the adaptive bitrate streaming template allowed for playback not protected by DRM.
+
+This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`.
                      */
                     void SetAdaptiveDynamicStreamingDefinition(const uint64_t& _adaptiveDynamicStreamingDefinition);
 
@@ -111,14 +157,22 @@ Default value: OFF.
                     bool AdaptiveDynamicStreamingDefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Content of the DRM-protected adaptive bitrate streaming template that allows output, which is required if `DrmSwitch` is `ON`.
-                     * @return DrmStreamingsInfo Content of the DRM-protected adaptive bitrate streaming template that allows output, which is required if `DrmSwitch` is `ON`.
+                     * 获取Content of the adaptive bitrate streaming template allowed for playback protected by DRM.
+
+This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `ON`.
+                     * @return DrmStreamingsInfo Content of the adaptive bitrate streaming template allowed for playback protected by DRM.
+
+This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `ON`.
                      */
                     DrmStreamingsInfo GetDrmStreamingsInfo() const;
 
                     /**
-                     * 设置Content of the DRM-protected adaptive bitrate streaming template that allows output, which is required if `DrmSwitch` is `ON`.
-                     * @param DrmStreamingsInfo Content of the DRM-protected adaptive bitrate streaming template that allows output, which is required if `DrmSwitch` is `ON`.
+                     * 设置Content of the adaptive bitrate streaming template allowed for playback protected by DRM.
+
+This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `ON`.
+                     * @param DrmStreamingsInfo Content of the adaptive bitrate streaming template allowed for playback protected by DRM.
+
+This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `ON`.
                      */
                     void SetDrmStreamingsInfo(const DrmStreamingsInfo& _drmStreamingsInfo);
 
@@ -127,6 +181,32 @@ Default value: OFF.
                      * @return DrmStreamingsInfo 是否已赋值
                      */
                     bool DrmStreamingsInfoHasBeenSet() const;
+
+                    /**
+                     * 获取ID of the transcoding template allowed for playback
+
+This parameter is required if `AudioVideoType` is `Transcode`.
+                     * @return TranscodeDefinition ID of the transcoding template allowed for playback
+
+This parameter is required if `AudioVideoType` is `Transcode`.
+                     */
+                    uint64_t GetTranscodeDefinition() const;
+
+                    /**
+                     * 设置ID of the transcoding template allowed for playback
+
+This parameter is required if `AudioVideoType` is `Transcode`.
+                     * @param TranscodeDefinition ID of the transcoding template allowed for playback
+
+This parameter is required if `AudioVideoType` is `Transcode`.
+                     */
+                    void SetTranscodeDefinition(const uint64_t& _transcodeDefinition);
+
+                    /**
+                     * 判断参数 TranscodeDefinition 是否已赋值
+                     * @return TranscodeDefinition 是否已赋值
+                     */
+                    bool TranscodeDefinitionHasBeenSet() const;
 
                     /**
                      * 获取ID of the image sprite generating template that allows output.
@@ -281,25 +361,48 @@ Default value: OFF.
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Switch of DRM-protected adaptive bitstream playback:
-<li>ON: enabled, indicating to play back only output adaptive bitstreams protected by DRM;</li>
-<li>OFF: disabled, indicating to play back unencrypted output adaptive bitstreams.</li>
-Default value: OFF.
+                     * Type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming</li>
+<li>Transcode</li>
+<li>Original</li>
+Default value: `AdaptiveDynamicStream`
+                     */
+                    std::string m_audioVideoType;
+                    bool m_audioVideoTypeHasBeenSet;
+
+                    /**
+                     * Whether to allow only adaptive bitrate streaming playback protected by DRM. Valid values:
+<li>`ON`: allow only adaptive bitrate streaming playback protected by DRM</li>
+<li>`OFF`: allow adaptive bitrate streaming playback not protected by DRM</li>
+Default value: `OFF`
+This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
                      */
                     std::string m_drmSwitch;
                     bool m_drmSwitchHasBeenSet;
 
                     /**
-                     * ID of the unencrypted adaptive bitrate streaming template that allows output, which is required if `DrmSwitch` is `OFF`.
+                     * ID of the adaptive bitrate streaming template allowed for playback not protected by DRM.
+
+This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`.
                      */
                     uint64_t m_adaptiveDynamicStreamingDefinition;
                     bool m_adaptiveDynamicStreamingDefinitionHasBeenSet;
 
                     /**
-                     * Content of the DRM-protected adaptive bitrate streaming template that allows output, which is required if `DrmSwitch` is `ON`.
+                     * Content of the adaptive bitrate streaming template allowed for playback protected by DRM.
+
+This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `ON`.
                      */
                     DrmStreamingsInfo m_drmStreamingsInfo;
                     bool m_drmStreamingsInfoHasBeenSet;
+
+                    /**
+                     * ID of the transcoding template allowed for playback
+
+This parameter is required if `AudioVideoType` is `Transcode`.
+                     */
+                    uint64_t m_transcodeDefinition;
+                    bool m_transcodeDefinitionHasBeenSet;
 
                     /**
                      * ID of the image sprite generating template that allows output.

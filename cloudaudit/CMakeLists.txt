@@ -19,18 +19,22 @@ set(cloudaudit_public_header
   )
 
 set(cloudaudit_public_header_model
-  include/tencentcloud/cloudaudit/v20190319/model/LookupAttribute.h
   include/tencentcloud/cloudaudit/v20190319/model/DescribeEventsResponse.h
   include/tencentcloud/cloudaudit/v20190319/model/Resource.h
+  include/tencentcloud/cloudaudit/v20190319/model/DescribeAuditTracksResponse.h
+  include/tencentcloud/cloudaudit/v20190319/model/DescribeAuditTracksRequest.h
+  include/tencentcloud/cloudaudit/v20190319/model/LookupAttribute.h
   include/tencentcloud/cloudaudit/v20190319/model/Event.h
   include/tencentcloud/cloudaudit/v20190319/model/DescribeEventsRequest.h
   )
 
 set(cloudaudit_src
   src/v20190319/CloudauditClient.cpp
-  src/v20190319/model/LookupAttribute.cpp
   src/v20190319/model/DescribeEventsResponse.cpp
   src/v20190319/model/Resource.cpp
+  src/v20190319/model/DescribeAuditTracksResponse.cpp
+  src/v20190319/model/DescribeAuditTracksRequest.cpp
+  src/v20190319/model/LookupAttribute.cpp
   src/v20190319/model/Event.cpp
   src/v20190319/model/DescribeEventsRequest.cpp
   )

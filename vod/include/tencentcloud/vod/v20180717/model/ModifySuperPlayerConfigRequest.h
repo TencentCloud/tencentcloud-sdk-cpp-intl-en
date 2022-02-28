@@ -63,6 +63,36 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
+                     * 获取Type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming</li>
+<li>Transcode</li>
+<li>Original</li>
+                     * @return AudioVideoType Type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming</li>
+<li>Transcode</li>
+<li>Original</li>
+                     */
+                    std::string GetAudioVideoType() const;
+
+                    /**
+                     * 设置Type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming</li>
+<li>Transcode</li>
+<li>Original</li>
+                     * @param AudioVideoType Type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming</li>
+<li>Transcode</li>
+<li>Original</li>
+                     */
+                    void SetAudioVideoType(const std::string& _audioVideoType);
+
+                    /**
+                     * 判断参数 AudioVideoType 是否已赋值
+                     * @return AudioVideoType 是否已赋值
+                     */
+                    bool AudioVideoTypeHasBeenSet() const;
+
+                    /**
                      * 获取Switch of DRM-protected adaptive bitstream playback:
 <li>ON: enabled, indicating to play back only output adaptive bitstreams protected by DRM;</li>
 <li>OFF: disabled, indicating to play back unencrypted output adaptive bitstreams.</li>
@@ -123,6 +153,24 @@ namespace TencentCloud
                      * @return DrmStreamingsInfo 是否已赋值
                      */
                     bool DrmStreamingsInfoHasBeenSet() const;
+
+                    /**
+                     * 获取ID of the transcoding template allowed for playback
+                     * @return TranscodeDefinition ID of the transcoding template allowed for playback
+                     */
+                    uint64_t GetTranscodeDefinition() const;
+
+                    /**
+                     * 设置ID of the transcoding template allowed for playback
+                     * @param TranscodeDefinition ID of the transcoding template allowed for playback
+                     */
+                    void SetTranscodeDefinition(const uint64_t& _transcodeDefinition);
+
+                    /**
+                     * 判断参数 TranscodeDefinition 是否已赋值
+                     * @return TranscodeDefinition 是否已赋值
+                     */
+                    bool TranscodeDefinitionHasBeenSet() const;
 
                     /**
                      * 获取ID of the image sprite generating template that allows output.
@@ -253,6 +301,15 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
+                     * Type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming</li>
+<li>Transcode</li>
+<li>Original</li>
+                     */
+                    std::string m_audioVideoType;
+                    bool m_audioVideoTypeHasBeenSet;
+
+                    /**
                      * Switch of DRM-protected adaptive bitstream playback:
 <li>ON: enabled, indicating to play back only output adaptive bitstreams protected by DRM;</li>
 <li>OFF: disabled, indicating to play back unencrypted output adaptive bitstreams.</li>
@@ -271,6 +328,12 @@ namespace TencentCloud
                      */
                     DrmStreamingsInfoForUpdate m_drmStreamingsInfo;
                     bool m_drmStreamingsInfoHasBeenSet;
+
+                    /**
+                     * ID of the transcoding template allowed for playback
+                     */
+                    uint64_t m_transcodeDefinition;
+                    bool m_transcodeDefinitionHasBeenSet;
 
                     /**
                      * ID of the image sprite generating template that allows output.
