@@ -269,14 +269,14 @@ namespace TencentCloud
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Login settings of the instance. You can use this parameter to set the login method, password, and key of the instance or keep the login settings of the original image. By default, a random password will be generated and sent to you via the Message Center.
-                     * @return LoginSettings Login settings of the instance. You can use this parameter to set the login method, password, and key of the instance or keep the login settings of the original image. By default, a random password will be generated and sent to you via the Message Center.
+                     * 获取Instance login settings. You can use this parameter to set the login method, login password and SSH key, or keep the original login settings of the image. If it's not specified, the user needs to set the login password using the "Reset password" option in the CVM console or calling the API `ResetInstancesPassword` to complete the creation of the CVM instance(s).
+                     * @return LoginSettings Instance login settings. You can use this parameter to set the login method, login password and SSH key, or keep the original login settings of the image. If it's not specified, the user needs to set the login password using the "Reset password" option in the CVM console or calling the API `ResetInstancesPassword` to complete the creation of the CVM instance(s).
                      */
                     LoginSettings GetLoginSettings() const;
 
                     /**
-                     * 设置Login settings of the instance. You can use this parameter to set the login method, password, and key of the instance or keep the login settings of the original image. By default, a random password will be generated and sent to you via the Message Center.
-                     * @param LoginSettings Login settings of the instance. You can use this parameter to set the login method, password, and key of the instance or keep the login settings of the original image. By default, a random password will be generated and sent to you via the Message Center.
+                     * 设置Instance login settings. You can use this parameter to set the login method, login password and SSH key, or keep the original login settings of the image. If it's not specified, the user needs to set the login password using the "Reset password" option in the CVM console or calling the API `ResetInstancesPassword` to complete the creation of the CVM instance(s).
+                     * @param LoginSettings Instance login settings. You can use this parameter to set the login method, login password and SSH key, or keep the original login settings of the image. If it's not specified, the user needs to set the login password using the "Reset password" option in the CVM console or calling the API `ResetInstancesPassword` to complete the creation of the CVM instance(s).
                      */
                     void SetLoginSettings(const LoginSettings& _loginSettings);
 
@@ -537,14 +537,14 @@ false (default value): send a normal request and create instance(s) if all the r
                     bool LaunchTemplateHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ChcIds 
+                     * 获取Specify the CHC physical server that used to create the CHC CVM.
+                     * @return ChcIds Specify the CHC physical server that used to create the CHC CVM.
                      */
                     std::vector<std::string> GetChcIds() const;
 
                     /**
-                     * 设置
-                     * @param ChcIds 
+                     * 设置Specify the CHC physical server that used to create the CHC CVM.
+                     * @param ChcIds Specify the CHC physical server that used to create the CHC CVM.
                      */
                     void SetChcIds(const std::vector<std::string>& _chcIds);
 
@@ -627,7 +627,7 @@ false (default value): send a normal request and create instance(s) if all the r
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Login settings of the instance. You can use this parameter to set the login method, password, and key of the instance or keep the login settings of the original image. By default, a random password will be generated and sent to you via the Message Center.
+                     * Instance login settings. You can use this parameter to set the login method, login password and SSH key, or keep the original login settings of the image. If it's not specified, the user needs to set the login password using the "Reset password" option in the CVM console or calling the API `ResetInstancesPassword` to complete the creation of the CVM instance(s).
                      */
                     LoginSettings m_loginSettings;
                     bool m_loginSettingsHasBeenSet;
@@ -715,7 +715,7 @@ false (default value): send a normal request and create instance(s) if all the r
                     bool m_launchTemplateHasBeenSet;
 
                     /**
-                     * 
+                     * Specify the CHC physical server that used to create the CHC CVM.
                      */
                     std::vector<std::string> m_chcIds;
                     bool m_chcIdsHasBeenSet;

@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool SecurityGroupsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DisableApiTermination 
+                     * 获取Whether the termination protection is enabled. Values: <br><li>`TRUE`: enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: do not enable the instance protection.<br><br>Default Value: `FALSE`.
+                     * @return DisableApiTermination Whether the termination protection is enabled. Values: <br><li>`TRUE`: enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: do not enable the instance protection.<br><br>Default Value: `FALSE`.
                      */
                     bool GetDisableApiTermination() const;
 
                     /**
-                     * 设置
-                     * @param DisableApiTermination 
+                     * 设置Whether the termination protection is enabled. Values: <br><li>`TRUE`: enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: do not enable the instance protection.<br><br>Default Value: `FALSE`.
+                     * @param DisableApiTermination Whether the termination protection is enabled. Values: <br><li>`TRUE`: enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: do not enable the instance protection.<br><br>Default Value: `FALSE`.
                      */
                     void SetDisableApiTermination(const bool& _disableApiTermination);
 
@@ -140,7 +140,7 @@ namespace TencentCloud
                     bool m_securityGroupsHasBeenSet;
 
                     /**
-                     * 
+                     * Whether the termination protection is enabled. Values: <br><li>`TRUE`: enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: do not enable the instance protection.<br><br>Default Value: `FALSE`.
                      */
                     bool m_disableApiTermination;
                     bool m_disableApiTerminationHasBeenSet;
