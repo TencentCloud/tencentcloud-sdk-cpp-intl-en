@@ -223,14 +223,14 @@ The default value is 0.
                     bool RealServerCertificateIdHasBeenSet() const;
 
                     /**
-                     * 获取Domain name of the origin server certificate.
-                     * @return RealServerCertificateDomain Domain name of the origin server certificate.
+                     * 获取This field has been disused. Use ServerNameIndication instead.
+                     * @return RealServerCertificateDomain This field has been disused. Use ServerNameIndication instead.
                      */
                     std::string GetRealServerCertificateDomain() const;
 
                     /**
-                     * 设置Domain name of the origin server certificate.
-                     * @param RealServerCertificateDomain Domain name of the origin server certificate.
+                     * 设置This field has been disused. Use ServerNameIndication instead.
+                     * @param RealServerCertificateDomain This field has been disused. Use ServerNameIndication instead.
                      */
                     void SetRealServerCertificateDomain(const std::string& _realServerCertificateDomain);
 
@@ -318,7 +318,7 @@ The default value is 0.
                     bool m_realServerCertificateIdHasBeenSet;
 
                     /**
-                     * Domain name of the origin server certificate.
+                     * This field has been disused. Use ServerNameIndication instead.
                      */
                     std::string m_realServerCertificateDomain;
                     bool m_realServerCertificateDomainHasBeenSet;

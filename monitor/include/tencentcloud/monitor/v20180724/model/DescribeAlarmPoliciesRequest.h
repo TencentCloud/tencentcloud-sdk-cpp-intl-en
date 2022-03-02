@@ -160,11 +160,15 @@ namespace TencentCloud
 You can also refer to the “Example 2” below.
 
 For more information on the parameter samples of different Tencent Cloud services, see [Product Policy Type and Dimension Information](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1).
+
+Note: If `1` is passed in for `NeedCorrespondence`, the relationship between a policy and an instance needs to be returned. You can pass in up to 20 alarm object dimensions to avoid request timeout.
                      * @return Dimensions The alarm object list, which is a JSON string. The outer array corresponds to multiple instances, and the inner array is the dimension of an object. For example, “CVM - Basic Monitor” can be written as:
 `[ {"Dimensions": {"unInstanceId": "ins-qr8d555g"}}, {"Dimensions": {"unInstanceId": "ins-qr8d555h"}} ]`
 You can also refer to the “Example 2” below.
 
 For more information on the parameter samples of different Tencent Cloud services, see [Product Policy Type and Dimension Information](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1).
+
+Note: If `1` is passed in for `NeedCorrespondence`, the relationship between a policy and an instance needs to be returned. You can pass in up to 20 alarm object dimensions to avoid request timeout.
                      */
                     std::string GetDimensions() const;
 
@@ -174,11 +178,15 @@ For more information on the parameter samples of different Tencent Cloud service
 You can also refer to the “Example 2” below.
 
 For more information on the parameter samples of different Tencent Cloud services, see [Product Policy Type and Dimension Information](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1).
+
+Note: If `1` is passed in for `NeedCorrespondence`, the relationship between a policy and an instance needs to be returned. You can pass in up to 20 alarm object dimensions to avoid request timeout.
                      * @param Dimensions The alarm object list, which is a JSON string. The outer array corresponds to multiple instances, and the inner array is the dimension of an object. For example, “CVM - Basic Monitor” can be written as:
 `[ {"Dimensions": {"unInstanceId": "ins-qr8d555g"}}, {"Dimensions": {"unInstanceId": "ins-qr8d555h"}} ]`
 You can also refer to the “Example 2” below.
 
 For more information on the parameter samples of different Tencent Cloud services, see [Product Policy Type and Dimension Information](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1).
+
+Note: If `1` is passed in for `NeedCorrespondence`, the relationship between a policy and an instance needs to be returned. You can pass in up to 20 alarm object dimensions to avoid request timeout.
                      */
                     void SetDimensions(const std::string& _dimensions);
 
@@ -394,6 +402,24 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
                      */
                     bool InstanceGroupIdHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the relationship between a policy and the input parameter filter dimension is required. `1`: Yes. `0`: No. Default value: `0`.
+                     * @return NeedCorrespondence Whether the relationship between a policy and the input parameter filter dimension is required. `1`: Yes. `0`: No. Default value: `0`.
+                     */
+                    int64_t GetNeedCorrespondence() const;
+
+                    /**
+                     * 设置Whether the relationship between a policy and the input parameter filter dimension is required. `1`: Yes. `0`: No. Default value: `0`.
+                     * @param NeedCorrespondence Whether the relationship between a policy and the input parameter filter dimension is required. `1`: Yes. `0`: No. Default value: `0`.
+                     */
+                    void SetNeedCorrespondence(const int64_t& _needCorrespondence);
+
+                    /**
+                     * 判断参数 NeedCorrespondence 是否已赋值
+                     * @return NeedCorrespondence 是否已赋值
+                     */
+                    bool NeedCorrespondenceHasBeenSet() const;
+
                 private:
 
                     /**
@@ -439,6 +465,8 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
 You can also refer to the “Example 2” below.
 
 For more information on the parameter samples of different Tencent Cloud services, see [Product Policy Type and Dimension Information](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1).
+
+Note: If `1` is passed in for `NeedCorrespondence`, the relationship between a policy and an instance needs to be returned. You can pass in up to 20 alarm object dimensions to avoid request timeout.
                      */
                     std::string m_dimensions;
                     bool m_dimensionsHasBeenSet;
@@ -510,6 +538,12 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
                      */
                     int64_t m_instanceGroupId;
                     bool m_instanceGroupIdHasBeenSet;
+
+                    /**
+                     * Whether the relationship between a policy and the input parameter filter dimension is required. `1`: Yes. `0`: No. Default value: `0`.
+                     */
+                    int64_t m_needCorrespondence;
+                    bool m_needCorrespondenceHasBeenSet;
 
                 };
             }

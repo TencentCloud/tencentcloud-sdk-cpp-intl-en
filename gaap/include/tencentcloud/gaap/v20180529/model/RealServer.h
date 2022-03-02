@@ -118,6 +118,24 @@ namespace TencentCloud
                      */
                     bool ProjectIdHasBeenSet() const;
 
+                    /**
+                     * 获取Indicates whether the origin server IP or domain name is in the blocklist. Valid values: `0` (no) and `1` (yes).
+                     * @return InBanBlacklist Indicates whether the origin server IP or domain name is in the blocklist. Valid values: `0` (no) and `1` (yes).
+                     */
+                    int64_t GetInBanBlacklist() const;
+
+                    /**
+                     * 设置Indicates whether the origin server IP or domain name is in the blocklist. Valid values: `0` (no) and `1` (yes).
+                     * @param InBanBlacklist Indicates whether the origin server IP or domain name is in the blocklist. Valid values: `0` (no) and `1` (yes).
+                     */
+                    void SetInBanBlacklist(const int64_t& _inBanBlacklist);
+
+                    /**
+                     * 判断参数 InBanBlacklist 是否已赋值
+                     * @return InBanBlacklist 是否已赋值
+                     */
+                    bool InBanBlacklistHasBeenSet() const;
+
                 private:
 
                     /**
@@ -143,6 +161,12 @@ namespace TencentCloud
                      */
                     uint64_t m_projectId;
                     bool m_projectIdHasBeenSet;
+
+                    /**
+                     * Indicates whether the origin server IP or domain name is in the blocklist. Valid values: `0` (no) and `1` (yes).
+                     */
+                    int64_t m_inBanBlacklist;
+                    bool m_inBanBlacklistHasBeenSet;
 
                 };
             }

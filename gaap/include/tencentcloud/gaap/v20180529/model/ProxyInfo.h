@@ -672,22 +672,22 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                     bool NetworkTypeHasBeenSet() const;
 
                     /**
-                     * 获取Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), 
+                     * 获取Package type of connections. Valid values: `Thunder` (general connection), `Accelerator` (silver connection), 
 and `CrossBorder` (cross-MLC-border connection).
-Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @return PackageType Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), 
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return PackageType Package type of connections. Valid values: `Thunder` (general connection), `Accelerator` (silver connection), 
 and `CrossBorder` (cross-MLC-border connection).
-Note: this field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetPackageType() const;
 
                     /**
-                     * 设置Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), 
+                     * 设置Package type of connections. Valid values: `Thunder` (general connection), `Accelerator` (silver connection), 
 and `CrossBorder` (cross-MLC-border connection).
-Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @param PackageType Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), 
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param PackageType Package type of connections. Valid values: `Thunder` (general connection), `Accelerator` (silver connection), 
 and `CrossBorder` (cross-MLC-border connection).
-Note: this field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetPackageType(const std::string& _packageType);
 
@@ -766,6 +766,28 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                      * @return Http3Supported 是否已赋值
                      */
                     bool Http3SupportedHasBeenSet() const;
+
+                    /**
+                     * 获取Indicates whether the origin server IP or domain name is in the blocklist. Valid values: `0` (no) and `1` (yes).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return InBanBlacklist Indicates whether the origin server IP or domain name is in the blocklist. Valid values: `0` (no) and `1` (yes).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    int64_t GetInBanBlacklist() const;
+
+                    /**
+                     * 设置Indicates whether the origin server IP or domain name is in the blocklist. Valid values: `0` (no) and `1` (yes).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param InBanBlacklist Indicates whether the origin server IP or domain name is in the blocklist. Valid values: `0` (no) and `1` (yes).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetInBanBlacklist(const int64_t& _inBanBlacklist);
+
+                    /**
+                     * 判断参数 InBanBlacklist 是否已赋值
+                     * @return InBanBlacklist 是否已赋值
+                     */
+                    bool InBanBlacklistHasBeenSet() const;
 
                 private:
 
@@ -969,9 +991,9 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                     bool m_networkTypeHasBeenSet;
 
                     /**
-                     * Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), 
+                     * Package type of connections. Valid values: `Thunder` (general connection), `Accelerator` (silver connection), 
 and `CrossBorder` (cross-MLC-border connection).
-Note: this field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_packageType;
                     bool m_packageTypeHasBeenSet;
@@ -997,6 +1019,13 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                      */
                     int64_t m_http3Supported;
                     bool m_http3SupportedHasBeenSet;
+
+                    /**
+                     * Indicates whether the origin server IP or domain name is in the blocklist. Valid values: `0` (no) and `1` (yes).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    int64_t m_inBanBlacklist;
+                    bool m_inBanBlacklistHasBeenSet;
 
                 };
             }

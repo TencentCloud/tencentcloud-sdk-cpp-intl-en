@@ -70,6 +70,7 @@
 #include <tencentcloud/cdn/v20180606/model/WebSocket.h>
 #include <tencentcloud/cdn/v20180606/model/RemoteAuthentication.h>
 #include <tencentcloud/cdn/v20180606/model/ShareCname.h>
+#include <tencentcloud/cdn/v20180606/model/RuleEngine.h>
 
 
 namespace TencentCloud
@@ -221,26 +222,34 @@ offline: disabled
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming VOD acceleration
-                     * @return ServiceType Domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming VOD acceleration
+                     * 获取Acceleration domain name service type
+`web`: Webpage file downloads
+`download`: Large file downloads
+`media`: Audio and video on demand acceleration
+`hybrid`: Dynamic and static content acceleration
+`dynamic`: Dynamic content acceleration
+                     * @return ServiceType Acceleration domain name service type
+`web`: Webpage file downloads
+`download`: Large file downloads
+`media`: Audio and video on demand acceleration
+`hybrid`: Dynamic and static content acceleration
+`dynamic`: Dynamic content acceleration
                      */
                     std::string GetServiceType() const;
 
                     /**
-                     * 设置Domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming VOD acceleration
-                     * @param ServiceType Domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming VOD acceleration
+                     * 设置Acceleration domain name service type
+`web`: Webpage file downloads
+`download`: Large file downloads
+`media`: Audio and video on demand acceleration
+`hybrid`: Dynamic and static content acceleration
+`dynamic`: Dynamic content acceleration
+                     * @param ServiceType Acceleration domain name service type
+`web`: Webpage file downloads
+`download`: Large file downloads
+`media`: Audio and video on demand acceleration
+`hybrid`: Dynamic and static content acceleration
+`dynamic`: Dynamic content acceleration
                      */
                     void SetServiceType(const std::string& _serviceType);
 
@@ -1456,6 +1465,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool ShareCnameHasBeenSet() const;
 
+                    /**
+                     * 获取Rule engine
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return RuleEngine Rule engine
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    RuleEngine GetRuleEngine() const;
+
+                    /**
+                     * 设置Rule engine
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param RuleEngine Rule engine
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetRuleEngine(const RuleEngine& _ruleEngine);
+
+                    /**
+                     * 判断参数 RuleEngine 是否已赋值
+                     * @return RuleEngine 是否已赋值
+                     */
+                    bool RuleEngineHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1500,10 +1531,12 @@ offline: disabled
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming VOD acceleration
+                     * Acceleration domain name service type
+`web`: Webpage file downloads
+`download`: Large file downloads
+`media`: Audio and video on demand acceleration
+`hybrid`: Dynamic and static content acceleration
+`dynamic`: Dynamic content acceleration
                      */
                     std::string m_serviceType;
                     bool m_serviceTypeHasBeenSet;
@@ -1888,6 +1921,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     ShareCname m_shareCname;
                     bool m_shareCnameHasBeenSet;
+
+                    /**
+                     * Rule engine
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    RuleEngine m_ruleEngine;
+                    bool m_ruleEngineHasBeenSet;
 
                 };
             }

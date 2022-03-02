@@ -194,18 +194,18 @@ If `ForwardProtocol=default`, the `ForwardProtocol` of the listener will be used
                     bool ForwardProtocolHasBeenSet() const;
 
                     /**
-                     * 获取The `host` carried in the request forwarded from the acceleration connection to the origin server.
-If `ForwardHost=default`, the domain name of rule will be used. For other cases, the value set in this field will be used.
-                     * @return ForwardHost The `host` carried in the request forwarded from the acceleration connection to the origin server.
-If `ForwardHost=default`, the domain name of rule will be used. For other cases, the value set in this field will be used.
+                     * 获取The forwarding host, which is carried in the request forwarded from the acceleration connection to the origin server.
+If `ForwardHost=default`, the domain name configured with the forwarding rule will be used. For other cases, the value set in this field will be used.
+                     * @return ForwardHost The forwarding host, which is carried in the request forwarded from the acceleration connection to the origin server.
+If `ForwardHost=default`, the domain name configured with the forwarding rule will be used. For other cases, the value set in this field will be used.
                      */
                     std::string GetForwardHost() const;
 
                     /**
-                     * 设置The `host` carried in the request forwarded from the acceleration connection to the origin server.
-If `ForwardHost=default`, the domain name of rule will be used. For other cases, the value set in this field will be used.
-                     * @param ForwardHost The `host` carried in the request forwarded from the acceleration connection to the origin server.
-If `ForwardHost=default`, the domain name of rule will be used. For other cases, the value set in this field will be used.
+                     * 设置The forwarding host, which is carried in the request forwarded from the acceleration connection to the origin server.
+If `ForwardHost=default`, the domain name configured with the forwarding rule will be used. For other cases, the value set in this field will be used.
+                     * @param ForwardHost The forwarding host, which is carried in the request forwarded from the acceleration connection to the origin server.
+If `ForwardHost=default`, the domain name configured with the forwarding rule will be used. For other cases, the value set in this field will be used.
                      */
                     void SetForwardHost(const std::string& _forwardHost);
 
@@ -214,6 +214,42 @@ If `ForwardHost=default`, the domain name of rule will be used. For other cases,
                      * @return ForwardHost 是否已赋值
                      */
                     bool ForwardHostHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+                     * @return ServerNameIndicationSwitch Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+                     */
+                    std::string GetServerNameIndicationSwitch() const;
+
+                    /**
+                     * 设置Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+                     * @param ServerNameIndicationSwitch Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+                     */
+                    void SetServerNameIndicationSwitch(const std::string& _serverNameIndicationSwitch);
+
+                    /**
+                     * 判断参数 ServerNameIndicationSwitch 是否已赋值
+                     * @return ServerNameIndicationSwitch 是否已赋值
+                     */
+                    bool ServerNameIndicationSwitchHasBeenSet() const;
+
+                    /**
+                     * 获取Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+                     * @return ServerNameIndication Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+                     */
+                    std::string GetServerNameIndication() const;
+
+                    /**
+                     * 设置Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+                     * @param ServerNameIndication Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+                     */
+                    void SetServerNameIndication(const std::string& _serverNameIndication);
+
+                    /**
+                     * 判断参数 ServerNameIndication 是否已赋值
+                     * @return ServerNameIndication 是否已赋值
+                     */
+                    bool ServerNameIndicationHasBeenSet() const;
 
                 private:
 
@@ -266,11 +302,23 @@ If `ForwardProtocol=default`, the `ForwardProtocol` of the listener will be used
                     bool m_forwardProtocolHasBeenSet;
 
                     /**
-                     * The `host` carried in the request forwarded from the acceleration connection to the origin server.
-If `ForwardHost=default`, the domain name of rule will be used. For other cases, the value set in this field will be used.
+                     * The forwarding host, which is carried in the request forwarded from the acceleration connection to the origin server.
+If `ForwardHost=default`, the domain name configured with the forwarding rule will be used. For other cases, the value set in this field will be used.
                      */
                     std::string m_forwardHost;
                     bool m_forwardHostHasBeenSet;
+
+                    /**
+                     * Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+                     */
+                    std::string m_serverNameIndicationSwitch;
+                    bool m_serverNameIndicationSwitchHasBeenSet;
+
+                    /**
+                     * Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+                     */
+                    std::string m_serverNameIndication;
+                    bool m_serverNameIndicationHasBeenSet;
 
                 };
             }

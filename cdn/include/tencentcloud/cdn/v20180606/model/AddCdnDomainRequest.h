@@ -94,25 +94,33 @@ namespace TencentCloud
 
                     /**
                      * 获取Acceleration domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming media VOD acceleration
+`web`: Webpage file downloads
+`download`: Large file downloads
+`media`: Audio and video on demand acceleration
+`hybrid`: Dynamic and static content acceleration
+`dynamic`: Dynamic content acceleration
                      * @return ServiceType Acceleration domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming media VOD acceleration
+`web`: Webpage file downloads
+`download`: Large file downloads
+`media`: Audio and video on demand acceleration
+`hybrid`: Dynamic and static content acceleration
+`dynamic`: Dynamic content acceleration
                      */
                     std::string GetServiceType() const;
 
                     /**
                      * 设置Acceleration domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming media VOD acceleration
+`web`: Webpage file downloads
+`download`: Large file downloads
+`media`: Audio and video on demand acceleration
+`hybrid`: Dynamic and static content acceleration
+`dynamic`: Dynamic content acceleration
                      * @param ServiceType Acceleration domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming media VOD acceleration
+`web`: Webpage file downloads
+`download`: Large file downloads
+`media`: Audio and video on demand acceleration
+`hybrid`: Dynamic and static content acceleration
+`dynamic`: Dynamic content acceleration
                      */
                     void SetServiceType(const std::string& _serviceType);
 
@@ -701,14 +709,14 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
                     bool OfflineCacheHasBeenSet() const;
 
                     /**
-                     * 获取QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
-                     * @return Quic QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+                     * 获取QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
+                     * @return Quic QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
                      */
                     Quic GetQuic() const;
 
                     /**
-                     * 设置QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
-                     * @param Quic QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+                     * 设置QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
+                     * @param Quic QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
                      */
                     void SetQuic(const Quic& _quic);
 
@@ -764,9 +772,11 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
 
                     /**
                      * Acceleration domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming media VOD acceleration
+`web`: Webpage file downloads
+`download`: Large file downloads
+`media`: Audio and video on demand acceleration
+`hybrid`: Dynamic and static content acceleration
+`dynamic`: Dynamic content acceleration
                      */
                     std::string m_serviceType;
                     bool m_serviceTypeHasBeenSet;
@@ -963,7 +973,7 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
                     bool m_offlineCacheHasBeenSet;
 
                     /**
-                     * QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+                     * QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
                      */
                     Quic m_quic;
                     bool m_quicHasBeenSet;

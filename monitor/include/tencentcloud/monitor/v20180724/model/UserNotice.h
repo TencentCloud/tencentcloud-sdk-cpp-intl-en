@@ -113,18 +113,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Notification channel list. Valid values: EMAIL (email), SMS (SMS), CALL (phone), WECHAT (WeChat)
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return NoticeWay Notification channel list. Valid values: EMAIL (email), SMS (SMS), CALL (phone), WECHAT (WeChat)
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Notification channel list. Valid values: `EMAIL` (email), `SMS` (SMS), `CALL` (phone), `WECHAT` (WeChat), `RTX` (WeCom)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return NoticeWay Notification channel list. Valid values: `EMAIL` (email), `SMS` (SMS), `CALL` (phone), `WECHAT` (WeChat), `RTX` (WeCom)
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> GetNoticeWay() const;
 
                     /**
-                     * 设置Notification channel list. Valid values: EMAIL (email), SMS (SMS), CALL (phone), WECHAT (WeChat)
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param NoticeWay Notification channel list. Valid values: EMAIL (email), SMS (SMS), CALL (phone), WECHAT (WeChat)
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Notification channel list. Valid values: `EMAIL` (email), `SMS` (SMS), `CALL` (phone), `WECHAT` (WeChat), `RTX` (WeCom)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param NoticeWay Notification channel list. Valid values: `EMAIL` (email), `SMS` (SMS), `CALL` (phone), `WECHAT` (WeChat), `RTX` (WeCom)
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetNoticeWay(const std::vector<std::string>& _noticeWay);
 
@@ -288,6 +288,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool NeedPhoneArriveNoticeHasBeenSet() const;
 
+                    /**
+                     * 获取Dial type. `SYNC` (simultaneous dial), `CIRCLE` (polled dial). Default value: `CIRCLE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return PhoneCallType Dial type. `SYNC` (simultaneous dial), `CIRCLE` (polled dial). Default value: `CIRCLE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetPhoneCallType() const;
+
+                    /**
+                     * 设置Dial type. `SYNC` (simultaneous dial), `CIRCLE` (polled dial). Default value: `CIRCLE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param PhoneCallType Dial type. `SYNC` (simultaneous dial), `CIRCLE` (polled dial). Default value: `CIRCLE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetPhoneCallType(const std::string& _phoneCallType);
+
+                    /**
+                     * 判断参数 PhoneCallType 是否已赋值
+                     * @return PhoneCallType 是否已赋值
+                     */
+                    bool PhoneCallTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -312,8 +334,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Notification channel list. Valid values: EMAIL (email), SMS (SMS), CALL (phone), WECHAT (WeChat)
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Notification channel list. Valid values: `EMAIL` (email), `SMS` (SMS), `CALL` (phone), `WECHAT` (WeChat), `RTX` (WeCom)
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_noticeWay;
                     bool m_noticeWayHasBeenSet;
@@ -366,6 +388,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_needPhoneArriveNotice;
                     bool m_needPhoneArriveNoticeHasBeenSet;
+
+                    /**
+                     * Dial type. `SYNC` (simultaneous dial), `CIRCLE` (polled dial). Default value: `CIRCLE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_phoneCallType;
+                    bool m_phoneCallTypeHasBeenSet;
 
                 };
             }

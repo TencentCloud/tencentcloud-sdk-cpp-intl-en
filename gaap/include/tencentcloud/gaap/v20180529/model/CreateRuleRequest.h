@@ -192,14 +192,14 @@ If this field is not passed in, it indicates that the ForwardProtocol of the cor
                     bool ForwardProtocolHasBeenSet() const;
 
                     /**
-                     * 获取Remote host to which the acceleration connection forwards. If this parameter is not specified, the default host will be used, i.e., the host with which the client initiates HTTP requests.
-                     * @return ForwardHost Remote host to which the acceleration connection forwards. If this parameter is not specified, the default host will be used, i.e., the host with which the client initiates HTTP requests.
+                     * 获取The forwarding host. If it’s not specified, the default host is used, that is the host with which the client initiates HTTP requests.
+                     * @return ForwardHost The forwarding host. If it’s not specified, the default host is used, that is the host with which the client initiates HTTP requests.
                      */
                     std::string GetForwardHost() const;
 
                     /**
-                     * 设置Remote host to which the acceleration connection forwards. If this parameter is not specified, the default host will be used, i.e., the host with which the client initiates HTTP requests.
-                     * @param ForwardHost Remote host to which the acceleration connection forwards. If this parameter is not specified, the default host will be used, i.e., the host with which the client initiates HTTP requests.
+                     * 设置The forwarding host. If it’s not specified, the default host is used, that is the host with which the client initiates HTTP requests.
+                     * @param ForwardHost The forwarding host. If it’s not specified, the default host is used, that is the host with which the client initiates HTTP requests.
                      */
                     void SetForwardHost(const std::string& _forwardHost);
 
@@ -208,6 +208,42 @@ If this field is not passed in, it indicates that the ForwardProtocol of the cor
                      * @return ForwardHost 是否已赋值
                      */
                     bool ForwardHostHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+                     * @return ServerNameIndicationSwitch Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+                     */
+                    std::string GetServerNameIndicationSwitch() const;
+
+                    /**
+                     * 设置Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+                     * @param ServerNameIndicationSwitch Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+                     */
+                    void SetServerNameIndicationSwitch(const std::string& _serverNameIndicationSwitch);
+
+                    /**
+                     * 判断参数 ServerNameIndicationSwitch 是否已赋值
+                     * @return ServerNameIndicationSwitch 是否已赋值
+                     */
+                    bool ServerNameIndicationSwitchHasBeenSet() const;
+
+                    /**
+                     * 获取Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+                     * @return ServerNameIndication Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+                     */
+                    std::string GetServerNameIndication() const;
+
+                    /**
+                     * 设置Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+                     * @param ServerNameIndication Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+                     */
+                    void SetServerNameIndication(const std::string& _serverNameIndication);
+
+                    /**
+                     * 判断参数 ServerNameIndication 是否已赋值
+                     * @return ServerNameIndication 是否已赋值
+                     */
+                    bool ServerNameIndicationHasBeenSet() const;
 
                 private:
 
@@ -261,10 +297,22 @@ If this field is not passed in, it indicates that the ForwardProtocol of the cor
                     bool m_forwardProtocolHasBeenSet;
 
                     /**
-                     * Remote host to which the acceleration connection forwards. If this parameter is not specified, the default host will be used, i.e., the host with which the client initiates HTTP requests.
+                     * The forwarding host. If it’s not specified, the default host is used, that is the host with which the client initiates HTTP requests.
                      */
                     std::string m_forwardHost;
                     bool m_forwardHostHasBeenSet;
+
+                    /**
+                     * Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+                     */
+                    std::string m_serverNameIndicationSwitch;
+                    bool m_serverNameIndicationSwitchHasBeenSet;
+
+                    /**
+                     * Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+                     */
+                    std::string m_serverNameIndication;
+                    bool m_serverNameIndicationHasBeenSet;
 
                 };
             }

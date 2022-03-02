@@ -702,6 +702,28 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool TagInstancesHasBeenSet() const;
 
+                    /**
+                     * 获取Information on the filter dimension associated with a policy.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return FilterDimensionsParam Information on the filter dimension associated with a policy.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetFilterDimensionsParam() const;
+
+                    /**
+                     * 设置Information on the filter dimension associated with a policy.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param FilterDimensionsParam Information on the filter dimension associated with a policy.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetFilterDimensionsParam(const std::string& _filterDimensionsParam);
+
+                    /**
+                     * 判断参数 FilterDimensionsParam 是否已赋值
+                     * @return FilterDimensionsParam 是否已赋值
+                     */
+                    bool FilterDimensionsParamHasBeenSet() const;
+
                 private:
 
                     /**
@@ -909,6 +931,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     std::vector<TagInstance> m_tagInstances;
                     bool m_tagInstancesHasBeenSet;
+
+                    /**
+                     * Information on the filter dimension associated with a policy.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_filterDimensionsParam;
+                    bool m_filterDimensionsParamHasBeenSet;
 
                 };
             }

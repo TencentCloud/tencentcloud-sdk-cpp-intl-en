@@ -395,18 +395,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool IPAddressVersionHasBeenSet() const;
 
                     /**
-                     * 获取Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (game accelerator connection group), and `CrossBorder` (cross-MLC-border connection group).
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return PackageType Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (game accelerator connection group), and `CrossBorder` (cross-MLC-border connection group).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (silver connection group), and `CrossBorder` (cross-MLC-border connection group).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return PackageType Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (silver connection group), and `CrossBorder` (cross-MLC-border connection group).
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetPackageType() const;
 
                     /**
-                     * 设置Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (game accelerator connection group), and `CrossBorder` (cross-MLC-border connection group).
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param PackageType Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (game accelerator connection group), and `CrossBorder` (cross-MLC-border connection group).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (silver connection group), and `CrossBorder` (cross-MLC-border connection group).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param PackageType Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (silver connection group), and `CrossBorder` (cross-MLC-border connection group).
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetPackageType(const std::string& _packageType);
 
@@ -561,8 +561,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_iPAddressVersionHasBeenSet;
 
                     /**
-                     * Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (game accelerator connection group), and `CrossBorder` (cross-MLC-border connection group).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (silver connection group), and `CrossBorder` (cross-MLC-border connection group).
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_packageType;
                     bool m_packageTypeHasBeenSet;

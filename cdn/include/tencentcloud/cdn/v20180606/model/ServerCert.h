@@ -223,6 +223,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool MessageHasBeenSet() const;
 
+                    /**
+                     * 获取Certificate source
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return From Certificate source
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetFrom() const;
+
+                    /**
+                     * 设置Certificate source
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param From Certificate source
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetFrom(const std::string& _from);
+
+                    /**
+                     * 判断参数 From 是否已赋值
+                     * @return From 是否已赋值
+                     */
+                    bool FromHasBeenSet() const;
+
                 private:
 
                     /**
@@ -278,6 +300,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
+
+                    /**
+                     * Certificate source
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_from;
+                    bool m_fromHasBeenSet;
 
                 };
             }

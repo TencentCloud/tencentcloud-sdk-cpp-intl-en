@@ -276,6 +276,58 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ForwardHostHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return ServerNameIndicationSwitch Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetServerNameIndicationSwitch() const;
+
+                    /**
+                     * 设置Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param ServerNameIndicationSwitch Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetServerNameIndicationSwitch(const std::string& _serverNameIndicationSwitch);
+
+                    /**
+                     * 判断参数 ServerNameIndicationSwitch 是否已赋值
+                     * @return ServerNameIndicationSwitch 是否已赋值
+                     */
+                    bool ServerNameIndicationSwitchHasBeenSet() const;
+
+                    /**
+                     * 获取Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return ServerNameIndication Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetServerNameIndication() const;
+
+                    /**
+                     * 设置Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param ServerNameIndication Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetServerNameIndication(const std::string& _serverNameIndication);
+
+                    /**
+                     * 判断参数 ServerNameIndication 是否已赋值
+                     * @return ServerNameIndication 是否已赋值
+                     */
+                    bool ServerNameIndicationHasBeenSet() const;
+
                 private:
 
                     /**
@@ -352,6 +404,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_forwardHost;
                     bool m_forwardHostHasBeenSet;
+
+                    /**
+                     * Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_serverNameIndicationSwitch;
+                    bool m_serverNameIndicationSwitchHasBeenSet;
+
+                    /**
+                     * Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_serverNameIndication;
+                    bool m_serverNameIndicationHasBeenSet;
 
                 };
             }
