@@ -33,7 +33,8 @@ AVTemplate::AVTemplate() :
     m_acodecHasBeenSet(false),
     m_audioBitrateHasBeenSet(false),
     m_videoBitrateHasBeenSet(false),
-    m_rateControlModeHasBeenSet(false)
+    m_rateControlModeHasBeenSet(false),
+    m_watermarkIdHasBeenSet(false)
 {
 }
 
@@ -172,6 +173,16 @@ CoreInternalOutcome AVTemplate::Deserialize(const rapidjson::Value &value)
         m_rateControlModeHasBeenSet = true;
     }
 
+    if (value.HasMember("WatermarkId") && !value["WatermarkId"].IsNull())
+    {
+        if (!value["WatermarkId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AVTemplate.WatermarkId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_watermarkId = string(value["WatermarkId"].GetString());
+        m_watermarkIdHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -281,6 +292,14 @@ void AVTemplate::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Allo
         string key = "RateControlMode";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_rateControlMode.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_watermarkIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "WatermarkId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_watermarkId.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -492,5 +511,21 @@ void AVTemplate::SetRateControlMode(const string& _rateControlMode)
 bool AVTemplate::RateControlModeHasBeenSet() const
 {
     return m_rateControlModeHasBeenSet;
+}
+
+string AVTemplate::GetWatermarkId() const
+{
+    return m_watermarkId;
+}
+
+void AVTemplate::SetWatermarkId(const string& _watermarkId)
+{
+    m_watermarkId = _watermarkId;
+    m_watermarkIdHasBeenSet = true;
+}
+
+bool AVTemplate::WatermarkIdHasBeenSet() const
+{
+    return m_watermarkIdHasBeenSet;
 }
 

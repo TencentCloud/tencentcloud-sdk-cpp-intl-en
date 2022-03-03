@@ -208,6 +208,28 @@ namespace TencentCloud
                      */
                     bool RateControlModeHasBeenSet() const;
 
+                    /**
+                     * 获取Watermark ID
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return WatermarkId Watermark ID
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string GetWatermarkId() const;
+
+                    /**
+                     * 设置Watermark ID
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param WatermarkId Watermark ID
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetWatermarkId(const std::string& _watermarkId);
+
+                    /**
+                     * 判断参数 WatermarkId 是否已赋值
+                     * @return WatermarkId 是否已赋值
+                     */
+                    bool WatermarkIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -263,6 +285,13 @@ namespace TencentCloud
                      */
                     std::string m_rateControlMode;
                     bool m_rateControlModeHasBeenSet;
+
+                    /**
+                     * Watermark ID
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string m_watermarkId;
+                    bool m_watermarkIdHasBeenSet;
 
                 };
             }

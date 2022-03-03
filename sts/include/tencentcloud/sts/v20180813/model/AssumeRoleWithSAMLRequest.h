@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool RoleSessionNameHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the validity period of credentials in seconds. Default value: 7200. Maximum value: 7200
-                     * @return DurationSeconds Specifies the validity period of credentials in seconds. Default value: 7200. Maximum value: 7200
+                     * 获取The validity period of the temporary credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
+                     * @return DurationSeconds The validity period of the temporary credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
                      */
                     uint64_t GetDurationSeconds() const;
 
                     /**
-                     * 设置Specifies the validity period of credentials in seconds. Default value: 7200. Maximum value: 7200
-                     * @param DurationSeconds Specifies the validity period of credentials in seconds. Default value: 7200. Maximum value: 7200
+                     * 设置The validity period of the temporary credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
+                     * @param DurationSeconds The validity period of the temporary credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
                      */
                     void SetDurationSeconds(const uint64_t& _durationSeconds);
 
@@ -159,7 +159,7 @@ namespace TencentCloud
                     bool m_roleSessionNameHasBeenSet;
 
                     /**
-                     * Specifies the validity period of credentials in seconds. Default value: 7200. Maximum value: 7200
+                     * The validity period of the temporary credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
                      */
                     uint64_t m_durationSeconds;
                     bool m_durationSecondsHasBeenSet;

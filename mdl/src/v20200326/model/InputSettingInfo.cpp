@@ -25,7 +25,8 @@ InputSettingInfo::InputSettingInfo() :
     m_streamNameHasBeenSet(false),
     m_sourceUrlHasBeenSet(false),
     m_inputAddressHasBeenSet(false),
-    m_sourceTypeHasBeenSet(false)
+    m_sourceTypeHasBeenSet(false),
+    m_delayTimeHasBeenSet(false)
 {
 }
 
@@ -84,6 +85,16 @@ CoreInternalOutcome InputSettingInfo::Deserialize(const rapidjson::Value &value)
         m_sourceTypeHasBeenSet = true;
     }
 
+    if (value.HasMember("DelayTime") && !value["DelayTime"].IsNull())
+    {
+        if (!value["DelayTime"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `InputSettingInfo.DelayTime` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_delayTime = value["DelayTime"].GetInt64();
+        m_delayTimeHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -129,6 +140,14 @@ void InputSettingInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document
         string key = "SourceType";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_sourceType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_delayTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DelayTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_delayTime, allocator);
     }
 
 }
@@ -212,5 +231,21 @@ void InputSettingInfo::SetSourceType(const string& _sourceType)
 bool InputSettingInfo::SourceTypeHasBeenSet() const
 {
     return m_sourceTypeHasBeenSet;
+}
+
+int64_t InputSettingInfo::GetDelayTime() const
+{
+    return m_delayTime;
+}
+
+void InputSettingInfo::SetDelayTime(const int64_t& _delayTime)
+{
+    m_delayTime = _delayTime;
+    m_delayTimeHasBeenSet = true;
+}
+
+bool InputSettingInfo::DelayTimeHasBeenSet() const
+{
+    return m_delayTimeHasBeenSet;
 }
 

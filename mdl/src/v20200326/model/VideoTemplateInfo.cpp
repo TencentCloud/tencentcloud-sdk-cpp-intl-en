@@ -29,7 +29,8 @@ VideoTemplateInfo::VideoTemplateInfo() :
     m_fpsHasBeenSet(false),
     m_topSpeedHasBeenSet(false),
     m_bitrateCompressionRatioHasBeenSet(false),
-    m_rateControlModeHasBeenSet(false)
+    m_rateControlModeHasBeenSet(false),
+    m_watermarkIdHasBeenSet(false)
 {
 }
 
@@ -128,6 +129,16 @@ CoreInternalOutcome VideoTemplateInfo::Deserialize(const rapidjson::Value &value
         m_rateControlModeHasBeenSet = true;
     }
 
+    if (value.HasMember("WatermarkId") && !value["WatermarkId"].IsNull())
+    {
+        if (!value["WatermarkId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `VideoTemplateInfo.WatermarkId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_watermarkId = string(value["WatermarkId"].GetString());
+        m_watermarkIdHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -205,6 +216,14 @@ void VideoTemplateInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Documen
         string key = "RateControlMode";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_rateControlMode.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_watermarkIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "WatermarkId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_watermarkId.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -352,5 +371,21 @@ void VideoTemplateInfo::SetRateControlMode(const string& _rateControlMode)
 bool VideoTemplateInfo::RateControlModeHasBeenSet() const
 {
     return m_rateControlModeHasBeenSet;
+}
+
+string VideoTemplateInfo::GetWatermarkId() const
+{
+    return m_watermarkId;
+}
+
+void VideoTemplateInfo::SetWatermarkId(const string& _watermarkId)
+{
+    m_watermarkId = _watermarkId;
+    m_watermarkIdHasBeenSet = true;
+}
+
+bool VideoTemplateInfo::WatermarkIdHasBeenSet() const
+{
+    return m_watermarkIdHasBeenSet;
 }
 

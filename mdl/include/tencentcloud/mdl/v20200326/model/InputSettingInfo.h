@@ -47,18 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Application name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return AppName Application name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Application name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return AppName Application name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::string GetAppName() const;
 
                     /**
-                     * 设置Application name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AppName Application name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Application name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param AppName Application name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     void SetAppName(const std::string& _appName);
 
@@ -69,18 +69,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool AppNameHasBeenSet() const;
 
                     /**
-                     * 获取Stream name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return StreamName Stream name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Stream name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return StreamName Stream name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::string GetStreamName() const;
 
                     /**
-                     * 设置Stream name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param StreamName Stream name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Stream name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param StreamName Stream name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     void SetStreamName(const std::string& _streamName);
 
@@ -91,18 +91,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool StreamNameHasBeenSet() const;
 
                     /**
-                     * 获取Origin-pull URL, which is used for RTMP_PULL/HLS_PULL/MP4_PULL. Length limit: [1,512].
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SourceUrl Origin-pull URL, which is used for RTMP_PULL/HLS_PULL/MP4_PULL. Length limit: [1,512].
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL` and can contain 1-512 characters
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return SourceUrl Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL` and can contain 1-512 characters
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::string GetSourceUrl() const;
 
                     /**
-                     * 设置Origin-pull URL, which is used for RTMP_PULL/HLS_PULL/MP4_PULL. Length limit: [1,512].
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SourceUrl Origin-pull URL, which is used for RTMP_PULL/HLS_PULL/MP4_PULL. Length limit: [1,512].
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL` and can contain 1-512 characters
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param SourceUrl Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL` and can contain 1-512 characters
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     void SetSourceUrl(const std::string& _sourceUrl);
 
@@ -156,25 +156,55 @@ Note: this field may return `null`, indicating that no valid value was found.
                      */
                     bool SourceTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Delayed time (ms) for playback, which is valid if `Type` is `RTMP_PUSH`
+Value range: 0 (default) or 10000-600000
+The value must be a multiple of 1,000.
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return DelayTime Delayed time (ms) for playback, which is valid if `Type` is `RTMP_PUSH`
+Value range: 0 (default) or 10000-600000
+The value must be a multiple of 1,000.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    int64_t GetDelayTime() const;
+
+                    /**
+                     * 设置Delayed time (ms) for playback, which is valid if `Type` is `RTMP_PUSH`
+Value range: 0 (default) or 10000-600000
+The value must be a multiple of 1,000.
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param DelayTime Delayed time (ms) for playback, which is valid if `Type` is `RTMP_PUSH`
+Value range: 0 (default) or 10000-600000
+The value must be a multiple of 1,000.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetDelayTime(const int64_t& _delayTime);
+
+                    /**
+                     * 判断参数 DelayTime 是否已赋值
+                     * @return DelayTime 是否已赋值
+                     */
+                    bool DelayTimeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Application name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Application name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::string m_appName;
                     bool m_appNameHasBeenSet;
 
                     /**
-                     * Stream name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Stream name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::string m_streamName;
                     bool m_streamNameHasBeenSet;
 
                     /**
-                     * Origin-pull URL, which is used for RTMP_PULL/HLS_PULL/MP4_PULL. Length limit: [1,512].
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL` and can contain 1-512 characters
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::string m_sourceUrl;
                     bool m_sourceUrlHasBeenSet;
@@ -192,6 +222,15 @@ Note: this field may return `null`, indicating that no valid value was found.
                      */
                     std::string m_sourceType;
                     bool m_sourceTypeHasBeenSet;
+
+                    /**
+                     * Delayed time (ms) for playback, which is valid if `Type` is `RTMP_PUSH`
+Value range: 0 (default) or 10000-600000
+The value must be a multiple of 1,000.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    int64_t m_delayTime;
+                    bool m_delayTimeHasBeenSet;
 
                 };
             }

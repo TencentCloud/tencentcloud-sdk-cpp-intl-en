@@ -284,6 +284,24 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                      */
                     bool RateControlModeHasBeenSet() const;
 
+                    /**
+                     * 获取Watermark ID
+                     * @return WatermarkId Watermark ID
+                     */
+                    std::string GetWatermarkId() const;
+
+                    /**
+                     * 设置Watermark ID
+                     * @param WatermarkId Watermark ID
+                     */
+                    void SetWatermarkId(const std::string& _watermarkId);
+
+                    /**
+                     * 判断参数 WatermarkId 是否已赋值
+                     * @return WatermarkId 是否已赋值
+                     */
+                    bool WatermarkIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -364,6 +382,12 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                      */
                     std::string m_rateControlMode;
                     bool m_rateControlModeHasBeenSet;
+
+                    /**
+                     * Watermark ID
+                     */
+                    std::string m_watermarkId;
+                    bool m_watermarkIdHasBeenSet;
 
                 };
             }

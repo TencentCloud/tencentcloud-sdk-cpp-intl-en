@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取token
-                     * @return Token token
+                     * 获取Token, which contains up to 4,096 bytes depending on the associated policies.
+                     * @return Token Token, which contains up to 4,096 bytes depending on the associated policies.
                      */
                     std::string GetToken() const;
 
                     /**
-                     * 设置token
-                     * @param Token token
+                     * 设置Token, which contains up to 4,096 bytes depending on the associated policies.
+                     * @param Token Token, which contains up to 4,096 bytes depending on the associated policies.
                      */
                     void SetToken(const std::string& _token);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool TokenHasBeenSet() const;
 
                     /**
-                     * 获取Temporary credentials secret ID
-                     * @return TmpSecretId Temporary credentials secret ID
+                     * 获取Temporary credentials key ID, which contains up to 1,024 bytes.
+                     * @return TmpSecretId Temporary credentials key ID, which contains up to 1,024 bytes.
                      */
                     std::string GetTmpSecretId() const;
 
                     /**
-                     * 设置Temporary credentials secret ID
-                     * @param TmpSecretId Temporary credentials secret ID
+                     * 设置Temporary credentials key ID, which contains up to 1,024 bytes.
+                     * @param TmpSecretId Temporary credentials key ID, which contains up to 1,024 bytes.
                      */
                     void SetTmpSecretId(const std::string& _tmpSecretId);
 
@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool TmpSecretIdHasBeenSet() const;
 
                     /**
-                     * 获取Temporary credentials secret key
-                     * @return TmpSecretKey Temporary credentials secret key
+                     * 获取Temporary credentials key, which contains up to 1,024 bytes.
+                     * @return TmpSecretKey Temporary credentials key, which contains up to 1,024 bytes.
                      */
                     std::string GetTmpSecretKey() const;
 
                     /**
-                     * 设置Temporary credentials secret key
-                     * @param TmpSecretKey Temporary credentials secret key
+                     * 设置Temporary credentials key, which contains up to 1,024 bytes.
+                     * @param TmpSecretKey Temporary credentials key, which contains up to 1,024 bytes.
                      */
                     void SetTmpSecretKey(const std::string& _tmpSecretKey);
 
@@ -103,19 +103,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * token
+                     * Token, which contains up to 4,096 bytes depending on the associated policies.
                      */
                     std::string m_token;
                     bool m_tokenHasBeenSet;
 
                     /**
-                     * Temporary credentials secret ID
+                     * Temporary credentials key ID, which contains up to 1,024 bytes.
                      */
                     std::string m_tmpSecretId;
                     bool m_tmpSecretIdHasBeenSet;
 
                     /**
-                     * Temporary credentials secret key
+                     * Temporary credentials key, which contains up to 1,024 bytes.
                      */
                     std::string m_tmpSecretKey;
                     bool m_tmpSecretKeyHasBeenSet;
