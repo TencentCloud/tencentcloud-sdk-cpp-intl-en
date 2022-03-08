@@ -19,10 +19,11 @@ set(mariadb_public_header
   )
 
 set(mariadb_public_header_model
+  include/tencentcloud/mariadb/v20170312/model/IsolateHourDBInstanceResponse.h
   include/tencentcloud/mariadb/v20170312/model/DescribeAccountPrivilegesResponse.h
   include/tencentcloud/mariadb/v20170312/model/DescribeDatabasesRequest.h
   include/tencentcloud/mariadb/v20170312/model/ParamDesc.h
-  include/tencentcloud/mariadb/v20170312/model/DescribeDBParametersRequest.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeDBResourceUsageRequest.h
   include/tencentcloud/mariadb/v20170312/model/DescribeAccountsRequest.h
   include/tencentcloud/mariadb/v20170312/model/ProcedurePrivilege.h
   include/tencentcloud/mariadb/v20170312/model/DestroyHourDBInstanceRequest.h
@@ -37,32 +38,39 @@ set(mariadb_public_header_model
   include/tencentcloud/mariadb/v20170312/model/DescribeDBSlowLogsRequest.h
   include/tencentcloud/mariadb/v20170312/model/CreateAccountRequest.h
   include/tencentcloud/mariadb/v20170312/model/InitDBInstancesResponse.h
-  include/tencentcloud/mariadb/v20170312/model/DescribeDBParametersResponse.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeLogFileRetentionPeriodRequest.h
+  include/tencentcloud/mariadb/v20170312/model/IsolateHourDBInstanceRequest.h
   include/tencentcloud/mariadb/v20170312/model/ResourceUsageMonitorSet.h
   include/tencentcloud/mariadb/v20170312/model/ModifyLogFileRetentionPeriodRequest.h
   include/tencentcloud/mariadb/v20170312/model/PerformanceMonitorSet.h
   include/tencentcloud/mariadb/v20170312/model/DescribeFlowResponse.h
   include/tencentcloud/mariadb/v20170312/model/CloneAccountResponse.h
   include/tencentcloud/mariadb/v20170312/model/ModifyAccountDescriptionResponse.h
-  include/tencentcloud/mariadb/v20170312/model/DescribeDBResourceUsageRequest.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeDBParametersRequest.h
   include/tencentcloud/mariadb/v20170312/model/ParamConstraint.h
   include/tencentcloud/mariadb/v20170312/model/ModifyDBInstancesProjectResponse.h
   include/tencentcloud/mariadb/v20170312/model/DBBackupTimeConfig.h
+  include/tencentcloud/mariadb/v20170312/model/ModifyBackupTimeRequest.h
+  include/tencentcloud/mariadb/v20170312/model/DatabaseView.h
   include/tencentcloud/mariadb/v20170312/model/DescribeDBLogFilesRequest.h
   include/tencentcloud/mariadb/v20170312/model/NodeInfo.h
   include/tencentcloud/mariadb/v20170312/model/ModifySyncTaskAttributeResponse.h
-  include/tencentcloud/mariadb/v20170312/model/ModifyDBInstanceSecurityGroupsResponse.h
+  include/tencentcloud/mariadb/v20170312/model/DcnDetailItem.h
   include/tencentcloud/mariadb/v20170312/model/ResetAccountPasswordRequest.h
   include/tencentcloud/mariadb/v20170312/model/CopyAccountPrivilegesResponse.h
   include/tencentcloud/mariadb/v20170312/model/CreateHourDBInstanceResponse.h
+  include/tencentcloud/mariadb/v20170312/model/SlowLogData.h
   include/tencentcloud/mariadb/v20170312/model/ParamModifyResult.h
   include/tencentcloud/mariadb/v20170312/model/DescribeDBInstancesRequest.h
   include/tencentcloud/mariadb/v20170312/model/DescribeDBSecurityGroupsRequest.h
   include/tencentcloud/mariadb/v20170312/model/SwitchDBInstanceHAResponse.h
   include/tencentcloud/mariadb/v20170312/model/TablePrivilege.h
   include/tencentcloud/mariadb/v20170312/model/DescribeProjectSecurityGroupsResponse.h
+  include/tencentcloud/mariadb/v20170312/model/DatabaseFunction.h
   include/tencentcloud/mariadb/v20170312/model/ResetAccountPasswordResponse.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeDatabaseObjectsRequest.h
   include/tencentcloud/mariadb/v20170312/model/DescribeBackupTimeRequest.h
+  include/tencentcloud/mariadb/v20170312/model/DatabaseTable.h
   include/tencentcloud/mariadb/v20170312/model/GrantAccountPrivilegesRequest.h
   include/tencentcloud/mariadb/v20170312/model/SwitchDBInstanceHARequest.h
   include/tencentcloud/mariadb/v20170312/model/DBParamValue.h
@@ -75,9 +83,9 @@ set(mariadb_public_header_model
   include/tencentcloud/mariadb/v20170312/model/SecurityGroup.h
   include/tencentcloud/mariadb/v20170312/model/DescribeDatabaseTableRequest.h
   include/tencentcloud/mariadb/v20170312/model/OpenDBExtranetAccessResponse.h
-  include/tencentcloud/mariadb/v20170312/model/DescribeDcnDetailResponse.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeDatabaseObjectsResponse.h
   include/tencentcloud/mariadb/v20170312/model/ModifyDBInstanceNameRequest.h
-  include/tencentcloud/mariadb/v20170312/model/ModifyBackupTimeRequest.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeDcnDetailResponse.h
   include/tencentcloud/mariadb/v20170312/model/TableColumn.h
   include/tencentcloud/mariadb/v20170312/model/SecurityGroupBound.h
   include/tencentcloud/mariadb/v20170312/model/ColumnPrivilege.h
@@ -92,14 +100,14 @@ set(mariadb_public_header_model
   include/tencentcloud/mariadb/v20170312/model/CancelDcnJobRequest.h
   include/tencentcloud/mariadb/v20170312/model/OpenDBExtranetAccessRequest.h
   include/tencentcloud/mariadb/v20170312/model/DatabasePrivilege.h
-  include/tencentcloud/mariadb/v20170312/model/DcnDetailItem.h
+  include/tencentcloud/mariadb/v20170312/model/ModifyDBInstanceSecurityGroupsResponse.h
   include/tencentcloud/mariadb/v20170312/model/ModifyDBInstanceNameResponse.h
   include/tencentcloud/mariadb/v20170312/model/CloseDBExtranetAccessResponse.h
   include/tencentcloud/mariadb/v20170312/model/FunctionPrivilege.h
   include/tencentcloud/mariadb/v20170312/model/ModifyAccountDescriptionRequest.h
   include/tencentcloud/mariadb/v20170312/model/DescribeDBPerformanceDetailsRequest.h
   include/tencentcloud/mariadb/v20170312/model/DescribeBackupTimeResponse.h
-  include/tencentcloud/mariadb/v20170312/model/SlowLogData.h
+  include/tencentcloud/mariadb/v20170312/model/ActivateHourDBInstanceRequest.h
   include/tencentcloud/mariadb/v20170312/model/DescribeDatabasesResponse.h
   include/tencentcloud/mariadb/v20170312/model/ViewPrivileges.h
   include/tencentcloud/mariadb/v20170312/model/DescribeDBLogFilesResponse.h
@@ -109,7 +117,9 @@ set(mariadb_public_header_model
   include/tencentcloud/mariadb/v20170312/model/DescribeFlowRequest.h
   include/tencentcloud/mariadb/v20170312/model/ModifyAccountPrivilegesRequest.h
   include/tencentcloud/mariadb/v20170312/model/DescribeDBPerformanceResponse.h
+  include/tencentcloud/mariadb/v20170312/model/DatabaseProcedure.h
   include/tencentcloud/mariadb/v20170312/model/ModifyDBSyncModeRequest.h
+  include/tencentcloud/mariadb/v20170312/model/ActivateHourDBInstanceResponse.h
   include/tencentcloud/mariadb/v20170312/model/DescribeInstanceNodeInfoRequest.h
   include/tencentcloud/mariadb/v20170312/model/CloneAccountRequest.h
   include/tencentcloud/mariadb/v20170312/model/CreateAccountResponse.h
@@ -127,7 +137,7 @@ set(mariadb_public_header_model
   include/tencentcloud/mariadb/v20170312/model/DescribeDBPerformanceDetailsResponse.h
   include/tencentcloud/mariadb/v20170312/model/DescribeAccountsResponse.h
   include/tencentcloud/mariadb/v20170312/model/DescribeDBSlowLogsResponse.h
-  include/tencentcloud/mariadb/v20170312/model/DescribeLogFileRetentionPeriodRequest.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeDBParametersResponse.h
   include/tencentcloud/mariadb/v20170312/model/ModifyDBInstancesProjectRequest.h
   include/tencentcloud/mariadb/v20170312/model/MonitorData.h
   include/tencentcloud/mariadb/v20170312/model/ModifyDBSyncModeResponse.h
@@ -140,10 +150,11 @@ set(mariadb_public_header_model
 
 set(mariadb_src
   src/v20170312/MariadbClient.cpp
+  src/v20170312/model/IsolateHourDBInstanceResponse.cpp
   src/v20170312/model/DescribeAccountPrivilegesResponse.cpp
   src/v20170312/model/DescribeDatabasesRequest.cpp
   src/v20170312/model/ParamDesc.cpp
-  src/v20170312/model/DescribeDBParametersRequest.cpp
+  src/v20170312/model/DescribeDBResourceUsageRequest.cpp
   src/v20170312/model/DescribeAccountsRequest.cpp
   src/v20170312/model/ProcedurePrivilege.cpp
   src/v20170312/model/DestroyHourDBInstanceRequest.cpp
@@ -158,32 +169,39 @@ set(mariadb_src
   src/v20170312/model/DescribeDBSlowLogsRequest.cpp
   src/v20170312/model/CreateAccountRequest.cpp
   src/v20170312/model/InitDBInstancesResponse.cpp
-  src/v20170312/model/DescribeDBParametersResponse.cpp
+  src/v20170312/model/DescribeLogFileRetentionPeriodRequest.cpp
+  src/v20170312/model/IsolateHourDBInstanceRequest.cpp
   src/v20170312/model/ResourceUsageMonitorSet.cpp
   src/v20170312/model/ModifyLogFileRetentionPeriodRequest.cpp
   src/v20170312/model/PerformanceMonitorSet.cpp
   src/v20170312/model/DescribeFlowResponse.cpp
   src/v20170312/model/CloneAccountResponse.cpp
   src/v20170312/model/ModifyAccountDescriptionResponse.cpp
-  src/v20170312/model/DescribeDBResourceUsageRequest.cpp
+  src/v20170312/model/DescribeDBParametersRequest.cpp
   src/v20170312/model/ParamConstraint.cpp
   src/v20170312/model/ModifyDBInstancesProjectResponse.cpp
   src/v20170312/model/DBBackupTimeConfig.cpp
+  src/v20170312/model/ModifyBackupTimeRequest.cpp
+  src/v20170312/model/DatabaseView.cpp
   src/v20170312/model/DescribeDBLogFilesRequest.cpp
   src/v20170312/model/NodeInfo.cpp
   src/v20170312/model/ModifySyncTaskAttributeResponse.cpp
-  src/v20170312/model/ModifyDBInstanceSecurityGroupsResponse.cpp
+  src/v20170312/model/DcnDetailItem.cpp
   src/v20170312/model/ResetAccountPasswordRequest.cpp
   src/v20170312/model/CopyAccountPrivilegesResponse.cpp
   src/v20170312/model/CreateHourDBInstanceResponse.cpp
+  src/v20170312/model/SlowLogData.cpp
   src/v20170312/model/ParamModifyResult.cpp
   src/v20170312/model/DescribeDBInstancesRequest.cpp
   src/v20170312/model/DescribeDBSecurityGroupsRequest.cpp
   src/v20170312/model/SwitchDBInstanceHAResponse.cpp
   src/v20170312/model/TablePrivilege.cpp
   src/v20170312/model/DescribeProjectSecurityGroupsResponse.cpp
+  src/v20170312/model/DatabaseFunction.cpp
   src/v20170312/model/ResetAccountPasswordResponse.cpp
+  src/v20170312/model/DescribeDatabaseObjectsRequest.cpp
   src/v20170312/model/DescribeBackupTimeRequest.cpp
+  src/v20170312/model/DatabaseTable.cpp
   src/v20170312/model/GrantAccountPrivilegesRequest.cpp
   src/v20170312/model/SwitchDBInstanceHARequest.cpp
   src/v20170312/model/DBParamValue.cpp
@@ -196,9 +214,9 @@ set(mariadb_src
   src/v20170312/model/SecurityGroup.cpp
   src/v20170312/model/DescribeDatabaseTableRequest.cpp
   src/v20170312/model/OpenDBExtranetAccessResponse.cpp
-  src/v20170312/model/DescribeDcnDetailResponse.cpp
+  src/v20170312/model/DescribeDatabaseObjectsResponse.cpp
   src/v20170312/model/ModifyDBInstanceNameRequest.cpp
-  src/v20170312/model/ModifyBackupTimeRequest.cpp
+  src/v20170312/model/DescribeDcnDetailResponse.cpp
   src/v20170312/model/TableColumn.cpp
   src/v20170312/model/SecurityGroupBound.cpp
   src/v20170312/model/ColumnPrivilege.cpp
@@ -213,14 +231,14 @@ set(mariadb_src
   src/v20170312/model/CancelDcnJobRequest.cpp
   src/v20170312/model/OpenDBExtranetAccessRequest.cpp
   src/v20170312/model/DatabasePrivilege.cpp
-  src/v20170312/model/DcnDetailItem.cpp
+  src/v20170312/model/ModifyDBInstanceSecurityGroupsResponse.cpp
   src/v20170312/model/ModifyDBInstanceNameResponse.cpp
   src/v20170312/model/CloseDBExtranetAccessResponse.cpp
   src/v20170312/model/FunctionPrivilege.cpp
   src/v20170312/model/ModifyAccountDescriptionRequest.cpp
   src/v20170312/model/DescribeDBPerformanceDetailsRequest.cpp
   src/v20170312/model/DescribeBackupTimeResponse.cpp
-  src/v20170312/model/SlowLogData.cpp
+  src/v20170312/model/ActivateHourDBInstanceRequest.cpp
   src/v20170312/model/DescribeDatabasesResponse.cpp
   src/v20170312/model/ViewPrivileges.cpp
   src/v20170312/model/DescribeDBLogFilesResponse.cpp
@@ -230,7 +248,9 @@ set(mariadb_src
   src/v20170312/model/DescribeFlowRequest.cpp
   src/v20170312/model/ModifyAccountPrivilegesRequest.cpp
   src/v20170312/model/DescribeDBPerformanceResponse.cpp
+  src/v20170312/model/DatabaseProcedure.cpp
   src/v20170312/model/ModifyDBSyncModeRequest.cpp
+  src/v20170312/model/ActivateHourDBInstanceResponse.cpp
   src/v20170312/model/DescribeInstanceNodeInfoRequest.cpp
   src/v20170312/model/CloneAccountRequest.cpp
   src/v20170312/model/CreateAccountResponse.cpp
@@ -248,7 +268,7 @@ set(mariadb_src
   src/v20170312/model/DescribeDBPerformanceDetailsResponse.cpp
   src/v20170312/model/DescribeAccountsResponse.cpp
   src/v20170312/model/DescribeDBSlowLogsResponse.cpp
-  src/v20170312/model/DescribeLogFileRetentionPeriodRequest.cpp
+  src/v20170312/model/DescribeDBParametersResponse.cpp
   src/v20170312/model/ModifyDBInstancesProjectRequest.cpp
   src/v20170312/model/MonitorData.cpp
   src/v20170312/model/ModifyDBSyncModeResponse.cpp

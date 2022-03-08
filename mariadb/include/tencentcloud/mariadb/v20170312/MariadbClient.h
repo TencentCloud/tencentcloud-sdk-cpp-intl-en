@@ -23,6 +23,8 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/mariadb/v20170312/model/ActivateHourDBInstanceRequest.h>
+#include <tencentcloud/mariadb/v20170312/model/ActivateHourDBInstanceResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/AssociateSecurityGroupsRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/AssociateSecurityGroupsResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/CancelDcnJobRequest.h>
@@ -63,6 +65,8 @@
 #include <tencentcloud/mariadb/v20170312/model/DescribeDBSecurityGroupsResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeDBSlowLogsRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeDBSlowLogsResponse.h>
+#include <tencentcloud/mariadb/v20170312/model/DescribeDatabaseObjectsRequest.h>
+#include <tencentcloud/mariadb/v20170312/model/DescribeDatabaseObjectsResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeDatabaseTableRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeDatabaseTableResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeDatabasesRequest.h>
@@ -87,6 +91,8 @@
 #include <tencentcloud/mariadb/v20170312/model/GrantAccountPrivilegesResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/InitDBInstancesRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/InitDBInstancesResponse.h>
+#include <tencentcloud/mariadb/v20170312/model/IsolateHourDBInstanceRequest.h>
+#include <tencentcloud/mariadb/v20170312/model/IsolateHourDBInstanceResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/ModifyAccountDescriptionRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/ModifyAccountDescriptionResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/ModifyAccountPrivilegesRequest.h>
@@ -127,6 +133,9 @@ namespace TencentCloud
                 MariadbClient(const Credential &credential, const std::string &region);
                 MariadbClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
+                typedef Outcome<Core::Error, Model::ActivateHourDBInstanceResponse> ActivateHourDBInstanceOutcome;
+                typedef std::future<ActivateHourDBInstanceOutcome> ActivateHourDBInstanceOutcomeCallable;
+                typedef std::function<void(const MariadbClient*, const Model::ActivateHourDBInstanceRequest&, ActivateHourDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ActivateHourDBInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::AssociateSecurityGroupsResponse> AssociateSecurityGroupsOutcome;
                 typedef std::future<AssociateSecurityGroupsOutcome> AssociateSecurityGroupsOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::AssociateSecurityGroupsRequest&, AssociateSecurityGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AssociateSecurityGroupsAsyncHandler;
@@ -187,6 +196,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeDBSlowLogsResponse> DescribeDBSlowLogsOutcome;
                 typedef std::future<DescribeDBSlowLogsOutcome> DescribeDBSlowLogsOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::DescribeDBSlowLogsRequest&, DescribeDBSlowLogsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBSlowLogsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDatabaseObjectsResponse> DescribeDatabaseObjectsOutcome;
+                typedef std::future<DescribeDatabaseObjectsOutcome> DescribeDatabaseObjectsOutcomeCallable;
+                typedef std::function<void(const MariadbClient*, const Model::DescribeDatabaseObjectsRequest&, DescribeDatabaseObjectsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDatabaseObjectsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDatabaseTableResponse> DescribeDatabaseTableOutcome;
                 typedef std::future<DescribeDatabaseTableOutcome> DescribeDatabaseTableOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::DescribeDatabaseTableRequest&, DescribeDatabaseTableOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDatabaseTableAsyncHandler;
@@ -223,6 +235,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::InitDBInstancesResponse> InitDBInstancesOutcome;
                 typedef std::future<InitDBInstancesOutcome> InitDBInstancesOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::InitDBInstancesRequest&, InitDBInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InitDBInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::IsolateHourDBInstanceResponse> IsolateHourDBInstanceOutcome;
+                typedef std::future<IsolateHourDBInstanceOutcome> IsolateHourDBInstanceOutcomeCallable;
+                typedef std::function<void(const MariadbClient*, const Model::IsolateHourDBInstanceRequest&, IsolateHourDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> IsolateHourDBInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyAccountDescriptionResponse> ModifyAccountDescriptionOutcome;
                 typedef std::future<ModifyAccountDescriptionOutcome> ModifyAccountDescriptionOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::ModifyAccountDescriptionRequest&, ModifyAccountDescriptionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAccountDescriptionAsyncHandler;
@@ -264,6 +279,15 @@ namespace TencentCloud
                 typedef std::function<void(const MariadbClient*, const Model::SwitchDBInstanceHARequest&, SwitchDBInstanceHAOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SwitchDBInstanceHAAsyncHandler;
 
 
+
+                /**
+                 *This API is used to remove the isolation of pay-as-you-go instances.
+                 * @param req ActivateHourDBInstanceRequest
+                 * @return ActivateHourDBInstanceOutcome
+                 */
+                ActivateHourDBInstanceOutcome ActivateHourDBInstance(const Model::ActivateHourDBInstanceRequest &request);
+                void ActivateHourDBInstanceAsync(const Model::ActivateHourDBInstanceRequest& request, const ActivateHourDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ActivateHourDBInstanceOutcomeCallable ActivateHourDBInstanceCallable(const Model::ActivateHourDBInstanceRequest& request);
 
                 /**
                  *This API is used to associate security groups with Tencent Cloud resources in batches.
@@ -449,6 +473,15 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
                 DescribeDBSlowLogsOutcomeCallable DescribeDBSlowLogsCallable(const Model::DescribeDBSlowLogsRequest& request);
 
                 /**
+                 *This API is used to query the list of database objects in a TencentDB instance, including tables, stored procedures, views, and functions.
+                 * @param req DescribeDatabaseObjectsRequest
+                 * @return DescribeDatabaseObjectsOutcome
+                 */
+                DescribeDatabaseObjectsOutcome DescribeDatabaseObjects(const Model::DescribeDatabaseObjectsRequest &request);
+                void DescribeDatabaseObjectsAsync(const Model::DescribeDatabaseObjectsRequest& request, const DescribeDatabaseObjectsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDatabaseObjectsOutcomeCallable DescribeDatabaseObjectsCallable(const Model::DescribeDatabaseObjectsRequest& request);
+
+                /**
                  *This API is used to query the table information of a TencentDB instance.
                  * @param req DescribeDatabaseTableRequest
                  * @return DescribeDatabaseTableOutcome
@@ -556,6 +589,15 @@ Note: accounts with the same username but different hosts are different accounts
                 InitDBInstancesOutcome InitDBInstances(const Model::InitDBInstancesRequest &request);
                 void InitDBInstancesAsync(const Model::InitDBInstancesRequest& request, const InitDBInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 InitDBInstancesOutcomeCallable InitDBInstancesCallable(const Model::InitDBInstancesRequest& request);
+
+                /**
+                 *This API is used to isolate pay-as-you-go instances.
+                 * @param req IsolateHourDBInstanceRequest
+                 * @return IsolateHourDBInstanceOutcome
+                 */
+                IsolateHourDBInstanceOutcome IsolateHourDBInstance(const Model::IsolateHourDBInstanceRequest &request);
+                void IsolateHourDBInstanceAsync(const Model::IsolateHourDBInstanceRequest& request, const IsolateHourDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                IsolateHourDBInstanceOutcomeCallable IsolateHourDBInstanceCallable(const Model::IsolateHourDBInstanceRequest& request);
 
                 /**
                  *This API is used to modify the remarks of a TencentDB account.

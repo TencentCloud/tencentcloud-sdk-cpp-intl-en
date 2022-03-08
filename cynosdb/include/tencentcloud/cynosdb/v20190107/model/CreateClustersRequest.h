@@ -161,14 +161,18 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Number of CPU cores of normal instance
-                     * @return Cpu Number of CPU cores of normal instance
+                     * 获取It is required when `DbMode` is set to `NORMAL` or left empty.
+Number of CPU cores of a non-serverless instance
+                     * @return Cpu It is required when `DbMode` is set to `NORMAL` or left empty.
+Number of CPU cores of a non-serverless instance
                      */
                     int64_t GetCpu() const;
 
                     /**
-                     * 设置Number of CPU cores of normal instance
-                     * @param Cpu Number of CPU cores of normal instance
+                     * 设置It is required when `DbMode` is set to `NORMAL` or left empty.
+Number of CPU cores of a non-serverless instance
+                     * @param Cpu It is required when `DbMode` is set to `NORMAL` or left empty.
+Number of CPU cores of a non-serverless instance
                      */
                     void SetCpu(const int64_t& _cpu);
 
@@ -179,14 +183,18 @@ namespace TencentCloud
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取Memory of a non-serverless instance in GB
-                     * @return Memory Memory of a non-serverless instance in GB
+                     * 获取It is required when `DbMode` is set to `NORMAL` or left empty.
+Memory of a non-serverless instance in GB
+                     * @return Memory It is required when `DbMode` is set to `NORMAL` or left empty.
+Memory of a non-serverless instance in GB
                      */
                     int64_t GetMemory() const;
 
                     /**
-                     * 设置Memory of a non-serverless instance in GB
-                     * @param Memory Memory of a non-serverless instance in GB
+                     * 设置It is required when `DbMode` is set to `NORMAL` or left empty.
+Memory of a non-serverless instance in GB
+                     * @param Memory It is required when `DbMode` is set to `NORMAL` or left empty.
+Memory of a non-serverless instance in GB
                      */
                     void SetMemory(const int64_t& _memory);
 
@@ -197,14 +205,18 @@ namespace TencentCloud
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取Storage capacity in GB
-                     * @return Storage Storage capacity in GB
+                     * 获取This parameter has been deprecated.
+Storage capacity in GB.
+                     * @return Storage This parameter has been deprecated.
+Storage capacity in GB.
                      */
                     int64_t GetStorage() const;
 
                     /**
-                     * 设置Storage capacity in GB
-                     * @param Storage Storage capacity in GB
+                     * 设置This parameter has been deprecated.
+Storage capacity in GB.
+                     * @param Storage This parameter has been deprecated.
+Storage capacity in GB.
                      */
                     void SetStorage(const int64_t& _storage);
 
@@ -389,14 +401,18 @@ timeRollback: rollback by time point
                     bool ExpectTimeHasBeenSet() const;
 
                     /**
-                     * 获取Specified allowed time range for time point rollback
-                     * @return ExpectTimeThresh Specified allowed time range for time point rollback
+                     * 获取This parameter has been deprecated.
+Specified allowed time range for time point rollback
+                     * @return ExpectTimeThresh This parameter has been deprecated.
+Specified allowed time range for time point rollback
                      */
                     uint64_t GetExpectTimeThresh() const;
 
                     /**
-                     * 设置Specified allowed time range for time point rollback
-                     * @param ExpectTimeThresh Specified allowed time range for time point rollback
+                     * 设置This parameter has been deprecated.
+Specified allowed time range for time point rollback
+                     * @param ExpectTimeThresh This parameter has been deprecated.
+Specified allowed time range for time point rollback
                      */
                     void SetExpectTimeThresh(const uint64_t& _expectTimeThresh);
 
@@ -855,19 +871,22 @@ Clusters with storage billed in prepaid mode cannot be cloned or rolled back.
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Number of CPU cores of normal instance
+                     * It is required when `DbMode` is set to `NORMAL` or left empty.
+Number of CPU cores of a non-serverless instance
                      */
                     int64_t m_cpu;
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * Memory of a non-serverless instance in GB
+                     * It is required when `DbMode` is set to `NORMAL` or left empty.
+Memory of a non-serverless instance in GB
                      */
                     int64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * Storage capacity in GB
+                     * This parameter has been deprecated.
+Storage capacity in GB.
                      */
                     int64_t m_storage;
                     bool m_storageHasBeenSet;
@@ -930,7 +949,8 @@ timeRollback: rollback by time point
                     bool m_expectTimeHasBeenSet;
 
                     /**
-                     * Specified allowed time range for time point rollback
+                     * This parameter has been deprecated.
+Specified allowed time range for time point rollback
                      */
                     uint64_t m_expectTimeThresh;
                     bool m_expectTimeThreshHasBeenSet;

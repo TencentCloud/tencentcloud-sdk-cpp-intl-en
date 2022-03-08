@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/cynosdb/v20190107/model/ModifyClusterParamRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/ActivateInstanceRequest.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -22,14 +22,13 @@
 using namespace TencentCloud::Cynosdb::V20190107::Model;
 using namespace std;
 
-ModifyClusterParamRequest::ModifyClusterParamRequest() :
+ActivateInstanceRequest::ActivateInstanceRequest() :
     m_clusterIdHasBeenSet(false),
-    m_paramListHasBeenSet(false),
-    m_isInMaintainPeriodHasBeenSet(false)
+    m_instanceIdListHasBeenSet(false)
 {
 }
 
-string ModifyClusterParamRequest::ToJsonString() const
+string ActivateInstanceRequest::ToJsonString() const
 {
     rapidjson::Document d;
     d.SetObject();
@@ -44,27 +43,17 @@ string ModifyClusterParamRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_clusterId.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_paramListHasBeenSet)
+    if (m_instanceIdListHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "ParamList";
+        string key = "InstanceIdList";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
-        int i=0;
-        for (auto itr = m_paramList.begin(); itr != m_paramList.end(); ++itr, ++i)
+        for (auto itr = m_instanceIdList.begin(); itr != m_instanceIdList.end(); ++itr)
         {
-            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
-            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
-    }
-
-    if (m_isInMaintainPeriodHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "IsInMaintainPeriod";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_isInMaintainPeriod.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -75,52 +64,36 @@ string ModifyClusterParamRequest::ToJsonString() const
 }
 
 
-string ModifyClusterParamRequest::GetClusterId() const
+string ActivateInstanceRequest::GetClusterId() const
 {
     return m_clusterId;
 }
 
-void ModifyClusterParamRequest::SetClusterId(const string& _clusterId)
+void ActivateInstanceRequest::SetClusterId(const string& _clusterId)
 {
     m_clusterId = _clusterId;
     m_clusterIdHasBeenSet = true;
 }
 
-bool ModifyClusterParamRequest::ClusterIdHasBeenSet() const
+bool ActivateInstanceRequest::ClusterIdHasBeenSet() const
 {
     return m_clusterIdHasBeenSet;
 }
 
-vector<ParamItem> ModifyClusterParamRequest::GetParamList() const
+vector<string> ActivateInstanceRequest::GetInstanceIdList() const
 {
-    return m_paramList;
+    return m_instanceIdList;
 }
 
-void ModifyClusterParamRequest::SetParamList(const vector<ParamItem>& _paramList)
+void ActivateInstanceRequest::SetInstanceIdList(const vector<string>& _instanceIdList)
 {
-    m_paramList = _paramList;
-    m_paramListHasBeenSet = true;
+    m_instanceIdList = _instanceIdList;
+    m_instanceIdListHasBeenSet = true;
 }
 
-bool ModifyClusterParamRequest::ParamListHasBeenSet() const
+bool ActivateInstanceRequest::InstanceIdListHasBeenSet() const
 {
-    return m_paramListHasBeenSet;
-}
-
-string ModifyClusterParamRequest::GetIsInMaintainPeriod() const
-{
-    return m_isInMaintainPeriod;
-}
-
-void ModifyClusterParamRequest::SetIsInMaintainPeriod(const string& _isInMaintainPeriod)
-{
-    m_isInMaintainPeriod = _isInMaintainPeriod;
-    m_isInMaintainPeriodHasBeenSet = true;
-}
-
-bool ModifyClusterParamRequest::IsInMaintainPeriodHasBeenSet() const
-{
-    return m_isInMaintainPeriodHasBeenSet;
+    return m_instanceIdListHasBeenSet;
 }
 
 

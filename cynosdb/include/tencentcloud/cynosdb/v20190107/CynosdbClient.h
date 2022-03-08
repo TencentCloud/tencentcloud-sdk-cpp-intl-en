@@ -23,6 +23,8 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/cynosdb/v20190107/model/ActivateInstanceRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/ActivateInstanceResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/AddInstancesRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/AddInstancesResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/CreateClustersRequest.h>
@@ -73,6 +75,10 @@
 #include <tencentcloud/cynosdb/v20190107/model/OfflineClusterResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/OfflineInstanceRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/OfflineInstanceResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/PauseServerlessRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/PauseServerlessResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/ResumeServerlessRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/ResumeServerlessResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/SetRenewFlagRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/SetRenewFlagResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/UpgradeInstanceRequest.h>
@@ -91,6 +97,9 @@ namespace TencentCloud
                 CynosdbClient(const Credential &credential, const std::string &region);
                 CynosdbClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
+                typedef Outcome<Core::Error, Model::ActivateInstanceResponse> ActivateInstanceOutcome;
+                typedef std::future<ActivateInstanceOutcome> ActivateInstanceOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::ActivateInstanceRequest&, ActivateInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ActivateInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::AddInstancesResponse> AddInstancesOutcome;
                 typedef std::future<AddInstancesOutcome> AddInstancesOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::AddInstancesRequest&, AddInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddInstancesAsyncHandler;
@@ -166,6 +175,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::OfflineInstanceResponse> OfflineInstanceOutcome;
                 typedef std::future<OfflineInstanceOutcome> OfflineInstanceOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::OfflineInstanceRequest&, OfflineInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> OfflineInstanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::PauseServerlessResponse> PauseServerlessOutcome;
+                typedef std::future<PauseServerlessOutcome> PauseServerlessOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::PauseServerlessRequest&, PauseServerlessOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PauseServerlessAsyncHandler;
+                typedef Outcome<Core::Error, Model::ResumeServerlessResponse> ResumeServerlessOutcome;
+                typedef std::future<ResumeServerlessOutcome> ResumeServerlessOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::ResumeServerlessRequest&, ResumeServerlessOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResumeServerlessAsyncHandler;
                 typedef Outcome<Core::Error, Model::SetRenewFlagResponse> SetRenewFlagOutcome;
                 typedef std::future<SetRenewFlagOutcome> SetRenewFlagOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::SetRenewFlagRequest&, SetRenewFlagOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SetRenewFlagAsyncHandler;
@@ -174,6 +189,15 @@ namespace TencentCloud
                 typedef std::function<void(const CynosdbClient*, const Model::UpgradeInstanceRequest&, UpgradeInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpgradeInstanceAsyncHandler;
 
 
+
+                /**
+                 *This API is used to remove the isolation of an instance to make it accessible again.
+                 * @param req ActivateInstanceRequest
+                 * @return ActivateInstanceOutcome
+                 */
+                ActivateInstanceOutcome ActivateInstance(const Model::ActivateInstanceRequest &request);
+                void ActivateInstanceAsync(const Model::ActivateInstanceRequest& request, const ActivateInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ActivateInstanceOutcomeCallable ActivateInstanceCallable(const Model::ActivateInstanceRequest& request);
 
                 /**
                  *This API is used to add an instance in a cluster.
@@ -399,6 +423,24 @@ namespace TencentCloud
                 OfflineInstanceOutcome OfflineInstance(const Model::OfflineInstanceRequest &request);
                 void OfflineInstanceAsync(const Model::OfflineInstanceRequest& request, const OfflineInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 OfflineInstanceOutcomeCallable OfflineInstanceCallable(const Model::OfflineInstanceRequest& request);
+
+                /**
+                 *This API is used to pause a serverless cluster.
+                 * @param req PauseServerlessRequest
+                 * @return PauseServerlessOutcome
+                 */
+                PauseServerlessOutcome PauseServerless(const Model::PauseServerlessRequest &request);
+                void PauseServerlessAsync(const Model::PauseServerlessRequest& request, const PauseServerlessAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                PauseServerlessOutcomeCallable PauseServerlessCallable(const Model::PauseServerlessRequest& request);
+
+                /**
+                 *This API is used to resume a serverless cluster.
+                 * @param req ResumeServerlessRequest
+                 * @return ResumeServerlessOutcome
+                 */
+                ResumeServerlessOutcome ResumeServerless(const Model::ResumeServerlessRequest &request);
+                void ResumeServerlessAsync(const Model::ResumeServerlessRequest& request, const ResumeServerlessAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ResumeServerlessOutcomeCallable ResumeServerlessCallable(const Model::ResumeServerlessRequest& request);
 
                 /**
                  *This API is used to set auto-renewal for an instance.

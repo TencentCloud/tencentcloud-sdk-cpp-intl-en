@@ -40,6 +40,49 @@ CynosdbClient::CynosdbClient(const Credential &credential, const string &region,
 }
 
 
+CynosdbClient::ActivateInstanceOutcome CynosdbClient::ActivateInstance(const ActivateInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "ActivateInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ActivateInstanceResponse rsp = ActivateInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ActivateInstanceOutcome(rsp);
+        else
+            return ActivateInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return ActivateInstanceOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::ActivateInstanceAsync(const ActivateInstanceRequest& request, const ActivateInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ActivateInstance(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::ActivateInstanceOutcomeCallable CynosdbClient::ActivateInstanceCallable(const ActivateInstanceRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ActivateInstanceOutcome()>>(
+        [this, request]()
+        {
+            return this->ActivateInstance(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CynosdbClient::AddInstancesOutcome CynosdbClient::AddInstances(const AddInstancesRequest &request)
 {
     auto outcome = MakeRequest(request, "AddInstances");
@@ -1108,6 +1151,92 @@ CynosdbClient::OfflineInstanceOutcomeCallable CynosdbClient::OfflineInstanceCall
         [this, request]()
         {
             return this->OfflineInstance(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CynosdbClient::PauseServerlessOutcome CynosdbClient::PauseServerless(const PauseServerlessRequest &request)
+{
+    auto outcome = MakeRequest(request, "PauseServerless");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        PauseServerlessResponse rsp = PauseServerlessResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return PauseServerlessOutcome(rsp);
+        else
+            return PauseServerlessOutcome(o.GetError());
+    }
+    else
+    {
+        return PauseServerlessOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::PauseServerlessAsync(const PauseServerlessRequest& request, const PauseServerlessAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->PauseServerless(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::PauseServerlessOutcomeCallable CynosdbClient::PauseServerlessCallable(const PauseServerlessRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<PauseServerlessOutcome()>>(
+        [this, request]()
+        {
+            return this->PauseServerless(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CynosdbClient::ResumeServerlessOutcome CynosdbClient::ResumeServerless(const ResumeServerlessRequest &request)
+{
+    auto outcome = MakeRequest(request, "ResumeServerless");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ResumeServerlessResponse rsp = ResumeServerlessResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ResumeServerlessOutcome(rsp);
+        else
+            return ResumeServerlessOutcome(o.GetError());
+    }
+    else
+    {
+        return ResumeServerlessOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::ResumeServerlessAsync(const ResumeServerlessRequest& request, const ResumeServerlessAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ResumeServerless(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::ResumeServerlessOutcomeCallable CynosdbClient::ResumeServerlessCallable(const ResumeServerlessRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ResumeServerlessOutcome()>>(
+        [this, request]()
+        {
+            return this->ResumeServerless(request);
         }
     );
 
