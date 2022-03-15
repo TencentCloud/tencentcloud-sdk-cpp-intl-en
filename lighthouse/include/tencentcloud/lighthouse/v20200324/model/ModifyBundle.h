@@ -114,6 +114,28 @@ namespace TencentCloud
                      */
                     bool BundleHasBeenSet() const;
 
+                    /**
+                     * 获取The reason of package changing failure. It’s empty if the package change status is `AVAILABLE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return NotSupportModifyMessage The reason of package changing failure. It’s empty if the package change status is `AVAILABLE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetNotSupportModifyMessage() const;
+
+                    /**
+                     * 设置The reason of package changing failure. It’s empty if the package change status is `AVAILABLE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param NotSupportModifyMessage The reason of package changing failure. It’s empty if the package change status is `AVAILABLE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetNotSupportModifyMessage(const std::string& _notSupportModifyMessage);
+
+                    /**
+                     * 判断参数 NotSupportModifyMessage 是否已赋值
+                     * @return NotSupportModifyMessage 是否已赋值
+                     */
+                    bool NotSupportModifyMessageHasBeenSet() const;
+
                 private:
 
                     /**
@@ -136,6 +158,13 @@ namespace TencentCloud
                      */
                     Bundle m_bundle;
                     bool m_bundleHasBeenSet;
+
+                    /**
+                     * The reason of package changing failure. It’s empty if the package change status is `AVAILABLE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_notSupportModifyMessage;
+                    bool m_notSupportModifyMessageHasBeenSet;
 
                 };
             }

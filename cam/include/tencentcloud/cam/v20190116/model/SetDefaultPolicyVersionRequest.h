@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool PolicyIdHasBeenSet() const;
 
                     /**
-                     * 获取Policy version ID
-                     * @return VersionId Policy version ID
+                     * 获取Policy version, which can be obtained through `ListPolicyVersions`.
+                     * @return VersionId Policy version, which can be obtained through `ListPolicyVersions`.
                      */
                     uint64_t GetVersionId() const;
 
                     /**
-                     * 设置Policy version ID
-                     * @param VersionId Policy version ID
+                     * 设置Policy version, which can be obtained through `ListPolicyVersions`.
+                     * @param VersionId Policy version, which can be obtained through `ListPolicyVersions`.
                      */
                     void SetVersionId(const uint64_t& _versionId);
 
@@ -87,7 +87,7 @@ namespace TencentCloud
                     bool m_policyIdHasBeenSet;
 
                     /**
-                     * Policy version ID
+                     * Policy version, which can be obtained through `ListPolicyVersions`.
                      */
                     uint64_t m_versionId;
                     bool m_versionIdHasBeenSet;

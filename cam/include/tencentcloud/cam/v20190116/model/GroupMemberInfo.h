@@ -137,14 +137,14 @@ namespace TencentCloud
                     bool CountryCodeHasBeenSet() const;
 
                     /**
-                     * 获取If mobile number has been verified
-                     * @return PhoneFlag If mobile number has been verified
+                     * 获取Whether the mobile phone has been verified. `0`: No; `1`: Yes.
+                     * @return PhoneFlag Whether the mobile phone has been verified. `0`: No; `1`: Yes.
                      */
                     uint64_t GetPhoneFlag() const;
 
                     /**
-                     * 设置If mobile number has been verified
-                     * @param PhoneFlag If mobile number has been verified
+                     * 设置Whether the mobile phone has been verified. `0`: No; `1`: Yes.
+                     * @param PhoneFlag Whether the mobile phone has been verified. `0`: No; `1`: Yes.
                      */
                     void SetPhoneFlag(const uint64_t& _phoneFlag);
 
@@ -173,14 +173,14 @@ namespace TencentCloud
                     bool EmailHasBeenSet() const;
 
                     /**
-                     * 获取If email has been verified
-                     * @return EmailFlag If email has been verified
+                     * 获取Whether the email has been verified. `0`: No; `1`: Yes.
+                     * @return EmailFlag Whether the email has been verified. `0`: No; `1`: Yes.
                      */
                     uint64_t GetEmailFlag() const;
 
                     /**
-                     * 设置If email has been verified
-                     * @param EmailFlag If email has been verified
+                     * 设置Whether the email has been verified. `0`: No; `1`: Yes.
+                     * @param EmailFlag Whether the email has been verified. `0`: No; `1`: Yes.
                      */
                     void SetEmailFlag(const uint64_t& _emailFlag);
 
@@ -191,14 +191,14 @@ namespace TencentCloud
                     bool EmailFlagHasBeenSet() const;
 
                     /**
-                     * 获取User type
-                     * @return UserType User type
+                     * 获取User type. `1`: Global collaborator; `2`: Project collaborator; `3`: Message recipient.
+                     * @return UserType User type. `1`: Global collaborator; `2`: Project collaborator; `3`: Message recipient.
                      */
                     uint64_t GetUserType() const;
 
                     /**
-                     * 设置User type
-                     * @param UserType User type
+                     * 设置User type. `1`: Global collaborator; `2`: Project collaborator; `3`: Message recipient.
+                     * @param UserType User type. `1`: Global collaborator; `2`: Project collaborator; `3`: Message recipient.
                      */
                     void SetUserType(const uint64_t& _userType);
 
@@ -227,14 +227,14 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取If the user is the main message recipient
-                     * @return IsReceiverOwner If the user is the main message recipient
+                     * 获取Whether the user is the primary message recipient. `0`: No; `1`: Yes.
+                     * @return IsReceiverOwner Whether the user is the primary message recipient. `0`: No; `1`: Yes.
                      */
                     uint64_t GetIsReceiverOwner() const;
 
                     /**
-                     * 设置If the user is the main message recipient
-                     * @param IsReceiverOwner If the user is the main message recipient
+                     * 设置Whether the user is the primary message recipient. `0`: No; `1`: Yes.
+                     * @param IsReceiverOwner Whether the user is the primary message recipient. `0`: No; `1`: Yes.
                      */
                     void SetIsReceiverOwner(const uint64_t& _isReceiverOwner);
 
@@ -277,7 +277,7 @@ namespace TencentCloud
                     bool m_countryCodeHasBeenSet;
 
                     /**
-                     * If mobile number has been verified
+                     * Whether the mobile phone has been verified. `0`: No; `1`: Yes.
                      */
                     uint64_t m_phoneFlag;
                     bool m_phoneFlagHasBeenSet;
@@ -289,13 +289,13 @@ namespace TencentCloud
                     bool m_emailHasBeenSet;
 
                     /**
-                     * If email has been verified
+                     * Whether the email has been verified. `0`: No; `1`: Yes.
                      */
                     uint64_t m_emailFlag;
                     bool m_emailFlagHasBeenSet;
 
                     /**
-                     * User type
+                     * User type. `1`: Global collaborator; `2`: Project collaborator; `3`: Message recipient.
                      */
                     uint64_t m_userType;
                     bool m_userTypeHasBeenSet;
@@ -307,7 +307,7 @@ namespace TencentCloud
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * If the user is the main message recipient
+                     * Whether the user is the primary message recipient. `0`: No; `1`: Yes.
                      */
                     uint64_t m_isReceiverOwner;
                     bool m_isReceiverOwnerHasBeenSet;

@@ -81,7 +81,9 @@ namespace TencentCloud
 
                     /**
                      * 获取Sub-user remarks
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Remark Sub-user remarks
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetRemark() const;
 
@@ -92,8 +94,8 @@ namespace TencentCloud
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取If sub-user can log in to the Console
-                     * @return ConsoleLogin If sub-user can log in to the Console
+                     * 获取Whether the sub-user can log in to the console. `0`: No; `1`: Yes.
+                     * @return ConsoleLogin Whether the sub-user can log in to the console. `0`: No; `1`: Yes.
                      */
                     uint64_t GetConsoleLogin() const;
 
@@ -161,12 +163,13 @@ namespace TencentCloud
 
                     /**
                      * Sub-user remarks
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * If sub-user can log in to the Console
+                     * Whether the sub-user can log in to the console. `0`: No; `1`: Yes.
                      */
                     uint64_t m_consoleLogin;
                     bool m_consoleLoginHasBeenSet;

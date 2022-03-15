@@ -212,6 +212,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool CreateTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Nickname.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return NickName Nickname.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetNickName() const;
+
+                    /**
+                     * 设置Nickname.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param NickName Nickname.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetNickName(const std::string& _nickName);
+
+                    /**
+                     * 判断参数 NickName 是否已赋值
+                     * @return NickName 是否已赋值
+                     */
+                    bool NickNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -268,6 +290,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
+
+                    /**
+                     * Nickname.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_nickName;
+                    bool m_nickNameHasBeenSet;
 
                 };
             }

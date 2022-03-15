@@ -56,8 +56,8 @@ namespace TencentCloud
                     bool SAMLMetadataHasBeenSet() const;
 
                     /**
-                     * 获取Status. `0`: not set, `11`: enabled, `2`: disabled.
-                     * @return Status Status. `0`: not set, `11`: enabled, `2`: disabled.
+                     * 获取Status. `0`: not set, `1`: enabled, `2`: disabled.
+                     * @return Status Status. `0`: not set, `1`: enabled, `2`: disabled.
                      */
                     uint64_t GetStatus() const;
 
@@ -76,7 +76,7 @@ namespace TencentCloud
                     bool m_sAMLMetadataHasBeenSet;
 
                     /**
-                     * Status. `0`: not set, `11`: enabled, `2`: disabled.
+                     * Status. `0`: not set, `1`: enabled, `2`: disabled.
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;

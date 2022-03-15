@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Sub-user UID
-                     * @return Uid Sub-user UID
+                     * 获取Sub-user UID. UID is the unique identifier of a user who is a message recipient, while UIN is a unique identifier of a user.
+                     * @return Uid Sub-user UID. UID is the unique identifier of a user who is a message recipient, while UIN is a unique identifier of a user.
                      */
                     uint64_t GetUid() const;
 
                     /**
-                     * 设置Sub-user UID
-                     * @param Uid Sub-user UID
+                     * 设置Sub-user UID. UID is the unique identifier of a user who is a message recipient, while UIN is a unique identifier of a user.
+                     * @param Uid Sub-user UID. UID is the unique identifier of a user who is a message recipient, while UIN is a unique identifier of a user.
                      */
                     void SetUid(const uint64_t& _uid);
 
@@ -209,7 +209,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Sub-user UID
+                     * Sub-user UID. UID is the unique identifier of a user who is a message recipient, while UIN is a unique identifier of a user.
                      */
                     uint64_t m_uid;
                     bool m_uidHasBeenSet;

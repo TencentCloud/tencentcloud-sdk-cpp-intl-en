@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取A parameter used to query the key ID list.
-                     * @return SecretIdList A parameter used to query the key ID list.
+                     * 获取Key ID list query. Up to 10 key IDs can be queried.
+                     * @return SecretIdList Key ID list query. Up to 10 key IDs can be queried.
                      */
                     std::vector<std::string> GetSecretIdList() const;
 
                     /**
-                     * 设置A parameter used to query the key ID list.
-                     * @param SecretIdList A parameter used to query the key ID list.
+                     * 设置Key ID list query. Up to 10 key IDs can be queried.
+                     * @param SecretIdList Key ID list query. Up to 10 key IDs can be queried.
                      */
                     void SetSecretIdList(const std::vector<std::string>& _secretIdList);
 
@@ -63,7 +63,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * A parameter used to query the key ID list.
+                     * Key ID list query. Up to 10 key IDs can be queried.
                      */
                     std::vector<std::string> m_secretIdList;
                     bool m_secretIdListHasBeenSet;

@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool ConsoleLoginHasBeenSet() const;
 
                     /**
-                     * 获取Role ID
-                     * @return RoleId Role ID
+                     * 获取Role ID. Use either `RoleId` or `RoleName` as the input parameter.
+                     * @return RoleId Role ID. Use either `RoleId` or `RoleName` as the input parameter.
                      */
                     int64_t GetRoleId() const;
 
                     /**
-                     * 设置Role ID
-                     * @param RoleId Role ID
+                     * 设置Role ID. Use either `RoleId` or `RoleName` as the input parameter.
+                     * @param RoleId Role ID. Use either `RoleId` or `RoleName` as the input parameter.
                      */
                     void SetRoleId(const int64_t& _roleId);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool RoleIdHasBeenSet() const;
 
                     /**
-                     * 获取Role name
-                     * @return RoleName Role name
+                     * 获取Role name. Use either `RoleId` or `RoleName` as the input parameter.
+                     * @return RoleName Role name. Use either `RoleId` or `RoleName` as the input parameter.
                      */
                     std::string GetRoleName() const;
 
                     /**
-                     * 设置Role name
-                     * @param RoleName Role name
+                     * 设置Role name. Use either `RoleId` or `RoleName` as the input parameter.
+                     * @param RoleName Role name. Use either `RoleId` or `RoleName` as the input parameter.
                      */
                     void SetRoleName(const std::string& _roleName);
 
@@ -105,13 +105,13 @@ namespace TencentCloud
                     bool m_consoleLoginHasBeenSet;
 
                     /**
-                     * Role ID
+                     * Role ID. Use either `RoleId` or `RoleName` as the input parameter.
                      */
                     int64_t m_roleId;
                     bool m_roleIdHasBeenSet;
 
                     /**
-                     * Role name
+                     * Role name. Use either `RoleId` or `RoleName` as the input parameter.
                      */
                     std::string m_roleName;
                     bool m_roleNameHasBeenSet;

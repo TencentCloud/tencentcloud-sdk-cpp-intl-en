@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information on policies associated with the user via the user group.
+                * Information on policies that are associated with the user and inherited from the user group
                 */
                 class AttachedUserPolicyGroupInfo : public AbstractModel
                 {
