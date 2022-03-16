@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Project ID
-                     * @return ProjectId Project ID
+                     * 获取Unique ID of an existing project (instead of a new project).
+                     * @return ProjectId Unique ID of an existing project (instead of a new project).
                      */
                     uint64_t GetProjectId() const;
 
                     /**
-                     * 设置Project ID
-                     * @param ProjectId Project ID
+                     * 设置Unique ID of an existing project (instead of a new project).
+                     * @param ProjectId Unique ID of an existing project (instead of a new project).
                      */
                     void SetProjectId(const uint64_t& _projectId);
 
@@ -87,7 +87,7 @@ namespace TencentCloud
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * Project ID
+                     * Unique ID of an existing project (instead of a new project).
                      */
                     uint64_t m_projectId;
                     bool m_projectIdHasBeenSet;

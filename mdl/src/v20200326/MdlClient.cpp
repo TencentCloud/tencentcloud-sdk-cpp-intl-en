@@ -212,6 +212,49 @@ MdlClient::CreateStreamLivePlanOutcomeCallable MdlClient::CreateStreamLivePlanCa
     return task->get_future();
 }
 
+MdlClient::CreateStreamLiveWatermarkOutcome MdlClient::CreateStreamLiveWatermark(const CreateStreamLiveWatermarkRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateStreamLiveWatermark");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateStreamLiveWatermarkResponse rsp = CreateStreamLiveWatermarkResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateStreamLiveWatermarkOutcome(rsp);
+        else
+            return CreateStreamLiveWatermarkOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateStreamLiveWatermarkOutcome(outcome.GetError());
+    }
+}
+
+void MdlClient::CreateStreamLiveWatermarkAsync(const CreateStreamLiveWatermarkRequest& request, const CreateStreamLiveWatermarkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateStreamLiveWatermark(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdlClient::CreateStreamLiveWatermarkOutcomeCallable MdlClient::CreateStreamLiveWatermarkCallable(const CreateStreamLiveWatermarkRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateStreamLiveWatermarkOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateStreamLiveWatermark(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 MdlClient::DeleteStreamLiveChannelOutcome MdlClient::DeleteStreamLiveChannel(const DeleteStreamLiveChannelRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteStreamLiveChannel");
@@ -377,6 +420,49 @@ MdlClient::DeleteStreamLivePlanOutcomeCallable MdlClient::DeleteStreamLivePlanCa
         [this, request]()
         {
             return this->DeleteStreamLivePlan(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdlClient::DeleteStreamLiveWatermarkOutcome MdlClient::DeleteStreamLiveWatermark(const DeleteStreamLiveWatermarkRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteStreamLiveWatermark");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteStreamLiveWatermarkResponse rsp = DeleteStreamLiveWatermarkResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteStreamLiveWatermarkOutcome(rsp);
+        else
+            return DeleteStreamLiveWatermarkOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteStreamLiveWatermarkOutcome(outcome.GetError());
+    }
+}
+
+void MdlClient::DeleteStreamLiveWatermarkAsync(const DeleteStreamLiveWatermarkRequest& request, const DeleteStreamLiveWatermarkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteStreamLiveWatermark(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdlClient::DeleteStreamLiveWatermarkOutcomeCallable MdlClient::DeleteStreamLiveWatermarkCallable(const DeleteStreamLiveWatermarkRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteStreamLiveWatermarkOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteStreamLiveWatermark(request);
         }
     );
 
@@ -900,6 +986,92 @@ MdlClient::DescribeStreamLiveRegionsOutcomeCallable MdlClient::DescribeStreamLiv
     return task->get_future();
 }
 
+MdlClient::DescribeStreamLiveWatermarkOutcome MdlClient::DescribeStreamLiveWatermark(const DescribeStreamLiveWatermarkRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeStreamLiveWatermark");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeStreamLiveWatermarkResponse rsp = DescribeStreamLiveWatermarkResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeStreamLiveWatermarkOutcome(rsp);
+        else
+            return DescribeStreamLiveWatermarkOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeStreamLiveWatermarkOutcome(outcome.GetError());
+    }
+}
+
+void MdlClient::DescribeStreamLiveWatermarkAsync(const DescribeStreamLiveWatermarkRequest& request, const DescribeStreamLiveWatermarkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeStreamLiveWatermark(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdlClient::DescribeStreamLiveWatermarkOutcomeCallable MdlClient::DescribeStreamLiveWatermarkCallable(const DescribeStreamLiveWatermarkRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeStreamLiveWatermarkOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeStreamLiveWatermark(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdlClient::DescribeStreamLiveWatermarksOutcome MdlClient::DescribeStreamLiveWatermarks(const DescribeStreamLiveWatermarksRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeStreamLiveWatermarks");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeStreamLiveWatermarksResponse rsp = DescribeStreamLiveWatermarksResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeStreamLiveWatermarksOutcome(rsp);
+        else
+            return DescribeStreamLiveWatermarksOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeStreamLiveWatermarksOutcome(outcome.GetError());
+    }
+}
+
+void MdlClient::DescribeStreamLiveWatermarksAsync(const DescribeStreamLiveWatermarksRequest& request, const DescribeStreamLiveWatermarksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeStreamLiveWatermarks(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdlClient::DescribeStreamLiveWatermarksOutcomeCallable MdlClient::DescribeStreamLiveWatermarksCallable(const DescribeStreamLiveWatermarksRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeStreamLiveWatermarksOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeStreamLiveWatermarks(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 MdlClient::ModifyStreamLiveChannelOutcome MdlClient::ModifyStreamLiveChannel(const ModifyStreamLiveChannelRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyStreamLiveChannel");
@@ -1022,6 +1194,49 @@ MdlClient::ModifyStreamLiveInputSecurityGroupOutcomeCallable MdlClient::ModifySt
         [this, request]()
         {
             return this->ModifyStreamLiveInputSecurityGroup(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdlClient::ModifyStreamLiveWatermarkOutcome MdlClient::ModifyStreamLiveWatermark(const ModifyStreamLiveWatermarkRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyStreamLiveWatermark");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyStreamLiveWatermarkResponse rsp = ModifyStreamLiveWatermarkResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyStreamLiveWatermarkOutcome(rsp);
+        else
+            return ModifyStreamLiveWatermarkOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyStreamLiveWatermarkOutcome(outcome.GetError());
+    }
+}
+
+void MdlClient::ModifyStreamLiveWatermarkAsync(const ModifyStreamLiveWatermarkRequest& request, const ModifyStreamLiveWatermarkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyStreamLiveWatermark(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdlClient::ModifyStreamLiveWatermarkOutcomeCallable MdlClient::ModifyStreamLiveWatermarkCallable(const ModifyStreamLiveWatermarkRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyStreamLiveWatermarkOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyStreamLiveWatermark(request);
         }
     );
 

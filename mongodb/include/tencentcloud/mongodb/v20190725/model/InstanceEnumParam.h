@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool EnumValueHasBeenSet() const;
 
                     /**
-                     * 获取Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no)
-                     * @return NeedRestart Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no)
+                     * 获取Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
+                     * @return NeedRestart Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
                      */
                     std::string GetNeedRestart() const;
 
                     /**
-                     * 设置Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no)
-                     * @param NeedRestart Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no)
+                     * 设置Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
+                     * @param NeedRestart Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
                      */
                     void SetNeedRestart(const std::string& _needRestart);
 
@@ -173,14 +173,14 @@ namespace TencentCloud
                     bool ValueTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether the TencentDB for MongoDB console has pulled parameter information successfully. Valid values: `1` (yes), `0` (no, and displays "Loading" in the console)
-                     * @return Status Whether the TencentDB for MongoDB console has pulled parameter information successfully. Valid values: `1` (yes), `0` (no, and displays "Loading" in the console)
+                     * 获取Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
+                     * @return Status Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
                      */
                     uint64_t GetStatus() const;
 
                     /**
-                     * 设置Whether the TencentDB for MongoDB console has pulled parameter information successfully. Valid values: `1` (yes), `0` (no, and displays "Loading" in the console)
-                     * @param Status Whether the TencentDB for MongoDB console has pulled parameter information successfully. Valid values: `1` (yes), `0` (no, and displays "Loading" in the console)
+                     * 设置Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
+                     * @param Status Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
                      */
                     void SetStatus(const uint64_t& _status);
 
@@ -211,7 +211,7 @@ namespace TencentCloud
                     bool m_enumValueHasBeenSet;
 
                     /**
-                     * Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no)
+                     * Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
                      */
                     std::string m_needRestart;
                     bool m_needRestartHasBeenSet;
@@ -235,7 +235,7 @@ namespace TencentCloud
                     bool m_valueTypeHasBeenSet;
 
                     /**
-                     * Whether the TencentDB for MongoDB console has pulled parameter information successfully. Valid values: `1` (yes), `0` (no, and displays "Loading" in the console)
+                     * Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;

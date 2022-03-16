@@ -769,6 +769,48 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
                      */
                     bool StartupProbeHasBeenSet() const;
 
+                    /**
+                     * 获取The version of the operating system
+If `openjdk` is selected, the value can be: 
+- ALPINE
+- CENTOS
+If `konajdk` is selected, the value can be: 
+- ALPINE
+- TENCENTOS
+                     * @return OsFlavour The version of the operating system
+If `openjdk` is selected, the value can be: 
+- ALPINE
+- CENTOS
+If `konajdk` is selected, the value can be: 
+- ALPINE
+- TENCENTOS
+                     */
+                    std::string GetOsFlavour() const;
+
+                    /**
+                     * 设置The version of the operating system
+If `openjdk` is selected, the value can be: 
+- ALPINE
+- CENTOS
+If `konajdk` is selected, the value can be: 
+- ALPINE
+- TENCENTOS
+                     * @param OsFlavour The version of the operating system
+If `openjdk` is selected, the value can be: 
+- ALPINE
+- CENTOS
+If `konajdk` is selected, the value can be: 
+- ALPINE
+- TENCENTOS
+                     */
+                    void SetOsFlavour(const std::string& _osFlavour);
+
+                    /**
+                     * 判断参数 OsFlavour 是否已赋值
+                     * @return OsFlavour 是否已赋值
+                     */
+                    bool OsFlavourHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1006,6 +1048,18 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
                      */
                     HealthCheckConfig m_startupProbe;
                     bool m_startupProbeHasBeenSet;
+
+                    /**
+                     * The version of the operating system
+If `openjdk` is selected, the value can be: 
+- ALPINE
+- CENTOS
+If `konajdk` is selected, the value can be: 
+- ALPINE
+- TENCENTOS
+                     */
+                    std::string m_osFlavour;
+                    bool m_osFlavourHasBeenSet;
 
                 };
             }

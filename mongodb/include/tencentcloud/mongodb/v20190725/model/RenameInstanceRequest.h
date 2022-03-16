@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance name
-                     * @return NewName Instance name
+                     * 获取Custom name of the instance, which can contain up to 60 letters, digits, or symbols (_-)
+                     * @return NewName Custom name of the instance, which can contain up to 60 letters, digits, or symbols (_-)
                      */
                     std::string GetNewName() const;
 
                     /**
-                     * 设置Instance name
-                     * @param NewName Instance name
+                     * 设置Custom name of the instance, which can contain up to 60 letters, digits, or symbols (_-)
+                     * @param NewName Custom name of the instance, which can contain up to 60 letters, digits, or symbols (_-)
                      */
                     void SetNewName(const std::string& _newName);
 
@@ -87,7 +87,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Instance name
+                     * Custom name of the instance, which can contain up to 60 letters, digits, or symbols (_-)
                      */
                     std::string m_newName;
                     bool m_newNameHasBeenSet;

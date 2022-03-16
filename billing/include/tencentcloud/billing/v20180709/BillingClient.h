@@ -37,6 +37,10 @@
 #include <tencentcloud/billing/v20180709/model/DescribeBillSummaryByRegionResponse.h>
 #include <tencentcloud/billing/v20180709/model/DescribeBillSummaryByTagRequest.h>
 #include <tencentcloud/billing/v20180709/model/DescribeBillSummaryByTagResponse.h>
+#include <tencentcloud/billing/v20180709/model/DescribeVoucherInfoRequest.h>
+#include <tencentcloud/billing/v20180709/model/DescribeVoucherInfoResponse.h>
+#include <tencentcloud/billing/v20180709/model/DescribeVoucherUsageDetailsRequest.h>
+#include <tencentcloud/billing/v20180709/model/DescribeVoucherUsageDetailsResponse.h>
 
 
 namespace TencentCloud
@@ -72,6 +76,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeBillSummaryByTagResponse> DescribeBillSummaryByTagOutcome;
                 typedef std::future<DescribeBillSummaryByTagOutcome> DescribeBillSummaryByTagOutcomeCallable;
                 typedef std::function<void(const BillingClient*, const Model::DescribeBillSummaryByTagRequest&, DescribeBillSummaryByTagOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBillSummaryByTagAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeVoucherInfoResponse> DescribeVoucherInfoOutcome;
+                typedef std::future<DescribeVoucherInfoOutcome> DescribeVoucherInfoOutcomeCallable;
+                typedef std::function<void(const BillingClient*, const Model::DescribeVoucherInfoRequest&, DescribeVoucherInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVoucherInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeVoucherUsageDetailsResponse> DescribeVoucherUsageDetailsOutcome;
+                typedef std::future<DescribeVoucherUsageDetailsOutcome> DescribeVoucherUsageDetailsOutcomeCallable;
+                typedef std::function<void(const BillingClient*, const Model::DescribeVoucherUsageDetailsRequest&, DescribeVoucherUsageDetailsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVoucherUsageDetailsAsyncHandler;
 
 
 
@@ -137,6 +147,24 @@ namespace TencentCloud
                 DescribeBillSummaryByTagOutcome DescribeBillSummaryByTag(const Model::DescribeBillSummaryByTagRequest &request);
                 void DescribeBillSummaryByTagAsync(const Model::DescribeBillSummaryByTagRequest& request, const DescribeBillSummaryByTagAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeBillSummaryByTagOutcomeCallable DescribeBillSummaryByTagCallable(const Model::DescribeBillSummaryByTagRequest& request);
+
+                /**
+                 *This API is used to query vouchers.
+                 * @param req DescribeVoucherInfoRequest
+                 * @return DescribeVoucherInfoOutcome
+                 */
+                DescribeVoucherInfoOutcome DescribeVoucherInfo(const Model::DescribeVoucherInfoRequest &request);
+                void DescribeVoucherInfoAsync(const Model::DescribeVoucherInfoRequest& request, const DescribeVoucherInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeVoucherInfoOutcomeCallable DescribeVoucherInfoCallable(const Model::DescribeVoucherInfoRequest& request);
+
+                /**
+                 *This API is used to query voucher usage details.
+                 * @param req DescribeVoucherUsageDetailsRequest
+                 * @return DescribeVoucherUsageDetailsOutcome
+                 */
+                DescribeVoucherUsageDetailsOutcome DescribeVoucherUsageDetails(const Model::DescribeVoucherUsageDetailsRequest &request);
+                void DescribeVoucherUsageDetailsAsync(const Model::DescribeVoucherUsageDetailsRequest& request, const DescribeVoucherUsageDetailsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeVoucherUsageDetailsOutcomeCallable DescribeVoucherUsageDetailsCallable(const Model::DescribeVoucherUsageDetailsRequest& request);
 
             };
         }

@@ -23,6 +23,8 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/dcdb/v20180411/model/ActiveHourDCDBInstanceRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/ActiveHourDCDBInstanceResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/AssociateSecurityGroupsRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/AssociateSecurityGroupsResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/CancelDcnJobRequest.h>
@@ -35,6 +37,8 @@
 #include <tencentcloud/dcdb/v20180411/model/CopyAccountPrivilegesResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/CreateAccountRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/CreateAccountResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/CreateHourDCDBInstanceRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/CreateHourDCDBInstanceResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/DeleteAccountRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/DeleteAccountResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeAccountPrivilegesRequest.h>
@@ -83,6 +87,8 @@
 #include <tencentcloud/dcdb/v20180411/model/GrantAccountPrivilegesResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/InitDCDBInstancesRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/InitDCDBInstancesResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/IsolateHourDCDBInstanceRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/IsolateHourDCDBInstanceResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/ModifyAccountDescriptionRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/ModifyAccountDescriptionResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/ModifyDBInstanceSecurityGroupsRequest.h>
@@ -113,6 +119,9 @@ namespace TencentCloud
                 DcdbClient(const Credential &credential, const std::string &region);
                 DcdbClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
+                typedef Outcome<Core::Error, Model::ActiveHourDCDBInstanceResponse> ActiveHourDCDBInstanceOutcome;
+                typedef std::future<ActiveHourDCDBInstanceOutcome> ActiveHourDCDBInstanceOutcomeCallable;
+                typedef std::function<void(const DcdbClient*, const Model::ActiveHourDCDBInstanceRequest&, ActiveHourDCDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ActiveHourDCDBInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::AssociateSecurityGroupsResponse> AssociateSecurityGroupsOutcome;
                 typedef std::future<AssociateSecurityGroupsOutcome> AssociateSecurityGroupsOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::AssociateSecurityGroupsRequest&, AssociateSecurityGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AssociateSecurityGroupsAsyncHandler;
@@ -131,6 +140,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateAccountResponse> CreateAccountOutcome;
                 typedef std::future<CreateAccountOutcome> CreateAccountOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::CreateAccountRequest&, CreateAccountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAccountAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateHourDCDBInstanceResponse> CreateHourDCDBInstanceOutcome;
+                typedef std::future<CreateHourDCDBInstanceOutcome> CreateHourDCDBInstanceOutcomeCallable;
+                typedef std::function<void(const DcdbClient*, const Model::CreateHourDCDBInstanceRequest&, CreateHourDCDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateHourDCDBInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteAccountResponse> DeleteAccountOutcome;
                 typedef std::future<DeleteAccountOutcome> DeleteAccountOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::DeleteAccountRequest&, DeleteAccountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAccountAsyncHandler;
@@ -203,6 +215,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::InitDCDBInstancesResponse> InitDCDBInstancesOutcome;
                 typedef std::future<InitDCDBInstancesOutcome> InitDCDBInstancesOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::InitDCDBInstancesRequest&, InitDCDBInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InitDCDBInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::IsolateHourDCDBInstanceResponse> IsolateHourDCDBInstanceOutcome;
+                typedef std::future<IsolateHourDCDBInstanceOutcome> IsolateHourDCDBInstanceOutcomeCallable;
+                typedef std::function<void(const DcdbClient*, const Model::IsolateHourDCDBInstanceRequest&, IsolateHourDCDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> IsolateHourDCDBInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyAccountDescriptionResponse> ModifyAccountDescriptionOutcome;
                 typedef std::future<ModifyAccountDescriptionOutcome> ModifyAccountDescriptionOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::ModifyAccountDescriptionRequest&, ModifyAccountDescriptionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAccountDescriptionAsyncHandler;
@@ -229,6 +244,15 @@ namespace TencentCloud
                 typedef std::function<void(const DcdbClient*, const Model::SwitchDBInstanceHARequest&, SwitchDBInstanceHAOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SwitchDBInstanceHAAsyncHandler;
 
 
+
+                /**
+                 *This API is used to remove the isolation of pay-as-you-go TDSQL for MySQL instances.
+                 * @param req ActiveHourDCDBInstanceRequest
+                 * @return ActiveHourDCDBInstanceOutcome
+                 */
+                ActiveHourDCDBInstanceOutcome ActiveHourDCDBInstance(const Model::ActiveHourDCDBInstanceRequest &request);
+                void ActiveHourDCDBInstanceAsync(const Model::ActiveHourDCDBInstanceRequest& request, const ActiveHourDCDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ActiveHourDCDBInstanceOutcomeCallable ActiveHourDCDBInstanceCallable(const Model::ActiveHourDCDBInstanceRequest& request);
 
                 /**
                  *This API is used to associate security groups with Tencent Cloud resources in batches.
@@ -284,6 +308,15 @@ Note: Accounts with the same username but different hosts are different accounts
                 CreateAccountOutcome CreateAccount(const Model::CreateAccountRequest &request);
                 void CreateAccountAsync(const Model::CreateAccountRequest& request, const CreateAccountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateAccountOutcomeCallable CreateAccountCallable(const Model::CreateAccountRequest& request);
+
+                /**
+                 *This API is used to create pay-as-you-go TDSQL for MySQL instances.
+                 * @param req CreateHourDCDBInstanceRequest
+                 * @return CreateHourDCDBInstanceOutcome
+                 */
+                CreateHourDCDBInstanceOutcome CreateHourDCDBInstance(const Model::CreateHourDCDBInstanceRequest &request);
+                void CreateHourDCDBInstanceAsync(const Model::CreateHourDCDBInstanceRequest& request, const CreateHourDCDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateHourDCDBInstanceOutcomeCallable CreateHourDCDBInstanceCallable(const Model::CreateHourDCDBInstanceRequest& request);
 
                 /**
                  *This API is used to delete a TencentDB account, which is uniquely identified by username and host.
@@ -503,6 +536,15 @@ Note: accounts with the same username but different hosts are different accounts
                 InitDCDBInstancesOutcome InitDCDBInstances(const Model::InitDCDBInstancesRequest &request);
                 void InitDCDBInstancesAsync(const Model::InitDCDBInstancesRequest& request, const InitDCDBInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 InitDCDBInstancesOutcomeCallable InitDCDBInstancesCallable(const Model::InitDCDBInstancesRequest& request);
+
+                /**
+                 *This API is used to isolate pay-as-you-go TDSQL for MySQL instances.
+                 * @param req IsolateHourDCDBInstanceRequest
+                 * @return IsolateHourDCDBInstanceOutcome
+                 */
+                IsolateHourDCDBInstanceOutcome IsolateHourDCDBInstance(const Model::IsolateHourDCDBInstanceRequest &request);
+                void IsolateHourDCDBInstanceAsync(const Model::IsolateHourDCDBInstanceRequest& request, const IsolateHourDCDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                IsolateHourDCDBInstanceOutcomeCallable IsolateHourDCDBInstanceCallable(const Model::IsolateHourDCDBInstanceRequest& request);
 
                 /**
                  *This API is used to modify the remarks of a TencentDB account.

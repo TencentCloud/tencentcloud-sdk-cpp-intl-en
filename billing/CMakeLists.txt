@@ -19,6 +19,7 @@ set(billing_public_header
   )
 
 set(billing_public_header_model
+  include/tencentcloud/billing/v20180709/model/UsageDetails.h
   include/tencentcloud/billing/v20180709/model/DescribeBillSummaryByTagResponse.h
   include/tencentcloud/billing/v20180709/model/DescribeBillSummaryByPayModeResponse.h
   include/tencentcloud/billing/v20180709/model/BillResourceSummary.h
@@ -26,29 +27,38 @@ set(billing_public_header_model
   include/tencentcloud/billing/v20180709/model/DescribeBillSummaryByProductResponse.h
   include/tencentcloud/billing/v20180709/model/BillTagInfo.h
   include/tencentcloud/billing/v20180709/model/DescribeBillSummaryByRegionResponse.h
-  include/tencentcloud/billing/v20180709/model/DescribeBillDetailRequest.h
   include/tencentcloud/billing/v20180709/model/RegionSummaryOverviewItem.h
+  include/tencentcloud/billing/v20180709/model/DescribeBillDetailRequest.h
+  include/tencentcloud/billing/v20180709/model/DescribeVoucherInfoResponse.h
+  include/tencentcloud/billing/v20180709/model/VoucherInfos.h
   include/tencentcloud/billing/v20180709/model/BusinessSummaryOverviewItem.h
   include/tencentcloud/billing/v20180709/model/BillDetailComponent.h
   include/tencentcloud/billing/v20180709/model/DescribeBillSummaryByRegionRequest.h
   include/tencentcloud/billing/v20180709/model/DescribeBillSummaryByPayModeRequest.h
+  include/tencentcloud/billing/v20180709/model/UsageRecords.h
   include/tencentcloud/billing/v20180709/model/DescribeBillResourceSummaryResponse.h
   include/tencentcloud/billing/v20180709/model/ActionSummaryOverviewItem.h
+  include/tencentcloud/billing/v20180709/model/DescribeVoucherInfoRequest.h
+  include/tencentcloud/billing/v20180709/model/ApplicableProducts.h
   include/tencentcloud/billing/v20180709/model/DescribeBillSummaryByProjectRequest.h
+  include/tencentcloud/billing/v20180709/model/DescribeVoucherUsageDetailsRequest.h
   include/tencentcloud/billing/v20180709/model/DescribeBillResourceSummaryRequest.h
   include/tencentcloud/billing/v20180709/model/DescribeBillSummaryByProductRequest.h
+  include/tencentcloud/billing/v20180709/model/SummaryTotal.h
   include/tencentcloud/billing/v20180709/model/BillDetail.h
   include/tencentcloud/billing/v20180709/model/TagSummaryOverviewItem.h
   include/tencentcloud/billing/v20180709/model/ProjectSummaryOverviewItem.h
   include/tencentcloud/billing/v20180709/model/DescribeBillDetailResponse.h
+  include/tencentcloud/billing/v20180709/model/DescribeVoucherUsageDetailsResponse.h
   include/tencentcloud/billing/v20180709/model/DescribeBillSummaryByProjectResponse.h
-  include/tencentcloud/billing/v20180709/model/SummaryTotal.h
+  include/tencentcloud/billing/v20180709/model/ExcludedProducts.h
   include/tencentcloud/billing/v20180709/model/PayModeSummaryOverviewItem.h
   include/tencentcloud/billing/v20180709/model/BusinessSummaryTotal.h
   )
 
 set(billing_src
   src/v20180709/BillingClient.cpp
+  src/v20180709/model/UsageDetails.cpp
   src/v20180709/model/DescribeBillSummaryByTagResponse.cpp
   src/v20180709/model/DescribeBillSummaryByPayModeResponse.cpp
   src/v20180709/model/BillResourceSummary.cpp
@@ -56,23 +66,31 @@ set(billing_src
   src/v20180709/model/DescribeBillSummaryByProductResponse.cpp
   src/v20180709/model/BillTagInfo.cpp
   src/v20180709/model/DescribeBillSummaryByRegionResponse.cpp
-  src/v20180709/model/DescribeBillDetailRequest.cpp
   src/v20180709/model/RegionSummaryOverviewItem.cpp
+  src/v20180709/model/DescribeBillDetailRequest.cpp
+  src/v20180709/model/DescribeVoucherInfoResponse.cpp
+  src/v20180709/model/VoucherInfos.cpp
   src/v20180709/model/BusinessSummaryOverviewItem.cpp
   src/v20180709/model/BillDetailComponent.cpp
   src/v20180709/model/DescribeBillSummaryByRegionRequest.cpp
   src/v20180709/model/DescribeBillSummaryByPayModeRequest.cpp
+  src/v20180709/model/UsageRecords.cpp
   src/v20180709/model/DescribeBillResourceSummaryResponse.cpp
   src/v20180709/model/ActionSummaryOverviewItem.cpp
+  src/v20180709/model/DescribeVoucherInfoRequest.cpp
+  src/v20180709/model/ApplicableProducts.cpp
   src/v20180709/model/DescribeBillSummaryByProjectRequest.cpp
+  src/v20180709/model/DescribeVoucherUsageDetailsRequest.cpp
   src/v20180709/model/DescribeBillResourceSummaryRequest.cpp
   src/v20180709/model/DescribeBillSummaryByProductRequest.cpp
+  src/v20180709/model/SummaryTotal.cpp
   src/v20180709/model/BillDetail.cpp
   src/v20180709/model/TagSummaryOverviewItem.cpp
   src/v20180709/model/ProjectSummaryOverviewItem.cpp
   src/v20180709/model/DescribeBillDetailResponse.cpp
+  src/v20180709/model/DescribeVoucherUsageDetailsResponse.cpp
   src/v20180709/model/DescribeBillSummaryByProjectResponse.cpp
-  src/v20180709/model/SummaryTotal.cpp
+  src/v20180709/model/ExcludedProducts.cpp
   src/v20180709/model/PayModeSummaryOverviewItem.cpp
   src/v20180709/model/BusinessSummaryTotal.cpp
   )

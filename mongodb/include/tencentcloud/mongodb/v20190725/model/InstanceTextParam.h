@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Current value (not in use)
-                     * @return CurrentValue Current value (not in use)
+                     * 获取Current value
+                     * @return CurrentValue Current value
                      */
                     std::string GetCurrentValue() const;
 
                     /**
-                     * 设置Current value (not in use)
-                     * @param CurrentValue Current value (not in use)
+                     * 设置Current value
+                     * @param CurrentValue Current value
                      */
                     void SetCurrentValue(const std::string& _currentValue);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool CurrentValueHasBeenSet() const;
 
                     /**
-                     * 获取Default value (not in use)
-                     * @return DefaultValue Default value (not in use)
+                     * 获取Default value
+                     * @return DefaultValue Default value
                      */
                     std::string GetDefaultValue() const;
 
                     /**
-                     * 设置Default value (not in use)
-                     * @param DefaultValue Default value (not in use)
+                     * 设置Default value
+                     * @param DefaultValue Default value
                      */
                     void SetDefaultValue(const std::string& _defaultValue);
 
@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool DefaultValueHasBeenSet() const;
 
                     /**
-                     * 获取Whether to restart the instance for the parameter to take effect (not in use)
-                     * @return NeedRestart Whether to restart the instance for the parameter to take effect (not in use)
+                     * 获取Whether to restart the instance for the parameter to take effect
+                     * @return NeedRestart Whether to restart the instance for the parameter to take effect
                      */
                     std::string GetNeedRestart() const;
 
                     /**
-                     * 设置Whether to restart the instance for the parameter to take effect (not in use)
-                     * @param NeedRestart Whether to restart the instance for the parameter to take effect (not in use)
+                     * 设置Whether to restart the instance for the parameter to take effect
+                     * @param NeedRestart Whether to restart the instance for the parameter to take effect
                      */
                     void SetNeedRestart(const std::string& _needRestart);
 
@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool NeedRestartHasBeenSet() const;
 
                     /**
-                     * 获取Parameter name (not in use)
-                     * @return ParamName Parameter name (not in use)
+                     * 获取Parameter name
+                     * @return ParamName Parameter name
                      */
                     std::string GetParamName() const;
 
                     /**
-                     * 设置Parameter name (not in use)
-                     * @param ParamName Parameter name (not in use)
+                     * 设置Parameter name
+                     * @param ParamName Parameter name
                      */
                     void SetParamName(const std::string& _paramName);
 
@@ -119,14 +119,14 @@ namespace TencentCloud
                     bool ParamNameHasBeenSet() const;
 
                     /**
-                     * 获取Acceptable values (not in use)
-                     * @return TextValue Acceptable values (not in use)
+                     * 获取Value of a text parameter
+                     * @return TextValue Value of a text parameter
                      */
                     std::string GetTextValue() const;
 
                     /**
-                     * 设置Acceptable values (not in use)
-                     * @param TextValue Acceptable values (not in use)
+                     * 设置Value of a text parameter
+                     * @param TextValue Value of a text parameter
                      */
                     void SetTextValue(const std::string& _textValue);
 
@@ -137,14 +137,14 @@ namespace TencentCloud
                     bool TextValueHasBeenSet() const;
 
                     /**
-                     * 获取Parameter description (not in use)
-                     * @return Tips Parameter description (not in use)
+                     * 获取Parameter description
+                     * @return Tips Parameter description
                      */
                     std::vector<std::string> GetTips() const;
 
                     /**
-                     * 设置Parameter description (not in use)
-                     * @param Tips Parameter description (not in use)
+                     * 设置Parameter description
+                     * @param Tips Parameter description
                      */
                     void SetTips(const std::vector<std::string>& _tips);
 
@@ -155,14 +155,14 @@ namespace TencentCloud
                     bool TipsHasBeenSet() const;
 
                     /**
-                     * 获取Data type of the parameter (not in use)
-                     * @return ValueType Data type of the parameter (not in use)
+                     * 获取Value type
+                     * @return ValueType Value type
                      */
                     std::string GetValueType() const;
 
                     /**
-                     * 设置Data type of the parameter (not in use)
-                     * @param ValueType Data type of the parameter (not in use)
+                     * 设置Value type
+                     * @param ValueType Value type
                      */
                     void SetValueType(const std::string& _valueType);
 
@@ -173,14 +173,14 @@ namespace TencentCloud
                     bool ValueTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether the TencentDB for MongoDB console has pulled parameter information successfully (not in use)
-                     * @return Status Whether the TencentDB for MongoDB console has pulled parameter information successfully (not in use)
+                     * 获取Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
+                     * @return Status Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Whether the TencentDB for MongoDB console has pulled parameter information successfully (not in use)
-                     * @param Status Whether the TencentDB for MongoDB console has pulled parameter information successfully (not in use)
+                     * 设置Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
+                     * @param Status Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
                      */
                     void SetStatus(const std::string& _status);
 
@@ -193,49 +193,49 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Current value (not in use)
+                     * Current value
                      */
                     std::string m_currentValue;
                     bool m_currentValueHasBeenSet;
 
                     /**
-                     * Default value (not in use)
+                     * Default value
                      */
                     std::string m_defaultValue;
                     bool m_defaultValueHasBeenSet;
 
                     /**
-                     * Whether to restart the instance for the parameter to take effect (not in use)
+                     * Whether to restart the instance for the parameter to take effect
                      */
                     std::string m_needRestart;
                     bool m_needRestartHasBeenSet;
 
                     /**
-                     * Parameter name (not in use)
+                     * Parameter name
                      */
                     std::string m_paramName;
                     bool m_paramNameHasBeenSet;
 
                     /**
-                     * Acceptable values (not in use)
+                     * Value of a text parameter
                      */
                     std::string m_textValue;
                     bool m_textValueHasBeenSet;
 
                     /**
-                     * Parameter description (not in use)
+                     * Parameter description
                      */
                     std::vector<std::string> m_tips;
                     bool m_tipsHasBeenSet;
 
                     /**
-                     * Data type of the parameter (not in use)
+                     * Value type
                      */
                     std::string m_valueType;
                     bool m_valueTypeHasBeenSet;
 
                     /**
-                     * Whether the TencentDB for MongoDB console has pulled parameter information successfully (not in use)
+                     * Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

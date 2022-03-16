@@ -119,14 +119,14 @@ namespace TencentCloud
                     bool MinHasBeenSet() const;
 
                     /**
-                     * 获取Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no)
-                     * @return NeedRestart Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no)
+                     * 获取Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
+                     * @return NeedRestart Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
                      */
                     std::string GetNeedRestart() const;
 
                     /**
-                     * 设置Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no)
-                     * @param NeedRestart Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no)
+                     * 设置Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
+                     * @param NeedRestart Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
                      */
                     void SetNeedRestart(const std::string& _needRestart);
 
@@ -191,14 +191,14 @@ namespace TencentCloud
                     bool ValueTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether the TencentDB for MongoDB console has pulled parameter information successfully. Valid values: `1` (no), `0` (yes). This field is only used in the console.
-                     * @return Status Whether the TencentDB for MongoDB console has pulled parameter information successfully. Valid values: `1` (no), `0` (yes). This field is only used in the console.
+                     * 获取Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
+                     * @return Status Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
                      */
                     uint64_t GetStatus() const;
 
                     /**
-                     * 设置Whether the TencentDB for MongoDB console has pulled parameter information successfully. Valid values: `1` (no), `0` (yes). This field is only used in the console.
-                     * @param Status Whether the TencentDB for MongoDB console has pulled parameter information successfully. Valid values: `1` (no), `0` (yes). This field is only used in the console.
+                     * 设置Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
+                     * @param Status Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
                      */
                     void SetStatus(const uint64_t& _status);
 
@@ -209,14 +209,14 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取This field is not in use
-                     * @return Unit This field is not in use
+                     * 获取Redundant field which can be ignored
+                     * @return Unit Redundant field which can be ignored
                      */
                     std::string GetUnit() const;
 
                     /**
-                     * 设置This field is not in use
-                     * @param Unit This field is not in use
+                     * 设置Redundant field which can be ignored
+                     * @param Unit Redundant field which can be ignored
                      */
                     void SetUnit(const std::string& _unit);
 
@@ -253,7 +253,7 @@ namespace TencentCloud
                     bool m_minHasBeenSet;
 
                     /**
-                     * Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no)
+                     * Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
                      */
                     std::string m_needRestart;
                     bool m_needRestartHasBeenSet;
@@ -277,13 +277,13 @@ namespace TencentCloud
                     bool m_valueTypeHasBeenSet;
 
                     /**
-                     * Whether the TencentDB for MongoDB console has pulled parameter information successfully. Valid values: `1` (no), `0` (yes). This field is only used in the console.
+                     * Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * This field is not in use
+                     * Redundant field which can be ignored
                      */
                     std::string m_unit;
                     bool m_unitHasBeenSet;

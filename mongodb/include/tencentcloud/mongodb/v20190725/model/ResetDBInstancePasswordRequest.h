@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool UserNameHasBeenSet() const;
 
                     /**
-                     * 获取New password
-                     * @return Password New password
+                     * 获取New password, which must contain at least eight characters
+                     * @return Password New password, which must contain at least eight characters
                      */
                     std::string GetPassword() const;
 
                     /**
-                     * 设置New password
-                     * @param Password New password
+                     * 设置New password, which must contain at least eight characters
+                     * @param Password New password, which must contain at least eight characters
                      */
                     void SetPassword(const std::string& _password);
 
@@ -111,7 +111,7 @@ namespace TencentCloud
                     bool m_userNameHasBeenSet;
 
                     /**
-                     * New password
+                     * New password, which must contain at least eight characters
                      */
                     std::string m_password;
                     bool m_passwordHasBeenSet;

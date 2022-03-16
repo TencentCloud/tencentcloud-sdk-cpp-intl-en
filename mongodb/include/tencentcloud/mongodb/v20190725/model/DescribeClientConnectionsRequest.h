@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取The number of records that will be returned. Default value: 10,000.
-                     * @return Limit The number of records that will be returned. Default value: 10,000.
+                     * 获取Number of results to be returned for a single request. Value range: 1-1,000. Default value: 1,000
+                     * @return Limit Number of results to be returned for a single request. Value range: 1-1,000. Default value: 1,000
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置The number of records that will be returned. Default value: 10,000.
-                     * @param Limit The number of records that will be returned. Default value: 10,000.
+                     * 设置Number of results to be returned for a single request. Value range: 1-1,000. Default value: 1,000
+                     * @param Limit Number of results to be returned for a single request. Value range: 1-1,000. Default value: 1,000
                      */
                     void SetLimit(const uint64_t& _limit);
 
@@ -105,7 +105,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * The number of records that will be returned. Default value: 10,000.
+                     * Number of results to be returned for a single request. Value range: 1-1,000. Default value: 1,000
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;

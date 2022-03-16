@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Number of nodes in each replica set. Currently, the number of nodes per replica set is fixed at 3, while the number of secondary nodes per shard is customizable. For more information, please see the parameter returned by the `DescribeSpecInfo` API.
-                     * @return NodeNum Number of nodes in each replica set. Currently, the number of nodes per replica set is fixed at 3, while the number of secondary nodes per shard is customizable. For more information, please see the parameter returned by the `DescribeSpecInfo` API.
+                     * 获取The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.
+                     * @return NodeNum The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.
                      */
                     int64_t GetNodeNum() const;
 
                     /**
-                     * 设置Number of nodes in each replica set. Currently, the number of nodes per replica set is fixed at 3, while the number of secondary nodes per shard is customizable. For more information, please see the parameter returned by the `DescribeSpecInfo` API.
-                     * @param NodeNum Number of nodes in each replica set. Currently, the number of nodes per replica set is fixed at 3, while the number of secondary nodes per shard is customizable. For more information, please see the parameter returned by the `DescribeSpecInfo` API.
+                     * 设置The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.
+                     * @param NodeNum The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.
                      */
                     void SetNodeNum(const int64_t& _nodeNum);
 
@@ -133,14 +133,14 @@ namespace TencentCloud
                     bool MongoVersionHasBeenSet() const;
 
                     /**
-                     * 获取Server type. Valid values: HIO (high IO), HIO10G (10-gigabit high IO), STDS5 (standard).
-                     * @return MachineCode Server type. Valid values: HIO (high IO), HIO10G (10-gigabit high IO), STDS5 (standard).
+                     * 获取Server type. Valid values: `HIO` (high IO), `HIO10G` (ten-gigabit high IO)
+                     * @return MachineCode Server type. Valid values: `HIO` (high IO), `HIO10G` (ten-gigabit high IO)
                      */
                     std::string GetMachineCode() const;
 
                     /**
-                     * 设置Server type. Valid values: HIO (high IO), HIO10G (10-gigabit high IO), STDS5 (standard).
-                     * @param MachineCode Server type. Valid values: HIO (high IO), HIO10G (10-gigabit high IO), STDS5 (standard).
+                     * 设置Server type. Valid values: `HIO` (high IO), `HIO10G` (ten-gigabit high IO)
+                     * @param MachineCode Server type. Valid values: `HIO` (high IO), `HIO10G` (ten-gigabit high IO)
                      */
                     void SetMachineCode(const std::string& _machineCode);
 
@@ -231,7 +231,7 @@ namespace TencentCloud
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Number of nodes in each replica set. Currently, the number of nodes per replica set is fixed at 3, while the number of secondary nodes per shard is customizable. For more information, please see the parameter returned by the `DescribeSpecInfo` API.
+                     * The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.
                      */
                     int64_t m_nodeNum;
                     bool m_nodeNumHasBeenSet;
@@ -255,7 +255,7 @@ namespace TencentCloud
                     bool m_mongoVersionHasBeenSet;
 
                     /**
-                     * Server type. Valid values: HIO (high IO), HIO10G (10-gigabit high IO), STDS5 (standard).
+                     * Server type. Valid values: `HIO` (high IO), `HIO10G` (ten-gigabit high IO)
                      */
                     std::string m_machineCode;
                     bool m_machineCodeHasBeenSet;

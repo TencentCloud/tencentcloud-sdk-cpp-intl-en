@@ -190,6 +190,46 @@ namespace TencentCloud
                      */
                     bool UrlHasBeenSet() const;
 
+                    /**
+                     * 获取Backup type of the backup file. Valid values: `0` (logical backup), `1` (physical backup)
+                     * @return BackupMethod Backup type of the backup file. Valid values: `0` (logical backup), `1` (physical backup)
+                     */
+                    int64_t GetBackupMethod() const;
+
+                    /**
+                     * 设置Backup type of the backup file. Valid values: `0` (logical backup), `1` (physical backup)
+                     * @param BackupMethod Backup type of the backup file. Valid values: `0` (logical backup), `1` (physical backup)
+                     */
+                    void SetBackupMethod(const int64_t& _backupMethod);
+
+                    /**
+                     * 判断参数 BackupMethod 是否已赋值
+                     * @return BackupMethod 是否已赋值
+                     */
+                    bool BackupMethodHasBeenSet() const;
+
+                    /**
+                     * 获取Backup description you set when starting a backup task
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return BackupDesc Backup description you set when starting a backup task
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetBackupDesc() const;
+
+                    /**
+                     * 设置Backup description you set when starting a backup task
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param BackupDesc Backup description you set when starting a backup task
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetBackupDesc(const std::string& _backupDesc);
+
+                    /**
+                     * 判断参数 BackupDesc 是否已赋值
+                     * @return BackupDesc 是否已赋值
+                     */
+                    bool BackupDescHasBeenSet() const;
+
                 private:
 
                     /**
@@ -239,6 +279,19 @@ namespace TencentCloud
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
+
+                    /**
+                     * Backup type of the backup file. Valid values: `0` (logical backup), `1` (physical backup)
+                     */
+                    int64_t m_backupMethod;
+                    bool m_backupMethodHasBeenSet;
+
+                    /**
+                     * Backup description you set when starting a backup task
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_backupDesc;
+                    bool m_backupDescHasBeenSet;
 
                 };
             }

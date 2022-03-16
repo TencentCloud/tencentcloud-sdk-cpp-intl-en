@@ -31,6 +31,8 @@
 #include <tencentcloud/mdl/v20200326/model/CreateStreamLiveInputSecurityGroupResponse.h>
 #include <tencentcloud/mdl/v20200326/model/CreateStreamLivePlanRequest.h>
 #include <tencentcloud/mdl/v20200326/model/CreateStreamLivePlanResponse.h>
+#include <tencentcloud/mdl/v20200326/model/CreateStreamLiveWatermarkRequest.h>
+#include <tencentcloud/mdl/v20200326/model/CreateStreamLiveWatermarkResponse.h>
 #include <tencentcloud/mdl/v20200326/model/DeleteStreamLiveChannelRequest.h>
 #include <tencentcloud/mdl/v20200326/model/DeleteStreamLiveChannelResponse.h>
 #include <tencentcloud/mdl/v20200326/model/DeleteStreamLiveInputRequest.h>
@@ -39,6 +41,8 @@
 #include <tencentcloud/mdl/v20200326/model/DeleteStreamLiveInputSecurityGroupResponse.h>
 #include <tencentcloud/mdl/v20200326/model/DeleteStreamLivePlanRequest.h>
 #include <tencentcloud/mdl/v20200326/model/DeleteStreamLivePlanResponse.h>
+#include <tencentcloud/mdl/v20200326/model/DeleteStreamLiveWatermarkRequest.h>
+#include <tencentcloud/mdl/v20200326/model/DeleteStreamLiveWatermarkResponse.h>
 #include <tencentcloud/mdl/v20200326/model/DescribeStreamLiveChannelRequest.h>
 #include <tencentcloud/mdl/v20200326/model/DescribeStreamLiveChannelResponse.h>
 #include <tencentcloud/mdl/v20200326/model/DescribeStreamLiveChannelAlertsRequest.h>
@@ -63,12 +67,18 @@
 #include <tencentcloud/mdl/v20200326/model/DescribeStreamLivePlansResponse.h>
 #include <tencentcloud/mdl/v20200326/model/DescribeStreamLiveRegionsRequest.h>
 #include <tencentcloud/mdl/v20200326/model/DescribeStreamLiveRegionsResponse.h>
+#include <tencentcloud/mdl/v20200326/model/DescribeStreamLiveWatermarkRequest.h>
+#include <tencentcloud/mdl/v20200326/model/DescribeStreamLiveWatermarkResponse.h>
+#include <tencentcloud/mdl/v20200326/model/DescribeStreamLiveWatermarksRequest.h>
+#include <tencentcloud/mdl/v20200326/model/DescribeStreamLiveWatermarksResponse.h>
 #include <tencentcloud/mdl/v20200326/model/ModifyStreamLiveChannelRequest.h>
 #include <tencentcloud/mdl/v20200326/model/ModifyStreamLiveChannelResponse.h>
 #include <tencentcloud/mdl/v20200326/model/ModifyStreamLiveInputRequest.h>
 #include <tencentcloud/mdl/v20200326/model/ModifyStreamLiveInputResponse.h>
 #include <tencentcloud/mdl/v20200326/model/ModifyStreamLiveInputSecurityGroupRequest.h>
 #include <tencentcloud/mdl/v20200326/model/ModifyStreamLiveInputSecurityGroupResponse.h>
+#include <tencentcloud/mdl/v20200326/model/ModifyStreamLiveWatermarkRequest.h>
+#include <tencentcloud/mdl/v20200326/model/ModifyStreamLiveWatermarkResponse.h>
 #include <tencentcloud/mdl/v20200326/model/StartStreamLiveChannelRequest.h>
 #include <tencentcloud/mdl/v20200326/model/StartStreamLiveChannelResponse.h>
 #include <tencentcloud/mdl/v20200326/model/StopStreamLiveChannelRequest.h>
@@ -99,6 +109,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateStreamLivePlanResponse> CreateStreamLivePlanOutcome;
                 typedef std::future<CreateStreamLivePlanOutcome> CreateStreamLivePlanOutcomeCallable;
                 typedef std::function<void(const MdlClient*, const Model::CreateStreamLivePlanRequest&, CreateStreamLivePlanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateStreamLivePlanAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateStreamLiveWatermarkResponse> CreateStreamLiveWatermarkOutcome;
+                typedef std::future<CreateStreamLiveWatermarkOutcome> CreateStreamLiveWatermarkOutcomeCallable;
+                typedef std::function<void(const MdlClient*, const Model::CreateStreamLiveWatermarkRequest&, CreateStreamLiveWatermarkOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateStreamLiveWatermarkAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteStreamLiveChannelResponse> DeleteStreamLiveChannelOutcome;
                 typedef std::future<DeleteStreamLiveChannelOutcome> DeleteStreamLiveChannelOutcomeCallable;
                 typedef std::function<void(const MdlClient*, const Model::DeleteStreamLiveChannelRequest&, DeleteStreamLiveChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteStreamLiveChannelAsyncHandler;
@@ -111,6 +124,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteStreamLivePlanResponse> DeleteStreamLivePlanOutcome;
                 typedef std::future<DeleteStreamLivePlanOutcome> DeleteStreamLivePlanOutcomeCallable;
                 typedef std::function<void(const MdlClient*, const Model::DeleteStreamLivePlanRequest&, DeleteStreamLivePlanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteStreamLivePlanAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteStreamLiveWatermarkResponse> DeleteStreamLiveWatermarkOutcome;
+                typedef std::future<DeleteStreamLiveWatermarkOutcome> DeleteStreamLiveWatermarkOutcomeCallable;
+                typedef std::function<void(const MdlClient*, const Model::DeleteStreamLiveWatermarkRequest&, DeleteStreamLiveWatermarkOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteStreamLiveWatermarkAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeStreamLiveChannelResponse> DescribeStreamLiveChannelOutcome;
                 typedef std::future<DescribeStreamLiveChannelOutcome> DescribeStreamLiveChannelOutcomeCallable;
                 typedef std::function<void(const MdlClient*, const Model::DescribeStreamLiveChannelRequest&, DescribeStreamLiveChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamLiveChannelAsyncHandler;
@@ -147,6 +163,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeStreamLiveRegionsResponse> DescribeStreamLiveRegionsOutcome;
                 typedef std::future<DescribeStreamLiveRegionsOutcome> DescribeStreamLiveRegionsOutcomeCallable;
                 typedef std::function<void(const MdlClient*, const Model::DescribeStreamLiveRegionsRequest&, DescribeStreamLiveRegionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamLiveRegionsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeStreamLiveWatermarkResponse> DescribeStreamLiveWatermarkOutcome;
+                typedef std::future<DescribeStreamLiveWatermarkOutcome> DescribeStreamLiveWatermarkOutcomeCallable;
+                typedef std::function<void(const MdlClient*, const Model::DescribeStreamLiveWatermarkRequest&, DescribeStreamLiveWatermarkOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamLiveWatermarkAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeStreamLiveWatermarksResponse> DescribeStreamLiveWatermarksOutcome;
+                typedef std::future<DescribeStreamLiveWatermarksOutcome> DescribeStreamLiveWatermarksOutcomeCallable;
+                typedef std::function<void(const MdlClient*, const Model::DescribeStreamLiveWatermarksRequest&, DescribeStreamLiveWatermarksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamLiveWatermarksAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyStreamLiveChannelResponse> ModifyStreamLiveChannelOutcome;
                 typedef std::future<ModifyStreamLiveChannelOutcome> ModifyStreamLiveChannelOutcomeCallable;
                 typedef std::function<void(const MdlClient*, const Model::ModifyStreamLiveChannelRequest&, ModifyStreamLiveChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyStreamLiveChannelAsyncHandler;
@@ -156,6 +178,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyStreamLiveInputSecurityGroupResponse> ModifyStreamLiveInputSecurityGroupOutcome;
                 typedef std::future<ModifyStreamLiveInputSecurityGroupOutcome> ModifyStreamLiveInputSecurityGroupOutcomeCallable;
                 typedef std::function<void(const MdlClient*, const Model::ModifyStreamLiveInputSecurityGroupRequest&, ModifyStreamLiveInputSecurityGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyStreamLiveInputSecurityGroupAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyStreamLiveWatermarkResponse> ModifyStreamLiveWatermarkOutcome;
+                typedef std::future<ModifyStreamLiveWatermarkOutcome> ModifyStreamLiveWatermarkOutcomeCallable;
+                typedef std::function<void(const MdlClient*, const Model::ModifyStreamLiveWatermarkRequest&, ModifyStreamLiveWatermarkOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyStreamLiveWatermarkAsyncHandler;
                 typedef Outcome<Core::Error, Model::StartStreamLiveChannelResponse> StartStreamLiveChannelOutcome;
                 typedef std::future<StartStreamLiveChannelOutcome> StartStreamLiveChannelOutcomeCallable;
                 typedef std::function<void(const MdlClient*, const Model::StartStreamLiveChannelRequest&, StartStreamLiveChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StartStreamLiveChannelAsyncHandler;
@@ -202,6 +227,15 @@ namespace TencentCloud
                 CreateStreamLivePlanOutcomeCallable CreateStreamLivePlanCallable(const Model::CreateStreamLivePlanRequest& request);
 
                 /**
+                 *This API is used to add a watermark.
+                 * @param req CreateStreamLiveWatermarkRequest
+                 * @return CreateStreamLiveWatermarkOutcome
+                 */
+                CreateStreamLiveWatermarkOutcome CreateStreamLiveWatermark(const Model::CreateStreamLiveWatermarkRequest &request);
+                void CreateStreamLiveWatermarkAsync(const Model::CreateStreamLiveWatermarkRequest& request, const CreateStreamLiveWatermarkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateStreamLiveWatermarkOutcomeCallable CreateStreamLiveWatermarkCallable(const Model::CreateStreamLiveWatermarkRequest& request);
+
+                /**
                  *This API is used to delete a StreamLive channel.
                  * @param req DeleteStreamLiveChannelRequest
                  * @return DeleteStreamLiveChannelOutcome
@@ -236,6 +270,15 @@ namespace TencentCloud
                 DeleteStreamLivePlanOutcome DeleteStreamLivePlan(const Model::DeleteStreamLivePlanRequest &request);
                 void DeleteStreamLivePlanAsync(const Model::DeleteStreamLivePlanRequest& request, const DeleteStreamLivePlanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteStreamLivePlanOutcomeCallable DeleteStreamLivePlanCallable(const Model::DeleteStreamLivePlanRequest& request);
+
+                /**
+                 *This API is used to delete a watermark.
+                 * @param req DeleteStreamLiveWatermarkRequest
+                 * @return DeleteStreamLiveWatermarkOutcome
+                 */
+                DeleteStreamLiveWatermarkOutcome DeleteStreamLiveWatermark(const Model::DeleteStreamLiveWatermarkRequest &request);
+                void DeleteStreamLiveWatermarkAsync(const Model::DeleteStreamLiveWatermarkRequest& request, const DeleteStreamLiveWatermarkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteStreamLiveWatermarkOutcomeCallable DeleteStreamLiveWatermarkCallable(const Model::DeleteStreamLiveWatermarkRequest& request);
 
                 /**
                  *This API is used to query a StreamLive channel.
@@ -346,6 +389,24 @@ namespace TencentCloud
                 DescribeStreamLiveRegionsOutcomeCallable DescribeStreamLiveRegionsCallable(const Model::DescribeStreamLiveRegionsRequest& request);
 
                 /**
+                 *This API is used to query a watermark.
+                 * @param req DescribeStreamLiveWatermarkRequest
+                 * @return DescribeStreamLiveWatermarkOutcome
+                 */
+                DescribeStreamLiveWatermarkOutcome DescribeStreamLiveWatermark(const Model::DescribeStreamLiveWatermarkRequest &request);
+                void DescribeStreamLiveWatermarkAsync(const Model::DescribeStreamLiveWatermarkRequest& request, const DescribeStreamLiveWatermarkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeStreamLiveWatermarkOutcomeCallable DescribeStreamLiveWatermarkCallable(const Model::DescribeStreamLiveWatermarkRequest& request);
+
+                /**
+                 *This API is used to query multiple watermarks at a time.
+                 * @param req DescribeStreamLiveWatermarksRequest
+                 * @return DescribeStreamLiveWatermarksOutcome
+                 */
+                DescribeStreamLiveWatermarksOutcome DescribeStreamLiveWatermarks(const Model::DescribeStreamLiveWatermarksRequest &request);
+                void DescribeStreamLiveWatermarksAsync(const Model::DescribeStreamLiveWatermarksRequest& request, const DescribeStreamLiveWatermarksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeStreamLiveWatermarksOutcomeCallable DescribeStreamLiveWatermarksCallable(const Model::DescribeStreamLiveWatermarksRequest& request);
+
+                /**
                  *This API is used to modify a StreamLive channel.
                  * @param req ModifyStreamLiveChannelRequest
                  * @return ModifyStreamLiveChannelOutcome
@@ -371,6 +432,15 @@ namespace TencentCloud
                 ModifyStreamLiveInputSecurityGroupOutcome ModifyStreamLiveInputSecurityGroup(const Model::ModifyStreamLiveInputSecurityGroupRequest &request);
                 void ModifyStreamLiveInputSecurityGroupAsync(const Model::ModifyStreamLiveInputSecurityGroupRequest& request, const ModifyStreamLiveInputSecurityGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyStreamLiveInputSecurityGroupOutcomeCallable ModifyStreamLiveInputSecurityGroupCallable(const Model::ModifyStreamLiveInputSecurityGroupRequest& request);
+
+                /**
+                 *This API is used to modify a watermark.
+                 * @param req ModifyStreamLiveWatermarkRequest
+                 * @return ModifyStreamLiveWatermarkOutcome
+                 */
+                ModifyStreamLiveWatermarkOutcome ModifyStreamLiveWatermark(const Model::ModifyStreamLiveWatermarkRequest &request);
+                void ModifyStreamLiveWatermarkAsync(const Model::ModifyStreamLiveWatermarkRequest& request, const ModifyStreamLiveWatermarkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyStreamLiveWatermarkOutcomeCallable ModifyStreamLiveWatermarkCallable(const Model::ModifyStreamLiveWatermarkRequest& request);
 
                 /**
                  *This API is used to start a StreamLive channel.

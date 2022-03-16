@@ -40,6 +40,49 @@ DcdbClient::DcdbClient(const Credential &credential, const string &region, const
 }
 
 
+DcdbClient::ActiveHourDCDBInstanceOutcome DcdbClient::ActiveHourDCDBInstance(const ActiveHourDCDBInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "ActiveHourDCDBInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ActiveHourDCDBInstanceResponse rsp = ActiveHourDCDBInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ActiveHourDCDBInstanceOutcome(rsp);
+        else
+            return ActiveHourDCDBInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return ActiveHourDCDBInstanceOutcome(outcome.GetError());
+    }
+}
+
+void DcdbClient::ActiveHourDCDBInstanceAsync(const ActiveHourDCDBInstanceRequest& request, const ActiveHourDCDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ActiveHourDCDBInstance(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DcdbClient::ActiveHourDCDBInstanceOutcomeCallable DcdbClient::ActiveHourDCDBInstanceCallable(const ActiveHourDCDBInstanceRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ActiveHourDCDBInstanceOutcome()>>(
+        [this, request]()
+        {
+            return this->ActiveHourDCDBInstance(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 DcdbClient::AssociateSecurityGroupsOutcome DcdbClient::AssociateSecurityGroups(const AssociateSecurityGroupsRequest &request)
 {
     auto outcome = MakeRequest(request, "AssociateSecurityGroups");
@@ -291,6 +334,49 @@ DcdbClient::CreateAccountOutcomeCallable DcdbClient::CreateAccountCallable(const
         [this, request]()
         {
             return this->CreateAccount(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DcdbClient::CreateHourDCDBInstanceOutcome DcdbClient::CreateHourDCDBInstance(const CreateHourDCDBInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateHourDCDBInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateHourDCDBInstanceResponse rsp = CreateHourDCDBInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateHourDCDBInstanceOutcome(rsp);
+        else
+            return CreateHourDCDBInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateHourDCDBInstanceOutcome(outcome.GetError());
+    }
+}
+
+void DcdbClient::CreateHourDCDBInstanceAsync(const CreateHourDCDBInstanceRequest& request, const CreateHourDCDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateHourDCDBInstance(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DcdbClient::CreateHourDCDBInstanceOutcomeCallable DcdbClient::CreateHourDCDBInstanceCallable(const CreateHourDCDBInstanceRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateHourDCDBInstanceOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateHourDCDBInstance(request);
         }
     );
 
@@ -1323,6 +1409,49 @@ DcdbClient::InitDCDBInstancesOutcomeCallable DcdbClient::InitDCDBInstancesCallab
         [this, request]()
         {
             return this->InitDCDBInstances(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DcdbClient::IsolateHourDCDBInstanceOutcome DcdbClient::IsolateHourDCDBInstance(const IsolateHourDCDBInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "IsolateHourDCDBInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        IsolateHourDCDBInstanceResponse rsp = IsolateHourDCDBInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return IsolateHourDCDBInstanceOutcome(rsp);
+        else
+            return IsolateHourDCDBInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return IsolateHourDCDBInstanceOutcome(outcome.GetError());
+    }
+}
+
+void DcdbClient::IsolateHourDCDBInstanceAsync(const IsolateHourDCDBInstanceRequest& request, const IsolateHourDCDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->IsolateHourDCDBInstance(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DcdbClient::IsolateHourDCDBInstanceOutcomeCallable DcdbClient::IsolateHourDCDBInstanceCallable(const IsolateHourDCDBInstanceRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<IsolateHourDCDBInstanceOutcome()>>(
+        [this, request]()
+        {
+            return this->IsolateHourDCDBInstance(request);
         }
     );
 

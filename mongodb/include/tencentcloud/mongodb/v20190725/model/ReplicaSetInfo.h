@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Shard name
-                     * @return ReplicaSetId Shard name
+                     * 获取Replica set ID
+                     * @return ReplicaSetId Replica set ID
                      */
                     std::string GetReplicaSetId() const;
 
                     /**
-                     * 设置Shard name
-                     * @param ReplicaSetId Shard name
+                     * 设置Replica set ID
+                     * @param ReplicaSetId Replica set ID
                      */
                     void SetReplicaSetId(const std::string& _replicaSetId);
 
@@ -67,7 +67,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Shard name
+                     * Replica set ID
                      */
                     std::string m_replicaSetId;
                     bool m_replicaSetIdHasBeenSet;

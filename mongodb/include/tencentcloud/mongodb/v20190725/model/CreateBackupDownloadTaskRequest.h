@@ -44,14 +44,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID in the format of "cmgo-p8vnipr5", which is the same as the instance ID displayed in the TencentDB console
-                     * @return InstanceId Instance ID in the format of "cmgo-p8vnipr5", which is the same as the instance ID displayed in the TencentDB console
+                     * 获取Instance ID in the format of "cmgo-p8vnipr5", which is the same as the instance ID displayed in the TencentDB console.
+                     * @return InstanceId Instance ID in the format of "cmgo-p8vnipr5", which is the same as the instance ID displayed in the TencentDB console.
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID in the format of "cmgo-p8vnipr5", which is the same as the instance ID displayed in the TencentDB console
-                     * @param InstanceId Instance ID in the format of "cmgo-p8vnipr5", which is the same as the instance ID displayed in the TencentDB console
+                     * 设置Instance ID in the format of "cmgo-p8vnipr5", which is the same as the instance ID displayed in the TencentDB console.
+                     * @param InstanceId Instance ID in the format of "cmgo-p8vnipr5", which is the same as the instance ID displayed in the TencentDB console.
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
@@ -62,14 +62,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取The name of the backup file to be downloaded, which can be obtained by the `DescribeDBBackups` API
-                     * @return BackupName The name of the backup file to be downloaded, which can be obtained by the `DescribeDBBackups` API
+                     * 获取The name of the backup file to be downloaded, which can be obtained by the `DescribeDBBackups` API.
+                     * @return BackupName The name of the backup file to be downloaded, which can be obtained by the `DescribeDBBackups` API.
                      */
                     std::string GetBackupName() const;
 
                     /**
-                     * 设置The name of the backup file to be downloaded, which can be obtained by the `DescribeDBBackups` API
-                     * @param BackupName The name of the backup file to be downloaded, which can be obtained by the `DescribeDBBackups` API
+                     * 设置The name of the backup file to be downloaded, which can be obtained by the `DescribeDBBackups` API.
+                     * @param BackupName The name of the backup file to be downloaded, which can be obtained by the `DescribeDBBackups` API.
                      */
                     void SetBackupName(const std::string& _backupName);
 
@@ -80,14 +80,22 @@ namespace TencentCloud
                     bool BackupNameHasBeenSet() const;
 
                     /**
-                     * 获取The list of shards with backups to be downloaded
-                     * @return BackupSets The list of shards with backups to be downloaded
+                     * 获取Specify the node name of a replica set instance or the shard name list of a sharded cluster instance. Only backups of the specified node or shards will be downloaded.
+Suppose you have a replica set instance (ID: cmgo-p8vnipr5), you can use the sample code `BackupSets.0=cmgo-p8vnipr5_0` to download the full backup. For a replica set instance, the parameter value must be in the format of "instance ID_0".
+Suppose you have a sharded cluster instance (ID: cmgo-p8vnipr5), you can use the sample code `BackupSets.0=cmgo-p8vnipr5_0&BackupSets.1=cmgo-p8vnipr5_1` to download the backup data of shard 0 and shard 1. To download the full backup, please specify all shard names.
+                     * @return BackupSets Specify the node name of a replica set instance or the shard name list of a sharded cluster instance. Only backups of the specified node or shards will be downloaded.
+Suppose you have a replica set instance (ID: cmgo-p8vnipr5), you can use the sample code `BackupSets.0=cmgo-p8vnipr5_0` to download the full backup. For a replica set instance, the parameter value must be in the format of "instance ID_0".
+Suppose you have a sharded cluster instance (ID: cmgo-p8vnipr5), you can use the sample code `BackupSets.0=cmgo-p8vnipr5_0&BackupSets.1=cmgo-p8vnipr5_1` to download the backup data of shard 0 and shard 1. To download the full backup, please specify all shard names.
                      */
                     std::vector<ReplicaSetInfo> GetBackupSets() const;
 
                     /**
-                     * 设置The list of shards with backups to be downloaded
-                     * @param BackupSets The list of shards with backups to be downloaded
+                     * 设置Specify the node name of a replica set instance or the shard name list of a sharded cluster instance. Only backups of the specified node or shards will be downloaded.
+Suppose you have a replica set instance (ID: cmgo-p8vnipr5), you can use the sample code `BackupSets.0=cmgo-p8vnipr5_0` to download the full backup. For a replica set instance, the parameter value must be in the format of "instance ID_0".
+Suppose you have a sharded cluster instance (ID: cmgo-p8vnipr5), you can use the sample code `BackupSets.0=cmgo-p8vnipr5_0&BackupSets.1=cmgo-p8vnipr5_1` to download the backup data of shard 0 and shard 1. To download the full backup, please specify all shard names.
+                     * @param BackupSets Specify the node name of a replica set instance or the shard name list of a sharded cluster instance. Only backups of the specified node or shards will be downloaded.
+Suppose you have a replica set instance (ID: cmgo-p8vnipr5), you can use the sample code `BackupSets.0=cmgo-p8vnipr5_0` to download the full backup. For a replica set instance, the parameter value must be in the format of "instance ID_0".
+Suppose you have a sharded cluster instance (ID: cmgo-p8vnipr5), you can use the sample code `BackupSets.0=cmgo-p8vnipr5_0&BackupSets.1=cmgo-p8vnipr5_1` to download the backup data of shard 0 and shard 1. To download the full backup, please specify all shard names.
                      */
                     void SetBackupSets(const std::vector<ReplicaSetInfo>& _backupSets);
 
@@ -100,19 +108,21 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID in the format of "cmgo-p8vnipr5", which is the same as the instance ID displayed in the TencentDB console
+                     * Instance ID in the format of "cmgo-p8vnipr5", which is the same as the instance ID displayed in the TencentDB console.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * The name of the backup file to be downloaded, which can be obtained by the `DescribeDBBackups` API
+                     * The name of the backup file to be downloaded, which can be obtained by the `DescribeDBBackups` API.
                      */
                     std::string m_backupName;
                     bool m_backupNameHasBeenSet;
 
                     /**
-                     * The list of shards with backups to be downloaded
+                     * Specify the node name of a replica set instance or the shard name list of a sharded cluster instance. Only backups of the specified node or shards will be downloaded.
+Suppose you have a replica set instance (ID: cmgo-p8vnipr5), you can use the sample code `BackupSets.0=cmgo-p8vnipr5_0` to download the full backup. For a replica set instance, the parameter value must be in the format of "instance ID_0".
+Suppose you have a sharded cluster instance (ID: cmgo-p8vnipr5), you can use the sample code `BackupSets.0=cmgo-p8vnipr5_0&BackupSets.1=cmgo-p8vnipr5_1` to download the backup data of shard 0 and shard 1. To download the full backup, please specify all shard names.
                      */
                     std::vector<ReplicaSetInfo> m_backupSets;
                     bool m_backupSetsHasBeenSet;
