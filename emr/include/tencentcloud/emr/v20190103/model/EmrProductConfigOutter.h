@@ -443,6 +443,28 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                      */
                     bool SecurityGroupsHasBeenSet() const;
 
+                    /**
+                     * 获取SSH key ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return PublicKeyId SSH key ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetPublicKeyId() const;
+
+                    /**
+                     * 设置SSH key ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param PublicKeyId SSH key ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetPublicKeyId(const std::string& _publicKeyId);
+
+                    /**
+                     * 判断参数 PublicKeyId 是否已赋值
+                     * @return PublicKeyId 是否已赋值
+                     */
+                    bool PublicKeyIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -570,6 +592,13 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                      */
                     std::vector<std::string> m_securityGroups;
                     bool m_securityGroupsHasBeenSet;
+
+                    /**
+                     * SSH key ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_publicKeyId;
+                    bool m_publicKeyIdHasBeenSet;
 
                 };
             }

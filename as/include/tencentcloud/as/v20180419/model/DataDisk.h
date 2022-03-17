@@ -112,6 +112,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool SnapshotIdHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies whether the data disk is terminated along with the termination of the associated CVM instance.  Values: <br><li>`TRUE` (only available for pay-as-you-go cloud disks that are billed by hour) and `FALSE`.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @return DeleteWithInstance Specifies whether the data disk is terminated along with the termination of the associated CVM instance.  Values: <br><li>`TRUE` (only available for pay-as-you-go cloud disks that are billed by hour) and `FALSE`.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    bool GetDeleteWithInstance() const;
+
+                    /**
+                     * 设置Specifies whether the data disk is terminated along with the termination of the associated CVM instance.  Values: <br><li>`TRUE` (only available for pay-as-you-go cloud disks that are billed by hour) and `FALSE`.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @param DeleteWithInstance Specifies whether the data disk is terminated along with the termination of the associated CVM instance.  Values: <br><li>`TRUE` (only available for pay-as-you-go cloud disks that are billed by hour) and `FALSE`.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetDeleteWithInstance(const bool& _deleteWithInstance);
+
+                    /**
+                     * 判断参数 DeleteWithInstance 是否已赋值
+                     * @return DeleteWithInstance 是否已赋值
+                     */
+                    bool DeleteWithInstanceHasBeenSet() const;
+
                 private:
 
                     /**
@@ -134,6 +156,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_snapshotId;
                     bool m_snapshotIdHasBeenSet;
+
+                    /**
+                     * Specifies whether the data disk is terminated along with the termination of the associated CVM instance.  Values: <br><li>`TRUE` (only available for pay-as-you-go cloud disks that are billed by hour) and `FALSE`.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    bool m_deleteWithInstance;
+                    bool m_deleteWithInstanceHasBeenSet;
 
                 };
             }

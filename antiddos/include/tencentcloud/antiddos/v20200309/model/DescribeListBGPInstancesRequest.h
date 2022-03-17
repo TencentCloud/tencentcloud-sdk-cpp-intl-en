@@ -169,14 +169,14 @@ namespace TencentCloud
                     bool FilterLineHasBeenSet() const;
 
                     /**
-                     * 获取Filters by instance status. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
-                     * @return FilterStatus Filters by instance status. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+                     * 获取Filters by instance status. `idle`: Running; `attacking`: Being attacked; `blocking`: Being blocked.
+                     * @return FilterStatus Filters by instance status. `idle`: Running; `attacking`: Being attacked; `blocking`: Being blocked.
                      */
                     std::string GetFilterStatus() const;
 
                     /**
-                     * 设置Filters by instance status. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
-                     * @param FilterStatus Filters by instance status. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+                     * 设置Filters by instance status. `idle`: Running; `attacking`: Being attacked; `blocking`: Being blocked.
+                     * @param FilterStatus Filters by instance status. `idle`: Running; `attacking`: Being attacked; `blocking`: Being blocked.
                      */
                     void SetFilterStatus(const std::string& _filterStatus);
 
@@ -249,7 +249,7 @@ namespace TencentCloud
                     bool m_filterLineHasBeenSet;
 
                     /**
-                     * Filters by instance status. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+                     * Filters by instance status. `idle`: Running; `attacking`: Being attacked; `blocking`: Being blocked.
                      */
                     std::string m_filterStatus;
                     bool m_filterStatusHasBeenSet;

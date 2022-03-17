@@ -44,14 +44,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the CVM instance to be queried. This parameter does not support specifying both InstanceIds and Filters at the same time.
-                     * @return InstanceIds ID of the CVM instance to be queried. This parameter does not support specifying both InstanceIds and Filters at the same time.
+                     * 获取IDs of the CVM instances to query. Up to 100 IDs can be queried at one time. `InstanceIds` and `Filters` can not be both specified.
+                     * @return InstanceIds IDs of the CVM instances to query. Up to 100 IDs can be queried at one time. `InstanceIds` and `Filters` can not be both specified.
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置ID of the CVM instance to be queried. This parameter does not support specifying both InstanceIds and Filters at the same time.
-                     * @param InstanceIds ID of the CVM instance to be queried. This parameter does not support specifying both InstanceIds and Filters at the same time.
+                     * 设置IDs of the CVM instances to query. Up to 100 IDs can be queried at one time. `InstanceIds` and `Filters` can not be both specified.
+                     * @param InstanceIds IDs of the CVM instances to query. Up to 100 IDs can be queried at one time. `InstanceIds` and `Filters` can not be both specified.
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
@@ -110,14 +110,14 @@ The maximum number of `Filters` per request is 10. The upper limit for `Filter.V
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of returned results. The default value is 20. The maximum is 2000. For more information on `Limit`, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
-                     * @return Limit Number of returned results. The default value is 20. The maximum is 2000. For more information on `Limit`, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+                     * 获取The number of returned results. Default value: `20`. Maximum value: `100`. For more information on `Limit`, see the relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+                     * @return Limit The number of returned results. Default value: `20`. Maximum value: `100`. For more information on `Limit`, see the relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of returned results. The default value is 20. The maximum is 2000. For more information on `Limit`, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
-                     * @param Limit Number of returned results. The default value is 20. The maximum is 2000. For more information on `Limit`, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+                     * 设置The number of returned results. Default value: `20`. Maximum value: `100`. For more information on `Limit`, see the relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+                     * @param Limit The number of returned results. Default value: `20`. Maximum value: `100`. For more information on `Limit`, see the relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
                      */
                     void SetLimit(const int64_t& _limit);
 
@@ -130,7 +130,7 @@ The maximum number of `Filters` per request is 10. The upper limit for `Filter.V
                 private:
 
                     /**
-                     * ID of the CVM instance to be queried. This parameter does not support specifying both InstanceIds and Filters at the same time.
+                     * IDs of the CVM instances to query. Up to 100 IDs can be queried at one time. `InstanceIds` and `Filters` can not be both specified.
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
@@ -151,7 +151,7 @@ The maximum number of `Filters` per request is 10. The upper limit for `Filter.V
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of returned results. The default value is 20. The maximum is 2000. For more information on `Limit`, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+                     * The number of returned results. Default value: `20`. Maximum value: `100`. For more information on `Limit`, see the relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

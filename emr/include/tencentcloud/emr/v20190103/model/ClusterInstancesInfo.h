@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/emr/v20190103/model/EmrProductConfigOutter.h>
 #include <tencentcloud/emr/v20190103/model/Tag.h>
+#include <tencentcloud/emr/v20190103/model/ClusterExternalServiceInfo.h>
 
 
 namespace TencentCloud
@@ -948,6 +949,28 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     bool SubnetNameHasBeenSet() const;
 
+                    /**
+                     * 获取Cluster dependency
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return ClusterExternalServiceInfo Cluster dependency
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::vector<ClusterExternalServiceInfo> GetClusterExternalServiceInfo() const;
+
+                    /**
+                     * 设置Cluster dependency
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param ClusterExternalServiceInfo Cluster dependency
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetClusterExternalServiceInfo(const std::vector<ClusterExternalServiceInfo>& _clusterExternalServiceInfo);
+
+                    /**
+                     * 判断参数 ClusterExternalServiceInfo 是否已赋值
+                     * @return ClusterExternalServiceInfo 是否已赋值
+                     */
+                    bool ClusterExternalServiceInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1228,6 +1251,13 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::string m_subnetName;
                     bool m_subnetNameHasBeenSet;
+
+                    /**
+                     * Cluster dependency
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::vector<ClusterExternalServiceInfo> m_clusterExternalServiceInfo;
+                    bool m_clusterExternalServiceInfoHasBeenSet;
 
                 };
             }

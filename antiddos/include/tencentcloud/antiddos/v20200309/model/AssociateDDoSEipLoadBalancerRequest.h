@@ -114,6 +114,24 @@ namespace TencentCloud
                      */
                     bool LoadBalancerRegionHasBeenSet() const;
 
+                    /**
+                     * 获取CLB private IP
+                     * @return Vip CLB private IP
+                     */
+                    std::string GetVip() const;
+
+                    /**
+                     * 设置CLB private IP
+                     * @param Vip CLB private IP
+                     */
+                    void SetVip(const std::string& _vip);
+
+                    /**
+                     * 判断参数 Vip 是否已赋值
+                     * @return Vip 是否已赋值
+                     */
+                    bool VipHasBeenSet() const;
+
                 private:
 
                     /**
@@ -139,6 +157,12 @@ namespace TencentCloud
                      */
                     std::string m_loadBalancerRegion;
                     bool m_loadBalancerRegionHasBeenSet;
+
+                    /**
+                     * CLB private IP
+                     */
+                    std::string m_vip;
+                    bool m_vipHasBeenSet;
 
                 };
             }

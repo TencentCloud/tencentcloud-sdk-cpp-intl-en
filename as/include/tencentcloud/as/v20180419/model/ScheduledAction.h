@@ -226,6 +226,24 @@ namespace TencentCloud
                      */
                     bool CreatedTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies how the scheduled action is executed. <br><li>`CRONTAB`: execute repeatedly <br><li>`ONCE`: execute only once
+                     * @return ScheduledType Specifies how the scheduled action is executed. <br><li>`CRONTAB`: execute repeatedly <br><li>`ONCE`: execute only once
+                     */
+                    std::string GetScheduledType() const;
+
+                    /**
+                     * 设置Specifies how the scheduled action is executed. <br><li>`CRONTAB`: execute repeatedly <br><li>`ONCE`: execute only once
+                     * @param ScheduledType Specifies how the scheduled action is executed. <br><li>`CRONTAB`: execute repeatedly <br><li>`ONCE`: execute only once
+                     */
+                    void SetScheduledType(const std::string& _scheduledType);
+
+                    /**
+                     * 判断参数 ScheduledType 是否已赋值
+                     * @return ScheduledType 是否已赋值
+                     */
+                    bool ScheduledTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -287,6 +305,12 @@ namespace TencentCloud
                      */
                     std::string m_createdTime;
                     bool m_createdTimeHasBeenSet;
+
+                    /**
+                     * Specifies how the scheduled action is executed. <br><li>`CRONTAB`: execute repeatedly <br><li>`ONCE`: execute only once
+                     */
+                    std::string m_scheduledType;
+                    bool m_scheduledTypeHasBeenSet;
 
                 };
             }

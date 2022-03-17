@@ -265,14 +265,14 @@ namespace TencentCloud
                     bool RenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取Instance status, which is an int-type value. 0: healthy, 1: alarmed, 2: exceptional
-                     * @return Healthy Instance status, which is an int-type value. 0: healthy, 1: alarmed, 2: exceptional
+                     * 获取Instance status. An int-type value will be returned. `0`: Healthy, `1`: Alarmed, `2`: Exceptional
+                     * @return Healthy Instance status. An int-type value will be returned. `0`: Healthy, `1`: Alarmed, `2`: Exceptional
                      */
                     int64_t GetHealthy() const;
 
                     /**
-                     * 设置Instance status, which is an int-type value. 0: healthy, 1: alarmed, 2: exceptional
-                     * @param Healthy Instance status, which is an int-type value. 0: healthy, 1: alarmed, 2: exceptional
+                     * 设置Instance status. An int-type value will be returned. `0`: Healthy, `1`: Alarmed, `2`: Exceptional
+                     * @param Healthy Instance status. An int-type value will be returned. `0`: Healthy, `1`: Alarmed, `2`: Exceptional
                      */
                     void SetHealthy(const int64_t& _healthy);
 
@@ -707,7 +707,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_renewFlagHasBeenSet;
 
                     /**
-                     * Instance status, which is an int-type value. 0: healthy, 1: alarmed, 2: exceptional
+                     * Instance status. An int-type value will be returned. `0`: Healthy, `1`: Alarmed, `2`: Exceptional
                      */
                     int64_t m_healthy;
                     bool m_healthyHasBeenSet;

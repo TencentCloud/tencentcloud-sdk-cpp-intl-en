@@ -41,6 +41,7 @@ set(emr_public_header_model
   include/tencentcloud/emr/v20190103/model/DescribeClusterNodesRequest.h
   include/tencentcloud/emr/v20190103/model/PreExecuteFileSettings.h
   include/tencentcloud/emr/v20190103/model/CreateInstanceRequest.h
+  include/tencentcloud/emr/v20190103/model/ClusterExternalServiceInfo.h
   include/tencentcloud/emr/v20190103/model/DescribeInstancesResponse.h
   include/tencentcloud/emr/v20190103/model/InquiryPriceScaleOutInstanceRequest.h
   include/tencentcloud/emr/v20190103/model/Tag.h
@@ -92,6 +93,7 @@ set(emr_src
   src/v20190103/model/DescribeClusterNodesRequest.cpp
   src/v20190103/model/PreExecuteFileSettings.cpp
   src/v20190103/model/CreateInstanceRequest.cpp
+  src/v20190103/model/ClusterExternalServiceInfo.cpp
   src/v20190103/model/DescribeInstancesResponse.cpp
   src/v20190103/model/InquiryPriceScaleOutInstanceRequest.cpp
   src/v20190103/model/Tag.cpp

@@ -29,6 +29,7 @@
 #include <tencentcloud/emr/v20190103/model/PreExecuteFileSettings.h>
 #include <tencentcloud/emr/v20190103/model/Tag.h>
 #include <tencentcloud/emr/v20190103/model/CustomMetaInfo.h>
+#include <tencentcloud/emr/v20190103/model/ExternalService.h>
 
 
 namespace TencentCloud
@@ -730,6 +731,24 @@ Hadoop-Hbase
                      */
                     bool SceneNameHasBeenSet() const;
 
+                    /**
+                     * 获取Shared component information
+                     * @return ExternalService Shared component information
+                     */
+                    std::vector<ExternalService> GetExternalService() const;
+
+                    /**
+                     * 设置Shared component information
+                     * @param ExternalService Shared component information
+                     */
+                    void SetExternalService(const std::vector<ExternalService>& _externalService);
+
+                    /**
+                     * 判断参数 ExternalService 是否已赋值
+                     * @return ExternalService 是否已赋值
+                     */
+                    bool ExternalServiceHasBeenSet() const;
+
                 private:
 
                     /**
@@ -943,6 +962,12 @@ Hadoop-Hbase
                      */
                     std::string m_sceneName;
                     bool m_sceneNameHasBeenSet;
+
+                    /**
+                     * Shared component information
+                     */
+                    std::vector<ExternalService> m_externalService;
+                    bool m_externalServiceHasBeenSet;
 
                 };
             }
