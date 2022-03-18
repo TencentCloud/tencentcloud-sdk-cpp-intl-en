@@ -173,14 +173,14 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取ID of trigger condition template. This parameter can be left empty.
-                     * @return ConditionTemplateId ID of trigger condition template. This parameter can be left empty.
+                     * 获取Trigger condition template ID. Pass in this parameter if the policy is associated with the trigger condition template; otherwise, pass in the `Condition` parameter. The trigger condition template ID can be obtained via [`DescribeConditionsTemplateList`](https://intl.cloud.tencent.com/document/api/248/70250?from_cn_redirect=1).
+                     * @return ConditionTemplateId Trigger condition template ID. Pass in this parameter if the policy is associated with the trigger condition template; otherwise, pass in the `Condition` parameter. The trigger condition template ID can be obtained via [`DescribeConditionsTemplateList`](https://intl.cloud.tencent.com/document/api/248/70250?from_cn_redirect=1).
                      */
                     int64_t GetConditionTemplateId() const;
 
                     /**
-                     * 设置ID of trigger condition template. This parameter can be left empty.
-                     * @param ConditionTemplateId ID of trigger condition template. This parameter can be left empty.
+                     * 设置Trigger condition template ID. Pass in this parameter if the policy is associated with the trigger condition template; otherwise, pass in the `Condition` parameter. The trigger condition template ID can be obtained via [`DescribeConditionsTemplateList`](https://intl.cloud.tencent.com/document/api/248/70250?from_cn_redirect=1).
+                     * @param ConditionTemplateId Trigger condition template ID. Pass in this parameter if the policy is associated with the trigger condition template; otherwise, pass in the `Condition` parameter. The trigger condition template ID can be obtained via [`DescribeConditionsTemplateList`](https://intl.cloud.tencent.com/document/api/248/70250?from_cn_redirect=1).
                      */
                     void SetConditionTemplateId(const int64_t& _conditionTemplateId);
 
@@ -343,7 +343,7 @@ namespace TencentCloud
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * ID of trigger condition template. This parameter can be left empty.
+                     * Trigger condition template ID. Pass in this parameter if the policy is associated with the trigger condition template; otherwise, pass in the `Condition` parameter. The trigger condition template ID can be obtained via [`DescribeConditionsTemplateList`](https://intl.cloud.tencent.com/document/api/248/70250?from_cn_redirect=1).
                      */
                     int64_t m_conditionTemplateId;
                     bool m_conditionTemplateIdHasBeenSet;

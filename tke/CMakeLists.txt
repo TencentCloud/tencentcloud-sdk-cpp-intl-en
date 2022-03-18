@@ -85,6 +85,7 @@ set(tke_public_header_model
   include/tencentcloud/tke/v20180525/model/ModifyClusterAsGroupAttributeResponse.h
   include/tencentcloud/tke/v20180525/model/CreateClusterInstancesRequest.h
   include/tencentcloud/tke/v20180525/model/DescribeClusterAuthenticationOptionsRequest.h
+  include/tencentcloud/tke/v20180525/model/DescribeTKEEdgeScriptResponse.h
   include/tencentcloud/tke/v20180525/model/DescribeClusterStatusRequest.h
   include/tencentcloud/tke/v20180525/model/VersionInstance.h
   include/tencentcloud/tke/v20180525/model/DescribeClusterStatusResponse.h
@@ -166,6 +167,7 @@ set(tke_public_header_model
   include/tencentcloud/tke/v20180525/model/ModifyClusterAsGroupOptionAttributeResponse.h
   include/tencentcloud/tke/v20180525/model/DescribePrometheusInstanceResponse.h
   include/tencentcloud/tke/v20180525/model/AddExistedInstancesRequest.h
+  include/tencentcloud/tke/v20180525/model/DescribeTKEEdgeScriptRequest.h
   include/tencentcloud/tke/v20180525/model/ClusterAsGroupOption.h
   include/tencentcloud/tke/v20180525/model/AddVpcCniSubnetsResponse.h
   include/tencentcloud/tke/v20180525/model/DescribeClusterNodePoolsRequest.h
@@ -274,6 +276,7 @@ set(tke_src
   src/v20180525/model/ModifyClusterAsGroupAttributeResponse.cpp
   src/v20180525/model/CreateClusterInstancesRequest.cpp
   src/v20180525/model/DescribeClusterAuthenticationOptionsRequest.cpp
+  src/v20180525/model/DescribeTKEEdgeScriptResponse.cpp
   src/v20180525/model/DescribeClusterStatusRequest.cpp
   src/v20180525/model/VersionInstance.cpp
   src/v20180525/model/DescribeClusterStatusResponse.cpp
@@ -355,6 +358,7 @@ set(tke_src
   src/v20180525/model/ModifyClusterAsGroupOptionAttributeResponse.cpp
   src/v20180525/model/DescribePrometheusInstanceResponse.cpp
   src/v20180525/model/AddExistedInstancesRequest.cpp
+  src/v20180525/model/DescribeTKEEdgeScriptRequest.cpp
   src/v20180525/model/ClusterAsGroupOption.cpp
   src/v20180525/model/AddVpcCniSubnetsResponse.cpp
   src/v20180525/model/DescribeClusterNodePoolsRequest.cpp

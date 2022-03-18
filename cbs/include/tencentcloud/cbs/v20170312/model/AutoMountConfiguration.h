@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * This parameter describes the configuration of automatically initializing and mounting the cloud disk to the CVM when purchasing a new cloud disk.
+                * Describes how a newly purchased cloud disk is initialized and mounted to a CVM
                 */
                 class AutoMountConfiguration : public AbstractModel
                 {

@@ -113,6 +113,8 @@
 #include <tencentcloud/tke/v20180525/model/DescribeRegionsResponse.h>
 #include <tencentcloud/tke/v20180525/model/DescribeRouteTableConflictsRequest.h>
 #include <tencentcloud/tke/v20180525/model/DescribeRouteTableConflictsResponse.h>
+#include <tencentcloud/tke/v20180525/model/DescribeTKEEdgeScriptRequest.h>
+#include <tencentcloud/tke/v20180525/model/DescribeTKEEdgeScriptResponse.h>
 #include <tencentcloud/tke/v20180525/model/DescribeVersionsRequest.h>
 #include <tencentcloud/tke/v20180525/model/DescribeVersionsResponse.h>
 #include <tencentcloud/tke/v20180525/model/DescribeVpcCniPodLimitsRequest.h>
@@ -298,6 +300,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeRouteTableConflictsResponse> DescribeRouteTableConflictsOutcome;
                 typedef std::future<DescribeRouteTableConflictsOutcome> DescribeRouteTableConflictsOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::DescribeRouteTableConflictsRequest&, DescribeRouteTableConflictsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRouteTableConflictsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeTKEEdgeScriptResponse> DescribeTKEEdgeScriptOutcome;
+                typedef std::future<DescribeTKEEdgeScriptOutcome> DescribeTKEEdgeScriptOutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::DescribeTKEEdgeScriptRequest&, DescribeTKEEdgeScriptOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTKEEdgeScriptAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeVersionsResponse> DescribeVersionsOutcome;
                 typedef std::future<DescribeVersionsOutcome> DescribeVersionsOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::DescribeVersionsRequest&, DescribeVersionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVersionsAsyncHandler;
@@ -759,6 +764,15 @@ namespace TencentCloud
                 DescribeRouteTableConflictsOutcome DescribeRouteTableConflicts(const Model::DescribeRouteTableConflictsRequest &request);
                 void DescribeRouteTableConflictsAsync(const Model::DescribeRouteTableConflictsRequest& request, const DescribeRouteTableConflictsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeRouteTableConflictsOutcomeCallable DescribeRouteTableConflictsCallable(const Model::DescribeRouteTableConflictsRequest& request);
+
+                /**
+                 *This API is used to query the URL of TKE edge script.
+                 * @param req DescribeTKEEdgeScriptRequest
+                 * @return DescribeTKEEdgeScriptOutcome
+                 */
+                DescribeTKEEdgeScriptOutcome DescribeTKEEdgeScript(const Model::DescribeTKEEdgeScriptRequest &request);
+                void DescribeTKEEdgeScriptAsync(const Model::DescribeTKEEdgeScriptRequest& request, const DescribeTKEEdgeScriptAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeTKEEdgeScriptOutcomeCallable DescribeTKEEdgeScriptCallable(const Model::DescribeTKEEdgeScriptRequest& request);
 
                 /**
                  *This API is used to query cluster version information.
