@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance name.
-                     * @return InstanceName Instance name.
+                     * 获取The modified instance name.
+                     * @return InstanceName The modified instance name.
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name.
-                     * @param InstanceName Instance name.
+                     * 设置The modified instance name.
+                     * @param InstanceName The modified instance name.
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
@@ -87,7 +87,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Instance name.
+                     * The modified instance name.
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;

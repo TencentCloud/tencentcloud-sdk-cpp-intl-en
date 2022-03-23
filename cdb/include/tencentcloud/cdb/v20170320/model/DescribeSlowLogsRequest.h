@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Offset. Minimum value: 0.
-                     * @return Offset Offset. Minimum value: 0.
+                     * 获取Pagination offset, starting from `0`. Default value: `0`.
+                     * @return Offset Pagination offset, starting from `0`. Default value: `0`.
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset. Minimum value: 0.
-                     * @param Offset Offset. Minimum value: 0.
+                     * 设置Pagination offset, starting from `0`. Default value: `0`.
+                     * @param Offset Pagination offset, starting from `0`. Default value: `0`.
                      */
                     void SetOffset(const int64_t& _offset);
 
@@ -105,7 +105,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Offset. Minimum value: 0.
+                     * Pagination offset, starting from `0`. Default value: `0`.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;

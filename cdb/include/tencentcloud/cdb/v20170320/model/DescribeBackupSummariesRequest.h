@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool ProductHasBeenSet() const;
 
                     /**
-                     * 获取Pagination offset.
-                     * @return Offset Pagination offset.
+                     * 获取Paginated query offset. Default value: `0`.
+                     * @return Offset Paginated query offset. Default value: `0`.
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Pagination offset.
-                     * @param Offset Pagination offset.
+                     * 设置Paginated query offset. Default value: `0`.
+                     * @param Offset Paginated query offset. Default value: `0`.
                      */
                     void SetOffset(const int64_t& _offset);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Paginated query limit. Default value: 20.
-                     * @return Limit Paginated query limit. Default value: 20.
+                     * 获取Maximum entries returned per page, which ranges from 1 to 100. Default value: `20`.
+                     * @return Limit Maximum entries returned per page, which ranges from 1 to 100. Default value: `20`.
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Paginated query limit. Default value: 20.
-                     * @param Limit Paginated query limit. Default value: 20.
+                     * 设置Maximum entries returned per page, which ranges from 1 to 100. Default value: `20`.
+                     * @param Limit Maximum entries returned per page, which ranges from 1 to 100. Default value: `20`.
                      */
                     void SetLimit(const int64_t& _limit);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Sorting criterion. Valid values: BackupVolume (backup capacity), DataBackupVolume (data backup capacity), BinlogBackupVolume (log backup capacity), AutoBackupVolume (automatic backup capacity), ManualBackupVolume (manual backup capacity).
-                     * @return OrderBy Sorting criterion. Valid values: BackupVolume (backup capacity), DataBackupVolume (data backup capacity), BinlogBackupVolume (log backup capacity), AutoBackupVolume (automatic backup capacity), ManualBackupVolume (manual backup capacity).
+                     * 获取Sorting criterion. Valid values: `BackupVolume` (backup capacity), `DataBackupVolume` (data backup capacity), `BinlogBackupVolume` (log backup capacity), `AutoBackupVolume` (automatic backup capacity), `ManualBackupVolume` (manual backup capacity). Default value: `BackupVolume`.
+                     * @return OrderBy Sorting criterion. Valid values: `BackupVolume` (backup capacity), `DataBackupVolume` (data backup capacity), `BinlogBackupVolume` (log backup capacity), `AutoBackupVolume` (automatic backup capacity), `ManualBackupVolume` (manual backup capacity). Default value: `BackupVolume`.
                      */
                     std::string GetOrderBy() const;
 
                     /**
-                     * 设置Sorting criterion. Valid values: BackupVolume (backup capacity), DataBackupVolume (data backup capacity), BinlogBackupVolume (log backup capacity), AutoBackupVolume (automatic backup capacity), ManualBackupVolume (manual backup capacity).
-                     * @param OrderBy Sorting criterion. Valid values: BackupVolume (backup capacity), DataBackupVolume (data backup capacity), BinlogBackupVolume (log backup capacity), AutoBackupVolume (automatic backup capacity), ManualBackupVolume (manual backup capacity).
+                     * 设置Sorting criterion. Valid values: `BackupVolume` (backup capacity), `DataBackupVolume` (data backup capacity), `BinlogBackupVolume` (log backup capacity), `AutoBackupVolume` (automatic backup capacity), `ManualBackupVolume` (manual backup capacity). Default value: `BackupVolume`.
+                     * @param OrderBy Sorting criterion. Valid values: `BackupVolume` (backup capacity), `DataBackupVolume` (data backup capacity), `BinlogBackupVolume` (log backup capacity), `AutoBackupVolume` (automatic backup capacity), `ManualBackupVolume` (manual backup capacity). Default value: `BackupVolume`.
                      */
                     void SetOrderBy(const std::string& _orderBy);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool OrderByHasBeenSet() const;
 
                     /**
-                     * 获取Sorting order. Valid values: ASC (ascending), DESC (descending).
-                     * @return OrderDirection Sorting order. Valid values: ASC (ascending), DESC (descending).
+                     * 获取Sorting order. Valid values: `ASC` (ascending), `DESC` (descending). Default value: `ASC`.
+                     * @return OrderDirection Sorting order. Valid values: `ASC` (ascending), `DESC` (descending). Default value: `ASC`.
                      */
                     std::string GetOrderDirection() const;
 
                     /**
-                     * 设置Sorting order. Valid values: ASC (ascending), DESC (descending).
-                     * @param OrderDirection Sorting order. Valid values: ASC (ascending), DESC (descending).
+                     * 设置Sorting order. Valid values: `ASC` (ascending), `DESC` (descending). Default value: `ASC`.
+                     * @param OrderDirection Sorting order. Valid values: `ASC` (ascending), `DESC` (descending). Default value: `ASC`.
                      */
                     void SetOrderDirection(const std::string& _orderDirection);
 
@@ -141,25 +141,25 @@ namespace TencentCloud
                     bool m_productHasBeenSet;
 
                     /**
-                     * Pagination offset.
+                     * Paginated query offset. Default value: `0`.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Paginated query limit. Default value: 20.
+                     * Maximum entries returned per page, which ranges from 1 to 100. Default value: `20`.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Sorting criterion. Valid values: BackupVolume (backup capacity), DataBackupVolume (data backup capacity), BinlogBackupVolume (log backup capacity), AutoBackupVolume (automatic backup capacity), ManualBackupVolume (manual backup capacity).
+                     * Sorting criterion. Valid values: `BackupVolume` (backup capacity), `DataBackupVolume` (data backup capacity), `BinlogBackupVolume` (log backup capacity), `AutoBackupVolume` (automatic backup capacity), `ManualBackupVolume` (manual backup capacity). Default value: `BackupVolume`.
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;
 
                     /**
-                     * Sorting order. Valid values: ASC (ascending), DESC (descending).
+                     * Sorting order. Valid values: `ASC` (ascending), `DESC` (descending). Default value: `ASC`.
                      */
                     std::string m_orderDirection;
                     bool m_orderDirectionHasBeenSet;
