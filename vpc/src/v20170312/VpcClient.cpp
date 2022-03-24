@@ -470,49 +470,6 @@ VpcClient::AssociateNatGatewayAddressOutcomeCallable VpcClient::AssociateNatGate
     return task->get_future();
 }
 
-VpcClient::AssociateNetworkAclSubnetsOutcome VpcClient::AssociateNetworkAclSubnets(const AssociateNetworkAclSubnetsRequest &request)
-{
-    auto outcome = MakeRequest(request, "AssociateNetworkAclSubnets");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        AssociateNetworkAclSubnetsResponse rsp = AssociateNetworkAclSubnetsResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return AssociateNetworkAclSubnetsOutcome(rsp);
-        else
-            return AssociateNetworkAclSubnetsOutcome(o.GetError());
-    }
-    else
-    {
-        return AssociateNetworkAclSubnetsOutcome(outcome.GetError());
-    }
-}
-
-void VpcClient::AssociateNetworkAclSubnetsAsync(const AssociateNetworkAclSubnetsRequest& request, const AssociateNetworkAclSubnetsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->AssociateNetworkAclSubnets(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-VpcClient::AssociateNetworkAclSubnetsOutcomeCallable VpcClient::AssociateNetworkAclSubnetsCallable(const AssociateNetworkAclSubnetsRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<AssociateNetworkAclSubnetsOutcome()>>(
-        [this, request]()
-        {
-            return this->AssociateNetworkAclSubnets(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
 VpcClient::AssociateNetworkInterfaceSecurityGroupsOutcome VpcClient::AssociateNetworkInterfaceSecurityGroups(const AssociateNetworkInterfaceSecurityGroupsRequest &request)
 {
     auto outcome = MakeRequest(request, "AssociateNetworkInterfaceSecurityGroups");
@@ -979,49 +936,6 @@ VpcClient::CreateAndAttachNetworkInterfaceOutcomeCallable VpcClient::CreateAndAt
         [this, request]()
         {
             return this->CreateAndAttachNetworkInterface(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
-VpcClient::CreateAssistantCidrOutcome VpcClient::CreateAssistantCidr(const CreateAssistantCidrRequest &request)
-{
-    auto outcome = MakeRequest(request, "CreateAssistantCidr");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        CreateAssistantCidrResponse rsp = CreateAssistantCidrResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return CreateAssistantCidrOutcome(rsp);
-        else
-            return CreateAssistantCidrOutcome(o.GetError());
-    }
-    else
-    {
-        return CreateAssistantCidrOutcome(outcome.GetError());
-    }
-}
-
-void VpcClient::CreateAssistantCidrAsync(const CreateAssistantCidrRequest& request, const CreateAssistantCidrAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateAssistantCidr(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-VpcClient::CreateAssistantCidrOutcomeCallable VpcClient::CreateAssistantCidrCallable(const CreateAssistantCidrRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<CreateAssistantCidrOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateAssistantCidr(request);
         }
     );
 
@@ -1581,49 +1495,6 @@ VpcClient::CreateNetDetectOutcomeCallable VpcClient::CreateNetDetectCallable(con
         [this, request]()
         {
             return this->CreateNetDetect(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
-VpcClient::CreateNetworkAclOutcome VpcClient::CreateNetworkAcl(const CreateNetworkAclRequest &request)
-{
-    auto outcome = MakeRequest(request, "CreateNetworkAcl");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        CreateNetworkAclResponse rsp = CreateNetworkAclResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return CreateNetworkAclOutcome(rsp);
-        else
-            return CreateNetworkAclOutcome(o.GetError());
-    }
-    else
-    {
-        return CreateNetworkAclOutcome(outcome.GetError());
-    }
-}
-
-void VpcClient::CreateNetworkAclAsync(const CreateNetworkAclRequest& request, const CreateNetworkAclAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateNetworkAcl(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-VpcClient::CreateNetworkAclOutcomeCallable VpcClient::CreateNetworkAclCallable(const CreateNetworkAclRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<CreateNetworkAclOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateNetworkAcl(request);
         }
     );
 
@@ -2448,49 +2319,6 @@ VpcClient::DeleteAddressTemplateGroupOutcomeCallable VpcClient::DeleteAddressTem
     return task->get_future();
 }
 
-VpcClient::DeleteAssistantCidrOutcome VpcClient::DeleteAssistantCidr(const DeleteAssistantCidrRequest &request)
-{
-    auto outcome = MakeRequest(request, "DeleteAssistantCidr");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        DeleteAssistantCidrResponse rsp = DeleteAssistantCidrResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return DeleteAssistantCidrOutcome(rsp);
-        else
-            return DeleteAssistantCidrOutcome(o.GetError());
-    }
-    else
-    {
-        return DeleteAssistantCidrOutcome(outcome.GetError());
-    }
-}
-
-void VpcClient::DeleteAssistantCidrAsync(const DeleteAssistantCidrRequest& request, const DeleteAssistantCidrAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteAssistantCidr(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-VpcClient::DeleteAssistantCidrOutcomeCallable VpcClient::DeleteAssistantCidrCallable(const DeleteAssistantCidrRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<DeleteAssistantCidrOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteAssistantCidr(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
 VpcClient::DeleteBandwidthPackageOutcome VpcClient::DeleteBandwidthPackage(const DeleteBandwidthPackageRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteBandwidthPackage");
@@ -3000,49 +2828,6 @@ VpcClient::DeleteNetDetectOutcomeCallable VpcClient::DeleteNetDetectCallable(con
         [this, request]()
         {
             return this->DeleteNetDetect(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
-VpcClient::DeleteNetworkAclOutcome VpcClient::DeleteNetworkAcl(const DeleteNetworkAclRequest &request)
-{
-    auto outcome = MakeRequest(request, "DeleteNetworkAcl");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        DeleteNetworkAclResponse rsp = DeleteNetworkAclResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return DeleteNetworkAclOutcome(rsp);
-        else
-            return DeleteNetworkAclOutcome(o.GetError());
-    }
-    else
-    {
-        return DeleteNetworkAclOutcome(outcome.GetError());
-    }
-}
-
-void VpcClient::DeleteNetworkAclAsync(const DeleteNetworkAclRequest& request, const DeleteNetworkAclAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteNetworkAcl(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-VpcClient::DeleteNetworkAclOutcomeCallable VpcClient::DeleteNetworkAclCallable(const DeleteNetworkAclRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<DeleteNetworkAclOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteNetworkAcl(request);
         }
     );
 
@@ -4684,49 +4469,6 @@ VpcClient::DescribeGatewayFlowMonitorDetailOutcomeCallable VpcClient::DescribeGa
     return task->get_future();
 }
 
-VpcClient::DescribeGatewayFlowQosOutcome VpcClient::DescribeGatewayFlowQos(const DescribeGatewayFlowQosRequest &request)
-{
-    auto outcome = MakeRequest(request, "DescribeGatewayFlowQos");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        DescribeGatewayFlowQosResponse rsp = DescribeGatewayFlowQosResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return DescribeGatewayFlowQosOutcome(rsp);
-        else
-            return DescribeGatewayFlowQosOutcome(o.GetError());
-    }
-    else
-    {
-        return DescribeGatewayFlowQosOutcome(outcome.GetError());
-    }
-}
-
-void VpcClient::DescribeGatewayFlowQosAsync(const DescribeGatewayFlowQosRequest& request, const DescribeGatewayFlowQosAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeGatewayFlowQos(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-VpcClient::DescribeGatewayFlowQosOutcomeCallable VpcClient::DescribeGatewayFlowQosCallable(const DescribeGatewayFlowQosRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<DescribeGatewayFlowQosOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeGatewayFlowQos(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
 VpcClient::DescribeHaVipsOutcome VpcClient::DescribeHaVips(const DescribeHaVipsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeHaVips");
@@ -5931,49 +5673,6 @@ VpcClient::DescribeVpcResourceDashboardOutcomeCallable VpcClient::DescribeVpcRes
     return task->get_future();
 }
 
-VpcClient::DescribeVpcTaskResultOutcome VpcClient::DescribeVpcTaskResult(const DescribeVpcTaskResultRequest &request)
-{
-    auto outcome = MakeRequest(request, "DescribeVpcTaskResult");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        DescribeVpcTaskResultResponse rsp = DescribeVpcTaskResultResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return DescribeVpcTaskResultOutcome(rsp);
-        else
-            return DescribeVpcTaskResultOutcome(o.GetError());
-    }
-    else
-    {
-        return DescribeVpcTaskResultOutcome(outcome.GetError());
-    }
-}
-
-void VpcClient::DescribeVpcTaskResultAsync(const DescribeVpcTaskResultRequest& request, const DescribeVpcTaskResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeVpcTaskResult(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-VpcClient::DescribeVpcTaskResultOutcomeCallable VpcClient::DescribeVpcTaskResultCallable(const DescribeVpcTaskResultRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<DescribeVpcTaskResultOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeVpcTaskResult(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
 VpcClient::DescribeVpcsOutcome VpcClient::DescribeVpcs(const DescribeVpcsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeVpcs");
@@ -6361,49 +6060,6 @@ VpcClient::DisableCcnRoutesOutcomeCallable VpcClient::DisableCcnRoutesCallable(c
     return task->get_future();
 }
 
-VpcClient::DisableGatewayFlowMonitorOutcome VpcClient::DisableGatewayFlowMonitor(const DisableGatewayFlowMonitorRequest &request)
-{
-    auto outcome = MakeRequest(request, "DisableGatewayFlowMonitor");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        DisableGatewayFlowMonitorResponse rsp = DisableGatewayFlowMonitorResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return DisableGatewayFlowMonitorOutcome(rsp);
-        else
-            return DisableGatewayFlowMonitorOutcome(o.GetError());
-    }
-    else
-    {
-        return DisableGatewayFlowMonitorOutcome(outcome.GetError());
-    }
-}
-
-void VpcClient::DisableGatewayFlowMonitorAsync(const DisableGatewayFlowMonitorRequest& request, const DisableGatewayFlowMonitorAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DisableGatewayFlowMonitor(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-VpcClient::DisableGatewayFlowMonitorOutcomeCallable VpcClient::DisableGatewayFlowMonitorCallable(const DisableGatewayFlowMonitorRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<DisableGatewayFlowMonitorOutcome()>>(
-        [this, request]()
-        {
-            return this->DisableGatewayFlowMonitor(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
 VpcClient::DisassociateAddressOutcome VpcClient::DisassociateAddress(const DisassociateAddressRequest &request)
 {
     auto outcome = MakeRequest(request, "DisassociateAddress");
@@ -6526,49 +6182,6 @@ VpcClient::DisassociateNatGatewayAddressOutcomeCallable VpcClient::DisassociateN
         [this, request]()
         {
             return this->DisassociateNatGatewayAddress(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
-VpcClient::DisassociateNetworkAclSubnetsOutcome VpcClient::DisassociateNetworkAclSubnets(const DisassociateNetworkAclSubnetsRequest &request)
-{
-    auto outcome = MakeRequest(request, "DisassociateNetworkAclSubnets");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        DisassociateNetworkAclSubnetsResponse rsp = DisassociateNetworkAclSubnetsResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return DisassociateNetworkAclSubnetsOutcome(rsp);
-        else
-            return DisassociateNetworkAclSubnetsOutcome(o.GetError());
-    }
-    else
-    {
-        return DisassociateNetworkAclSubnetsOutcome(outcome.GetError());
-    }
-}
-
-void VpcClient::DisassociateNetworkAclSubnetsAsync(const DisassociateNetworkAclSubnetsRequest& request, const DisassociateNetworkAclSubnetsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DisassociateNetworkAclSubnets(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-VpcClient::DisassociateNetworkAclSubnetsOutcomeCallable VpcClient::DisassociateNetworkAclSubnetsCallable(const DisassociateNetworkAclSubnetsRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<DisassociateNetworkAclSubnetsOutcome()>>(
-        [this, request]()
-        {
-            return this->DisassociateNetworkAclSubnets(request);
         }
     );
 
@@ -6741,49 +6354,6 @@ VpcClient::EnableCcnRoutesOutcomeCallable VpcClient::EnableCcnRoutesCallable(con
         [this, request]()
         {
             return this->EnableCcnRoutes(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
-VpcClient::EnableGatewayFlowMonitorOutcome VpcClient::EnableGatewayFlowMonitor(const EnableGatewayFlowMonitorRequest &request)
-{
-    auto outcome = MakeRequest(request, "EnableGatewayFlowMonitor");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        EnableGatewayFlowMonitorResponse rsp = EnableGatewayFlowMonitorResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return EnableGatewayFlowMonitorOutcome(rsp);
-        else
-            return EnableGatewayFlowMonitorOutcome(o.GetError());
-    }
-    else
-    {
-        return EnableGatewayFlowMonitorOutcome(outcome.GetError());
-    }
-}
-
-void VpcClient::EnableGatewayFlowMonitorAsync(const EnableGatewayFlowMonitorRequest& request, const EnableGatewayFlowMonitorAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->EnableGatewayFlowMonitor(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-VpcClient::EnableGatewayFlowMonitorOutcomeCallable VpcClient::EnableGatewayFlowMonitorCallable(const EnableGatewayFlowMonitorRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<EnableGatewayFlowMonitorOutcome()>>(
-        [this, request]()
-        {
-            return this->EnableGatewayFlowMonitor(request);
         }
     );
 
@@ -7436,49 +7006,6 @@ VpcClient::ModifyAddressesBandwidthOutcomeCallable VpcClient::ModifyAddressesBan
     return task->get_future();
 }
 
-VpcClient::ModifyAssistantCidrOutcome VpcClient::ModifyAssistantCidr(const ModifyAssistantCidrRequest &request)
-{
-    auto outcome = MakeRequest(request, "ModifyAssistantCidr");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        ModifyAssistantCidrResponse rsp = ModifyAssistantCidrResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return ModifyAssistantCidrOutcome(rsp);
-        else
-            return ModifyAssistantCidrOutcome(o.GetError());
-    }
-    else
-    {
-        return ModifyAssistantCidrOutcome(outcome.GetError());
-    }
-}
-
-void VpcClient::ModifyAssistantCidrAsync(const ModifyAssistantCidrRequest& request, const ModifyAssistantCidrAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyAssistantCidr(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-VpcClient::ModifyAssistantCidrOutcomeCallable VpcClient::ModifyAssistantCidrCallable(const ModifyAssistantCidrRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<ModifyAssistantCidrOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyAssistantCidr(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
 VpcClient::ModifyBandwidthPackageAttributeOutcome VpcClient::ModifyBandwidthPackageAttribute(const ModifyBandwidthPackageAttributeRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyBandwidthPackageAttribute");
@@ -7780,49 +7307,6 @@ VpcClient::ModifyFlowLogAttributeOutcomeCallable VpcClient::ModifyFlowLogAttribu
     return task->get_future();
 }
 
-VpcClient::ModifyGatewayFlowQosOutcome VpcClient::ModifyGatewayFlowQos(const ModifyGatewayFlowQosRequest &request)
-{
-    auto outcome = MakeRequest(request, "ModifyGatewayFlowQos");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        ModifyGatewayFlowQosResponse rsp = ModifyGatewayFlowQosResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return ModifyGatewayFlowQosOutcome(rsp);
-        else
-            return ModifyGatewayFlowQosOutcome(o.GetError());
-    }
-    else
-    {
-        return ModifyGatewayFlowQosOutcome(outcome.GetError());
-    }
-}
-
-void VpcClient::ModifyGatewayFlowQosAsync(const ModifyGatewayFlowQosRequest& request, const ModifyGatewayFlowQosAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyGatewayFlowQos(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-VpcClient::ModifyGatewayFlowQosOutcomeCallable VpcClient::ModifyGatewayFlowQosCallable(const ModifyGatewayFlowQosRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<ModifyGatewayFlowQosOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyGatewayFlowQos(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
 VpcClient::ModifyHaVipAttributeOutcome VpcClient::ModifyHaVipAttribute(const ModifyHaVipAttributeRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyHaVipAttribute");
@@ -8117,92 +7601,6 @@ VpcClient::ModifyNetDetectOutcomeCallable VpcClient::ModifyNetDetectCallable(con
         [this, request]()
         {
             return this->ModifyNetDetect(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
-VpcClient::ModifyNetworkAclAttributeOutcome VpcClient::ModifyNetworkAclAttribute(const ModifyNetworkAclAttributeRequest &request)
-{
-    auto outcome = MakeRequest(request, "ModifyNetworkAclAttribute");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        ModifyNetworkAclAttributeResponse rsp = ModifyNetworkAclAttributeResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return ModifyNetworkAclAttributeOutcome(rsp);
-        else
-            return ModifyNetworkAclAttributeOutcome(o.GetError());
-    }
-    else
-    {
-        return ModifyNetworkAclAttributeOutcome(outcome.GetError());
-    }
-}
-
-void VpcClient::ModifyNetworkAclAttributeAsync(const ModifyNetworkAclAttributeRequest& request, const ModifyNetworkAclAttributeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyNetworkAclAttribute(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-VpcClient::ModifyNetworkAclAttributeOutcomeCallable VpcClient::ModifyNetworkAclAttributeCallable(const ModifyNetworkAclAttributeRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<ModifyNetworkAclAttributeOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyNetworkAclAttribute(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
-VpcClient::ModifyNetworkAclEntriesOutcome VpcClient::ModifyNetworkAclEntries(const ModifyNetworkAclEntriesRequest &request)
-{
-    auto outcome = MakeRequest(request, "ModifyNetworkAclEntries");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        ModifyNetworkAclEntriesResponse rsp = ModifyNetworkAclEntriesResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return ModifyNetworkAclEntriesOutcome(rsp);
-        else
-            return ModifyNetworkAclEntriesOutcome(o.GetError());
-    }
-    else
-    {
-        return ModifyNetworkAclEntriesOutcome(outcome.GetError());
-    }
-}
-
-void VpcClient::ModifyNetworkAclEntriesAsync(const ModifyNetworkAclEntriesRequest& request, const ModifyNetworkAclEntriesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyNetworkAclEntries(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-VpcClient::ModifyNetworkAclEntriesOutcomeCallable VpcClient::ModifyNetworkAclEntriesCallable(const ModifyNetworkAclEntriesRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<ModifyNetworkAclEntriesOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyNetworkAclEntries(request);
         }
     );
 
@@ -8891,49 +8289,6 @@ VpcClient::ModifyVpnGatewayRoutesOutcomeCallable VpcClient::ModifyVpnGatewayRout
         [this, request]()
         {
             return this->ModifyVpnGatewayRoutes(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
-VpcClient::NotifyRoutesOutcome VpcClient::NotifyRoutes(const NotifyRoutesRequest &request)
-{
-    auto outcome = MakeRequest(request, "NotifyRoutes");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        NotifyRoutesResponse rsp = NotifyRoutesResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return NotifyRoutesOutcome(rsp);
-        else
-            return NotifyRoutesOutcome(o.GetError());
-    }
-    else
-    {
-        return NotifyRoutesOutcome(outcome.GetError());
-    }
-}
-
-void VpcClient::NotifyRoutesAsync(const NotifyRoutesRequest& request, const NotifyRoutesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->NotifyRoutes(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-VpcClient::NotifyRoutesOutcomeCallable VpcClient::NotifyRoutesCallable(const NotifyRoutesRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<NotifyRoutesOutcome()>>(
-        [this, request]()
-        {
-            return this->NotifyRoutes(request);
         }
     );
 
@@ -9751,49 +9106,6 @@ VpcClient::UnassignPrivateIpAddressesOutcomeCallable VpcClient::UnassignPrivateI
         [this, request]()
         {
             return this->UnassignPrivateIpAddresses(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
-VpcClient::WithdrawNotifyRoutesOutcome VpcClient::WithdrawNotifyRoutes(const WithdrawNotifyRoutesRequest &request)
-{
-    auto outcome = MakeRequest(request, "WithdrawNotifyRoutes");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        WithdrawNotifyRoutesResponse rsp = WithdrawNotifyRoutesResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return WithdrawNotifyRoutesOutcome(rsp);
-        else
-            return WithdrawNotifyRoutesOutcome(o.GetError());
-    }
-    else
-    {
-        return WithdrawNotifyRoutesOutcome(outcome.GetError());
-    }
-}
-
-void VpcClient::WithdrawNotifyRoutesAsync(const WithdrawNotifyRoutesRequest& request, const WithdrawNotifyRoutesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->WithdrawNotifyRoutes(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-VpcClient::WithdrawNotifyRoutesOutcomeCallable VpcClient::WithdrawNotifyRoutesCallable(const WithdrawNotifyRoutesRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<WithdrawNotifyRoutesOutcome()>>(
-        [this, request]()
-        {
-            return this->WithdrawNotifyRoutes(request);
         }
     );
 

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * IP address template.
+                * IP address template
                 */
                 class AddressTemplateSpecification : public AbstractModel
                 {

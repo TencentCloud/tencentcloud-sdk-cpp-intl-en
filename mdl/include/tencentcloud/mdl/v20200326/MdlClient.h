@@ -67,6 +67,8 @@
 #include <tencentcloud/mdl/v20200326/model/DescribeStreamLivePlansResponse.h>
 #include <tencentcloud/mdl/v20200326/model/DescribeStreamLiveRegionsRequest.h>
 #include <tencentcloud/mdl/v20200326/model/DescribeStreamLiveRegionsResponse.h>
+#include <tencentcloud/mdl/v20200326/model/DescribeStreamLiveTranscodeDetailRequest.h>
+#include <tencentcloud/mdl/v20200326/model/DescribeStreamLiveTranscodeDetailResponse.h>
 #include <tencentcloud/mdl/v20200326/model/DescribeStreamLiveWatermarkRequest.h>
 #include <tencentcloud/mdl/v20200326/model/DescribeStreamLiveWatermarkResponse.h>
 #include <tencentcloud/mdl/v20200326/model/DescribeStreamLiveWatermarksRequest.h>
@@ -163,6 +165,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeStreamLiveRegionsResponse> DescribeStreamLiveRegionsOutcome;
                 typedef std::future<DescribeStreamLiveRegionsOutcome> DescribeStreamLiveRegionsOutcomeCallable;
                 typedef std::function<void(const MdlClient*, const Model::DescribeStreamLiveRegionsRequest&, DescribeStreamLiveRegionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamLiveRegionsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeStreamLiveTranscodeDetailResponse> DescribeStreamLiveTranscodeDetailOutcome;
+                typedef std::future<DescribeStreamLiveTranscodeDetailOutcome> DescribeStreamLiveTranscodeDetailOutcomeCallable;
+                typedef std::function<void(const MdlClient*, const Model::DescribeStreamLiveTranscodeDetailRequest&, DescribeStreamLiveTranscodeDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamLiveTranscodeDetailAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeStreamLiveWatermarkResponse> DescribeStreamLiveWatermarkOutcome;
                 typedef std::future<DescribeStreamLiveWatermarkOutcome> DescribeStreamLiveWatermarkOutcomeCallable;
                 typedef std::function<void(const MdlClient*, const Model::DescribeStreamLiveWatermarkRequest&, DescribeStreamLiveWatermarkOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamLiveWatermarkAsyncHandler;
@@ -387,6 +392,15 @@ namespace TencentCloud
                 DescribeStreamLiveRegionsOutcome DescribeStreamLiveRegions(const Model::DescribeStreamLiveRegionsRequest &request);
                 void DescribeStreamLiveRegionsAsync(const Model::DescribeStreamLiveRegionsRequest& request, const DescribeStreamLiveRegionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeStreamLiveRegionsOutcomeCallable DescribeStreamLiveRegionsCallable(const Model::DescribeStreamLiveRegionsRequest& request);
+
+                /**
+                 *This API is used to query the transcoding information of StreamLive streams.
+                 * @param req DescribeStreamLiveTranscodeDetailRequest
+                 * @return DescribeStreamLiveTranscodeDetailOutcome
+                 */
+                DescribeStreamLiveTranscodeDetailOutcome DescribeStreamLiveTranscodeDetail(const Model::DescribeStreamLiveTranscodeDetailRequest &request);
+                void DescribeStreamLiveTranscodeDetailAsync(const Model::DescribeStreamLiveTranscodeDetailRequest& request, const DescribeStreamLiveTranscodeDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeStreamLiveTranscodeDetailOutcomeCallable DescribeStreamLiveTranscodeDetailCallable(const Model::DescribeStreamLiveTranscodeDetailRequest& request);
 
                 /**
                  *This API is used to query a watermark.

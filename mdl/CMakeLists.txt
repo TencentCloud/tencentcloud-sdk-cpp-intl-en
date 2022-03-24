@@ -26,7 +26,7 @@ set(mdl_public_header_model
   include/tencentcloud/mdl/v20200326/model/CreateStreamLivePlanRequest.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveWatermarksResponse.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveInputRequest.h
-  include/tencentcloud/mdl/v20200326/model/ModifyStreamLiveWatermarkRequest.h
+  include/tencentcloud/mdl/v20200326/model/CreateStreamLiveInputRequest.h
   include/tencentcloud/mdl/v20200326/model/AudioPidSelectionInfo.h
   include/tencentcloud/mdl/v20200326/model/AudioPipelineInputStatistics.h
   include/tencentcloud/mdl/v20200326/model/CreateStreamLivePlanResponse.h
@@ -55,10 +55,12 @@ set(mdl_public_header_model
   include/tencentcloud/mdl/v20200326/model/DeleteStreamLiveInputSecurityGroupRequest.h
   include/tencentcloud/mdl/v20200326/model/AttachedInput.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveWatermarksRequest.h
+  include/tencentcloud/mdl/v20200326/model/DescribeTranscodeDetailInfo.h
   include/tencentcloud/mdl/v20200326/model/TimeShiftSettingsInfo.h
   include/tencentcloud/mdl/v20200326/model/VideoTemplateInfo.h
   include/tencentcloud/mdl/v20200326/model/TimingSettingsReq.h
-  include/tencentcloud/mdl/v20200326/model/CreateStreamLiveInputRequest.h
+  include/tencentcloud/mdl/v20200326/model/ModifyStreamLiveWatermarkRequest.h
+  include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveTranscodeDetailRequest.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveChannelLogsResponse.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveChannelInputStatisticsRequest.h
   include/tencentcloud/mdl/v20200326/model/PipelineLogInfo.h
@@ -68,6 +70,7 @@ set(mdl_public_header_model
   include/tencentcloud/mdl/v20200326/model/ChannelInputStatistics.h
   include/tencentcloud/mdl/v20200326/model/HlsRemuxSettingsInfo.h
   include/tencentcloud/mdl/v20200326/model/EventSettingsResp.h
+  include/tencentcloud/mdl/v20200326/model/TimingSettingsResp.h
   include/tencentcloud/mdl/v20200326/model/AudioTemplateInfo.h
   include/tencentcloud/mdl/v20200326/model/StreamPackageSettingsInfo.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveChannelsResponse.h
@@ -79,7 +82,7 @@ set(mdl_public_header_model
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveChannelRequest.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLivePlansRequest.h
   include/tencentcloud/mdl/v20200326/model/CreateStreamLiveChannelRequest.h
-  include/tencentcloud/mdl/v20200326/model/TimingSettingsResp.h
+  include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveTranscodeDetailResponse.h
   include/tencentcloud/mdl/v20200326/model/CreateStreamLiveWatermarkResponse.h
   include/tencentcloud/mdl/v20200326/model/DescribeStreamLiveInputsResponse.h
   include/tencentcloud/mdl/v20200326/model/ModifyStreamLiveInputResponse.h
@@ -146,7 +149,7 @@ set(mdl_src
   src/v20200326/model/CreateStreamLivePlanRequest.cpp
   src/v20200326/model/DescribeStreamLiveWatermarksResponse.cpp
   src/v20200326/model/DescribeStreamLiveInputRequest.cpp
-  src/v20200326/model/ModifyStreamLiveWatermarkRequest.cpp
+  src/v20200326/model/CreateStreamLiveInputRequest.cpp
   src/v20200326/model/AudioPidSelectionInfo.cpp
   src/v20200326/model/AudioPipelineInputStatistics.cpp
   src/v20200326/model/CreateStreamLivePlanResponse.cpp
@@ -175,10 +178,12 @@ set(mdl_src
   src/v20200326/model/DeleteStreamLiveInputSecurityGroupRequest.cpp
   src/v20200326/model/AttachedInput.cpp
   src/v20200326/model/DescribeStreamLiveWatermarksRequest.cpp
+  src/v20200326/model/DescribeTranscodeDetailInfo.cpp
   src/v20200326/model/TimeShiftSettingsInfo.cpp
   src/v20200326/model/VideoTemplateInfo.cpp
   src/v20200326/model/TimingSettingsReq.cpp
-  src/v20200326/model/CreateStreamLiveInputRequest.cpp
+  src/v20200326/model/ModifyStreamLiveWatermarkRequest.cpp
+  src/v20200326/model/DescribeStreamLiveTranscodeDetailRequest.cpp
   src/v20200326/model/DescribeStreamLiveChannelLogsResponse.cpp
   src/v20200326/model/DescribeStreamLiveChannelInputStatisticsRequest.cpp
   src/v20200326/model/PipelineLogInfo.cpp
@@ -188,6 +193,7 @@ set(mdl_src
   src/v20200326/model/ChannelInputStatistics.cpp
   src/v20200326/model/HlsRemuxSettingsInfo.cpp
   src/v20200326/model/EventSettingsResp.cpp
+  src/v20200326/model/TimingSettingsResp.cpp
   src/v20200326/model/AudioTemplateInfo.cpp
   src/v20200326/model/StreamPackageSettingsInfo.cpp
   src/v20200326/model/DescribeStreamLiveChannelsResponse.cpp
@@ -199,7 +205,7 @@ set(mdl_src
   src/v20200326/model/DescribeStreamLiveChannelRequest.cpp
   src/v20200326/model/DescribeStreamLivePlansRequest.cpp
   src/v20200326/model/CreateStreamLiveChannelRequest.cpp
-  src/v20200326/model/TimingSettingsResp.cpp
+  src/v20200326/model/DescribeStreamLiveTranscodeDetailResponse.cpp
   src/v20200326/model/CreateStreamLiveWatermarkResponse.cpp
   src/v20200326/model/DescribeStreamLiveInputsResponse.cpp
   src/v20200326/model/ModifyStreamLiveInputResponse.cpp

@@ -85,14 +85,18 @@ namespace TencentCloud
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取Port (all, discrete port, range).
-                     * @return Port Port (all, discrete port, range).
+                     * 获取Port (`all`, a single port, or a port range).
+Note: If the `Protocol` value is set to `ALL`, the `Port` value also needs to be set to `all`.
+                     * @return Port Port (`all`, a single port, or a port range).
+Note: If the `Protocol` value is set to `ALL`, the `Port` value also needs to be set to `all`.
                      */
                     std::string GetPort() const;
 
                     /**
-                     * 设置Port (all, discrete port, range).
-                     * @param Port Port (all, discrete port, range).
+                     * 设置Port (`all`, a single port, or a port range).
+Note: If the `Protocol` value is set to `ALL`, the `Port` value also needs to be set to `all`.
+                     * @param Port Port (`all`, a single port, or a port range).
+Note: If the `Protocol` value is set to `ALL`, the `Port` value also needs to be set to `all`.
                      */
                     void SetPort(const std::string& _port);
 
@@ -261,7 +265,8 @@ namespace TencentCloud
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * Port (all, discrete port, range).
+                     * Port (`all`, a single port, or a port range).
+Note: If the `Protocol` value is set to `ALL`, the `Port` value also needs to be set to `all`.
                      */
                     std::string m_port;
                     bool m_portHasBeenSet;

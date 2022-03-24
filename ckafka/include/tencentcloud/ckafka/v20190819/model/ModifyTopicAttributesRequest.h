@@ -313,6 +313,42 @@ namespace TencentCloud
                      */
                     bool TagsHasBeenSet() const;
 
+                    /**
+                     * 获取Production throttling in MB/sec.
+                     * @return QuotaProducerByteRate Production throttling in MB/sec.
+                     */
+                    int64_t GetQuotaProducerByteRate() const;
+
+                    /**
+                     * 设置Production throttling in MB/sec.
+                     * @param QuotaProducerByteRate Production throttling in MB/sec.
+                     */
+                    void SetQuotaProducerByteRate(const int64_t& _quotaProducerByteRate);
+
+                    /**
+                     * 判断参数 QuotaProducerByteRate 是否已赋值
+                     * @return QuotaProducerByteRate 是否已赋值
+                     */
+                    bool QuotaProducerByteRateHasBeenSet() const;
+
+                    /**
+                     * 获取Consumption throttling in MB/sec.
+                     * @return QuotaConsumerByteRate Consumption throttling in MB/sec.
+                     */
+                    int64_t GetQuotaConsumerByteRate() const;
+
+                    /**
+                     * 设置Consumption throttling in MB/sec.
+                     * @param QuotaConsumerByteRate Consumption throttling in MB/sec.
+                     */
+                    void SetQuotaConsumerByteRate(const int64_t& _quotaConsumerByteRate);
+
+                    /**
+                     * 判断参数 QuotaConsumerByteRate 是否已赋值
+                     * @return QuotaConsumerByteRate 是否已赋值
+                     */
+                    bool QuotaConsumerByteRateHasBeenSet() const;
+
                 private:
 
                     /**
@@ -404,6 +440,18 @@ namespace TencentCloud
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * Production throttling in MB/sec.
+                     */
+                    int64_t m_quotaProducerByteRate;
+                    bool m_quotaProducerByteRateHasBeenSet;
+
+                    /**
+                     * Consumption throttling in MB/sec.
+                     */
+                    int64_t m_quotaConsumerByteRate;
+                    bool m_quotaConsumerByteRateHasBeenSet;
 
                 };
             }

@@ -47,22 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取TESHD type. Valid values:
-<li>TEHD-100: TESHD-100.</li>
-If this parameter is left blank, no modification will be made.
-                     * @return Type TESHD type. Valid values:
-<li>TEHD-100: TESHD-100.</li>
-If this parameter is left blank, no modification will be made.
+                     * 获取TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
+                     * @return Type TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置TESHD type. Valid values:
-<li>TEHD-100: TESHD-100.</li>
-If this parameter is left blank, no modification will be made.
-                     * @param Type TESHD type. Valid values:
-<li>TEHD-100: TESHD-100.</li>
-If this parameter is left blank, no modification will be made.
+                     * 设置TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
+                     * @param Type TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
                      */
                     void SetType(const std::string& _type);
 
@@ -93,9 +85,7 @@ If this parameter is left blank, no modification will be made.
                 private:
 
                     /**
-                     * TESHD type. Valid values:
-<li>TEHD-100: TESHD-100.</li>
-If this parameter is left blank, no modification will be made.
+                     * TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

@@ -27,6 +27,7 @@
 #include <tencentcloud/ckafka/v20190819/model/Config.h>
 #include <tencentcloud/ckafka/v20190819/model/TopicPartitionDO.h>
 #include <tencentcloud/ckafka/v20190819/model/AclRule.h>
+#include <tencentcloud/ckafka/v20190819/model/InstanceQuotaConfigResp.h>
 
 
 namespace TencentCloud
@@ -241,6 +242,28 @@ Note: `null` may be returned for this field, indicating that no valid values can
                      */
                     bool AclRuleListHasBeenSet() const;
 
+                    /**
+                     * 获取Traffic throttling policy in topic dimension.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return QuotaConfig Traffic throttling policy in topic dimension.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    InstanceQuotaConfigResp GetQuotaConfig() const;
+
+                    /**
+                     * 设置Traffic throttling policy in topic dimension.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param QuotaConfig Traffic throttling policy in topic dimension.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetQuotaConfig(const InstanceQuotaConfigResp& _quotaConfig);
+
+                    /**
+                     * 判断参数 QuotaConfig 是否已赋值
+                     * @return QuotaConfig 是否已赋值
+                     */
+                    bool QuotaConfigHasBeenSet() const;
+
                 private:
 
                     /**
@@ -305,6 +328,13 @@ Note: `null` may be returned for this field, indicating that no valid values can
                      */
                     std::vector<AclRule> m_aclRuleList;
                     bool m_aclRuleListHasBeenSet;
+
+                    /**
+                     * Traffic throttling policy in topic dimension.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    InstanceQuotaConfigResp m_quotaConfig;
+                    bool m_quotaConfigHasBeenSet;
 
                 };
             }

@@ -179,6 +179,28 @@ Note: this field may return null, indicating that no valid value was found.
                      */
                     bool CcnRegionBandwidthLimitHasBeenSet() const;
 
+                    /**
+                     * 获取Cloud marketplace instance ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return MarketId Cloud marketplace instance ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetMarketId() const;
+
+                    /**
+                     * 设置Cloud marketplace instance ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param MarketId Cloud marketplace instance ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetMarketId(const std::string& _marketId);
+
+                    /**
+                     * 判断参数 MarketId 是否已赋值
+                     * @return MarketId 是否已赋值
+                     */
+                    bool MarketIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -222,6 +244,13 @@ Note: this field may return null, indicating that no valid value was found.
                      */
                     CcnRegionBandwidthLimit m_ccnRegionBandwidthLimit;
                     bool m_ccnRegionBandwidthLimitHasBeenSet;
+
+                    /**
+                     * Cloud marketplace instance ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_marketId;
+                    bool m_marketIdHasBeenSet;
 
                 };
             }

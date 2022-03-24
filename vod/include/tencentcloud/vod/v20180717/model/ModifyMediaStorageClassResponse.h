@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_VPC_V20170312_MODEL_MODIFYGATEWAYFLOWQOSRESPONSE_H_
-#define TENCENTCLOUD_VPC_V20170312_MODEL_MODIFYGATEWAYFLOWQOSRESPONSE_H_
+#ifndef TENCENTCLOUD_VOD_V20180717_MODEL_MODIFYMEDIASTORAGECLASSRESPONSE_H_
+#define TENCENTCLOUD_VOD_V20180717_MODEL_MODIFYMEDIASTORAGECLASSRESPONSE_H_
 
 #include <string>
 #include <vector>
@@ -25,20 +25,20 @@
 
 namespace TencentCloud
 {
-    namespace Vpc
+    namespace Vod
     {
-        namespace V20170312
+        namespace V20180717
         {
             namespace Model
             {
                 /**
-                * ModifyGatewayFlowQos response structure.
+                * ModifyMediaStorageClass response structure.
                 */
-                class ModifyGatewayFlowQosResponse : public AbstractModel
+                class ModifyMediaStorageClassResponse : public AbstractModel
                 {
                 public:
-                    ModifyGatewayFlowQosResponse();
-                    ~ModifyGatewayFlowQosResponse() = default;
+                    ModifyMediaStorageClassResponse();
+                    ~ModifyMediaStorageClassResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
@@ -51,4 +51,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_VPC_V20170312_MODEL_MODIFYGATEWAYFLOWQOSRESPONSE_H_
+#endif // !TENCENTCLOUD_VOD_V20180717_MODEL_MODIFYMEDIASTORAGECLASSRESPONSE_H_

@@ -150,6 +150,24 @@ namespace TencentCloud
                      */
                     bool UpgradeModeHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to back up the cluster before version upgrade (no backup by default)
+                     * @return CosBackup Whether to back up the cluster before version upgrade (no backup by default)
+                     */
+                    bool GetCosBackup() const;
+
+                    /**
+                     * 设置Whether to back up the cluster before version upgrade (no backup by default)
+                     * @param CosBackup Whether to back up the cluster before version upgrade (no backup by default)
+                     */
+                    void SetCosBackup(const bool& _cosBackup);
+
+                    /**
+                     * 判断参数 CosBackup 是否已赋值
+                     * @return CosBackup 是否已赋值
+                     */
+                    bool CosBackupHasBeenSet() const;
+
                 private:
 
                     /**
@@ -187,6 +205,12 @@ namespace TencentCloud
                      */
                     std::string m_upgradeMode;
                     bool m_upgradeModeHasBeenSet;
+
+                    /**
+                     * Whether to back up the cluster before version upgrade (no backup by default)
+                     */
+                    bool m_cosBackup;
+                    bool m_cosBackupHasBeenSet;
 
                 };
             }

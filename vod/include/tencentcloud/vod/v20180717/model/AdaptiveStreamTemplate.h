@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/vod/v20180717/model/VideoTemplateInfo.h>
 #include <tencentcloud/vod/v20180717/model/AudioTemplateInfo.h>
+#include <tencentcloud/vod/v20180717/model/TEHDConfig.h>
 
 
 namespace TencentCloud
@@ -136,6 +137,28 @@ namespace TencentCloud
                      */
                     bool RemoveVideoHasBeenSet() const;
 
+                    /**
+                     * 获取TESHD transcoding parameters
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return TEHDConfig TESHD transcoding parameters
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    TEHDConfig GetTEHDConfig() const;
+
+                    /**
+                     * 设置TESHD transcoding parameters
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param TEHDConfig TESHD transcoding parameters
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetTEHDConfig(const TEHDConfig& _tEHDConfig);
+
+                    /**
+                     * 判断参数 TEHDConfig 是否已赋值
+                     * @return TEHDConfig 是否已赋值
+                     */
+                    bool TEHDConfigHasBeenSet() const;
+
                 private:
 
                     /**
@@ -165,6 +188,13 @@ namespace TencentCloud
                      */
                     uint64_t m_removeVideo;
                     bool m_removeVideoHasBeenSet;
+
+                    /**
+                     * TESHD transcoding parameters
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    TEHDConfig m_tEHDConfig;
+                    bool m_tEHDConfigHasBeenSet;
 
                 };
             }

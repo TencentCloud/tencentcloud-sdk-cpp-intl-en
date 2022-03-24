@@ -43,8 +43,6 @@
 #include <tencentcloud/vpc/v20170312/model/AssociateDirectConnectGatewayNatGatewayResponse.h>
 #include <tencentcloud/vpc/v20170312/model/AssociateNatGatewayAddressRequest.h>
 #include <tencentcloud/vpc/v20170312/model/AssociateNatGatewayAddressResponse.h>
-#include <tencentcloud/vpc/v20170312/model/AssociateNetworkAclSubnetsRequest.h>
-#include <tencentcloud/vpc/v20170312/model/AssociateNetworkAclSubnetsResponse.h>
 #include <tencentcloud/vpc/v20170312/model/AssociateNetworkInterfaceSecurityGroupsRequest.h>
 #include <tencentcloud/vpc/v20170312/model/AssociateNetworkInterfaceSecurityGroupsResponse.h>
 #include <tencentcloud/vpc/v20170312/model/AttachCcnInstancesRequest.h>
@@ -67,8 +65,6 @@
 #include <tencentcloud/vpc/v20170312/model/CreateAddressTemplateGroupResponse.h>
 #include <tencentcloud/vpc/v20170312/model/CreateAndAttachNetworkInterfaceRequest.h>
 #include <tencentcloud/vpc/v20170312/model/CreateAndAttachNetworkInterfaceResponse.h>
-#include <tencentcloud/vpc/v20170312/model/CreateAssistantCidrRequest.h>
-#include <tencentcloud/vpc/v20170312/model/CreateAssistantCidrResponse.h>
 #include <tencentcloud/vpc/v20170312/model/CreateBandwidthPackageRequest.h>
 #include <tencentcloud/vpc/v20170312/model/CreateBandwidthPackageResponse.h>
 #include <tencentcloud/vpc/v20170312/model/CreateCcnRequest.h>
@@ -95,8 +91,6 @@
 #include <tencentcloud/vpc/v20170312/model/CreateNatGatewaySourceIpTranslationNatRuleResponse.h>
 #include <tencentcloud/vpc/v20170312/model/CreateNetDetectRequest.h>
 #include <tencentcloud/vpc/v20170312/model/CreateNetDetectResponse.h>
-#include <tencentcloud/vpc/v20170312/model/CreateNetworkAclRequest.h>
-#include <tencentcloud/vpc/v20170312/model/CreateNetworkAclResponse.h>
 #include <tencentcloud/vpc/v20170312/model/CreateNetworkInterfaceRequest.h>
 #include <tencentcloud/vpc/v20170312/model/CreateNetworkInterfaceResponse.h>
 #include <tencentcloud/vpc/v20170312/model/CreateRouteTableRequest.h>
@@ -135,8 +129,6 @@
 #include <tencentcloud/vpc/v20170312/model/DeleteAddressTemplateResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DeleteAddressTemplateGroupRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DeleteAddressTemplateGroupResponse.h>
-#include <tencentcloud/vpc/v20170312/model/DeleteAssistantCidrRequest.h>
-#include <tencentcloud/vpc/v20170312/model/DeleteAssistantCidrResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DeleteBandwidthPackageRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DeleteBandwidthPackageResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DeleteCcnRequest.h>
@@ -161,8 +153,6 @@
 #include <tencentcloud/vpc/v20170312/model/DeleteNatGatewaySourceIpTranslationNatRuleResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DeleteNetDetectRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DeleteNetDetectResponse.h>
-#include <tencentcloud/vpc/v20170312/model/DeleteNetworkAclRequest.h>
-#include <tencentcloud/vpc/v20170312/model/DeleteNetworkAclResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DeleteNetworkInterfaceRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DeleteNetworkInterfaceResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DeleteRouteTableRequest.h>
@@ -239,8 +229,6 @@
 #include <tencentcloud/vpc/v20170312/model/DescribeFlowLogsResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeGatewayFlowMonitorDetailRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeGatewayFlowMonitorDetailResponse.h>
-#include <tencentcloud/vpc/v20170312/model/DescribeGatewayFlowQosRequest.h>
-#include <tencentcloud/vpc/v20170312/model/DescribeGatewayFlowQosResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeHaVipsRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeHaVipsResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeIpGeolocationDatabaseUrlRequest.h>
@@ -297,8 +285,6 @@
 #include <tencentcloud/vpc/v20170312/model/DescribeVpcPrivateIpAddressesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeVpcResourceDashboardRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeVpcResourceDashboardResponse.h>
-#include <tencentcloud/vpc/v20170312/model/DescribeVpcTaskResultRequest.h>
-#include <tencentcloud/vpc/v20170312/model/DescribeVpcTaskResultResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeVpcsRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeVpcsResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeVpnConnectionsRequest.h>
@@ -317,16 +303,12 @@
 #include <tencentcloud/vpc/v20170312/model/DetachNetworkInterfaceResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DisableCcnRoutesRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DisableCcnRoutesResponse.h>
-#include <tencentcloud/vpc/v20170312/model/DisableGatewayFlowMonitorRequest.h>
-#include <tencentcloud/vpc/v20170312/model/DisableGatewayFlowMonitorResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DisassociateAddressRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DisassociateAddressResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DisassociateDirectConnectGatewayNatGatewayRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DisassociateDirectConnectGatewayNatGatewayResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DisassociateNatGatewayAddressRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DisassociateNatGatewayAddressResponse.h>
-#include <tencentcloud/vpc/v20170312/model/DisassociateNetworkAclSubnetsRequest.h>
-#include <tencentcloud/vpc/v20170312/model/DisassociateNetworkAclSubnetsResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DisassociateNetworkInterfaceSecurityGroupsRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DisassociateNetworkInterfaceSecurityGroupsResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DisassociateVpcEndPointSecurityGroupsRequest.h>
@@ -335,8 +317,6 @@
 #include <tencentcloud/vpc/v20170312/model/DownloadCustomerGatewayConfigurationResponse.h>
 #include <tencentcloud/vpc/v20170312/model/EnableCcnRoutesRequest.h>
 #include <tencentcloud/vpc/v20170312/model/EnableCcnRoutesResponse.h>
-#include <tencentcloud/vpc/v20170312/model/EnableGatewayFlowMonitorRequest.h>
-#include <tencentcloud/vpc/v20170312/model/EnableGatewayFlowMonitorResponse.h>
 #include <tencentcloud/vpc/v20170312/model/EnableVpcEndPointConnectRequest.h>
 #include <tencentcloud/vpc/v20170312/model/EnableVpcEndPointConnectResponse.h>
 #include <tencentcloud/vpc/v20170312/model/GetCcnRegionBandwidthLimitsRequest.h>
@@ -367,8 +347,6 @@
 #include <tencentcloud/vpc/v20170312/model/ModifyAddressTemplateGroupAttributeResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyAddressesBandwidthRequest.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyAddressesBandwidthResponse.h>
-#include <tencentcloud/vpc/v20170312/model/ModifyAssistantCidrRequest.h>
-#include <tencentcloud/vpc/v20170312/model/ModifyAssistantCidrResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyBandwidthPackageAttributeRequest.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyBandwidthPackageAttributeResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyCcnAttachedInstancesAttributeRequest.h>
@@ -383,8 +361,6 @@
 #include <tencentcloud/vpc/v20170312/model/ModifyDirectConnectGatewayAttributeResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyFlowLogAttributeRequest.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyFlowLogAttributeResponse.h>
-#include <tencentcloud/vpc/v20170312/model/ModifyGatewayFlowQosRequest.h>
-#include <tencentcloud/vpc/v20170312/model/ModifyGatewayFlowQosResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyHaVipAttributeRequest.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyHaVipAttributeResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyIpv6AddressesAttributeRequest.h>
@@ -399,10 +375,6 @@
 #include <tencentcloud/vpc/v20170312/model/ModifyNatGatewaySourceIpTranslationNatRuleResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyNetDetectRequest.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyNetDetectResponse.h>
-#include <tencentcloud/vpc/v20170312/model/ModifyNetworkAclAttributeRequest.h>
-#include <tencentcloud/vpc/v20170312/model/ModifyNetworkAclAttributeResponse.h>
-#include <tencentcloud/vpc/v20170312/model/ModifyNetworkAclEntriesRequest.h>
-#include <tencentcloud/vpc/v20170312/model/ModifyNetworkAclEntriesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyNetworkInterfaceAttributeRequest.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyNetworkInterfaceAttributeResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyPrivateIpAddressesAttributeRequest.h>
@@ -435,8 +407,6 @@
 #include <tencentcloud/vpc/v20170312/model/ModifyVpnGatewayCcnRoutesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyVpnGatewayRoutesRequest.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyVpnGatewayRoutesResponse.h>
-#include <tencentcloud/vpc/v20170312/model/NotifyRoutesRequest.h>
-#include <tencentcloud/vpc/v20170312/model/NotifyRoutesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/RejectAttachCcnInstancesRequest.h>
 #include <tencentcloud/vpc/v20170312/model/RejectAttachCcnInstancesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ReleaseAddressesRequest.h>
@@ -475,8 +445,6 @@
 #include <tencentcloud/vpc/v20170312/model/UnassignIpv6SubnetCidrBlockResponse.h>
 #include <tencentcloud/vpc/v20170312/model/UnassignPrivateIpAddressesRequest.h>
 #include <tencentcloud/vpc/v20170312/model/UnassignPrivateIpAddressesResponse.h>
-#include <tencentcloud/vpc/v20170312/model/WithdrawNotifyRoutesRequest.h>
-#include <tencentcloud/vpc/v20170312/model/WithdrawNotifyRoutesResponse.h>
 
 
 namespace TencentCloud
@@ -521,9 +489,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::AssociateNatGatewayAddressResponse> AssociateNatGatewayAddressOutcome;
                 typedef std::future<AssociateNatGatewayAddressOutcome> AssociateNatGatewayAddressOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::AssociateNatGatewayAddressRequest&, AssociateNatGatewayAddressOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AssociateNatGatewayAddressAsyncHandler;
-                typedef Outcome<Core::Error, Model::AssociateNetworkAclSubnetsResponse> AssociateNetworkAclSubnetsOutcome;
-                typedef std::future<AssociateNetworkAclSubnetsOutcome> AssociateNetworkAclSubnetsOutcomeCallable;
-                typedef std::function<void(const VpcClient*, const Model::AssociateNetworkAclSubnetsRequest&, AssociateNetworkAclSubnetsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AssociateNetworkAclSubnetsAsyncHandler;
                 typedef Outcome<Core::Error, Model::AssociateNetworkInterfaceSecurityGroupsResponse> AssociateNetworkInterfaceSecurityGroupsOutcome;
                 typedef std::future<AssociateNetworkInterfaceSecurityGroupsOutcome> AssociateNetworkInterfaceSecurityGroupsOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::AssociateNetworkInterfaceSecurityGroupsRequest&, AssociateNetworkInterfaceSecurityGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AssociateNetworkInterfaceSecurityGroupsAsyncHandler;
@@ -557,9 +522,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateAndAttachNetworkInterfaceResponse> CreateAndAttachNetworkInterfaceOutcome;
                 typedef std::future<CreateAndAttachNetworkInterfaceOutcome> CreateAndAttachNetworkInterfaceOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::CreateAndAttachNetworkInterfaceRequest&, CreateAndAttachNetworkInterfaceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAndAttachNetworkInterfaceAsyncHandler;
-                typedef Outcome<Core::Error, Model::CreateAssistantCidrResponse> CreateAssistantCidrOutcome;
-                typedef std::future<CreateAssistantCidrOutcome> CreateAssistantCidrOutcomeCallable;
-                typedef std::function<void(const VpcClient*, const Model::CreateAssistantCidrRequest&, CreateAssistantCidrOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAssistantCidrAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateBandwidthPackageResponse> CreateBandwidthPackageOutcome;
                 typedef std::future<CreateBandwidthPackageOutcome> CreateBandwidthPackageOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::CreateBandwidthPackageRequest&, CreateBandwidthPackageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateBandwidthPackageAsyncHandler;
@@ -599,9 +561,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateNetDetectResponse> CreateNetDetectOutcome;
                 typedef std::future<CreateNetDetectOutcome> CreateNetDetectOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::CreateNetDetectRequest&, CreateNetDetectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateNetDetectAsyncHandler;
-                typedef Outcome<Core::Error, Model::CreateNetworkAclResponse> CreateNetworkAclOutcome;
-                typedef std::future<CreateNetworkAclOutcome> CreateNetworkAclOutcomeCallable;
-                typedef std::function<void(const VpcClient*, const Model::CreateNetworkAclRequest&, CreateNetworkAclOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateNetworkAclAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateNetworkInterfaceResponse> CreateNetworkInterfaceOutcome;
                 typedef std::future<CreateNetworkInterfaceOutcome> CreateNetworkInterfaceOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::CreateNetworkInterfaceRequest&, CreateNetworkInterfaceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateNetworkInterfaceAsyncHandler;
@@ -659,9 +618,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteAddressTemplateGroupResponse> DeleteAddressTemplateGroupOutcome;
                 typedef std::future<DeleteAddressTemplateGroupOutcome> DeleteAddressTemplateGroupOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DeleteAddressTemplateGroupRequest&, DeleteAddressTemplateGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAddressTemplateGroupAsyncHandler;
-                typedef Outcome<Core::Error, Model::DeleteAssistantCidrResponse> DeleteAssistantCidrOutcome;
-                typedef std::future<DeleteAssistantCidrOutcome> DeleteAssistantCidrOutcomeCallable;
-                typedef std::function<void(const VpcClient*, const Model::DeleteAssistantCidrRequest&, DeleteAssistantCidrOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAssistantCidrAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteBandwidthPackageResponse> DeleteBandwidthPackageOutcome;
                 typedef std::future<DeleteBandwidthPackageOutcome> DeleteBandwidthPackageOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DeleteBandwidthPackageRequest&, DeleteBandwidthPackageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteBandwidthPackageAsyncHandler;
@@ -698,9 +654,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteNetDetectResponse> DeleteNetDetectOutcome;
                 typedef std::future<DeleteNetDetectOutcome> DeleteNetDetectOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DeleteNetDetectRequest&, DeleteNetDetectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteNetDetectAsyncHandler;
-                typedef Outcome<Core::Error, Model::DeleteNetworkAclResponse> DeleteNetworkAclOutcome;
-                typedef std::future<DeleteNetworkAclOutcome> DeleteNetworkAclOutcomeCallable;
-                typedef std::function<void(const VpcClient*, const Model::DeleteNetworkAclRequest&, DeleteNetworkAclOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteNetworkAclAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteNetworkInterfaceResponse> DeleteNetworkInterfaceOutcome;
                 typedef std::future<DeleteNetworkInterfaceOutcome> DeleteNetworkInterfaceOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DeleteNetworkInterfaceRequest&, DeleteNetworkInterfaceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteNetworkInterfaceAsyncHandler;
@@ -815,9 +768,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeGatewayFlowMonitorDetailResponse> DescribeGatewayFlowMonitorDetailOutcome;
                 typedef std::future<DescribeGatewayFlowMonitorDetailOutcome> DescribeGatewayFlowMonitorDetailOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DescribeGatewayFlowMonitorDetailRequest&, DescribeGatewayFlowMonitorDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeGatewayFlowMonitorDetailAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeGatewayFlowQosResponse> DescribeGatewayFlowQosOutcome;
-                typedef std::future<DescribeGatewayFlowQosOutcome> DescribeGatewayFlowQosOutcomeCallable;
-                typedef std::function<void(const VpcClient*, const Model::DescribeGatewayFlowQosRequest&, DescribeGatewayFlowQosOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeGatewayFlowQosAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeHaVipsResponse> DescribeHaVipsOutcome;
                 typedef std::future<DescribeHaVipsOutcome> DescribeHaVipsOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DescribeHaVipsRequest&, DescribeHaVipsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeHaVipsAsyncHandler;
@@ -902,9 +852,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeVpcResourceDashboardResponse> DescribeVpcResourceDashboardOutcome;
                 typedef std::future<DescribeVpcResourceDashboardOutcome> DescribeVpcResourceDashboardOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DescribeVpcResourceDashboardRequest&, DescribeVpcResourceDashboardOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVpcResourceDashboardAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeVpcTaskResultResponse> DescribeVpcTaskResultOutcome;
-                typedef std::future<DescribeVpcTaskResultOutcome> DescribeVpcTaskResultOutcomeCallable;
-                typedef std::function<void(const VpcClient*, const Model::DescribeVpcTaskResultRequest&, DescribeVpcTaskResultOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVpcTaskResultAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeVpcsResponse> DescribeVpcsOutcome;
                 typedef std::future<DescribeVpcsOutcome> DescribeVpcsOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DescribeVpcsRequest&, DescribeVpcsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVpcsAsyncHandler;
@@ -932,9 +879,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DisableCcnRoutesResponse> DisableCcnRoutesOutcome;
                 typedef std::future<DisableCcnRoutesOutcome> DisableCcnRoutesOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DisableCcnRoutesRequest&, DisableCcnRoutesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisableCcnRoutesAsyncHandler;
-                typedef Outcome<Core::Error, Model::DisableGatewayFlowMonitorResponse> DisableGatewayFlowMonitorOutcome;
-                typedef std::future<DisableGatewayFlowMonitorOutcome> DisableGatewayFlowMonitorOutcomeCallable;
-                typedef std::function<void(const VpcClient*, const Model::DisableGatewayFlowMonitorRequest&, DisableGatewayFlowMonitorOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisableGatewayFlowMonitorAsyncHandler;
                 typedef Outcome<Core::Error, Model::DisassociateAddressResponse> DisassociateAddressOutcome;
                 typedef std::future<DisassociateAddressOutcome> DisassociateAddressOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DisassociateAddressRequest&, DisassociateAddressOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisassociateAddressAsyncHandler;
@@ -944,9 +888,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DisassociateNatGatewayAddressResponse> DisassociateNatGatewayAddressOutcome;
                 typedef std::future<DisassociateNatGatewayAddressOutcome> DisassociateNatGatewayAddressOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DisassociateNatGatewayAddressRequest&, DisassociateNatGatewayAddressOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisassociateNatGatewayAddressAsyncHandler;
-                typedef Outcome<Core::Error, Model::DisassociateNetworkAclSubnetsResponse> DisassociateNetworkAclSubnetsOutcome;
-                typedef std::future<DisassociateNetworkAclSubnetsOutcome> DisassociateNetworkAclSubnetsOutcomeCallable;
-                typedef std::function<void(const VpcClient*, const Model::DisassociateNetworkAclSubnetsRequest&, DisassociateNetworkAclSubnetsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisassociateNetworkAclSubnetsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DisassociateNetworkInterfaceSecurityGroupsResponse> DisassociateNetworkInterfaceSecurityGroupsOutcome;
                 typedef std::future<DisassociateNetworkInterfaceSecurityGroupsOutcome> DisassociateNetworkInterfaceSecurityGroupsOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DisassociateNetworkInterfaceSecurityGroupsRequest&, DisassociateNetworkInterfaceSecurityGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisassociateNetworkInterfaceSecurityGroupsAsyncHandler;
@@ -959,9 +900,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::EnableCcnRoutesResponse> EnableCcnRoutesOutcome;
                 typedef std::future<EnableCcnRoutesOutcome> EnableCcnRoutesOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::EnableCcnRoutesRequest&, EnableCcnRoutesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnableCcnRoutesAsyncHandler;
-                typedef Outcome<Core::Error, Model::EnableGatewayFlowMonitorResponse> EnableGatewayFlowMonitorOutcome;
-                typedef std::future<EnableGatewayFlowMonitorOutcome> EnableGatewayFlowMonitorOutcomeCallable;
-                typedef std::function<void(const VpcClient*, const Model::EnableGatewayFlowMonitorRequest&, EnableGatewayFlowMonitorOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnableGatewayFlowMonitorAsyncHandler;
                 typedef Outcome<Core::Error, Model::EnableVpcEndPointConnectResponse> EnableVpcEndPointConnectOutcome;
                 typedef std::future<EnableVpcEndPointConnectOutcome> EnableVpcEndPointConnectOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::EnableVpcEndPointConnectRequest&, EnableVpcEndPointConnectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnableVpcEndPointConnectAsyncHandler;
@@ -1007,9 +945,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyAddressesBandwidthResponse> ModifyAddressesBandwidthOutcome;
                 typedef std::future<ModifyAddressesBandwidthOutcome> ModifyAddressesBandwidthOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::ModifyAddressesBandwidthRequest&, ModifyAddressesBandwidthOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAddressesBandwidthAsyncHandler;
-                typedef Outcome<Core::Error, Model::ModifyAssistantCidrResponse> ModifyAssistantCidrOutcome;
-                typedef std::future<ModifyAssistantCidrOutcome> ModifyAssistantCidrOutcomeCallable;
-                typedef std::function<void(const VpcClient*, const Model::ModifyAssistantCidrRequest&, ModifyAssistantCidrOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAssistantCidrAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyBandwidthPackageAttributeResponse> ModifyBandwidthPackageAttributeOutcome;
                 typedef std::future<ModifyBandwidthPackageAttributeOutcome> ModifyBandwidthPackageAttributeOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::ModifyBandwidthPackageAttributeRequest&, ModifyBandwidthPackageAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyBandwidthPackageAttributeAsyncHandler;
@@ -1031,9 +966,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyFlowLogAttributeResponse> ModifyFlowLogAttributeOutcome;
                 typedef std::future<ModifyFlowLogAttributeOutcome> ModifyFlowLogAttributeOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::ModifyFlowLogAttributeRequest&, ModifyFlowLogAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyFlowLogAttributeAsyncHandler;
-                typedef Outcome<Core::Error, Model::ModifyGatewayFlowQosResponse> ModifyGatewayFlowQosOutcome;
-                typedef std::future<ModifyGatewayFlowQosOutcome> ModifyGatewayFlowQosOutcomeCallable;
-                typedef std::function<void(const VpcClient*, const Model::ModifyGatewayFlowQosRequest&, ModifyGatewayFlowQosOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyGatewayFlowQosAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyHaVipAttributeResponse> ModifyHaVipAttributeOutcome;
                 typedef std::future<ModifyHaVipAttributeOutcome> ModifyHaVipAttributeOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::ModifyHaVipAttributeRequest&, ModifyHaVipAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyHaVipAttributeAsyncHandler;
@@ -1055,12 +987,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyNetDetectResponse> ModifyNetDetectOutcome;
                 typedef std::future<ModifyNetDetectOutcome> ModifyNetDetectOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::ModifyNetDetectRequest&, ModifyNetDetectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyNetDetectAsyncHandler;
-                typedef Outcome<Core::Error, Model::ModifyNetworkAclAttributeResponse> ModifyNetworkAclAttributeOutcome;
-                typedef std::future<ModifyNetworkAclAttributeOutcome> ModifyNetworkAclAttributeOutcomeCallable;
-                typedef std::function<void(const VpcClient*, const Model::ModifyNetworkAclAttributeRequest&, ModifyNetworkAclAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyNetworkAclAttributeAsyncHandler;
-                typedef Outcome<Core::Error, Model::ModifyNetworkAclEntriesResponse> ModifyNetworkAclEntriesOutcome;
-                typedef std::future<ModifyNetworkAclEntriesOutcome> ModifyNetworkAclEntriesOutcomeCallable;
-                typedef std::function<void(const VpcClient*, const Model::ModifyNetworkAclEntriesRequest&, ModifyNetworkAclEntriesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyNetworkAclEntriesAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyNetworkInterfaceAttributeResponse> ModifyNetworkInterfaceAttributeOutcome;
                 typedef std::future<ModifyNetworkInterfaceAttributeOutcome> ModifyNetworkInterfaceAttributeOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::ModifyNetworkInterfaceAttributeRequest&, ModifyNetworkInterfaceAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyNetworkInterfaceAttributeAsyncHandler;
@@ -1109,9 +1035,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyVpnGatewayRoutesResponse> ModifyVpnGatewayRoutesOutcome;
                 typedef std::future<ModifyVpnGatewayRoutesOutcome> ModifyVpnGatewayRoutesOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::ModifyVpnGatewayRoutesRequest&, ModifyVpnGatewayRoutesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyVpnGatewayRoutesAsyncHandler;
-                typedef Outcome<Core::Error, Model::NotifyRoutesResponse> NotifyRoutesOutcome;
-                typedef std::future<NotifyRoutesOutcome> NotifyRoutesOutcomeCallable;
-                typedef std::function<void(const VpcClient*, const Model::NotifyRoutesRequest&, NotifyRoutesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> NotifyRoutesAsyncHandler;
                 typedef Outcome<Core::Error, Model::RejectAttachCcnInstancesResponse> RejectAttachCcnInstancesOutcome;
                 typedef std::future<RejectAttachCcnInstancesOutcome> RejectAttachCcnInstancesOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::RejectAttachCcnInstancesRequest&, RejectAttachCcnInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RejectAttachCcnInstancesAsyncHandler;
@@ -1169,9 +1092,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::UnassignPrivateIpAddressesResponse> UnassignPrivateIpAddressesOutcome;
                 typedef std::future<UnassignPrivateIpAddressesOutcome> UnassignPrivateIpAddressesOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::UnassignPrivateIpAddressesRequest&, UnassignPrivateIpAddressesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UnassignPrivateIpAddressesAsyncHandler;
-                typedef Outcome<Core::Error, Model::WithdrawNotifyRoutesResponse> WithdrawNotifyRoutesOutcome;
-                typedef std::future<WithdrawNotifyRoutesOutcome> WithdrawNotifyRoutesOutcomeCallable;
-                typedef std::function<void(const VpcClient*, const Model::WithdrawNotifyRoutesRequest&, WithdrawNotifyRoutesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> WithdrawNotifyRoutesAsyncHandler;
 
 
 
@@ -1289,15 +1209,6 @@ This API is completed asynchronously. If you need to query the execution result 
                 AssociateNatGatewayAddressOutcomeCallable AssociateNatGatewayAddressCallable(const Model::AssociateNatGatewayAddressRequest& request);
 
                 /**
-                 *This API is used to associate a network ACL with subnets in a VPC instance.
-                 * @param req AssociateNetworkAclSubnetsRequest
-                 * @return AssociateNetworkAclSubnetsOutcome
-                 */
-                AssociateNetworkAclSubnetsOutcome AssociateNetworkAclSubnets(const Model::AssociateNetworkAclSubnetsRequest &request);
-                void AssociateNetworkAclSubnetsAsync(const Model::AssociateNetworkAclSubnetsRequest& request, const AssociateNetworkAclSubnetsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                AssociateNetworkAclSubnetsOutcomeCallable AssociateNetworkAclSubnetsCallable(const Model::AssociateNetworkAclSubnetsRequest& request);
-
-                /**
                  *This API (AssociateNetworkInterfaceSecurityGroups) is used to attach a security group to an ENI.
                  * @param req AssociateNetworkInterfaceSecurityGroupsRequest
                  * @return AssociateNetworkInterfaceSecurityGroupsOutcome
@@ -1386,7 +1297,7 @@ This API is completed asynchronously. If you need to query the execution result 
                 CloneSecurityGroupOutcomeCallable CloneSecurityGroupCallable(const Model::CloneSecurityGroupRequest& request);
 
                 /**
-                 *This API (CreateAddressTemplate) is used to create an IP address template.
+                 *This API is used to create an IP address template.
                  * @param req CreateAddressTemplateRequest
                  * @return CreateAddressTemplateOutcome
                  */
@@ -1395,7 +1306,7 @@ This API is completed asynchronously. If you need to query the execution result 
                 CreateAddressTemplateOutcomeCallable CreateAddressTemplateCallable(const Model::CreateAddressTemplateRequest& request);
 
                 /**
-                 *This API (CreateAddressTemplateGroup) is used to create an IP address template group.
+                 *This API is used to create an IP address template group.
                  * @param req CreateAddressTemplateGroupRequest
                  * @return CreateAddressTemplateGroupOutcome
                  */
@@ -1418,15 +1329,6 @@ This API is completed asynchronously. If you need to query the execution result 
                 CreateAndAttachNetworkInterfaceOutcome CreateAndAttachNetworkInterface(const Model::CreateAndAttachNetworkInterfaceRequest &request);
                 void CreateAndAttachNetworkInterfaceAsync(const Model::CreateAndAttachNetworkInterfaceRequest& request, const CreateAndAttachNetworkInterfaceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateAndAttachNetworkInterfaceOutcomeCallable CreateAndAttachNetworkInterfaceCallable(const Model::CreateAndAttachNetworkInterfaceRequest& request);
-
-                /**
-                 *This API (CreateAssistantCidr) is used to batch create secondary CIDR blocks. (To use this API that is in Beta, please submit a ticket.)
-                 * @param req CreateAssistantCidrRequest
-                 * @return CreateAssistantCidrOutcome
-                 */
-                CreateAssistantCidrOutcome CreateAssistantCidr(const Model::CreateAssistantCidrRequest &request);
-                void CreateAssistantCidrAsync(const Model::CreateAssistantCidrRequest& request, const CreateAssistantCidrAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                CreateAssistantCidrOutcomeCallable CreateAssistantCidrCallable(const Model::CreateAssistantCidrRequest& request);
 
                 /**
                  *This API is used to create a [device bandwidth package](https://intl.cloud.tencent.com/document/product/684/15245?from_cn_redirect=1#bwptype) or an [IP bandwidth package](https://intl.cloud.tencent.com/document/product/684/15245?from_cn_redirect=1#bwptype).
@@ -1555,16 +1457,6 @@ Before taking actions on a NAT Gateway, ensure that it has been successfully cre
                 CreateNetDetectOutcome CreateNetDetect(const Model::CreateNetDetectRequest &request);
                 void CreateNetDetectAsync(const Model::CreateNetDetectRequest& request, const CreateNetDetectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateNetDetectOutcomeCallable CreateNetDetectCallable(const Model::CreateNetDetectRequest& request);
-
-                /**
-                 *This API is used to create a <a href="https://intl.cloud.tencent.com/document/product/215/20088?from_cn_redirect=1">network ACL</a>.
-* The inbound and outbound rules for a new network ACL are "Deny All" by default. You need to call `ModifyNetworkAclEntries` after creation to set rules for the network ACL as needed.
-                 * @param req CreateNetworkAclRequest
-                 * @return CreateNetworkAclOutcome
-                 */
-                CreateNetworkAclOutcome CreateNetworkAcl(const Model::CreateNetworkAclRequest &request);
-                void CreateNetworkAclAsync(const Model::CreateNetworkAclRequest& request, const CreateNetworkAclAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                CreateNetworkAclOutcomeCallable CreateNetworkAclCallable(const Model::CreateNetworkAclRequest& request);
 
                 /**
                  *This API is used to create an ENI.
@@ -1795,15 +1687,6 @@ Description:
                 DeleteAddressTemplateGroupOutcomeCallable DeleteAddressTemplateGroupCallable(const Model::DeleteAddressTemplateGroupRequest& request);
 
                 /**
-                 *This API (DeleteAssistantCidr) is used to delete secondary CIDR blocks. (To use this API that is in Beta, please submit a ticket.)
-                 * @param req DeleteAssistantCidrRequest
-                 * @return DeleteAssistantCidrOutcome
-                 */
-                DeleteAssistantCidrOutcome DeleteAssistantCidr(const Model::DeleteAssistantCidrRequest &request);
-                void DeleteAssistantCidrAsync(const Model::DeleteAssistantCidrRequest& request, const DeleteAssistantCidrAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DeleteAssistantCidrOutcomeCallable DeleteAssistantCidrCallable(const Model::DeleteAssistantCidrRequest& request);
-
-                /**
                  *This API is used to delete bandwidth packages, including [device bandwidth packages](https://intl.cloud.tencent.com/document/product/684/15246?from_cn_redirect=1#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85) and [IP bandwidth packages](https://intl.cloud.tencent.com/document/product/684/15246?from_cn_redirect=1#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85).
                  * @param req DeleteBandwidthPackageRequest
                  * @return DeleteBandwidthPackageOutcome
@@ -1918,15 +1801,6 @@ After the deletion of a NAT gateway, the system will automatically delete the ro
                 DeleteNetDetectOutcome DeleteNetDetect(const Model::DeleteNetDetectRequest &request);
                 void DeleteNetDetectAsync(const Model::DeleteNetDetectRequest& request, const DeleteNetDetectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteNetDetectOutcomeCallable DeleteNetDetectCallable(const Model::DeleteNetDetectRequest& request);
-
-                /**
-                 *This API is used to delete a network ACL.
-                 * @param req DeleteNetworkAclRequest
-                 * @return DeleteNetworkAclOutcome
-                 */
-                DeleteNetworkAclOutcome DeleteNetworkAcl(const Model::DeleteNetworkAclRequest &request);
-                void DeleteNetworkAclAsync(const Model::DeleteNetworkAclRequest& request, const DeleteNetworkAclAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DeleteNetworkAclOutcomeCallable DeleteNetworkAclCallable(const Model::DeleteNetworkAclRequest& request);
 
                 /**
                  *This API is used to delete an ENI.
@@ -2289,15 +2163,6 @@ A service provider can query all review requests created by any `APPID` under it
                 DescribeGatewayFlowMonitorDetailOutcomeCallable DescribeGatewayFlowMonitorDetailCallable(const Model::DescribeGatewayFlowMonitorDetailRequest& request);
 
                 /**
-                 *This API (DescribeGatewayFlowQos) is used to query the QoS bandwidth limit of inbound IP flow in a gateway.
-                 * @param req DescribeGatewayFlowQosRequest
-                 * @return DescribeGatewayFlowQosOutcome
-                 */
-                DescribeGatewayFlowQosOutcome DescribeGatewayFlowQos(const Model::DescribeGatewayFlowQosRequest &request);
-                void DescribeGatewayFlowQosAsync(const Model::DescribeGatewayFlowQosRequest& request, const DescribeGatewayFlowQosAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeGatewayFlowQosOutcomeCallable DescribeGatewayFlowQosCallable(const Model::DescribeGatewayFlowQosRequest& request);
-
-                /**
                  *This API (DescribeHaVips) is used to query the list of highly available virtual IPs (HAVIP).
                  * @param req DescribeHaVipsRequest
                  * @return DescribeHaVipsOutcome
@@ -2553,15 +2418,6 @@ This API is used to query only the information of IP addresses that are already 
                 DescribeVpcResourceDashboardOutcomeCallable DescribeVpcResourceDashboardCallable(const Model::DescribeVpcResourceDashboardRequest& request);
 
                 /**
-                 *This API is used to query the execution result of a VPC task.
-                 * @param req DescribeVpcTaskResultRequest
-                 * @return DescribeVpcTaskResultOutcome
-                 */
-                DescribeVpcTaskResultOutcome DescribeVpcTaskResult(const Model::DescribeVpcTaskResultRequest &request);
-                void DescribeVpcTaskResultAsync(const Model::DescribeVpcTaskResultRequest& request, const DescribeVpcTaskResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeVpcTaskResultOutcomeCallable DescribeVpcTaskResultCallable(const Model::DescribeVpcTaskResultRequest& request);
-
-                /**
                  *This API (DescribeVpcs) is used to query the VPC list.
                  * @param req DescribeVpcsRequest
                  * @return DescribeVpcsOutcome
@@ -2647,15 +2503,6 @@ This API is completed asynchronously. If you need to query the execution result 
                 DisableCcnRoutesOutcomeCallable DisableCcnRoutesCallable(const Model::DisableCcnRoutesRequest& request);
 
                 /**
-                 *This API (DisableGatewayFlowMonitor) is used to disable gateway flow monitor.
-                 * @param req DisableGatewayFlowMonitorRequest
-                 * @return DisableGatewayFlowMonitorOutcome
-                 */
-                DisableGatewayFlowMonitorOutcome DisableGatewayFlowMonitor(const Model::DisableGatewayFlowMonitorRequest &request);
-                void DisableGatewayFlowMonitorAsync(const Model::DisableGatewayFlowMonitorRequest& request, const DisableGatewayFlowMonitorAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DisableGatewayFlowMonitorOutcomeCallable DisableGatewayFlowMonitorCallable(const Model::DisableGatewayFlowMonitorRequest& request);
-
-                /**
                  *This API is used to unbind an [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1) (EIP for short).
 * This API supports unbinding an EIP from CVM instances and ENIs.
 * This API does not support unbinding an EIP from a NAT Gateway. To unbind an EIP from a NAT Gateway, use the [`DisassociateNatGatewayAddress`](https://intl.cloud.tencent.com/document/api/215/36716?from_cn_redirect=1) API.
@@ -2685,15 +2532,6 @@ This API is completed asynchronously. If you need to query the execution result 
                 DisassociateNatGatewayAddressOutcome DisassociateNatGatewayAddress(const Model::DisassociateNatGatewayAddressRequest &request);
                 void DisassociateNatGatewayAddressAsync(const Model::DisassociateNatGatewayAddressRequest& request, const DisassociateNatGatewayAddressAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DisassociateNatGatewayAddressOutcomeCallable DisassociateNatGatewayAddressCallable(const Model::DisassociateNatGatewayAddressRequest& request);
-
-                /**
-                 *This API is used to disassociate a network ACL from subnets in a VPC instance.
-                 * @param req DisassociateNetworkAclSubnetsRequest
-                 * @return DisassociateNetworkAclSubnetsOutcome
-                 */
-                DisassociateNetworkAclSubnetsOutcome DisassociateNetworkAclSubnets(const Model::DisassociateNetworkAclSubnetsRequest &request);
-                void DisassociateNetworkAclSubnetsAsync(const Model::DisassociateNetworkAclSubnetsRequest& request, const DisassociateNetworkAclSubnetsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DisassociateNetworkAclSubnetsOutcomeCallable DisassociateNetworkAclSubnetsCallable(const Model::DisassociateNetworkAclSubnetsRequest& request);
 
                 /**
                  *This API (DisassociateNetworkInterfaceSecurityGroups) is used to detach (or fully detach if possible) a security group from an ENI.
@@ -2731,15 +2569,6 @@ This API is used to verify whether there will be conflict with an existing route
                 EnableCcnRoutesOutcome EnableCcnRoutes(const Model::EnableCcnRoutesRequest &request);
                 void EnableCcnRoutesAsync(const Model::EnableCcnRoutesRequest& request, const EnableCcnRoutesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 EnableCcnRoutesOutcomeCallable EnableCcnRoutesCallable(const Model::EnableCcnRoutesRequest& request);
-
-                /**
-                 *This API (EnableGatewayFlowMonitor) is used to enable gateway flow monitor.
-                 * @param req EnableGatewayFlowMonitorRequest
-                 * @return EnableGatewayFlowMonitorOutcome
-                 */
-                EnableGatewayFlowMonitorOutcome EnableGatewayFlowMonitor(const Model::EnableGatewayFlowMonitorRequest &request);
-                void EnableGatewayFlowMonitorAsync(const Model::EnableGatewayFlowMonitorRequest& request, const EnableGatewayFlowMonitorAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                EnableGatewayFlowMonitorOutcomeCallable EnableGatewayFlowMonitorCallable(const Model::EnableGatewayFlowMonitorRequest& request);
 
                 /**
                  *This API is used to determine whether to accept the request of connecting with an endpoint.
@@ -2886,15 +2715,6 @@ This API is completed asynchronously. If you need to query the execution result 
                 ModifyAddressesBandwidthOutcomeCallable ModifyAddressesBandwidthCallable(const Model::ModifyAddressesBandwidthRequest& request);
 
                 /**
-                 *This API (ModifyAssistantCidr) is used to batch modify (e.g. add and delete) secondary CIDR blocks. (To use this API that is in Beta, please submit a ticket.)
-                 * @param req ModifyAssistantCidrRequest
-                 * @return ModifyAssistantCidrOutcome
-                 */
-                ModifyAssistantCidrOutcome ModifyAssistantCidr(const Model::ModifyAssistantCidrRequest &request);
-                void ModifyAssistantCidrAsync(const Model::ModifyAssistantCidrRequest& request, const ModifyAssistantCidrAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                ModifyAssistantCidrOutcomeCallable ModifyAssistantCidrCallable(const Model::ModifyAssistantCidrRequest& request);
-
-                /**
                  *This API is used to modify the attributes of a bandwidth package, including the bandwidth package name, and so on.
                  * @param req ModifyBandwidthPackageAttributeRequest
                  * @return ModifyBandwidthPackageAttributeOutcome
@@ -2959,15 +2779,6 @@ This API is completed asynchronously. If you need to query the execution result 
                 ModifyFlowLogAttributeOutcomeCallable ModifyFlowLogAttributeCallable(const Model::ModifyFlowLogAttributeRequest& request);
 
                 /**
-                 *This API (ModifyGatewayFlowQos) is used to adjust the QoS bandwidth limit in a gateway.
-                 * @param req ModifyGatewayFlowQosRequest
-                 * @return ModifyGatewayFlowQosOutcome
-                 */
-                ModifyGatewayFlowQosOutcome ModifyGatewayFlowQos(const Model::ModifyGatewayFlowQosRequest &request);
-                void ModifyGatewayFlowQosAsync(const Model::ModifyGatewayFlowQosRequest& request, const ModifyGatewayFlowQosAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                ModifyGatewayFlowQosOutcomeCallable ModifyGatewayFlowQosCallable(const Model::ModifyGatewayFlowQosRequest& request);
-
-                /**
                  *This API (ModifyHaVipAttribute) is used to modify HAVIP attributes.
                  * @param req ModifyHaVipAttributeRequest
                  * @return ModifyHaVipAttributeOutcome
@@ -3029,24 +2840,6 @@ This API is completed asynchronously. If you need to query the execution result 
                 ModifyNetDetectOutcome ModifyNetDetect(const Model::ModifyNetDetectRequest &request);
                 void ModifyNetDetectAsync(const Model::ModifyNetDetectRequest& request, const ModifyNetDetectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyNetDetectOutcomeCallable ModifyNetDetectCallable(const Model::ModifyNetDetectRequest& request);
-
-                /**
-                 *This API is used to modify the attributes of a network ACL.
-                 * @param req ModifyNetworkAclAttributeRequest
-                 * @return ModifyNetworkAclAttributeOutcome
-                 */
-                ModifyNetworkAclAttributeOutcome ModifyNetworkAclAttribute(const Model::ModifyNetworkAclAttributeRequest &request);
-                void ModifyNetworkAclAttributeAsync(const Model::ModifyNetworkAclAttributeRequest& request, const ModifyNetworkAclAttributeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                ModifyNetworkAclAttributeOutcomeCallable ModifyNetworkAclAttributeCallable(const Model::ModifyNetworkAclAttributeRequest& request);
-
-                /**
-                 *This API is used to modify (add or delete) the inbound and outbound rules of a network ACL.
-                 * @param req ModifyNetworkAclEntriesRequest
-                 * @return ModifyNetworkAclEntriesOutcome
-                 */
-                ModifyNetworkAclEntriesOutcome ModifyNetworkAclEntries(const Model::ModifyNetworkAclEntriesRequest &request);
-                void ModifyNetworkAclEntriesAsync(const Model::ModifyNetworkAclEntriesRequest& request, const ModifyNetworkAclEntriesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                ModifyNetworkAclEntriesOutcomeCallable ModifyNetworkAclEntriesCallable(const Model::ModifyNetworkAclEntriesRequest& request);
 
                 /**
                  *This API (ModifyNetworkInterfaceAttribute) is used to modify ENI attributes.
@@ -3208,15 +3001,6 @@ This API is completed asynchronously. If you need to query the execution result 
                 ModifyVpnGatewayRoutesOutcome ModifyVpnGatewayRoutes(const Model::ModifyVpnGatewayRoutesRequest &request);
                 void ModifyVpnGatewayRoutesAsync(const Model::ModifyVpnGatewayRoutesRequest& request, const ModifyVpnGatewayRoutesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyVpnGatewayRoutesOutcomeCallable ModifyVpnGatewayRoutesCallable(const Model::ModifyVpnGatewayRoutesRequest& request);
-
-                /**
-                 *This API is used to publish a route to CCN. This can also be done by clicking the **Publish to CCN** button on the route table page.
-                 * @param req NotifyRoutesRequest
-                 * @return NotifyRoutesOutcome
-                 */
-                NotifyRoutesOutcome NotifyRoutes(const Model::NotifyRoutesRequest &request);
-                void NotifyRoutesAsync(const Model::NotifyRoutesRequest& request, const NotifyRoutesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                NotifyRoutesOutcomeCallable NotifyRoutesCallable(const Model::NotifyRoutesRequest& request);
 
                 /**
                  *This API (RejectAttachCcnInstances) is used to reject association operations when instances are associated across accounts for the CCN owner.
@@ -3401,15 +3185,6 @@ This API is completed asynchronously. If you need to query the execution result 
                 UnassignPrivateIpAddressesOutcome UnassignPrivateIpAddresses(const Model::UnassignPrivateIpAddressesRequest &request);
                 void UnassignPrivateIpAddressesAsync(const Model::UnassignPrivateIpAddressesRequest& request, const UnassignPrivateIpAddressesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 UnassignPrivateIpAddressesOutcomeCallable UnassignPrivateIpAddressesCallable(const Model::UnassignPrivateIpAddressesRequest& request);
-
-                /**
-                 *This API is used to withdraw a route from CCN. This can also be done by clicking the **Withdraw from CCN** button on the route table page.
-                 * @param req WithdrawNotifyRoutesRequest
-                 * @return WithdrawNotifyRoutesOutcome
-                 */
-                WithdrawNotifyRoutesOutcome WithdrawNotifyRoutes(const Model::WithdrawNotifyRoutesRequest &request);
-                void WithdrawNotifyRoutesAsync(const Model::WithdrawNotifyRoutesRequest& request, const WithdrawNotifyRoutesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                WithdrawNotifyRoutesOutcomeCallable WithdrawNotifyRoutesCallable(const Model::WithdrawNotifyRoutesRequest& request);
 
             };
         }

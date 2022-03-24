@@ -986,6 +986,49 @@ MdlClient::DescribeStreamLiveRegionsOutcomeCallable MdlClient::DescribeStreamLiv
     return task->get_future();
 }
 
+MdlClient::DescribeStreamLiveTranscodeDetailOutcome MdlClient::DescribeStreamLiveTranscodeDetail(const DescribeStreamLiveTranscodeDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeStreamLiveTranscodeDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeStreamLiveTranscodeDetailResponse rsp = DescribeStreamLiveTranscodeDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeStreamLiveTranscodeDetailOutcome(rsp);
+        else
+            return DescribeStreamLiveTranscodeDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeStreamLiveTranscodeDetailOutcome(outcome.GetError());
+    }
+}
+
+void MdlClient::DescribeStreamLiveTranscodeDetailAsync(const DescribeStreamLiveTranscodeDetailRequest& request, const DescribeStreamLiveTranscodeDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeStreamLiveTranscodeDetail(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdlClient::DescribeStreamLiveTranscodeDetailOutcomeCallable MdlClient::DescribeStreamLiveTranscodeDetailCallable(const DescribeStreamLiveTranscodeDetailRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeStreamLiveTranscodeDetailOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeStreamLiveTranscodeDetail(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 MdlClient::DescribeStreamLiveWatermarkOutcome MdlClient::DescribeStreamLiveWatermark(const DescribeStreamLiveWatermarkRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeStreamLiveWatermark");
