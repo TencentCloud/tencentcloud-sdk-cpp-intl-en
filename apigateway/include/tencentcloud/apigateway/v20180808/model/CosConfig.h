@@ -132,6 +132,44 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool AuthorizationHasBeenSet() const;
 
+                    /**
+                     * 获取The path matching mode of the backend COS service
+`BackEndPath`: Match the backend path
+`FullPath`: Match the full path
+
+Default: `BackEndPath`
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return PathMatchMode The path matching mode of the backend COS service
+`BackEndPath`: Match the backend path
+`FullPath`: Match the full path
+
+Default: `BackEndPath`
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetPathMatchMode() const;
+
+                    /**
+                     * 设置The path matching mode of the backend COS service
+`BackEndPath`: Match the backend path
+`FullPath`: Match the full path
+
+Default: `BackEndPath`
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param PathMatchMode The path matching mode of the backend COS service
+`BackEndPath`: Match the backend path
+`FullPath`: Match the full path
+
+Default: `BackEndPath`
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetPathMatchMode(const std::string& _pathMatchMode);
+
+                    /**
+                     * 判断参数 PathMatchMode 是否已赋值
+                     * @return PathMatchMode 是否已赋值
+                     */
+                    bool PathMatchModeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -159,6 +197,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool m_authorization;
                     bool m_authorizationHasBeenSet;
+
+                    /**
+                     * The path matching mode of the backend COS service
+`BackEndPath`: Match the backend path
+`FullPath`: Match the full path
+
+Default: `BackEndPath`
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_pathMatchMode;
+                    bool m_pathMatchModeHasBeenSet;
 
                 };
             }

@@ -43,6 +43,8 @@
 #include <tencentcloud/ses/v20201002/model/DeleteEmailIdentityResponse.h>
 #include <tencentcloud/ses/v20201002/model/DeleteEmailTemplateRequest.h>
 #include <tencentcloud/ses/v20201002/model/DeleteEmailTemplateResponse.h>
+#include <tencentcloud/ses/v20201002/model/DeleteReceiverRequest.h>
+#include <tencentcloud/ses/v20201002/model/DeleteReceiverResponse.h>
 #include <tencentcloud/ses/v20201002/model/GetEmailIdentityRequest.h>
 #include <tencentcloud/ses/v20201002/model/GetEmailIdentityResponse.h>
 #include <tencentcloud/ses/v20201002/model/GetEmailTemplateRequest.h>
@@ -113,6 +115,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteEmailTemplateResponse> DeleteEmailTemplateOutcome;
                 typedef std::future<DeleteEmailTemplateOutcome> DeleteEmailTemplateOutcomeCallable;
                 typedef std::function<void(const SesClient*, const Model::DeleteEmailTemplateRequest&, DeleteEmailTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteEmailTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteReceiverResponse> DeleteReceiverOutcome;
+                typedef std::future<DeleteReceiverOutcome> DeleteReceiverOutcomeCallable;
+                typedef std::function<void(const SesClient*, const Model::DeleteReceiverRequest&, DeleteReceiverOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteReceiverAsyncHandler;
                 typedef Outcome<Core::Error, Model::GetEmailIdentityResponse> GetEmailIdentityOutcome;
                 typedef std::future<GetEmailIdentityOutcome> GetEmailIdentityOutcomeCallable;
                 typedef std::function<void(const SesClient*, const Model::GetEmailIdentityRequest&, GetEmailIdentityOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetEmailIdentityAsyncHandler;
@@ -184,7 +189,7 @@ namespace TencentCloud
 
                 /**
                  *This API is used to create a TEXT or HTML email template. To create an HTML template, ensure that it does not include external CSS files. You can use {{variable name}} to specify a variable in the template.
-Note: only an approved template can be used to send emails.
+Note: Only an approved template can be used to send emails.
                  * @param req CreateEmailTemplateRequest
                  * @return CreateEmailTemplateOutcome
                  */
@@ -245,6 +250,15 @@ Note: only an approved template can be used to send emails.
                 DeleteEmailTemplateOutcome DeleteEmailTemplate(const Model::DeleteEmailTemplateRequest &request);
                 void DeleteEmailTemplateAsync(const Model::DeleteEmailTemplateRequest& request, const DeleteEmailTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteEmailTemplateOutcomeCallable DeleteEmailTemplateCallable(const Model::DeleteEmailTemplateRequest& request);
+
+                /**
+                 *This API is used to delete a recipient group and all recipient email addresses in the group based on the recipient group ID.
+                 * @param req DeleteReceiverRequest
+                 * @return DeleteReceiverOutcome
+                 */
+                DeleteReceiverOutcome DeleteReceiver(const Model::DeleteReceiverRequest &request);
+                void DeleteReceiverAsync(const Model::DeleteReceiverRequest& request, const DeleteReceiverAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteReceiverOutcomeCallable DeleteReceiverCallable(const Model::DeleteReceiverRequest& request);
 
                 /**
                  *This API is used to get the configuration details of a sender domain.

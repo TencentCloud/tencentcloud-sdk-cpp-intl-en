@@ -197,6 +197,24 @@ Sender <email address>
                      */
                     bool UnsubscribeHasBeenSet() const;
 
+                    /**
+                     * 获取Email triggering type. `0` (default): non-trigger-based, suitable for marketing emails and non-immediate emails; `1`: trigger-based, suitable for immediate emails such as emails containing verification codes. If the size of an email exceeds a specified value, the system will automatically choose the non-trigger-based type.
+                     * @return TriggerType Email triggering type. `0` (default): non-trigger-based, suitable for marketing emails and non-immediate emails; `1`: trigger-based, suitable for immediate emails such as emails containing verification codes. If the size of an email exceeds a specified value, the system will automatically choose the non-trigger-based type.
+                     */
+                    uint64_t GetTriggerType() const;
+
+                    /**
+                     * 设置Email triggering type. `0` (default): non-trigger-based, suitable for marketing emails and non-immediate emails; `1`: trigger-based, suitable for immediate emails such as emails containing verification codes. If the size of an email exceeds a specified value, the system will automatically choose the non-trigger-based type.
+                     * @param TriggerType Email triggering type. `0` (default): non-trigger-based, suitable for marketing emails and non-immediate emails; `1`: trigger-based, suitable for immediate emails such as emails containing verification codes. If the size of an email exceeds a specified value, the system will automatically choose the non-trigger-based type.
+                     */
+                    void SetTriggerType(const uint64_t& _triggerType);
+
+                    /**
+                     * 判断参数 TriggerType 是否已赋值
+                     * @return TriggerType 是否已赋值
+                     */
+                    bool TriggerTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -248,6 +266,12 @@ Sender <email address>
                      */
                     std::string m_unsubscribe;
                     bool m_unsubscribeHasBeenSet;
+
+                    /**
+                     * Email triggering type. `0` (default): non-trigger-based, suitable for marketing emails and non-immediate emails; `1`: trigger-based, suitable for immediate emails such as emails containing verification codes. If the size of an email exceeds a specified value, the system will automatically choose the non-trigger-based type.
+                     */
+                    uint64_t m_triggerType;
+                    bool m_triggerTypeHasBeenSet;
 
                 };
             }

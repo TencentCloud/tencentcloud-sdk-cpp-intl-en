@@ -164,14 +164,14 @@ Tencent Cloud team <noreply@mail.qcloud.com>
                     bool TemplateHasBeenSet() const;
 
                     /**
-                     * 获取Email content when emails are sent by calling the API
-                     * @return Simple Email content when emails are sent by calling the API
+                     * 获取Email content when emails are sent by calling the API. This parameter is currently unavailable.
+                     * @return Simple Email content when emails are sent by calling the API. This parameter is currently unavailable.
                      */
                     Simple GetSimple() const;
 
                     /**
-                     * 设置Email content when emails are sent by calling the API
-                     * @param Simple Email content when emails are sent by calling the API
+                     * 设置Email content when emails are sent by calling the API. This parameter is currently unavailable.
+                     * @param Simple Email content when emails are sent by calling the API. This parameter is currently unavailable.
                      */
                     void SetSimple(const Simple& _simple);
 
@@ -182,14 +182,14 @@ Tencent Cloud team <noreply@mail.qcloud.com>
                     bool SimpleHasBeenSet() const;
 
                     /**
-                     * 获取Email attachments
-                     * @return Attachments Email attachments
+                     * 获取Attachment parameters to set when you need to send attachments. This parameter is currently unavailable.
+                     * @return Attachments Attachment parameters to set when you need to send attachments. This parameter is currently unavailable.
                      */
                     std::vector<Attachment> GetAttachments() const;
 
                     /**
-                     * 设置Email attachments
-                     * @param Attachments Email attachments
+                     * 设置Attachment parameters to set when you need to send attachments. This parameter is currently unavailable.
+                     * @param Attachments Attachment parameters to set when you need to send attachments. This parameter is currently unavailable.
                      */
                     void SetAttachments(const std::vector<Attachment>& _attachments);
 
@@ -253,6 +253,24 @@ Tencent Cloud team <noreply@mail.qcloud.com>
                      */
                     bool UnsubscribeHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return ADLocation 
+                     */
+                    uint64_t GetADLocation() const;
+
+                    /**
+                     * 设置
+                     * @param ADLocation 
+                     */
+                    void SetADLocation(const uint64_t& _aDLocation);
+
+                    /**
+                     * 判断参数 ADLocation 是否已赋值
+                     * @return ADLocation 是否已赋值
+                     */
+                    bool ADLocationHasBeenSet() const;
+
                 private:
 
                     /**
@@ -294,13 +312,13 @@ Tencent Cloud team <noreply@mail.qcloud.com>
                     bool m_templateHasBeenSet;
 
                     /**
-                     * Email content when emails are sent by calling the API
+                     * Email content when emails are sent by calling the API. This parameter is currently unavailable.
                      */
                     Simple m_simple;
                     bool m_simpleHasBeenSet;
 
                     /**
-                     * Email attachments
+                     * Attachment parameters to set when you need to send attachments. This parameter is currently unavailable.
                      */
                     std::vector<Attachment> m_attachments;
                     bool m_attachmentsHasBeenSet;
@@ -322,6 +340,12 @@ Tencent Cloud team <noreply@mail.qcloud.com>
                      */
                     std::string m_unsubscribe;
                     bool m_unsubscribeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_aDLocation;
+                    bool m_aDLocationHasBeenSet;
 
                 };
             }

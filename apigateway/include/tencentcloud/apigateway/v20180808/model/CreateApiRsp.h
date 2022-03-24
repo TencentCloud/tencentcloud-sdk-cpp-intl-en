@@ -69,18 +69,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ApiIdHasBeenSet() const;
 
                     /**
-                     * 获取path
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Path path
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Path
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Path Path
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetPath() const;
 
                     /**
-                     * 设置path
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Path path
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Path
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param Path Path
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetPath(const std::string& _path);
 
@@ -91,18 +91,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PathHasBeenSet() const;
 
                     /**
-                     * 获取method
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Method method
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Request method
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Method Request method
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetMethod() const;
 
                     /**
-                     * 设置method
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Method method
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Request method
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param Method Request method
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetMethod(const std::string& _method);
 
@@ -134,6 +134,72 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool CreatedTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Status of the import task
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Status Status of the import task
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetStatus() const;
+
+                    /**
+                     * 设置Status of the import task
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param Status Status of the import task
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetStatus(const std::string& _status);
+
+                    /**
+                     * 判断参数 Status 是否已赋值
+                     * @return Status 是否已赋值
+                     */
+                    bool StatusHasBeenSet() const;
+
+                    /**
+                     * 获取Details of the error
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return ErrMsg Details of the error
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetErrMsg() const;
+
+                    /**
+                     * 设置Details of the error
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param ErrMsg Details of the error
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetErrMsg(const std::string& _errMsg);
+
+                    /**
+                     * 判断参数 ErrMsg 是否已赋值
+                     * @return ErrMsg 是否已赋值
+                     */
+                    bool ErrMsgHasBeenSet() const;
+
+                    /**
+                     * 获取API name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return ApiName API name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetApiName() const;
+
+                    /**
+                     * 设置API name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param ApiName API name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetApiName(const std::string& _apiName);
+
+                    /**
+                     * 判断参数 ApiName 是否已赋值
+                     * @return ApiName 是否已赋值
+                     */
+                    bool ApiNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -144,15 +210,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_apiIdHasBeenSet;
 
                     /**
-                     * path
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Path
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_path;
                     bool m_pathHasBeenSet;
 
                     /**
-                     * method
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Request method
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_method;
                     bool m_methodHasBeenSet;
@@ -163,6 +229,27 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_createdTime;
                     bool m_createdTimeHasBeenSet;
+
+                    /**
+                     * Status of the import task
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_status;
+                    bool m_statusHasBeenSet;
+
+                    /**
+                     * Details of the error
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_errMsg;
+                    bool m_errMsgHasBeenSet;
+
+                    /**
+                     * API name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_apiName;
+                    bool m_apiNameHasBeenSet;
 
                 };
             }

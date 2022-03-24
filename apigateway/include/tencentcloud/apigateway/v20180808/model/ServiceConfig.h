@@ -48,14 +48,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Backend type, which takes effect when VPC is enabled. Valid values: `clb` and `upstream` (VPC channel)
-                     * @return Product Backend type, which takes effect when VPC is enabled. Valid values: `clb` and `upstream` (VPC channel)
+                     * 获取The backend type. It’s available when `vpc` is enabled. Values: `clb`, `cvm` and `upstream`.
+                     * @return Product The backend type. It’s available when `vpc` is enabled. Values: `clb`, `cvm` and `upstream`.
                      */
                     std::string GetProduct() const;
 
                     /**
-                     * 设置Backend type, which takes effect when VPC is enabled. Valid values: `clb` and `upstream` (VPC channel)
-                     * @param Product Backend type, which takes effect when VPC is enabled. Valid values: `clb` and `upstream` (VPC channel)
+                     * 设置The backend type. It’s available when `vpc` is enabled. Values: `clb`, `cvm` and `upstream`.
+                     * @param Product The backend type. It’s available when `vpc` is enabled. Values: `clb`, `cvm` and `upstream`.
                      */
                     void SetProduct(const std::string& _product);
 
@@ -162,7 +162,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Backend type, which takes effect when VPC is enabled. Valid values: `clb` and `upstream` (VPC channel)
+                     * The backend type. It’s available when `vpc` is enabled. Values: `clb`, `cvm` and `upstream`.
                      */
                     std::string m_product;
                     bool m_productHasBeenSet;
