@@ -206,6 +206,24 @@ namespace TencentCloud
                      */
                     bool Mp3ParamHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to remove the watermark. This parameter is invalid if `IsDelayLive` is `1`.
+                     * @return RemoveWatermark Whether to remove the watermark. This parameter is invalid if `IsDelayLive` is `1`.
+                     */
+                    bool GetRemoveWatermark() const;
+
+                    /**
+                     * 设置Whether to remove the watermark. This parameter is invalid if `IsDelayLive` is `1`.
+                     * @param RemoveWatermark Whether to remove the watermark. This parameter is invalid if `IsDelayLive` is `1`.
+                     */
+                    void SetRemoveWatermark(const bool& _removeWatermark);
+
+                    /**
+                     * 判断参数 RemoveWatermark 是否已赋值
+                     * @return RemoveWatermark 是否已赋值
+                     */
+                    bool RemoveWatermarkHasBeenSet() const;
+
                 private:
 
                     /**
@@ -261,6 +279,12 @@ namespace TencentCloud
                      */
                     RecordParam m_mp3Param;
                     bool m_mp3ParamHasBeenSet;
+
+                    /**
+                     * Whether to remove the watermark. This parameter is invalid if `IsDelayLive` is `1`.
+                     */
+                    bool m_removeWatermark;
+                    bool m_removeWatermarkHasBeenSet;
 
                 };
             }

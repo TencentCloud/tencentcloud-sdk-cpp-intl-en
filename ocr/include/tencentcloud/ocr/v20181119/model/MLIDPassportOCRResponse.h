@@ -185,6 +185,30 @@ namespace TencentCloud
                      */
                     bool AdvancedInfoHasBeenSet() const;
 
+                    /**
+                     * 获取The first row of the machine-readable zone (MRZ) at the bottom
+                     * @return CodeSet The first row of the machine-readable zone (MRZ) at the bottom
+                     */
+                    std::string GetCodeSet() const;
+
+                    /**
+                     * 判断参数 CodeSet 是否已赋值
+                     * @return CodeSet 是否已赋值
+                     */
+                    bool CodeSetHasBeenSet() const;
+
+                    /**
+                     * 获取The second row of the MRZ at the bottom
+                     * @return CodeCrc The second row of the MRZ at the bottom
+                     */
+                    std::string GetCodeCrc() const;
+
+                    /**
+                     * 判断参数 CodeCrc 是否已赋值
+                     * @return CodeCrc 是否已赋值
+                     */
+                    bool CodeCrcHasBeenSet() const;
+
                 private:
 
                     /**
@@ -257,6 +281,18 @@ namespace TencentCloud
                      */
                     std::string m_advancedInfo;
                     bool m_advancedInfoHasBeenSet;
+
+                    /**
+                     * The first row of the machine-readable zone (MRZ) at the bottom
+                     */
+                    std::string m_codeSet;
+                    bool m_codeSetHasBeenSet;
+
+                    /**
+                     * The second row of the MRZ at the bottom
+                     */
+                    std::string m_codeCrc;
+                    bool m_codeCrcHasBeenSet;
 
                 };
             }

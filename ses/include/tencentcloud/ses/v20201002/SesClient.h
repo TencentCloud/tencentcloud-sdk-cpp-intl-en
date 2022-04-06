@@ -23,14 +23,10 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
-#include <tencentcloud/ses/v20201002/model/BatchSendEmailRequest.h>
-#include <tencentcloud/ses/v20201002/model/BatchSendEmailResponse.h>
 #include <tencentcloud/ses/v20201002/model/CreateEmailAddressRequest.h>
 #include <tencentcloud/ses/v20201002/model/CreateEmailAddressResponse.h>
 #include <tencentcloud/ses/v20201002/model/CreateEmailIdentityRequest.h>
 #include <tencentcloud/ses/v20201002/model/CreateEmailIdentityResponse.h>
-#include <tencentcloud/ses/v20201002/model/CreateEmailTemplateRequest.h>
-#include <tencentcloud/ses/v20201002/model/CreateEmailTemplateResponse.h>
 #include <tencentcloud/ses/v20201002/model/CreateReceiverRequest.h>
 #include <tencentcloud/ses/v20201002/model/CreateReceiverResponse.h>
 #include <tencentcloud/ses/v20201002/model/CreateReceiverDetailRequest.h>
@@ -49,8 +45,6 @@
 #include <tencentcloud/ses/v20201002/model/GetEmailIdentityResponse.h>
 #include <tencentcloud/ses/v20201002/model/GetEmailTemplateRequest.h>
 #include <tencentcloud/ses/v20201002/model/GetEmailTemplateResponse.h>
-#include <tencentcloud/ses/v20201002/model/GetSendEmailStatusRequest.h>
-#include <tencentcloud/ses/v20201002/model/GetSendEmailStatusResponse.h>
 #include <tencentcloud/ses/v20201002/model/GetStatisticsReportRequest.h>
 #include <tencentcloud/ses/v20201002/model/GetStatisticsReportResponse.h>
 #include <tencentcloud/ses/v20201002/model/ListBlackEmailAddressRequest.h>
@@ -69,8 +63,6 @@
 #include <tencentcloud/ses/v20201002/model/SendEmailResponse.h>
 #include <tencentcloud/ses/v20201002/model/UpdateEmailIdentityRequest.h>
 #include <tencentcloud/ses/v20201002/model/UpdateEmailIdentityResponse.h>
-#include <tencentcloud/ses/v20201002/model/UpdateEmailTemplateRequest.h>
-#include <tencentcloud/ses/v20201002/model/UpdateEmailTemplateResponse.h>
 
 
 namespace TencentCloud
@@ -85,18 +77,12 @@ namespace TencentCloud
                 SesClient(const Credential &credential, const std::string &region);
                 SesClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
-                typedef Outcome<Core::Error, Model::BatchSendEmailResponse> BatchSendEmailOutcome;
-                typedef std::future<BatchSendEmailOutcome> BatchSendEmailOutcomeCallable;
-                typedef std::function<void(const SesClient*, const Model::BatchSendEmailRequest&, BatchSendEmailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BatchSendEmailAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateEmailAddressResponse> CreateEmailAddressOutcome;
                 typedef std::future<CreateEmailAddressOutcome> CreateEmailAddressOutcomeCallable;
                 typedef std::function<void(const SesClient*, const Model::CreateEmailAddressRequest&, CreateEmailAddressOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateEmailAddressAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateEmailIdentityResponse> CreateEmailIdentityOutcome;
                 typedef std::future<CreateEmailIdentityOutcome> CreateEmailIdentityOutcomeCallable;
                 typedef std::function<void(const SesClient*, const Model::CreateEmailIdentityRequest&, CreateEmailIdentityOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateEmailIdentityAsyncHandler;
-                typedef Outcome<Core::Error, Model::CreateEmailTemplateResponse> CreateEmailTemplateOutcome;
-                typedef std::future<CreateEmailTemplateOutcome> CreateEmailTemplateOutcomeCallable;
-                typedef std::function<void(const SesClient*, const Model::CreateEmailTemplateRequest&, CreateEmailTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateEmailTemplateAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateReceiverResponse> CreateReceiverOutcome;
                 typedef std::future<CreateReceiverOutcome> CreateReceiverOutcomeCallable;
                 typedef std::function<void(const SesClient*, const Model::CreateReceiverRequest&, CreateReceiverOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateReceiverAsyncHandler;
@@ -124,9 +110,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::GetEmailTemplateResponse> GetEmailTemplateOutcome;
                 typedef std::future<GetEmailTemplateOutcome> GetEmailTemplateOutcomeCallable;
                 typedef std::function<void(const SesClient*, const Model::GetEmailTemplateRequest&, GetEmailTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetEmailTemplateAsyncHandler;
-                typedef Outcome<Core::Error, Model::GetSendEmailStatusResponse> GetSendEmailStatusOutcome;
-                typedef std::future<GetSendEmailStatusOutcome> GetSendEmailStatusOutcomeCallable;
-                typedef std::function<void(const SesClient*, const Model::GetSendEmailStatusRequest&, GetSendEmailStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetSendEmailStatusAsyncHandler;
                 typedef Outcome<Core::Error, Model::GetStatisticsReportResponse> GetStatisticsReportOutcome;
                 typedef std::future<GetStatisticsReportOutcome> GetStatisticsReportOutcomeCallable;
                 typedef std::function<void(const SesClient*, const Model::GetStatisticsReportRequest&, GetStatisticsReportOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetStatisticsReportAsyncHandler;
@@ -154,20 +137,8 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::UpdateEmailIdentityResponse> UpdateEmailIdentityOutcome;
                 typedef std::future<UpdateEmailIdentityOutcome> UpdateEmailIdentityOutcomeCallable;
                 typedef std::function<void(const SesClient*, const Model::UpdateEmailIdentityRequest&, UpdateEmailIdentityOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateEmailIdentityAsyncHandler;
-                typedef Outcome<Core::Error, Model::UpdateEmailTemplateResponse> UpdateEmailTemplateOutcome;
-                typedef std::future<UpdateEmailTemplateOutcome> UpdateEmailTemplateOutcomeCallable;
-                typedef std::function<void(const SesClient*, const Model::UpdateEmailTemplateRequest&, UpdateEmailTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateEmailTemplateAsyncHandler;
 
 
-
-                /**
-                 *This API is used to send a TEXT or HTML email to multiple recipients at a time for marketing or notification purposes. By default, you can send emails using a template only. To send custom content, please contact your sales rep to enable this feature. You need to create a recipient group with email addresses first and then send emails by group ID. SES supports scheduled and recurring email sending tasks. You need to pass in `TimedParam` for a scheduled task and `CycleParam` for a recurring one.
-                 * @param req BatchSendEmailRequest
-                 * @return BatchSendEmailOutcome
-                 */
-                BatchSendEmailOutcome BatchSendEmail(const Model::BatchSendEmailRequest &request);
-                void BatchSendEmailAsync(const Model::BatchSendEmailRequest& request, const BatchSendEmailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                BatchSendEmailOutcomeCallable BatchSendEmailCallable(const Model::BatchSendEmailRequest& request);
 
                 /**
                  *After the sender domain is verified, you need a sender address to send emails. For example, if your sender domain is mail.qcloud.com, your sender address can be service@mail.qcloud.com. If you want to display your name (such as "Tencent Cloud") in the inbox list of the recipients, the sender address should be in the format of `Tencent Cloud <email address>`. Please note that there must be a space between your name and the first angle bracket.
@@ -186,16 +157,6 @@ namespace TencentCloud
                 CreateEmailIdentityOutcome CreateEmailIdentity(const Model::CreateEmailIdentityRequest &request);
                 void CreateEmailIdentityAsync(const Model::CreateEmailIdentityRequest& request, const CreateEmailIdentityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateEmailIdentityOutcomeCallable CreateEmailIdentityCallable(const Model::CreateEmailIdentityRequest& request);
-
-                /**
-                 *This API is used to create a TEXT or HTML email template. To create an HTML template, ensure that it does not include external CSS files. You can use {{variable name}} to specify a variable in the template.
-Note: Only an approved template can be used to send emails.
-                 * @param req CreateEmailTemplateRequest
-                 * @return CreateEmailTemplateOutcome
-                 */
-                CreateEmailTemplateOutcome CreateEmailTemplate(const Model::CreateEmailTemplateRequest &request);
-                void CreateEmailTemplateAsync(const Model::CreateEmailTemplateRequest& request, const CreateEmailTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                CreateEmailTemplateOutcomeCallable CreateEmailTemplateCallable(const Model::CreateEmailTemplateRequest& request);
 
                 /**
                  *This API is used to create a recipient group, which is the list of target email addresses for batch sending emails. After creating a group, you need to upload recipient email addresses. Then, you can create a sending task and select the group to batch send emails.
@@ -279,15 +240,6 @@ Note: Only an approved template can be used to send emails.
                 GetEmailTemplateOutcomeCallable GetEmailTemplateCallable(const Model::GetEmailTemplateRequest& request);
 
                 /**
-                 *This API is used to get email sending status. Only data within 30 days can be queried.
-                 * @param req GetSendEmailStatusRequest
-                 * @return GetSendEmailStatusOutcome
-                 */
-                GetSendEmailStatusOutcome GetSendEmailStatus(const Model::GetSendEmailStatusRequest &request);
-                void GetSendEmailStatusAsync(const Model::GetSendEmailStatusRequest& request, const GetSendEmailStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                GetSendEmailStatusOutcomeCallable GetSendEmailStatusCallable(const Model::GetSendEmailStatusRequest& request);
-
-                /**
                  *This API is used to get the email sending statistics over a recent period, including data on sent emails, delivery success rate, open rate, bounce rate, and so on.
                  * @param req GetStatisticsReportRequest
                  * @return GetStatisticsReportOutcome
@@ -367,15 +319,6 @@ Note: Only an approved template can be used to send emails.
                 UpdateEmailIdentityOutcome UpdateEmailIdentity(const Model::UpdateEmailIdentityRequest &request);
                 void UpdateEmailIdentityAsync(const Model::UpdateEmailIdentityRequest& request, const UpdateEmailIdentityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 UpdateEmailIdentityOutcomeCallable UpdateEmailIdentityCallable(const Model::UpdateEmailIdentityRequest& request);
-
-                /**
-                 *This API is used to update an email template. An updated template must be approved again before it can be used.
-                 * @param req UpdateEmailTemplateRequest
-                 * @return UpdateEmailTemplateOutcome
-                 */
-                UpdateEmailTemplateOutcome UpdateEmailTemplate(const Model::UpdateEmailTemplateRequest &request);
-                void UpdateEmailTemplateAsync(const Model::UpdateEmailTemplateRequest& request, const UpdateEmailTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                UpdateEmailTemplateOutcomeCallable UpdateEmailTemplateCallable(const Model::UpdateEmailTemplateRequest& request);
 
             };
         }

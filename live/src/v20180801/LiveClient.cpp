@@ -1502,49 +1502,6 @@ LiveClient::DescribeAreaBillBandwidthAndFluxListOutcomeCallable LiveClient::Desc
     return task->get_future();
 }
 
-LiveClient::DescribeBillBandwidthAndFluxListOutcome LiveClient::DescribeBillBandwidthAndFluxList(const DescribeBillBandwidthAndFluxListRequest &request)
-{
-    auto outcome = MakeRequest(request, "DescribeBillBandwidthAndFluxList");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        DescribeBillBandwidthAndFluxListResponse rsp = DescribeBillBandwidthAndFluxListResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return DescribeBillBandwidthAndFluxListOutcome(rsp);
-        else
-            return DescribeBillBandwidthAndFluxListOutcome(o.GetError());
-    }
-    else
-    {
-        return DescribeBillBandwidthAndFluxListOutcome(outcome.GetError());
-    }
-}
-
-void LiveClient::DescribeBillBandwidthAndFluxListAsync(const DescribeBillBandwidthAndFluxListRequest& request, const DescribeBillBandwidthAndFluxListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeBillBandwidthAndFluxList(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-LiveClient::DescribeBillBandwidthAndFluxListOutcomeCallable LiveClient::DescribeBillBandwidthAndFluxListCallable(const DescribeBillBandwidthAndFluxListRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<DescribeBillBandwidthAndFluxListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeBillBandwidthAndFluxList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
 LiveClient::DescribeConcurrentRecordStreamNumOutcome LiveClient::DescribeConcurrentRecordStreamNum(const DescribeConcurrentRecordStreamNumRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeConcurrentRecordStreamNum");
@@ -3430,49 +3387,6 @@ LiveClient::DescribeStreamPlayInfoListOutcomeCallable LiveClient::DescribeStream
         [this, request]()
         {
             return this->DescribeStreamPlayInfoList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
-LiveClient::DescribeStreamPushInfoListOutcome LiveClient::DescribeStreamPushInfoList(const DescribeStreamPushInfoListRequest &request)
-{
-    auto outcome = MakeRequest(request, "DescribeStreamPushInfoList");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        DescribeStreamPushInfoListResponse rsp = DescribeStreamPushInfoListResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return DescribeStreamPushInfoListOutcome(rsp);
-        else
-            return DescribeStreamPushInfoListOutcome(o.GetError());
-    }
-    else
-    {
-        return DescribeStreamPushInfoListOutcome(outcome.GetError());
-    }
-}
-
-void LiveClient::DescribeStreamPushInfoListAsync(const DescribeStreamPushInfoListRequest& request, const DescribeStreamPushInfoListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeStreamPushInfoList(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-LiveClient::DescribeStreamPushInfoListOutcomeCallable LiveClient::DescribeStreamPushInfoListCallable(const DescribeStreamPushInfoListRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<DescribeStreamPushInfoListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeStreamPushInfoList(request);
         }
     );
 

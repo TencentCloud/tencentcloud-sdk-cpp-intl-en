@@ -232,6 +232,28 @@ namespace TencentCloud
                      */
                     bool Mp3ParamHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the watermark is removed.
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return RemoveWatermark Whether the watermark is removed.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    bool GetRemoveWatermark() const;
+
+                    /**
+                     * 设置Whether the watermark is removed.
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param RemoveWatermark Whether the watermark is removed.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetRemoveWatermark(const bool& _removeWatermark);
+
+                    /**
+                     * 判断参数 RemoveWatermark 是否已赋值
+                     * @return RemoveWatermark 是否已赋值
+                     */
+                    bool RemoveWatermarkHasBeenSet() const;
+
                 private:
 
                     /**
@@ -294,6 +316,13 @@ namespace TencentCloud
                      */
                     RecordParam m_mp3Param;
                     bool m_mp3ParamHasBeenSet;
+
+                    /**
+                     * Whether the watermark is removed.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    bool m_removeWatermark;
+                    bool m_removeWatermarkHasBeenSet;
 
                 };
             }

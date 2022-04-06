@@ -41,8 +41,6 @@
 #include <tencentcloud/vpc/v20170312/model/AssociateAddressResponse.h>
 #include <tencentcloud/vpc/v20170312/model/AssociateDirectConnectGatewayNatGatewayRequest.h>
 #include <tencentcloud/vpc/v20170312/model/AssociateDirectConnectGatewayNatGatewayResponse.h>
-#include <tencentcloud/vpc/v20170312/model/AssociateNatGatewayAddressRequest.h>
-#include <tencentcloud/vpc/v20170312/model/AssociateNatGatewayAddressResponse.h>
 #include <tencentcloud/vpc/v20170312/model/AssociateNetworkInterfaceSecurityGroupsRequest.h>
 #include <tencentcloud/vpc/v20170312/model/AssociateNetworkInterfaceSecurityGroupsResponse.h>
 #include <tencentcloud/vpc/v20170312/model/AttachCcnInstancesRequest.h>
@@ -83,8 +81,6 @@
 #include <tencentcloud/vpc/v20170312/model/CreateHaVipResponse.h>
 #include <tencentcloud/vpc/v20170312/model/CreateLocalGatewayRequest.h>
 #include <tencentcloud/vpc/v20170312/model/CreateLocalGatewayResponse.h>
-#include <tencentcloud/vpc/v20170312/model/CreateNatGatewayRequest.h>
-#include <tencentcloud/vpc/v20170312/model/CreateNatGatewayResponse.h>
 #include <tencentcloud/vpc/v20170312/model/CreateNatGatewayDestinationIpPortTranslationNatRuleRequest.h>
 #include <tencentcloud/vpc/v20170312/model/CreateNatGatewayDestinationIpPortTranslationNatRuleResponse.h>
 #include <tencentcloud/vpc/v20170312/model/CreateNatGatewaySourceIpTranslationNatRuleRequest.h>
@@ -145,12 +141,6 @@
 #include <tencentcloud/vpc/v20170312/model/DeleteHaVipResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DeleteLocalGatewayRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DeleteLocalGatewayResponse.h>
-#include <tencentcloud/vpc/v20170312/model/DeleteNatGatewayRequest.h>
-#include <tencentcloud/vpc/v20170312/model/DeleteNatGatewayResponse.h>
-#include <tencentcloud/vpc/v20170312/model/DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest.h>
-#include <tencentcloud/vpc/v20170312/model/DeleteNatGatewayDestinationIpPortTranslationNatRuleResponse.h>
-#include <tencentcloud/vpc/v20170312/model/DeleteNatGatewaySourceIpTranslationNatRuleRequest.h>
-#include <tencentcloud/vpc/v20170312/model/DeleteNatGatewaySourceIpTranslationNatRuleResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DeleteNetDetectRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DeleteNetDetectResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DeleteNetworkInterfaceRequest.h>
@@ -237,12 +227,6 @@
 #include <tencentcloud/vpc/v20170312/model/DescribeIpGeolocationInfosResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeLocalGatewayRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeLocalGatewayResponse.h>
-#include <tencentcloud/vpc/v20170312/model/DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest.h>
-#include <tencentcloud/vpc/v20170312/model/DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse.h>
-#include <tencentcloud/vpc/v20170312/model/DescribeNatGatewaySourceIpTranslationNatRulesRequest.h>
-#include <tencentcloud/vpc/v20170312/model/DescribeNatGatewaySourceIpTranslationNatRulesResponse.h>
-#include <tencentcloud/vpc/v20170312/model/DescribeNatGatewaysRequest.h>
-#include <tencentcloud/vpc/v20170312/model/DescribeNatGatewaysResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeNetDetectStatesRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeNetDetectStatesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeNetDetectsRequest.h>
@@ -307,8 +291,6 @@
 #include <tencentcloud/vpc/v20170312/model/DisassociateAddressResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DisassociateDirectConnectGatewayNatGatewayRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DisassociateDirectConnectGatewayNatGatewayResponse.h>
-#include <tencentcloud/vpc/v20170312/model/DisassociateNatGatewayAddressRequest.h>
-#include <tencentcloud/vpc/v20170312/model/DisassociateNatGatewayAddressResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DisassociateNetworkInterfaceSecurityGroupsRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DisassociateNetworkInterfaceSecurityGroupsResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DisassociateVpcEndPointSecurityGroupsRequest.h>
@@ -327,8 +309,6 @@
 #include <tencentcloud/vpc/v20170312/model/HaVipDisassociateAddressIpResponse.h>
 #include <tencentcloud/vpc/v20170312/model/InquirePriceCreateDirectConnectGatewayRequest.h>
 #include <tencentcloud/vpc/v20170312/model/InquirePriceCreateDirectConnectGatewayResponse.h>
-#include <tencentcloud/vpc/v20170312/model/InquiryPriceCreateVpnGatewayRequest.h>
-#include <tencentcloud/vpc/v20170312/model/InquiryPriceCreateVpnGatewayResponse.h>
 #include <tencentcloud/vpc/v20170312/model/InquiryPriceRenewVpnGatewayRequest.h>
 #include <tencentcloud/vpc/v20170312/model/InquiryPriceRenewVpnGatewayResponse.h>
 #include <tencentcloud/vpc/v20170312/model/InquiryPriceResetVpnGatewayInternetMaxBandwidthRequest.h>
@@ -367,12 +347,6 @@
 #include <tencentcloud/vpc/v20170312/model/ModifyIpv6AddressesAttributeResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyLocalGatewayRequest.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyLocalGatewayResponse.h>
-#include <tencentcloud/vpc/v20170312/model/ModifyNatGatewayAttributeRequest.h>
-#include <tencentcloud/vpc/v20170312/model/ModifyNatGatewayAttributeResponse.h>
-#include <tencentcloud/vpc/v20170312/model/ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest.h>
-#include <tencentcloud/vpc/v20170312/model/ModifyNatGatewayDestinationIpPortTranslationNatRuleResponse.h>
-#include <tencentcloud/vpc/v20170312/model/ModifyNatGatewaySourceIpTranslationNatRuleRequest.h>
-#include <tencentcloud/vpc/v20170312/model/ModifyNatGatewaySourceIpTranslationNatRuleResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyNetDetectRequest.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyNetDetectResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyNetworkInterfaceAttributeRequest.h>
@@ -425,8 +399,6 @@
 #include <tencentcloud/vpc/v20170312/model/ReplaceSecurityGroupPolicyResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ResetAttachCcnInstancesRequest.h>
 #include <tencentcloud/vpc/v20170312/model/ResetAttachCcnInstancesResponse.h>
-#include <tencentcloud/vpc/v20170312/model/ResetNatGatewayConnectionRequest.h>
-#include <tencentcloud/vpc/v20170312/model/ResetNatGatewayConnectionResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ResetRoutesRequest.h>
 #include <tencentcloud/vpc/v20170312/model/ResetRoutesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ResetVpnConnectionRequest.h>
@@ -486,9 +458,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::AssociateDirectConnectGatewayNatGatewayResponse> AssociateDirectConnectGatewayNatGatewayOutcome;
                 typedef std::future<AssociateDirectConnectGatewayNatGatewayOutcome> AssociateDirectConnectGatewayNatGatewayOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::AssociateDirectConnectGatewayNatGatewayRequest&, AssociateDirectConnectGatewayNatGatewayOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AssociateDirectConnectGatewayNatGatewayAsyncHandler;
-                typedef Outcome<Core::Error, Model::AssociateNatGatewayAddressResponse> AssociateNatGatewayAddressOutcome;
-                typedef std::future<AssociateNatGatewayAddressOutcome> AssociateNatGatewayAddressOutcomeCallable;
-                typedef std::function<void(const VpcClient*, const Model::AssociateNatGatewayAddressRequest&, AssociateNatGatewayAddressOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AssociateNatGatewayAddressAsyncHandler;
                 typedef Outcome<Core::Error, Model::AssociateNetworkInterfaceSecurityGroupsResponse> AssociateNetworkInterfaceSecurityGroupsOutcome;
                 typedef std::future<AssociateNetworkInterfaceSecurityGroupsOutcome> AssociateNetworkInterfaceSecurityGroupsOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::AssociateNetworkInterfaceSecurityGroupsRequest&, AssociateNetworkInterfaceSecurityGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AssociateNetworkInterfaceSecurityGroupsAsyncHandler;
@@ -549,9 +518,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateLocalGatewayResponse> CreateLocalGatewayOutcome;
                 typedef std::future<CreateLocalGatewayOutcome> CreateLocalGatewayOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::CreateLocalGatewayRequest&, CreateLocalGatewayOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLocalGatewayAsyncHandler;
-                typedef Outcome<Core::Error, Model::CreateNatGatewayResponse> CreateNatGatewayOutcome;
-                typedef std::future<CreateNatGatewayOutcome> CreateNatGatewayOutcomeCallable;
-                typedef std::function<void(const VpcClient*, const Model::CreateNatGatewayRequest&, CreateNatGatewayOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateNatGatewayAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateNatGatewayDestinationIpPortTranslationNatRuleResponse> CreateNatGatewayDestinationIpPortTranslationNatRuleOutcome;
                 typedef std::future<CreateNatGatewayDestinationIpPortTranslationNatRuleOutcome> CreateNatGatewayDestinationIpPortTranslationNatRuleOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::CreateNatGatewayDestinationIpPortTranslationNatRuleRequest&, CreateNatGatewayDestinationIpPortTranslationNatRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateNatGatewayDestinationIpPortTranslationNatRuleAsyncHandler;
@@ -642,15 +608,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteLocalGatewayResponse> DeleteLocalGatewayOutcome;
                 typedef std::future<DeleteLocalGatewayOutcome> DeleteLocalGatewayOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DeleteLocalGatewayRequest&, DeleteLocalGatewayOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLocalGatewayAsyncHandler;
-                typedef Outcome<Core::Error, Model::DeleteNatGatewayResponse> DeleteNatGatewayOutcome;
-                typedef std::future<DeleteNatGatewayOutcome> DeleteNatGatewayOutcomeCallable;
-                typedef std::function<void(const VpcClient*, const Model::DeleteNatGatewayRequest&, DeleteNatGatewayOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteNatGatewayAsyncHandler;
-                typedef Outcome<Core::Error, Model::DeleteNatGatewayDestinationIpPortTranslationNatRuleResponse> DeleteNatGatewayDestinationIpPortTranslationNatRuleOutcome;
-                typedef std::future<DeleteNatGatewayDestinationIpPortTranslationNatRuleOutcome> DeleteNatGatewayDestinationIpPortTranslationNatRuleOutcomeCallable;
-                typedef std::function<void(const VpcClient*, const Model::DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest&, DeleteNatGatewayDestinationIpPortTranslationNatRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteNatGatewayDestinationIpPortTranslationNatRuleAsyncHandler;
-                typedef Outcome<Core::Error, Model::DeleteNatGatewaySourceIpTranslationNatRuleResponse> DeleteNatGatewaySourceIpTranslationNatRuleOutcome;
-                typedef std::future<DeleteNatGatewaySourceIpTranslationNatRuleOutcome> DeleteNatGatewaySourceIpTranslationNatRuleOutcomeCallable;
-                typedef std::function<void(const VpcClient*, const Model::DeleteNatGatewaySourceIpTranslationNatRuleRequest&, DeleteNatGatewaySourceIpTranslationNatRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteNatGatewaySourceIpTranslationNatRuleAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteNetDetectResponse> DeleteNetDetectOutcome;
                 typedef std::future<DeleteNetDetectOutcome> DeleteNetDetectOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DeleteNetDetectRequest&, DeleteNetDetectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteNetDetectAsyncHandler;
@@ -780,15 +737,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeLocalGatewayResponse> DescribeLocalGatewayOutcome;
                 typedef std::future<DescribeLocalGatewayOutcome> DescribeLocalGatewayOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DescribeLocalGatewayRequest&, DescribeLocalGatewayOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLocalGatewayAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse> DescribeNatGatewayDestinationIpPortTranslationNatRulesOutcome;
-                typedef std::future<DescribeNatGatewayDestinationIpPortTranslationNatRulesOutcome> DescribeNatGatewayDestinationIpPortTranslationNatRulesOutcomeCallable;
-                typedef std::function<void(const VpcClient*, const Model::DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest&, DescribeNatGatewayDestinationIpPortTranslationNatRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeNatGatewayDestinationIpPortTranslationNatRulesAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeNatGatewaySourceIpTranslationNatRulesResponse> DescribeNatGatewaySourceIpTranslationNatRulesOutcome;
-                typedef std::future<DescribeNatGatewaySourceIpTranslationNatRulesOutcome> DescribeNatGatewaySourceIpTranslationNatRulesOutcomeCallable;
-                typedef std::function<void(const VpcClient*, const Model::DescribeNatGatewaySourceIpTranslationNatRulesRequest&, DescribeNatGatewaySourceIpTranslationNatRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeNatGatewaySourceIpTranslationNatRulesAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeNatGatewaysResponse> DescribeNatGatewaysOutcome;
-                typedef std::future<DescribeNatGatewaysOutcome> DescribeNatGatewaysOutcomeCallable;
-                typedef std::function<void(const VpcClient*, const Model::DescribeNatGatewaysRequest&, DescribeNatGatewaysOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeNatGatewaysAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeNetDetectStatesResponse> DescribeNetDetectStatesOutcome;
                 typedef std::future<DescribeNetDetectStatesOutcome> DescribeNetDetectStatesOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DescribeNetDetectStatesRequest&, DescribeNetDetectStatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeNetDetectStatesAsyncHandler;
@@ -885,9 +833,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DisassociateDirectConnectGatewayNatGatewayResponse> DisassociateDirectConnectGatewayNatGatewayOutcome;
                 typedef std::future<DisassociateDirectConnectGatewayNatGatewayOutcome> DisassociateDirectConnectGatewayNatGatewayOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DisassociateDirectConnectGatewayNatGatewayRequest&, DisassociateDirectConnectGatewayNatGatewayOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisassociateDirectConnectGatewayNatGatewayAsyncHandler;
-                typedef Outcome<Core::Error, Model::DisassociateNatGatewayAddressResponse> DisassociateNatGatewayAddressOutcome;
-                typedef std::future<DisassociateNatGatewayAddressOutcome> DisassociateNatGatewayAddressOutcomeCallable;
-                typedef std::function<void(const VpcClient*, const Model::DisassociateNatGatewayAddressRequest&, DisassociateNatGatewayAddressOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisassociateNatGatewayAddressAsyncHandler;
                 typedef Outcome<Core::Error, Model::DisassociateNetworkInterfaceSecurityGroupsResponse> DisassociateNetworkInterfaceSecurityGroupsOutcome;
                 typedef std::future<DisassociateNetworkInterfaceSecurityGroupsOutcome> DisassociateNetworkInterfaceSecurityGroupsOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DisassociateNetworkInterfaceSecurityGroupsRequest&, DisassociateNetworkInterfaceSecurityGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisassociateNetworkInterfaceSecurityGroupsAsyncHandler;
@@ -915,9 +860,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::InquirePriceCreateDirectConnectGatewayResponse> InquirePriceCreateDirectConnectGatewayOutcome;
                 typedef std::future<InquirePriceCreateDirectConnectGatewayOutcome> InquirePriceCreateDirectConnectGatewayOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::InquirePriceCreateDirectConnectGatewayRequest&, InquirePriceCreateDirectConnectGatewayOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquirePriceCreateDirectConnectGatewayAsyncHandler;
-                typedef Outcome<Core::Error, Model::InquiryPriceCreateVpnGatewayResponse> InquiryPriceCreateVpnGatewayOutcome;
-                typedef std::future<InquiryPriceCreateVpnGatewayOutcome> InquiryPriceCreateVpnGatewayOutcomeCallable;
-                typedef std::function<void(const VpcClient*, const Model::InquiryPriceCreateVpnGatewayRequest&, InquiryPriceCreateVpnGatewayOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquiryPriceCreateVpnGatewayAsyncHandler;
                 typedef Outcome<Core::Error, Model::InquiryPriceRenewVpnGatewayResponse> InquiryPriceRenewVpnGatewayOutcome;
                 typedef std::future<InquiryPriceRenewVpnGatewayOutcome> InquiryPriceRenewVpnGatewayOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::InquiryPriceRenewVpnGatewayRequest&, InquiryPriceRenewVpnGatewayOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquiryPriceRenewVpnGatewayAsyncHandler;
@@ -975,15 +917,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyLocalGatewayResponse> ModifyLocalGatewayOutcome;
                 typedef std::future<ModifyLocalGatewayOutcome> ModifyLocalGatewayOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::ModifyLocalGatewayRequest&, ModifyLocalGatewayOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLocalGatewayAsyncHandler;
-                typedef Outcome<Core::Error, Model::ModifyNatGatewayAttributeResponse> ModifyNatGatewayAttributeOutcome;
-                typedef std::future<ModifyNatGatewayAttributeOutcome> ModifyNatGatewayAttributeOutcomeCallable;
-                typedef std::function<void(const VpcClient*, const Model::ModifyNatGatewayAttributeRequest&, ModifyNatGatewayAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyNatGatewayAttributeAsyncHandler;
-                typedef Outcome<Core::Error, Model::ModifyNatGatewayDestinationIpPortTranslationNatRuleResponse> ModifyNatGatewayDestinationIpPortTranslationNatRuleOutcome;
-                typedef std::future<ModifyNatGatewayDestinationIpPortTranslationNatRuleOutcome> ModifyNatGatewayDestinationIpPortTranslationNatRuleOutcomeCallable;
-                typedef std::function<void(const VpcClient*, const Model::ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest&, ModifyNatGatewayDestinationIpPortTranslationNatRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyNatGatewayDestinationIpPortTranslationNatRuleAsyncHandler;
-                typedef Outcome<Core::Error, Model::ModifyNatGatewaySourceIpTranslationNatRuleResponse> ModifyNatGatewaySourceIpTranslationNatRuleOutcome;
-                typedef std::future<ModifyNatGatewaySourceIpTranslationNatRuleOutcome> ModifyNatGatewaySourceIpTranslationNatRuleOutcomeCallable;
-                typedef std::function<void(const VpcClient*, const Model::ModifyNatGatewaySourceIpTranslationNatRuleRequest&, ModifyNatGatewaySourceIpTranslationNatRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyNatGatewaySourceIpTranslationNatRuleAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyNetDetectResponse> ModifyNetDetectOutcome;
                 typedef std::future<ModifyNetDetectOutcome> ModifyNetDetectOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::ModifyNetDetectRequest&, ModifyNetDetectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyNetDetectAsyncHandler;
@@ -1062,9 +995,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ResetAttachCcnInstancesResponse> ResetAttachCcnInstancesOutcome;
                 typedef std::future<ResetAttachCcnInstancesOutcome> ResetAttachCcnInstancesOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::ResetAttachCcnInstancesRequest&, ResetAttachCcnInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetAttachCcnInstancesAsyncHandler;
-                typedef Outcome<Core::Error, Model::ResetNatGatewayConnectionResponse> ResetNatGatewayConnectionOutcome;
-                typedef std::future<ResetNatGatewayConnectionOutcome> ResetNatGatewayConnectionOutcomeCallable;
-                typedef std::function<void(const VpcClient*, const Model::ResetNatGatewayConnectionRequest&, ResetNatGatewayConnectionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetNatGatewayConnectionAsyncHandler;
                 typedef Outcome<Core::Error, Model::ResetRoutesResponse> ResetRoutesOutcome;
                 typedef std::future<ResetRoutesOutcome> ResetRoutesOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::ResetRoutesRequest&, ResetRoutesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetRoutesAsyncHandler;
@@ -1198,15 +1128,6 @@ This API is completed asynchronously. If you need to query the execution result 
                 AssociateDirectConnectGatewayNatGatewayOutcome AssociateDirectConnectGatewayNatGateway(const Model::AssociateDirectConnectGatewayNatGatewayRequest &request);
                 void AssociateDirectConnectGatewayNatGatewayAsync(const Model::AssociateDirectConnectGatewayNatGatewayRequest& request, const AssociateDirectConnectGatewayNatGatewayAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 AssociateDirectConnectGatewayNatGatewayOutcomeCallable AssociateDirectConnectGatewayNatGatewayCallable(const Model::AssociateDirectConnectGatewayNatGatewayRequest& request);
-
-                /**
-                 *This API is used to bind an EIP to NAT Gateway.
-                 * @param req AssociateNatGatewayAddressRequest
-                 * @return AssociateNatGatewayAddressOutcome
-                 */
-                AssociateNatGatewayAddressOutcome AssociateNatGatewayAddress(const Model::AssociateNatGatewayAddressRequest &request);
-                void AssociateNatGatewayAddressAsync(const Model::AssociateNatGatewayAddressRequest& request, const AssociateNatGatewayAddressAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                AssociateNatGatewayAddressOutcomeCallable AssociateNatGatewayAddressCallable(const Model::AssociateNatGatewayAddressRequest& request);
 
                 /**
                  *This API (AssociateNetworkInterfaceSecurityGroups) is used to attach a security group to an ENI.
@@ -1420,16 +1341,6 @@ You can also use the Force parameter to forcibly return a default VPC.
                 CreateLocalGatewayOutcome CreateLocalGateway(const Model::CreateLocalGatewayRequest &request);
                 void CreateLocalGatewayAsync(const Model::CreateLocalGatewayRequest& request, const CreateLocalGatewayAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateLocalGatewayOutcomeCallable CreateLocalGatewayCallable(const Model::CreateLocalGatewayRequest& request);
-
-                /**
-                 *This API is used to create a NAT Gateway.
-Before taking actions on a NAT Gateway, ensure that it has been successfully created, namely, the `State` field in the response of the `DescribeNatGateway` API is `AVAILABLE`.
-                 * @param req CreateNatGatewayRequest
-                 * @return CreateNatGatewayOutcome
-                 */
-                CreateNatGatewayOutcome CreateNatGateway(const Model::CreateNatGatewayRequest &request);
-                void CreateNatGatewayAsync(const Model::CreateNatGatewayRequest& request, const CreateNatGatewayAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                CreateNatGatewayOutcomeCallable CreateNatGatewayCallable(const Model::CreateNatGatewayRequest& request);
 
                 /**
                  *This API (CreateNatGatewayDestinationIpPortTranslationNatRule) is used to create a port forwarding rule for a NAT gateway.
@@ -1764,34 +1675,6 @@ This API is completed asynchronously. If you need to query the execution result 
                 DeleteLocalGatewayOutcome DeleteLocalGateway(const Model::DeleteLocalGatewayRequest &request);
                 void DeleteLocalGatewayAsync(const Model::DeleteLocalGatewayRequest& request, const DeleteLocalGatewayAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteLocalGatewayOutcomeCallable DeleteLocalGatewayCallable(const Model::DeleteLocalGatewayRequest& request);
-
-                /**
-                 *This API (DeleteNatGateway) is used to delete a NAT gateway.
-After the deletion of a NAT gateway, the system will automatically delete the routing entry that contains the NAT gateway from the route table. It will also unbind the Elastic IP.
-                 * @param req DeleteNatGatewayRequest
-                 * @return DeleteNatGatewayOutcome
-                 */
-                DeleteNatGatewayOutcome DeleteNatGateway(const Model::DeleteNatGatewayRequest &request);
-                void DeleteNatGatewayAsync(const Model::DeleteNatGatewayRequest& request, const DeleteNatGatewayAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DeleteNatGatewayOutcomeCallable DeleteNatGatewayCallable(const Model::DeleteNatGatewayRequest& request);
-
-                /**
-                 *This API (DeleteNatGatewayDestinationIpPortTranslationNatRule) is used to delete a port forwarding rule for a NAT gateway.
-                 * @param req DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest
-                 * @return DeleteNatGatewayDestinationIpPortTranslationNatRuleOutcome
-                 */
-                DeleteNatGatewayDestinationIpPortTranslationNatRuleOutcome DeleteNatGatewayDestinationIpPortTranslationNatRule(const Model::DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest &request);
-                void DeleteNatGatewayDestinationIpPortTranslationNatRuleAsync(const Model::DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest& request, const DeleteNatGatewayDestinationIpPortTranslationNatRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DeleteNatGatewayDestinationIpPortTranslationNatRuleOutcomeCallable DeleteNatGatewayDestinationIpPortTranslationNatRuleCallable(const Model::DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest& request);
-
-                /**
-                 *This API is used to delete a SNAT forwarding rule of the NAT Gateway.
-                 * @param req DeleteNatGatewaySourceIpTranslationNatRuleRequest
-                 * @return DeleteNatGatewaySourceIpTranslationNatRuleOutcome
-                 */
-                DeleteNatGatewaySourceIpTranslationNatRuleOutcome DeleteNatGatewaySourceIpTranslationNatRule(const Model::DeleteNatGatewaySourceIpTranslationNatRuleRequest &request);
-                void DeleteNatGatewaySourceIpTranslationNatRuleAsync(const Model::DeleteNatGatewaySourceIpTranslationNatRuleRequest& request, const DeleteNatGatewaySourceIpTranslationNatRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DeleteNatGatewaySourceIpTranslationNatRuleOutcomeCallable DeleteNatGatewaySourceIpTranslationNatRuleCallable(const Model::DeleteNatGatewaySourceIpTranslationNatRuleRequest& request);
 
                 /**
                  *This API (DeleteNetDetect) is used to delete a network detection instance.
@@ -2200,33 +2083,6 @@ This API is currently in beta test. To use it, please [submit a ticket](https://
                 DescribeLocalGatewayOutcomeCallable DescribeLocalGatewayCallable(const Model::DescribeLocalGatewayRequest& request);
 
                 /**
-                 *This API (DescribeNatGatewayDestinationIpPortTranslationNatRules) is used to query the array of objects of the port forwarding rules for a NAT gateway.
-                 * @param req DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest
-                 * @return DescribeNatGatewayDestinationIpPortTranslationNatRulesOutcome
-                 */
-                DescribeNatGatewayDestinationIpPortTranslationNatRulesOutcome DescribeNatGatewayDestinationIpPortTranslationNatRules(const Model::DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest &request);
-                void DescribeNatGatewayDestinationIpPortTranslationNatRulesAsync(const Model::DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest& request, const DescribeNatGatewayDestinationIpPortTranslationNatRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeNatGatewayDestinationIpPortTranslationNatRulesOutcomeCallable DescribeNatGatewayDestinationIpPortTranslationNatRulesCallable(const Model::DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest& request);
-
-                /**
-                 *This API is used to query the object arrays of SNAT forwarding rules of the NAT Gateway.
-                 * @param req DescribeNatGatewaySourceIpTranslationNatRulesRequest
-                 * @return DescribeNatGatewaySourceIpTranslationNatRulesOutcome
-                 */
-                DescribeNatGatewaySourceIpTranslationNatRulesOutcome DescribeNatGatewaySourceIpTranslationNatRules(const Model::DescribeNatGatewaySourceIpTranslationNatRulesRequest &request);
-                void DescribeNatGatewaySourceIpTranslationNatRulesAsync(const Model::DescribeNatGatewaySourceIpTranslationNatRulesRequest& request, const DescribeNatGatewaySourceIpTranslationNatRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeNatGatewaySourceIpTranslationNatRulesOutcomeCallable DescribeNatGatewaySourceIpTranslationNatRulesCallable(const Model::DescribeNatGatewaySourceIpTranslationNatRulesRequest& request);
-
-                /**
-                 *This API (DescribeNatGateways) is used to query NAT gateways.
-                 * @param req DescribeNatGatewaysRequest
-                 * @return DescribeNatGatewaysOutcome
-                 */
-                DescribeNatGatewaysOutcome DescribeNatGateways(const Model::DescribeNatGatewaysRequest &request);
-                void DescribeNatGatewaysAsync(const Model::DescribeNatGatewaysRequest& request, const DescribeNatGatewaysAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeNatGatewaysOutcomeCallable DescribeNatGatewaysCallable(const Model::DescribeNatGatewaysRequest& request);
-
-                /**
                  *This API (DescribeNetDetectStates) is used to query the list of network detection verification results.
                  * @param req DescribeNetDetectStatesRequest
                  * @return DescribeNetDetectStatesOutcome
@@ -2525,15 +2381,6 @@ This API is completed asynchronously. If you need to query the execution result 
                 DisassociateDirectConnectGatewayNatGatewayOutcomeCallable DisassociateDirectConnectGatewayNatGatewayCallable(const Model::DisassociateDirectConnectGatewayNatGatewayRequest& request);
 
                 /**
-                 *This API (DisassociateNatGatewayAddress) is used to unbind an EIP from a NAT gateway.
-                 * @param req DisassociateNatGatewayAddressRequest
-                 * @return DisassociateNatGatewayAddressOutcome
-                 */
-                DisassociateNatGatewayAddressOutcome DisassociateNatGatewayAddress(const Model::DisassociateNatGatewayAddressRequest &request);
-                void DisassociateNatGatewayAddressAsync(const Model::DisassociateNatGatewayAddressRequest& request, const DisassociateNatGatewayAddressAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DisassociateNatGatewayAddressOutcomeCallable DisassociateNatGatewayAddressCallable(const Model::DisassociateNatGatewayAddressRequest& request);
-
-                /**
                  *This API (DisassociateNetworkInterfaceSecurityGroups) is used to detach (or fully detach if possible) a security group from an ENI.
                  * @param req DisassociateNetworkInterfaceSecurityGroupsRequest
                  * @return DisassociateNetworkInterfaceSecurityGroupsOutcome
@@ -2616,15 +2463,6 @@ This API is completed asynchronously. If you need to query the execution result 
                 InquirePriceCreateDirectConnectGatewayOutcome InquirePriceCreateDirectConnectGateway(const Model::InquirePriceCreateDirectConnectGatewayRequest &request);
                 void InquirePriceCreateDirectConnectGatewayAsync(const Model::InquirePriceCreateDirectConnectGatewayRequest& request, const InquirePriceCreateDirectConnectGatewayAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 InquirePriceCreateDirectConnectGatewayOutcomeCallable InquirePriceCreateDirectConnectGatewayCallable(const Model::InquirePriceCreateDirectConnectGatewayRequest& request);
-
-                /**
-                 *This API (InquiryPriceCreateVpnGateway) is used to query the price for VPN gateway creation.
-                 * @param req InquiryPriceCreateVpnGatewayRequest
-                 * @return InquiryPriceCreateVpnGatewayOutcome
-                 */
-                InquiryPriceCreateVpnGatewayOutcome InquiryPriceCreateVpnGateway(const Model::InquiryPriceCreateVpnGatewayRequest &request);
-                void InquiryPriceCreateVpnGatewayAsync(const Model::InquiryPriceCreateVpnGatewayRequest& request, const InquiryPriceCreateVpnGatewayAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                InquiryPriceCreateVpnGatewayOutcomeCallable InquiryPriceCreateVpnGatewayCallable(const Model::InquiryPriceCreateVpnGatewayRequest& request);
 
                 /**
                  *This API (InquiryPriceRenewVpnGateway) is used to query the price for VPN gateway renewal. Currently, only querying prices for IPSEC-type gateways is supported.
@@ -2804,33 +2642,6 @@ This API is completed asynchronously. If you need to query the execution result 
                 ModifyLocalGatewayOutcome ModifyLocalGateway(const Model::ModifyLocalGatewayRequest &request);
                 void ModifyLocalGatewayAsync(const Model::ModifyLocalGatewayRequest& request, const ModifyLocalGatewayAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyLocalGatewayOutcomeCallable ModifyLocalGatewayCallable(const Model::ModifyLocalGatewayRequest& request);
-
-                /**
-                 *This API (ModifyNatGatewayAttribute) is used to modify the attributes of a NAT gateway.
-                 * @param req ModifyNatGatewayAttributeRequest
-                 * @return ModifyNatGatewayAttributeOutcome
-                 */
-                ModifyNatGatewayAttributeOutcome ModifyNatGatewayAttribute(const Model::ModifyNatGatewayAttributeRequest &request);
-                void ModifyNatGatewayAttributeAsync(const Model::ModifyNatGatewayAttributeRequest& request, const ModifyNatGatewayAttributeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                ModifyNatGatewayAttributeOutcomeCallable ModifyNatGatewayAttributeCallable(const Model::ModifyNatGatewayAttributeRequest& request);
-
-                /**
-                 *This API (ModifyNatGatewayDestinationIpPortTranslationNatRule) is used to modify a port forwarding rule for a NAT gateway.
-                 * @param req ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest
-                 * @return ModifyNatGatewayDestinationIpPortTranslationNatRuleOutcome
-                 */
-                ModifyNatGatewayDestinationIpPortTranslationNatRuleOutcome ModifyNatGatewayDestinationIpPortTranslationNatRule(const Model::ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest &request);
-                void ModifyNatGatewayDestinationIpPortTranslationNatRuleAsync(const Model::ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest& request, const ModifyNatGatewayDestinationIpPortTranslationNatRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                ModifyNatGatewayDestinationIpPortTranslationNatRuleOutcomeCallable ModifyNatGatewayDestinationIpPortTranslationNatRuleCallable(const Model::ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest& request);
-
-                /**
-                 *This API is used to modify a SNAT forwarding rule of the NAT Gateway.
-                 * @param req ModifyNatGatewaySourceIpTranslationNatRuleRequest
-                 * @return ModifyNatGatewaySourceIpTranslationNatRuleOutcome
-                 */
-                ModifyNatGatewaySourceIpTranslationNatRuleOutcome ModifyNatGatewaySourceIpTranslationNatRule(const Model::ModifyNatGatewaySourceIpTranslationNatRuleRequest &request);
-                void ModifyNatGatewaySourceIpTranslationNatRuleAsync(const Model::ModifyNatGatewaySourceIpTranslationNatRuleRequest& request, const ModifyNatGatewaySourceIpTranslationNatRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                ModifyNatGatewaySourceIpTranslationNatRuleOutcomeCallable ModifyNatGatewaySourceIpTranslationNatRuleCallable(const Model::ModifyNatGatewaySourceIpTranslationNatRuleRequest& request);
 
                 /**
                  *This API (ModifyNetDetect) is used to modify network detection parameters.
@@ -3087,15 +2898,6 @@ Only one policy in a single direction can be replaced in each request, and the P
                 ResetAttachCcnInstancesOutcome ResetAttachCcnInstances(const Model::ResetAttachCcnInstancesRequest &request);
                 void ResetAttachCcnInstancesAsync(const Model::ResetAttachCcnInstancesRequest& request, const ResetAttachCcnInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ResetAttachCcnInstancesOutcomeCallable ResetAttachCcnInstancesCallable(const Model::ResetAttachCcnInstancesRequest& request);
-
-                /**
-                 *This API (ResetNatGatewayConnection) is used to adjust concurrent connection cap for the NAT gateway.
-                 * @param req ResetNatGatewayConnectionRequest
-                 * @return ResetNatGatewayConnectionOutcome
-                 */
-                ResetNatGatewayConnectionOutcome ResetNatGatewayConnection(const Model::ResetNatGatewayConnectionRequest &request);
-                void ResetNatGatewayConnectionAsync(const Model::ResetNatGatewayConnectionRequest& request, const ResetNatGatewayConnectionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                ResetNatGatewayConnectionOutcomeCallable ResetNatGatewayConnectionCallable(const Model::ResetNatGatewayConnectionRequest& request);
 
                 /**
                  *This API (ResetRoutes) is used to reset the name of a route table and all its routing policies.<br />

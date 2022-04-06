@@ -43,6 +43,8 @@
 #include <tencentcloud/es/v20180416/model/RestartKibanaResponse.h>
 #include <tencentcloud/es/v20180416/model/RestartNodesRequest.h>
 #include <tencentcloud/es/v20180416/model/RestartNodesResponse.h>
+#include <tencentcloud/es/v20180416/model/UpdateDictionariesRequest.h>
+#include <tencentcloud/es/v20180416/model/UpdateDictionariesResponse.h>
 #include <tencentcloud/es/v20180416/model/UpdateInstanceRequest.h>
 #include <tencentcloud/es/v20180416/model/UpdateInstanceResponse.h>
 #include <tencentcloud/es/v20180416/model/UpdatePluginsRequest.h>
@@ -97,6 +99,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::RestartNodesResponse> RestartNodesOutcome;
                 typedef std::future<RestartNodesOutcome> RestartNodesOutcomeCallable;
                 typedef std::function<void(const EsClient*, const Model::RestartNodesRequest&, RestartNodesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RestartNodesAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateDictionariesResponse> UpdateDictionariesOutcome;
+                typedef std::future<UpdateDictionariesOutcome> UpdateDictionariesOutcomeCallable;
+                typedef std::function<void(const EsClient*, const Model::UpdateDictionariesRequest&, UpdateDictionariesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateDictionariesAsyncHandler;
                 typedef Outcome<Core::Error, Model::UpdateInstanceResponse> UpdateInstanceOutcome;
                 typedef std::future<UpdateInstanceOutcome> UpdateInstanceOutcomeCallable;
                 typedef std::function<void(const EsClient*, const Model::UpdateInstanceRequest&, UpdateInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateInstanceAsyncHandler;
@@ -204,6 +209,15 @@ namespace TencentCloud
                 RestartNodesOutcome RestartNodes(const Model::RestartNodesRequest &request);
                 void RestartNodesAsync(const Model::RestartNodesRequest& request, const RestartNodesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 RestartNodesOutcomeCallable RestartNodesCallable(const Model::RestartNodesRequest& request);
+
+                /**
+                 *This API is used to update ES cluster dictionaries.
+                 * @param req UpdateDictionariesRequest
+                 * @return UpdateDictionariesOutcome
+                 */
+                UpdateDictionariesOutcome UpdateDictionaries(const Model::UpdateDictionariesRequest &request);
+                void UpdateDictionariesAsync(const Model::UpdateDictionariesRequest& request, const UpdateDictionariesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateDictionariesOutcomeCallable UpdateDictionariesCallable(const Model::UpdateDictionariesRequest& request);
 
                 /**
                  *This API is used for operations such as modifying node specification, renaming an instance, modifying configuration, resetting password, and setting Kibana blocklist/allowlist. `InstanceId` is required, while `ForceRestart` is optional. Other parameters or parameter combinations and their meanings are as follows:

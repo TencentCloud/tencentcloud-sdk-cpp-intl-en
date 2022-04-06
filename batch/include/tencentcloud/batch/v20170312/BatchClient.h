@@ -71,8 +71,6 @@
 #include <tencentcloud/batch/v20170312/model/ModifyTaskTemplateResponse.h>
 #include <tencentcloud/batch/v20170312/model/RetryJobsRequest.h>
 #include <tencentcloud/batch/v20170312/model/RetryJobsResponse.h>
-#include <tencentcloud/batch/v20170312/model/SubmitJobRequest.h>
-#include <tencentcloud/batch/v20170312/model/SubmitJobResponse.h>
 #include <tencentcloud/batch/v20170312/model/TerminateComputeNodeRequest.h>
 #include <tencentcloud/batch/v20170312/model/TerminateComputeNodeResponse.h>
 #include <tencentcloud/batch/v20170312/model/TerminateComputeNodesRequest.h>
@@ -167,9 +165,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::RetryJobsResponse> RetryJobsOutcome;
                 typedef std::future<RetryJobsOutcome> RetryJobsOutcomeCallable;
                 typedef std::function<void(const BatchClient*, const Model::RetryJobsRequest&, RetryJobsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RetryJobsAsyncHandler;
-                typedef Outcome<Core::Error, Model::SubmitJobResponse> SubmitJobOutcome;
-                typedef std::future<SubmitJobOutcome> SubmitJobOutcomeCallable;
-                typedef std::function<void(const BatchClient*, const Model::SubmitJobRequest&, SubmitJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SubmitJobAsyncHandler;
                 typedef Outcome<Core::Error, Model::TerminateComputeNodeResponse> TerminateComputeNodeOutcome;
                 typedef std::future<TerminateComputeNodeOutcome> TerminateComputeNodeOutcomeCallable;
                 typedef std::function<void(const BatchClient*, const Model::TerminateComputeNodeRequest&, TerminateComputeNodeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TerminateComputeNodeAsyncHandler;
@@ -409,15 +404,6 @@ Job retry is supported only if a job is in the "FAILED" state. After the retry o
                 RetryJobsOutcome RetryJobs(const Model::RetryJobsRequest &request);
                 void RetryJobsAsync(const Model::RetryJobsRequest& request, const RetryJobsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 RetryJobsOutcomeCallable RetryJobsCallable(const Model::RetryJobsRequest& request);
-
-                /**
-                 *This API is used to submit a instance.
-                 * @param req SubmitJobRequest
-                 * @return SubmitJobOutcome
-                 */
-                SubmitJobOutcome SubmitJob(const Model::SubmitJobRequest &request);
-                void SubmitJobAsync(const Model::SubmitJobRequest& request, const SubmitJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                SubmitJobOutcomeCallable SubmitJobCallable(const Model::SubmitJobRequest& request);
 
                 /**
                  *This API is used to terminate a compute node.

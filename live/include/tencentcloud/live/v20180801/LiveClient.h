@@ -91,8 +91,6 @@
 #include <tencentcloud/live/v20180801/model/DescribeAllStreamPlayInfoListResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeAreaBillBandwidthAndFluxListRequest.h>
 #include <tencentcloud/live/v20180801/model/DescribeAreaBillBandwidthAndFluxListResponse.h>
-#include <tencentcloud/live/v20180801/model/DescribeBillBandwidthAndFluxListRequest.h>
-#include <tencentcloud/live/v20180801/model/DescribeBillBandwidthAndFluxListResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeConcurrentRecordStreamNumRequest.h>
 #include <tencentcloud/live/v20180801/model/DescribeConcurrentRecordStreamNumResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeDeliverBandwidthListRequest.h>
@@ -181,8 +179,6 @@
 #include <tencentcloud/live/v20180801/model/DescribeStreamDayPlayInfoListResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeStreamPlayInfoListRequest.h>
 #include <tencentcloud/live/v20180801/model/DescribeStreamPlayInfoListResponse.h>
-#include <tencentcloud/live/v20180801/model/DescribeStreamPushInfoListRequest.h>
-#include <tencentcloud/live/v20180801/model/DescribeStreamPushInfoListResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeTopClientIpSumInfoListRequest.h>
 #include <tencentcloud/live/v20180801/model/DescribeTopClientIpSumInfoListResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeUploadStreamNumsRequest.h>
@@ -345,9 +341,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeAreaBillBandwidthAndFluxListResponse> DescribeAreaBillBandwidthAndFluxListOutcome;
                 typedef std::future<DescribeAreaBillBandwidthAndFluxListOutcome> DescribeAreaBillBandwidthAndFluxListOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeAreaBillBandwidthAndFluxListRequest&, DescribeAreaBillBandwidthAndFluxListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAreaBillBandwidthAndFluxListAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeBillBandwidthAndFluxListResponse> DescribeBillBandwidthAndFluxListOutcome;
-                typedef std::future<DescribeBillBandwidthAndFluxListOutcome> DescribeBillBandwidthAndFluxListOutcomeCallable;
-                typedef std::function<void(const LiveClient*, const Model::DescribeBillBandwidthAndFluxListRequest&, DescribeBillBandwidthAndFluxListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBillBandwidthAndFluxListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeConcurrentRecordStreamNumResponse> DescribeConcurrentRecordStreamNumOutcome;
                 typedef std::future<DescribeConcurrentRecordStreamNumOutcome> DescribeConcurrentRecordStreamNumOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeConcurrentRecordStreamNumRequest&, DescribeConcurrentRecordStreamNumOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeConcurrentRecordStreamNumAsyncHandler;
@@ -480,9 +473,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeStreamPlayInfoListResponse> DescribeStreamPlayInfoListOutcome;
                 typedef std::future<DescribeStreamPlayInfoListOutcome> DescribeStreamPlayInfoListOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeStreamPlayInfoListRequest&, DescribeStreamPlayInfoListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamPlayInfoListAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeStreamPushInfoListResponse> DescribeStreamPushInfoListOutcome;
-                typedef std::future<DescribeStreamPushInfoListOutcome> DescribeStreamPushInfoListOutcomeCallable;
-                typedef std::function<void(const LiveClient*, const Model::DescribeStreamPushInfoListRequest&, DescribeStreamPushInfoListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamPushInfoListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeTopClientIpSumInfoListResponse> DescribeTopClientIpSumInfoListOutcome;
                 typedef std::future<DescribeTopClientIpSumInfoListOutcome> DescribeTopClientIpSumInfoListOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeTopClientIpSumInfoListRequest&, DescribeTopClientIpSumInfoListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTopClientIpSumInfoListAsyncHandler;
@@ -901,15 +891,6 @@ Note: only one screencapturing template can be associated with one domain name.
                 DescribeAreaBillBandwidthAndFluxListOutcome DescribeAreaBillBandwidthAndFluxList(const Model::DescribeAreaBillBandwidthAndFluxListRequest &request);
                 void DescribeAreaBillBandwidthAndFluxListAsync(const Model::DescribeAreaBillBandwidthAndFluxListRequest& request, const DescribeAreaBillBandwidthAndFluxListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeAreaBillBandwidthAndFluxListOutcomeCallable DescribeAreaBillBandwidthAndFluxListCallable(const Model::DescribeAreaBillBandwidthAndFluxListRequest& request);
-
-                /**
-                 *This API is used to query the data of billable LVB bandwidth and traffic.
-                 * @param req DescribeBillBandwidthAndFluxListRequest
-                 * @return DescribeBillBandwidthAndFluxListOutcome
-                 */
-                DescribeBillBandwidthAndFluxListOutcome DescribeBillBandwidthAndFluxList(const Model::DescribeBillBandwidthAndFluxListRequest &request);
-                void DescribeBillBandwidthAndFluxListAsync(const Model::DescribeBillBandwidthAndFluxListRequest& request, const DescribeBillBandwidthAndFluxListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeBillBandwidthAndFluxListOutcomeCallable DescribeBillBandwidthAndFluxListCallable(const Model::DescribeBillBandwidthAndFluxListRequest& request);
 
                 /**
                  *This API is used to query the number of concurrent recording channels, which is applicable to LCB and LVB.
@@ -1335,15 +1316,6 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
                 DescribeStreamPlayInfoListOutcome DescribeStreamPlayInfoList(const Model::DescribeStreamPlayInfoListRequest &request);
                 void DescribeStreamPlayInfoListAsync(const Model::DescribeStreamPlayInfoListRequest& request, const DescribeStreamPlayInfoListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeStreamPlayInfoListOutcomeCallable DescribeStreamPlayInfoListCallable(const Model::DescribeStreamPlayInfoListRequest& request);
-
-                /**
-                 *This API is used to query the upstream push quality data by stream ID, including frame rate, bitrate, elapsed time, and codec of audio and video files.
-                 * @param req DescribeStreamPushInfoListRequest
-                 * @return DescribeStreamPushInfoListOutcome
-                 */
-                DescribeStreamPushInfoListOutcome DescribeStreamPushInfoList(const Model::DescribeStreamPushInfoListRequest &request);
-                void DescribeStreamPushInfoListAsync(const Model::DescribeStreamPushInfoListRequest& request, const DescribeStreamPushInfoListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeStreamPushInfoListOutcomeCallable DescribeStreamPushInfoListCallable(const Model::DescribeStreamPushInfoListRequest& request);
 
                 /**
                  *This API is used to query the information of the top n client IPs in a certain period of time (top 1,000 is supported currently).

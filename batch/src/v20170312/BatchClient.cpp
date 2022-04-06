@@ -1072,49 +1072,6 @@ BatchClient::RetryJobsOutcomeCallable BatchClient::RetryJobsCallable(const Retry
     return task->get_future();
 }
 
-BatchClient::SubmitJobOutcome BatchClient::SubmitJob(const SubmitJobRequest &request)
-{
-    auto outcome = MakeRequest(request, "SubmitJob");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        SubmitJobResponse rsp = SubmitJobResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return SubmitJobOutcome(rsp);
-        else
-            return SubmitJobOutcome(o.GetError());
-    }
-    else
-    {
-        return SubmitJobOutcome(outcome.GetError());
-    }
-}
-
-void BatchClient::SubmitJobAsync(const SubmitJobRequest& request, const SubmitJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->SubmitJob(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-BatchClient::SubmitJobOutcomeCallable BatchClient::SubmitJobCallable(const SubmitJobRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<SubmitJobOutcome()>>(
-        [this, request]()
-        {
-            return this->SubmitJob(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
 BatchClient::TerminateComputeNodeOutcome BatchClient::TerminateComputeNode(const TerminateComputeNodeRequest &request)
 {
     auto outcome = MakeRequest(request, "TerminateComputeNode");

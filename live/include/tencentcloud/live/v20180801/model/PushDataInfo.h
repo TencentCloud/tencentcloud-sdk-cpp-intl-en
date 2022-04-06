@@ -137,14 +137,14 @@ namespace TencentCloud
                     bool VideoFpsHasBeenSet() const;
 
                     /**
-                     * 获取Video bitrate (Kbps) for publishing
-                     * @return VideoSpeed Video bitrate (Kbps) for publishing
+                     * 获取Video bitrate (bps) for publishing
+                     * @return VideoSpeed Video bitrate (bps) for publishing
                      */
                     uint64_t GetVideoSpeed() const;
 
                     /**
-                     * 设置Video bitrate (Kbps) for publishing
-                     * @param VideoSpeed Video bitrate (Kbps) for publishing
+                     * 设置Video bitrate (bps) for publishing
+                     * @param VideoSpeed Video bitrate (bps) for publishing
                      */
                     void SetVideoSpeed(const uint64_t& _videoSpeed);
 
@@ -173,14 +173,14 @@ namespace TencentCloud
                     bool AudioFpsHasBeenSet() const;
 
                     /**
-                     * 获取Audio bitrate (Kbps) for publishing
-                     * @return AudioSpeed Audio bitrate (Kbps) for publishing
+                     * 获取Audio bitrate (bps) for publishing
+                     * @return AudioSpeed Audio bitrate (bps) for publishing
                      */
                     uint64_t GetAudioSpeed() const;
 
                     /**
-                     * 设置Audio bitrate (Kbps) for publishing
-                     * @param AudioSpeed Audio bitrate (Kbps) for publishing
+                     * 设置Audio bitrate (bps) for publishing
+                     * @param AudioSpeed Audio bitrate (bps) for publishing
                      */
                     void SetAudioSpeed(const uint64_t& _audioSpeed);
 
@@ -307,14 +307,14 @@ Example: H.264.
                     bool AsampleRateHasBeenSet() const;
 
                     /**
-                     * 获取Audio bitrate in `metadata` in Kbps.
-                     * @return MetaAudioSpeed Audio bitrate in `metadata` in Kbps.
+                     * 获取Audio bitrate (bps) in metadata
+                     * @return MetaAudioSpeed Audio bitrate (bps) in metadata
                      */
                     uint64_t GetMetaAudioSpeed() const;
 
                     /**
-                     * 设置Audio bitrate in `metadata` in Kbps.
-                     * @param MetaAudioSpeed Audio bitrate in `metadata` in Kbps.
+                     * 设置Audio bitrate (bps) in metadata
+                     * @param MetaAudioSpeed Audio bitrate (bps) in metadata
                      */
                     void SetMetaAudioSpeed(const uint64_t& _metaAudioSpeed);
 
@@ -325,14 +325,14 @@ Example: H.264.
                     bool MetaAudioSpeedHasBeenSet() const;
 
                     /**
-                     * 获取Video bitrate in `metadata` in Kbps.
-                     * @return MetaVideoSpeed Video bitrate in `metadata` in Kbps.
+                     * 获取Video bitrate (bps) in metadata
+                     * @return MetaVideoSpeed Video bitrate (bps) in metadata
                      */
                     uint64_t GetMetaVideoSpeed() const;
 
                     /**
-                     * 设置Video bitrate in `metadata` in Kbps.
-                     * @param MetaVideoSpeed Video bitrate in `metadata` in Kbps.
+                     * 设置Video bitrate (bps) in metadata
+                     * @param MetaVideoSpeed Video bitrate (bps) in metadata
                      */
                     void SetMetaVideoSpeed(const uint64_t& _metaVideoSpeed);
 
@@ -393,7 +393,7 @@ Example: H.264.
                     bool m_videoFpsHasBeenSet;
 
                     /**
-                     * Video bitrate (Kbps) for publishing
+                     * Video bitrate (bps) for publishing
                      */
                     uint64_t m_videoSpeed;
                     bool m_videoSpeedHasBeenSet;
@@ -405,7 +405,7 @@ Example: H.264.
                     bool m_audioFpsHasBeenSet;
 
                     /**
-                     * Audio bitrate (Kbps) for publishing
+                     * Audio bitrate (bps) for publishing
                      */
                     uint64_t m_audioSpeed;
                     bool m_audioSpeedHasBeenSet;
@@ -449,13 +449,13 @@ Example: H.264.
                     bool m_asampleRateHasBeenSet;
 
                     /**
-                     * Audio bitrate in `metadata` in Kbps.
+                     * Audio bitrate (bps) in metadata
                      */
                     uint64_t m_metaAudioSpeed;
                     bool m_metaAudioSpeedHasBeenSet;
 
                     /**
-                     * Video bitrate in `metadata` in Kbps.
+                     * Video bitrate (bps) in metadata
                      */
                     uint64_t m_metaVideoSpeed;
                     bool m_metaVideoSpeedHasBeenSet;

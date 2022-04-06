@@ -22,7 +22,6 @@ set(batch_public_header_model
   include/tencentcloud/batch/v20170312/model/EventVar.h
   include/tencentcloud/batch/v20170312/model/AnonymousComputeEnv.h
   include/tencentcloud/batch/v20170312/model/DeleteComputeEnvResponse.h
-  include/tencentcloud/batch/v20170312/model/SubmitJobRequest.h
   include/tencentcloud/batch/v20170312/model/ComputeEnvData.h
   include/tencentcloud/batch/v20170312/model/Authentication.h
   include/tencentcloud/batch/v20170312/model/RetryJobsResponse.h
@@ -55,7 +54,6 @@ set(batch_public_header_model
   include/tencentcloud/batch/v20170312/model/LocalDiskType.h
   include/tencentcloud/batch/v20170312/model/DescribeComputeEnvActivitiesRequest.h
   include/tencentcloud/batch/v20170312/model/CreateTaskTemplateRequest.h
-  include/tencentcloud/batch/v20170312/model/Job.h
   include/tencentcloud/batch/v20170312/model/DeleteComputeEnvRequest.h
   include/tencentcloud/batch/v20170312/model/CreateComputeEnvRequest.h
   include/tencentcloud/batch/v20170312/model/DescribeComputeEnvCreateInfoResponse.h
@@ -89,7 +87,6 @@ set(batch_public_header_model
   include/tencentcloud/batch/v20170312/model/RedirectInfo.h
   include/tencentcloud/batch/v20170312/model/DescribeInstanceCategoriesResponse.h
   include/tencentcloud/batch/v20170312/model/ModifyTaskTemplateResponse.h
-  include/tencentcloud/batch/v20170312/model/SubmitJobResponse.h
   include/tencentcloud/batch/v20170312/model/InputMapping.h
   include/tencentcloud/batch/v20170312/model/RedirectLocalInfo.h
   include/tencentcloud/batch/v20170312/model/DescribeJobSubmitInfoRequest.h
@@ -140,7 +137,6 @@ set(batch_src
   src/v20170312/model/EventVar.cpp
   src/v20170312/model/AnonymousComputeEnv.cpp
   src/v20170312/model/DeleteComputeEnvResponse.cpp
-  src/v20170312/model/SubmitJobRequest.cpp
   src/v20170312/model/ComputeEnvData.cpp
   src/v20170312/model/Authentication.cpp
   src/v20170312/model/RetryJobsResponse.cpp
@@ -173,7 +169,6 @@ set(batch_src
   src/v20170312/model/LocalDiskType.cpp
   src/v20170312/model/DescribeComputeEnvActivitiesRequest.cpp
   src/v20170312/model/CreateTaskTemplateRequest.cpp
-  src/v20170312/model/Job.cpp
   src/v20170312/model/DeleteComputeEnvRequest.cpp
   src/v20170312/model/CreateComputeEnvRequest.cpp
   src/v20170312/model/DescribeComputeEnvCreateInfoResponse.cpp
@@ -207,7 +202,6 @@ set(batch_src
   src/v20170312/model/RedirectInfo.cpp
   src/v20170312/model/DescribeInstanceCategoriesResponse.cpp
   src/v20170312/model/ModifyTaskTemplateResponse.cpp
-  src/v20170312/model/SubmitJobResponse.cpp
   src/v20170312/model/InputMapping.cpp
   src/v20170312/model/RedirectLocalInfo.cpp
   src/v20170312/model/DescribeJobSubmitInfoRequest.cpp
