@@ -189,29 +189,17 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Database engine version. Valid values:
-10.0.10: MariaDB 10.0.10;
-10.1.9: MariaDB 10.1.9;
-5.7.17: Percona 5.7.17.
+                     * 获取Database engine version. Valid values: 10.0.10, 10.1.9, 5.7.17.
 If this parameter is left empty, `10.1.9` will be used.
-                     * @return DbVersionId Database engine version. Valid values:
-10.0.10: MariaDB 10.0.10;
-10.1.9: MariaDB 10.1.9;
-5.7.17: Percona 5.7.17.
+                     * @return DbVersionId Database engine version. Valid values: 10.0.10, 10.1.9, 5.7.17.
 If this parameter is left empty, `10.1.9` will be used.
                      */
                     std::string GetDbVersionId() const;
 
                     /**
-                     * 设置Database engine version. Valid values:
-10.0.10: MariaDB 10.0.10;
-10.1.9: MariaDB 10.1.9;
-5.7.17: Percona 5.7.17.
+                     * 设置Database engine version. Valid values: 10.0.10, 10.1.9, 5.7.17.
 If this parameter is left empty, `10.1.9` will be used.
-                     * @param DbVersionId Database engine version. Valid values:
-10.0.10: MariaDB 10.0.10;
-10.1.9: MariaDB 10.1.9;
-5.7.17: Percona 5.7.17.
+                     * @param DbVersionId Database engine version. Valid values: 10.0.10, 10.1.9, 5.7.17.
 If this parameter is left empty, `10.1.9` will be used.
                      */
                     void SetDbVersionId(const std::string& _dbVersionId);
@@ -331,14 +319,22 @@ If this parameter is left empty, `10.1.9` will be used.
                     bool DcnInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取List of parameters. Valid values: `character_set_server` (character set; required); `lower_case_table_names` (table name case sensitivity; required; 0: case-sensitive; 1: case-insensitive); `innodb_page_size` (InnoDB data page size; default size: 16 KB); `sync_mode` (sync mode; 0: async; 1: strong sync; 2: downgradable strong sync; default value: 2).
-                     * @return InitParams List of parameters. Valid values: `character_set_server` (character set; required); `lower_case_table_names` (table name case sensitivity; required; 0: case-sensitive; 1: case-insensitive); `innodb_page_size` (InnoDB data page size; default size: 16 KB); `sync_mode` (sync mode; 0: async; 1: strong sync; 2: downgradable strong sync; default value: 2).
+                     * 获取List of parameters. Valid values: 
+`character_set_server` (character set; required); `lower_case_table_names` (table name case sensitivity; required; 0: case-sensitive; 1: case-insensitive);
+`innodb_page_size` (innoDB data page size; default size: 16 KB); `sync_mode` (sync mode; 0: async; 1: strong sync; 2: downgradable strong sync; default value: 2).
+                     * @return InitParams List of parameters. Valid values: 
+`character_set_server` (character set; required); `lower_case_table_names` (table name case sensitivity; required; 0: case-sensitive; 1: case-insensitive);
+`innodb_page_size` (innoDB data page size; default size: 16 KB); `sync_mode` (sync mode; 0: async; 1: strong sync; 2: downgradable strong sync; default value: 2).
                      */
                     std::vector<DBParamValue> GetInitParams() const;
 
                     /**
-                     * 设置List of parameters. Valid values: `character_set_server` (character set; required); `lower_case_table_names` (table name case sensitivity; required; 0: case-sensitive; 1: case-insensitive); `innodb_page_size` (InnoDB data page size; default size: 16 KB); `sync_mode` (sync mode; 0: async; 1: strong sync; 2: downgradable strong sync; default value: 2).
-                     * @param InitParams List of parameters. Valid values: `character_set_server` (character set; required); `lower_case_table_names` (table name case sensitivity; required; 0: case-sensitive; 1: case-insensitive); `innodb_page_size` (InnoDB data page size; default size: 16 KB); `sync_mode` (sync mode; 0: async; 1: strong sync; 2: downgradable strong sync; default value: 2).
+                     * 设置List of parameters. Valid values: 
+`character_set_server` (character set; required); `lower_case_table_names` (table name case sensitivity; required; 0: case-sensitive; 1: case-insensitive);
+`innodb_page_size` (innoDB data page size; default size: 16 KB); `sync_mode` (sync mode; 0: async; 1: strong sync; 2: downgradable strong sync; default value: 2).
+                     * @param InitParams List of parameters. Valid values: 
+`character_set_server` (character set; required); `lower_case_table_names` (table name case sensitivity; required; 0: case-sensitive; 1: case-insensitive);
+`innodb_page_size` (innoDB data page size; default size: 16 KB); `sync_mode` (sync mode; 0: async; 1: strong sync; 2: downgradable strong sync; default value: 2).
                      */
                     void SetInitParams(const std::vector<DBParamValue>& _initParams);
 
@@ -435,10 +431,7 @@ If this parameter is left empty, `10.1.9` will be used.
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * Database engine version. Valid values:
-10.0.10: MariaDB 10.0.10;
-10.1.9: MariaDB 10.1.9;
-5.7.17: Percona 5.7.17.
+                     * Database engine version. Valid values: 10.0.10, 10.1.9, 5.7.17.
 If this parameter is left empty, `10.1.9` will be used.
                      */
                     std::string m_dbVersionId;
@@ -481,7 +474,9 @@ If this parameter is left empty, `10.1.9` will be used.
                     bool m_dcnInstanceIdHasBeenSet;
 
                     /**
-                     * List of parameters. Valid values: `character_set_server` (character set; required); `lower_case_table_names` (table name case sensitivity; required; 0: case-sensitive; 1: case-insensitive); `innodb_page_size` (InnoDB data page size; default size: 16 KB); `sync_mode` (sync mode; 0: async; 1: strong sync; 2: downgradable strong sync; default value: 2).
+                     * List of parameters. Valid values: 
+`character_set_server` (character set; required); `lower_case_table_names` (table name case sensitivity; required; 0: case-sensitive; 1: case-insensitive);
+`innodb_page_size` (innoDB data page size; default size: 16 KB); `sync_mode` (sync mode; 0: async; 1: strong sync; 2: downgradable strong sync; default value: 2).
                      */
                     std::vector<DBParamValue> m_initParams;
                     bool m_initParamsHasBeenSet;

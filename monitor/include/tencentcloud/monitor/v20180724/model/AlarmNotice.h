@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/monitor/v20180724/model/UserNotice.h>
 #include <tencentcloud/monitor/v20180724/model/URLNotice.h>
+#include <tencentcloud/monitor/v20180724/model/CLSNotice.h>
 
 
 namespace TencentCloud
@@ -268,6 +269,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool PolicyIdsHasBeenSet() const;
 
+                    /**
+                     * 获取Channel to push alarm notifications to CLS.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return CLSNotices Channel to push alarm notifications to CLS.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<CLSNotice> GetCLSNotices() const;
+
+                    /**
+                     * 设置Channel to push alarm notifications to CLS.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param CLSNotices Channel to push alarm notifications to CLS.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetCLSNotices(const std::vector<CLSNotice>& _cLSNotices);
+
+                    /**
+                     * 判断参数 CLSNotices 是否已赋值
+                     * @return CLSNotices 是否已赋值
+                     */
+                    bool CLSNoticesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -339,6 +362,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<std::string> m_policyIds;
                     bool m_policyIdsHasBeenSet;
+
+                    /**
+                     * Channel to push alarm notifications to CLS.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<CLSNotice> m_cLSNotices;
+                    bool m_cLSNoticesHasBeenSet;
 
                 };
             }

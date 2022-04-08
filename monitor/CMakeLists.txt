@@ -161,6 +161,7 @@ set(monitor_public_header_model
   include/tencentcloud/monitor/v20180724/model/GetMonitorDataResponse.h
   include/tencentcloud/monitor/v20180724/model/ReceiverInfo.h
   include/tencentcloud/monitor/v20180724/model/UnBindingAllPolicyObjectRequest.h
+  include/tencentcloud/monitor/v20180724/model/CLSNotice.h
   include/tencentcloud/monitor/v20180724/model/DescribePolicyGroupInfoEventCondition.h
   include/tencentcloud/monitor/v20180724/model/SendCustomAlarmMsgResponse.h
   include/tencentcloud/monitor/v20180724/model/AlarmPolicyCondition.h
@@ -317,6 +318,7 @@ set(monitor_src
   src/v20180724/model/GetMonitorDataResponse.cpp
   src/v20180724/model/ReceiverInfo.cpp
   src/v20180724/model/UnBindingAllPolicyObjectRequest.cpp
+  src/v20180724/model/CLSNotice.cpp
   src/v20180724/model/DescribePolicyGroupInfoEventCondition.cpp
   src/v20180724/model/SendCustomAlarmMsgResponse.cpp
   src/v20180724/model/AlarmPolicyCondition.cpp

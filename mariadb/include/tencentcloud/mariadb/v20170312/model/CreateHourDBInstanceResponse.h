@@ -44,9 +44,9 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Order ID, which is used in the `DescribeOrders` API.
+                     * 获取Order ID, which is used for calling the `DescribeOrders` API.
  The parameter can be used to either query order details or call the user account APIs to make another payment when this payment fails.
-                     * @return DealName Order ID, which is used in the `DescribeOrders` API.
+                     * @return DealName Order ID, which is used for calling the `DescribeOrders` API.
  The parameter can be used to either query order details or call the user account APIs to make another payment when this payment fails.
                      */
                     std::string GetDealName() const;
@@ -74,7 +74,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Order ID, which is used in the `DescribeOrders` API.
+                     * Order ID, which is used for calling the `DescribeOrders` API.
  The parameter can be used to either query order details or call the user account APIs to make another payment when this payment fails.
                      */
                     std::string m_dealName;

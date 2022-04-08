@@ -50,14 +50,50 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster status
-                     * @return Status Cluster status
+                     * 获取Cluster status. Valid values are as follows:
+creating
+running
+isolating
+isolated
+activating (removing isolation)
+offlining (deactivating)
+offlined (deactivated)
+deleting
+deleted
+                     * @return Status Cluster status. Valid values are as follows:
+creating
+running
+isolating
+isolated
+activating (removing isolation)
+offlining (deactivating)
+offlined (deactivated)
+deleting
+deleted
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Cluster status
-                     * @param Status Cluster status
+                     * 设置Cluster status. Valid values are as follows:
+creating
+running
+isolating
+isolated
+activating (removing isolation)
+offlining (deactivating)
+offlined (deactivated)
+deleting
+deleted
+                     * @param Status Cluster status. Valid values are as follows:
+creating
+running
+isolating
+isolated
+activating (removing isolation)
+offlining (deactivating)
+offlined (deactivated)
+deleting
+deleted
                      */
                     void SetStatus(const std::string& _status);
 
@@ -672,7 +708,16 @@ pause
                 private:
 
                     /**
-                     * Cluster status
+                     * Cluster status. Valid values are as follows:
+creating
+running
+isolating
+isolated
+activating (removing isolation)
+offlining (deactivating)
+offlined (deactivated)
+deleting
+deleted
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

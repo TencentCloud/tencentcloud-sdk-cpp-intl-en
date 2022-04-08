@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/monitor/v20180724/model/UserNotice.h>
 #include <tencentcloud/monitor/v20180724/model/URLNotice.h>
+#include <tencentcloud/monitor/v20180724/model/CLSNotice.h>
 
 
 namespace TencentCloud
@@ -170,6 +171,24 @@ namespace TencentCloud
                      */
                     bool URLNoticesHasBeenSet() const;
 
+                    /**
+                     * 获取The operation of pushing alarm notifications to CLS. Up to one CLS log topic can be configured.
+                     * @return CLSNotices The operation of pushing alarm notifications to CLS. Up to one CLS log topic can be configured.
+                     */
+                    std::vector<CLSNotice> GetCLSNotices() const;
+
+                    /**
+                     * 设置The operation of pushing alarm notifications to CLS. Up to one CLS log topic can be configured.
+                     * @param CLSNotices The operation of pushing alarm notifications to CLS. Up to one CLS log topic can be configured.
+                     */
+                    void SetCLSNotices(const std::vector<CLSNotice>& _cLSNotices);
+
+                    /**
+                     * 判断参数 CLSNotices 是否已赋值
+                     * @return CLSNotices 是否已赋值
+                     */
+                    bool CLSNoticesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -213,6 +232,12 @@ namespace TencentCloud
                      */
                     std::vector<URLNotice> m_uRLNotices;
                     bool m_uRLNoticesHasBeenSet;
+
+                    /**
+                     * The operation of pushing alarm notifications to CLS. Up to one CLS log topic can be configured.
+                     */
+                    std::vector<CLSNotice> m_cLSNotices;
+                    bool m_cLSNoticesHasBeenSet;
 
                 };
             }

@@ -42,7 +42,7 @@ set(tke_public_header_model
   include/tencentcloud/tke/v20180525/model/ServiceAccountAuthenticationOptions.h
   include/tencentcloud/tke/v20180525/model/InstanceUpgradeProgressItem.h
   include/tencentcloud/tke/v20180525/model/NodePool.h
-  include/tencentcloud/tke/v20180525/model/DeleteClusterRequest.h
+  include/tencentcloud/tke/v20180525/model/AutoUpgradeClusterLevel.h
   include/tencentcloud/tke/v20180525/model/RunInstancesForNode.h
   include/tencentcloud/tke/v20180525/model/DeleteClusterAsGroupsRequest.h
   include/tencentcloud/tke/v20180525/model/DescribeExistedInstancesRequest.h
@@ -194,6 +194,7 @@ set(tke_public_header_model
   include/tencentcloud/tke/v20180525/model/DescribeClusterAsGroupOptionResponse.h
   include/tencentcloud/tke/v20180525/model/ClusterAsGroupAttribute.h
   include/tencentcloud/tke/v20180525/model/DeleteClusterNodePoolResponse.h
+  include/tencentcloud/tke/v20180525/model/DeleteClusterRequest.h
   include/tencentcloud/tke/v20180525/model/RunMonitorServiceEnabled.h
   include/tencentcloud/tke/v20180525/model/UpdateClusterVersionResponse.h
   include/tencentcloud/tke/v20180525/model/CreateClusterNodePoolResponse.h
@@ -233,7 +234,7 @@ set(tke_src
   src/v20180525/model/ServiceAccountAuthenticationOptions.cpp
   src/v20180525/model/InstanceUpgradeProgressItem.cpp
   src/v20180525/model/NodePool.cpp
-  src/v20180525/model/DeleteClusterRequest.cpp
+  src/v20180525/model/AutoUpgradeClusterLevel.cpp
   src/v20180525/model/RunInstancesForNode.cpp
   src/v20180525/model/DeleteClusterAsGroupsRequest.cpp
   src/v20180525/model/DescribeExistedInstancesRequest.cpp
@@ -385,6 +386,7 @@ set(tke_src
   src/v20180525/model/DescribeClusterAsGroupOptionResponse.cpp
   src/v20180525/model/ClusterAsGroupAttribute.cpp
   src/v20180525/model/DeleteClusterNodePoolResponse.cpp
+  src/v20180525/model/DeleteClusterRequest.cpp
   src/v20180525/model/RunMonitorServiceEnabled.cpp
   src/v20180525/model/UpdateClusterVersionResponse.cpp
   src/v20180525/model/CreateClusterNodePoolResponse.cpp

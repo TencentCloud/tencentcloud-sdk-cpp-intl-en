@@ -229,14 +229,14 @@ namespace TencentCloud
                     bool TagSpecificationHasBeenSet() const;
 
                     /**
-                     * 获取Cluster status (Running, Creating, or Abnormal)
-                     * @return ClusterStatus Cluster status (Running, Creating, or Abnormal)
+                     * 获取Cluster status (`Running`, `Creating`, `Idling` or `Abnormal`)
+                     * @return ClusterStatus Cluster status (`Running`, `Creating`, `Idling` or `Abnormal`)
                      */
                     std::string GetClusterStatus() const;
 
                     /**
-                     * 设置Cluster status (Running, Creating, or Abnormal)
-                     * @param ClusterStatus Cluster status (Running, Creating, or Abnormal)
+                     * 设置Cluster status (`Running`, `Creating`, `Idling` or `Abnormal`)
+                     * @param ClusterStatus Cluster status (`Running`, `Creating`, `Idling` or `Abnormal`)
                      */
                     void SetClusterStatus(const std::string& _clusterStatus);
 
@@ -414,6 +414,42 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                      */
                     bool EnableExternalNodeHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return ClusterLevel 
+                     */
+                    std::string GetClusterLevel() const;
+
+                    /**
+                     * 设置
+                     * @param ClusterLevel 
+                     */
+                    void SetClusterLevel(const std::string& _clusterLevel);
+
+                    /**
+                     * 判断参数 ClusterLevel 是否已赋值
+                     * @return ClusterLevel 是否已赋值
+                     */
+                    bool ClusterLevelHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return AutoUpgradeClusterLevel 
+                     */
+                    bool GetAutoUpgradeClusterLevel() const;
+
+                    /**
+                     * 设置
+                     * @param AutoUpgradeClusterLevel 
+                     */
+                    void SetAutoUpgradeClusterLevel(const bool& _autoUpgradeClusterLevel);
+
+                    /**
+                     * 判断参数 AutoUpgradeClusterLevel 是否已赋值
+                     * @return AutoUpgradeClusterLevel 是否已赋值
+                     */
+                    bool AutoUpgradeClusterLevelHasBeenSet() const;
+
                 private:
 
                     /**
@@ -477,7 +513,7 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                     bool m_tagSpecificationHasBeenSet;
 
                     /**
-                     * Cluster status (Running, Creating, or Abnormal)
+                     * Cluster status (`Running`, `Creating`, `Idling` or `Abnormal`)
                      */
                     std::string m_clusterStatus;
                     bool m_clusterStatusHasBeenSet;
@@ -535,6 +571,18 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                      */
                     bool m_enableExternalNode;
                     bool m_enableExternalNodeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_clusterLevel;
+                    bool m_clusterLevelHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_autoUpgradeClusterLevel;
+                    bool m_autoUpgradeClusterLevelHasBeenSet;
 
                 };
             }

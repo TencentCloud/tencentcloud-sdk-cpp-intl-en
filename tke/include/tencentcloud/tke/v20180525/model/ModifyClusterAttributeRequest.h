@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tke/v20180525/model/AutoUpgradeClusterLevel.h>
 
 
 namespace TencentCloud
@@ -114,6 +115,42 @@ namespace TencentCloud
                      */
                     bool ClusterDescHasBeenSet() const;
 
+                    /**
+                     * 获取Cluster specification
+                     * @return ClusterLevel Cluster specification
+                     */
+                    std::string GetClusterLevel() const;
+
+                    /**
+                     * 设置Cluster specification
+                     * @param ClusterLevel Cluster specification
+                     */
+                    void SetClusterLevel(const std::string& _clusterLevel);
+
+                    /**
+                     * 判断参数 ClusterLevel 是否已赋值
+                     * @return ClusterLevel 是否已赋值
+                     */
+                    bool ClusterLevelHasBeenSet() const;
+
+                    /**
+                     * 获取Auto-upgrades cluster specification
+                     * @return AutoUpgradeClusterLevel Auto-upgrades cluster specification
+                     */
+                    AutoUpgradeClusterLevel GetAutoUpgradeClusterLevel() const;
+
+                    /**
+                     * 设置Auto-upgrades cluster specification
+                     * @param AutoUpgradeClusterLevel Auto-upgrades cluster specification
+                     */
+                    void SetAutoUpgradeClusterLevel(const AutoUpgradeClusterLevel& _autoUpgradeClusterLevel);
+
+                    /**
+                     * 判断参数 AutoUpgradeClusterLevel 是否已赋值
+                     * @return AutoUpgradeClusterLevel 是否已赋值
+                     */
+                    bool AutoUpgradeClusterLevelHasBeenSet() const;
+
                 private:
 
                     /**
@@ -139,6 +176,18 @@ namespace TencentCloud
                      */
                     std::string m_clusterDesc;
                     bool m_clusterDescHasBeenSet;
+
+                    /**
+                     * Cluster specification
+                     */
+                    std::string m_clusterLevel;
+                    bool m_clusterLevelHasBeenSet;
+
+                    /**
+                     * Auto-upgrades cluster specification
+                     */
+                    AutoUpgradeClusterLevel m_autoUpgradeClusterLevel;
+                    bool m_autoUpgradeClusterLevelHasBeenSet;
 
                 };
             }

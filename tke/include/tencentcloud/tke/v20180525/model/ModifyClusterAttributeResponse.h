@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tke/v20180525/model/AutoUpgradeClusterLevel.h>
 
 
 namespace TencentCloud
@@ -85,6 +86,34 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool ClusterDescHasBeenSet() const;
 
+                    /**
+                     * 获取Cluster specification
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return ClusterLevel Cluster specification
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetClusterLevel() const;
+
+                    /**
+                     * 判断参数 ClusterLevel 是否已赋值
+                     * @return ClusterLevel 是否已赋值
+                     */
+                    bool ClusterLevelHasBeenSet() const;
+
+                    /**
+                     * 获取Auto-upgrades cluster specification
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return AutoUpgradeClusterLevel Auto-upgrades cluster specification
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    AutoUpgradeClusterLevel GetAutoUpgradeClusterLevel() const;
+
+                    /**
+                     * 判断参数 AutoUpgradeClusterLevel 是否已赋值
+                     * @return AutoUpgradeClusterLevel 是否已赋值
+                     */
+                    bool AutoUpgradeClusterLevelHasBeenSet() const;
+
                 private:
 
                     /**
@@ -107,6 +136,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_clusterDesc;
                     bool m_clusterDescHasBeenSet;
+
+                    /**
+                     * Cluster specification
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_clusterLevel;
+                    bool m_clusterLevelHasBeenSet;
+
+                    /**
+                     * Auto-upgrades cluster specification
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    AutoUpgradeClusterLevel m_autoUpgradeClusterLevel;
+                    bool m_autoUpgradeClusterLevelHasBeenSet;
 
                 };
             }

@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/monitor/v20180724/model/AlarmPolicyTriggerTask.h>
 
 
 namespace TencentCloud
@@ -420,6 +421,24 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
                      */
                     bool NeedCorrespondenceHasBeenSet() const;
 
+                    /**
+                     * 获取Filter alarm policy by triggered task (such as auto scaling task). Up to 10 tasks can be specified.
+                     * @return TriggerTasks Filter alarm policy by triggered task (such as auto scaling task). Up to 10 tasks can be specified.
+                     */
+                    std::vector<AlarmPolicyTriggerTask> GetTriggerTasks() const;
+
+                    /**
+                     * 设置Filter alarm policy by triggered task (such as auto scaling task). Up to 10 tasks can be specified.
+                     * @param TriggerTasks Filter alarm policy by triggered task (such as auto scaling task). Up to 10 tasks can be specified.
+                     */
+                    void SetTriggerTasks(const std::vector<AlarmPolicyTriggerTask>& _triggerTasks);
+
+                    /**
+                     * 判断参数 TriggerTasks 是否已赋值
+                     * @return TriggerTasks 是否已赋值
+                     */
+                    bool TriggerTasksHasBeenSet() const;
+
                 private:
 
                     /**
@@ -544,6 +563,12 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
                      */
                     int64_t m_needCorrespondence;
                     bool m_needCorrespondenceHasBeenSet;
+
+                    /**
+                     * Filter alarm policy by triggered task (such as auto scaling task). Up to 10 tasks can be specified.
+                     */
+                    std::vector<AlarmPolicyTriggerTask> m_triggerTasks;
+                    bool m_triggerTasksHasBeenSet;
 
                 };
             }

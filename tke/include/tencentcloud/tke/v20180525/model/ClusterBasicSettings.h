@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/tke/v20180525/model/TagSpecification.h>
+#include <tencentcloud/tke/v20180525/model/AutoUpgradeClusterLevel.h>
 
 
 namespace TencentCloud
@@ -227,6 +228,42 @@ namespace TencentCloud
                      */
                     bool SubnetIdHasBeenSet() const;
 
+                    /**
+                     * 获取Cluster specifications available for managed clusters
+                     * @return ClusterLevel Cluster specifications available for managed clusters
+                     */
+                    std::string GetClusterLevel() const;
+
+                    /**
+                     * 设置Cluster specifications available for managed clusters
+                     * @param ClusterLevel Cluster specifications available for managed clusters
+                     */
+                    void SetClusterLevel(const std::string& _clusterLevel);
+
+                    /**
+                     * 判断参数 ClusterLevel 是否已赋值
+                     * @return ClusterLevel 是否已赋值
+                     */
+                    bool ClusterLevelHasBeenSet() const;
+
+                    /**
+                     * 获取Auto cluster upgrade for managed clusters
+                     * @return AutoUpgradeClusterLevel Auto cluster upgrade for managed clusters
+                     */
+                    AutoUpgradeClusterLevel GetAutoUpgradeClusterLevel() const;
+
+                    /**
+                     * 设置Auto cluster upgrade for managed clusters
+                     * @param AutoUpgradeClusterLevel Auto cluster upgrade for managed clusters
+                     */
+                    void SetAutoUpgradeClusterLevel(const AutoUpgradeClusterLevel& _autoUpgradeClusterLevel);
+
+                    /**
+                     * 判断参数 AutoUpgradeClusterLevel 是否已赋值
+                     * @return AutoUpgradeClusterLevel 是否已赋值
+                     */
+                    bool AutoUpgradeClusterLevelHasBeenSet() const;
+
                 private:
 
                     /**
@@ -288,6 +325,18 @@ namespace TencentCloud
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
+
+                    /**
+                     * Cluster specifications available for managed clusters
+                     */
+                    std::string m_clusterLevel;
+                    bool m_clusterLevelHasBeenSet;
+
+                    /**
+                     * Auto cluster upgrade for managed clusters
+                     */
+                    AutoUpgradeClusterLevel m_autoUpgradeClusterLevel;
+                    bool m_autoUpgradeClusterLevelHasBeenSet;
 
                 };
             }
