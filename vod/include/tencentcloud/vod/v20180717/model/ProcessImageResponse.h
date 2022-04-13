@@ -14,55 +14,55 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_RUM_V20210622_MODEL_DESCRIBESCORESRESPONSE_H_
-#define TENCENTCLOUD_RUM_V20210622_MODEL_DESCRIBESCORESRESPONSE_H_
+#ifndef TENCENTCLOUD_VOD_V20180717_MODEL_PROCESSIMAGERESPONSE_H_
+#define TENCENTCLOUD_VOD_V20180717_MODEL_PROCESSIMAGERESPONSE_H_
 
 #include <string>
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/rum/v20210622/model/ScoreInfo.h>
+#include <tencentcloud/vod/v20180717/model/ContentReviewResult.h>
 
 
 namespace TencentCloud
 {
-    namespace Rum
+    namespace Vod
     {
-        namespace V20210622
+        namespace V20180717
         {
             namespace Model
             {
                 /**
-                * DescribeScores response structure.
+                * ProcessImage response structure.
                 */
-                class DescribeScoresResponse : public AbstractModel
+                class ProcessImageResponse : public AbstractModel
                 {
                 public:
-                    DescribeScoresResponse();
-                    ~DescribeScoresResponse() = default;
+                    ProcessImageResponse();
+                    ~ProcessImageResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Array
-                     * @return ScoreSet Array
+                     * 获取The image recognition result.
+                     * @return ContentReviewResultSet The image recognition result.
                      */
-                    std::vector<ScoreInfo> GetScoreSet() const;
+                    std::vector<ContentReviewResult> GetContentReviewResultSet() const;
 
                     /**
-                     * 判断参数 ScoreSet 是否已赋值
-                     * @return ScoreSet 是否已赋值
+                     * 判断参数 ContentReviewResultSet 是否已赋值
+                     * @return ContentReviewResultSet 是否已赋值
                      */
-                    bool ScoreSetHasBeenSet() const;
+                    bool ContentReviewResultSetHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Array
+                     * The image recognition result.
                      */
-                    std::vector<ScoreInfo> m_scoreSet;
-                    bool m_scoreSetHasBeenSet;
+                    std::vector<ContentReviewResult> m_contentReviewResultSet;
+                    bool m_contentReviewResultSetHasBeenSet;
 
                 };
             }
@@ -70,4 +70,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_RUM_V20210622_MODEL_DESCRIBESCORESRESPONSE_H_
+#endif // !TENCENTCLOUD_VOD_V20180717_MODEL_PROCESSIMAGERESPONSE_H_

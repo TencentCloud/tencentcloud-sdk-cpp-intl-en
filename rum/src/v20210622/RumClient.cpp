@@ -1760,49 +1760,6 @@ RumClient::DescribeProjectLimitsOutcomeCallable RumClient::DescribeProjectLimits
     return task->get_future();
 }
 
-RumClient::DescribeProjectsOutcome RumClient::DescribeProjects(const DescribeProjectsRequest &request)
-{
-    auto outcome = MakeRequest(request, "DescribeProjects");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        DescribeProjectsResponse rsp = DescribeProjectsResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return DescribeProjectsOutcome(rsp);
-        else
-            return DescribeProjectsOutcome(o.GetError());
-    }
-    else
-    {
-        return DescribeProjectsOutcome(outcome.GetError());
-    }
-}
-
-void RumClient::DescribeProjectsAsync(const DescribeProjectsRequest& request, const DescribeProjectsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeProjects(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-RumClient::DescribeProjectsOutcomeCallable RumClient::DescribeProjectsCallable(const DescribeProjectsRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<DescribeProjectsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeProjects(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
 RumClient::DescribePvListOutcome RumClient::DescribePvList(const DescribePvListRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribePvList");
@@ -1932,49 +1889,6 @@ RumClient::DescribeReleaseFilesOutcomeCallable RumClient::DescribeReleaseFilesCa
     return task->get_future();
 }
 
-RumClient::DescribeScoresOutcome RumClient::DescribeScores(const DescribeScoresRequest &request)
-{
-    auto outcome = MakeRequest(request, "DescribeScores");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        DescribeScoresResponse rsp = DescribeScoresResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return DescribeScoresOutcome(rsp);
-        else
-            return DescribeScoresOutcome(o.GetError());
-    }
-    else
-    {
-        return DescribeScoresOutcome(outcome.GetError());
-    }
-}
-
-void RumClient::DescribeScoresAsync(const DescribeScoresRequest& request, const DescribeScoresAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeScores(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-RumClient::DescribeScoresOutcomeCallable RumClient::DescribeScoresCallable(const DescribeScoresRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<DescribeScoresOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeScores(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
 RumClient::DescribeTawAreasOutcome RumClient::DescribeTawAreas(const DescribeTawAreasRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeTawAreas");
@@ -2011,49 +1925,6 @@ RumClient::DescribeTawAreasOutcomeCallable RumClient::DescribeTawAreasCallable(c
         [this, request]()
         {
             return this->DescribeTawAreas(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
-RumClient::DescribeTawInstancesOutcome RumClient::DescribeTawInstances(const DescribeTawInstancesRequest &request)
-{
-    auto outcome = MakeRequest(request, "DescribeTawInstances");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        DescribeTawInstancesResponse rsp = DescribeTawInstancesResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return DescribeTawInstancesOutcome(rsp);
-        else
-            return DescribeTawInstancesOutcome(o.GetError());
-    }
-    else
-    {
-        return DescribeTawInstancesOutcome(outcome.GetError());
-    }
-}
-
-void RumClient::DescribeTawInstancesAsync(const DescribeTawInstancesRequest& request, const DescribeTawInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeTawInstances(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-RumClient::DescribeTawInstancesOutcomeCallable RumClient::DescribeTawInstancesCallable(const DescribeTawInstancesRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<DescribeTawInstancesOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeTawInstances(request);
         }
     );
 

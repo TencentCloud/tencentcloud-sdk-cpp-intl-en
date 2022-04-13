@@ -2233,6 +2233,49 @@ VodClient::DescribeMediaInfosOutcomeCallable VodClient::DescribeMediaInfosCallab
     return task->get_future();
 }
 
+VodClient::DescribeMediaPlayStatDetailsOutcome VodClient::DescribeMediaPlayStatDetails(const DescribeMediaPlayStatDetailsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMediaPlayStatDetails");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMediaPlayStatDetailsResponse rsp = DescribeMediaPlayStatDetailsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMediaPlayStatDetailsOutcome(rsp);
+        else
+            return DescribeMediaPlayStatDetailsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMediaPlayStatDetailsOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::DescribeMediaPlayStatDetailsAsync(const DescribeMediaPlayStatDetailsRequest& request, const DescribeMediaPlayStatDetailsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeMediaPlayStatDetails(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VodClient::DescribeMediaPlayStatDetailsOutcomeCallable VodClient::DescribeMediaPlayStatDetailsCallable(const DescribeMediaPlayStatDetailsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeMediaPlayStatDetailsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeMediaPlayStatDetails(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VodClient::DescribeMediaProcessUsageDataOutcome VodClient::DescribeMediaProcessUsageData(const DescribeMediaProcessUsageDataRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeMediaProcessUsageData");
@@ -2914,49 +2957,6 @@ VodClient::DescribeWordSamplesOutcomeCallable VodClient::DescribeWordSamplesCall
         [this, request]()
         {
             return this->DescribeWordSamples(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
-VodClient::EditMediaOutcome VodClient::EditMedia(const EditMediaRequest &request)
-{
-    auto outcome = MakeRequest(request, "EditMedia");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        EditMediaResponse rsp = EditMediaResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return EditMediaOutcome(rsp);
-        else
-            return EditMediaOutcome(o.GetError());
-    }
-    else
-    {
-        return EditMediaOutcome(outcome.GetError());
-    }
-}
-
-void VodClient::EditMediaAsync(const EditMediaRequest& request, const EditMediaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->EditMedia(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-VodClient::EditMediaOutcomeCallable VodClient::EditMediaCallable(const EditMediaRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<EditMediaOutcome()>>(
-        [this, request]()
-        {
-            return this->EditMedia(request);
         }
     );
 
@@ -4039,6 +4039,49 @@ VodClient::ParseStreamingManifestOutcomeCallable VodClient::ParseStreamingManife
     return task->get_future();
 }
 
+VodClient::ProcessImageOutcome VodClient::ProcessImage(const ProcessImageRequest &request)
+{
+    auto outcome = MakeRequest(request, "ProcessImage");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ProcessImageResponse rsp = ProcessImageResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ProcessImageOutcome(rsp);
+        else
+            return ProcessImageOutcome(o.GetError());
+    }
+    else
+    {
+        return ProcessImageOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::ProcessImageAsync(const ProcessImageRequest& request, const ProcessImageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ProcessImage(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VodClient::ProcessImageOutcomeCallable VodClient::ProcessImageCallable(const ProcessImageRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ProcessImageOutcome()>>(
+        [this, request]()
+        {
+            return this->ProcessImage(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VodClient::ProcessMediaOutcome VodClient::ProcessMedia(const ProcessMediaRequest &request)
 {
     auto outcome = MakeRequest(request, "ProcessMedia");
@@ -4419,49 +4462,6 @@ VodClient::SimpleHlsClipOutcomeCallable VodClient::SimpleHlsClipCallable(const S
         [this, request]()
         {
             return this->SimpleHlsClip(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
-VodClient::WeChatMiniProgramPublishOutcome VodClient::WeChatMiniProgramPublish(const WeChatMiniProgramPublishRequest &request)
-{
-    auto outcome = MakeRequest(request, "WeChatMiniProgramPublish");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        WeChatMiniProgramPublishResponse rsp = WeChatMiniProgramPublishResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return WeChatMiniProgramPublishOutcome(rsp);
-        else
-            return WeChatMiniProgramPublishOutcome(o.GetError());
-    }
-    else
-    {
-        return WeChatMiniProgramPublishOutcome(outcome.GetError());
-    }
-}
-
-void VodClient::WeChatMiniProgramPublishAsync(const WeChatMiniProgramPublishRequest& request, const WeChatMiniProgramPublishAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->WeChatMiniProgramPublish(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-VodClient::WeChatMiniProgramPublishOutcomeCallable VodClient::WeChatMiniProgramPublishCallable(const WeChatMiniProgramPublishRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<WeChatMiniProgramPublishOutcome()>>(
-        [this, request]()
-        {
-            return this->WeChatMiniProgramPublish(request);
         }
     );
 

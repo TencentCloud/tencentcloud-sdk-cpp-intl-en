@@ -181,14 +181,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MediaBasicInfoHasBeenSet() const;
 
                     /**
-                     * 获取Metadata of a source video
-                     * @return MetaData Metadata of a source video
+                     * 获取The metadata of the output video.
+                     * @return MetaData The metadata of the output video.
                      */
                     MediaMetaData GetMetaData() const;
 
                     /**
-                     * 设置Metadata of a source video
-                     * @param MetaData Metadata of a source video
+                     * 设置The metadata of the output video.
+                     * @param MetaData The metadata of the output video.
                      */
                     void SetMetaData(const MediaMetaData& _metaData);
 
@@ -315,7 +315,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_mediaBasicInfoHasBeenSet;
 
                     /**
-                     * Metadata of a source video
+                     * The metadata of the output video.
                      */
                     MediaMetaData m_metaData;
                     bool m_metaDataHasBeenSet;

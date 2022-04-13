@@ -14,22 +14,21 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/rum/v20210622/model/DescribeProjectsResponse.h>
+#include <tencentcloud/vod/v20180717/model/DescribeMediaPlayStatDetailsResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using TencentCloud::CoreInternalOutcome;
-using namespace TencentCloud::Rum::V20210622::Model;
+using namespace TencentCloud::Vod::V20180717::Model;
 using namespace std;
 
-DescribeProjectsResponse::DescribeProjectsResponse() :
-    m_totalCountHasBeenSet(false),
-    m_projectSetHasBeenSet(false)
+DescribeMediaPlayStatDetailsResponse::DescribeMediaPlayStatDetailsResponse() :
+    m_playStatInfoSetHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome DescribeProjectsResponse::Deserialize(const string &payload)
+CoreInternalOutcome DescribeMediaPlayStatDetailsResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -63,63 +62,45 @@ CoreInternalOutcome DescribeProjectsResponse::Deserialize(const string &payload)
     }
 
 
-    if (rsp.HasMember("TotalCount") && !rsp["TotalCount"].IsNull())
+    if (rsp.HasMember("PlayStatInfoSet") && !rsp["PlayStatInfoSet"].IsNull())
     {
-        if (!rsp["TotalCount"].IsUint64())
-        {
-            return CoreInternalOutcome(Core::Error("response `TotalCount` IsUint64=false incorrectly").SetRequestId(requestId));
-        }
-        m_totalCount = rsp["TotalCount"].GetUint64();
-        m_totalCountHasBeenSet = true;
-    }
+        if (!rsp["PlayStatInfoSet"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `PlayStatInfoSet` is not array type"));
 
-    if (rsp.HasMember("ProjectSet") && !rsp["ProjectSet"].IsNull())
-    {
-        if (!rsp["ProjectSet"].IsArray())
-            return CoreInternalOutcome(Core::Error("response `ProjectSet` is not array type"));
-
-        const rapidjson::Value &tmpValue = rsp["ProjectSet"];
+        const rapidjson::Value &tmpValue = rsp["PlayStatInfoSet"];
         for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
-            RumProject item;
+            PlayStatInfo item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
             if (!outcome.IsSuccess())
             {
                 outcome.GetError().SetRequestId(requestId);
                 return outcome;
             }
-            m_projectSet.push_back(item);
+            m_playStatInfoSet.push_back(item);
         }
-        m_projectSetHasBeenSet = true;
+        m_playStatInfoSetHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string DescribeProjectsResponse::ToJsonString() const
+string DescribeMediaPlayStatDetailsResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_totalCountHasBeenSet)
+    if (m_playStatInfoSetHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "TotalCount";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_totalCount, allocator);
-    }
-
-    if (m_projectSetHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "ProjectSet";
+        string key = "PlayStatInfoSet";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
-        for (auto itr = m_projectSet.begin(); itr != m_projectSet.end(); ++itr, ++i)
+        for (auto itr = m_playStatInfoSet.begin(); itr != m_playStatInfoSet.end(); ++itr, ++i)
         {
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
@@ -138,24 +119,14 @@ string DescribeProjectsResponse::ToJsonString() const
 }
 
 
-uint64_t DescribeProjectsResponse::GetTotalCount() const
+vector<PlayStatInfo> DescribeMediaPlayStatDetailsResponse::GetPlayStatInfoSet() const
 {
-    return m_totalCount;
+    return m_playStatInfoSet;
 }
 
-bool DescribeProjectsResponse::TotalCountHasBeenSet() const
+bool DescribeMediaPlayStatDetailsResponse::PlayStatInfoSetHasBeenSet() const
 {
-    return m_totalCountHasBeenSet;
-}
-
-vector<RumProject> DescribeProjectsResponse::GetProjectSet() const
-{
-    return m_projectSet;
-}
-
-bool DescribeProjectsResponse::ProjectSetHasBeenSet() const
-{
-    return m_projectSetHasBeenSet;
+    return m_playStatInfoSetHasBeenSet;
 }
 
 

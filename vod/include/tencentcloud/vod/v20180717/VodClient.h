@@ -125,6 +125,8 @@
 #include <tencentcloud/vod/v20180717/model/DescribeImageSpriteTemplatesResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeMediaInfosRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeMediaInfosResponse.h>
+#include <tencentcloud/vod/v20180717/model/DescribeMediaPlayStatDetailsRequest.h>
+#include <tencentcloud/vod/v20180717/model/DescribeMediaPlayStatDetailsResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeMediaProcessUsageDataRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeMediaProcessUsageDataResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribePersonSamplesRequest.h>
@@ -157,8 +159,6 @@
 #include <tencentcloud/vod/v20180717/model/DescribeWatermarkTemplatesResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeWordSamplesRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeWordSamplesResponse.h>
-#include <tencentcloud/vod/v20180717/model/EditMediaRequest.h>
-#include <tencentcloud/vod/v20180717/model/EditMediaResponse.h>
 #include <tencentcloud/vod/v20180717/model/ExecuteFunctionRequest.h>
 #include <tencentcloud/vod/v20180717/model/ExecuteFunctionResponse.h>
 #include <tencentcloud/vod/v20180717/model/ForbidMediaDistributionRequest.h>
@@ -209,6 +209,8 @@
 #include <tencentcloud/vod/v20180717/model/ModifyWordSampleResponse.h>
 #include <tencentcloud/vod/v20180717/model/ParseStreamingManifestRequest.h>
 #include <tencentcloud/vod/v20180717/model/ParseStreamingManifestResponse.h>
+#include <tencentcloud/vod/v20180717/model/ProcessImageRequest.h>
+#include <tencentcloud/vod/v20180717/model/ProcessImageResponse.h>
 #include <tencentcloud/vod/v20180717/model/ProcessMediaRequest.h>
 #include <tencentcloud/vod/v20180717/model/ProcessMediaResponse.h>
 #include <tencentcloud/vod/v20180717/model/ProcessMediaByProcedureRequest.h>
@@ -227,8 +229,6 @@
 #include <tencentcloud/vod/v20180717/model/SearchMediaResponse.h>
 #include <tencentcloud/vod/v20180717/model/SimpleHlsClipRequest.h>
 #include <tencentcloud/vod/v20180717/model/SimpleHlsClipResponse.h>
-#include <tencentcloud/vod/v20180717/model/WeChatMiniProgramPublishRequest.h>
-#include <tencentcloud/vod/v20180717/model/WeChatMiniProgramPublishResponse.h>
 
 
 namespace TencentCloud
@@ -396,6 +396,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeMediaInfosResponse> DescribeMediaInfosOutcome;
                 typedef std::future<DescribeMediaInfosOutcome> DescribeMediaInfosOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeMediaInfosRequest&, DescribeMediaInfosOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMediaInfosAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMediaPlayStatDetailsResponse> DescribeMediaPlayStatDetailsOutcome;
+                typedef std::future<DescribeMediaPlayStatDetailsOutcome> DescribeMediaPlayStatDetailsOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::DescribeMediaPlayStatDetailsRequest&, DescribeMediaPlayStatDetailsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMediaPlayStatDetailsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeMediaProcessUsageDataResponse> DescribeMediaProcessUsageDataOutcome;
                 typedef std::future<DescribeMediaProcessUsageDataOutcome> DescribeMediaProcessUsageDataOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeMediaProcessUsageDataRequest&, DescribeMediaProcessUsageDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMediaProcessUsageDataAsyncHandler;
@@ -444,9 +447,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeWordSamplesResponse> DescribeWordSamplesOutcome;
                 typedef std::future<DescribeWordSamplesOutcome> DescribeWordSamplesOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeWordSamplesRequest&, DescribeWordSamplesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWordSamplesAsyncHandler;
-                typedef Outcome<Core::Error, Model::EditMediaResponse> EditMediaOutcome;
-                typedef std::future<EditMediaOutcome> EditMediaOutcomeCallable;
-                typedef std::function<void(const VodClient*, const Model::EditMediaRequest&, EditMediaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EditMediaAsyncHandler;
                 typedef Outcome<Core::Error, Model::ExecuteFunctionResponse> ExecuteFunctionOutcome;
                 typedef std::future<ExecuteFunctionOutcome> ExecuteFunctionOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ExecuteFunctionRequest&, ExecuteFunctionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExecuteFunctionAsyncHandler;
@@ -522,6 +522,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ParseStreamingManifestResponse> ParseStreamingManifestOutcome;
                 typedef std::future<ParseStreamingManifestOutcome> ParseStreamingManifestOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ParseStreamingManifestRequest&, ParseStreamingManifestOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ParseStreamingManifestAsyncHandler;
+                typedef Outcome<Core::Error, Model::ProcessImageResponse> ProcessImageOutcome;
+                typedef std::future<ProcessImageOutcome> ProcessImageOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::ProcessImageRequest&, ProcessImageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ProcessImageAsyncHandler;
                 typedef Outcome<Core::Error, Model::ProcessMediaResponse> ProcessMediaOutcome;
                 typedef std::future<ProcessMediaOutcome> ProcessMediaOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ProcessMediaRequest&, ProcessMediaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ProcessMediaAsyncHandler;
@@ -549,9 +552,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::SimpleHlsClipResponse> SimpleHlsClipOutcome;
                 typedef std::future<SimpleHlsClipOutcome> SimpleHlsClipOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::SimpleHlsClipRequest&, SimpleHlsClipOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SimpleHlsClipAsyncHandler;
-                typedef Outcome<Core::Error, Model::WeChatMiniProgramPublishResponse> WeChatMiniProgramPublishOutcome;
-                typedef std::future<WeChatMiniProgramPublishOutcome> WeChatMiniProgramPublishOutcomeCallable;
-                typedef std::function<void(const VodClient*, const Model::WeChatMiniProgramPublishRequest&, WeChatMiniProgramPublishOutcome, const std::shared_ptr<const AsyncCallerContext>&)> WeChatMiniProgramPublishAsyncHandler;
 
 
 
@@ -1060,6 +1060,18 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DescribeMediaInfosOutcomeCallable DescribeMediaInfosCallable(const Model::DescribeMediaInfosRequest& request);
 
                 /**
+                 *This API is used to query the playback statistics of a media file at the specified granularity.
+* You can query playback statistics in the past year.
+* If the granularity is an hour, the start and end time cannot be more than seven days apart.
+* If the granularity is a day, the start and end time cannot be more than 90 days apart.
+                 * @param req DescribeMediaPlayStatDetailsRequest
+                 * @return DescribeMediaPlayStatDetailsOutcome
+                 */
+                DescribeMediaPlayStatDetailsOutcome DescribeMediaPlayStatDetails(const Model::DescribeMediaPlayStatDetailsRequest &request);
+                void DescribeMediaPlayStatDetailsAsync(const Model::DescribeMediaPlayStatDetailsRequest& request, const DescribeMediaPlayStatDetailsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMediaPlayStatDetailsOutcomeCallable DescribeMediaPlayStatDetailsCallable(const Model::DescribeMediaPlayStatDetailsRequest& request);
+
+                /**
                  *This API is used to query the information of video processing usage within the specified time range.
    1. Statistics on video processing for the last 365 days can be queried.
    2. The query time range cannot be more than 90 days.
@@ -1214,25 +1226,6 @@ This API returns the video content duration for intelligent recognition in secon
                 DescribeWordSamplesOutcome DescribeWordSamples(const Model::DescribeWordSamplesRequest &request);
                 void DescribeWordSamplesAsync(const Model::DescribeWordSamplesRequest& request, const DescribeWordSamplesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeWordSamplesOutcomeCallable DescribeWordSamplesCallable(const Model::DescribeWordSamplesRequest& request);
-
-                /**
-                 *This API is used to edit a video (by clipping, splicing, etc.) to generate a new VOD video. Editing features include:
-
-1. Clipping a file in VOD to generate a new video;
-2. Splicing multiple files in VOD to generate a new video;
-3. Clipping multiple files in VOD and then splicing the clips to generate a new video;
-4. Directly generating a new video from a stream in VOD;
-5. Clipping a stream in VOD to generate a new video;
-6. Splicing multiple streams in VOD to generate a new video;
-7. Clipping multiple streams in VOD and then splicing the clips to generate a new video.
-
-You can also specify whether to perform a task flow for the generated new video.
-                 * @param req EditMediaRequest
-                 * @return EditMediaOutcome
-                 */
-                EditMediaOutcome EditMedia(const Model::EditMediaRequest &request);
-                void EditMediaAsync(const Model::EditMediaRequest& request, const EditMediaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                EditMediaOutcomeCallable EditMediaCallable(const Model::EditMediaRequest& request);
 
                 /**
                  *This API is only used in special scenarios of custom development. Unless requested by VOD customer service, please do not call it.
@@ -1500,6 +1493,22 @@ If the current storage class is DEEP ARCHIVE, it can be changed to the following
                 ParseStreamingManifestOutcomeCallable ParseStreamingManifestCallable(const Model::ParseStreamingManifestRequest& request);
 
                 /**
+                 *This API is used to initiate an image processing task. Image processing operations include the following:
+
+1. Intelligent recognition of pornographic, terrorism, and politically sensitive content
+
+><li>File size: < 5 MB</li>
+><li>Resolution: Preferably higher than 256 x 256. Resolution lower than this may compromise the recognition performance.</li>
+><li>Supported image formats: PNG, JPG, JPEG, BMP, GIF, WEBP</li>
+
+                 * @param req ProcessImageRequest
+                 * @return ProcessImageOutcome
+                 */
+                ProcessImageOutcome ProcessImage(const Model::ProcessImageRequest &request);
+                void ProcessImageAsync(const Model::ProcessImageRequest& request, const ProcessImageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ProcessImageOutcomeCallable ProcessImageCallable(const Model::ProcessImageRequest& request);
+
+                /**
                  *This API is used to initiate a media processing task on a VOD file. The task may include:
 1. Video transcoding (with watermark)
 2. Animated image generating
@@ -1656,15 +1665,6 @@ Clipping for temporary sharing is lightweight and incurs no additional storage f
                 SimpleHlsClipOutcome SimpleHlsClip(const Model::SimpleHlsClipRequest &request);
                 void SimpleHlsClipAsync(const Model::SimpleHlsClipRequest& request, const SimpleHlsClipAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 SimpleHlsClipOutcomeCallable SimpleHlsClipCallable(const Model::SimpleHlsClipRequest& request);
-
-                /**
-                 *This API is used to publish a VOD video on WeChat Mini Program for playback in the WeChat Mini Program player.
-                 * @param req WeChatMiniProgramPublishRequest
-                 * @return WeChatMiniProgramPublishOutcome
-                 */
-                WeChatMiniProgramPublishOutcome WeChatMiniProgramPublish(const Model::WeChatMiniProgramPublishRequest &request);
-                void WeChatMiniProgramPublishAsync(const Model::WeChatMiniProgramPublishRequest& request, const WeChatMiniProgramPublishAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                WeChatMiniProgramPublishOutcomeCallable WeChatMiniProgramPublishCallable(const Model::WeChatMiniProgramPublishRequest& request);
 
             };
         }

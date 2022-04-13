@@ -14,13 +14,14 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_VOD_V20180717_MODEL_WECHATMINIPROGRAMPUBLISHRESPONSE_H_
-#define TENCENTCLOUD_VOD_V20180717_MODEL_WECHATMINIPROGRAMPUBLISHRESPONSE_H_
+#ifndef TENCENTCLOUD_VOD_V20180717_MODEL_DESCRIBEMEDIAPLAYSTATDETAILSRESPONSE_H_
+#define TENCENTCLOUD_VOD_V20180717_MODEL_DESCRIBEMEDIAPLAYSTATDETAILSRESPONSE_H_
 
 #include <string>
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/vod/v20180717/model/PlayStatInfo.h>
 
 
 namespace TencentCloud
@@ -32,36 +33,36 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * WeChatMiniProgramPublish response structure.
+                * DescribeMediaPlayStatDetails response structure.
                 */
-                class WeChatMiniProgramPublishResponse : public AbstractModel
+                class DescribeMediaPlayStatDetailsResponse : public AbstractModel
                 {
                 public:
-                    WeChatMiniProgramPublishResponse();
-                    ~WeChatMiniProgramPublishResponse() = default;
+                    DescribeMediaPlayStatDetailsResponse();
+                    ~DescribeMediaPlayStatDetailsResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Task ID.
-                     * @return TaskId Task ID.
+                     * 获取The playback statistics.
+                     * @return PlayStatInfoSet The playback statistics.
                      */
-                    std::string GetTaskId() const;
+                    std::vector<PlayStatInfo> GetPlayStatInfoSet() const;
 
                     /**
-                     * 判断参数 TaskId 是否已赋值
-                     * @return TaskId 是否已赋值
+                     * 判断参数 PlayStatInfoSet 是否已赋值
+                     * @return PlayStatInfoSet 是否已赋值
                      */
-                    bool TaskIdHasBeenSet() const;
+                    bool PlayStatInfoSetHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Task ID.
+                     * The playback statistics.
                      */
-                    std::string m_taskId;
-                    bool m_taskIdHasBeenSet;
+                    std::vector<PlayStatInfo> m_playStatInfoSet;
+                    bool m_playStatInfoSetHasBeenSet;
 
                 };
             }
@@ -69,4 +70,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_VOD_V20180717_MODEL_WECHATMINIPROGRAMPUBLISHRESPONSE_H_
+#endif // !TENCENTCLOUD_VOD_V20180717_MODEL_DESCRIBEMEDIAPLAYSTATDETAILSRESPONSE_H_

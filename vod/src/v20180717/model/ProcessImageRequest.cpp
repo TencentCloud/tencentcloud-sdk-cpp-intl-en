@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/vod/v20180717/model/WeChatMiniProgramPublishRequest.h>
+#include <tencentcloud/vod/v20180717/model/ProcessImageRequest.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -22,14 +22,15 @@
 using namespace TencentCloud::Vod::V20180717::Model;
 using namespace std;
 
-WeChatMiniProgramPublishRequest::WeChatMiniProgramPublishRequest() :
+ProcessImageRequest::ProcessImageRequest() :
     m_fileIdHasBeenSet(false),
-    m_sourceDefinitionHasBeenSet(false),
+    m_operationHasBeenSet(false),
+    m_contentReviewInputHasBeenSet(false),
     m_subAppIdHasBeenSet(false)
 {
 }
 
-string WeChatMiniProgramPublishRequest::ToJsonString() const
+string ProcessImageRequest::ToJsonString() const
 {
     rapidjson::Document d;
     d.SetObject();
@@ -44,12 +45,21 @@ string WeChatMiniProgramPublishRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_fileId.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_sourceDefinitionHasBeenSet)
+    if (m_operationHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "SourceDefinition";
+        string key = "Operation";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, m_sourceDefinition, allocator);
+        d.AddMember(iKey, rapidjson::Value(m_operation.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_contentReviewInputHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ContentReviewInput";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_contentReviewInput.ToJsonObject(d[key.c_str()], allocator);
     }
 
     if (m_subAppIdHasBeenSet)
@@ -68,50 +78,66 @@ string WeChatMiniProgramPublishRequest::ToJsonString() const
 }
 
 
-string WeChatMiniProgramPublishRequest::GetFileId() const
+string ProcessImageRequest::GetFileId() const
 {
     return m_fileId;
 }
 
-void WeChatMiniProgramPublishRequest::SetFileId(const string& _fileId)
+void ProcessImageRequest::SetFileId(const string& _fileId)
 {
     m_fileId = _fileId;
     m_fileIdHasBeenSet = true;
 }
 
-bool WeChatMiniProgramPublishRequest::FileIdHasBeenSet() const
+bool ProcessImageRequest::FileIdHasBeenSet() const
 {
     return m_fileIdHasBeenSet;
 }
 
-int64_t WeChatMiniProgramPublishRequest::GetSourceDefinition() const
+string ProcessImageRequest::GetOperation() const
 {
-    return m_sourceDefinition;
+    return m_operation;
 }
 
-void WeChatMiniProgramPublishRequest::SetSourceDefinition(const int64_t& _sourceDefinition)
+void ProcessImageRequest::SetOperation(const string& _operation)
 {
-    m_sourceDefinition = _sourceDefinition;
-    m_sourceDefinitionHasBeenSet = true;
+    m_operation = _operation;
+    m_operationHasBeenSet = true;
 }
 
-bool WeChatMiniProgramPublishRequest::SourceDefinitionHasBeenSet() const
+bool ProcessImageRequest::OperationHasBeenSet() const
 {
-    return m_sourceDefinitionHasBeenSet;
+    return m_operationHasBeenSet;
 }
 
-uint64_t WeChatMiniProgramPublishRequest::GetSubAppId() const
+ImageContentReviewInput ProcessImageRequest::GetContentReviewInput() const
+{
+    return m_contentReviewInput;
+}
+
+void ProcessImageRequest::SetContentReviewInput(const ImageContentReviewInput& _contentReviewInput)
+{
+    m_contentReviewInput = _contentReviewInput;
+    m_contentReviewInputHasBeenSet = true;
+}
+
+bool ProcessImageRequest::ContentReviewInputHasBeenSet() const
+{
+    return m_contentReviewInputHasBeenSet;
+}
+
+uint64_t ProcessImageRequest::GetSubAppId() const
 {
     return m_subAppId;
 }
 
-void WeChatMiniProgramPublishRequest::SetSubAppId(const uint64_t& _subAppId)
+void ProcessImageRequest::SetSubAppId(const uint64_t& _subAppId)
 {
     m_subAppId = _subAppId;
     m_subAppIdHasBeenSet = true;
 }
 
-bool WeChatMiniProgramPublishRequest::SubAppIdHasBeenSet() const
+bool ProcessImageRequest::SubAppIdHasBeenSet() const
 {
     return m_subAppIdHasBeenSet;
 }

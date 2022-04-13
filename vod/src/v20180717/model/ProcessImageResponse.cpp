@@ -14,22 +14,21 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/rum/v20210622/model/DescribeTawInstancesResponse.h>
+#include <tencentcloud/vod/v20180717/model/ProcessImageResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using TencentCloud::CoreInternalOutcome;
-using namespace TencentCloud::Rum::V20210622::Model;
+using namespace TencentCloud::Vod::V20180717::Model;
 using namespace std;
 
-DescribeTawInstancesResponse::DescribeTawInstancesResponse() :
-    m_instanceSetHasBeenSet(false),
-    m_totalCountHasBeenSet(false)
+ProcessImageResponse::ProcessImageResponse() :
+    m_contentReviewResultSetHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome DescribeTawInstancesResponse::Deserialize(const string &payload)
+CoreInternalOutcome ProcessImageResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -63,67 +62,49 @@ CoreInternalOutcome DescribeTawInstancesResponse::Deserialize(const string &payl
     }
 
 
-    if (rsp.HasMember("InstanceSet") && !rsp["InstanceSet"].IsNull())
+    if (rsp.HasMember("ContentReviewResultSet") && !rsp["ContentReviewResultSet"].IsNull())
     {
-        if (!rsp["InstanceSet"].IsArray())
-            return CoreInternalOutcome(Core::Error("response `InstanceSet` is not array type"));
+        if (!rsp["ContentReviewResultSet"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `ContentReviewResultSet` is not array type"));
 
-        const rapidjson::Value &tmpValue = rsp["InstanceSet"];
+        const rapidjson::Value &tmpValue = rsp["ContentReviewResultSet"];
         for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
-            RumInstanceInfo item;
+            ContentReviewResult item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
             if (!outcome.IsSuccess())
             {
                 outcome.GetError().SetRequestId(requestId);
                 return outcome;
             }
-            m_instanceSet.push_back(item);
+            m_contentReviewResultSet.push_back(item);
         }
-        m_instanceSetHasBeenSet = true;
-    }
-
-    if (rsp.HasMember("TotalCount") && !rsp["TotalCount"].IsNull())
-    {
-        if (!rsp["TotalCount"].IsInt64())
-        {
-            return CoreInternalOutcome(Core::Error("response `TotalCount` IsInt64=false incorrectly").SetRequestId(requestId));
-        }
-        m_totalCount = rsp["TotalCount"].GetInt64();
-        m_totalCountHasBeenSet = true;
+        m_contentReviewResultSetHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string DescribeTawInstancesResponse::ToJsonString() const
+string ProcessImageResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_instanceSetHasBeenSet)
+    if (m_contentReviewResultSetHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "InstanceSet";
+        string key = "ContentReviewResultSet";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
-        for (auto itr = m_instanceSet.begin(); itr != m_instanceSet.end(); ++itr, ++i)
+        for (auto itr = m_contentReviewResultSet.begin(); itr != m_contentReviewResultSet.end(); ++itr, ++i)
         {
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
-    }
-
-    if (m_totalCountHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "TotalCount";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_totalCount, allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -138,24 +119,14 @@ string DescribeTawInstancesResponse::ToJsonString() const
 }
 
 
-vector<RumInstanceInfo> DescribeTawInstancesResponse::GetInstanceSet() const
+vector<ContentReviewResult> ProcessImageResponse::GetContentReviewResultSet() const
 {
-    return m_instanceSet;
+    return m_contentReviewResultSet;
 }
 
-bool DescribeTawInstancesResponse::InstanceSetHasBeenSet() const
+bool ProcessImageResponse::ContentReviewResultSetHasBeenSet() const
 {
-    return m_instanceSetHasBeenSet;
-}
-
-int64_t DescribeTawInstancesResponse::GetTotalCount() const
-{
-    return m_totalCount;
-}
-
-bool DescribeTawInstancesResponse::TotalCountHasBeenSet() const
-{
-    return m_totalCountHasBeenSet;
+    return m_contentReviewResultSetHasBeenSet;
 }
 
 

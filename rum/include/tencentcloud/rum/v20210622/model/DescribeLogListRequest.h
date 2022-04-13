@@ -151,14 +151,14 @@ namespace TencentCloud
                     bool ContextHasBeenSet() const;
 
                     /**
-                     * 获取Query statement. Maximum length: 4096
-                     * @return Query Query statement. Maximum length: 4096
+                     * 获取Query statement, which can contain up to 4,096 characters.
+                     * @return Query Query statement, which can contain up to 4,096 characters.
                      */
                     std::string GetQuery() const;
 
                     /**
-                     * 设置Query statement. Maximum length: 4096
-                     * @param Query Query statement. Maximum length: 4096
+                     * 设置Query statement, which can contain up to 4,096 characters.
+                     * @param Query Query statement, which can contain up to 4,096 characters.
                      */
                     void SetQuery(const std::string& _query);
 
@@ -225,7 +225,7 @@ namespace TencentCloud
                     bool m_contextHasBeenSet;
 
                     /**
-                     * Query statement. Maximum length: 4096
+                     * Query statement, which can contain up to 4,096 characters.
                      */
                     std::string m_query;
                     bool m_queryHasBeenSet;

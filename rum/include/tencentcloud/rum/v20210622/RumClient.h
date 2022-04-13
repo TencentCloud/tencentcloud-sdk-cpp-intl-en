@@ -103,20 +103,14 @@
 #include <tencentcloud/rum/v20210622/model/DescribeOfflineLogsResponse.h>
 #include <tencentcloud/rum/v20210622/model/DescribeProjectLimitsRequest.h>
 #include <tencentcloud/rum/v20210622/model/DescribeProjectLimitsResponse.h>
-#include <tencentcloud/rum/v20210622/model/DescribeProjectsRequest.h>
-#include <tencentcloud/rum/v20210622/model/DescribeProjectsResponse.h>
 #include <tencentcloud/rum/v20210622/model/DescribePvListRequest.h>
 #include <tencentcloud/rum/v20210622/model/DescribePvListResponse.h>
 #include <tencentcloud/rum/v20210622/model/DescribeReleaseFileSignRequest.h>
 #include <tencentcloud/rum/v20210622/model/DescribeReleaseFileSignResponse.h>
 #include <tencentcloud/rum/v20210622/model/DescribeReleaseFilesRequest.h>
 #include <tencentcloud/rum/v20210622/model/DescribeReleaseFilesResponse.h>
-#include <tencentcloud/rum/v20210622/model/DescribeScoresRequest.h>
-#include <tencentcloud/rum/v20210622/model/DescribeScoresResponse.h>
 #include <tencentcloud/rum/v20210622/model/DescribeTawAreasRequest.h>
 #include <tencentcloud/rum/v20210622/model/DescribeTawAreasResponse.h>
-#include <tencentcloud/rum/v20210622/model/DescribeTawInstancesRequest.h>
-#include <tencentcloud/rum/v20210622/model/DescribeTawInstancesResponse.h>
 #include <tencentcloud/rum/v20210622/model/DescribeUvListRequest.h>
 #include <tencentcloud/rum/v20210622/model/DescribeUvListResponse.h>
 #include <tencentcloud/rum/v20210622/model/DescribeWhitelistsRequest.h>
@@ -265,9 +259,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeProjectLimitsResponse> DescribeProjectLimitsOutcome;
                 typedef std::future<DescribeProjectLimitsOutcome> DescribeProjectLimitsOutcomeCallable;
                 typedef std::function<void(const RumClient*, const Model::DescribeProjectLimitsRequest&, DescribeProjectLimitsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProjectLimitsAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeProjectsResponse> DescribeProjectsOutcome;
-                typedef std::future<DescribeProjectsOutcome> DescribeProjectsOutcomeCallable;
-                typedef std::function<void(const RumClient*, const Model::DescribeProjectsRequest&, DescribeProjectsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProjectsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribePvListResponse> DescribePvListOutcome;
                 typedef std::future<DescribePvListOutcome> DescribePvListOutcomeCallable;
                 typedef std::function<void(const RumClient*, const Model::DescribePvListRequest&, DescribePvListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePvListAsyncHandler;
@@ -277,15 +268,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeReleaseFilesResponse> DescribeReleaseFilesOutcome;
                 typedef std::future<DescribeReleaseFilesOutcome> DescribeReleaseFilesOutcomeCallable;
                 typedef std::function<void(const RumClient*, const Model::DescribeReleaseFilesRequest&, DescribeReleaseFilesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeReleaseFilesAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeScoresResponse> DescribeScoresOutcome;
-                typedef std::future<DescribeScoresOutcome> DescribeScoresOutcomeCallable;
-                typedef std::function<void(const RumClient*, const Model::DescribeScoresRequest&, DescribeScoresOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeScoresAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeTawAreasResponse> DescribeTawAreasOutcome;
                 typedef std::future<DescribeTawAreasOutcome> DescribeTawAreasOutcomeCallable;
                 typedef std::function<void(const RumClient*, const Model::DescribeTawAreasRequest&, DescribeTawAreasOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTawAreasAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeTawInstancesResponse> DescribeTawInstancesOutcome;
-                typedef std::future<DescribeTawInstancesOutcome> DescribeTawInstancesOutcomeCallable;
-                typedef std::function<void(const RumClient*, const Model::DescribeTawInstancesRequest&, DescribeTawInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTawInstancesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeUvListResponse> DescribeUvListOutcome;
                 typedef std::future<DescribeUvListOutcome> DescribeUvListOutcomeCallable;
                 typedef std::function<void(const RumClient*, const Model::DescribeUvListRequest&, DescribeUvListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUvListAsyncHandler;
@@ -684,15 +669,6 @@ Default API request rate limit: 20 requests/sec.
                 DescribeProjectLimitsOutcomeCallable DescribeProjectLimitsCallable(const Model::DescribeProjectLimitsRequest& request);
 
                 /**
-                 *This API is used to get the list of projects (under teams created by an instance).
-                 * @param req DescribeProjectsRequest
-                 * @return DescribeProjectsOutcome
-                 */
-                DescribeProjectsOutcome DescribeProjects(const Model::DescribeProjectsRequest &request);
-                void DescribeProjectsAsync(const Model::DescribeProjectsRequest& request, const DescribeProjectsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeProjectsOutcomeCallable DescribeProjectsCallable(const Model::DescribeProjectsRequest& request);
-
-                /**
                  *This API is used to get the list of PVs under a project.
                  * @param req DescribePvListRequest
                  * @return DescribePvListOutcome
@@ -720,15 +696,6 @@ Default API request rate limit: 20 requests/sec.
                 DescribeReleaseFilesOutcomeCallable DescribeReleaseFilesCallable(const Model::DescribeReleaseFilesRequest& request);
 
                 /**
-                 *This API is used to get the list of homepage scores.
-                 * @param req DescribeScoresRequest
-                 * @return DescribeScoresOutcome
-                 */
-                DescribeScoresOutcome DescribeScores(const Model::DescribeScoresRequest &request);
-                void DescribeScoresAsync(const Model::DescribeScoresRequest& request, const DescribeScoresAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeScoresOutcomeCallable DescribeScoresCallable(const Model::DescribeScoresRequest& request);
-
-                /**
                  *This API is used to query region information.
                  * @param req DescribeTawAreasRequest
                  * @return DescribeTawAreasOutcome
@@ -736,15 +703,6 @@ Default API request rate limit: 20 requests/sec.
                 DescribeTawAreasOutcome DescribeTawAreas(const Model::DescribeTawAreasRequest &request);
                 void DescribeTawAreasAsync(const Model::DescribeTawAreasRequest& request, const DescribeTawAreasAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeTawAreasOutcomeCallable DescribeTawAreasCallable(const Model::DescribeTawAreasRequest& request);
-
-                /**
-                 *This API is used to query instance information.
-                 * @param req DescribeTawInstancesRequest
-                 * @return DescribeTawInstancesOutcome
-                 */
-                DescribeTawInstancesOutcome DescribeTawInstances(const Model::DescribeTawInstancesRequest &request);
-                void DescribeTawInstancesAsync(const Model::DescribeTawInstancesRequest& request, const DescribeTawInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeTawInstancesOutcomeCallable DescribeTawInstancesCallable(const Model::DescribeTawInstancesRequest& request);
 
                 /**
                  *This API is used to get the list of UVs under a project.

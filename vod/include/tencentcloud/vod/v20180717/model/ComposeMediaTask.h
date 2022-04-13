@@ -212,18 +212,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取Metadata of a source video.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return MetaData Metadata of a source video.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取The metadata of the output video.
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return MetaData The metadata of the output video.
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     MediaMetaData GetMetaData() const;
 
                     /**
-                     * 设置Metadata of a source video.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param MetaData Metadata of a source video.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置The metadata of the output video.
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param MetaData The metadata of the output video.
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     void SetMetaData(const MediaMetaData& _metaData);
 
@@ -323,8 +323,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_outputHasBeenSet;
 
                     /**
-                     * Metadata of a source video.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * The metadata of the output video.
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     MediaMetaData m_metaData;
                     bool m_metaDataHasBeenSet;
