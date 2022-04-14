@@ -133,6 +133,98 @@ namespace TencentCloud
                      */
                     bool TriggerActionsHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies the provisioned concurrency type.
+`Default`: Static provisioned concurrency. 
+`ConcurrencyUtilizationTracking`: Scales the concurrency automatically according to the concurrency utilization.
+If `ConcurrencyUtilizationTracking` is passed in, 
+
+`TrackingTarget`, `MinCapacity` and `MaxCapacity` are required, and `VersionProvisionedConcurrencyNum` must be `0`. 
+                     * @return ProvisionedType Specifies the provisioned concurrency type.
+`Default`: Static provisioned concurrency. 
+`ConcurrencyUtilizationTracking`: Scales the concurrency automatically according to the concurrency utilization.
+If `ConcurrencyUtilizationTracking` is passed in, 
+
+`TrackingTarget`, `MinCapacity` and `MaxCapacity` are required, and `VersionProvisionedConcurrencyNum` must be `0`. 
+                     */
+                    std::string GetProvisionedType() const;
+
+                    /**
+                     * 设置Specifies the provisioned concurrency type.
+`Default`: Static provisioned concurrency. 
+`ConcurrencyUtilizationTracking`: Scales the concurrency automatically according to the concurrency utilization.
+If `ConcurrencyUtilizationTracking` is passed in, 
+
+`TrackingTarget`, `MinCapacity` and `MaxCapacity` are required, and `VersionProvisionedConcurrencyNum` must be `0`. 
+                     * @param ProvisionedType Specifies the provisioned concurrency type.
+`Default`: Static provisioned concurrency. 
+`ConcurrencyUtilizationTracking`: Scales the concurrency automatically according to the concurrency utilization.
+If `ConcurrencyUtilizationTracking` is passed in, 
+
+`TrackingTarget`, `MinCapacity` and `MaxCapacity` are required, and `VersionProvisionedConcurrencyNum` must be `0`. 
+                     */
+                    void SetProvisionedType(const std::string& _provisionedType);
+
+                    /**
+                     * 判断参数 ProvisionedType 是否已赋值
+                     * @return ProvisionedType 是否已赋值
+                     */
+                    bool ProvisionedTypeHasBeenSet() const;
+
+                    /**
+                     * 获取The target concurrency utilization. Range: (0,1) (two decimal places)
+                     * @return TrackingTarget The target concurrency utilization. Range: (0,1) (two decimal places)
+                     */
+                    double GetTrackingTarget() const;
+
+                    /**
+                     * 设置The target concurrency utilization. Range: (0,1) (two decimal places)
+                     * @param TrackingTarget The target concurrency utilization. Range: (0,1) (two decimal places)
+                     */
+                    void SetTrackingTarget(const double& _trackingTarget);
+
+                    /**
+                     * 判断参数 TrackingTarget 是否已赋值
+                     * @return TrackingTarget 是否已赋值
+                     */
+                    bool TrackingTargetHasBeenSet() const;
+
+                    /**
+                     * 获取The minimum number of instances. It can not be smaller than `1`.
+                     * @return MinCapacity The minimum number of instances. It can not be smaller than `1`.
+                     */
+                    uint64_t GetMinCapacity() const;
+
+                    /**
+                     * 设置The minimum number of instances. It can not be smaller than `1`.
+                     * @param MinCapacity The minimum number of instances. It can not be smaller than `1`.
+                     */
+                    void SetMinCapacity(const uint64_t& _minCapacity);
+
+                    /**
+                     * 判断参数 MinCapacity 是否已赋值
+                     * @return MinCapacity 是否已赋值
+                     */
+                    bool MinCapacityHasBeenSet() const;
+
+                    /**
+                     * 获取The maximum number of instances
+                     * @return MaxCapacity The maximum number of instances
+                     */
+                    uint64_t GetMaxCapacity() const;
+
+                    /**
+                     * 设置The maximum number of instances
+                     * @param MaxCapacity The maximum number of instances
+                     */
+                    void SetMaxCapacity(const uint64_t& _maxCapacity);
+
+                    /**
+                     * 判断参数 MaxCapacity 是否已赋值
+                     * @return MaxCapacity 是否已赋值
+                     */
+                    bool MaxCapacityHasBeenSet() const;
+
                 private:
 
                     /**
@@ -164,6 +256,35 @@ namespace TencentCloud
                      */
                     std::vector<TriggerAction> m_triggerActions;
                     bool m_triggerActionsHasBeenSet;
+
+                    /**
+                     * Specifies the provisioned concurrency type.
+`Default`: Static provisioned concurrency. 
+`ConcurrencyUtilizationTracking`: Scales the concurrency automatically according to the concurrency utilization.
+If `ConcurrencyUtilizationTracking` is passed in, 
+
+`TrackingTarget`, `MinCapacity` and `MaxCapacity` are required, and `VersionProvisionedConcurrencyNum` must be `0`. 
+                     */
+                    std::string m_provisionedType;
+                    bool m_provisionedTypeHasBeenSet;
+
+                    /**
+                     * The target concurrency utilization. Range: (0,1) (two decimal places)
+                     */
+                    double m_trackingTarget;
+                    bool m_trackingTargetHasBeenSet;
+
+                    /**
+                     * The minimum number of instances. It can not be smaller than `1`.
+                     */
+                    uint64_t m_minCapacity;
+                    bool m_minCapacityHasBeenSet;
+
+                    /**
+                     * The maximum number of instances
+                     */
+                    uint64_t m_maxCapacity;
+                    bool m_maxCapacityHasBeenSet;
 
                 };
             }

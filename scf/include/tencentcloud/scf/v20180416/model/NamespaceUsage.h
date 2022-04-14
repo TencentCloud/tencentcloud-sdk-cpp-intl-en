@@ -100,6 +100,50 @@ namespace TencentCloud
                      */
                     bool FunctionsCountHasBeenSet() const;
 
+                    /**
+                     * 获取Total memory quota of the namespace
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return TotalConcurrencyMem Total memory quota of the namespace
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetTotalConcurrencyMem() const;
+
+                    /**
+                     * 设置Total memory quota of the namespace
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param TotalConcurrencyMem Total memory quota of the namespace
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetTotalConcurrencyMem(const int64_t& _totalConcurrencyMem);
+
+                    /**
+                     * 判断参数 TotalConcurrencyMem 是否已赋值
+                     * @return TotalConcurrencyMem 是否已赋值
+                     */
+                    bool TotalConcurrencyMemHasBeenSet() const;
+
+                    /**
+                     * 获取Memory usage of the namespace
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return TotalAllocatedConcurrencyMem Memory usage of the namespace
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetTotalAllocatedConcurrencyMem() const;
+
+                    /**
+                     * 设置Memory usage of the namespace
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param TotalAllocatedConcurrencyMem Memory usage of the namespace
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetTotalAllocatedConcurrencyMem(const int64_t& _totalAllocatedConcurrencyMem);
+
+                    /**
+                     * 判断参数 TotalAllocatedConcurrencyMem 是否已赋值
+                     * @return TotalAllocatedConcurrencyMem 是否已赋值
+                     */
+                    bool TotalAllocatedConcurrencyMemHasBeenSet() const;
+
                 private:
 
                     /**
@@ -119,6 +163,20 @@ namespace TencentCloud
                      */
                     int64_t m_functionsCount;
                     bool m_functionsCountHasBeenSet;
+
+                    /**
+                     * Total memory quota of the namespace
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_totalConcurrencyMem;
+                    bool m_totalConcurrencyMemHasBeenSet;
+
+                    /**
+                     * Memory usage of the namespace
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_totalAllocatedConcurrencyMem;
+                    bool m_totalAllocatedConcurrencyMemHasBeenSet;
 
                 };
             }

@@ -93,16 +93,10 @@
 #include <tencentcloud/antiddos/v20200309/model/DescribeCCLevelListResponse.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeCCLevelPolicyRequest.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeCCLevelPolicyResponse.h>
-#include <tencentcloud/antiddos/v20200309/model/DescribeCCPrecisionPlyListRequest.h>
-#include <tencentcloud/antiddos/v20200309/model/DescribeCCPrecisionPlyListResponse.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeCCThresholdListRequest.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeCCThresholdListResponse.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeCCTrendRequest.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeCCTrendResponse.h>
-#include <tencentcloud/antiddos/v20200309/model/DescribeCcBlackWhiteIpListRequest.h>
-#include <tencentcloud/antiddos/v20200309/model/DescribeCcBlackWhiteIpListResponse.h>
-#include <tencentcloud/antiddos/v20200309/model/DescribeCcGeoIPBlockConfigListRequest.h>
-#include <tencentcloud/antiddos/v20200309/model/DescribeCcGeoIPBlockConfigListResponse.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeDDoSTrendRequest.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeDDoSTrendResponse.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeDefaultAlarmThresholdRequest.h>
@@ -111,8 +105,6 @@
 #include <tencentcloud/antiddos/v20200309/model/DescribeL7RulesBySSLCertIdResponse.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeListBGPIPInstancesRequest.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeListBGPIPInstancesResponse.h>
-#include <tencentcloud/antiddos/v20200309/model/DescribeListBGPInstancesRequest.h>
-#include <tencentcloud/antiddos/v20200309/model/DescribeListBGPInstancesResponse.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeListBlackWhiteIpListRequest.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeListBlackWhiteIpListResponse.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeListDDoSAIRequest.h>
@@ -272,21 +264,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeCCLevelPolicyResponse> DescribeCCLevelPolicyOutcome;
                 typedef std::future<DescribeCCLevelPolicyOutcome> DescribeCCLevelPolicyOutcomeCallable;
                 typedef std::function<void(const AntiddosClient*, const Model::DescribeCCLevelPolicyRequest&, DescribeCCLevelPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCCLevelPolicyAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeCCPrecisionPlyListResponse> DescribeCCPrecisionPlyListOutcome;
-                typedef std::future<DescribeCCPrecisionPlyListOutcome> DescribeCCPrecisionPlyListOutcomeCallable;
-                typedef std::function<void(const AntiddosClient*, const Model::DescribeCCPrecisionPlyListRequest&, DescribeCCPrecisionPlyListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCCPrecisionPlyListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeCCThresholdListResponse> DescribeCCThresholdListOutcome;
                 typedef std::future<DescribeCCThresholdListOutcome> DescribeCCThresholdListOutcomeCallable;
                 typedef std::function<void(const AntiddosClient*, const Model::DescribeCCThresholdListRequest&, DescribeCCThresholdListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCCThresholdListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeCCTrendResponse> DescribeCCTrendOutcome;
                 typedef std::future<DescribeCCTrendOutcome> DescribeCCTrendOutcomeCallable;
                 typedef std::function<void(const AntiddosClient*, const Model::DescribeCCTrendRequest&, DescribeCCTrendOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCCTrendAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeCcBlackWhiteIpListResponse> DescribeCcBlackWhiteIpListOutcome;
-                typedef std::future<DescribeCcBlackWhiteIpListOutcome> DescribeCcBlackWhiteIpListOutcomeCallable;
-                typedef std::function<void(const AntiddosClient*, const Model::DescribeCcBlackWhiteIpListRequest&, DescribeCcBlackWhiteIpListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCcBlackWhiteIpListAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeCcGeoIPBlockConfigListResponse> DescribeCcGeoIPBlockConfigListOutcome;
-                typedef std::future<DescribeCcGeoIPBlockConfigListOutcome> DescribeCcGeoIPBlockConfigListOutcomeCallable;
-                typedef std::function<void(const AntiddosClient*, const Model::DescribeCcGeoIPBlockConfigListRequest&, DescribeCcGeoIPBlockConfigListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCcGeoIPBlockConfigListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDDoSTrendResponse> DescribeDDoSTrendOutcome;
                 typedef std::future<DescribeDDoSTrendOutcome> DescribeDDoSTrendOutcomeCallable;
                 typedef std::function<void(const AntiddosClient*, const Model::DescribeDDoSTrendRequest&, DescribeDDoSTrendOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDDoSTrendAsyncHandler;
@@ -299,9 +282,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeListBGPIPInstancesResponse> DescribeListBGPIPInstancesOutcome;
                 typedef std::future<DescribeListBGPIPInstancesOutcome> DescribeListBGPIPInstancesOutcomeCallable;
                 typedef std::function<void(const AntiddosClient*, const Model::DescribeListBGPIPInstancesRequest&, DescribeListBGPIPInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeListBGPIPInstancesAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeListBGPInstancesResponse> DescribeListBGPInstancesOutcome;
-                typedef std::future<DescribeListBGPInstancesOutcome> DescribeListBGPInstancesOutcomeCallable;
-                typedef std::function<void(const AntiddosClient*, const Model::DescribeListBGPInstancesRequest&, DescribeListBGPInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeListBGPInstancesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeListBlackWhiteIpListResponse> DescribeListBlackWhiteIpListOutcome;
                 typedef std::future<DescribeListBlackWhiteIpListOutcome> DescribeListBlackWhiteIpListOutcomeCallable;
                 typedef std::function<void(const AntiddosClient*, const Model::DescribeListBlackWhiteIpListRequest&, DescribeListBlackWhiteIpListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeListBlackWhiteIpListAsyncHandler;
@@ -681,15 +661,6 @@ namespace TencentCloud
                 DescribeCCLevelPolicyOutcomeCallable DescribeCCLevelPolicyCallable(const Model::DescribeCCLevelPolicyRequest& request);
 
                 /**
-                 *This API is used to obtain a CC precise protection policy.
-                 * @param req DescribeCCPrecisionPlyListRequest
-                 * @return DescribeCCPrecisionPlyListOutcome
-                 */
-                DescribeCCPrecisionPlyListOutcome DescribeCCPrecisionPlyList(const Model::DescribeCCPrecisionPlyListRequest &request);
-                void DescribeCCPrecisionPlyListAsync(const Model::DescribeCCPrecisionPlyListRequest& request, const DescribeCCPrecisionPlyListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeCCPrecisionPlyListOutcomeCallable DescribeCCPrecisionPlyListCallable(const Model::DescribeCCPrecisionPlyListRequest& request);
-
-                /**
                  *This API is used to query the list of CC cleansing thresholds.
                  * @param req DescribeCCThresholdListRequest
                  * @return DescribeCCThresholdListOutcome
@@ -706,24 +677,6 @@ namespace TencentCloud
                 DescribeCCTrendOutcome DescribeCCTrend(const Model::DescribeCCTrendRequest &request);
                 void DescribeCCTrendAsync(const Model::DescribeCCTrendRequest& request, const DescribeCCTrendAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeCCTrendOutcomeCallable DescribeCCTrendCallable(const Model::DescribeCCTrendRequest& request);
-
-                /**
-                 *This API is used to obtain a layer-4 access control list.
-                 * @param req DescribeCcBlackWhiteIpListRequest
-                 * @return DescribeCcBlackWhiteIpListOutcome
-                 */
-                DescribeCcBlackWhiteIpListOutcome DescribeCcBlackWhiteIpList(const Model::DescribeCcBlackWhiteIpListRequest &request);
-                void DescribeCcBlackWhiteIpListAsync(const Model::DescribeCcBlackWhiteIpListRequest& request, const DescribeCcBlackWhiteIpListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeCcBlackWhiteIpListOutcomeCallable DescribeCcBlackWhiteIpListCallable(const Model::DescribeCcBlackWhiteIpListRequest& request);
-
-                /**
-                 *This API is used to obtain a list of regional blocking configurations.
-                 * @param req DescribeCcGeoIPBlockConfigListRequest
-                 * @return DescribeCcGeoIPBlockConfigListOutcome
-                 */
-                DescribeCcGeoIPBlockConfigListOutcome DescribeCcGeoIPBlockConfigList(const Model::DescribeCcGeoIPBlockConfigListRequest &request);
-                void DescribeCcGeoIPBlockConfigListAsync(const Model::DescribeCcGeoIPBlockConfigListRequest& request, const DescribeCcGeoIPBlockConfigListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeCcGeoIPBlockConfigListOutcomeCallable DescribeCcGeoIPBlockConfigListCallable(const Model::DescribeCcGeoIPBlockConfigListRequest& request);
 
                 /**
                  *This API is used to get DDoS attack traffic bandwidth and attack packet rate.
@@ -761,16 +714,6 @@ namespace TencentCloud
                 DescribeListBGPIPInstancesOutcome DescribeListBGPIPInstances(const Model::DescribeListBGPIPInstancesRequest &request);
                 void DescribeListBGPIPInstancesAsync(const Model::DescribeListBGPIPInstancesRequest& request, const DescribeListBGPIPInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeListBGPIPInstancesOutcomeCallable DescribeListBGPIPInstancesCallable(const Model::DescribeListBGPIPInstancesRequest& request);
-
-                /**
-                 *This API is used to get a list of Anti-DDoS Pro instances.
-
-                 * @param req DescribeListBGPInstancesRequest
-                 * @return DescribeListBGPInstancesOutcome
-                 */
-                DescribeListBGPInstancesOutcome DescribeListBGPInstances(const Model::DescribeListBGPInstancesRequest &request);
-                void DescribeListBGPInstancesAsync(const Model::DescribeListBGPInstancesRequest& request, const DescribeListBGPInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeListBGPInstancesOutcomeCallable DescribeListBGPInstancesCallable(const Model::DescribeListBGPInstancesRequest& request);
 
                 /**
                  *This API is used to get a list of Anti-DDoS IP blocklists/allowlists.

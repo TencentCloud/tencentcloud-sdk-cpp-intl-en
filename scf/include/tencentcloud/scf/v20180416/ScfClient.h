@@ -27,8 +27,6 @@
 #include <tencentcloud/scf/v20180416/model/CopyFunctionResponse.h>
 #include <tencentcloud/scf/v20180416/model/CreateAliasRequest.h>
 #include <tencentcloud/scf/v20180416/model/CreateAliasResponse.h>
-#include <tencentcloud/scf/v20180416/model/CreateFunctionRequest.h>
-#include <tencentcloud/scf/v20180416/model/CreateFunctionResponse.h>
 #include <tencentcloud/scf/v20180416/model/CreateNamespaceRequest.h>
 #include <tencentcloud/scf/v20180416/model/CreateNamespaceResponse.h>
 #include <tencentcloud/scf/v20180416/model/CreateTriggerRequest.h>
@@ -53,8 +51,6 @@
 #include <tencentcloud/scf/v20180416/model/GetAliasResponse.h>
 #include <tencentcloud/scf/v20180416/model/GetAsyncEventStatusRequest.h>
 #include <tencentcloud/scf/v20180416/model/GetAsyncEventStatusResponse.h>
-#include <tencentcloud/scf/v20180416/model/GetFunctionRequest.h>
-#include <tencentcloud/scf/v20180416/model/GetFunctionResponse.h>
 #include <tencentcloud/scf/v20180416/model/GetFunctionAddressRequest.h>
 #include <tencentcloud/scf/v20180416/model/GetFunctionAddressResponse.h>
 #include <tencentcloud/scf/v20180416/model/GetFunctionEventInvokeConfigRequest.h>
@@ -105,8 +101,6 @@
 #include <tencentcloud/scf/v20180416/model/UpdateAliasResponse.h>
 #include <tencentcloud/scf/v20180416/model/UpdateFunctionCodeRequest.h>
 #include <tencentcloud/scf/v20180416/model/UpdateFunctionCodeResponse.h>
-#include <tencentcloud/scf/v20180416/model/UpdateFunctionConfigurationRequest.h>
-#include <tencentcloud/scf/v20180416/model/UpdateFunctionConfigurationResponse.h>
 #include <tencentcloud/scf/v20180416/model/UpdateFunctionEventInvokeConfigRequest.h>
 #include <tencentcloud/scf/v20180416/model/UpdateFunctionEventInvokeConfigResponse.h>
 #include <tencentcloud/scf/v20180416/model/UpdateNamespaceRequest.h>
@@ -131,9 +125,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateAliasResponse> CreateAliasOutcome;
                 typedef std::future<CreateAliasOutcome> CreateAliasOutcomeCallable;
                 typedef std::function<void(const ScfClient*, const Model::CreateAliasRequest&, CreateAliasOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAliasAsyncHandler;
-                typedef Outcome<Core::Error, Model::CreateFunctionResponse> CreateFunctionOutcome;
-                typedef std::future<CreateFunctionOutcome> CreateFunctionOutcomeCallable;
-                typedef std::function<void(const ScfClient*, const Model::CreateFunctionRequest&, CreateFunctionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateFunctionAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateNamespaceResponse> CreateNamespaceOutcome;
                 typedef std::future<CreateNamespaceOutcome> CreateNamespaceOutcomeCallable;
                 typedef std::function<void(const ScfClient*, const Model::CreateNamespaceRequest&, CreateNamespaceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateNamespaceAsyncHandler;
@@ -170,9 +161,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::GetAsyncEventStatusResponse> GetAsyncEventStatusOutcome;
                 typedef std::future<GetAsyncEventStatusOutcome> GetAsyncEventStatusOutcomeCallable;
                 typedef std::function<void(const ScfClient*, const Model::GetAsyncEventStatusRequest&, GetAsyncEventStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetAsyncEventStatusAsyncHandler;
-                typedef Outcome<Core::Error, Model::GetFunctionResponse> GetFunctionOutcome;
-                typedef std::future<GetFunctionOutcome> GetFunctionOutcomeCallable;
-                typedef std::function<void(const ScfClient*, const Model::GetFunctionRequest&, GetFunctionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetFunctionAsyncHandler;
                 typedef Outcome<Core::Error, Model::GetFunctionAddressResponse> GetFunctionAddressOutcome;
                 typedef std::future<GetFunctionAddressOutcome> GetFunctionAddressOutcomeCallable;
                 typedef std::function<void(const ScfClient*, const Model::GetFunctionAddressRequest&, GetFunctionAddressOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetFunctionAddressAsyncHandler;
@@ -248,9 +236,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::UpdateFunctionCodeResponse> UpdateFunctionCodeOutcome;
                 typedef std::future<UpdateFunctionCodeOutcome> UpdateFunctionCodeOutcomeCallable;
                 typedef std::function<void(const ScfClient*, const Model::UpdateFunctionCodeRequest&, UpdateFunctionCodeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateFunctionCodeAsyncHandler;
-                typedef Outcome<Core::Error, Model::UpdateFunctionConfigurationResponse> UpdateFunctionConfigurationOutcome;
-                typedef std::future<UpdateFunctionConfigurationOutcome> UpdateFunctionConfigurationOutcomeCallable;
-                typedef std::function<void(const ScfClient*, const Model::UpdateFunctionConfigurationRequest&, UpdateFunctionConfigurationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateFunctionConfigurationAsyncHandler;
                 typedef Outcome<Core::Error, Model::UpdateFunctionEventInvokeConfigResponse> UpdateFunctionEventInvokeConfigOutcome;
                 typedef std::future<UpdateFunctionEventInvokeConfigOutcome> UpdateFunctionEventInvokeConfigOutcomeCallable;
                 typedef std::function<void(const ScfClient*, const Model::UpdateFunctionEventInvokeConfigRequest&, UpdateFunctionEventInvokeConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateFunctionEventInvokeConfigAsyncHandler;
@@ -284,15 +269,6 @@ An alias must point to a master version and can point to an additional version a
                 CreateAliasOutcome CreateAlias(const Model::CreateAliasRequest &request);
                 void CreateAliasAsync(const Model::CreateAliasRequest& request, const CreateAliasAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateAliasOutcomeCallable CreateAliasCallable(const Model::CreateAliasRequest& request);
-
-                /**
-                 *This API is used to create a function based on the input parameters.
-                 * @param req CreateFunctionRequest
-                 * @return CreateFunctionOutcome
-                 */
-                CreateFunctionOutcome CreateFunction(const Model::CreateFunctionRequest &request);
-                void CreateFunctionAsync(const Model::CreateFunctionRequest& request, const CreateFunctionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                CreateFunctionOutcomeCallable CreateFunctionCallable(const Model::CreateFunctionRequest& request);
 
                 /**
                  *This API is used to create a namespace based on the input parameters.
@@ -401,15 +377,6 @@ An alias must point to a master version and can point to an additional version a
                 GetAsyncEventStatusOutcome GetAsyncEventStatus(const Model::GetAsyncEventStatusRequest &request);
                 void GetAsyncEventStatusAsync(const Model::GetAsyncEventStatusRequest& request, const GetAsyncEventStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 GetAsyncEventStatusOutcomeCallable GetAsyncEventStatusCallable(const Model::GetAsyncEventStatusRequest& request);
-
-                /**
-                 *This API is used to obtain function details, such as name, code, handler, associated trigger, and timeout.
-                 * @param req GetFunctionRequest
-                 * @return GetFunctionOutcome
-                 */
-                GetFunctionOutcome GetFunction(const Model::GetFunctionRequest &request);
-                void GetFunctionAsync(const Model::GetFunctionRequest& request, const GetFunctionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                GetFunctionOutcomeCallable GetFunctionCallable(const Model::GetFunctionRequest& request);
 
                 /**
                  *This API is used to obtain the download address of the function code package.
@@ -635,15 +602,6 @@ An alias must point to a master version and can point to an additional version a
                 UpdateFunctionCodeOutcome UpdateFunctionCode(const Model::UpdateFunctionCodeRequest &request);
                 void UpdateFunctionCodeAsync(const Model::UpdateFunctionCodeRequest& request, const UpdateFunctionCodeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 UpdateFunctionCodeOutcomeCallable UpdateFunctionCodeCallable(const Model::UpdateFunctionCodeRequest& request);
-
-                /**
-                 *This API is used to update the function configuration based on the input parameters.
-                 * @param req UpdateFunctionConfigurationRequest
-                 * @return UpdateFunctionConfigurationOutcome
-                 */
-                UpdateFunctionConfigurationOutcome UpdateFunctionConfiguration(const Model::UpdateFunctionConfigurationRequest &request);
-                void UpdateFunctionConfigurationAsync(const Model::UpdateFunctionConfigurationRequest& request, const UpdateFunctionConfigurationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                UpdateFunctionConfigurationOutcomeCallable UpdateFunctionConfigurationCallable(const Model::UpdateFunctionConfigurationRequest& request);
 
                 /**
                  *This API is used to update the async retry configuration of a function, including the number of retry attempts and message retention period.

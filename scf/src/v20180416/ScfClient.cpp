@@ -126,49 +126,6 @@ ScfClient::CreateAliasOutcomeCallable ScfClient::CreateAliasCallable(const Creat
     return task->get_future();
 }
 
-ScfClient::CreateFunctionOutcome ScfClient::CreateFunction(const CreateFunctionRequest &request)
-{
-    auto outcome = MakeRequest(request, "CreateFunction");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        CreateFunctionResponse rsp = CreateFunctionResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return CreateFunctionOutcome(rsp);
-        else
-            return CreateFunctionOutcome(o.GetError());
-    }
-    else
-    {
-        return CreateFunctionOutcome(outcome.GetError());
-    }
-}
-
-void ScfClient::CreateFunctionAsync(const CreateFunctionRequest& request, const CreateFunctionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateFunction(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-ScfClient::CreateFunctionOutcomeCallable ScfClient::CreateFunctionCallable(const CreateFunctionRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<CreateFunctionOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateFunction(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
 ScfClient::CreateNamespaceOutcome ScfClient::CreateNamespace(const CreateNamespaceRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateNamespace");
@@ -678,49 +635,6 @@ ScfClient::GetAsyncEventStatusOutcomeCallable ScfClient::GetAsyncEventStatusCall
         [this, request]()
         {
             return this->GetAsyncEventStatus(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
-ScfClient::GetFunctionOutcome ScfClient::GetFunction(const GetFunctionRequest &request)
-{
-    auto outcome = MakeRequest(request, "GetFunction");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        GetFunctionResponse rsp = GetFunctionResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return GetFunctionOutcome(rsp);
-        else
-            return GetFunctionOutcome(o.GetError());
-    }
-    else
-    {
-        return GetFunctionOutcome(outcome.GetError());
-    }
-}
-
-void ScfClient::GetFunctionAsync(const GetFunctionRequest& request, const GetFunctionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->GetFunction(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-ScfClient::GetFunctionOutcomeCallable ScfClient::GetFunctionCallable(const GetFunctionRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<GetFunctionOutcome()>>(
-        [this, request]()
-        {
-            return this->GetFunction(request);
         }
     );
 
@@ -1796,49 +1710,6 @@ ScfClient::UpdateFunctionCodeOutcomeCallable ScfClient::UpdateFunctionCodeCallab
         [this, request]()
         {
             return this->UpdateFunctionCode(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
-ScfClient::UpdateFunctionConfigurationOutcome ScfClient::UpdateFunctionConfiguration(const UpdateFunctionConfigurationRequest &request)
-{
-    auto outcome = MakeRequest(request, "UpdateFunctionConfiguration");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        UpdateFunctionConfigurationResponse rsp = UpdateFunctionConfigurationResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return UpdateFunctionConfigurationOutcome(rsp);
-        else
-            return UpdateFunctionConfigurationOutcome(o.GetError());
-    }
-    else
-    {
-        return UpdateFunctionConfigurationOutcome(outcome.GetError());
-    }
-}
-
-void ScfClient::UpdateFunctionConfigurationAsync(const UpdateFunctionConfigurationRequest& request, const UpdateFunctionConfigurationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->UpdateFunctionConfiguration(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-ScfClient::UpdateFunctionConfigurationOutcomeCallable ScfClient::UpdateFunctionConfigurationCallable(const UpdateFunctionConfigurationRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<UpdateFunctionConfigurationOutcome()>>(
-        [this, request]()
-        {
-            return this->UpdateFunctionConfiguration(request);
         }
     );
 
