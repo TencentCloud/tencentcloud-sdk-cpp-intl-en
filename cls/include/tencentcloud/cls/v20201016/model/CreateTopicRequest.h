@@ -152,14 +152,14 @@ namespace TencentCloud
                     bool MaxSplitPartitionsHasBeenSet() const;
 
                     /**
-                     * 获取Log topic storage class. Valid values: `hot`: real-time storage; `cold`: offline storage. Default value: `hot`. If `cold` is passed in, please contact the customer service to add the log topic to the allowlist first.
-                     * @return StorageType Log topic storage class. Valid values: `hot`: real-time storage; `cold`: offline storage. Default value: `hot`. If `cold` is passed in, please contact the customer service to add the log topic to the allowlist first.
+                     * 获取Log topic storage type. Valid values: `hot` (real-time storage); `cold` (IA storage). Default value: `hot`.
+                     * @return StorageType Log topic storage type. Valid values: `hot` (real-time storage); `cold` (IA storage). Default value: `hot`.
                      */
                     std::string GetStorageType() const;
 
                     /**
-                     * 设置Log topic storage class. Valid values: `hot`: real-time storage; `cold`: offline storage. Default value: `hot`. If `cold` is passed in, please contact the customer service to add the log topic to the allowlist first.
-                     * @param StorageType Log topic storage class. Valid values: `hot`: real-time storage; `cold`: offline storage. Default value: `hot`. If `cold` is passed in, please contact the customer service to add the log topic to the allowlist first.
+                     * 设置Log topic storage type. Valid values: `hot` (real-time storage); `cold` (IA storage). Default value: `hot`.
+                     * @param StorageType Log topic storage type. Valid values: `hot` (real-time storage); `cold` (IA storage). Default value: `hot`.
                      */
                     void SetStorageType(const std::string& _storageType);
 
@@ -170,14 +170,14 @@ namespace TencentCloud
                     bool StorageTypeHasBeenSet() const;
 
                     /**
-                     * 获取Lifecycle in days. Value range: 1–366. Default value: 30
-                     * @return Period Lifecycle in days. Value range: 1–366. Default value: 30
+                     * 获取Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
+                     * @return Period Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
                      */
                     int64_t GetPeriod() const;
 
                     /**
-                     * 设置Lifecycle in days. Value range: 1–366. Default value: 30
-                     * @param Period Lifecycle in days. Value range: 1–366. Default value: 30
+                     * 设置Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
+                     * @param Period Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
                      */
                     void SetPeriod(const int64_t& _period);
 
@@ -226,13 +226,13 @@ namespace TencentCloud
                     bool m_maxSplitPartitionsHasBeenSet;
 
                     /**
-                     * Log topic storage class. Valid values: `hot`: real-time storage; `cold`: offline storage. Default value: `hot`. If `cold` is passed in, please contact the customer service to add the log topic to the allowlist first.
+                     * Log topic storage type. Valid values: `hot` (real-time storage); `cold` (IA storage). Default value: `hot`.
                      */
                     std::string m_storageType;
                     bool m_storageTypeHasBeenSet;
 
                     /**
-                     * Lifecycle in days. Value range: 1–366. Default value: 30
+                     * Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
                      */
                     int64_t m_period;
                     bool m_periodHasBeenSet;

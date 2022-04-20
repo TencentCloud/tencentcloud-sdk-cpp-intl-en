@@ -45,14 +45,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Alarm template name
-                     * @return Name Alarm template name
+                     * 获取Notification group name
+                     * @return Name Notification group name
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Alarm template name
-                     * @param Name Alarm template name
+                     * 设置Notification group name
+                     * @param Name Notification group name
                      */
                     void SetName(const std::string& _name);
 
@@ -63,26 +63,26 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Alarm template type. Valid values:
-<br><li> `Trigger`: alarm triggered
-<br><li> `Recovery`: alarm cleared
-<br><li> `All`: alarm triggered and alarm cleared
-                     * @return Type Alarm template type. Valid values:
-<br><li> `Trigger`: alarm triggered
-<br><li> `Recovery`: alarm cleared
-<br><li> `All`: alarm triggered and alarm cleared
+                     * 获取Notification type. Valid values:
+<li> `Trigger`: alarm triggered
+<li> `Recovery`: alarm cleared
+<li> `All`: alarm triggered and alarm cleared
+                     * @return Type Notification type. Valid values:
+<li> `Trigger`: alarm triggered
+<li> `Recovery`: alarm cleared
+<li> `All`: alarm triggered and alarm cleared
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Alarm template type. Valid values:
-<br><li> `Trigger`: alarm triggered
-<br><li> `Recovery`: alarm cleared
-<br><li> `All`: alarm triggered and alarm cleared
-                     * @param Type Alarm template type. Valid values:
-<br><li> `Trigger`: alarm triggered
-<br><li> `Recovery`: alarm cleared
-<br><li> `All`: alarm triggered and alarm cleared
+                     * 设置Notification type. Valid values:
+<li> `Trigger`: alarm triggered
+<li> `Recovery`: alarm cleared
+<li> `All`: alarm triggered and alarm cleared
+                     * @param Type Notification type. Valid values:
+<li> `Trigger`: alarm triggered
+<li> `Recovery`: alarm cleared
+<li> `All`: alarm triggered and alarm cleared
                      */
                     void SetType(const std::string& _type);
 
@@ -93,14 +93,14 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Information of the recipient in alarm template
-                     * @return NoticeReceivers Information of the recipient in alarm template
+                     * 获取Notification recipient
+                     * @return NoticeReceivers Notification recipient
                      */
                     std::vector<NoticeReceiver> GetNoticeReceivers() const;
 
                     /**
-                     * 设置Information of the recipient in alarm template
-                     * @param NoticeReceivers Information of the recipient in alarm template
+                     * 设置Notification recipient
+                     * @param NoticeReceivers Notification recipient
                      */
                     void SetNoticeReceivers(const std::vector<NoticeReceiver>& _noticeReceivers);
 
@@ -111,14 +111,14 @@ namespace TencentCloud
                     bool NoticeReceiversHasBeenSet() const;
 
                     /**
-                     * 获取Alarm template callback information
-                     * @return WebCallbacks Alarm template callback information
+                     * 获取API callback information (including WeCom)
+                     * @return WebCallbacks API callback information (including WeCom)
                      */
                     std::vector<WebCallback> GetWebCallbacks() const;
 
                     /**
-                     * 设置Alarm template callback information
-                     * @param WebCallbacks Alarm template callback information
+                     * 设置API callback information (including WeCom)
+                     * @param WebCallbacks API callback information (including WeCom)
                      */
                     void SetWebCallbacks(const std::vector<WebCallback>& _webCallbacks);
 
@@ -131,28 +131,28 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Alarm template name
+                     * Notification group name
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Alarm template type. Valid values:
-<br><li> `Trigger`: alarm triggered
-<br><li> `Recovery`: alarm cleared
-<br><li> `All`: alarm triggered and alarm cleared
+                     * Notification type. Valid values:
+<li> `Trigger`: alarm triggered
+<li> `Recovery`: alarm cleared
+<li> `All`: alarm triggered and alarm cleared
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Information of the recipient in alarm template
+                     * Notification recipient
                      */
                     std::vector<NoticeReceiver> m_noticeReceivers;
                     bool m_noticeReceiversHasBeenSet;
 
                     /**
-                     * Alarm template callback information
+                     * API callback information (including WeCom)
                      */
                     std::vector<WebCallback> m_webCallbacks;
                     bool m_webCallbacksHasBeenSet;

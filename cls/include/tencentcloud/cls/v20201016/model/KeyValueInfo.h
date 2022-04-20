@@ -48,14 +48,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The field that needs to be configured with a key value or metafield index
-                     * @return Key The field that needs to be configured with a key value or metafield index
+                     * 获取When a key value or metafield index needs to be configured for a field, the metafield `Key` does not need to be prefixed with `__TAG__.` and is consistent with the one when logs are uploaded. `__TAG__.` will be prefixed automatically for display in the console.
+                     * @return Key When a key value or metafield index needs to be configured for a field, the metafield `Key` does not need to be prefixed with `__TAG__.` and is consistent with the one when logs are uploaded. `__TAG__.` will be prefixed automatically for display in the console.
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置The field that needs to be configured with a key value or metafield index
-                     * @param Key The field that needs to be configured with a key value or metafield index
+                     * 设置When a key value or metafield index needs to be configured for a field, the metafield `Key` does not need to be prefixed with `__TAG__.` and is consistent with the one when logs are uploaded. `__TAG__.` will be prefixed automatically for display in the console.
+                     * @param Key When a key value or metafield index needs to be configured for a field, the metafield `Key` does not need to be prefixed with `__TAG__.` and is consistent with the one when logs are uploaded. `__TAG__.` will be prefixed automatically for display in the console.
                      */
                     void SetKey(const std::string& _key);
 
@@ -86,7 +86,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The field that needs to be configured with a key value or metafield index
+                     * When a key value or metafield index needs to be configured for a field, the metafield `Key` does not need to be prefixed with `__TAG__.` and is consistent with the one when logs are uploaded. `__TAG__.` will be prefixed automatically for display in the console.
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;

@@ -55,6 +55,8 @@
 #include <tencentcloud/vod/v20180717/model/CreateSampleSnapshotTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/CreateSnapshotByTimeOffsetTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/CreateSnapshotByTimeOffsetTemplateResponse.h>
+#include <tencentcloud/vod/v20180717/model/CreateStorageRegionRequest.h>
+#include <tencentcloud/vod/v20180717/model/CreateStorageRegionResponse.h>
 #include <tencentcloud/vod/v20180717/model/CreateSubAppIdRequest.h>
 #include <tencentcloud/vod/v20180717/model/CreateSubAppIdResponse.h>
 #include <tencentcloud/vod/v20180717/model/CreateSuperPlayerConfigRequest.h>
@@ -143,6 +145,8 @@
 #include <tencentcloud/vod/v20180717/model/DescribeStorageDataResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeStorageDetailsRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeStorageDetailsResponse.h>
+#include <tencentcloud/vod/v20180717/model/DescribeStorageRegionsRequest.h>
+#include <tencentcloud/vod/v20180717/model/DescribeStorageRegionsResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeSubAppIdsRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeSubAppIdsResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeSuperPlayerConfigsRequest.h>
@@ -179,6 +183,8 @@
 #include <tencentcloud/vod/v20180717/model/ModifyClassResponse.h>
 #include <tencentcloud/vod/v20180717/model/ModifyContentReviewTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/ModifyContentReviewTemplateResponse.h>
+#include <tencentcloud/vod/v20180717/model/ModifyDefaultStorageRegionRequest.h>
+#include <tencentcloud/vod/v20180717/model/ModifyDefaultStorageRegionResponse.h>
 #include <tencentcloud/vod/v20180717/model/ModifyImageSpriteTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/ModifyImageSpriteTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/ModifyMediaInfoRequest.h>
@@ -291,6 +297,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateSnapshotByTimeOffsetTemplateResponse> CreateSnapshotByTimeOffsetTemplateOutcome;
                 typedef std::future<CreateSnapshotByTimeOffsetTemplateOutcome> CreateSnapshotByTimeOffsetTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CreateSnapshotByTimeOffsetTemplateRequest&, CreateSnapshotByTimeOffsetTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateSnapshotByTimeOffsetTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateStorageRegionResponse> CreateStorageRegionOutcome;
+                typedef std::future<CreateStorageRegionOutcome> CreateStorageRegionOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::CreateStorageRegionRequest&, CreateStorageRegionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateStorageRegionAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateSubAppIdResponse> CreateSubAppIdOutcome;
                 typedef std::future<CreateSubAppIdOutcome> CreateSubAppIdOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CreateSubAppIdRequest&, CreateSubAppIdOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateSubAppIdAsyncHandler;
@@ -423,6 +432,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeStorageDetailsResponse> DescribeStorageDetailsOutcome;
                 typedef std::future<DescribeStorageDetailsOutcome> DescribeStorageDetailsOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeStorageDetailsRequest&, DescribeStorageDetailsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStorageDetailsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeStorageRegionsResponse> DescribeStorageRegionsOutcome;
+                typedef std::future<DescribeStorageRegionsOutcome> DescribeStorageRegionsOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::DescribeStorageRegionsRequest&, DescribeStorageRegionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStorageRegionsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeSubAppIdsResponse> DescribeSubAppIdsOutcome;
                 typedef std::future<DescribeSubAppIdsOutcome> DescribeSubAppIdsOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeSubAppIdsRequest&, DescribeSubAppIdsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSubAppIdsAsyncHandler;
@@ -477,6 +489,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyContentReviewTemplateResponse> ModifyContentReviewTemplateOutcome;
                 typedef std::future<ModifyContentReviewTemplateOutcome> ModifyContentReviewTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ModifyContentReviewTemplateRequest&, ModifyContentReviewTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyContentReviewTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyDefaultStorageRegionResponse> ModifyDefaultStorageRegionOutcome;
+                typedef std::future<ModifyDefaultStorageRegionOutcome> ModifyDefaultStorageRegionOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::ModifyDefaultStorageRegionRequest&, ModifyDefaultStorageRegionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDefaultStorageRegionAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyImageSpriteTemplateResponse> ModifyImageSpriteTemplateOutcome;
                 typedef std::future<ModifyImageSpriteTemplateOutcome> ModifyImageSpriteTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ModifyImageSpriteTemplateRequest&, ModifyImageSpriteTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyImageSpriteTemplateAsyncHandler;
@@ -708,6 +723,17 @@ namespace TencentCloud
                 CreateSnapshotByTimeOffsetTemplateOutcome CreateSnapshotByTimeOffsetTemplate(const Model::CreateSnapshotByTimeOffsetTemplateRequest &request);
                 void CreateSnapshotByTimeOffsetTemplateAsync(const Model::CreateSnapshotByTimeOffsetTemplateRequest& request, const CreateSnapshotByTimeOffsetTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateSnapshotByTimeOffsetTemplateOutcomeCallable CreateSnapshotByTimeOffsetTemplateCallable(const Model::CreateSnapshotByTimeOffsetTemplateRequest& request);
+
+                /**
+                 *This API is used to enable storage in a region.
+  1. When you activate VOD, the system will enable storage for you in certain regions. If you need to store data in another region, you can use this API to enable storage in that region.
+  2. You can use the `DescribeStorageRegions` API to query all supported storage regions and the regions you have storage access to currently.
+                 * @param req CreateStorageRegionRequest
+                 * @return CreateStorageRegionOutcome
+                 */
+                CreateStorageRegionOutcome CreateStorageRegion(const Model::CreateStorageRegionRequest &request);
+                void CreateStorageRegionAsync(const Model::CreateStorageRegionRequest& request, const CreateStorageRegionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateStorageRegionOutcomeCallable CreateStorageRegionCallable(const Model::CreateStorageRegionRequest& request);
 
                 /**
                  *This API is used to create a VOD subapplication.
@@ -1154,6 +1180,18 @@ This API returns the video content duration for intelligent recognition in secon
                 DescribeStorageDetailsOutcomeCallable DescribeStorageDetailsCallable(const Model::DescribeStorageDetailsRequest& request);
 
                 /**
+                 *This API is used to query the following information:
+  1. All supported storage regions.
+  2. The regions you have storage access to currently.
+  3. The default storage region.
+                 * @param req DescribeStorageRegionsRequest
+                 * @return DescribeStorageRegionsOutcome
+                 */
+                DescribeStorageRegionsOutcome DescribeStorageRegions(const Model::DescribeStorageRegionsRequest &request);
+                void DescribeStorageRegionsAsync(const Model::DescribeStorageRegionsRequest& request, const DescribeStorageRegionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeStorageRegionsOutcomeCallable DescribeStorageRegionsCallable(const Model::DescribeStorageRegionsRequest& request);
+
+                /**
                  *This API is used to query the list of the primary application and subapplications of the current account.
                  * @param req DescribeSubAppIdsRequest
                  * @return DescribeSubAppIdsOutcome
@@ -1342,6 +1380,15 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
                 ModifyContentReviewTemplateOutcome ModifyContentReviewTemplate(const Model::ModifyContentReviewTemplateRequest &request);
                 void ModifyContentReviewTemplateAsync(const Model::ModifyContentReviewTemplateRequest& request, const ModifyContentReviewTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyContentReviewTemplateOutcomeCallable ModifyContentReviewTemplateCallable(const Model::ModifyContentReviewTemplateRequest& request);
+
+                /**
+                 *This API is used to set the default storage region. A file will be stored in the default region if no region is specified for file upload.
+                 * @param req ModifyDefaultStorageRegionRequest
+                 * @return ModifyDefaultStorageRegionOutcome
+                 */
+                ModifyDefaultStorageRegionOutcome ModifyDefaultStorageRegion(const Model::ModifyDefaultStorageRegionRequest &request);
+                void ModifyDefaultStorageRegionAsync(const Model::ModifyDefaultStorageRegionRequest& request, const ModifyDefaultStorageRegionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyDefaultStorageRegionOutcomeCallable ModifyDefaultStorageRegionCallable(const Model::ModifyDefaultStorageRegionRequest& request);
 
                 /**
                  *This API is used to modify a custom image sprite generating template.

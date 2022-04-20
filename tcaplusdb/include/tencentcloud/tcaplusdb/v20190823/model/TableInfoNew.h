@@ -642,6 +642,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool DbClusterInfoStructHasBeenSet() const;
 
+                    /**
+                     * 获取The number of days after which the table Txh backup files will be expire and deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return TxhBackupExpireDay The number of days after which the table Txh backup files will be expire and deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetTxhBackupExpireDay() const;
+
+                    /**
+                     * 设置The number of days after which the table Txh backup files will be expire and deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param TxhBackupExpireDay The number of days after which the table Txh backup files will be expire and deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetTxhBackupExpireDay(const uint64_t& _txhBackupExpireDay);
+
+                    /**
+                     * 判断参数 TxhBackupExpireDay 是否已赋值
+                     * @return TxhBackupExpireDay 是否已赋值
+                     */
+                    bool TxhBackupExpireDayHasBeenSet() const;
+
                 private:
 
                     /**
@@ -832,6 +854,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_dbClusterInfoStruct;
                     bool m_dbClusterInfoStructHasBeenSet;
+
+                    /**
+                     * The number of days after which the table Txh backup files will be expire and deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_txhBackupExpireDay;
+                    bool m_txhBackupExpireDayHasBeenSet;
 
                 };
             }

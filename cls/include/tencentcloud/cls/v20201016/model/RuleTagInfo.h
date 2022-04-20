@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Tag index configuration information
+                * Metafield index configuration
                 */
                 class RuleTagInfo : public AbstractModel
                 {
@@ -66,14 +66,14 @@ namespace TencentCloud
                     bool CaseSensitiveHasBeenSet() const;
 
                     /**
-                     * 获取Field information in tag index configuration
-                     * @return KeyValues Field information in tag index configuration
+                     * 获取Field information in the metafield index configuration
+                     * @return KeyValues Field information in the metafield index configuration
                      */
                     std::vector<KeyValueInfo> GetKeyValues() const;
 
                     /**
-                     * 设置Field information in tag index configuration
-                     * @param KeyValues Field information in tag index configuration
+                     * 设置Field information in the metafield index configuration
+                     * @param KeyValues Field information in the metafield index configuration
                      */
                     void SetKeyValues(const std::vector<KeyValueInfo>& _keyValues);
 
@@ -92,7 +92,7 @@ namespace TencentCloud
                     bool m_caseSensitiveHasBeenSet;
 
                     /**
-                     * Field information in tag index configuration
+                     * Field information in the metafield index configuration
                      */
                     std::vector<KeyValueInfo> m_keyValues;
                     bool m_keyValuesHasBeenSet;

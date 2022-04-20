@@ -51,8 +51,6 @@
 #include <tencentcloud/tcaplusdb/v20190823/model/DeleteTableIndexResponse.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/DeleteTablesRequest.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/DeleteTablesResponse.h>
-#include <tencentcloud/tcaplusdb/v20190823/model/DescribeApplicationsRequest.h>
-#include <tencentcloud/tcaplusdb/v20190823/model/DescribeApplicationsResponse.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/DescribeClusterTagsRequest.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/DescribeClusterTagsResponse.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/DescribeClustersRequest.h>
@@ -179,9 +177,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteTablesResponse> DeleteTablesOutcome;
                 typedef std::future<DeleteTablesOutcome> DeleteTablesOutcomeCallable;
                 typedef std::function<void(const TcaplusdbClient*, const Model::DeleteTablesRequest&, DeleteTablesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteTablesAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeApplicationsResponse> DescribeApplicationsOutcome;
-                typedef std::future<DescribeApplicationsOutcome> DescribeApplicationsOutcomeCallable;
-                typedef std::function<void(const TcaplusdbClient*, const Model::DescribeApplicationsRequest&, DescribeApplicationsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeApplicationsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeClusterTagsResponse> DescribeClusterTagsOutcome;
                 typedef std::future<DescribeClusterTagsOutcome> DescribeClusterTagsOutcomeCallable;
                 typedef std::function<void(const TcaplusdbClient*, const Model::DescribeClusterTagsRequest&, DescribeClusterTagsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClusterTagsAsyncHandler;
@@ -415,15 +410,6 @@ namespace TencentCloud
                 DeleteTablesOutcome DeleteTables(const Model::DeleteTablesRequest &request);
                 void DeleteTablesAsync(const Model::DeleteTablesRequest& request, const DeleteTablesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteTablesOutcomeCallable DeleteTablesCallable(const Model::DeleteTablesRequest& request);
-
-                /**
-                 *This API is used to query the list of cluster operation applications.
-                 * @param req DescribeApplicationsRequest
-                 * @return DescribeApplicationsOutcome
-                 */
-                DescribeApplicationsOutcome DescribeApplications(const Model::DescribeApplicationsRequest &request);
-                void DescribeApplicationsAsync(const Model::DescribeApplicationsRequest& request, const DescribeApplicationsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeApplicationsOutcomeCallable DescribeApplicationsCallable(const Model::DescribeApplicationsRequest& request);
 
                 /**
                  *This API is used to get the associated tag list of a cluster.

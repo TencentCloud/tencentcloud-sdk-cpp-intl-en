@@ -93,8 +93,8 @@ namespace TencentCloud
                     bool UpdateEndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Latest LogListener version available to the current user
-                     * @return LatestAgentVersion Latest LogListener version available to the current user
+                     * 获取Latest LogListener version available to the current user
+                     * @return LatestAgentVersion Latest LogListener version available to the current user
                      */
                     std::string GetLatestAgentVersion() const;
 
@@ -143,7 +143,7 @@ namespace TencentCloud
                     bool m_updateEndTimeHasBeenSet;
 
                     /**
-                     * Latest LogListener version available to the current user
+                     * Latest LogListener version available to the current user
                      */
                     std::string m_latestAgentVersion;
                     bool m_latestAgentVersionHasBeenSet;

@@ -67,6 +67,20 @@ namespace TencentCloud
                      */
                     bool FlowIdHasBeenSet() const;
 
+                    /**
+                     * 获取Order ID, which is used for calling the `DescribeOrders` API.
+ The parameter can be used to either query order details or call the user account APIs to make another payment when this payment fails.
+                     * @return DealName Order ID, which is used for calling the `DescribeOrders` API.
+ The parameter can be used to either query order details or call the user account APIs to make another payment when this payment fails.
+                     */
+                    std::string GetDealName() const;
+
+                    /**
+                     * 判断参数 DealName 是否已赋值
+                     * @return DealName 是否已赋值
+                     */
+                    bool DealNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -80,6 +94,13 @@ namespace TencentCloud
                      */
                     int64_t m_flowId;
                     bool m_flowIdHasBeenSet;
+
+                    /**
+                     * Order ID, which is used for calling the `DescribeOrders` API.
+ The parameter can be used to either query order details or call the user account APIs to make another payment when this payment fails.
+                     */
+                    std::string m_dealName;
+                    bool m_dealNameHasBeenSet;
 
                 };
             }

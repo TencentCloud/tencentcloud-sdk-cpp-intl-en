@@ -63,14 +63,14 @@ namespace TencentCloud
                     bool TopicIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the shipping task
-                     * @return Effective Whether to enable the shipping task
+                     * 获取Whether the shipping task takes effect (default: no)
+                     * @return Effective Whether the shipping task takes effect (default: no)
                      */
                     bool GetEffective() const;
 
                     /**
-                     * 设置Whether to enable the shipping task
-                     * @param Effective Whether to enable the shipping task
+                     * 设置Whether the shipping task takes effect (default: no)
+                     * @param Effective Whether the shipping task takes effect (default: no)
                      */
                     void SetEffective(const bool& _effective);
 
@@ -143,7 +143,7 @@ namespace TencentCloud
                     bool m_topicIdHasBeenSet;
 
                     /**
-                     * Whether to enable the shipping task
+                     * Whether the shipping task takes effect (default: no)
                      */
                     bool m_effective;
                     bool m_effectiveHasBeenSet;

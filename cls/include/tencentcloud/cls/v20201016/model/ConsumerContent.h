@@ -90,6 +90,28 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     bool MetaFieldsHasBeenSet() const;
 
+                    /**
+                     * 获取This parameter is required if `EnableTag` is `true`, and is used to specify whether the tag information is JSON tiled. Valid values: `true` (not tiled); `false` (tiled)
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return TagJsonNotTiled This parameter is required if `EnableTag` is `true`, and is used to specify whether the tag information is JSON tiled. Valid values: `true` (not tiled); `false` (tiled)
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    bool GetTagJsonNotTiled() const;
+
+                    /**
+                     * 设置This parameter is required if `EnableTag` is `true`, and is used to specify whether the tag information is JSON tiled. Valid values: `true` (not tiled); `false` (tiled)
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param TagJsonNotTiled This parameter is required if `EnableTag` is `true`, and is used to specify whether the tag information is JSON tiled. Valid values: `true` (not tiled); `false` (tiled)
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetTagJsonNotTiled(const bool& _tagJsonNotTiled);
+
+                    /**
+                     * 判断参数 TagJsonNotTiled 是否已赋值
+                     * @return TagJsonNotTiled 是否已赋值
+                     */
+                    bool TagJsonNotTiledHasBeenSet() const;
+
                 private:
 
                     /**
@@ -105,6 +127,13 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::vector<std::string> m_metaFields;
                     bool m_metaFieldsHasBeenSet;
+
+                    /**
+                     * This parameter is required if `EnableTag` is `true`, and is used to specify whether the tag information is JSON tiled. Valid values: `true` (not tiled); `false` (tiled)
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    bool m_tagJsonNotTiled;
+                    bool m_tagJsonNotTiledHasBeenSet;
 
                 };
             }

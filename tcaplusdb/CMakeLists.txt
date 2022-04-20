@@ -29,7 +29,7 @@ set(tcaplusdb_public_header_model
   include/tencentcloud/tcaplusdb/v20190823/model/DeleteTableIndexResponse.h
   include/tencentcloud/tcaplusdb/v20190823/model/TableRollbackResultNew.h
   include/tencentcloud/tcaplusdb/v20190823/model/ApplyStatus.h
-  include/tencentcloud/tcaplusdb/v20190823/model/RegionInfo.h
+  include/tencentcloud/tcaplusdb/v20190823/model/ServerMachineInfo.h
   include/tencentcloud/tcaplusdb/v20190823/model/DescribeTablesResponse.h
   include/tencentcloud/tcaplusdb/v20190823/model/ModifySnapshotsResponse.h
   include/tencentcloud/tcaplusdb/v20190823/model/UpdateApplyResponse.h
@@ -48,7 +48,6 @@ set(tcaplusdb_public_header_model
   include/tencentcloud/tcaplusdb/v20190823/model/DeleteTableGroupRequest.h
   include/tencentcloud/tcaplusdb/v20190823/model/DescribeSnapshotsRequest.h
   include/tencentcloud/tcaplusdb/v20190823/model/TagsInfoOfTableGroup.h
-  include/tencentcloud/tcaplusdb/v20190823/model/DescribeApplicationsResponse.h
   include/tencentcloud/tcaplusdb/v20190823/model/CreateTableGroupRequest.h
   include/tencentcloud/tcaplusdb/v20190823/model/ModifyClusterMachineResponse.h
   include/tencentcloud/tcaplusdb/v20190823/model/TagsInfoOfTable.h
@@ -59,7 +58,7 @@ set(tcaplusdb_public_header_model
   include/tencentcloud/tcaplusdb/v20190823/model/ApplyResult.h
   include/tencentcloud/tcaplusdb/v20190823/model/DescribeTasksRequest.h
   include/tencentcloud/tcaplusdb/v20190823/model/SnapshotInfoNew.h
-  include/tencentcloud/tcaplusdb/v20190823/model/Application.h
+  include/tencentcloud/tcaplusdb/v20190823/model/RecoverRecycleTablesResponse.h
   include/tencentcloud/tcaplusdb/v20190823/model/ClearTablesResponse.h
   include/tencentcloud/tcaplusdb/v20190823/model/DescribeIdlFileInfosRequest.h
   include/tencentcloud/tcaplusdb/v20190823/model/ModifyTableTagsResponse.h
@@ -98,7 +97,6 @@ set(tcaplusdb_public_header_model
   include/tencentcloud/tcaplusdb/v20190823/model/SetTableIndexResponse.h
   include/tencentcloud/tcaplusdb/v20190823/model/ClearTablesRequest.h
   include/tencentcloud/tcaplusdb/v20190823/model/DescribeIdlFileInfosResponse.h
-  include/tencentcloud/tcaplusdb/v20190823/model/ServerMachineInfo.h
   include/tencentcloud/tcaplusdb/v20190823/model/CreateSnapshotsResponse.h
   include/tencentcloud/tcaplusdb/v20190823/model/IdlFileInfo.h
   include/tencentcloud/tcaplusdb/v20190823/model/DisableRestProxyResponse.h
@@ -136,9 +134,8 @@ set(tcaplusdb_public_header_model
   include/tencentcloud/tcaplusdb/v20190823/model/TableResultNew.h
   include/tencentcloud/tcaplusdb/v20190823/model/CreateTablesRequest.h
   include/tencentcloud/tcaplusdb/v20190823/model/DescribeClusterTagsRequest.h
-  include/tencentcloud/tcaplusdb/v20190823/model/RecoverRecycleTablesResponse.h
   include/tencentcloud/tcaplusdb/v20190823/model/MergeTablesDataResponse.h
-  include/tencentcloud/tcaplusdb/v20190823/model/DescribeApplicationsRequest.h
+  include/tencentcloud/tcaplusdb/v20190823/model/RegionInfo.h
   include/tencentcloud/tcaplusdb/v20190823/model/DescribeTableGroupsResponse.h
   include/tencentcloud/tcaplusdb/v20190823/model/DeleteTableGroupResponse.h
   include/tencentcloud/tcaplusdb/v20190823/model/PoolInfo.h
@@ -169,7 +166,7 @@ set(tcaplusdb_src
   src/v20190823/model/DeleteTableIndexResponse.cpp
   src/v20190823/model/TableRollbackResultNew.cpp
   src/v20190823/model/ApplyStatus.cpp
-  src/v20190823/model/RegionInfo.cpp
+  src/v20190823/model/ServerMachineInfo.cpp
   src/v20190823/model/DescribeTablesResponse.cpp
   src/v20190823/model/ModifySnapshotsResponse.cpp
   src/v20190823/model/UpdateApplyResponse.cpp
@@ -188,7 +185,6 @@ set(tcaplusdb_src
   src/v20190823/model/DeleteTableGroupRequest.cpp
   src/v20190823/model/DescribeSnapshotsRequest.cpp
   src/v20190823/model/TagsInfoOfTableGroup.cpp
-  src/v20190823/model/DescribeApplicationsResponse.cpp
   src/v20190823/model/CreateTableGroupRequest.cpp
   src/v20190823/model/ModifyClusterMachineResponse.cpp
   src/v20190823/model/TagsInfoOfTable.cpp
@@ -199,7 +195,7 @@ set(tcaplusdb_src
   src/v20190823/model/ApplyResult.cpp
   src/v20190823/model/DescribeTasksRequest.cpp
   src/v20190823/model/SnapshotInfoNew.cpp
-  src/v20190823/model/Application.cpp
+  src/v20190823/model/RecoverRecycleTablesResponse.cpp
   src/v20190823/model/ClearTablesResponse.cpp
   src/v20190823/model/DescribeIdlFileInfosRequest.cpp
   src/v20190823/model/ModifyTableTagsResponse.cpp
@@ -238,7 +234,6 @@ set(tcaplusdb_src
   src/v20190823/model/SetTableIndexResponse.cpp
   src/v20190823/model/ClearTablesRequest.cpp
   src/v20190823/model/DescribeIdlFileInfosResponse.cpp
-  src/v20190823/model/ServerMachineInfo.cpp
   src/v20190823/model/CreateSnapshotsResponse.cpp
   src/v20190823/model/IdlFileInfo.cpp
   src/v20190823/model/DisableRestProxyResponse.cpp
@@ -276,9 +271,8 @@ set(tcaplusdb_src
   src/v20190823/model/TableResultNew.cpp
   src/v20190823/model/CreateTablesRequest.cpp
   src/v20190823/model/DescribeClusterTagsRequest.cpp
-  src/v20190823/model/RecoverRecycleTablesResponse.cpp
   src/v20190823/model/MergeTablesDataResponse.cpp
-  src/v20190823/model/DescribeApplicationsRequest.cpp
+  src/v20190823/model/RegionInfo.cpp
   src/v20190823/model/DescribeTableGroupsResponse.cpp
   src/v20190823/model/DeleteTableGroupResponse.cpp
   src/v20190823/model/PoolInfo.cpp

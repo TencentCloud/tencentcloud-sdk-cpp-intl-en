@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool TagValueHasBeenSet() const;
 
                     /**
-                     * 获取[Six-segment resource description](https://cloud.tencent.com/document/product/598/10606)
-                     * @return Resource [Six-segment resource description](https://cloud.tencent.com/document/product/598/10606)
+                     * 获取[Six-segment resource description](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
+                     * @return Resource [Six-segment resource description](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
                      */
                     std::string GetResource() const;
 
                     /**
-                     * 设置[Six-segment resource description](https://cloud.tencent.com/document/product/598/10606)
-                     * @param Resource [Six-segment resource description](https://cloud.tencent.com/document/product/598/10606)
+                     * 设置[Six-segment resource description](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
+                     * @param Resource [Six-segment resource description](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
                      */
                     void SetResource(const std::string& _resource);
 
@@ -111,7 +111,7 @@ namespace TencentCloud
                     bool m_tagValueHasBeenSet;
 
                     /**
-                     * [Six-segment resource description](https://cloud.tencent.com/document/product/598/10606)
+                     * [Six-segment resource description](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
                      */
                     std::string m_resource;
                     bool m_resourceHasBeenSet;

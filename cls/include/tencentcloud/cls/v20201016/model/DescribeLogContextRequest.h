@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool TopicIdHasBeenSet() const;
 
                     /**
-                     * 获取Log time in the format of `YYYY-mm-dd HH:MM:SS`
-                     * @return BTime Log time in the format of `YYYY-mm-dd HH:MM:SS`
+                     * 获取Log time in the format of YYYY-mm-dd HH:MM:SS.FFF
+                     * @return BTime Log time in the format of YYYY-mm-dd HH:MM:SS.FFF
                      */
                     std::string GetBTime() const;
 
                     /**
-                     * 设置Log time in the format of `YYYY-mm-dd HH:MM:SS`
-                     * @param BTime Log time in the format of `YYYY-mm-dd HH:MM:SS`
+                     * 设置Log time in the format of YYYY-mm-dd HH:MM:SS.FFF
+                     * @param BTime Log time in the format of YYYY-mm-dd HH:MM:SS.FFF
                      */
                     void SetBTime(const std::string& _bTime);
 
@@ -159,7 +159,7 @@ namespace TencentCloud
                     bool m_topicIdHasBeenSet;
 
                     /**
-                     * Log time in the format of `YYYY-mm-dd HH:MM:SS`
+                     * Log time in the format of YYYY-mm-dd HH:MM:SS.FFF
                      */
                     std::string m_bTime;
                     bool m_bTimeHasBeenSet;

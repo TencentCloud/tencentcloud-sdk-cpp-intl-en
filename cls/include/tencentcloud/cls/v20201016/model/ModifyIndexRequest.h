@@ -80,14 +80,14 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Index rule. Either `Rule` or `Effective` must exist.
-                     * @return Rule Index rule. Either `Rule` or `Effective` must exist.
+                     * 获取Index rule
+                     * @return Rule Index rule
                      */
                     RuleInfo GetRule() const;
 
                     /**
-                     * 设置Index rule. Either `Rule` or `Effective` must exist.
-                     * @param Rule Index rule. Either `Rule` or `Effective` must exist.
+                     * 设置Index rule
+                     * @param Rule Index rule
                      */
                     void SetRule(const RuleInfo& _rule);
 
@@ -96,6 +96,42 @@ namespace TencentCloud
                      * @return Rule 是否已赋值
                      */
                     bool RuleHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return IncludeInternalFields 
+                     */
+                    bool GetIncludeInternalFields() const;
+
+                    /**
+                     * 设置
+                     * @param IncludeInternalFields 
+                     */
+                    void SetIncludeInternalFields(const bool& _includeInternalFields);
+
+                    /**
+                     * 判断参数 IncludeInternalFields 是否已赋值
+                     * @return IncludeInternalFields 是否已赋值
+                     */
+                    bool IncludeInternalFieldsHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return MetadataFlag 
+                     */
+                    uint64_t GetMetadataFlag() const;
+
+                    /**
+                     * 设置
+                     * @param MetadataFlag 
+                     */
+                    void SetMetadataFlag(const uint64_t& _metadataFlag);
+
+                    /**
+                     * 判断参数 MetadataFlag 是否已赋值
+                     * @return MetadataFlag 是否已赋值
+                     */
+                    bool MetadataFlagHasBeenSet() const;
 
                 private:
 
@@ -112,10 +148,22 @@ namespace TencentCloud
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Index rule. Either `Rule` or `Effective` must exist.
+                     * Index rule
                      */
                     RuleInfo m_rule;
                     bool m_ruleHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_includeInternalFields;
+                    bool m_includeInternalFieldsHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_metadataFlag;
+                    bool m_metadataFlagHasBeenSet;
 
                 };
             }

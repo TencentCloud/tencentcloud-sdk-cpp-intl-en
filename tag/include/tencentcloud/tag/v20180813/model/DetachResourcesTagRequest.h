@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Resource service name
-                     * @return ServiceType Resource service name
+                     * 获取Resource service name (the third segment in the six-segment resource description)
+                     * @return ServiceType Resource service name (the third segment in the six-segment resource description)
                      */
                     std::string GetServiceType() const;
 
                     /**
-                     * 设置Resource service name
-                     * @param ServiceType Resource service name
+                     * 设置Resource service name (the third segment in the six-segment resource description)
+                     * @param ServiceType Resource service name (the third segment in the six-segment resource description)
                      */
                     void SetServiceType(const std::string& _serviceType);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool TagKeyHasBeenSet() const;
 
                     /**
-                     * 获取Resource region. This field is not required for resources that do not have the region attribute
-                     * @return ResourceRegion Resource region. This field is not required for resources that do not have the region attribute
+                     * 获取Resource region. If resources have the region attribute, this field is required; otherwise, it is optional.
+                     * @return ResourceRegion Resource region. If resources have the region attribute, this field is required; otherwise, it is optional.
                      */
                     std::string GetResourceRegion() const;
 
                     /**
-                     * 设置Resource region. This field is not required for resources that do not have the region attribute
-                     * @param ResourceRegion Resource region. This field is not required for resources that do not have the region attribute
+                     * 设置Resource region. If resources have the region attribute, this field is required; otherwise, it is optional.
+                     * @param ResourceRegion Resource region. If resources have the region attribute, this field is required; otherwise, it is optional.
                      */
                     void SetResourceRegion(const std::string& _resourceRegion);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool ResourceRegionHasBeenSet() const;
 
                     /**
-                     * 获取Resource prefix, which is not required for COS buckets
-                     * @return ResourcePrefix Resource prefix, which is not required for COS buckets
+                     * 获取Resource prefix (the part before "/" in the last segment in the six-segment resource description), which is optional for COS buckets but required for other Tencent Cloud resources.
+                     * @return ResourcePrefix Resource prefix (the part before "/" in the last segment in the six-segment resource description), which is optional for COS buckets but required for other Tencent Cloud resources.
                      */
                     std::string GetResourcePrefix() const;
 
                     /**
-                     * 设置Resource prefix, which is not required for COS buckets
-                     * @param ResourcePrefix Resource prefix, which is not required for COS buckets
+                     * 设置Resource prefix (the part before "/" in the last segment in the six-segment resource description), which is optional for COS buckets but required for other Tencent Cloud resources.
+                     * @param ResourcePrefix Resource prefix (the part before "/" in the last segment in the six-segment resource description), which is optional for COS buckets but required for other Tencent Cloud resources.
                      */
                     void SetResourcePrefix(const std::string& _resourcePrefix);
 
@@ -135,7 +135,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Resource service name
+                     * Resource service name (the third segment in the six-segment resource description)
                      */
                     std::string m_serviceType;
                     bool m_serviceTypeHasBeenSet;
@@ -153,13 +153,13 @@ namespace TencentCloud
                     bool m_tagKeyHasBeenSet;
 
                     /**
-                     * Resource region. This field is not required for resources that do not have the region attribute
+                     * Resource region. If resources have the region attribute, this field is required; otherwise, it is optional.
                      */
                     std::string m_resourceRegion;
                     bool m_resourceRegionHasBeenSet;
 
                     /**
-                     * Resource prefix, which is not required for COS buckets
+                     * Resource prefix (the part before "/" in the last segment in the six-segment resource description), which is optional for COS buckets but required for other Tencent Cloud resources.
                      */
                     std::string m_resourcePrefix;
                     bool m_resourcePrefixHasBeenSet;

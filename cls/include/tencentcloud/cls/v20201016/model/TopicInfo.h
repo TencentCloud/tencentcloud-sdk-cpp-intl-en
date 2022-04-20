@@ -262,18 +262,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool StorageTypeHasBeenSet() const;
 
                     /**
-                     * 获取Lifecycle in days
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Period Lifecycle in days
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return Period Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     int64_t GetPeriod() const;
 
                     /**
-                     * 设置Lifecycle in days
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Period Lifecycle in days
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param Period Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     void SetPeriod(const int64_t& _period);
 
@@ -356,8 +356,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_storageTypeHasBeenSet;
 
                     /**
-                     * Lifecycle in days
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     int64_t m_period;
                     bool m_periodHasBeenSet;

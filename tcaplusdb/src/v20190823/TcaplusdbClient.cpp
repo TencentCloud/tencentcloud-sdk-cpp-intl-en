@@ -642,49 +642,6 @@ TcaplusdbClient::DeleteTablesOutcomeCallable TcaplusdbClient::DeleteTablesCallab
     return task->get_future();
 }
 
-TcaplusdbClient::DescribeApplicationsOutcome TcaplusdbClient::DescribeApplications(const DescribeApplicationsRequest &request)
-{
-    auto outcome = MakeRequest(request, "DescribeApplications");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        DescribeApplicationsResponse rsp = DescribeApplicationsResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return DescribeApplicationsOutcome(rsp);
-        else
-            return DescribeApplicationsOutcome(o.GetError());
-    }
-    else
-    {
-        return DescribeApplicationsOutcome(outcome.GetError());
-    }
-}
-
-void TcaplusdbClient::DescribeApplicationsAsync(const DescribeApplicationsRequest& request, const DescribeApplicationsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeApplications(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-TcaplusdbClient::DescribeApplicationsOutcomeCallable TcaplusdbClient::DescribeApplicationsCallable(const DescribeApplicationsRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<DescribeApplicationsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeApplications(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
 TcaplusdbClient::DescribeClusterTagsOutcome TcaplusdbClient::DescribeClusterTags(const DescribeClusterTagsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeClusterTags");

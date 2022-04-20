@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Log topic ID to be queried
-                     * @return TopicId Log topic ID to be queried
+                     * 获取ID of the log topic to be searched
+                     * @return TopicId ID of the log topic to be searched
                      */
                     std::string GetTopicId() const;
 
                     /**
-                     * 设置Log topic ID to be queried
-                     * @param TopicId Log topic ID to be queried
+                     * 设置ID of the log topic to be searched
+                     * @param TopicId ID of the log topic to be searched
                      */
                     void SetTopicId(const std::string& _topicId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool TopicIdHasBeenSet() const;
 
                     /**
-                     * 获取Start time of the log to be queried, which is a Unix timestamp in milliseconds
-                     * @return From Start time of the log to be queried, which is a Unix timestamp in milliseconds
+                     * 获取Start time of the log to be searched, which is a Unix timestamp in milliseconds
+                     * @return From Start time of the log to be searched, which is a Unix timestamp in milliseconds
                      */
                     int64_t GetFrom() const;
 
                     /**
-                     * 设置Start time of the log to be queried, which is a Unix timestamp in milliseconds
-                     * @param From Start time of the log to be queried, which is a Unix timestamp in milliseconds
+                     * 设置Start time of the log to be searched, which is a Unix timestamp in milliseconds
+                     * @param From Start time of the log to be searched, which is a Unix timestamp in milliseconds
                      */
                     void SetFrom(const int64_t& _from);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool FromHasBeenSet() const;
 
                     /**
-                     * 获取End time of the log to be queried, which is a Unix timestamp in milliseconds
-                     * @return To End time of the log to be queried, which is a Unix timestamp in milliseconds
+                     * 获取End time of the log to be searched, which is a Unix timestamp in milliseconds
+                     * @return To End time of the log to be searched, which is a Unix timestamp in milliseconds
                      */
                     int64_t GetTo() const;
 
                     /**
-                     * 设置End time of the log to be queried, which is a Unix timestamp in milliseconds
-                     * @param To End time of the log to be queried, which is a Unix timestamp in milliseconds
+                     * 设置End time of the log to be searched, which is a Unix timestamp in milliseconds
+                     * @param To End time of the log to be searched, which is a Unix timestamp in milliseconds
                      */
                     void SetTo(const int64_t& _to);
 
@@ -97,14 +97,18 @@ namespace TencentCloud
                     bool ToHasBeenSet() const;
 
                     /**
-                     * 获取Query statement. Maximum length: 4096
-                     * @return Query Query statement. Maximum length: 4096
+                     * 获取Statement for search and analysis. Maximum length: 12 KB
+A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search rule]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
+                     * @return Query Statement for search and analysis. Maximum length: 12 KB
+A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search rule]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
                      */
                     std::string GetQuery() const;
 
                     /**
-                     * 设置Query statement. Maximum length: 4096
-                     * @param Query Query statement. Maximum length: 4096
+                     * 设置Statement for search and analysis. Maximum length: 12 KB
+A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search rule]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
+                     * @param Query Statement for search and analysis. Maximum length: 12 KB
+A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search rule]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
                      */
                     void SetQuery(const std::string& _query);
 
@@ -115,14 +119,26 @@ namespace TencentCloud
                     bool QueryHasBeenSet() const;
 
                     /**
-                     * 获取Number of raw logs returned in a single query. Maximum value: 100. If the query statement (Query) contains an SQL query, you need to specify the number of SQL query results in `Query`. For more information, please visit https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1
-                     * @return Limit Number of raw logs returned in a single query. Maximum value: 100. If the query statement (Query) contains an SQL query, you need to specify the number of SQL query results in `Query`. For more information, please visit https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1
+                     * 获取The number of raw logs returned by a single query. Maximum value: 1000. You need to use `Context` to continue to get logs.
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To limit the number of analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
+                     * @return Limit The number of raw logs returned by a single query. Maximum value: 1000. You need to use `Context` to continue to get logs.
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To limit the number of analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of raw logs returned in a single query. Maximum value: 100. If the query statement (Query) contains an SQL query, you need to specify the number of SQL query results in `Query`. For more information, please visit https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1
-                     * @param Limit Number of raw logs returned in a single query. Maximum value: 100. If the query statement (Query) contains an SQL query, you need to specify the number of SQL query results in `Query`. For more information, please visit https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1
+                     * 设置The number of raw logs returned by a single query. Maximum value: 1000. You need to use `Context` to continue to get logs.
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To limit the number of analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
+                     * @param Limit The number of raw logs returned by a single query. Maximum value: 1000. You need to use `Context` to continue to get logs.
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To limit the number of analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
                      */
                     void SetLimit(const int64_t& _limit);
 
@@ -133,14 +149,26 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取This parameter is used to load more logs. Pass through the last `Context` value returned to get more log content. Up to 10,000 raw logs can be obtained in total. This parameter expires in 1 hour.
-                     * @return Context This parameter is used to load more logs. Pass through the last `Context` value returned to get more log content. Up to 10,000 raw logs can be obtained in total. This parameter expires in 1 hour.
+                     * 获取You can pass through the `Context` value (validity: 1 hour) returned by the last API to continue to get logs, which can get up to 10,000 raw logs.
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To continue to get analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
+                     * @return Context You can pass through the `Context` value (validity: 1 hour) returned by the last API to continue to get logs, which can get up to 10,000 raw logs.
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To continue to get analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
                      */
                     std::string GetContext() const;
 
                     /**
-                     * 设置This parameter is used to load more logs. Pass through the last `Context` value returned to get more log content. Up to 10,000 raw logs can be obtained in total. This parameter expires in 1 hour.
-                     * @param Context This parameter is used to load more logs. Pass through the last `Context` value returned to get more log content. Up to 10,000 raw logs can be obtained in total. This parameter expires in 1 hour.
+                     * 设置You can pass through the `Context` value (validity: 1 hour) returned by the last API to continue to get logs, which can get up to 10,000 raw logs.
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To continue to get analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
+                     * @param Context You can pass through the `Context` value (validity: 1 hour) returned by the last API to continue to get logs, which can get up to 10,000 raw logs.
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To continue to get analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
                      */
                     void SetContext(const std::string& _context);
 
@@ -151,14 +179,26 @@ namespace TencentCloud
                     bool ContextHasBeenSet() const;
 
                     /**
-                     * 获取Order of the logs sorted by time returned by the log API. Valid values: `asc`: ascending; `desc`: descending. Default value: `desc`
-                     * @return Sort Order of the logs sorted by time returned by the log API. Valid values: `asc`: ascending; `desc`: descending. Default value: `desc`
+                     * 获取Time order of the logs returned. Valid values: `asc` (ascending); `desc`: (descending). Default value: `desc`
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To sort the analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58978?from_cn_redirect=1" target="_blank">SQL ORDER BY Syntax</a>.
+                     * @return Sort Time order of the logs returned. Valid values: `asc` (ascending); `desc`: (descending). Default value: `desc`
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To sort the analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58978?from_cn_redirect=1" target="_blank">SQL ORDER BY Syntax</a>.
                      */
                     std::string GetSort() const;
 
                     /**
-                     * 设置Order of the logs sorted by time returned by the log API. Valid values: `asc`: ascending; `desc`: descending. Default value: `desc`
-                     * @param Sort Order of the logs sorted by time returned by the log API. Valid values: `asc`: ascending; `desc`: descending. Default value: `desc`
+                     * 设置Time order of the logs returned. Valid values: `asc` (ascending); `desc`: (descending). Default value: `desc`
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To sort the analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58978?from_cn_redirect=1" target="_blank">SQL ORDER BY Syntax</a>.
+                     * @param Sort Time order of the logs returned. Valid values: `asc` (ascending); `desc`: (descending). Default value: `desc`
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To sort the analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58978?from_cn_redirect=1" target="_blank">SQL ORDER BY Syntax</a>.
                      */
                     void SetSort(const std::string& _sort);
 
@@ -169,14 +209,22 @@ namespace TencentCloud
                     bool SortHasBeenSet() const;
 
                     /**
-                     * 获取If the value is `true`, the new search method will be used, and the response parameters `AnalysisRecords` and `Columns` will be valid. If the value is `false`, the old search method will be used, and `AnalysisResults` and `ColNames` will be valid.
-                     * @return UseNewAnalysis If the value is `true`, the new search method will be used, and the response parameters `AnalysisRecords` and `Columns` will be valid. If the value is `false`, the old search method will be used, and `AnalysisResults` and `ColNames` will be valid.
+                     * 获取If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
+If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
+The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`).
+                     * @return UseNewAnalysis If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
+If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
+The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`).
                      */
                     bool GetUseNewAnalysis() const;
 
                     /**
-                     * 设置If the value is `true`, the new search method will be used, and the response parameters `AnalysisRecords` and `Columns` will be valid. If the value is `false`, the old search method will be used, and `AnalysisResults` and `ColNames` will be valid.
-                     * @param UseNewAnalysis If the value is `true`, the new search method will be used, and the response parameters `AnalysisRecords` and `Columns` will be valid. If the value is `false`, the old search method will be used, and `AnalysisResults` and `ColNames` will be valid.
+                     * 设置If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
+If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
+The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`).
+                     * @param UseNewAnalysis If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
+If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
+The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`).
                      */
                     void SetUseNewAnalysis(const bool& _useNewAnalysis);
 
@@ -189,49 +237,61 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Log topic ID to be queried
+                     * ID of the log topic to be searched
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
 
                     /**
-                     * Start time of the log to be queried, which is a Unix timestamp in milliseconds
+                     * Start time of the log to be searched, which is a Unix timestamp in milliseconds
                      */
                     int64_t m_from;
                     bool m_fromHasBeenSet;
 
                     /**
-                     * End time of the log to be queried, which is a Unix timestamp in milliseconds
+                     * End time of the log to be searched, which is a Unix timestamp in milliseconds
                      */
                     int64_t m_to;
                     bool m_toHasBeenSet;
 
                     /**
-                     * Query statement. Maximum length: 4096
+                     * Statement for search and analysis. Maximum length: 12 KB
+A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search rule]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
                      */
                     std::string m_query;
                     bool m_queryHasBeenSet;
 
                     /**
-                     * Number of raw logs returned in a single query. Maximum value: 100. If the query statement (Query) contains an SQL query, you need to specify the number of SQL query results in `Query`. For more information, please visit https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1
+                     * The number of raw logs returned by a single query. Maximum value: 1000. You need to use `Context` to continue to get logs.
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To limit the number of analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * This parameter is used to load more logs. Pass through the last `Context` value returned to get more log content. Up to 10,000 raw logs can be obtained in total. This parameter expires in 1 hour.
+                     * You can pass through the `Context` value (validity: 1 hour) returned by the last API to continue to get logs, which can get up to 10,000 raw logs.
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To continue to get analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
                      */
                     std::string m_context;
                     bool m_contextHasBeenSet;
 
                     /**
-                     * Order of the logs sorted by time returned by the log API. Valid values: `asc`: ascending; `desc`: descending. Default value: `desc`
+                     * Time order of the logs returned. Valid values: `asc` (ascending); `desc`: (descending). Default value: `desc`
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To sort the analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58978?from_cn_redirect=1" target="_blank">SQL ORDER BY Syntax</a>.
                      */
                     std::string m_sort;
                     bool m_sortHasBeenSet;
 
                     /**
-                     * If the value is `true`, the new search method will be used, and the response parameters `AnalysisRecords` and `Columns` will be valid. If the value is `false`, the old search method will be used, and `AnalysisResults` and `ColNames` will be valid.
+                     * If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
+If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
+The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`).
                      */
                     bool m_useNewAnalysis;
                     bool m_useNewAnalysisHasBeenSet;

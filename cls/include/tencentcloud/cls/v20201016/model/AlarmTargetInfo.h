@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Log alarm monitoring object
+                * Alarm object
                 */
                 class AlarmTargetInfo : public AbstractModel
                 {

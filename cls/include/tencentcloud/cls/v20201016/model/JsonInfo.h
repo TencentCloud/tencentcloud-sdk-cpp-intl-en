@@ -65,18 +65,18 @@ namespace TencentCloud
                     bool EnableTagHasBeenSet() const;
 
                     /**
-                     * 获取Metadata information list
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return MetaFields Metadata information list
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Metadata information list. Valid values: __SOURCE__; __FILENAME__; __TIMESTAMP__
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return MetaFields Metadata information list. Valid values: __SOURCE__; __FILENAME__; __TIMESTAMP__
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::vector<std::string> GetMetaFields() const;
 
                     /**
-                     * 设置Metadata information list
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param MetaFields Metadata information list
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Metadata information list. Valid values: __SOURCE__; __FILENAME__; __TIMESTAMP__
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param MetaFields Metadata information list. Valid values: __SOURCE__; __FILENAME__; __TIMESTAMP__
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     void SetMetaFields(const std::vector<std::string>& _metaFields);
 
@@ -95,8 +95,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_enableTagHasBeenSet;
 
                     /**
-                     * Metadata information list
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Metadata information list. Valid values: __SOURCE__; __FILENAME__; __TIMESTAMP__
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::vector<std::string> m_metaFields;
                     bool m_metaFieldsHasBeenSet;

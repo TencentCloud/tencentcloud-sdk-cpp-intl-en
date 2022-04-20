@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool ResourcePrefixHasBeenSet() const;
 
                     /**
-                     * 获取Unique resource ID
-                     * @return ResourceId Unique resource ID
+                     * 获取Unique resource ID. Queries with `ResourceId` only may be slow or fail to return results. We recommend you also enter `ServiceType`, `ResourcePrefix`, and `ResourceRegion` (which can be ignored for resources that don't have the region attribute) when entering `ResourceId`.
+                     * @return ResourceId Unique resource ID. Queries with `ResourceId` only may be slow or fail to return results. We recommend you also enter `ServiceType`, `ResourcePrefix`, and `ResourceRegion` (which can be ignored for resources that don't have the region attribute) when entering `ResourceId`.
                      */
                     std::string GetResourceId() const;
 
                     /**
-                     * 设置Unique resource ID
-                     * @param ResourceId Unique resource ID
+                     * 设置Unique resource ID. Queries with `ResourceId` only may be slow or fail to return results. We recommend you also enter `ServiceType`, `ResourcePrefix`, and `ResourceRegion` (which can be ignored for resources that don't have the region attribute) when entering `ResourceId`.
+                     * @param ResourceId Unique resource ID. Queries with `ResourceId` only may be slow or fail to return results. We recommend you also enter `ServiceType`, `ResourcePrefix`, and `ResourceRegion` (which can be ignored for resources that don't have the region attribute) when entering `ResourceId`.
                      */
                     void SetResourceId(const std::string& _resourceId);
 
@@ -169,14 +169,14 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is a COS resource ID
-                     * @return CosResourceId Whether it is a COS resource ID
+                     * 获取Whether it is a COS resource (0 or 1). This parameter is required when the entered `ResourceId` is a COS resource.
+                     * @return CosResourceId Whether it is a COS resource (0 or 1). This parameter is required when the entered `ResourceId` is a COS resource.
                      */
                     uint64_t GetCosResourceId() const;
 
                     /**
-                     * 设置Whether it is a COS resource ID
-                     * @param CosResourceId Whether it is a COS resource ID
+                     * 设置Whether it is a COS resource (0 or 1). This parameter is required when the entered `ResourceId` is a COS resource.
+                     * @param CosResourceId Whether it is a COS resource (0 or 1). This parameter is required when the entered `ResourceId` is a COS resource.
                      */
                     void SetCosResourceId(const uint64_t& _cosResourceId);
 
@@ -213,7 +213,7 @@ namespace TencentCloud
                     bool m_resourcePrefixHasBeenSet;
 
                     /**
-                     * Unique resource ID
+                     * Unique resource ID. Queries with `ResourceId` only may be slow or fail to return results. We recommend you also enter `ServiceType`, `ResourcePrefix`, and `ResourceRegion` (which can be ignored for resources that don't have the region attribute) when entering `ResourceId`.
                      */
                     std::string m_resourceId;
                     bool m_resourceIdHasBeenSet;
@@ -231,7 +231,7 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Whether it is a COS resource ID
+                     * Whether it is a COS resource (0 or 1). This parameter is required when the entered `ResourceId` is a COS resource.
                      */
                     uint64_t m_cosResourceId;
                     bool m_cosResourceIdHasBeenSet;

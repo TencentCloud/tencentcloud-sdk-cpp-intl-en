@@ -40,6 +40,49 @@ DcdbClient::DcdbClient(const Credential &credential, const string &region, const
 }
 
 
+DcdbClient::ActiveHourDCDBInstanceOutcome DcdbClient::ActiveHourDCDBInstance(const ActiveHourDCDBInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "ActiveHourDCDBInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ActiveHourDCDBInstanceResponse rsp = ActiveHourDCDBInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ActiveHourDCDBInstanceOutcome(rsp);
+        else
+            return ActiveHourDCDBInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return ActiveHourDCDBInstanceOutcome(outcome.GetError());
+    }
+}
+
+void DcdbClient::ActiveHourDCDBInstanceAsync(const ActiveHourDCDBInstanceRequest& request, const ActiveHourDCDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ActiveHourDCDBInstance(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DcdbClient::ActiveHourDCDBInstanceOutcomeCallable DcdbClient::ActiveHourDCDBInstanceCallable(const ActiveHourDCDBInstanceRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ActiveHourDCDBInstanceOutcome()>>(
+        [this, request]()
+        {
+            return this->ActiveHourDCDBInstance(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 DcdbClient::AssociateSecurityGroupsOutcome DcdbClient::AssociateSecurityGroups(const AssociateSecurityGroupsRequest &request)
 {
     auto outcome = MakeRequest(request, "AssociateSecurityGroups");
@@ -119,6 +162,49 @@ DcdbClient::CancelDcnJobOutcomeCallable DcdbClient::CancelDcnJobCallable(const C
         [this, request]()
         {
             return this->CancelDcnJob(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DcdbClient::CloneAccountOutcome DcdbClient::CloneAccount(const CloneAccountRequest &request)
+{
+    auto outcome = MakeRequest(request, "CloneAccount");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CloneAccountResponse rsp = CloneAccountResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CloneAccountOutcome(rsp);
+        else
+            return CloneAccountOutcome(o.GetError());
+    }
+    else
+    {
+        return CloneAccountOutcome(outcome.GetError());
+    }
+}
+
+void DcdbClient::CloneAccountAsync(const CloneAccountRequest& request, const CloneAccountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CloneAccount(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DcdbClient::CloneAccountOutcomeCallable DcdbClient::CloneAccountCallable(const CloneAccountRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CloneAccountOutcome()>>(
+        [this, request]()
+        {
+            return this->CloneAccount(request);
         }
     );
 
@@ -341,6 +427,92 @@ DcdbClient::DeleteAccountOutcomeCallable DcdbClient::DeleteAccountCallable(const
     return task->get_future();
 }
 
+DcdbClient::DescribeAccountPrivilegesOutcome DcdbClient::DescribeAccountPrivileges(const DescribeAccountPrivilegesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAccountPrivileges");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAccountPrivilegesResponse rsp = DescribeAccountPrivilegesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAccountPrivilegesOutcome(rsp);
+        else
+            return DescribeAccountPrivilegesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAccountPrivilegesOutcome(outcome.GetError());
+    }
+}
+
+void DcdbClient::DescribeAccountPrivilegesAsync(const DescribeAccountPrivilegesRequest& request, const DescribeAccountPrivilegesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeAccountPrivileges(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DcdbClient::DescribeAccountPrivilegesOutcomeCallable DcdbClient::DescribeAccountPrivilegesCallable(const DescribeAccountPrivilegesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeAccountPrivilegesOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeAccountPrivileges(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DcdbClient::DescribeAccountsOutcome DcdbClient::DescribeAccounts(const DescribeAccountsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAccounts");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAccountsResponse rsp = DescribeAccountsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAccountsOutcome(rsp);
+        else
+            return DescribeAccountsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAccountsOutcome(outcome.GetError());
+    }
+}
+
+void DcdbClient::DescribeAccountsAsync(const DescribeAccountsRequest& request, const DescribeAccountsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeAccounts(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DcdbClient::DescribeAccountsOutcomeCallable DcdbClient::DescribeAccountsCallable(const DescribeAccountsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeAccountsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeAccounts(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 DcdbClient::DescribeDBLogFilesOutcome DcdbClient::DescribeDBLogFiles(const DescribeDBLogFilesRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeDBLogFiles");
@@ -384,42 +556,85 @@ DcdbClient::DescribeDBLogFilesOutcomeCallable DcdbClient::DescribeDBLogFilesCall
     return task->get_future();
 }
 
-DcdbClient::DescribeDBSecurityGroupsOutcome DcdbClient::DescribeDBSecurityGroups(const DescribeDBSecurityGroupsRequest &request)
+DcdbClient::DescribeDBParametersOutcome DcdbClient::DescribeDBParameters(const DescribeDBParametersRequest &request)
 {
-    auto outcome = MakeRequest(request, "DescribeDBSecurityGroups");
+    auto outcome = MakeRequest(request, "DescribeDBParameters");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        DescribeDBSecurityGroupsResponse rsp = DescribeDBSecurityGroupsResponse();
+        DescribeDBParametersResponse rsp = DescribeDBParametersResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return DescribeDBSecurityGroupsOutcome(rsp);
+            return DescribeDBParametersOutcome(rsp);
         else
-            return DescribeDBSecurityGroupsOutcome(o.GetError());
+            return DescribeDBParametersOutcome(o.GetError());
     }
     else
     {
-        return DescribeDBSecurityGroupsOutcome(outcome.GetError());
+        return DescribeDBParametersOutcome(outcome.GetError());
     }
 }
 
-void DcdbClient::DescribeDBSecurityGroupsAsync(const DescribeDBSecurityGroupsRequest& request, const DescribeDBSecurityGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void DcdbClient::DescribeDBParametersAsync(const DescribeDBParametersRequest& request, const DescribeDBParametersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
     auto fn = [this, request, handler, context]()
     {
-        handler(this, request, this->DescribeDBSecurityGroups(request), context);
+        handler(this, request, this->DescribeDBParameters(request), context);
     };
 
     Executor::GetInstance()->Submit(new Runnable(fn));
 }
 
-DcdbClient::DescribeDBSecurityGroupsOutcomeCallable DcdbClient::DescribeDBSecurityGroupsCallable(const DescribeDBSecurityGroupsRequest &request)
+DcdbClient::DescribeDBParametersOutcomeCallable DcdbClient::DescribeDBParametersCallable(const DescribeDBParametersRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<DescribeDBSecurityGroupsOutcome()>>(
+    auto task = std::make_shared<std::packaged_task<DescribeDBParametersOutcome()>>(
         [this, request]()
         {
-            return this->DescribeDBSecurityGroups(request);
+            return this->DescribeDBParameters(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DcdbClient::DescribeDBSlowLogsOutcome DcdbClient::DescribeDBSlowLogs(const DescribeDBSlowLogsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDBSlowLogs");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDBSlowLogsResponse rsp = DescribeDBSlowLogsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDBSlowLogsOutcome(rsp);
+        else
+            return DescribeDBSlowLogsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDBSlowLogsOutcome(outcome.GetError());
+    }
+}
+
+void DcdbClient::DescribeDBSlowLogsAsync(const DescribeDBSlowLogsRequest& request, const DescribeDBSlowLogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeDBSlowLogs(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DcdbClient::DescribeDBSlowLogsOutcomeCallable DcdbClient::DescribeDBSlowLogsCallable(const DescribeDBSlowLogsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeDBSlowLogsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeDBSlowLogs(request);
         }
     );
 
@@ -549,6 +764,178 @@ DcdbClient::DescribeDCDBInstancesOutcomeCallable DcdbClient::DescribeDCDBInstanc
         [this, request]()
         {
             return this->DescribeDCDBInstances(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DcdbClient::DescribeDCDBShardsOutcome DcdbClient::DescribeDCDBShards(const DescribeDCDBShardsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDCDBShards");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDCDBShardsResponse rsp = DescribeDCDBShardsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDCDBShardsOutcome(rsp);
+        else
+            return DescribeDCDBShardsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDCDBShardsOutcome(outcome.GetError());
+    }
+}
+
+void DcdbClient::DescribeDCDBShardsAsync(const DescribeDCDBShardsRequest& request, const DescribeDCDBShardsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeDCDBShards(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DcdbClient::DescribeDCDBShardsOutcomeCallable DcdbClient::DescribeDCDBShardsCallable(const DescribeDCDBShardsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeDCDBShardsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeDCDBShards(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DcdbClient::DescribeDatabaseObjectsOutcome DcdbClient::DescribeDatabaseObjects(const DescribeDatabaseObjectsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDatabaseObjects");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDatabaseObjectsResponse rsp = DescribeDatabaseObjectsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDatabaseObjectsOutcome(rsp);
+        else
+            return DescribeDatabaseObjectsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDatabaseObjectsOutcome(outcome.GetError());
+    }
+}
+
+void DcdbClient::DescribeDatabaseObjectsAsync(const DescribeDatabaseObjectsRequest& request, const DescribeDatabaseObjectsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeDatabaseObjects(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DcdbClient::DescribeDatabaseObjectsOutcomeCallable DcdbClient::DescribeDatabaseObjectsCallable(const DescribeDatabaseObjectsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeDatabaseObjectsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeDatabaseObjects(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DcdbClient::DescribeDatabaseTableOutcome DcdbClient::DescribeDatabaseTable(const DescribeDatabaseTableRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDatabaseTable");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDatabaseTableResponse rsp = DescribeDatabaseTableResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDatabaseTableOutcome(rsp);
+        else
+            return DescribeDatabaseTableOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDatabaseTableOutcome(outcome.GetError());
+    }
+}
+
+void DcdbClient::DescribeDatabaseTableAsync(const DescribeDatabaseTableRequest& request, const DescribeDatabaseTableAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeDatabaseTable(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DcdbClient::DescribeDatabaseTableOutcomeCallable DcdbClient::DescribeDatabaseTableCallable(const DescribeDatabaseTableRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeDatabaseTableOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeDatabaseTable(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DcdbClient::DescribeDatabasesOutcome DcdbClient::DescribeDatabases(const DescribeDatabasesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDatabases");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDatabasesResponse rsp = DescribeDatabasesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDatabasesOutcome(rsp);
+        else
+            return DescribeDatabasesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDatabasesOutcome(outcome.GetError());
+    }
+}
+
+void DcdbClient::DescribeDatabasesAsync(const DescribeDatabasesRequest& request, const DescribeDatabasesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeDatabases(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DcdbClient::DescribeDatabasesOutcomeCallable DcdbClient::DescribeDatabasesCallable(const DescribeDatabasesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeDatabasesOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeDatabases(request);
         }
     );
 
@@ -728,49 +1115,6 @@ DcdbClient::DescribeProjectSecurityGroupsOutcomeCallable DcdbClient::DescribePro
     return task->get_future();
 }
 
-DcdbClient::DescribeProjectsOutcome DcdbClient::DescribeProjects(const DescribeProjectsRequest &request)
-{
-    auto outcome = MakeRequest(request, "DescribeProjects");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        DescribeProjectsResponse rsp = DescribeProjectsResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return DescribeProjectsOutcome(rsp);
-        else
-            return DescribeProjectsOutcome(o.GetError());
-    }
-    else
-    {
-        return DescribeProjectsOutcome(outcome.GetError());
-    }
-}
-
-void DcdbClient::DescribeProjectsAsync(const DescribeProjectsRequest& request, const DescribeProjectsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeProjects(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-DcdbClient::DescribeProjectsOutcomeCallable DcdbClient::DescribeProjectsCallable(const DescribeProjectsRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<DescribeProjectsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeProjects(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
 DcdbClient::DestroyDCDBInstanceOutcome DcdbClient::DestroyDCDBInstance(const DestroyDCDBInstanceRequest &request)
 {
     auto outcome = MakeRequest(request, "DestroyDCDBInstance");
@@ -943,6 +1287,92 @@ DcdbClient::GrantAccountPrivilegesOutcomeCallable DcdbClient::GrantAccountPrivil
     return task->get_future();
 }
 
+DcdbClient::InitDCDBInstancesOutcome DcdbClient::InitDCDBInstances(const InitDCDBInstancesRequest &request)
+{
+    auto outcome = MakeRequest(request, "InitDCDBInstances");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        InitDCDBInstancesResponse rsp = InitDCDBInstancesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return InitDCDBInstancesOutcome(rsp);
+        else
+            return InitDCDBInstancesOutcome(o.GetError());
+    }
+    else
+    {
+        return InitDCDBInstancesOutcome(outcome.GetError());
+    }
+}
+
+void DcdbClient::InitDCDBInstancesAsync(const InitDCDBInstancesRequest& request, const InitDCDBInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->InitDCDBInstances(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DcdbClient::InitDCDBInstancesOutcomeCallable DcdbClient::InitDCDBInstancesCallable(const InitDCDBInstancesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<InitDCDBInstancesOutcome()>>(
+        [this, request]()
+        {
+            return this->InitDCDBInstances(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DcdbClient::IsolateHourDCDBInstanceOutcome DcdbClient::IsolateHourDCDBInstance(const IsolateHourDCDBInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "IsolateHourDCDBInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        IsolateHourDCDBInstanceResponse rsp = IsolateHourDCDBInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return IsolateHourDCDBInstanceOutcome(rsp);
+        else
+            return IsolateHourDCDBInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return IsolateHourDCDBInstanceOutcome(outcome.GetError());
+    }
+}
+
+void DcdbClient::IsolateHourDCDBInstanceAsync(const IsolateHourDCDBInstanceRequest& request, const IsolateHourDCDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->IsolateHourDCDBInstance(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DcdbClient::IsolateHourDCDBInstanceOutcomeCallable DcdbClient::IsolateHourDCDBInstanceCallable(const IsolateHourDCDBInstanceRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<IsolateHourDCDBInstanceOutcome()>>(
+        [this, request]()
+        {
+            return this->IsolateHourDCDBInstance(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 DcdbClient::ModifyAccountDescriptionOutcome DcdbClient::ModifyAccountDescription(const ModifyAccountDescriptionRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyAccountDescription");
@@ -1065,6 +1495,92 @@ DcdbClient::ModifyDBInstancesProjectOutcomeCallable DcdbClient::ModifyDBInstance
         [this, request]()
         {
             return this->ModifyDBInstancesProject(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DcdbClient::ModifyDBParametersOutcome DcdbClient::ModifyDBParameters(const ModifyDBParametersRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyDBParameters");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyDBParametersResponse rsp = ModifyDBParametersResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyDBParametersOutcome(rsp);
+        else
+            return ModifyDBParametersOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyDBParametersOutcome(outcome.GetError());
+    }
+}
+
+void DcdbClient::ModifyDBParametersAsync(const ModifyDBParametersRequest& request, const ModifyDBParametersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyDBParameters(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DcdbClient::ModifyDBParametersOutcomeCallable DcdbClient::ModifyDBParametersCallable(const ModifyDBParametersRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyDBParametersOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyDBParameters(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DcdbClient::ModifyDBSyncModeOutcome DcdbClient::ModifyDBSyncMode(const ModifyDBSyncModeRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyDBSyncMode");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyDBSyncModeResponse rsp = ModifyDBSyncModeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyDBSyncModeOutcome(rsp);
+        else
+            return ModifyDBSyncModeOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyDBSyncModeOutcome(outcome.GetError());
+    }
+}
+
+void DcdbClient::ModifyDBSyncModeAsync(const ModifyDBSyncModeRequest& request, const ModifyDBSyncModeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyDBSyncMode(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DcdbClient::ModifyDBSyncModeOutcomeCallable DcdbClient::ModifyDBSyncModeCallable(const ModifyDBSyncModeRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyDBSyncModeOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyDBSyncMode(request);
         }
     );
 

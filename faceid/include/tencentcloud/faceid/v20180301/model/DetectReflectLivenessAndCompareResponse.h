@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取URL of the best screenshot (in JPG format) of the video after successful verification
-                     * @return BestFrameUrl URL of the best screenshot (in JPG format) of the video after successful verification
+                     * 获取Temporary URL of the best screenshot (.jpg) of the video after successful verification. Both the screenshot and the URL are valid for two hours only, so you need to download the screenshot within this period.
+                     * @return BestFrameUrl Temporary URL of the best screenshot (.jpg) of the video after successful verification. Both the screenshot and the URL are valid for two hours only, so you need to download the screenshot within this period.
                      */
                     std::string GetBestFrameUrl() const;
 
@@ -56,8 +56,8 @@ namespace TencentCloud
                     bool BestFrameUrlHasBeenSet() const;
 
                     /**
-                     * 获取MD5 hash value of the best screenshot of the video after successful verification
-                     * @return BestFrameMd5 MD5 hash value of the best screenshot of the video after successful verification
+                     * 获取MD5 hash value (32-bit) of the best screenshot of the video after successful verification, which is used to verify the `BestFrame` consistency.
+                     * @return BestFrameMd5 MD5 hash value (32-bit) of the best screenshot of the video after successful verification, which is used to verify the `BestFrame` consistency.
                      */
                     std::string GetBestFrameMd5() const;
 
@@ -68,8 +68,8 @@ namespace TencentCloud
                     bool BestFrameMd5HasBeenSet() const;
 
                     /**
-                     * 获取Service error code. `Success` will be returned for success. For error information, please see the `FailedOperation` section in the error code list below.
-                     * @return Result Service error code. `Success` will be returned for success. For error information, please see the `FailedOperation` section in the error code list below.
+                     * 获取Service error code. `Success` will be returned for success. For error information, see the `FailedOperation` section in the error code list below.
+                     * @return Result Service error code. `Success` will be returned for success. For error information, see the `FailedOperation` section in the error code list below.
                      */
                     std::string GetResult() const;
 
@@ -106,19 +106,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * URL of the best screenshot (in JPG format) of the video after successful verification
+                     * Temporary URL of the best screenshot (.jpg) of the video after successful verification. Both the screenshot and the URL are valid for two hours only, so you need to download the screenshot within this period.
                      */
                     std::string m_bestFrameUrl;
                     bool m_bestFrameUrlHasBeenSet;
 
                     /**
-                     * MD5 hash value of the best screenshot of the video after successful verification
+                     * MD5 hash value (32-bit) of the best screenshot of the video after successful verification, which is used to verify the `BestFrame` consistency.
                      */
                     std::string m_bestFrameMd5;
                     bool m_bestFrameMd5HasBeenSet;
 
                     /**
-                     * Service error code. `Success` will be returned for success. For error information, please see the `FailedOperation` section in the error code list below.
+                     * Service error code. `Success` will be returned for success. For error information, see the `FailedOperation` section in the error code list below.
                      */
                     std::string m_result;
                     bool m_resultHasBeenSet;

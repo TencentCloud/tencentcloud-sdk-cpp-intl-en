@@ -29,10 +29,6 @@
 #include <tencentcloud/cls/v20201016/model/CreateAlarmResponse.h>
 #include <tencentcloud/cls/v20201016/model/CreateAlarmNoticeRequest.h>
 #include <tencentcloud/cls/v20201016/model/CreateAlarmNoticeResponse.h>
-#include <tencentcloud/cls/v20201016/model/CreateAsyncContextTaskRequest.h>
-#include <tencentcloud/cls/v20201016/model/CreateAsyncContextTaskResponse.h>
-#include <tencentcloud/cls/v20201016/model/CreateAsyncSearchTaskRequest.h>
-#include <tencentcloud/cls/v20201016/model/CreateAsyncSearchTaskResponse.h>
 #include <tencentcloud/cls/v20201016/model/CreateConfigRequest.h>
 #include <tencentcloud/cls/v20201016/model/CreateConfigResponse.h>
 #include <tencentcloud/cls/v20201016/model/CreateConsumerRequest.h>
@@ -45,18 +41,12 @@
 #include <tencentcloud/cls/v20201016/model/CreateLogsetResponse.h>
 #include <tencentcloud/cls/v20201016/model/CreateMachineGroupRequest.h>
 #include <tencentcloud/cls/v20201016/model/CreateMachineGroupResponse.h>
-#include <tencentcloud/cls/v20201016/model/CreateShipperRequest.h>
-#include <tencentcloud/cls/v20201016/model/CreateShipperResponse.h>
 #include <tencentcloud/cls/v20201016/model/CreateTopicRequest.h>
 #include <tencentcloud/cls/v20201016/model/CreateTopicResponse.h>
 #include <tencentcloud/cls/v20201016/model/DeleteAlarmRequest.h>
 #include <tencentcloud/cls/v20201016/model/DeleteAlarmResponse.h>
 #include <tencentcloud/cls/v20201016/model/DeleteAlarmNoticeRequest.h>
 #include <tencentcloud/cls/v20201016/model/DeleteAlarmNoticeResponse.h>
-#include <tencentcloud/cls/v20201016/model/DeleteAsyncContextTaskRequest.h>
-#include <tencentcloud/cls/v20201016/model/DeleteAsyncContextTaskResponse.h>
-#include <tencentcloud/cls/v20201016/model/DeleteAsyncSearchTaskRequest.h>
-#include <tencentcloud/cls/v20201016/model/DeleteAsyncSearchTaskResponse.h>
 #include <tencentcloud/cls/v20201016/model/DeleteConfigRequest.h>
 #include <tencentcloud/cls/v20201016/model/DeleteConfigResponse.h>
 #include <tencentcloud/cls/v20201016/model/DeleteConfigFromMachineGroupRequest.h>
@@ -79,14 +69,6 @@
 #include <tencentcloud/cls/v20201016/model/DescribeAlarmNoticesResponse.h>
 #include <tencentcloud/cls/v20201016/model/DescribeAlarmsRequest.h>
 #include <tencentcloud/cls/v20201016/model/DescribeAlarmsResponse.h>
-#include <tencentcloud/cls/v20201016/model/DescribeAsyncContextResultRequest.h>
-#include <tencentcloud/cls/v20201016/model/DescribeAsyncContextResultResponse.h>
-#include <tencentcloud/cls/v20201016/model/DescribeAsyncContextTasksRequest.h>
-#include <tencentcloud/cls/v20201016/model/DescribeAsyncContextTasksResponse.h>
-#include <tencentcloud/cls/v20201016/model/DescribeAsyncSearchResultRequest.h>
-#include <tencentcloud/cls/v20201016/model/DescribeAsyncSearchResultResponse.h>
-#include <tencentcloud/cls/v20201016/model/DescribeAsyncSearchTasksRequest.h>
-#include <tencentcloud/cls/v20201016/model/DescribeAsyncSearchTasksResponse.h>
 #include <tencentcloud/cls/v20201016/model/DescribeConfigMachineGroupsRequest.h>
 #include <tencentcloud/cls/v20201016/model/DescribeConfigMachineGroupsResponse.h>
 #include <tencentcloud/cls/v20201016/model/DescribeConfigsRequest.h>
@@ -99,6 +81,8 @@
 #include <tencentcloud/cls/v20201016/model/DescribeIndexResponse.h>
 #include <tencentcloud/cls/v20201016/model/DescribeLogContextRequest.h>
 #include <tencentcloud/cls/v20201016/model/DescribeLogContextResponse.h>
+#include <tencentcloud/cls/v20201016/model/DescribeLogHistogramRequest.h>
+#include <tencentcloud/cls/v20201016/model/DescribeLogHistogramResponse.h>
 #include <tencentcloud/cls/v20201016/model/DescribeLogsetsRequest.h>
 #include <tencentcloud/cls/v20201016/model/DescribeLogsetsResponse.h>
 #include <tencentcloud/cls/v20201016/model/DescribeMachineGroupConfigsRequest.h>
@@ -135,8 +119,6 @@
 #include <tencentcloud/cls/v20201016/model/ModifyMachineGroupResponse.h>
 #include <tencentcloud/cls/v20201016/model/ModifyShipperRequest.h>
 #include <tencentcloud/cls/v20201016/model/ModifyShipperResponse.h>
-#include <tencentcloud/cls/v20201016/model/ModifyTopicRequest.h>
-#include <tencentcloud/cls/v20201016/model/ModifyTopicResponse.h>
 #include <tencentcloud/cls/v20201016/model/RetryShipperTaskRequest.h>
 #include <tencentcloud/cls/v20201016/model/RetryShipperTaskResponse.h>
 #include <tencentcloud/cls/v20201016/model/SearchLogRequest.h>
@@ -168,12 +150,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateAlarmNoticeResponse> CreateAlarmNoticeOutcome;
                 typedef std::future<CreateAlarmNoticeOutcome> CreateAlarmNoticeOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::CreateAlarmNoticeRequest&, CreateAlarmNoticeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAlarmNoticeAsyncHandler;
-                typedef Outcome<Core::Error, Model::CreateAsyncContextTaskResponse> CreateAsyncContextTaskOutcome;
-                typedef std::future<CreateAsyncContextTaskOutcome> CreateAsyncContextTaskOutcomeCallable;
-                typedef std::function<void(const ClsClient*, const Model::CreateAsyncContextTaskRequest&, CreateAsyncContextTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAsyncContextTaskAsyncHandler;
-                typedef Outcome<Core::Error, Model::CreateAsyncSearchTaskResponse> CreateAsyncSearchTaskOutcome;
-                typedef std::future<CreateAsyncSearchTaskOutcome> CreateAsyncSearchTaskOutcomeCallable;
-                typedef std::function<void(const ClsClient*, const Model::CreateAsyncSearchTaskRequest&, CreateAsyncSearchTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAsyncSearchTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateConfigResponse> CreateConfigOutcome;
                 typedef std::future<CreateConfigOutcome> CreateConfigOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::CreateConfigRequest&, CreateConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateConfigAsyncHandler;
@@ -192,9 +168,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateMachineGroupResponse> CreateMachineGroupOutcome;
                 typedef std::future<CreateMachineGroupOutcome> CreateMachineGroupOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::CreateMachineGroupRequest&, CreateMachineGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateMachineGroupAsyncHandler;
-                typedef Outcome<Core::Error, Model::CreateShipperResponse> CreateShipperOutcome;
-                typedef std::future<CreateShipperOutcome> CreateShipperOutcomeCallable;
-                typedef std::function<void(const ClsClient*, const Model::CreateShipperRequest&, CreateShipperOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateShipperAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateTopicResponse> CreateTopicOutcome;
                 typedef std::future<CreateTopicOutcome> CreateTopicOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::CreateTopicRequest&, CreateTopicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateTopicAsyncHandler;
@@ -204,12 +177,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteAlarmNoticeResponse> DeleteAlarmNoticeOutcome;
                 typedef std::future<DeleteAlarmNoticeOutcome> DeleteAlarmNoticeOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::DeleteAlarmNoticeRequest&, DeleteAlarmNoticeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAlarmNoticeAsyncHandler;
-                typedef Outcome<Core::Error, Model::DeleteAsyncContextTaskResponse> DeleteAsyncContextTaskOutcome;
-                typedef std::future<DeleteAsyncContextTaskOutcome> DeleteAsyncContextTaskOutcomeCallable;
-                typedef std::function<void(const ClsClient*, const Model::DeleteAsyncContextTaskRequest&, DeleteAsyncContextTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAsyncContextTaskAsyncHandler;
-                typedef Outcome<Core::Error, Model::DeleteAsyncSearchTaskResponse> DeleteAsyncSearchTaskOutcome;
-                typedef std::future<DeleteAsyncSearchTaskOutcome> DeleteAsyncSearchTaskOutcomeCallable;
-                typedef std::function<void(const ClsClient*, const Model::DeleteAsyncSearchTaskRequest&, DeleteAsyncSearchTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAsyncSearchTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteConfigResponse> DeleteConfigOutcome;
                 typedef std::future<DeleteConfigOutcome> DeleteConfigOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::DeleteConfigRequest&, DeleteConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteConfigAsyncHandler;
@@ -243,18 +210,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeAlarmsResponse> DescribeAlarmsOutcome;
                 typedef std::future<DescribeAlarmsOutcome> DescribeAlarmsOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::DescribeAlarmsRequest&, DescribeAlarmsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAlarmsAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeAsyncContextResultResponse> DescribeAsyncContextResultOutcome;
-                typedef std::future<DescribeAsyncContextResultOutcome> DescribeAsyncContextResultOutcomeCallable;
-                typedef std::function<void(const ClsClient*, const Model::DescribeAsyncContextResultRequest&, DescribeAsyncContextResultOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAsyncContextResultAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeAsyncContextTasksResponse> DescribeAsyncContextTasksOutcome;
-                typedef std::future<DescribeAsyncContextTasksOutcome> DescribeAsyncContextTasksOutcomeCallable;
-                typedef std::function<void(const ClsClient*, const Model::DescribeAsyncContextTasksRequest&, DescribeAsyncContextTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAsyncContextTasksAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeAsyncSearchResultResponse> DescribeAsyncSearchResultOutcome;
-                typedef std::future<DescribeAsyncSearchResultOutcome> DescribeAsyncSearchResultOutcomeCallable;
-                typedef std::function<void(const ClsClient*, const Model::DescribeAsyncSearchResultRequest&, DescribeAsyncSearchResultOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAsyncSearchResultAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeAsyncSearchTasksResponse> DescribeAsyncSearchTasksOutcome;
-                typedef std::future<DescribeAsyncSearchTasksOutcome> DescribeAsyncSearchTasksOutcomeCallable;
-                typedef std::function<void(const ClsClient*, const Model::DescribeAsyncSearchTasksRequest&, DescribeAsyncSearchTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAsyncSearchTasksAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeConfigMachineGroupsResponse> DescribeConfigMachineGroupsOutcome;
                 typedef std::future<DescribeConfigMachineGroupsOutcome> DescribeConfigMachineGroupsOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::DescribeConfigMachineGroupsRequest&, DescribeConfigMachineGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeConfigMachineGroupsAsyncHandler;
@@ -273,6 +228,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeLogContextResponse> DescribeLogContextOutcome;
                 typedef std::future<DescribeLogContextOutcome> DescribeLogContextOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::DescribeLogContextRequest&, DescribeLogContextOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLogContextAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeLogHistogramResponse> DescribeLogHistogramOutcome;
+                typedef std::future<DescribeLogHistogramOutcome> DescribeLogHistogramOutcomeCallable;
+                typedef std::function<void(const ClsClient*, const Model::DescribeLogHistogramRequest&, DescribeLogHistogramOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLogHistogramAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeLogsetsResponse> DescribeLogsetsOutcome;
                 typedef std::future<DescribeLogsetsOutcome> DescribeLogsetsOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::DescribeLogsetsRequest&, DescribeLogsetsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLogsetsAsyncHandler;
@@ -327,9 +285,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyShipperResponse> ModifyShipperOutcome;
                 typedef std::future<ModifyShipperOutcome> ModifyShipperOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::ModifyShipperRequest&, ModifyShipperOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyShipperAsyncHandler;
-                typedef Outcome<Core::Error, Model::ModifyTopicResponse> ModifyTopicOutcome;
-                typedef std::future<ModifyTopicOutcome> ModifyTopicOutcomeCallable;
-                typedef std::function<void(const ClsClient*, const Model::ModifyTopicRequest&, ModifyTopicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyTopicAsyncHandler;
                 typedef Outcome<Core::Error, Model::RetryShipperTaskResponse> RetryShipperTaskOutcome;
                 typedef std::future<RetryShipperTaskOutcome> RetryShipperTaskOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::RetryShipperTaskRequest&, RetryShipperTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RetryShipperTaskAsyncHandler;
@@ -373,24 +328,6 @@ namespace TencentCloud
                 CreateAlarmNoticeOutcomeCallable CreateAlarmNoticeCallable(const Model::CreateAlarmNoticeRequest& request);
 
                 /**
-                 *This API is used to create an offline context search task.
-                 * @param req CreateAsyncContextTaskRequest
-                 * @return CreateAsyncContextTaskOutcome
-                 */
-                CreateAsyncContextTaskOutcome CreateAsyncContextTask(const Model::CreateAsyncContextTaskRequest &request);
-                void CreateAsyncContextTaskAsync(const Model::CreateAsyncContextTaskRequest& request, const CreateAsyncContextTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                CreateAsyncContextTaskOutcomeCallable CreateAsyncContextTaskCallable(const Model::CreateAsyncContextTaskRequest& request);
-
-                /**
-                 *This API is used to create an offline search task.
-                 * @param req CreateAsyncSearchTaskRequest
-                 * @return CreateAsyncSearchTaskOutcome
-                 */
-                CreateAsyncSearchTaskOutcome CreateAsyncSearchTask(const Model::CreateAsyncSearchTaskRequest &request);
-                void CreateAsyncSearchTaskAsync(const Model::CreateAsyncSearchTaskRequest& request, const CreateAsyncSearchTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                CreateAsyncSearchTaskOutcomeCallable CreateAsyncSearchTaskCallable(const Model::CreateAsyncSearchTaskRequest& request);
-
-                /**
                  *This API is used to create a collection rule configuration.
                  * @param req CreateConfigRequest
                  * @return CreateConfigOutcome
@@ -409,7 +346,7 @@ namespace TencentCloud
                 CreateConsumerOutcomeCallable CreateConsumerCallable(const Model::CreateConsumerRequest& request);
 
                 /**
-                 *This API is used to create a log download task.
+                 *This API is used to create a download task to export raw logs.
                  * @param req CreateExportRequest
                  * @return CreateExportOutcome
                  */
@@ -445,15 +382,6 @@ namespace TencentCloud
                 CreateMachineGroupOutcomeCallable CreateMachineGroupCallable(const Model::CreateMachineGroupRequest& request);
 
                 /**
-                 *This API is used to create a shipping rule. To use this API, you need to grant CLS the write permission of the specified bucket.
-                 * @param req CreateShipperRequest
-                 * @return CreateShipperOutcome
-                 */
-                CreateShipperOutcome CreateShipper(const Model::CreateShipperRequest &request);
-                void CreateShipperAsync(const Model::CreateShipperRequest& request, const CreateShipperAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                CreateShipperOutcomeCallable CreateShipperCallable(const Model::CreateShipperRequest& request);
-
-                /**
                  *This API is used to create a log topic.
                  * @param req CreateTopicRequest
                  * @return CreateTopicOutcome
@@ -479,24 +407,6 @@ namespace TencentCloud
                 DeleteAlarmNoticeOutcome DeleteAlarmNotice(const Model::DeleteAlarmNoticeRequest &request);
                 void DeleteAlarmNoticeAsync(const Model::DeleteAlarmNoticeRequest& request, const DeleteAlarmNoticeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteAlarmNoticeOutcomeCallable DeleteAlarmNoticeCallable(const Model::DeleteAlarmNoticeRequest& request);
-
-                /**
-                 *This API is used to delete an offline context search task.
-                 * @param req DeleteAsyncContextTaskRequest
-                 * @return DeleteAsyncContextTaskOutcome
-                 */
-                DeleteAsyncContextTaskOutcome DeleteAsyncContextTask(const Model::DeleteAsyncContextTaskRequest &request);
-                void DeleteAsyncContextTaskAsync(const Model::DeleteAsyncContextTaskRequest& request, const DeleteAsyncContextTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DeleteAsyncContextTaskOutcomeCallable DeleteAsyncContextTaskCallable(const Model::DeleteAsyncContextTaskRequest& request);
-
-                /**
-                 *This API is used to delete an offline search task.
-                 * @param req DeleteAsyncSearchTaskRequest
-                 * @return DeleteAsyncSearchTaskOutcome
-                 */
-                DeleteAsyncSearchTaskOutcome DeleteAsyncSearchTask(const Model::DeleteAsyncSearchTaskRequest &request);
-                void DeleteAsyncSearchTaskAsync(const Model::DeleteAsyncSearchTaskRequest& request, const DeleteAsyncSearchTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DeleteAsyncSearchTaskOutcomeCallable DeleteAsyncSearchTaskCallable(const Model::DeleteAsyncSearchTaskRequest& request);
 
                 /**
                  *This API is used to delete a collection rule configuration.
@@ -535,7 +445,7 @@ namespace TencentCloud
                 DeleteExportOutcomeCallable DeleteExportCallable(const Model::DeleteExportRequest& request);
 
                 /**
-                 *This API is used to delete the index configuration of a log topic.
+                 *This API is used to delete the index configuration of a log topic. After deleting, you cannot retrieve or query the collected logs.
                  * @param req DeleteIndexRequest
                  * @return DeleteIndexOutcome
                  */
@@ -598,42 +508,6 @@ namespace TencentCloud
                 DescribeAlarmsOutcomeCallable DescribeAlarmsCallable(const Model::DescribeAlarmsRequest& request);
 
                 /**
-                 *This API is used to get the result of an offline context search task.
-                 * @param req DescribeAsyncContextResultRequest
-                 * @return DescribeAsyncContextResultOutcome
-                 */
-                DescribeAsyncContextResultOutcome DescribeAsyncContextResult(const Model::DescribeAsyncContextResultRequest &request);
-                void DescribeAsyncContextResultAsync(const Model::DescribeAsyncContextResultRequest& request, const DescribeAsyncContextResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeAsyncContextResultOutcomeCallable DescribeAsyncContextResultCallable(const Model::DescribeAsyncContextResultRequest& request);
-
-                /**
-                 *This API is used to get the list of offline context search tasks.
-                 * @param req DescribeAsyncContextTasksRequest
-                 * @return DescribeAsyncContextTasksOutcome
-                 */
-                DescribeAsyncContextTasksOutcome DescribeAsyncContextTasks(const Model::DescribeAsyncContextTasksRequest &request);
-                void DescribeAsyncContextTasksAsync(const Model::DescribeAsyncContextTasksRequest& request, const DescribeAsyncContextTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeAsyncContextTasksOutcomeCallable DescribeAsyncContextTasksCallable(const Model::DescribeAsyncContextTasksRequest& request);
-
-                /**
-                 *This API is used to get the result of an offline search task.
-                 * @param req DescribeAsyncSearchResultRequest
-                 * @return DescribeAsyncSearchResultOutcome
-                 */
-                DescribeAsyncSearchResultOutcome DescribeAsyncSearchResult(const Model::DescribeAsyncSearchResultRequest &request);
-                void DescribeAsyncSearchResultAsync(const Model::DescribeAsyncSearchResultRequest& request, const DescribeAsyncSearchResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeAsyncSearchResultOutcomeCallable DescribeAsyncSearchResultCallable(const Model::DescribeAsyncSearchResultRequest& request);
-
-                /**
-                 *This API is used to get the list of offline search tasks.
-                 * @param req DescribeAsyncSearchTasksRequest
-                 * @return DescribeAsyncSearchTasksOutcome
-                 */
-                DescribeAsyncSearchTasksOutcome DescribeAsyncSearchTasks(const Model::DescribeAsyncSearchTasksRequest &request);
-                void DescribeAsyncSearchTasksAsync(const Model::DescribeAsyncSearchTasksRequest& request, const DescribeAsyncSearchTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeAsyncSearchTasksOutcomeCallable DescribeAsyncSearchTasksCallable(const Model::DescribeAsyncSearchTasksRequest& request);
-
-                /**
                  *This API is used to get the machine group bound to a collection rule configuration.
                  * @param req DescribeConfigMachineGroupsRequest
                  * @return DescribeConfigMachineGroupsOutcome
@@ -686,6 +560,15 @@ namespace TencentCloud
                 DescribeLogContextOutcome DescribeLogContext(const Model::DescribeLogContextRequest &request);
                 void DescribeLogContextAsync(const Model::DescribeLogContextRequest& request, const DescribeLogContextAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeLogContextOutcomeCallable DescribeLogContextCallable(const Model::DescribeLogContextRequest& request);
+
+                /**
+                 *This API is used to build a histogram.
+                 * @param req DescribeLogHistogramRequest
+                 * @return DescribeLogHistogramOutcome
+                 */
+                DescribeLogHistogramOutcome DescribeLogHistogram(const Model::DescribeLogHistogramRequest &request);
+                void DescribeLogHistogramAsync(const Model::DescribeLogHistogramRequest& request, const DescribeLogHistogramAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeLogHistogramOutcomeCallable DescribeLogHistogramCallable(const Model::DescribeLogHistogramRequest& request);
 
                 /**
                  *This API is used to get the list of logsets.
@@ -851,15 +734,6 @@ namespace TencentCloud
                 ModifyShipperOutcomeCallable ModifyShipperCallable(const Model::ModifyShipperRequest& request);
 
                 /**
-                 *This API is used to modify a log topic.
-                 * @param req ModifyTopicRequest
-                 * @return ModifyTopicOutcome
-                 */
-                ModifyTopicOutcome ModifyTopic(const Model::ModifyTopicRequest &request);
-                void ModifyTopicAsync(const Model::ModifyTopicRequest& request, const ModifyTopicAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                ModifyTopicOutcomeCallable ModifyTopicCallable(const Model::ModifyTopicRequest& request);
-
-                /**
                  *This API is used to retry a failed shipping task.
                  * @param req RetryShipperTaskRequest
                  * @return RetryShipperTaskOutcome
@@ -869,7 +743,7 @@ namespace TencentCloud
                 RetryShipperTaskOutcomeCallable RetryShipperTaskCallable(const Model::RetryShipperTaskRequest& request);
 
                 /**
-                 *This API is used to search logs. It is subject to the default API rate limit, and the number of concurrent calls to the same log topic cannot exceed 15.
+                 *This API is used to search logs. It is subject to the default API rate limit, and the number of concurrent queries to the same log topic cannot exceed 15.
                  * @param req SearchLogRequest
                  * @return SearchLogOutcome
                  */
@@ -887,7 +761,14 @@ namespace TencentCloud
                 SplitPartitionOutcomeCallable SplitPartitionCallable(const Model::SplitPartitionRequest& request);
 
                 /**
-                 *## Feature Description
+                 *## Note
+To ensure log data reliability and help you use CLS more efficiently, you are advised to use the optimized API [Uploading Structured Logs](https://intl.cloud.tencent.com/document/api/614/16873) to upload logs.
+
+For the optimized API, we have developed an SDK (available in multiple languages) that provides features including async sending, resource control, automatic retry, graceful shutdown, and detection-based reporting. For details, see [Collection via SDK](https://intl.cloud.tencent.com/document/product/614/67157?from_cn_redirect=1).
+
+`UploadLog` allows you to synchronously upload log data. If you still want to continue to use this API instead of the optimized one, read this document.
+
+## Feature Description
 
 This API is used to write logs to a specified log topic.
 
@@ -895,11 +776,11 @@ CLS provides the following two modes:
 
 #### Load balancing mode
 
-In this mode, logs will be automatically written to a target partition among all readable/writable partitions under the current log topic based on the load balancing principle. This mode is suitable for scenarios where the sequential consumption is not needed.
+In this mode, logs will be automatically written to a target partition among all readable/writable partitions under the current log topic based on the load balancing principle. This mode is suitable for scenarios where sequential consumption is not needed.
 
 #### Hash routing mode
 
-In this mode, data will be written to a target partition that meets the range requirements based on the hash value (`X-CLS-HashKey`) carried by data. For example, a log source can be bound to a topic partition through `HashKey`, strictly guaranteeing the sequence of the data written to and consumed in this partition.
+In this mode, data will be written to a target partition that meets the range requirements based on the carried hash value (`X-CLS-HashKey`). For example, a log source can be bound to a topic partition through `HashKey`, strictly guaranteeing the sequence of the data written to and consumed in this partition.
 
 In addition, CLS allows you to upload logs in the following two modes:
                  
@@ -915,7 +796,7 @@ In addition, CLS allows you to upload logs in the following two modes:
 | Parameter     | Required | Description                                                         |
 | ----------- | -------- | ------------------------------------------------------------ |
 | logs        | Yes       | Log array consisting of multiple `Log` values. The `Log` indicates a log, and a `LogGroup` can contain up to 10,000 `Log` values. |
-| contextFlow | No       | Unique `LogGroup` ID, which should be passed in if the context feature needs to be used. Format: "{context ID}-{LogGroupID}". <br>Context ID: uniquely identifies the context (a series of log files that are continuously scrolling or a series of logs that need to be sequenced), which is a 64-bit integer hex string. <br>LogGroupID: a 64-bit integer hex string that continuously increases, such as `102700A66102516A-59F59`.                        |
+| contextFlow | No       | Unique `LogGroup` ID, which should be passed in if the context feature needs to be used. Format: "{context ID}-{LogGroupID}". <br>Context ID: Uniquely identifies the context (a series of log files that are continuously scrolling or a series of logs that need to be sequenced), which is a 64-bit integer hex string. <br>LogGroupID: A 64-bit integer hex string that continuously increases, such as `102700A66102516A-59F59`.                        |
 | filename    | No       | Log filename                                                   |
 | source      | No       | Log source, which is generally the machine IP                           |
 | logTags     | No       | Tag list of logs                                               |
@@ -945,11 +826,11 @@ In addition, CLS allows you to upload logs in the following two modes:
 
 This sample describes how to use the protoc compiler to compile the pb description file into a log upload API in C++.
 
-> ?Currently, protoc supports compilation in multiple programming languages such as Java, C++, and Python. For more information, please see [protoc](https://github.com/protocolbuffers/protobuf).
+> ?Currently, protoc supports compilation in multiple programming languages such as Java, C++, and Python. For more information, see [protoc](https://github.com/protocolbuffers/protobuf).
 
 #### 1. Install Protocol Buffers
 
-Download [Protocol Buffers](https://main.qcloudimg.com/raw/d7810aaf8b3073fbbc9d4049c21532aa/protobuf-2.6.1.tar.gz), decompress the package, and install the tool. The version used in the sample is protobuf 2.6.1 running on CentOS 7.3. Run the following command to decompress the `protobuf-2.6.1.tar.gz` package to the `/usr/local` directory and enter the directory:
+Download [Protocol Buffers](https://main.qcloudimg.com/raw/d7810aaf8b3073fbbc9d4049c21532aa/protobuf-2.6.1.tar.gz), decompress the package, and install the tool. The version used in the sample is protobuf 2.6.1 running on CentOS 7.3. Run the following command to decompress the `protobuf-2.6.1.tar.gz` package to the `/usr/local` directory and go to the directory:
 
 ```
 tar -zxvf protobuf-2.6.1.tar.gz -C /usr/local/ && cd /usr/local/protobuf-2.6.1
@@ -972,7 +853,7 @@ liprotoc 2.6.1
 
 #### 2. Create a pb description file
 
-A pb description file is an agreed-on data interchange format for communication. To upload logs, please compile the specified protocol format to an API in the target programming language and add the API to the project code. For more information, please see [protoc](https://github.com/protocolbuffers/protobuf).
+A pb description file is an agreed-on data interchange format for communication. To upload logs, compile the specified protocol format to an API in the target programming language and add the API to the project code. For more information, see [protoc](https://github.com/protocolbuffers/protobuf).
 
 Create a pb message description file `cls.proto` based on the pb data format content specified by CLS.
 
@@ -1017,7 +898,7 @@ message LogGroupList
 
 #### 3. Compile and generate the API
 
-This sample uses the proto compiler to generate a C++ file in the same directory as the `cls.proto` file. Run the following compilation commands:
+This sample uses the proto compiler to generate a C++ file in the same directory as the `cls.proto` file. Run the following compilation command:
 
 ```
 protoc --cpp_out=./ ./cls.proto 
@@ -1025,7 +906,7 @@ protoc --cpp_out=./ ./cls.proto
 
 > ?`--cpp_out=./ ` indicates that the file will be compiled in cpp format and output to the current directory. `./cls.proto` indicates the `cls.proto` description file in the current directory.
 
-After the compilation succeeds, the code file in the corresponding programming language will be generated. This sample generates the `cls.pb.h` header file and `cls.pb.cc` code implementation file as shown below:
+After the compilation succeeds, the code file in the corresponding programming language will be generated. This sample generates the `cls.pb.h` header file and [cls.pb.cc](http://cls.pb.cc) code implementation file as shown below:
 
 ```
 [root@VM_0_8_centos protobuf-2.6.1]# protoc --cpp_out=./ ./cls.proto

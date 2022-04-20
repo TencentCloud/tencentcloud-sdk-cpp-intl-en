@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool QueryHasBeenSet() const;
 
                     /**
-                     * 获取Number of logs returned in a single query. Maximum value: 100
-                     * @return Limit Number of logs returned in a single query. Maximum value: 100
+                     * 获取Number of logs returned in a single query. Maximum value: 1000
+                     * @return Limit Number of logs returned in a single query. Maximum value: 1000
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of logs returned in a single query. Maximum value: 100
-                     * @param Limit Number of logs returned in a single query. Maximum value: 100
+                     * 设置Number of logs returned in a single query. Maximum value: 1000
+                     * @param Limit Number of logs returned in a single query. Maximum value: 1000
                      */
                     void SetLimit(const int64_t& _limit);
 
@@ -189,7 +189,7 @@ namespace TencentCloud
                     bool m_queryHasBeenSet;
 
                     /**
-                     * Number of logs returned in a single query. Maximum value: 100
+                     * Number of logs returned in a single query. Maximum value: 1000
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

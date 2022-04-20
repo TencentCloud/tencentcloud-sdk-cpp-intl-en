@@ -66,21 +66,21 @@ namespace TencentCloud
 
                     /**
                      * 获取Callback type. Valid values:
-<br><li> WeCom
-<br><li> Http
+<li> WeCom
+<li> Http
                      * @return CallbackType Callback type. Valid values:
-<br><li> WeCom
-<br><li> Http
+<li> WeCom
+<li> Http
                      */
                     std::string GetCallbackType() const;
 
                     /**
                      * 设置Callback type. Valid values:
-<br><li> WeCom
-<br><li> Http
+<li> WeCom
+<li> Http
                      * @param CallbackType Callback type. Valid values:
-<br><li> WeCom
-<br><li> Http
+<li> WeCom
+<li> Http
                      */
                     void SetCallbackType(const std::string& _callbackType);
 
@@ -92,29 +92,29 @@ namespace TencentCloud
 
                     /**
                      * 获取Callback method. Valid values:
-<br><li> POST
-<br><li> PUT
+<li> POST
+<li> PUT
 Default value: `POST`. This parameter is required if `CallbackType` is `Http`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
                      * @return Method Callback method. Valid values:
-<br><li> POST
-<br><li> PUT
+<li> POST
+<li> PUT
 Default value: `POST`. This parameter is required if `CallbackType` is `Http`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::string GetMethod() const;
 
                     /**
                      * 设置Callback method. Valid values:
-<br><li> POST
-<br><li> PUT
+<li> POST
+<li> PUT
 Default value: `POST`. This parameter is required if `CallbackType` is `Http`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
                      * @param Method Callback method. Valid values:
-<br><li> POST
-<br><li> PUT
+<li> POST
+<li> PUT
 Default value: `POST`. This parameter is required if `CallbackType` is `Http`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     void SetMethod(const std::string& _method);
 
@@ -126,17 +126,21 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 获取Request header
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This parameter is disused. To specify request headers, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
+Note: This field may return `null`, indicating that no valid value was found.
                      * @return Headers Request header
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This parameter is disused. To specify request headers, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::vector<std::string> GetHeaders() const;
 
                     /**
                      * 设置Request header
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This parameter is disused. To specify request headers, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
+Note: This field may return `null`, indicating that no valid value was found.
                      * @param Headers Request header
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This parameter is disused. To specify request headers, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     void SetHeaders(const std::vector<std::string>& _headers);
 
@@ -147,18 +151,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool HeadersHasBeenSet() const;
 
                     /**
-                     * 获取Request content, which is required when `CallbackType` is `Http`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Body Request content, which is required when `CallbackType` is `Http`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Request content
+Note: This parameter is disused. To specify request content, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return Body Request content
+Note: This parameter is disused. To specify request content, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::string GetBody() const;
 
                     /**
-                     * 设置Request content, which is required when `CallbackType` is `Http`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Body Request content, which is required when `CallbackType` is `Http`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Request content
+Note: This parameter is disused. To specify request content, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param Body Request content
+Note: This parameter is disused. To specify request content, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     void SetBody(const std::string& _body);
 
@@ -196,32 +204,34 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * Callback type. Valid values:
-<br><li> WeCom
-<br><li> Http
+<li> WeCom
+<li> Http
                      */
                     std::string m_callbackType;
                     bool m_callbackTypeHasBeenSet;
 
                     /**
                      * Callback method. Valid values:
-<br><li> POST
-<br><li> PUT
+<li> POST
+<li> PUT
 Default value: `POST`. This parameter is required if `CallbackType` is `Http`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::string m_method;
                     bool m_methodHasBeenSet;
 
                     /**
                      * Request header
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This parameter is disused. To specify request headers, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::vector<std::string> m_headers;
                     bool m_headersHasBeenSet;
 
                     /**
-                     * Request content, which is required when `CallbackType` is `Http`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Request content
+Note: This parameter is disused. To specify request content, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::string m_body;
                     bool m_bodyHasBeenSet;

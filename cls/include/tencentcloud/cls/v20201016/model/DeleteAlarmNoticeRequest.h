@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Alarm notification template
-                     * @return AlarmNoticeId Alarm notification template
+                     * 获取Notification group ID
+                     * @return AlarmNoticeId Notification group ID
                      */
                     std::string GetAlarmNoticeId() const;
 
                     /**
-                     * 设置Alarm notification template
-                     * @param AlarmNoticeId Alarm notification template
+                     * 设置Notification group ID
+                     * @param AlarmNoticeId Notification group ID
                      */
                     void SetAlarmNoticeId(const std::string& _alarmNoticeId);
 
@@ -63,7 +63,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Alarm notification template
+                     * Notification group ID
                      */
                     std::string m_alarmNoticeId;
                     bool m_alarmNoticeIdHasBeenSet;

@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Log topic
-                     * @return TopicId Log topic
+                     * 获取Log topic ID
+                     * @return TopicId Log topic ID
                      */
                     std::string GetTopicId() const;
 
                     /**
-                     * 设置Log topic
-                     * @param TopicId Log topic
+                     * 设置Log topic ID
+                     * @param TopicId Log topic ID
                      */
                     void SetTopicId(const std::string& _topicId);
 
@@ -61,32 +61,14 @@ namespace TencentCloud
                     bool TopicIdHasBeenSet() const;
 
                     /**
-                     * 获取Log export search statement
-                     * @return Query Log export search statement
-                     */
-                    std::string GetQuery() const;
-
-                    /**
-                     * 设置Log export search statement
-                     * @param Query Log export search statement
-                     */
-                    void SetQuery(const std::string& _query);
-
-                    /**
-                     * 判断参数 Query 是否已赋值
-                     * @return Query 是否已赋值
-                     */
-                    bool QueryHasBeenSet() const;
-
-                    /**
-                     * 获取Number of logs to be exported. Maximum value: 10 million
-                     * @return Count Number of logs to be exported. Maximum value: 10 million
+                     * 获取Number of logs to be exported. Maximum value: 50 million
+                     * @return Count Number of logs to be exported. Maximum value: 50 million
                      */
                     uint64_t GetCount() const;
 
                     /**
-                     * 设置Number of logs to be exported. Maximum value: 10 million
-                     * @param Count Number of logs to be exported. Maximum value: 10 million
+                     * 设置Number of logs to be exported. Maximum value: 50 million
+                     * @param Count Number of logs to be exported. Maximum value: 50 million
                      */
                     void SetCount(const uint64_t& _count);
 
@@ -95,6 +77,24 @@ namespace TencentCloud
                      * @return Count 是否已赋值
                      */
                     bool CountHasBeenSet() const;
+
+                    /**
+                     * 获取Search statements for log export. <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statements]</a> are not supported.
+                     * @return Query Search statements for log export. <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statements]</a> are not supported.
+                     */
+                    std::string GetQuery() const;
+
+                    /**
+                     * 设置Search statements for log export. <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statements]</a> are not supported.
+                     * @param Query Search statements for log export. <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statements]</a> are not supported.
+                     */
+                    void SetQuery(const std::string& _query);
+
+                    /**
+                     * 判断参数 Query 是否已赋值
+                     * @return Query 是否已赋值
+                     */
+                    bool QueryHasBeenSet() const;
 
                     /**
                      * 获取Start time of the log to be exported, which is a timestamp in milliseconds
@@ -171,22 +171,22 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Log topic
+                     * Log topic ID
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
 
                     /**
-                     * Log export search statement
-                     */
-                    std::string m_query;
-                    bool m_queryHasBeenSet;
-
-                    /**
-                     * Number of logs to be exported. Maximum value: 10 million
+                     * Number of logs to be exported. Maximum value: 50 million
                      */
                     uint64_t m_count;
                     bool m_countHasBeenSet;
+
+                    /**
+                     * Search statements for log export. <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statements]</a> are not supported.
+                     */
+                    std::string m_query;
+                    bool m_queryHasBeenSet;
 
                     /**
                      * Start time of the log to be exported, which is a timestamp in milliseconds

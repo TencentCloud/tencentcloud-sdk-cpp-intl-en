@@ -565,6 +565,72 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool KafkaInfoHasBeenSet() const;
 
+                    /**
+                     * 获取The number of days after which the cluster Txh backup file will expire and be deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return TxhBackupExpireDay The number of days after which the cluster Txh backup file will expire and be deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetTxhBackupExpireDay() const;
+
+                    /**
+                     * 设置The number of days after which the cluster Txh backup file will expire and be deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param TxhBackupExpireDay The number of days after which the cluster Txh backup file will expire and be deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetTxhBackupExpireDay(const uint64_t& _txhBackupExpireDay);
+
+                    /**
+                     * 判断参数 TxhBackupExpireDay 是否已赋值
+                     * @return TxhBackupExpireDay 是否已赋值
+                     */
+                    bool TxhBackupExpireDayHasBeenSet() const;
+
+                    /**
+                     * 获取The number of days after which the cluster Ulog backup file will expire and be deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return UlogBackupExpireDay The number of days after which the cluster Ulog backup file will expire and be deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetUlogBackupExpireDay() const;
+
+                    /**
+                     * 设置The number of days after which the cluster Ulog backup file will expire and be deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param UlogBackupExpireDay The number of days after which the cluster Ulog backup file will expire and be deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetUlogBackupExpireDay(const uint64_t& _ulogBackupExpireDay);
+
+                    /**
+                     * 判断参数 UlogBackupExpireDay 是否已赋值
+                     * @return UlogBackupExpireDay 是否已赋值
+                     */
+                    bool UlogBackupExpireDayHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the expiration policy of cluster Ulog backup file is read-only. `0`: Yes; `1`: No.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return IsReadOnlyUlogBackupExpireDay Whether the expiration policy of cluster Ulog backup file is read-only. `0`: Yes; `1`: No.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetIsReadOnlyUlogBackupExpireDay() const;
+
+                    /**
+                     * 设置Whether the expiration policy of cluster Ulog backup file is read-only. `0`: Yes; `1`: No.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param IsReadOnlyUlogBackupExpireDay Whether the expiration policy of cluster Ulog backup file is read-only. `0`: Yes; `1`: No.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetIsReadOnlyUlogBackupExpireDay(const uint64_t& _isReadOnlyUlogBackupExpireDay);
+
+                    /**
+                     * 判断参数 IsReadOnlyUlogBackupExpireDay 是否已赋值
+                     * @return IsReadOnlyUlogBackupExpireDay 是否已赋值
+                     */
+                    bool IsReadOnlyUlogBackupExpireDayHasBeenSet() const;
+
                 private:
 
                     /**
@@ -734,6 +800,27 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     KafkaInfo m_kafkaInfo;
                     bool m_kafkaInfoHasBeenSet;
+
+                    /**
+                     * The number of days after which the cluster Txh backup file will expire and be deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_txhBackupExpireDay;
+                    bool m_txhBackupExpireDayHasBeenSet;
+
+                    /**
+                     * The number of days after which the cluster Ulog backup file will expire and be deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_ulogBackupExpireDay;
+                    bool m_ulogBackupExpireDayHasBeenSet;
+
+                    /**
+                     * Whether the expiration policy of cluster Ulog backup file is read-only. `0`: Yes; `1`: No.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_isReadOnlyUlogBackupExpireDay;
+                    bool m_isReadOnlyUlogBackupExpireDayHasBeenSet;
 
                 };
             }
