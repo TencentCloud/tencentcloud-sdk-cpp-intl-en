@@ -35,8 +35,6 @@
 #include <tencentcloud/cvm/v20170312/model/CreateImageResponse.h>
 #include <tencentcloud/cvm/v20170312/model/CreateKeyPairRequest.h>
 #include <tencentcloud/cvm/v20170312/model/CreateKeyPairResponse.h>
-#include <tencentcloud/cvm/v20170312/model/CreateLaunchTemplateRequest.h>
-#include <tencentcloud/cvm/v20170312/model/CreateLaunchTemplateResponse.h>
 #include <tencentcloud/cvm/v20170312/model/CreateLaunchTemplateVersionRequest.h>
 #include <tencentcloud/cvm/v20170312/model/CreateLaunchTemplateVersionResponse.h>
 #include <tencentcloud/cvm/v20170312/model/DeleteDisasterRecoverGroupsRequest.h>
@@ -65,10 +63,6 @@
 #include <tencentcloud/cvm/v20170312/model/DescribeImportImageOsResponse.h>
 #include <tencentcloud/cvm/v20170312/model/DescribeInstanceFamilyConfigsRequest.h>
 #include <tencentcloud/cvm/v20170312/model/DescribeInstanceFamilyConfigsResponse.h>
-#include <tencentcloud/cvm/v20170312/model/DescribeInstanceTypeConfigsRequest.h>
-#include <tencentcloud/cvm/v20170312/model/DescribeInstanceTypeConfigsResponse.h>
-#include <tencentcloud/cvm/v20170312/model/DescribeInstanceVncUrlRequest.h>
-#include <tencentcloud/cvm/v20170312/model/DescribeInstanceVncUrlResponse.h>
 #include <tencentcloud/cvm/v20170312/model/DescribeInstancesRequest.h>
 #include <tencentcloud/cvm/v20170312/model/DescribeInstancesResponse.h>
 #include <tencentcloud/cvm/v20170312/model/DescribeInstancesOperationLimitRequest.h>
@@ -85,8 +79,6 @@
 #include <tencentcloud/cvm/v20170312/model/DescribeLaunchTemplatesResponse.h>
 #include <tencentcloud/cvm/v20170312/model/DescribeRegionsRequest.h>
 #include <tencentcloud/cvm/v20170312/model/DescribeRegionsResponse.h>
-#include <tencentcloud/cvm/v20170312/model/DescribeReservedInstancesRequest.h>
-#include <tencentcloud/cvm/v20170312/model/DescribeReservedInstancesResponse.h>
 #include <tencentcloud/cvm/v20170312/model/DescribeReservedInstancesConfigInfosRequest.h>
 #include <tencentcloud/cvm/v20170312/model/DescribeReservedInstancesConfigInfosResponse.h>
 #include <tencentcloud/cvm/v20170312/model/DescribeReservedInstancesOfferingsRequest.h>
@@ -113,8 +105,6 @@
 #include <tencentcloud/cvm/v20170312/model/InquiryPriceResetInstancesTypeResponse.h>
 #include <tencentcloud/cvm/v20170312/model/InquiryPriceResizeInstanceDisksRequest.h>
 #include <tencentcloud/cvm/v20170312/model/InquiryPriceResizeInstanceDisksResponse.h>
-#include <tencentcloud/cvm/v20170312/model/InquiryPriceRunInstancesRequest.h>
-#include <tencentcloud/cvm/v20170312/model/InquiryPriceRunInstancesResponse.h>
 #include <tencentcloud/cvm/v20170312/model/ModifyDisasterRecoverGroupAttributeRequest.h>
 #include <tencentcloud/cvm/v20170312/model/ModifyDisasterRecoverGroupAttributeResponse.h>
 #include <tencentcloud/cvm/v20170312/model/ModifyHostsAttributeRequest.h>
@@ -147,8 +137,6 @@
 #include <tencentcloud/cvm/v20170312/model/ResetInstancesTypeResponse.h>
 #include <tencentcloud/cvm/v20170312/model/ResizeInstanceDisksRequest.h>
 #include <tencentcloud/cvm/v20170312/model/ResizeInstanceDisksResponse.h>
-#include <tencentcloud/cvm/v20170312/model/RunInstancesRequest.h>
-#include <tencentcloud/cvm/v20170312/model/RunInstancesResponse.h>
 #include <tencentcloud/cvm/v20170312/model/StartInstancesRequest.h>
 #include <tencentcloud/cvm/v20170312/model/StartInstancesResponse.h>
 #include <tencentcloud/cvm/v20170312/model/StopInstancesRequest.h>
@@ -189,9 +177,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateKeyPairResponse> CreateKeyPairOutcome;
                 typedef std::future<CreateKeyPairOutcome> CreateKeyPairOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::CreateKeyPairRequest&, CreateKeyPairOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateKeyPairAsyncHandler;
-                typedef Outcome<Core::Error, Model::CreateLaunchTemplateResponse> CreateLaunchTemplateOutcome;
-                typedef std::future<CreateLaunchTemplateOutcome> CreateLaunchTemplateOutcomeCallable;
-                typedef std::function<void(const CvmClient*, const Model::CreateLaunchTemplateRequest&, CreateLaunchTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLaunchTemplateAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateLaunchTemplateVersionResponse> CreateLaunchTemplateVersionOutcome;
                 typedef std::future<CreateLaunchTemplateVersionOutcome> CreateLaunchTemplateVersionOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::CreateLaunchTemplateVersionRequest&, CreateLaunchTemplateVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLaunchTemplateVersionAsyncHandler;
@@ -234,12 +219,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeInstanceFamilyConfigsResponse> DescribeInstanceFamilyConfigsOutcome;
                 typedef std::future<DescribeInstanceFamilyConfigsOutcome> DescribeInstanceFamilyConfigsOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DescribeInstanceFamilyConfigsRequest&, DescribeInstanceFamilyConfigsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstanceFamilyConfigsAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeInstanceTypeConfigsResponse> DescribeInstanceTypeConfigsOutcome;
-                typedef std::future<DescribeInstanceTypeConfigsOutcome> DescribeInstanceTypeConfigsOutcomeCallable;
-                typedef std::function<void(const CvmClient*, const Model::DescribeInstanceTypeConfigsRequest&, DescribeInstanceTypeConfigsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstanceTypeConfigsAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeInstanceVncUrlResponse> DescribeInstanceVncUrlOutcome;
-                typedef std::future<DescribeInstanceVncUrlOutcome> DescribeInstanceVncUrlOutcomeCallable;
-                typedef std::function<void(const CvmClient*, const Model::DescribeInstanceVncUrlRequest&, DescribeInstanceVncUrlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstanceVncUrlAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeInstancesResponse> DescribeInstancesOutcome;
                 typedef std::future<DescribeInstancesOutcome> DescribeInstancesOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DescribeInstancesRequest&, DescribeInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstancesAsyncHandler;
@@ -264,9 +243,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeRegionsResponse> DescribeRegionsOutcome;
                 typedef std::future<DescribeRegionsOutcome> DescribeRegionsOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DescribeRegionsRequest&, DescribeRegionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRegionsAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeReservedInstancesResponse> DescribeReservedInstancesOutcome;
-                typedef std::future<DescribeReservedInstancesOutcome> DescribeReservedInstancesOutcomeCallable;
-                typedef std::function<void(const CvmClient*, const Model::DescribeReservedInstancesRequest&, DescribeReservedInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeReservedInstancesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeReservedInstancesConfigInfosResponse> DescribeReservedInstancesConfigInfosOutcome;
                 typedef std::future<DescribeReservedInstancesConfigInfosOutcome> DescribeReservedInstancesConfigInfosOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DescribeReservedInstancesConfigInfosRequest&, DescribeReservedInstancesConfigInfosOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeReservedInstancesConfigInfosAsyncHandler;
@@ -306,9 +282,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::InquiryPriceResizeInstanceDisksResponse> InquiryPriceResizeInstanceDisksOutcome;
                 typedef std::future<InquiryPriceResizeInstanceDisksOutcome> InquiryPriceResizeInstanceDisksOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::InquiryPriceResizeInstanceDisksRequest&, InquiryPriceResizeInstanceDisksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquiryPriceResizeInstanceDisksAsyncHandler;
-                typedef Outcome<Core::Error, Model::InquiryPriceRunInstancesResponse> InquiryPriceRunInstancesOutcome;
-                typedef std::future<InquiryPriceRunInstancesOutcome> InquiryPriceRunInstancesOutcomeCallable;
-                typedef std::function<void(const CvmClient*, const Model::InquiryPriceRunInstancesRequest&, InquiryPriceRunInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquiryPriceRunInstancesAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyDisasterRecoverGroupAttributeResponse> ModifyDisasterRecoverGroupAttributeOutcome;
                 typedef std::future<ModifyDisasterRecoverGroupAttributeOutcome> ModifyDisasterRecoverGroupAttributeOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::ModifyDisasterRecoverGroupAttributeRequest&, ModifyDisasterRecoverGroupAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDisasterRecoverGroupAttributeAsyncHandler;
@@ -357,9 +330,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ResizeInstanceDisksResponse> ResizeInstanceDisksOutcome;
                 typedef std::future<ResizeInstanceDisksOutcome> ResizeInstanceDisksOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::ResizeInstanceDisksRequest&, ResizeInstanceDisksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResizeInstanceDisksAsyncHandler;
-                typedef Outcome<Core::Error, Model::RunInstancesResponse> RunInstancesOutcome;
-                typedef std::future<RunInstancesOutcome> RunInstancesOutcomeCallable;
-                typedef std::function<void(const CvmClient*, const Model::RunInstancesRequest&, RunInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RunInstancesAsyncHandler;
                 typedef Outcome<Core::Error, Model::StartInstancesResponse> StartInstancesOutcome;
                 typedef std::future<StartInstancesOutcome> StartInstancesOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::StartInstancesRequest&, StartInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StartInstancesAsyncHandler;
@@ -441,19 +411,6 @@ If you currently use a password to log in, you will no longer be able to do so a
                 CreateKeyPairOutcomeCallable CreateKeyPairCallable(const Model::CreateKeyPairRequest& request);
 
                 /**
-                 *This API is used to create an instance launch template.
-
-An instance launch template contains the configuration information required to create an instance, including instance type, data/system disk type and size, and security group, etc.
-
-When a template is created, it defaults to Version 1. You can use `CreateLaunchTemplateVersion` to create new versions of this template, with the version number increasing. When you run `RunInstances` to create instances, you can specify the instance launch template version. If it’s not specified, the default template version is used.
-                 * @param req CreateLaunchTemplateRequest
-                 * @return CreateLaunchTemplateOutcome
-                 */
-                CreateLaunchTemplateOutcome CreateLaunchTemplate(const Model::CreateLaunchTemplateRequest &request);
-                void CreateLaunchTemplateAsync(const Model::CreateLaunchTemplateRequest& request, const CreateLaunchTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                CreateLaunchTemplateOutcomeCallable CreateLaunchTemplateCallable(const Model::CreateLaunchTemplateRequest& request);
-
-                /**
                  *This API is used to create an instance launch template based on the specified template ID and the corresponding template version number. The default version number will be used when no template version numbers are specified. Each instance launch template can have up to 30 version numbers.
                  * @param req CreateLaunchTemplateVersionRequest
                  * @return CreateLaunchTemplateVersionOutcome
@@ -472,10 +429,10 @@ When a template is created, it defaults to Version 1. You can use `CreateLaunchT
                 DeleteDisasterRecoverGroupsOutcomeCallable DeleteDisasterRecoverGroupsCallable(const Model::DeleteDisasterRecoverGroupsRequest& request);
 
                 /**
-                 *This API is used to delete images.
+                 *This API is used to delete one or more images.
 
-* If the [ImageState](https://intl.cloud.tencent.com/document/api/213/9452?from_cn_redirect=1#image_state) of an image is `Creating` or `In Use`, it cannot be deleted. Use [DescribeImages](https://intl.cloud.tencent.com/document/api/213/9418?from_cn_redirect=1) to query the image state.
-* You can only create up to 10 custom images in each region. If you have used up the quota, you can delete images to create new ones.
+* If the [ImageState](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#Image) of an image is `CREATING` or `USING`, the image cannot be deleted. Call the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) API to query the image status.
+* Up to 10 custom images are allowed in each region. If you have run out of the quota, delete unused images to create new ones.
 * A shared image cannot be deleted.
                  * @param req DeleteImagesRequest
                  * @return DeleteImagesOutcome
@@ -590,42 +547,6 @@ When a template is created, it defaults to Version 1. You can use `CreateLaunchT
                 DescribeInstanceFamilyConfigsOutcomeCallable DescribeInstanceFamilyConfigsCallable(const Model::DescribeInstanceFamilyConfigsRequest& request);
 
                 /**
-                 *This API is used to query the model configuration of an instance.
-
-* You can filter the query results with `zone` or `instance-family`. For more information on filtering conditions, see [`Filter`](https://intl.cloud.tencent.com/document/api/213/15753?from_cn_redirect=1#Filter).
-* If no parameter is defined, the model configuration of all the instances in the specified region will be returned.
-                 * @param req DescribeInstanceTypeConfigsRequest
-                 * @return DescribeInstanceTypeConfigsOutcome
-                 */
-                DescribeInstanceTypeConfigsOutcome DescribeInstanceTypeConfigs(const Model::DescribeInstanceTypeConfigsRequest &request);
-                void DescribeInstanceTypeConfigsAsync(const Model::DescribeInstanceTypeConfigsRequest& request, const DescribeInstanceTypeConfigsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeInstanceTypeConfigsOutcomeCallable DescribeInstanceTypeConfigsCallable(const Model::DescribeInstanceTypeConfigsRequest& request);
-
-                /**
-                 *This API is used to query the Virtual Network Console (VNC) URL of an instance for its login to the VNC.
-
-* It does not support `STOPPED` CVMs.
-* A VNC URL is only valid for 15 seconds. If you do not access the URL within 15 seconds, it will become invalid and you have to query a URL again.
-* Once the VNC URL is accessed, it will become invalid and you have to query a URL again if needed.
-* If the connection is interrupted, you can make up to 30 reconnection attempts per minute.
-* After getting the value `InstanceVncUrl`, you need to append `InstanceVncUrl=xxxx` to the end of the link <https://img.qcloud.com/qcloud/app/active_vnc/index.html?>.
-
-  - `InstanceVncUrl`: its value will be returned after the API is successfully called.
-
-    The final URL is in the following format:
-
-```
-https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F%2Fbjvnc.qcloud.com%3A26789%2Fvnc%3Fs%3DaHpjWnRVMFNhYmxKdDM5MjRHNlVTSVQwajNUSW0wb2tBbmFtREFCTmFrcy8vUUNPMG0wSHZNOUUxRm5PMmUzWmFDcWlOdDJIbUJxSTZDL0RXcHZxYnZZMmRkWWZWcEZia2lyb09XMzdKNmM9
-```
-
-                 * @param req DescribeInstanceVncUrlRequest
-                 * @return DescribeInstanceVncUrlOutcome
-                 */
-                DescribeInstanceVncUrlOutcome DescribeInstanceVncUrl(const Model::DescribeInstanceVncUrlRequest &request);
-                void DescribeInstanceVncUrlAsync(const Model::DescribeInstanceVncUrlRequest& request, const DescribeInstanceVncUrlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeInstanceVncUrlOutcomeCallable DescribeInstanceVncUrlCallable(const Model::DescribeInstanceVncUrlRequest& request);
-
-                /**
                  *This API is used to query the details of instances.
 
 * You can filter the query results with the instance `ID`, name, or billing method. See `Filter` for more information.
@@ -708,15 +629,6 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 DescribeRegionsOutcomeCallable DescribeRegionsCallable(const Model::DescribeRegionsRequest& request);
 
                 /**
-                 *This API is used to list reserved instances the user has purchased.
-                 * @param req DescribeReservedInstancesRequest
-                 * @return DescribeReservedInstancesOutcome
-                 */
-                DescribeReservedInstancesOutcome DescribeReservedInstances(const Model::DescribeReservedInstancesRequest &request);
-                void DescribeReservedInstancesAsync(const Model::DescribeReservedInstancesRequest& request, const DescribeReservedInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeReservedInstancesOutcomeCallable DescribeReservedInstancesCallable(const Model::DescribeReservedInstancesRequest& request);
-
-                /**
                  *This API is used to describe reserved instance (RI) offerings. Currently, RIs are only offered to beta users.
                  * @param req DescribeReservedInstancesConfigInfosRequest
                  * @return DescribeReservedInstancesConfigInfosOutcome
@@ -787,7 +699,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 /**
                  *This API is used to import key pairs.
 
-* You can use this API to import key pairs to a user account, but the key pairs will not be automatically associated with any instance. You may use [AssociasteInstancesKeyPair](https://intl.cloud.tencent.com/document/api/213/9404?from_cn_redirect=1) to associate key pairs with instances.
+* You can use this API to import key pairs to a user account, but the key pairs will not be automatically associated with any instance. You may use [AssociasteInstancesKeyPair](https://intl.cloud.tencent.com/document/api/213/15698?from_cn_redirect=1) to associate key pairs with instances.
 * You need to specify the names of the key pairs and the content of the public keys.
 * If you only have private keys, you can convert them to public keys with the `SSL` tool before importing them.
                  * @param req ImportKeyPairRequest
@@ -854,15 +766,6 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 InquiryPriceResizeInstanceDisksOutcome InquiryPriceResizeInstanceDisks(const Model::InquiryPriceResizeInstanceDisksRequest &request);
                 void InquiryPriceResizeInstanceDisksAsync(const Model::InquiryPriceResizeInstanceDisksRequest& request, const InquiryPriceResizeInstanceDisksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 InquiryPriceResizeInstanceDisksOutcomeCallable InquiryPriceResizeInstanceDisksCallable(const Model::InquiryPriceResizeInstanceDisksRequest& request);
-
-                /**
-                 *This API is used to query the price of creating instances. You can only use this API for instances whose configuration is within the purchase limit. For more information, see [RunInstances](https://intl.cloud.tencent.com/document/api/213/15730?from_cn_redirect=1).
-                 * @param req InquiryPriceRunInstancesRequest
-                 * @return InquiryPriceRunInstancesOutcome
-                 */
-                InquiryPriceRunInstancesOutcome InquiryPriceRunInstances(const Model::InquiryPriceRunInstancesRequest &request);
-                void InquiryPriceRunInstancesAsync(const Model::InquiryPriceRunInstancesRequest& request, const InquiryPriceRunInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                InquiryPriceRunInstancesOutcomeCallable InquiryPriceRunInstancesCallable(const Model::InquiryPriceRunInstancesRequest& request);
 
                 /**
                  *This API is used to modify the attributes of [spread placement groups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1).
@@ -1059,20 +962,6 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
                 ResizeInstanceDisksOutcome ResizeInstanceDisks(const Model::ResizeInstanceDisksRequest &request);
                 void ResizeInstanceDisksAsync(const Model::ResizeInstanceDisksRequest& request, const ResizeInstanceDisksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ResizeInstanceDisksOutcomeCallable ResizeInstanceDisksCallable(const Model::ResizeInstanceDisksRequest& request);
-
-                /**
-                 *This API is used to create one or more instances with a specified configuration.
-
-* After an instance is created successfully, it will start up automatically, and the [instance state](https://intl.cloud.tencent.com/document/api/213/9452?from_cn_redirect=1#instance_state) will become "Running".
-* If you create a pay-as-you-go instance billed on an hourly basis, an amount equivalent to the hourly rate will be frozen before the creation. Make sure your account balance is sufficient before calling this API.
-* The number of instances you can purchase through this API is subject to the [CVM instance purchase limit](https://intl.cloud.tencent.com/document/product/213/2664?from_cn_redirect=1). Both the instances created through this API and the console will be counted toward the quota.
-* This API is an async API. An instance `ID` list will be returned after you successfully make a creation request. However, it does not mean the creation has been completed. The state of the instance will be `Creating` during the creation. You can use [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) to query the status of the instance. If the status changes from `Creating` to `Running`, it means that the instance has been created successfully.
-                 * @param req RunInstancesRequest
-                 * @return RunInstancesOutcome
-                 */
-                RunInstancesOutcome RunInstances(const Model::RunInstancesRequest &request);
-                void RunInstancesAsync(const Model::RunInstancesRequest& request, const RunInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                RunInstancesOutcomeCallable RunInstancesCallable(const Model::RunInstancesRequest& request);
 
                 /**
                  *This API is used to start instances.

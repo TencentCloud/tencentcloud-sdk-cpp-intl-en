@@ -83,14 +83,18 @@ namespace TencentCloud
                     bool DiskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Data disk ID. Data disks of the type `LOCAL_BASIC` or `LOCAL_SSD` do not have IDs and do not support this parameter.
-                     * @return DiskId Data disk ID. Data disks of the type `LOCAL_BASIC` or `LOCAL_SSD` do not have IDs and do not support this parameter.
+                     * 获取Data disk ID. Note that it’s not available for `LOCAL_BASIC` and `LOCAL_SSD` disks.
+This parameter is only available for the `DescribeInstances` API.
+                     * @return DiskId Data disk ID. Note that it’s not available for `LOCAL_BASIC` and `LOCAL_SSD` disks.
+This parameter is only available for the `DescribeInstances` API.
                      */
                     std::string GetDiskId() const;
 
                     /**
-                     * 设置Data disk ID. Data disks of the type `LOCAL_BASIC` or `LOCAL_SSD` do not have IDs and do not support this parameter.
-                     * @param DiskId Data disk ID. Data disks of the type `LOCAL_BASIC` or `LOCAL_SSD` do not have IDs and do not support this parameter.
+                     * 设置Data disk ID. Note that it’s not available for `LOCAL_BASIC` and `LOCAL_SSD` disks.
+This parameter is only available for the `DescribeInstances` API.
+                     * @param DiskId Data disk ID. Note that it’s not available for `LOCAL_BASIC` and `LOCAL_SSD` disks.
+This parameter is only available for the `DescribeInstances` API.
                      */
                     void SetDiskId(const std::string& _diskId);
 
@@ -287,7 +291,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_diskTypeHasBeenSet;
 
                     /**
-                     * Data disk ID. Data disks of the type `LOCAL_BASIC` or `LOCAL_SSD` do not have IDs and do not support this parameter.
+                     * Data disk ID. Note that it’s not available for `LOCAL_BASIC` and `LOCAL_SSD` disks.
+This parameter is only available for the `DescribeInstances` API.
                      */
                     std::string m_diskId;
                     bool m_diskIdHasBeenSet;
