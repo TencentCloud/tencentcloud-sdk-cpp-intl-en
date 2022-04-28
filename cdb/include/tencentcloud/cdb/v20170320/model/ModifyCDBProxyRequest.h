@@ -62,14 +62,14 @@ namespace TencentCloud
                     bool ProxyGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to remove delayed read-only instances from the proxy group. Valid values: `true`, `false`
-                     * @return IsKickout Whether to remove delayed read-only instances from the proxy group. Valid values: `true`, `false`
+                     * 获取Whether to remove delayed read-only instances from the proxy group. Valid values: `true`, `false`. Default value: `false`.
+                     * @return IsKickout Whether to remove delayed read-only instances from the proxy group. Valid values: `true`, `false`. Default value: `false`.
                      */
                     bool GetIsKickout() const;
 
                     /**
-                     * 设置Whether to remove delayed read-only instances from the proxy group. Valid values: `true`, `false`
-                     * @param IsKickout Whether to remove delayed read-only instances from the proxy group. Valid values: `true`, `false`
+                     * 设置Whether to remove delayed read-only instances from the proxy group. Valid values: `true`, `false`. Default value: `false`.
+                     * @param IsKickout Whether to remove delayed read-only instances from the proxy group. Valid values: `true`, `false`. Default value: `false`.
                      */
                     void SetIsKickout(const bool& _isKickout);
 
@@ -80,14 +80,14 @@ namespace TencentCloud
                     bool IsKickoutHasBeenSet() const;
 
                     /**
-                     * 获取The minimum number of read-only instances allowed by the proxy group
-                     * @return MinCount The minimum number of read-only instances allowed by the proxy group
+                     * 获取The minimum number of read-only instances allowed by the proxy group. Minimum value: 1; maximum value: The number of instances.
+                     * @return MinCount The minimum number of read-only instances allowed by the proxy group. Minimum value: 1; maximum value: The number of instances.
                      */
                     uint64_t GetMinCount() const;
 
                     /**
-                     * 设置The minimum number of read-only instances allowed by the proxy group
-                     * @param MinCount The minimum number of read-only instances allowed by the proxy group
+                     * 设置The minimum number of read-only instances allowed by the proxy group. Minimum value: 1; maximum value: The number of instances.
+                     * @param MinCount The minimum number of read-only instances allowed by the proxy group. Minimum value: 1; maximum value: The number of instances.
                      */
                     void SetMinCount(const uint64_t& _minCount);
 
@@ -152,14 +152,14 @@ namespace TencentCloud
                     bool RoWeightValuesHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable failover. If it is enabled, the connection address will route requests to the source instance in case of proxy failure. Valid values: `true`, `false`
-                     * @return FailOver Whether to enable failover. If it is enabled, the connection address will route requests to the source instance in case of proxy failure. Valid values: `true`, `false`
+                     * 获取Whether to enable failover. If it is enabled, the connection address will route requests to the source instance in case of proxy failure. Valid values: `true`, `false`. Default value: `false`.
+                     * @return FailOver Whether to enable failover. If it is enabled, the connection address will route requests to the source instance in case of proxy failure. Valid values: `true`, `false`. Default value: `false`.
                      */
                     bool GetFailOver() const;
 
                     /**
-                     * 设置Whether to enable failover. If it is enabled, the connection address will route requests to the source instance in case of proxy failure. Valid values: `true`, `false`
-                     * @param FailOver Whether to enable failover. If it is enabled, the connection address will route requests to the source instance in case of proxy failure. Valid values: `true`, `false`
+                     * 设置Whether to enable failover. If it is enabled, the connection address will route requests to the source instance in case of proxy failure. Valid values: `true`, `false`. Default value: `false`.
+                     * @param FailOver Whether to enable failover. If it is enabled, the connection address will route requests to the source instance in case of proxy failure. Valid values: `true`, `false`. Default value: `false`.
                      */
                     void SetFailOver(const bool& _failOver);
 
@@ -170,14 +170,14 @@ namespace TencentCloud
                     bool FailOverHasBeenSet() const;
 
                     /**
-                     * 获取Whether to automatically add newly created read-only instances to the proxy group. Valid values: `true`, `false`
-                     * @return AutoAddRo Whether to automatically add newly created read-only instances to the proxy group. Valid values: `true`, `false`
+                     * 获取Whether to automatically add newly created read-only instances to the proxy group. Valid values: `true`, `false` Default value: `false`.
+                     * @return AutoAddRo Whether to automatically add newly created read-only instances to the proxy group. Valid values: `true`, `false` Default value: `false`.
                      */
                     bool GetAutoAddRo() const;
 
                     /**
-                     * 设置Whether to automatically add newly created read-only instances to the proxy group. Valid values: `true`, `false`
-                     * @param AutoAddRo Whether to automatically add newly created read-only instances to the proxy group. Valid values: `true`, `false`
+                     * 设置Whether to automatically add newly created read-only instances to the proxy group. Valid values: `true`, `false` Default value: `false`.
+                     * @param AutoAddRo Whether to automatically add newly created read-only instances to the proxy group. Valid values: `true`, `false` Default value: `false`.
                      */
                     void SetAutoAddRo(const bool& _autoAddRo);
 
@@ -196,13 +196,13 @@ namespace TencentCloud
                     bool m_proxyGroupIdHasBeenSet;
 
                     /**
-                     * Whether to remove delayed read-only instances from the proxy group. Valid values: `true`, `false`
+                     * Whether to remove delayed read-only instances from the proxy group. Valid values: `true`, `false`. Default value: `false`.
                      */
                     bool m_isKickout;
                     bool m_isKickoutHasBeenSet;
 
                     /**
-                     * The minimum number of read-only instances allowed by the proxy group
+                     * The minimum number of read-only instances allowed by the proxy group. Minimum value: 1; maximum value: The number of instances.
                      */
                     uint64_t m_minCount;
                     bool m_minCountHasBeenSet;
@@ -226,13 +226,13 @@ namespace TencentCloud
                     bool m_roWeightValuesHasBeenSet;
 
                     /**
-                     * Whether to enable failover. If it is enabled, the connection address will route requests to the source instance in case of proxy failure. Valid values: `true`, `false`
+                     * Whether to enable failover. If it is enabled, the connection address will route requests to the source instance in case of proxy failure. Valid values: `true`, `false`. Default value: `false`.
                      */
                     bool m_failOver;
                     bool m_failOverHasBeenSet;
 
                     /**
-                     * Whether to automatically add newly created read-only instances to the proxy group. Valid values: `true`, `false`
+                     * Whether to automatically add newly created read-only instances to the proxy group. Valid values: `true`, `false` Default value: `false`.
                      */
                     bool m_autoAddRo;
                     bool m_autoAddRoHasBeenSet;

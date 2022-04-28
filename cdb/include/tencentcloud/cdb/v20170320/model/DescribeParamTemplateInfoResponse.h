@@ -117,8 +117,8 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Parameter template type. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
-                     * @return TemplateType Parameter template type. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+                     * 获取Type of the parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+                     * @return TemplateType Type of the parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
                      */
                     std::string GetTemplateType() const;
 
@@ -167,7 +167,7 @@ namespace TencentCloud
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Parameter template type. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+                     * Type of the parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
                      */
                     std::string m_templateType;
                     bool m_templateTypeHasBeenSet;

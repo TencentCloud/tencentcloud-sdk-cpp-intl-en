@@ -295,14 +295,14 @@ namespace TencentCloud
                     bool SubnetIdsHasBeenSet() const;
 
                     /**
-                     * 获取Lock flag.
-                     * @return CdbErrors Lock flag.
+                     * 获取Whether to lock disk write. Valid values: `0`(unlock), `1`(lock). Default value: 0.
+                     * @return CdbErrors Whether to lock disk write. Valid values: `0`(unlock), `1`(lock). Default value: 0.
                      */
                     std::vector<int64_t> GetCdbErrors() const;
 
                     /**
-                     * 设置Lock flag.
-                     * @param CdbErrors Lock flag.
+                     * 设置Whether to lock disk write. Valid values: `0`(unlock), `1`(lock). Default value: 0.
+                     * @param CdbErrors Whether to lock disk write. Valid values: `0`(unlock), `1`(lock). Default value: 0.
                      */
                     void SetCdbErrors(const std::vector<int64_t>& _cdbErrors);
 
@@ -546,6 +546,60 @@ namespace TencentCloud
                      */
                     bool CageIdsHasBeenSet() const;
 
+                    /**
+                     * 获取Tag value
+                     * @return TagValues Tag value
+                     */
+                    std::vector<std::string> GetTagValues() const;
+
+                    /**
+                     * 设置Tag value
+                     * @param TagValues Tag value
+                     */
+                    void SetTagValues(const std::vector<std::string>& _tagValues);
+
+                    /**
+                     * 判断参数 TagValues 是否已赋值
+                     * @return TagValues 是否已赋值
+                     */
+                    bool TagValuesHasBeenSet() const;
+
+                    /**
+                     * 获取VPC character vpcId
+                     * @return UniqueVpcIds VPC character vpcId
+                     */
+                    std::vector<std::string> GetUniqueVpcIds() const;
+
+                    /**
+                     * 设置VPC character vpcId
+                     * @param UniqueVpcIds VPC character vpcId
+                     */
+                    void SetUniqueVpcIds(const std::vector<std::string>& _uniqueVpcIds);
+
+                    /**
+                     * 判断参数 UniqueVpcIds 是否已赋值
+                     * @return UniqueVpcIds 是否已赋值
+                     */
+                    bool UniqueVpcIdsHasBeenSet() const;
+
+                    /**
+                     * 获取VPC character subnetId
+                     * @return UniqSubnetIds VPC character subnetId
+                     */
+                    std::vector<std::string> GetUniqSubnetIds() const;
+
+                    /**
+                     * 设置VPC character subnetId
+                     * @param UniqSubnetIds VPC character subnetId
+                     */
+                    void SetUniqSubnetIds(const std::vector<std::string>& _uniqSubnetIds);
+
+                    /**
+                     * 判断参数 UniqSubnetIds 是否已赋值
+                     * @return UniqSubnetIds 是否已赋值
+                     */
+                    bool UniqSubnetIdsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -633,7 +687,7 @@ namespace TencentCloud
                     bool m_subnetIdsHasBeenSet;
 
                     /**
-                     * Lock flag.
+                     * Whether to lock disk write. Valid values: `0`(unlock), `1`(lock). Default value: 0.
                      */
                     std::vector<int64_t> m_cdbErrors;
                     bool m_cdbErrorsHasBeenSet;
@@ -715,6 +769,24 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_cageIds;
                     bool m_cageIdsHasBeenSet;
+
+                    /**
+                     * Tag value
+                     */
+                    std::vector<std::string> m_tagValues;
+                    bool m_tagValuesHasBeenSet;
+
+                    /**
+                     * VPC character vpcId
+                     */
+                    std::vector<std::string> m_uniqueVpcIds;
+                    bool m_uniqueVpcIdsHasBeenSet;
+
+                    /**
+                     * VPC character subnetId
+                     */
+                    std::vector<std::string> m_uniqSubnetIds;
+                    bool m_uniqSubnetIdsHasBeenSet;
 
                 };
             }

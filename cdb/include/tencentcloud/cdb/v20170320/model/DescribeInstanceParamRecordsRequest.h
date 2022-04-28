@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Pagination offset.
-                     * @return Offset Pagination offset.
+                     * 获取Pagination offset. Default value: 0.
+                     * @return Offset Pagination offset. Default value: 0.
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Pagination offset.
-                     * @param Offset Pagination offset.
+                     * 设置Pagination offset. Default value: 0.
+                     * @param Offset Pagination offset. Default value: 0.
                      */
                     void SetOffset(const int64_t& _offset);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of entries per page.
-                     * @return Limit Number of entries per page.
+                     * 获取Number of entries per page. Default value: 20.
+                     * @return Limit Number of entries per page. Default value: 20.
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of entries per page.
-                     * @param Limit Number of entries per page.
+                     * 设置Number of entries per page. Default value: 20.
+                     * @param Limit Number of entries per page. Default value: 20.
                      */
                     void SetLimit(const int64_t& _limit);
 
@@ -105,13 +105,13 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Pagination offset.
+                     * Pagination offset. Default value: 0.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of entries per page.
+                     * Number of entries per page. Default value: 20.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

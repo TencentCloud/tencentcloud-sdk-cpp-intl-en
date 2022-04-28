@@ -298,49 +298,6 @@ CdbClient::CloseWanServiceOutcomeCallable CdbClient::CloseWanServiceCallable(con
     return task->get_future();
 }
 
-CdbClient::CreateAccountsOutcome CdbClient::CreateAccounts(const CreateAccountsRequest &request)
-{
-    auto outcome = MakeRequest(request, "CreateAccounts");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        CreateAccountsResponse rsp = CreateAccountsResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return CreateAccountsOutcome(rsp);
-        else
-            return CreateAccountsOutcome(o.GetError());
-    }
-    else
-    {
-        return CreateAccountsOutcome(outcome.GetError());
-    }
-}
-
-void CdbClient::CreateAccountsAsync(const CreateAccountsRequest& request, const CreateAccountsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateAccounts(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-CdbClient::CreateAccountsOutcomeCallable CdbClient::CreateAccountsCallable(const CreateAccountsRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<CreateAccountsOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateAccounts(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
 CdbClient::CreateAuditPolicyOutcome CdbClient::CreateAuditPolicy(const CreateAuditPolicyRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateAuditPolicy");
@@ -556,49 +513,6 @@ CdbClient::CreateDBInstanceHourOutcomeCallable CdbClient::CreateDBInstanceHourCa
     return task->get_future();
 }
 
-CdbClient::CreateDeployGroupOutcome CdbClient::CreateDeployGroup(const CreateDeployGroupRequest &request)
-{
-    auto outcome = MakeRequest(request, "CreateDeployGroup");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        CreateDeployGroupResponse rsp = CreateDeployGroupResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return CreateDeployGroupOutcome(rsp);
-        else
-            return CreateDeployGroupOutcome(o.GetError());
-    }
-    else
-    {
-        return CreateDeployGroupOutcome(outcome.GetError());
-    }
-}
-
-void CdbClient::CreateDeployGroupAsync(const CreateDeployGroupRequest& request, const CreateDeployGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateDeployGroup(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-CdbClient::CreateDeployGroupOutcomeCallable CdbClient::CreateDeployGroupCallable(const CreateDeployGroupRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<CreateDeployGroupOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateDeployGroup(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
 CdbClient::CreateParamTemplateOutcome CdbClient::CreateParamTemplate(const CreateParamTemplateRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateParamTemplate");
@@ -771,49 +685,6 @@ CdbClient::DeleteBackupOutcomeCallable CdbClient::DeleteBackupCallable(const Del
     return task->get_future();
 }
 
-CdbClient::DeleteDeployGroupsOutcome CdbClient::DeleteDeployGroups(const DeleteDeployGroupsRequest &request)
-{
-    auto outcome = MakeRequest(request, "DeleteDeployGroups");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        DeleteDeployGroupsResponse rsp = DeleteDeployGroupsResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return DeleteDeployGroupsOutcome(rsp);
-        else
-            return DeleteDeployGroupsOutcome(o.GetError());
-    }
-    else
-    {
-        return DeleteDeployGroupsOutcome(outcome.GetError());
-    }
-}
-
-void CdbClient::DeleteDeployGroupsAsync(const DeleteDeployGroupsRequest& request, const DeleteDeployGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteDeployGroups(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-CdbClient::DeleteDeployGroupsOutcomeCallable CdbClient::DeleteDeployGroupsCallable(const DeleteDeployGroupsRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<DeleteDeployGroupsOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteDeployGroups(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
 CdbClient::DeleteParamTemplateOutcome CdbClient::DeleteParamTemplate(const DeleteParamTemplateRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteParamTemplate");
@@ -943,49 +814,6 @@ CdbClient::DescribeAccountPrivilegesOutcomeCallable CdbClient::DescribeAccountPr
     return task->get_future();
 }
 
-CdbClient::DescribeAccountsOutcome CdbClient::DescribeAccounts(const DescribeAccountsRequest &request)
-{
-    auto outcome = MakeRequest(request, "DescribeAccounts");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        DescribeAccountsResponse rsp = DescribeAccountsResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return DescribeAccountsOutcome(rsp);
-        else
-            return DescribeAccountsOutcome(o.GetError());
-    }
-    else
-    {
-        return DescribeAccountsOutcome(outcome.GetError());
-    }
-}
-
-void CdbClient::DescribeAccountsAsync(const DescribeAccountsRequest& request, const DescribeAccountsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeAccounts(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-CdbClient::DescribeAccountsOutcomeCallable CdbClient::DescribeAccountsCallable(const DescribeAccountsRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<DescribeAccountsOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeAccounts(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
 CdbClient::DescribeAsyncRequestInfoOutcome CdbClient::DescribeAsyncRequestInfo(const DescribeAsyncRequestInfoRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeAsyncRequestInfo");
@@ -1022,6 +850,92 @@ CdbClient::DescribeAsyncRequestInfoOutcomeCallable CdbClient::DescribeAsyncReque
         [this, request]()
         {
             return this->DescribeAsyncRequestInfo(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CdbClient::DescribeAuditPoliciesOutcome CdbClient::DescribeAuditPolicies(const DescribeAuditPoliciesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAuditPolicies");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAuditPoliciesResponse rsp = DescribeAuditPoliciesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAuditPoliciesOutcome(rsp);
+        else
+            return DescribeAuditPoliciesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAuditPoliciesOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::DescribeAuditPoliciesAsync(const DescribeAuditPoliciesRequest& request, const DescribeAuditPoliciesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeAuditPolicies(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdbClient::DescribeAuditPoliciesOutcomeCallable CdbClient::DescribeAuditPoliciesCallable(const DescribeAuditPoliciesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeAuditPoliciesOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeAuditPolicies(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CdbClient::DescribeAuditRulesOutcome CdbClient::DescribeAuditRules(const DescribeAuditRulesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAuditRules");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAuditRulesResponse rsp = DescribeAuditRulesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAuditRulesOutcome(rsp);
+        else
+            return DescribeAuditRulesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAuditRulesOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::DescribeAuditRulesAsync(const DescribeAuditRulesRequest& request, const DescribeAuditRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeAuditRules(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdbClient::DescribeAuditRulesOutcomeCallable CdbClient::DescribeAuditRulesCallable(const DescribeAuditRulesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeAuditRulesOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeAuditRules(request);
         }
     );
 
@@ -1968,49 +1882,6 @@ CdbClient::DescribeDefaultParamsOutcomeCallable CdbClient::DescribeDefaultParams
         [this, request]()
         {
             return this->DescribeDefaultParams(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
-CdbClient::DescribeDeployGroupListOutcome CdbClient::DescribeDeployGroupList(const DescribeDeployGroupListRequest &request)
-{
-    auto outcome = MakeRequest(request, "DescribeDeployGroupList");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        DescribeDeployGroupListResponse rsp = DescribeDeployGroupListResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return DescribeDeployGroupListOutcome(rsp);
-        else
-            return DescribeDeployGroupListOutcome(o.GetError());
-    }
-    else
-    {
-        return DescribeDeployGroupListOutcome(outcome.GetError());
-    }
-}
-
-void CdbClient::DescribeDeployGroupListAsync(const DescribeDeployGroupListRequest& request, const DescribeDeployGroupListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDeployGroupList(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-CdbClient::DescribeDeployGroupListOutcomeCallable CdbClient::DescribeDeployGroupListCallable(const DescribeDeployGroupListRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<DescribeDeployGroupListOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDeployGroupList(request);
         }
     );
 
@@ -3695,49 +3566,6 @@ CdbClient::ModifyDBInstanceSecurityGroupsOutcomeCallable CdbClient::ModifyDBInst
     return task->get_future();
 }
 
-CdbClient::ModifyDBInstanceVipVportOutcome CdbClient::ModifyDBInstanceVipVport(const ModifyDBInstanceVipVportRequest &request)
-{
-    auto outcome = MakeRequest(request, "ModifyDBInstanceVipVport");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        ModifyDBInstanceVipVportResponse rsp = ModifyDBInstanceVipVportResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return ModifyDBInstanceVipVportOutcome(rsp);
-        else
-            return ModifyDBInstanceVipVportOutcome(o.GetError());
-    }
-    else
-    {
-        return ModifyDBInstanceVipVportOutcome(outcome.GetError());
-    }
-}
-
-void CdbClient::ModifyDBInstanceVipVportAsync(const ModifyDBInstanceVipVportRequest& request, const ModifyDBInstanceVipVportAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyDBInstanceVipVport(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-CdbClient::ModifyDBInstanceVipVportOutcomeCallable CdbClient::ModifyDBInstanceVipVportCallable(const ModifyDBInstanceVipVportRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<ModifyDBInstanceVipVportOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyDBInstanceVipVport(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
 CdbClient::ModifyInstanceParamOutcome CdbClient::ModifyInstanceParam(const ModifyInstanceParamRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyInstanceParam");
@@ -3860,49 +3688,6 @@ CdbClient::ModifyLocalBinlogConfigOutcomeCallable CdbClient::ModifyLocalBinlogCo
         [this, request]()
         {
             return this->ModifyLocalBinlogConfig(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
-CdbClient::ModifyNameOrDescByDpIdOutcome CdbClient::ModifyNameOrDescByDpId(const ModifyNameOrDescByDpIdRequest &request)
-{
-    auto outcome = MakeRequest(request, "ModifyNameOrDescByDpId");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        ModifyNameOrDescByDpIdResponse rsp = ModifyNameOrDescByDpIdResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return ModifyNameOrDescByDpIdOutcome(rsp);
-        else
-            return ModifyNameOrDescByDpIdOutcome(o.GetError());
-    }
-    else
-    {
-        return ModifyNameOrDescByDpIdOutcome(outcome.GetError());
-    }
-}
-
-void CdbClient::ModifyNameOrDescByDpIdAsync(const ModifyNameOrDescByDpIdRequest& request, const ModifyNameOrDescByDpIdAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyNameOrDescByDpId(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-CdbClient::ModifyNameOrDescByDpIdOutcomeCallable CdbClient::ModifyNameOrDescByDpIdCallable(const ModifyNameOrDescByDpIdRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<ModifyNameOrDescByDpIdOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyNameOrDescByDpId(request);
         }
     );
 
@@ -4290,6 +4075,49 @@ CdbClient::ReloadBalanceProxyNodeOutcomeCallable CdbClient::ReloadBalanceProxyNo
         [this, request]()
         {
             return this->ReloadBalanceProxyNode(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CdbClient::ResetRootAccountOutcome CdbClient::ResetRootAccount(const ResetRootAccountRequest &request)
+{
+    auto outcome = MakeRequest(request, "ResetRootAccount");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ResetRootAccountResponse rsp = ResetRootAccountResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ResetRootAccountOutcome(rsp);
+        else
+            return ResetRootAccountOutcome(o.GetError());
+    }
+    else
+    {
+        return ResetRootAccountOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::ResetRootAccountAsync(const ResetRootAccountRequest& request, const ResetRootAccountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ResetRootAccount(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdbClient::ResetRootAccountOutcomeCallable CdbClient::ResetRootAccountCallable(const ResetRootAccountRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ResetRootAccountOutcome()>>(
+        [this, request]()
+        {
+            return this->ResetRootAccount(request);
         }
     );
 

@@ -35,6 +35,7 @@ set(dc_public_header_model
   include/tencentcloud/dc/v20180410/model/RouteFilterPrefix.h
   include/tencentcloud/dc/v20180410/model/ApplyInternetAddressResponse.h
   include/tencentcloud/dc/v20180410/model/AcceptDirectConnectTunnelRequest.h
+  include/tencentcloud/dc/v20180410/model/Tag.h
   include/tencentcloud/dc/v20180410/model/CreateDirectConnectTunnelRequest.h
   include/tencentcloud/dc/v20180410/model/DeleteDirectConnectResponse.h
   include/tencentcloud/dc/v20180410/model/EnableInternetAddressResponse.h
@@ -55,11 +56,12 @@ set(dc_public_header_model
   include/tencentcloud/dc/v20180410/model/RejectDirectConnectTunnelResponse.h
   include/tencentcloud/dc/v20180410/model/CreateDirectConnectTunnelResponse.h
   include/tencentcloud/dc/v20180410/model/DeleteDirectConnectTunnelResponse.h
-  include/tencentcloud/dc/v20180410/model/AccessPoint.h
+  include/tencentcloud/dc/v20180410/model/BFDInfo.h
   include/tencentcloud/dc/v20180410/model/DeleteDirectConnectRequest.h
   include/tencentcloud/dc/v20180410/model/DescribeDirectConnectTunnelsResponse.h
+  include/tencentcloud/dc/v20180410/model/AccessPoint.h
   include/tencentcloud/dc/v20180410/model/DescribeInternetAddressStatisticsResponse.h
-  include/tencentcloud/dc/v20180410/model/Tag.h
+  include/tencentcloud/dc/v20180410/model/NQAInfo.h
   include/tencentcloud/dc/v20180410/model/DescribeInternetAddressRequest.h
   include/tencentcloud/dc/v20180410/model/DescribeInternetAddressQuotaResponse.h
   include/tencentcloud/dc/v20180410/model/ReleaseInternetAddressResponse.h
@@ -85,6 +87,7 @@ set(dc_src
   src/v20180410/model/RouteFilterPrefix.cpp
   src/v20180410/model/ApplyInternetAddressResponse.cpp
   src/v20180410/model/AcceptDirectConnectTunnelRequest.cpp
+  src/v20180410/model/Tag.cpp
   src/v20180410/model/CreateDirectConnectTunnelRequest.cpp
   src/v20180410/model/DeleteDirectConnectResponse.cpp
   src/v20180410/model/EnableInternetAddressResponse.cpp
@@ -105,11 +108,12 @@ set(dc_src
   src/v20180410/model/RejectDirectConnectTunnelResponse.cpp
   src/v20180410/model/CreateDirectConnectTunnelResponse.cpp
   src/v20180410/model/DeleteDirectConnectTunnelResponse.cpp
-  src/v20180410/model/AccessPoint.cpp
+  src/v20180410/model/BFDInfo.cpp
   src/v20180410/model/DeleteDirectConnectRequest.cpp
   src/v20180410/model/DescribeDirectConnectTunnelsResponse.cpp
+  src/v20180410/model/AccessPoint.cpp
   src/v20180410/model/DescribeInternetAddressStatisticsResponse.cpp
-  src/v20180410/model/Tag.cpp
+  src/v20180410/model/NQAInfo.cpp
   src/v20180410/model/DescribeInternetAddressRequest.cpp
   src/v20180410/model/DescribeInternetAddressQuotaResponse.cpp
   src/v20180410/model/ReleaseInternetAddressResponse.cpp

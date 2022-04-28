@@ -78,6 +78,24 @@ namespace TencentCloud
                      */
                     bool DestinationRegionsHasBeenSet() const;
 
+                    /**
+                     * 获取Checks whether image synchronization can be initiated 
+                     * @return DryRun Checks whether image synchronization can be initiated 
+                     */
+                    bool GetDryRun() const;
+
+                    /**
+                     * 设置Checks whether image synchronization can be initiated 
+                     * @param DryRun Checks whether image synchronization can be initiated 
+                     */
+                    void SetDryRun(const bool& _dryRun);
+
+                    /**
+                     * 判断参数 DryRun 是否已赋值
+                     * @return DryRun 是否已赋值
+                     */
+                    bool DryRunHasBeenSet() const;
+
                 private:
 
                     /**
@@ -91,6 +109,12 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_destinationRegions;
                     bool m_destinationRegionsHasBeenSet;
+
+                    /**
+                     * Checks whether image synchronization can be initiated 
+                     */
+                    bool m_dryRun;
+                    bool m_dryRunHasBeenSet;
 
                 };
             }

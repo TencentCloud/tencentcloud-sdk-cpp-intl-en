@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Proxy ID
-                     * @return ProxyGroupId Proxy ID
+                     * 获取Proxy group ID
+                     * @return ProxyGroupId Proxy group ID
                      */
                     std::string GetProxyGroupId() const;
 
                     /**
-                     * 设置Proxy ID
-                     * @param ProxyGroupId Proxy ID
+                     * 设置Proxy group ID
+                     * @param ProxyGroupId Proxy group ID
                      */
                     void SetProxyGroupId(const std::string& _proxyGroupId);
 
@@ -87,7 +87,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Proxy ID
+                     * Proxy group ID
                      */
                     std::string m_proxyGroupId;
                     bool m_proxyGroupIdHasBeenSet;

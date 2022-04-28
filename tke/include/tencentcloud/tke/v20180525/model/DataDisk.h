@@ -157,18 +157,18 @@ Note: This field may return null, indicating that no valid value was found.
                     bool MountTargetHasBeenSet() const;
 
                     /**
-                     * 获取The name of the device or partition to mount
-Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @return DiskPartition The name of the device or partition to mount
-Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 获取Mounted device name or partition name (only required when adding an existing node)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return DiskPartition Mounted device name or partition name (only required when adding an existing node)
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetDiskPartition() const;
 
                     /**
-                     * 设置The name of the device or partition to mount
-Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param DiskPartition The name of the device or partition to mount
-Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 设置Mounted device name or partition name (only required when adding an existing node)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param DiskPartition Mounted device name or partition name (only required when adding an existing node)
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetDiskPartition(const std::string& _diskPartition);
 
@@ -216,8 +216,8 @@ Note: This field may return null, indicating that no valid value was found.
                     bool m_mountTargetHasBeenSet;
 
                     /**
-                     * The name of the device or partition to mount
-Note: this field may return `null`, indicating that no valid value is obtained.
+                     * Mounted device name or partition name (only required when adding an existing node)
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_diskPartition;
                     bool m_diskPartitionHasBeenSet;

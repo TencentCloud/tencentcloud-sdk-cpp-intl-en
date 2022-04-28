@@ -415,14 +415,18 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                     bool EnableExternalNodeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ClusterLevel 
+                     * 获取Cluster models. It’s valid for managed clusters.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return ClusterLevel Cluster models. It’s valid for managed clusters.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetClusterLevel() const;
 
                     /**
-                     * 设置
-                     * @param ClusterLevel 
+                     * 设置Cluster models. It’s valid for managed clusters.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param ClusterLevel Cluster models. It’s valid for managed clusters.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetClusterLevel(const std::string& _clusterLevel);
 
@@ -433,14 +437,18 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                     bool ClusterLevelHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AutoUpgradeClusterLevel 
+                     * 获取The target cluster model for auto-upgrade
+Note: this field may return null, indicating that no valid value is obtained.
+                     * @return AutoUpgradeClusterLevel The target cluster model for auto-upgrade
+Note: this field may return null, indicating that no valid value is obtained.
                      */
                     bool GetAutoUpgradeClusterLevel() const;
 
                     /**
-                     * 设置
-                     * @param AutoUpgradeClusterLevel 
+                     * 设置The target cluster model for auto-upgrade
+Note: this field may return null, indicating that no valid value is obtained.
+                     * @param AutoUpgradeClusterLevel The target cluster model for auto-upgrade
+Note: this field may return null, indicating that no valid value is obtained.
                      */
                     void SetAutoUpgradeClusterLevel(const bool& _autoUpgradeClusterLevel);
 
@@ -573,13 +581,15 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                     bool m_enableExternalNodeHasBeenSet;
 
                     /**
-                     * 
+                     * Cluster models. It’s valid for managed clusters.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_clusterLevel;
                     bool m_clusterLevelHasBeenSet;
 
                     /**
-                     * 
+                     * The target cluster model for auto-upgrade
+Note: this field may return null, indicating that no valid value is obtained.
                      */
                     bool m_autoUpgradeClusterLevel;
                     bool m_autoUpgradeClusterLevelHasBeenSet;

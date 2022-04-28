@@ -172,6 +172,32 @@ Notes:
                      */
                     bool ParseM3U8HasBeenSet() const;
 
+                    /**
+                     * 获取Specifies whether to disable Range GETs.
+Notes:
+This feature is in beta test.
+                     * @return DisableRange Specifies whether to disable Range GETs.
+Notes:
+This feature is in beta test.
+                     */
+                    bool GetDisableRange() const;
+
+                    /**
+                     * 设置Specifies whether to disable Range GETs.
+Notes:
+This feature is in beta test.
+                     * @param DisableRange Specifies whether to disable Range GETs.
+Notes:
+This feature is in beta test.
+                     */
+                    void SetDisableRange(const bool& _disableRange);
+
+                    /**
+                     * 判断参数 DisableRange 是否已赋值
+                     * @return DisableRange 是否已赋值
+                     */
+                    bool DisableRangeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -213,6 +239,14 @@ Notes:
                      */
                     bool m_parseM3U8;
                     bool m_parseM3U8HasBeenSet;
+
+                    /**
+                     * Specifies whether to disable Range GETs.
+Notes:
+This feature is in beta test.
+                     */
+                    bool m_disableRange;
+                    bool m_disableRangeHasBeenSet;
 
                 };
             }

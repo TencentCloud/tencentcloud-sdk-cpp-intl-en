@@ -23,6 +23,8 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/dc/v20180410/model/BgpPeer.h>
 #include <tencentcloud/dc/v20180410/model/RouteFilterPrefix.h>
+#include <tencentcloud/dc/v20180410/model/BFDInfo.h>
+#include <tencentcloud/dc/v20180410/model/NQAInfo.h>
 
 
 namespace TencentCloud
@@ -368,6 +370,78 @@ Default value: Non-zero.
                      */
                     bool CloudAttachIdHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable BFD
+                     * @return BfdEnable Whether to enable BFD
+                     */
+                    int64_t GetBfdEnable() const;
+
+                    /**
+                     * 设置Whether to enable BFD
+                     * @param BfdEnable Whether to enable BFD
+                     */
+                    void SetBfdEnable(const int64_t& _bfdEnable);
+
+                    /**
+                     * 判断参数 BfdEnable 是否已赋值
+                     * @return BfdEnable 是否已赋值
+                     */
+                    bool BfdEnableHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable NQA
+                     * @return NqaEnable Whether to enable NQA
+                     */
+                    int64_t GetNqaEnable() const;
+
+                    /**
+                     * 设置Whether to enable NQA
+                     * @param NqaEnable Whether to enable NQA
+                     */
+                    void SetNqaEnable(const int64_t& _nqaEnable);
+
+                    /**
+                     * 判断参数 NqaEnable 是否已赋值
+                     * @return NqaEnable 是否已赋值
+                     */
+                    bool NqaEnableHasBeenSet() const;
+
+                    /**
+                     * 获取BFD configuration information
+                     * @return BfdInfo BFD configuration information
+                     */
+                    BFDInfo GetBfdInfo() const;
+
+                    /**
+                     * 设置BFD configuration information
+                     * @param BfdInfo BFD configuration information
+                     */
+                    void SetBfdInfo(const BFDInfo& _bfdInfo);
+
+                    /**
+                     * 判断参数 BfdInfo 是否已赋值
+                     * @return BfdInfo 是否已赋值
+                     */
+                    bool BfdInfoHasBeenSet() const;
+
+                    /**
+                     * 获取NQA configuration information
+                     * @return NqaInfo NQA configuration information
+                     */
+                    NQAInfo GetNqaInfo() const;
+
+                    /**
+                     * 设置NQA configuration information
+                     * @param NqaInfo NQA configuration information
+                     */
+                    void SetNqaInfo(const NQAInfo& _nqaInfo);
+
+                    /**
+                     * 判断参数 NqaInfo 是否已赋值
+                     * @return NqaInfo 是否已赋值
+                     */
+                    bool NqaInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -474,6 +548,30 @@ Default value: Non-zero.
                      */
                     std::string m_cloudAttachId;
                     bool m_cloudAttachIdHasBeenSet;
+
+                    /**
+                     * Whether to enable BFD
+                     */
+                    int64_t m_bfdEnable;
+                    bool m_bfdEnableHasBeenSet;
+
+                    /**
+                     * Whether to enable NQA
+                     */
+                    int64_t m_nqaEnable;
+                    bool m_nqaEnableHasBeenSet;
+
+                    /**
+                     * BFD configuration information
+                     */
+                    BFDInfo m_bfdInfo;
+                    bool m_bfdInfoHasBeenSet;
+
+                    /**
+                     * NQA configuration information
+                     */
+                    NQAInfo m_nqaInfo;
+                    bool m_nqaInfoHasBeenSet;
 
                 };
             }

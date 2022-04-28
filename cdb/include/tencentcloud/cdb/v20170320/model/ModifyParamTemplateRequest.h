@@ -62,14 +62,14 @@ namespace TencentCloud
                     bool TemplateIdHasBeenSet() const;
 
                     /**
-                     * 获取Template name.
-                     * @return Name Template name.
+                     * 获取Template name (up to 64 characters)
+                     * @return Name Template name (up to 64 characters)
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Template name.
-                     * @param Name Template name.
+                     * 设置Template name (up to 64 characters)
+                     * @param Name Template name (up to 64 characters)
                      */
                     void SetName(const std::string& _name);
 
@@ -80,14 +80,14 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Template description.
-                     * @return Description Template description.
+                     * 获取Template description (up to 255 characters)
+                     * @return Description Template description (up to 255 characters)
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Template description.
-                     * @param Description Template description.
+                     * 设置Template description (up to 255 characters)
+                     * @param Description Template description (up to 255 characters)
                      */
                     void SetDescription(const std::string& _description);
 
@@ -124,13 +124,13 @@ namespace TencentCloud
                     bool m_templateIdHasBeenSet;
 
                     /**
-                     * Template name.
+                     * Template name (up to 64 characters)
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Template description.
+                     * Template description (up to 255 characters)
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;

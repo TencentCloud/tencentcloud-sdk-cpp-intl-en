@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool ProxyGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Number of proxy nodes
-                     * @return ProxyCount Number of proxy nodes
+                     * 获取The number of proxy nodes
+                     * @return ProxyCount The number of proxy nodes
                      */
                     int64_t GetProxyCount() const;
 
                     /**
-                     * 设置Number of proxy nodes
-                     * @param ProxyCount Number of proxy nodes
+                     * 设置The number of proxy nodes
+                     * @param ProxyCount The number of proxy nodes
                      */
                     void SetProxyCount(const int64_t& _proxyCount);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool ProxyCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of CPU cores per proxy node
-                     * @return Cpu Number of CPU cores per proxy node
+                     * 获取The number of CPU cores per proxy node
+                     * @return Cpu The number of CPU cores per proxy node
                      */
                     int64_t GetCpu() const;
 
                     /**
-                     * 设置Number of CPU cores per proxy node
-                     * @param Cpu Number of CPU cores per proxy node
+                     * 设置The number of CPU cores per proxy node
+                     * @param Cpu The number of CPU cores per proxy node
                      */
                     void SetCpu(const int64_t& _cpu);
 
@@ -183,13 +183,13 @@ namespace TencentCloud
                     bool m_proxyGroupIdHasBeenSet;
 
                     /**
-                     * Number of proxy nodes
+                     * The number of proxy nodes
                      */
                     int64_t m_proxyCount;
                     bool m_proxyCountHasBeenSet;
 
                     /**
-                     * Number of CPU cores per proxy node
+                     * The number of CPU cores per proxy node
                      */
                     int64_t m_cpu;
                     bool m_cpuHasBeenSet;

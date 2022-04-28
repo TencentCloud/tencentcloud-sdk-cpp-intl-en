@@ -83,18 +83,18 @@ namespace TencentCloud
                     bool AccountsHasBeenSet() const;
 
                     /**
-                     * 获取Global permission. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "PROCESS", "DROP", "REFERENCES", "INDEX", "ALTER", "SHOW DATABASES", "CREATE TEMPORARY TABLES", "LOCK TABLES", "EXECUTE", "CREATE VIEW", "SHOW VIEW", "CREATE ROUTINE", "ALTER ROUTINE", "EVENT", "TRIGGER","CREATE USER","RELOAD","REPLICATION CLIENT","REPLICATION SLAVE","UPDATE".
-Note: If this parameter is not passed in, it means to clear the permission.
-                     * @return GlobalPrivileges Global permission. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "PROCESS", "DROP", "REFERENCES", "INDEX", "ALTER", "SHOW DATABASES", "CREATE TEMPORARY TABLES", "LOCK TABLES", "EXECUTE", "CREATE VIEW", "SHOW VIEW", "CREATE ROUTINE", "ALTER ROUTINE", "EVENT", "TRIGGER","CREATE USER","RELOAD","REPLICATION CLIENT","REPLICATION SLAVE","UPDATE".
-Note: If this parameter is not passed in, it means to clear the permission.
+                     * 获取Global permission. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "PROCESS", "DROP", "REFERENCES", "INDEX", "ALTER", "SHOW DATABASES", "CREATE TEMPORARY TABLES", "LOCK TABLES", "EXECUTE", "CREATE VIEW", "SHOW VIEW", "CREATE ROUTINE", "ALTER ROUTINE", "EVENT", "TRIGGER", "CREATE USER", "RELOAD", "REPLICATION CLIENT", "REPLICATION SLAVE", "UPDATE".
+Note: When “ModifyAction” is empty, if `GlobalPrivileges` is not passed in, it indicates the global permission will become ineffective.
+                     * @return GlobalPrivileges Global permission. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "PROCESS", "DROP", "REFERENCES", "INDEX", "ALTER", "SHOW DATABASES", "CREATE TEMPORARY TABLES", "LOCK TABLES", "EXECUTE", "CREATE VIEW", "SHOW VIEW", "CREATE ROUTINE", "ALTER ROUTINE", "EVENT", "TRIGGER", "CREATE USER", "RELOAD", "REPLICATION CLIENT", "REPLICATION SLAVE", "UPDATE".
+Note: When “ModifyAction” is empty, if `GlobalPrivileges` is not passed in, it indicates the global permission will become ineffective.
                      */
                     std::vector<std::string> GetGlobalPrivileges() const;
 
                     /**
-                     * 设置Global permission. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "PROCESS", "DROP", "REFERENCES", "INDEX", "ALTER", "SHOW DATABASES", "CREATE TEMPORARY TABLES", "LOCK TABLES", "EXECUTE", "CREATE VIEW", "SHOW VIEW", "CREATE ROUTINE", "ALTER ROUTINE", "EVENT", "TRIGGER","CREATE USER","RELOAD","REPLICATION CLIENT","REPLICATION SLAVE","UPDATE".
-Note: If this parameter is not passed in, it means to clear the permission.
-                     * @param GlobalPrivileges Global permission. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "PROCESS", "DROP", "REFERENCES", "INDEX", "ALTER", "SHOW DATABASES", "CREATE TEMPORARY TABLES", "LOCK TABLES", "EXECUTE", "CREATE VIEW", "SHOW VIEW", "CREATE ROUTINE", "ALTER ROUTINE", "EVENT", "TRIGGER","CREATE USER","RELOAD","REPLICATION CLIENT","REPLICATION SLAVE","UPDATE".
-Note: If this parameter is not passed in, it means to clear the permission.
+                     * 设置Global permission. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "PROCESS", "DROP", "REFERENCES", "INDEX", "ALTER", "SHOW DATABASES", "CREATE TEMPORARY TABLES", "LOCK TABLES", "EXECUTE", "CREATE VIEW", "SHOW VIEW", "CREATE ROUTINE", "ALTER ROUTINE", "EVENT", "TRIGGER", "CREATE USER", "RELOAD", "REPLICATION CLIENT", "REPLICATION SLAVE", "UPDATE".
+Note: When “ModifyAction” is empty, if `GlobalPrivileges` is not passed in, it indicates the global permission will become ineffective.
+                     * @param GlobalPrivileges Global permission. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "PROCESS", "DROP", "REFERENCES", "INDEX", "ALTER", "SHOW DATABASES", "CREATE TEMPORARY TABLES", "LOCK TABLES", "EXECUTE", "CREATE VIEW", "SHOW VIEW", "CREATE ROUTINE", "ALTER ROUTINE", "EVENT", "TRIGGER", "CREATE USER", "RELOAD", "REPLICATION CLIENT", "REPLICATION SLAVE", "UPDATE".
+Note: When “ModifyAction” is empty, if `GlobalPrivileges` is not passed in, it indicates the global permission will become ineffective.
                      */
                     void SetGlobalPrivileges(const std::vector<std::string>& _globalPrivileges);
 
@@ -105,18 +105,18 @@ Note: If this parameter is not passed in, it means to clear the permission.
                     bool GlobalPrivilegesHasBeenSet() const;
 
                     /**
-                     * 获取Database permission. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", 	"DROP", "REFERENCES", "INDEX", "ALTER", "CREATE TEMPORARY TABLES", "LOCK TABLES", "EXECUTE", "CREATE VIEW", "SHOW VIEW", "CREATE ROUTINE", "ALTER ROUTINE", "EVENT", "TRIGGER".
-Note: if this parameter is not passed in, it means to clear the permission.
-                     * @return DatabasePrivileges Database permission. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", 	"DROP", "REFERENCES", "INDEX", "ALTER", "CREATE TEMPORARY TABLES", "LOCK TABLES", "EXECUTE", "CREATE VIEW", "SHOW VIEW", "CREATE ROUTINE", "ALTER ROUTINE", "EVENT", "TRIGGER".
-Note: if this parameter is not passed in, it means to clear the permission.
+                     * 获取Database permission. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "REFERENCES", "INDEX", "ALTER", "CREATE TEMPORARY TABLES", "LOCK TABLES", "EXECUTE", "CREATE VIEW", "SHOW VIEW", "CREATE ROUTINE", "ALTER ROUTINE", "EVENT", "TRIGGER".
+Note: When “ModifyAction” is empty, if `DatabasePrivileges` is not passed in, it indicates the permission of the database will become ineffective.
+                     * @return DatabasePrivileges Database permission. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "REFERENCES", "INDEX", "ALTER", "CREATE TEMPORARY TABLES", "LOCK TABLES", "EXECUTE", "CREATE VIEW", "SHOW VIEW", "CREATE ROUTINE", "ALTER ROUTINE", "EVENT", "TRIGGER".
+Note: When “ModifyAction” is empty, if `DatabasePrivileges` is not passed in, it indicates the permission of the database will become ineffective.
                      */
                     std::vector<DatabasePrivilege> GetDatabasePrivileges() const;
 
                     /**
-                     * 设置Database permission. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", 	"DROP", "REFERENCES", "INDEX", "ALTER", "CREATE TEMPORARY TABLES", "LOCK TABLES", "EXECUTE", "CREATE VIEW", "SHOW VIEW", "CREATE ROUTINE", "ALTER ROUTINE", "EVENT", "TRIGGER".
-Note: if this parameter is not passed in, it means to clear the permission.
-                     * @param DatabasePrivileges Database permission. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", 	"DROP", "REFERENCES", "INDEX", "ALTER", "CREATE TEMPORARY TABLES", "LOCK TABLES", "EXECUTE", "CREATE VIEW", "SHOW VIEW", "CREATE ROUTINE", "ALTER ROUTINE", "EVENT", "TRIGGER".
-Note: if this parameter is not passed in, it means to clear the permission.
+                     * 设置Database permission. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "REFERENCES", "INDEX", "ALTER", "CREATE TEMPORARY TABLES", "LOCK TABLES", "EXECUTE", "CREATE VIEW", "SHOW VIEW", "CREATE ROUTINE", "ALTER ROUTINE", "EVENT", "TRIGGER".
+Note: When “ModifyAction” is empty, if `DatabasePrivileges` is not passed in, it indicates the permission of the database will become ineffective.
+                     * @param DatabasePrivileges Database permission. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "REFERENCES", "INDEX", "ALTER", "CREATE TEMPORARY TABLES", "LOCK TABLES", "EXECUTE", "CREATE VIEW", "SHOW VIEW", "CREATE ROUTINE", "ALTER ROUTINE", "EVENT", "TRIGGER".
+Note: When “ModifyAction” is empty, if `DatabasePrivileges` is not passed in, it indicates the permission of the database will become ineffective.
                      */
                     void SetDatabasePrivileges(const std::vector<DatabasePrivilege>& _databasePrivileges);
 
@@ -127,18 +127,18 @@ Note: if this parameter is not passed in, it means to clear the permission.
                     bool DatabasePrivilegesHasBeenSet() const;
 
                     /**
-                     * 获取Table permission in the database. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", 	"DROP", "REFERENCES", "INDEX", "ALTER", "CREATE VIEW", "SHOW VIEW", "TRIGGER".
-Note: if this parameter is not passed in, it means to clear the permission.
-                     * @return TablePrivileges Table permission in the database. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", 	"DROP", "REFERENCES", "INDEX", "ALTER", "CREATE VIEW", "SHOW VIEW", "TRIGGER".
-Note: if this parameter is not passed in, it means to clear the permission.
+                     * 获取Table permission in the database. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "REFERENCES", "INDEX", "ALTER", "CREATE VIEW", "SHOW VIEW", "TRIGGER".
+Note: When “ModifyAction” is empty, if `TablePrivileges` is not passed in, it indicates the permission of the table will become ineffective.
+                     * @return TablePrivileges Table permission in the database. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "REFERENCES", "INDEX", "ALTER", "CREATE VIEW", "SHOW VIEW", "TRIGGER".
+Note: When “ModifyAction” is empty, if `TablePrivileges` is not passed in, it indicates the permission of the table will become ineffective.
                      */
                     std::vector<TablePrivilege> GetTablePrivileges() const;
 
                     /**
-                     * 设置Table permission in the database. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", 	"DROP", "REFERENCES", "INDEX", "ALTER", "CREATE VIEW", "SHOW VIEW", "TRIGGER".
-Note: if this parameter is not passed in, it means to clear the permission.
-                     * @param TablePrivileges Table permission in the database. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", 	"DROP", "REFERENCES", "INDEX", "ALTER", "CREATE VIEW", "SHOW VIEW", "TRIGGER".
-Note: if this parameter is not passed in, it means to clear the permission.
+                     * 设置Table permission in the database. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "REFERENCES", "INDEX", "ALTER", "CREATE VIEW", "SHOW VIEW", "TRIGGER".
+Note: When “ModifyAction” is empty, if `TablePrivileges` is not passed in, it indicates the permission of the table will become ineffective.
+                     * @param TablePrivileges Table permission in the database. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "REFERENCES", "INDEX", "ALTER", "CREATE VIEW", "SHOW VIEW", "TRIGGER".
+Note: When “ModifyAction” is empty, if `TablePrivileges` is not passed in, it indicates the permission of the table will become ineffective.
                      */
                     void SetTablePrivileges(const std::vector<TablePrivilege>& _tablePrivileges);
 
@@ -149,18 +149,18 @@ Note: if this parameter is not passed in, it means to clear the permission.
                     bool TablePrivilegesHasBeenSet() const;
 
                     /**
-                     * 获取Column permission in table. Valid values: "SELECT", "INSERT", "UPDATE", "REFERENCES".
-Note: if this parameter is not passed in, it means to clear the permission.
-                     * @return ColumnPrivileges Column permission in table. Valid values: "SELECT", "INSERT", "UPDATE", "REFERENCES".
-Note: if this parameter is not passed in, it means to clear the permission.
+                     * 获取Column permission in the table. Valid values: "SELECT", "INSERT", "UPDATE", "REFERENCES".
+Note: When “ModifyAction” is empty, if `ColumnPrivileges` is not passed in, it indicates the permission of the column will become ineffective.
+                     * @return ColumnPrivileges Column permission in the table. Valid values: "SELECT", "INSERT", "UPDATE", "REFERENCES".
+Note: When “ModifyAction” is empty, if `ColumnPrivileges` is not passed in, it indicates the permission of the column will become ineffective.
                      */
                     std::vector<ColumnPrivilege> GetColumnPrivileges() const;
 
                     /**
-                     * 设置Column permission in table. Valid values: "SELECT", "INSERT", "UPDATE", "REFERENCES".
-Note: if this parameter is not passed in, it means to clear the permission.
-                     * @param ColumnPrivileges Column permission in table. Valid values: "SELECT", "INSERT", "UPDATE", "REFERENCES".
-Note: if this parameter is not passed in, it means to clear the permission.
+                     * 设置Column permission in the table. Valid values: "SELECT", "INSERT", "UPDATE", "REFERENCES".
+Note: When “ModifyAction” is empty, if `ColumnPrivileges` is not passed in, it indicates the permission of the column will become ineffective.
+                     * @param ColumnPrivileges Column permission in the table. Valid values: "SELECT", "INSERT", "UPDATE", "REFERENCES".
+Note: When “ModifyAction” is empty, if `ColumnPrivileges` is not passed in, it indicates the permission of the column will become ineffective.
                      */
                     void SetColumnPrivileges(const std::vector<ColumnPrivilege>& _columnPrivileges);
 
@@ -171,14 +171,14 @@ Note: if this parameter is not passed in, it means to clear the permission.
                     bool ColumnPrivilegesHasBeenSet() const;
 
                     /**
-                     * 获取If this parameter is specified, permissions are modified in batches. Valid values: `grant`, `revoke`.
-                     * @return ModifyAction If this parameter is specified, permissions are modified in batches. Valid values: `grant`, `revoke`.
+                     * 获取When this parameter is not empty, it indicates that the permission will be modified. Valid values: `grant` (grant permission), `revoke` (revoke permission)
+                     * @return ModifyAction When this parameter is not empty, it indicates that the permission will be modified. Valid values: `grant` (grant permission), `revoke` (revoke permission)
                      */
                     std::string GetModifyAction() const;
 
                     /**
-                     * 设置If this parameter is specified, permissions are modified in batches. Valid values: `grant`, `revoke`.
-                     * @param ModifyAction If this parameter is specified, permissions are modified in batches. Valid values: `grant`, `revoke`.
+                     * 设置When this parameter is not empty, it indicates that the permission will be modified. Valid values: `grant` (grant permission), `revoke` (revoke permission)
+                     * @param ModifyAction When this parameter is not empty, it indicates that the permission will be modified. Valid values: `grant` (grant permission), `revoke` (revoke permission)
                      */
                     void SetModifyAction(const std::string& _modifyAction);
 
@@ -203,35 +203,35 @@ Note: if this parameter is not passed in, it means to clear the permission.
                     bool m_accountsHasBeenSet;
 
                     /**
-                     * Global permission. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "PROCESS", "DROP", "REFERENCES", "INDEX", "ALTER", "SHOW DATABASES", "CREATE TEMPORARY TABLES", "LOCK TABLES", "EXECUTE", "CREATE VIEW", "SHOW VIEW", "CREATE ROUTINE", "ALTER ROUTINE", "EVENT", "TRIGGER","CREATE USER","RELOAD","REPLICATION CLIENT","REPLICATION SLAVE","UPDATE".
-Note: If this parameter is not passed in, it means to clear the permission.
+                     * Global permission. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "PROCESS", "DROP", "REFERENCES", "INDEX", "ALTER", "SHOW DATABASES", "CREATE TEMPORARY TABLES", "LOCK TABLES", "EXECUTE", "CREATE VIEW", "SHOW VIEW", "CREATE ROUTINE", "ALTER ROUTINE", "EVENT", "TRIGGER", "CREATE USER", "RELOAD", "REPLICATION CLIENT", "REPLICATION SLAVE", "UPDATE".
+Note: When “ModifyAction” is empty, if `GlobalPrivileges` is not passed in, it indicates the global permission will become ineffective.
                      */
                     std::vector<std::string> m_globalPrivileges;
                     bool m_globalPrivilegesHasBeenSet;
 
                     /**
-                     * Database permission. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", 	"DROP", "REFERENCES", "INDEX", "ALTER", "CREATE TEMPORARY TABLES", "LOCK TABLES", "EXECUTE", "CREATE VIEW", "SHOW VIEW", "CREATE ROUTINE", "ALTER ROUTINE", "EVENT", "TRIGGER".
-Note: if this parameter is not passed in, it means to clear the permission.
+                     * Database permission. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "REFERENCES", "INDEX", "ALTER", "CREATE TEMPORARY TABLES", "LOCK TABLES", "EXECUTE", "CREATE VIEW", "SHOW VIEW", "CREATE ROUTINE", "ALTER ROUTINE", "EVENT", "TRIGGER".
+Note: When “ModifyAction” is empty, if `DatabasePrivileges` is not passed in, it indicates the permission of the database will become ineffective.
                      */
                     std::vector<DatabasePrivilege> m_databasePrivileges;
                     bool m_databasePrivilegesHasBeenSet;
 
                     /**
-                     * Table permission in the database. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", 	"DROP", "REFERENCES", "INDEX", "ALTER", "CREATE VIEW", "SHOW VIEW", "TRIGGER".
-Note: if this parameter is not passed in, it means to clear the permission.
+                     * Table permission in the database. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "REFERENCES", "INDEX", "ALTER", "CREATE VIEW", "SHOW VIEW", "TRIGGER".
+Note: When “ModifyAction” is empty, if `TablePrivileges` is not passed in, it indicates the permission of the table will become ineffective.
                      */
                     std::vector<TablePrivilege> m_tablePrivileges;
                     bool m_tablePrivilegesHasBeenSet;
 
                     /**
-                     * Column permission in table. Valid values: "SELECT", "INSERT", "UPDATE", "REFERENCES".
-Note: if this parameter is not passed in, it means to clear the permission.
+                     * Column permission in the table. Valid values: "SELECT", "INSERT", "UPDATE", "REFERENCES".
+Note: When “ModifyAction” is empty, if `ColumnPrivileges` is not passed in, it indicates the permission of the column will become ineffective.
                      */
                     std::vector<ColumnPrivilege> m_columnPrivileges;
                     bool m_columnPrivilegesHasBeenSet;
 
                     /**
-                     * If this parameter is specified, permissions are modified in batches. Valid values: `grant`, `revoke`.
+                     * When this parameter is not empty, it indicates that the permission will be modified. Valid values: `grant` (grant permission), `revoke` (revoke permission)
                      */
                     std::string m_modifyAction;
                     bool m_modifyActionHasBeenSet;

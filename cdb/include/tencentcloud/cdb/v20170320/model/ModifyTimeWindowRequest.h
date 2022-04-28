@@ -96,6 +96,24 @@ namespace TencentCloud
                      */
                     bool WeekdaysHasBeenSet() const;
 
+                    /**
+                     * 获取Data delay threshold. It takes effect only for source instance and disaster recovery instance. Default value: 10.
+                     * @return MaxDelayTime Data delay threshold. It takes effect only for source instance and disaster recovery instance. Default value: 10.
+                     */
+                    uint64_t GetMaxDelayTime() const;
+
+                    /**
+                     * 设置Data delay threshold. It takes effect only for source instance and disaster recovery instance. Default value: 10.
+                     * @param MaxDelayTime Data delay threshold. It takes effect only for source instance and disaster recovery instance. Default value: 10.
+                     */
+                    void SetMaxDelayTime(const uint64_t& _maxDelayTime);
+
+                    /**
+                     * 判断参数 MaxDelayTime 是否已赋值
+                     * @return MaxDelayTime 是否已赋值
+                     */
+                    bool MaxDelayTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -115,6 +133,12 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_weekdays;
                     bool m_weekdaysHasBeenSet;
+
+                    /**
+                     * Data delay threshold. It takes effect only for source instance and disaster recovery instance. Default value: 10.
+                     */
+                    uint64_t m_maxDelayTime;
+                    bool m_maxDelayTimeHasBeenSet;
 
                 };
             }

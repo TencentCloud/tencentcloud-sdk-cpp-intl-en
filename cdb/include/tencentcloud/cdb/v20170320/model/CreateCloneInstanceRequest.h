@@ -407,6 +407,24 @@ which is left empty by default. Specify this parameter when cloning a strong syn
                      */
                     bool CageIdHasBeenSet() const;
 
+                    /**
+                     * 获取Project ID. Default value: 0.
+                     * @return ProjectId Project ID. Default value: 0.
+                     */
+                    uint64_t GetProjectId() const;
+
+                    /**
+                     * 设置Project ID. Default value: 0.
+                     * @param ProjectId Project ID. Default value: 0.
+                     */
+                    void SetProjectId(const uint64_t& _projectId);
+
+                    /**
+                     * 判断参数 ProjectId 是否已赋值
+                     * @return ProjectId 是否已赋值
+                     */
+                    bool ProjectIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -529,6 +547,12 @@ which is left empty by default. Specify this parameter when cloning a strong syn
                      */
                     std::string m_cageId;
                     bool m_cageIdHasBeenSet;
+
+                    /**
+                     * Project ID. Default value: 0.
+                     */
+                    uint64_t m_projectId;
+                    bool m_projectIdHasBeenSet;
 
                 };
             }

@@ -25,6 +25,12 @@
 #include <tencentcloud/core/AsyncCallerContext.h>
 #include <tencentcloud/cdn/v20180606/model/CreateScdnFailedLogTaskRequest.h>
 #include <tencentcloud/cdn/v20180606/model/CreateScdnFailedLogTaskResponse.h>
+#include <tencentcloud/cdn/v20180606/model/DescribeBillingDataRequest.h>
+#include <tencentcloud/cdn/v20180606/model/DescribeBillingDataResponse.h>
+#include <tencentcloud/cdn/v20180606/model/DescribeCdnDataRequest.h>
+#include <tencentcloud/cdn/v20180606/model/DescribeCdnDataResponse.h>
+#include <tencentcloud/cdn/v20180606/model/DescribeOriginDataRequest.h>
+#include <tencentcloud/cdn/v20180606/model/DescribeOriginDataResponse.h>
 #include <tencentcloud/cdn/v20180606/model/PurgePathCacheRequest.h>
 #include <tencentcloud/cdn/v20180606/model/PurgePathCacheResponse.h>
 #include <tencentcloud/cdn/v20180606/model/PushUrlsCacheRequest.h>
@@ -46,6 +52,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateScdnFailedLogTaskResponse> CreateScdnFailedLogTaskOutcome;
                 typedef std::future<CreateScdnFailedLogTaskOutcome> CreateScdnFailedLogTaskOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::CreateScdnFailedLogTaskRequest&, CreateScdnFailedLogTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateScdnFailedLogTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBillingDataResponse> DescribeBillingDataOutcome;
+                typedef std::future<DescribeBillingDataOutcome> DescribeBillingDataOutcomeCallable;
+                typedef std::function<void(const CdnClient*, const Model::DescribeBillingDataRequest&, DescribeBillingDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBillingDataAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCdnDataResponse> DescribeCdnDataOutcome;
+                typedef std::future<DescribeCdnDataOutcome> DescribeCdnDataOutcomeCallable;
+                typedef std::function<void(const CdnClient*, const Model::DescribeCdnDataRequest&, DescribeCdnDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCdnDataAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeOriginDataResponse> DescribeOriginDataOutcome;
+                typedef std::future<DescribeOriginDataOutcome> DescribeOriginDataOutcomeCallable;
+                typedef std::function<void(const CdnClient*, const Model::DescribeOriginDataRequest&, DescribeOriginDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOriginDataAsyncHandler;
                 typedef Outcome<Core::Error, Model::PurgePathCacheResponse> PurgePathCacheOutcome;
                 typedef std::future<PurgePathCacheOutcome> PurgePathCacheOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::PurgePathCacheRequest&, PurgePathCacheOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PurgePathCacheAsyncHandler;
@@ -63,6 +78,55 @@ namespace TencentCloud
                 CreateScdnFailedLogTaskOutcome CreateScdnFailedLogTask(const Model::CreateScdnFailedLogTaskRequest &request);
                 void CreateScdnFailedLogTaskAsync(const Model::CreateScdnFailedLogTaskRequest& request, const CreateScdnFailedLogTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateScdnFailedLogTaskOutcomeCallable CreateScdnFailedLogTaskCallable(const Model::CreateScdnFailedLogTaskRequest& request);
+
+                /**
+                 *This API is used to query billing data details.
+                 * @param req DescribeBillingDataRequest
+                 * @return DescribeBillingDataOutcome
+                 */
+                DescribeBillingDataOutcome DescribeBillingData(const Model::DescribeBillingDataRequest &request);
+                void DescribeBillingDataAsync(const Model::DescribeBillingDataRequest& request, const DescribeBillingDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBillingDataOutcomeCallable DescribeBillingDataCallable(const Model::DescribeBillingDataRequest& request);
+
+                /**
+                 *This API (DescribeCdnData) is used to query CDN real-time access monitoring data and supports the following metrics:
+
++ Traffic (in bytes)
++ Bandwidth (in bps)
++ Number of requests
++ Number of hit requests
++ Request hit rate (in %)
++ Hit traffic (in bytes)
++ Traffic hit rate (in %)
++ Aggregate list of 2xx status codes and the details of status codes starting with 2 (in entries)
++ Aggregate list of 3xx status codes and the details of status codes starting with 3 (in entries)
++ Aggregate list of 4xx status codes and the details of status codes starting with 4 (in entries)
++ Aggregate list of 5xx status codes and the details of status codes starting with 5 (in entries)
+                 * @param req DescribeCdnDataRequest
+                 * @return DescribeCdnDataOutcome
+                 */
+                DescribeCdnDataOutcome DescribeCdnData(const Model::DescribeCdnDataRequest &request);
+                void DescribeCdnDataAsync(const Model::DescribeCdnDataRequest& request, const DescribeCdnDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCdnDataOutcomeCallable DescribeCdnDataCallable(const Model::DescribeCdnDataRequest& request);
+
+                /**
+                 *This API (DescribeOriginData) is used to query CDN real-time origin-pull monitoring data and supports the following metrics:
+
++ Origin-pull traffic (in bytes)
++ Origin-pull bandwidth (in bps)
++ Number of origin-pull requests
++ Number of failed origin-pull requests
++ Origin-pull failure rate (in % with two decimal digits)
++ Aggregate list of 2xx origin-pull status codes and the details of origin-pull status codes starting with 2 (in entries)
++ Aggregate list of 3xx origin-pull status codes and the details of origin-pull status codes starting with 3 (in entries)
++ Aggregate list of 4xx origin-pull status codes and the details of origin-pull status codes starting with 4 (in entries)
++ Aggregate list of 5xx origin-pull status codes and the details of origin-pull status codes starting with 5 (in entries)
+                 * @param req DescribeOriginDataRequest
+                 * @return DescribeOriginDataOutcome
+                 */
+                DescribeOriginDataOutcome DescribeOriginData(const Model::DescribeOriginDataRequest &request);
+                void DescribeOriginDataAsync(const Model::DescribeOriginDataRequest& request, const DescribeOriginDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeOriginDataOutcomeCallable DescribeOriginDataCallable(const Model::DescribeOriginDataRequest& request);
 
                 /**
                  *This API is used to submit multiple directory purge tasks, which are carried out according to the acceleration region of the domain names.

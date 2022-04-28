@@ -83,6 +83,135 @@ CdnClient::CreateScdnFailedLogTaskOutcomeCallable CdnClient::CreateScdnFailedLog
     return task->get_future();
 }
 
+CdnClient::DescribeBillingDataOutcome CdnClient::DescribeBillingData(const DescribeBillingDataRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeBillingData");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeBillingDataResponse rsp = DescribeBillingDataResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeBillingDataOutcome(rsp);
+        else
+            return DescribeBillingDataOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeBillingDataOutcome(outcome.GetError());
+    }
+}
+
+void CdnClient::DescribeBillingDataAsync(const DescribeBillingDataRequest& request, const DescribeBillingDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeBillingData(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdnClient::DescribeBillingDataOutcomeCallable CdnClient::DescribeBillingDataCallable(const DescribeBillingDataRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeBillingDataOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeBillingData(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CdnClient::DescribeCdnDataOutcome CdnClient::DescribeCdnData(const DescribeCdnDataRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCdnData");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCdnDataResponse rsp = DescribeCdnDataResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCdnDataOutcome(rsp);
+        else
+            return DescribeCdnDataOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCdnDataOutcome(outcome.GetError());
+    }
+}
+
+void CdnClient::DescribeCdnDataAsync(const DescribeCdnDataRequest& request, const DescribeCdnDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeCdnData(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdnClient::DescribeCdnDataOutcomeCallable CdnClient::DescribeCdnDataCallable(const DescribeCdnDataRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeCdnDataOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeCdnData(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CdnClient::DescribeOriginDataOutcome CdnClient::DescribeOriginData(const DescribeOriginDataRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeOriginData");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeOriginDataResponse rsp = DescribeOriginDataResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeOriginDataOutcome(rsp);
+        else
+            return DescribeOriginDataOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeOriginDataOutcome(outcome.GetError());
+    }
+}
+
+void CdnClient::DescribeOriginDataAsync(const DescribeOriginDataRequest& request, const DescribeOriginDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeOriginData(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdnClient::DescribeOriginDataOutcomeCallable CdnClient::DescribeOriginDataCallable(const DescribeOriginDataRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeOriginDataOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeOriginData(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CdnClient::PurgePathCacheOutcome CdnClient::PurgePathCache(const PurgePathCacheRequest &request)
 {
     auto outcome = MakeRequest(request, "PurgePathCache");

@@ -48,76 +48,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Session persistence duration, in seconds.
-                     * @return KeepTime Session persistence duration, in seconds.
+                     * 获取Forwarding protocol. Valid values: `http` and `https`.
+                     * @return Protocol Forwarding protocol. Valid values: `http` and `https`.
                      */
-                    uint64_t GetKeepTime() const;
+                    std::string GetProtocol() const;
 
                     /**
-                     * 设置Session persistence duration, in seconds.
-                     * @param KeepTime Session persistence duration, in seconds.
+                     * 设置Forwarding protocol. Valid values: `http` and `https`.
+                     * @param Protocol Forwarding protocol. Valid values: `http` and `https`.
                      */
-                    void SetKeepTime(const uint64_t& _keepTime);
+                    void SetProtocol(const std::string& _protocol);
 
                     /**
-                     * 判断参数 KeepTime 是否已赋值
-                     * @return KeepTime 是否已赋值
+                     * 判断参数 Protocol 是否已赋值
+                     * @return Protocol 是否已赋值
                      */
-                    bool KeepTimeHasBeenSet() const;
-
-                    /**
-                     * 获取Load balancing method. Valid value: `1` (weighed polling).
-                     * @return LbType Load balancing method. Valid value: `1` (weighed polling).
-                     */
-                    uint64_t GetLbType() const;
-
-                    /**
-                     * 设置Load balancing method. Valid value: `1` (weighed polling).
-                     * @param LbType Load balancing method. Valid value: `1` (weighed polling).
-                     */
-                    void SetLbType(const uint64_t& _lbType);
-
-                    /**
-                     * 判断参数 LbType 是否已赋值
-                     * @return LbType 是否已赋值
-                     */
-                    bool LbTypeHasBeenSet() const;
-
-                    /**
-                     * 获取List of origins
-                     * @return SourceList List of origins
-                     */
-                    std::vector<L4RuleSource> GetSourceList() const;
-
-                    /**
-                     * 设置List of origins
-                     * @param SourceList List of origins
-                     */
-                    void SetSourceList(const std::vector<L4RuleSource>& _sourceList);
-
-                    /**
-                     * 判断参数 SourceList 是否已赋值
-                     * @return SourceList 是否已赋值
-                     */
-                    bool SourceListHasBeenSet() const;
-
-                    /**
-                     * 获取Whether session persistence is enabled. Valid values: `0` (disabled) and `1` (enabled).
-                     * @return KeepEnable Whether session persistence is enabled. Valid values: `0` (disabled) and `1` (enabled).
-                     */
-                    uint64_t GetKeepEnable() const;
-
-                    /**
-                     * 设置Whether session persistence is enabled. Valid values: `0` (disabled) and `1` (enabled).
-                     * @param KeepEnable Whether session persistence is enabled. Valid values: `0` (disabled) and `1` (enabled).
-                     */
-                    void SetKeepEnable(const uint64_t& _keepEnable);
-
-                    /**
-                     * 判断参数 KeepEnable 是否已赋值
-                     * @return KeepEnable 是否已赋值
-                     */
-                    bool KeepEnableHasBeenSet() const;
+                    bool ProtocolHasBeenSet() const;
 
                     /**
                      * 获取Forwarding domain name.
@@ -138,22 +84,58 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取Forwarding protocol. Valid values: `http` and `https`.
-                     * @return Protocol Forwarding protocol. Valid values: `http` and `https`.
+                     * 获取Load balancing method. Valid value: `1` (weighed polling).
+                     * @return LbType Load balancing method. Valid value: `1` (weighed polling).
                      */
-                    std::string GetProtocol() const;
+                    uint64_t GetLbType() const;
 
                     /**
-                     * 设置Forwarding protocol. Valid values: `http` and `https`.
-                     * @param Protocol Forwarding protocol. Valid values: `http` and `https`.
+                     * 设置Load balancing method. Valid value: `1` (weighed polling).
+                     * @param LbType Load balancing method. Valid value: `1` (weighed polling).
                      */
-                    void SetProtocol(const std::string& _protocol);
+                    void SetLbType(const uint64_t& _lbType);
 
                     /**
-                     * 判断参数 Protocol 是否已赋值
-                     * @return Protocol 是否已赋值
+                     * 判断参数 LbType 是否已赋值
+                     * @return LbType 是否已赋值
                      */
-                    bool ProtocolHasBeenSet() const;
+                    bool LbTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Whether session persistence is enabled. Valid values: `0` (disabled) and `1` (enabled).
+                     * @return KeepEnable Whether session persistence is enabled. Valid values: `0` (disabled) and `1` (enabled).
+                     */
+                    uint64_t GetKeepEnable() const;
+
+                    /**
+                     * 设置Whether session persistence is enabled. Valid values: `0` (disabled) and `1` (enabled).
+                     * @param KeepEnable Whether session persistence is enabled. Valid values: `0` (disabled) and `1` (enabled).
+                     */
+                    void SetKeepEnable(const uint64_t& _keepEnable);
+
+                    /**
+                     * 判断参数 KeepEnable 是否已赋值
+                     * @return KeepEnable 是否已赋值
+                     */
+                    bool KeepEnableHasBeenSet() const;
+
+                    /**
+                     * 获取Session persistence duration, in seconds.
+                     * @return KeepTime Session persistence duration, in seconds.
+                     */
+                    uint64_t GetKeepTime() const;
+
+                    /**
+                     * 设置Session persistence duration, in seconds.
+                     * @param KeepTime Session persistence duration, in seconds.
+                     */
+                    void SetKeepTime(const uint64_t& _keepTime);
+
+                    /**
+                     * 判断参数 KeepTime 是否已赋值
+                     * @return KeepTime 是否已赋值
+                     */
+                    bool KeepTimeHasBeenSet() const;
 
                     /**
                      * 获取Forwarding method. Valid values: `1` (by domain name); `2` (by IP).
@@ -174,22 +156,184 @@ namespace TencentCloud
                     bool SourceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable **Forward HTTPS requests via HTTP**. Valid values: `0` (disabled) and `1` (enabled). It defaults to `0`.
-                     * @return HttpsToHttpEnable Whether to enable **Forward HTTPS requests via HTTP**. Valid values: `0` (disabled) and `1` (enabled). It defaults to `0`.
+                     * 获取List of origins
+                     * @return SourceList List of origins
                      */
-                    uint64_t GetHttpsToHttpEnable() const;
+                    std::vector<L4RuleSource> GetSourceList() const;
 
                     /**
-                     * 设置Whether to enable **Forward HTTPS requests via HTTP**. Valid values: `0` (disabled) and `1` (enabled). It defaults to `0`.
-                     * @param HttpsToHttpEnable Whether to enable **Forward HTTPS requests via HTTP**. Valid values: `0` (disabled) and `1` (enabled). It defaults to `0`.
+                     * 设置List of origins
+                     * @param SourceList List of origins
                      */
-                    void SetHttpsToHttpEnable(const uint64_t& _httpsToHttpEnable);
+                    void SetSourceList(const std::vector<L4RuleSource>& _sourceList);
 
                     /**
-                     * 判断参数 HttpsToHttpEnable 是否已赋值
-                     * @return HttpsToHttpEnable 是否已赋值
+                     * 判断参数 SourceList 是否已赋值
+                     * @return SourceList 是否已赋值
                      */
-                    bool HttpsToHttpEnableHasBeenSet() const;
+                    bool SourceListHasBeenSet() const;
+
+                    /**
+                     * 获取Region code.
+                     * @return Region Region code.
+                     */
+                    uint64_t GetRegion() const;
+
+                    /**
+                     * 设置Region code.
+                     * @param Region Region code.
+                     */
+                    void SetRegion(const uint64_t& _region);
+
+                    /**
+                     * 判断参数 Region 是否已赋值
+                     * @return Region 是否已赋值
+                     */
+                    bool RegionHasBeenSet() const;
+
+                    /**
+                     * 获取Resource ID.
+                     * @return Id Resource ID.
+                     */
+                    std::string GetId() const;
+
+                    /**
+                     * 设置Resource ID.
+                     * @param Id Resource ID.
+                     */
+                    void SetId(const std::string& _id);
+
+                    /**
+                     * 判断参数 Id 是否已赋值
+                     * @return Id 是否已赋值
+                     */
+                    bool IdHasBeenSet() const;
+
+                    /**
+                     * 获取Anti-DDoS instance IP address.
+                     * @return Ip Anti-DDoS instance IP address.
+                     */
+                    std::string GetIp() const;
+
+                    /**
+                     * 设置Anti-DDoS instance IP address.
+                     * @param Ip Anti-DDoS instance IP address.
+                     */
+                    void SetIp(const std::string& _ip);
+
+                    /**
+                     * 判断参数 Ip 是否已赋值
+                     * @return Ip 是否已赋值
+                     */
+                    bool IpHasBeenSet() const;
+
+                    /**
+                     * 获取Rule ID. This field is not required for adding a rule, but is required for modifying or deleting a rule.
+                     * @return RuleId Rule ID. This field is not required for adding a rule, but is required for modifying or deleting a rule.
+                     */
+                    std::string GetRuleId() const;
+
+                    /**
+                     * 设置Rule ID. This field is not required for adding a rule, but is required for modifying or deleting a rule.
+                     * @param RuleId Rule ID. This field is not required for adding a rule, but is required for modifying or deleting a rule.
+                     */
+                    void SetRuleId(const std::string& _ruleId);
+
+                    /**
+                     * 判断参数 RuleId 是否已赋值
+                     * @return RuleId 是否已赋值
+                     */
+                    bool RuleIdHasBeenSet() const;
+
+                    /**
+                     * 获取Rule description.
+                     * @return RuleName Rule description.
+                     */
+                    std::string GetRuleName() const;
+
+                    /**
+                     * 设置Rule description.
+                     * @param RuleName Rule description.
+                     */
+                    void SetRuleName(const std::string& _ruleName);
+
+                    /**
+                     * 判断参数 RuleName 是否已赋值
+                     * @return RuleName 是否已赋值
+                     */
+                    bool RuleNameHasBeenSet() const;
+
+                    /**
+                     * 获取Certificate source. When the forwarding protocol is HTTPS, this field must be set to `2` (Tencent Cloud managed certificate), and for HTTP protocol, it can be set to `0`.
+                     * @return CertType Certificate source. When the forwarding protocol is HTTPS, this field must be set to `2` (Tencent Cloud managed certificate), and for HTTP protocol, it can be set to `0`.
+                     */
+                    uint64_t GetCertType() const;
+
+                    /**
+                     * 设置Certificate source. When the forwarding protocol is HTTPS, this field must be set to `2` (Tencent Cloud managed certificate), and for HTTP protocol, it can be set to `0`.
+                     * @param CertType Certificate source. When the forwarding protocol is HTTPS, this field must be set to `2` (Tencent Cloud managed certificate), and for HTTP protocol, it can be set to `0`.
+                     */
+                    void SetCertType(const uint64_t& _certType);
+
+                    /**
+                     * 判断参数 CertType 是否已赋值
+                     * @return CertType 是否已赋值
+                     */
+                    bool CertTypeHasBeenSet() const;
+
+                    /**
+                     * 获取When the certificate is managed by Tencent Cloud, this field must be set to the ID of the managed certificate.
+                     * @return SSLId When the certificate is managed by Tencent Cloud, this field must be set to the ID of the managed certificate.
+                     */
+                    std::string GetSSLId() const;
+
+                    /**
+                     * 设置When the certificate is managed by Tencent Cloud, this field must be set to the ID of the managed certificate.
+                     * @param SSLId When the certificate is managed by Tencent Cloud, this field must be set to the ID of the managed certificate.
+                     */
+                    void SetSSLId(const std::string& _sSLId);
+
+                    /**
+                     * 判断参数 SSLId 是否已赋值
+                     * @return SSLId 是否已赋值
+                     */
+                    bool SSLIdHasBeenSet() const;
+
+                    /**
+                     * 获取[Disused] When the certificate is an external certificate, the certificate content should be provided here. 
+                     * @return Cert [Disused] When the certificate is an external certificate, the certificate content should be provided here. 
+                     */
+                    std::string GetCert() const;
+
+                    /**
+                     * 设置[Disused] When the certificate is an external certificate, the certificate content should be provided here. 
+                     * @param Cert [Disused] When the certificate is an external certificate, the certificate content should be provided here. 
+                     */
+                    void SetCert(const std::string& _cert);
+
+                    /**
+                     * 判断参数 Cert 是否已赋值
+                     * @return Cert 是否已赋值
+                     */
+                    bool CertHasBeenSet() const;
+
+                    /**
+                     * 获取[Disused] When the certificate is an external certificate, the certificate key should be provided here. 
+                     * @return PrivateKey [Disused] When the certificate is an external certificate, the certificate key should be provided here. 
+                     */
+                    std::string GetPrivateKey() const;
+
+                    /**
+                     * 设置[Disused] When the certificate is an external certificate, the certificate key should be provided here. 
+                     * @param PrivateKey [Disused] When the certificate is an external certificate, the certificate key should be provided here. 
+                     */
+                    void SetPrivateKey(const std::string& _privateKey);
+
+                    /**
+                     * 判断参数 PrivateKey 是否已赋值
+                     * @return PrivateKey 是否已赋值
+                     */
+                    bool PrivateKeyHasBeenSet() const;
 
                     /**
                      * 获取Rule status. Valid values: `0` (the rule was successfully configured), `1` (configuring the rule), `2` (rule configuration failed), `3` (deleting the rule), `5` (failed to delete rule), `6` (rule awaiting configuration), `7` (rule awaiting deletion), and `8` (rule awaiting certificate configuration).
@@ -210,22 +354,22 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取CC protection level based on HTTPS.
-                     * @return CCLevel CC protection level based on HTTPS.
+                     * 获取CC protection status. Valid values: `0` (disabled) and `1` (enabled).
+                     * @return CCStatus CC protection status. Valid values: `0` (disabled) and `1` (enabled).
                      */
-                    std::string GetCCLevel() const;
+                    uint64_t GetCCStatus() const;
 
                     /**
-                     * 设置CC protection level based on HTTPS.
-                     * @param CCLevel CC protection level based on HTTPS.
+                     * 设置CC protection status. Valid values: `0` (disabled) and `1` (enabled).
+                     * @param CCStatus CC protection status. Valid values: `0` (disabled) and `1` (enabled).
                      */
-                    void SetCCLevel(const std::string& _cCLevel);
+                    void SetCCStatus(const uint64_t& _cCStatus);
 
                     /**
-                     * 判断参数 CCLevel 是否已赋值
-                     * @return CCLevel 是否已赋值
+                     * 判断参数 CCStatus 是否已赋值
+                     * @return CCStatus 是否已赋值
                      */
-                    bool CCLevelHasBeenSet() const;
+                    bool CCStatusHasBeenSet() const;
 
                     /**
                      * 获取CC protection status based on HTTPS. Valid values: `0` (disabled) and `1` (enabled).
@@ -264,58 +408,22 @@ namespace TencentCloud
                     bool CCThresholdHasBeenSet() const;
 
                     /**
-                     * 获取Region code.
-                     * @return Region Region code.
+                     * 获取CC protection level based on HTTPS.
+                     * @return CCLevel CC protection level based on HTTPS.
                      */
-                    uint64_t GetRegion() const;
+                    std::string GetCCLevel() const;
 
                     /**
-                     * 设置Region code.
-                     * @param Region Region code.
+                     * 设置CC protection level based on HTTPS.
+                     * @param CCLevel CC protection level based on HTTPS.
                      */
-                    void SetRegion(const uint64_t& _region);
+                    void SetCCLevel(const std::string& _cCLevel);
 
                     /**
-                     * 判断参数 Region 是否已赋值
-                     * @return Region 是否已赋值
+                     * 判断参数 CCLevel 是否已赋值
+                     * @return CCLevel 是否已赋值
                      */
-                    bool RegionHasBeenSet() const;
-
-                    /**
-                     * 获取Rule description.
-                     * @return RuleName Rule description.
-                     */
-                    std::string GetRuleName() const;
-
-                    /**
-                     * 设置Rule description.
-                     * @param RuleName Rule description.
-                     */
-                    void SetRuleName(const std::string& _ruleName);
-
-                    /**
-                     * 判断参数 RuleName 是否已赋值
-                     * @return RuleName 是否已赋值
-                     */
-                    bool RuleNameHasBeenSet() const;
-
-                    /**
-                     * 获取[Disused] When the certificate is an external certificate, the certificate content should be provided here. 
-                     * @return Cert [Disused] When the certificate is an external certificate, the certificate content should be provided here. 
-                     */
-                    std::string GetCert() const;
-
-                    /**
-                     * 设置[Disused] When the certificate is an external certificate, the certificate content should be provided here. 
-                     * @param Cert [Disused] When the certificate is an external certificate, the certificate content should be provided here. 
-                     */
-                    void SetCert(const std::string& _cert);
-
-                    /**
-                     * 判断参数 Cert 是否已赋值
-                     * @return Cert 是否已赋值
-                     */
-                    bool CertHasBeenSet() const;
+                    bool CCLevelHasBeenSet() const;
 
                     /**
                      * 获取Modification time.
@@ -336,76 +444,22 @@ namespace TencentCloud
                     bool ModifyTimeHasBeenSet() const;
 
                     /**
-                     * 获取Rule ID. This field is not required for adding a rule, but is required for modifying or deleting a rule.
-                     * @return RuleId Rule ID. This field is not required for adding a rule, but is required for modifying or deleting a rule.
+                     * 获取Whether to enable **Forward HTTPS requests via HTTP**. Valid values: `0` (disabled) and `1` (enabled). It defaults to `0`.
+                     * @return HttpsToHttpEnable Whether to enable **Forward HTTPS requests via HTTP**. Valid values: `0` (disabled) and `1` (enabled). It defaults to `0`.
                      */
-                    std::string GetRuleId() const;
+                    uint64_t GetHttpsToHttpEnable() const;
 
                     /**
-                     * 设置Rule ID. This field is not required for adding a rule, but is required for modifying or deleting a rule.
-                     * @param RuleId Rule ID. This field is not required for adding a rule, but is required for modifying or deleting a rule.
+                     * 设置Whether to enable **Forward HTTPS requests via HTTP**. Valid values: `0` (disabled) and `1` (enabled). It defaults to `0`.
+                     * @param HttpsToHttpEnable Whether to enable **Forward HTTPS requests via HTTP**. Valid values: `0` (disabled) and `1` (enabled). It defaults to `0`.
                      */
-                    void SetRuleId(const std::string& _ruleId);
+                    void SetHttpsToHttpEnable(const uint64_t& _httpsToHttpEnable);
 
                     /**
-                     * 判断参数 RuleId 是否已赋值
-                     * @return RuleId 是否已赋值
+                     * 判断参数 HttpsToHttpEnable 是否已赋值
+                     * @return HttpsToHttpEnable 是否已赋值
                      */
-                    bool RuleIdHasBeenSet() const;
-
-                    /**
-                     * 获取Anti-DDoS instance IP address.
-                     * @return Ip Anti-DDoS instance IP address.
-                     */
-                    std::string GetIp() const;
-
-                    /**
-                     * 设置Anti-DDoS instance IP address.
-                     * @param Ip Anti-DDoS instance IP address.
-                     */
-                    void SetIp(const std::string& _ip);
-
-                    /**
-                     * 判断参数 Ip 是否已赋值
-                     * @return Ip 是否已赋值
-                     */
-                    bool IpHasBeenSet() const;
-
-                    /**
-                     * 获取[Disused] When the certificate is an external certificate, the certificate key should be provided here. 
-                     * @return PrivateKey [Disused] When the certificate is an external certificate, the certificate key should be provided here. 
-                     */
-                    std::string GetPrivateKey() const;
-
-                    /**
-                     * 设置[Disused] When the certificate is an external certificate, the certificate key should be provided here. 
-                     * @param PrivateKey [Disused] When the certificate is an external certificate, the certificate key should be provided here. 
-                     */
-                    void SetPrivateKey(const std::string& _privateKey);
-
-                    /**
-                     * 判断参数 PrivateKey 是否已赋值
-                     * @return PrivateKey 是否已赋值
-                     */
-                    bool PrivateKeyHasBeenSet() const;
-
-                    /**
-                     * 获取Certificate source. When the forwarding protocol is HTTPS, this field must be set to `2` (Tencent Cloud managed certificate), and for HTTP protocol, it can be set to `0`.
-                     * @return CertType Certificate source. When the forwarding protocol is HTTPS, this field must be set to `2` (Tencent Cloud managed certificate), and for HTTP protocol, it can be set to `0`.
-                     */
-                    uint64_t GetCertType() const;
-
-                    /**
-                     * 设置Certificate source. When the forwarding protocol is HTTPS, this field must be set to `2` (Tencent Cloud managed certificate), and for HTTP protocol, it can be set to `0`.
-                     * @param CertType Certificate source. When the forwarding protocol is HTTPS, this field must be set to `2` (Tencent Cloud managed certificate), and for HTTP protocol, it can be set to `0`.
-                     */
-                    void SetCertType(const uint64_t& _certType);
-
-                    /**
-                     * 判断参数 CertType 是否已赋值
-                     * @return CertType 是否已赋值
-                     */
-                    bool CertTypeHasBeenSet() const;
+                    bool HttpsToHttpEnableHasBeenSet() const;
 
                     /**
                      * 获取Access port number.
@@ -430,90 +484,42 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool VirtualPortHasBeenSet() const;
 
                     /**
-                     * 获取CC protection status. Valid values: `0` (disabled) and `1` (enabled).
-                     * @return CCStatus CC protection status. Valid values: `0` (disabled) and `1` (enabled).
+                     * 获取Specifies whether to forcibly redirect HTTP to HTTPS. `1`: Enable. `0`: Disable.
+                     * @return RewriteHttps Specifies whether to forcibly redirect HTTP to HTTPS. `1`: Enable. `0`: Disable.
                      */
-                    uint64_t GetCCStatus() const;
+                    uint64_t GetRewriteHttps() const;
 
                     /**
-                     * 设置CC protection status. Valid values: `0` (disabled) and `1` (enabled).
-                     * @param CCStatus CC protection status. Valid values: `0` (disabled) and `1` (enabled).
+                     * 设置Specifies whether to forcibly redirect HTTP to HTTPS. `1`: Enable. `0`: Disable.
+                     * @param RewriteHttps Specifies whether to forcibly redirect HTTP to HTTPS. `1`: Enable. `0`: Disable.
                      */
-                    void SetCCStatus(const uint64_t& _cCStatus);
+                    void SetRewriteHttps(const uint64_t& _rewriteHttps);
 
                     /**
-                     * 判断参数 CCStatus 是否已赋值
-                     * @return CCStatus 是否已赋值
+                     * 判断参数 RewriteHttps 是否已赋值
+                     * @return RewriteHttps 是否已赋值
                      */
-                    bool CCStatusHasBeenSet() const;
+                    bool RewriteHttpsHasBeenSet() const;
 
                     /**
-                     * 获取When the certificate is managed by Tencent Cloud, this field must be set to the ID of the managed certificate.
-                     * @return SSLId When the certificate is managed by Tencent Cloud, this field must be set to the ID of the managed certificate.
+                     * 获取Returns an error code when the rule configuration fails (only valid when `Status=2`). `1001`: The certificate does not exist. `1002`: Failed to obtain the certificate. `1003`: Failed to upload the certificate. `1004`: The certificate has expired.
+                     * @return ErrCode Returns an error code when the rule configuration fails (only valid when `Status=2`). `1001`: The certificate does not exist. `1002`: Failed to obtain the certificate. `1003`: Failed to upload the certificate. `1004`: The certificate has expired.
                      */
-                    std::string GetSSLId() const;
+                    uint64_t GetErrCode() const;
 
                     /**
-                     * 设置When the certificate is managed by Tencent Cloud, this field must be set to the ID of the managed certificate.
-                     * @param SSLId When the certificate is managed by Tencent Cloud, this field must be set to the ID of the managed certificate.
+                     * 设置Returns an error code when the rule configuration fails (only valid when `Status=2`). `1001`: The certificate does not exist. `1002`: Failed to obtain the certificate. `1003`: Failed to upload the certificate. `1004`: The certificate has expired.
+                     * @param ErrCode Returns an error code when the rule configuration fails (only valid when `Status=2`). `1001`: The certificate does not exist. `1002`: Failed to obtain the certificate. `1003`: Failed to upload the certificate. `1004`: The certificate has expired.
                      */
-                    void SetSSLId(const std::string& _sSLId);
+                    void SetErrCode(const uint64_t& _errCode);
 
                     /**
-                     * 判断参数 SSLId 是否已赋值
-                     * @return SSLId 是否已赋值
+                     * 判断参数 ErrCode 是否已赋值
+                     * @return ErrCode 是否已赋值
                      */
-                    bool SSLIdHasBeenSet() const;
-
-                    /**
-                     * 获取Resource ID.
-                     * @return Id Resource ID.
-                     */
-                    std::string GetId() const;
-
-                    /**
-                     * 设置Resource ID.
-                     * @param Id Resource ID.
-                     */
-                    void SetId(const std::string& _id);
-
-                    /**
-                     * 判断参数 Id 是否已赋值
-                     * @return Id 是否已赋值
-                     */
-                    bool IdHasBeenSet() const;
+                    bool ErrCodeHasBeenSet() const;
 
                 private:
-
-                    /**
-                     * Session persistence duration, in seconds.
-                     */
-                    uint64_t m_keepTime;
-                    bool m_keepTimeHasBeenSet;
-
-                    /**
-                     * Load balancing method. Valid value: `1` (weighed polling).
-                     */
-                    uint64_t m_lbType;
-                    bool m_lbTypeHasBeenSet;
-
-                    /**
-                     * List of origins
-                     */
-                    std::vector<L4RuleSource> m_sourceList;
-                    bool m_sourceListHasBeenSet;
-
-                    /**
-                     * Whether session persistence is enabled. Valid values: `0` (disabled) and `1` (enabled).
-                     */
-                    uint64_t m_keepEnable;
-                    bool m_keepEnableHasBeenSet;
-
-                    /**
-                     * Forwarding domain name.
-                     */
-                    std::string m_domain;
-                    bool m_domainHasBeenSet;
 
                     /**
                      * Forwarding protocol. Valid values: `http` and `https`.
@@ -522,16 +528,94 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_protocolHasBeenSet;
 
                     /**
+                     * Forwarding domain name.
+                     */
+                    std::string m_domain;
+                    bool m_domainHasBeenSet;
+
+                    /**
+                     * Load balancing method. Valid value: `1` (weighed polling).
+                     */
+                    uint64_t m_lbType;
+                    bool m_lbTypeHasBeenSet;
+
+                    /**
+                     * Whether session persistence is enabled. Valid values: `0` (disabled) and `1` (enabled).
+                     */
+                    uint64_t m_keepEnable;
+                    bool m_keepEnableHasBeenSet;
+
+                    /**
+                     * Session persistence duration, in seconds.
+                     */
+                    uint64_t m_keepTime;
+                    bool m_keepTimeHasBeenSet;
+
+                    /**
                      * Forwarding method. Valid values: `1` (by domain name); `2` (by IP).
                      */
                     uint64_t m_sourceType;
                     bool m_sourceTypeHasBeenSet;
 
                     /**
-                     * Whether to enable **Forward HTTPS requests via HTTP**. Valid values: `0` (disabled) and `1` (enabled). It defaults to `0`.
+                     * List of origins
                      */
-                    uint64_t m_httpsToHttpEnable;
-                    bool m_httpsToHttpEnableHasBeenSet;
+                    std::vector<L4RuleSource> m_sourceList;
+                    bool m_sourceListHasBeenSet;
+
+                    /**
+                     * Region code.
+                     */
+                    uint64_t m_region;
+                    bool m_regionHasBeenSet;
+
+                    /**
+                     * Resource ID.
+                     */
+                    std::string m_id;
+                    bool m_idHasBeenSet;
+
+                    /**
+                     * Anti-DDoS instance IP address.
+                     */
+                    std::string m_ip;
+                    bool m_ipHasBeenSet;
+
+                    /**
+                     * Rule ID. This field is not required for adding a rule, but is required for modifying or deleting a rule.
+                     */
+                    std::string m_ruleId;
+                    bool m_ruleIdHasBeenSet;
+
+                    /**
+                     * Rule description.
+                     */
+                    std::string m_ruleName;
+                    bool m_ruleNameHasBeenSet;
+
+                    /**
+                     * Certificate source. When the forwarding protocol is HTTPS, this field must be set to `2` (Tencent Cloud managed certificate), and for HTTP protocol, it can be set to `0`.
+                     */
+                    uint64_t m_certType;
+                    bool m_certTypeHasBeenSet;
+
+                    /**
+                     * When the certificate is managed by Tencent Cloud, this field must be set to the ID of the managed certificate.
+                     */
+                    std::string m_sSLId;
+                    bool m_sSLIdHasBeenSet;
+
+                    /**
+                     * [Disused] When the certificate is an external certificate, the certificate content should be provided here. 
+                     */
+                    std::string m_cert;
+                    bool m_certHasBeenSet;
+
+                    /**
+                     * [Disused] When the certificate is an external certificate, the certificate key should be provided here. 
+                     */
+                    std::string m_privateKey;
+                    bool m_privateKeyHasBeenSet;
 
                     /**
                      * Rule status. Valid values: `0` (the rule was successfully configured), `1` (configuring the rule), `2` (rule configuration failed), `3` (deleting the rule), `5` (failed to delete rule), `6` (rule awaiting configuration), `7` (rule awaiting deletion), and `8` (rule awaiting certificate configuration).
@@ -540,10 +624,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_statusHasBeenSet;
 
                     /**
-                     * CC protection level based on HTTPS.
+                     * CC protection status. Valid values: `0` (disabled) and `1` (enabled).
                      */
-                    std::string m_cCLevel;
-                    bool m_cCLevelHasBeenSet;
+                    uint64_t m_cCStatus;
+                    bool m_cCStatusHasBeenSet;
 
                     /**
                      * CC protection status based on HTTPS. Valid values: `0` (disabled) and `1` (enabled).
@@ -558,22 +642,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_cCThresholdHasBeenSet;
 
                     /**
-                     * Region code.
+                     * CC protection level based on HTTPS.
                      */
-                    uint64_t m_region;
-                    bool m_regionHasBeenSet;
-
-                    /**
-                     * Rule description.
-                     */
-                    std::string m_ruleName;
-                    bool m_ruleNameHasBeenSet;
-
-                    /**
-                     * [Disused] When the certificate is an external certificate, the certificate content should be provided here. 
-                     */
-                    std::string m_cert;
-                    bool m_certHasBeenSet;
+                    std::string m_cCLevel;
+                    bool m_cCLevelHasBeenSet;
 
                     /**
                      * Modification time.
@@ -582,28 +654,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_modifyTimeHasBeenSet;
 
                     /**
-                     * Rule ID. This field is not required for adding a rule, but is required for modifying or deleting a rule.
+                     * Whether to enable **Forward HTTPS requests via HTTP**. Valid values: `0` (disabled) and `1` (enabled). It defaults to `0`.
                      */
-                    std::string m_ruleId;
-                    bool m_ruleIdHasBeenSet;
-
-                    /**
-                     * Anti-DDoS instance IP address.
-                     */
-                    std::string m_ip;
-                    bool m_ipHasBeenSet;
-
-                    /**
-                     * [Disused] When the certificate is an external certificate, the certificate key should be provided here. 
-                     */
-                    std::string m_privateKey;
-                    bool m_privateKeyHasBeenSet;
-
-                    /**
-                     * Certificate source. When the forwarding protocol is HTTPS, this field must be set to `2` (Tencent Cloud managed certificate), and for HTTP protocol, it can be set to `0`.
-                     */
-                    uint64_t m_certType;
-                    bool m_certTypeHasBeenSet;
+                    uint64_t m_httpsToHttpEnable;
+                    bool m_httpsToHttpEnableHasBeenSet;
 
                     /**
                      * Access port number.
@@ -613,22 +667,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_virtualPortHasBeenSet;
 
                     /**
-                     * CC protection status. Valid values: `0` (disabled) and `1` (enabled).
+                     * Specifies whether to forcibly redirect HTTP to HTTPS. `1`: Enable. `0`: Disable.
                      */
-                    uint64_t m_cCStatus;
-                    bool m_cCStatusHasBeenSet;
+                    uint64_t m_rewriteHttps;
+                    bool m_rewriteHttpsHasBeenSet;
 
                     /**
-                     * When the certificate is managed by Tencent Cloud, this field must be set to the ID of the managed certificate.
+                     * Returns an error code when the rule configuration fails (only valid when `Status=2`). `1001`: The certificate does not exist. `1002`: Failed to obtain the certificate. `1003`: Failed to upload the certificate. `1004`: The certificate has expired.
                      */
-                    std::string m_sSLId;
-                    bool m_sSLIdHasBeenSet;
-
-                    /**
-                     * Resource ID.
-                     */
-                    std::string m_id;
-                    bool m_idHasBeenSet;
+                    uint64_t m_errCode;
+                    bool m_errCodeHasBeenSet;
 
                 };
             }

@@ -127,6 +127,18 @@ namespace TencentCloud
                      */
                     bool SundayHasBeenSet() const;
 
+                    /**
+                     * 获取Maximum data delay threshold
+                     * @return MaxDelayTime Maximum data delay threshold
+                     */
+                    uint64_t GetMaxDelayTime() const;
+
+                    /**
+                     * 判断参数 MaxDelayTime 是否已赋值
+                     * @return MaxDelayTime 是否已赋值
+                     */
+                    bool MaxDelayTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -170,6 +182,12 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_sunday;
                     bool m_sundayHasBeenSet;
+
+                    /**
+                     * Maximum data delay threshold
+                     */
+                    uint64_t m_maxDelayTime;
+                    bool m_maxDelayTimeHasBeenSet;
 
                 };
             }

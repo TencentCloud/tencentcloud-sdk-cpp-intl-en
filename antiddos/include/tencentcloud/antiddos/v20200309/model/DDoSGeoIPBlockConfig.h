@@ -48,28 +48,28 @@ namespace TencentCloud
 
                     /**
                      * 获取Region type. Valid values:
-oversea: outside the Chinese mainland
-`china`: the Chinese mainland
-`customized`: custom region
+`oversea`: Outside the Chinese mainland
+`china`: The Chinese mainland
+`customized`: User-specified region
 ]
                      * @return RegionType Region type. Valid values:
-oversea: outside the Chinese mainland
-`china`: the Chinese mainland
-`customized`: custom region
+`oversea`: Outside the Chinese mainland
+`china`: The Chinese mainland
+`customized`: User-specified region
 ]
                      */
                     std::string GetRegionType() const;
 
                     /**
                      * 设置Region type. Valid values:
-oversea: outside the Chinese mainland
-`china`: the Chinese mainland
-`customized`: custom region
+`oversea`: Outside the Chinese mainland
+`china`: The Chinese mainland
+`customized`: User-specified region
 ]
                      * @param RegionType Region type. Valid values:
-oversea: outside the Chinese mainland
-`china`: the Chinese mainland
-`customized`: custom region
+`oversea`: Outside the Chinese mainland
+`china`: The Chinese mainland
+`customized`: User-specified region
 ]
                      */
                     void SetRegionType(const std::string& _regionType);
@@ -150,9 +150,9 @@ oversea: outside the Chinese mainland
 
                     /**
                      * Region type. Valid values:
-oversea: outside the Chinese mainland
-`china`: the Chinese mainland
-`customized`: custom region
+`oversea`: Outside the Chinese mainland
+`china`: The Chinese mainland
+`customized`: User-specified region
 ]
                      */
                     std::string m_regionType;

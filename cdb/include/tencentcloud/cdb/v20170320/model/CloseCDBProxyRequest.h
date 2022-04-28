@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool ProxyGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether only to disable read/write separation. Valid values: `true`, `false`
-                     * @return OnlyCloseRW Whether only to disable read/write separation. Valid values: `true`, `false`
+                     * 获取Whether only to disable read/write separation. Valid values: `true`, `false`. Default value: `false`.
+                     * @return OnlyCloseRW Whether only to disable read/write separation. Valid values: `true`, `false`. Default value: `false`.
                      */
                     bool GetOnlyCloseRW() const;
 
                     /**
-                     * 设置Whether only to disable read/write separation. Valid values: `true`, `false`
-                     * @param OnlyCloseRW Whether only to disable read/write separation. Valid values: `true`, `false`
+                     * 设置Whether only to disable read/write separation. Valid values: `true`, `false`. Default value: `false`.
+                     * @param OnlyCloseRW Whether only to disable read/write separation. Valid values: `true`, `false`. Default value: `false`.
                      */
                     void SetOnlyCloseRW(const bool& _onlyCloseRW);
 
@@ -111,7 +111,7 @@ namespace TencentCloud
                     bool m_proxyGroupIdHasBeenSet;
 
                     /**
-                     * Whether only to disable read/write separation. Valid values: `true`, `false`
+                     * Whether only to disable read/write separation. Valid values: `true`, `false`. Default value: `false`.
                      */
                     bool m_onlyCloseRW;
                     bool m_onlyCloseRWHasBeenSet;

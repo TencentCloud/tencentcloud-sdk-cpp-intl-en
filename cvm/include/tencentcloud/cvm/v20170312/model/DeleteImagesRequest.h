@@ -60,6 +60,42 @@ namespace TencentCloud
                      */
                     bool ImageIdsHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to delete the snapshot associated with the image
+                     * @return DeleteBindedSnap Whether to delete the snapshot associated with the image
+                     */
+                    bool GetDeleteBindedSnap() const;
+
+                    /**
+                     * 设置Whether to delete the snapshot associated with the image
+                     * @param DeleteBindedSnap Whether to delete the snapshot associated with the image
+                     */
+                    void SetDeleteBindedSnap(const bool& _deleteBindedSnap);
+
+                    /**
+                     * 判断参数 DeleteBindedSnap 是否已赋值
+                     * @return DeleteBindedSnap 是否已赋值
+                     */
+                    bool DeleteBindedSnapHasBeenSet() const;
+
+                    /**
+                     * 获取Check whether deleting an image is supported
+                     * @return DryRun Check whether deleting an image is supported
+                     */
+                    bool GetDryRun() const;
+
+                    /**
+                     * 设置Check whether deleting an image is supported
+                     * @param DryRun Check whether deleting an image is supported
+                     */
+                    void SetDryRun(const bool& _dryRun);
+
+                    /**
+                     * 判断参数 DryRun 是否已赋值
+                     * @return DryRun 是否已赋值
+                     */
+                    bool DryRunHasBeenSet() const;
+
                 private:
 
                     /**
@@ -67,6 +103,18 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_imageIds;
                     bool m_imageIdsHasBeenSet;
+
+                    /**
+                     * Whether to delete the snapshot associated with the image
+                     */
+                    bool m_deleteBindedSnap;
+                    bool m_deleteBindedSnapHasBeenSet;
+
+                    /**
+                     * Check whether deleting an image is supported
+                     */
+                    bool m_dryRun;
+                    bool m_dryRunHasBeenSet;
 
                 };
             }

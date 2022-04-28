@@ -43,14 +43,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Product 
+                     * 获取Indicates whether a hybrid cloud product is used.
+`hybrid`: Anti-DDoS Service Platform
+For other products, leave this field empty.
+                     * @return Product Indicates whether a hybrid cloud product is used.
+`hybrid`: Anti-DDoS Service Platform
+For other products, leave this field empty.
                      */
                     std::string GetProduct() const;
 
                     /**
-                     * 设置
-                     * @param Product 
+                     * 设置Indicates whether a hybrid cloud product is used.
+`hybrid`: Anti-DDoS Service Platform
+For other products, leave this field empty.
+                     * @param Product Indicates whether a hybrid cloud product is used.
+`hybrid`: Anti-DDoS Service Platform
+For other products, leave this field empty.
                      */
                     void SetProduct(const std::string& _product);
 
@@ -63,7 +71,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Indicates whether a hybrid cloud product is used.
+`hybrid`: Anti-DDoS Service Platform
+For other products, leave this field empty.
                      */
                     std::string m_product;
                     bool m_productHasBeenSet;
