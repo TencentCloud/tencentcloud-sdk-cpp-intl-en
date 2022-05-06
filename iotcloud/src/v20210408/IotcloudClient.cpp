@@ -728,3 +728,46 @@ IotcloudClient::UpdatePrivateCAOutcomeCallable IotcloudClient::UpdatePrivateCACa
     return task->get_future();
 }
 
+IotcloudClient::UpdateProductDynamicRegisterOutcome IotcloudClient::UpdateProductDynamicRegister(const UpdateProductDynamicRegisterRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateProductDynamicRegister");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateProductDynamicRegisterResponse rsp = UpdateProductDynamicRegisterResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateProductDynamicRegisterOutcome(rsp);
+        else
+            return UpdateProductDynamicRegisterOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateProductDynamicRegisterOutcome(outcome.GetError());
+    }
+}
+
+void IotcloudClient::UpdateProductDynamicRegisterAsync(const UpdateProductDynamicRegisterRequest& request, const UpdateProductDynamicRegisterAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->UpdateProductDynamicRegister(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+IotcloudClient::UpdateProductDynamicRegisterOutcomeCallable IotcloudClient::UpdateProductDynamicRegisterCallable(const UpdateProductDynamicRegisterRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<UpdateProductDynamicRegisterOutcome()>>(
+        [this, request]()
+        {
+            return this->UpdateProductDynamicRegister(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+

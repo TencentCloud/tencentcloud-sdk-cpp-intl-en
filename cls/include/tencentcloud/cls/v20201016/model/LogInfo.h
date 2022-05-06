@@ -194,6 +194,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool LogJsonHasBeenSet() const;
 
+                    /**
+                     * 获取Source host name of logs
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return HostName Source host name of logs
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string GetHostName() const;
+
+                    /**
+                     * 设置Source host name of logs
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param HostName Source host name of logs
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetHostName(const std::string& _hostName);
+
+                    /**
+                     * 判断参数 HostName 是否已赋值
+                     * @return HostName 是否已赋值
+                     */
+                    bool HostNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -244,6 +266,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_logJson;
                     bool m_logJsonHasBeenSet;
+
+                    /**
+                     * Source host name of logs
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string m_hostName;
+                    bool m_hostNameHasBeenSet;
 
                 };
             }

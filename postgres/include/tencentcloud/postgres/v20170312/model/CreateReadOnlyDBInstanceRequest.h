@@ -368,14 +368,14 @@ namespace TencentCloud
                     bool ReadOnlyGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取The information of tags to be associated with instances. This parameter is left empty by default.
-                     * @return TagList The information of tags to be associated with instances. This parameter is left empty by default.
+                     * 获取The information of tags to be bound with the purchased instance, which is left empty by default (type: tag array).
+                     * @return TagList The information of tags to be bound with the purchased instance, which is left empty by default (type: tag array).
                      */
                     Tag GetTagList() const;
 
                     /**
-                     * 设置The information of tags to be associated with instances. This parameter is left empty by default.
-                     * @param TagList The information of tags to be associated with instances. This parameter is left empty by default.
+                     * 设置The information of tags to be bound with the purchased instance, which is left empty by default (type: tag array).
+                     * @param TagList The information of tags to be bound with the purchased instance, which is left empty by default (type: tag array).
                      */
                     void SetTagList(const Tag& _tagList);
 
@@ -514,7 +514,7 @@ namespace TencentCloud
                     bool m_readOnlyGroupIdHasBeenSet;
 
                     /**
-                     * The information of tags to be associated with instances. This parameter is left empty by default.
+                     * The information of tags to be bound with the purchased instance, which is left empty by default (type: tag array).
                      */
                     Tag m_tagList;
                     bool m_tagListHasBeenSet;

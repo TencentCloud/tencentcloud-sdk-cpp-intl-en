@@ -44,14 +44,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of results returned in a page
-                     * @return Limit Number of results returned in a page
+                     * 获取Number of entries per page
+                     * @return Limit Number of entries per page
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of results returned in a page
-                     * @param Limit Number of results returned in a page
+                     * 设置Number of entries per page
+                     * @param Limit Number of entries per page
                      */
                     void SetLimit(const uint64_t& _limit);
 
@@ -62,14 +62,14 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Page offset
-                     * @return Offset Page offset
+                     * 获取The starting position of paging
+                     * @return Offset The starting position of paging
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Page offset
-                     * @param Offset Page offset
+                     * 设置The starting position of paging
+                     * @param Offset The starting position of paging
                      */
                     void SetOffset(const uint64_t& _offset);
 
@@ -80,14 +80,14 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Filters
-                     * @return Filters Filters
+                     * 获取Filters. Valid values: `UpstreamId` and `UpstreamName`
+                     * @return Filters Filters. Valid values: `UpstreamId` and `UpstreamName`
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filters
-                     * @param Filters Filters
+                     * 设置Filters. Valid values: `UpstreamId` and `UpstreamName`
+                     * @param Filters Filters. Valid values: `UpstreamId` and `UpstreamName`
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
@@ -100,19 +100,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of results returned in a page
+                     * Number of entries per page
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Page offset
+                     * The starting position of paging
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Filters
+                     * Filters. Valid values: `UpstreamId` and `UpstreamName`
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

@@ -207,14 +207,14 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created.
-                     * @return DBVersion PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created.
+                     * 获取PostgreSQL version. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created. You must pass in at least one of the following parameters: DBVersion, DBMajorVersion, DBKernelVersion.
+                     * @return DBVersion PostgreSQL version. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created. You must pass in at least one of the following parameters: DBVersion, DBMajorVersion, DBKernelVersion.
                      */
                     std::string GetDBVersion() const;
 
                     /**
-                     * 设置PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created.
-                     * @param DBVersion PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created.
+                     * 设置PostgreSQL version. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created. You must pass in at least one of the following parameters: DBVersion, DBMajorVersion, DBKernelVersion.
+                     * @param DBVersion PostgreSQL version. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created. You must pass in at least one of the following parameters: DBVersion, DBMajorVersion, DBKernelVersion.
                      */
                     void SetDBVersion(const std::string& _dBVersion);
 
@@ -423,14 +423,14 @@ namespace TencentCloud
                     bool SecurityGroupIdsHasBeenSet() const;
 
                     /**
-                     * 获取PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created.
-                     * @return DBMajorVersion PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created.
+                     * 获取PostgreSQL major version. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created. You must pass in at least one of the following parameters: DBMajorVersion, DBVersion, DBKernelVersion.
+                     * @return DBMajorVersion PostgreSQL major version. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created. You must pass in at least one of the following parameters: DBMajorVersion, DBVersion, DBKernelVersion.
                      */
                     std::string GetDBMajorVersion() const;
 
                     /**
-                     * 设置PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created.
-                     * @param DBMajorVersion PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created.
+                     * 设置PostgreSQL major version. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created. You must pass in at least one of the following parameters: DBMajorVersion, DBVersion, DBKernelVersion.
+                     * @param DBMajorVersion PostgreSQL major version. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created. You must pass in at least one of the following parameters: DBMajorVersion, DBVersion, DBKernelVersion.
                      */
                     void SetDBMajorVersion(const std::string& _dBMajorVersion);
 
@@ -441,14 +441,14 @@ namespace TencentCloud
                     bool DBMajorVersionHasBeenSet() const;
 
                     /**
-                     * 获取PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
-                     * @return DBKernelVersion PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
+                     * 获取PostgreSQL kernel version. If it is specified, an instance running the latest kernel of PostgreSQL `DBKernelVersion` will be created. You must pass in one of the following parameters: DBKernelVersion, DBVersion, DBMajorVersion.
+                     * @return DBKernelVersion PostgreSQL kernel version. If it is specified, an instance running the latest kernel of PostgreSQL `DBKernelVersion` will be created. You must pass in one of the following parameters: DBKernelVersion, DBVersion, DBMajorVersion.
                      */
                     std::string GetDBKernelVersion() const;
 
                     /**
-                     * 设置PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
-                     * @param DBKernelVersion PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
+                     * 设置PostgreSQL kernel version. If it is specified, an instance running the latest kernel of PostgreSQL `DBKernelVersion` will be created. You must pass in one of the following parameters: DBKernelVersion, DBVersion, DBMajorVersion.
+                     * @param DBKernelVersion PostgreSQL kernel version. If it is specified, an instance running the latest kernel of PostgreSQL `DBKernelVersion` will be created. You must pass in one of the following parameters: DBKernelVersion, DBVersion, DBMajorVersion.
                      */
                     void SetDBKernelVersion(const std::string& _dBKernelVersion);
 
@@ -475,6 +475,60 @@ namespace TencentCloud
                      * @return DBNodeSet 是否已赋值
                      */
                     bool DBNodeSetHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to support transparent data encryption. Valid values: 1 (yes), 0 (no). Default value: 0.
+                     * @return NeedSupportTDE Whether to support transparent data encryption. Valid values: 1 (yes), 0 (no). Default value: 0.
+                     */
+                    uint64_t GetNeedSupportTDE() const;
+
+                    /**
+                     * 设置Whether to support transparent data encryption. Valid values: 1 (yes), 0 (no). Default value: 0.
+                     * @param NeedSupportTDE Whether to support transparent data encryption. Valid values: 1 (yes), 0 (no). Default value: 0.
+                     */
+                    void SetNeedSupportTDE(const uint64_t& _needSupportTDE);
+
+                    /**
+                     * 判断参数 NeedSupportTDE 是否已赋值
+                     * @return NeedSupportTDE 是否已赋值
+                     */
+                    bool NeedSupportTDEHasBeenSet() const;
+
+                    /**
+                     * 获取KeyId of custom key, which is required if you select custom key encryption. It is also the unique CMK identifier.
+                     * @return KMSKeyId KeyId of custom key, which is required if you select custom key encryption. It is also the unique CMK identifier.
+                     */
+                    std::string GetKMSKeyId() const;
+
+                    /**
+                     * 设置KeyId of custom key, which is required if you select custom key encryption. It is also the unique CMK identifier.
+                     * @param KMSKeyId KeyId of custom key, which is required if you select custom key encryption. It is also the unique CMK identifier.
+                     */
+                    void SetKMSKeyId(const std::string& _kMSKeyId);
+
+                    /**
+                     * 判断参数 KMSKeyId 是否已赋值
+                     * @return KMSKeyId 是否已赋值
+                     */
+                    bool KMSKeyIdHasBeenSet() const;
+
+                    /**
+                     * 获取The region where the KMS service is enabled. When “KMSRegion” is left empty, the “KMS” of the local domain will be enabled by default. If the local domain is not supported, you need to select another region supported by KMS.
+                     * @return KMSRegion The region where the KMS service is enabled. When “KMSRegion” is left empty, the “KMS” of the local domain will be enabled by default. If the local domain is not supported, you need to select another region supported by KMS.
+                     */
+                    std::string GetKMSRegion() const;
+
+                    /**
+                     * 设置The region where the KMS service is enabled. When “KMSRegion” is left empty, the “KMS” of the local domain will be enabled by default. If the local domain is not supported, you need to select another region supported by KMS.
+                     * @param KMSRegion The region where the KMS service is enabled. When “KMSRegion” is left empty, the “KMS” of the local domain will be enabled by default. If the local domain is not supported, you need to select another region supported by KMS.
+                     */
+                    void SetKMSRegion(const std::string& _kMSRegion);
+
+                    /**
+                     * 判断参数 KMSRegion 是否已赋值
+                     * @return KMSRegion 是否已赋值
+                     */
+                    bool KMSRegionHasBeenSet() const;
 
                 private:
 
@@ -533,7 +587,7 @@ namespace TencentCloud
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created.
+                     * PostgreSQL version. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created. You must pass in at least one of the following parameters: DBVersion, DBMajorVersion, DBKernelVersion.
                      */
                     std::string m_dBVersion;
                     bool m_dBVersionHasBeenSet;
@@ -605,13 +659,13 @@ namespace TencentCloud
                     bool m_securityGroupIdsHasBeenSet;
 
                     /**
-                     * PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created.
+                     * PostgreSQL major version. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created. You must pass in at least one of the following parameters: DBMajorVersion, DBVersion, DBKernelVersion.
                      */
                     std::string m_dBMajorVersion;
                     bool m_dBMajorVersionHasBeenSet;
 
                     /**
-                     * PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
+                     * PostgreSQL kernel version. If it is specified, an instance running the latest kernel of PostgreSQL `DBKernelVersion` will be created. You must pass in one of the following parameters: DBKernelVersion, DBVersion, DBMajorVersion.
                      */
                     std::string m_dBKernelVersion;
                     bool m_dBKernelVersionHasBeenSet;
@@ -621,6 +675,24 @@ namespace TencentCloud
                      */
                     std::vector<DBNode> m_dBNodeSet;
                     bool m_dBNodeSetHasBeenSet;
+
+                    /**
+                     * Whether to support transparent data encryption. Valid values: 1 (yes), 0 (no). Default value: 0.
+                     */
+                    uint64_t m_needSupportTDE;
+                    bool m_needSupportTDEHasBeenSet;
+
+                    /**
+                     * KeyId of custom key, which is required if you select custom key encryption. It is also the unique CMK identifier.
+                     */
+                    std::string m_kMSKeyId;
+                    bool m_kMSKeyIdHasBeenSet;
+
+                    /**
+                     * The region where the KMS service is enabled. When “KMSRegion” is left empty, the “KMS” of the local domain will be enabled by default. If the local domain is not supported, you need to select another region supported by KMS.
+                     */
+                    std::string m_kMSRegion;
+                    bool m_kMSRegionHasBeenSet;
 
                 };
             }

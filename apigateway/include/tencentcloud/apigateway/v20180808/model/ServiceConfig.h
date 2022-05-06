@@ -138,6 +138,28 @@ namespace TencentCloud
                     bool MethodHasBeenSet() const;
 
                     /**
+                     * 获取It’s required for `upstream`.
+Note: This field may return `NULL`, indicating that no valid value was found.
+                     * @return UpstreamId It’s required for `upstream`.
+Note: This field may return `NULL`, indicating that no valid value was found.
+                     */
+                    std::string GetUpstreamId() const;
+
+                    /**
+                     * 设置It’s required for `upstream`.
+Note: This field may return `NULL`, indicating that no valid value was found.
+                     * @param UpstreamId It’s required for `upstream`.
+Note: This field may return `NULL`, indicating that no valid value was found.
+                     */
+                    void SetUpstreamId(const std::string& _upstreamId);
+
+                    /**
+                     * 判断参数 UpstreamId 是否已赋值
+                     * @return UpstreamId 是否已赋值
+                     */
+                    bool UpstreamIdHasBeenSet() const;
+
+                    /**
                      * 获取API backend COS configuration. It’s required if the `ServiceType` is ·`COS`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return CosConfig API backend COS configuration. It’s required if the `ServiceType` is ·`COS`.
@@ -190,6 +212,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_method;
                     bool m_methodHasBeenSet;
+
+                    /**
+                     * It’s required for `upstream`.
+Note: This field may return `NULL`, indicating that no valid value was found.
+                     */
+                    std::string m_upstreamId;
+                    bool m_upstreamIdHasBeenSet;
 
                     /**
                      * API backend COS configuration. It’s required if the `ServiceType` is ·`COS`.

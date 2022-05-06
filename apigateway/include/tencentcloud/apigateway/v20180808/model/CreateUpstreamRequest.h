@@ -22,6 +22,8 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/apigateway/v20180808/model/UpstreamNode.h>
+#include <tencentcloud/apigateway/v20180808/model/Tag.h>
+#include <tencentcloud/apigateway/v20180808/model/UpstreamHealthChecker.h>
 #include <tencentcloud/apigateway/v20180808/model/K8sService.h>
 
 
@@ -45,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Backend protocol. Values: `HTTP`, `HTTPS`
-                     * @return Scheme Backend protocol. Values: `HTTP`, `HTTPS`
+                     * 获取Backend protocol. Valid values: `HTTP`, `HTTPS`
+                     * @return Scheme Backend protocol. Valid values: `HTTP`, `HTTPS`
                      */
                     std::string GetScheme() const;
 
                     /**
-                     * 设置Backend protocol. Values: `HTTP`, `HTTPS`
-                     * @param Scheme Backend protocol. Values: `HTTP`, `HTTPS`
+                     * 设置Backend protocol. Valid values: `HTTP`, `HTTPS`
+                     * @param Scheme Backend protocol. Valid values: `HTTP`, `HTTPS`
                      */
                     void SetScheme(const std::string& _scheme);
 
@@ -63,14 +65,14 @@ namespace TencentCloud
                     bool SchemeHasBeenSet() const;
 
                     /**
-                     * 获取The balancing method can only be `ROUND_ROBIN`.
-                     * @return Algorithm The balancing method can only be `ROUND_ROBIN`.
+                     * 获取Load balancing algorithm. Valid value: `ROUND-ROBIN`
+                     * @return Algorithm Load balancing algorithm. Valid value: `ROUND-ROBIN`
                      */
                     std::string GetAlgorithm() const;
 
                     /**
-                     * 设置The balancing method can only be `ROUND_ROBIN`.
-                     * @param Algorithm The balancing method can only be `ROUND_ROBIN`.
+                     * 设置Load balancing algorithm. Valid value: `ROUND-ROBIN`
+                     * @param Algorithm Load balancing algorithm. Valid value: `ROUND-ROBIN`
                      */
                     void SetAlgorithm(const std::string& _algorithm);
 
@@ -99,14 +101,14 @@ namespace TencentCloud
                     bool UniqVpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Name of the upstream 
-                     * @return UpstreamName Name of the upstream 
+                     * 获取Upstream name
+                     * @return UpstreamName Upstream name
                      */
                     std::string GetUpstreamName() const;
 
                     /**
-                     * 设置Name of the upstream 
-                     * @param UpstreamName Name of the upstream 
+                     * 设置Upstream name
+                     * @param UpstreamName Upstream name
                      */
                     void SetUpstreamName(const std::string& _upstreamName);
 
@@ -117,14 +119,14 @@ namespace TencentCloud
                     bool UpstreamNameHasBeenSet() const;
 
                     /**
-                     * 获取Description of the upstream
-                     * @return UpstreamDescription Description of the upstream
+                     * 获取Upstream description
+                     * @return UpstreamDescription Upstream description
                      */
                     std::string GetUpstreamDescription() const;
 
                     /**
-                     * 设置Description of the upstream
-                     * @param UpstreamDescription Description of the upstream
+                     * 设置Upstream description
+                     * @param UpstreamDescription Upstream description
                      */
                     void SetUpstreamDescription(const std::string& _upstreamDescription);
 
@@ -133,6 +135,24 @@ namespace TencentCloud
                      * @return UpstreamDescription 是否已赋值
                      */
                     bool UpstreamDescriptionHasBeenSet() const;
+
+                    /**
+                     * 获取Upstream access type. Valid values: `IP_PORT`, `K8S`
+                     * @return UpstreamType Upstream access type. Valid values: `IP_PORT`, `K8S`
+                     */
+                    std::string GetUpstreamType() const;
+
+                    /**
+                     * 设置Upstream access type. Valid values: `IP_PORT`, `K8S`
+                     * @param UpstreamType Upstream access type. Valid values: `IP_PORT`, `K8S`
+                     */
+                    void SetUpstreamType(const std::string& _upstreamType);
+
+                    /**
+                     * 判断参数 UpstreamType 是否已赋值
+                     * @return UpstreamType 是否已赋值
+                     */
+                    bool UpstreamTypeHasBeenSet() const;
 
                     /**
                      * 获取Retry attempts. It defaults to `3`.
@@ -153,14 +173,14 @@ namespace TencentCloud
                     bool RetriesHasBeenSet() const;
 
                     /**
-                     * 获取The host header in the request sending to the backend
-                     * @return UpstreamHost The host header in the request sending to the backend
+                     * 获取The Host request header that forwarded from the gateway to backend
+                     * @return UpstreamHost The Host request header that forwarded from the gateway to backend
                      */
                     std::string GetUpstreamHost() const;
 
                     /**
-                     * 设置The host header in the request sending to the backend
-                     * @param UpstreamHost The host header in the request sending to the backend
+                     * 设置The Host request header that forwarded from the gateway to backend
+                     * @param UpstreamHost The Host request header that forwarded from the gateway to backend
                      */
                     void SetUpstreamHost(const std::string& _upstreamHost);
 
@@ -189,14 +209,50 @@ namespace TencentCloud
                     bool NodesHasBeenSet() const;
 
                     /**
-                     * 获取The location of K8s service
-                     * @return K8sService The location of K8s service
+                     * 获取Label
+                     * @return Tags Label
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 设置Label
+                     * @param Tags Label
+                     */
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
+                    /**
+                     * 获取Health check configuration
+                     * @return HealthChecker Health check configuration
+                     */
+                    UpstreamHealthChecker GetHealthChecker() const;
+
+                    /**
+                     * 设置Health check configuration
+                     * @param HealthChecker Health check configuration
+                     */
+                    void SetHealthChecker(const UpstreamHealthChecker& _healthChecker);
+
+                    /**
+                     * 判断参数 HealthChecker 是否已赋值
+                     * @return HealthChecker 是否已赋值
+                     */
+                    bool HealthCheckerHasBeenSet() const;
+
+                    /**
+                     * 获取Configuration of TKE service
+                     * @return K8sService Configuration of TKE service
                      */
                     std::vector<K8sService> GetK8sService() const;
 
                     /**
-                     * 设置The location of K8s service
-                     * @param K8sService The location of K8s service
+                     * 设置Configuration of TKE service
+                     * @param K8sService Configuration of TKE service
                      */
                     void SetK8sService(const std::vector<K8sService>& _k8sService);
 
@@ -209,13 +265,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Backend protocol. Values: `HTTP`, `HTTPS`
+                     * Backend protocol. Valid values: `HTTP`, `HTTPS`
                      */
                     std::string m_scheme;
                     bool m_schemeHasBeenSet;
 
                     /**
-                     * The balancing method can only be `ROUND_ROBIN`.
+                     * Load balancing algorithm. Valid value: `ROUND-ROBIN`
                      */
                     std::string m_algorithm;
                     bool m_algorithmHasBeenSet;
@@ -227,16 +283,22 @@ namespace TencentCloud
                     bool m_uniqVpcIdHasBeenSet;
 
                     /**
-                     * Name of the upstream 
+                     * Upstream name
                      */
                     std::string m_upstreamName;
                     bool m_upstreamNameHasBeenSet;
 
                     /**
-                     * Description of the upstream
+                     * Upstream description
                      */
                     std::string m_upstreamDescription;
                     bool m_upstreamDescriptionHasBeenSet;
+
+                    /**
+                     * Upstream access type. Valid values: `IP_PORT`, `K8S`
+                     */
+                    std::string m_upstreamType;
+                    bool m_upstreamTypeHasBeenSet;
 
                     /**
                      * Retry attempts. It defaults to `3`.
@@ -245,7 +307,7 @@ namespace TencentCloud
                     bool m_retriesHasBeenSet;
 
                     /**
-                     * The host header in the request sending to the backend
+                     * The Host request header that forwarded from the gateway to backend
                      */
                     std::string m_upstreamHost;
                     bool m_upstreamHostHasBeenSet;
@@ -257,7 +319,19 @@ namespace TencentCloud
                     bool m_nodesHasBeenSet;
 
                     /**
-                     * The location of K8s service
+                     * Label
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
+
+                    /**
+                     * Health check configuration
+                     */
+                    UpstreamHealthChecker m_healthChecker;
+                    bool m_healthCheckerHasBeenSet;
+
+                    /**
+                     * Configuration of TKE service
                      */
                     std::vector<K8sService> m_k8sService;
                     bool m_k8sServiceHasBeenSet;

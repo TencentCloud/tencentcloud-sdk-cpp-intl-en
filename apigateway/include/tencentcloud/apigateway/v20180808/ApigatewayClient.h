@@ -714,7 +714,7 @@ You can use this API if you use a custom domain name and custom mapping. Please 
                 DeleteServiceSubDomainMappingOutcomeCallable DeleteServiceSubDomainMappingCallable(const Model::DeleteServiceSubDomainMappingRequest& request);
 
                 /**
-                 *This API is used to delete an upstream. Note that you can only delete an upstream when it’s not bound with an API.
+                 *This API is used to delete an upstream. Note that you can only delete an upstream when it’s not bound with any APIs.
                  * @param req DeleteUpstreamRequest
                  * @return DeleteUpstreamOutcome
                  */
@@ -1021,7 +1021,7 @@ To make authentication and throttling for a service take effect, you need to bin
                 DescribeServicesStatusOutcomeCallable DescribeServicesStatusCallable(const Model::DescribeServicesStatusRequest& request);
 
                 /**
-                 *This API is used to query the list of APIs bound with an upstream.
+                 *This API is used to query APIs bound with an upstream.
                  * @param req DescribeUpstreamBindApisRequest
                  * @return DescribeUpstreamBindApisOutcome
                  */
@@ -1030,7 +1030,7 @@ To make authentication and throttling for a service take effect, you need to bin
                 DescribeUpstreamBindApisOutcomeCallable DescribeUpstreamBindApisCallable(const Model::DescribeUpstreamBindApisRequest& request);
 
                 /**
-                 *This API is used to query the list of upstreams.
+                 *This API is used to query details of upstreams under the current account.
                  * @param req DescribeUpstreamsRequest
                  * @return DescribeUpstreamsOutcome
                  */

@@ -64,6 +64,42 @@ namespace TencentCloud
                      */
                     bool SimpleAesDefinitionHasBeenSet() const;
 
+                    /**
+                     * 获取The ID of the adaptive bitrate streaming template that encrypts the streams by Widewine.
+                     * @return WidevineDefinition The ID of the adaptive bitrate streaming template that encrypts the streams by Widewine.
+                     */
+                    uint64_t GetWidevineDefinition() const;
+
+                    /**
+                     * 设置The ID of the adaptive bitrate streaming template that encrypts the streams by Widewine.
+                     * @param WidevineDefinition The ID of the adaptive bitrate streaming template that encrypts the streams by Widewine.
+                     */
+                    void SetWidevineDefinition(const uint64_t& _widevineDefinition);
+
+                    /**
+                     * 判断参数 WidevineDefinition 是否已赋值
+                     * @return WidevineDefinition 是否已赋值
+                     */
+                    bool WidevineDefinitionHasBeenSet() const;
+
+                    /**
+                     * 获取The ID of the adaptive bitrate streaming template that encrypts the streams by FairPlay.
+                     * @return FairPlayDefinition The ID of the adaptive bitrate streaming template that encrypts the streams by FairPlay.
+                     */
+                    uint64_t GetFairPlayDefinition() const;
+
+                    /**
+                     * 设置The ID of the adaptive bitrate streaming template that encrypts the streams by FairPlay.
+                     * @param FairPlayDefinition The ID of the adaptive bitrate streaming template that encrypts the streams by FairPlay.
+                     */
+                    void SetFairPlayDefinition(const uint64_t& _fairPlayDefinition);
+
+                    /**
+                     * 判断参数 FairPlayDefinition 是否已赋值
+                     * @return FairPlayDefinition 是否已赋值
+                     */
+                    bool FairPlayDefinitionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -71,6 +107,18 @@ namespace TencentCloud
                      */
                     uint64_t m_simpleAesDefinition;
                     bool m_simpleAesDefinitionHasBeenSet;
+
+                    /**
+                     * The ID of the adaptive bitrate streaming template that encrypts the streams by Widewine.
+                     */
+                    uint64_t m_widevineDefinition;
+                    bool m_widevineDefinitionHasBeenSet;
+
+                    /**
+                     * The ID of the adaptive bitrate streaming template that encrypts the streams by FairPlay.
+                     */
+                    uint64_t m_fairPlayDefinition;
+                    bool m_fairPlayDefinitionHasBeenSet;
 
                 };
             }

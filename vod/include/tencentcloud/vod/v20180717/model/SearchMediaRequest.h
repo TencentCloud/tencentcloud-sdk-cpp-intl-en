@@ -249,18 +249,18 @@ namespace TencentCloud
                     bool SourceTypesHasBeenSet() const;
 
                     /**
-                     * 获取[Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
-                     * @return StreamIds [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
+                     * 获取The live stream code array. A media file will be returned if it matches any element in the array.
+<li>Array length limit: 10</li>
+                     * @return StreamIds The live stream code array. A media file will be returned if it matches any element in the array.
+<li>Array length limit: 10</li>
                      */
                     std::vector<std::string> GetStreamIds() const;
 
                     /**
-                     * 设置[Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
-                     * @param StreamIds [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
+                     * 设置The live stream code array. A media file will be returned if it matches any element in the array.
+<li>Array length limit: 10</li>
+                     * @param StreamIds The live stream code array. A media file will be returned if it matches any element in the array.
+<li>Array length limit: 10</li>
                      */
                     void SetStreamIds(const std::vector<std::string>& _streamIds);
 
@@ -587,18 +587,18 @@ Media file source. For valid values, please see [SourceType](https://intl.cloud.
                     bool SourceTypeHasBeenSet() const;
 
                     /**
-                     * 获取(This is not recommended. `StreamIds` should be used instead)
-[Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1).
-                     * @return StreamId (This is not recommended. `StreamIds` should be used instead)
-[Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1).
+                     * 获取(Not recommended. Consider using `StreamIds` instead.)
+The live stream code.
+                     * @return StreamId (Not recommended. Consider using `StreamIds` instead.)
+The live stream code.
                      */
                     std::string GetStreamId() const;
 
                     /**
-                     * 设置(This is not recommended. `StreamIds` should be used instead)
-[Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1).
-                     * @param StreamId (This is not recommended. `StreamIds` should be used instead)
-[Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1).
+                     * 设置(Not recommended. Consider using `StreamIds` instead.)
+The live stream code.
+                     * @param StreamId (Not recommended. Consider using `StreamIds` instead.)
+The live stream code.
                      */
                     void SetStreamId(const std::string& _streamId);
 
@@ -764,8 +764,8 @@ End time in the creation time range.
                     bool m_sourceTypesHasBeenSet;
 
                     /**
-                     * [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
+                     * The live stream code array. A media file will be returned if it matches any element in the array.
+<li>Array length limit: 10</li>
                      */
                     std::vector<std::string> m_streamIds;
                     bool m_streamIdsHasBeenSet;
@@ -868,8 +868,8 @@ Media file source. For valid values, please see [SourceType](https://intl.cloud.
                     bool m_sourceTypeHasBeenSet;
 
                     /**
-                     * (This is not recommended. `StreamIds` should be used instead)
-[Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1).
+                     * (Not recommended. Consider using `StreamIds` instead.)
+The live stream code.
                      */
                     std::string m_streamId;
                     bool m_streamIdHasBeenSet;

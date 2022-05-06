@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Metadata of backend nodes of the upstream
+                * Upstream node metadata
                 */
                 class UpstreamNode : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取IP or domain name of the host
-                     * @return Host IP or domain name of the host
+                     * 获取IP or domain name
+                     * @return Host IP or domain name
                      */
                     std::string GetHost() const;
 
                     /**
-                     * 设置IP or domain name of the host
-                     * @param Host IP or domain name of the host
+                     * 设置IP or domain name
+                     * @param Host IP or domain name
                      */
                     void SetHost(const std::string& _host);
 
@@ -101,18 +101,18 @@ namespace TencentCloud
                     bool WeightHasBeenSet() const;
 
                     /**
-                     * 获取VM instance ID
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return VmInstanceId VM instance ID
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取CVM Instance ID
+Note: This field may return `NULL`, indicating that no valid value was found.
+                     * @return VmInstanceId CVM Instance ID
+Note: This field may return `NULL`, indicating that no valid value was found.
                      */
                     std::string GetVmInstanceId() const;
 
                     /**
-                     * 设置VM instance ID
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param VmInstanceId VM instance ID
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置CVM Instance ID
+Note: This field may return `NULL`, indicating that no valid value was found.
+                     * @param VmInstanceId CVM Instance ID
+Note: This field may return `NULL`, indicating that no valid value was found.
                      */
                     void SetVmInstanceId(const std::string& _vmInstanceId);
 
@@ -145,18 +145,18 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Health status of the node. Value: `OFF`, `HEALTHY`, `UNHEALTHY` and `NO_DATA`. It’s not required for creating and editing actions.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return Healthy Health status of the node. Value: `OFF`, `HEALTHY`, `UNHEALTHY` and `NO_DATA`. It’s not required for creating and editing actions.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取Health status of the node. Values: `OFF`, `HEALTHY`, `UNHEALTHY` and `NO_DATA`. It’s not required for creating and editing actions. It only supports VPC upstreams.
+Note: This field may return `NULL`, indicating that no valid value was found.
+                     * @return Healthy Health status of the node. Values: `OFF`, `HEALTHY`, `UNHEALTHY` and `NO_DATA`. It’s not required for creating and editing actions. It only supports VPC upstreams.
+Note: This field may return `NULL`, indicating that no valid value was found.
                      */
                     std::string GetHealthy() const;
 
                     /**
-                     * 设置Health status of the node. Value: `OFF`, `HEALTHY`, `UNHEALTHY` and `NO_DATA`. It’s not required for creating and editing actions.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param Healthy Health status of the node. Value: `OFF`, `HEALTHY`, `UNHEALTHY` and `NO_DATA`. It’s not required for creating and editing actions.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置Health status of the node. Values: `OFF`, `HEALTHY`, `UNHEALTHY` and `NO_DATA`. It’s not required for creating and editing actions. It only supports VPC upstreams.
+Note: This field may return `NULL`, indicating that no valid value was found.
+                     * @param Healthy Health status of the node. Values: `OFF`, `HEALTHY`, `UNHEALTHY` and `NO_DATA`. It’s not required for creating and editing actions. It only supports VPC upstreams.
+Note: This field may return `NULL`, indicating that no valid value was found.
                      */
                     void SetHealthy(const std::string& _healthy);
 
@@ -167,18 +167,18 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool HealthyHasBeenSet() const;
 
                     /**
-                     * 获取The K8s service name
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return ServiceName The K8s service name
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取TKE container name
+Note: This field may return `NULL`, indicating that no valid value was found.
+                     * @return ServiceName TKE container name
+Note: This field may return `NULL`, indicating that no valid value was found.
                      */
                     std::string GetServiceName() const;
 
                     /**
-                     * 设置The K8s service name
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param ServiceName The K8s service name
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置TKE container name
+Note: This field may return `NULL`, indicating that no valid value was found.
+                     * @param ServiceName TKE container name
+Note: This field may return `NULL`, indicating that no valid value was found.
                      */
                     void SetServiceName(const std::string& _serviceName);
 
@@ -189,18 +189,18 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool ServiceNameHasBeenSet() const;
 
                     /**
-                     * 获取K8s namespace
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return NameSpace K8s namespace
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取TKE namespace
+Note: This field may return `NULL`, indicating that no valid value was found.
+                     * @return NameSpace TKE namespace
+Note: This field may return `NULL`, indicating that no valid value was found.
                      */
                     std::string GetNameSpace() const;
 
                     /**
-                     * 设置K8s namespace
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param NameSpace K8s namespace
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置TKE namespace
+Note: This field may return `NULL`, indicating that no valid value was found.
+                     * @param NameSpace TKE namespace
+Note: This field may return `NULL`, indicating that no valid value was found.
                      */
                     void SetNameSpace(const std::string& _nameSpace);
 
@@ -233,18 +233,18 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Source of the node
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return Source Source of the node
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取Node source. Valid value: `K8S`
+Note: This field may return `NULL`, indicating that no valid value was found.
+                     * @return Source Node source. Valid value: `K8S`
+Note: This field may return `NULL`, indicating that no valid value was found.
                      */
                     std::string GetSource() const;
 
                     /**
-                     * 设置Source of the node
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param Source Source of the node
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置Node source. Valid value: `K8S`
+Note: This field may return `NULL`, indicating that no valid value was found.
+                     * @param Source Node source. Valid value: `K8S`
+Note: This field may return `NULL`, indicating that no valid value was found.
                      */
                     void SetSource(const std::string& _source);
 
@@ -279,7 +279,7 @@ Note: This field may return `null`, indicating that no valid value was found.
                 private:
 
                     /**
-                     * IP or domain name of the host
+                     * IP or domain name
                      */
                     std::string m_host;
                     bool m_hostHasBeenSet;
@@ -297,8 +297,8 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_weightHasBeenSet;
 
                     /**
-                     * VM instance ID
-Note: This field may return `null`, indicating that no valid value was found.
+                     * CVM Instance ID
+Note: This field may return `NULL`, indicating that no valid value was found.
                      */
                     std::string m_vmInstanceId;
                     bool m_vmInstanceIdHasBeenSet;
@@ -311,22 +311,22 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Health status of the node. Value: `OFF`, `HEALTHY`, `UNHEALTHY` and `NO_DATA`. It’s not required for creating and editing actions.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * Health status of the node. Values: `OFF`, `HEALTHY`, `UNHEALTHY` and `NO_DATA`. It’s not required for creating and editing actions. It only supports VPC upstreams.
+Note: This field may return `NULL`, indicating that no valid value was found.
                      */
                     std::string m_healthy;
                     bool m_healthyHasBeenSet;
 
                     /**
-                     * The K8s service name
-Note: This field may return `null`, indicating that no valid value was found.
+                     * TKE container name
+Note: This field may return `NULL`, indicating that no valid value was found.
                      */
                     std::string m_serviceName;
                     bool m_serviceNameHasBeenSet;
 
                     /**
-                     * K8s namespace
-Note: This field may return `null`, indicating that no valid value was found.
+                     * TKE namespace
+Note: This field may return `NULL`, indicating that no valid value was found.
                      */
                     std::string m_nameSpace;
                     bool m_nameSpaceHasBeenSet;
@@ -339,8 +339,8 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Source of the node
-Note: This field may return `null`, indicating that no valid value was found.
+                     * Node source. Valid value: `K8S`
+Note: This field may return `NULL`, indicating that no valid value was found.
                      */
                     std::string m_source;
                     bool m_sourceHasBeenSet;

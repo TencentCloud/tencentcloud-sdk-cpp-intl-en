@@ -369,10 +369,10 @@ Note: this field may return null, indicating that no valid values found.
                     bool DeploymentTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether it’s for special usage
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return SpecialUse Whether it’s for special usage
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Whether the service if for special usage. Valid values: `DEFAULT` (general usage), `HTTP_DNS`.
+Note: This field may return `NULL`, indicating that no valid value was found.
+                     * @return SpecialUse Whether the service if for special usage. Valid values: `DEFAULT` (general usage), `HTTP_DNS`.
+Note: This field may return `NULL`, indicating that no valid value was found.
                      */
                     std::string GetSpecialUse() const;
 
@@ -546,8 +546,8 @@ Note: this field may return null, indicating that no valid values found.
                     bool m_deploymentTypeHasBeenSet;
 
                     /**
-                     * Whether it’s for special usage
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Whether the service if for special usage. Valid values: `DEFAULT` (general usage), `HTTP_DNS`.
+Note: This field may return `NULL`, indicating that no valid value was found.
                      */
                     std::string m_specialUse;
                     bool m_specialUseHasBeenSet;

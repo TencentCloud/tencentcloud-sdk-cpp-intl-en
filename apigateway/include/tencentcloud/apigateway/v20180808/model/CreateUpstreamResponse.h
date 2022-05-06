@@ -44,10 +44,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The unique upstream IP returned
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return UpstreamId The unique upstream IP returned
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取The unique upstream ID returned
+Note: This field may return `NULL`, indicating that no valid value was found.
+                     * @return UpstreamId The unique upstream ID returned
+Note: This field may return `NULL`, indicating that no valid value was found.
                      */
                     std::string GetUpstreamId() const;
 
@@ -60,8 +60,8 @@ Note: This field may return `null`, indicating that no valid value was found.
                 private:
 
                     /**
-                     * The unique upstream IP returned
-Note: This field may return `null`, indicating that no valid value was found.
+                     * The unique upstream ID returned
+Note: This field may return `NULL`, indicating that no valid value was found.
                      */
                     std::string m_upstreamId;
                     bool m_upstreamIdHasBeenSet;

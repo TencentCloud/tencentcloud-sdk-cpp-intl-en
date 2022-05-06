@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information of the queried upstreams
+                * The returned result of upstream query
                 */
                 class DescribeUpstreamInfo : public AbstractModel
                 {

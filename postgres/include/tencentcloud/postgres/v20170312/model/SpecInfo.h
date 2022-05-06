@@ -101,6 +101,28 @@ namespace TencentCloud
                      */
                     bool SpecItemInfoListHasBeenSet() const;
 
+                    /**
+                     * 获取Regions where KMS is supported
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return SupportKMSRegions Regions where KMS is supported
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::vector<std::string> GetSupportKMSRegions() const;
+
+                    /**
+                     * 设置Regions where KMS is supported
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param SupportKMSRegions Regions where KMS is supported
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetSupportKMSRegions(const std::vector<std::string>& _supportKMSRegions);
+
+                    /**
+                     * 判断参数 SupportKMSRegions 是否已赋值
+                     * @return SupportKMSRegions 是否已赋值
+                     */
+                    bool SupportKMSRegionsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -120,6 +142,13 @@ namespace TencentCloud
                      */
                     std::vector<SpecItemInfo> m_specItemInfoList;
                     bool m_specItemInfoListHasBeenSet;
+
+                    /**
+                     * Regions where KMS is supported
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::vector<std::string> m_supportKMSRegions;
+                    bool m_supportKMSRegionsHasBeenSet;
 
                 };
             }

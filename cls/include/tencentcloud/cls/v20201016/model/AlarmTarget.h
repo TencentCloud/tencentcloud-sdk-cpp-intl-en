@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool NumberHasBeenSet() const;
 
                     /**
-                     * 获取Offset of the query start time from the current time in minutes. The value cannot be positive. Value range: -1440–0.
-                     * @return StartTimeOffset Offset of the query start time from the current time in minutes. The value cannot be positive. Value range: -1440–0.
+                     * 获取Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Value range: -1440–0.
+                     * @return StartTimeOffset Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Value range: -1440–0.
                      */
                     int64_t GetStartTimeOffset() const;
 
                     /**
-                     * 设置Offset of the query start time from the current time in minutes. The value cannot be positive. Value range: -1440–0.
-                     * @param StartTimeOffset Offset of the query start time from the current time in minutes. The value cannot be positive. Value range: -1440–0.
+                     * 设置Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Value range: -1440–0.
+                     * @param StartTimeOffset Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Value range: -1440–0.
                      */
                     void SetStartTimeOffset(const int64_t& _startTimeOffset);
 
@@ -119,14 +119,14 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取Offset of the query end time from the current time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
-                     * @return EndTimeOffset Offset of the query end time from the current time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
+                     * 获取Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
+                     * @return EndTimeOffset Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
                      */
                     int64_t GetEndTimeOffset() const;
 
                     /**
-                     * 设置Offset of the query end time from the current time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
-                     * @param EndTimeOffset Offset of the query end time from the current time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
+                     * 设置Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
+                     * @param EndTimeOffset Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
                      */
                     void SetEndTimeOffset(const int64_t& _endTimeOffset);
 
@@ -175,13 +175,13 @@ namespace TencentCloud
                     bool m_numberHasBeenSet;
 
                     /**
-                     * Offset of the query start time from the current time in minutes. The value cannot be positive. Value range: -1440–0.
+                     * Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Value range: -1440–0.
                      */
                     int64_t m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * Offset of the query end time from the current time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
+                     * Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
                      */
                     int64_t m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;

@@ -734,6 +734,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool DBNodeSetHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the instance supports TDE data encryption. Valid values: 0 (no), 1 (yes)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return IsSupportTDE Whether the instance supports TDE data encryption. Valid values: 0 (no), 1 (yes)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetIsSupportTDE() const;
+
+                    /**
+                     * 设置Whether the instance supports TDE data encryption. Valid values: 0 (no), 1 (yes)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param IsSupportTDE Whether the instance supports TDE data encryption. Valid values: 0 (no), 1 (yes)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetIsSupportTDE(const int64_t& _isSupportTDE);
+
+                    /**
+                     * 判断参数 IsSupportTDE 是否已赋值
+                     * @return IsSupportTDE 是否已赋值
+                     */
+                    bool IsSupportTDEHasBeenSet() const;
+
                 private:
 
                     /**
@@ -960,6 +982,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::vector<DBNode> m_dBNodeSet;
                     bool m_dBNodeSetHasBeenSet;
+
+                    /**
+                     * Whether the instance supports TDE data encryption. Valid values: 0 (no), 1 (yes)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_isSupportTDE;
+                    bool m_isSupportTDEHasBeenSet;
 
                 };
             }

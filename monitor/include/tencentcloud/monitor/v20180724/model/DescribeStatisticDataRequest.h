@@ -116,14 +116,34 @@ namespace TencentCloud
                     bool ConditionsHasBeenSet() const;
 
                     /**
-                     * 获取Statistical granularity in s. Default value: 300
-                     * @return Period Statistical granularity in s. Default value: 300
+                     * 获取Statistical period in seconds. Default value: 300. Optional values: 60, 300, 3,600, and 86,400.
+Due to the storage period limit, the statistical period is subject to the time range of statistics:
+60s: The time range is less than 12 hours, and the timespan between `StartTime` and the current time cannot exceed 15 days.
+300s: The time range is less than three days, and the timespan between `StartTime` and the current time cannot exceed 31 days.
+3,600s: The time range is less than 30 days, and the timespan between `StartTime` and the current time cannot exceed 93 days.
+86,400s: The time range is less than 186 days, and the timespan between `StartTime` and the current time cannot exceed 186 days.
+                     * @return Period Statistical period in seconds. Default value: 300. Optional values: 60, 300, 3,600, and 86,400.
+Due to the storage period limit, the statistical period is subject to the time range of statistics:
+60s: The time range is less than 12 hours, and the timespan between `StartTime` and the current time cannot exceed 15 days.
+300s: The time range is less than three days, and the timespan between `StartTime` and the current time cannot exceed 31 days.
+3,600s: The time range is less than 30 days, and the timespan between `StartTime` and the current time cannot exceed 93 days.
+86,400s: The time range is less than 186 days, and the timespan between `StartTime` and the current time cannot exceed 186 days.
                      */
                     uint64_t GetPeriod() const;
 
                     /**
-                     * 设置Statistical granularity in s. Default value: 300
-                     * @param Period Statistical granularity in s. Default value: 300
+                     * 设置Statistical period in seconds. Default value: 300. Optional values: 60, 300, 3,600, and 86,400.
+Due to the storage period limit, the statistical period is subject to the time range of statistics:
+60s: The time range is less than 12 hours, and the timespan between `StartTime` and the current time cannot exceed 15 days.
+300s: The time range is less than three days, and the timespan between `StartTime` and the current time cannot exceed 31 days.
+3,600s: The time range is less than 30 days, and the timespan between `StartTime` and the current time cannot exceed 93 days.
+86,400s: The time range is less than 186 days, and the timespan between `StartTime` and the current time cannot exceed 186 days.
+                     * @param Period Statistical period in seconds. Default value: 300. Optional values: 60, 300, 3,600, and 86,400.
+Due to the storage period limit, the statistical period is subject to the time range of statistics:
+60s: The time range is less than 12 hours, and the timespan between `StartTime` and the current time cannot exceed 15 days.
+300s: The time range is less than three days, and the timespan between `StartTime` and the current time cannot exceed 31 days.
+3,600s: The time range is less than 30 days, and the timespan between `StartTime` and the current time cannot exceed 93 days.
+86,400s: The time range is less than 186 days, and the timespan between `StartTime` and the current time cannot exceed 186 days.
                      */
                     void SetPeriod(const uint64_t& _period);
 
@@ -214,7 +234,12 @@ namespace TencentCloud
                     bool m_conditionsHasBeenSet;
 
                     /**
-                     * Statistical granularity in s. Default value: 300
+                     * Statistical period in seconds. Default value: 300. Optional values: 60, 300, 3,600, and 86,400.
+Due to the storage period limit, the statistical period is subject to the time range of statistics:
+60s: The time range is less than 12 hours, and the timespan between `StartTime` and the current time cannot exceed 15 days.
+300s: The time range is less than three days, and the timespan between `StartTime` and the current time cannot exceed 31 days.
+3,600s: The time range is less than 30 days, and the timespan between `StartTime` and the current time cannot exceed 93 days.
+86,400s: The time range is less than 186 days, and the timespan between `StartTime` and the current time cannot exceed 186 days.
                      */
                     uint64_t m_period;
                     bool m_periodHasBeenSet;

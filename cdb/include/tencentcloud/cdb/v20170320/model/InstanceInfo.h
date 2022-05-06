@@ -631,14 +631,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VportHasBeenSet() const;
 
                     /**
-                     * 获取Lock flag
-                     * @return CdbError Lock flag
+                     * 获取Whether the disk write is locked (It depends on whether the instance data in disk exceeds its quota). Valid values: `0` (unlocked), `1` (locked).
+                     * @return CdbError Whether the disk write is locked (It depends on whether the instance data in disk exceeds its quota). Valid values: `0` (unlocked), `1` (locked).
                      */
                     int64_t GetCdbError() const;
 
                     /**
-                     * 设置Lock flag
-                     * @param CdbError Lock flag
+                     * 设置Whether the disk write is locked (It depends on whether the instance data in disk exceeds its quota). Valid values: `0` (unlocked), `1` (locked).
+                     * @param CdbError Whether the disk write is locked (It depends on whether the instance data in disk exceeds its quota). Valid values: `0` (unlocked), `1` (locked).
                      */
                     void SetCdbError(const int64_t& _cdbError);
 
@@ -1056,7 +1056,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_vportHasBeenSet;
 
                     /**
-                     * Lock flag
+                     * Whether the disk write is locked (It depends on whether the instance data in disk exceeds its quota). Valid values: `0` (unlocked), `1` (locked).
                      */
                     int64_t m_cdbError;
                     bool m_cdbErrorHasBeenSet;

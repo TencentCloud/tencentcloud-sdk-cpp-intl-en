@@ -55,6 +55,8 @@
 #include <tencentcloud/iotcloud/v20210408/model/UpdateDevicesEnableStateResponse.h>
 #include <tencentcloud/iotcloud/v20210408/model/UpdatePrivateCARequest.h>
 #include <tencentcloud/iotcloud/v20210408/model/UpdatePrivateCAResponse.h>
+#include <tencentcloud/iotcloud/v20210408/model/UpdateProductDynamicRegisterRequest.h>
+#include <tencentcloud/iotcloud/v20210408/model/UpdateProductDynamicRegisterResponse.h>
 
 
 namespace TencentCloud
@@ -117,6 +119,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::UpdatePrivateCAResponse> UpdatePrivateCAOutcome;
                 typedef std::future<UpdatePrivateCAOutcome> UpdatePrivateCAOutcomeCallable;
                 typedef std::function<void(const IotcloudClient*, const Model::UpdatePrivateCARequest&, UpdatePrivateCAOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdatePrivateCAAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateProductDynamicRegisterResponse> UpdateProductDynamicRegisterOutcome;
+                typedef std::future<UpdateProductDynamicRegisterOutcome> UpdateProductDynamicRegisterOutcomeCallable;
+                typedef std::function<void(const IotcloudClient*, const Model::UpdateProductDynamicRegisterRequest&, UpdateProductDynamicRegisterOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateProductDynamicRegisterAsyncHandler;
 
 
 
@@ -263,6 +268,15 @@ namespace TencentCloud
                 UpdatePrivateCAOutcome UpdatePrivateCA(const Model::UpdatePrivateCARequest &request);
                 void UpdatePrivateCAAsync(const Model::UpdatePrivateCARequest& request, const UpdatePrivateCAAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 UpdatePrivateCAOutcomeCallable UpdatePrivateCACallable(const Model::UpdatePrivateCARequest& request);
+
+                /**
+                 *This API is used to update the configuration of product dynamic registration. 
+                 * @param req UpdateProductDynamicRegisterRequest
+                 * @return UpdateProductDynamicRegisterOutcome
+                 */
+                UpdateProductDynamicRegisterOutcome UpdateProductDynamicRegister(const Model::UpdateProductDynamicRegisterRequest &request);
+                void UpdateProductDynamicRegisterAsync(const Model::UpdateProductDynamicRegisterRequest& request, const UpdateProductDynamicRegisterAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateProductDynamicRegisterOutcomeCallable UpdateProductDynamicRegisterCallable(const Model::UpdateProductDynamicRegisterRequest& request);
 
             };
         }

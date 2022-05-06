@@ -270,6 +270,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool KernelVersionHasBeenSet() const;
 
+                    /**
+                     * 获取Whether TDE data encryption is supported. Valid values: 0 (no), 1 (yes)
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return IsSupportTDE Whether TDE data encryption is supported. Valid values: 0 (no), 1 (yes)
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    int64_t GetIsSupportTDE() const;
+
+                    /**
+                     * 设置Whether TDE data encryption is supported. Valid values: 0 (no), 1 (yes)
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param IsSupportTDE Whether TDE data encryption is supported. Valid values: 0 (no), 1 (yes)
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetIsSupportTDE(const int64_t& _isSupportTDE);
+
+                    /**
+                     * 判断参数 IsSupportTDE 是否已赋值
+                     * @return IsSupportTDE 是否已赋值
+                     */
+                    bool IsSupportTDEHasBeenSet() const;
+
                 private:
 
                     /**
@@ -345,6 +367,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_kernelVersion;
                     bool m_kernelVersionHasBeenSet;
+
+                    /**
+                     * Whether TDE data encryption is supported. Valid values: 0 (no), 1 (yes)
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    int64_t m_isSupportTDE;
+                    bool m_isSupportTDEHasBeenSet;
 
                 };
             }

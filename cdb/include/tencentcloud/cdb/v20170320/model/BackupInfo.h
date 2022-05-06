@@ -298,6 +298,24 @@ namespace TencentCloud
                      */
                     bool ManualBackupNameHasBeenSet() const;
 
+                    /**
+                     * 获取Backup retention type. Valid values: `save_mode_regular` (non-archive backup), save_mode_period`(archive backup).
+                     * @return SaveMode Backup retention type. Valid values: `save_mode_regular` (non-archive backup), save_mode_period`(archive backup).
+                     */
+                    std::string GetSaveMode() const;
+
+                    /**
+                     * 设置Backup retention type. Valid values: `save_mode_regular` (non-archive backup), save_mode_period`(archive backup).
+                     * @param SaveMode Backup retention type. Valid values: `save_mode_regular` (non-archive backup), save_mode_period`(archive backup).
+                     */
+                    void SetSaveMode(const std::string& _saveMode);
+
+                    /**
+                     * 判断参数 SaveMode 是否已赋值
+                     * @return SaveMode 是否已赋值
+                     */
+                    bool SaveModeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -383,6 +401,12 @@ namespace TencentCloud
                      */
                     std::string m_manualBackupName;
                     bool m_manualBackupNameHasBeenSet;
+
+                    /**
+                     * Backup retention type. Valid values: `save_mode_regular` (non-archive backup), save_mode_period`(archive backup).
+                     */
+                    std::string m_saveMode;
+                    bool m_saveModeHasBeenSet;
 
                 };
             }

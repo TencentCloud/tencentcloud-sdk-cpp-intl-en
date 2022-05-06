@@ -39,7 +39,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information of an upstream
+                * Upstream details
                 */
                 class UpstreamInfo : public AbstractModel
                 {
@@ -51,14 +51,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique ID of the upstream
-                     * @return UpstreamId Unique ID of the upstream
+                     * 获取Unique upstream ID
+                     * @return UpstreamId Unique upstream ID
                      */
                     std::string GetUpstreamId() const;
 
                     /**
-                     * 设置Unique ID of the upstream
-                     * @param UpstreamId Unique ID of the upstream
+                     * 设置Unique upstream ID
+                     * @param UpstreamId Unique upstream ID
                      */
                     void SetUpstreamId(const std::string& _upstreamId);
 
@@ -69,14 +69,14 @@ namespace TencentCloud
                     bool UpstreamIdHasBeenSet() const;
 
                     /**
-                     * 获取Name of the upstream 
-                     * @return UpstreamName Name of the upstream 
+                     * 获取Upstream name
+                     * @return UpstreamName Upstream name
                      */
                     std::string GetUpstreamName() const;
 
                     /**
-                     * 设置Name of the upstream 
-                     * @param UpstreamName Name of the upstream 
+                     * 设置Upstream name
+                     * @param UpstreamName Upstream name
                      */
                     void SetUpstreamName(const std::string& _upstreamName);
 
@@ -87,14 +87,14 @@ namespace TencentCloud
                     bool UpstreamNameHasBeenSet() const;
 
                     /**
-                     * 获取Description of the upstream
-                     * @return UpstreamDescription Description of the upstream
+                     * 获取Upstream description
+                     * @return UpstreamDescription Upstream description
                      */
                     std::string GetUpstreamDescription() const;
 
                     /**
-                     * 设置Description of the upstream
-                     * @param UpstreamDescription Description of the upstream
+                     * 设置Upstream description
+                     * @param UpstreamDescription Upstream description
                      */
                     void SetUpstreamDescription(const std::string& _upstreamDescription);
 
@@ -105,14 +105,14 @@ namespace TencentCloud
                     bool UpstreamDescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Protocol
-                     * @return Scheme Protocol
+                     * 获取Backend protocol. Valid values: `HTTP`, `HTTPS`
+                     * @return Scheme Backend protocol. Valid values: `HTTP`, `HTTPS`
                      */
                     std::string GetScheme() const;
 
                     /**
-                     * 设置Protocol
-                     * @param Scheme Protocol
+                     * 设置Backend protocol. Valid values: `HTTP`, `HTTPS`
+                     * @param Scheme Backend protocol. Valid values: `HTTP`, `HTTPS`
                      */
                     void SetScheme(const std::string& _scheme);
 
@@ -123,14 +123,14 @@ namespace TencentCloud
                     bool SchemeHasBeenSet() const;
 
                     /**
-                     * 获取Load balancing algorithm
-                     * @return Algorithm Load balancing algorithm
+                     * 获取Load balancing algorithm. Valid value: `ROUND_ROBIN`
+                     * @return Algorithm Load balancing algorithm. Valid value: `ROUND_ROBIN`
                      */
                     std::string GetAlgorithm() const;
 
                     /**
-                     * 设置Load balancing algorithm
-                     * @param Algorithm Load balancing algorithm
+                     * 设置Load balancing algorithm. Valid value: `ROUND_ROBIN`
+                     * @param Algorithm Load balancing algorithm. Valid value: `ROUND_ROBIN`
                      */
                     void SetAlgorithm(const std::string& _algorithm);
 
@@ -141,14 +141,14 @@ namespace TencentCloud
                     bool AlgorithmHasBeenSet() const;
 
                     /**
-                     * 获取Unique VPC ID.
-                     * @return UniqVpcId Unique VPC ID.
+                     * 获取Unique VPC ID
+                     * @return UniqVpcId Unique VPC ID
                      */
                     std::string GetUniqVpcId() const;
 
                     /**
-                     * 设置Unique VPC ID.
-                     * @param UniqVpcId Unique VPC ID.
+                     * 设置Unique VPC ID
+                     * @param UniqVpcId Unique VPC ID
                      */
                     void SetUniqVpcId(const std::string& _uniqVpcId);
 
@@ -159,14 +159,14 @@ namespace TencentCloud
                     bool UniqVpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Number of retried attempts
-                     * @return Retries Number of retried attempts
+                     * 获取Number of retry attempts
+                     * @return Retries Number of retry attempts
                      */
                     uint64_t GetRetries() const;
 
                     /**
-                     * 设置Number of retried attempts
-                     * @param Retries Number of retried attempts
+                     * 设置Number of retry attempts
+                     * @param Retries Number of retry attempts
                      */
                     void SetRetries(const uint64_t& _retries);
 
@@ -257,14 +257,14 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool HealthCheckerHasBeenSet() const;
 
                     /**
-                     * 获取Type of the upstream
-                     * @return UpstreamType Type of the upstream
+                     * 获取Upstream type. Valid values: `IP_PORT`, `K8S`
+                     * @return UpstreamType Upstream type. Valid values: `IP_PORT`, `K8S`
                      */
                     std::string GetUpstreamType() const;
 
                     /**
-                     * 设置Type of the upstream
-                     * @param UpstreamType Type of the upstream
+                     * 设置Upstream type. Valid values: `IP_PORT`, `K8S`
+                     * @param UpstreamType Upstream type. Valid values: `IP_PORT`, `K8S`
                      */
                     void SetUpstreamType(const std::string& _upstreamType);
 
@@ -275,18 +275,18 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool UpstreamTypeHasBeenSet() const;
 
                     /**
-                     * 获取Configuration of K8s service
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return K8sServices Configuration of K8s service
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取Configuration of TKE service
+Note: This field may return `NULL`, indicating that no valid value was found.
+                     * @return K8sServices Configuration of TKE service
+Note: This field may return `NULL`, indicating that no valid value was found.
                      */
                     std::vector<K8sService> GetK8sServices() const;
 
                     /**
-                     * 设置Configuration of K8s service
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param K8sServices Configuration of K8s service
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置Configuration of TKE service
+Note: This field may return `NULL`, indicating that no valid value was found.
+                     * @param K8sServices Configuration of TKE service
+Note: This field may return `NULL`, indicating that no valid value was found.
                      */
                     void SetK8sServices(const std::vector<K8sService>& _k8sServices);
 
@@ -297,18 +297,18 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool K8sServicesHasBeenSet() const;
 
                     /**
-                     * 获取Host of the upstream
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return UpstreamHost Host of the upstream
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取The Host header that the gateway forwards to the upstream
+Note: This field may return `NULL`, indicating that no valid value was found.
+                     * @return UpstreamHost The Host header that the gateway forwards to the upstream
+Note: This field may return `NULL`, indicating that no valid value was found.
                      */
                     std::string GetUpstreamHost() const;
 
                     /**
-                     * 设置Host of the upstream
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param UpstreamHost Host of the upstream
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置The Host header that the gateway forwards to the upstream
+Note: This field may return `NULL`, indicating that no valid value was found.
+                     * @param UpstreamHost The Host header that the gateway forwards to the upstream
+Note: This field may return `NULL`, indicating that no valid value was found.
                      */
                     void SetUpstreamHost(const std::string& _upstreamHost);
 
@@ -321,43 +321,43 @@ Note: This field may return `null`, indicating that no valid value was found.
                 private:
 
                     /**
-                     * Unique ID of the upstream
+                     * Unique upstream ID
                      */
                     std::string m_upstreamId;
                     bool m_upstreamIdHasBeenSet;
 
                     /**
-                     * Name of the upstream 
+                     * Upstream name
                      */
                     std::string m_upstreamName;
                     bool m_upstreamNameHasBeenSet;
 
                     /**
-                     * Description of the upstream
+                     * Upstream description
                      */
                     std::string m_upstreamDescription;
                     bool m_upstreamDescriptionHasBeenSet;
 
                     /**
-                     * Protocol
+                     * Backend protocol. Valid values: `HTTP`, `HTTPS`
                      */
                     std::string m_scheme;
                     bool m_schemeHasBeenSet;
 
                     /**
-                     * Load balancing algorithm
+                     * Load balancing algorithm. Valid value: `ROUND_ROBIN`
                      */
                     std::string m_algorithm;
                     bool m_algorithmHasBeenSet;
 
                     /**
-                     * Unique VPC ID.
+                     * Unique VPC ID
                      */
                     std::string m_uniqVpcId;
                     bool m_uniqVpcIdHasBeenSet;
 
                     /**
-                     * Number of retried attempts
+                     * Number of retry attempts
                      */
                     uint64_t m_retries;
                     bool m_retriesHasBeenSet;
@@ -389,21 +389,21 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_healthCheckerHasBeenSet;
 
                     /**
-                     * Type of the upstream
+                     * Upstream type. Valid values: `IP_PORT`, `K8S`
                      */
                     std::string m_upstreamType;
                     bool m_upstreamTypeHasBeenSet;
 
                     /**
-                     * Configuration of K8s service
-Note: This field may return `null`, indicating that no valid value was found.
+                     * Configuration of TKE service
+Note: This field may return `NULL`, indicating that no valid value was found.
                      */
                     std::vector<K8sService> m_k8sServices;
                     bool m_k8sServicesHasBeenSet;
 
                     /**
-                     * Host of the upstream
-Note: This field may return `null`, indicating that no valid value was found.
+                     * The Host header that the gateway forwards to the upstream
+Note: This field may return `NULL`, indicating that no valid value was found.
                      */
                     std::string m_upstreamHost;
                     bool m_upstreamHostHasBeenSet;

@@ -40,6 +40,49 @@ SesClient::SesClient(const Credential &credential, const string &region, const C
 }
 
 
+SesClient::BatchSendEmailOutcome SesClient::BatchSendEmail(const BatchSendEmailRequest &request)
+{
+    auto outcome = MakeRequest(request, "BatchSendEmail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        BatchSendEmailResponse rsp = BatchSendEmailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return BatchSendEmailOutcome(rsp);
+        else
+            return BatchSendEmailOutcome(o.GetError());
+    }
+    else
+    {
+        return BatchSendEmailOutcome(outcome.GetError());
+    }
+}
+
+void SesClient::BatchSendEmailAsync(const BatchSendEmailRequest& request, const BatchSendEmailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->BatchSendEmail(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SesClient::BatchSendEmailOutcomeCallable SesClient::BatchSendEmailCallable(const BatchSendEmailRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<BatchSendEmailOutcome()>>(
+        [this, request]()
+        {
+            return this->BatchSendEmail(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 SesClient::CreateEmailAddressOutcome SesClient::CreateEmailAddress(const CreateEmailAddressRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateEmailAddress");
@@ -119,6 +162,49 @@ SesClient::CreateEmailIdentityOutcomeCallable SesClient::CreateEmailIdentityCall
         [this, request]()
         {
             return this->CreateEmailIdentity(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SesClient::CreateEmailTemplateOutcome SesClient::CreateEmailTemplate(const CreateEmailTemplateRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateEmailTemplate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateEmailTemplateResponse rsp = CreateEmailTemplateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateEmailTemplateOutcome(rsp);
+        else
+            return CreateEmailTemplateOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateEmailTemplateOutcome(outcome.GetError());
+    }
+}
+
+void SesClient::CreateEmailTemplateAsync(const CreateEmailTemplateRequest& request, const CreateEmailTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateEmailTemplate(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SesClient::CreateEmailTemplateOutcomeCallable SesClient::CreateEmailTemplateCallable(const CreateEmailTemplateRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateEmailTemplateOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateEmailTemplate(request);
         }
     );
 
@@ -893,6 +979,49 @@ SesClient::UpdateEmailIdentityOutcomeCallable SesClient::UpdateEmailIdentityCall
         [this, request]()
         {
             return this->UpdateEmailIdentity(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+SesClient::UpdateEmailTemplateOutcome SesClient::UpdateEmailTemplate(const UpdateEmailTemplateRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateEmailTemplate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateEmailTemplateResponse rsp = UpdateEmailTemplateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateEmailTemplateOutcome(rsp);
+        else
+            return UpdateEmailTemplateOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateEmailTemplateOutcome(outcome.GetError());
+    }
+}
+
+void SesClient::UpdateEmailTemplateAsync(const UpdateEmailTemplateRequest& request, const UpdateEmailTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->UpdateEmailTemplate(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+SesClient::UpdateEmailTemplateOutcomeCallable SesClient::UpdateEmailTemplateCallable(const UpdateEmailTemplateRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<UpdateEmailTemplateOutcome()>>(
+        [this, request]()
+        {
+            return this->UpdateEmailTemplate(request);
         }
     );
 

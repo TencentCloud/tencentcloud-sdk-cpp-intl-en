@@ -44,10 +44,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the upstream deleted
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return UpstreamId ID of the upstream deleted
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取ID of the deleted upstream
+Note: This field may return `NULL`, indicating that no valid value was found.
+                     * @return UpstreamId ID of the deleted upstream
+Note: This field may return `NULL`, indicating that no valid value was found.
                      */
                     std::string GetUpstreamId() const;
 
@@ -60,8 +60,8 @@ Note: This field may return `null`, indicating that no valid value was found.
                 private:
 
                     /**
-                     * ID of the upstream deleted
-Note: This field may return `null`, indicating that no valid value was found.
+                     * ID of the deleted upstream
+Note: This field may return `NULL`, indicating that no valid value was found.
                      */
                     std::string m_upstreamId;
                     bool m_upstreamIdHasBeenSet;

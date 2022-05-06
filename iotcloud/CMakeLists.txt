@@ -41,6 +41,7 @@ set(iotcloud_public_header_model
   include/tencentcloud/iotcloud/v20210408/model/DescribeProductResponse.h
   include/tencentcloud/iotcloud/v20210408/model/DescribeDeviceRequest.h
   include/tencentcloud/iotcloud/v20210408/model/DeviceLabel.h
+  include/tencentcloud/iotcloud/v20210408/model/UpdateProductDynamicRegisterRequest.h
   include/tencentcloud/iotcloud/v20210408/model/CertInfo.h
   include/tencentcloud/iotcloud/v20210408/model/ProductMetadata.h
   include/tencentcloud/iotcloud/v20210408/model/DescribePrivateCAsRequest.h
@@ -59,6 +60,7 @@ set(iotcloud_public_header_model
   include/tencentcloud/iotcloud/v20210408/model/DeviceInfo.h
   include/tencentcloud/iotcloud/v20210408/model/ProductProperties.h
   include/tencentcloud/iotcloud/v20210408/model/DescribeDeviceResponse.h
+  include/tencentcloud/iotcloud/v20210408/model/UpdateProductDynamicRegisterResponse.h
   )
 
 set(iotcloud_src
@@ -85,6 +87,7 @@ set(iotcloud_src
   src/v20210408/model/DescribeProductResponse.cpp
   src/v20210408/model/DescribeDeviceRequest.cpp
   src/v20210408/model/DeviceLabel.cpp
+  src/v20210408/model/UpdateProductDynamicRegisterRequest.cpp
   src/v20210408/model/CertInfo.cpp
   src/v20210408/model/ProductMetadata.cpp
   src/v20210408/model/DescribePrivateCAsRequest.cpp
@@ -103,6 +106,7 @@ set(iotcloud_src
   src/v20210408/model/DeviceInfo.cpp
   src/v20210408/model/ProductProperties.cpp
   src/v20210408/model/DescribeDeviceResponse.cpp
+  src/v20210408/model/UpdateProductDynamicRegisterResponse.cpp
   )
 
 set(iotcloud_include

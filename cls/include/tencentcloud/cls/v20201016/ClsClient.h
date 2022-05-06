@@ -25,6 +25,8 @@
 #include <tencentcloud/core/AsyncCallerContext.h>
 #include <tencentcloud/cls/v20201016/model/ApplyConfigToMachineGroupRequest.h>
 #include <tencentcloud/cls/v20201016/model/ApplyConfigToMachineGroupResponse.h>
+#include <tencentcloud/cls/v20201016/model/CloseKafkaConsumerRequest.h>
+#include <tencentcloud/cls/v20201016/model/CloseKafkaConsumerResponse.h>
 #include <tencentcloud/cls/v20201016/model/CreateAlarmRequest.h>
 #include <tencentcloud/cls/v20201016/model/CreateAlarmResponse.h>
 #include <tencentcloud/cls/v20201016/model/CreateAlarmNoticeRequest.h>
@@ -41,6 +43,8 @@
 #include <tencentcloud/cls/v20201016/model/CreateLogsetResponse.h>
 #include <tencentcloud/cls/v20201016/model/CreateMachineGroupRequest.h>
 #include <tencentcloud/cls/v20201016/model/CreateMachineGroupResponse.h>
+#include <tencentcloud/cls/v20201016/model/CreateShipperRequest.h>
+#include <tencentcloud/cls/v20201016/model/CreateShipperResponse.h>
 #include <tencentcloud/cls/v20201016/model/CreateTopicRequest.h>
 #include <tencentcloud/cls/v20201016/model/CreateTopicResponse.h>
 #include <tencentcloud/cls/v20201016/model/DeleteAlarmRequest.h>
@@ -119,6 +123,10 @@
 #include <tencentcloud/cls/v20201016/model/ModifyMachineGroupResponse.h>
 #include <tencentcloud/cls/v20201016/model/ModifyShipperRequest.h>
 #include <tencentcloud/cls/v20201016/model/ModifyShipperResponse.h>
+#include <tencentcloud/cls/v20201016/model/ModifyTopicRequest.h>
+#include <tencentcloud/cls/v20201016/model/ModifyTopicResponse.h>
+#include <tencentcloud/cls/v20201016/model/OpenKafkaConsumerRequest.h>
+#include <tencentcloud/cls/v20201016/model/OpenKafkaConsumerResponse.h>
 #include <tencentcloud/cls/v20201016/model/RetryShipperTaskRequest.h>
 #include <tencentcloud/cls/v20201016/model/RetryShipperTaskResponse.h>
 #include <tencentcloud/cls/v20201016/model/SearchLogRequest.h>
@@ -144,6 +152,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ApplyConfigToMachineGroupResponse> ApplyConfigToMachineGroupOutcome;
                 typedef std::future<ApplyConfigToMachineGroupOutcome> ApplyConfigToMachineGroupOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::ApplyConfigToMachineGroupRequest&, ApplyConfigToMachineGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ApplyConfigToMachineGroupAsyncHandler;
+                typedef Outcome<Core::Error, Model::CloseKafkaConsumerResponse> CloseKafkaConsumerOutcome;
+                typedef std::future<CloseKafkaConsumerOutcome> CloseKafkaConsumerOutcomeCallable;
+                typedef std::function<void(const ClsClient*, const Model::CloseKafkaConsumerRequest&, CloseKafkaConsumerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CloseKafkaConsumerAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateAlarmResponse> CreateAlarmOutcome;
                 typedef std::future<CreateAlarmOutcome> CreateAlarmOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::CreateAlarmRequest&, CreateAlarmOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAlarmAsyncHandler;
@@ -168,6 +179,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateMachineGroupResponse> CreateMachineGroupOutcome;
                 typedef std::future<CreateMachineGroupOutcome> CreateMachineGroupOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::CreateMachineGroupRequest&, CreateMachineGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateMachineGroupAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateShipperResponse> CreateShipperOutcome;
+                typedef std::future<CreateShipperOutcome> CreateShipperOutcomeCallable;
+                typedef std::function<void(const ClsClient*, const Model::CreateShipperRequest&, CreateShipperOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateShipperAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateTopicResponse> CreateTopicOutcome;
                 typedef std::future<CreateTopicOutcome> CreateTopicOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::CreateTopicRequest&, CreateTopicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateTopicAsyncHandler;
@@ -285,6 +299,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyShipperResponse> ModifyShipperOutcome;
                 typedef std::future<ModifyShipperOutcome> ModifyShipperOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::ModifyShipperRequest&, ModifyShipperOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyShipperAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyTopicResponse> ModifyTopicOutcome;
+                typedef std::future<ModifyTopicOutcome> ModifyTopicOutcomeCallable;
+                typedef std::function<void(const ClsClient*, const Model::ModifyTopicRequest&, ModifyTopicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyTopicAsyncHandler;
+                typedef Outcome<Core::Error, Model::OpenKafkaConsumerResponse> OpenKafkaConsumerOutcome;
+                typedef std::future<OpenKafkaConsumerOutcome> OpenKafkaConsumerOutcomeCallable;
+                typedef std::function<void(const ClsClient*, const Model::OpenKafkaConsumerRequest&, OpenKafkaConsumerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> OpenKafkaConsumerAsyncHandler;
                 typedef Outcome<Core::Error, Model::RetryShipperTaskResponse> RetryShipperTaskOutcome;
                 typedef std::future<RetryShipperTaskOutcome> RetryShipperTaskOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::RetryShipperTaskRequest&, RetryShipperTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RetryShipperTaskAsyncHandler;
@@ -308,6 +328,15 @@ namespace TencentCloud
                 ApplyConfigToMachineGroupOutcome ApplyConfigToMachineGroup(const Model::ApplyConfigToMachineGroupRequest &request);
                 void ApplyConfigToMachineGroupAsync(const Model::ApplyConfigToMachineGroupRequest& request, const ApplyConfigToMachineGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ApplyConfigToMachineGroupOutcomeCallable ApplyConfigToMachineGroupCallable(const Model::ApplyConfigToMachineGroupRequest& request);
+
+                /**
+                 *This API is used to disable Kafka consumption.
+                 * @param req CloseKafkaConsumerRequest
+                 * @return CloseKafkaConsumerOutcome
+                 */
+                CloseKafkaConsumerOutcome CloseKafkaConsumer(const Model::CloseKafkaConsumerRequest &request);
+                void CloseKafkaConsumerAsync(const Model::CloseKafkaConsumerRequest& request, const CloseKafkaConsumerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CloseKafkaConsumerOutcomeCallable CloseKafkaConsumerCallable(const Model::CloseKafkaConsumerRequest& request);
 
                 /**
                  *This API is used to create an alarm policy.
@@ -380,6 +409,15 @@ namespace TencentCloud
                 CreateMachineGroupOutcome CreateMachineGroup(const Model::CreateMachineGroupRequest &request);
                 void CreateMachineGroupAsync(const Model::CreateMachineGroupRequest& request, const CreateMachineGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateMachineGroupOutcomeCallable CreateMachineGroupCallable(const Model::CreateMachineGroupRequest& request);
+
+                /**
+                 *This API is used to create a shipping rule. Note: To use this API, you need to check whether you have configured the role and permission for COS shipping tasks. If not, see **Viewing and Configuring Shipping Authorization** at https://intl.cloud.tencent.com/document/product/614/71623.?from_cn_redirect=1
+                 * @param req CreateShipperRequest
+                 * @return CreateShipperOutcome
+                 */
+                CreateShipperOutcome CreateShipper(const Model::CreateShipperRequest &request);
+                void CreateShipperAsync(const Model::CreateShipperRequest& request, const CreateShipperAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateShipperOutcomeCallable CreateShipperCallable(const Model::CreateShipperRequest& request);
 
                 /**
                  *This API is used to create a log topic.
@@ -732,6 +770,24 @@ namespace TencentCloud
                 ModifyShipperOutcome ModifyShipper(const Model::ModifyShipperRequest &request);
                 void ModifyShipperAsync(const Model::ModifyShipperRequest& request, const ModifyShipperAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyShipperOutcomeCallable ModifyShipperCallable(const Model::ModifyShipperRequest& request);
+
+                /**
+                 *This API is used to modify a log topic.
+                 * @param req ModifyTopicRequest
+                 * @return ModifyTopicOutcome
+                 */
+                ModifyTopicOutcome ModifyTopic(const Model::ModifyTopicRequest &request);
+                void ModifyTopicAsync(const Model::ModifyTopicRequest& request, const ModifyTopicAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyTopicOutcomeCallable ModifyTopicCallable(const Model::ModifyTopicRequest& request);
+
+                /**
+                 *This API is used to enable the Kafka consumption feature.
+                 * @param req OpenKafkaConsumerRequest
+                 * @return OpenKafkaConsumerOutcome
+                 */
+                OpenKafkaConsumerOutcome OpenKafkaConsumer(const Model::OpenKafkaConsumerRequest &request);
+                void OpenKafkaConsumerAsync(const Model::OpenKafkaConsumerRequest& request, const OpenKafkaConsumerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                OpenKafkaConsumerOutcomeCallable OpenKafkaConsumerCallable(const Model::OpenKafkaConsumerRequest& request);
 
                 /**
                  *This API is used to retry a failed shipping task.

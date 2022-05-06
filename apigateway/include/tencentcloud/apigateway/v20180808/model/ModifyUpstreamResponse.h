@@ -45,10 +45,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Information of the upstream after the modification
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return Result Information of the upstream after the modification
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取Return modified upstream information
+Note: This field may return `NULL`, indicating that no valid value was found.
+                     * @return Result Return modified upstream information
+Note: This field may return `NULL`, indicating that no valid value was found.
                      */
                     UpstreamInfo GetResult() const;
 
@@ -61,8 +61,8 @@ Note: This field may return `null`, indicating that no valid value was found.
                 private:
 
                     /**
-                     * Information of the upstream after the modification
-Note: This field may return `null`, indicating that no valid value was found.
+                     * Return modified upstream information
+Note: This field may return `NULL`, indicating that no valid value was found.
                      */
                     UpstreamInfo m_result;
                     bool m_resultHasBeenSet;

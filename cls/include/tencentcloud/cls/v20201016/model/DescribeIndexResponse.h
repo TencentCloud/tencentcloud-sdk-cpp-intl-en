@@ -94,6 +94,34 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool ModifyTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return IncludeInternalFields Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    bool GetIncludeInternalFields() const;
+
+                    /**
+                     * 判断参数 IncludeInternalFields 是否已赋值
+                     * @return IncludeInternalFields 是否已赋值
+                     */
+                    bool IncludeInternalFieldsHasBeenSet() const;
+
+                    /**
+                     * 获取Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return MetadataFlag Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    uint64_t GetMetadataFlag() const;
+
+                    /**
+                     * 判断参数 MetadataFlag 是否已赋值
+                     * @return MetadataFlag 是否已赋值
+                     */
+                    bool MetadataFlagHasBeenSet() const;
+
                 private:
 
                     /**
@@ -120,6 +148,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_modifyTime;
                     bool m_modifyTimeHasBeenSet;
+
+                    /**
+                     * Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    bool m_includeInternalFields;
+                    bool m_includeInternalFieldsHasBeenSet;
+
+                    /**
+                     * Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    uint64_t m_metadataFlag;
+                    bool m_metadataFlagHasBeenSet;
 
                 };
             }

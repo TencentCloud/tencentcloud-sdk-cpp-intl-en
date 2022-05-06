@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Querying the list of APIs bound with an upstream.
+                * Queries APIs bound with an upstream
                 */
                 class DescribeUpstreamBindApis : public AbstractModel
                 {

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Upstream health check configuration
+                * Upstream health check parameter configuration
                 */
                 class UpstreamHealthChecker : public AbstractModel
                 {

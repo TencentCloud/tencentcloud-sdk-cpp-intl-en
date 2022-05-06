@@ -310,6 +310,28 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool PhoneCallTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Notification cycle. The values 1-7 indicate Monday to Sunday.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Weekday Notification cycle. The values 1-7 indicate Monday to Sunday.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<int64_t> GetWeekday() const;
+
+                    /**
+                     * 设置Notification cycle. The values 1-7 indicate Monday to Sunday.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param Weekday Notification cycle. The values 1-7 indicate Monday to Sunday.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetWeekday(const std::vector<int64_t>& _weekday);
+
+                    /**
+                     * 判断参数 Weekday 是否已赋值
+                     * @return Weekday 是否已赋值
+                     */
+                    bool WeekdayHasBeenSet() const;
+
                 private:
 
                     /**
@@ -395,6 +417,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_phoneCallType;
                     bool m_phoneCallTypeHasBeenSet;
+
+                    /**
+                     * Notification cycle. The values 1-7 indicate Monday to Sunday.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<int64_t> m_weekday;
+                    bool m_weekdayHasBeenSet;
 
                 };
             }

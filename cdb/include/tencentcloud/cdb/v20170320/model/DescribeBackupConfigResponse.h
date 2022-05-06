@@ -116,6 +116,66 @@ namespace TencentCloud
                      */
                     bool BackupTimeWindowHasBeenSet() const;
 
+                    /**
+                     * 获取Switch for archive backup retention. Valid values: `off` (disable), `on` (enable). Default value:`off`.
+                     * @return EnableBackupPeriodSave Switch for archive backup retention. Valid values: `off` (disable), `on` (enable). Default value:`off`.
+                     */
+                    std::string GetEnableBackupPeriodSave() const;
+
+                    /**
+                     * 判断参数 EnableBackupPeriodSave 是否已赋值
+                     * @return EnableBackupPeriodSave 是否已赋值
+                     */
+                    bool EnableBackupPeriodSaveHasBeenSet() const;
+
+                    /**
+                     * 获取Maximum days of archive backup retention. Valid range: 90-3650. Default value: 1080.
+                     * @return BackupPeriodSaveDays Maximum days of archive backup retention. Valid range: 90-3650. Default value: 1080.
+                     */
+                    int64_t GetBackupPeriodSaveDays() const;
+
+                    /**
+                     * 判断参数 BackupPeriodSaveDays 是否已赋值
+                     * @return BackupPeriodSaveDays 是否已赋值
+                     */
+                    bool BackupPeriodSaveDaysHasBeenSet() const;
+
+                    /**
+                     * 获取Archive backup retention period. Valid values: `weekly` (a week), `monthly` (a month), `quarterly` (a quarter), `yearly` (a year). Default value: `monthly`.
+                     * @return BackupPeriodSaveInterval Archive backup retention period. Valid values: `weekly` (a week), `monthly` (a month), `quarterly` (a quarter), `yearly` (a year). Default value: `monthly`.
+                     */
+                    std::string GetBackupPeriodSaveInterval() const;
+
+                    /**
+                     * 判断参数 BackupPeriodSaveInterval 是否已赋值
+                     * @return BackupPeriodSaveInterval 是否已赋值
+                     */
+                    bool BackupPeriodSaveIntervalHasBeenSet() const;
+
+                    /**
+                     * 获取Number of archive backups. Minimum value: `1`, Maximum value: Number of non-archive backups in archive backup retention period. Default value: `1`.
+                     * @return BackupPeriodSaveCount Number of archive backups. Minimum value: `1`, Maximum value: Number of non-archive backups in archive backup retention period. Default value: `1`.
+                     */
+                    int64_t GetBackupPeriodSaveCount() const;
+
+                    /**
+                     * 判断参数 BackupPeriodSaveCount 是否已赋值
+                     * @return BackupPeriodSaveCount 是否已赋值
+                     */
+                    bool BackupPeriodSaveCountHasBeenSet() const;
+
+                    /**
+                     * 获取The start time in the format: yyyy-mm-dd HH:MM:SS, which is used to enable archive backup retention policy.
+                     * @return StartBackupPeriodSaveDate The start time in the format: yyyy-mm-dd HH:MM:SS, which is used to enable archive backup retention policy.
+                     */
+                    std::string GetStartBackupPeriodSaveDate() const;
+
+                    /**
+                     * 判断参数 StartBackupPeriodSaveDate 是否已赋值
+                     * @return StartBackupPeriodSaveDate 是否已赋值
+                     */
+                    bool StartBackupPeriodSaveDateHasBeenSet() const;
+
                 private:
 
                     /**
@@ -153,6 +213,36 @@ namespace TencentCloud
                      */
                     CommonTimeWindow m_backupTimeWindow;
                     bool m_backupTimeWindowHasBeenSet;
+
+                    /**
+                     * Switch for archive backup retention. Valid values: `off` (disable), `on` (enable). Default value:`off`.
+                     */
+                    std::string m_enableBackupPeriodSave;
+                    bool m_enableBackupPeriodSaveHasBeenSet;
+
+                    /**
+                     * Maximum days of archive backup retention. Valid range: 90-3650. Default value: 1080.
+                     */
+                    int64_t m_backupPeriodSaveDays;
+                    bool m_backupPeriodSaveDaysHasBeenSet;
+
+                    /**
+                     * Archive backup retention period. Valid values: `weekly` (a week), `monthly` (a month), `quarterly` (a quarter), `yearly` (a year). Default value: `monthly`.
+                     */
+                    std::string m_backupPeriodSaveInterval;
+                    bool m_backupPeriodSaveIntervalHasBeenSet;
+
+                    /**
+                     * Number of archive backups. Minimum value: `1`, Maximum value: Number of non-archive backups in archive backup retention period. Default value: `1`.
+                     */
+                    int64_t m_backupPeriodSaveCount;
+                    bool m_backupPeriodSaveCountHasBeenSet;
+
+                    /**
+                     * The start time in the format: yyyy-mm-dd HH:MM:SS, which is used to enable archive backup retention policy.
+                     */
+                    std::string m_startBackupPeriodSaveDate;
+                    bool m_startBackupPeriodSaveDateHasBeenSet;
 
                 };
             }
