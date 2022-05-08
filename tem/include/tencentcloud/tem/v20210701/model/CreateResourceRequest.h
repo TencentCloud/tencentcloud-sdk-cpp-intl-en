@@ -114,6 +114,42 @@ namespace TencentCloud
                      */
                     bool SourceChannelHasBeenSet() const;
 
+                    /**
+                     * 获取Source of the resource. Values: `existing` (choose an existing resource), `creating` (create a new resource)
+                     * @return ResourceFrom Source of the resource. Values: `existing` (choose an existing resource), `creating` (create a new resource)
+                     */
+                    std::string GetResourceFrom() const;
+
+                    /**
+                     * 设置Source of the resource. Values: `existing` (choose an existing resource), `creating` (create a new resource)
+                     * @param ResourceFrom Source of the resource. Values: `existing` (choose an existing resource), `creating` (create a new resource)
+                     */
+                    void SetResourceFrom(const std::string& _resourceFrom);
+
+                    /**
+                     * 判断参数 ResourceFrom 是否已赋值
+                     * @return ResourceFrom 是否已赋值
+                     */
+                    bool ResourceFromHasBeenSet() const;
+
+                    /**
+                     * 获取Resource extra configuration
+                     * @return ResourceConfig Resource extra configuration
+                     */
+                    std::string GetResourceConfig() const;
+
+                    /**
+                     * 设置Resource extra configuration
+                     * @param ResourceConfig Resource extra configuration
+                     */
+                    void SetResourceConfig(const std::string& _resourceConfig);
+
+                    /**
+                     * 判断参数 ResourceConfig 是否已赋值
+                     * @return ResourceConfig 是否已赋值
+                     */
+                    bool ResourceConfigHasBeenSet() const;
+
                 private:
 
                     /**
@@ -139,6 +175,18 @@ namespace TencentCloud
                      */
                     int64_t m_sourceChannel;
                     bool m_sourceChannelHasBeenSet;
+
+                    /**
+                     * Source of the resource. Values: `existing` (choose an existing resource), `creating` (create a new resource)
+                     */
+                    std::string m_resourceFrom;
+                    bool m_resourceFromHasBeenSet;
+
+                    /**
+                     * Resource extra configuration
+                     */
+                    std::string m_resourceConfig;
+                    bool m_resourceConfigHasBeenSet;
 
                 };
             }

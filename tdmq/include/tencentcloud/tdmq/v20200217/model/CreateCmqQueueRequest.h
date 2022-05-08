@@ -134,14 +134,14 @@ namespace TencentCloud
                     bool MaxMsgSizeHasBeenSet() const;
 
                     /**
-                     * 获取Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
-                     * @return MsgRetentionSeconds Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
+                     * 获取The max period during which a message is retained before it is automatically acknowledged. Value range: 30-43,200 seconds (30 seconds to 12 hours). Default value: 3600 seconds (1 hour).
+                     * @return MsgRetentionSeconds The max period during which a message is retained before it is automatically acknowledged. Value range: 30-43,200 seconds (30 seconds to 12 hours). Default value: 3600 seconds (1 hour).
                      */
                     uint64_t GetMsgRetentionSeconds() const;
 
                     /**
-                     * 设置Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
-                     * @param MsgRetentionSeconds Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
+                     * 设置The max period during which a message is retained before it is automatically acknowledged. Value range: 30-43,200 seconds (30 seconds to 12 hours). Default value: 3600 seconds (1 hour).
+                     * @param MsgRetentionSeconds The max period during which a message is retained before it is automatically acknowledged. Value range: 30-43,200 seconds (30 seconds to 12 hours). Default value: 3600 seconds (1 hour).
                      */
                     void SetMsgRetentionSeconds(const uint64_t& _msgRetentionSeconds);
 
@@ -152,14 +152,14 @@ namespace TencentCloud
                     bool MsgRetentionSecondsHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the message rewinding feature for a queue. Value range: 0–msgRetentionSeconds, where 0 means not to enable this feature, while `msgRetentionSeconds` indicates that the maximum rewindable period is the message retention period of the queue.
-                     * @return RewindSeconds Whether to enable the message rewinding feature for a queue. Value range: 0–msgRetentionSeconds, where 0 means not to enable this feature, while `msgRetentionSeconds` indicates that the maximum rewindable period is the message retention period of the queue.
+                     * 获取Rewindable time of messages in the queue. Value range: 0-1,296,000s (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+                     * @return RewindSeconds Rewindable time of messages in the queue. Value range: 0-1,296,000s (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
                      */
                     uint64_t GetRewindSeconds() const;
 
                     /**
-                     * 设置Whether to enable the message rewinding feature for a queue. Value range: 0–msgRetentionSeconds, where 0 means not to enable this feature, while `msgRetentionSeconds` indicates that the maximum rewindable period is the message retention period of the queue.
-                     * @param RewindSeconds Whether to enable the message rewinding feature for a queue. Value range: 0–msgRetentionSeconds, where 0 means not to enable this feature, while `msgRetentionSeconds` indicates that the maximum rewindable period is the message retention period of the queue.
+                     * 设置Rewindable time of messages in the queue. Value range: 0-1,296,000s (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+                     * @param RewindSeconds Rewindable time of messages in the queue. Value range: 0-1,296,000s (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
                      */
                     void SetRewindSeconds(const uint64_t& _rewindSeconds);
 
@@ -331,6 +331,24 @@ namespace TencentCloud
                      */
                     bool TagsHasBeenSet() const;
 
+                    /**
+                     * 获取Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+                     * @return RetentionSizeInMB Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+                     */
+                    uint64_t GetRetentionSizeInMB() const;
+
+                    /**
+                     * 设置Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+                     * @param RetentionSizeInMB Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+                     */
+                    void SetRetentionSizeInMB(const uint64_t& _retentionSizeInMB);
+
+                    /**
+                     * 判断参数 RetentionSizeInMB 是否已赋值
+                     * @return RetentionSizeInMB 是否已赋值
+                     */
+                    bool RetentionSizeInMBHasBeenSet() const;
+
                 private:
 
                     /**
@@ -364,13 +382,13 @@ namespace TencentCloud
                     bool m_maxMsgSizeHasBeenSet;
 
                     /**
-                     * Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
+                     * The max period during which a message is retained before it is automatically acknowledged. Value range: 30-43,200 seconds (30 seconds to 12 hours). Default value: 3600 seconds (1 hour).
                      */
                     uint64_t m_msgRetentionSeconds;
                     bool m_msgRetentionSecondsHasBeenSet;
 
                     /**
-                     * Whether to enable the message rewinding feature for a queue. Value range: 0–msgRetentionSeconds, where 0 means not to enable this feature, while `msgRetentionSeconds` indicates that the maximum rewindable period is the message retention period of the queue.
+                     * Rewindable time of messages in the queue. Value range: 0-1,296,000s (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
                      */
                     uint64_t m_rewindSeconds;
                     bool m_rewindSecondsHasBeenSet;
@@ -428,6 +446,12 @@ namespace TencentCloud
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+                     */
+                    uint64_t m_retentionSizeInMB;
+                    bool m_retentionSizeInMBHasBeenSet;
 
                 };
             }

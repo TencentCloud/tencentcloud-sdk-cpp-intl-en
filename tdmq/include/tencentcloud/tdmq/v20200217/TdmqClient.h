@@ -77,56 +77,28 @@
 #include <tencentcloud/tdmq/v20200217/model/DeleteRocketMQTopicResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DeleteRolesRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DeleteRolesResponse.h>
-#include <tencentcloud/tdmq/v20200217/model/DeleteSubscriptionsRequest.h>
-#include <tencentcloud/tdmq/v20200217/model/DeleteSubscriptionsResponse.h>
-#include <tencentcloud/tdmq/v20200217/model/DeleteTopicsRequest.h>
-#include <tencentcloud/tdmq/v20200217/model/DeleteTopicsResponse.h>
-#include <tencentcloud/tdmq/v20200217/model/DescribeBindClustersRequest.h>
-#include <tencentcloud/tdmq/v20200217/model/DescribeBindClustersResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeBindVpcsRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeBindVpcsResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeClusterDetailRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeClusterDetailResponse.h>
-#include <tencentcloud/tdmq/v20200217/model/DescribeClustersRequest.h>
-#include <tencentcloud/tdmq/v20200217/model/DescribeClustersResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeCmqDeadLetterSourceQueuesRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeCmqDeadLetterSourceQueuesResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeCmqQueueDetailRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeCmqQueueDetailResponse.h>
-#include <tencentcloud/tdmq/v20200217/model/DescribeCmqQueuesRequest.h>
-#include <tencentcloud/tdmq/v20200217/model/DescribeCmqQueuesResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeCmqSubscriptionDetailRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeCmqSubscriptionDetailResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeCmqTopicDetailRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeCmqTopicDetailResponse.h>
-#include <tencentcloud/tdmq/v20200217/model/DescribeCmqTopicsRequest.h>
-#include <tencentcloud/tdmq/v20200217/model/DescribeCmqTopicsResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeEnvironmentAttributesRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeEnvironmentAttributesResponse.h>
-#include <tencentcloud/tdmq/v20200217/model/DescribeEnvironmentRolesRequest.h>
-#include <tencentcloud/tdmq/v20200217/model/DescribeEnvironmentRolesResponse.h>
-#include <tencentcloud/tdmq/v20200217/model/DescribeEnvironmentsRequest.h>
-#include <tencentcloud/tdmq/v20200217/model/DescribeEnvironmentsResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribePublisherSummaryRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribePublisherSummaryResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribePublishersRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribePublishersResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQClusterRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQClusterResponse.h>
-#include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQClustersRequest.h>
-#include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQClustersResponse.h>
-#include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQGroupsRequest.h>
-#include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQGroupsResponse.h>
-#include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQNamespacesRequest.h>
-#include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQNamespacesResponse.h>
-#include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQTopicsRequest.h>
-#include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQTopicsResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRolesRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRolesResponse.h>
-#include <tencentcloud/tdmq/v20200217/model/DescribeSubscriptionsRequest.h>
-#include <tencentcloud/tdmq/v20200217/model/DescribeSubscriptionsResponse.h>
-#include <tencentcloud/tdmq/v20200217/model/DescribeTopicsRequest.h>
-#include <tencentcloud/tdmq/v20200217/model/DescribeTopicsResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/ModifyClusterRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/ModifyClusterResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/ModifyCmqQueueAttributeRequest.h>
@@ -157,6 +129,8 @@
 #include <tencentcloud/tdmq/v20200217/model/ReceiveMessageResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/ResetMsgSubOffsetByTimestampRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/ResetMsgSubOffsetByTimestampResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/ResetRocketMQConsumerOffSetRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/ResetRocketMQConsumerOffSetResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/RewindCmqQueueRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/RewindCmqQueueResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/SendBatchMessagesRequest.h>
@@ -264,51 +238,27 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteRolesResponse> DeleteRolesOutcome;
                 typedef std::future<DeleteRolesOutcome> DeleteRolesOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DeleteRolesRequest&, DeleteRolesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRolesAsyncHandler;
-                typedef Outcome<Core::Error, Model::DeleteSubscriptionsResponse> DeleteSubscriptionsOutcome;
-                typedef std::future<DeleteSubscriptionsOutcome> DeleteSubscriptionsOutcomeCallable;
-                typedef std::function<void(const TdmqClient*, const Model::DeleteSubscriptionsRequest&, DeleteSubscriptionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteSubscriptionsAsyncHandler;
-                typedef Outcome<Core::Error, Model::DeleteTopicsResponse> DeleteTopicsOutcome;
-                typedef std::future<DeleteTopicsOutcome> DeleteTopicsOutcomeCallable;
-                typedef std::function<void(const TdmqClient*, const Model::DeleteTopicsRequest&, DeleteTopicsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteTopicsAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeBindClustersResponse> DescribeBindClustersOutcome;
-                typedef std::future<DescribeBindClustersOutcome> DescribeBindClustersOutcomeCallable;
-                typedef std::function<void(const TdmqClient*, const Model::DescribeBindClustersRequest&, DescribeBindClustersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBindClustersAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeBindVpcsResponse> DescribeBindVpcsOutcome;
                 typedef std::future<DescribeBindVpcsOutcome> DescribeBindVpcsOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DescribeBindVpcsRequest&, DescribeBindVpcsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBindVpcsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeClusterDetailResponse> DescribeClusterDetailOutcome;
                 typedef std::future<DescribeClusterDetailOutcome> DescribeClusterDetailOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DescribeClusterDetailRequest&, DescribeClusterDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClusterDetailAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeClustersResponse> DescribeClustersOutcome;
-                typedef std::future<DescribeClustersOutcome> DescribeClustersOutcomeCallable;
-                typedef std::function<void(const TdmqClient*, const Model::DescribeClustersRequest&, DescribeClustersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClustersAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeCmqDeadLetterSourceQueuesResponse> DescribeCmqDeadLetterSourceQueuesOutcome;
                 typedef std::future<DescribeCmqDeadLetterSourceQueuesOutcome> DescribeCmqDeadLetterSourceQueuesOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DescribeCmqDeadLetterSourceQueuesRequest&, DescribeCmqDeadLetterSourceQueuesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCmqDeadLetterSourceQueuesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeCmqQueueDetailResponse> DescribeCmqQueueDetailOutcome;
                 typedef std::future<DescribeCmqQueueDetailOutcome> DescribeCmqQueueDetailOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DescribeCmqQueueDetailRequest&, DescribeCmqQueueDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCmqQueueDetailAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeCmqQueuesResponse> DescribeCmqQueuesOutcome;
-                typedef std::future<DescribeCmqQueuesOutcome> DescribeCmqQueuesOutcomeCallable;
-                typedef std::function<void(const TdmqClient*, const Model::DescribeCmqQueuesRequest&, DescribeCmqQueuesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCmqQueuesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeCmqSubscriptionDetailResponse> DescribeCmqSubscriptionDetailOutcome;
                 typedef std::future<DescribeCmqSubscriptionDetailOutcome> DescribeCmqSubscriptionDetailOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DescribeCmqSubscriptionDetailRequest&, DescribeCmqSubscriptionDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCmqSubscriptionDetailAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeCmqTopicDetailResponse> DescribeCmqTopicDetailOutcome;
                 typedef std::future<DescribeCmqTopicDetailOutcome> DescribeCmqTopicDetailOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DescribeCmqTopicDetailRequest&, DescribeCmqTopicDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCmqTopicDetailAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeCmqTopicsResponse> DescribeCmqTopicsOutcome;
-                typedef std::future<DescribeCmqTopicsOutcome> DescribeCmqTopicsOutcomeCallable;
-                typedef std::function<void(const TdmqClient*, const Model::DescribeCmqTopicsRequest&, DescribeCmqTopicsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCmqTopicsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeEnvironmentAttributesResponse> DescribeEnvironmentAttributesOutcome;
                 typedef std::future<DescribeEnvironmentAttributesOutcome> DescribeEnvironmentAttributesOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DescribeEnvironmentAttributesRequest&, DescribeEnvironmentAttributesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeEnvironmentAttributesAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeEnvironmentRolesResponse> DescribeEnvironmentRolesOutcome;
-                typedef std::future<DescribeEnvironmentRolesOutcome> DescribeEnvironmentRolesOutcomeCallable;
-                typedef std::function<void(const TdmqClient*, const Model::DescribeEnvironmentRolesRequest&, DescribeEnvironmentRolesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeEnvironmentRolesAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeEnvironmentsResponse> DescribeEnvironmentsOutcome;
-                typedef std::future<DescribeEnvironmentsOutcome> DescribeEnvironmentsOutcomeCallable;
-                typedef std::function<void(const TdmqClient*, const Model::DescribeEnvironmentsRequest&, DescribeEnvironmentsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeEnvironmentsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribePublisherSummaryResponse> DescribePublisherSummaryOutcome;
                 typedef std::future<DescribePublisherSummaryOutcome> DescribePublisherSummaryOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DescribePublisherSummaryRequest&, DescribePublisherSummaryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePublisherSummaryAsyncHandler;
@@ -318,27 +268,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeRocketMQClusterResponse> DescribeRocketMQClusterOutcome;
                 typedef std::future<DescribeRocketMQClusterOutcome> DescribeRocketMQClusterOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DescribeRocketMQClusterRequest&, DescribeRocketMQClusterOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRocketMQClusterAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeRocketMQClustersResponse> DescribeRocketMQClustersOutcome;
-                typedef std::future<DescribeRocketMQClustersOutcome> DescribeRocketMQClustersOutcomeCallable;
-                typedef std::function<void(const TdmqClient*, const Model::DescribeRocketMQClustersRequest&, DescribeRocketMQClustersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRocketMQClustersAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeRocketMQGroupsResponse> DescribeRocketMQGroupsOutcome;
-                typedef std::future<DescribeRocketMQGroupsOutcome> DescribeRocketMQGroupsOutcomeCallable;
-                typedef std::function<void(const TdmqClient*, const Model::DescribeRocketMQGroupsRequest&, DescribeRocketMQGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRocketMQGroupsAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeRocketMQNamespacesResponse> DescribeRocketMQNamespacesOutcome;
-                typedef std::future<DescribeRocketMQNamespacesOutcome> DescribeRocketMQNamespacesOutcomeCallable;
-                typedef std::function<void(const TdmqClient*, const Model::DescribeRocketMQNamespacesRequest&, DescribeRocketMQNamespacesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRocketMQNamespacesAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeRocketMQTopicsResponse> DescribeRocketMQTopicsOutcome;
-                typedef std::future<DescribeRocketMQTopicsOutcome> DescribeRocketMQTopicsOutcomeCallable;
-                typedef std::function<void(const TdmqClient*, const Model::DescribeRocketMQTopicsRequest&, DescribeRocketMQTopicsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRocketMQTopicsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeRolesResponse> DescribeRolesOutcome;
                 typedef std::future<DescribeRolesOutcome> DescribeRolesOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DescribeRolesRequest&, DescribeRolesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRolesAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeSubscriptionsResponse> DescribeSubscriptionsOutcome;
-                typedef std::future<DescribeSubscriptionsOutcome> DescribeSubscriptionsOutcomeCallable;
-                typedef std::function<void(const TdmqClient*, const Model::DescribeSubscriptionsRequest&, DescribeSubscriptionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSubscriptionsAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeTopicsResponse> DescribeTopicsOutcome;
-                typedef std::future<DescribeTopicsOutcome> DescribeTopicsOutcomeCallable;
-                typedef std::function<void(const TdmqClient*, const Model::DescribeTopicsRequest&, DescribeTopicsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTopicsAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyClusterResponse> ModifyClusterOutcome;
                 typedef std::future<ModifyClusterOutcome> ModifyClusterOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::ModifyClusterRequest&, ModifyClusterOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyClusterAsyncHandler;
@@ -384,6 +316,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ResetMsgSubOffsetByTimestampResponse> ResetMsgSubOffsetByTimestampOutcome;
                 typedef std::future<ResetMsgSubOffsetByTimestampOutcome> ResetMsgSubOffsetByTimestampOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::ResetMsgSubOffsetByTimestampRequest&, ResetMsgSubOffsetByTimestampOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetMsgSubOffsetByTimestampAsyncHandler;
+                typedef Outcome<Core::Error, Model::ResetRocketMQConsumerOffSetResponse> ResetRocketMQConsumerOffSetOutcome;
+                typedef std::future<ResetRocketMQConsumerOffSetOutcome> ResetRocketMQConsumerOffSetOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::ResetRocketMQConsumerOffSetRequest&, ResetRocketMQConsumerOffSetOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetRocketMQConsumerOffSetAsyncHandler;
                 typedef Outcome<Core::Error, Model::RewindCmqQueueResponse> RewindCmqQueueOutcome;
                 typedef std::future<RewindCmqQueueOutcome> RewindCmqQueueOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::RewindCmqQueueRequest&, RewindCmqQueueOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RewindCmqQueueAsyncHandler;
@@ -649,33 +584,6 @@ namespace TencentCloud
                 DeleteRolesOutcomeCallable DeleteRolesCallable(const Model::DeleteRolesRequest& request);
 
                 /**
-                 *This API is used to delete a subscription.
-                 * @param req DeleteSubscriptionsRequest
-                 * @return DeleteSubscriptionsOutcome
-                 */
-                DeleteSubscriptionsOutcome DeleteSubscriptions(const Model::DeleteSubscriptionsRequest &request);
-                void DeleteSubscriptionsAsync(const Model::DeleteSubscriptionsRequest& request, const DeleteSubscriptionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DeleteSubscriptionsOutcomeCallable DeleteSubscriptionsCallable(const Model::DeleteSubscriptionsRequest& request);
-
-                /**
-                 *This API is used to batch delete topics.
-                 * @param req DeleteTopicsRequest
-                 * @return DeleteTopicsOutcome
-                 */
-                DeleteTopicsOutcome DeleteTopics(const Model::DeleteTopicsRequest &request);
-                void DeleteTopicsAsync(const Model::DeleteTopicsRequest& request, const DeleteTopicsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DeleteTopicsOutcomeCallable DeleteTopicsCallable(const Model::DeleteTopicsRequest& request);
-
-                /**
-                 *This API is used to get the list of dedicated clusters bound to a user.
-                 * @param req DescribeBindClustersRequest
-                 * @return DescribeBindClustersOutcome
-                 */
-                DescribeBindClustersOutcome DescribeBindClusters(const Model::DescribeBindClustersRequest &request);
-                void DescribeBindClustersAsync(const Model::DescribeBindClustersRequest& request, const DescribeBindClustersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeBindClustersOutcomeCallable DescribeBindClustersCallable(const Model::DescribeBindClustersRequest& request);
-
-                /**
                  *This API is used to get the tenant-VPC binding relationship.
                  * @param req DescribeBindVpcsRequest
                  * @return DescribeBindVpcsOutcome
@@ -692,15 +600,6 @@ namespace TencentCloud
                 DescribeClusterDetailOutcome DescribeClusterDetail(const Model::DescribeClusterDetailRequest &request);
                 void DescribeClusterDetailAsync(const Model::DescribeClusterDetailRequest& request, const DescribeClusterDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeClusterDetailOutcomeCallable DescribeClusterDetailCallable(const Model::DescribeClusterDetailRequest& request);
-
-                /**
-                 *This API is used to get the list of clusters.
-                 * @param req DescribeClustersRequest
-                 * @return DescribeClustersOutcome
-                 */
-                DescribeClustersOutcome DescribeClusters(const Model::DescribeClustersRequest &request);
-                void DescribeClustersAsync(const Model::DescribeClustersRequest& request, const DescribeClustersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeClustersOutcomeCallable DescribeClustersCallable(const Model::DescribeClustersRequest& request);
 
                 /**
                  *This API is used to enumerate the source queues of a CMQ dead letter queue.
@@ -721,15 +620,6 @@ namespace TencentCloud
                 DescribeCmqQueueDetailOutcomeCallable DescribeCmqQueueDetailCallable(const Model::DescribeCmqQueueDetailRequest& request);
 
                 /**
-                 *This API is used to query all CMQ queues.
-                 * @param req DescribeCmqQueuesRequest
-                 * @return DescribeCmqQueuesOutcome
-                 */
-                DescribeCmqQueuesOutcome DescribeCmqQueues(const Model::DescribeCmqQueuesRequest &request);
-                void DescribeCmqQueuesAsync(const Model::DescribeCmqQueuesRequest& request, const DescribeCmqQueuesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeCmqQueuesOutcomeCallable DescribeCmqQueuesCallable(const Model::DescribeCmqQueuesRequest& request);
-
-                /**
                  *This API is used to query the CMQ subscription details.
                  * @param req DescribeCmqSubscriptionDetailRequest
                  * @return DescribeCmqSubscriptionDetailOutcome
@@ -748,15 +638,6 @@ namespace TencentCloud
                 DescribeCmqTopicDetailOutcomeCallable DescribeCmqTopicDetailCallable(const Model::DescribeCmqTopicDetailRequest& request);
 
                 /**
-                 *This API is used to enumerate all CMQ topics.
-                 * @param req DescribeCmqTopicsRequest
-                 * @return DescribeCmqTopicsOutcome
-                 */
-                DescribeCmqTopicsOutcome DescribeCmqTopics(const Model::DescribeCmqTopicsRequest &request);
-                void DescribeCmqTopicsAsync(const Model::DescribeCmqTopicsRequest& request, const DescribeCmqTopicsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeCmqTopicsOutcomeCallable DescribeCmqTopicsCallable(const Model::DescribeCmqTopicsRequest& request);
-
-                /**
                  *This API is used to get the attributes of the specified namespace.
                  * @param req DescribeEnvironmentAttributesRequest
                  * @return DescribeEnvironmentAttributesOutcome
@@ -764,24 +645,6 @@ namespace TencentCloud
                 DescribeEnvironmentAttributesOutcome DescribeEnvironmentAttributes(const Model::DescribeEnvironmentAttributesRequest &request);
                 void DescribeEnvironmentAttributesAsync(const Model::DescribeEnvironmentAttributesRequest& request, const DescribeEnvironmentAttributesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeEnvironmentAttributesOutcomeCallable DescribeEnvironmentAttributesCallable(const Model::DescribeEnvironmentAttributesRequest& request);
-
-                /**
-                 *This API is used to get the list of namespace roles.
-                 * @param req DescribeEnvironmentRolesRequest
-                 * @return DescribeEnvironmentRolesOutcome
-                 */
-                DescribeEnvironmentRolesOutcome DescribeEnvironmentRoles(const Model::DescribeEnvironmentRolesRequest &request);
-                void DescribeEnvironmentRolesAsync(const Model::DescribeEnvironmentRolesRequest& request, const DescribeEnvironmentRolesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeEnvironmentRolesOutcomeCallable DescribeEnvironmentRolesCallable(const Model::DescribeEnvironmentRolesRequest& request);
-
-                /**
-                 *This API is used to get the list of namespaces under a tenant.
-                 * @param req DescribeEnvironmentsRequest
-                 * @return DescribeEnvironmentsOutcome
-                 */
-                DescribeEnvironmentsOutcome DescribeEnvironments(const Model::DescribeEnvironmentsRequest &request);
-                void DescribeEnvironmentsAsync(const Model::DescribeEnvironmentsRequest& request, const DescribeEnvironmentsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeEnvironmentsOutcomeCallable DescribeEnvironmentsCallable(const Model::DescribeEnvironmentsRequest& request);
 
                 /**
                  *This API is used to obtain message production overview information.
@@ -811,42 +674,6 @@ namespace TencentCloud
                 DescribeRocketMQClusterOutcomeCallable DescribeRocketMQClusterCallable(const Model::DescribeRocketMQClusterRequest& request);
 
                 /**
-                 *This API is used to get the list of RocketMQ clusters.
-                 * @param req DescribeRocketMQClustersRequest
-                 * @return DescribeRocketMQClustersOutcome
-                 */
-                DescribeRocketMQClustersOutcome DescribeRocketMQClusters(const Model::DescribeRocketMQClustersRequest &request);
-                void DescribeRocketMQClustersAsync(const Model::DescribeRocketMQClustersRequest& request, const DescribeRocketMQClustersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeRocketMQClustersOutcomeCallable DescribeRocketMQClustersCallable(const Model::DescribeRocketMQClustersRequest& request);
-
-                /**
-                 *This API is used to get the list of RocketMQ consumer groups.
-                 * @param req DescribeRocketMQGroupsRequest
-                 * @return DescribeRocketMQGroupsOutcome
-                 */
-                DescribeRocketMQGroupsOutcome DescribeRocketMQGroups(const Model::DescribeRocketMQGroupsRequest &request);
-                void DescribeRocketMQGroupsAsync(const Model::DescribeRocketMQGroupsRequest& request, const DescribeRocketMQGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeRocketMQGroupsOutcomeCallable DescribeRocketMQGroupsCallable(const Model::DescribeRocketMQGroupsRequest& request);
-
-                /**
-                 *This API is used to get the list of RocketMQ namespaces.
-                 * @param req DescribeRocketMQNamespacesRequest
-                 * @return DescribeRocketMQNamespacesOutcome
-                 */
-                DescribeRocketMQNamespacesOutcome DescribeRocketMQNamespaces(const Model::DescribeRocketMQNamespacesRequest &request);
-                void DescribeRocketMQNamespacesAsync(const Model::DescribeRocketMQNamespacesRequest& request, const DescribeRocketMQNamespacesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeRocketMQNamespacesOutcomeCallable DescribeRocketMQNamespacesCallable(const Model::DescribeRocketMQNamespacesRequest& request);
-
-                /**
-                 *This API is used to get the list of RocketMQ topics.
-                 * @param req DescribeRocketMQTopicsRequest
-                 * @return DescribeRocketMQTopicsOutcome
-                 */
-                DescribeRocketMQTopicsOutcome DescribeRocketMQTopics(const Model::DescribeRocketMQTopicsRequest &request);
-                void DescribeRocketMQTopicsAsync(const Model::DescribeRocketMQTopicsRequest& request, const DescribeRocketMQTopicsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeRocketMQTopicsOutcomeCallable DescribeRocketMQTopicsCallable(const Model::DescribeRocketMQTopicsRequest& request);
-
-                /**
                  *This API is used to get the list of roles.
                  * @param req DescribeRolesRequest
                  * @return DescribeRolesOutcome
@@ -854,24 +681,6 @@ namespace TencentCloud
                 DescribeRolesOutcome DescribeRoles(const Model::DescribeRolesRequest &request);
                 void DescribeRolesAsync(const Model::DescribeRolesRequest& request, const DescribeRolesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeRolesOutcomeCallable DescribeRolesCallable(const Model::DescribeRolesRequest& request);
-
-                /**
-                 *This API is used to query the list of subscribers under the specified environment and topic.
-                 * @param req DescribeSubscriptionsRequest
-                 * @return DescribeSubscriptionsOutcome
-                 */
-                DescribeSubscriptionsOutcome DescribeSubscriptions(const Model::DescribeSubscriptionsRequest &request);
-                void DescribeSubscriptionsAsync(const Model::DescribeSubscriptionsRequest& request, const DescribeSubscriptionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeSubscriptionsOutcomeCallable DescribeSubscriptionsCallable(const Model::DescribeSubscriptionsRequest& request);
-
-                /**
-                 *This API is used to get the list of topics under an environment.
-                 * @param req DescribeTopicsRequest
-                 * @return DescribeTopicsOutcome
-                 */
-                DescribeTopicsOutcome DescribeTopics(const Model::DescribeTopicsRequest &request);
-                void DescribeTopicsAsync(const Model::DescribeTopicsRequest& request, const DescribeTopicsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeTopicsOutcomeCallable DescribeTopicsCallable(const Model::DescribeTopicsRequest& request);
 
                 /**
                  *This API is used to update a cluster.
@@ -1007,6 +816,15 @@ namespace TencentCloud
                 ResetMsgSubOffsetByTimestampOutcome ResetMsgSubOffsetByTimestamp(const Model::ResetMsgSubOffsetByTimestampRequest &request);
                 void ResetMsgSubOffsetByTimestampAsync(const Model::ResetMsgSubOffsetByTimestampRequest& request, const ResetMsgSubOffsetByTimestampAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ResetMsgSubOffsetByTimestampOutcomeCallable ResetMsgSubOffsetByTimestampCallable(const Model::ResetMsgSubOffsetByTimestampRequest& request);
+
+                /**
+                 *This API is used to reset the consumption offset of a specified consumer group to a specified timestamp.
+                 * @param req ResetRocketMQConsumerOffSetRequest
+                 * @return ResetRocketMQConsumerOffSetOutcome
+                 */
+                ResetRocketMQConsumerOffSetOutcome ResetRocketMQConsumerOffSet(const Model::ResetRocketMQConsumerOffSetRequest &request);
+                void ResetRocketMQConsumerOffSetAsync(const Model::ResetRocketMQConsumerOffSetRequest& request, const ResetRocketMQConsumerOffSetAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ResetRocketMQConsumerOffSetOutcomeCallable ResetRocketMQConsumerOffSetCallable(const Model::ResetRocketMQConsumerOffSetRequest& request);
 
                 /**
                  *This API is used to rewind a CMQ queue.

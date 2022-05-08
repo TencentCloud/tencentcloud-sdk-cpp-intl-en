@@ -188,14 +188,14 @@ namespace TencentCloud
                     bool SegmentMsHasBeenSet() const;
 
                     /**
-                     * 获取Maximum topic message length in bytes. The maximum value is 8,388,608 bytes (i.e., 8 MB).
-                     * @return MaxMessageBytes Maximum topic message length in bytes. The maximum value is 8,388,608 bytes (i.e., 8 MB).
+                     * 获取Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
+                     * @return MaxMessageBytes Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
                      */
                     int64_t GetMaxMessageBytes() const;
 
                     /**
-                     * 设置Maximum topic message length in bytes. The maximum value is 8,388,608 bytes (i.e., 8 MB).
-                     * @param MaxMessageBytes Maximum topic message length in bytes. The maximum value is 8,388,608 bytes (i.e., 8 MB).
+                     * 设置Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
+                     * @param MaxMessageBytes Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
                      */
                     void SetMaxMessageBytes(const int64_t& _maxMessageBytes);
 
@@ -400,7 +400,7 @@ namespace TencentCloud
                     bool m_segmentMsHasBeenSet;
 
                     /**
-                     * Maximum topic message length in bytes. The maximum value is 8,388,608 bytes (i.e., 8 MB).
+                     * Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
                      */
                     int64_t m_maxMessageBytes;
                     bool m_maxMessageBytesHasBeenSet;

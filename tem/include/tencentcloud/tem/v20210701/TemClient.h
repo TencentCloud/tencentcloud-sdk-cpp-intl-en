@@ -23,16 +23,12 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
-#include <tencentcloud/tem/v20210701/model/CreateApplicationRequest.h>
-#include <tencentcloud/tem/v20210701/model/CreateApplicationResponse.h>
 #include <tencentcloud/tem/v20210701/model/CreateCosTokenRequest.h>
 #include <tencentcloud/tem/v20210701/model/CreateCosTokenResponse.h>
 #include <tencentcloud/tem/v20210701/model/CreateEnvironmentRequest.h>
 #include <tencentcloud/tem/v20210701/model/CreateEnvironmentResponse.h>
 #include <tencentcloud/tem/v20210701/model/CreateResourceRequest.h>
 #include <tencentcloud/tem/v20210701/model/CreateResourceResponse.h>
-#include <tencentcloud/tem/v20210701/model/DeleteApplicationRequest.h>
-#include <tencentcloud/tem/v20210701/model/DeleteApplicationResponse.h>
 #include <tencentcloud/tem/v20210701/model/DeleteIngressRequest.h>
 #include <tencentcloud/tem/v20210701/model/DeleteIngressResponse.h>
 #include <tencentcloud/tem/v20210701/model/DeployApplicationRequest.h>
@@ -77,9 +73,6 @@ namespace TencentCloud
                 TemClient(const Credential &credential, const std::string &region);
                 TemClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
-                typedef Outcome<Core::Error, Model::CreateApplicationResponse> CreateApplicationOutcome;
-                typedef std::future<CreateApplicationOutcome> CreateApplicationOutcomeCallable;
-                typedef std::function<void(const TemClient*, const Model::CreateApplicationRequest&, CreateApplicationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateApplicationAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateCosTokenResponse> CreateCosTokenOutcome;
                 typedef std::future<CreateCosTokenOutcome> CreateCosTokenOutcomeCallable;
                 typedef std::function<void(const TemClient*, const Model::CreateCosTokenRequest&, CreateCosTokenOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCosTokenAsyncHandler;
@@ -89,9 +82,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateResourceResponse> CreateResourceOutcome;
                 typedef std::future<CreateResourceOutcome> CreateResourceOutcomeCallable;
                 typedef std::function<void(const TemClient*, const Model::CreateResourceRequest&, CreateResourceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateResourceAsyncHandler;
-                typedef Outcome<Core::Error, Model::DeleteApplicationResponse> DeleteApplicationOutcome;
-                typedef std::future<DeleteApplicationOutcome> DeleteApplicationOutcomeCallable;
-                typedef std::function<void(const TemClient*, const Model::DeleteApplicationRequest&, DeleteApplicationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteApplicationAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteIngressResponse> DeleteIngressOutcome;
                 typedef std::future<DeleteIngressOutcome> DeleteIngressOutcomeCallable;
                 typedef std::function<void(const TemClient*, const Model::DeleteIngressRequest&, DeleteIngressOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteIngressAsyncHandler;
@@ -141,15 +131,6 @@ namespace TencentCloud
 
 
                 /**
-                 *This API is used to create an application.
-                 * @param req CreateApplicationRequest
-                 * @return CreateApplicationOutcome
-                 */
-                CreateApplicationOutcome CreateApplication(const Model::CreateApplicationRequest &request);
-                void CreateApplicationAsync(const Model::CreateApplicationRequest& request, const CreateApplicationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                CreateApplicationOutcomeCallable CreateApplicationCallable(const Model::CreateApplicationRequest& request);
-
-                /**
                  *This API is used to generate a COS temporary key.
                  * @param req CreateCosTokenRequest
                  * @return CreateCosTokenOutcome
@@ -175,18 +156,6 @@ namespace TencentCloud
                 CreateResourceOutcome CreateResource(const Model::CreateResourceRequest &request);
                 void CreateResourceAsync(const Model::CreateResourceRequest& request, const CreateResourceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateResourceOutcomeCallable CreateResourceCallable(const Model::CreateResourceRequest& request);
-
-                /**
-                 *This API is used to delete an application.
-  - Stop the application if it’s running
-  - Delete resources associated with this application
-  - Delele the application
-                 * @param req DeleteApplicationRequest
-                 * @return DeleteApplicationOutcome
-                 */
-                DeleteApplicationOutcome DeleteApplication(const Model::DeleteApplicationRequest &request);
-                void DeleteApplicationAsync(const Model::DeleteApplicationRequest& request, const DeleteApplicationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DeleteApplicationOutcomeCallable DeleteApplicationCallable(const Model::DeleteApplicationRequest& request);
 
                 /**
                  *This API is used to delete an ingress rule.

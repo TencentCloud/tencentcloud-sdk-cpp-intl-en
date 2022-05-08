@@ -32,6 +32,7 @@
 #include <tencentcloud/tem/v20210701/model/DeployStrategyConf.h>
 #include <tencentcloud/tem/v20210701/model/HorizontalAutoscaler.h>
 #include <tencentcloud/tem/v20210701/model/CronHorizontalAutoscaler.h>
+#include <tencentcloud/tem/v20210701/model/EnablePrometheusConf.h>
 
 
 namespace TencentCloud
@@ -811,6 +812,24 @@ If `konajdk` is selected, the value can be:
                      */
                     bool OsFlavourHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies whether to enable Prometheus metric
+                     * @return EnablePrometheusConf Specifies whether to enable Prometheus metric
+                     */
+                    EnablePrometheusConf GetEnablePrometheusConf() const;
+
+                    /**
+                     * 设置Specifies whether to enable Prometheus metric
+                     * @param EnablePrometheusConf Specifies whether to enable Prometheus metric
+                     */
+                    void SetEnablePrometheusConf(const EnablePrometheusConf& _enablePrometheusConf);
+
+                    /**
+                     * 判断参数 EnablePrometheusConf 是否已赋值
+                     * @return EnablePrometheusConf 是否已赋值
+                     */
+                    bool EnablePrometheusConfHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1060,6 +1079,12 @@ If `konajdk` is selected, the value can be:
                      */
                     std::string m_osFlavour;
                     bool m_osFlavourHasBeenSet;
+
+                    /**
+                     * Specifies whether to enable Prometheus metric
+                     */
+                    EnablePrometheusConf m_enablePrometheusConf;
+                    bool m_enablePrometheusConfHasBeenSet;
 
                 };
             }

@@ -224,14 +224,14 @@ namespace TencentCloud
                     bool UncleanLeaderElectionEnableHasBeenSet() const;
 
                     /**
-                     * 获取Message retention period in ms, which is optional. The current minimum value is 60,000 ms
-                     * @return RetentionMs Message retention period in ms, which is optional. The current minimum value is 60,000 ms
+                     * 获取Message retention period in milliseconds, which is optional. Min value: 60,000 ms.
+                     * @return RetentionMs Message retention period in milliseconds, which is optional. Min value: 60,000 ms.
                      */
                     int64_t GetRetentionMs() const;
 
                     /**
-                     * 设置Message retention period in ms, which is optional. The current minimum value is 60,000 ms
-                     * @param RetentionMs Message retention period in ms, which is optional. The current minimum value is 60,000 ms
+                     * 设置Message retention period in milliseconds, which is optional. Min value: 60,000 ms.
+                     * @param RetentionMs Message retention period in milliseconds, which is optional. Min value: 60,000 ms.
                      */
                     void SetRetentionMs(const int64_t& _retentionMs);
 
@@ -258,6 +258,24 @@ namespace TencentCloud
                      * @return SegmentMs 是否已赋值
                      */
                     bool SegmentMsHasBeenSet() const;
+
+                    /**
+                     * 获取Max message size in bytes. Value range: 1,024 bytes (1 KB) to 8,388,608 bytes (8 MB).
+                     * @return MaxMessageBytes Max message size in bytes. Value range: 1,024 bytes (1 KB) to 8,388,608 bytes (8 MB).
+                     */
+                    int64_t GetMaxMessageBytes() const;
+
+                    /**
+                     * 设置Max message size in bytes. Value range: 1,024 bytes (1 KB) to 8,388,608 bytes (8 MB).
+                     * @param MaxMessageBytes Max message size in bytes. Value range: 1,024 bytes (1 KB) to 8,388,608 bytes (8 MB).
+                     */
+                    void SetMaxMessageBytes(const int64_t& _maxMessageBytes);
+
+                    /**
+                     * 判断参数 MaxMessageBytes 是否已赋值
+                     * @return MaxMessageBytes 是否已赋值
+                     */
+                    bool MaxMessageBytesHasBeenSet() const;
 
                     /**
                      * 获取Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
@@ -394,7 +412,7 @@ namespace TencentCloud
                     bool m_uncleanLeaderElectionEnableHasBeenSet;
 
                     /**
-                     * Message retention period in ms, which is optional. The current minimum value is 60,000 ms
+                     * Message retention period in milliseconds, which is optional. Min value: 60,000 ms.
                      */
                     int64_t m_retentionMs;
                     bool m_retentionMsHasBeenSet;
@@ -404,6 +422,12 @@ namespace TencentCloud
                      */
                     int64_t m_segmentMs;
                     bool m_segmentMsHasBeenSet;
+
+                    /**
+                     * Max message size in bytes. Value range: 1,024 bytes (1 KB) to 8,388,608 bytes (8 MB).
+                     */
+                    int64_t m_maxMessageBytes;
+                    bool m_maxMessageBytesHasBeenSet;
 
                     /**
                      * Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.

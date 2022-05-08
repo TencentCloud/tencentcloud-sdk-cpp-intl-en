@@ -176,6 +176,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool VpcEndPointHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the namespace access point is supported.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return SupportNamespaceEndpoint Whether the namespace access point is supported.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool GetSupportNamespaceEndpoint() const;
+
+                    /**
+                     * 设置Whether the namespace access point is supported.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param SupportNamespaceEndpoint Whether the namespace access point is supported.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetSupportNamespaceEndpoint(const bool& _supportNamespaceEndpoint);
+
+                    /**
+                     * 判断参数 SupportNamespaceEndpoint 是否已赋值
+                     * @return SupportNamespaceEndpoint 是否已赋值
+                     */
+                    bool SupportNamespaceEndpointHasBeenSet() const;
+
                 private:
 
                     /**
@@ -220,6 +242,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_vpcEndPoint;
                     bool m_vpcEndPointHasBeenSet;
+
+                    /**
+                     * Whether the namespace access point is supported.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool m_supportNamespaceEndpoint;
+                    bool m_supportNamespaceEndpointHasBeenSet;
 
                 };
             }

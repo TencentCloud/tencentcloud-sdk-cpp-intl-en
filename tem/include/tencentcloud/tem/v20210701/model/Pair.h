@@ -126,6 +126,28 @@ Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     bool ConfigHasBeenSet() const;
 
+                    /**
+                     * 获取Encrypt configuration name
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return Secret Encrypt configuration name
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string GetSecret() const;
+
+                    /**
+                     * 设置Encrypt configuration name
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param Secret Encrypt configuration name
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetSecret(const std::string& _secret);
+
+                    /**
+                     * 判断参数 Secret 是否已赋值
+                     * @return Secret 是否已赋值
+                     */
+                    bool SecretHasBeenSet() const;
+
                 private:
 
                     /**
@@ -153,6 +175,13 @@ Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     std::string m_config;
                     bool m_configHasBeenSet;
+
+                    /**
+                     * Encrypt configuration name
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string m_secret;
+                    bool m_secretHasBeenSet;
 
                 };
             }

@@ -101,6 +101,24 @@ namespace TencentCloud
                      */
                     bool DataHasBeenSet() const;
 
+                    /**
+                     * 获取Encrypt configuration name
+                     * @return SecretDataName Encrypt configuration name
+                     */
+                    std::string GetSecretDataName() const;
+
+                    /**
+                     * 设置Encrypt configuration name
+                     * @param SecretDataName Encrypt configuration name
+                     */
+                    void SetSecretDataName(const std::string& _secretDataName);
+
+                    /**
+                     * 判断参数 SecretDataName 是否已赋值
+                     * @return SecretDataName 是否已赋值
+                     */
+                    bool SecretDataNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -120,6 +138,12 @@ namespace TencentCloud
                      */
                     std::vector<Pair> m_data;
                     bool m_dataHasBeenSet;
+
+                    /**
+                     * Encrypt configuration name
+                     */
+                    std::string m_secretDataName;
+                    bool m_secretDataNameHasBeenSet;
 
                 };
             }

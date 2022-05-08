@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_TDMQ_V20200217_MODEL_DESCRIBEBINDCLUSTERSREQUEST_H_
-#define TENCENTCLOUD_TDMQ_V20200217_MODEL_DESCRIBEBINDCLUSTERSREQUEST_H_
+#ifndef TENCENTCLOUD_TDMQ_V20200217_MODEL_RESETROCKETMQCONSUMEROFFSETRESPONSE_H_
+#define TENCENTCLOUD_TDMQ_V20200217_MODEL_RESETROCKETMQCONSUMEROFFSETRESPONSE_H_
 
 #include <string>
 #include <vector>
@@ -32,13 +32,14 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * DescribeBindClusters request structure.
+                * ResetRocketMQConsumerOffSet response structure.
                 */
-                class DescribeBindClustersRequest : public AbstractModel
+                class ResetRocketMQConsumerOffSetResponse : public AbstractModel
                 {
                 public:
-                    DescribeBindClustersRequest();
-                    ~DescribeBindClustersRequest() = default;
+                    ResetRocketMQConsumerOffSetResponse();
+                    ~ResetRocketMQConsumerOffSetResponse() = default;
+                    CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
@@ -50,4 +51,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_TDMQ_V20200217_MODEL_DESCRIBEBINDCLUSTERSREQUEST_H_
+#endif // !TENCENTCLOUD_TDMQ_V20200217_MODEL_RESETROCKETMQCONSUMEROFFSETRESPONSE_H_

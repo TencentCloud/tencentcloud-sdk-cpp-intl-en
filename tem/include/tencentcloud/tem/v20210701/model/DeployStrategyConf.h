@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool BetaBatchNumHasBeenSet() const;
 
                     /**
-                     * 获取Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual)
-                     * @return DeployStrategyType Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual)
+                     * 获取Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual), `3`: initial release
+                     * @return DeployStrategyType Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual), `3`: initial release
                      */
                     int64_t GetDeployStrategyType() const;
 
                     /**
-                     * 设置Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual)
-                     * @param DeployStrategyType Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual)
+                     * 设置Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual), `3`: initial release
+                     * @param DeployStrategyType Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual), `3`: initial release
                      */
                     void SetDeployStrategyType(const int64_t& _deployStrategyType);
 
@@ -169,7 +169,7 @@ namespace TencentCloud
                     bool m_betaBatchNumHasBeenSet;
 
                     /**
-                     * Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual)
+                     * Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual), `3`: initial release
                      */
                     int64_t m_deployStrategyType;
                     bool m_deployStrategyTypeHasBeenSet;

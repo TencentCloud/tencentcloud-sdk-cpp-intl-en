@@ -152,14 +152,14 @@ namespace TencentCloud
                     bool TagKeyHasBeenSet() const;
 
                     /**
-                     * 获取Filter.
-                     * @return Filters Filter.
+                     * 获取Filter. Valid values of `filter.Name` include `Ip`, `VpcId`, `SubNetId`, `InstanceType`, and `InstanceId`. Up to 10 values can be passed for `filter.Values`.
+                     * @return Filters Filter. Valid values of `filter.Name` include `Ip`, `VpcId`, `SubNetId`, `InstanceType`, and `InstanceId`. Up to 10 values can be passed for `filter.Values`.
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter.
-                     * @param Filters Filter.
+                     * 设置Filter. Valid values of `filter.Name` include `Ip`, `VpcId`, `SubNetId`, `InstanceType`, and `InstanceId`. Up to 10 values can be passed for `filter.Values`.
+                     * @param Filters Filter. Valid values of `filter.Name` include `Ip`, `VpcId`, `SubNetId`, `InstanceType`, and `InstanceId`. Up to 10 values can be passed for `filter.Values`.
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
@@ -186,6 +186,24 @@ namespace TencentCloud
                      * @return InstanceIds 是否已赋值
                      */
                     bool InstanceIdsHasBeenSet() const;
+
+                    /**
+                     * 获取Filter by instance ID.
+                     * @return InstanceIdList Filter by instance ID.
+                     */
+                    std::vector<std::string> GetInstanceIdList() const;
+
+                    /**
+                     * 设置Filter by instance ID.
+                     * @param InstanceIdList Filter by instance ID.
+                     */
+                    void SetInstanceIdList(const std::vector<std::string>& _instanceIdList);
+
+                    /**
+                     * 判断参数 InstanceIdList 是否已赋值
+                     * @return InstanceIdList 是否已赋值
+                     */
+                    bool InstanceIdListHasBeenSet() const;
 
                 private:
 
@@ -226,7 +244,7 @@ namespace TencentCloud
                     bool m_tagKeyHasBeenSet;
 
                     /**
-                     * Filter.
+                     * Filter. Valid values of `filter.Name` include `Ip`, `VpcId`, `SubNetId`, `InstanceType`, and `InstanceId`. Up to 10 values can be passed for `filter.Values`.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
@@ -236,6 +254,12 @@ namespace TencentCloud
                      */
                     std::string m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
+
+                    /**
+                     * Filter by instance ID.
+                     */
+                    std::vector<std::string> m_instanceIdList;
+                    bool m_instanceIdListHasBeenSet;
 
                 };
             }

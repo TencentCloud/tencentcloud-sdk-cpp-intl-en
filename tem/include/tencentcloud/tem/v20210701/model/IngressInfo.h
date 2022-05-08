@@ -270,6 +270,36 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool MixedHasBeenSet() const;
 
+                    /**
+                     * 获取Redirection mode. Values:
+- `AUTO` (automatically redirect HTTP to HTTPS)
+- `NONE` (no redirection)
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return RewriteType Redirection mode. Values:
+- `AUTO` (automatically redirect HTTP to HTTPS)
+- `NONE` (no redirection)
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetRewriteType() const;
+
+                    /**
+                     * 设置Redirection mode. Values:
+- `AUTO` (automatically redirect HTTP to HTTPS)
+- `NONE` (no redirection)
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param RewriteType Redirection mode. Values:
+- `AUTO` (automatically redirect HTTP to HTTPS)
+- `NONE` (no redirection)
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetRewriteType(const std::string& _rewriteType);
+
+                    /**
+                     * 判断参数 RewriteType 是否已赋值
+                     * @return RewriteType 是否已赋值
+                     */
+                    bool RewriteTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -343,6 +373,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool m_mixed;
                     bool m_mixedHasBeenSet;
+
+                    /**
+                     * Redirection mode. Values:
+- `AUTO` (automatically redirect HTTP to HTTPS)
+- `NONE` (no redirection)
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_rewriteType;
+                    bool m_rewriteTypeHasBeenSet;
 
                 };
             }

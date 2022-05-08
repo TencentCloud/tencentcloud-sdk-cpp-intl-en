@@ -363,6 +363,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool NamespaceNameHasBeenSet() const;
 
+                    /**
+                     * 获取Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Status Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetStatus() const;
+
+                    /**
+                     * 设置Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param Status Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetStatus(const int64_t& _status);
+
+                    /**
+                     * 判断参数 Status 是否已赋值
+                     * @return Status 是否已赋值
+                     */
+                    bool StatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -464,6 +486,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_namespaceName;
                     bool m_namespaceNameHasBeenSet;
+
+                    /**
+                     * Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_status;
+                    bool m_statusHasBeenSet;
 
                 };
             }

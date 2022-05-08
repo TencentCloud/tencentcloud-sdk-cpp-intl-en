@@ -698,6 +698,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool MaxMsgBacklogSizeHasBeenSet() const;
 
+                    /**
+                     * 获取Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return RetentionSizeInMB Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetRetentionSizeInMB() const;
+
+                    /**
+                     * 设置Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param RetentionSizeInMB Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetRetentionSizeInMB(const uint64_t& _retentionSizeInMB);
+
+                    /**
+                     * 判断参数 RetentionSizeInMB 是否已赋值
+                     * @return RetentionSizeInMB 是否已赋值
+                     */
+                    bool RetentionSizeInMBHasBeenSet() const;
+
                 private:
 
                     /**
@@ -906,6 +928,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     int64_t m_maxMsgBacklogSize;
                     bool m_maxMsgBacklogSizeHasBeenSet;
+
+                    /**
+                     * Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_retentionSizeInMB;
+                    bool m_retentionSizeInMBHasBeenSet;
 
                 };
             }
