@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Time offset corresponding to the screenshot in the video in <font color=red>milliseconds</font>.
-                     * @return TimeOffset Time offset corresponding to the screenshot in the video in <font color=red>milliseconds</font>.
+                     * 获取The timestamp (seconds) of the screenshot.
+                     * @return TimeOffset The timestamp (seconds) of the screenshot.
                      */
                     double GetTimeOffset() const;
 
                     /**
-                     * 设置Time offset corresponding to the screenshot in the video in <font color=red>milliseconds</font>.
-                     * @param TimeOffset Time offset corresponding to the screenshot in the video in <font color=red>milliseconds</font>.
+                     * 设置The timestamp (seconds) of the screenshot.
+                     * @param TimeOffset The timestamp (seconds) of the screenshot.
                      */
                     void SetTimeOffset(const double& _timeOffset);
 
@@ -103,7 +103,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Time offset corresponding to the screenshot in the video in <font color=red>milliseconds</font>.
+                     * The timestamp (seconds) of the screenshot.
                      */
                     double m_timeOffset;
                     bool m_timeOffsetHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Control parameter of a politically sensitive information detection in speech task.
+                * The parameters for detecting sensitive information based on ASR.
                 */
                 class PoliticalAsrReviewTemplateInfoForUpdate : public AbstractModel
                 {
@@ -47,22 +47,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Switch of a politically sensitive information detection in speech task. Valid values:
-<li>ON: Enables a politically sensitive information detection in speech task;</li>
-<li>OFF: Disables a politically sensitive information detection in speech task.</li>
-                     * @return Switch Switch of a politically sensitive information detection in speech task. Valid values:
-<li>ON: Enables a politically sensitive information detection in speech task;</li>
-<li>OFF: Disables a politically sensitive information detection in speech task.</li>
+                     * 获取Whether to detect sensitive information based on ASR. Valid values:
+<li>ON</li>
+<li>OFF</li>
+                     * @return Switch Whether to detect sensitive information based on ASR. Valid values:
+<li>ON</li>
+<li>OFF</li>
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Switch of a politically sensitive information detection in speech task. Valid values:
-<li>ON: Enables a politically sensitive information detection in speech task;</li>
-<li>OFF: Disables a politically sensitive information detection in speech task.</li>
-                     * @param Switch Switch of a politically sensitive information detection in speech task. Valid values:
-<li>ON: Enables a politically sensitive information detection in speech task;</li>
-<li>OFF: Disables a politically sensitive information detection in speech task.</li>
+                     * 设置Whether to detect sensitive information based on ASR. Valid values:
+<li>ON</li>
+<li>OFF</li>
+                     * @param Switch Whether to detect sensitive information based on ASR. Valid values:
+<li>ON</li>
+<li>OFF</li>
                      */
                     void SetSwitch(const std::string& _switch);
 
@@ -111,9 +111,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Switch of a politically sensitive information detection in speech task. Valid values:
-<li>ON: Enables a politically sensitive information detection in speech task;</li>
-<li>OFF: Disables a politically sensitive information detection in speech task.</li>
+                     * Whether to detect sensitive information based on ASR. Valid values:
+<li>ON</li>
+<li>OFF</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

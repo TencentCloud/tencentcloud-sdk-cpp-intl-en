@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Control parameter of a terrorism information detection task
+                * The parameters for detecting sensitive information.
                 */
                 class TerrorismConfigureInfo : public AbstractModel
                 {
@@ -49,18 +49,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Control parameter of a terrorism information detection in image task.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ImgReviewInfo Control parameter of a terrorism information detection in image task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The parameters for detecting sensitive information in images.
+                     * @return ImgReviewInfo The parameters for detecting sensitive information in images.
                      */
                     TerrorismImgReviewTemplateInfo GetImgReviewInfo() const;
 
                     /**
-                     * 设置Control parameter of a terrorism information detection in image task.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ImgReviewInfo Control parameter of a terrorism information detection in image task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The parameters for detecting sensitive information in images.
+                     * @param ImgReviewInfo The parameters for detecting sensitive information in images.
                      */
                     void SetImgReviewInfo(const TerrorismImgReviewTemplateInfo& _imgReviewInfo);
 
@@ -71,14 +67,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ImgReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取Control parameter of terrorism information detection in text task.
-                     * @return OcrReviewInfo Control parameter of terrorism information detection in text task.
+                     * 获取The parameters for detecting sensitive information based on OCR.
+                     * @return OcrReviewInfo The parameters for detecting sensitive information based on OCR.
                      */
                     TerrorismOcrReviewTemplateInfo GetOcrReviewInfo() const;
 
                     /**
-                     * 设置Control parameter of terrorism information detection in text task.
-                     * @param OcrReviewInfo Control parameter of terrorism information detection in text task.
+                     * 设置The parameters for detecting sensitive information based on OCR.
+                     * @param OcrReviewInfo The parameters for detecting sensitive information based on OCR.
                      */
                     void SetOcrReviewInfo(const TerrorismOcrReviewTemplateInfo& _ocrReviewInfo);
 
@@ -91,14 +87,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Control parameter of a terrorism information detection in image task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The parameters for detecting sensitive information in images.
                      */
                     TerrorismImgReviewTemplateInfo m_imgReviewInfo;
                     bool m_imgReviewInfoHasBeenSet;
 
                     /**
-                     * Control parameter of terrorism information detection in text task.
+                     * The parameters for detecting sensitive information based on OCR.
                      */
                     TerrorismOcrReviewTemplateInfo m_ocrReviewInfo;
                     bool m_ocrReviewInfoHasBeenSet;

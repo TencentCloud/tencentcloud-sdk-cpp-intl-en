@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Result type of a terrorism information detection task during content audit
+                * The result of sensitive information detection.
                 */
                 class AiReviewTaskTerrorismResult : public AbstractModel
                 {
@@ -121,14 +121,14 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Input for a terrorism information detection task during content audit.
-                     * @return Input Input for a terrorism information detection task during content audit.
+                     * 获取The input parameter for sensitive information detection.
+                     * @return Input The input parameter for sensitive information detection.
                      */
                     AiReviewTerrorismTaskInput GetInput() const;
 
                     /**
-                     * 设置Input for a terrorism information detection task during content audit.
-                     * @param Input Input for a terrorism information detection task during content audit.
+                     * 设置The input parameter for sensitive information detection.
+                     * @param Input The input parameter for sensitive information detection.
                      */
                     void SetInput(const AiReviewTerrorismTaskInput& _input);
 
@@ -139,18 +139,18 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output of a terrorism information detection task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Output Output of a terrorism information detection task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The output of sensitive information detection.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Output The output of sensitive information detection.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     AiReviewTerrorismTaskOutput GetOutput() const;
 
                     /**
-                     * 设置Output of a terrorism information detection task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Output Output of a terrorism information detection task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The output of sensitive information detection.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param Output The output of sensitive information detection.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetOutput(const AiReviewTerrorismTaskOutput& _output);
 
@@ -187,14 +187,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Input for a terrorism information detection task during content audit.
+                     * The input parameter for sensitive information detection.
                      */
                     AiReviewTerrorismTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output of a terrorism information detection task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The output of sensitive information detection.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     AiReviewTerrorismTaskOutput m_output;
                     bool m_outputHasBeenSet;

@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Control parameter of a terrorism information detection task.
+                * The parameters for detecting sensitive information.
                 */
                 class TerrorismConfigureInfoForUpdate : public AbstractModel
                 {
@@ -49,14 +49,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Control parameter of a terrorism information detection in image task.
-                     * @return ImgReviewInfo Control parameter of a terrorism information detection in image task.
+                     * 获取The parameters for detecting sensitive information in images.
+                     * @return ImgReviewInfo The parameters for detecting sensitive information in images.
                      */
                     TerrorismImgReviewTemplateInfoForUpdate GetImgReviewInfo() const;
 
                     /**
-                     * 设置Control parameter of a terrorism information detection in image task.
-                     * @param ImgReviewInfo Control parameter of a terrorism information detection in image task.
+                     * 设置The parameters for detecting sensitive information in images.
+                     * @param ImgReviewInfo The parameters for detecting sensitive information in images.
                      */
                     void SetImgReviewInfo(const TerrorismImgReviewTemplateInfoForUpdate& _imgReviewInfo);
 
@@ -67,14 +67,14 @@ namespace TencentCloud
                     bool ImgReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取Control parameter of terrorism information detection in text task.
-                     * @return OcrReviewInfo Control parameter of terrorism information detection in text task.
+                     * 获取The parameters for detecting sensitive information based on OCR.
+                     * @return OcrReviewInfo The parameters for detecting sensitive information based on OCR.
                      */
                     TerrorismOcrReviewTemplateInfoForUpdate GetOcrReviewInfo() const;
 
                     /**
-                     * 设置Control parameter of terrorism information detection in text task.
-                     * @param OcrReviewInfo Control parameter of terrorism information detection in text task.
+                     * 设置The parameters for detecting sensitive information based on OCR.
+                     * @param OcrReviewInfo The parameters for detecting sensitive information based on OCR.
                      */
                     void SetOcrReviewInfo(const TerrorismOcrReviewTemplateInfoForUpdate& _ocrReviewInfo);
 
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Control parameter of a terrorism information detection in image task.
+                     * The parameters for detecting sensitive information in images.
                      */
                     TerrorismImgReviewTemplateInfoForUpdate m_imgReviewInfo;
                     bool m_imgReviewInfoHasBeenSet;
 
                     /**
-                     * Control parameter of terrorism information detection in text task.
+                     * The parameters for detecting sensitive information based on OCR.
                      */
                     TerrorismOcrReviewTemplateInfoForUpdate m_ocrReviewInfo;
                     bool m_ocrReviewInfoHasBeenSet;

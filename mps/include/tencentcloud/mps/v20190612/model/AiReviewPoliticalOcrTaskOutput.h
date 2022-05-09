@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * OCR-detected politically sensitive information in text
+                * The information about the sensitive content detected based on OCR.
                 */
                 class AiReviewPoliticalOcrTaskOutput : public AbstractModel
                 {
@@ -48,14 +48,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Score of the OCR-detected politically sensitive information in text from 0 to 100.
-                     * @return Confidence Score of the OCR-detected politically sensitive information in text from 0 to 100.
+                     * 获取The confidence score for the OCR-based detection of sensitive information. Value range: 0-100.
+                     * @return Confidence The confidence score for the OCR-based detection of sensitive information. Value range: 0-100.
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Score of the OCR-detected politically sensitive information in text from 0 to 100.
-                     * @param Confidence Score of the OCR-detected politically sensitive information in text from 0 to 100.
+                     * 设置The confidence score for the OCR-based detection of sensitive information. Value range: 0-100.
+                     * @param Confidence The confidence score for the OCR-based detection of sensitive information. Value range: 0-100.
                      */
                     void SetConfidence(const double& _confidence);
 
@@ -66,26 +66,26 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Suggestion for the OCR-detected politically sensitive information in text. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-                     * @return Suggestion Suggestion for the OCR-detected politically sensitive information in text. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+                     * 获取The suggestion for handling the sensitive information detected based on OCR. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
+                     * @return Suggestion The suggestion for handling the sensitive information detected based on OCR. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
                      */
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置Suggestion for the OCR-detected politically sensitive information in text. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-                     * @param Suggestion Suggestion for the OCR-detected politically sensitive information in text. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+                     * 设置The suggestion for handling the sensitive information detected based on OCR. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
+                     * @param Suggestion The suggestion for handling the sensitive information detected based on OCR. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
                      */
                     void SetSuggestion(const std::string& _suggestion);
 
@@ -96,14 +96,14 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取List of video segments that contain OCR-detected politically sensitive information in text.
-                     * @return SegmentSet List of video segments that contain OCR-detected politically sensitive information in text.
+                     * 获取The video segments that contain sensitive information detected based on OCR.
+                     * @return SegmentSet The video segments that contain sensitive information detected based on OCR.
                      */
                     std::vector<MediaContentReviewOcrTextSegmentItem> GetSegmentSet() const;
 
                     /**
-                     * 设置List of video segments that contain OCR-detected politically sensitive information in text.
-                     * @param SegmentSet List of video segments that contain OCR-detected politically sensitive information in text.
+                     * 设置The video segments that contain sensitive information detected based on OCR.
+                     * @param SegmentSet The video segments that contain sensitive information detected based on OCR.
                      */
                     void SetSegmentSet(const std::vector<MediaContentReviewOcrTextSegmentItem>& _segmentSet);
 
@@ -116,22 +116,22 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Score of the OCR-detected politically sensitive information in text from 0 to 100.
+                     * The confidence score for the OCR-based detection of sensitive information. Value range: 0-100.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * Suggestion for the OCR-detected politically sensitive information in text. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+                     * The suggestion for handling the sensitive information detected based on OCR. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
                      */
                     std::string m_suggestion;
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * List of video segments that contain OCR-detected politically sensitive information in text.
+                     * The video segments that contain sensitive information detected based on OCR.
                      */
                     std::vector<MediaContentReviewOcrTextSegmentItem> m_segmentSet;
                     bool m_segmentSetHasBeenSet;

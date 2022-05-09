@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Result of terrorism information detection in image in AI-based live stream content audit
+                * The result of detecting sensitive information in live streaming videos.
                 */
                 class LiveStreamAiReviewImageTerrorismResult : public AbstractModel
                 {
@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool EndPtsTimeHasBeenSet() const;
 
                     /**
-                     * 获取Score of a suspected terrorism segment.
-                     * @return Confidence Score of a suspected terrorism segment.
+                     * 获取The confidence score for the detected sensitive segments.
+                     * @return Confidence The confidence score for the detected sensitive segments.
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Score of a suspected terrorism segment.
-                     * @param Confidence Score of a suspected terrorism segment.
+                     * 设置The confidence score for the detected sensitive segments.
+                     * @param Confidence The confidence score for the detected sensitive segments.
                      */
                     void SetConfidence(const double& _confidence);
 
@@ -101,11 +101,11 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Suggestion for terrorism information detection of a suspected segment. Valid values:
+                     * 获取The suggestion for handling the sensitive segments. Valid values:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-                     * @return Suggestion Suggestion for terrorism information detection of a suspected segment. Valid values:
+                     * @return Suggestion The suggestion for handling the sensitive segments. Valid values:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -113,11 +113,11 @@ namespace TencentCloud
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置Suggestion for terrorism information detection of a suspected segment. Valid values:
+                     * 设置The suggestion for handling the sensitive segments. Valid values:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-                     * @param Suggestion Suggestion for terrorism information detection of a suspected segment. Valid values:
+                     * @param Suggestion The suggestion for handling the sensitive segments. Valid values:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -131,46 +131,46 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取Tag of the detected terrorism information in a video. Valid values:
-<li>guns: Weapons and guns.</li>
-<li>crowd: Crowd.</li>
-<li>police: Police force.</li>
-<li>bloody: Bloody scenes.</li>
-<li>banners: Terrorism flags.</li>
-<li>militant: Militants.</li>
-<li>explosion: Explosions and fires.</li>
-<li>terrorists: Terrorists.</li>
-                     * @return Label Tag of the detected terrorism information in a video. Valid values:
-<li>guns: Weapons and guns.</li>
-<li>crowd: Crowd.</li>
-<li>police: Police force.</li>
-<li>bloody: Bloody scenes.</li>
-<li>banners: Terrorism flags.</li>
-<li>militant: Militants.</li>
-<li>explosion: Explosions and fires.</li>
-<li>terrorists: Terrorists.</li>
+                     * 获取The labels for the detected sensitive content. Valid values:
+<li>guns</li>
+<li>crowd</li>
+<li>police</li>
+<li>bloody</li>
+<li>banners (sensitive flags)</li>
+<li>militant</li>
+<li>explosion</li>
+<li>terrorists</li>
+                     * @return Label The labels for the detected sensitive content. Valid values:
+<li>guns</li>
+<li>crowd</li>
+<li>police</li>
+<li>bloody</li>
+<li>banners (sensitive flags)</li>
+<li>militant</li>
+<li>explosion</li>
+<li>terrorists</li>
                      */
                     std::string GetLabel() const;
 
                     /**
-                     * 设置Tag of the detected terrorism information in a video. Valid values:
-<li>guns: Weapons and guns.</li>
-<li>crowd: Crowd.</li>
-<li>police: Police force.</li>
-<li>bloody: Bloody scenes.</li>
-<li>banners: Terrorism flags.</li>
-<li>militant: Militants.</li>
-<li>explosion: Explosions and fires.</li>
-<li>terrorists: Terrorists.</li>
-                     * @param Label Tag of the detected terrorism information in a video. Valid values:
-<li>guns: Weapons and guns.</li>
-<li>crowd: Crowd.</li>
-<li>police: Police force.</li>
-<li>bloody: Bloody scenes.</li>
-<li>banners: Terrorism flags.</li>
-<li>militant: Militants.</li>
-<li>explosion: Explosions and fires.</li>
-<li>terrorists: Terrorists.</li>
+                     * 设置The labels for the detected sensitive content. Valid values:
+<li>guns</li>
+<li>crowd</li>
+<li>police</li>
+<li>bloody</li>
+<li>banners (sensitive flags)</li>
+<li>militant</li>
+<li>explosion</li>
+<li>terrorists</li>
+                     * @param Label The labels for the detected sensitive content. Valid values:
+<li>guns</li>
+<li>crowd</li>
+<li>police</li>
+<li>bloody</li>
+<li>banners (sensitive flags)</li>
+<li>militant</li>
+<li>explosion</li>
+<li>terrorists</li>
                      */
                     void SetLabel(const std::string& _label);
 
@@ -235,13 +235,13 @@ and will be deleted after `PicUrlExpireTime`).
                     bool m_endPtsTimeHasBeenSet;
 
                     /**
-                     * Score of a suspected terrorism segment.
+                     * The confidence score for the detected sensitive segments.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * Suggestion for terrorism information detection of a suspected segment. Valid values:
+                     * The suggestion for handling the sensitive segments. Valid values:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -250,15 +250,15 @@ and will be deleted after `PicUrlExpireTime`).
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * Tag of the detected terrorism information in a video. Valid values:
-<li>guns: Weapons and guns.</li>
-<li>crowd: Crowd.</li>
-<li>police: Police force.</li>
-<li>bloody: Bloody scenes.</li>
-<li>banners: Terrorism flags.</li>
-<li>militant: Militants.</li>
-<li>explosion: Explosions and fires.</li>
-<li>terrorists: Terrorists.</li>
+                     * The labels for the detected sensitive content. Valid values:
+<li>guns</li>
+<li>crowd</li>
+<li>police</li>
+<li>bloody</li>
+<li>banners (sensitive flags)</li>
+<li>militant</li>
+<li>explosion</li>
+<li>terrorists</li>
                      */
                     std::string m_label;
                     bool m_labelHasBeenSet;

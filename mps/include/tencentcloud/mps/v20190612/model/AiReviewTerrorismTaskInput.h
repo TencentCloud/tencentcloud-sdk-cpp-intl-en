@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input parameter type of a terrorism information detection task during content audit
+                * The input parameter for the detection of sensitive information.
                 */
                 class AiReviewTerrorismTaskInput : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of a terrorism information detection template.
-                     * @return Definition ID of a terrorism information detection template.
+                     * 获取The template ID.
+                     * @return Definition The template ID.
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置ID of a terrorism information detection template.
-                     * @param Definition ID of a terrorism information detection template.
+                     * 设置The template ID.
+                     * @param Definition The template ID.
                      */
                     void SetDefinition(const uint64_t& _definition);
 
@@ -67,7 +67,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of a terrorism information detection template.
+                     * The template ID.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

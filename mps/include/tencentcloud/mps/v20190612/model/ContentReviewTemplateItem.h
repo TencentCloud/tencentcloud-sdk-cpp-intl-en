@@ -128,18 +128,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PornConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Terrorism information detection control parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TerrorismConfigure Terrorism information detection control parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The parameters for detecting sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return TerrorismConfigure The parameters for detecting sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     TerrorismConfigureInfo GetTerrorismConfigure() const;
 
                     /**
-                     * 设置Terrorism information detection control parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TerrorismConfigure Terrorism information detection control parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The parameters for detecting sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param TerrorismConfigure The parameters for detecting sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetTerrorismConfigure(const TerrorismConfigureInfo& _terrorismConfigure);
 
@@ -150,18 +150,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TerrorismConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Politically sensitive information detection control parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PoliticalConfigure Politically sensitive information detection control parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The parameters for detecting sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return PoliticalConfigure The parameters for detecting sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     PoliticalConfigureInfo GetPoliticalConfigure() const;
 
                     /**
-                     * 设置Politically sensitive information detection control parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PoliticalConfigure Politically sensitive information detection control parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The parameters for detecting sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param PoliticalConfigure The parameters for detecting sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetPoliticalConfigure(const PoliticalConfigureInfo& _politicalConfigure);
 
@@ -287,15 +287,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_pornConfigureHasBeenSet;
 
                     /**
-                     * Terrorism information detection control parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The parameters for detecting sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     TerrorismConfigureInfo m_terrorismConfigure;
                     bool m_terrorismConfigureHasBeenSet;
 
                     /**
-                     * Politically sensitive information detection control parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The parameters for detecting sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     PoliticalConfigureInfo m_politicalConfigure;
                     bool m_politicalConfigureHasBeenSet;

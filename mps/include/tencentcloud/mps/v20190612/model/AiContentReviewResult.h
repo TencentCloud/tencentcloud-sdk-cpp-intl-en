@@ -58,45 +58,53 @@ namespace TencentCloud
 
                     /**
                      * 获取Task type. Valid values:
-<li>Porn: Porn information detection in image</li>
-<li>Terrorism: Terrorism information detection in image</li>
-<li>Political: Politically sensitive information detection in image</li>
-<li>Porn.Asr: ASR-based porn information detection in text</li>
-<li>Porn.Ocr: OCR-based porn information detection in text</li>
-<li>Porn.Voice: Porn information detection in speech</li>
-<li>Political.Asr: ASR-based politically sensitive information detection in text</li>
-<li>Political.Ocr: OCR-based politically sensitive information detection in text</li>
+<li>Porn (in images)</li>
+<li>Terrorism (in images)</li>
+<li>Political (in images)</li>
+<li>Porn.Asr</li>
+<li>Porn.Ocr</li>
+<li>Political.Asr</li>
+<li>Political.Ocr</li>
+<li>Terrorism.Ocr</li>
+<li>Prohibited.Asr</li>
+<li>Prohibited.Ocr</li>
                      * @return Type Task type. Valid values:
-<li>Porn: Porn information detection in image</li>
-<li>Terrorism: Terrorism information detection in image</li>
-<li>Political: Politically sensitive information detection in image</li>
-<li>Porn.Asr: ASR-based porn information detection in text</li>
-<li>Porn.Ocr: OCR-based porn information detection in text</li>
-<li>Porn.Voice: Porn information detection in speech</li>
-<li>Political.Asr: ASR-based politically sensitive information detection in text</li>
-<li>Political.Ocr: OCR-based politically sensitive information detection in text</li>
+<li>Porn (in images)</li>
+<li>Terrorism (in images)</li>
+<li>Political (in images)</li>
+<li>Porn.Asr</li>
+<li>Porn.Ocr</li>
+<li>Political.Asr</li>
+<li>Political.Ocr</li>
+<li>Terrorism.Ocr</li>
+<li>Prohibited.Asr</li>
+<li>Prohibited.Ocr</li>
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Task type. Valid values:
-<li>Porn: Porn information detection in image</li>
-<li>Terrorism: Terrorism information detection in image</li>
-<li>Political: Politically sensitive information detection in image</li>
-<li>Porn.Asr: ASR-based porn information detection in text</li>
-<li>Porn.Ocr: OCR-based porn information detection in text</li>
-<li>Porn.Voice: Porn information detection in speech</li>
-<li>Political.Asr: ASR-based politically sensitive information detection in text</li>
-<li>Political.Ocr: OCR-based politically sensitive information detection in text</li>
+<li>Porn (in images)</li>
+<li>Terrorism (in images)</li>
+<li>Political (in images)</li>
+<li>Porn.Asr</li>
+<li>Porn.Ocr</li>
+<li>Political.Asr</li>
+<li>Political.Ocr</li>
+<li>Terrorism.Ocr</li>
+<li>Prohibited.Asr</li>
+<li>Prohibited.Ocr</li>
                      * @param Type Task type. Valid values:
-<li>Porn: Porn information detection in image</li>
-<li>Terrorism: Terrorism information detection in image</li>
-<li>Political: Politically sensitive information detection in image</li>
-<li>Porn.Asr: ASR-based porn information detection in text</li>
-<li>Porn.Ocr: OCR-based porn information detection in text</li>
-<li>Porn.Voice: Porn information detection in speech</li>
-<li>Political.Asr: ASR-based politically sensitive information detection in text</li>
-<li>Political.Ocr: OCR-based politically sensitive information detection in text</li>
+<li>Porn (in images)</li>
+<li>Terrorism (in images)</li>
+<li>Political (in images)</li>
+<li>Porn.Asr</li>
+<li>Porn.Ocr</li>
+<li>Political.Asr</li>
+<li>Political.Ocr</li>
+<li>Terrorism.Ocr</li>
+<li>Prohibited.Asr</li>
+<li>Prohibited.Ocr</li>
                      */
                     void SetType(const std::string& _type);
 
@@ -165,18 +173,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PornTaskHasBeenSet() const;
 
                     /**
-                     * 获取Query result of an intelligent terrorism information detection in image task in video content audit, which is valid when task type is `Terrorism`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TerrorismTask Query result of an intelligent terrorism information detection in image task in video content audit, which is valid when task type is `Terrorism`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The result of detecting terrorism content in images, which is valid when the task type is `Terrorism`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return TerrorismTask The result of detecting terrorism content in images, which is valid when the task type is `Terrorism`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     AiReviewTaskTerrorismResult GetTerrorismTask() const;
 
                     /**
-                     * 设置Query result of an intelligent terrorism information detection in image task in video content audit, which is valid when task type is `Terrorism`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TerrorismTask Query result of an intelligent terrorism information detection in image task in video content audit, which is valid when task type is `Terrorism`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The result of detecting terrorism content in images, which is valid when the task type is `Terrorism`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param TerrorismTask The result of detecting terrorism content in images, which is valid when the task type is `Terrorism`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetTerrorismTask(const AiReviewTaskTerrorismResult& _terrorismTask);
 
@@ -187,18 +195,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TerrorismTaskHasBeenSet() const;
 
                     /**
-                     * 获取Query result of an intelligent politically sensitive information detection in image task in video content audit, which is valid when task type is `Political`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PoliticalTask Query result of an intelligent politically sensitive information detection in image task in video content audit, which is valid when task type is `Political`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The result of detecting politically sensitive information in images, which is valid when the task type is `Political`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return PoliticalTask The result of detecting politically sensitive information in images, which is valid when the task type is `Political`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     AiReviewTaskPoliticalResult GetPoliticalTask() const;
 
                     /**
-                     * 设置Query result of an intelligent politically sensitive information detection in image task in video content audit, which is valid when task type is `Political`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PoliticalTask Query result of an intelligent politically sensitive information detection in image task in video content audit, which is valid when task type is `Political`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The result of detecting politically sensitive information in images, which is valid when the task type is `Political`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param PoliticalTask The result of detecting politically sensitive information in images, which is valid when the task type is `Political`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetPoliticalTask(const AiReviewTaskPoliticalResult& _politicalTask);
 
@@ -253,18 +261,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PornOcrTaskHasBeenSet() const;
 
                     /**
-                     * 获取Query result of an ASR-based politically sensitive information detection in text task in video content audit, which is valid when task type is `Political.Asr`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PoliticalAsrTask Query result of an ASR-based politically sensitive information detection in text task in video content audit, which is valid when task type is `Political.Asr`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The result of detecting politically sensitive information based on ASR, which is valid when the task type is `Political.Asr`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return PoliticalAsrTask The result of detecting politically sensitive information based on ASR, which is valid when the task type is `Political.Asr`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     AiReviewTaskPoliticalAsrResult GetPoliticalAsrTask() const;
 
                     /**
-                     * 设置Query result of an ASR-based politically sensitive information detection in text task in video content audit, which is valid when task type is `Political.Asr`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PoliticalAsrTask Query result of an ASR-based politically sensitive information detection in text task in video content audit, which is valid when task type is `Political.Asr`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The result of detecting politically sensitive information based on ASR, which is valid when the task type is `Political.Asr`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param PoliticalAsrTask The result of detecting politically sensitive information based on ASR, which is valid when the task type is `Political.Asr`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetPoliticalAsrTask(const AiReviewTaskPoliticalAsrResult& _politicalAsrTask);
 
@@ -275,18 +283,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PoliticalAsrTaskHasBeenSet() const;
 
                     /**
-                     * 获取Query result of an OCR-based politically sensitive information detection in text task in video content audit, which is valid when task type is `Political.Ocr`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PoliticalOcrTask Query result of an OCR-based politically sensitive information detection in text task in video content audit, which is valid when task type is `Political.Ocr`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The result of detecting politically sensitive information based on OCR, which is valid when the task type is `Political.Ocr`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return PoliticalOcrTask The result of detecting politically sensitive information based on OCR, which is valid when the task type is `Political.Ocr`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     AiReviewTaskPoliticalOcrResult GetPoliticalOcrTask() const;
 
                     /**
-                     * 设置Query result of an OCR-based politically sensitive information detection in text task in video content audit, which is valid when task type is `Political.Ocr`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PoliticalOcrTask Query result of an OCR-based politically sensitive information detection in text task in video content audit, which is valid when task type is `Political.Ocr`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The result of detecting politically sensitive information based on OCR, which is valid when the task type is `Political.Ocr`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param PoliticalOcrTask The result of detecting politically sensitive information based on OCR, which is valid when the task type is `Political.Ocr`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetPoliticalOcrTask(const AiReviewTaskPoliticalOcrResult& _politicalOcrTask);
 
@@ -297,14 +305,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PoliticalOcrTaskHasBeenSet() const;
 
                     /**
-                     * 获取Query result of OCR-based terrorism information detection in text task in video content audit, which is valid if task type is `Terrorism.Ocr`.
-                     * @return TerrorismOcrTask Query result of OCR-based terrorism information detection in text task in video content audit, which is valid if task type is `Terrorism.Ocr`.
+                     * 获取The result of detecting terrorism content based on OCR, which is valid when task type is `Terrorism.Ocr`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return TerrorismOcrTask The result of detecting terrorism content based on OCR, which is valid when task type is `Terrorism.Ocr`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     AiReviewTaskTerrorismOcrResult GetTerrorismOcrTask() const;
 
                     /**
-                     * 设置Query result of OCR-based terrorism information detection in text task in video content audit, which is valid if task type is `Terrorism.Ocr`.
-                     * @param TerrorismOcrTask Query result of OCR-based terrorism information detection in text task in video content audit, which is valid if task type is `Terrorism.Ocr`.
+                     * 设置The result of detecting terrorism content based on OCR, which is valid when task type is `Terrorism.Ocr`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param TerrorismOcrTask The result of detecting terrorism content based on OCR, which is valid when task type is `Terrorism.Ocr`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetTerrorismOcrTask(const AiReviewTaskTerrorismOcrResult& _terrorismOcrTask);
 
@@ -354,14 +366,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Task type. Valid values:
-<li>Porn: Porn information detection in image</li>
-<li>Terrorism: Terrorism information detection in image</li>
-<li>Political: Politically sensitive information detection in image</li>
-<li>Porn.Asr: ASR-based porn information detection in text</li>
-<li>Porn.Ocr: OCR-based porn information detection in text</li>
-<li>Porn.Voice: Porn information detection in speech</li>
-<li>Political.Asr: ASR-based politically sensitive information detection in text</li>
-<li>Political.Ocr: OCR-based politically sensitive information detection in text</li>
+<li>Porn (in images)</li>
+<li>Terrorism (in images)</li>
+<li>Political (in images)</li>
+<li>Porn.Asr</li>
+<li>Porn.Ocr</li>
+<li>Political.Asr</li>
+<li>Political.Ocr</li>
+<li>Terrorism.Ocr</li>
+<li>Prohibited.Asr</li>
+<li>Prohibited.Ocr</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -386,15 +400,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_pornTaskHasBeenSet;
 
                     /**
-                     * Query result of an intelligent terrorism information detection in image task in video content audit, which is valid when task type is `Terrorism`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The result of detecting terrorism content in images, which is valid when the task type is `Terrorism`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     AiReviewTaskTerrorismResult m_terrorismTask;
                     bool m_terrorismTaskHasBeenSet;
 
                     /**
-                     * Query result of an intelligent politically sensitive information detection in image task in video content audit, which is valid when task type is `Political`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The result of detecting politically sensitive information in images, which is valid when the task type is `Political`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     AiReviewTaskPoliticalResult m_politicalTask;
                     bool m_politicalTaskHasBeenSet;
@@ -414,21 +428,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_pornOcrTaskHasBeenSet;
 
                     /**
-                     * Query result of an ASR-based politically sensitive information detection in text task in video content audit, which is valid when task type is `Political.Asr`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The result of detecting politically sensitive information based on ASR, which is valid when the task type is `Political.Asr`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     AiReviewTaskPoliticalAsrResult m_politicalAsrTask;
                     bool m_politicalAsrTaskHasBeenSet;
 
                     /**
-                     * Query result of an OCR-based politically sensitive information detection in text task in video content audit, which is valid when task type is `Political.Ocr`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The result of detecting politically sensitive information based on OCR, which is valid when the task type is `Political.Ocr`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     AiReviewTaskPoliticalOcrResult m_politicalOcrTask;
                     bool m_politicalOcrTaskHasBeenSet;
 
                     /**
-                     * Query result of OCR-based terrorism information detection in text task in video content audit, which is valid if task type is `Terrorism.Ocr`.
+                     * The result of detecting terrorism content based on OCR, which is valid when task type is `Terrorism.Ocr`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     AiReviewTaskTerrorismOcrResult m_terrorismOcrTask;
                     bool m_terrorismOcrTaskHasBeenSet;

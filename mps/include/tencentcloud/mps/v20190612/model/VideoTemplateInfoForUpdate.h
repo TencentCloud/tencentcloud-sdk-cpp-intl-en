@@ -272,6 +272,36 @@ It is not recommended to specify this parameter if there are no special requirem
                      */
                     bool VcrfHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable adaptive encoding. Valid values:
+<li>0: Disable</li>
+<li>1: Enable</li>
+Default value: 0. If this parameter is set to `1`, multiple streams with different resolutions and bitrates will be generated automatically. The highest resolution, bitrate, and quality of the streams are determined by the values of `width` and `height`, `Bitrate`, and `Vcrf` in `VideoTemplate` respectively. If these parameters are not set in `VideoTemplate`, the highest resolution generated will be the same as that of the source video, and the highest video quality will be close to VMAF 95. To use this parameter or learn about the billing details of adaptive encoding, please contact your sales rep.
+                     * @return ContentAdaptStream Whether to enable adaptive encoding. Valid values:
+<li>0: Disable</li>
+<li>1: Enable</li>
+Default value: 0. If this parameter is set to `1`, multiple streams with different resolutions and bitrates will be generated automatically. The highest resolution, bitrate, and quality of the streams are determined by the values of `width` and `height`, `Bitrate`, and `Vcrf` in `VideoTemplate` respectively. If these parameters are not set in `VideoTemplate`, the highest resolution generated will be the same as that of the source video, and the highest video quality will be close to VMAF 95. To use this parameter or learn about the billing details of adaptive encoding, please contact your sales rep.
+                     */
+                    uint64_t GetContentAdaptStream() const;
+
+                    /**
+                     * 设置Whether to enable adaptive encoding. Valid values:
+<li>0: Disable</li>
+<li>1: Enable</li>
+Default value: 0. If this parameter is set to `1`, multiple streams with different resolutions and bitrates will be generated automatically. The highest resolution, bitrate, and quality of the streams are determined by the values of `width` and `height`, `Bitrate`, and `Vcrf` in `VideoTemplate` respectively. If these parameters are not set in `VideoTemplate`, the highest resolution generated will be the same as that of the source video, and the highest video quality will be close to VMAF 95. To use this parameter or learn about the billing details of adaptive encoding, please contact your sales rep.
+                     * @param ContentAdaptStream Whether to enable adaptive encoding. Valid values:
+<li>0: Disable</li>
+<li>1: Enable</li>
+Default value: 0. If this parameter is set to `1`, multiple streams with different resolutions and bitrates will be generated automatically. The highest resolution, bitrate, and quality of the streams are determined by the values of `width` and `height`, `Bitrate`, and `Vcrf` in `VideoTemplate` respectively. If these parameters are not set in `VideoTemplate`, the highest resolution generated will be the same as that of the source video, and the highest video quality will be close to VMAF 95. To use this parameter or learn about the billing details of adaptive encoding, please contact your sales rep.
+                     */
+                    void SetContentAdaptStream(const uint64_t& _contentAdaptStream);
+
+                    /**
+                     * 判断参数 ContentAdaptStream 是否已赋值
+                     * @return ContentAdaptStream 是否已赋值
+                     */
+                    bool ContentAdaptStreamHasBeenSet() const;
+
                 private:
 
                     /**
@@ -343,6 +373,15 @@ It is not recommended to specify this parameter if there are no special requirem
                      */
                     uint64_t m_vcrf;
                     bool m_vcrfHasBeenSet;
+
+                    /**
+                     * Whether to enable adaptive encoding. Valid values:
+<li>0: Disable</li>
+<li>1: Enable</li>
+Default value: 0. If this parameter is set to `1`, multiple streams with different resolutions and bitrates will be generated automatically. The highest resolution, bitrate, and quality of the streams are determined by the values of `width` and `height`, `Bitrate`, and `Vcrf` in `VideoTemplate` respectively. If these parameters are not set in `VideoTemplate`, the highest resolution generated will be the same as that of the source video, and the highest video quality will be close to VMAF 95. To use this parameter or learn about the billing details of adaptive encoding, please contact your sales rep.
+                     */
+                    uint64_t m_contentAdaptStream;
+                    bool m_contentAdaptStreamHasBeenSet;
 
                 };
             }

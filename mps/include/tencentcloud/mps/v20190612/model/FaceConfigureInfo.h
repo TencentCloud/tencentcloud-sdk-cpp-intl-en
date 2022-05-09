@@ -91,26 +91,26 @@ namespace TencentCloud
                     bool ScoreHasBeenSet() const;
 
                     /**
-                     * 获取Default figure filter tag, which specifies the default figure tag that needs to be returned. If this parameter is left empty or an empty value is entered, all results of the default figures will be returned. Valid values:
-<li>entertainment: Entertainment celebrity;</li>
-<li>sport: Sports celebrity;</li>
-<li>politician: Politically sensitive figure.</li>
-                     * @return DefaultLibraryLabelSet Default figure filter tag, which specifies the default figure tag that needs to be returned. If this parameter is left empty or an empty value is entered, all results of the default figures will be returned. Valid values:
-<li>entertainment: Entertainment celebrity;</li>
-<li>sport: Sports celebrity;</li>
-<li>politician: Politically sensitive figure.</li>
+                     * 获取The default face filter labels, which specify the types of faces to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
+<li>entertainment (people in the entertainment industry)</li>
+<li>sport (sports celebrities)</li>
+<li>politician</li>
+                     * @return DefaultLibraryLabelSet The default face filter labels, which specify the types of faces to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
+<li>entertainment (people in the entertainment industry)</li>
+<li>sport (sports celebrities)</li>
+<li>politician</li>
                      */
                     std::vector<std::string> GetDefaultLibraryLabelSet() const;
 
                     /**
-                     * 设置Default figure filter tag, which specifies the default figure tag that needs to be returned. If this parameter is left empty or an empty value is entered, all results of the default figures will be returned. Valid values:
-<li>entertainment: Entertainment celebrity;</li>
-<li>sport: Sports celebrity;</li>
-<li>politician: Politically sensitive figure.</li>
-                     * @param DefaultLibraryLabelSet Default figure filter tag, which specifies the default figure tag that needs to be returned. If this parameter is left empty or an empty value is entered, all results of the default figures will be returned. Valid values:
-<li>entertainment: Entertainment celebrity;</li>
-<li>sport: Sports celebrity;</li>
-<li>politician: Politically sensitive figure.</li>
+                     * 设置The default face filter labels, which specify the types of faces to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
+<li>entertainment (people in the entertainment industry)</li>
+<li>sport (sports celebrities)</li>
+<li>politician</li>
+                     * @param DefaultLibraryLabelSet The default face filter labels, which specify the types of faces to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
+<li>entertainment (people in the entertainment industry)</li>
+<li>sport (sports celebrities)</li>
+<li>politician</li>
                      */
                     void SetDefaultLibraryLabelSet(const std::vector<std::string>& _defaultLibraryLabelSet);
 
@@ -193,10 +193,10 @@ Default value: All (both default and custom figure libraries will be used.)
                     bool m_scoreHasBeenSet;
 
                     /**
-                     * Default figure filter tag, which specifies the default figure tag that needs to be returned. If this parameter is left empty or an empty value is entered, all results of the default figures will be returned. Valid values:
-<li>entertainment: Entertainment celebrity;</li>
-<li>sport: Sports celebrity;</li>
-<li>politician: Politically sensitive figure.</li>
+                     * The default face filter labels, which specify the types of faces to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
+<li>entertainment (people in the entertainment industry)</li>
+<li>sport (sports celebrities)</li>
+<li>politician</li>
                      */
                     std::vector<std::string> m_defaultLibraryLabelSet;
                     bool m_defaultLibraryLabelSetHasBeenSet;

@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Result type of OCR-based terrorism information detection in text task in content audit
+                * The result of OCR-based detection of terrorism content.
                 */
                 class AiReviewTaskTerrorismOcrResult : public AbstractModel
                 {
@@ -133,14 +133,14 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Input of OCR-based terrorism information detection in text task in content audit.
-                     * @return Input Input of OCR-based terrorism information detection in text task in content audit.
+                     * 获取The input parameter for OCR-based detection of terrorism content.
+                     * @return Input The input parameter for OCR-based detection of terrorism content.
                      */
                     AiReviewTerrorismOcrTaskInput GetInput() const;
 
                     /**
-                     * 设置Input of OCR-based terrorism information detection in text task in content audit.
-                     * @param Input Input of OCR-based terrorism information detection in text task in content audit.
+                     * 设置The input parameter for OCR-based detection of terrorism content.
+                     * @param Input The input parameter for OCR-based detection of terrorism content.
                      */
                     void SetInput(const AiReviewTerrorismOcrTaskInput& _input);
 
@@ -151,14 +151,18 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output of OCR-based terrorism information detection in text task in content audit.
-                     * @return Output Output of OCR-based terrorism information detection in text task in content audit.
+                     * 获取The output of OCR-based detection of terrorism content.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Output The output of OCR-based detection of terrorism content.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     AiReviewTerrorismOcrTaskOutput GetOutput() const;
 
                     /**
-                     * 设置Output of OCR-based terrorism information detection in text task in content audit.
-                     * @param Output Output of OCR-based terrorism information detection in text task in content audit.
+                     * 设置The output of OCR-based detection of terrorism content.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param Output The output of OCR-based detection of terrorism content.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetOutput(const AiReviewTerrorismOcrTaskOutput& _output);
 
@@ -198,13 +202,14 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Input of OCR-based terrorism information detection in text task in content audit.
+                     * The input parameter for OCR-based detection of terrorism content.
                      */
                     AiReviewTerrorismOcrTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output of OCR-based terrorism information detection in text task in content audit.
+                     * The output of OCR-based detection of terrorism content.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     AiReviewTerrorismOcrTaskOutput m_output;
                     bool m_outputHasBeenSet;

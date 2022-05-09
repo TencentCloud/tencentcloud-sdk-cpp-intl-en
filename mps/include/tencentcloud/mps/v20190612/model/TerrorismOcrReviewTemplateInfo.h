@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Control parameter of terrorism information detection in text task
+                * The parameters for detecting sensitive information based on OCR.
                 */
                 class TerrorismOcrReviewTemplateInfo : public AbstractModel
                 {
@@ -47,22 +47,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Switch of terrorism information detection in text task. Valid values:
-<li>ON: enables terrorism information detection in text task;</li>
-<li>OFF: disables terrorism information detection in text task.</li>
-                     * @return Switch Switch of terrorism information detection in text task. Valid values:
-<li>ON: enables terrorism information detection in text task;</li>
-<li>OFF: disables terrorism information detection in text task.</li>
+                     * 获取Whether to detect sensitive information based on OCR. Valid values:
+<li>ON</li>
+<li>OFF</li>
+                     * @return Switch Whether to detect sensitive information based on OCR. Valid values:
+<li>ON</li>
+<li>OFF</li>
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Switch of terrorism information detection in text task. Valid values:
-<li>ON: enables terrorism information detection in text task;</li>
-<li>OFF: disables terrorism information detection in text task.</li>
-                     * @param Switch Switch of terrorism information detection in text task. Valid values:
-<li>ON: enables terrorism information detection in text task;</li>
-<li>OFF: disables terrorism information detection in text task.</li>
+                     * 设置Whether to detect sensitive information based on OCR. Valid values:
+<li>ON</li>
+<li>OFF</li>
+                     * @param Switch Whether to detect sensitive information based on OCR. Valid values:
+<li>ON</li>
+<li>OFF</li>
                      */
                     void SetSwitch(const std::string& _switch);
 
@@ -111,9 +111,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Switch of terrorism information detection in text task. Valid values:
-<li>ON: enables terrorism information detection in text task;</li>
-<li>OFF: disables terrorism information detection in text task.</li>
+                     * Whether to detect sensitive information based on OCR. Valid values:
+<li>ON</li>
+<li>OFF</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

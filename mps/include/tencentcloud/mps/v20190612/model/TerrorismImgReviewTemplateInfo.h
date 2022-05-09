@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Control parameter of a terrorism information detection in image task
+                * The parameters for detecting sensitive information in images.
                 */
                 class TerrorismImgReviewTemplateInfo : public AbstractModel
                 {
@@ -47,22 +47,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Switch of a terrorism information detection in image task. Valid values:
-<li>ON: Enables a terrorism information detection in image task;</li>
-<li>OFF: Disables a terrorism information detection in image task.</li>
-                     * @return Switch Switch of a terrorism information detection in image task. Valid values:
-<li>ON: Enables a terrorism information detection in image task;</li>
-<li>OFF: Disables a terrorism information detection in image task.</li>
+                     * 获取Whether to detect sensitive information in images. Valid values:
+<li>ON</li>
+<li>OFF</li>
+                     * @return Switch Whether to detect sensitive information in images. Valid values:
+<li>ON</li>
+<li>OFF</li>
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Switch of a terrorism information detection in image task. Valid values:
-<li>ON: Enables a terrorism information detection in image task;</li>
-<li>OFF: Disables a terrorism information detection in image task.</li>
-                     * @param Switch Switch of a terrorism information detection in image task. Valid values:
-<li>ON: Enables a terrorism information detection in image task;</li>
-<li>OFF: Disables a terrorism information detection in image task.</li>
+                     * 设置Whether to detect sensitive information in images. Valid values:
+<li>ON</li>
+<li>OFF</li>
+                     * @param Switch Whether to detect sensitive information in images. Valid values:
+<li>ON</li>
+<li>OFF</li>
                      */
                     void SetSwitch(const std::string& _switch);
 
@@ -73,50 +73,50 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Filter tags for terrorism information detection in images. If a specified tag is detected, the tag is returned. If no filter tag is specified, all detected tags are returned. Valid values:
-<li>`guns`: weapons and guns</li>
-<li>`crowd`: crowds</li>
-<li>`bloody`: bloodiness</li>
-<li>`police`: police forces</li>
-<li>`banners`: terrorism flags</li>
-<li>`militant`: militants</li>
-<li>`explosion`: explosions and fires</li>
-<li>`terrorists`: terrorists</li>
-<li>`scenario`: terrorism images</li>
-                     * @return LabelSet Filter tags for terrorism information detection in images. If a specified tag is detected, the tag is returned. If no filter tag is specified, all detected tags are returned. Valid values:
-<li>`guns`: weapons and guns</li>
-<li>`crowd`: crowds</li>
-<li>`bloody`: bloodiness</li>
-<li>`police`: police forces</li>
-<li>`banners`: terrorism flags</li>
-<li>`militant`: militants</li>
-<li>`explosion`: explosions and fires</li>
-<li>`terrorists`: terrorists</li>
-<li>`scenario`: terrorism images</li>
+                     * 获取The filter labels for sensitive information detection in images, which specify the types of sensitive information to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
+<li>guns</li>
+<li>crowd</li>
+<li>bloody</li>
+<li>police</li>
+<li>banners (sensitive flags)</li>
+<li>militant</li>
+<li>explosion</li>
+<li>terrorists</li>
+<li>scenario (sensitive scenes) </li>
+                     * @return LabelSet The filter labels for sensitive information detection in images, which specify the types of sensitive information to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
+<li>guns</li>
+<li>crowd</li>
+<li>bloody</li>
+<li>police</li>
+<li>banners (sensitive flags)</li>
+<li>militant</li>
+<li>explosion</li>
+<li>terrorists</li>
+<li>scenario (sensitive scenes) </li>
                      */
                     std::vector<std::string> GetLabelSet() const;
 
                     /**
-                     * 设置Filter tags for terrorism information detection in images. If a specified tag is detected, the tag is returned. If no filter tag is specified, all detected tags are returned. Valid values:
-<li>`guns`: weapons and guns</li>
-<li>`crowd`: crowds</li>
-<li>`bloody`: bloodiness</li>
-<li>`police`: police forces</li>
-<li>`banners`: terrorism flags</li>
-<li>`militant`: militants</li>
-<li>`explosion`: explosions and fires</li>
-<li>`terrorists`: terrorists</li>
-<li>`scenario`: terrorism images</li>
-                     * @param LabelSet Filter tags for terrorism information detection in images. If a specified tag is detected, the tag is returned. If no filter tag is specified, all detected tags are returned. Valid values:
-<li>`guns`: weapons and guns</li>
-<li>`crowd`: crowds</li>
-<li>`bloody`: bloodiness</li>
-<li>`police`: police forces</li>
-<li>`banners`: terrorism flags</li>
-<li>`militant`: militants</li>
-<li>`explosion`: explosions and fires</li>
-<li>`terrorists`: terrorists</li>
-<li>`scenario`: terrorism images</li>
+                     * 设置The filter labels for sensitive information detection in images, which specify the types of sensitive information to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
+<li>guns</li>
+<li>crowd</li>
+<li>bloody</li>
+<li>police</li>
+<li>banners (sensitive flags)</li>
+<li>militant</li>
+<li>explosion</li>
+<li>terrorists</li>
+<li>scenario (sensitive scenes) </li>
+                     * @param LabelSet The filter labels for sensitive information detection in images, which specify the types of sensitive information to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
+<li>guns</li>
+<li>crowd</li>
+<li>bloody</li>
+<li>police</li>
+<li>banners (sensitive flags)</li>
+<li>militant</li>
+<li>explosion</li>
+<li>terrorists</li>
+<li>scenario (sensitive scenes) </li>
                      */
                     void SetLabelSet(const std::vector<std::string>& _labelSet);
 
@@ -165,24 +165,24 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Switch of a terrorism information detection in image task. Valid values:
-<li>ON: Enables a terrorism information detection in image task;</li>
-<li>OFF: Disables a terrorism information detection in image task.</li>
+                     * Whether to detect sensitive information in images. Valid values:
+<li>ON</li>
+<li>OFF</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Filter tags for terrorism information detection in images. If a specified tag is detected, the tag is returned. If no filter tag is specified, all detected tags are returned. Valid values:
-<li>`guns`: weapons and guns</li>
-<li>`crowd`: crowds</li>
-<li>`bloody`: bloodiness</li>
-<li>`police`: police forces</li>
-<li>`banners`: terrorism flags</li>
-<li>`militant`: militants</li>
-<li>`explosion`: explosions and fires</li>
-<li>`terrorists`: terrorists</li>
-<li>`scenario`: terrorism images</li>
+                     * The filter labels for sensitive information detection in images, which specify the types of sensitive information to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
+<li>guns</li>
+<li>crowd</li>
+<li>bloody</li>
+<li>police</li>
+<li>banners (sensitive flags)</li>
+<li>militant</li>
+<li>explosion</li>
+<li>terrorists</li>
+<li>scenario (sensitive scenes) </li>
                      */
                     std::vector<std::string> m_labelSet;
                     bool m_labelSetHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Suspected porn/terrorism segment identified during content audit
+                * The information about the detected pornographic/sensitive segments.
                 */
                 class MediaContentReviewSegmentItem : public AbstractModel
                 {

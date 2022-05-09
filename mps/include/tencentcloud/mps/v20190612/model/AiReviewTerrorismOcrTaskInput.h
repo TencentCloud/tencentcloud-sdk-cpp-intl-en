@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input parameter type of OCR-based terrorism information detection in text task in content audit
+                * The input parameter for OCR-based detection of sensitive information.
                 */
                 class AiReviewTerrorismOcrTaskInput : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Terrorism information detection template ID.
-                     * @return Definition Terrorism information detection template ID.
+                     * 获取The template ID.
+                     * @return Definition The template ID.
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置Terrorism information detection template ID.
-                     * @param Definition Terrorism information detection template ID.
+                     * 设置The template ID.
+                     * @param Definition The template ID.
                      */
                     void SetDefinition(const uint64_t& _definition);
 
@@ -67,7 +67,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Terrorism information detection template ID.
+                     * The template ID.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

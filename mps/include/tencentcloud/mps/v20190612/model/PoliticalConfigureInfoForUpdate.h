@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Control parameter of a politically sensitive information detection task.
+                * The parameters for detecting sensitive information.
                 */
                 class PoliticalConfigureInfoForUpdate : public AbstractModel
                 {
@@ -50,14 +50,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Control parameter of politically sensitive information detection in image.
-                     * @return ImgReviewInfo Control parameter of politically sensitive information detection in image.
+                     * 获取The parameters for detecting sensitive information in images.
+                     * @return ImgReviewInfo The parameters for detecting sensitive information in images.
                      */
                     PoliticalImgReviewTemplateInfoForUpdate GetImgReviewInfo() const;
 
                     /**
-                     * 设置Control parameter of politically sensitive information detection in image.
-                     * @param ImgReviewInfo Control parameter of politically sensitive information detection in image.
+                     * 设置The parameters for detecting sensitive information in images.
+                     * @param ImgReviewInfo The parameters for detecting sensitive information in images.
                      */
                     void SetImgReviewInfo(const PoliticalImgReviewTemplateInfoForUpdate& _imgReviewInfo);
 
@@ -68,14 +68,14 @@ namespace TencentCloud
                     bool ImgReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取Control parameter of politically sensitive information detection in speech.
-                     * @return AsrReviewInfo Control parameter of politically sensitive information detection in speech.
+                     * 获取The parameters for detecting sensitive information based on ASR.
+                     * @return AsrReviewInfo The parameters for detecting sensitive information based on ASR.
                      */
                     PoliticalAsrReviewTemplateInfoForUpdate GetAsrReviewInfo() const;
 
                     /**
-                     * 设置Control parameter of politically sensitive information detection in speech.
-                     * @param AsrReviewInfo Control parameter of politically sensitive information detection in speech.
+                     * 设置The parameters for detecting sensitive information based on ASR.
+                     * @param AsrReviewInfo The parameters for detecting sensitive information based on ASR.
                      */
                     void SetAsrReviewInfo(const PoliticalAsrReviewTemplateInfoForUpdate& _asrReviewInfo);
 
@@ -86,14 +86,14 @@ namespace TencentCloud
                     bool AsrReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取Control parameter of politically sensitive information detection in text.
-                     * @return OcrReviewInfo Control parameter of politically sensitive information detection in text.
+                     * 获取The parameters for detecting sensitive information based on OCR.
+                     * @return OcrReviewInfo The parameters for detecting sensitive information based on OCR.
                      */
                     PoliticalOcrReviewTemplateInfoForUpdate GetOcrReviewInfo() const;
 
                     /**
-                     * 设置Control parameter of politically sensitive information detection in text.
-                     * @param OcrReviewInfo Control parameter of politically sensitive information detection in text.
+                     * 设置The parameters for detecting sensitive information based on OCR.
+                     * @param OcrReviewInfo The parameters for detecting sensitive information based on OCR.
                      */
                     void SetOcrReviewInfo(const PoliticalOcrReviewTemplateInfoForUpdate& _ocrReviewInfo);
 
@@ -106,19 +106,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Control parameter of politically sensitive information detection in image.
+                     * The parameters for detecting sensitive information in images.
                      */
                     PoliticalImgReviewTemplateInfoForUpdate m_imgReviewInfo;
                     bool m_imgReviewInfoHasBeenSet;
 
                     /**
-                     * Control parameter of politically sensitive information detection in speech.
+                     * The parameters for detecting sensitive information based on ASR.
                      */
                     PoliticalAsrReviewTemplateInfoForUpdate m_asrReviewInfo;
                     bool m_asrReviewInfoHasBeenSet;
 
                     /**
-                     * Control parameter of politically sensitive information detection in text.
+                     * The parameters for detecting sensitive information based on OCR.
                      */
                     PoliticalOcrReviewTemplateInfoForUpdate m_ocrReviewInfo;
                     bool m_ocrReviewInfoHasBeenSet;

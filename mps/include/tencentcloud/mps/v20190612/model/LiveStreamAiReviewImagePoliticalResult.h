@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Result of politically sensitive information detection in image in AI-based live stream content audit
+                * The result of detecting sensitive information in live streaming videos.
                 */
                 class LiveStreamAiReviewImagePoliticalResult : public AbstractModel
                 {
@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool EndPtsTimeHasBeenSet() const;
 
                     /**
-                     * 获取Score of a suspected politically sensitive segment.
-                     * @return Confidence Score of a suspected politically sensitive segment.
+                     * 获取The confidence score for the detected sensitive segments.
+                     * @return Confidence The confidence score for the detected sensitive segments.
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Score of a suspected politically sensitive segment.
-                     * @param Confidence Score of a suspected politically sensitive segment.
+                     * 设置The confidence score for the detected sensitive segments.
+                     * @param Confidence The confidence score for the detected sensitive segments.
                      */
                     void SetConfidence(const double& _confidence);
 
@@ -131,22 +131,22 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取Tag of the detected politically sensitive information in video. Valid values:
-<li>politician: Politically sensitive figure.</li>
-<li>violation_photo: Violating photo.</li>
-                     * @return Label Tag of the detected politically sensitive information in video. Valid values:
-<li>politician: Politically sensitive figure.</li>
-<li>violation_photo: Violating photo.</li>
+                     * 获取The labels for the detected sensitive information. Valid values:
+<li>politician</li>
+<li>violation_photo (banned icons)</li>
+                     * @return Label The labels for the detected sensitive information. Valid values:
+<li>politician</li>
+<li>violation_photo (banned icons)</li>
                      */
                     std::string GetLabel() const;
 
                     /**
-                     * 设置Tag of the detected politically sensitive information in video. Valid values:
-<li>politician: Politically sensitive figure.</li>
-<li>violation_photo: Violating photo.</li>
-                     * @param Label Tag of the detected politically sensitive information in video. Valid values:
-<li>politician: Politically sensitive figure.</li>
-<li>violation_photo: Violating photo.</li>
+                     * 设置The labels for the detected sensitive information. Valid values:
+<li>politician</li>
+<li>violation_photo (banned icons)</li>
+                     * @param Label The labels for the detected sensitive information. Valid values:
+<li>politician</li>
+<li>violation_photo (banned icons)</li>
                      */
                     void SetLabel(const std::string& _label);
 
@@ -157,14 +157,14 @@ namespace TencentCloud
                     bool LabelHasBeenSet() const;
 
                     /**
-                     * 获取Name of a politically sensitive figure or violating photo.
-                     * @return Name Name of a politically sensitive figure or violating photo.
+                     * 获取The name of a sensitive person or banned icon.
+                     * @return Name The name of a sensitive person or banned icon.
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Name of a politically sensitive figure or violating photo.
-                     * @param Name Name of a politically sensitive figure or violating photo.
+                     * 设置The name of a sensitive person or banned icon.
+                     * @param Name The name of a sensitive person or banned icon.
                      */
                     void SetName(const std::string& _name);
 
@@ -175,14 +175,14 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Zone coordinates (at the pixel level) of a politically sensitive figure or violating photo: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
-                     * @return AreaCoordSet Zone coordinates (at the pixel level) of a politically sensitive figure or violating photo: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
+                     * 获取The coordinates (pixel) of the detected sensitive people or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
+                     * @return AreaCoordSet The coordinates (pixel) of the detected sensitive people or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
                      */
                     std::vector<int64_t> GetAreaCoordSet() const;
 
                     /**
-                     * 设置Zone coordinates (at the pixel level) of a politically sensitive figure or violating photo: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
-                     * @param AreaCoordSet Zone coordinates (at the pixel level) of a politically sensitive figure or violating photo: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
+                     * 设置The coordinates (pixel) of the detected sensitive people or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
+                     * @param AreaCoordSet The coordinates (pixel) of the detected sensitive people or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
                      */
                     void SetAreaCoordSet(const std::vector<int64_t>& _areaCoordSet);
 
@@ -247,7 +247,7 @@ and will be deleted after `PicUrlExpireTime`).
                     bool m_endPtsTimeHasBeenSet;
 
                     /**
-                     * Score of a suspected politically sensitive segment.
+                     * The confidence score for the detected sensitive segments.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
@@ -262,21 +262,21 @@ and will be deleted after `PicUrlExpireTime`).
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * Tag of the detected politically sensitive information in video. Valid values:
-<li>politician: Politically sensitive figure.</li>
-<li>violation_photo: Violating photo.</li>
+                     * The labels for the detected sensitive information. Valid values:
+<li>politician</li>
+<li>violation_photo (banned icons)</li>
                      */
                     std::string m_label;
                     bool m_labelHasBeenSet;
 
                     /**
-                     * Name of a politically sensitive figure or violating photo.
+                     * The name of a sensitive person or banned icon.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Zone coordinates (at the pixel level) of a politically sensitive figure or violating photo: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
+                     * The coordinates (pixel) of the detected sensitive people or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
                      */
                     std::vector<int64_t> m_areaCoordSet;
                     bool m_areaCoordSetHasBeenSet;
