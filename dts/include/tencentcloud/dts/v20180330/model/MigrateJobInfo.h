@@ -362,6 +362,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool TagsHasBeenSet() const;
 
+                    /**
+                     * 获取Information of the source instance, a cluster edition instance whose access type is not `cdb`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return SrcInfoMulti Information of the source instance, a cluster edition instance whose access type is not `cdb`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<SrcInfo> GetSrcInfoMulti() const;
+
+                    /**
+                     * 设置Information of the source instance, a cluster edition instance whose access type is not `cdb`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param SrcInfoMulti Information of the source instance, a cluster edition instance whose access type is not `cdb`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetSrcInfoMulti(const std::vector<SrcInfo>& _srcInfoMulti);
+
+                    /**
+                     * 判断参数 SrcInfoMulti 是否已赋值
+                     * @return SrcInfoMulti 是否已赋值
+                     */
+                    bool SrcInfoMultiHasBeenSet() const;
+
                 private:
 
                     /**
@@ -466,6 +488,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::vector<TagItem> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * Information of the source instance, a cluster edition instance whose access type is not `cdb`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<SrcInfo> m_srcInfoMulti;
+                    bool m_srcInfoMultiHasBeenSet;
 
                 };
             }

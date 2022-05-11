@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/dts/v20180330/model/SubscribeObject.h>
 #include <tencentcloud/dts/v20180330/model/TagItem.h>
+#include <tencentcloud/dts/v20180330/model/SubsErr.h>
 
 
 namespace TencentCloud
@@ -361,6 +362,32 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool AutoRenewFlagHasBeenSet() const;
 
+                    /**
+                     * 获取Data subscription edition. `txdts`: Legacy edition; `kafka`: Kafka edition.
+                     * @return SubscribeVersion Data subscription edition. `txdts`: Legacy edition; `kafka`: Kafka edition.
+                     */
+                    std::string GetSubscribeVersion() const;
+
+                    /**
+                     * 判断参数 SubscribeVersion 是否已赋值
+                     * @return SubscribeVersion 是否已赋值
+                     */
+                    bool SubscribeVersionHasBeenSet() const;
+
+                    /**
+                     * 获取Error message.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Errors Error message.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<SubsErr> GetErrors() const;
+
+                    /**
+                     * 判断参数 Errors 是否已赋值
+                     * @return Errors 是否已赋值
+                     */
+                    bool ErrorsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -520,6 +547,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     int64_t m_autoRenewFlag;
                     bool m_autoRenewFlagHasBeenSet;
+
+                    /**
+                     * Data subscription edition. `txdts`: Legacy edition; `kafka`: Kafka edition.
+                     */
+                    std::string m_subscribeVersion;
+                    bool m_subscribeVersionHasBeenSet;
+
+                    /**
+                     * Error message.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<SubsErr> m_errors;
+                    bool m_errorsHasBeenSet;
 
                 };
             }

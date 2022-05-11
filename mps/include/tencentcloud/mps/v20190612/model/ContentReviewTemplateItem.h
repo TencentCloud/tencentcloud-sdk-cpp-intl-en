@@ -259,6 +259,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool UpdateTimeHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return Type 
+                     */
+                    std::string GetType() const;
+
+                    /**
+                     * 设置
+                     * @param Type 
+                     */
+                    void SetType(const std::string& _type);
+
+                    /**
+                     * 判断参数 Type 是否已赋值
+                     * @return Type 是否已赋值
+                     */
+                    bool TypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -327,6 +345,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_type;
+                    bool m_typeHasBeenSet;
 
                 };
             }

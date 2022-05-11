@@ -151,6 +151,24 @@ namespace TencentCloud
                      */
                     bool TagsHasBeenSet() const;
 
+                    /**
+                     * 获取A custom instance name.
+                     * @return Name A custom instance name.
+                     */
+                    std::string GetName() const;
+
+                    /**
+                     * 设置A custom instance name.
+                     * @param Name A custom instance name.
+                     */
+                    void SetName(const std::string& _name);
+
+                    /**
+                     * 判断参数 Name 是否已赋值
+                     * @return Name 是否已赋值
+                     */
+                    bool NameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -188,6 +206,12 @@ namespace TencentCloud
                      */
                     std::vector<TagItem> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * A custom instance name.
+                     */
+                    std::string m_name;
+                    bool m_nameHasBeenSet;
 
                 };
             }

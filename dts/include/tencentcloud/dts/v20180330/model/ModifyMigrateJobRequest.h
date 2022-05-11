@@ -217,6 +217,42 @@ This field does not need to be set when the entire instance is to be migrated
                      */
                     bool DatabaseInfoHasBeenSet() const;
 
+                    /**
+                     * 获取Source instance type. `simple`: Primary/Secondary node; `cluster`: Cluster node. If this field is left empty, the value defaults to primary/secondary node.
+                     * @return SrcNodeType Source instance type. `simple`: Primary/Secondary node; `cluster`: Cluster node. If this field is left empty, the value defaults to primary/secondary node.
+                     */
+                    std::string GetSrcNodeType() const;
+
+                    /**
+                     * 设置Source instance type. `simple`: Primary/Secondary node; `cluster`: Cluster node. If this field is left empty, the value defaults to primary/secondary node.
+                     * @param SrcNodeType Source instance type. `simple`: Primary/Secondary node; `cluster`: Cluster node. If this field is left empty, the value defaults to primary/secondary node.
+                     */
+                    void SetSrcNodeType(const std::string& _srcNodeType);
+
+                    /**
+                     * 判断参数 SrcNodeType 是否已赋值
+                     * @return SrcNodeType 是否已赋值
+                     */
+                    bool SrcNodeTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Source instance information, which is correlated with the migration task type.
+                     * @return SrcInfoMulti Source instance information, which is correlated with the migration task type.
+                     */
+                    std::vector<SrcInfo> GetSrcInfoMulti() const;
+
+                    /**
+                     * 设置Source instance information, which is correlated with the migration task type.
+                     * @param SrcInfoMulti Source instance information, which is correlated with the migration task type.
+                     */
+                    void SetSrcInfoMulti(const std::vector<SrcInfo>& _srcInfoMulti);
+
+                    /**
+                     * 判断参数 SrcInfoMulti 是否已赋值
+                     * @return SrcInfoMulti 是否已赋值
+                     */
+                    bool SrcInfoMultiHasBeenSet() const;
+
                 private:
 
                     /**
@@ -273,6 +309,18 @@ This field does not need to be set when the entire instance is to be migrated
                      */
                     std::string m_databaseInfo;
                     bool m_databaseInfoHasBeenSet;
+
+                    /**
+                     * Source instance type. `simple`: Primary/Secondary node; `cluster`: Cluster node. If this field is left empty, the value defaults to primary/secondary node.
+                     */
+                    std::string m_srcNodeType;
+                    bool m_srcNodeTypeHasBeenSet;
+
+                    /**
+                     * Source instance information, which is correlated with the migration task type.
+                     */
+                    std::vector<SrcInfo> m_srcInfoMulti;
+                    bool m_srcInfoMultiHasBeenSet;
 
                 };
             }
