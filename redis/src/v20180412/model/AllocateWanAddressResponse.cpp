@@ -14,21 +14,22 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/as/v20180419/model/ScaleInInstancesResponse.h>
+#include <tencentcloud/redis/v20180412/model/AllocateWanAddressResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using TencentCloud::CoreInternalOutcome;
-using namespace TencentCloud::As::V20180419::Model;
+using namespace TencentCloud::Redis::V20180412::Model;
 using namespace std;
 
-ScaleInInstancesResponse::ScaleInInstancesResponse() :
-    m_activityIdHasBeenSet(false)
+AllocateWanAddressResponse::AllocateWanAddressResponse() :
+    m_flowIdHasBeenSet(false),
+    m_wanStatusHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome ScaleInInstancesResponse::Deserialize(const string &payload)
+CoreInternalOutcome AllocateWanAddressResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -62,32 +63,50 @@ CoreInternalOutcome ScaleInInstancesResponse::Deserialize(const string &payload)
     }
 
 
-    if (rsp.HasMember("ActivityId") && !rsp["ActivityId"].IsNull())
+    if (rsp.HasMember("FlowId") && !rsp["FlowId"].IsNull())
     {
-        if (!rsp["ActivityId"].IsString())
+        if (!rsp["FlowId"].IsInt64())
         {
-            return CoreInternalOutcome(Core::Error("response `ActivityId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FlowId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
-        m_activityId = string(rsp["ActivityId"].GetString());
-        m_activityIdHasBeenSet = true;
+        m_flowId = rsp["FlowId"].GetInt64();
+        m_flowIdHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("WanStatus") && !rsp["WanStatus"].IsNull())
+    {
+        if (!rsp["WanStatus"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `WanStatus` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_wanStatus = string(rsp["WanStatus"].GetString());
+        m_wanStatusHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string ScaleInInstancesResponse::ToJsonString() const
+string AllocateWanAddressResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_activityIdHasBeenSet)
+    if (m_flowIdHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "ActivityId";
+        string key = "FlowId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_activityId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, m_flowId, allocator);
+    }
+
+    if (m_wanStatusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "WanStatus";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_wanStatus.c_str(), allocator).Move(), allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -102,14 +121,24 @@ string ScaleInInstancesResponse::ToJsonString() const
 }
 
 
-string ScaleInInstancesResponse::GetActivityId() const
+int64_t AllocateWanAddressResponse::GetFlowId() const
 {
-    return m_activityId;
+    return m_flowId;
 }
 
-bool ScaleInInstancesResponse::ActivityIdHasBeenSet() const
+bool AllocateWanAddressResponse::FlowIdHasBeenSet() const
 {
-    return m_activityIdHasBeenSet;
+    return m_flowIdHasBeenSet;
+}
+
+string AllocateWanAddressResponse::GetWanStatus() const
+{
+    return m_wanStatus;
+}
+
+bool AllocateWanAddressResponse::WanStatusHasBeenSet() const
+{
+    return m_wanStatusHasBeenSet;
 }
 
 

@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_AS_V20180419_MODEL_INSTANCETAG_H_
-#define TENCENTCLOUD_AS_V20180419_MODEL_INSTANCETAG_H_
+#ifndef TENCENTCLOUD_REDIS_V20180412_MODEL_TENDISNODES_H_
+#define TENCENTCLOUD_REDIS_V20180412_MODEL_TENDISNODES_H_
 
 #include <string>
 #include <vector>
@@ -28,73 +28,73 @@
 
 namespace TencentCloud
 {
-    namespace As
+    namespace Redis
     {
-        namespace V20180419
+        namespace V20180412
         {
             namespace Model
             {
                 /**
-                * Instance tag. This parameter is used to bind tags to newly added instances.
+                * Tendis node information
                 */
-                class InstanceTag : public AbstractModel
+                class TendisNodes : public AbstractModel
                 {
                 public:
-                    InstanceTag();
-                    ~InstanceTag() = default;
+                    TendisNodes();
+                    ~TendisNodes() = default;
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
                     /**
-                     * 获取Tag key
-                     * @return Key Tag key
+                     * 获取Node ID
+                     * @return NodeId Node ID
                      */
-                    std::string GetKey() const;
+                    std::string GetNodeId() const;
 
                     /**
-                     * 设置Tag key
-                     * @param Key Tag key
+                     * 设置Node ID
+                     * @param NodeId Node ID
                      */
-                    void SetKey(const std::string& _key);
+                    void SetNodeId(const std::string& _nodeId);
 
                     /**
-                     * 判断参数 Key 是否已赋值
-                     * @return Key 是否已赋值
+                     * 判断参数 NodeId 是否已赋值
+                     * @return NodeId 是否已赋值
                      */
-                    bool KeyHasBeenSet() const;
+                    bool NodeIdHasBeenSet() const;
 
                     /**
-                     * 获取Tag value
-                     * @return Value Tag value
+                     * 获取Node role
+                     * @return NodeRole Node role
                      */
-                    std::string GetValue() const;
+                    std::string GetNodeRole() const;
 
                     /**
-                     * 设置Tag value
-                     * @param Value Tag value
+                     * 设置Node role
+                     * @param NodeRole Node role
                      */
-                    void SetValue(const std::string& _value);
+                    void SetNodeRole(const std::string& _nodeRole);
 
                     /**
-                     * 判断参数 Value 是否已赋值
-                     * @return Value 是否已赋值
+                     * 判断参数 NodeRole 是否已赋值
+                     * @return NodeRole 是否已赋值
                      */
-                    bool ValueHasBeenSet() const;
+                    bool NodeRoleHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Tag key
+                     * Node ID
                      */
-                    std::string m_key;
-                    bool m_keyHasBeenSet;
+                    std::string m_nodeId;
+                    bool m_nodeIdHasBeenSet;
 
                     /**
-                     * Tag value
+                     * Node role
                      */
-                    std::string m_value;
-                    bool m_valueHasBeenSet;
+                    std::string m_nodeRole;
+                    bool m_nodeRoleHasBeenSet;
 
                 };
             }
@@ -102,4 +102,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_AS_V20180419_MODEL_INSTANCETAG_H_
+#endif // !TENCENTCLOUD_REDIS_V20180412_MODEL_TENDISNODES_H_

@@ -66,6 +66,36 @@ namespace TencentCloud
                     bool AutoScalingGroupIdHasBeenSet() const;
 
                     /**
+                     * 获取Scaling group warning level. Valid values:<br>
+<li>NORMAL: Normal<br>
+<li>WARNING: Warning<br>
+<li>CRITICAL: Serious warning<br>
+                     * @return Level Scaling group warning level. Valid values:<br>
+<li>NORMAL: Normal<br>
+<li>WARNING: Warning<br>
+<li>CRITICAL: Serious warning<br>
+                     */
+                    std::string GetLevel() const;
+
+                    /**
+                     * 设置Scaling group warning level. Valid values:<br>
+<li>NORMAL: Normal<br>
+<li>WARNING: Warning<br>
+<li>CRITICAL: Serious warning<br>
+                     * @param Level Scaling group warning level. Valid values:<br>
+<li>NORMAL: Normal<br>
+<li>WARNING: Warning<br>
+<li>CRITICAL: Serious warning<br>
+                     */
+                    void SetLevel(const std::string& _level);
+
+                    /**
+                     * 判断参数 Level 是否已赋值
+                     * @return Level 是否已赋值
+                     */
+                    bool LevelHasBeenSet() const;
+
+                    /**
                      * 获取A collection of suggestions for scaling group configurations.
                      * @return Advices A collection of suggestions for scaling group configurations.
                      */
@@ -90,6 +120,15 @@ namespace TencentCloud
                      */
                     std::string m_autoScalingGroupId;
                     bool m_autoScalingGroupIdHasBeenSet;
+
+                    /**
+                     * Scaling group warning level. Valid values:<br>
+<li>NORMAL: Normal<br>
+<li>WARNING: Warning<br>
+<li>CRITICAL: Serious warning<br>
+                     */
+                    std::string m_level;
+                    bool m_levelHasBeenSet;
 
                     /**
                      * A collection of suggestions for scaling group configurations.

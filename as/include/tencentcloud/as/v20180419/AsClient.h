@@ -35,8 +35,6 @@
 #include <tencentcloud/as/v20180419/model/CreateAutoScalingGroupResponse.h>
 #include <tencentcloud/as/v20180419/model/CreateAutoScalingGroupFromInstanceRequest.h>
 #include <tencentcloud/as/v20180419/model/CreateAutoScalingGroupFromInstanceResponse.h>
-#include <tencentcloud/as/v20180419/model/CreateLaunchConfigurationRequest.h>
-#include <tencentcloud/as/v20180419/model/CreateLaunchConfigurationResponse.h>
 #include <tencentcloud/as/v20180419/model/CreateLifecycleHookRequest.h>
 #include <tencentcloud/as/v20180419/model/CreateLifecycleHookResponse.h>
 #include <tencentcloud/as/v20180419/model/CreateNotificationConfigurationRequest.h>
@@ -69,8 +67,6 @@
 #include <tencentcloud/as/v20180419/model/DescribeAutoScalingGroupsResponse.h>
 #include <tencentcloud/as/v20180419/model/DescribeAutoScalingInstancesRequest.h>
 #include <tencentcloud/as/v20180419/model/DescribeAutoScalingInstancesResponse.h>
-#include <tencentcloud/as/v20180419/model/DescribeLaunchConfigurationsRequest.h>
-#include <tencentcloud/as/v20180419/model/DescribeLaunchConfigurationsResponse.h>
 #include <tencentcloud/as/v20180419/model/DescribeLifecycleHooksRequest.h>
 #include <tencentcloud/as/v20180419/model/DescribeLifecycleHooksResponse.h>
 #include <tencentcloud/as/v20180419/model/DescribeNotificationConfigurationsRequest.h>
@@ -83,8 +79,6 @@
 #include <tencentcloud/as/v20180419/model/DetachInstancesResponse.h>
 #include <tencentcloud/as/v20180419/model/DetachLoadBalancersRequest.h>
 #include <tencentcloud/as/v20180419/model/DetachLoadBalancersResponse.h>
-#include <tencentcloud/as/v20180419/model/DisableAutoScalingGroupRequest.h>
-#include <tencentcloud/as/v20180419/model/DisableAutoScalingGroupResponse.h>
 #include <tencentcloud/as/v20180419/model/EnableAutoScalingGroupRequest.h>
 #include <tencentcloud/as/v20180419/model/EnableAutoScalingGroupResponse.h>
 #include <tencentcloud/as/v20180419/model/ExecuteScalingPolicyRequest.h>
@@ -95,6 +89,8 @@
 #include <tencentcloud/as/v20180419/model/ModifyDesiredCapacityResponse.h>
 #include <tencentcloud/as/v20180419/model/ModifyLaunchConfigurationAttributesRequest.h>
 #include <tencentcloud/as/v20180419/model/ModifyLaunchConfigurationAttributesResponse.h>
+#include <tencentcloud/as/v20180419/model/ModifyLifecycleHookRequest.h>
+#include <tencentcloud/as/v20180419/model/ModifyLifecycleHookResponse.h>
 #include <tencentcloud/as/v20180419/model/ModifyLoadBalancerTargetAttributesRequest.h>
 #include <tencentcloud/as/v20180419/model/ModifyLoadBalancerTargetAttributesResponse.h>
 #include <tencentcloud/as/v20180419/model/ModifyLoadBalancersRequest.h>
@@ -107,18 +103,12 @@
 #include <tencentcloud/as/v20180419/model/ModifyScheduledActionResponse.h>
 #include <tencentcloud/as/v20180419/model/RemoveInstancesRequest.h>
 #include <tencentcloud/as/v20180419/model/RemoveInstancesResponse.h>
-#include <tencentcloud/as/v20180419/model/ScaleInInstancesRequest.h>
-#include <tencentcloud/as/v20180419/model/ScaleInInstancesResponse.h>
-#include <tencentcloud/as/v20180419/model/ScaleOutInstancesRequest.h>
-#include <tencentcloud/as/v20180419/model/ScaleOutInstancesResponse.h>
 #include <tencentcloud/as/v20180419/model/SetInstancesProtectionRequest.h>
 #include <tencentcloud/as/v20180419/model/SetInstancesProtectionResponse.h>
 #include <tencentcloud/as/v20180419/model/StartAutoScalingInstancesRequest.h>
 #include <tencentcloud/as/v20180419/model/StartAutoScalingInstancesResponse.h>
 #include <tencentcloud/as/v20180419/model/StopAutoScalingInstancesRequest.h>
 #include <tencentcloud/as/v20180419/model/StopAutoScalingInstancesResponse.h>
-#include <tencentcloud/as/v20180419/model/UpgradeLaunchConfigurationRequest.h>
-#include <tencentcloud/as/v20180419/model/UpgradeLaunchConfigurationResponse.h>
 #include <tencentcloud/as/v20180419/model/UpgradeLifecycleHookRequest.h>
 #include <tencentcloud/as/v20180419/model/UpgradeLifecycleHookResponse.h>
 
@@ -153,9 +143,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateAutoScalingGroupFromInstanceResponse> CreateAutoScalingGroupFromInstanceOutcome;
                 typedef std::future<CreateAutoScalingGroupFromInstanceOutcome> CreateAutoScalingGroupFromInstanceOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::CreateAutoScalingGroupFromInstanceRequest&, CreateAutoScalingGroupFromInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAutoScalingGroupFromInstanceAsyncHandler;
-                typedef Outcome<Core::Error, Model::CreateLaunchConfigurationResponse> CreateLaunchConfigurationOutcome;
-                typedef std::future<CreateLaunchConfigurationOutcome> CreateLaunchConfigurationOutcomeCallable;
-                typedef std::function<void(const AsClient*, const Model::CreateLaunchConfigurationRequest&, CreateLaunchConfigurationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLaunchConfigurationAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateLifecycleHookResponse> CreateLifecycleHookOutcome;
                 typedef std::future<CreateLifecycleHookOutcome> CreateLifecycleHookOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::CreateLifecycleHookRequest&, CreateLifecycleHookOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLifecycleHookAsyncHandler;
@@ -204,9 +191,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeAutoScalingInstancesResponse> DescribeAutoScalingInstancesOutcome;
                 typedef std::future<DescribeAutoScalingInstancesOutcome> DescribeAutoScalingInstancesOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::DescribeAutoScalingInstancesRequest&, DescribeAutoScalingInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAutoScalingInstancesAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeLaunchConfigurationsResponse> DescribeLaunchConfigurationsOutcome;
-                typedef std::future<DescribeLaunchConfigurationsOutcome> DescribeLaunchConfigurationsOutcomeCallable;
-                typedef std::function<void(const AsClient*, const Model::DescribeLaunchConfigurationsRequest&, DescribeLaunchConfigurationsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLaunchConfigurationsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeLifecycleHooksResponse> DescribeLifecycleHooksOutcome;
                 typedef std::future<DescribeLifecycleHooksOutcome> DescribeLifecycleHooksOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::DescribeLifecycleHooksRequest&, DescribeLifecycleHooksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLifecycleHooksAsyncHandler;
@@ -225,9 +209,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DetachLoadBalancersResponse> DetachLoadBalancersOutcome;
                 typedef std::future<DetachLoadBalancersOutcome> DetachLoadBalancersOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::DetachLoadBalancersRequest&, DetachLoadBalancersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DetachLoadBalancersAsyncHandler;
-                typedef Outcome<Core::Error, Model::DisableAutoScalingGroupResponse> DisableAutoScalingGroupOutcome;
-                typedef std::future<DisableAutoScalingGroupOutcome> DisableAutoScalingGroupOutcomeCallable;
-                typedef std::function<void(const AsClient*, const Model::DisableAutoScalingGroupRequest&, DisableAutoScalingGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisableAutoScalingGroupAsyncHandler;
                 typedef Outcome<Core::Error, Model::EnableAutoScalingGroupResponse> EnableAutoScalingGroupOutcome;
                 typedef std::future<EnableAutoScalingGroupOutcome> EnableAutoScalingGroupOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::EnableAutoScalingGroupRequest&, EnableAutoScalingGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnableAutoScalingGroupAsyncHandler;
@@ -243,6 +224,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyLaunchConfigurationAttributesResponse> ModifyLaunchConfigurationAttributesOutcome;
                 typedef std::future<ModifyLaunchConfigurationAttributesOutcome> ModifyLaunchConfigurationAttributesOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::ModifyLaunchConfigurationAttributesRequest&, ModifyLaunchConfigurationAttributesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLaunchConfigurationAttributesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyLifecycleHookResponse> ModifyLifecycleHookOutcome;
+                typedef std::future<ModifyLifecycleHookOutcome> ModifyLifecycleHookOutcomeCallable;
+                typedef std::function<void(const AsClient*, const Model::ModifyLifecycleHookRequest&, ModifyLifecycleHookOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLifecycleHookAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyLoadBalancerTargetAttributesResponse> ModifyLoadBalancerTargetAttributesOutcome;
                 typedef std::future<ModifyLoadBalancerTargetAttributesOutcome> ModifyLoadBalancerTargetAttributesOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::ModifyLoadBalancerTargetAttributesRequest&, ModifyLoadBalancerTargetAttributesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLoadBalancerTargetAttributesAsyncHandler;
@@ -261,12 +245,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::RemoveInstancesResponse> RemoveInstancesOutcome;
                 typedef std::future<RemoveInstancesOutcome> RemoveInstancesOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::RemoveInstancesRequest&, RemoveInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RemoveInstancesAsyncHandler;
-                typedef Outcome<Core::Error, Model::ScaleInInstancesResponse> ScaleInInstancesOutcome;
-                typedef std::future<ScaleInInstancesOutcome> ScaleInInstancesOutcomeCallable;
-                typedef std::function<void(const AsClient*, const Model::ScaleInInstancesRequest&, ScaleInInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ScaleInInstancesAsyncHandler;
-                typedef Outcome<Core::Error, Model::ScaleOutInstancesResponse> ScaleOutInstancesOutcome;
-                typedef std::future<ScaleOutInstancesOutcome> ScaleOutInstancesOutcomeCallable;
-                typedef std::function<void(const AsClient*, const Model::ScaleOutInstancesRequest&, ScaleOutInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ScaleOutInstancesAsyncHandler;
                 typedef Outcome<Core::Error, Model::SetInstancesProtectionResponse> SetInstancesProtectionOutcome;
                 typedef std::future<SetInstancesProtectionOutcome> SetInstancesProtectionOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::SetInstancesProtectionRequest&, SetInstancesProtectionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SetInstancesProtectionAsyncHandler;
@@ -276,9 +254,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::StopAutoScalingInstancesResponse> StopAutoScalingInstancesOutcome;
                 typedef std::future<StopAutoScalingInstancesOutcome> StopAutoScalingInstancesOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::StopAutoScalingInstancesRequest&, StopAutoScalingInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopAutoScalingInstancesAsyncHandler;
-                typedef Outcome<Core::Error, Model::UpgradeLaunchConfigurationResponse> UpgradeLaunchConfigurationOutcome;
-                typedef std::future<UpgradeLaunchConfigurationOutcome> UpgradeLaunchConfigurationOutcomeCallable;
-                typedef std::function<void(const AsClient*, const Model::UpgradeLaunchConfigurationRequest&, UpgradeLaunchConfigurationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpgradeLaunchConfigurationAsyncHandler;
                 typedef Outcome<Core::Error, Model::UpgradeLifecycleHookResponse> UpgradeLifecycleHookOutcome;
                 typedef std::future<UpgradeLifecycleHookOutcome> UpgradeLifecycleHookOutcomeCallable;
                 typedef std::function<void(const AsClient*, const Model::UpgradeLifecycleHookRequest&, UpgradeLifecycleHookOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpgradeLifecycleHookAsyncHandler;
@@ -344,20 +319,6 @@ Note: for a scaling group that is created based on a monthly-subscribed instance
                 CreateAutoScalingGroupFromInstanceOutcome CreateAutoScalingGroupFromInstance(const Model::CreateAutoScalingGroupFromInstanceRequest &request);
                 void CreateAutoScalingGroupFromInstanceAsync(const Model::CreateAutoScalingGroupFromInstanceRequest& request, const CreateAutoScalingGroupFromInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateAutoScalingGroupFromInstanceOutcomeCallable CreateAutoScalingGroupFromInstanceCallable(const Model::CreateAutoScalingGroupFromInstanceRequest& request);
-
-                /**
-                 *This API (CreateLaunchConfiguration) is used to create a launch configuration.
-
-* A few fields of a launch configuration can be modified through `ModifyLaunchConfigurationAttributes`. To use a new launch configuration, it is recommended to create it from scratch.
-
-* You can create up to 20 launch configurations for each project. For more information, see [Usage Limits](https://intl.cloud.tencent.com/document/product/377/3120?from_cn_redirect=1).
-
-                 * @param req CreateLaunchConfigurationRequest
-                 * @return CreateLaunchConfigurationOutcome
-                 */
-                CreateLaunchConfigurationOutcome CreateLaunchConfiguration(const Model::CreateLaunchConfigurationRequest &request);
-                void CreateLaunchConfigurationAsync(const Model::CreateLaunchConfigurationRequest& request, const CreateLaunchConfigurationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                CreateLaunchConfigurationOutcomeCallable CreateLaunchConfigurationCallable(const Model::CreateLaunchConfigurationRequest& request);
 
                 /**
                  *This API (CreateLifeCycleHook) is used to create a lifecycle hook.
@@ -558,18 +519,6 @@ When the notification is sent to a CMQ topic or queue, the following contents ar
                 DescribeAutoScalingInstancesOutcomeCallable DescribeAutoScalingInstancesCallable(const Model::DescribeAutoScalingInstancesRequest& request);
 
                 /**
-                 *This API (DescribeLaunchConfigurations) is used to query the information of launch configurations.
-
-* You can query the launch configuration details based on information such as launch configuration ID and name. For more information on filters, see `Filter`.
-* If the parameter is empty, a certain number (specified by `Limit` and 20 by default) of launch configurations of the current user will be returned.
-                 * @param req DescribeLaunchConfigurationsRequest
-                 * @return DescribeLaunchConfigurationsOutcome
-                 */
-                DescribeLaunchConfigurationsOutcome DescribeLaunchConfigurations(const Model::DescribeLaunchConfigurationsRequest &request);
-                void DescribeLaunchConfigurationsAsync(const Model::DescribeLaunchConfigurationsRequest& request, const DescribeLaunchConfigurationsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeLaunchConfigurationsOutcomeCallable DescribeLaunchConfigurationsCallable(const Model::DescribeLaunchConfigurationsRequest& request);
-
-                /**
                  *This API (DescribeLifecycleHooks) is used to query the information of lifecycle hooks.
 
 * You can query the details of lifecycle hooks based on information such as auto scaling group ID, lifecycle hook ID, or lifecycle hook name. For more information on filters, see `Filter`.
@@ -636,15 +585,6 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
                 DetachLoadBalancersOutcomeCallable DetachLoadBalancersCallable(const Model::DetachLoadBalancersRequest& request);
 
                 /**
-                 *This API (DisableAutoScalingGroup) is used to disable the specified auto scaling group.
-                 * @param req DisableAutoScalingGroupRequest
-                 * @return DisableAutoScalingGroupOutcome
-                 */
-                DisableAutoScalingGroupOutcome DisableAutoScalingGroup(const Model::DisableAutoScalingGroupRequest &request);
-                void DisableAutoScalingGroupAsync(const Model::DisableAutoScalingGroupRequest& request, const DisableAutoScalingGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DisableAutoScalingGroupOutcomeCallable DisableAutoScalingGroupCallable(const Model::DisableAutoScalingGroupRequest& request);
-
-                /**
                  *This API (EnableAutoScalingGroup) is used to enable the specified auto scaling group.
                  * @param req EnableAutoScalingGroupRequest
                  * @return EnableAutoScalingGroupOutcome
@@ -694,6 +634,15 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
                 ModifyLaunchConfigurationAttributesOutcome ModifyLaunchConfigurationAttributes(const Model::ModifyLaunchConfigurationAttributesRequest &request);
                 void ModifyLaunchConfigurationAttributesAsync(const Model::ModifyLaunchConfigurationAttributesRequest& request, const ModifyLaunchConfigurationAttributesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyLaunchConfigurationAttributesOutcomeCallable ModifyLaunchConfigurationAttributesCallable(const Model::ModifyLaunchConfigurationAttributesRequest& request);
+
+                /**
+                 *This API is used to modify the lifecycle hook.
+                 * @param req ModifyLifecycleHookRequest
+                 * @return ModifyLifecycleHookOutcome
+                 */
+                ModifyLifecycleHookOutcome ModifyLifecycleHook(const Model::ModifyLifecycleHookRequest &request);
+                void ModifyLifecycleHookAsync(const Model::ModifyLifecycleHookRequest& request, const ModifyLifecycleHookAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyLifecycleHookOutcomeCallable ModifyLifecycleHookCallable(const Model::ModifyLifecycleHookRequest& request);
 
                 /**
                  *This API is used to modify the target rule attributes of the CLB in the scaling group.
@@ -758,32 +707,6 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
                 RemoveInstancesOutcomeCallable RemoveInstancesCallable(const Model::RemoveInstancesRequest& request);
 
                 /**
-                 *This API is used to reduce the specified number of instances from the scaling group, which returns the scaling activity ID `ActivityId`.
-* The scaling group is not active.
-* The scale-in instances will be selected according to the `TerminationPolicies` policy as described in [Reducing Capacity](https://intl.cloud.tencent.com/document/product/377/8563?from_cn_redirect=1).
-* Only the `IN_SERVICE` instances will be reduced. To reduce instances in other statues, use the [`DetachInstances`](https://intl.cloud.tencent.com/document/api/377/20436?from_cn_redirect=1) or [`RemoveInstances`](https://intl.cloud.tencent.com/document/api/377/20431?from_cn_redirect=1) API.
-* The desired capacity will be reduced accordingly. The new desired capacity should be no less than the minimum capacity.
-* If the scale-in activity failed or partially succeeded, the final desired capacity only deducts the instances that have been reduced successfully.
-                 * @param req ScaleInInstancesRequest
-                 * @return ScaleInInstancesOutcome
-                 */
-                ScaleInInstancesOutcome ScaleInInstances(const Model::ScaleInInstancesRequest &request);
-                void ScaleInInstancesAsync(const Model::ScaleInInstancesRequest& request, const ScaleInInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                ScaleInInstancesOutcomeCallable ScaleInInstancesCallable(const Model::ScaleInInstancesRequest& request);
-
-                /**
-                 *This API is used to add the specified number of instances to the scaling group, which returns the scaling activity ID `ActivityId`.
-* The scaling group is not active.
-* The desired capacity will be increased accordingly. The new desired capacity should be no more than the maximum capacity.
-* If the scale-out activity failed or partially succeeded, the final desired capacity only includes the instances that have been added successfully.
-                 * @param req ScaleOutInstancesRequest
-                 * @return ScaleOutInstancesOutcome
-                 */
-                ScaleOutInstancesOutcome ScaleOutInstances(const Model::ScaleOutInstancesRequest &request);
-                void ScaleOutInstancesAsync(const Model::ScaleOutInstancesRequest& request, const ScaleOutInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                ScaleOutInstancesOutcomeCallable ScaleOutInstancesCallable(const Model::ScaleOutInstancesRequest& request);
-
-                /**
                  *This API is used to enable scale-in protection for an instance.
 When scale-in protection is enabled, the instance will not be removed in scale-in activities triggered by replacement of unhealthy instances, alarm threshold reached, change of desired quantity, etc.
                  * @param req SetInstancesProtectionRequest
@@ -816,18 +739,6 @@ When scale-in protection is enabled, the instance will not be removed in scale-i
                 StopAutoScalingInstancesOutcome StopAutoScalingInstances(const Model::StopAutoScalingInstancesRequest &request);
                 void StopAutoScalingInstancesAsync(const Model::StopAutoScalingInstancesRequest& request, const StopAutoScalingInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 StopAutoScalingInstancesOutcomeCallable StopAutoScalingInstancesCallable(const Model::StopAutoScalingInstancesRequest& request);
-
-                /**
-                 *This API (UpgradeLaunchConfiguration) is used to upgrade a launch configuration.
-
-* This API is used to upgrade a launch configuration in a "completely overriding" manner, i.e., it uniformly sets a new configuration according to the API parameters regardless of the original parameters. If optional fields are left empty, their default values will be used.
-* After the launch configuration is upgraded, the existing instances that have been created by it will not be changed, but new instances will be created according to the new configuration.
-                 * @param req UpgradeLaunchConfigurationRequest
-                 * @return UpgradeLaunchConfigurationOutcome
-                 */
-                UpgradeLaunchConfigurationOutcome UpgradeLaunchConfiguration(const Model::UpgradeLaunchConfigurationRequest &request);
-                void UpgradeLaunchConfigurationAsync(const Model::UpgradeLaunchConfigurationRequest& request, const UpgradeLaunchConfigurationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                UpgradeLaunchConfigurationOutcomeCallable UpgradeLaunchConfigurationCallable(const Model::UpgradeLaunchConfigurationRequest& request);
 
                 /**
                  *This API (UpgradeLifecycleHook) is used to upgrade a lifecycle hook.

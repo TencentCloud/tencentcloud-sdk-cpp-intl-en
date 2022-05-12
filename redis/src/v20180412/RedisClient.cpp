@@ -40,6 +40,92 @@ RedisClient::RedisClient(const Credential &credential, const string &region, con
 }
 
 
+RedisClient::AllocateWanAddressOutcome RedisClient::AllocateWanAddress(const AllocateWanAddressRequest &request)
+{
+    auto outcome = MakeRequest(request, "AllocateWanAddress");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AllocateWanAddressResponse rsp = AllocateWanAddressResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AllocateWanAddressOutcome(rsp);
+        else
+            return AllocateWanAddressOutcome(o.GetError());
+    }
+    else
+    {
+        return AllocateWanAddressOutcome(outcome.GetError());
+    }
+}
+
+void RedisClient::AllocateWanAddressAsync(const AllocateWanAddressRequest& request, const AllocateWanAddressAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->AllocateWanAddress(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+RedisClient::AllocateWanAddressOutcomeCallable RedisClient::AllocateWanAddressCallable(const AllocateWanAddressRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<AllocateWanAddressOutcome()>>(
+        [this, request]()
+        {
+            return this->AllocateWanAddress(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+RedisClient::ChangeReplicaToMasterOutcome RedisClient::ChangeReplicaToMaster(const ChangeReplicaToMasterRequest &request)
+{
+    auto outcome = MakeRequest(request, "ChangeReplicaToMaster");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ChangeReplicaToMasterResponse rsp = ChangeReplicaToMasterResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ChangeReplicaToMasterOutcome(rsp);
+        else
+            return ChangeReplicaToMasterOutcome(o.GetError());
+    }
+    else
+    {
+        return ChangeReplicaToMasterOutcome(outcome.GetError());
+    }
+}
+
+void RedisClient::ChangeReplicaToMasterAsync(const ChangeReplicaToMasterRequest& request, const ChangeReplicaToMasterAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ChangeReplicaToMaster(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+RedisClient::ChangeReplicaToMasterOutcomeCallable RedisClient::ChangeReplicaToMasterCallable(const ChangeReplicaToMasterRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ChangeReplicaToMasterOutcome()>>(
+        [this, request]()
+        {
+            return this->ChangeReplicaToMaster(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 RedisClient::DescribeInstanceAccountOutcome RedisClient::DescribeInstanceAccount(const DescribeInstanceAccountRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeInstanceAccount");
@@ -427,6 +513,49 @@ RedisClient::DescribeInstanceMonitorTopNCmdTookOutcomeCallable RedisClient::Desc
     return task->get_future();
 }
 
+RedisClient::DescribeInstanceNodeInfoOutcome RedisClient::DescribeInstanceNodeInfo(const DescribeInstanceNodeInfoRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeInstanceNodeInfo");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeInstanceNodeInfoResponse rsp = DescribeInstanceNodeInfoResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeInstanceNodeInfoOutcome(rsp);
+        else
+            return DescribeInstanceNodeInfoOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeInstanceNodeInfoOutcome(outcome.GetError());
+    }
+}
+
+void RedisClient::DescribeInstanceNodeInfoAsync(const DescribeInstanceNodeInfoRequest& request, const DescribeInstanceNodeInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeInstanceNodeInfo(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+RedisClient::DescribeInstanceNodeInfoOutcomeCallable RedisClient::DescribeInstanceNodeInfoCallable(const DescribeInstanceNodeInfoRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeInstanceNodeInfoOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeInstanceNodeInfo(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 RedisClient::DescribeMaintenanceWindowOutcome RedisClient::DescribeMaintenanceWindow(const DescribeMaintenanceWindowRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeMaintenanceWindow");
@@ -721,6 +850,49 @@ RedisClient::ModfiyInstancePasswordOutcomeCallable RedisClient::ModfiyInstancePa
         [this, request]()
         {
             return this->ModfiyInstancePassword(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+RedisClient::ReleaseWanAddressOutcome RedisClient::ReleaseWanAddress(const ReleaseWanAddressRequest &request)
+{
+    auto outcome = MakeRequest(request, "ReleaseWanAddress");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ReleaseWanAddressResponse rsp = ReleaseWanAddressResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ReleaseWanAddressOutcome(rsp);
+        else
+            return ReleaseWanAddressOutcome(o.GetError());
+    }
+    else
+    {
+        return ReleaseWanAddressOutcome(outcome.GetError());
+    }
+}
+
+void RedisClient::ReleaseWanAddressAsync(const ReleaseWanAddressRequest& request, const ReleaseWanAddressAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ReleaseWanAddress(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+RedisClient::ReleaseWanAddressOutcomeCallable RedisClient::ReleaseWanAddressCallable(const ReleaseWanAddressRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ReleaseWanAddressOutcome()>>(
+        [this, request]()
+        {
+            return this->ReleaseWanAddress(request);
         }
     );
 

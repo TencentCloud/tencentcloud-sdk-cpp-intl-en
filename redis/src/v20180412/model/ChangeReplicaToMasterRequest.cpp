@@ -14,41 +14,41 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/as/v20180419/model/ScaleOutInstancesRequest.h>
+#include <tencentcloud/redis/v20180412/model/ChangeReplicaToMasterRequest.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
-using namespace TencentCloud::As::V20180419::Model;
+using namespace TencentCloud::Redis::V20180412::Model;
 using namespace std;
 
-ScaleOutInstancesRequest::ScaleOutInstancesRequest() :
-    m_autoScalingGroupIdHasBeenSet(false),
-    m_scaleOutNumberHasBeenSet(false)
+ChangeReplicaToMasterRequest::ChangeReplicaToMasterRequest() :
+    m_instanceIdHasBeenSet(false),
+    m_groupIdHasBeenSet(false)
 {
 }
 
-string ScaleOutInstancesRequest::ToJsonString() const
+string ChangeReplicaToMasterRequest::ToJsonString() const
 {
     rapidjson::Document d;
     d.SetObject();
     rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
-    if (m_autoScalingGroupIdHasBeenSet)
+    if (m_instanceIdHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "AutoScalingGroupId";
+        string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_autoScalingGroupId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_scaleOutNumberHasBeenSet)
+    if (m_groupIdHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "ScaleOutNumber";
+        string key = "GroupId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, m_scaleOutNumber, allocator);
+        d.AddMember(iKey, m_groupId, allocator);
     }
 
 
@@ -59,36 +59,36 @@ string ScaleOutInstancesRequest::ToJsonString() const
 }
 
 
-string ScaleOutInstancesRequest::GetAutoScalingGroupId() const
+string ChangeReplicaToMasterRequest::GetInstanceId() const
 {
-    return m_autoScalingGroupId;
+    return m_instanceId;
 }
 
-void ScaleOutInstancesRequest::SetAutoScalingGroupId(const string& _autoScalingGroupId)
+void ChangeReplicaToMasterRequest::SetInstanceId(const string& _instanceId)
 {
-    m_autoScalingGroupId = _autoScalingGroupId;
-    m_autoScalingGroupIdHasBeenSet = true;
+    m_instanceId = _instanceId;
+    m_instanceIdHasBeenSet = true;
 }
 
-bool ScaleOutInstancesRequest::AutoScalingGroupIdHasBeenSet() const
+bool ChangeReplicaToMasterRequest::InstanceIdHasBeenSet() const
 {
-    return m_autoScalingGroupIdHasBeenSet;
+    return m_instanceIdHasBeenSet;
 }
 
-uint64_t ScaleOutInstancesRequest::GetScaleOutNumber() const
+int64_t ChangeReplicaToMasterRequest::GetGroupId() const
 {
-    return m_scaleOutNumber;
+    return m_groupId;
 }
 
-void ScaleOutInstancesRequest::SetScaleOutNumber(const uint64_t& _scaleOutNumber)
+void ChangeReplicaToMasterRequest::SetGroupId(const int64_t& _groupId)
 {
-    m_scaleOutNumber = _scaleOutNumber;
-    m_scaleOutNumberHasBeenSet = true;
+    m_groupId = _groupId;
+    m_groupIdHasBeenSet = true;
 }
 
-bool ScaleOutInstancesRequest::ScaleOutNumberHasBeenSet() const
+bool ChangeReplicaToMasterRequest::GroupIdHasBeenSet() const
 {
-    return m_scaleOutNumberHasBeenSet;
+    return m_groupIdHasBeenSet;
 }
 
 

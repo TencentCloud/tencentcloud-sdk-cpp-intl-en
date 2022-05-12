@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_AS_V20180419_MODEL_DISABLEAUTOSCALINGGROUPRESPONSE_H_
-#define TENCENTCLOUD_AS_V20180419_MODEL_DISABLEAUTOSCALINGGROUPRESPONSE_H_
+#ifndef TENCENTCLOUD_AS_V20180419_MODEL_MODIFYLIFECYCLEHOOKRESPONSE_H_
+#define TENCENTCLOUD_AS_V20180419_MODEL_MODIFYLIFECYCLEHOOKRESPONSE_H_
 
 #include <string>
 #include <vector>
@@ -32,13 +32,13 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * DisableAutoScalingGroup response structure.
+                * ModifyLifecycleHook response structure.
                 */
-                class DisableAutoScalingGroupResponse : public AbstractModel
+                class ModifyLifecycleHookResponse : public AbstractModel
                 {
                 public:
-                    DisableAutoScalingGroupResponse();
-                    ~DisableAutoScalingGroupResponse() = default;
+                    ModifyLifecycleHookResponse();
+                    ~ModifyLifecycleHookResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
@@ -51,4 +51,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_AS_V20180419_MODEL_DISABLEAUTOSCALINGGROUPRESPONSE_H_
+#endif // !TENCENTCLOUD_AS_V20180419_MODEL_MODIFYLIFECYCLEHOOKRESPONSE_H_

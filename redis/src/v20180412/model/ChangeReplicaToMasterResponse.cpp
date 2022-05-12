@@ -14,21 +14,21 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/as/v20180419/model/ScaleOutInstancesResponse.h>
+#include <tencentcloud/redis/v20180412/model/ChangeReplicaToMasterResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using TencentCloud::CoreInternalOutcome;
-using namespace TencentCloud::As::V20180419::Model;
+using namespace TencentCloud::Redis::V20180412::Model;
 using namespace std;
 
-ScaleOutInstancesResponse::ScaleOutInstancesResponse() :
-    m_activityIdHasBeenSet(false)
+ChangeReplicaToMasterResponse::ChangeReplicaToMasterResponse() :
+    m_taskIdHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome ScaleOutInstancesResponse::Deserialize(const string &payload)
+CoreInternalOutcome ChangeReplicaToMasterResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -62,32 +62,32 @@ CoreInternalOutcome ScaleOutInstancesResponse::Deserialize(const string &payload
     }
 
 
-    if (rsp.HasMember("ActivityId") && !rsp["ActivityId"].IsNull())
+    if (rsp.HasMember("TaskId") && !rsp["TaskId"].IsNull())
     {
-        if (!rsp["ActivityId"].IsString())
+        if (!rsp["TaskId"].IsInt64())
         {
-            return CoreInternalOutcome(Core::Error("response `ActivityId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TaskId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
-        m_activityId = string(rsp["ActivityId"].GetString());
-        m_activityIdHasBeenSet = true;
+        m_taskId = rsp["TaskId"].GetInt64();
+        m_taskIdHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string ScaleOutInstancesResponse::ToJsonString() const
+string ChangeReplicaToMasterResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_activityIdHasBeenSet)
+    if (m_taskIdHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "ActivityId";
+        string key = "TaskId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_activityId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, m_taskId, allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -102,14 +102,14 @@ string ScaleOutInstancesResponse::ToJsonString() const
 }
 
 
-string ScaleOutInstancesResponse::GetActivityId() const
+int64_t ChangeReplicaToMasterResponse::GetTaskId() const
 {
-    return m_activityId;
+    return m_taskId;
 }
 
-bool ScaleOutInstancesResponse::ActivityIdHasBeenSet() const
+bool ChangeReplicaToMasterResponse::TaskIdHasBeenSet() const
 {
-    return m_activityIdHasBeenSet;
+    return m_taskIdHasBeenSet;
 }
 
 

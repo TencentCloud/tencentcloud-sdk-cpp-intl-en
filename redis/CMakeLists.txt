@@ -19,23 +19,28 @@ set(redis_public_header
   )
 
 set(redis_public_header_model
-  include/tencentcloud/redis/v20180412/model/RegionConf.h
-  include/tencentcloud/redis/v20180412/model/ZoneCapacityConf.h
+  include/tencentcloud/redis/v20180412/model/ChangeReplicaToMasterRequest.h
+  include/tencentcloud/redis/v20180412/model/ReleaseWanAddressRequest.h
+  include/tencentcloud/redis/v20180412/model/ProxyNodes.h
   include/tencentcloud/redis/v20180412/model/DescribeInstanceMonitorTopNCmdTookRequest.h
   include/tencentcloud/redis/v20180412/model/Instances.h
-  include/tencentcloud/redis/v20180412/model/DescribeInstanceMonitorTopNCmdResponse.h
+  include/tencentcloud/redis/v20180412/model/DescribeInstanceMonitorBigKeySizeDistResponse.h
   include/tencentcloud/redis/v20180412/model/DescribeInstanceMonitorTookDistRequest.h
   include/tencentcloud/redis/v20180412/model/DescribeInstanceMonitorHotKeyRequest.h
+  include/tencentcloud/redis/v20180412/model/AllocateWanAddressRequest.h
   include/tencentcloud/redis/v20180412/model/DescribeInstanceMonitorBigKeyTypeDistRequest.h
   include/tencentcloud/redis/v20180412/model/InquiryPriceCreateInstanceRequest.h
   include/tencentcloud/redis/v20180412/model/DescribeProductInfoResponse.h
   include/tencentcloud/redis/v20180412/model/DescribeMaintenanceWindowResponse.h
+  include/tencentcloud/redis/v20180412/model/ReleaseWanAddressResponse.h
   include/tencentcloud/redis/v20180412/model/ProductConf.h
   include/tencentcloud/redis/v20180412/model/BigKeyTypeInfo.h
+  include/tencentcloud/redis/v20180412/model/DescribeInstanceNodeInfoRequest.h
   include/tencentcloud/redis/v20180412/model/DescribeMaintenanceWindowRequest.h
   include/tencentcloud/redis/v20180412/model/CommandTake.h
   include/tencentcloud/redis/v20180412/model/DescribeInstanceMonitorBigKeyResponse.h
   include/tencentcloud/redis/v20180412/model/InquiryPriceCreateInstanceResponse.h
+  include/tencentcloud/redis/v20180412/model/RedisNodes.h
   include/tencentcloud/redis/v20180412/model/InquiryPriceUpgradeInstanceRequest.h
   include/tencentcloud/redis/v20180412/model/DelayDistribution.h
   include/tencentcloud/redis/v20180412/model/DescribeSlowLogResponse.h
@@ -44,9 +49,12 @@ set(redis_public_header_model
   include/tencentcloud/redis/v20180412/model/DescribeInstanceAccountResponse.h
   include/tencentcloud/redis/v20180412/model/DescribeInstanceMonitorBigKeyRequest.h
   include/tencentcloud/redis/v20180412/model/DescribeInstanceMonitorBigKeyTypeDistResponse.h
+  include/tencentcloud/redis/v20180412/model/TendisNodes.h
+  include/tencentcloud/redis/v20180412/model/AllocateWanAddressResponse.h
+  include/tencentcloud/redis/v20180412/model/RegionConf.h
   include/tencentcloud/redis/v20180412/model/Account.h
   include/tencentcloud/redis/v20180412/model/DescribeProductInfoRequest.h
-  include/tencentcloud/redis/v20180412/model/DescribeInstanceMonitorBigKeySizeDistResponse.h
+  include/tencentcloud/redis/v20180412/model/DescribeInstanceMonitorTopNCmdResponse.h
   include/tencentcloud/redis/v20180412/model/SourceCommand.h
   include/tencentcloud/redis/v20180412/model/HotKeyInfo.h
   include/tencentcloud/redis/v20180412/model/BigKeyInfo.h
@@ -59,6 +67,9 @@ set(redis_public_header_model
   include/tencentcloud/redis/v20180412/model/DescribeInstanceMonitorSIPResponse.h
   include/tencentcloud/redis/v20180412/model/SourceInfo.h
   include/tencentcloud/redis/v20180412/model/DescribeInstanceMonitorSIPRequest.h
+  include/tencentcloud/redis/v20180412/model/ChangeReplicaToMasterResponse.h
+  include/tencentcloud/redis/v20180412/model/ZoneCapacityConf.h
+  include/tencentcloud/redis/v20180412/model/DescribeInstanceNodeInfoResponse.h
   include/tencentcloud/redis/v20180412/model/DescribeReplicationGroupRequest.h
   include/tencentcloud/redis/v20180412/model/DescribeReplicationGroupResponse.h
   include/tencentcloud/redis/v20180412/model/DescribeInstanceMonitorHotKeyResponse.h
@@ -69,23 +80,28 @@ set(redis_public_header_model
 
 set(redis_src
   src/v20180412/RedisClient.cpp
-  src/v20180412/model/RegionConf.cpp
-  src/v20180412/model/ZoneCapacityConf.cpp
+  src/v20180412/model/ChangeReplicaToMasterRequest.cpp
+  src/v20180412/model/ReleaseWanAddressRequest.cpp
+  src/v20180412/model/ProxyNodes.cpp
   src/v20180412/model/DescribeInstanceMonitorTopNCmdTookRequest.cpp
   src/v20180412/model/Instances.cpp
-  src/v20180412/model/DescribeInstanceMonitorTopNCmdResponse.cpp
+  src/v20180412/model/DescribeInstanceMonitorBigKeySizeDistResponse.cpp
   src/v20180412/model/DescribeInstanceMonitorTookDistRequest.cpp
   src/v20180412/model/DescribeInstanceMonitorHotKeyRequest.cpp
+  src/v20180412/model/AllocateWanAddressRequest.cpp
   src/v20180412/model/DescribeInstanceMonitorBigKeyTypeDistRequest.cpp
   src/v20180412/model/InquiryPriceCreateInstanceRequest.cpp
   src/v20180412/model/DescribeProductInfoResponse.cpp
   src/v20180412/model/DescribeMaintenanceWindowResponse.cpp
+  src/v20180412/model/ReleaseWanAddressResponse.cpp
   src/v20180412/model/ProductConf.cpp
   src/v20180412/model/BigKeyTypeInfo.cpp
+  src/v20180412/model/DescribeInstanceNodeInfoRequest.cpp
   src/v20180412/model/DescribeMaintenanceWindowRequest.cpp
   src/v20180412/model/CommandTake.cpp
   src/v20180412/model/DescribeInstanceMonitorBigKeyResponse.cpp
   src/v20180412/model/InquiryPriceCreateInstanceResponse.cpp
+  src/v20180412/model/RedisNodes.cpp
   src/v20180412/model/InquiryPriceUpgradeInstanceRequest.cpp
   src/v20180412/model/DelayDistribution.cpp
   src/v20180412/model/DescribeSlowLogResponse.cpp
@@ -94,9 +110,12 @@ set(redis_src
   src/v20180412/model/DescribeInstanceAccountResponse.cpp
   src/v20180412/model/DescribeInstanceMonitorBigKeyRequest.cpp
   src/v20180412/model/DescribeInstanceMonitorBigKeyTypeDistResponse.cpp
+  src/v20180412/model/TendisNodes.cpp
+  src/v20180412/model/AllocateWanAddressResponse.cpp
+  src/v20180412/model/RegionConf.cpp
   src/v20180412/model/Account.cpp
   src/v20180412/model/DescribeProductInfoRequest.cpp
-  src/v20180412/model/DescribeInstanceMonitorBigKeySizeDistResponse.cpp
+  src/v20180412/model/DescribeInstanceMonitorTopNCmdResponse.cpp
   src/v20180412/model/SourceCommand.cpp
   src/v20180412/model/HotKeyInfo.cpp
   src/v20180412/model/BigKeyInfo.cpp
@@ -109,6 +128,9 @@ set(redis_src
   src/v20180412/model/DescribeInstanceMonitorSIPResponse.cpp
   src/v20180412/model/SourceInfo.cpp
   src/v20180412/model/DescribeInstanceMonitorSIPRequest.cpp
+  src/v20180412/model/ChangeReplicaToMasterResponse.cpp
+  src/v20180412/model/ZoneCapacityConf.cpp
+  src/v20180412/model/DescribeInstanceNodeInfoResponse.cpp
   src/v20180412/model/DescribeReplicationGroupRequest.cpp
   src/v20180412/model/DescribeReplicationGroupResponse.cpp
   src/v20180412/model/DescribeInstanceMonitorHotKeyResponse.cpp

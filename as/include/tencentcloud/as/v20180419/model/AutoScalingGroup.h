@@ -87,14 +87,54 @@ namespace TencentCloud
                     bool AutoScalingGroupNameHasBeenSet() const;
 
                     /**
-                     * 获取Current status of the auto scaling group. Value range: <br><li>NORMAL: normal <br><li>CVM_ABNORMAL: Exception with the launch configuration <br><li>LB_ABNORMAL: exception with the load balancer <br><li>VPC_ABNORMAL: exception with the VPC <br><li>INSUFFICIENT_BALANCE: insufficient balance <br><li>LB_BACKEND_REGION_NOT_MATCH: the backend region of the CLB instance is not the same as the one of AS service.<br>
-                     * @return AutoScalingGroupStatus Current status of the auto scaling group. Value range: <br><li>NORMAL: normal <br><li>CVM_ABNORMAL: Exception with the launch configuration <br><li>LB_ABNORMAL: exception with the load balancer <br><li>VPC_ABNORMAL: exception with the VPC <br><li>INSUFFICIENT_BALANCE: insufficient balance <br><li>LB_BACKEND_REGION_NOT_MATCH: the backend region of the CLB instance is not the same as the one of AS service.<br>
+                     * 获取Current scaling group status. Valid values:<br>
+<li>NORMAL: Normal<br>
+<li>CVM_ABNORMAL: Abnormal launch configuration<br>
+<li>LB_ABNORMAL: Abnormal load balancer<br>
+<li>LB_LISTENER_ABNORMAL: Abnormal load balancer listener<br>
+<li>LB_LOCATION_ABNORMAL: Abnormal forwarding configuration of the load balancer listener<br>
+<li>VPC_ABNORMAL: VPC network error<br>
+<li>SUBNET_ABNORMAL: VPC subnet exception<br>
+<li>INSUFFICIENT_BALANCE: Insufficient account balance<br>
+<li>LB_BACKEND_REGION_NOT_MATCH: The CLB backend and the AS service are not in the same region.<br>
+<li>LB_BACKEND_VPC_NOT_MATCH: The CLB instance and the scaling group are not in the same VPC.
+                     * @return AutoScalingGroupStatus Current scaling group status. Valid values:<br>
+<li>NORMAL: Normal<br>
+<li>CVM_ABNORMAL: Abnormal launch configuration<br>
+<li>LB_ABNORMAL: Abnormal load balancer<br>
+<li>LB_LISTENER_ABNORMAL: Abnormal load balancer listener<br>
+<li>LB_LOCATION_ABNORMAL: Abnormal forwarding configuration of the load balancer listener<br>
+<li>VPC_ABNORMAL: VPC network error<br>
+<li>SUBNET_ABNORMAL: VPC subnet exception<br>
+<li>INSUFFICIENT_BALANCE: Insufficient account balance<br>
+<li>LB_BACKEND_REGION_NOT_MATCH: The CLB backend and the AS service are not in the same region.<br>
+<li>LB_BACKEND_VPC_NOT_MATCH: The CLB instance and the scaling group are not in the same VPC.
                      */
                     std::string GetAutoScalingGroupStatus() const;
 
                     /**
-                     * 设置Current status of the auto scaling group. Value range: <br><li>NORMAL: normal <br><li>CVM_ABNORMAL: Exception with the launch configuration <br><li>LB_ABNORMAL: exception with the load balancer <br><li>VPC_ABNORMAL: exception with the VPC <br><li>INSUFFICIENT_BALANCE: insufficient balance <br><li>LB_BACKEND_REGION_NOT_MATCH: the backend region of the CLB instance is not the same as the one of AS service.<br>
-                     * @param AutoScalingGroupStatus Current status of the auto scaling group. Value range: <br><li>NORMAL: normal <br><li>CVM_ABNORMAL: Exception with the launch configuration <br><li>LB_ABNORMAL: exception with the load balancer <br><li>VPC_ABNORMAL: exception with the VPC <br><li>INSUFFICIENT_BALANCE: insufficient balance <br><li>LB_BACKEND_REGION_NOT_MATCH: the backend region of the CLB instance is not the same as the one of AS service.<br>
+                     * 设置Current scaling group status. Valid values:<br>
+<li>NORMAL: Normal<br>
+<li>CVM_ABNORMAL: Abnormal launch configuration<br>
+<li>LB_ABNORMAL: Abnormal load balancer<br>
+<li>LB_LISTENER_ABNORMAL: Abnormal load balancer listener<br>
+<li>LB_LOCATION_ABNORMAL: Abnormal forwarding configuration of the load balancer listener<br>
+<li>VPC_ABNORMAL: VPC network error<br>
+<li>SUBNET_ABNORMAL: VPC subnet exception<br>
+<li>INSUFFICIENT_BALANCE: Insufficient account balance<br>
+<li>LB_BACKEND_REGION_NOT_MATCH: The CLB backend and the AS service are not in the same region.<br>
+<li>LB_BACKEND_VPC_NOT_MATCH: The CLB instance and the scaling group are not in the same VPC.
+                     * @param AutoScalingGroupStatus Current scaling group status. Valid values:<br>
+<li>NORMAL: Normal<br>
+<li>CVM_ABNORMAL: Abnormal launch configuration<br>
+<li>LB_ABNORMAL: Abnormal load balancer<br>
+<li>LB_LISTENER_ABNORMAL: Abnormal load balancer listener<br>
+<li>LB_LOCATION_ABNORMAL: Abnormal forwarding configuration of the load balancer listener<br>
+<li>VPC_ABNORMAL: VPC network error<br>
+<li>SUBNET_ABNORMAL: VPC subnet exception<br>
+<li>INSUFFICIENT_BALANCE: Insufficient account balance<br>
+<li>LB_BACKEND_REGION_NOT_MATCH: The CLB backend and the AS service are not in the same region.<br>
+<li>LB_BACKEND_VPC_NOT_MATCH: The CLB instance and the scaling group are not in the same VPC.
                      */
                     void SetAutoScalingGroupStatus(const std::string& _autoScalingGroupStatus);
 
@@ -651,7 +691,17 @@ A valid value will be returned only when `InstanceAllocationPolicy` is set to `S
                     bool m_autoScalingGroupNameHasBeenSet;
 
                     /**
-                     * Current status of the auto scaling group. Value range: <br><li>NORMAL: normal <br><li>CVM_ABNORMAL: Exception with the launch configuration <br><li>LB_ABNORMAL: exception with the load balancer <br><li>VPC_ABNORMAL: exception with the VPC <br><li>INSUFFICIENT_BALANCE: insufficient balance <br><li>LB_BACKEND_REGION_NOT_MATCH: the backend region of the CLB instance is not the same as the one of AS service.<br>
+                     * Current scaling group status. Valid values:<br>
+<li>NORMAL: Normal<br>
+<li>CVM_ABNORMAL: Abnormal launch configuration<br>
+<li>LB_ABNORMAL: Abnormal load balancer<br>
+<li>LB_LISTENER_ABNORMAL: Abnormal load balancer listener<br>
+<li>LB_LOCATION_ABNORMAL: Abnormal forwarding configuration of the load balancer listener<br>
+<li>VPC_ABNORMAL: VPC network error<br>
+<li>SUBNET_ABNORMAL: VPC subnet exception<br>
+<li>INSUFFICIENT_BALANCE: Insufficient account balance<br>
+<li>LB_BACKEND_REGION_NOT_MATCH: The CLB backend and the AS service are not in the same region.<br>
+<li>LB_BACKEND_VPC_NOT_MATCH: The CLB instance and the scaling group are not in the same VPC.
                      */
                     std::string m_autoScalingGroupStatus;
                     bool m_autoScalingGroupStatusHasBeenSet;

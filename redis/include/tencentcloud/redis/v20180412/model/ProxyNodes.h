@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_AS_V20180419_MODEL_LIMITEDLOGINSETTINGS_H_
-#define TENCENTCLOUD_AS_V20180419_MODEL_LIMITEDLOGINSETTINGS_H_
+#ifndef TENCENTCLOUD_REDIS_V20180412_MODEL_PROXYNODES_H_
+#define TENCENTCLOUD_REDIS_V20180412_MODEL_PROXYNODES_H_
 
 #include <string>
 #include <vector>
@@ -28,49 +28,54 @@
 
 namespace TencentCloud
 {
-    namespace As
+    namespace Redis
     {
-        namespace V20180419
+        namespace V20180412
         {
             namespace Model
             {
                 /**
-                * This describes the configuration and information related to instance login. For security reasons, sensitive information is not described.
+                * Proxy node information
                 */
-                class LimitedLoginSettings : public AbstractModel
+                class ProxyNodes : public AbstractModel
                 {
                 public:
-                    LimitedLoginSettings();
-                    ~LimitedLoginSettings() = default;
+                    ProxyNodes();
+                    ~ProxyNodes() = default;
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
                     /**
-                     * 获取List of key IDs.
-                     * @return KeyIds List of key IDs.
+                     * 获取Node ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return NodeId Node ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
-                    std::vector<std::string> GetKeyIds() const;
+                    std::string GetNodeId() const;
 
                     /**
-                     * 设置List of key IDs.
-                     * @param KeyIds List of key IDs.
+                     * 设置Node ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param NodeId Node ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
-                    void SetKeyIds(const std::vector<std::string>& _keyIds);
+                    void SetNodeId(const std::string& _nodeId);
 
                     /**
-                     * 判断参数 KeyIds 是否已赋值
-                     * @return KeyIds 是否已赋值
+                     * 判断参数 NodeId 是否已赋值
+                     * @return NodeId 是否已赋值
                      */
-                    bool KeyIdsHasBeenSet() const;
+                    bool NodeIdHasBeenSet() const;
 
                 private:
 
                     /**
-                     * List of key IDs.
+                     * Node ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
-                    std::vector<std::string> m_keyIds;
-                    bool m_keyIdsHasBeenSet;
+                    std::string m_nodeId;
+                    bool m_nodeIdHasBeenSet;
 
                 };
             }
@@ -78,4 +83,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_AS_V20180419_MODEL_LIMITEDLOGINSETTINGS_H_
+#endif // !TENCENTCLOUD_REDIS_V20180412_MODEL_PROXYNODES_H_

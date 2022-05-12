@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/as/v20180419/model/DisableAutoScalingGroupResponse.h>
+#include <tencentcloud/as/v20180419/model/ModifyLifecycleHookResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,11 +23,11 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::As::V20180419::Model;
 using namespace std;
 
-DisableAutoScalingGroupResponse::DisableAutoScalingGroupResponse()
+ModifyLifecycleHookResponse::ModifyLifecycleHookResponse()
 {
 }
 
-CoreInternalOutcome DisableAutoScalingGroupResponse::Deserialize(const string &payload)
+CoreInternalOutcome ModifyLifecycleHookResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -65,7 +65,7 @@ CoreInternalOutcome DisableAutoScalingGroupResponse::Deserialize(const string &p
     return CoreInternalOutcome(true);
 }
 
-string DisableAutoScalingGroupResponse::ToJsonString() const
+string ModifyLifecycleHookResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();

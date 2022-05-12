@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_AS_V20180419_MODEL_SCALEININSTANCESRESPONSE_H_
-#define TENCENTCLOUD_AS_V20180419_MODEL_SCALEININSTANCESRESPONSE_H_
+#ifndef TENCENTCLOUD_REDIS_V20180412_MODEL_ALLOCATEWANADDRESSREQUEST_H_
+#define TENCENTCLOUD_REDIS_V20180412_MODEL_ALLOCATEWANADDRESSREQUEST_H_
 
 #include <string>
 #include <vector>
@@ -25,43 +25,48 @@
 
 namespace TencentCloud
 {
-    namespace As
+    namespace Redis
     {
-        namespace V20180419
+        namespace V20180412
         {
             namespace Model
             {
                 /**
-                * ScaleInInstances response structure.
+                * AllocateWanAddress request structure.
                 */
-                class ScaleInInstancesResponse : public AbstractModel
+                class AllocateWanAddressRequest : public AbstractModel
                 {
                 public:
-                    ScaleInInstancesResponse();
-                    ~ScaleInInstancesResponse() = default;
-                    CoreInternalOutcome Deserialize(const std::string &payload);
+                    AllocateWanAddressRequest();
+                    ~AllocateWanAddressRequest() = default;
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Scaling activity ID
-                     * @return ActivityId Scaling activity ID
+                     * 获取Instance ID.
+                     * @return InstanceId Instance ID.
                      */
-                    std::string GetActivityId() const;
+                    std::string GetInstanceId() const;
 
                     /**
-                     * 判断参数 ActivityId 是否已赋值
-                     * @return ActivityId 是否已赋值
+                     * 设置Instance ID.
+                     * @param InstanceId Instance ID.
                      */
-                    bool ActivityIdHasBeenSet() const;
+                    void SetInstanceId(const std::string& _instanceId);
+
+                    /**
+                     * 判断参数 InstanceId 是否已赋值
+                     * @return InstanceId 是否已赋值
+                     */
+                    bool InstanceIdHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Scaling activity ID
+                     * Instance ID.
                      */
-                    std::string m_activityId;
-                    bool m_activityIdHasBeenSet;
+                    std::string m_instanceId;
+                    bool m_instanceIdHasBeenSet;
 
                 };
             }
@@ -69,4 +74,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_AS_V20180419_MODEL_SCALEININSTANCESRESPONSE_H_
+#endif // !TENCENTCLOUD_REDIS_V20180412_MODEL_ALLOCATEWANADDRESSREQUEST_H_

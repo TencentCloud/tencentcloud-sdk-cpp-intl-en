@@ -14,32 +14,32 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/as/v20180419/model/DisableAutoScalingGroupRequest.h>
+#include <tencentcloud/redis/v20180412/model/ReleaseWanAddressRequest.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
-using namespace TencentCloud::As::V20180419::Model;
+using namespace TencentCloud::Redis::V20180412::Model;
 using namespace std;
 
-DisableAutoScalingGroupRequest::DisableAutoScalingGroupRequest() :
-    m_autoScalingGroupIdHasBeenSet(false)
+ReleaseWanAddressRequest::ReleaseWanAddressRequest() :
+    m_instanceIdHasBeenSet(false)
 {
 }
 
-string DisableAutoScalingGroupRequest::ToJsonString() const
+string ReleaseWanAddressRequest::ToJsonString() const
 {
     rapidjson::Document d;
     d.SetObject();
     rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
-    if (m_autoScalingGroupIdHasBeenSet)
+    if (m_instanceIdHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "AutoScalingGroupId";
+        string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_autoScalingGroupId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -50,20 +50,20 @@ string DisableAutoScalingGroupRequest::ToJsonString() const
 }
 
 
-string DisableAutoScalingGroupRequest::GetAutoScalingGroupId() const
+string ReleaseWanAddressRequest::GetInstanceId() const
 {
-    return m_autoScalingGroupId;
+    return m_instanceId;
 }
 
-void DisableAutoScalingGroupRequest::SetAutoScalingGroupId(const string& _autoScalingGroupId)
+void ReleaseWanAddressRequest::SetInstanceId(const string& _instanceId)
 {
-    m_autoScalingGroupId = _autoScalingGroupId;
-    m_autoScalingGroupIdHasBeenSet = true;
+    m_instanceId = _instanceId;
+    m_instanceIdHasBeenSet = true;
 }
 
-bool DisableAutoScalingGroupRequest::AutoScalingGroupIdHasBeenSet() const
+bool ReleaseWanAddressRequest::InstanceIdHasBeenSet() const
 {
-    return m_autoScalingGroupIdHasBeenSet;
+    return m_instanceIdHasBeenSet;
 }
 
 

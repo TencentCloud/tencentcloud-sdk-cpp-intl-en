@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_AS_V20180419_MODEL_UPGRADELAUNCHCONFIGURATIONRESPONSE_H_
-#define TENCENTCLOUD_AS_V20180419_MODEL_UPGRADELAUNCHCONFIGURATIONRESPONSE_H_
+#ifndef TENCENTCLOUD_REDIS_V20180412_MODEL_CHANGEREPLICATOMASTERRESPONSE_H_
+#define TENCENTCLOUD_REDIS_V20180412_MODEL_CHANGEREPLICATOMASTERRESPONSE_H_
 
 #include <string>
 #include <vector>
@@ -25,25 +25,43 @@
 
 namespace TencentCloud
 {
-    namespace As
+    namespace Redis
     {
-        namespace V20180419
+        namespace V20180412
         {
             namespace Model
             {
                 /**
-                * UpgradeLaunchConfiguration response structure.
+                * ChangeReplicaToMaster response structure.
                 */
-                class UpgradeLaunchConfigurationResponse : public AbstractModel
+                class ChangeReplicaToMasterResponse : public AbstractModel
                 {
                 public:
-                    UpgradeLaunchConfigurationResponse();
-                    ~UpgradeLaunchConfigurationResponse() = default;
+                    ChangeReplicaToMasterResponse();
+                    ~ChangeReplicaToMasterResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
+                    /**
+                     * 获取Async task ID
+                     * @return TaskId Async task ID
+                     */
+                    int64_t GetTaskId() const;
+
+                    /**
+                     * 判断参数 TaskId 是否已赋值
+                     * @return TaskId 是否已赋值
+                     */
+                    bool TaskIdHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * Async task ID
+                     */
+                    int64_t m_taskId;
+                    bool m_taskIdHasBeenSet;
 
                 };
             }
@@ -51,4 +69,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_AS_V20180419_MODEL_UPGRADELAUNCHCONFIGURATIONRESPONSE_H_
+#endif // !TENCENTCLOUD_REDIS_V20180412_MODEL_CHANGEREPLICATOMASTERRESPONSE_H_

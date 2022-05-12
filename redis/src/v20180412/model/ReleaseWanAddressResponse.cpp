@@ -14,21 +14,22 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/as/v20180419/model/CreateLaunchConfigurationResponse.h>
+#include <tencentcloud/redis/v20180412/model/ReleaseWanAddressResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using TencentCloud::CoreInternalOutcome;
-using namespace TencentCloud::As::V20180419::Model;
+using namespace TencentCloud::Redis::V20180412::Model;
 using namespace std;
 
-CreateLaunchConfigurationResponse::CreateLaunchConfigurationResponse() :
-    m_launchConfigurationIdHasBeenSet(false)
+ReleaseWanAddressResponse::ReleaseWanAddressResponse() :
+    m_flowIdHasBeenSet(false),
+    m_wanStatusHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome CreateLaunchConfigurationResponse::Deserialize(const string &payload)
+CoreInternalOutcome ReleaseWanAddressResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -62,32 +63,50 @@ CoreInternalOutcome CreateLaunchConfigurationResponse::Deserialize(const string 
     }
 
 
-    if (rsp.HasMember("LaunchConfigurationId") && !rsp["LaunchConfigurationId"].IsNull())
+    if (rsp.HasMember("FlowId") && !rsp["FlowId"].IsNull())
     {
-        if (!rsp["LaunchConfigurationId"].IsString())
+        if (!rsp["FlowId"].IsInt64())
         {
-            return CoreInternalOutcome(Core::Error("response `LaunchConfigurationId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FlowId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
-        m_launchConfigurationId = string(rsp["LaunchConfigurationId"].GetString());
-        m_launchConfigurationIdHasBeenSet = true;
+        m_flowId = rsp["FlowId"].GetInt64();
+        m_flowIdHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("WanStatus") && !rsp["WanStatus"].IsNull())
+    {
+        if (!rsp["WanStatus"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `WanStatus` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_wanStatus = string(rsp["WanStatus"].GetString());
+        m_wanStatusHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string CreateLaunchConfigurationResponse::ToJsonString() const
+string ReleaseWanAddressResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_launchConfigurationIdHasBeenSet)
+    if (m_flowIdHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "LaunchConfigurationId";
+        string key = "FlowId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_launchConfigurationId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, m_flowId, allocator);
+    }
+
+    if (m_wanStatusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "WanStatus";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_wanStatus.c_str(), allocator).Move(), allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -102,14 +121,24 @@ string CreateLaunchConfigurationResponse::ToJsonString() const
 }
 
 
-string CreateLaunchConfigurationResponse::GetLaunchConfigurationId() const
+int64_t ReleaseWanAddressResponse::GetFlowId() const
 {
-    return m_launchConfigurationId;
+    return m_flowId;
 }
 
-bool CreateLaunchConfigurationResponse::LaunchConfigurationIdHasBeenSet() const
+bool ReleaseWanAddressResponse::FlowIdHasBeenSet() const
 {
-    return m_launchConfigurationIdHasBeenSet;
+    return m_flowIdHasBeenSet;
+}
+
+string ReleaseWanAddressResponse::GetWanStatus() const
+{
+    return m_wanStatus;
+}
+
+bool ReleaseWanAddressResponse::WanStatusHasBeenSet() const
+{
+    return m_wanStatusHasBeenSet;
 }
 
 
