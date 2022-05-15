@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/mdc/v20200828/model/SRTSourceAddressReq.h>
 
 
 namespace TencentCloud
@@ -45,6 +46,24 @@ namespace TencentCloud
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
+
+                    /**
+                     * 获取The SRT mode. Valid values: LISTENER (default), CALLER.
+                     * @return Mode The SRT mode. Valid values: LISTENER (default), CALLER.
+                     */
+                    std::string GetMode() const;
+
+                    /**
+                     * 设置The SRT mode. Valid values: LISTENER (default), CALLER.
+                     * @param Mode The SRT mode. Valid values: LISTENER (default), CALLER.
+                     */
+                    void SetMode(const std::string& _mode);
+
+                    /**
+                     * 判断参数 Mode 是否已赋值
+                     * @return Mode 是否已赋值
+                     */
+                    bool ModeHasBeenSet() const;
 
                     /**
                      * 获取Stream ID, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
@@ -172,7 +191,31 @@ namespace TencentCloud
                      */
                     bool PbKeyLenHasBeenSet() const;
 
+                    /**
+                     * 获取The SRT peer address, which is required if `Mode` is `CALLER`. Only one address is allowed.
+                     * @return SourceAddresses The SRT peer address, which is required if `Mode` is `CALLER`. Only one address is allowed.
+                     */
+                    std::vector<SRTSourceAddressReq> GetSourceAddresses() const;
+
+                    /**
+                     * 设置The SRT peer address, which is required if `Mode` is `CALLER`. Only one address is allowed.
+                     * @param SourceAddresses The SRT peer address, which is required if `Mode` is `CALLER`. Only one address is allowed.
+                     */
+                    void SetSourceAddresses(const std::vector<SRTSourceAddressReq>& _sourceAddresses);
+
+                    /**
+                     * 判断参数 SourceAddresses 是否已赋值
+                     * @return SourceAddresses 是否已赋值
+                     */
+                    bool SourceAddressesHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * The SRT mode. Valid values: LISTENER (default), CALLER.
+                     */
+                    std::string m_mode;
+                    bool m_modeHasBeenSet;
 
                     /**
                      * Stream ID, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
@@ -215,6 +258,12 @@ namespace TencentCloud
                      */
                     int64_t m_pbKeyLen;
                     bool m_pbKeyLenHasBeenSet;
+
+                    /**
+                     * The SRT peer address, which is required if `Mode` is `CALLER`. Only one address is allowed.
+                     */
+                    std::vector<SRTSourceAddressReq> m_sourceAddresses;
+                    bool m_sourceAddressesHasBeenSet;
 
                 };
             }

@@ -36,11 +36,12 @@ set(dcdb_public_header_model
   include/tencentcloud/dcdb/v20180411/model/CreateAccountRequest.h
   include/tencentcloud/dcdb/v20180411/model/DescribeDBParametersResponse.h
   include/tencentcloud/dcdb/v20180411/model/DestroyHourDCDBInstanceResponse.h
+  include/tencentcloud/dcdb/v20180411/model/ModifyDBInstanceNameResponse.h
   include/tencentcloud/dcdb/v20180411/model/DescribeFlowResponse.h
   include/tencentcloud/dcdb/v20180411/model/CloneAccountResponse.h
   include/tencentcloud/dcdb/v20180411/model/ModifyAccountDescriptionResponse.h
   include/tencentcloud/dcdb/v20180411/model/DestroyDCDBInstanceRequest.h
-  include/tencentcloud/dcdb/v20180411/model/ParamConstraint.h
+  include/tencentcloud/dcdb/v20180411/model/BriefNodeInfo.h
   include/tencentcloud/dcdb/v20180411/model/ModifyDBInstancesProjectResponse.h
   include/tencentcloud/dcdb/v20180411/model/DescribeDCDBInstanceNodeInfoRequest.h
   include/tencentcloud/dcdb/v20180411/model/DatabaseView.h
@@ -53,7 +54,7 @@ set(dcdb_public_header_model
   include/tencentcloud/dcdb/v20180411/model/SwitchDBInstanceHAResponse.h
   include/tencentcloud/dcdb/v20180411/model/DescribeProjectSecurityGroupsResponse.h
   include/tencentcloud/dcdb/v20180411/model/DatabaseFunction.h
-  include/tencentcloud/dcdb/v20180411/model/BriefNodeInfo.h
+  include/tencentcloud/dcdb/v20180411/model/ParamConstraint.h
   include/tencentcloud/dcdb/v20180411/model/ResetAccountPasswordResponse.h
   include/tencentcloud/dcdb/v20180411/model/DescribeDatabaseObjectsRequest.h
   include/tencentcloud/dcdb/v20180411/model/DatabaseTable.h
@@ -73,6 +74,7 @@ set(dcdb_public_header_model
   include/tencentcloud/dcdb/v20180411/model/DescribeDatabaseTableRequest.h
   include/tencentcloud/dcdb/v20180411/model/DescribeDCDBInstanceNodeInfoResponse.h
   include/tencentcloud/dcdb/v20180411/model/DescribeDatabaseObjectsResponse.h
+  include/tencentcloud/dcdb/v20180411/model/ModifyDBInstanceNameRequest.h
   include/tencentcloud/dcdb/v20180411/model/DescribeDcnDetailResponse.h
   include/tencentcloud/dcdb/v20180411/model/TableColumn.h
   include/tencentcloud/dcdb/v20180411/model/SecurityGroupBound.h
@@ -138,11 +140,12 @@ set(dcdb_src
   src/v20180411/model/CreateAccountRequest.cpp
   src/v20180411/model/DescribeDBParametersResponse.cpp
   src/v20180411/model/DestroyHourDCDBInstanceResponse.cpp
+  src/v20180411/model/ModifyDBInstanceNameResponse.cpp
   src/v20180411/model/DescribeFlowResponse.cpp
   src/v20180411/model/CloneAccountResponse.cpp
   src/v20180411/model/ModifyAccountDescriptionResponse.cpp
   src/v20180411/model/DestroyDCDBInstanceRequest.cpp
-  src/v20180411/model/ParamConstraint.cpp
+  src/v20180411/model/BriefNodeInfo.cpp
   src/v20180411/model/ModifyDBInstancesProjectResponse.cpp
   src/v20180411/model/DescribeDCDBInstanceNodeInfoRequest.cpp
   src/v20180411/model/DatabaseView.cpp
@@ -155,7 +158,7 @@ set(dcdb_src
   src/v20180411/model/SwitchDBInstanceHAResponse.cpp
   src/v20180411/model/DescribeProjectSecurityGroupsResponse.cpp
   src/v20180411/model/DatabaseFunction.cpp
-  src/v20180411/model/BriefNodeInfo.cpp
+  src/v20180411/model/ParamConstraint.cpp
   src/v20180411/model/ResetAccountPasswordResponse.cpp
   src/v20180411/model/DescribeDatabaseObjectsRequest.cpp
   src/v20180411/model/DatabaseTable.cpp
@@ -175,6 +178,7 @@ set(dcdb_src
   src/v20180411/model/DescribeDatabaseTableRequest.cpp
   src/v20180411/model/DescribeDCDBInstanceNodeInfoResponse.cpp
   src/v20180411/model/DescribeDatabaseObjectsResponse.cpp
+  src/v20180411/model/ModifyDBInstanceNameRequest.cpp
   src/v20180411/model/DescribeDcnDetailResponse.cpp
   src/v20180411/model/TableColumn.cpp
   src/v20180411/model/SecurityGroupBound.cpp

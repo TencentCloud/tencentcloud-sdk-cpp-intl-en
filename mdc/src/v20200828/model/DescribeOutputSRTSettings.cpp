@@ -28,7 +28,9 @@ DescribeOutputSRTSettings::DescribeOutputSRTSettings() :
     m_peerLatencyHasBeenSet(false),
     m_peerIdleTimeoutHasBeenSet(false),
     m_passphraseHasBeenSet(false),
-    m_pbKeyLenHasBeenSet(false)
+    m_pbKeyLenHasBeenSet(false),
+    m_modeHasBeenSet(false),
+    m_sourceAddressesHasBeenSet(false)
 {
 }
 
@@ -127,6 +129,36 @@ CoreInternalOutcome DescribeOutputSRTSettings::Deserialize(const rapidjson::Valu
         m_pbKeyLenHasBeenSet = true;
     }
 
+    if (value.HasMember("Mode") && !value["Mode"].IsNull())
+    {
+        if (!value["Mode"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DescribeOutputSRTSettings.Mode` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_mode = string(value["Mode"].GetString());
+        m_modeHasBeenSet = true;
+    }
+
+    if (value.HasMember("SourceAddresses") && !value["SourceAddresses"].IsNull())
+    {
+        if (!value["SourceAddresses"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `DescribeOutputSRTSettings.SourceAddresses` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["SourceAddresses"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            OutputSRTSourceAddressResp item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_sourceAddresses.push_back(item);
+        }
+        m_sourceAddressesHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -203,6 +235,29 @@ void DescribeOutputSRTSettings::ToJsonObject(rapidjson::Value &value, rapidjson:
         string key = "PbKeyLen";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_pbKeyLen, allocator);
+    }
+
+    if (m_modeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Mode";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_mode.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_sourceAddressesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SourceAddresses";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_sourceAddresses.begin(); itr != m_sourceAddresses.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
     }
 
 }
@@ -334,5 +389,37 @@ void DescribeOutputSRTSettings::SetPbKeyLen(const int64_t& _pbKeyLen)
 bool DescribeOutputSRTSettings::PbKeyLenHasBeenSet() const
 {
     return m_pbKeyLenHasBeenSet;
+}
+
+string DescribeOutputSRTSettings::GetMode() const
+{
+    return m_mode;
+}
+
+void DescribeOutputSRTSettings::SetMode(const string& _mode)
+{
+    m_mode = _mode;
+    m_modeHasBeenSet = true;
+}
+
+bool DescribeOutputSRTSettings::ModeHasBeenSet() const
+{
+    return m_modeHasBeenSet;
+}
+
+vector<OutputSRTSourceAddressResp> DescribeOutputSRTSettings::GetSourceAddresses() const
+{
+    return m_sourceAddresses;
+}
+
+void DescribeOutputSRTSettings::SetSourceAddresses(const vector<OutputSRTSourceAddressResp>& _sourceAddresses)
+{
+    m_sourceAddresses = _sourceAddresses;
+    m_sourceAddressesHasBeenSet = true;
+}
+
+bool DescribeOutputSRTSettings::SourceAddressesHasBeenSet() const
+{
+    return m_sourceAddressesHasBeenSet;
 }
 

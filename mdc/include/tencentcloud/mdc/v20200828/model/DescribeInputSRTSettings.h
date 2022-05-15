@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/mdc/v20200828/model/SRTSourceAddressResp.h>
 
 
 namespace TencentCloud
@@ -45,6 +46,28 @@ namespace TencentCloud
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
+
+                    /**
+                     * 获取The SRT mode.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return Mode The SRT mode.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetMode() const;
+
+                    /**
+                     * 设置The SRT mode.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param Mode The SRT mode.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetMode(const std::string& _mode);
+
+                    /**
+                     * 判断参数 Mode 是否已赋值
+                     * @return Mode 是否已赋值
+                     */
+                    bool ModeHasBeenSet() const;
 
                     /**
                      * 获取Stream ID.
@@ -172,7 +195,36 @@ namespace TencentCloud
                      */
                     bool PbKeyLenHasBeenSet() const;
 
+                    /**
+                     * 获取The SRT peer address.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return SourceAddresses The SRT peer address.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::vector<SRTSourceAddressResp> GetSourceAddresses() const;
+
+                    /**
+                     * 设置The SRT peer address.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param SourceAddresses The SRT peer address.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetSourceAddresses(const std::vector<SRTSourceAddressResp>& _sourceAddresses);
+
+                    /**
+                     * 判断参数 SourceAddresses 是否已赋值
+                     * @return SourceAddresses 是否已赋值
+                     */
+                    bool SourceAddressesHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * The SRT mode.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_mode;
+                    bool m_modeHasBeenSet;
 
                     /**
                      * Stream ID.
@@ -215,6 +267,13 @@ namespace TencentCloud
                      */
                     int64_t m_pbKeyLen;
                     bool m_pbKeyLenHasBeenSet;
+
+                    /**
+                     * The SRT peer address.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::vector<SRTSourceAddressResp> m_sourceAddresses;
+                    bool m_sourceAddressesHasBeenSet;
 
                 };
             }

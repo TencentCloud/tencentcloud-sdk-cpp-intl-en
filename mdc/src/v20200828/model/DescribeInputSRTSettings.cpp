@@ -21,13 +21,15 @@ using namespace TencentCloud::Mdc::V20200828::Model;
 using namespace std;
 
 DescribeInputSRTSettings::DescribeInputSRTSettings() :
+    m_modeHasBeenSet(false),
     m_streamIdHasBeenSet(false),
     m_latencyHasBeenSet(false),
     m_recvLatencyHasBeenSet(false),
     m_peerLatencyHasBeenSet(false),
     m_peerIdleTimeoutHasBeenSet(false),
     m_passphraseHasBeenSet(false),
-    m_pbKeyLenHasBeenSet(false)
+    m_pbKeyLenHasBeenSet(false),
+    m_sourceAddressesHasBeenSet(false)
 {
 }
 
@@ -35,6 +37,16 @@ CoreInternalOutcome DescribeInputSRTSettings::Deserialize(const rapidjson::Value
 {
     string requestId = "";
 
+
+    if (value.HasMember("Mode") && !value["Mode"].IsNull())
+    {
+        if (!value["Mode"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DescribeInputSRTSettings.Mode` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_mode = string(value["Mode"].GetString());
+        m_modeHasBeenSet = true;
+    }
 
     if (value.HasMember("StreamId") && !value["StreamId"].IsNull())
     {
@@ -106,12 +118,40 @@ CoreInternalOutcome DescribeInputSRTSettings::Deserialize(const rapidjson::Value
         m_pbKeyLenHasBeenSet = true;
     }
 
+    if (value.HasMember("SourceAddresses") && !value["SourceAddresses"].IsNull())
+    {
+        if (!value["SourceAddresses"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `DescribeInputSRTSettings.SourceAddresses` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["SourceAddresses"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            SRTSourceAddressResp item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_sourceAddresses.push_back(item);
+        }
+        m_sourceAddressesHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
 void DescribeInputSRTSettings::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
+
+    if (m_modeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Mode";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_mode.c_str(), allocator).Move(), allocator);
+    }
 
     if (m_streamIdHasBeenSet)
     {
@@ -169,8 +209,39 @@ void DescribeInputSRTSettings::ToJsonObject(rapidjson::Value &value, rapidjson::
         value.AddMember(iKey, m_pbKeyLen, allocator);
     }
 
+    if (m_sourceAddressesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SourceAddresses";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_sourceAddresses.begin(); itr != m_sourceAddresses.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
 }
 
+
+string DescribeInputSRTSettings::GetMode() const
+{
+    return m_mode;
+}
+
+void DescribeInputSRTSettings::SetMode(const string& _mode)
+{
+    m_mode = _mode;
+    m_modeHasBeenSet = true;
+}
+
+bool DescribeInputSRTSettings::ModeHasBeenSet() const
+{
+    return m_modeHasBeenSet;
+}
 
 string DescribeInputSRTSettings::GetStreamId() const
 {
@@ -282,5 +353,21 @@ void DescribeInputSRTSettings::SetPbKeyLen(const int64_t& _pbKeyLen)
 bool DescribeInputSRTSettings::PbKeyLenHasBeenSet() const
 {
     return m_pbKeyLenHasBeenSet;
+}
+
+vector<SRTSourceAddressResp> DescribeInputSRTSettings::GetSourceAddresses() const
+{
+    return m_sourceAddresses;
+}
+
+void DescribeInputSRTSettings::SetSourceAddresses(const vector<SRTSourceAddressResp>& _sourceAddresses)
+{
+    m_sourceAddresses = _sourceAddresses;
+    m_sourceAddressesHasBeenSet = true;
+}
+
+bool DescribeInputSRTSettings::SourceAddressesHasBeenSet() const
+{
+    return m_sourceAddressesHasBeenSet;
 }
 

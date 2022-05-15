@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mdc/v20200828/model/SRTAddressDestination.h>
+#include <tencentcloud/mdc/v20200828/model/OutputSRTSourceAddressResp.h>
 
 
 namespace TencentCloud
@@ -48,18 +49,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Push destination address information list.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Destinations Push destination address information list.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取A list of the destination addresses for relay. This parameter is valid if `Mode` is `CALLER`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return Destinations A list of the destination addresses for relay. This parameter is valid if `Mode` is `CALLER`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<SRTAddressDestination> GetDestinations() const;
 
                     /**
-                     * 设置Push destination address information list.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Destinations Push destination address information list.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置A list of the destination addresses for relay. This parameter is valid if `Mode` is `CALLER`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param Destinations A list of the destination addresses for relay. This parameter is valid if `Mode` is `CALLER`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetDestinations(const std::vector<SRTAddressDestination>& _destinations);
 
@@ -223,11 +224,55 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool PbKeyLenHasBeenSet() const;
 
+                    /**
+                     * 获取The SRT mode.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return Mode The SRT mode.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetMode() const;
+
+                    /**
+                     * 设置The SRT mode.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param Mode The SRT mode.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetMode(const std::string& _mode);
+
+                    /**
+                     * 判断参数 Mode 是否已赋值
+                     * @return Mode 是否已赋值
+                     */
+                    bool ModeHasBeenSet() const;
+
+                    /**
+                     * 获取The server’s listen address, which is valid if `Mode` is `LISTENER`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return SourceAddresses The server’s listen address, which is valid if `Mode` is `LISTENER`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::vector<OutputSRTSourceAddressResp> GetSourceAddresses() const;
+
+                    /**
+                     * 设置The server’s listen address, which is valid if `Mode` is `LISTENER`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param SourceAddresses The server’s listen address, which is valid if `Mode` is `LISTENER`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetSourceAddresses(const std::vector<OutputSRTSourceAddressResp>& _sourceAddresses);
+
+                    /**
+                     * 判断参数 SourceAddresses 是否已赋值
+                     * @return SourceAddresses 是否已赋值
+                     */
+                    bool SourceAddressesHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Push destination address information list.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * A list of the destination addresses for relay. This parameter is valid if `Mode` is `CALLER`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<SRTAddressDestination> m_destinations;
                     bool m_destinationsHasBeenSet;
@@ -280,6 +325,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_pbKeyLen;
                     bool m_pbKeyLenHasBeenSet;
+
+                    /**
+                     * The SRT mode.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_mode;
+                    bool m_modeHasBeenSet;
+
+                    /**
+                     * The server’s listen address, which is valid if `Mode` is `LISTENER`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::vector<OutputSRTSourceAddressResp> m_sourceAddresses;
+                    bool m_sourceAddressesHasBeenSet;
 
                 };
             }

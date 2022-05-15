@@ -83,6 +83,49 @@ MdcClient::CreateStreamLinkFlowOutcomeCallable MdcClient::CreateStreamLinkFlowCa
     return task->get_future();
 }
 
+MdcClient::CreateStreamLinkOutputInfoOutcome MdcClient::CreateStreamLinkOutputInfo(const CreateStreamLinkOutputInfoRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateStreamLinkOutputInfo");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateStreamLinkOutputInfoResponse rsp = CreateStreamLinkOutputInfoResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateStreamLinkOutputInfoOutcome(rsp);
+        else
+            return CreateStreamLinkOutputInfoOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateStreamLinkOutputInfoOutcome(outcome.GetError());
+    }
+}
+
+void MdcClient::CreateStreamLinkOutputInfoAsync(const CreateStreamLinkOutputInfoRequest& request, const CreateStreamLinkOutputInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateStreamLinkOutputInfo(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdcClient::CreateStreamLinkOutputInfoOutcomeCallable MdcClient::CreateStreamLinkOutputInfoCallable(const CreateStreamLinkOutputInfoRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateStreamLinkOutputInfoOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateStreamLinkOutputInfo(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 MdcClient::DeleteStreamLinkFlowOutcome MdcClient::DeleteStreamLinkFlow(const DeleteStreamLinkFlowRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteStreamLinkFlow");
@@ -212,6 +255,221 @@ MdcClient::DescribeStreamLinkFlowOutcomeCallable MdcClient::DescribeStreamLinkFl
     return task->get_future();
 }
 
+MdcClient::DescribeStreamLinkFlowLogsOutcome MdcClient::DescribeStreamLinkFlowLogs(const DescribeStreamLinkFlowLogsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeStreamLinkFlowLogs");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeStreamLinkFlowLogsResponse rsp = DescribeStreamLinkFlowLogsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeStreamLinkFlowLogsOutcome(rsp);
+        else
+            return DescribeStreamLinkFlowLogsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeStreamLinkFlowLogsOutcome(outcome.GetError());
+    }
+}
+
+void MdcClient::DescribeStreamLinkFlowLogsAsync(const DescribeStreamLinkFlowLogsRequest& request, const DescribeStreamLinkFlowLogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeStreamLinkFlowLogs(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdcClient::DescribeStreamLinkFlowLogsOutcomeCallable MdcClient::DescribeStreamLinkFlowLogsCallable(const DescribeStreamLinkFlowLogsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeStreamLinkFlowLogsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeStreamLinkFlowLogs(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdcClient::DescribeStreamLinkFlowMediaStatisticsOutcome MdcClient::DescribeStreamLinkFlowMediaStatistics(const DescribeStreamLinkFlowMediaStatisticsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeStreamLinkFlowMediaStatistics");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeStreamLinkFlowMediaStatisticsResponse rsp = DescribeStreamLinkFlowMediaStatisticsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeStreamLinkFlowMediaStatisticsOutcome(rsp);
+        else
+            return DescribeStreamLinkFlowMediaStatisticsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeStreamLinkFlowMediaStatisticsOutcome(outcome.GetError());
+    }
+}
+
+void MdcClient::DescribeStreamLinkFlowMediaStatisticsAsync(const DescribeStreamLinkFlowMediaStatisticsRequest& request, const DescribeStreamLinkFlowMediaStatisticsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeStreamLinkFlowMediaStatistics(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdcClient::DescribeStreamLinkFlowMediaStatisticsOutcomeCallable MdcClient::DescribeStreamLinkFlowMediaStatisticsCallable(const DescribeStreamLinkFlowMediaStatisticsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeStreamLinkFlowMediaStatisticsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeStreamLinkFlowMediaStatistics(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdcClient::DescribeStreamLinkFlowRealtimeStatusOutcome MdcClient::DescribeStreamLinkFlowRealtimeStatus(const DescribeStreamLinkFlowRealtimeStatusRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeStreamLinkFlowRealtimeStatus");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeStreamLinkFlowRealtimeStatusResponse rsp = DescribeStreamLinkFlowRealtimeStatusResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeStreamLinkFlowRealtimeStatusOutcome(rsp);
+        else
+            return DescribeStreamLinkFlowRealtimeStatusOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeStreamLinkFlowRealtimeStatusOutcome(outcome.GetError());
+    }
+}
+
+void MdcClient::DescribeStreamLinkFlowRealtimeStatusAsync(const DescribeStreamLinkFlowRealtimeStatusRequest& request, const DescribeStreamLinkFlowRealtimeStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeStreamLinkFlowRealtimeStatus(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdcClient::DescribeStreamLinkFlowRealtimeStatusOutcomeCallable MdcClient::DescribeStreamLinkFlowRealtimeStatusCallable(const DescribeStreamLinkFlowRealtimeStatusRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeStreamLinkFlowRealtimeStatusOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeStreamLinkFlowRealtimeStatus(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdcClient::DescribeStreamLinkFlowSRTStatisticsOutcome MdcClient::DescribeStreamLinkFlowSRTStatistics(const DescribeStreamLinkFlowSRTStatisticsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeStreamLinkFlowSRTStatistics");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeStreamLinkFlowSRTStatisticsResponse rsp = DescribeStreamLinkFlowSRTStatisticsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeStreamLinkFlowSRTStatisticsOutcome(rsp);
+        else
+            return DescribeStreamLinkFlowSRTStatisticsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeStreamLinkFlowSRTStatisticsOutcome(outcome.GetError());
+    }
+}
+
+void MdcClient::DescribeStreamLinkFlowSRTStatisticsAsync(const DescribeStreamLinkFlowSRTStatisticsRequest& request, const DescribeStreamLinkFlowSRTStatisticsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeStreamLinkFlowSRTStatistics(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdcClient::DescribeStreamLinkFlowSRTStatisticsOutcomeCallable MdcClient::DescribeStreamLinkFlowSRTStatisticsCallable(const DescribeStreamLinkFlowSRTStatisticsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeStreamLinkFlowSRTStatisticsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeStreamLinkFlowSRTStatistics(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdcClient::DescribeStreamLinkFlowStatisticsOutcome MdcClient::DescribeStreamLinkFlowStatistics(const DescribeStreamLinkFlowStatisticsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeStreamLinkFlowStatistics");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeStreamLinkFlowStatisticsResponse rsp = DescribeStreamLinkFlowStatisticsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeStreamLinkFlowStatisticsOutcome(rsp);
+        else
+            return DescribeStreamLinkFlowStatisticsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeStreamLinkFlowStatisticsOutcome(outcome.GetError());
+    }
+}
+
+void MdcClient::DescribeStreamLinkFlowStatisticsAsync(const DescribeStreamLinkFlowStatisticsRequest& request, const DescribeStreamLinkFlowStatisticsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeStreamLinkFlowStatistics(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdcClient::DescribeStreamLinkFlowStatisticsOutcomeCallable MdcClient::DescribeStreamLinkFlowStatisticsCallable(const DescribeStreamLinkFlowStatisticsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeStreamLinkFlowStatisticsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeStreamLinkFlowStatistics(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 MdcClient::DescribeStreamLinkFlowsOutcome MdcClient::DescribeStreamLinkFlows(const DescribeStreamLinkFlowsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeStreamLinkFlows");
@@ -334,6 +592,92 @@ MdcClient::ModifyStreamLinkFlowOutcomeCallable MdcClient::ModifyStreamLinkFlowCa
         [this, request]()
         {
             return this->ModifyStreamLinkFlow(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdcClient::ModifyStreamLinkInputOutcome MdcClient::ModifyStreamLinkInput(const ModifyStreamLinkInputRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyStreamLinkInput");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyStreamLinkInputResponse rsp = ModifyStreamLinkInputResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyStreamLinkInputOutcome(rsp);
+        else
+            return ModifyStreamLinkInputOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyStreamLinkInputOutcome(outcome.GetError());
+    }
+}
+
+void MdcClient::ModifyStreamLinkInputAsync(const ModifyStreamLinkInputRequest& request, const ModifyStreamLinkInputAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyStreamLinkInput(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdcClient::ModifyStreamLinkInputOutcomeCallable MdcClient::ModifyStreamLinkInputCallable(const ModifyStreamLinkInputRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyStreamLinkInputOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyStreamLinkInput(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MdcClient::ModifyStreamLinkOutputInfoOutcome MdcClient::ModifyStreamLinkOutputInfo(const ModifyStreamLinkOutputInfoRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyStreamLinkOutputInfo");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyStreamLinkOutputInfoResponse rsp = ModifyStreamLinkOutputInfoResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyStreamLinkOutputInfoOutcome(rsp);
+        else
+            return ModifyStreamLinkOutputInfoOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyStreamLinkOutputInfoOutcome(outcome.GetError());
+    }
+}
+
+void MdcClient::ModifyStreamLinkOutputInfoAsync(const ModifyStreamLinkOutputInfoRequest& request, const ModifyStreamLinkOutputInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyStreamLinkOutputInfo(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdcClient::ModifyStreamLinkOutputInfoOutcomeCallable MdcClient::ModifyStreamLinkOutputInfoCallable(const ModifyStreamLinkOutputInfoRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyStreamLinkOutputInfoOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyStreamLinkOutputInfo(request);
         }
     );
 
