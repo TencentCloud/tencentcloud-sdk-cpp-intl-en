@@ -29,18 +29,18 @@
 #include <tencentcloud/emr/v20190103/model/DescribeClusterNodesResponse.h>
 #include <tencentcloud/emr/v20190103/model/DescribeInstancesRequest.h>
 #include <tencentcloud/emr/v20190103/model/DescribeInstancesResponse.h>
+#include <tencentcloud/emr/v20190103/model/DescribeResourceScheduleRequest.h>
+#include <tencentcloud/emr/v20190103/model/DescribeResourceScheduleResponse.h>
 #include <tencentcloud/emr/v20190103/model/InquiryPriceCreateInstanceRequest.h>
 #include <tencentcloud/emr/v20190103/model/InquiryPriceCreateInstanceResponse.h>
 #include <tencentcloud/emr/v20190103/model/InquiryPriceRenewInstanceRequest.h>
 #include <tencentcloud/emr/v20190103/model/InquiryPriceRenewInstanceResponse.h>
-#include <tencentcloud/emr/v20190103/model/InquiryPriceScaleOutInstanceRequest.h>
-#include <tencentcloud/emr/v20190103/model/InquiryPriceScaleOutInstanceResponse.h>
 #include <tencentcloud/emr/v20190103/model/InquiryPriceUpdateInstanceRequest.h>
 #include <tencentcloud/emr/v20190103/model/InquiryPriceUpdateInstanceResponse.h>
-#include <tencentcloud/emr/v20190103/model/ScaleOutInstanceRequest.h>
-#include <tencentcloud/emr/v20190103/model/ScaleOutInstanceResponse.h>
-#include <tencentcloud/emr/v20190103/model/TerminateInstanceRequest.h>
-#include <tencentcloud/emr/v20190103/model/TerminateInstanceResponse.h>
+#include <tencentcloud/emr/v20190103/model/ModifyResourceScheduleConfigRequest.h>
+#include <tencentcloud/emr/v20190103/model/ModifyResourceScheduleConfigResponse.h>
+#include <tencentcloud/emr/v20190103/model/ModifyResourceSchedulerRequest.h>
+#include <tencentcloud/emr/v20190103/model/ModifyResourceSchedulerResponse.h>
 #include <tencentcloud/emr/v20190103/model/TerminateTasksRequest.h>
 #include <tencentcloud/emr/v20190103/model/TerminateTasksResponse.h>
 
@@ -66,24 +66,24 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeInstancesResponse> DescribeInstancesOutcome;
                 typedef std::future<DescribeInstancesOutcome> DescribeInstancesOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::DescribeInstancesRequest&, DescribeInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeResourceScheduleResponse> DescribeResourceScheduleOutcome;
+                typedef std::future<DescribeResourceScheduleOutcome> DescribeResourceScheduleOutcomeCallable;
+                typedef std::function<void(const EmrClient*, const Model::DescribeResourceScheduleRequest&, DescribeResourceScheduleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeResourceScheduleAsyncHandler;
                 typedef Outcome<Core::Error, Model::InquiryPriceCreateInstanceResponse> InquiryPriceCreateInstanceOutcome;
                 typedef std::future<InquiryPriceCreateInstanceOutcome> InquiryPriceCreateInstanceOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::InquiryPriceCreateInstanceRequest&, InquiryPriceCreateInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquiryPriceCreateInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::InquiryPriceRenewInstanceResponse> InquiryPriceRenewInstanceOutcome;
                 typedef std::future<InquiryPriceRenewInstanceOutcome> InquiryPriceRenewInstanceOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::InquiryPriceRenewInstanceRequest&, InquiryPriceRenewInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquiryPriceRenewInstanceAsyncHandler;
-                typedef Outcome<Core::Error, Model::InquiryPriceScaleOutInstanceResponse> InquiryPriceScaleOutInstanceOutcome;
-                typedef std::future<InquiryPriceScaleOutInstanceOutcome> InquiryPriceScaleOutInstanceOutcomeCallable;
-                typedef std::function<void(const EmrClient*, const Model::InquiryPriceScaleOutInstanceRequest&, InquiryPriceScaleOutInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquiryPriceScaleOutInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::InquiryPriceUpdateInstanceResponse> InquiryPriceUpdateInstanceOutcome;
                 typedef std::future<InquiryPriceUpdateInstanceOutcome> InquiryPriceUpdateInstanceOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::InquiryPriceUpdateInstanceRequest&, InquiryPriceUpdateInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquiryPriceUpdateInstanceAsyncHandler;
-                typedef Outcome<Core::Error, Model::ScaleOutInstanceResponse> ScaleOutInstanceOutcome;
-                typedef std::future<ScaleOutInstanceOutcome> ScaleOutInstanceOutcomeCallable;
-                typedef std::function<void(const EmrClient*, const Model::ScaleOutInstanceRequest&, ScaleOutInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ScaleOutInstanceAsyncHandler;
-                typedef Outcome<Core::Error, Model::TerminateInstanceResponse> TerminateInstanceOutcome;
-                typedef std::future<TerminateInstanceOutcome> TerminateInstanceOutcomeCallable;
-                typedef std::function<void(const EmrClient*, const Model::TerminateInstanceRequest&, TerminateInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TerminateInstanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyResourceScheduleConfigResponse> ModifyResourceScheduleConfigOutcome;
+                typedef std::future<ModifyResourceScheduleConfigOutcome> ModifyResourceScheduleConfigOutcomeCallable;
+                typedef std::function<void(const EmrClient*, const Model::ModifyResourceScheduleConfigRequest&, ModifyResourceScheduleConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyResourceScheduleConfigAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyResourceSchedulerResponse> ModifyResourceSchedulerOutcome;
+                typedef std::future<ModifyResourceSchedulerOutcome> ModifyResourceSchedulerOutcomeCallable;
+                typedef std::function<void(const EmrClient*, const Model::ModifyResourceSchedulerRequest&, ModifyResourceSchedulerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyResourceSchedulerAsyncHandler;
                 typedef Outcome<Core::Error, Model::TerminateTasksResponse> TerminateTasksOutcome;
                 typedef std::future<TerminateTasksOutcome> TerminateTasksOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::TerminateTasksRequest&, TerminateTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TerminateTasksAsyncHandler;
@@ -118,6 +118,15 @@ namespace TencentCloud
                 DescribeInstancesOutcomeCallable DescribeInstancesCallable(const Model::DescribeInstancesRequest& request);
 
                 /**
+                 *This API is used to get data from the YARN Resource Scheduling page.
+                 * @param req DescribeResourceScheduleRequest
+                 * @return DescribeResourceScheduleOutcome
+                 */
+                DescribeResourceScheduleOutcome DescribeResourceSchedule(const Model::DescribeResourceScheduleRequest &request);
+                void DescribeResourceScheduleAsync(const Model::DescribeResourceScheduleRequest& request, const DescribeResourceScheduleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeResourceScheduleOutcomeCallable DescribeResourceScheduleCallable(const Model::DescribeResourceScheduleRequest& request);
+
+                /**
                  *This API is used to query price of instance creation.
                  * @param req InquiryPriceCreateInstanceRequest
                  * @return InquiryPriceCreateInstanceOutcome
@@ -136,15 +145,6 @@ namespace TencentCloud
                 InquiryPriceRenewInstanceOutcomeCallable InquiryPriceRenewInstanceCallable(const Model::InquiryPriceRenewInstanceRequest& request);
 
                 /**
-                 *This API is used to query price of scale-out.
-                 * @param req InquiryPriceScaleOutInstanceRequest
-                 * @return InquiryPriceScaleOutInstanceOutcome
-                 */
-                InquiryPriceScaleOutInstanceOutcome InquiryPriceScaleOutInstance(const Model::InquiryPriceScaleOutInstanceRequest &request);
-                void InquiryPriceScaleOutInstanceAsync(const Model::InquiryPriceScaleOutInstanceRequest& request, const InquiryPriceScaleOutInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                InquiryPriceScaleOutInstanceOutcomeCallable InquiryPriceScaleOutInstanceCallable(const Model::InquiryPriceScaleOutInstanceRequest& request);
-
-                /**
                  *This API is used to query price of scaling.
                  * @param req InquiryPriceUpdateInstanceRequest
                  * @return InquiryPriceUpdateInstanceOutcome
@@ -154,22 +154,22 @@ namespace TencentCloud
                 InquiryPriceUpdateInstanceOutcomeCallable InquiryPriceUpdateInstanceCallable(const Model::InquiryPriceUpdateInstanceRequest& request);
 
                 /**
-                 *This API is used to scale out instance.
-                 * @param req ScaleOutInstanceRequest
-                 * @return ScaleOutInstanceOutcome
+                 *This API is used to modify the resource configuration of YARN Resource Scheduling.
+                 * @param req ModifyResourceScheduleConfigRequest
+                 * @return ModifyResourceScheduleConfigOutcome
                  */
-                ScaleOutInstanceOutcome ScaleOutInstance(const Model::ScaleOutInstanceRequest &request);
-                void ScaleOutInstanceAsync(const Model::ScaleOutInstanceRequest& request, const ScaleOutInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                ScaleOutInstanceOutcomeCallable ScaleOutInstanceCallable(const Model::ScaleOutInstanceRequest& request);
+                ModifyResourceScheduleConfigOutcome ModifyResourceScheduleConfig(const Model::ModifyResourceScheduleConfigRequest &request);
+                void ModifyResourceScheduleConfigAsync(const Model::ModifyResourceScheduleConfigRequest& request, const ModifyResourceScheduleConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyResourceScheduleConfigOutcomeCallable ModifyResourceScheduleConfigCallable(const Model::ModifyResourceScheduleConfigRequest& request);
 
                 /**
-                 *This API is used to terminate an EMR instance. It is only supported in the official paid edition of EMR.
-                 * @param req TerminateInstanceRequest
-                 * @return TerminateInstanceOutcome
+                 *This API is used to modify the YARN resource scheduler (the change will take effect after you click Apply).
+                 * @param req ModifyResourceSchedulerRequest
+                 * @return ModifyResourceSchedulerOutcome
                  */
-                TerminateInstanceOutcome TerminateInstance(const Model::TerminateInstanceRequest &request);
-                void TerminateInstanceAsync(const Model::TerminateInstanceRequest& request, const TerminateInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                TerminateInstanceOutcomeCallable TerminateInstanceCallable(const Model::TerminateInstanceRequest& request);
+                ModifyResourceSchedulerOutcome ModifyResourceScheduler(const Model::ModifyResourceSchedulerRequest &request);
+                void ModifyResourceSchedulerAsync(const Model::ModifyResourceSchedulerRequest& request, const ModifyResourceSchedulerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyResourceSchedulerOutcomeCallable ModifyResourceSchedulerCallable(const Model::ModifyResourceSchedulerRequest& request);
 
                 /**
                  *This API is used to terminate a task node.

@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_EMR_V20190103_MODEL_TERMINATEINSTANCERESPONSE_H_
-#define TENCENTCLOUD_EMR_V20190103_MODEL_TERMINATEINSTANCERESPONSE_H_
+#ifndef TENCENTCLOUD_EMR_V20190103_MODEL_MODIFYRESOURCESCHEDULERRESPONSE_H_
+#define TENCENTCLOUD_EMR_V20190103_MODEL_MODIFYRESOURCESCHEDULERRESPONSE_H_
 
 #include <string>
 #include <vector>
@@ -32,13 +32,13 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * TerminateInstance response structure.
+                * ModifyResourceScheduler response structure.
                 */
-                class TerminateInstanceResponse : public AbstractModel
+                class ModifyResourceSchedulerResponse : public AbstractModel
                 {
                 public:
-                    TerminateInstanceResponse();
-                    ~TerminateInstanceResponse() = default;
+                    ModifyResourceSchedulerResponse();
+                    ~ModifyResourceSchedulerResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
@@ -51,4 +51,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_EMR_V20190103_MODEL_TERMINATEINSTANCERESPONSE_H_
+#endif // !TENCENTCLOUD_EMR_V20190103_MODEL_MODIFYRESOURCESCHEDULERRESPONSE_H_

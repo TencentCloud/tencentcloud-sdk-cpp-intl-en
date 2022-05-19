@@ -169,6 +169,49 @@ EmrClient::DescribeInstancesOutcomeCallable EmrClient::DescribeInstancesCallable
     return task->get_future();
 }
 
+EmrClient::DescribeResourceScheduleOutcome EmrClient::DescribeResourceSchedule(const DescribeResourceScheduleRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeResourceSchedule");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeResourceScheduleResponse rsp = DescribeResourceScheduleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeResourceScheduleOutcome(rsp);
+        else
+            return DescribeResourceScheduleOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeResourceScheduleOutcome(outcome.GetError());
+    }
+}
+
+void EmrClient::DescribeResourceScheduleAsync(const DescribeResourceScheduleRequest& request, const DescribeResourceScheduleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeResourceSchedule(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+EmrClient::DescribeResourceScheduleOutcomeCallable EmrClient::DescribeResourceScheduleCallable(const DescribeResourceScheduleRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeResourceScheduleOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeResourceSchedule(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 EmrClient::InquiryPriceCreateInstanceOutcome EmrClient::InquiryPriceCreateInstance(const InquiryPriceCreateInstanceRequest &request)
 {
     auto outcome = MakeRequest(request, "InquiryPriceCreateInstance");
@@ -255,49 +298,6 @@ EmrClient::InquiryPriceRenewInstanceOutcomeCallable EmrClient::InquiryPriceRenew
     return task->get_future();
 }
 
-EmrClient::InquiryPriceScaleOutInstanceOutcome EmrClient::InquiryPriceScaleOutInstance(const InquiryPriceScaleOutInstanceRequest &request)
-{
-    auto outcome = MakeRequest(request, "InquiryPriceScaleOutInstance");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        InquiryPriceScaleOutInstanceResponse rsp = InquiryPriceScaleOutInstanceResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return InquiryPriceScaleOutInstanceOutcome(rsp);
-        else
-            return InquiryPriceScaleOutInstanceOutcome(o.GetError());
-    }
-    else
-    {
-        return InquiryPriceScaleOutInstanceOutcome(outcome.GetError());
-    }
-}
-
-void EmrClient::InquiryPriceScaleOutInstanceAsync(const InquiryPriceScaleOutInstanceRequest& request, const InquiryPriceScaleOutInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->InquiryPriceScaleOutInstance(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-EmrClient::InquiryPriceScaleOutInstanceOutcomeCallable EmrClient::InquiryPriceScaleOutInstanceCallable(const InquiryPriceScaleOutInstanceRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<InquiryPriceScaleOutInstanceOutcome()>>(
-        [this, request]()
-        {
-            return this->InquiryPriceScaleOutInstance(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
 EmrClient::InquiryPriceUpdateInstanceOutcome EmrClient::InquiryPriceUpdateInstance(const InquiryPriceUpdateInstanceRequest &request)
 {
     auto outcome = MakeRequest(request, "InquiryPriceUpdateInstance");
@@ -341,42 +341,42 @@ EmrClient::InquiryPriceUpdateInstanceOutcomeCallable EmrClient::InquiryPriceUpda
     return task->get_future();
 }
 
-EmrClient::ScaleOutInstanceOutcome EmrClient::ScaleOutInstance(const ScaleOutInstanceRequest &request)
+EmrClient::ModifyResourceScheduleConfigOutcome EmrClient::ModifyResourceScheduleConfig(const ModifyResourceScheduleConfigRequest &request)
 {
-    auto outcome = MakeRequest(request, "ScaleOutInstance");
+    auto outcome = MakeRequest(request, "ModifyResourceScheduleConfig");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        ScaleOutInstanceResponse rsp = ScaleOutInstanceResponse();
+        ModifyResourceScheduleConfigResponse rsp = ModifyResourceScheduleConfigResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return ScaleOutInstanceOutcome(rsp);
+            return ModifyResourceScheduleConfigOutcome(rsp);
         else
-            return ScaleOutInstanceOutcome(o.GetError());
+            return ModifyResourceScheduleConfigOutcome(o.GetError());
     }
     else
     {
-        return ScaleOutInstanceOutcome(outcome.GetError());
+        return ModifyResourceScheduleConfigOutcome(outcome.GetError());
     }
 }
 
-void EmrClient::ScaleOutInstanceAsync(const ScaleOutInstanceRequest& request, const ScaleOutInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void EmrClient::ModifyResourceScheduleConfigAsync(const ModifyResourceScheduleConfigRequest& request, const ModifyResourceScheduleConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
     auto fn = [this, request, handler, context]()
     {
-        handler(this, request, this->ScaleOutInstance(request), context);
+        handler(this, request, this->ModifyResourceScheduleConfig(request), context);
     };
 
     Executor::GetInstance()->Submit(new Runnable(fn));
 }
 
-EmrClient::ScaleOutInstanceOutcomeCallable EmrClient::ScaleOutInstanceCallable(const ScaleOutInstanceRequest &request)
+EmrClient::ModifyResourceScheduleConfigOutcomeCallable EmrClient::ModifyResourceScheduleConfigCallable(const ModifyResourceScheduleConfigRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ScaleOutInstanceOutcome()>>(
+    auto task = std::make_shared<std::packaged_task<ModifyResourceScheduleConfigOutcome()>>(
         [this, request]()
         {
-            return this->ScaleOutInstance(request);
+            return this->ModifyResourceScheduleConfig(request);
         }
     );
 
@@ -384,42 +384,42 @@ EmrClient::ScaleOutInstanceOutcomeCallable EmrClient::ScaleOutInstanceCallable(c
     return task->get_future();
 }
 
-EmrClient::TerminateInstanceOutcome EmrClient::TerminateInstance(const TerminateInstanceRequest &request)
+EmrClient::ModifyResourceSchedulerOutcome EmrClient::ModifyResourceScheduler(const ModifyResourceSchedulerRequest &request)
 {
-    auto outcome = MakeRequest(request, "TerminateInstance");
+    auto outcome = MakeRequest(request, "ModifyResourceScheduler");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        TerminateInstanceResponse rsp = TerminateInstanceResponse();
+        ModifyResourceSchedulerResponse rsp = ModifyResourceSchedulerResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return TerminateInstanceOutcome(rsp);
+            return ModifyResourceSchedulerOutcome(rsp);
         else
-            return TerminateInstanceOutcome(o.GetError());
+            return ModifyResourceSchedulerOutcome(o.GetError());
     }
     else
     {
-        return TerminateInstanceOutcome(outcome.GetError());
+        return ModifyResourceSchedulerOutcome(outcome.GetError());
     }
 }
 
-void EmrClient::TerminateInstanceAsync(const TerminateInstanceRequest& request, const TerminateInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void EmrClient::ModifyResourceSchedulerAsync(const ModifyResourceSchedulerRequest& request, const ModifyResourceSchedulerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
     auto fn = [this, request, handler, context]()
     {
-        handler(this, request, this->TerminateInstance(request), context);
+        handler(this, request, this->ModifyResourceScheduler(request), context);
     };
 
     Executor::GetInstance()->Submit(new Runnable(fn));
 }
 
-EmrClient::TerminateInstanceOutcomeCallable EmrClient::TerminateInstanceCallable(const TerminateInstanceRequest &request)
+EmrClient::ModifyResourceSchedulerOutcomeCallable EmrClient::ModifyResourceSchedulerCallable(const ModifyResourceSchedulerRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<TerminateInstanceOutcome()>>(
+    auto task = std::make_shared<std::packaged_task<ModifyResourceSchedulerOutcome()>>(
         [this, request]()
         {
-            return this->TerminateInstance(request);
+            return this->ModifyResourceScheduler(request);
         }
     );
 

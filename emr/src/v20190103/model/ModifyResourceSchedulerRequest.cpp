@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/emr/v20190103/model/TerminateInstanceRequest.h>
+#include <tencentcloud/emr/v20190103/model/ModifyResourceSchedulerRequest.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -22,13 +22,14 @@
 using namespace TencentCloud::Emr::V20190103::Model;
 using namespace std;
 
-TerminateInstanceRequest::TerminateInstanceRequest() :
+ModifyResourceSchedulerRequest::ModifyResourceSchedulerRequest() :
     m_instanceIdHasBeenSet(false),
-    m_resourceIdsHasBeenSet(false)
+    m_oldValueHasBeenSet(false),
+    m_newValueHasBeenSet(false)
 {
 }
 
-string TerminateInstanceRequest::ToJsonString() const
+string ModifyResourceSchedulerRequest::ToJsonString() const
 {
     rapidjson::Document d;
     d.SetObject();
@@ -43,17 +44,20 @@ string TerminateInstanceRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_resourceIdsHasBeenSet)
+    if (m_oldValueHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "ResourceIds";
+        string key = "OldValue";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_oldValue.c_str(), allocator).Move(), allocator);
+    }
 
-        for (auto itr = m_resourceIds.begin(); itr != m_resourceIds.end(); ++itr)
-        {
-            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
-        }
+    if (m_newValueHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NewValue";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_newValue.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -64,36 +68,52 @@ string TerminateInstanceRequest::ToJsonString() const
 }
 
 
-string TerminateInstanceRequest::GetInstanceId() const
+string ModifyResourceSchedulerRequest::GetInstanceId() const
 {
     return m_instanceId;
 }
 
-void TerminateInstanceRequest::SetInstanceId(const string& _instanceId)
+void ModifyResourceSchedulerRequest::SetInstanceId(const string& _instanceId)
 {
     m_instanceId = _instanceId;
     m_instanceIdHasBeenSet = true;
 }
 
-bool TerminateInstanceRequest::InstanceIdHasBeenSet() const
+bool ModifyResourceSchedulerRequest::InstanceIdHasBeenSet() const
 {
     return m_instanceIdHasBeenSet;
 }
 
-vector<string> TerminateInstanceRequest::GetResourceIds() const
+string ModifyResourceSchedulerRequest::GetOldValue() const
 {
-    return m_resourceIds;
+    return m_oldValue;
 }
 
-void TerminateInstanceRequest::SetResourceIds(const vector<string>& _resourceIds)
+void ModifyResourceSchedulerRequest::SetOldValue(const string& _oldValue)
 {
-    m_resourceIds = _resourceIds;
-    m_resourceIdsHasBeenSet = true;
+    m_oldValue = _oldValue;
+    m_oldValueHasBeenSet = true;
 }
 
-bool TerminateInstanceRequest::ResourceIdsHasBeenSet() const
+bool ModifyResourceSchedulerRequest::OldValueHasBeenSet() const
 {
-    return m_resourceIdsHasBeenSet;
+    return m_oldValueHasBeenSet;
+}
+
+string ModifyResourceSchedulerRequest::GetNewValue() const
+{
+    return m_newValue;
+}
+
+void ModifyResourceSchedulerRequest::SetNewValue(const string& _newValue)
+{
+    m_newValue = _newValue;
+    m_newValueHasBeenSet = true;
+}
+
+bool ModifyResourceSchedulerRequest::NewValueHasBeenSet() const
+{
+    return m_newValueHasBeenSet;
 }
 
 

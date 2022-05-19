@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/emr/v20190103/model/TerminateInstanceResponse.h>
+#include <tencentcloud/emr/v20190103/model/ModifyResourceScheduleConfigResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,11 +23,13 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Emr::V20190103::Model;
 using namespace std;
 
-TerminateInstanceResponse::TerminateInstanceResponse()
+ModifyResourceScheduleConfigResponse::ModifyResourceScheduleConfigResponse() :
+    m_isDraftHasBeenSet(false),
+    m_errorMsgHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome TerminateInstanceResponse::Deserialize(const string &payload)
+CoreInternalOutcome ModifyResourceScheduleConfigResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -61,15 +63,51 @@ CoreInternalOutcome TerminateInstanceResponse::Deserialize(const string &payload
     }
 
 
+    if (rsp.HasMember("IsDraft") && !rsp["IsDraft"].IsNull())
+    {
+        if (!rsp["IsDraft"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `IsDraft` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_isDraft = rsp["IsDraft"].GetBool();
+        m_isDraftHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("ErrorMsg") && !rsp["ErrorMsg"].IsNull())
+    {
+        if (!rsp["ErrorMsg"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ErrorMsg` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_errorMsg = string(rsp["ErrorMsg"].GetString());
+        m_errorMsgHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-string TerminateInstanceResponse::ToJsonString() const
+string ModifyResourceScheduleConfigResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_isDraftHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsDraft";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_isDraft, allocator);
+    }
+
+    if (m_errorMsgHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ErrorMsg";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_errorMsg.c_str(), allocator).Move(), allocator);
+    }
 
     rapidjson::Value iKey(rapidjson::kStringType);
     string key = "RequestId";
@@ -82,5 +120,25 @@ string TerminateInstanceResponse::ToJsonString() const
     return buffer.GetString();
 }
 
+
+bool ModifyResourceScheduleConfigResponse::GetIsDraft() const
+{
+    return m_isDraft;
+}
+
+bool ModifyResourceScheduleConfigResponse::IsDraftHasBeenSet() const
+{
+    return m_isDraftHasBeenSet;
+}
+
+string ModifyResourceScheduleConfigResponse::GetErrorMsg() const
+{
+    return m_errorMsg;
+}
+
+bool ModifyResourceScheduleConfigResponse::ErrorMsgHasBeenSet() const
+{
+    return m_errorMsgHasBeenSet;
+}
 
 
