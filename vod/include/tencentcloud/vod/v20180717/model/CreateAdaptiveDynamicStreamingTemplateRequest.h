@@ -106,22 +106,30 @@ Note: the frame rate of all substreams must be the same; otherwise, the frame ra
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取DRM scheme type. Valid values:
-<li>SimpleAES.</li>
-If this field is an empty string, DRM will not be performed on the video.
-                     * @return DrmType DRM scheme type. Valid values:
-<li>SimpleAES.</li>
-If this field is an empty string, DRM will not be performed on the video.
+                     * 获取The DRM type. Valid values:
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
+If this parameter is an empty string, it indicates that the video is not protected by DRM.
+                     * @return DrmType The DRM type. Valid values:
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
+If this parameter is an empty string, it indicates that the video is not protected by DRM.
                      */
                     std::string GetDrmType() const;
 
                     /**
-                     * 设置DRM scheme type. Valid values:
-<li>SimpleAES.</li>
-If this field is an empty string, DRM will not be performed on the video.
-                     * @param DrmType DRM scheme type. Valid values:
-<li>SimpleAES.</li>
-If this field is an empty string, DRM will not be performed on the video.
+                     * 设置The DRM type. Valid values:
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
+If this parameter is an empty string, it indicates that the video is not protected by DRM.
+                     * @param DrmType The DRM type. Valid values:
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
+If this parameter is an empty string, it indicates that the video is not protected by DRM.
                      */
                     void SetDrmType(const std::string& _drmType);
 
@@ -250,9 +258,11 @@ Note: the frame rate of all substreams must be the same; otherwise, the frame ra
                     bool m_nameHasBeenSet;
 
                     /**
-                     * DRM scheme type. Valid values:
-<li>SimpleAES.</li>
-If this field is an empty string, DRM will not be performed on the video.
+                     * The DRM type. Valid values:
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
+If this parameter is an empty string, it indicates that the video is not protected by DRM.
                      */
                     std::string m_drmType;
                     bool m_drmTypeHasBeenSet;

@@ -29,6 +29,7 @@ set(cls_public_header_model
   include/tencentcloud/cls/v20201016/model/DeleteShipperRequest.h
   include/tencentcloud/cls/v20201016/model/ModifyTopicRequest.h
   include/tencentcloud/cls/v20201016/model/DeleteLogsetResponse.h
+  include/tencentcloud/cls/v20201016/model/ParquetKeyInfo.h
   include/tencentcloud/cls/v20201016/model/DescribeShipperTasksResponse.h
   include/tencentcloud/cls/v20201016/model/CreateMachineGroupResponse.h
   include/tencentcloud/cls/v20201016/model/DescribeConfigMachineGroupsRequest.h
@@ -168,6 +169,7 @@ set(cls_public_header_model
   include/tencentcloud/cls/v20201016/model/ModifyLogsetRequest.h
   include/tencentcloud/cls/v20201016/model/DescribeMachineGroupsResponse.h
   include/tencentcloud/cls/v20201016/model/DescribeLogsetsRequest.h
+  include/tencentcloud/cls/v20201016/model/ParquetInfo.h
   include/tencentcloud/cls/v20201016/model/DeleteTopicResponse.h
   include/tencentcloud/cls/v20201016/model/Filter.h
   include/tencentcloud/cls/v20201016/model/ConsumerContent.h
@@ -188,6 +190,7 @@ set(cls_src
   src/v20201016/model/DeleteShipperRequest.cpp
   src/v20201016/model/ModifyTopicRequest.cpp
   src/v20201016/model/DeleteLogsetResponse.cpp
+  src/v20201016/model/ParquetKeyInfo.cpp
   src/v20201016/model/DescribeShipperTasksResponse.cpp
   src/v20201016/model/CreateMachineGroupResponse.cpp
   src/v20201016/model/DescribeConfigMachineGroupsRequest.cpp
@@ -327,6 +330,7 @@ set(cls_src
   src/v20201016/model/ModifyLogsetRequest.cpp
   src/v20201016/model/DescribeMachineGroupsResponse.cpp
   src/v20201016/model/DescribeLogsetsRequest.cpp
+  src/v20201016/model/ParquetInfo.cpp
   src/v20201016/model/DeleteTopicResponse.cpp
   src/v20201016/model/Filter.cpp
   src/v20201016/model/ConsumerContent.cpp

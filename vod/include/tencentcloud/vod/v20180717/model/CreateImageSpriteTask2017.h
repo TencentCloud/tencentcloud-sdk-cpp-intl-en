@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Image sprite generating task. This structure is only used for tasks initiated by the [CreateImageSprite](https://intl.cloud.tencent.com/document/product/266/8101?from_cn_redirect=1) API in v2017.
+                * The details of an image sprite task. This parameter is only valid for tasks initiated by the v2017 image sprite API.
                 */
                 class CreateImageSpriteTask2017 : public AbstractModel
                 {

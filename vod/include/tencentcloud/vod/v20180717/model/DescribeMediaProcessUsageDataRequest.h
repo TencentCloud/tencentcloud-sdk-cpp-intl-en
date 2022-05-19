@@ -79,42 +79,46 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Type of media processing task. Valid values:
-<li>`Transcoding`: basic transcoding</li>
-<li>`Transcoding-TESHD`: TESHD transcoding</li>
-<li>`Editing`: video editing</li>
-<li>`AdaptiveBitrateStreaming`: adaptive bitrate streaming</li>
-<li>`ContentAudit`: content moderation</li>
-<li>`RemoveWatermark`: watermark removal</li>
-<li>`Transcode`: transcoding, including basic transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
-                     * @return Type Type of media processing task. Valid values:
-<li>`Transcoding`: basic transcoding</li>
-<li>`Transcoding-TESHD`: TESHD transcoding</li>
-<li>`Editing`: video editing</li>
-<li>`AdaptiveBitrateStreaming`: adaptive bitrate streaming</li>
-<li>`ContentAudit`: content moderation</li>
-<li>`RemoveWatermark`: watermark removal</li>
-<li>`Transcode`: transcoding, including basic transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
+                     * 获取The type of media processing task. Valid values:
+<li>Transcoding: General transcoding</li>
+<li>Transcoding-TESHD: TESHD transcoding</li>
+<li>Editing: Video editing</li>
+<li>Editing-TESHD: TESHD editing</li>
+<li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
+<li>ContentAudit: Content moderation</li>
+<li>RemoveWatermark: Watermark removal</li>
+<li>Transcode: Transcoding, including general transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
+                     * @return Type The type of media processing task. Valid values:
+<li>Transcoding: General transcoding</li>
+<li>Transcoding-TESHD: TESHD transcoding</li>
+<li>Editing: Video editing</li>
+<li>Editing-TESHD: TESHD editing</li>
+<li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
+<li>ContentAudit: Content moderation</li>
+<li>RemoveWatermark: Watermark removal</li>
+<li>Transcode: Transcoding, including general transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Type of media processing task. Valid values:
-<li>`Transcoding`: basic transcoding</li>
-<li>`Transcoding-TESHD`: TESHD transcoding</li>
-<li>`Editing`: video editing</li>
-<li>`AdaptiveBitrateStreaming`: adaptive bitrate streaming</li>
-<li>`ContentAudit`: content moderation</li>
-<li>`RemoveWatermark`: watermark removal</li>
-<li>`Transcode`: transcoding, including basic transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
-                     * @param Type Type of media processing task. Valid values:
-<li>`Transcoding`: basic transcoding</li>
-<li>`Transcoding-TESHD`: TESHD transcoding</li>
-<li>`Editing`: video editing</li>
-<li>`AdaptiveBitrateStreaming`: adaptive bitrate streaming</li>
-<li>`ContentAudit`: content moderation</li>
-<li>`RemoveWatermark`: watermark removal</li>
-<li>`Transcode`: transcoding, including basic transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
+                     * 设置The type of media processing task. Valid values:
+<li>Transcoding: General transcoding</li>
+<li>Transcoding-TESHD: TESHD transcoding</li>
+<li>Editing: Video editing</li>
+<li>Editing-TESHD: TESHD editing</li>
+<li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
+<li>ContentAudit: Content moderation</li>
+<li>RemoveWatermark: Watermark removal</li>
+<li>Transcode: Transcoding, including general transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
+                     * @param Type The type of media processing task. Valid values:
+<li>Transcoding: General transcoding</li>
+<li>Transcoding-TESHD: TESHD transcoding</li>
+<li>Editing: Video editing</li>
+<li>Editing-TESHD: TESHD editing</li>
+<li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
+<li>ContentAudit: Content moderation</li>
+<li>RemoveWatermark: Watermark removal</li>
+<li>Transcode: Transcoding, including general transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
                      */
                     void SetType(const std::string& _type);
 
@@ -157,14 +161,15 @@ namespace TencentCloud
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Type of media processing task. Valid values:
-<li>`Transcoding`: basic transcoding</li>
-<li>`Transcoding-TESHD`: TESHD transcoding</li>
-<li>`Editing`: video editing</li>
-<li>`AdaptiveBitrateStreaming`: adaptive bitrate streaming</li>
-<li>`ContentAudit`: content moderation</li>
-<li>`RemoveWatermark`: watermark removal</li>
-<li>`Transcode`: transcoding, including basic transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
+                     * The type of media processing task. Valid values:
+<li>Transcoding: General transcoding</li>
+<li>Transcoding-TESHD: TESHD transcoding</li>
+<li>Editing: Video editing</li>
+<li>Editing-TESHD: TESHD editing</li>
+<li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
+<li>ContentAudit: Content moderation</li>
+<li>RemoveWatermark: Watermark removal</li>
+<li>Transcode: Transcoding, including general transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

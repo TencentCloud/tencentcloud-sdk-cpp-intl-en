@@ -2190,6 +2190,49 @@ VodClient::DescribeDailyPlayStatFileListOutcomeCallable VodClient::DescribeDaily
     return task->get_future();
 }
 
+VodClient::DescribeImageReviewUsageDataOutcome VodClient::DescribeImageReviewUsageData(const DescribeImageReviewUsageDataRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeImageReviewUsageData");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeImageReviewUsageDataResponse rsp = DescribeImageReviewUsageDataResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeImageReviewUsageDataOutcome(rsp);
+        else
+            return DescribeImageReviewUsageDataOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeImageReviewUsageDataOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::DescribeImageReviewUsageDataAsync(const DescribeImageReviewUsageDataRequest& request, const DescribeImageReviewUsageDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeImageReviewUsageData(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VodClient::DescribeImageReviewUsageDataOutcomeCallable VodClient::DescribeImageReviewUsageDataCallable(const DescribeImageReviewUsageDataRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeImageReviewUsageDataOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeImageReviewUsageData(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VodClient::DescribeImageSpriteTemplatesOutcome VodClient::DescribeImageSpriteTemplates(const DescribeImageSpriteTemplatesRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeImageSpriteTemplates");
@@ -2226,6 +2269,49 @@ VodClient::DescribeImageSpriteTemplatesOutcomeCallable VodClient::DescribeImageS
         [this, request]()
         {
             return this->DescribeImageSpriteTemplates(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VodClient::DescribeLicenseUsageDataOutcome VodClient::DescribeLicenseUsageData(const DescribeLicenseUsageDataRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeLicenseUsageData");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeLicenseUsageDataResponse rsp = DescribeLicenseUsageDataResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeLicenseUsageDataOutcome(rsp);
+        else
+            return DescribeLicenseUsageDataOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeLicenseUsageDataOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::DescribeLicenseUsageDataAsync(const DescribeLicenseUsageDataRequest& request, const DescribeLicenseUsageDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeLicenseUsageData(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VodClient::DescribeLicenseUsageDataOutcomeCallable VodClient::DescribeLicenseUsageDataCallable(const DescribeLicenseUsageDataRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeLicenseUsageDataOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeLicenseUsageData(request);
         }
     );
 
@@ -4505,6 +4591,49 @@ VodClient::ResetProcedureTemplateOutcomeCallable VodClient::ResetProcedureTempla
         [this, request]()
         {
             return this->ResetProcedureTemplate(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VodClient::ReviewImageOutcome VodClient::ReviewImage(const ReviewImageRequest &request)
+{
+    auto outcome = MakeRequest(request, "ReviewImage");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ReviewImageResponse rsp = ReviewImageResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ReviewImageOutcome(rsp);
+        else
+            return ReviewImageOutcome(o.GetError());
+    }
+    else
+    {
+        return ReviewImageOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::ReviewImageAsync(const ReviewImageRequest& request, const ReviewImageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ReviewImage(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VodClient::ReviewImageOutcomeCallable VodClient::ReviewImageCallable(const ReviewImageRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ReviewImageOutcome()>>(
+        [this, request]()
+        {
+            return this->ReviewImage(request);
         }
     );
 

@@ -56,36 +56,38 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task type. Valid values:
-<li>Procedure: video processing task</li>
-<li>EditMedia: video editing task</li>
-<li>SplitMedia: video splitting task</li>
-<li>ComposeMedia: media file producing task</li>
-<li>WechatPublish: WeChat publishing task</li>
-<li>WechatMiniProgramPublish: video publishing on WeChat Mini Program</li>
-<li>PullUpload: pulling media files for upload</li>
+                     * 获取The task type. Valid values:
+<li>Procedure: Video processing</li>
+<li>EditMedia: Video editing</li>
+<li>SplitMedia: Video splitting</li>
+<li>ComposeMedia: Media file producing</li>
+<li>WechatPublish: WeChat publishing</li>
+<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
+<li>PullUpload: Pulling media files for upload</li>
+<li>FastClipMedia: Quick clipping</li>
 
-Support v2017 task types:
-<li>Transcode: transcoding task</li>
-<li>SnapshotByTimeOffset: screencapturing task</li>
-<li>Concat: video splicing task</li>
-<li>Clip: video clipping task</li>
-<li>ImageSprites: image sprite generating task</li>
-                     * @return TaskType Task type. Valid values:
-<li>Procedure: video processing task</li>
-<li>EditMedia: video editing task</li>
-<li>SplitMedia: video splitting task</li>
-<li>ComposeMedia: media file producing task</li>
-<li>WechatPublish: WeChat publishing task</li>
-<li>WechatMiniProgramPublish: video publishing on WeChat Mini Program</li>
-<li>PullUpload: pulling media files for upload</li>
+Task types for v2017:
+<li>Transcode: Transcoding</li>
+<li>SnapshotByTimeOffset: Screencapturing</li>
+<li>Concat: Video splicing</li>
+<li>Clip: Video clipping</li>
+<li>ImageSprites: Image sprite generating</li>
+                     * @return TaskType The task type. Valid values:
+<li>Procedure: Video processing</li>
+<li>EditMedia: Video editing</li>
+<li>SplitMedia: Video splitting</li>
+<li>ComposeMedia: Media file producing</li>
+<li>WechatPublish: WeChat publishing</li>
+<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
+<li>PullUpload: Pulling media files for upload</li>
+<li>FastClipMedia: Quick clipping</li>
 
-Support v2017 task types:
-<li>Transcode: transcoding task</li>
-<li>SnapshotByTimeOffset: screencapturing task</li>
-<li>Concat: video splicing task</li>
-<li>Clip: video clipping task</li>
-<li>ImageSprites: image sprite generating task</li>
+Task types for v2017:
+<li>Transcode: Transcoding</li>
+<li>SnapshotByTimeOffset: Screencapturing</li>
+<li>Concat: Video splicing</li>
+<li>Clip: Video clipping</li>
+<li>ImageSprites: Image sprite generating</li>
                      */
                     std::string GetTaskType() const;
 
@@ -320,21 +322,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Task type. Valid values:
-<li>Procedure: video processing task</li>
-<li>EditMedia: video editing task</li>
-<li>SplitMedia: video splitting task</li>
-<li>ComposeMedia: media file producing task</li>
-<li>WechatPublish: WeChat publishing task</li>
-<li>WechatMiniProgramPublish: video publishing on WeChat Mini Program</li>
-<li>PullUpload: pulling media files for upload</li>
+                     * The task type. Valid values:
+<li>Procedure: Video processing</li>
+<li>EditMedia: Video editing</li>
+<li>SplitMedia: Video splitting</li>
+<li>ComposeMedia: Media file producing</li>
+<li>WechatPublish: WeChat publishing</li>
+<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
+<li>PullUpload: Pulling media files for upload</li>
+<li>FastClipMedia: Quick clipping</li>
 
-Support v2017 task types:
-<li>Transcode: transcoding task</li>
-<li>SnapshotByTimeOffset: screencapturing task</li>
-<li>Concat: video splicing task</li>
-<li>Clip: video clipping task</li>
-<li>ImageSprites: image sprite generating task</li>
+Task types for v2017:
+<li>Transcode: Transcoding</li>
+<li>SnapshotByTimeOffset: Screencapturing</li>
+<li>Concat: Video splicing</li>
+<li>Clip: Video clipping</li>
+<li>ImageSprites: Image sprite generating</li>
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;

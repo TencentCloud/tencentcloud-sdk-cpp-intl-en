@@ -375,7 +375,7 @@ namespace TencentCloud
                 CreateConsumerOutcomeCallable CreateConsumerCallable(const Model::CreateConsumerRequest& request);
 
                 /**
-                 *This API is used to create a download task to export raw logs.
+                 *This API is used to create a download task. To get the returned download address, call `DescribeExports` to view the task list. The `CosPath` parameter is also included for download address. For more information, visit https://intl.cloud.tencent.com/document/product/614/56449.?from_cn_redirect=1
                  * @param req CreateExportRequest
                  * @return CreateExportOutcome
                  */

@@ -251,6 +251,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool UpdateTimeHasBeenSet() const;
 
+                    /**
+                     * 获取The template type. Valid values:
+* Preset
+* Custom
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return Type The template type. Valid values:
+* Preset
+* Custom
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetType() const;
+
+                    /**
+                     * 设置The template type. Valid values:
+* Preset
+* Custom
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param Type The template type. Valid values:
+* Preset
+* Custom
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetType(const std::string& _type);
+
+                    /**
+                     * 判断参数 Type 是否已赋值
+                     * @return Type 是否已赋值
+                     */
+                    bool TypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -317,6 +347,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
+
+                    /**
+                     * The template type. Valid values:
+* Preset
+* Custom
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_type;
+                    bool m_typeHasBeenSet;
 
                 };
             }

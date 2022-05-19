@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/sts/v20180813/model/Tag.h>
 
 
 namespace TencentCloud
@@ -172,6 +173,24 @@ It can contain 2-128 letters, digits, and symbols (=,.@:/-). Regex: [\w+=,.@:\/-
                      */
                     bool ExternalIdHasBeenSet() const;
 
+                    /**
+                     * 获取List of session tags. Up to 50 tags are allowed. The tag keys can not duplicate.
+                     * @return Tags List of session tags. Up to 50 tags are allowed. The tag keys can not duplicate.
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 设置List of session tags. Up to 50 tags are allowed. The tag keys can not duplicate.
+                     * @param Tags List of session tags. Up to 50 tags are allowed. The tag keys can not duplicate.
+                     */
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -213,6 +232,12 @@ It can contain 2-128 letters, digits, and symbols (=,.@:/-). Regex: [\w+=,.@:\/-
                      */
                     std::string m_externalId;
                     bool m_externalIdHasBeenSet;
+
+                    /**
+                     * List of session tags. Up to 50 tags are allowed. The tag keys can not duplicate.
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
 
                 };
             }

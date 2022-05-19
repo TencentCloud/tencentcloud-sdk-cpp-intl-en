@@ -27,6 +27,8 @@
 #include <tencentcloud/sts/v20180813/model/AssumeRoleResponse.h>
 #include <tencentcloud/sts/v20180813/model/AssumeRoleWithSAMLRequest.h>
 #include <tencentcloud/sts/v20180813/model/AssumeRoleWithSAMLResponse.h>
+#include <tencentcloud/sts/v20180813/model/AssumeRoleWithWebIdentityRequest.h>
+#include <tencentcloud/sts/v20180813/model/AssumeRoleWithWebIdentityResponse.h>
 #include <tencentcloud/sts/v20180813/model/GetCallerIdentityRequest.h>
 #include <tencentcloud/sts/v20180813/model/GetCallerIdentityResponse.h>
 #include <tencentcloud/sts/v20180813/model/GetFederationTokenRequest.h>
@@ -51,6 +53,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::AssumeRoleWithSAMLResponse> AssumeRoleWithSAMLOutcome;
                 typedef std::future<AssumeRoleWithSAMLOutcome> AssumeRoleWithSAMLOutcomeCallable;
                 typedef std::function<void(const StsClient*, const Model::AssumeRoleWithSAMLRequest&, AssumeRoleWithSAMLOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AssumeRoleWithSAMLAsyncHandler;
+                typedef Outcome<Core::Error, Model::AssumeRoleWithWebIdentityResponse> AssumeRoleWithWebIdentityOutcome;
+                typedef std::future<AssumeRoleWithWebIdentityOutcome> AssumeRoleWithWebIdentityOutcomeCallable;
+                typedef std::function<void(const StsClient*, const Model::AssumeRoleWithWebIdentityRequest&, AssumeRoleWithWebIdentityOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AssumeRoleWithWebIdentityAsyncHandler;
                 typedef Outcome<Core::Error, Model::GetCallerIdentityResponse> GetCallerIdentityOutcome;
                 typedef std::future<GetCallerIdentityOutcome> GetCallerIdentityOutcomeCallable;
                 typedef std::function<void(const StsClient*, const Model::GetCallerIdentityRequest&, GetCallerIdentityOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetCallerIdentityAsyncHandler;
@@ -77,6 +82,15 @@ namespace TencentCloud
                 AssumeRoleWithSAMLOutcome AssumeRoleWithSAML(const Model::AssumeRoleWithSAMLRequest &request);
                 void AssumeRoleWithSAMLAsync(const Model::AssumeRoleWithSAMLRequest& request, const AssumeRoleWithSAMLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 AssumeRoleWithSAMLOutcomeCallable AssumeRoleWithSAMLCallable(const Model::AssumeRoleWithSAMLRequest& request);
+
+                /**
+                 *This API is used to apply for an OIDC role credential.
+                 * @param req AssumeRoleWithWebIdentityRequest
+                 * @return AssumeRoleWithWebIdentityOutcome
+                 */
+                AssumeRoleWithWebIdentityOutcome AssumeRoleWithWebIdentity(const Model::AssumeRoleWithWebIdentityRequest &request);
+                void AssumeRoleWithWebIdentityAsync(const Model::AssumeRoleWithWebIdentityRequest& request, const AssumeRoleWithWebIdentityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AssumeRoleWithWebIdentityOutcomeCallable AssumeRoleWithWebIdentityCallable(const Model::AssumeRoleWithWebIdentityRequest& request);
 
                 /**
                  *This API is used to get the identity information of the current caller.

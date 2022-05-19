@@ -43,6 +43,8 @@
 #include <tencentcloud/ckafka/v20190819/model/CreateUserResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DeleteAclRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/DeleteAclResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/DeleteRouteRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/DeleteRouteResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DeleteRouteTriggerTimeRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/DeleteRouteTriggerTimeResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DeleteTopicRequest.h>
@@ -143,6 +145,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteAclResponse> DeleteAclOutcome;
                 typedef std::future<DeleteAclOutcome> DeleteAclOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DeleteAclRequest&, DeleteAclOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAclAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteRouteResponse> DeleteRouteOutcome;
+                typedef std::future<DeleteRouteOutcome> DeleteRouteOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::DeleteRouteRequest&, DeleteRouteOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRouteAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteRouteTriggerTimeResponse> DeleteRouteTriggerTimeOutcome;
                 typedef std::future<DeleteRouteTriggerTimeOutcome> DeleteRouteTriggerTimeOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DeleteRouteTriggerTimeRequest&, DeleteRouteTriggerTimeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRouteTriggerTimeAsyncHandler;
@@ -319,6 +324,15 @@ namespace TencentCloud
                 DeleteAclOutcome DeleteAcl(const Model::DeleteAclRequest &request);
                 void DeleteAclAsync(const Model::DeleteAclRequest& request, const DeleteAclAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteAclOutcomeCallable DeleteAclCallable(const Model::DeleteAclRequest& request);
+
+                /**
+                 *This API is used to delete a route.
+                 * @param req DeleteRouteRequest
+                 * @return DeleteRouteOutcome
+                 */
+                DeleteRouteOutcome DeleteRoute(const Model::DeleteRouteRequest &request);
+                void DeleteRouteAsync(const Model::DeleteRouteRequest& request, const DeleteRouteAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteRouteOutcomeCallable DeleteRouteCallable(const Model::DeleteRouteRequest& request);
 
                 /**
                  *This API is used to modify the delayed trigger time of route deletion.

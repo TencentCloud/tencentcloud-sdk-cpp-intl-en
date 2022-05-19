@@ -49,42 +49,46 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task type
-<li>`Transcoding`: basic transcoding</li>
-<li>`Transcoding-TESHD`: TESHD transcoding</li>
-<li>`Editing`: video editing</li>
-<li>`AdaptiveBitrateStreaming`: adaptive bitrate streaming</li>
-<li>`ContentAudit`: content moderation</li>
-<li>`RemoveWatermark`: watermark removal</li>
-<li>`Transcode`: transcoding, including basic transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
-                     * @return TaskType Task type
-<li>`Transcoding`: basic transcoding</li>
-<li>`Transcoding-TESHD`: TESHD transcoding</li>
-<li>`Editing`: video editing</li>
-<li>`AdaptiveBitrateStreaming`: adaptive bitrate streaming</li>
-<li>`ContentAudit`: content moderation</li>
-<li>`RemoveWatermark`: watermark removal</li>
-<li>`Transcode`: transcoding, including basic transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
+                     * 获取The task type.
+<li>Transcoding: General transcoding</li>
+<li>Transcoding-TESHD: TESHD transcoding</li>
+<li>Editing: Video editing</li>
+<li>Editing-TESHD: TESHD editing</li>
+<li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
+<li>ContentAudit: Content moderation</li>
+<li>RemoveWatermark: Watermark removal</li>
+<li>Transcode: Transcoding, including general transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
+                     * @return TaskType The task type.
+<li>Transcoding: General transcoding</li>
+<li>Transcoding-TESHD: TESHD transcoding</li>
+<li>Editing: Video editing</li>
+<li>Editing-TESHD: TESHD editing</li>
+<li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
+<li>ContentAudit: Content moderation</li>
+<li>RemoveWatermark: Watermark removal</li>
+<li>Transcode: Transcoding, including general transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
                      */
                     std::string GetTaskType() const;
 
                     /**
-                     * 设置Task type
-<li>`Transcoding`: basic transcoding</li>
-<li>`Transcoding-TESHD`: TESHD transcoding</li>
-<li>`Editing`: video editing</li>
-<li>`AdaptiveBitrateStreaming`: adaptive bitrate streaming</li>
-<li>`ContentAudit`: content moderation</li>
-<li>`RemoveWatermark`: watermark removal</li>
-<li>`Transcode`: transcoding, including basic transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
-                     * @param TaskType Task type
-<li>`Transcoding`: basic transcoding</li>
-<li>`Transcoding-TESHD`: TESHD transcoding</li>
-<li>`Editing`: video editing</li>
-<li>`AdaptiveBitrateStreaming`: adaptive bitrate streaming</li>
-<li>`ContentAudit`: content moderation</li>
-<li>`RemoveWatermark`: watermark removal</li>
-<li>`Transcode`: transcoding, including basic transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
+                     * 设置The task type.
+<li>Transcoding: General transcoding</li>
+<li>Transcoding-TESHD: TESHD transcoding</li>
+<li>Editing: Video editing</li>
+<li>Editing-TESHD: TESHD editing</li>
+<li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
+<li>ContentAudit: Content moderation</li>
+<li>RemoveWatermark: Watermark removal</li>
+<li>Transcode: Transcoding, including general transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
+                     * @param TaskType The task type.
+<li>Transcoding: General transcoding</li>
+<li>Transcoding-TESHD: TESHD transcoding</li>
+<li>Editing: Video editing</li>
+<li>Editing-TESHD: TESHD editing</li>
+<li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
+<li>ContentAudit: Content moderation</li>
+<li>RemoveWatermark: Watermark removal</li>
+<li>Transcode: Transcoding, including general transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
                      */
                     void SetTaskType(const std::string& _taskType);
 
@@ -113,8 +117,8 @@ namespace TencentCloud
                     bool SummaryHasBeenSet() const;
 
                     /**
-                     * 获取Detailed statistics of different tasks
-Transcoding statistics:
+                     * 获取The detailed statistics of different tasks.
+Transcoding:
 <li>Remuxing</li>
 <li>Audio</li>
 <li>Standard.H264.SD</li>
@@ -148,15 +152,25 @@ Transcoding statistics:
 <li>Edit.H265.FHD</li>
 <li>Edit.H265.2K</li>
 <li>Edit.H265.4K</li>
+<li>Edit.TESHD-10.H264.SD</li>
+<li>Edit.TESHD-10.H264.HD</li>
+<li>Edit.TESHD-10.H264.FHD</li>
+<li>Edit.TESHD-10.H264.2K</li>
+<li>Edit.TESHD-10.H264.4K</li>
+<li>Edit.TESHD-10.H265.SD</li>
+<li>Edit.TESHD-10.H265.HD</li>
+<li>Edit.TESHD-10.H265.FHD</li>
+<li>Edit.TESHD-10.H265.2K</li>
+<li>Edit.TESHD-10.H265.4K</li>
 Watermark removal:
-<li>`480P`: 640 × 480 and below</li>
-<li>`720P`: 1280 × 720 and below</li>
-<li>`1080P`: 1920 × 1080 and below</li>
-<li>`2K`: 2560 × 1440 and below</li>
-<li>`4K`: 3840 × 2160 and below</li>
-<li>`8K`: 7680 × 4320 and below</li>
-                     * @return Details Detailed statistics of different tasks
-Transcoding statistics:
+<li>480P: 640 x 480 and below</li>
+<li>720P: 1280 x 720 and below</li>
+<li>1080P: 1920 x 1080 and below</li>
+<li>2K: 2560 x 1440 and below</li>
+<li>4K: 3840 x 2160 and below</li>
+<li>8K: 7680 x 4320 and below</li>
+                     * @return Details The detailed statistics of different tasks.
+Transcoding:
 <li>Remuxing</li>
 <li>Audio</li>
 <li>Standard.H264.SD</li>
@@ -190,19 +204,29 @@ Transcoding statistics:
 <li>Edit.H265.FHD</li>
 <li>Edit.H265.2K</li>
 <li>Edit.H265.4K</li>
+<li>Edit.TESHD-10.H264.SD</li>
+<li>Edit.TESHD-10.H264.HD</li>
+<li>Edit.TESHD-10.H264.FHD</li>
+<li>Edit.TESHD-10.H264.2K</li>
+<li>Edit.TESHD-10.H264.4K</li>
+<li>Edit.TESHD-10.H265.SD</li>
+<li>Edit.TESHD-10.H265.HD</li>
+<li>Edit.TESHD-10.H265.FHD</li>
+<li>Edit.TESHD-10.H265.2K</li>
+<li>Edit.TESHD-10.H265.4K</li>
 Watermark removal:
-<li>`480P`: 640 × 480 and below</li>
-<li>`720P`: 1280 × 720 and below</li>
-<li>`1080P`: 1920 × 1080 and below</li>
-<li>`2K`: 2560 × 1440 and below</li>
-<li>`4K`: 3840 × 2160 and below</li>
-<li>`8K`: 7680 × 4320 and below</li>
+<li>480P: 640 x 480 and below</li>
+<li>720P: 1280 x 720 and below</li>
+<li>1080P: 1920 x 1080 and below</li>
+<li>2K: 2560 x 1440 and below</li>
+<li>4K: 3840 x 2160 and below</li>
+<li>8K: 7680 x 4320 and below</li>
                      */
                     std::vector<SpecificationDataItem> GetDetails() const;
 
                     /**
-                     * 设置Detailed statistics of different tasks
-Transcoding statistics:
+                     * 设置The detailed statistics of different tasks.
+Transcoding:
 <li>Remuxing</li>
 <li>Audio</li>
 <li>Standard.H264.SD</li>
@@ -236,15 +260,25 @@ Transcoding statistics:
 <li>Edit.H265.FHD</li>
 <li>Edit.H265.2K</li>
 <li>Edit.H265.4K</li>
+<li>Edit.TESHD-10.H264.SD</li>
+<li>Edit.TESHD-10.H264.HD</li>
+<li>Edit.TESHD-10.H264.FHD</li>
+<li>Edit.TESHD-10.H264.2K</li>
+<li>Edit.TESHD-10.H264.4K</li>
+<li>Edit.TESHD-10.H265.SD</li>
+<li>Edit.TESHD-10.H265.HD</li>
+<li>Edit.TESHD-10.H265.FHD</li>
+<li>Edit.TESHD-10.H265.2K</li>
+<li>Edit.TESHD-10.H265.4K</li>
 Watermark removal:
-<li>`480P`: 640 × 480 and below</li>
-<li>`720P`: 1280 × 720 and below</li>
-<li>`1080P`: 1920 × 1080 and below</li>
-<li>`2K`: 2560 × 1440 and below</li>
-<li>`4K`: 3840 × 2160 and below</li>
-<li>`8K`: 7680 × 4320 and below</li>
-                     * @param Details Detailed statistics of different tasks
-Transcoding statistics:
+<li>480P: 640 x 480 and below</li>
+<li>720P: 1280 x 720 and below</li>
+<li>1080P: 1920 x 1080 and below</li>
+<li>2K: 2560 x 1440 and below</li>
+<li>4K: 3840 x 2160 and below</li>
+<li>8K: 7680 x 4320 and below</li>
+                     * @param Details The detailed statistics of different tasks.
+Transcoding:
 <li>Remuxing</li>
 <li>Audio</li>
 <li>Standard.H264.SD</li>
@@ -278,13 +312,23 @@ Transcoding statistics:
 <li>Edit.H265.FHD</li>
 <li>Edit.H265.2K</li>
 <li>Edit.H265.4K</li>
+<li>Edit.TESHD-10.H264.SD</li>
+<li>Edit.TESHD-10.H264.HD</li>
+<li>Edit.TESHD-10.H264.FHD</li>
+<li>Edit.TESHD-10.H264.2K</li>
+<li>Edit.TESHD-10.H264.4K</li>
+<li>Edit.TESHD-10.H265.SD</li>
+<li>Edit.TESHD-10.H265.HD</li>
+<li>Edit.TESHD-10.H265.FHD</li>
+<li>Edit.TESHD-10.H265.2K</li>
+<li>Edit.TESHD-10.H265.4K</li>
 Watermark removal:
-<li>`480P`: 640 × 480 and below</li>
-<li>`720P`: 1280 × 720 and below</li>
-<li>`1080P`: 1920 × 1080 and below</li>
-<li>`2K`: 2560 × 1440 and below</li>
-<li>`4K`: 3840 × 2160 and below</li>
-<li>`8K`: 7680 × 4320 and below</li>
+<li>480P: 640 x 480 and below</li>
+<li>720P: 1280 x 720 and below</li>
+<li>1080P: 1920 x 1080 and below</li>
+<li>2K: 2560 x 1440 and below</li>
+<li>4K: 3840 x 2160 and below</li>
+<li>8K: 7680 x 4320 and below</li>
                      */
                     void SetDetails(const std::vector<SpecificationDataItem>& _details);
 
@@ -297,14 +341,15 @@ Watermark removal:
                 private:
 
                     /**
-                     * Task type
-<li>`Transcoding`: basic transcoding</li>
-<li>`Transcoding-TESHD`: TESHD transcoding</li>
-<li>`Editing`: video editing</li>
-<li>`AdaptiveBitrateStreaming`: adaptive bitrate streaming</li>
-<li>`ContentAudit`: content moderation</li>
-<li>`RemoveWatermark`: watermark removal</li>
-<li>`Transcode`: transcoding, including basic transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
+                     * The task type.
+<li>Transcoding: General transcoding</li>
+<li>Transcoding-TESHD: TESHD transcoding</li>
+<li>Editing: Video editing</li>
+<li>Editing-TESHD: TESHD editing</li>
+<li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
+<li>ContentAudit: Content moderation</li>
+<li>RemoveWatermark: Watermark removal</li>
+<li>Transcode: Transcoding, including general transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;
@@ -316,8 +361,8 @@ Watermark removal:
                     bool m_summaryHasBeenSet;
 
                     /**
-                     * Detailed statistics of different tasks
-Transcoding statistics:
+                     * The detailed statistics of different tasks.
+Transcoding:
 <li>Remuxing</li>
 <li>Audio</li>
 <li>Standard.H264.SD</li>
@@ -351,13 +396,23 @@ Transcoding statistics:
 <li>Edit.H265.FHD</li>
 <li>Edit.H265.2K</li>
 <li>Edit.H265.4K</li>
+<li>Edit.TESHD-10.H264.SD</li>
+<li>Edit.TESHD-10.H264.HD</li>
+<li>Edit.TESHD-10.H264.FHD</li>
+<li>Edit.TESHD-10.H264.2K</li>
+<li>Edit.TESHD-10.H264.4K</li>
+<li>Edit.TESHD-10.H265.SD</li>
+<li>Edit.TESHD-10.H265.HD</li>
+<li>Edit.TESHD-10.H265.FHD</li>
+<li>Edit.TESHD-10.H265.2K</li>
+<li>Edit.TESHD-10.H265.4K</li>
 Watermark removal:
-<li>`480P`: 640 × 480 and below</li>
-<li>`720P`: 1280 × 720 and below</li>
-<li>`1080P`: 1920 × 1080 and below</li>
-<li>`2K`: 2560 × 1440 and below</li>
-<li>`4K`: 3840 × 2160 and below</li>
-<li>`8K`: 7680 × 4320 and below</li>
+<li>480P: 640 x 480 and below</li>
+<li>720P: 1280 x 720 and below</li>
+<li>1080P: 1920 x 1080 and below</li>
+<li>2K: 2560 x 1440 and below</li>
+<li>4K: 3840 x 2160 and below</li>
+<li>8K: 7680 x 4320 and below</li>
                      */
                     std::vector<SpecificationDataItem> m_details;
                     bool m_detailsHasBeenSet;

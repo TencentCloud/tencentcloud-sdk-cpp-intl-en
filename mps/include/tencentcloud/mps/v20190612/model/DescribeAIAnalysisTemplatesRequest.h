@@ -96,6 +96,32 @@ namespace TencentCloud
                      */
                     bool LimitHasBeenSet() const;
 
+                    /**
+                     * 获取The filter for querying templates. If this parameter is left empty, both preset and custom templates are returned. Valid values:
+* Preset
+* Custom
+                     * @return Type The filter for querying templates. If this parameter is left empty, both preset and custom templates are returned. Valid values:
+* Preset
+* Custom
+                     */
+                    std::string GetType() const;
+
+                    /**
+                     * 设置The filter for querying templates. If this parameter is left empty, both preset and custom templates are returned. Valid values:
+* Preset
+* Custom
+                     * @param Type The filter for querying templates. If this parameter is left empty, both preset and custom templates are returned. Valid values:
+* Preset
+* Custom
+                     */
+                    void SetType(const std::string& _type);
+
+                    /**
+                     * 判断参数 Type 是否已赋值
+                     * @return Type 是否已赋值
+                     */
+                    bool TypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -115,6 +141,14 @@ namespace TencentCloud
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
+
+                    /**
+                     * The filter for querying templates. If this parameter is left empty, both preset and custom templates are returned. Valid values:
+* Preset
+* Custom
+                     */
+                    std::string m_type;
+                    bool m_typeHasBeenSet;
 
                 };
             }

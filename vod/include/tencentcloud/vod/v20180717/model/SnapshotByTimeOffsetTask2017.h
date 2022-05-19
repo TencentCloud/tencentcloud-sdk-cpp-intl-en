@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Time point screencapturing task information. This structure is only used for tasks initiated by the [CreateSnapshotByTimeOffset](https://intl.cloud.tencent.com/document/product/266/8102?from_cn_redirect=1) API in v2017.
+                * The details of a time point screenshot task. This parameter is only valid for the v2017 time point screenshot API.
                 */
                 class SnapshotByTimeOffsetTask2017 : public AbstractModel
                 {

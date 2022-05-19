@@ -439,6 +439,24 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
                      */
                     bool TriggerTasksHasBeenSet() const;
 
+                    /**
+                     * 获取Filter by quick alarm policy. If this parameter is left empty, all policies are displayed. `ONECLICK`: Display quick alarm policies; `NOT_ONECLICK`: Display non-quick alarm policies.
+                     * @return OneClickPolicyType Filter by quick alarm policy. If this parameter is left empty, all policies are displayed. `ONECLICK`: Display quick alarm policies; `NOT_ONECLICK`: Display non-quick alarm policies.
+                     */
+                    std::vector<std::string> GetOneClickPolicyType() const;
+
+                    /**
+                     * 设置Filter by quick alarm policy. If this parameter is left empty, all policies are displayed. `ONECLICK`: Display quick alarm policies; `NOT_ONECLICK`: Display non-quick alarm policies.
+                     * @param OneClickPolicyType Filter by quick alarm policy. If this parameter is left empty, all policies are displayed. `ONECLICK`: Display quick alarm policies; `NOT_ONECLICK`: Display non-quick alarm policies.
+                     */
+                    void SetOneClickPolicyType(const std::vector<std::string>& _oneClickPolicyType);
+
+                    /**
+                     * 判断参数 OneClickPolicyType 是否已赋值
+                     * @return OneClickPolicyType 是否已赋值
+                     */
+                    bool OneClickPolicyTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -569,6 +587,12 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
                      */
                     std::vector<AlarmPolicyTriggerTask> m_triggerTasks;
                     bool m_triggerTasksHasBeenSet;
+
+                    /**
+                     * Filter by quick alarm policy. If this parameter is left empty, all policies are displayed. `ONECLICK`: Display quick alarm policies; `NOT_ONECLICK`: Display non-quick alarm policies.
+                     */
+                    std::vector<std::string> m_oneClickPolicyType;
+                    bool m_oneClickPolicyTypeHasBeenSet;
 
                 };
             }

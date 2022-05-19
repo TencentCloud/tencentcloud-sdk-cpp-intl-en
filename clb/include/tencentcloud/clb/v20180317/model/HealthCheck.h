@@ -378,17 +378,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HttpVersionHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the type of IP for health check. `0` (default): Use the CLB VIP as the source IP. `1`: Use the IP range starting with 100.64 as the source IP.
+                     * 获取Specifies the type of IP for health check. `0` (default): CLB VIP. `1`: Use the IP range starting with 100.64 as the source IP.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return SourceIpType Specifies the type of IP for health check. `0` (default): Use the CLB VIP as the source IP. `1`: Use the IP range starting with 100.64 as the source IP.
+                     * @return SourceIpType Specifies the type of IP for health check. `0` (default): CLB VIP. `1`: Use the IP range starting with 100.64 as the source IP.
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     int64_t GetSourceIpType() const;
 
                     /**
-                     * 设置Specifies the type of IP for health check. `0` (default): Use the CLB VIP as the source IP. `1`: Use the IP range starting with 100.64 as the source IP.
+                     * 设置Specifies the type of IP for health check. `0` (default): CLB VIP. `1`: Use the IP range starting with 100.64 as the source IP.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param SourceIpType Specifies the type of IP for health check. `0` (default): Use the CLB VIP as the source IP. `1`: Use the IP range starting with 100.64 as the source IP.
+                     * @param SourceIpType Specifies the type of IP for health check. `0` (default): CLB VIP. `1`: Use the IP range starting with 100.64 as the source IP.
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetSourceIpType(const int64_t& _sourceIpType);
@@ -398,6 +398,28 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      * @return SourceIpType 是否已赋值
                      */
                     bool SourceIpTypeHasBeenSet() const;
+
+                    /**
+                     * 获取GRPC health check status code, which is only applicable to rules with GRPC as the backend forwarding protocol. It can be a single number (such as `20`), multiple numbers (such as `20,25`) or a range (such as `0-99`). The default value is `12`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return ExtendedCode GRPC health check status code, which is only applicable to rules with GRPC as the backend forwarding protocol. It can be a single number (such as `20`), multiple numbers (such as `20,25`) or a range (such as `0-99`). The default value is `12`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetExtendedCode() const;
+
+                    /**
+                     * 设置GRPC health check status code, which is only applicable to rules with GRPC as the backend forwarding protocol. It can be a single number (such as `20`), multiple numbers (such as `20,25`) or a range (such as `0-99`). The default value is `12`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param ExtendedCode GRPC health check status code, which is only applicable to rules with GRPC as the backend forwarding protocol. It can be a single number (such as `20`), multiple numbers (such as `20,25`) or a range (such as `0-99`). The default value is `12`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetExtendedCode(const std::string& _extendedCode);
+
+                    /**
+                     * 判断参数 ExtendedCode 是否已赋值
+                     * @return ExtendedCode 是否已赋值
+                     */
+                    bool ExtendedCodeHasBeenSet() const;
 
                 private:
 
@@ -507,11 +529,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_httpVersionHasBeenSet;
 
                     /**
-                     * Specifies the type of IP for health check. `0` (default): Use the CLB VIP as the source IP. `1`: Use the IP range starting with 100.64 as the source IP.
+                     * Specifies the type of IP for health check. `0` (default): CLB VIP. `1`: Use the IP range starting with 100.64 as the source IP.
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     int64_t m_sourceIpType;
                     bool m_sourceIpTypeHasBeenSet;
+
+                    /**
+                     * GRPC health check status code, which is only applicable to rules with GRPC as the backend forwarding protocol. It can be a single number (such as `20`), multiple numbers (such as `20,25`) or a range (such as `0-99`). The default value is `12`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_extendedCode;
+                    bool m_extendedCodeHasBeenSet;
 
                 };
             }

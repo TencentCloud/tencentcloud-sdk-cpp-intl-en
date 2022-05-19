@@ -724,6 +724,50 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool FilterDimensionsParamHasBeenSet() const;
 
+                    /**
+                     * 获取Whether it is a quick alarm policy.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return IsOneClick Whether it is a quick alarm policy.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetIsOneClick() const;
+
+                    /**
+                     * 设置Whether it is a quick alarm policy.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param IsOneClick Whether it is a quick alarm policy.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetIsOneClick(const int64_t& _isOneClick);
+
+                    /**
+                     * 判断参数 IsOneClick 是否已赋值
+                     * @return IsOneClick 是否已赋值
+                     */
+                    bool IsOneClickHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the quick alarm policy is enabled.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return OneClickStatus Whether the quick alarm policy is enabled.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetOneClickStatus() const;
+
+                    /**
+                     * 设置Whether the quick alarm policy is enabled.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param OneClickStatus Whether the quick alarm policy is enabled.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetOneClickStatus(const int64_t& _oneClickStatus);
+
+                    /**
+                     * 判断参数 OneClickStatus 是否已赋值
+                     * @return OneClickStatus 是否已赋值
+                     */
+                    bool OneClickStatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -938,6 +982,20 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_filterDimensionsParam;
                     bool m_filterDimensionsParamHasBeenSet;
+
+                    /**
+                     * Whether it is a quick alarm policy.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_isOneClick;
+                    bool m_isOneClickHasBeenSet;
+
+                    /**
+                     * Whether the quick alarm policy is enabled.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_oneClickStatus;
+                    bool m_oneClickStatusHasBeenSet;
 
                 };
             }

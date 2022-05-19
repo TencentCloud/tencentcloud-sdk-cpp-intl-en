@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cls/v20201016/model/CsvInfo.h>
 #include <tencentcloud/cls/v20201016/model/JsonInfo.h>
+#include <tencentcloud/cls/v20201016/model/ParquetInfo.h>
 
 
 namespace TencentCloud
@@ -110,6 +111,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool JsonHasBeenSet() const;
 
+                    /**
+                     * 获取`Parquet` format description
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return Parquet `Parquet` format description
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    ParquetInfo GetParquet() const;
+
+                    /**
+                     * 设置`Parquet` format description
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param Parquet `Parquet` format description
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetParquet(const ParquetInfo& _parquet);
+
+                    /**
+                     * 判断参数 Parquet 是否已赋值
+                     * @return Parquet 是否已赋值
+                     */
+                    bool ParquetHasBeenSet() const;
+
                 private:
 
                     /**
@@ -131,6 +154,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     JsonInfo m_json;
                     bool m_jsonHasBeenSet;
+
+                    /**
+                     * `Parquet` format description
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    ParquetInfo m_parquet;
+                    bool m_parquetHasBeenSet;
 
                 };
             }

@@ -150,30 +150,30 @@ namespace TencentCloud
                     bool FormatHasBeenSet() const;
 
                     /**
-                     * 获取DRM type. Valid values:
-<li>FairPlay;</li>
-<li>SimpleAES;</li>
-<li>Widevine.</li>
-If this field is a blank string, DRM will not be performed on the video.
-                     * @return DrmType DRM type. Valid values:
-<li>FairPlay;</li>
-<li>SimpleAES;</li>
-<li>Widevine.</li>
-If this field is a blank string, DRM will not be performed on the video.
+                     * 获取The DRM type. Valid values:
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
+If this parameter is an empty string, it indicates that the video is not protected by DRM.
+                     * @return DrmType The DRM type. Valid values:
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
+If this parameter is an empty string, it indicates that the video is not protected by DRM.
                      */
                     std::string GetDrmType() const;
 
                     /**
-                     * 设置DRM type. Valid values:
-<li>FairPlay;</li>
-<li>SimpleAES;</li>
-<li>Widevine.</li>
-If this field is a blank string, DRM will not be performed on the video.
-                     * @param DrmType DRM type. Valid values:
-<li>FairPlay;</li>
-<li>SimpleAES;</li>
-<li>Widevine.</li>
-If this field is a blank string, DRM will not be performed on the video.
+                     * 设置The DRM type. Valid values:
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
+If this parameter is an empty string, it indicates that the video is not protected by DRM.
+                     * @param DrmType The DRM type. Valid values:
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
+If this parameter is an empty string, it indicates that the video is not protected by DRM.
                      */
                     void SetDrmType(const std::string& _drmType);
 
@@ -325,11 +325,11 @@ If this field is a blank string, DRM will not be performed on the video.
                     bool m_formatHasBeenSet;
 
                     /**
-                     * DRM type. Valid values:
-<li>FairPlay;</li>
-<li>SimpleAES;</li>
-<li>Widevine.</li>
-If this field is a blank string, DRM will not be performed on the video.
+                     * The DRM type. Valid values:
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
+If this parameter is an empty string, it indicates that the video is not protected by DRM.
                      */
                     std::string m_drmType;
                     bool m_drmTypeHasBeenSet;

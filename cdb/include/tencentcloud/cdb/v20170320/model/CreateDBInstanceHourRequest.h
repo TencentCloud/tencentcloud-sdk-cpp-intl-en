@@ -676,6 +676,24 @@ namespace TencentCloud
                     bool DryRunHasBeenSet() const;
 
                     /**
+                     * 获取Instance engine type. Valid values: `InnoDB` (default); `RocksDB`.
+                     * @return EngineType Instance engine type. Valid values: `InnoDB` (default); `RocksDB`.
+                     */
+                    std::string GetEngineType() const;
+
+                    /**
+                     * 设置Instance engine type. Valid values: `InnoDB` (default); `RocksDB`.
+                     * @param EngineType Instance engine type. Valid values: `InnoDB` (default); `RocksDB`.
+                     */
+                    void SetEngineType(const std::string& _engineType);
+
+                    /**
+                     * 判断参数 EngineType 是否已赋值
+                     * @return EngineType 是否已赋值
+                     */
+                    bool EngineTypeHasBeenSet() const;
+
+                    /**
                      * 获取The list of IPs for sources instances. Only one IP address can be assigned to a single source instance. If all IPs are used up, the system will automatically assign IPs to the remaining source instances that do not have one.
                      * @return Vips The list of IPs for sources instances. Only one IP address can be assigned to a single source instance. If all IPs are used up, the system will automatically assign IPs to the remaining source instances that do not have one.
                      */
@@ -904,6 +922,12 @@ namespace TencentCloud
                      */
                     bool m_dryRun;
                     bool m_dryRunHasBeenSet;
+
+                    /**
+                     * Instance engine type. Valid values: `InnoDB` (default); `RocksDB`.
+                     */
+                    std::string m_engineType;
+                    bool m_engineTypeHasBeenSet;
 
                     /**
                      * The list of IPs for sources instances. Only one IP address can be assigned to a single source instance. If all IPs are used up, the system will automatically assign IPs to the remaining source instances that do not have one.

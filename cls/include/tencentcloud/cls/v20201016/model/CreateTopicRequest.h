@@ -152,14 +152,14 @@ namespace TencentCloud
                     bool MaxSplitPartitionsHasBeenSet() const;
 
                     /**
-                     * 获取Log topic storage type. Valid values: `hot` (real-time storage); `cold` (IA storage). Default value: `hot`.
-                     * @return StorageType Log topic storage type. Valid values: `hot` (real-time storage); `cold` (IA storage). Default value: `hot`.
+                     * 获取Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
+                     * @return StorageType Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
                      */
                     std::string GetStorageType() const;
 
                     /**
-                     * 设置Log topic storage type. Valid values: `hot` (real-time storage); `cold` (IA storage). Default value: `hot`.
-                     * @param StorageType Log topic storage type. Valid values: `hot` (real-time storage); `cold` (IA storage). Default value: `hot`.
+                     * 设置Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
+                     * @param StorageType Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
                      */
                     void SetStorageType(const std::string& _storageType);
 
@@ -226,7 +226,7 @@ namespace TencentCloud
                     bool m_maxSplitPartitionsHasBeenSet;
 
                     /**
-                     * Log topic storage type. Valid values: `hot` (real-time storage); `cold` (IA storage). Default value: `hot`.
+                     * Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
                      */
                     std::string m_storageType;
                     bool m_storageTypeHasBeenSet;

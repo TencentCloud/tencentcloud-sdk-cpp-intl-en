@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool PartitionHasBeenSet() const;
 
                     /**
-                     * 获取Offset information
-                     * @return Offset Offset information
+                     * 获取Offset information, which is required.
+                     * @return Offset Offset information, which is required.
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset information
-                     * @param Offset Offset information
+                     * 设置Offset information, which is required.
+                     * @param Offset Offset information, which is required.
                      */
                     void SetOffset(const int64_t& _offset);
 
@@ -135,7 +135,7 @@ namespace TencentCloud
                     bool m_partitionHasBeenSet;
 
                     /**
-                     * Offset information
+                     * Offset information, which is required.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
