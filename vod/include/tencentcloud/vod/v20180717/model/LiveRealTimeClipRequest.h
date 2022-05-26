@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取[LVB code](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) of a stream.
-                     * @return StreamId [LVB code](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) of a stream.
+                     * 获取The live stream code.
+                     * @return StreamId The live stream code.
                      */
                     std::string GetStreamId() const;
 
                     /**
-                     * 设置[LVB code](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) of a stream.
-                     * @param StreamId [LVB code](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) of a stream.
+                     * 设置The live stream code.
+                     * @param StreamId The live stream code.
                      */
                     void SetStreamId(const std::string& _streamId);
 
@@ -225,7 +225,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * [LVB code](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) of a stream.
+                     * The live stream code.
                      */
                     std::string m_streamId;
                     bool m_streamIdHasBeenSet;

@@ -32,6 +32,7 @@ set(redis_public_header_model
   include/tencentcloud/redis/v20180412/model/InquiryPriceCreateInstanceRequest.h
   include/tencentcloud/redis/v20180412/model/DescribeProductInfoResponse.h
   include/tencentcloud/redis/v20180412/model/DescribeMaintenanceWindowResponse.h
+  include/tencentcloud/redis/v20180412/model/ModifyInstanceReadOnlyResponse.h
   include/tencentcloud/redis/v20180412/model/ReleaseWanAddressResponse.h
   include/tencentcloud/redis/v20180412/model/ProductConf.h
   include/tencentcloud/redis/v20180412/model/BigKeyTypeInfo.h
@@ -75,6 +76,7 @@ set(redis_public_header_model
   include/tencentcloud/redis/v20180412/model/DescribeInstanceMonitorHotKeyResponse.h
   include/tencentcloud/redis/v20180412/model/DescribeInstanceMonitorTopNCmdRequest.h
   include/tencentcloud/redis/v20180412/model/ModfiyInstancePasswordResponse.h
+  include/tencentcloud/redis/v20180412/model/ModifyInstanceReadOnlyRequest.h
   include/tencentcloud/redis/v20180412/model/InstanceSlowlogDetail.h
   )
 
@@ -93,6 +95,7 @@ set(redis_src
   src/v20180412/model/InquiryPriceCreateInstanceRequest.cpp
   src/v20180412/model/DescribeProductInfoResponse.cpp
   src/v20180412/model/DescribeMaintenanceWindowResponse.cpp
+  src/v20180412/model/ModifyInstanceReadOnlyResponse.cpp
   src/v20180412/model/ReleaseWanAddressResponse.cpp
   src/v20180412/model/ProductConf.cpp
   src/v20180412/model/BigKeyTypeInfo.cpp
@@ -136,6 +139,7 @@ set(redis_src
   src/v20180412/model/DescribeInstanceMonitorHotKeyResponse.cpp
   src/v20180412/model/DescribeInstanceMonitorTopNCmdRequest.cpp
   src/v20180412/model/ModfiyInstancePasswordResponse.cpp
+  src/v20180412/model/ModifyInstanceReadOnlyRequest.cpp
   src/v20180412/model/InstanceSlowlogDetail.cpp
   )
 

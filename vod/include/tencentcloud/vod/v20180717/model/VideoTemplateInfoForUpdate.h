@@ -47,30 +47,42 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Video stream encoder. Valid values:
+                     * 获取The video codec. Valid values:
 <li>libx264: H.264</li>
 <li>libx265: H.265</li>
 <li>av1: AOMedia Video 1</li>
-Currently, a resolution within 640x480 must be specified for H.265. and the `av1` container only supports mp4.
-                     * @return Codec Video stream encoder. Valid values:
+<li>H.266: H.266</li>
+<font color=red>Notes:</font>
+<li>The AOMedia Video 1 and H.266 codecs can only be used for MP4 files.</li>
+<li> Only CRF is supported for H.266 currently.</li>
+                     * @return Codec The video codec. Valid values:
 <li>libx264: H.264</li>
 <li>libx265: H.265</li>
 <li>av1: AOMedia Video 1</li>
-Currently, a resolution within 640x480 must be specified for H.265. and the `av1` container only supports mp4.
+<li>H.266: H.266</li>
+<font color=red>Notes:</font>
+<li>The AOMedia Video 1 and H.266 codecs can only be used for MP4 files.</li>
+<li> Only CRF is supported for H.266 currently.</li>
                      */
                     std::string GetCodec() const;
 
                     /**
-                     * 设置Video stream encoder. Valid values:
+                     * 设置The video codec. Valid values:
 <li>libx264: H.264</li>
 <li>libx265: H.265</li>
 <li>av1: AOMedia Video 1</li>
-Currently, a resolution within 640x480 must be specified for H.265. and the `av1` container only supports mp4.
-                     * @param Codec Video stream encoder. Valid values:
+<li>H.266: H.266</li>
+<font color=red>Notes:</font>
+<li>The AOMedia Video 1 and H.266 codecs can only be used for MP4 files.</li>
+<li> Only CRF is supported for H.266 currently.</li>
+                     * @param Codec The video codec. Valid values:
 <li>libx264: H.264</li>
 <li>libx265: H.265</li>
 <li>av1: AOMedia Video 1</li>
-Currently, a resolution within 640x480 must be specified for H.265. and the `av1` container only supports mp4.
+<li>H.266: H.266</li>
+<font color=red>Notes:</font>
+<li>The AOMedia Video 1 and H.266 codecs can only be used for MP4 files.</li>
+<li> Only CRF is supported for H.266 currently.</li>
                      */
                     void SetCodec(const std::string& _codec);
 
@@ -237,18 +249,34 @@ If the value is 0, the bitrate of the video will be the same as that of the sour
                     bool FillTypeHasBeenSet() const;
 
                     /**
-                     * 获取Video Constant Rate Factor (CRF). Value range: 0-51. This parameter will be disabled if you enter 0.
-We don’t recommend specifying this parameter unless you have special requirements.
-                     * @return Vcrf Video Constant Rate Factor (CRF). Value range: 0-51. This parameter will be disabled if you enter 0.
-We don’t recommend specifying this parameter unless you have special requirements.
+                     * 获取The video constant rate factor (CRF). Value range: 1-51. `0` means to disable this parameter.
+
+<font color=red>Notes:</font>
+<li>If this parameter is specified, CRF encoding will be used and the bitrate parameter will be ignored.</li>
+<li>If `Codec` is `H.266`, this parameter is required (`28` is recommended).</li>
+<li>We don’t recommend using this parameter unless you have special requirements.</li>
+                     * @return Vcrf The video constant rate factor (CRF). Value range: 1-51. `0` means to disable this parameter.
+
+<font color=red>Notes:</font>
+<li>If this parameter is specified, CRF encoding will be used and the bitrate parameter will be ignored.</li>
+<li>If `Codec` is `H.266`, this parameter is required (`28` is recommended).</li>
+<li>We don’t recommend using this parameter unless you have special requirements.</li>
                      */
                     uint64_t GetVcrf() const;
 
                     /**
-                     * 设置Video Constant Rate Factor (CRF). Value range: 0-51. This parameter will be disabled if you enter 0.
-We don’t recommend specifying this parameter unless you have special requirements.
-                     * @param Vcrf Video Constant Rate Factor (CRF). Value range: 0-51. This parameter will be disabled if you enter 0.
-We don’t recommend specifying this parameter unless you have special requirements.
+                     * 设置The video constant rate factor (CRF). Value range: 1-51. `0` means to disable this parameter.
+
+<font color=red>Notes:</font>
+<li>If this parameter is specified, CRF encoding will be used and the bitrate parameter will be ignored.</li>
+<li>If `Codec` is `H.266`, this parameter is required (`28` is recommended).</li>
+<li>We don’t recommend using this parameter unless you have special requirements.</li>
+                     * @param Vcrf The video constant rate factor (CRF). Value range: 1-51. `0` means to disable this parameter.
+
+<font color=red>Notes:</font>
+<li>If this parameter is specified, CRF encoding will be used and the bitrate parameter will be ignored.</li>
+<li>If `Codec` is `H.266`, this parameter is required (`28` is recommended).</li>
+<li>We don’t recommend using this parameter unless you have special requirements.</li>
                      */
                     void SetVcrf(const uint64_t& _vcrf);
 
@@ -283,11 +311,14 @@ When this parameter is set to 0 or left empty, `Gop` will be automatically set.
                 private:
 
                     /**
-                     * Video stream encoder. Valid values:
+                     * The video codec. Valid values:
 <li>libx264: H.264</li>
 <li>libx265: H.265</li>
 <li>av1: AOMedia Video 1</li>
-Currently, a resolution within 640x480 must be specified for H.265. and the `av1` container only supports mp4.
+<li>H.266: H.266</li>
+<font color=red>Notes:</font>
+<li>The AOMedia Video 1 and H.266 codecs can only be used for MP4 files.</li>
+<li> Only CRF is supported for H.266 currently.</li>
                      */
                     std::string m_codec;
                     bool m_codecHasBeenSet;
@@ -341,8 +372,12 @@ If the value is 0, the bitrate of the video will be the same as that of the sour
                     bool m_fillTypeHasBeenSet;
 
                     /**
-                     * Video Constant Rate Factor (CRF). Value range: 0-51. This parameter will be disabled if you enter 0.
-We don’t recommend specifying this parameter unless you have special requirements.
+                     * The video constant rate factor (CRF). Value range: 1-51. `0` means to disable this parameter.
+
+<font color=red>Notes:</font>
+<li>If this parameter is specified, CRF encoding will be used and the bitrate parameter will be ignored.</li>
+<li>If `Codec` is `H.266`, this parameter is required (`28` is recommended).</li>
+<li>We don’t recommend using this parameter unless you have special requirements.</li>
                      */
                     uint64_t m_vcrf;
                     bool m_vcrfHasBeenSet;
