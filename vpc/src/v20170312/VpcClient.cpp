@@ -1287,92 +1287,6 @@ VpcClient::CreateLocalGatewayOutcomeCallable VpcClient::CreateLocalGatewayCallab
     return task->get_future();
 }
 
-VpcClient::CreateNatGatewayDestinationIpPortTranslationNatRuleOutcome VpcClient::CreateNatGatewayDestinationIpPortTranslationNatRule(const CreateNatGatewayDestinationIpPortTranslationNatRuleRequest &request)
-{
-    auto outcome = MakeRequest(request, "CreateNatGatewayDestinationIpPortTranslationNatRule");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        CreateNatGatewayDestinationIpPortTranslationNatRuleResponse rsp = CreateNatGatewayDestinationIpPortTranslationNatRuleResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return CreateNatGatewayDestinationIpPortTranslationNatRuleOutcome(rsp);
-        else
-            return CreateNatGatewayDestinationIpPortTranslationNatRuleOutcome(o.GetError());
-    }
-    else
-    {
-        return CreateNatGatewayDestinationIpPortTranslationNatRuleOutcome(outcome.GetError());
-    }
-}
-
-void VpcClient::CreateNatGatewayDestinationIpPortTranslationNatRuleAsync(const CreateNatGatewayDestinationIpPortTranslationNatRuleRequest& request, const CreateNatGatewayDestinationIpPortTranslationNatRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateNatGatewayDestinationIpPortTranslationNatRule(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-VpcClient::CreateNatGatewayDestinationIpPortTranslationNatRuleOutcomeCallable VpcClient::CreateNatGatewayDestinationIpPortTranslationNatRuleCallable(const CreateNatGatewayDestinationIpPortTranslationNatRuleRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<CreateNatGatewayDestinationIpPortTranslationNatRuleOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateNatGatewayDestinationIpPortTranslationNatRule(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
-VpcClient::CreateNatGatewaySourceIpTranslationNatRuleOutcome VpcClient::CreateNatGatewaySourceIpTranslationNatRule(const CreateNatGatewaySourceIpTranslationNatRuleRequest &request)
-{
-    auto outcome = MakeRequest(request, "CreateNatGatewaySourceIpTranslationNatRule");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        CreateNatGatewaySourceIpTranslationNatRuleResponse rsp = CreateNatGatewaySourceIpTranslationNatRuleResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return CreateNatGatewaySourceIpTranslationNatRuleOutcome(rsp);
-        else
-            return CreateNatGatewaySourceIpTranslationNatRuleOutcome(o.GetError());
-    }
-    else
-    {
-        return CreateNatGatewaySourceIpTranslationNatRuleOutcome(outcome.GetError());
-    }
-}
-
-void VpcClient::CreateNatGatewaySourceIpTranslationNatRuleAsync(const CreateNatGatewaySourceIpTranslationNatRuleRequest& request, const CreateNatGatewaySourceIpTranslationNatRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateNatGatewaySourceIpTranslationNatRule(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-VpcClient::CreateNatGatewaySourceIpTranslationNatRuleOutcomeCallable VpcClient::CreateNatGatewaySourceIpTranslationNatRuleCallable(const CreateNatGatewaySourceIpTranslationNatRuleRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<CreateNatGatewaySourceIpTranslationNatRuleOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateNatGatewaySourceIpTranslationNatRule(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
 VpcClient::CreateNetDetectOutcome VpcClient::CreateNetDetect(const CreateNetDetectRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateNetDetect");
@@ -5716,6 +5630,49 @@ VpcClient::DisableCcnRoutesOutcomeCallable VpcClient::DisableCcnRoutesCallable(c
     return task->get_future();
 }
 
+VpcClient::DisableFlowLogsOutcome VpcClient::DisableFlowLogs(const DisableFlowLogsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DisableFlowLogs");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DisableFlowLogsResponse rsp = DisableFlowLogsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DisableFlowLogsOutcome(rsp);
+        else
+            return DisableFlowLogsOutcome(o.GetError());
+    }
+    else
+    {
+        return DisableFlowLogsOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::DisableFlowLogsAsync(const DisableFlowLogsRequest& request, const DisableFlowLogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DisableFlowLogs(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::DisableFlowLogsOutcomeCallable VpcClient::DisableFlowLogsCallable(const DisableFlowLogsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DisableFlowLogsOutcome()>>(
+        [this, request]()
+        {
+            return this->DisableFlowLogs(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VpcClient::DisassociateAddressOutcome VpcClient::DisassociateAddress(const DisassociateAddressRequest &request)
 {
     auto outcome = MakeRequest(request, "DisassociateAddress");
@@ -5967,6 +5924,49 @@ VpcClient::EnableCcnRoutesOutcomeCallable VpcClient::EnableCcnRoutesCallable(con
         [this, request]()
         {
             return this->EnableCcnRoutes(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VpcClient::EnableFlowLogsOutcome VpcClient::EnableFlowLogs(const EnableFlowLogsRequest &request)
+{
+    auto outcome = MakeRequest(request, "EnableFlowLogs");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        EnableFlowLogsResponse rsp = EnableFlowLogsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return EnableFlowLogsOutcome(rsp);
+        else
+            return EnableFlowLogsOutcome(o.GetError());
+    }
+    else
+    {
+        return EnableFlowLogsOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::EnableFlowLogsAsync(const EnableFlowLogsRequest& request, const EnableFlowLogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->EnableFlowLogs(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::EnableFlowLogsOutcomeCallable VpcClient::EnableFlowLogsCallable(const EnableFlowLogsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<EnableFlowLogsOutcome()>>(
+        [this, request]()
+        {
+            return this->EnableFlowLogs(request);
         }
     );
 

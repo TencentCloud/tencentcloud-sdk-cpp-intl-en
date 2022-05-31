@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_VPC_V20170312_MODEL_CREATENATGATEWAYDESTINATIONIPPORTTRANSLATIONNATRULERESPONSE_H_
-#define TENCENTCLOUD_VPC_V20170312_MODEL_CREATENATGATEWAYDESTINATIONIPPORTTRANSLATIONNATRULERESPONSE_H_
+#ifndef TENCENTCLOUD_VPC_V20170312_MODEL_DISABLEFLOWLOGSRESPONSE_H_
+#define TENCENTCLOUD_VPC_V20170312_MODEL_DISABLEFLOWLOGSRESPONSE_H_
 
 #include <string>
 #include <vector>
@@ -32,13 +32,13 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * CreateNatGatewayDestinationIpPortTranslationNatRule response structure.
+                * DisableFlowLogs response structure.
                 */
-                class CreateNatGatewayDestinationIpPortTranslationNatRuleResponse : public AbstractModel
+                class DisableFlowLogsResponse : public AbstractModel
                 {
                 public:
-                    CreateNatGatewayDestinationIpPortTranslationNatRuleResponse();
-                    ~CreateNatGatewayDestinationIpPortTranslationNatRuleResponse() = default;
+                    DisableFlowLogsResponse();
+                    ~DisableFlowLogsResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
@@ -51,4 +51,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_VPC_V20170312_MODEL_CREATENATGATEWAYDESTINATIONIPPORTTRANSLATIONNATRULERESPONSE_H_
+#endif // !TENCENTCLOUD_VPC_V20170312_MODEL_DISABLEFLOWLOGSRESPONSE_H_

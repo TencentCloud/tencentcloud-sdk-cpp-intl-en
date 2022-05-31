@@ -81,10 +81,6 @@
 #include <tencentcloud/vpc/v20170312/model/CreateHaVipResponse.h>
 #include <tencentcloud/vpc/v20170312/model/CreateLocalGatewayRequest.h>
 #include <tencentcloud/vpc/v20170312/model/CreateLocalGatewayResponse.h>
-#include <tencentcloud/vpc/v20170312/model/CreateNatGatewayDestinationIpPortTranslationNatRuleRequest.h>
-#include <tencentcloud/vpc/v20170312/model/CreateNatGatewayDestinationIpPortTranslationNatRuleResponse.h>
-#include <tencentcloud/vpc/v20170312/model/CreateNatGatewaySourceIpTranslationNatRuleRequest.h>
-#include <tencentcloud/vpc/v20170312/model/CreateNatGatewaySourceIpTranslationNatRuleResponse.h>
 #include <tencentcloud/vpc/v20170312/model/CreateNetDetectRequest.h>
 #include <tencentcloud/vpc/v20170312/model/CreateNetDetectResponse.h>
 #include <tencentcloud/vpc/v20170312/model/CreateNetworkInterfaceRequest.h>
@@ -287,6 +283,8 @@
 #include <tencentcloud/vpc/v20170312/model/DetachNetworkInterfaceResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DisableCcnRoutesRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DisableCcnRoutesResponse.h>
+#include <tencentcloud/vpc/v20170312/model/DisableFlowLogsRequest.h>
+#include <tencentcloud/vpc/v20170312/model/DisableFlowLogsResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DisassociateAddressRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DisassociateAddressResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DisassociateDirectConnectGatewayNatGatewayRequest.h>
@@ -299,6 +297,8 @@
 #include <tencentcloud/vpc/v20170312/model/DownloadCustomerGatewayConfigurationResponse.h>
 #include <tencentcloud/vpc/v20170312/model/EnableCcnRoutesRequest.h>
 #include <tencentcloud/vpc/v20170312/model/EnableCcnRoutesResponse.h>
+#include <tencentcloud/vpc/v20170312/model/EnableFlowLogsRequest.h>
+#include <tencentcloud/vpc/v20170312/model/EnableFlowLogsResponse.h>
 #include <tencentcloud/vpc/v20170312/model/EnableVpcEndPointConnectRequest.h>
 #include <tencentcloud/vpc/v20170312/model/EnableVpcEndPointConnectResponse.h>
 #include <tencentcloud/vpc/v20170312/model/GetCcnRegionBandwidthLimitsRequest.h>
@@ -518,12 +518,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateLocalGatewayResponse> CreateLocalGatewayOutcome;
                 typedef std::future<CreateLocalGatewayOutcome> CreateLocalGatewayOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::CreateLocalGatewayRequest&, CreateLocalGatewayOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLocalGatewayAsyncHandler;
-                typedef Outcome<Core::Error, Model::CreateNatGatewayDestinationIpPortTranslationNatRuleResponse> CreateNatGatewayDestinationIpPortTranslationNatRuleOutcome;
-                typedef std::future<CreateNatGatewayDestinationIpPortTranslationNatRuleOutcome> CreateNatGatewayDestinationIpPortTranslationNatRuleOutcomeCallable;
-                typedef std::function<void(const VpcClient*, const Model::CreateNatGatewayDestinationIpPortTranslationNatRuleRequest&, CreateNatGatewayDestinationIpPortTranslationNatRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateNatGatewayDestinationIpPortTranslationNatRuleAsyncHandler;
-                typedef Outcome<Core::Error, Model::CreateNatGatewaySourceIpTranslationNatRuleResponse> CreateNatGatewaySourceIpTranslationNatRuleOutcome;
-                typedef std::future<CreateNatGatewaySourceIpTranslationNatRuleOutcome> CreateNatGatewaySourceIpTranslationNatRuleOutcomeCallable;
-                typedef std::function<void(const VpcClient*, const Model::CreateNatGatewaySourceIpTranslationNatRuleRequest&, CreateNatGatewaySourceIpTranslationNatRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateNatGatewaySourceIpTranslationNatRuleAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateNetDetectResponse> CreateNetDetectOutcome;
                 typedef std::future<CreateNetDetectOutcome> CreateNetDetectOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::CreateNetDetectRequest&, CreateNetDetectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateNetDetectAsyncHandler;
@@ -827,6 +821,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DisableCcnRoutesResponse> DisableCcnRoutesOutcome;
                 typedef std::future<DisableCcnRoutesOutcome> DisableCcnRoutesOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DisableCcnRoutesRequest&, DisableCcnRoutesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisableCcnRoutesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DisableFlowLogsResponse> DisableFlowLogsOutcome;
+                typedef std::future<DisableFlowLogsOutcome> DisableFlowLogsOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::DisableFlowLogsRequest&, DisableFlowLogsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisableFlowLogsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DisassociateAddressResponse> DisassociateAddressOutcome;
                 typedef std::future<DisassociateAddressOutcome> DisassociateAddressOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DisassociateAddressRequest&, DisassociateAddressOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisassociateAddressAsyncHandler;
@@ -845,6 +842,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::EnableCcnRoutesResponse> EnableCcnRoutesOutcome;
                 typedef std::future<EnableCcnRoutesOutcome> EnableCcnRoutesOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::EnableCcnRoutesRequest&, EnableCcnRoutesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnableCcnRoutesAsyncHandler;
+                typedef Outcome<Core::Error, Model::EnableFlowLogsResponse> EnableFlowLogsOutcome;
+                typedef std::future<EnableFlowLogsOutcome> EnableFlowLogsOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::EnableFlowLogsRequest&, EnableFlowLogsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnableFlowLogsAsyncHandler;
                 typedef Outcome<Core::Error, Model::EnableVpcEndPointConnectResponse> EnableVpcEndPointConnectOutcome;
                 typedef std::future<EnableVpcEndPointConnectOutcome> EnableVpcEndPointConnectOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::EnableVpcEndPointConnectRequest&, EnableVpcEndPointConnectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnableVpcEndPointConnectAsyncHandler;
@@ -1163,8 +1163,9 @@ The number of network instances that each CCN can be associated with is limited.
 
                 /**
                  *This API is used to bind an ENI to a CVM.
-* One CVM can be bound with multiple ENIs, but only one primary ENI. * For more information about the limits, see <a href="https://intl.cloud.tencent.com/document/product/576/18527?from_cn_redirect=1">ENI Use Limits</a>.
-* An ENI can only be bound to one CVM at a time.
+* An ENI must be bound with one security group at least. To bind it, see <a href="https://intl.cloud.tencent.com/document/product/215/43132?from_cn_redirect=1">AssociateNetworkInterfaceSecurityGroups</a>.
+* One CVM can be bound with multiple ENIs, but only one can be the primary ENI. For more information about the limits, see <a href="https://intl.cloud.tencent.com/document/product/576/18527?from_cn_redirect=1">ENI Use Limits</a>.
+* An ENI can only be bound to one CVM.
 * Only the running or shutdown CVMs can be bound with ENIs. For more information about the CVM status, see <a href="https://intl.cloud.tencent.com/document/api/213/9452?from_cn_redirect=1#InstanceStatus">InstanceStatus</a> in the Data Types.
 * An ENI can only be bound to a VPC-based CVM under the same availability zone as the ENI subnet.
 
@@ -1341,24 +1342,6 @@ You can also use the Force parameter to forcibly return a default VPC.
                 CreateLocalGatewayOutcome CreateLocalGateway(const Model::CreateLocalGatewayRequest &request);
                 void CreateLocalGatewayAsync(const Model::CreateLocalGatewayRequest& request, const CreateLocalGatewayAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateLocalGatewayOutcomeCallable CreateLocalGatewayCallable(const Model::CreateLocalGatewayRequest& request);
-
-                /**
-                 *This API (CreateNatGatewayDestinationIpPortTranslationNatRule) is used to create a port forwarding rule for a NAT gateway.
-                 * @param req CreateNatGatewayDestinationIpPortTranslationNatRuleRequest
-                 * @return CreateNatGatewayDestinationIpPortTranslationNatRuleOutcome
-                 */
-                CreateNatGatewayDestinationIpPortTranslationNatRuleOutcome CreateNatGatewayDestinationIpPortTranslationNatRule(const Model::CreateNatGatewayDestinationIpPortTranslationNatRuleRequest &request);
-                void CreateNatGatewayDestinationIpPortTranslationNatRuleAsync(const Model::CreateNatGatewayDestinationIpPortTranslationNatRuleRequest& request, const CreateNatGatewayDestinationIpPortTranslationNatRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                CreateNatGatewayDestinationIpPortTranslationNatRuleOutcomeCallable CreateNatGatewayDestinationIpPortTranslationNatRuleCallable(const Model::CreateNatGatewayDestinationIpPortTranslationNatRuleRequest& request);
-
-                /**
-                 *This API is used to create a SNAT rule for the NAT Gateway.
-                 * @param req CreateNatGatewaySourceIpTranslationNatRuleRequest
-                 * @return CreateNatGatewaySourceIpTranslationNatRuleOutcome
-                 */
-                CreateNatGatewaySourceIpTranslationNatRuleOutcome CreateNatGatewaySourceIpTranslationNatRule(const Model::CreateNatGatewaySourceIpTranslationNatRuleRequest &request);
-                void CreateNatGatewaySourceIpTranslationNatRuleAsync(const Model::CreateNatGatewaySourceIpTranslationNatRuleRequest& request, const CreateNatGatewaySourceIpTranslationNatRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                CreateNatGatewaySourceIpTranslationNatRuleOutcomeCallable CreateNatGatewaySourceIpTranslationNatRuleCallable(const Model::CreateNatGatewaySourceIpTranslationNatRuleRequest& request);
 
                 /**
                  *This API is used to create a network detection instance.
@@ -2359,6 +2342,15 @@ This API is completed asynchronously. If you need to query the execution result 
                 DisableCcnRoutesOutcomeCallable DisableCcnRoutesCallable(const Model::DisableCcnRoutesRequest& request);
 
                 /**
+                 *This API is used to disable flow log.
+                 * @param req DisableFlowLogsRequest
+                 * @return DisableFlowLogsOutcome
+                 */
+                DisableFlowLogsOutcome DisableFlowLogs(const Model::DisableFlowLogsRequest &request);
+                void DisableFlowLogsAsync(const Model::DisableFlowLogsRequest& request, const DisableFlowLogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DisableFlowLogsOutcomeCallable DisableFlowLogsCallable(const Model::DisableFlowLogsRequest& request);
+
+                /**
                  *This API is used to unbind an [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1) (EIP for short).
 * This API supports unbinding an EIP from CVM instances and ENIs.
 * This API does not support unbinding an EIP from a NAT Gateway. To unbind an EIP from a NAT Gateway, use the [`DisassociateNatGatewayAddress`](https://intl.cloud.tencent.com/document/api/215/36716?from_cn_redirect=1) API.
@@ -2416,6 +2408,15 @@ This API is used to verify whether there will be conflict with an existing route
                 EnableCcnRoutesOutcome EnableCcnRoutes(const Model::EnableCcnRoutesRequest &request);
                 void EnableCcnRoutesAsync(const Model::EnableCcnRoutesRequest& request, const EnableCcnRoutesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 EnableCcnRoutesOutcomeCallable EnableCcnRoutesCallable(const Model::EnableCcnRoutesRequest& request);
+
+                /**
+                 *This API is used to enable flow log.
+                 * @param req EnableFlowLogsRequest
+                 * @return EnableFlowLogsOutcome
+                 */
+                EnableFlowLogsOutcome EnableFlowLogs(const Model::EnableFlowLogsRequest &request);
+                void EnableFlowLogsAsync(const Model::EnableFlowLogsRequest& request, const EnableFlowLogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                EnableFlowLogsOutcomeCallable EnableFlowLogsCallable(const Model::EnableFlowLogsRequest& request);
 
                 /**
                  *This API is used to determine whether to accept the request of connecting with an endpoint.
