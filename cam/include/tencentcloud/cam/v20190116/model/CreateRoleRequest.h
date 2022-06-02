@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cam/v20190116/model/RoleTags.h>
 
 
 namespace TencentCloud
@@ -132,6 +133,24 @@ namespace TencentCloud
                      */
                     bool SessionDurationHasBeenSet() const;
 
+                    /**
+                     * 获取Tags bound to the role.
+                     * @return Tags Tags bound to the role.
+                     */
+                    std::vector<RoleTags> GetTags() const;
+
+                    /**
+                     * 设置Tags bound to the role.
+                     * @param Tags Tags bound to the role.
+                     */
+                    void SetTags(const std::vector<RoleTags>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -163,6 +182,12 @@ namespace TencentCloud
                      */
                     uint64_t m_sessionDuration;
                     bool m_sessionDurationHasBeenSet;
+
+                    /**
+                     * Tags bound to the role.
+                     */
+                    std::vector<RoleTags> m_tags;
+                    bool m_tagsHasBeenSet;
 
                 };
             }

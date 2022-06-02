@@ -27,6 +27,7 @@
 #include <tencentcloud/emr/v20190103/model/EmrProductConfigOutter.h>
 #include <tencentcloud/emr/v20190103/model/Tag.h>
 #include <tencentcloud/emr/v20190103/model/ClusterExternalServiceInfo.h>
+#include <tencentcloud/emr/v20190103/model/TopologyInfo.h>
 
 
 namespace TencentCloud
@@ -971,6 +972,94 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     bool ClusterExternalServiceInfoHasBeenSet() const;
 
+                    /**
+                     * 获取The VPC ID string type of the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return UniqVpcId The VPC ID string type of the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetUniqVpcId() const;
+
+                    /**
+                     * 设置The VPC ID string type of the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param UniqVpcId The VPC ID string type of the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetUniqVpcId(const std::string& _uniqVpcId);
+
+                    /**
+                     * 判断参数 UniqVpcId 是否已赋值
+                     * @return UniqVpcId 是否已赋值
+                     */
+                    bool UniqVpcIdHasBeenSet() const;
+
+                    /**
+                     * 获取The subnet ID string type of the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return UniqSubnetId The subnet ID string type of the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetUniqSubnetId() const;
+
+                    /**
+                     * 设置The subnet ID string type of the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param UniqSubnetId The subnet ID string type of the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetUniqSubnetId(const std::string& _uniqSubnetId);
+
+                    /**
+                     * 判断参数 UniqSubnetId 是否已赋值
+                     * @return UniqSubnetId 是否已赋值
+                     */
+                    bool UniqSubnetIdHasBeenSet() const;
+
+                    /**
+                     * 获取Node information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return TopologyInfoList Node information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<TopologyInfo> GetTopologyInfoList() const;
+
+                    /**
+                     * 设置Node information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param TopologyInfoList Node information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetTopologyInfoList(const std::vector<TopologyInfo>& _topologyInfoList);
+
+                    /**
+                     * 判断参数 TopologyInfoList 是否已赋值
+                     * @return TopologyInfoList 是否已赋值
+                     */
+                    bool TopologyInfoListHasBeenSet() const;
+
+                    /**
+                     * 获取Multi-AZ cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return IsMultiZoneCluster Multi-AZ cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool GetIsMultiZoneCluster() const;
+
+                    /**
+                     * 设置Multi-AZ cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param IsMultiZoneCluster Multi-AZ cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetIsMultiZoneCluster(const bool& _isMultiZoneCluster);
+
+                    /**
+                     * 判断参数 IsMultiZoneCluster 是否已赋值
+                     * @return IsMultiZoneCluster 是否已赋值
+                     */
+                    bool IsMultiZoneClusterHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1258,6 +1347,34 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::vector<ClusterExternalServiceInfo> m_clusterExternalServiceInfo;
                     bool m_clusterExternalServiceInfoHasBeenSet;
+
+                    /**
+                     * The VPC ID string type of the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_uniqVpcId;
+                    bool m_uniqVpcIdHasBeenSet;
+
+                    /**
+                     * The subnet ID string type of the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_uniqSubnetId;
+                    bool m_uniqSubnetIdHasBeenSet;
+
+                    /**
+                     * Node information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<TopologyInfo> m_topologyInfoList;
+                    bool m_topologyInfoListHasBeenSet;
+
+                    /**
+                     * Multi-AZ cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool m_isMultiZoneCluster;
+                    bool m_isMultiZoneClusterHasBeenSet;
 
                 };
             }

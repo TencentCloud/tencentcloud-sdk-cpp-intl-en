@@ -20,13 +20,17 @@ set(emr_public_header
 
 set(emr_public_header_model
   include/tencentcloud/emr/v20190103/model/MultiDiskMC.h
+  include/tencentcloud/emr/v20190103/model/AddUsersForUserManagerRequest.h
   include/tencentcloud/emr/v20190103/model/ModifyResourceSchedulerRequest.h
   include/tencentcloud/emr/v20190103/model/EmrProductConfigOutter.h
   include/tencentcloud/emr/v20190103/model/LoginSettings.h
+  include/tencentcloud/emr/v20190103/model/DescribeInstancesListResponse.h
   include/tencentcloud/emr/v20190103/model/TerminateTasksResponse.h
   include/tencentcloud/emr/v20190103/model/InquiryPriceCreateInstanceRequest.h
   include/tencentcloud/emr/v20190103/model/CustomServiceDefine.h
   include/tencentcloud/emr/v20190103/model/Resource.h
+  include/tencentcloud/emr/v20190103/model/MultiZoneSetting.h
+  include/tencentcloud/emr/v20190103/model/SubnetInfo.h
   include/tencentcloud/emr/v20190103/model/ModifyResourceScheduleConfigRequest.h
   include/tencentcloud/emr/v20190103/model/CreateInstanceResponse.h
   include/tencentcloud/emr/v20190103/model/InquiryPriceRenewInstanceResponse.h
@@ -45,18 +49,27 @@ set(emr_public_header_model
   include/tencentcloud/emr/v20190103/model/Placement.h
   include/tencentcloud/emr/v20190103/model/DescribeInstancesRequest.h
   include/tencentcloud/emr/v20190103/model/CustomMetaInfo.h
+  include/tencentcloud/emr/v20190103/model/DescribeUsersForUserManagerRequest.h
   include/tencentcloud/emr/v20190103/model/InquiryPriceUpdateInstanceRequest.h
+  include/tencentcloud/emr/v20190103/model/UserInfoForUserManager.h
   include/tencentcloud/emr/v20190103/model/COSSettings.h
   include/tencentcloud/emr/v20190103/model/ClusterInstancesInfo.h
+  include/tencentcloud/emr/v20190103/model/DescribeInstancesListRequest.h
   include/tencentcloud/emr/v20190103/model/MultiDisk.h
+  include/tencentcloud/emr/v20190103/model/AddUsersForUserManagerResponse.h
   include/tencentcloud/emr/v20190103/model/SearchItem.h
   include/tencentcloud/emr/v20190103/model/ModifyResourceSchedulerResponse.h
+  include/tencentcloud/emr/v20190103/model/ShortNodeInfo.h
   include/tencentcloud/emr/v20190103/model/ModifyResourceScheduleConfigResponse.h
+  include/tencentcloud/emr/v20190103/model/TopologyInfo.h
   include/tencentcloud/emr/v20190103/model/VPCSettings.h
   include/tencentcloud/emr/v20190103/model/DescribeClusterNodesResponse.h
   include/tencentcloud/emr/v20190103/model/NodeHardwareInfo.h
+  include/tencentcloud/emr/v20190103/model/DescribeUsersForUserManagerResponse.h
   include/tencentcloud/emr/v20190103/model/InquiryPriceUpdateInstanceResponse.h
   include/tencentcloud/emr/v20190103/model/NewResourceSpec.h
+  include/tencentcloud/emr/v20190103/model/Filters.h
+  include/tencentcloud/emr/v20190103/model/EmrListInstance.h
   include/tencentcloud/emr/v20190103/model/InquiryPriceRenewInstanceRequest.h
   include/tencentcloud/emr/v20190103/model/DescribeResourceScheduleResponse.h
   include/tencentcloud/emr/v20190103/model/CdbInfo.h
@@ -65,13 +78,17 @@ set(emr_public_header_model
 set(emr_src
   src/v20190103/EmrClient.cpp
   src/v20190103/model/MultiDiskMC.cpp
+  src/v20190103/model/AddUsersForUserManagerRequest.cpp
   src/v20190103/model/ModifyResourceSchedulerRequest.cpp
   src/v20190103/model/EmrProductConfigOutter.cpp
   src/v20190103/model/LoginSettings.cpp
+  src/v20190103/model/DescribeInstancesListResponse.cpp
   src/v20190103/model/TerminateTasksResponse.cpp
   src/v20190103/model/InquiryPriceCreateInstanceRequest.cpp
   src/v20190103/model/CustomServiceDefine.cpp
   src/v20190103/model/Resource.cpp
+  src/v20190103/model/MultiZoneSetting.cpp
+  src/v20190103/model/SubnetInfo.cpp
   src/v20190103/model/ModifyResourceScheduleConfigRequest.cpp
   src/v20190103/model/CreateInstanceResponse.cpp
   src/v20190103/model/InquiryPriceRenewInstanceResponse.cpp
@@ -90,18 +107,27 @@ set(emr_src
   src/v20190103/model/Placement.cpp
   src/v20190103/model/DescribeInstancesRequest.cpp
   src/v20190103/model/CustomMetaInfo.cpp
+  src/v20190103/model/DescribeUsersForUserManagerRequest.cpp
   src/v20190103/model/InquiryPriceUpdateInstanceRequest.cpp
+  src/v20190103/model/UserInfoForUserManager.cpp
   src/v20190103/model/COSSettings.cpp
   src/v20190103/model/ClusterInstancesInfo.cpp
+  src/v20190103/model/DescribeInstancesListRequest.cpp
   src/v20190103/model/MultiDisk.cpp
+  src/v20190103/model/AddUsersForUserManagerResponse.cpp
   src/v20190103/model/SearchItem.cpp
   src/v20190103/model/ModifyResourceSchedulerResponse.cpp
+  src/v20190103/model/ShortNodeInfo.cpp
   src/v20190103/model/ModifyResourceScheduleConfigResponse.cpp
+  src/v20190103/model/TopologyInfo.cpp
   src/v20190103/model/VPCSettings.cpp
   src/v20190103/model/DescribeClusterNodesResponse.cpp
   src/v20190103/model/NodeHardwareInfo.cpp
+  src/v20190103/model/DescribeUsersForUserManagerResponse.cpp
   src/v20190103/model/InquiryPriceUpdateInstanceResponse.cpp
   src/v20190103/model/NewResourceSpec.cpp
+  src/v20190103/model/Filters.cpp
+  src/v20190103/model/EmrListInstance.cpp
   src/v20190103/model/InquiryPriceRenewInstanceRequest.cpp
   src/v20190103/model/DescribeResourceScheduleResponse.cpp
   src/v20190103/model/CdbInfo.cpp

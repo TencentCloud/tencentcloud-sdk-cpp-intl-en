@@ -21,15 +21,16 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/emr/v20190103/model/LoginSettings.h>
 #include <tencentcloud/emr/v20190103/model/VPCSettings.h>
 #include <tencentcloud/emr/v20190103/model/NewResourceSpec.h>
-#include <tencentcloud/emr/v20190103/model/Placement.h>
-#include <tencentcloud/emr/v20190103/model/LoginSettings.h>
 #include <tencentcloud/emr/v20190103/model/COSSettings.h>
+#include <tencentcloud/emr/v20190103/model/Placement.h>
 #include <tencentcloud/emr/v20190103/model/PreExecuteFileSettings.h>
 #include <tencentcloud/emr/v20190103/model/Tag.h>
 #include <tencentcloud/emr/v20190103/model/CustomMetaInfo.h>
 #include <tencentcloud/emr/v20190103/model/ExternalService.h>
+#include <tencentcloud/emr/v20190103/model/MultiZoneSetting.h>
 
 
 namespace TencentCloud
@@ -150,24 +151,6 @@ namespace TencentCloud
                     bool ProductIdHasBeenSet() const;
 
                     /**
-                     * 获取Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
-                     * @return VPCSettings Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
-                     */
-                    VPCSettings GetVPCSettings() const;
-
-                    /**
-                     * 设置Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
-                     * @param VPCSettings Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
-                     */
-                    void SetVPCSettings(const VPCSettings& _vPCSettings);
-
-                    /**
-                     * 判断参数 VPCSettings 是否已赋值
-                     * @return VPCSettings 是否已赋值
-                     */
-                    bool VPCSettingsHasBeenSet() const;
-
-                    /**
                      * 获取List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
 Enter an instance value: `hive` or `flink`.
                      * @return Software List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
@@ -188,24 +171,6 @@ Enter an instance value: `hive` or `flink`.
                      * @return Software 是否已赋值
                      */
                     bool SoftwareHasBeenSet() const;
-
-                    /**
-                     * 获取Node resource specification.
-                     * @return ResourceSpec Node resource specification.
-                     */
-                    NewResourceSpec GetResourceSpec() const;
-
-                    /**
-                     * 设置Node resource specification.
-                     * @param ResourceSpec Node resource specification.
-                     */
-                    void SetResourceSpec(const NewResourceSpec& _resourceSpec);
-
-                    /**
-                     * 判断参数 ResourceSpec 是否已赋值
-                     * @return ResourceSpec 是否已赋值
-                     */
-                    bool ResourceSpecHasBeenSet() const;
 
                     /**
                      * 获取Whether to enable high node availability. Valid values:
@@ -280,24 +245,6 @@ Enter an instance value: `hive` or `flink`.
                      * @return PayMode 是否已赋值
                      */
                     bool PayModeHasBeenSet() const;
-
-                    /**
-                     * 获取Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-                     * @return Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-                     */
-                    Placement GetPlacement() const;
-
-                    /**
-                     * 设置Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-                     * @param Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-                     */
-                    void SetPlacement(const Placement& _placement);
-
-                    /**
-                     * 判断参数 Placement 是否已赋值
-                     * @return Placement 是否已赋值
-                     */
-                    bool PlacementHasBeenSet() const;
 
                     /**
                      * 获取Purchase duration of instance, which needs to be used together with `TimeUnit`.
@@ -378,6 +325,42 @@ Enter an instance value: `hive` or `flink`.
                     bool LoginSettingsHasBeenSet() const;
 
                     /**
+                     * 获取Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
+                     * @return VPCSettings Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
+                     */
+                    VPCSettings GetVPCSettings() const;
+
+                    /**
+                     * 设置Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
+                     * @param VPCSettings Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
+                     */
+                    void SetVPCSettings(const VPCSettings& _vPCSettings);
+
+                    /**
+                     * 判断参数 VPCSettings 是否已赋值
+                     * @return VPCSettings 是否已赋值
+                     */
+                    bool VPCSettingsHasBeenSet() const;
+
+                    /**
+                     * 获取Node resource specification.
+                     * @return ResourceSpec Node resource specification.
+                     */
+                    NewResourceSpec GetResourceSpec() const;
+
+                    /**
+                     * 设置Node resource specification.
+                     * @param ResourceSpec Node resource specification.
+                     */
+                    void SetResourceSpec(const NewResourceSpec& _resourceSpec);
+
+                    /**
+                     * 判断参数 ResourceSpec 是否已赋值
+                     * @return ResourceSpec 是否已赋值
+                     */
+                    bool ResourceSpecHasBeenSet() const;
+
+                    /**
                      * 获取Parameter required for enabling COS access.
                      * @return COSSettings Parameter required for enabling COS access.
                      */
@@ -394,6 +377,24 @@ Enter an instance value: `hive` or `flink`.
                      * @return COSSettings 是否已赋值
                      */
                     bool COSSettingsHasBeenSet() const;
+
+                    /**
+                     * 获取Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+                     * @return Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+                     */
+                    Placement GetPlacement() const;
+
+                    /**
+                     * 设置Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+                     * @param Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+                     */
+                    void SetPlacement(const Placement& _placement);
+
+                    /**
+                     * 判断参数 Placement 是否已赋值
+                     * @return Placement 是否已赋值
+                     */
+                    bool PlacementHasBeenSet() const;
 
                     /**
                      * 获取Security group to which an instance belongs in the format of `sg-xxxxxxxx`. This parameter can be obtained from the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808) API.
@@ -749,6 +750,60 @@ Hadoop-Hbase
                      */
                     bool ExternalServiceHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return VersionID 
+                     */
+                    int64_t GetVersionID() const;
+
+                    /**
+                     * 设置
+                     * @param VersionID 
+                     */
+                    void SetVersionID(const int64_t& _versionID);
+
+                    /**
+                     * 判断参数 VersionID 是否已赋值
+                     * @return VersionID 是否已赋值
+                     */
+                    bool VersionIDHasBeenSet() const;
+
+                    /**
+                     * 获取`true` indicates that the multi-AZ deployment mode is enabled. This parameter is available only in cluster creation and cannot be changed after setting.
+                     * @return MultiZone `true` indicates that the multi-AZ deployment mode is enabled. This parameter is available only in cluster creation and cannot be changed after setting.
+                     */
+                    bool GetMultiZone() const;
+
+                    /**
+                     * 设置`true` indicates that the multi-AZ deployment mode is enabled. This parameter is available only in cluster creation and cannot be changed after setting.
+                     * @param MultiZone `true` indicates that the multi-AZ deployment mode is enabled. This parameter is available only in cluster creation and cannot be changed after setting.
+                     */
+                    void SetMultiZone(const bool& _multiZone);
+
+                    /**
+                     * 判断参数 MultiZone 是否已赋值
+                     * @return MultiZone 是否已赋值
+                     */
+                    bool MultiZoneHasBeenSet() const;
+
+                    /**
+                     * 获取Node resource specs. The actual number of AZs is set, with the first AZ as the primary AZ, the second as the backup AZ, and the third as the arbitrator AZ. If the multi-AZ mode is not enabled, set the value to `1`.
+                     * @return MultiZoneSettings Node resource specs. The actual number of AZs is set, with the first AZ as the primary AZ, the second as the backup AZ, and the third as the arbitrator AZ. If the multi-AZ mode is not enabled, set the value to `1`.
+                     */
+                    std::vector<MultiZoneSetting> GetMultiZoneSettings() const;
+
+                    /**
+                     * 设置Node resource specs. The actual number of AZs is set, with the first AZ as the primary AZ, the second as the backup AZ, and the third as the arbitrator AZ. If the multi-AZ mode is not enabled, set the value to `1`.
+                     * @param MultiZoneSettings Node resource specs. The actual number of AZs is set, with the first AZ as the primary AZ, the second as the backup AZ, and the third as the arbitrator AZ. If the multi-AZ mode is not enabled, set the value to `1`.
+                     */
+                    void SetMultiZoneSettings(const std::vector<MultiZoneSetting>& _multiZoneSettings);
+
+                    /**
+                     * 判断参数 MultiZoneSettings 是否已赋值
+                     * @return MultiZoneSettings 是否已赋值
+                     */
+                    bool MultiZoneSettingsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -778,23 +833,11 @@ Hadoop-Hbase
                     bool m_productIdHasBeenSet;
 
                     /**
-                     * Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
-                     */
-                    VPCSettings m_vPCSettings;
-                    bool m_vPCSettingsHasBeenSet;
-
-                    /**
                      * List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
 Enter an instance value: `hive` or `flink`.
                      */
                     std::vector<std::string> m_software;
                     bool m_softwareHasBeenSet;
-
-                    /**
-                     * Node resource specification.
-                     */
-                    NewResourceSpec m_resourceSpec;
-                    bool m_resourceSpecHasBeenSet;
 
                     /**
                      * Whether to enable high node availability. Valid values:
@@ -818,12 +861,6 @@ Enter an instance value: `hive` or `flink`.
                      */
                     uint64_t m_payMode;
                     bool m_payModeHasBeenSet;
-
-                    /**
-                     * Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-                     */
-                    Placement m_placement;
-                    bool m_placementHasBeenSet;
 
                     /**
                      * Purchase duration of instance, which needs to be used together with `TimeUnit`.
@@ -850,10 +887,28 @@ Enter an instance value: `hive` or `flink`.
                     bool m_loginSettingsHasBeenSet;
 
                     /**
+                     * Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
+                     */
+                    VPCSettings m_vPCSettings;
+                    bool m_vPCSettingsHasBeenSet;
+
+                    /**
+                     * Node resource specification.
+                     */
+                    NewResourceSpec m_resourceSpec;
+                    bool m_resourceSpecHasBeenSet;
+
+                    /**
                      * Parameter required for enabling COS access.
                      */
                     COSSettings m_cOSSettings;
                     bool m_cOSSettingsHasBeenSet;
+
+                    /**
+                     * Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+                     */
+                    Placement m_placement;
+                    bool m_placementHasBeenSet;
 
                     /**
                      * Security group to which an instance belongs in the format of `sg-xxxxxxxx`. This parameter can be obtained from the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808) API.
@@ -968,6 +1023,24 @@ Hadoop-Hbase
                      */
                     std::vector<ExternalService> m_externalService;
                     bool m_externalServiceHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_versionID;
+                    bool m_versionIDHasBeenSet;
+
+                    /**
+                     * `true` indicates that the multi-AZ deployment mode is enabled. This parameter is available only in cluster creation and cannot be changed after setting.
+                     */
+                    bool m_multiZone;
+                    bool m_multiZoneHasBeenSet;
+
+                    /**
+                     * Node resource specs. The actual number of AZs is set, with the first AZ as the primary AZ, the second as the backup AZ, and the third as the arbitrator AZ. If the multi-AZ mode is not enabled, set the value to `1`.
+                     */
+                    std::vector<MultiZoneSetting> m_multiZoneSettings;
+                    bool m_multiZoneSettingsHasBeenSet;
 
                 };
             }

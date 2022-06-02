@@ -26,6 +26,7 @@
 #include <tencentcloud/emr/v20190103/model/VPCSettings.h>
 #include <tencentcloud/emr/v20190103/model/CustomMetaInfo.h>
 #include <tencentcloud/emr/v20190103/model/ExternalService.h>
+#include <tencentcloud/emr/v20190103/model/MultiZoneSetting.h>
 
 
 namespace TencentCloud
@@ -94,24 +95,6 @@ namespace TencentCloud
                      * @return TimeSpan 是否已赋值
                      */
                     bool TimeSpanHasBeenSet() const;
-
-                    /**
-                     * 获取Node specification queried for price.
-                     * @return ResourceSpec Node specification queried for price.
-                     */
-                    NewResourceSpec GetResourceSpec() const;
-
-                    /**
-                     * 设置Node specification queried for price.
-                     * @param ResourceSpec Node specification queried for price.
-                     */
-                    void SetResourceSpec(const NewResourceSpec& _resourceSpec);
-
-                    /**
-                     * 判断参数 ResourceSpec 是否已赋值
-                     * @return ResourceSpec 是否已赋值
-                     */
-                    bool ResourceSpecHasBeenSet() const;
 
                     /**
                      * 获取Currency.
@@ -212,6 +195,24 @@ namespace TencentCloud
                      * @return Software 是否已赋值
                      */
                     bool SoftwareHasBeenSet() const;
+
+                    /**
+                     * 获取Node specification queried for price.
+                     * @return ResourceSpec Node specification queried for price.
+                     */
+                    NewResourceSpec GetResourceSpec() const;
+
+                    /**
+                     * 设置Node specification queried for price.
+                     * @param ResourceSpec Node specification queried for price.
+                     */
+                    void SetResourceSpec(const NewResourceSpec& _resourceSpec);
+
+                    /**
+                     * 判断参数 ResourceSpec 是否已赋值
+                     * @return ResourceSpec 是否已赋值
+                     */
+                    bool ResourceSpecHasBeenSet() const;
 
                     /**
                      * 获取Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
@@ -401,6 +402,42 @@ Hadoop-Hbase
                      */
                     bool ExternalServiceHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return VersionID 
+                     */
+                    uint64_t GetVersionID() const;
+
+                    /**
+                     * 设置
+                     * @param VersionID 
+                     */
+                    void SetVersionID(const uint64_t& _versionID);
+
+                    /**
+                     * 判断参数 VersionID 是否已赋值
+                     * @return VersionID 是否已赋值
+                     */
+                    bool VersionIDHasBeenSet() const;
+
+                    /**
+                     * 获取AZ specs
+                     * @return MultiZoneSettings AZ specs
+                     */
+                    std::vector<MultiZoneSetting> GetMultiZoneSettings() const;
+
+                    /**
+                     * 设置AZ specs
+                     * @param MultiZoneSettings AZ specs
+                     */
+                    void SetMultiZoneSettings(const std::vector<MultiZoneSetting>& _multiZoneSettings);
+
+                    /**
+                     * 判断参数 MultiZoneSettings 是否已赋值
+                     * @return MultiZoneSettings 是否已赋值
+                     */
+                    bool MultiZoneSettingsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -417,12 +454,6 @@ Hadoop-Hbase
                      */
                     uint64_t m_timeSpan;
                     bool m_timeSpanHasBeenSet;
-
-                    /**
-                     * Node specification queried for price.
-                     */
-                    NewResourceSpec m_resourceSpec;
-                    bool m_resourceSpecHasBeenSet;
 
                     /**
                      * Currency.
@@ -454,6 +485,12 @@ Hadoop-Hbase
                      */
                     std::vector<std::string> m_software;
                     bool m_softwareHasBeenSet;
+
+                    /**
+                     * Node specification queried for price.
+                     */
+                    NewResourceSpec m_resourceSpec;
+                    bool m_resourceSpecHasBeenSet;
 
                     /**
                      * Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
@@ -513,6 +550,18 @@ Hadoop-Hbase
                      */
                     std::vector<ExternalService> m_externalService;
                     bool m_externalServiceHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_versionID;
+                    bool m_versionIDHasBeenSet;
+
+                    /**
+                     * AZ specs
+                     */
+                    std::vector<MultiZoneSetting> m_multiZoneSettings;
+                    bool m_multiZoneSettingsHasBeenSet;
 
                 };
             }

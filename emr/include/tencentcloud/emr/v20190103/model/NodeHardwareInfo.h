@@ -27,6 +27,7 @@
 #include <tencentcloud/emr/v20190103/model/MultiDiskMC.h>
 #include <tencentcloud/emr/v20190103/model/CdbInfo.h>
 #include <tencentcloud/emr/v20190103/model/Tag.h>
+#include <tencentcloud/emr/v20190103/model/SubnetInfo.h>
 
 
 namespace TencentCloud
@@ -929,6 +930,94 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool SupportModifyPayModeHasBeenSet() const;
 
+                    /**
+                     * 获取System disk type
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return RootStorageType System disk type
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetRootStorageType() const;
+
+                    /**
+                     * 设置System disk type
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param RootStorageType System disk type
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetRootStorageType(const int64_t& _rootStorageType);
+
+                    /**
+                     * 判断参数 RootStorageType 是否已赋值
+                     * @return RootStorageType 是否已赋值
+                     */
+                    bool RootStorageTypeHasBeenSet() const;
+
+                    /**
+                     * 获取AZ information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return Zone AZ information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetZone() const;
+
+                    /**
+                     * 设置AZ information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param Zone AZ information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetZone(const std::string& _zone);
+
+                    /**
+                     * 判断参数 Zone 是否已赋值
+                     * @return Zone 是否已赋值
+                     */
+                    bool ZoneHasBeenSet() const;
+
+                    /**
+                     * 获取Subnet
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return SubnetInfo Subnet
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    SubnetInfo GetSubnetInfo() const;
+
+                    /**
+                     * 设置Subnet
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param SubnetInfo Subnet
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetSubnetInfo(const SubnetInfo& _subnetInfo);
+
+                    /**
+                     * 判断参数 SubnetInfo 是否已赋值
+                     * @return SubnetInfo 是否已赋值
+                     */
+                    bool SubnetInfoHasBeenSet() const;
+
+                    /**
+                     * 获取Client
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return Clients Client
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetClients() const;
+
+                    /**
+                     * 设置Client
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param Clients Client
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetClients(const std::string& _clients);
+
+                    /**
+                     * 判断参数 Clients 是否已赋值
+                     * @return Clients 是否已赋值
+                     */
+                    bool ClientsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1210,6 +1299,34 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     int64_t m_supportModifyPayMode;
                     bool m_supportModifyPayModeHasBeenSet;
+
+                    /**
+                     * System disk type
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_rootStorageType;
+                    bool m_rootStorageTypeHasBeenSet;
+
+                    /**
+                     * AZ information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_zone;
+                    bool m_zoneHasBeenSet;
+
+                    /**
+                     * Subnet
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    SubnetInfo m_subnetInfo;
+                    bool m_subnetInfoHasBeenSet;
+
+                    /**
+                     * Client
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_clients;
+                    bool m_clientsHasBeenSet;
 
                 };
             }

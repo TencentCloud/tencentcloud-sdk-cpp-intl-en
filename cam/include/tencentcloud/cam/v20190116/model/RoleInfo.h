@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cam/v20190116/model/RoleTags.h>
 
 
 namespace TencentCloud
@@ -238,6 +239,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool DeletionTaskIdHasBeenSet() const;
 
+                    /**
+                     * 获取Tags.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Tags Tags.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<RoleTags> GetTags() const;
+
+                    /**
+                     * 设置Tags.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param Tags Tags.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetTags(const std::vector<RoleTags>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -302,6 +325,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_deletionTaskId;
                     bool m_deletionTaskIdHasBeenSet;
+
+                    /**
+                     * Tags.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<RoleTags> m_tags;
+                    bool m_tagsHasBeenSet;
 
                 };
             }

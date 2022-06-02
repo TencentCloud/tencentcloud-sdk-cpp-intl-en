@@ -95,6 +95,8 @@
 #include <tencentcloud/ckafka/v20190819/model/ModifyGroupOffsetsResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/ModifyInstanceAttributesRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/ModifyInstanceAttributesResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/ModifyInstancePreRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/ModifyInstancePreResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/ModifyPasswordRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/ModifyPasswordResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/ModifyTopicAttributesRequest.h>
@@ -223,6 +225,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyInstanceAttributesResponse> ModifyInstanceAttributesOutcome;
                 typedef std::future<ModifyInstanceAttributesOutcome> ModifyInstanceAttributesOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::ModifyInstanceAttributesRequest&, ModifyInstanceAttributesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstanceAttributesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyInstancePreResponse> ModifyInstancePreOutcome;
+                typedef std::future<ModifyInstancePreOutcome> ModifyInstancePreOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::ModifyInstancePreRequest&, ModifyInstancePreOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstancePreAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyPasswordResponse> ModifyPasswordOutcome;
                 typedef std::future<ModifyPasswordOutcome> ModifyPasswordOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::ModifyPasswordRequest&, ModifyPasswordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyPasswordAsyncHandler;
@@ -560,6 +565,15 @@ This API is used to get the list of topics in a CKafka instance of a user.
                 ModifyInstanceAttributesOutcome ModifyInstanceAttributes(const Model::ModifyInstanceAttributesRequest &request);
                 void ModifyInstanceAttributesAsync(const Model::ModifyInstanceAttributesRequest& request, const ModifyInstanceAttributesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyInstanceAttributesOutcomeCallable ModifyInstanceAttributesCallable(const Model::ModifyInstanceAttributesRequest& request);
+
+                /**
+                 *This API is used to change the configurations of a prepaid instance, such as disk capacity and bandwidth.
+                 * @param req ModifyInstancePreRequest
+                 * @return ModifyInstancePreOutcome
+                 */
+                ModifyInstancePreOutcome ModifyInstancePre(const Model::ModifyInstancePreRequest &request);
+                void ModifyInstancePreAsync(const Model::ModifyInstancePreRequest& request, const ModifyInstancePreAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyInstancePreOutcomeCallable ModifyInstancePreCallable(const Model::ModifyInstancePreRequest& request);
 
                 /**
                  *This API is used to change the password.

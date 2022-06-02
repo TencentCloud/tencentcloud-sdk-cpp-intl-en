@@ -400,6 +400,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool EcmRegionHasBeenSet() const;
 
+                    /**
+                     * 获取Type of the resource bound with an ENI. Valid values: `cvm` and `eks`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Business Type of the resource bound with an ENI. Valid values: `cvm` and `eks`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetBusiness() const;
+
+                    /**
+                     * 设置Type of the resource bound with an ENI. Valid values: `cvm` and `eks`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param Business Type of the resource bound with an ENI. Valid values: `cvm` and `eks`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetBusiness(const std::string& _business);
+
+                    /**
+                     * 判断参数 Business 是否已赋值
+                     * @return Business 是否已赋值
+                     */
+                    bool BusinessHasBeenSet() const;
+
                 private:
 
                     /**
@@ -514,6 +536,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_ecmRegion;
                     bool m_ecmRegionHasBeenSet;
+
+                    /**
+                     * Type of the resource bound with an ENI. Valid values: `cvm` and `eks`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_business;
+                    bool m_businessHasBeenSet;
 
                 };
             }
