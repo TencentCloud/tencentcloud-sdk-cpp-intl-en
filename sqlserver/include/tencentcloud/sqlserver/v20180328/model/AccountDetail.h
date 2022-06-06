@@ -209,6 +209,42 @@ namespace TencentCloud
                      */
                     bool IsAdminHasBeenSet() const;
 
+                    /**
+                     * 获取Valid values: `win-windows authentication`, `sql-sqlserver authentication`.
+                     * @return Authentication Valid values: `win-windows authentication`, `sql-sqlserver authentication`.
+                     */
+                    std::string GetAuthentication() const;
+
+                    /**
+                     * 设置Valid values: `win-windows authentication`, `sql-sqlserver authentication`.
+                     * @param Authentication Valid values: `win-windows authentication`, `sql-sqlserver authentication`.
+                     */
+                    void SetAuthentication(const std::string& _authentication);
+
+                    /**
+                     * 判断参数 Authentication 是否已赋值
+                     * @return Authentication 是否已赋值
+                     */
+                    bool AuthenticationHasBeenSet() const;
+
+                    /**
+                     * 获取The host required for `win-windows authentication` account
+                     * @return Host The host required for `win-windows authentication` account
+                     */
+                    std::string GetHost() const;
+
+                    /**
+                     * 设置The host required for `win-windows authentication` account
+                     * @param Host The host required for `win-windows authentication` account
+                     */
+                    void SetHost(const std::string& _host);
+
+                    /**
+                     * 判断参数 Host 是否已赋值
+                     * @return Host 是否已赋值
+                     */
+                    bool HostHasBeenSet() const;
+
                 private:
 
                     /**
@@ -264,6 +300,18 @@ namespace TencentCloud
                      */
                     bool m_isAdmin;
                     bool m_isAdminHasBeenSet;
+
+                    /**
+                     * Valid values: `win-windows authentication`, `sql-sqlserver authentication`.
+                     */
+                    std::string m_authentication;
+                    bool m_authenticationHasBeenSet;
+
+                    /**
+                     * The host required for `win-windows authentication` account
+                     */
+                    std::string m_host;
+                    bool m_hostHasBeenSet;
 
                 };
             }

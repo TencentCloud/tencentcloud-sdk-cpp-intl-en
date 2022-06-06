@@ -360,6 +360,24 @@ namespace TencentCloud
                      */
                     bool UidSetHasBeenSet() const;
 
+                    /**
+                     * 获取Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+                     * @return InstanceType Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+                     */
+                    std::string GetInstanceType() const;
+
+                    /**
+                     * 设置Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+                     * @param InstanceType Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+                     */
+                    void SetInstanceType(const std::string& _instanceType);
+
+                    /**
+                     * 判断参数 InstanceType 是否已赋值
+                     * @return InstanceType 是否已赋值
+                     */
+                    bool InstanceTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -463,6 +481,12 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_uidSet;
                     bool m_uidSetHasBeenSet;
+
+                    /**
+                     * Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+                     */
+                    std::string m_instanceType;
+                    bool m_instanceTypeHasBeenSet;
 
                 };
             }

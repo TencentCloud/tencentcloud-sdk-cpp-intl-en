@@ -204,6 +204,24 @@ namespace TencentCloud
                      */
                     bool MultiZonesHasBeenSet() const;
 
+                    /**
+                     * 获取The time when configuration adjustment task is performed. Valid values: `0` (execute immediately), `1` (execute during maintenance time). Default value: `1`.
+                     * @return WaitSwitch The time when configuration adjustment task is performed. Valid values: `0` (execute immediately), `1` (execute during maintenance time). Default value: `1`.
+                     */
+                    int64_t GetWaitSwitch() const;
+
+                    /**
+                     * 设置The time when configuration adjustment task is performed. Valid values: `0` (execute immediately), `1` (execute during maintenance time). Default value: `1`.
+                     * @param WaitSwitch The time when configuration adjustment task is performed. Valid values: `0` (execute immediately), `1` (execute during maintenance time). Default value: `1`.
+                     */
+                    void SetWaitSwitch(const int64_t& _waitSwitch);
+
+                    /**
+                     * 判断参数 WaitSwitch 是否已赋值
+                     * @return WaitSwitch 是否已赋值
+                     */
+                    bool WaitSwitchHasBeenSet() const;
+
                 private:
 
                     /**
@@ -259,6 +277,12 @@ namespace TencentCloud
                      */
                     std::string m_multiZones;
                     bool m_multiZonesHasBeenSet;
+
+                    /**
+                     * The time when configuration adjustment task is performed. Valid values: `0` (execute immediately), `1` (execute during maintenance time). Default value: `1`.
+                     */
+                    int64_t m_waitSwitch;
+                    bool m_waitSwitchHasBeenSet;
 
                 };
             }

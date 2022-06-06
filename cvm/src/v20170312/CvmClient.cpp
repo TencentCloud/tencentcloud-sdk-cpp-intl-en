@@ -2491,6 +2491,49 @@ CvmClient::ResizeInstanceDisksOutcomeCallable CvmClient::ResizeInstanceDisksCall
     return task->get_future();
 }
 
+CvmClient::RunInstancesOutcome CvmClient::RunInstances(const RunInstancesRequest &request)
+{
+    auto outcome = MakeRequest(request, "RunInstances");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RunInstancesResponse rsp = RunInstancesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RunInstancesOutcome(rsp);
+        else
+            return RunInstancesOutcome(o.GetError());
+    }
+    else
+    {
+        return RunInstancesOutcome(outcome.GetError());
+    }
+}
+
+void CvmClient::RunInstancesAsync(const RunInstancesRequest& request, const RunInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->RunInstances(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CvmClient::RunInstancesOutcomeCallable CvmClient::RunInstancesCallable(const RunInstancesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<RunInstancesOutcome()>>(
+        [this, request]()
+        {
+            return this->RunInstances(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CvmClient::StartInstancesOutcome CvmClient::StartInstances(const StartInstancesRequest &request)
 {
     auto outcome = MakeRequest(request, "StartInstances");

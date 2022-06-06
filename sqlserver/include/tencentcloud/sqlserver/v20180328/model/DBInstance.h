@@ -755,6 +755,100 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool BackupModelHasBeenSet() const;
 
+                    /**
+                     * 获取Instance backup info
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return InstanceNote Instance backup info
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetInstanceNote() const;
+
+                    /**
+                     * 设置Instance backup info
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param InstanceNote Instance backup info
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetInstanceNote(const std::string& _instanceNote);
+
+                    /**
+                     * 判断参数 InstanceNote 是否已赋值
+                     * @return InstanceNote 是否已赋值
+                     */
+                    bool InstanceNoteHasBeenSet() const;
+
+                    /**
+                     * 获取Backup cycle
+                     * @return BackupCycle Backup cycle
+                     */
+                    std::vector<int64_t> GetBackupCycle() const;
+
+                    /**
+                     * 设置Backup cycle
+                     * @param BackupCycle Backup cycle
+                     */
+                    void SetBackupCycle(const std::vector<int64_t>& _backupCycle);
+
+                    /**
+                     * 判断参数 BackupCycle 是否已赋值
+                     * @return BackupCycle 是否已赋值
+                     */
+                    bool BackupCycleHasBeenSet() const;
+
+                    /**
+                     * 获取Backup cycle type. Valid values: `daily`, `weekly`, `monthly`.
+                     * @return BackupCycleType Backup cycle type. Valid values: `daily`, `weekly`, `monthly`.
+                     */
+                    std::string GetBackupCycleType() const;
+
+                    /**
+                     * 设置Backup cycle type. Valid values: `daily`, `weekly`, `monthly`.
+                     * @param BackupCycleType Backup cycle type. Valid values: `daily`, `weekly`, `monthly`.
+                     */
+                    void SetBackupCycleType(const std::string& _backupCycleType);
+
+                    /**
+                     * 判断参数 BackupCycleType 是否已赋值
+                     * @return BackupCycleType 是否已赋值
+                     */
+                    bool BackupCycleTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Data (log) backup retention period
+                     * @return BackupSaveDays Data (log) backup retention period
+                     */
+                    int64_t GetBackupSaveDays() const;
+
+                    /**
+                     * 设置Data (log) backup retention period
+                     * @param BackupSaveDays Data (log) backup retention period
+                     */
+                    void SetBackupSaveDays(const int64_t& _backupSaveDays);
+
+                    /**
+                     * 判断参数 BackupSaveDays 是否已赋值
+                     * @return BackupSaveDays 是否已赋值
+                     */
+                    bool BackupSaveDaysHasBeenSet() const;
+
+                    /**
+                     * 获取Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+                     * @return InstanceType Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+                     */
+                    std::string GetInstanceType() const;
+
+                    /**
+                     * 设置Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+                     * @param InstanceType Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+                     */
+                    void SetInstanceType(const std::string& _instanceType);
+
+                    /**
+                     * 判断参数 InstanceType 是否已赋值
+                     * @return InstanceType 是否已赋值
+                     */
+                    bool InstanceTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -990,6 +1084,37 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_backupModel;
                     bool m_backupModelHasBeenSet;
+
+                    /**
+                     * Instance backup info
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_instanceNote;
+                    bool m_instanceNoteHasBeenSet;
+
+                    /**
+                     * Backup cycle
+                     */
+                    std::vector<int64_t> m_backupCycle;
+                    bool m_backupCycleHasBeenSet;
+
+                    /**
+                     * Backup cycle type. Valid values: `daily`, `weekly`, `monthly`.
+                     */
+                    std::string m_backupCycleType;
+                    bool m_backupCycleTypeHasBeenSet;
+
+                    /**
+                     * Data (log) backup retention period
+                     */
+                    int64_t m_backupSaveDays;
+                    bool m_backupSaveDaysHasBeenSet;
+
+                    /**
+                     * Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+                     */
+                    std::string m_instanceType;
+                    bool m_instanceTypeHasBeenSet;
 
                 };
             }

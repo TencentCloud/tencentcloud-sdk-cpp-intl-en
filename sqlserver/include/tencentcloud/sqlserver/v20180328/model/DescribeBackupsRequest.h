@@ -240,6 +240,42 @@ namespace TencentCloud
                      */
                     bool GroupHasBeenSet() const;
 
+                    /**
+                     * 获取Backup type. Valid values: `1` (data backup), `2` (log backup). Default value: `1`.
+                     * @return Type Backup type. Valid values: `1` (data backup), `2` (log backup). Default value: `1`.
+                     */
+                    int64_t GetType() const;
+
+                    /**
+                     * 设置Backup type. Valid values: `1` (data backup), `2` (log backup). Default value: `1`.
+                     * @param Type Backup type. Valid values: `1` (data backup), `2` (log backup). Default value: `1`.
+                     */
+                    void SetType(const int64_t& _type);
+
+                    /**
+                     * 判断参数 Type 是否已赋值
+                     * @return Type 是否已赋值
+                     */
+                    bool TypeHasBeenSet() const;
+
+                    /**
+                     * 获取Filter by backup file format. Valid values: `pkg` (archive file), `single` (Unarchived files).
+                     * @return BackupFormat Filter by backup file format. Valid values: `pkg` (archive file), `single` (Unarchived files).
+                     */
+                    std::string GetBackupFormat() const;
+
+                    /**
+                     * 设置Filter by backup file format. Valid values: `pkg` (archive file), `single` (Unarchived files).
+                     * @param BackupFormat Filter by backup file format. Valid values: `pkg` (archive file), `single` (Unarchived files).
+                     */
+                    void SetBackupFormat(const std::string& _backupFormat);
+
+                    /**
+                     * 判断参数 BackupFormat 是否已赋值
+                     * @return BackupFormat 是否已赋值
+                     */
+                    bool BackupFormatHasBeenSet() const;
+
                 private:
 
                     /**
@@ -307,6 +343,18 @@ namespace TencentCloud
                      */
                     int64_t m_group;
                     bool m_groupHasBeenSet;
+
+                    /**
+                     * Backup type. Valid values: `1` (data backup), `2` (log backup). Default value: `1`.
+                     */
+                    int64_t m_type;
+                    bool m_typeHasBeenSet;
+
+                    /**
+                     * Filter by backup file format. Valid values: `pkg` (archive file), `single` (Unarchived files).
+                     */
+                    std::string m_backupFormat;
+                    bool m_backupFormatHasBeenSet;
 
                 };
             }

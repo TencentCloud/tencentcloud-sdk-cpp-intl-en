@@ -137,6 +137,24 @@ namespace TencentCloud
                      */
                     bool IsAdminHasBeenSet() const;
 
+                    /**
+                     * 获取Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`.
+                     * @return Authentication Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`.
+                     */
+                    std::string GetAuthentication() const;
+
+                    /**
+                     * 设置Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`.
+                     * @param Authentication Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`.
+                     */
+                    void SetAuthentication(const std::string& _authentication);
+
+                    /**
+                     * 判断参数 Authentication 是否已赋值
+                     * @return Authentication 是否已赋值
+                     */
+                    bool AuthenticationHasBeenSet() const;
+
                 private:
 
                     /**
@@ -168,6 +186,12 @@ namespace TencentCloud
                      */
                     bool m_isAdmin;
                     bool m_isAdminHasBeenSet;
+
+                    /**
+                     * Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`.
+                     */
+                    std::string m_authentication;
+                    bool m_authenticationHasBeenSet;
 
                 };
             }

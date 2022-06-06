@@ -280,6 +280,24 @@ namespace TencentCloud
                      */
                     bool GroupIdHasBeenSet() const;
 
+                    /**
+                     * 获取Backup file format. Valid values:`pkg` (archive file), `single` (unarchived files).
+                     * @return BackupFormat Backup file format. Valid values:`pkg` (archive file), `single` (unarchived files).
+                     */
+                    std::string GetBackupFormat() const;
+
+                    /**
+                     * 设置Backup file format. Valid values:`pkg` (archive file), `single` (unarchived files).
+                     * @param BackupFormat Backup file format. Valid values:`pkg` (archive file), `single` (unarchived files).
+                     */
+                    void SetBackupFormat(const std::string& _backupFormat);
+
+                    /**
+                     * 判断参数 BackupFormat 是否已赋值
+                     * @return BackupFormat 是否已赋值
+                     */
+                    bool BackupFormatHasBeenSet() const;
+
                 private:
 
                     /**
@@ -359,6 +377,12 @@ namespace TencentCloud
                      */
                     std::string m_groupId;
                     bool m_groupIdHasBeenSet;
+
+                    /**
+                     * Backup file format. Valid values:`pkg` (archive file), `single` (unarchived files).
+                     */
+                    std::string m_backupFormat;
+                    bool m_backupFormatHasBeenSet;
 
                 };
             }

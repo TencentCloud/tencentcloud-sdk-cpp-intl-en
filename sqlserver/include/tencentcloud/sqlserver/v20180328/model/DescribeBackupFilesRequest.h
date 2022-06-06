@@ -132,6 +132,24 @@ namespace TencentCloud
                      */
                     bool DatabaseNameHasBeenSet() const;
 
+                    /**
+                     * 获取List items sorting by backup size. Valid values: `desc`(descending order), `asc` (ascending order). Default value: `desc`.
+                     * @return OrderBy List items sorting by backup size. Valid values: `desc`(descending order), `asc` (ascending order). Default value: `desc`.
+                     */
+                    std::string GetOrderBy() const;
+
+                    /**
+                     * 设置List items sorting by backup size. Valid values: `desc`(descending order), `asc` (ascending order). Default value: `desc`.
+                     * @param OrderBy List items sorting by backup size. Valid values: `desc`(descending order), `asc` (ascending order). Default value: `desc`.
+                     */
+                    void SetOrderBy(const std::string& _orderBy);
+
+                    /**
+                     * 判断参数 OrderBy 是否已赋值
+                     * @return OrderBy 是否已赋值
+                     */
+                    bool OrderByHasBeenSet() const;
+
                 private:
 
                     /**
@@ -163,6 +181,12 @@ namespace TencentCloud
                      */
                     std::string m_databaseName;
                     bool m_databaseNameHasBeenSet;
+
+                    /**
+                     * List items sorting by backup size. Valid values: `desc`(descending order), `asc` (ascending order). Default value: `desc`.
+                     */
+                    std::string m_orderBy;
+                    bool m_orderByHasBeenSet;
 
                 };
             }

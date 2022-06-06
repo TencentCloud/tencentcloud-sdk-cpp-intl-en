@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Backup mode, which supports daily backup only. Valid value: daily.
-                     * @return BackupType Backup mode, which supports daily backup only. Valid value: daily.
+                     * 获取Backup type. Valid values: `weekly` (when length(BackupDay) <=7 && length(BackupDay) >=2), `daily` (when length(BackupDay)=1). Default value: `daily`.
+                     * @return BackupType Backup type. Valid values: `weekly` (when length(BackupDay) <=7 && length(BackupDay) >=2), `daily` (when length(BackupDay)=1). Default value: `daily`.
                      */
                     std::string GetBackupType() const;
 
                     /**
-                     * 设置Backup mode, which supports daily backup only. Valid value: daily.
-                     * @param BackupType Backup mode, which supports daily backup only. Valid value: daily.
+                     * 设置Backup type. Valid values: `weekly` (when length(BackupDay) <=7 && length(BackupDay) >=2), `daily` (when length(BackupDay)=1). Default value: `daily`.
+                     * @param BackupType Backup type. Valid values: `weekly` (when length(BackupDay) <=7 && length(BackupDay) >=2), `daily` (when length(BackupDay)=1). Default value: `daily`.
                      */
                     void SetBackupType(const std::string& _backupType);
 
@@ -132,6 +132,42 @@ namespace TencentCloud
                      */
                     bool BackupModelHasBeenSet() const;
 
+                    /**
+                     * 获取The days of the week on which backup will be performed when “BackupType” is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
+                     * @return BackupCycle The days of the week on which backup will be performed when “BackupType” is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
+                     */
+                    std::vector<uint64_t> GetBackupCycle() const;
+
+                    /**
+                     * 设置The days of the week on which backup will be performed when “BackupType” is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
+                     * @param BackupCycle The days of the week on which backup will be performed when “BackupType” is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
+                     */
+                    void SetBackupCycle(const std::vector<uint64_t>& _backupCycle);
+
+                    /**
+                     * 判断参数 BackupCycle 是否已赋值
+                     * @return BackupCycle 是否已赋值
+                     */
+                    bool BackupCycleHasBeenSet() const;
+
+                    /**
+                     * 获取Data (log) backup retention period. Value range: 3-1830 days, default value: 7 days.
+                     * @return BackupSaveDays Data (log) backup retention period. Value range: 3-1830 days, default value: 7 days.
+                     */
+                    uint64_t GetBackupSaveDays() const;
+
+                    /**
+                     * 设置Data (log) backup retention period. Value range: 3-1830 days, default value: 7 days.
+                     * @param BackupSaveDays Data (log) backup retention period. Value range: 3-1830 days, default value: 7 days.
+                     */
+                    void SetBackupSaveDays(const uint64_t& _backupSaveDays);
+
+                    /**
+                     * 判断参数 BackupSaveDays 是否已赋值
+                     * @return BackupSaveDays 是否已赋值
+                     */
+                    bool BackupSaveDaysHasBeenSet() const;
+
                 private:
 
                     /**
@@ -141,7 +177,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Backup mode, which supports daily backup only. Valid value: daily.
+                     * Backup type. Valid values: `weekly` (when length(BackupDay) <=7 && length(BackupDay) >=2), `daily` (when length(BackupDay)=1). Default value: `daily`.
                      */
                     std::string m_backupType;
                     bool m_backupTypeHasBeenSet;
@@ -163,6 +199,18 @@ namespace TencentCloud
                      */
                     std::string m_backupModel;
                     bool m_backupModelHasBeenSet;
+
+                    /**
+                     * The days of the week on which backup will be performed when “BackupType” is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
+                     */
+                    std::vector<uint64_t> m_backupCycle;
+                    bool m_backupCycleHasBeenSet;
+
+                    /**
+                     * Data (log) backup retention period. Value range: 3-1830 days, default value: 7 days.
+                     */
+                    uint64_t m_backupSaveDays;
+                    bool m_backupSaveDaysHasBeenSet;
 
                 };
             }
