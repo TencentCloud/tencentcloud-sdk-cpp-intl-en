@@ -123,18 +123,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool TotalConcurrencyMemHasBeenSet() const;
 
                     /**
-                     * 获取Memory usage of the namespace
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return TotalAllocatedConcurrencyMem Memory usage of the namespace
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Concurrency usage of the namespace
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return TotalAllocatedConcurrencyMem Concurrency usage of the namespace
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     int64_t GetTotalAllocatedConcurrencyMem() const;
 
                     /**
-                     * 设置Memory usage of the namespace
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param TotalAllocatedConcurrencyMem Memory usage of the namespace
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Concurrency usage of the namespace
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param TotalAllocatedConcurrencyMem Concurrency usage of the namespace
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetTotalAllocatedConcurrencyMem(const int64_t& _totalAllocatedConcurrencyMem);
 
@@ -143,6 +143,28 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      * @return TotalAllocatedConcurrencyMem 是否已赋值
                      */
                     bool TotalAllocatedConcurrencyMemHasBeenSet() const;
+
+                    /**
+                     * 获取Provisioned concurrency usage of the namespace
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return TotalAllocatedProvisionedMem Provisioned concurrency usage of the namespace
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    int64_t GetTotalAllocatedProvisionedMem() const;
+
+                    /**
+                     * 设置Provisioned concurrency usage of the namespace
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param TotalAllocatedProvisionedMem Provisioned concurrency usage of the namespace
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetTotalAllocatedProvisionedMem(const int64_t& _totalAllocatedProvisionedMem);
+
+                    /**
+                     * 判断参数 TotalAllocatedProvisionedMem 是否已赋值
+                     * @return TotalAllocatedProvisionedMem 是否已赋值
+                     */
+                    bool TotalAllocatedProvisionedMemHasBeenSet() const;
 
                 private:
 
@@ -172,11 +194,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_totalConcurrencyMemHasBeenSet;
 
                     /**
-                     * Memory usage of the namespace
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Concurrency usage of the namespace
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     int64_t m_totalAllocatedConcurrencyMem;
                     bool m_totalAllocatedConcurrencyMemHasBeenSet;
+
+                    /**
+                     * Provisioned concurrency usage of the namespace
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    int64_t m_totalAllocatedProvisionedMem;
+                    bool m_totalAllocatedProvisionedMemHasBeenSet;
 
                 };
             }
