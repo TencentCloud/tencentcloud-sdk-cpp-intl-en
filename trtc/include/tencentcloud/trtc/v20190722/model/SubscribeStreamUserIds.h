@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The allowlist/blocklist for stream subscription. You cannot set both an allowlist and blocklist for audio or video subscription. Up to 25 streams can be subscribed to at the same time. In the mixed-stream recording mode, up to 24 videos can be displayed.
+                * The subscription allowlist/blocklist. You cannot specify an allowlist and a blocklist for audio/video subscription at the same time. The maximum number of streams one can receive at the same time is 25. When streams are mixed, up to 24 videos are supported. You can use `.*$` to specify user IDs with the same prefix, but make sure there aren’t users whose IDs contain ".*$" and are exactly the same as the prefix you pass in. If there are, TRTC will only allow or block those users.
                 */
                 class SubscribeStreamUserIds : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The allowlist for audio subscription. For example, `["1", "2", "3"]` means to subscribe to the audios of users 1, 2, and 3. If this parameter is left empty, the audios of all anchors (max 32) in the room will be received.
-                     * @return SubscribeAudioUserIds The allowlist for audio subscription. For example, `["1", "2", "3"]` means to subscribe to the audios of users 1, 2, and 3. If this parameter is left empty, the audios of all anchors (max 32) in the room will be received.
+                     * 获取The allowlist for audio subscription. For example, `["1", "2", "3"]` means to only subscribe to the audios of users 1, 2, and 3, and ["1.*$"] means to only subscribe to the audios of users whose ID prefix is `1`. If this parameter is left empty, the audios of all anchors in the room will be received. The array can contain at most 32 elements.
+                     * @return SubscribeAudioUserIds The allowlist for audio subscription. For example, `["1", "2", "3"]` means to only subscribe to the audios of users 1, 2, and 3, and ["1.*$"] means to only subscribe to the audios of users whose ID prefix is `1`. If this parameter is left empty, the audios of all anchors in the room will be received. The array can contain at most 32 elements.
                      */
                     std::vector<std::string> GetSubscribeAudioUserIds() const;
 
                     /**
-                     * 设置The allowlist for audio subscription. For example, `["1", "2", "3"]` means to subscribe to the audios of users 1, 2, and 3. If this parameter is left empty, the audios of all anchors (max 32) in the room will be received.
-                     * @param SubscribeAudioUserIds The allowlist for audio subscription. For example, `["1", "2", "3"]` means to subscribe to the audios of users 1, 2, and 3. If this parameter is left empty, the audios of all anchors (max 32) in the room will be received.
+                     * 设置The allowlist for audio subscription. For example, `["1", "2", "3"]` means to only subscribe to the audios of users 1, 2, and 3, and ["1.*$"] means to only subscribe to the audios of users whose ID prefix is `1`. If this parameter is left empty, the audios of all anchors in the room will be received. The array can contain at most 32 elements.
+                     * @param SubscribeAudioUserIds The allowlist for audio subscription. For example, `["1", "2", "3"]` means to only subscribe to the audios of users 1, 2, and 3, and ["1.*$"] means to only subscribe to the audios of users whose ID prefix is `1`. If this parameter is left empty, the audios of all anchors in the room will be received. The array can contain at most 32 elements.
                      */
                     void SetSubscribeAudioUserIds(const std::vector<std::string>& _subscribeAudioUserIds);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool SubscribeAudioUserIdsHasBeenSet() const;
 
                     /**
-                     * 获取The blocklist for audio subscription. For example, `["1", "2", "3"]` means to not subscribe to the audios of users 1, 2, and 3. If this parameter is left empty, the audios of all anchors (max 32) in the room will be received.
-                     * @return UnSubscribeAudioUserIds The blocklist for audio subscription. For example, `["1", "2", "3"]` means to not subscribe to the audios of users 1, 2, and 3. If this parameter is left empty, the audios of all anchors (max 32) in the room will be received.
+                     * 获取The blocklist for audio subscription. For example, `["1", "2", "3"]` means to not subscribe to the audios of users 1, 2, and 3, and `["1.*$"]` means to not subscribe to users whose ID prefix is `1`. If this parameter is left empty, the audios of all anchors in the room will be received. The array can contain at most 32 elements.
+                     * @return UnSubscribeAudioUserIds The blocklist for audio subscription. For example, `["1", "2", "3"]` means to not subscribe to the audios of users 1, 2, and 3, and `["1.*$"]` means to not subscribe to users whose ID prefix is `1`. If this parameter is left empty, the audios of all anchors in the room will be received. The array can contain at most 32 elements.
                      */
                     std::vector<std::string> GetUnSubscribeAudioUserIds() const;
 
                     /**
-                     * 设置The blocklist for audio subscription. For example, `["1", "2", "3"]` means to not subscribe to the audios of users 1, 2, and 3. If this parameter is left empty, the audios of all anchors (max 32) in the room will be received.
-                     * @param UnSubscribeAudioUserIds The blocklist for audio subscription. For example, `["1", "2", "3"]` means to not subscribe to the audios of users 1, 2, and 3. If this parameter is left empty, the audios of all anchors (max 32) in the room will be received.
+                     * 设置The blocklist for audio subscription. For example, `["1", "2", "3"]` means to not subscribe to the audios of users 1, 2, and 3, and `["1.*$"]` means to not subscribe to users whose ID prefix is `1`. If this parameter is left empty, the audios of all anchors in the room will be received. The array can contain at most 32 elements.
+                     * @param UnSubscribeAudioUserIds The blocklist for audio subscription. For example, `["1", "2", "3"]` means to not subscribe to the audios of users 1, 2, and 3, and `["1.*$"]` means to not subscribe to users whose ID prefix is `1`. If this parameter is left empty, the audios of all anchors in the room will be received. The array can contain at most 32 elements.
                      */
                     void SetUnSubscribeAudioUserIds(const std::vector<std::string>& _unSubscribeAudioUserIds);
 
@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool UnSubscribeAudioUserIdsHasBeenSet() const;
 
                     /**
-                     * 获取The allowlist for video subscription. For example, `["1", "2", "3"]` means to subscribe to the videos of users 1, 2, and 3. If this parameter is left empty, the videos of all anchors (max 32) in the room will be received.
-                     * @return SubscribeVideoUserIds The allowlist for video subscription. For example, `["1", "2", "3"]` means to subscribe to the videos of users 1, 2, and 3. If this parameter is left empty, the videos of all anchors (max 32) in the room will be received.
+                     * 获取The allowlist for video subscription. For example, `["1", "2", "3"]` means to only subscribe to the videos of users 1, 2, and 3, and `["1.*$"]` means to only subscribe to the videos of users whose ID prefix is `1`. If this parameter is left empty, the videos of all anchors in the room will be received. The array can contain at most 32 elements.
+                     * @return SubscribeVideoUserIds The allowlist for video subscription. For example, `["1", "2", "3"]` means to only subscribe to the videos of users 1, 2, and 3, and `["1.*$"]` means to only subscribe to the videos of users whose ID prefix is `1`. If this parameter is left empty, the videos of all anchors in the room will be received. The array can contain at most 32 elements.
                      */
                     std::vector<std::string> GetSubscribeVideoUserIds() const;
 
                     /**
-                     * 设置The allowlist for video subscription. For example, `["1", "2", "3"]` means to subscribe to the videos of users 1, 2, and 3. If this parameter is left empty, the videos of all anchors (max 32) in the room will be received.
-                     * @param SubscribeVideoUserIds The allowlist for video subscription. For example, `["1", "2", "3"]` means to subscribe to the videos of users 1, 2, and 3. If this parameter is left empty, the videos of all anchors (max 32) in the room will be received.
+                     * 设置The allowlist for video subscription. For example, `["1", "2", "3"]` means to only subscribe to the videos of users 1, 2, and 3, and `["1.*$"]` means to only subscribe to the videos of users whose ID prefix is `1`. If this parameter is left empty, the videos of all anchors in the room will be received. The array can contain at most 32 elements.
+                     * @param SubscribeVideoUserIds The allowlist for video subscription. For example, `["1", "2", "3"]` means to only subscribe to the videos of users 1, 2, and 3, and `["1.*$"]` means to only subscribe to the videos of users whose ID prefix is `1`. If this parameter is left empty, the videos of all anchors in the room will be received. The array can contain at most 32 elements.
                      */
                     void SetSubscribeVideoUserIds(const std::vector<std::string>& _subscribeVideoUserIds);
 
@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool SubscribeVideoUserIdsHasBeenSet() const;
 
                     /**
-                     * 获取The blocklist for video subscription. For example, `["1", "2", "3"]` means to not subscribe to the videos of users 1, 2, and 3. If this parameter is left empty, the videos of all anchors (max 32) in the room will be received.
-                     * @return UnSubscribeVideoUserIds The blocklist for video subscription. For example, `["1", "2", "3"]` means to not subscribe to the videos of users 1, 2, and 3. If this parameter is left empty, the videos of all anchors (max 32) in the room will be received.
+                     * 获取The blocklist for video subscription. For example, `["1", "2", "3"]` means to not subscribe to the videos of users 1, 2, and 3, and `["1.*$"]` means to not subscribe to the videos of users whose ID prefix is `1`. If this parameter is left empty, the videos of all anchors in the room will be received. The array can contain at most 32 elements.
+                     * @return UnSubscribeVideoUserIds The blocklist for video subscription. For example, `["1", "2", "3"]` means to not subscribe to the videos of users 1, 2, and 3, and `["1.*$"]` means to not subscribe to the videos of users whose ID prefix is `1`. If this parameter is left empty, the videos of all anchors in the room will be received. The array can contain at most 32 elements.
                      */
                     std::vector<std::string> GetUnSubscribeVideoUserIds() const;
 
                     /**
-                     * 设置The blocklist for video subscription. For example, `["1", "2", "3"]` means to not subscribe to the videos of users 1, 2, and 3. If this parameter is left empty, the videos of all anchors (max 32) in the room will be received.
-                     * @param UnSubscribeVideoUserIds The blocklist for video subscription. For example, `["1", "2", "3"]` means to not subscribe to the videos of users 1, 2, and 3. If this parameter is left empty, the videos of all anchors (max 32) in the room will be received.
+                     * 设置The blocklist for video subscription. For example, `["1", "2", "3"]` means to not subscribe to the videos of users 1, 2, and 3, and `["1.*$"]` means to not subscribe to the videos of users whose ID prefix is `1`. If this parameter is left empty, the videos of all anchors in the room will be received. The array can contain at most 32 elements.
+                     * @param UnSubscribeVideoUserIds The blocklist for video subscription. For example, `["1", "2", "3"]` means to not subscribe to the videos of users 1, 2, and 3, and `["1.*$"]` means to not subscribe to the videos of users whose ID prefix is `1`. If this parameter is left empty, the videos of all anchors in the room will be received. The array can contain at most 32 elements.
                      */
                     void SetUnSubscribeVideoUserIds(const std::vector<std::string>& _unSubscribeVideoUserIds);
 
@@ -121,25 +121,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The allowlist for audio subscription. For example, `["1", "2", "3"]` means to subscribe to the audios of users 1, 2, and 3. If this parameter is left empty, the audios of all anchors (max 32) in the room will be received.
+                     * The allowlist for audio subscription. For example, `["1", "2", "3"]` means to only subscribe to the audios of users 1, 2, and 3, and ["1.*$"] means to only subscribe to the audios of users whose ID prefix is `1`. If this parameter is left empty, the audios of all anchors in the room will be received. The array can contain at most 32 elements.
                      */
                     std::vector<std::string> m_subscribeAudioUserIds;
                     bool m_subscribeAudioUserIdsHasBeenSet;
 
                     /**
-                     * The blocklist for audio subscription. For example, `["1", "2", "3"]` means to not subscribe to the audios of users 1, 2, and 3. If this parameter is left empty, the audios of all anchors (max 32) in the room will be received.
+                     * The blocklist for audio subscription. For example, `["1", "2", "3"]` means to not subscribe to the audios of users 1, 2, and 3, and `["1.*$"]` means to not subscribe to users whose ID prefix is `1`. If this parameter is left empty, the audios of all anchors in the room will be received. The array can contain at most 32 elements.
                      */
                     std::vector<std::string> m_unSubscribeAudioUserIds;
                     bool m_unSubscribeAudioUserIdsHasBeenSet;
 
                     /**
-                     * The allowlist for video subscription. For example, `["1", "2", "3"]` means to subscribe to the videos of users 1, 2, and 3. If this parameter is left empty, the videos of all anchors (max 32) in the room will be received.
+                     * The allowlist for video subscription. For example, `["1", "2", "3"]` means to only subscribe to the videos of users 1, 2, and 3, and `["1.*$"]` means to only subscribe to the videos of users whose ID prefix is `1`. If this parameter is left empty, the videos of all anchors in the room will be received. The array can contain at most 32 elements.
                      */
                     std::vector<std::string> m_subscribeVideoUserIds;
                     bool m_subscribeVideoUserIdsHasBeenSet;
 
                     /**
-                     * The blocklist for video subscription. For example, `["1", "2", "3"]` means to not subscribe to the videos of users 1, 2, and 3. If this parameter is left empty, the videos of all anchors (max 32) in the room will be received.
+                     * The blocklist for video subscription. For example, `["1", "2", "3"]` means to not subscribe to the videos of users 1, 2, and 3, and `["1.*$"]` means to not subscribe to the videos of users whose ID prefix is `1`. If this parameter is left empty, the videos of all anchors in the room will be received. The array can contain at most 32 elements.
                      */
                     std::vector<std::string> m_unSubscribeVideoUserIds;
                     bool m_unSubscribeVideoUserIdsHasBeenSet;

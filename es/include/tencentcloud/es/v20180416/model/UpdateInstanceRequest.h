@@ -27,6 +27,7 @@
 #include <tencentcloud/es/v20180416/model/EsPublicAcl.h>
 #include <tencentcloud/es/v20180416/model/ZoneDetail.h>
 #include <tencentcloud/es/v20180416/model/WebNodeTypeInfo.h>
+#include <tencentcloud/es/v20180416/model/EsConfigSetInfo.h>
 
 
 namespace TencentCloud
@@ -594,6 +595,24 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
                      */
                     bool CerebroPrivateAccessHasBeenSet() const;
 
+                    /**
+                     * 获取Added or modified configuration set information
+                     * @return EsConfigSet Added or modified configuration set information
+                     */
+                    EsConfigSetInfo GetEsConfigSet() const;
+
+                    /**
+                     * 设置Added or modified configuration set information
+                     * @param EsConfigSet Added or modified configuration set information
+                     */
+                    void SetEsConfigSet(const EsConfigSetInfo& _esConfigSet);
+
+                    /**
+                     * 判断参数 EsConfigSet 是否已赋值
+                     * @return EsConfigSet 是否已赋值
+                     */
+                    bool EsConfigSetHasBeenSet() const;
+
                 private:
 
                     /**
@@ -775,6 +794,12 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
                      */
                     std::string m_cerebroPrivateAccess;
                     bool m_cerebroPrivateAccessHasBeenSet;
+
+                    /**
+                     * Added or modified configuration set information
+                     */
+                    EsConfigSetInfo m_esConfigSet;
+                    bool m_esConfigSetHasBeenSet;
 
                 };
             }

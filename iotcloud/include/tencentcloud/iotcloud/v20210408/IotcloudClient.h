@@ -27,6 +27,8 @@
 #include <tencentcloud/iotcloud/v20210408/model/CreateDeviceResponse.h>
 #include <tencentcloud/iotcloud/v20210408/model/CreatePrivateCARequest.h>
 #include <tencentcloud/iotcloud/v20210408/model/CreatePrivateCAResponse.h>
+#include <tencentcloud/iotcloud/v20210408/model/CreateProductRequest.h>
+#include <tencentcloud/iotcloud/v20210408/model/CreateProductResponse.h>
 #include <tencentcloud/iotcloud/v20210408/model/DeleteDeviceRequest.h>
 #include <tencentcloud/iotcloud/v20210408/model/DeleteDeviceResponse.h>
 #include <tencentcloud/iotcloud/v20210408/model/DeletePrivateCARequest.h>
@@ -47,6 +49,8 @@
 #include <tencentcloud/iotcloud/v20210408/model/DescribeProductResponse.h>
 #include <tencentcloud/iotcloud/v20210408/model/DescribeProductCARequest.h>
 #include <tencentcloud/iotcloud/v20210408/model/DescribeProductCAResponse.h>
+#include <tencentcloud/iotcloud/v20210408/model/DescribeProductsRequest.h>
+#include <tencentcloud/iotcloud/v20210408/model/DescribeProductsResponse.h>
 #include <tencentcloud/iotcloud/v20210408/model/SetProductsForbiddenStatusRequest.h>
 #include <tencentcloud/iotcloud/v20210408/model/SetProductsForbiddenStatusResponse.h>
 #include <tencentcloud/iotcloud/v20210408/model/UpdateDeviceLogLevelRequest.h>
@@ -77,6 +81,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreatePrivateCAResponse> CreatePrivateCAOutcome;
                 typedef std::future<CreatePrivateCAOutcome> CreatePrivateCAOutcomeCallable;
                 typedef std::function<void(const IotcloudClient*, const Model::CreatePrivateCARequest&, CreatePrivateCAOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreatePrivateCAAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateProductResponse> CreateProductOutcome;
+                typedef std::future<CreateProductOutcome> CreateProductOutcomeCallable;
+                typedef std::function<void(const IotcloudClient*, const Model::CreateProductRequest&, CreateProductOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateProductAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteDeviceResponse> DeleteDeviceOutcome;
                 typedef std::future<DeleteDeviceOutcome> DeleteDeviceOutcomeCallable;
                 typedef std::function<void(const IotcloudClient*, const Model::DeleteDeviceRequest&, DeleteDeviceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteDeviceAsyncHandler;
@@ -107,6 +114,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeProductCAResponse> DescribeProductCAOutcome;
                 typedef std::future<DescribeProductCAOutcome> DescribeProductCAOutcomeCallable;
                 typedef std::function<void(const IotcloudClient*, const Model::DescribeProductCARequest&, DescribeProductCAOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProductCAAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeProductsResponse> DescribeProductsOutcome;
+                typedef std::future<DescribeProductsOutcome> DescribeProductsOutcomeCallable;
+                typedef std::function<void(const IotcloudClient*, const Model::DescribeProductsRequest&, DescribeProductsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProductsAsyncHandler;
                 typedef Outcome<Core::Error, Model::SetProductsForbiddenStatusResponse> SetProductsForbiddenStatusOutcome;
                 typedef std::future<SetProductsForbiddenStatusOutcome> SetProductsForbiddenStatusOutcomeCallable;
                 typedef std::function<void(const IotcloudClient*, const Model::SetProductsForbiddenStatusRequest&, SetProductsForbiddenStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SetProductsForbiddenStatusAsyncHandler;
@@ -142,6 +152,15 @@ namespace TencentCloud
                 CreatePrivateCAOutcome CreatePrivateCA(const Model::CreatePrivateCARequest &request);
                 void CreatePrivateCAAsync(const Model::CreatePrivateCARequest& request, const CreatePrivateCAAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreatePrivateCAOutcomeCallable CreatePrivateCACallable(const Model::CreatePrivateCARequest& request);
+
+                /**
+                 *This API is used to create a new IoT communication product. 
+                 * @param req CreateProductRequest
+                 * @return CreateProductOutcome
+                 */
+                CreateProductOutcome CreateProduct(const Model::CreateProductRequest &request);
+                void CreateProductAsync(const Model::CreateProductRequest& request, const CreateProductAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateProductOutcomeCallable CreateProductCallable(const Model::CreateProductRequest& request);
 
                 /**
                  *This API is used to delete an IoT Hub device. 
@@ -232,6 +251,15 @@ namespace TencentCloud
                 DescribeProductCAOutcome DescribeProductCA(const Model::DescribeProductCARequest &request);
                 void DescribeProductCAAsync(const Model::DescribeProductCARequest& request, const DescribeProductCAAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeProductCAOutcomeCallable DescribeProductCACallable(const Model::DescribeProductCARequest& request);
+
+                /**
+                 *This API is used to obtain the product list. 
+                 * @param req DescribeProductsRequest
+                 * @return DescribeProductsOutcome
+                 */
+                DescribeProductsOutcome DescribeProducts(const Model::DescribeProductsRequest &request);
+                void DescribeProductsAsync(const Model::DescribeProductsRequest& request, const DescribeProductsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeProductsOutcomeCallable DescribeProductsCallable(const Model::DescribeProductsRequest& request);
 
                 /**
                  *This API is used to enable or disable multiple products at a time.

@@ -768,6 +768,28 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool OneClickStatusHasBeenSet() const;
 
+                    /**
+                     * 获取The number of advanced metrics.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return AdvancedMetricNumber The number of advanced metrics.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetAdvancedMetricNumber() const;
+
+                    /**
+                     * 设置The number of advanced metrics.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param AdvancedMetricNumber The number of advanced metrics.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetAdvancedMetricNumber(const int64_t& _advancedMetricNumber);
+
+                    /**
+                     * 判断参数 AdvancedMetricNumber 是否已赋值
+                     * @return AdvancedMetricNumber 是否已赋值
+                     */
+                    bool AdvancedMetricNumberHasBeenSet() const;
+
                 private:
 
                     /**
@@ -996,6 +1018,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     int64_t m_oneClickStatus;
                     bool m_oneClickStatusHasBeenSet;
+
+                    /**
+                     * The number of advanced metrics.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_advancedMetricNumber;
+                    bool m_advancedMetricNumberHasBeenSet;
 
                 };
             }

@@ -37,8 +37,6 @@
 #include <tencentcloud/lighthouse/v20200324/model/CreateFirewallRulesResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/CreateInstanceSnapshotRequest.h>
 #include <tencentcloud/lighthouse/v20200324/model/CreateInstanceSnapshotResponse.h>
-#include <tencentcloud/lighthouse/v20200324/model/CreateInstancesRequest.h>
-#include <tencentcloud/lighthouse/v20200324/model/CreateInstancesResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/CreateKeyPairRequest.h>
 #include <tencentcloud/lighthouse/v20200324/model/CreateKeyPairResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/DeleteBlueprintsRequest.h>
@@ -73,14 +71,10 @@
 #include <tencentcloud/lighthouse/v20200324/model/DescribeFirewallRulesResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/DescribeFirewallRulesTemplateRequest.h>
 #include <tencentcloud/lighthouse/v20200324/model/DescribeFirewallRulesTemplateResponse.h>
-#include <tencentcloud/lighthouse/v20200324/model/DescribeGeneralResourceQuotasRequest.h>
-#include <tencentcloud/lighthouse/v20200324/model/DescribeGeneralResourceQuotasResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/DescribeInstanceLoginKeyPairAttributeRequest.h>
 #include <tencentcloud/lighthouse/v20200324/model/DescribeInstanceLoginKeyPairAttributeResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/DescribeInstanceVncUrlRequest.h>
 #include <tencentcloud/lighthouse/v20200324/model/DescribeInstanceVncUrlResponse.h>
-#include <tencentcloud/lighthouse/v20200324/model/DescribeInstancesRequest.h>
-#include <tencentcloud/lighthouse/v20200324/model/DescribeInstancesResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/DescribeInstancesDeniedActionsRequest.h>
 #include <tencentcloud/lighthouse/v20200324/model/DescribeInstancesDeniedActionsResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/DescribeInstancesDiskNumRequest.h>
@@ -119,8 +113,6 @@
 #include <tencentcloud/lighthouse/v20200324/model/InquirePriceCreateInstancesResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/InquirePriceRenewDisksRequest.h>
 #include <tencentcloud/lighthouse/v20200324/model/InquirePriceRenewDisksResponse.h>
-#include <tencentcloud/lighthouse/v20200324/model/InquirePriceRenewInstancesRequest.h>
-#include <tencentcloud/lighthouse/v20200324/model/InquirePriceRenewInstancesResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/ModifyBlueprintAttributeRequest.h>
 #include <tencentcloud/lighthouse/v20200324/model/ModifyBlueprintAttributeResponse.h>
 #include <tencentcloud/lighthouse/v20200324/model/ModifyDisksAttributeRequest.h>
@@ -190,9 +182,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateInstanceSnapshotResponse> CreateInstanceSnapshotOutcome;
                 typedef std::future<CreateInstanceSnapshotOutcome> CreateInstanceSnapshotOutcomeCallable;
                 typedef std::function<void(const LighthouseClient*, const Model::CreateInstanceSnapshotRequest&, CreateInstanceSnapshotOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateInstanceSnapshotAsyncHandler;
-                typedef Outcome<Core::Error, Model::CreateInstancesResponse> CreateInstancesOutcome;
-                typedef std::future<CreateInstancesOutcome> CreateInstancesOutcomeCallable;
-                typedef std::function<void(const LighthouseClient*, const Model::CreateInstancesRequest&, CreateInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateInstancesAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateKeyPairResponse> CreateKeyPairOutcome;
                 typedef std::future<CreateKeyPairOutcome> CreateKeyPairOutcomeCallable;
                 typedef std::function<void(const LighthouseClient*, const Model::CreateKeyPairRequest&, CreateKeyPairOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateKeyPairAsyncHandler;
@@ -244,18 +233,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeFirewallRulesTemplateResponse> DescribeFirewallRulesTemplateOutcome;
                 typedef std::future<DescribeFirewallRulesTemplateOutcome> DescribeFirewallRulesTemplateOutcomeCallable;
                 typedef std::function<void(const LighthouseClient*, const Model::DescribeFirewallRulesTemplateRequest&, DescribeFirewallRulesTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeFirewallRulesTemplateAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeGeneralResourceQuotasResponse> DescribeGeneralResourceQuotasOutcome;
-                typedef std::future<DescribeGeneralResourceQuotasOutcome> DescribeGeneralResourceQuotasOutcomeCallable;
-                typedef std::function<void(const LighthouseClient*, const Model::DescribeGeneralResourceQuotasRequest&, DescribeGeneralResourceQuotasOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeGeneralResourceQuotasAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeInstanceLoginKeyPairAttributeResponse> DescribeInstanceLoginKeyPairAttributeOutcome;
                 typedef std::future<DescribeInstanceLoginKeyPairAttributeOutcome> DescribeInstanceLoginKeyPairAttributeOutcomeCallable;
                 typedef std::function<void(const LighthouseClient*, const Model::DescribeInstanceLoginKeyPairAttributeRequest&, DescribeInstanceLoginKeyPairAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstanceLoginKeyPairAttributeAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeInstanceVncUrlResponse> DescribeInstanceVncUrlOutcome;
                 typedef std::future<DescribeInstanceVncUrlOutcome> DescribeInstanceVncUrlOutcomeCallable;
                 typedef std::function<void(const LighthouseClient*, const Model::DescribeInstanceVncUrlRequest&, DescribeInstanceVncUrlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstanceVncUrlAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeInstancesResponse> DescribeInstancesOutcome;
-                typedef std::future<DescribeInstancesOutcome> DescribeInstancesOutcomeCallable;
-                typedef std::function<void(const LighthouseClient*, const Model::DescribeInstancesRequest&, DescribeInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstancesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeInstancesDeniedActionsResponse> DescribeInstancesDeniedActionsOutcome;
                 typedef std::future<DescribeInstancesDeniedActionsOutcome> DescribeInstancesDeniedActionsOutcomeCallable;
                 typedef std::function<void(const LighthouseClient*, const Model::DescribeInstancesDeniedActionsRequest&, DescribeInstancesDeniedActionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstancesDeniedActionsAsyncHandler;
@@ -313,9 +296,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::InquirePriceRenewDisksResponse> InquirePriceRenewDisksOutcome;
                 typedef std::future<InquirePriceRenewDisksOutcome> InquirePriceRenewDisksOutcomeCallable;
                 typedef std::function<void(const LighthouseClient*, const Model::InquirePriceRenewDisksRequest&, InquirePriceRenewDisksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquirePriceRenewDisksAsyncHandler;
-                typedef Outcome<Core::Error, Model::InquirePriceRenewInstancesResponse> InquirePriceRenewInstancesOutcome;
-                typedef std::future<InquirePriceRenewInstancesOutcome> InquirePriceRenewInstancesOutcomeCallable;
-                typedef std::function<void(const LighthouseClient*, const Model::InquirePriceRenewInstancesRequest&, InquirePriceRenewInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquirePriceRenewInstancesAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyBlueprintAttributeResponse> ModifyBlueprintAttributeOutcome;
                 typedef std::future<ModifyBlueprintAttributeOutcome> ModifyBlueprintAttributeOutcomeCallable;
                 typedef std::function<void(const LighthouseClient*, const Model::ModifyBlueprintAttributeRequest&, ModifyBlueprintAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyBlueprintAttributeAsyncHandler;
@@ -451,15 +431,6 @@ In the `FirewallRules` parameter:
                 CreateInstanceSnapshotOutcome CreateInstanceSnapshot(const Model::CreateInstanceSnapshotRequest &request);
                 void CreateInstanceSnapshotAsync(const Model::CreateInstanceSnapshotRequest& request, const CreateInstanceSnapshotAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateInstanceSnapshotOutcomeCallable CreateInstanceSnapshotCallable(const Model::CreateInstanceSnapshotRequest& request);
-
-                /**
-                 *This API is used to create one or more Lighthouse instances.
-                 * @param req CreateInstancesRequest
-                 * @return CreateInstancesOutcome
-                 */
-                CreateInstancesOutcome CreateInstances(const Model::CreateInstancesRequest &request);
-                void CreateInstancesAsync(const Model::CreateInstancesRequest& request, const CreateInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                CreateInstancesOutcomeCallable CreateInstancesCallable(const Model::CreateInstancesRequest& request);
 
                 /**
                  *This API is used to create a key pair.
@@ -625,15 +596,6 @@ The snapshot must be in `NORMAL` status. To query the status of a snapshot, you 
                 DescribeFirewallRulesTemplateOutcomeCallable DescribeFirewallRulesTemplateCallable(const Model::DescribeFirewallRulesTemplateRequest& request);
 
                 /**
-                 *This API is used to query the quota information of general resources.
-                 * @param req DescribeGeneralResourceQuotasRequest
-                 * @return DescribeGeneralResourceQuotasOutcome
-                 */
-                DescribeGeneralResourceQuotasOutcome DescribeGeneralResourceQuotas(const Model::DescribeGeneralResourceQuotasRequest &request);
-                void DescribeGeneralResourceQuotasAsync(const Model::DescribeGeneralResourceQuotasRequest& request, const DescribeGeneralResourceQuotasAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeGeneralResourceQuotasOutcomeCallable DescribeGeneralResourceQuotasCallable(const Model::DescribeGeneralResourceQuotasRequest& request);
-
-                /**
                  *This API is used to query the attributes of the default login key of an instance.
                  * @param req DescribeInstanceLoginKeyPairAttributeRequest
                  * @return DescribeInstanceLoginKeyPairAttributeOutcome
@@ -643,32 +605,28 @@ The snapshot must be in `NORMAL` status. To query the status of a snapshot, you 
                 DescribeInstanceLoginKeyPairAttributeOutcomeCallable DescribeInstanceLoginKeyPairAttributeCallable(const Model::DescribeInstanceLoginKeyPairAttributeRequest& request);
 
                 /**
-                 *This API is used to query the VNC URL of an instance, and the obtained address can be used for VNC login to the instance.
+                 *This API is used to query the URL for VNC login.
 
-* This feature is available to instances in `RUNNING` status.
-* A VNC URL is only valid for 15 seconds. If you do not access the URL within 15 seconds, it will become invalid, and you will have to query another one.
-* Once the VNC URL is accessed, it will become invalid, and you will have to query another one if needed.
-* If the connection is interrupted, up to 30 reconnection requests per minute are allowed.
+* It does not support `STOPPED` CVMs.
+* A VNC URL is only valid for 15 seconds. If you do not access the URL within 15 seconds, you will need to query another one.
+* The VNC URL can be used once only. You need to query a new one if you want to log in again.
+* Up to 30 re-connection attempts allowed in one minute.
+After you get the value of `InstanceVncUrl`, you need to append `InstanceVncUrl=xxxx` to the end of the link `https://img.qcloud.com/qcloud/app/active_vnc/index.html?`.
+
+  - `InstanceVncUrl`: Its value will be returned after the API is successfully called.
+
+    The final URL can be in the following formats:
+
+```
+https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F%2Fbjvnc.qcloud.com%3A26789%2Fvnc%3Fs%3DaHpjWnRVMFNhYmxKdDM5MjRHNlVTSVQwajNUSW0wb2tBbmFtREFCTmFrcy8vUUNPMG0wSHZNOUUxRm5PMmUzWmFDcWlOdDJIbUJxSTZDL0RXcHZxYnZZMmRkWWZWcEZia2lyb09XMzdKNmM9
+```
+
                  * @param req DescribeInstanceVncUrlRequest
                  * @return DescribeInstanceVncUrlOutcome
                  */
                 DescribeInstanceVncUrlOutcome DescribeInstanceVncUrl(const Model::DescribeInstanceVncUrlRequest &request);
                 void DescribeInstanceVncUrlAsync(const Model::DescribeInstanceVncUrlRequest& request, const DescribeInstanceVncUrlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeInstanceVncUrlOutcomeCallable DescribeInstanceVncUrlCallable(const Model::DescribeInstanceVncUrlRequest& request);
-
-                /**
-                 *This API is used to query the details of one or multiple instances.
-
-* You can query the details of an instance according to its ID, name, or private IP.
-* For more information on filters, please see [Filters](https://intl.cloud.tencent.com/document/product/1207/47576?from_cn_redirect=1#Filter).
-* If no parameter is defined, the status of a certain number of instances under the current account will be returned. The number is specified by `Limit` and is 20 by default.
-* The latest operation (LatestOperation) and the latest operation status (LatestOperationState) of the instance can be queried.
-                 * @param req DescribeInstancesRequest
-                 * @return DescribeInstancesOutcome
-                 */
-                DescribeInstancesOutcome DescribeInstances(const Model::DescribeInstancesRequest &request);
-                void DescribeInstancesAsync(const Model::DescribeInstancesRequest& request, const DescribeInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeInstancesOutcomeCallable DescribeInstancesCallable(const Model::DescribeInstancesRequest& request);
 
                 /**
                  *This API is used to query the list of operation limits of one or more instances.
@@ -846,15 +804,6 @@ The snapshot must be in `NORMAL` status. To query the status of a snapshot, you 
                 InquirePriceRenewDisksOutcome InquirePriceRenewDisks(const Model::InquirePriceRenewDisksRequest &request);
                 void InquirePriceRenewDisksAsync(const Model::InquirePriceRenewDisksRequest& request, const InquirePriceRenewDisksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 InquirePriceRenewDisksOutcomeCallable InquirePriceRenewDisksCallable(const Model::InquirePriceRenewDisksRequest& request);
-
-                /**
-                 *This API is used to query the price of renewed instance.
-                 * @param req InquirePriceRenewInstancesRequest
-                 * @return InquirePriceRenewInstancesOutcome
-                 */
-                InquirePriceRenewInstancesOutcome InquirePriceRenewInstances(const Model::InquirePriceRenewInstancesRequest &request);
-                void InquirePriceRenewInstancesAsync(const Model::InquirePriceRenewInstancesRequest& request, const InquirePriceRenewInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                InquirePriceRenewInstancesOutcomeCallable InquirePriceRenewInstancesCallable(const Model::InquirePriceRenewInstancesRequest& request);
 
                 /**
                  *This API is used to modify an image attribute.

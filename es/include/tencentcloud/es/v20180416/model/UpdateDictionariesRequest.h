@@ -133,14 +133,14 @@ namespace TencentCloud
                     bool QQDictHasBeenSet() const;
 
                     /**
-                     * 获取0: Install; 1: Delete
-                     * @return UpdateType 0: Install; 1: Delete
+                     * 获取`0` (default): Install, `1`: Delete
+                     * @return UpdateType `0` (default): Install, `1`: Delete
                      */
                     int64_t GetUpdateType() const;
 
                     /**
-                     * 设置0: Install; 1: Delete
-                     * @param UpdateType 0: Install; 1: Delete
+                     * 设置`0` (default): Install, `1`: Delete
+                     * @param UpdateType `0` (default): Install, `1`: Delete
                      */
                     void SetUpdateType(const int64_t& _updateType);
 
@@ -151,14 +151,14 @@ namespace TencentCloud
                     bool UpdateTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to force restart the cluster
-                     * @return ForceRestart Whether to force restart the cluster
+                     * 获取Whether to force restart the cluster. The default value is `false`.
+                     * @return ForceRestart Whether to force restart the cluster. The default value is `false`.
                      */
                     bool GetForceRestart() const;
 
                     /**
-                     * 设置Whether to force restart the cluster
-                     * @param ForceRestart Whether to force restart the cluster
+                     * 设置Whether to force restart the cluster. The default value is `false`.
+                     * @param ForceRestart Whether to force restart the cluster. The default value is `false`.
                      */
                     void SetForceRestart(const bool& _forceRestart);
 
@@ -201,13 +201,13 @@ namespace TencentCloud
                     bool m_qQDictHasBeenSet;
 
                     /**
-                     * 0: Install; 1: Delete
+                     * `0` (default): Install, `1`: Delete
                      */
                     int64_t m_updateType;
                     bool m_updateTypeHasBeenSet;
 
                     /**
-                     * Whether to force restart the cluster
+                     * Whether to force restart the cluster. The default value is `false`.
                      */
                     bool m_forceRestart;
                     bool m_forceRestartHasBeenSet;

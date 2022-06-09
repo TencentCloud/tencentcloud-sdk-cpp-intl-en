@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool RemovePluginListHasBeenSet() const;
 
                     /**
-                     * 获取Whether to force restart
-                     * @return ForceRestart Whether to force restart
+                     * 获取Whether to force restart the cluster. The default value is `false`.
+                     * @return ForceRestart Whether to force restart the cluster. The default value is `false`.
                      */
                     bool GetForceRestart() const;
 
                     /**
-                     * 设置Whether to force restart
-                     * @param ForceRestart Whether to force restart
+                     * 设置Whether to force restart the cluster. The default value is `false`.
+                     * @param ForceRestart Whether to force restart the cluster. The default value is `false`.
                      */
                     void SetForceRestart(const bool& _forceRestart);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool ForceRestartHasBeenSet() const;
 
                     /**
-                     * 获取Whether to reinstall
-                     * @return ForceUpdate Whether to reinstall
+                     * 获取Whether to reinstall the cluster. The default value is `false`.
+                     * @return ForceUpdate Whether to reinstall the cluster. The default value is `false`.
                      */
                     bool GetForceUpdate() const;
 
                     /**
-                     * 设置Whether to reinstall
-                     * @param ForceUpdate Whether to reinstall
+                     * 设置Whether to reinstall the cluster. The default value is `false`.
+                     * @param ForceUpdate Whether to reinstall the cluster. The default value is `false`.
                      */
                     void SetForceUpdate(const bool& _forceUpdate);
 
@@ -171,13 +171,13 @@ namespace TencentCloud
                     bool m_removePluginListHasBeenSet;
 
                     /**
-                     * Whether to force restart
+                     * Whether to force restart the cluster. The default value is `false`.
                      */
                     bool m_forceRestart;
                     bool m_forceRestartHasBeenSet;
 
                     /**
-                     * Whether to reinstall
+                     * Whether to reinstall the cluster. The default value is `false`.
                      */
                     bool m_forceUpdate;
                     bool m_forceUpdateHasBeenSet;

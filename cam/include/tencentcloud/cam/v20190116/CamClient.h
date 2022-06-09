@@ -155,6 +155,10 @@
 #include <tencentcloud/cam/v20190116/model/SetDefaultPolicyVersionResponse.h>
 #include <tencentcloud/cam/v20190116/model/SetMfaFlagRequest.h>
 #include <tencentcloud/cam/v20190116/model/SetMfaFlagResponse.h>
+#include <tencentcloud/cam/v20190116/model/TagRoleRequest.h>
+#include <tencentcloud/cam/v20190116/model/TagRoleResponse.h>
+#include <tencentcloud/cam/v20190116/model/UntagRoleRequest.h>
+#include <tencentcloud/cam/v20190116/model/UntagRoleResponse.h>
 #include <tencentcloud/cam/v20190116/model/UpdateAssumeRolePolicyRequest.h>
 #include <tencentcloud/cam/v20190116/model/UpdateAssumeRolePolicyResponse.h>
 #include <tencentcloud/cam/v20190116/model/UpdateGroupRequest.h>
@@ -387,6 +391,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::SetMfaFlagResponse> SetMfaFlagOutcome;
                 typedef std::future<SetMfaFlagOutcome> SetMfaFlagOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::SetMfaFlagRequest&, SetMfaFlagOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SetMfaFlagAsyncHandler;
+                typedef Outcome<Core::Error, Model::TagRoleResponse> TagRoleOutcome;
+                typedef std::future<TagRoleOutcome> TagRoleOutcomeCallable;
+                typedef std::function<void(const CamClient*, const Model::TagRoleRequest&, TagRoleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TagRoleAsyncHandler;
+                typedef Outcome<Core::Error, Model::UntagRoleResponse> UntagRoleOutcome;
+                typedef std::future<UntagRoleOutcome> UntagRoleOutcomeCallable;
+                typedef std::function<void(const CamClient*, const Model::UntagRoleRequest&, UntagRoleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UntagRoleAsyncHandler;
                 typedef Outcome<Core::Error, Model::UpdateAssumeRolePolicyResponse> UpdateAssumeRolePolicyOutcome;
                 typedef std::future<UpdateAssumeRolePolicyOutcome> UpdateAssumeRolePolicyOutcomeCallable;
                 typedef std::function<void(const CamClient*, const Model::UpdateAssumeRolePolicyRequest&, UpdateAssumeRolePolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateAssumeRolePolicyAsyncHandler;
@@ -1013,6 +1023,24 @@ namespace TencentCloud
                 SetMfaFlagOutcome SetMfaFlag(const Model::SetMfaFlagRequest &request);
                 void SetMfaFlagAsync(const Model::SetMfaFlagRequest& request, const SetMfaFlagAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 SetMfaFlagOutcomeCallable SetMfaFlagCallable(const Model::SetMfaFlagRequest& request);
+
+                /**
+                 *This API is used to bind tags to a role.
+                 * @param req TagRoleRequest
+                 * @return TagRoleOutcome
+                 */
+                TagRoleOutcome TagRole(const Model::TagRoleRequest &request);
+                void TagRoleAsync(const Model::TagRoleRequest& request, const TagRoleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                TagRoleOutcomeCallable TagRoleCallable(const Model::TagRoleRequest& request);
+
+                /**
+                 *This API is used to unbind tags from a role.
+                 * @param req UntagRoleRequest
+                 * @return UntagRoleOutcome
+                 */
+                UntagRoleOutcome UntagRole(const Model::UntagRoleRequest &request);
+                void UntagRoleAsync(const Model::UntagRoleRequest& request, const UntagRoleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UntagRoleOutcomeCallable UntagRoleCallable(const Model::UntagRoleRequest& request);
 
                 /**
                  *This API (UpdateAssumeRolePolicy) is used to modify the trust policy of a role.

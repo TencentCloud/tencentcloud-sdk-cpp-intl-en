@@ -361,6 +361,72 @@ Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     bool RuleTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Whether it is an advanced metric. 0: No; 1: Yes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return IsAdvanced Whether it is an advanced metric. 0: No; 1: Yes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetIsAdvanced() const;
+
+                    /**
+                     * 设置Whether it is an advanced metric. 0: No; 1: Yes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param IsAdvanced Whether it is an advanced metric. 0: No; 1: Yes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetIsAdvanced(const int64_t& _isAdvanced);
+
+                    /**
+                     * 判断参数 IsAdvanced 是否已赋值
+                     * @return IsAdvanced 是否已赋值
+                     */
+                    bool IsAdvancedHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the advanced metric feature is enabled. 0: No; 1: Yes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return IsOpen Whether the advanced metric feature is enabled. 0: No; 1: Yes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetIsOpen() const;
+
+                    /**
+                     * 设置Whether the advanced metric feature is enabled. 0: No; 1: Yes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param IsOpen Whether the advanced metric feature is enabled. 0: No; 1: Yes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetIsOpen(const int64_t& _isOpen);
+
+                    /**
+                     * 判断参数 IsOpen 是否已赋值
+                     * @return IsOpen 是否已赋值
+                     */
+                    bool IsOpenHasBeenSet() const;
+
+                    /**
+                     * 获取Integration center product ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return ProductId Integration center product ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetProductId() const;
+
+                    /**
+                     * 设置Integration center product ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param ProductId Integration center product ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetProductId(const std::string& _productId);
+
+                    /**
+                     * 判断参数 ProductId 是否已赋值
+                     * @return ProductId 是否已赋值
+                     */
+                    bool ProductIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -457,6 +523,27 @@ Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::string m_ruleType;
                     bool m_ruleTypeHasBeenSet;
+
+                    /**
+                     * Whether it is an advanced metric. 0: No; 1: Yes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_isAdvanced;
+                    bool m_isAdvancedHasBeenSet;
+
+                    /**
+                     * Whether the advanced metric feature is enabled. 0: No; 1: Yes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_isOpen;
+                    bool m_isOpenHasBeenSet;
+
+                    /**
+                     * Integration center product ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_productId;
+                    bool m_productIdHasBeenSet;
 
                 };
             }

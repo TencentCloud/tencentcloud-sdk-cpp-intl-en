@@ -126,6 +126,49 @@ IotcloudClient::CreatePrivateCAOutcomeCallable IotcloudClient::CreatePrivateCACa
     return task->get_future();
 }
 
+IotcloudClient::CreateProductOutcome IotcloudClient::CreateProduct(const CreateProductRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateProduct");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateProductResponse rsp = CreateProductResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateProductOutcome(rsp);
+        else
+            return CreateProductOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateProductOutcome(outcome.GetError());
+    }
+}
+
+void IotcloudClient::CreateProductAsync(const CreateProductRequest& request, const CreateProductAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateProduct(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+IotcloudClient::CreateProductOutcomeCallable IotcloudClient::CreateProductCallable(const CreateProductRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateProductOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateProduct(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 IotcloudClient::DeleteDeviceOutcome IotcloudClient::DeleteDevice(const DeleteDeviceRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteDevice");
@@ -549,6 +592,49 @@ IotcloudClient::DescribeProductCAOutcomeCallable IotcloudClient::DescribeProduct
         [this, request]()
         {
             return this->DescribeProductCA(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+IotcloudClient::DescribeProductsOutcome IotcloudClient::DescribeProducts(const DescribeProductsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeProducts");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeProductsResponse rsp = DescribeProductsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeProductsOutcome(rsp);
+        else
+            return DescribeProductsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeProductsOutcome(outcome.GetError());
+    }
+}
+
+void IotcloudClient::DescribeProductsAsync(const DescribeProductsRequest& request, const DescribeProductsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeProducts(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+IotcloudClient::DescribeProductsOutcomeCallable IotcloudClient::DescribeProductsCallable(const DescribeProductsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeProductsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeProducts(request);
         }
     );
 

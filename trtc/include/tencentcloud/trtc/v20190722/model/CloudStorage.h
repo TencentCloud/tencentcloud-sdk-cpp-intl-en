@@ -141,14 +141,14 @@ namespace TencentCloud
                     bool SecretKeyHasBeenSet() const;
 
                     /**
-                     * 获取The bucket to save data, which is an array of strings that can contain letters (a-z and A-Z) and numbers (0-9). For example, if the value of this parameter is `["prefix1", "prefix2"]`, the recording file `xxx.m3u8` will be saved as `prefix1/prefix2/TaskId/xxx.m3u8`.
-                     * @return FileNamePrefix The bucket to save data, which is an array of strings that can contain letters (a-z and A-Z) and numbers (0-9). For example, if the value of this parameter is `["prefix1", "prefix2"]`, the recording file `xxx.m3u8` will be saved as `prefix1/prefix2/TaskId/xxx.m3u8`.
+                     * 获取The bucket to save data, which is an array of strings that can contain letters (a-z and A-Z), numbers (0-9), underscores (_), and hyphens (-). For example, if the value of this parameter is `["prefix1", "prefix2"]`, the recording file `xxx.m3u8` will be saved as `prefix1/prefix2/TaskId/xxx.m3u8`.
+                     * @return FileNamePrefix The bucket to save data, which is an array of strings that can contain letters (a-z and A-Z), numbers (0-9), underscores (_), and hyphens (-). For example, if the value of this parameter is `["prefix1", "prefix2"]`, the recording file `xxx.m3u8` will be saved as `prefix1/prefix2/TaskId/xxx.m3u8`.
                      */
                     std::vector<std::string> GetFileNamePrefix() const;
 
                     /**
-                     * 设置The bucket to save data, which is an array of strings that can contain letters (a-z and A-Z) and numbers (0-9). For example, if the value of this parameter is `["prefix1", "prefix2"]`, the recording file `xxx.m3u8` will be saved as `prefix1/prefix2/TaskId/xxx.m3u8`.
-                     * @param FileNamePrefix The bucket to save data, which is an array of strings that can contain letters (a-z and A-Z) and numbers (0-9). For example, if the value of this parameter is `["prefix1", "prefix2"]`, the recording file `xxx.m3u8` will be saved as `prefix1/prefix2/TaskId/xxx.m3u8`.
+                     * 设置The bucket to save data, which is an array of strings that can contain letters (a-z and A-Z), numbers (0-9), underscores (_), and hyphens (-). For example, if the value of this parameter is `["prefix1", "prefix2"]`, the recording file `xxx.m3u8` will be saved as `prefix1/prefix2/TaskId/xxx.m3u8`.
+                     * @param FileNamePrefix The bucket to save data, which is an array of strings that can contain letters (a-z and A-Z), numbers (0-9), underscores (_), and hyphens (-). For example, if the value of this parameter is `["prefix1", "prefix2"]`, the recording file `xxx.m3u8` will be saved as `prefix1/prefix2/TaskId/xxx.m3u8`.
                      */
                     void SetFileNamePrefix(const std::vector<std::string>& _fileNamePrefix);
 
@@ -192,7 +192,7 @@ namespace TencentCloud
                     bool m_secretKeyHasBeenSet;
 
                     /**
-                     * The bucket to save data, which is an array of strings that can contain letters (a-z and A-Z) and numbers (0-9). For example, if the value of this parameter is `["prefix1", "prefix2"]`, the recording file `xxx.m3u8` will be saved as `prefix1/prefix2/TaskId/xxx.m3u8`.
+                     * The bucket to save data, which is an array of strings that can contain letters (a-z and A-Z), numbers (0-9), underscores (_), and hyphens (-). For example, if the value of this parameter is `["prefix1", "prefix2"]`, the recording file `xxx.m3u8` will be saved as `prefix1/prefix2/TaskId/xxx.m3u8`.
                      */
                     std::vector<std::string> m_fileNamePrefix;
                     bool m_fileNamePrefixHasBeenSet;
