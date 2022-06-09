@@ -40,6 +40,49 @@ FaceidClient::FaceidClient(const Credential &credential, const string &region, c
 }
 
 
+FaceidClient::CreateUploadUrlOutcome FaceidClient::CreateUploadUrl(const CreateUploadUrlRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateUploadUrl");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateUploadUrlResponse rsp = CreateUploadUrlResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateUploadUrlOutcome(rsp);
+        else
+            return CreateUploadUrlOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateUploadUrlOutcome(outcome.GetError());
+    }
+}
+
+void FaceidClient::CreateUploadUrlAsync(const CreateUploadUrlRequest& request, const CreateUploadUrlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateUploadUrl(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+FaceidClient::CreateUploadUrlOutcomeCallable FaceidClient::CreateUploadUrlCallable(const CreateUploadUrlRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateUploadUrlOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateUploadUrl(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 FaceidClient::DetectReflectLivenessAndCompareOutcome FaceidClient::DetectReflectLivenessAndCompare(const DetectReflectLivenessAndCompareRequest &request)
 {
     auto outcome = MakeRequest(request, "DetectReflectLivenessAndCompare");
@@ -76,6 +119,49 @@ FaceidClient::DetectReflectLivenessAndCompareOutcomeCallable FaceidClient::Detec
         [this, request]()
         {
             return this->DetectReflectLivenessAndCompare(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+FaceidClient::GenerateReflectSequenceOutcome FaceidClient::GenerateReflectSequence(const GenerateReflectSequenceRequest &request)
+{
+    auto outcome = MakeRequest(request, "GenerateReflectSequence");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        GenerateReflectSequenceResponse rsp = GenerateReflectSequenceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return GenerateReflectSequenceOutcome(rsp);
+        else
+            return GenerateReflectSequenceOutcome(o.GetError());
+    }
+    else
+    {
+        return GenerateReflectSequenceOutcome(outcome.GetError());
+    }
+}
+
+void FaceidClient::GenerateReflectSequenceAsync(const GenerateReflectSequenceRequest& request, const GenerateReflectSequenceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->GenerateReflectSequence(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+FaceidClient::GenerateReflectSequenceOutcomeCallable FaceidClient::GenerateReflectSequenceCallable(const GenerateReflectSequenceRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<GenerateReflectSequenceOutcome()>>(
+        [this, request]()
+        {
+            return this->GenerateReflectSequence(request);
         }
     );
 
