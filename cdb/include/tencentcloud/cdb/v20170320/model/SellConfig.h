@@ -342,6 +342,28 @@ Note: `null` may be returned for this field, indicating that no valid values can
                      */
                     bool DeviceTypeNameHasBeenSet() const;
 
+                    /**
+                     * 获取Engine type. Valid values: `Innodb`,`RocksDB`.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return EngineType Engine type. Valid values: `Innodb`,`RocksDB`.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string GetEngineType() const;
+
+                    /**
+                     * 设置Engine type. Valid values: `Innodb`,`RocksDB`.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param EngineType Engine type. Valid values: `Innodb`,`RocksDB`.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    void SetEngineType(const std::string& _engineType);
+
+                    /**
+                     * 判断参数 EngineType 是否已赋值
+                     * @return EngineType 是否已赋值
+                     */
+                    bool EngineTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -441,6 +463,13 @@ Note: `null` may be returned for this field, indicating that no valid values can
                      */
                     std::string m_deviceTypeName;
                     bool m_deviceTypeNameHasBeenSet;
+
+                    /**
+                     * Engine type. Valid values: `Innodb`,`RocksDB`.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string m_engineType;
+                    bool m_engineTypeHasBeenSet;
 
                 };
             }

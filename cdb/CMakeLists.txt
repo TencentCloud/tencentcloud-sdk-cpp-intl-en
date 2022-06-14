@@ -318,6 +318,7 @@ set(cdb_public_header_model
   include/tencentcloud/cdb/v20170320/model/DescribeDBInstanceGTIDRequest.h
   include/tencentcloud/cdb/v20170320/model/RollbackDBName.h
   include/tencentcloud/cdb/v20170320/model/LocalBinlogConfig.h
+  include/tencentcloud/cdb/v20170320/model/Tag.h
   )
 
 set(cdb_src
@@ -621,6 +622,7 @@ set(cdb_src
   src/v20170320/model/DescribeDBInstanceGTIDRequest.cpp
   src/v20170320/model/RollbackDBName.cpp
   src/v20170320/model/LocalBinlogConfig.cpp
+  src/v20170320/model/Tag.cpp
   )
 
 set(cdb_include

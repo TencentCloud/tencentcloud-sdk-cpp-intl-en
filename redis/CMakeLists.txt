@@ -21,6 +21,7 @@ set(redis_public_header
 set(redis_public_header_model
   include/tencentcloud/redis/v20180412/model/ChangeReplicaToMasterRequest.h
   include/tencentcloud/redis/v20180412/model/ReleaseWanAddressRequest.h
+  include/tencentcloud/redis/v20180412/model/UpgradeSmallVersionRequest.h
   include/tencentcloud/redis/v20180412/model/ProxyNodes.h
   include/tencentcloud/redis/v20180412/model/DescribeInstanceMonitorTopNCmdTookRequest.h
   include/tencentcloud/redis/v20180412/model/Instances.h
@@ -30,6 +31,7 @@ set(redis_public_header_model
   include/tencentcloud/redis/v20180412/model/AllocateWanAddressRequest.h
   include/tencentcloud/redis/v20180412/model/DescribeInstanceMonitorBigKeyTypeDistRequest.h
   include/tencentcloud/redis/v20180412/model/InquiryPriceCreateInstanceRequest.h
+  include/tencentcloud/redis/v20180412/model/UpgradeSmallVersionResponse.h
   include/tencentcloud/redis/v20180412/model/DescribeProductInfoResponse.h
   include/tencentcloud/redis/v20180412/model/DescribeMaintenanceWindowResponse.h
   include/tencentcloud/redis/v20180412/model/ModifyInstanceReadOnlyResponse.h
@@ -42,6 +44,7 @@ set(redis_public_header_model
   include/tencentcloud/redis/v20180412/model/DescribeInstanceMonitorBigKeyResponse.h
   include/tencentcloud/redis/v20180412/model/InquiryPriceCreateInstanceResponse.h
   include/tencentcloud/redis/v20180412/model/RedisNodes.h
+  include/tencentcloud/redis/v20180412/model/UpgradeProxyVersionResponse.h
   include/tencentcloud/redis/v20180412/model/InquiryPriceUpgradeInstanceRequest.h
   include/tencentcloud/redis/v20180412/model/DelayDistribution.h
   include/tencentcloud/redis/v20180412/model/DescribeSlowLogResponse.h
@@ -69,6 +72,7 @@ set(redis_public_header_model
   include/tencentcloud/redis/v20180412/model/SourceInfo.h
   include/tencentcloud/redis/v20180412/model/DescribeInstanceMonitorSIPRequest.h
   include/tencentcloud/redis/v20180412/model/ChangeReplicaToMasterResponse.h
+  include/tencentcloud/redis/v20180412/model/UpgradeProxyVersionRequest.h
   include/tencentcloud/redis/v20180412/model/ZoneCapacityConf.h
   include/tencentcloud/redis/v20180412/model/DescribeInstanceNodeInfoResponse.h
   include/tencentcloud/redis/v20180412/model/DescribeReplicationGroupRequest.h
@@ -84,6 +88,7 @@ set(redis_src
   src/v20180412/RedisClient.cpp
   src/v20180412/model/ChangeReplicaToMasterRequest.cpp
   src/v20180412/model/ReleaseWanAddressRequest.cpp
+  src/v20180412/model/UpgradeSmallVersionRequest.cpp
   src/v20180412/model/ProxyNodes.cpp
   src/v20180412/model/DescribeInstanceMonitorTopNCmdTookRequest.cpp
   src/v20180412/model/Instances.cpp
@@ -93,6 +98,7 @@ set(redis_src
   src/v20180412/model/AllocateWanAddressRequest.cpp
   src/v20180412/model/DescribeInstanceMonitorBigKeyTypeDistRequest.cpp
   src/v20180412/model/InquiryPriceCreateInstanceRequest.cpp
+  src/v20180412/model/UpgradeSmallVersionResponse.cpp
   src/v20180412/model/DescribeProductInfoResponse.cpp
   src/v20180412/model/DescribeMaintenanceWindowResponse.cpp
   src/v20180412/model/ModifyInstanceReadOnlyResponse.cpp
@@ -105,6 +111,7 @@ set(redis_src
   src/v20180412/model/DescribeInstanceMonitorBigKeyResponse.cpp
   src/v20180412/model/InquiryPriceCreateInstanceResponse.cpp
   src/v20180412/model/RedisNodes.cpp
+  src/v20180412/model/UpgradeProxyVersionResponse.cpp
   src/v20180412/model/InquiryPriceUpgradeInstanceRequest.cpp
   src/v20180412/model/DelayDistribution.cpp
   src/v20180412/model/DescribeSlowLogResponse.cpp
@@ -132,6 +139,7 @@ set(redis_src
   src/v20180412/model/SourceInfo.cpp
   src/v20180412/model/DescribeInstanceMonitorSIPRequest.cpp
   src/v20180412/model/ChangeReplicaToMasterResponse.cpp
+  src/v20180412/model/UpgradeProxyVersionRequest.cpp
   src/v20180412/model/ZoneCapacityConf.cpp
   src/v20180412/model/DescribeInstanceNodeInfoResponse.cpp
   src/v20180412/model/DescribeReplicationGroupRequest.cpp

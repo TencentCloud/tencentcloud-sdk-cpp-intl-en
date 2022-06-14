@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cdb/v20170320/model/Tag.h>
 
 
 namespace TencentCloud
@@ -600,6 +601,24 @@ namespace TencentCloud
                      */
                     bool UniqSubnetIdsHasBeenSet() const;
 
+                    /**
+                     * 获取Tag key value
+                     * @return Tags Tag key value
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 设置Tag key value
+                     * @param Tags Tag key value
+                     */
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -787,6 +806,12 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_uniqSubnetIds;
                     bool m_uniqSubnetIdsHasBeenSet;
+
+                    /**
+                     * Tag key value
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
 
                 };
             }
