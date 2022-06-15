@@ -101,6 +101,24 @@ namespace TencentCloud
                      */
                     bool SpecItemsHasBeenSet() const;
 
+                    /**
+                     * 获取Whether cross-AZ deployment is supported. Valid values: `1` (yes), `0` (no).
+                     * @return SupportMultiAZ Whether cross-AZ deployment is supported. Valid values: `1` (yes), `0` (no).
+                     */
+                    int64_t GetSupportMultiAZ() const;
+
+                    /**
+                     * 设置Whether cross-AZ deployment is supported. Valid values: `1` (yes), `0` (no).
+                     * @param SupportMultiAZ Whether cross-AZ deployment is supported. Valid values: `1` (yes), `0` (no).
+                     */
+                    void SetSupportMultiAZ(const int64_t& _supportMultiAZ);
+
+                    /**
+                     * 判断参数 SupportMultiAZ 是否已赋值
+                     * @return SupportMultiAZ 是否已赋值
+                     */
+                    bool SupportMultiAZHasBeenSet() const;
+
                 private:
 
                     /**
@@ -120,6 +138,12 @@ namespace TencentCloud
                      */
                     std::vector<SpecItem> m_specItems;
                     bool m_specItemsHasBeenSet;
+
+                    /**
+                     * Whether cross-AZ deployment is supported. Valid values: `1` (yes), `0` (no).
+                     */
+                    int64_t m_supportMultiAZ;
+                    bool m_supportMultiAZHasBeenSet;
 
                 };
             }

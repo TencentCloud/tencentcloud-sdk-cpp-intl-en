@@ -14,22 +14,23 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/live/v20180801/model/DescribeAllStreamPlayInfoListResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/DescribeDBSecurityGroupsResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using TencentCloud::CoreInternalOutcome;
-using namespace TencentCloud::Live::V20180801::Model;
+using namespace TencentCloud::Dcdb::V20180411::Model;
 using namespace std;
 
-DescribeAllStreamPlayInfoListResponse::DescribeAllStreamPlayInfoListResponse() :
-    m_queryTimeHasBeenSet(false),
-    m_dataInfoListHasBeenSet(false)
+DescribeDBSecurityGroupsResponse::DescribeDBSecurityGroupsResponse() :
+    m_groupsHasBeenSet(false),
+    m_vIPHasBeenSet(false),
+    m_vPortHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome DescribeAllStreamPlayInfoListResponse::Deserialize(const string &payload)
+CoreInternalOutcome DescribeDBSecurityGroupsResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -63,67 +64,85 @@ CoreInternalOutcome DescribeAllStreamPlayInfoListResponse::Deserialize(const str
     }
 
 
-    if (rsp.HasMember("QueryTime") && !rsp["QueryTime"].IsNull())
+    if (rsp.HasMember("Groups") && !rsp["Groups"].IsNull())
     {
-        if (!rsp["QueryTime"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `QueryTime` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_queryTime = string(rsp["QueryTime"].GetString());
-        m_queryTimeHasBeenSet = true;
-    }
+        if (!rsp["Groups"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `Groups` is not array type"));
 
-    if (rsp.HasMember("DataInfoList") && !rsp["DataInfoList"].IsNull())
-    {
-        if (!rsp["DataInfoList"].IsArray())
-            return CoreInternalOutcome(Core::Error("response `DataInfoList` is not array type"));
-
-        const rapidjson::Value &tmpValue = rsp["DataInfoList"];
+        const rapidjson::Value &tmpValue = rsp["Groups"];
         for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
-            MonitorStreamPlayInfo item;
+            SecurityGroup item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
             if (!outcome.IsSuccess())
             {
                 outcome.GetError().SetRequestId(requestId);
                 return outcome;
             }
-            m_dataInfoList.push_back(item);
+            m_groups.push_back(item);
         }
-        m_dataInfoListHasBeenSet = true;
+        m_groupsHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("VIP") && !rsp["VIP"].IsNull())
+    {
+        if (!rsp["VIP"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `VIP` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_vIP = string(rsp["VIP"].GetString());
+        m_vIPHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("VPort") && !rsp["VPort"].IsNull())
+    {
+        if (!rsp["VPort"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `VPort` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_vPort = string(rsp["VPort"].GetString());
+        m_vPortHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string DescribeAllStreamPlayInfoListResponse::ToJsonString() const
+string DescribeDBSecurityGroupsResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_queryTimeHasBeenSet)
+    if (m_groupsHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "QueryTime";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_queryTime.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_dataInfoListHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "DataInfoList";
+        string key = "Groups";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
-        for (auto itr = m_dataInfoList.begin(); itr != m_dataInfoList.end(); ++itr, ++i)
+        for (auto itr = m_groups.begin(); itr != m_groups.end(); ++itr, ++i)
         {
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_vIPHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "VIP";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vIP.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_vPortHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "VPort";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_vPort.c_str(), allocator).Move(), allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -138,24 +157,34 @@ string DescribeAllStreamPlayInfoListResponse::ToJsonString() const
 }
 
 
-string DescribeAllStreamPlayInfoListResponse::GetQueryTime() const
+vector<SecurityGroup> DescribeDBSecurityGroupsResponse::GetGroups() const
 {
-    return m_queryTime;
+    return m_groups;
 }
 
-bool DescribeAllStreamPlayInfoListResponse::QueryTimeHasBeenSet() const
+bool DescribeDBSecurityGroupsResponse::GroupsHasBeenSet() const
 {
-    return m_queryTimeHasBeenSet;
+    return m_groupsHasBeenSet;
 }
 
-vector<MonitorStreamPlayInfo> DescribeAllStreamPlayInfoListResponse::GetDataInfoList() const
+string DescribeDBSecurityGroupsResponse::GetVIP() const
 {
-    return m_dataInfoList;
+    return m_vIP;
 }
 
-bool DescribeAllStreamPlayInfoListResponse::DataInfoListHasBeenSet() const
+bool DescribeDBSecurityGroupsResponse::VIPHasBeenSet() const
 {
-    return m_dataInfoListHasBeenSet;
+    return m_vIPHasBeenSet;
+}
+
+string DescribeDBSecurityGroupsResponse::GetVPort() const
+{
+    return m_vPort;
+}
+
+bool DescribeDBSecurityGroupsResponse::VPortHasBeenSet() const
+{
+    return m_vPortHasBeenSet;
 }
 
 

@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/emr/v20190103/model/UserManagerFilter.h>
 
 
 namespace TencentCloud
@@ -43,6 +44,78 @@ namespace TencentCloud
 
 
                     /**
+                     * 获取Cluster instance ID
+                     * @return InstanceId Cluster instance ID
+                     */
+                    std::string GetInstanceId() const;
+
+                    /**
+                     * 设置Cluster instance ID
+                     * @param InstanceId Cluster instance ID
+                     */
+                    void SetInstanceId(const std::string& _instanceId);
+
+                    /**
+                     * 判断参数 InstanceId 是否已赋值
+                     * @return InstanceId 是否已赋值
+                     */
+                    bool InstanceIdHasBeenSet() const;
+
+                    /**
+                     * 获取Page number
+                     * @return PageNo Page number
+                     */
+                    int64_t GetPageNo() const;
+
+                    /**
+                     * 设置Page number
+                     * @param PageNo Page number
+                     */
+                    void SetPageNo(const int64_t& _pageNo);
+
+                    /**
+                     * 判断参数 PageNo 是否已赋值
+                     * @return PageNo 是否已赋值
+                     */
+                    bool PageNoHasBeenSet() const;
+
+                    /**
+                     * 获取Page size
+                     * @return PageSize Page size
+                     */
+                    int64_t GetPageSize() const;
+
+                    /**
+                     * 设置Page size
+                     * @param PageSize Page size
+                     */
+                    void SetPageSize(const int64_t& _pageSize);
+
+                    /**
+                     * 判断参数 PageSize 是否已赋值
+                     * @return PageSize 是否已赋值
+                     */
+                    bool PageSizeHasBeenSet() const;
+
+                    /**
+                     * 获取User list query filter
+                     * @return UserManagerFilter User list query filter
+                     */
+                    UserManagerFilter GetUserManagerFilter() const;
+
+                    /**
+                     * 设置User list query filter
+                     * @param UserManagerFilter User list query filter
+                     */
+                    void SetUserManagerFilter(const UserManagerFilter& _userManagerFilter);
+
+                    /**
+                     * 判断参数 UserManagerFilter 是否已赋值
+                     * @return UserManagerFilter 是否已赋值
+                     */
+                    bool UserManagerFilterHasBeenSet() const;
+
+                    /**
                      * 获取Whether the Keytab file information is required. This field is only valid for clusters with Kerberos enabled and defaults to `false`.
                      * @return NeedKeytabInfo Whether the Keytab file information is required. This field is only valid for clusters with Kerberos enabled and defaults to `false`.
                      */
@@ -61,6 +134,30 @@ namespace TencentCloud
                     bool NeedKeytabInfoHasBeenSet() const;
 
                 private:
+
+                    /**
+                     * Cluster instance ID
+                     */
+                    std::string m_instanceId;
+                    bool m_instanceIdHasBeenSet;
+
+                    /**
+                     * Page number
+                     */
+                    int64_t m_pageNo;
+                    bool m_pageNoHasBeenSet;
+
+                    /**
+                     * Page size
+                     */
+                    int64_t m_pageSize;
+                    bool m_pageSizeHasBeenSet;
+
+                    /**
+                     * User list query filter
+                     */
+                    UserManagerFilter m_userManagerFilter;
+                    bool m_userManagerFilterHasBeenSet;
 
                     /**
                      * Whether the Keytab file information is required. This field is only valid for clusters with Kerberos enabled and defaults to `false`.

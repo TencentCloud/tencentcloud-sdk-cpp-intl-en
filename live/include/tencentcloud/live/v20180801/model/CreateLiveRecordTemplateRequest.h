@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/live/v20180801/model/RecordParam.h>
 #include <tencentcloud/live/v20180801/model/HlsSpecialParam.h>
+#include <tencentcloud/live/v20180801/model/FlvSpecialParam.h>
 
 
 namespace TencentCloud
@@ -232,6 +233,24 @@ namespace TencentCloud
                      */
                     bool RemoveWatermarkHasBeenSet() const;
 
+                    /**
+                     * 获取A special parameter for FLV recording.
+                     * @return FlvSpecialParam A special parameter for FLV recording.
+                     */
+                    FlvSpecialParam GetFlvSpecialParam() const;
+
+                    /**
+                     * 设置A special parameter for FLV recording.
+                     * @param FlvSpecialParam A special parameter for FLV recording.
+                     */
+                    void SetFlvSpecialParam(const FlvSpecialParam& _flvSpecialParam);
+
+                    /**
+                     * 判断参数 FlvSpecialParam 是否已赋值
+                     * @return FlvSpecialParam 是否已赋值
+                     */
+                    bool FlvSpecialParamHasBeenSet() const;
+
                 private:
 
                     /**
@@ -295,6 +314,12 @@ namespace TencentCloud
                      */
                     bool m_removeWatermark;
                     bool m_removeWatermarkHasBeenSet;
+
+                    /**
+                     * A special parameter for FLV recording.
+                     */
+                    FlvSpecialParam m_flvSpecialParam;
+                    bool m_flvSpecialParamHasBeenSet;
 
                 };
             }

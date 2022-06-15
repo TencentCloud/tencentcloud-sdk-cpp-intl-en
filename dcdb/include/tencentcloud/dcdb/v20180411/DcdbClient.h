@@ -49,6 +49,8 @@
 #include <tencentcloud/dcdb/v20180411/model/DescribeDBLogFilesResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeDBParametersRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeDBParametersResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/DescribeDBSecurityGroupsRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/DescribeDBSecurityGroupsResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeDBSlowLogsRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeDBSlowLogsResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeDBSyncModeRequest.h>
@@ -71,6 +73,8 @@
 #include <tencentcloud/dcdb/v20180411/model/DescribeFileDownloadUrlResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeFlowRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeFlowResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/DescribeOrdersRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/DescribeOrdersResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeProjectSecurityGroupsRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeProjectSecurityGroupsResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/DestroyDCDBInstanceRequest.h>
@@ -154,6 +158,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeDBParametersResponse> DescribeDBParametersOutcome;
                 typedef std::future<DescribeDBParametersOutcome> DescribeDBParametersOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::DescribeDBParametersRequest&, DescribeDBParametersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBParametersAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDBSecurityGroupsResponse> DescribeDBSecurityGroupsOutcome;
+                typedef std::future<DescribeDBSecurityGroupsOutcome> DescribeDBSecurityGroupsOutcomeCallable;
+                typedef std::function<void(const DcdbClient*, const Model::DescribeDBSecurityGroupsRequest&, DescribeDBSecurityGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBSecurityGroupsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDBSlowLogsResponse> DescribeDBSlowLogsOutcome;
                 typedef std::future<DescribeDBSlowLogsOutcome> DescribeDBSlowLogsOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::DescribeDBSlowLogsRequest&, DescribeDBSlowLogsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBSlowLogsAsyncHandler;
@@ -187,6 +194,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeFlowResponse> DescribeFlowOutcome;
                 typedef std::future<DescribeFlowOutcome> DescribeFlowOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::DescribeFlowRequest&, DescribeFlowOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeFlowAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeOrdersResponse> DescribeOrdersOutcome;
+                typedef std::future<DescribeOrdersOutcome> DescribeOrdersOutcomeCallable;
+                typedef std::function<void(const DcdbClient*, const Model::DescribeOrdersRequest&, DescribeOrdersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOrdersAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeProjectSecurityGroupsResponse> DescribeProjectSecurityGroupsOutcome;
                 typedef std::future<DescribeProjectSecurityGroupsOutcome> DescribeProjectSecurityGroupsOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::DescribeProjectSecurityGroupsRequest&, DescribeProjectSecurityGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProjectSecurityGroupsAsyncHandler;
@@ -355,6 +365,15 @@ Note: Accounts with the same username but different hosts are considered as diff
                 DescribeDBParametersOutcomeCallable DescribeDBParametersCallable(const Model::DescribeDBParametersRequest& request);
 
                 /**
+                 *This API is used to query the security group information of an instance.
+                 * @param req DescribeDBSecurityGroupsRequest
+                 * @return DescribeDBSecurityGroupsOutcome
+                 */
+                DescribeDBSecurityGroupsOutcome DescribeDBSecurityGroups(const Model::DescribeDBSecurityGroupsRequest &request);
+                void DescribeDBSecurityGroupsAsync(const Model::DescribeDBSecurityGroupsRequest& request, const DescribeDBSecurityGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDBSecurityGroupsOutcomeCallable DescribeDBSecurityGroupsCallable(const Model::DescribeDBSecurityGroupsRequest& request);
+
+                /**
                  *This API is used to query the list of slow query logs.
                  * @param req DescribeDBSlowLogsRequest
                  * @return DescribeDBSlowLogsOutcome
@@ -453,6 +472,15 @@ If no filter is specified, 10 instances will be returned by default. Up to 100 i
                 DescribeFlowOutcome DescribeFlow(const Model::DescribeFlowRequest &request);
                 void DescribeFlowAsync(const Model::DescribeFlowRequest& request, const DescribeFlowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeFlowOutcomeCallable DescribeFlowCallable(const Model::DescribeFlowRequest& request);
+
+                /**
+                 *This API is used to query TDSQL order information. You can pass in an order ID to query the TDSQL instance associated with the order and the corresponding task process ID.
+                 * @param req DescribeOrdersRequest
+                 * @return DescribeOrdersOutcome
+                 */
+                DescribeOrdersOutcome DescribeOrders(const Model::DescribeOrdersRequest &request);
+                void DescribeOrdersAsync(const Model::DescribeOrdersRequest& request, const DescribeOrdersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeOrdersOutcomeCallable DescribeOrdersCallable(const Model::DescribeOrdersRequest& request);
 
                 /**
                  *This API is used to query the security group details of a project.

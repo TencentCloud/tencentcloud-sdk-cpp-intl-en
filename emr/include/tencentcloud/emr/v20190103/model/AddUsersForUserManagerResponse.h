@@ -43,7 +43,49 @@ namespace TencentCloud
                     std::string ToJsonString() const;
 
 
+                    /**
+                     * 获取The user list that is successfully added
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return SuccessUserList The user list that is successfully added
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::vector<std::string> GetSuccessUserList() const;
+
+                    /**
+                     * 判断参数 SuccessUserList 是否已赋值
+                     * @return SuccessUserList 是否已赋值
+                     */
+                    bool SuccessUserListHasBeenSet() const;
+
+                    /**
+                     * 获取The user list that is not successfully added
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return FailedUserList The user list that is not successfully added
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::vector<std::string> GetFailedUserList() const;
+
+                    /**
+                     * 判断参数 FailedUserList 是否已赋值
+                     * @return FailedUserList 是否已赋值
+                     */
+                    bool FailedUserListHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * The user list that is successfully added
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::vector<std::string> m_successUserList;
+                    bool m_successUserListHasBeenSet;
+
+                    /**
+                     * The user list that is not successfully added
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::vector<std::string> m_failedUserList;
+                    bool m_failedUserListHasBeenSet;
 
                 };
             }

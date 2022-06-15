@@ -106,7 +106,8 @@ namespace TencentCloud
 
 
                 /**
-                 *This API is used to add user lists (user management).
+                 *This API is available for clusters with OpenLDAP components configured.
+This API is used to add user lists (user management).
                  * @param req AddUsersForUserManagerRequest
                  * @return AddUsersForUserManagerOutcome
                  */
@@ -160,7 +161,8 @@ namespace TencentCloud
                 DescribeResourceScheduleOutcomeCallable DescribeResourceScheduleCallable(const Model::DescribeResourceScheduleRequest& request);
 
                 /**
-                 *This API is used to export users in batches.
+                 *This API is available for clusters with OpenLDAP components configured.
+This API is used to export users in batches. For a Kerberos cluster, set `NeedKeytabInfo` to `true` to obtain the download link of the Keytab file. If `SupportDownLoadKeyTab` is `true`, but `DownLoadKeyTabUrl` is null, the Keytab file is not ready yet (being generated) in the backend.
                  * @param req DescribeUsersForUserManagerRequest
                  * @return DescribeUsersForUserManagerOutcome
                  */

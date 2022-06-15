@@ -14,34 +14,34 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/live/v20180801/model/DescribeLiveDomainPlayInfoListRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/DescribeOrdersRequest.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
-using namespace TencentCloud::Live::V20180801::Model;
+using namespace TencentCloud::Dcdb::V20180411::Model;
 using namespace std;
 
-DescribeLiveDomainPlayInfoListRequest::DescribeLiveDomainPlayInfoListRequest() :
-    m_playDomainsHasBeenSet(false)
+DescribeOrdersRequest::DescribeOrdersRequest() :
+    m_dealNamesHasBeenSet(false)
 {
 }
 
-string DescribeLiveDomainPlayInfoListRequest::ToJsonString() const
+string DescribeOrdersRequest::ToJsonString() const
 {
     rapidjson::Document d;
     d.SetObject();
     rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
-    if (m_playDomainsHasBeenSet)
+    if (m_dealNamesHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "PlayDomains";
+        string key = "DealNames";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
-        for (auto itr = m_playDomains.begin(); itr != m_playDomains.end(); ++itr)
+        for (auto itr = m_dealNames.begin(); itr != m_dealNames.end(); ++itr)
         {
             d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
@@ -55,20 +55,20 @@ string DescribeLiveDomainPlayInfoListRequest::ToJsonString() const
 }
 
 
-vector<string> DescribeLiveDomainPlayInfoListRequest::GetPlayDomains() const
+vector<string> DescribeOrdersRequest::GetDealNames() const
 {
-    return m_playDomains;
+    return m_dealNames;
 }
 
-void DescribeLiveDomainPlayInfoListRequest::SetPlayDomains(const vector<string>& _playDomains)
+void DescribeOrdersRequest::SetDealNames(const vector<string>& _dealNames)
 {
-    m_playDomains = _playDomains;
-    m_playDomainsHasBeenSet = true;
+    m_dealNames = _dealNames;
+    m_dealNamesHasBeenSet = true;
 }
 
-bool DescribeLiveDomainPlayInfoListRequest::PlayDomainsHasBeenSet() const
+bool DescribeOrdersRequest::DealNamesHasBeenSet() const
 {
-    return m_playDomainsHasBeenSet;
+    return m_dealNamesHasBeenSet;
 }
 
 

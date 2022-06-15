@@ -45,8 +45,10 @@ set(emr_public_header_model
   include/tencentcloud/emr/v20190103/model/DescribeResourceScheduleRequest.h
   include/tencentcloud/emr/v20190103/model/DescribeInstancesResponse.h
   include/tencentcloud/emr/v20190103/model/UpdateInstanceSettings.h
+  include/tencentcloud/emr/v20190103/model/UserManagerUserBriefInfo.h
   include/tencentcloud/emr/v20190103/model/Tag.h
   include/tencentcloud/emr/v20190103/model/Placement.h
+  include/tencentcloud/emr/v20190103/model/UserManagerFilter.h
   include/tencentcloud/emr/v20190103/model/DescribeInstancesRequest.h
   include/tencentcloud/emr/v20190103/model/CustomMetaInfo.h
   include/tencentcloud/emr/v20190103/model/DescribeUsersForUserManagerRequest.h
@@ -103,8 +105,10 @@ set(emr_src
   src/v20190103/model/DescribeResourceScheduleRequest.cpp
   src/v20190103/model/DescribeInstancesResponse.cpp
   src/v20190103/model/UpdateInstanceSettings.cpp
+  src/v20190103/model/UserManagerUserBriefInfo.cpp
   src/v20190103/model/Tag.cpp
   src/v20190103/model/Placement.cpp
+  src/v20190103/model/UserManagerFilter.cpp
   src/v20190103/model/DescribeInstancesRequest.cpp
   src/v20190103/model/CustomMetaInfo.cpp
   src/v20190103/model/DescribeUsersForUserManagerRequest.cpp

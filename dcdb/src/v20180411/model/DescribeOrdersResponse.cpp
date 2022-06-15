@@ -14,20 +14,22 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/eb/v20210416/model/UpdateEventBusResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/DescribeOrdersResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using TencentCloud::CoreInternalOutcome;
-using namespace TencentCloud::Eb::V20210416::Model;
+using namespace TencentCloud::Dcdb::V20180411::Model;
 using namespace std;
 
-UpdateEventBusResponse::UpdateEventBusResponse()
+DescribeOrdersResponse::DescribeOrdersResponse() :
+    m_totalCountHasBeenSet(false),
+    m_dealsHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome UpdateEventBusResponse::Deserialize(const string &payload)
+CoreInternalOutcome DescribeOrdersResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -61,15 +63,68 @@ CoreInternalOutcome UpdateEventBusResponse::Deserialize(const string &payload)
     }
 
 
+    if (rsp.HasMember("TotalCount") && !rsp["TotalCount"].IsNull())
+    {
+        if (!rsp["TotalCount"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `TotalCount` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_totalCount = rsp["TotalCount"].GetUint64();
+        m_totalCountHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("Deals") && !rsp["Deals"].IsNull())
+    {
+        if (!rsp["Deals"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `Deals` is not array type"));
+
+        const rapidjson::Value &tmpValue = rsp["Deals"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            Deal item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_deals.push_back(item);
+        }
+        m_dealsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-string UpdateEventBusResponse::ToJsonString() const
+string DescribeOrdersResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_totalCountHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TotalCount";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_totalCount, allocator);
+    }
+
+    if (m_dealsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Deals";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_deals.begin(); itr != m_deals.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
 
     rapidjson::Value iKey(rapidjson::kStringType);
     string key = "RequestId";
@@ -82,5 +137,25 @@ string UpdateEventBusResponse::ToJsonString() const
     return buffer.GetString();
 }
 
+
+uint64_t DescribeOrdersResponse::GetTotalCount() const
+{
+    return m_totalCount;
+}
+
+bool DescribeOrdersResponse::TotalCountHasBeenSet() const
+{
+    return m_totalCountHasBeenSet;
+}
+
+vector<Deal> DescribeOrdersResponse::GetDeals() const
+{
+    return m_deals;
+}
+
+bool DescribeOrdersResponse::DealsHasBeenSet() const
+{
+    return m_dealsHasBeenSet;
+}
 
 

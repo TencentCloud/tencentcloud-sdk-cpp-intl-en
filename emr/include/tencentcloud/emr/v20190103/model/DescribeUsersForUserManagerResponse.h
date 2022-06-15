@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/emr/v20190103/model/UserManagerUserBriefInfo.h>
 
 
 namespace TencentCloud
@@ -43,7 +44,46 @@ namespace TencentCloud
                     std::string ToJsonString() const;
 
 
+                    /**
+                     * 获取Total number
+                     * @return TotalCnt Total number
+                     */
+                    int64_t GetTotalCnt() const;
+
+                    /**
+                     * 判断参数 TotalCnt 是否已赋值
+                     * @return TotalCnt 是否已赋值
+                     */
+                    bool TotalCntHasBeenSet() const;
+
+                    /**
+                     * 获取User information list
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return UserManagerUserList User information list
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::vector<UserManagerUserBriefInfo> GetUserManagerUserList() const;
+
+                    /**
+                     * 判断参数 UserManagerUserList 是否已赋值
+                     * @return UserManagerUserList 是否已赋值
+                     */
+                    bool UserManagerUserListHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * Total number
+                     */
+                    int64_t m_totalCnt;
+                    bool m_totalCntHasBeenSet;
+
+                    /**
+                     * User information list
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::vector<UserManagerUserBriefInfo> m_userManagerUserList;
+                    bool m_userManagerUserListHasBeenSet;
 
                 };
             }

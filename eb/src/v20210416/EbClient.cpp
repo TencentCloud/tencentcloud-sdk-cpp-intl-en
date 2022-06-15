@@ -40,49 +40,6 @@ EbClient::EbClient(const Credential &credential, const string &region, const Cli
 }
 
 
-EbClient::CheckRuleOutcome EbClient::CheckRule(const CheckRuleRequest &request)
-{
-    auto outcome = MakeRequest(request, "CheckRule");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        CheckRuleResponse rsp = CheckRuleResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return CheckRuleOutcome(rsp);
-        else
-            return CheckRuleOutcome(o.GetError());
-    }
-    else
-    {
-        return CheckRuleOutcome(outcome.GetError());
-    }
-}
-
-void EbClient::CheckRuleAsync(const CheckRuleRequest& request, const CheckRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CheckRule(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-EbClient::CheckRuleOutcomeCallable EbClient::CheckRuleCallable(const CheckRuleRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<CheckRuleOutcome()>>(
-        [this, request]()
-        {
-            return this->CheckRule(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
 EbClient::CheckTransformationOutcome EbClient::CheckTransformation(const CheckTransformationRequest &request)
 {
     auto outcome = MakeRequest(request, "CheckTransformation");
@@ -119,92 +76,6 @@ EbClient::CheckTransformationOutcomeCallable EbClient::CheckTransformationCallab
         [this, request]()
         {
             return this->CheckTransformation(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
-EbClient::CreateConnectionOutcome EbClient::CreateConnection(const CreateConnectionRequest &request)
-{
-    auto outcome = MakeRequest(request, "CreateConnection");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        CreateConnectionResponse rsp = CreateConnectionResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return CreateConnectionOutcome(rsp);
-        else
-            return CreateConnectionOutcome(o.GetError());
-    }
-    else
-    {
-        return CreateConnectionOutcome(outcome.GetError());
-    }
-}
-
-void EbClient::CreateConnectionAsync(const CreateConnectionRequest& request, const CreateConnectionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateConnection(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-EbClient::CreateConnectionOutcomeCallable EbClient::CreateConnectionCallable(const CreateConnectionRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<CreateConnectionOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateConnection(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
-EbClient::CreateEventBusOutcome EbClient::CreateEventBus(const CreateEventBusRequest &request)
-{
-    auto outcome = MakeRequest(request, "CreateEventBus");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        CreateEventBusResponse rsp = CreateEventBusResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return CreateEventBusOutcome(rsp);
-        else
-            return CreateEventBusOutcome(o.GetError());
-    }
-    else
-    {
-        return CreateEventBusOutcome(outcome.GetError());
-    }
-}
-
-void EbClient::CreateEventBusAsync(const CreateEventBusRequest& request, const CreateEventBusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateEventBus(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-EbClient::CreateEventBusOutcomeCallable EbClient::CreateEventBusCallable(const CreateEventBusRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<CreateEventBusOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateEventBus(request);
         }
     );
 
@@ -556,49 +427,6 @@ EbClient::DeleteTransformationOutcomeCallable EbClient::DeleteTransformationCall
     return task->get_future();
 }
 
-EbClient::GetEventBusOutcome EbClient::GetEventBus(const GetEventBusRequest &request)
-{
-    auto outcome = MakeRequest(request, "GetEventBus");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        GetEventBusResponse rsp = GetEventBusResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return GetEventBusOutcome(rsp);
-        else
-            return GetEventBusOutcome(o.GetError());
-    }
-    else
-    {
-        return GetEventBusOutcome(outcome.GetError());
-    }
-}
-
-void EbClient::GetEventBusAsync(const GetEventBusRequest& request, const GetEventBusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->GetEventBus(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-EbClient::GetEventBusOutcomeCallable EbClient::GetEventBusCallable(const GetEventBusRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<GetEventBusOutcome()>>(
-        [this, request]()
-        {
-            return this->GetEventBus(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
 EbClient::GetRuleOutcome EbClient::GetRule(const GetRuleRequest &request)
 {
     auto outcome = MakeRequest(request, "GetRule");
@@ -893,49 +721,6 @@ EbClient::UpdateConnectionOutcomeCallable EbClient::UpdateConnectionCallable(con
         [this, request]()
         {
             return this->UpdateConnection(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
-EbClient::UpdateEventBusOutcome EbClient::UpdateEventBus(const UpdateEventBusRequest &request)
-{
-    auto outcome = MakeRequest(request, "UpdateEventBus");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        UpdateEventBusResponse rsp = UpdateEventBusResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return UpdateEventBusOutcome(rsp);
-        else
-            return UpdateEventBusOutcome(o.GetError());
-    }
-    else
-    {
-        return UpdateEventBusOutcome(outcome.GetError());
-    }
-}
-
-void EbClient::UpdateEventBusAsync(const UpdateEventBusRequest& request, const UpdateEventBusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->UpdateEventBus(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-EbClient::UpdateEventBusOutcomeCallable EbClient::UpdateEventBusCallable(const UpdateEventBusRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<UpdateEventBusOutcome()>>(
-        [this, request]()
-        {
-            return this->UpdateEventBus(request);
         }
     );
 

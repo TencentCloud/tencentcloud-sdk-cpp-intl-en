@@ -14,41 +14,41 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/eb/v20210416/model/CreateEventBusRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/DescribeDBSecurityGroupsRequest.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
-using namespace TencentCloud::Eb::V20210416::Model;
+using namespace TencentCloud::Dcdb::V20180411::Model;
 using namespace std;
 
-CreateEventBusRequest::CreateEventBusRequest() :
-    m_eventBusNameHasBeenSet(false),
-    m_descriptionHasBeenSet(false)
+DescribeDBSecurityGroupsRequest::DescribeDBSecurityGroupsRequest() :
+    m_productHasBeenSet(false),
+    m_instanceIdHasBeenSet(false)
 {
 }
 
-string CreateEventBusRequest::ToJsonString() const
+string DescribeDBSecurityGroupsRequest::ToJsonString() const
 {
     rapidjson::Document d;
     d.SetObject();
     rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
-    if (m_eventBusNameHasBeenSet)
+    if (m_productHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "EventBusName";
+        string key = "Product";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_eventBusName.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_product.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_descriptionHasBeenSet)
+    if (m_instanceIdHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Description";
+        string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_description.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -59,36 +59,36 @@ string CreateEventBusRequest::ToJsonString() const
 }
 
 
-string CreateEventBusRequest::GetEventBusName() const
+string DescribeDBSecurityGroupsRequest::GetProduct() const
 {
-    return m_eventBusName;
+    return m_product;
 }
 
-void CreateEventBusRequest::SetEventBusName(const string& _eventBusName)
+void DescribeDBSecurityGroupsRequest::SetProduct(const string& _product)
 {
-    m_eventBusName = _eventBusName;
-    m_eventBusNameHasBeenSet = true;
+    m_product = _product;
+    m_productHasBeenSet = true;
 }
 
-bool CreateEventBusRequest::EventBusNameHasBeenSet() const
+bool DescribeDBSecurityGroupsRequest::ProductHasBeenSet() const
 {
-    return m_eventBusNameHasBeenSet;
+    return m_productHasBeenSet;
 }
 
-string CreateEventBusRequest::GetDescription() const
+string DescribeDBSecurityGroupsRequest::GetInstanceId() const
 {
-    return m_description;
+    return m_instanceId;
 }
 
-void CreateEventBusRequest::SetDescription(const string& _description)
+void DescribeDBSecurityGroupsRequest::SetInstanceId(const string& _instanceId)
 {
-    m_description = _description;
-    m_descriptionHasBeenSet = true;
+    m_instanceId = _instanceId;
+    m_instanceIdHasBeenSet = true;
 }
 
-bool CreateEventBusRequest::DescriptionHasBeenSet() const
+bool DescribeDBSecurityGroupsRequest::InstanceIdHasBeenSet() const
 {
-    return m_descriptionHasBeenSet;
+    return m_instanceIdHasBeenSet;
 }
 
 

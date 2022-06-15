@@ -44,6 +44,24 @@ namespace TencentCloud
 
 
                     /**
+                     * 获取Cluster string ID
+                     * @return InstanceId Cluster string ID
+                     */
+                    std::string GetInstanceId() const;
+
+                    /**
+                     * 设置Cluster string ID
+                     * @param InstanceId Cluster string ID
+                     */
+                    void SetInstanceId(const std::string& _instanceId);
+
+                    /**
+                     * 判断参数 InstanceId 是否已赋值
+                     * @return InstanceId 是否已赋值
+                     */
+                    bool InstanceIdHasBeenSet() const;
+
+                    /**
                      * 获取User information list
                      * @return UserManagerUserList User information list
                      */
@@ -62,6 +80,12 @@ namespace TencentCloud
                     bool UserManagerUserListHasBeenSet() const;
 
                 private:
+
+                    /**
+                     * Cluster string ID
+                     */
+                    std::string m_instanceId;
+                    bool m_instanceIdHasBeenSet;
 
                     /**
                      * User information list

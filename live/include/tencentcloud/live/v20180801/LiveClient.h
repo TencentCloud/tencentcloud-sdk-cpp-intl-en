@@ -87,10 +87,6 @@
 #include <tencentcloud/live/v20180801/model/DeleteLiveWatermarkRuleResponse.h>
 #include <tencentcloud/live/v20180801/model/DeleteRecordTaskRequest.h>
 #include <tencentcloud/live/v20180801/model/DeleteRecordTaskResponse.h>
-#include <tencentcloud/live/v20180801/model/DescribeAllStreamPlayInfoListRequest.h>
-#include <tencentcloud/live/v20180801/model/DescribeAllStreamPlayInfoListResponse.h>
-#include <tencentcloud/live/v20180801/model/DescribeAreaBillBandwidthAndFluxListRequest.h>
-#include <tencentcloud/live/v20180801/model/DescribeAreaBillBandwidthAndFluxListResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeConcurrentRecordStreamNumRequest.h>
 #include <tencentcloud/live/v20180801/model/DescribeConcurrentRecordStreamNumResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeDeliverBandwidthListRequest.h>
@@ -115,8 +111,6 @@
 #include <tencentcloud/live/v20180801/model/DescribeLiveDomainResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeLiveDomainCertRequest.h>
 #include <tencentcloud/live/v20180801/model/DescribeLiveDomainCertResponse.h>
-#include <tencentcloud/live/v20180801/model/DescribeLiveDomainPlayInfoListRequest.h>
-#include <tencentcloud/live/v20180801/model/DescribeLiveDomainPlayInfoListResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeLiveDomainRefererRequest.h>
 #include <tencentcloud/live/v20180801/model/DescribeLiveDomainRefererResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeLiveDomainsRequest.h>
@@ -169,8 +163,6 @@
 #include <tencentcloud/live/v20180801/model/DescribePlayErrorCodeDetailInfoListResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribePlayErrorCodeSumInfoListRequest.h>
 #include <tencentcloud/live/v20180801/model/DescribePlayErrorCodeSumInfoListResponse.h>
-#include <tencentcloud/live/v20180801/model/DescribeProIspPlaySumInfoListRequest.h>
-#include <tencentcloud/live/v20180801/model/DescribeProIspPlaySumInfoListResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeProvinceIspPlayInfoListRequest.h>
 #include <tencentcloud/live/v20180801/model/DescribeProvinceIspPlayInfoListResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeScreenShotSheetNumListRequest.h>
@@ -185,8 +177,6 @@
 #include <tencentcloud/live/v20180801/model/DescribeUploadStreamNumsResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeVisitTopSumInfoListRequest.h>
 #include <tencentcloud/live/v20180801/model/DescribeVisitTopSumInfoListResponse.h>
-#include <tencentcloud/live/v20180801/model/DropLiveStreamRequest.h>
-#include <tencentcloud/live/v20180801/model/DropLiveStreamResponse.h>
 #include <tencentcloud/live/v20180801/model/EnableLiveDomainRequest.h>
 #include <tencentcloud/live/v20180801/model/EnableLiveDomainResponse.h>
 #include <tencentcloud/live/v20180801/model/ForbidLiveDomainRequest.h>
@@ -335,12 +325,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteRecordTaskResponse> DeleteRecordTaskOutcome;
                 typedef std::future<DeleteRecordTaskOutcome> DeleteRecordTaskOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DeleteRecordTaskRequest&, DeleteRecordTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRecordTaskAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeAllStreamPlayInfoListResponse> DescribeAllStreamPlayInfoListOutcome;
-                typedef std::future<DescribeAllStreamPlayInfoListOutcome> DescribeAllStreamPlayInfoListOutcomeCallable;
-                typedef std::function<void(const LiveClient*, const Model::DescribeAllStreamPlayInfoListRequest&, DescribeAllStreamPlayInfoListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAllStreamPlayInfoListAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeAreaBillBandwidthAndFluxListResponse> DescribeAreaBillBandwidthAndFluxListOutcome;
-                typedef std::future<DescribeAreaBillBandwidthAndFluxListOutcome> DescribeAreaBillBandwidthAndFluxListOutcomeCallable;
-                typedef std::function<void(const LiveClient*, const Model::DescribeAreaBillBandwidthAndFluxListRequest&, DescribeAreaBillBandwidthAndFluxListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAreaBillBandwidthAndFluxListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeConcurrentRecordStreamNumResponse> DescribeConcurrentRecordStreamNumOutcome;
                 typedef std::future<DescribeConcurrentRecordStreamNumOutcome> DescribeConcurrentRecordStreamNumOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeConcurrentRecordStreamNumRequest&, DescribeConcurrentRecordStreamNumOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeConcurrentRecordStreamNumAsyncHandler;
@@ -377,9 +361,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeLiveDomainCertResponse> DescribeLiveDomainCertOutcome;
                 typedef std::future<DescribeLiveDomainCertOutcome> DescribeLiveDomainCertOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLiveDomainCertRequest&, DescribeLiveDomainCertOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveDomainCertAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeLiveDomainPlayInfoListResponse> DescribeLiveDomainPlayInfoListOutcome;
-                typedef std::future<DescribeLiveDomainPlayInfoListOutcome> DescribeLiveDomainPlayInfoListOutcomeCallable;
-                typedef std::function<void(const LiveClient*, const Model::DescribeLiveDomainPlayInfoListRequest&, DescribeLiveDomainPlayInfoListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveDomainPlayInfoListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeLiveDomainRefererResponse> DescribeLiveDomainRefererOutcome;
                 typedef std::future<DescribeLiveDomainRefererOutcome> DescribeLiveDomainRefererOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLiveDomainRefererRequest&, DescribeLiveDomainRefererOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveDomainRefererAsyncHandler;
@@ -458,9 +439,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribePlayErrorCodeSumInfoListResponse> DescribePlayErrorCodeSumInfoListOutcome;
                 typedef std::future<DescribePlayErrorCodeSumInfoListOutcome> DescribePlayErrorCodeSumInfoListOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribePlayErrorCodeSumInfoListRequest&, DescribePlayErrorCodeSumInfoListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePlayErrorCodeSumInfoListAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeProIspPlaySumInfoListResponse> DescribeProIspPlaySumInfoListOutcome;
-                typedef std::future<DescribeProIspPlaySumInfoListOutcome> DescribeProIspPlaySumInfoListOutcomeCallable;
-                typedef std::function<void(const LiveClient*, const Model::DescribeProIspPlaySumInfoListRequest&, DescribeProIspPlaySumInfoListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProIspPlaySumInfoListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeProvinceIspPlayInfoListResponse> DescribeProvinceIspPlayInfoListOutcome;
                 typedef std::future<DescribeProvinceIspPlayInfoListOutcome> DescribeProvinceIspPlayInfoListOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeProvinceIspPlayInfoListRequest&, DescribeProvinceIspPlayInfoListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProvinceIspPlayInfoListAsyncHandler;
@@ -482,9 +460,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeVisitTopSumInfoListResponse> DescribeVisitTopSumInfoListOutcome;
                 typedef std::future<DescribeVisitTopSumInfoListOutcome> DescribeVisitTopSumInfoListOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeVisitTopSumInfoListRequest&, DescribeVisitTopSumInfoListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVisitTopSumInfoListAsyncHandler;
-                typedef Outcome<Core::Error, Model::DropLiveStreamResponse> DropLiveStreamOutcome;
-                typedef std::future<DropLiveStreamOutcome> DropLiveStreamOutcomeCallable;
-                typedef std::function<void(const LiveClient*, const Model::DropLiveStreamRequest&, DropLiveStreamOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DropLiveStreamAsyncHandler;
                 typedef Outcome<Core::Error, Model::EnableLiveDomainResponse> EnableLiveDomainOutcome;
                 typedef std::future<EnableLiveDomainOutcome> EnableLiveDomainOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::EnableLiveDomainRequest&, EnableLiveDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnableLiveDomainAsyncHandler;
@@ -875,24 +850,6 @@ Note: only one screencapturing template can be associated with one domain name.
                 DeleteRecordTaskOutcomeCallable DeleteRecordTaskCallable(const Model::DeleteRecordTaskRequest& request);
 
                 /**
-                 *This API is used to query the downstream information of all streams at a specified point in time (at a 1-minute granularity).
-                 * @param req DescribeAllStreamPlayInfoListRequest
-                 * @return DescribeAllStreamPlayInfoListOutcome
-                 */
-                DescribeAllStreamPlayInfoListOutcome DescribeAllStreamPlayInfoList(const Model::DescribeAllStreamPlayInfoListRequest &request);
-                void DescribeAllStreamPlayInfoListAsync(const Model::DescribeAllStreamPlayInfoListRequest& request, const DescribeAllStreamPlayInfoListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeAllStreamPlayInfoListOutcomeCallable DescribeAllStreamPlayInfoListCallable(const Model::DescribeAllStreamPlayInfoListRequest& request);
-
-                /**
-                 *This API is used to query the billable LVB bandwidth and traffic data outside Chinese mainland.
-                 * @param req DescribeAreaBillBandwidthAndFluxListRequest
-                 * @return DescribeAreaBillBandwidthAndFluxListOutcome
-                 */
-                DescribeAreaBillBandwidthAndFluxListOutcome DescribeAreaBillBandwidthAndFluxList(const Model::DescribeAreaBillBandwidthAndFluxListRequest &request);
-                void DescribeAreaBillBandwidthAndFluxListAsync(const Model::DescribeAreaBillBandwidthAndFluxListRequest& request, const DescribeAreaBillBandwidthAndFluxListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeAreaBillBandwidthAndFluxListOutcomeCallable DescribeAreaBillBandwidthAndFluxListCallable(const Model::DescribeAreaBillBandwidthAndFluxListRequest& request);
-
-                /**
                  *This API is used to query the number of concurrent recording channels, which is applicable to LCB and LVB.
                  * @param req DescribeConcurrentRecordStreamNumRequest
                  * @return DescribeConcurrentRecordStreamNumOutcome
@@ -1000,15 +957,6 @@ Note: data can be queried one hour after it is generated. For example, data betw
                 DescribeLiveDomainCertOutcome DescribeLiveDomainCert(const Model::DescribeLiveDomainCertRequest &request);
                 void DescribeLiveDomainCertAsync(const Model::DescribeLiveDomainCertRequest& request, const DescribeLiveDomainCertAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeLiveDomainCertOutcomeCallable DescribeLiveDomainCertCallable(const Model::DescribeLiveDomainCertRequest& request);
-
-                /**
-                 *This API is used to query the real-time downstream playback data at the domain name level. As it takes certain time to process data, the API queries quasi-real-time data generated 4 minutes ago by default.
-                 * @param req DescribeLiveDomainPlayInfoListRequest
-                 * @return DescribeLiveDomainPlayInfoListOutcome
-                 */
-                DescribeLiveDomainPlayInfoListOutcome DescribeLiveDomainPlayInfoList(const Model::DescribeLiveDomainPlayInfoListRequest &request);
-                void DescribeLiveDomainPlayInfoListAsync(const Model::DescribeLiveDomainPlayInfoListRequest& request, const DescribeLiveDomainPlayInfoListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeLiveDomainPlayInfoListOutcomeCallable DescribeLiveDomainPlayInfoListCallable(const Model::DescribeLiveDomainPlayInfoListRequest& request);
 
                 /**
                  *This API is used to query referer allowlist/blocklist configuration of a live streaming domain name.
@@ -1272,15 +1220,6 @@ If not or if the data of specified domains is queried, the data returned will be
                 DescribePlayErrorCodeSumInfoListOutcomeCallable DescribePlayErrorCodeSumInfoListCallable(const Model::DescribePlayErrorCodeSumInfoListRequest& request);
 
                 /**
-                 *This API is used to query the average traffic per second, total traffic, and number of total requests by country/region, district, and ISP in a certain period of time.
-                 * @param req DescribeProIspPlaySumInfoListRequest
-                 * @return DescribeProIspPlaySumInfoListOutcome
-                 */
-                DescribeProIspPlaySumInfoListOutcome DescribeProIspPlaySumInfoList(const Model::DescribeProIspPlaySumInfoListRequest &request);
-                void DescribeProIspPlaySumInfoListAsync(const Model::DescribeProIspPlaySumInfoListRequest& request, const DescribeProIspPlaySumInfoListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeProIspPlaySumInfoListOutcomeCallable DescribeProIspPlaySumInfoListCallable(const Model::DescribeProIspPlaySumInfoListRequest& request);
-
-                /**
                  *This API is used to query the downstream playback data of a specified ISP in a specified district, including bandwidth, traffic, number of requests, and number of concurrent connections.
                  * @param req DescribeProvinceIspPlayInfoListRequest
                  * @return DescribeProvinceIspPlayInfoListOutcome
@@ -1343,15 +1282,6 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
                 DescribeVisitTopSumInfoListOutcome DescribeVisitTopSumInfoList(const Model::DescribeVisitTopSumInfoListRequest &request);
                 void DescribeVisitTopSumInfoListAsync(const Model::DescribeVisitTopSumInfoListRequest& request, const DescribeVisitTopSumInfoListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeVisitTopSumInfoListOutcomeCallable DescribeVisitTopSumInfoListCallable(const Model::DescribeVisitTopSumInfoListRequest& request);
-
-                /**
-                 *This API is used to disconnect the push connection, which can be resumed.
-                 * @param req DropLiveStreamRequest
-                 * @return DropLiveStreamOutcome
-                 */
-                DropLiveStreamOutcome DropLiveStream(const Model::DropLiveStreamRequest &request);
-                void DropLiveStreamAsync(const Model::DropLiveStreamRequest& request, const DropLiveStreamAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DropLiveStreamOutcomeCallable DropLiveStreamCallable(const Model::DropLiveStreamRequest& request);
 
                 /**
                  *This API is used to enable a disabled LVB domain name.

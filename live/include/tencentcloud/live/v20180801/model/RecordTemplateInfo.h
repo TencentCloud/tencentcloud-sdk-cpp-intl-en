@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/live/v20180801/model/RecordParam.h>
 #include <tencentcloud/live/v20180801/model/HlsSpecialParam.h>
+#include <tencentcloud/live/v20180801/model/FlvSpecialParam.h>
 
 
 namespace TencentCloud
@@ -197,14 +198,14 @@ namespace TencentCloud
                     bool IsDelayLiveHasBeenSet() const;
 
                     /**
-                     * 获取Custom HLS recording parameter
-                     * @return HlsSpecialParam Custom HLS recording parameter
+                     * 获取A special parameter for HLS recording.
+                     * @return HlsSpecialParam A special parameter for HLS recording.
                      */
                     HlsSpecialParam GetHlsSpecialParam() const;
 
                     /**
-                     * 设置Custom HLS recording parameter
-                     * @param HlsSpecialParam Custom HLS recording parameter
+                     * 设置A special parameter for HLS recording.
+                     * @param HlsSpecialParam A special parameter for HLS recording.
                      */
                     void SetHlsSpecialParam(const HlsSpecialParam& _hlsSpecialParam);
 
@@ -253,6 +254,28 @@ Note: This field may return `null`, indicating that no valid value was found.
                      * @return RemoveWatermark 是否已赋值
                      */
                     bool RemoveWatermarkHasBeenSet() const;
+
+                    /**
+                     * 获取A special parameter for FLV recording.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return FlvSpecialParam A special parameter for FLV recording.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    FlvSpecialParam GetFlvSpecialParam() const;
+
+                    /**
+                     * 设置A special parameter for FLV recording.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param FlvSpecialParam A special parameter for FLV recording.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetFlvSpecialParam(const FlvSpecialParam& _flvSpecialParam);
+
+                    /**
+                     * 判断参数 FlvSpecialParam 是否已赋值
+                     * @return FlvSpecialParam 是否已赋值
+                     */
+                    bool FlvSpecialParamHasBeenSet() const;
 
                 private:
 
@@ -306,7 +329,7 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_isDelayLiveHasBeenSet;
 
                     /**
-                     * Custom HLS recording parameter
+                     * A special parameter for HLS recording.
                      */
                     HlsSpecialParam m_hlsSpecialParam;
                     bool m_hlsSpecialParamHasBeenSet;
@@ -323,6 +346,13 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     bool m_removeWatermark;
                     bool m_removeWatermarkHasBeenSet;
+
+                    /**
+                     * A special parameter for FLV recording.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    FlvSpecialParam m_flvSpecialParam;
+                    bool m_flvSpecialParamHasBeenSet;
 
                 };
             }

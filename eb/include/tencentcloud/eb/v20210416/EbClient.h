@@ -23,14 +23,8 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
-#include <tencentcloud/eb/v20210416/model/CheckRuleRequest.h>
-#include <tencentcloud/eb/v20210416/model/CheckRuleResponse.h>
 #include <tencentcloud/eb/v20210416/model/CheckTransformationRequest.h>
 #include <tencentcloud/eb/v20210416/model/CheckTransformationResponse.h>
-#include <tencentcloud/eb/v20210416/model/CreateConnectionRequest.h>
-#include <tencentcloud/eb/v20210416/model/CreateConnectionResponse.h>
-#include <tencentcloud/eb/v20210416/model/CreateEventBusRequest.h>
-#include <tencentcloud/eb/v20210416/model/CreateEventBusResponse.h>
 #include <tencentcloud/eb/v20210416/model/CreateRuleRequest.h>
 #include <tencentcloud/eb/v20210416/model/CreateRuleResponse.h>
 #include <tencentcloud/eb/v20210416/model/CreateTargetRequest.h>
@@ -47,8 +41,6 @@
 #include <tencentcloud/eb/v20210416/model/DeleteTargetResponse.h>
 #include <tencentcloud/eb/v20210416/model/DeleteTransformationRequest.h>
 #include <tencentcloud/eb/v20210416/model/DeleteTransformationResponse.h>
-#include <tencentcloud/eb/v20210416/model/GetEventBusRequest.h>
-#include <tencentcloud/eb/v20210416/model/GetEventBusResponse.h>
 #include <tencentcloud/eb/v20210416/model/GetRuleRequest.h>
 #include <tencentcloud/eb/v20210416/model/GetRuleResponse.h>
 #include <tencentcloud/eb/v20210416/model/GetTransformationRequest.h>
@@ -63,8 +55,6 @@
 #include <tencentcloud/eb/v20210416/model/ListTargetsResponse.h>
 #include <tencentcloud/eb/v20210416/model/UpdateConnectionRequest.h>
 #include <tencentcloud/eb/v20210416/model/UpdateConnectionResponse.h>
-#include <tencentcloud/eb/v20210416/model/UpdateEventBusRequest.h>
-#include <tencentcloud/eb/v20210416/model/UpdateEventBusResponse.h>
 #include <tencentcloud/eb/v20210416/model/UpdateRuleRequest.h>
 #include <tencentcloud/eb/v20210416/model/UpdateRuleResponse.h>
 #include <tencentcloud/eb/v20210416/model/UpdateTargetRequest.h>
@@ -85,18 +75,9 @@ namespace TencentCloud
                 EbClient(const Credential &credential, const std::string &region);
                 EbClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
-                typedef Outcome<Core::Error, Model::CheckRuleResponse> CheckRuleOutcome;
-                typedef std::future<CheckRuleOutcome> CheckRuleOutcomeCallable;
-                typedef std::function<void(const EbClient*, const Model::CheckRuleRequest&, CheckRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CheckRuleAsyncHandler;
                 typedef Outcome<Core::Error, Model::CheckTransformationResponse> CheckTransformationOutcome;
                 typedef std::future<CheckTransformationOutcome> CheckTransformationOutcomeCallable;
                 typedef std::function<void(const EbClient*, const Model::CheckTransformationRequest&, CheckTransformationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CheckTransformationAsyncHandler;
-                typedef Outcome<Core::Error, Model::CreateConnectionResponse> CreateConnectionOutcome;
-                typedef std::future<CreateConnectionOutcome> CreateConnectionOutcomeCallable;
-                typedef std::function<void(const EbClient*, const Model::CreateConnectionRequest&, CreateConnectionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateConnectionAsyncHandler;
-                typedef Outcome<Core::Error, Model::CreateEventBusResponse> CreateEventBusOutcome;
-                typedef std::future<CreateEventBusOutcome> CreateEventBusOutcomeCallable;
-                typedef std::function<void(const EbClient*, const Model::CreateEventBusRequest&, CreateEventBusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateEventBusAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateRuleResponse> CreateRuleOutcome;
                 typedef std::future<CreateRuleOutcome> CreateRuleOutcomeCallable;
                 typedef std::function<void(const EbClient*, const Model::CreateRuleRequest&, CreateRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRuleAsyncHandler;
@@ -121,9 +102,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteTransformationResponse> DeleteTransformationOutcome;
                 typedef std::future<DeleteTransformationOutcome> DeleteTransformationOutcomeCallable;
                 typedef std::function<void(const EbClient*, const Model::DeleteTransformationRequest&, DeleteTransformationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteTransformationAsyncHandler;
-                typedef Outcome<Core::Error, Model::GetEventBusResponse> GetEventBusOutcome;
-                typedef std::future<GetEventBusOutcome> GetEventBusOutcomeCallable;
-                typedef std::function<void(const EbClient*, const Model::GetEventBusRequest&, GetEventBusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetEventBusAsyncHandler;
                 typedef Outcome<Core::Error, Model::GetRuleResponse> GetRuleOutcome;
                 typedef std::future<GetRuleOutcome> GetRuleOutcomeCallable;
                 typedef std::function<void(const EbClient*, const Model::GetRuleRequest&, GetRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetRuleAsyncHandler;
@@ -145,9 +123,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::UpdateConnectionResponse> UpdateConnectionOutcome;
                 typedef std::future<UpdateConnectionOutcome> UpdateConnectionOutcomeCallable;
                 typedef std::function<void(const EbClient*, const Model::UpdateConnectionRequest&, UpdateConnectionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateConnectionAsyncHandler;
-                typedef Outcome<Core::Error, Model::UpdateEventBusResponse> UpdateEventBusOutcome;
-                typedef std::future<UpdateEventBusOutcome> UpdateEventBusOutcomeCallable;
-                typedef std::function<void(const EbClient*, const Model::UpdateEventBusRequest&, UpdateEventBusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateEventBusAsyncHandler;
                 typedef Outcome<Core::Error, Model::UpdateRuleResponse> UpdateRuleOutcome;
                 typedef std::future<UpdateRuleOutcome> UpdateRuleOutcomeCallable;
                 typedef std::function<void(const EbClient*, const Model::UpdateRuleRequest&, UpdateRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateRuleAsyncHandler;
@@ -161,15 +136,6 @@ namespace TencentCloud
 
 
                 /**
-                 *This API is used to check a rule.
-                 * @param req CheckRuleRequest
-                 * @return CheckRuleOutcome
-                 */
-                CheckRuleOutcome CheckRule(const Model::CheckRuleRequest &request);
-                void CheckRuleAsync(const Model::CheckRuleRequest& request, const CheckRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                CheckRuleOutcomeCallable CheckRuleCallable(const Model::CheckRuleRequest& request);
-
-                /**
                  *This API is used to test rules and data on the ETL configuration page.
                  * @param req CheckTransformationRequest
                  * @return CheckTransformationOutcome
@@ -177,24 +143,6 @@ namespace TencentCloud
                 CheckTransformationOutcome CheckTransformation(const Model::CheckTransformationRequest &request);
                 void CheckTransformationAsync(const Model::CheckTransformationRequest& request, const CheckTransformationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CheckTransformationOutcomeCallable CheckTransformationCallable(const Model::CheckTransformationRequest& request);
-
-                /**
-                 *This API is used to create an event connector.
-                 * @param req CreateConnectionRequest
-                 * @return CreateConnectionOutcome
-                 */
-                CreateConnectionOutcome CreateConnection(const Model::CreateConnectionRequest &request);
-                void CreateConnectionAsync(const Model::CreateConnectionRequest& request, const CreateConnectionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                CreateConnectionOutcomeCallable CreateConnectionCallable(const Model::CreateConnectionRequest& request);
-
-                /**
-                 *This API is used to create an event bus.
-                 * @param req CreateEventBusRequest
-                 * @return CreateEventBusOutcome
-                 */
-                CreateEventBusOutcome CreateEventBus(const Model::CreateEventBusRequest &request);
-                void CreateEventBusAsync(const Model::CreateEventBusRequest& request, const CreateEventBusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                CreateEventBusOutcomeCallable CreateEventBusCallable(const Model::CreateEventBusRequest& request);
 
                 /**
                  *This API is used to create an event rule.
@@ -269,15 +217,6 @@ namespace TencentCloud
                 DeleteTransformationOutcomeCallable DeleteTransformationCallable(const Model::DeleteTransformationRequest& request);
 
                 /**
-                 *This API is used to get the details of an event bus.
-                 * @param req GetEventBusRequest
-                 * @return GetEventBusOutcome
-                 */
-                GetEventBusOutcome GetEventBus(const Model::GetEventBusRequest &request);
-                void GetEventBusAsync(const Model::GetEventBusRequest& request, const GetEventBusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                GetEventBusOutcomeCallable GetEventBusCallable(const Model::GetEventBusRequest& request);
-
-                /**
                  *This API is used to get the details of an event rule.
                  * @param req GetRuleRequest
                  * @return GetRuleOutcome
@@ -339,15 +278,6 @@ namespace TencentCloud
                 UpdateConnectionOutcome UpdateConnection(const Model::UpdateConnectionRequest &request);
                 void UpdateConnectionAsync(const Model::UpdateConnectionRequest& request, const UpdateConnectionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 UpdateConnectionOutcomeCallable UpdateConnectionCallable(const Model::UpdateConnectionRequest& request);
-
-                /**
-                 *This API is used to update an event bus.
-                 * @param req UpdateEventBusRequest
-                 * @return UpdateEventBusOutcome
-                 */
-                UpdateEventBusOutcome UpdateEventBus(const Model::UpdateEventBusRequest &request);
-                void UpdateEventBusAsync(const Model::UpdateEventBusRequest& request, const UpdateEventBusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                UpdateEventBusOutcomeCallable UpdateEventBusCallable(const Model::UpdateEventBusRequest& request);
 
                 /**
                  *This API is used to update an event rule.
