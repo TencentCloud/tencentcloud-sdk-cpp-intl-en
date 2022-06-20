@@ -27,6 +27,8 @@
 #include <tencentcloud/mariadb/v20170312/model/AssociateSecurityGroupsResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/CancelDcnJobRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/CancelDcnJobResponse.h>
+#include <tencentcloud/mariadb/v20170312/model/CloneAccountRequest.h>
+#include <tencentcloud/mariadb/v20170312/model/CloneAccountResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/CloseDBExtranetAccessRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/CloseDBExtranetAccessResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/CopyAccountPrivilegesRequest.h>
@@ -37,18 +39,34 @@
 #include <tencentcloud/mariadb/v20170312/model/CreateHourDBInstanceResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/DeleteAccountRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/DeleteAccountResponse.h>
+#include <tencentcloud/mariadb/v20170312/model/DescribeAccountPrivilegesRequest.h>
+#include <tencentcloud/mariadb/v20170312/model/DescribeAccountPrivilegesResponse.h>
+#include <tencentcloud/mariadb/v20170312/model/DescribeAccountsRequest.h>
+#include <tencentcloud/mariadb/v20170312/model/DescribeAccountsResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeDBInstancesRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeDBInstancesResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeDBLogFilesRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeDBLogFilesResponse.h>
+#include <tencentcloud/mariadb/v20170312/model/DescribeDBParametersRequest.h>
+#include <tencentcloud/mariadb/v20170312/model/DescribeDBParametersResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeDBSecurityGroupsRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeDBSecurityGroupsResponse.h>
+#include <tencentcloud/mariadb/v20170312/model/DescribeDBSlowLogsRequest.h>
+#include <tencentcloud/mariadb/v20170312/model/DescribeDBSlowLogsResponse.h>
+#include <tencentcloud/mariadb/v20170312/model/DescribeDatabaseObjectsRequest.h>
+#include <tencentcloud/mariadb/v20170312/model/DescribeDatabaseObjectsResponse.h>
+#include <tencentcloud/mariadb/v20170312/model/DescribeDatabaseTableRequest.h>
+#include <tencentcloud/mariadb/v20170312/model/DescribeDatabaseTableResponse.h>
+#include <tencentcloud/mariadb/v20170312/model/DescribeDatabasesRequest.h>
+#include <tencentcloud/mariadb/v20170312/model/DescribeDatabasesResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeDcnDetailRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeDcnDetailResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeFileDownloadUrlRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeFileDownloadUrlResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeInstanceNodeInfoRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeInstanceNodeInfoResponse.h>
+#include <tencentcloud/mariadb/v20170312/model/DescribeOrdersRequest.h>
+#include <tencentcloud/mariadb/v20170312/model/DescribeOrdersResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeProjectSecurityGroupsRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeProjectSecurityGroupsResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/DestroyHourDBInstanceRequest.h>
@@ -63,6 +81,10 @@
 #include <tencentcloud/mariadb/v20170312/model/ModifyAccountPrivilegesResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/ModifyDBInstancesProjectRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/ModifyDBInstancesProjectResponse.h>
+#include <tencentcloud/mariadb/v20170312/model/ModifyDBParametersRequest.h>
+#include <tencentcloud/mariadb/v20170312/model/ModifyDBParametersResponse.h>
+#include <tencentcloud/mariadb/v20170312/model/ModifyDBSyncModeRequest.h>
+#include <tencentcloud/mariadb/v20170312/model/ModifyDBSyncModeResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/ModifySyncTaskAttributeRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/ModifySyncTaskAttributeResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/ResetAccountPasswordRequest.h>
@@ -87,6 +109,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CancelDcnJobResponse> CancelDcnJobOutcome;
                 typedef std::future<CancelDcnJobOutcome> CancelDcnJobOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::CancelDcnJobRequest&, CancelDcnJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CancelDcnJobAsyncHandler;
+                typedef Outcome<Core::Error, Model::CloneAccountResponse> CloneAccountOutcome;
+                typedef std::future<CloneAccountOutcome> CloneAccountOutcomeCallable;
+                typedef std::function<void(const MariadbClient*, const Model::CloneAccountRequest&, CloneAccountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CloneAccountAsyncHandler;
                 typedef Outcome<Core::Error, Model::CloseDBExtranetAccessResponse> CloseDBExtranetAccessOutcome;
                 typedef std::future<CloseDBExtranetAccessOutcome> CloseDBExtranetAccessOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::CloseDBExtranetAccessRequest&, CloseDBExtranetAccessOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CloseDBExtranetAccessAsyncHandler;
@@ -102,15 +127,36 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteAccountResponse> DeleteAccountOutcome;
                 typedef std::future<DeleteAccountOutcome> DeleteAccountOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::DeleteAccountRequest&, DeleteAccountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAccountAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAccountPrivilegesResponse> DescribeAccountPrivilegesOutcome;
+                typedef std::future<DescribeAccountPrivilegesOutcome> DescribeAccountPrivilegesOutcomeCallable;
+                typedef std::function<void(const MariadbClient*, const Model::DescribeAccountPrivilegesRequest&, DescribeAccountPrivilegesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccountPrivilegesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAccountsResponse> DescribeAccountsOutcome;
+                typedef std::future<DescribeAccountsOutcome> DescribeAccountsOutcomeCallable;
+                typedef std::function<void(const MariadbClient*, const Model::DescribeAccountsRequest&, DescribeAccountsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccountsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDBInstancesResponse> DescribeDBInstancesOutcome;
                 typedef std::future<DescribeDBInstancesOutcome> DescribeDBInstancesOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::DescribeDBInstancesRequest&, DescribeDBInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBInstancesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDBLogFilesResponse> DescribeDBLogFilesOutcome;
                 typedef std::future<DescribeDBLogFilesOutcome> DescribeDBLogFilesOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::DescribeDBLogFilesRequest&, DescribeDBLogFilesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBLogFilesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDBParametersResponse> DescribeDBParametersOutcome;
+                typedef std::future<DescribeDBParametersOutcome> DescribeDBParametersOutcomeCallable;
+                typedef std::function<void(const MariadbClient*, const Model::DescribeDBParametersRequest&, DescribeDBParametersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBParametersAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDBSecurityGroupsResponse> DescribeDBSecurityGroupsOutcome;
                 typedef std::future<DescribeDBSecurityGroupsOutcome> DescribeDBSecurityGroupsOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::DescribeDBSecurityGroupsRequest&, DescribeDBSecurityGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBSecurityGroupsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDBSlowLogsResponse> DescribeDBSlowLogsOutcome;
+                typedef std::future<DescribeDBSlowLogsOutcome> DescribeDBSlowLogsOutcomeCallable;
+                typedef std::function<void(const MariadbClient*, const Model::DescribeDBSlowLogsRequest&, DescribeDBSlowLogsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBSlowLogsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDatabaseObjectsResponse> DescribeDatabaseObjectsOutcome;
+                typedef std::future<DescribeDatabaseObjectsOutcome> DescribeDatabaseObjectsOutcomeCallable;
+                typedef std::function<void(const MariadbClient*, const Model::DescribeDatabaseObjectsRequest&, DescribeDatabaseObjectsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDatabaseObjectsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDatabaseTableResponse> DescribeDatabaseTableOutcome;
+                typedef std::future<DescribeDatabaseTableOutcome> DescribeDatabaseTableOutcomeCallable;
+                typedef std::function<void(const MariadbClient*, const Model::DescribeDatabaseTableRequest&, DescribeDatabaseTableOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDatabaseTableAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDatabasesResponse> DescribeDatabasesOutcome;
+                typedef std::future<DescribeDatabasesOutcome> DescribeDatabasesOutcomeCallable;
+                typedef std::function<void(const MariadbClient*, const Model::DescribeDatabasesRequest&, DescribeDatabasesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDatabasesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDcnDetailResponse> DescribeDcnDetailOutcome;
                 typedef std::future<DescribeDcnDetailOutcome> DescribeDcnDetailOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::DescribeDcnDetailRequest&, DescribeDcnDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDcnDetailAsyncHandler;
@@ -120,6 +166,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeInstanceNodeInfoResponse> DescribeInstanceNodeInfoOutcome;
                 typedef std::future<DescribeInstanceNodeInfoOutcome> DescribeInstanceNodeInfoOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::DescribeInstanceNodeInfoRequest&, DescribeInstanceNodeInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstanceNodeInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeOrdersResponse> DescribeOrdersOutcome;
+                typedef std::future<DescribeOrdersOutcome> DescribeOrdersOutcomeCallable;
+                typedef std::function<void(const MariadbClient*, const Model::DescribeOrdersRequest&, DescribeOrdersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOrdersAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeProjectSecurityGroupsResponse> DescribeProjectSecurityGroupsOutcome;
                 typedef std::future<DescribeProjectSecurityGroupsOutcome> DescribeProjectSecurityGroupsOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::DescribeProjectSecurityGroupsRequest&, DescribeProjectSecurityGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProjectSecurityGroupsAsyncHandler;
@@ -141,6 +190,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyDBInstancesProjectResponse> ModifyDBInstancesProjectOutcome;
                 typedef std::future<ModifyDBInstancesProjectOutcome> ModifyDBInstancesProjectOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::ModifyDBInstancesProjectRequest&, ModifyDBInstancesProjectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBInstancesProjectAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyDBParametersResponse> ModifyDBParametersOutcome;
+                typedef std::future<ModifyDBParametersOutcome> ModifyDBParametersOutcomeCallable;
+                typedef std::function<void(const MariadbClient*, const Model::ModifyDBParametersRequest&, ModifyDBParametersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBParametersAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyDBSyncModeResponse> ModifyDBSyncModeOutcome;
+                typedef std::future<ModifyDBSyncModeOutcome> ModifyDBSyncModeOutcomeCallable;
+                typedef std::function<void(const MariadbClient*, const Model::ModifyDBSyncModeRequest&, ModifyDBSyncModeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBSyncModeAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifySyncTaskAttributeResponse> ModifySyncTaskAttributeOutcome;
                 typedef std::future<ModifySyncTaskAttributeOutcome> ModifySyncTaskAttributeOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::ModifySyncTaskAttributeRequest&, ModifySyncTaskAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifySyncTaskAttributeAsyncHandler;
@@ -167,6 +222,15 @@ namespace TencentCloud
                 CancelDcnJobOutcome CancelDcnJob(const Model::CancelDcnJobRequest &request);
                 void CancelDcnJobAsync(const Model::CancelDcnJobRequest& request, const CancelDcnJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CancelDcnJobOutcomeCallable CancelDcnJobCallable(const Model::CancelDcnJobRequest& request);
+
+                /**
+                 *This API is used to clone an instance account.
+                 * @param req CloneAccountRequest
+                 * @return CloneAccountOutcome
+                 */
+                CloneAccountOutcome CloneAccount(const Model::CloneAccountRequest &request);
+                void CloneAccountAsync(const Model::CloneAccountRequest& request, const CloneAccountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CloneAccountOutcomeCallable CloneAccountCallable(const Model::CloneAccountRequest& request);
 
                 /**
                  *This API is used to disable public network access for a TencentDB instance, which will make the public IP address inaccessible. The `DescribeDCDBInstances` API will not return the public domain name and port information of the corresponding instance.
@@ -215,6 +279,25 @@ Note: accounts with the same username but different hosts are different accounts
                 DeleteAccountOutcomeCallable DeleteAccountCallable(const Model::DeleteAccountRequest& request);
 
                 /**
+                 *This API is used to query the permissions of a TencentDB account.
+Note: Accounts with the same username but different hosts are different accounts.
+                 * @param req DescribeAccountPrivilegesRequest
+                 * @return DescribeAccountPrivilegesOutcome
+                 */
+                DescribeAccountPrivilegesOutcome DescribeAccountPrivileges(const Model::DescribeAccountPrivilegesRequest &request);
+                void DescribeAccountPrivilegesAsync(const Model::DescribeAccountPrivilegesRequest& request, const DescribeAccountPrivilegesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAccountPrivilegesOutcomeCallable DescribeAccountPrivilegesCallable(const Model::DescribeAccountPrivilegesRequest& request);
+
+                /**
+                 *This API is used to query the list of accounts of a specified TencentDB instance.
+                 * @param req DescribeAccountsRequest
+                 * @return DescribeAccountsOutcome
+                 */
+                DescribeAccountsOutcome DescribeAccounts(const Model::DescribeAccountsRequest &request);
+                void DescribeAccountsAsync(const Model::DescribeAccountsRequest& request, const DescribeAccountsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAccountsOutcomeCallable DescribeAccountsCallable(const Model::DescribeAccountsRequest& request);
+
+                /**
                  *This API is used to query the TencentDB instance list. It supports filtering instances by project ID, instance ID, private address, and instance name.
 If no filter is specified, 20 instances will be returned by default. Up to 100 instances can be returned for a single request.
                  * @param req DescribeDBInstancesRequest
@@ -234,6 +317,15 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
                 DescribeDBLogFilesOutcomeCallable DescribeDBLogFilesCallable(const Model::DescribeDBLogFilesRequest& request);
 
                 /**
+                 *This API is used to get the current parameter settings of a database.
+                 * @param req DescribeDBParametersRequest
+                 * @return DescribeDBParametersOutcome
+                 */
+                DescribeDBParametersOutcome DescribeDBParameters(const Model::DescribeDBParametersRequest &request);
+                void DescribeDBParametersAsync(const Model::DescribeDBParametersRequest& request, const DescribeDBParametersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDBParametersOutcomeCallable DescribeDBParametersCallable(const Model::DescribeDBParametersRequest& request);
+
+                /**
                  *This API is used to query the security group details of an instance.
                  * @param req DescribeDBSecurityGroupsRequest
                  * @return DescribeDBSecurityGroupsOutcome
@@ -241,6 +333,42 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
                 DescribeDBSecurityGroupsOutcome DescribeDBSecurityGroups(const Model::DescribeDBSecurityGroupsRequest &request);
                 void DescribeDBSecurityGroupsAsync(const Model::DescribeDBSecurityGroupsRequest& request, const DescribeDBSecurityGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeDBSecurityGroupsOutcomeCallable DescribeDBSecurityGroupsCallable(const Model::DescribeDBSecurityGroupsRequest& request);
+
+                /**
+                 *This API is used to query the list of slow query logs.
+                 * @param req DescribeDBSlowLogsRequest
+                 * @return DescribeDBSlowLogsOutcome
+                 */
+                DescribeDBSlowLogsOutcome DescribeDBSlowLogs(const Model::DescribeDBSlowLogsRequest &request);
+                void DescribeDBSlowLogsAsync(const Model::DescribeDBSlowLogsRequest& request, const DescribeDBSlowLogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDBSlowLogsOutcomeCallable DescribeDBSlowLogsCallable(const Model::DescribeDBSlowLogsRequest& request);
+
+                /**
+                 *This API is used to query the list of database objects in a TencentDB instance, including tables, stored procedures, views, and functions.
+                 * @param req DescribeDatabaseObjectsRequest
+                 * @return DescribeDatabaseObjectsOutcome
+                 */
+                DescribeDatabaseObjectsOutcome DescribeDatabaseObjects(const Model::DescribeDatabaseObjectsRequest &request);
+                void DescribeDatabaseObjectsAsync(const Model::DescribeDatabaseObjectsRequest& request, const DescribeDatabaseObjectsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDatabaseObjectsOutcomeCallable DescribeDatabaseObjectsCallable(const Model::DescribeDatabaseObjectsRequest& request);
+
+                /**
+                 *This API is used to query the table information of a TencentDB instance.
+                 * @param req DescribeDatabaseTableRequest
+                 * @return DescribeDatabaseTableOutcome
+                 */
+                DescribeDatabaseTableOutcome DescribeDatabaseTable(const Model::DescribeDatabaseTableRequest &request);
+                void DescribeDatabaseTableAsync(const Model::DescribeDatabaseTableRequest& request, const DescribeDatabaseTableAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDatabaseTableOutcomeCallable DescribeDatabaseTableCallable(const Model::DescribeDatabaseTableRequest& request);
+
+                /**
+                 *This API is used to query the database list of a TencentDB instance.
+                 * @param req DescribeDatabasesRequest
+                 * @return DescribeDatabasesOutcome
+                 */
+                DescribeDatabasesOutcome DescribeDatabases(const Model::DescribeDatabasesRequest &request);
+                void DescribeDatabasesAsync(const Model::DescribeDatabasesRequest& request, const DescribeDatabasesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDatabasesOutcomeCallable DescribeDatabasesCallable(const Model::DescribeDatabasesRequest& request);
 
                 /**
                  *This API is used to query the disaster recovery details of an instance.
@@ -268,6 +396,15 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
                 DescribeInstanceNodeInfoOutcome DescribeInstanceNodeInfo(const Model::DescribeInstanceNodeInfoRequest &request);
                 void DescribeInstanceNodeInfoAsync(const Model::DescribeInstanceNodeInfoRequest& request, const DescribeInstanceNodeInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeInstanceNodeInfoOutcomeCallable DescribeInstanceNodeInfoCallable(const Model::DescribeInstanceNodeInfoRequest& request);
+
+                /**
+                 *This API is used to query TencentDB order information. You can pass in an order ID to query the TencentDB instance associated with the order and the corresponding task process ID.
+                 * @param req DescribeOrdersRequest
+                 * @return DescribeOrdersOutcome
+                 */
+                DescribeOrdersOutcome DescribeOrders(const Model::DescribeOrdersRequest &request);
+                void DescribeOrdersAsync(const Model::DescribeOrdersRequest& request, const DescribeOrdersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeOrdersOutcomeCallable DescribeOrdersCallable(const Model::DescribeOrdersRequest& request);
 
                 /**
                  *This API is used to query the security group details of a project.
@@ -338,6 +475,24 @@ Note: accounts with the same username but different hosts are different accounts
                 ModifyDBInstancesProjectOutcome ModifyDBInstancesProject(const Model::ModifyDBInstancesProjectRequest &request);
                 void ModifyDBInstancesProjectAsync(const Model::ModifyDBInstancesProjectRequest& request, const ModifyDBInstancesProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyDBInstancesProjectOutcomeCallable ModifyDBInstancesProjectCallable(const Model::ModifyDBInstancesProjectRequest& request);
+
+                /**
+                 *This API is used to modify database parameters.
+                 * @param req ModifyDBParametersRequest
+                 * @return ModifyDBParametersOutcome
+                 */
+                ModifyDBParametersOutcome ModifyDBParameters(const Model::ModifyDBParametersRequest &request);
+                void ModifyDBParametersAsync(const Model::ModifyDBParametersRequest& request, const ModifyDBParametersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyDBParametersOutcomeCallable ModifyDBParametersCallable(const Model::ModifyDBParametersRequest& request);
+
+                /**
+                 *This API is used to modify the sync mode of a TencentDB instance.
+                 * @param req ModifyDBSyncModeRequest
+                 * @return ModifyDBSyncModeOutcome
+                 */
+                ModifyDBSyncModeOutcome ModifyDBSyncMode(const Model::ModifyDBSyncModeRequest &request);
+                void ModifyDBSyncModeAsync(const Model::ModifyDBSyncModeRequest& request, const ModifyDBSyncModeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyDBSyncModeOutcomeCallable ModifyDBSyncModeCallable(const Model::ModifyDBSyncModeRequest& request);
 
                 /**
                  *This API is used to modify sync task attributes (currently, only the task name can be modified).

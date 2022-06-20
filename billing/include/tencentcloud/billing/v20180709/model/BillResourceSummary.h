@@ -649,6 +649,110 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool RegionIdHasBeenSet() const;
 
+                    /**
+                     * 获取The special instance (resource pack, reserved instance, savings plan, or spot instance) that is applied to deduction. Valid values:
+
+ri=Standard RI
+
+svp=Savings Plan
+
+si=Spot Instances
+
+rp=Resource Pack
+                     * @return InstanceType The special instance (resource pack, reserved instance, savings plan, or spot instance) that is applied to deduction. Valid values:
+
+ri=Standard RI
+
+svp=Savings Plan
+
+si=Spot Instances
+
+rp=Resource Pack
+                     */
+                    std::string GetInstanceType() const;
+
+                    /**
+                     * 设置The special instance (resource pack, reserved instance, savings plan, or spot instance) that is applied to deduction. Valid values:
+
+ri=Standard RI
+
+svp=Savings Plan
+
+si=Spot Instances
+
+rp=Resource Pack
+                     * @param InstanceType The special instance (resource pack, reserved instance, savings plan, or spot instance) that is applied to deduction. Valid values:
+
+ri=Standard RI
+
+svp=Savings Plan
+
+si=Spot Instances
+
+rp=Resource Pack
+                     */
+                    void SetInstanceType(const std::string& _instanceType);
+
+                    /**
+                     * 判断参数 InstanceType 是否已赋值
+                     * @return InstanceType 是否已赋值
+                     */
+                    bool InstanceTypeHasBeenSet() const;
+
+                    /**
+                     * 获取The amount deducted by a reserved instance based on the original component cost.
+                     * @return OriginalCostWithRI The amount deducted by a reserved instance based on the original component cost.
+                     */
+                    std::string GetOriginalCostWithRI() const;
+
+                    /**
+                     * 设置The amount deducted by a reserved instance based on the original component cost.
+                     * @param OriginalCostWithRI The amount deducted by a reserved instance based on the original component cost.
+                     */
+                    void SetOriginalCostWithRI(const std::string& _originalCostWithRI);
+
+                    /**
+                     * 判断参数 OriginalCostWithRI 是否已赋值
+                     * @return OriginalCostWithRI 是否已赋值
+                     */
+                    bool OriginalCostWithRIHasBeenSet() const;
+
+                    /**
+                     * 获取The savings plan deduction amount.
+                     * @return SPDeduction The savings plan deduction amount.
+                     */
+                    std::string GetSPDeduction() const;
+
+                    /**
+                     * 设置The savings plan deduction amount.
+                     * @param SPDeduction The savings plan deduction amount.
+                     */
+                    void SetSPDeduction(const std::string& _sPDeduction);
+
+                    /**
+                     * 判断参数 SPDeduction 是否已赋值
+                     * @return SPDeduction 是否已赋值
+                     */
+                    bool SPDeductionHasBeenSet() const;
+
+                    /**
+                     * 获取The amount deducted by a savings plan based on the original component cost.
+                     * @return OriginalCostWithSP The amount deducted by a savings plan based on the original component cost.
+                     */
+                    std::string GetOriginalCostWithSP() const;
+
+                    /**
+                     * 设置The amount deducted by a savings plan based on the original component cost.
+                     * @param OriginalCostWithSP The amount deducted by a savings plan based on the original component cost.
+                     */
+                    void SetOriginalCostWithSP(const std::string& _originalCostWithSP);
+
+                    /**
+                     * 判断参数 OriginalCostWithSP 是否已赋值
+                     * @return OriginalCostWithSP 是否已赋值
+                     */
+                    bool OriginalCostWithSPHasBeenSet() const;
+
                 private:
 
                     /**
@@ -850,6 +954,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_regionId;
                     bool m_regionIdHasBeenSet;
+
+                    /**
+                     * The special instance (resource pack, reserved instance, savings plan, or spot instance) that is applied to deduction. Valid values:
+
+ri=Standard RI
+
+svp=Savings Plan
+
+si=Spot Instances
+
+rp=Resource Pack
+                     */
+                    std::string m_instanceType;
+                    bool m_instanceTypeHasBeenSet;
+
+                    /**
+                     * The amount deducted by a reserved instance based on the original component cost.
+                     */
+                    std::string m_originalCostWithRI;
+                    bool m_originalCostWithRIHasBeenSet;
+
+                    /**
+                     * The savings plan deduction amount.
+                     */
+                    std::string m_sPDeduction;
+                    bool m_sPDeductionHasBeenSet;
+
+                    /**
+                     * The amount deducted by a savings plan based on the original component cost.
+                     */
+                    std::string m_originalCostWithSP;
+                    bool m_originalCostWithSPHasBeenSet;
 
                 };
             }

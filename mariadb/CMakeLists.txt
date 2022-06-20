@@ -19,128 +19,198 @@ set(mariadb_public_header
   )
 
 set(mariadb_public_header_model
-  include/tencentcloud/mariadb/v20170312/model/DescribeDBLogFilesRequest.h
-  include/tencentcloud/mariadb/v20170312/model/DescribeDcnDetailRequest.h
-  include/tencentcloud/mariadb/v20170312/model/DeleteAccountRequest.h
-  include/tencentcloud/mariadb/v20170312/model/DescribeFileDownloadUrlResponse.h
-  include/tencentcloud/mariadb/v20170312/model/NodeInfo.h
-  include/tencentcloud/mariadb/v20170312/model/CopyAccountPrivilegesRequest.h
-  include/tencentcloud/mariadb/v20170312/model/ModifyAccountPrivilegesRequest.h
-  include/tencentcloud/mariadb/v20170312/model/ModifySyncTaskAttributeResponse.h
-  include/tencentcloud/mariadb/v20170312/model/DcnDetailItem.h
-  include/tencentcloud/mariadb/v20170312/model/LogFileInfo.h
-  include/tencentcloud/mariadb/v20170312/model/CopyAccountPrivilegesResponse.h
-  include/tencentcloud/mariadb/v20170312/model/CreateHourDBInstanceResponse.h
-  include/tencentcloud/mariadb/v20170312/model/ResetAccountPasswordRequest.h
-  include/tencentcloud/mariadb/v20170312/model/DescribeDcnDetailResponse.h
-  include/tencentcloud/mariadb/v20170312/model/DescribeInstanceNodeInfoRequest.h
-  include/tencentcloud/mariadb/v20170312/model/DescribeDBInstancesRequest.h
-  include/tencentcloud/mariadb/v20170312/model/DescribeDBSecurityGroupsRequest.h
-  include/tencentcloud/mariadb/v20170312/model/ModifySyncTaskAttributeRequest.h
-  include/tencentcloud/mariadb/v20170312/model/AssociateSecurityGroupsRequest.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeAccountPrivilegesResponse.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeDatabasesRequest.h
   include/tencentcloud/mariadb/v20170312/model/CreateAccountResponse.h
-  include/tencentcloud/mariadb/v20170312/model/SecurityGroupBound.h
-  include/tencentcloud/mariadb/v20170312/model/ColumnPrivilege.h
-  include/tencentcloud/mariadb/v20170312/model/GrantAccountPrivilegesResponse.h
-  include/tencentcloud/mariadb/v20170312/model/DescribeProjectSecurityGroupsResponse.h
-  include/tencentcloud/mariadb/v20170312/model/AssociateSecurityGroupsResponse.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeDBParametersRequest.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeAccountsRequest.h
+  include/tencentcloud/mariadb/v20170312/model/DestroyHourDBInstanceRequest.h
+  include/tencentcloud/mariadb/v20170312/model/AssociateSecurityGroupsRequest.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeDBSecurityGroupsResponse.h
   include/tencentcloud/mariadb/v20170312/model/CancelDcnJobResponse.h
-  include/tencentcloud/mariadb/v20170312/model/DescribeDBInstancesResponse.h
-  include/tencentcloud/mariadb/v20170312/model/DBInstance.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeFileDownloadUrlRequest.h
   include/tencentcloud/mariadb/v20170312/model/DestroyHourDBInstanceResponse.h
-  include/tencentcloud/mariadb/v20170312/model/DisassociateSecurityGroupsRequest.h
-  include/tencentcloud/mariadb/v20170312/model/ModifyAccountPrivilegesResponse.h
   include/tencentcloud/mariadb/v20170312/model/Account.h
   include/tencentcloud/mariadb/v20170312/model/DescribeProjectSecurityGroupsRequest.h
-  include/tencentcloud/mariadb/v20170312/model/DescribeDBSecurityGroupsResponse.h
-  include/tencentcloud/mariadb/v20170312/model/ProcedurePrivilege.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeDBSlowLogsRequest.h
   include/tencentcloud/mariadb/v20170312/model/CreateAccountRequest.h
-  include/tencentcloud/mariadb/v20170312/model/CancelDcnJobRequest.h
-  include/tencentcloud/mariadb/v20170312/model/DestroyHourDBInstanceRequest.h
-  include/tencentcloud/mariadb/v20170312/model/CreateHourDBInstanceRequest.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeDBParametersResponse.h
+  include/tencentcloud/mariadb/v20170312/model/CloneAccountResponse.h
+  include/tencentcloud/mariadb/v20170312/model/ModifyAccountDescriptionResponse.h
+  include/tencentcloud/mariadb/v20170312/model/ParamConstraint.h
+  include/tencentcloud/mariadb/v20170312/model/ModifyDBInstancesProjectResponse.h
+  include/tencentcloud/mariadb/v20170312/model/DatabaseView.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeDBLogFilesRequest.h
+  include/tencentcloud/mariadb/v20170312/model/NodeInfo.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeOrdersResponse.h
+  include/tencentcloud/mariadb/v20170312/model/ModifySyncTaskAttributeResponse.h
+  include/tencentcloud/mariadb/v20170312/model/DcnDetailItem.h
+  include/tencentcloud/mariadb/v20170312/model/ResetAccountPasswordRequest.h
+  include/tencentcloud/mariadb/v20170312/model/CopyAccountPrivilegesResponse.h
+  include/tencentcloud/mariadb/v20170312/model/CreateHourDBInstanceResponse.h
+  include/tencentcloud/mariadb/v20170312/model/ParamModifyResult.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeDBInstancesRequest.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeDBSecurityGroupsRequest.h
+  include/tencentcloud/mariadb/v20170312/model/TablePrivilege.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeProjectSecurityGroupsResponse.h
+  include/tencentcloud/mariadb/v20170312/model/DatabaseFunction.h
+  include/tencentcloud/mariadb/v20170312/model/ResetAccountPasswordResponse.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeDatabaseObjectsRequest.h
+  include/tencentcloud/mariadb/v20170312/model/DatabaseTable.h
+  include/tencentcloud/mariadb/v20170312/model/Deal.h
+  include/tencentcloud/mariadb/v20170312/model/GrantAccountPrivilegesRequest.h
+  include/tencentcloud/mariadb/v20170312/model/DBParamValue.h
+  include/tencentcloud/mariadb/v20170312/model/ModifyDBParametersRequest.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeDcnDetailRequest.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeFileDownloadUrlResponse.h
+  include/tencentcloud/mariadb/v20170312/model/ModifyDBParametersResponse.h
+  include/tencentcloud/mariadb/v20170312/model/CopyAccountPrivilegesRequest.h
   include/tencentcloud/mariadb/v20170312/model/SecurityGroup.h
-  include/tencentcloud/mariadb/v20170312/model/DescribeFileDownloadUrlRequest.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeDatabaseTableRequest.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeDatabaseObjectsResponse.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeDcnDetailResponse.h
+  include/tencentcloud/mariadb/v20170312/model/TableColumn.h
+  include/tencentcloud/mariadb/v20170312/model/SecurityGroupBound.h
+  include/tencentcloud/mariadb/v20170312/model/ColumnPrivilege.h
+  include/tencentcloud/mariadb/v20170312/model/ModifySyncTaskAttributeRequest.h
+  include/tencentcloud/mariadb/v20170312/model/AssociateSecurityGroupsResponse.h
+  include/tencentcloud/mariadb/v20170312/model/DBInstance.h
+  include/tencentcloud/mariadb/v20170312/model/ModifyAccountPrivilegesResponse.h
+  include/tencentcloud/mariadb/v20170312/model/Database.h
+  include/tencentcloud/mariadb/v20170312/model/GrantAccountPrivilegesResponse.h
+  include/tencentcloud/mariadb/v20170312/model/CancelDcnJobRequest.h
   include/tencentcloud/mariadb/v20170312/model/DatabasePrivilege.h
-  include/tencentcloud/mariadb/v20170312/model/ModifyDBInstancesProjectRequest.h
   include/tencentcloud/mariadb/v20170312/model/CloseDBExtranetAccessResponse.h
   include/tencentcloud/mariadb/v20170312/model/FunctionPrivilege.h
   include/tencentcloud/mariadb/v20170312/model/ModifyAccountDescriptionRequest.h
-  include/tencentcloud/mariadb/v20170312/model/ModifyAccountDescriptionResponse.h
-  include/tencentcloud/mariadb/v20170312/model/GrantAccountPrivilegesRequest.h
-  include/tencentcloud/mariadb/v20170312/model/DescribeInstanceNodeInfoResponse.h
-  include/tencentcloud/mariadb/v20170312/model/TablePrivilege.h
-  include/tencentcloud/mariadb/v20170312/model/DBParamValue.h
+  include/tencentcloud/mariadb/v20170312/model/SlowLogData.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeDatabasesResponse.h
   include/tencentcloud/mariadb/v20170312/model/ViewPrivileges.h
-  include/tencentcloud/mariadb/v20170312/model/ModifyDBInstancesProjectResponse.h
-  include/tencentcloud/mariadb/v20170312/model/DisassociateSecurityGroupsResponse.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeOrdersRequest.h
   include/tencentcloud/mariadb/v20170312/model/DescribeDBLogFilesResponse.h
   include/tencentcloud/mariadb/v20170312/model/CloseDBExtranetAccessRequest.h
-  include/tencentcloud/mariadb/v20170312/model/ResetAccountPasswordResponse.h
-  include/tencentcloud/mariadb/v20170312/model/DeleteAccountResponse.h
   include/tencentcloud/mariadb/v20170312/model/ResourceTag.h
+  include/tencentcloud/mariadb/v20170312/model/DeleteAccountRequest.h
+  include/tencentcloud/mariadb/v20170312/model/ModifyAccountPrivilegesRequest.h
+  include/tencentcloud/mariadb/v20170312/model/DatabaseProcedure.h
+  include/tencentcloud/mariadb/v20170312/model/ModifyDBSyncModeRequest.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeInstanceNodeInfoRequest.h
+  include/tencentcloud/mariadb/v20170312/model/CloneAccountRequest.h
+  include/tencentcloud/mariadb/v20170312/model/ParamDesc.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeDBInstancesResponse.h
+  include/tencentcloud/mariadb/v20170312/model/ConstraintRange.h
+  include/tencentcloud/mariadb/v20170312/model/LogFileInfo.h
+  include/tencentcloud/mariadb/v20170312/model/ProcedurePrivilege.h
+  include/tencentcloud/mariadb/v20170312/model/DisassociateSecurityGroupsRequest.h
+  include/tencentcloud/mariadb/v20170312/model/DBAccount.h
+  include/tencentcloud/mariadb/v20170312/model/CreateHourDBInstanceRequest.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeDatabaseTableResponse.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeAccountPrivilegesRequest.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeAccountsResponse.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeDBSlowLogsResponse.h
+  include/tencentcloud/mariadb/v20170312/model/ModifyDBInstancesProjectRequest.h
+  include/tencentcloud/mariadb/v20170312/model/ModifyDBSyncModeResponse.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeInstanceNodeInfoResponse.h
+  include/tencentcloud/mariadb/v20170312/model/DisassociateSecurityGroupsResponse.h
+  include/tencentcloud/mariadb/v20170312/model/DeleteAccountResponse.h
   )
 
 set(mariadb_src
   src/v20170312/MariadbClient.cpp
-  src/v20170312/model/DescribeDBLogFilesRequest.cpp
-  src/v20170312/model/DescribeDcnDetailRequest.cpp
-  src/v20170312/model/DeleteAccountRequest.cpp
-  src/v20170312/model/DescribeFileDownloadUrlResponse.cpp
-  src/v20170312/model/NodeInfo.cpp
-  src/v20170312/model/CopyAccountPrivilegesRequest.cpp
-  src/v20170312/model/ModifyAccountPrivilegesRequest.cpp
-  src/v20170312/model/ModifySyncTaskAttributeResponse.cpp
-  src/v20170312/model/DcnDetailItem.cpp
-  src/v20170312/model/LogFileInfo.cpp
-  src/v20170312/model/CopyAccountPrivilegesResponse.cpp
-  src/v20170312/model/CreateHourDBInstanceResponse.cpp
-  src/v20170312/model/ResetAccountPasswordRequest.cpp
-  src/v20170312/model/DescribeDcnDetailResponse.cpp
-  src/v20170312/model/DescribeInstanceNodeInfoRequest.cpp
-  src/v20170312/model/DescribeDBInstancesRequest.cpp
-  src/v20170312/model/DescribeDBSecurityGroupsRequest.cpp
-  src/v20170312/model/ModifySyncTaskAttributeRequest.cpp
-  src/v20170312/model/AssociateSecurityGroupsRequest.cpp
+  src/v20170312/model/DescribeAccountPrivilegesResponse.cpp
+  src/v20170312/model/DescribeDatabasesRequest.cpp
   src/v20170312/model/CreateAccountResponse.cpp
-  src/v20170312/model/SecurityGroupBound.cpp
-  src/v20170312/model/ColumnPrivilege.cpp
-  src/v20170312/model/GrantAccountPrivilegesResponse.cpp
-  src/v20170312/model/DescribeProjectSecurityGroupsResponse.cpp
-  src/v20170312/model/AssociateSecurityGroupsResponse.cpp
+  src/v20170312/model/DescribeDBParametersRequest.cpp
+  src/v20170312/model/DescribeAccountsRequest.cpp
+  src/v20170312/model/DestroyHourDBInstanceRequest.cpp
+  src/v20170312/model/AssociateSecurityGroupsRequest.cpp
+  src/v20170312/model/DescribeDBSecurityGroupsResponse.cpp
   src/v20170312/model/CancelDcnJobResponse.cpp
-  src/v20170312/model/DescribeDBInstancesResponse.cpp
-  src/v20170312/model/DBInstance.cpp
+  src/v20170312/model/DescribeFileDownloadUrlRequest.cpp
   src/v20170312/model/DestroyHourDBInstanceResponse.cpp
-  src/v20170312/model/DisassociateSecurityGroupsRequest.cpp
-  src/v20170312/model/ModifyAccountPrivilegesResponse.cpp
   src/v20170312/model/Account.cpp
   src/v20170312/model/DescribeProjectSecurityGroupsRequest.cpp
-  src/v20170312/model/DescribeDBSecurityGroupsResponse.cpp
-  src/v20170312/model/ProcedurePrivilege.cpp
+  src/v20170312/model/DescribeDBSlowLogsRequest.cpp
   src/v20170312/model/CreateAccountRequest.cpp
-  src/v20170312/model/CancelDcnJobRequest.cpp
-  src/v20170312/model/DestroyHourDBInstanceRequest.cpp
-  src/v20170312/model/CreateHourDBInstanceRequest.cpp
+  src/v20170312/model/DescribeDBParametersResponse.cpp
+  src/v20170312/model/CloneAccountResponse.cpp
+  src/v20170312/model/ModifyAccountDescriptionResponse.cpp
+  src/v20170312/model/ParamConstraint.cpp
+  src/v20170312/model/ModifyDBInstancesProjectResponse.cpp
+  src/v20170312/model/DatabaseView.cpp
+  src/v20170312/model/DescribeDBLogFilesRequest.cpp
+  src/v20170312/model/NodeInfo.cpp
+  src/v20170312/model/DescribeOrdersResponse.cpp
+  src/v20170312/model/ModifySyncTaskAttributeResponse.cpp
+  src/v20170312/model/DcnDetailItem.cpp
+  src/v20170312/model/ResetAccountPasswordRequest.cpp
+  src/v20170312/model/CopyAccountPrivilegesResponse.cpp
+  src/v20170312/model/CreateHourDBInstanceResponse.cpp
+  src/v20170312/model/ParamModifyResult.cpp
+  src/v20170312/model/DescribeDBInstancesRequest.cpp
+  src/v20170312/model/DescribeDBSecurityGroupsRequest.cpp
+  src/v20170312/model/TablePrivilege.cpp
+  src/v20170312/model/DescribeProjectSecurityGroupsResponse.cpp
+  src/v20170312/model/DatabaseFunction.cpp
+  src/v20170312/model/ResetAccountPasswordResponse.cpp
+  src/v20170312/model/DescribeDatabaseObjectsRequest.cpp
+  src/v20170312/model/DatabaseTable.cpp
+  src/v20170312/model/Deal.cpp
+  src/v20170312/model/GrantAccountPrivilegesRequest.cpp
+  src/v20170312/model/DBParamValue.cpp
+  src/v20170312/model/ModifyDBParametersRequest.cpp
+  src/v20170312/model/DescribeDcnDetailRequest.cpp
+  src/v20170312/model/DescribeFileDownloadUrlResponse.cpp
+  src/v20170312/model/ModifyDBParametersResponse.cpp
+  src/v20170312/model/CopyAccountPrivilegesRequest.cpp
   src/v20170312/model/SecurityGroup.cpp
-  src/v20170312/model/DescribeFileDownloadUrlRequest.cpp
+  src/v20170312/model/DescribeDatabaseTableRequest.cpp
+  src/v20170312/model/DescribeDatabaseObjectsResponse.cpp
+  src/v20170312/model/DescribeDcnDetailResponse.cpp
+  src/v20170312/model/TableColumn.cpp
+  src/v20170312/model/SecurityGroupBound.cpp
+  src/v20170312/model/ColumnPrivilege.cpp
+  src/v20170312/model/ModifySyncTaskAttributeRequest.cpp
+  src/v20170312/model/AssociateSecurityGroupsResponse.cpp
+  src/v20170312/model/DBInstance.cpp
+  src/v20170312/model/ModifyAccountPrivilegesResponse.cpp
+  src/v20170312/model/Database.cpp
+  src/v20170312/model/GrantAccountPrivilegesResponse.cpp
+  src/v20170312/model/CancelDcnJobRequest.cpp
   src/v20170312/model/DatabasePrivilege.cpp
-  src/v20170312/model/ModifyDBInstancesProjectRequest.cpp
   src/v20170312/model/CloseDBExtranetAccessResponse.cpp
   src/v20170312/model/FunctionPrivilege.cpp
   src/v20170312/model/ModifyAccountDescriptionRequest.cpp
-  src/v20170312/model/ModifyAccountDescriptionResponse.cpp
-  src/v20170312/model/GrantAccountPrivilegesRequest.cpp
-  src/v20170312/model/DescribeInstanceNodeInfoResponse.cpp
-  src/v20170312/model/TablePrivilege.cpp
-  src/v20170312/model/DBParamValue.cpp
+  src/v20170312/model/SlowLogData.cpp
+  src/v20170312/model/DescribeDatabasesResponse.cpp
   src/v20170312/model/ViewPrivileges.cpp
-  src/v20170312/model/ModifyDBInstancesProjectResponse.cpp
-  src/v20170312/model/DisassociateSecurityGroupsResponse.cpp
+  src/v20170312/model/DescribeOrdersRequest.cpp
   src/v20170312/model/DescribeDBLogFilesResponse.cpp
   src/v20170312/model/CloseDBExtranetAccessRequest.cpp
-  src/v20170312/model/ResetAccountPasswordResponse.cpp
-  src/v20170312/model/DeleteAccountResponse.cpp
   src/v20170312/model/ResourceTag.cpp
+  src/v20170312/model/DeleteAccountRequest.cpp
+  src/v20170312/model/ModifyAccountPrivilegesRequest.cpp
+  src/v20170312/model/DatabaseProcedure.cpp
+  src/v20170312/model/ModifyDBSyncModeRequest.cpp
+  src/v20170312/model/DescribeInstanceNodeInfoRequest.cpp
+  src/v20170312/model/CloneAccountRequest.cpp
+  src/v20170312/model/ParamDesc.cpp
+  src/v20170312/model/DescribeDBInstancesResponse.cpp
+  src/v20170312/model/ConstraintRange.cpp
+  src/v20170312/model/LogFileInfo.cpp
+  src/v20170312/model/ProcedurePrivilege.cpp
+  src/v20170312/model/DisassociateSecurityGroupsRequest.cpp
+  src/v20170312/model/DBAccount.cpp
+  src/v20170312/model/CreateHourDBInstanceRequest.cpp
+  src/v20170312/model/DescribeDatabaseTableResponse.cpp
+  src/v20170312/model/DescribeAccountPrivilegesRequest.cpp
+  src/v20170312/model/DescribeAccountsResponse.cpp
+  src/v20170312/model/DescribeDBSlowLogsResponse.cpp
+  src/v20170312/model/ModifyDBInstancesProjectRequest.cpp
+  src/v20170312/model/ModifyDBSyncModeResponse.cpp
+  src/v20170312/model/DescribeInstanceNodeInfoResponse.cpp
+  src/v20170312/model/DisassociateSecurityGroupsResponse.cpp
+  src/v20170312/model/DeleteAccountResponse.cpp
   )
 
 set(mariadb_include

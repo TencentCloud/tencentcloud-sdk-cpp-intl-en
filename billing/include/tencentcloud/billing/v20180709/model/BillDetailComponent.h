@@ -396,6 +396,160 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool ContractPriceHasBeenSet() const;
 
+                    /**
+                     * 获取The special instance (resource pack, reserved instance, savings plan, or spot instance) that is applied to deduction. Valid values:
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return InstanceType The special instance (resource pack, reserved instance, savings plan, or spot instance) that is applied to deduction. Valid values:
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetInstanceType() const;
+
+                    /**
+                     * 设置The special instance (resource pack, reserved instance, savings plan, or spot instance) that is applied to deduction. Valid values:
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param InstanceType The special instance (resource pack, reserved instance, savings plan, or spot instance) that is applied to deduction. Valid values:
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetInstanceType(const std::string& _instanceType);
+
+                    /**
+                     * 判断参数 InstanceType 是否已赋值
+                     * @return InstanceType 是否已赋值
+                     */
+                    bool InstanceTypeHasBeenSet() const;
+
+                    /**
+                     * 获取The usage duration deducted by a reserved instance. The unit of measurement for deduction is the same as that for usage duration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return RiTimeSpan The usage duration deducted by a reserved instance. The unit of measurement for deduction is the same as that for usage duration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetRiTimeSpan() const;
+
+                    /**
+                     * 设置The usage duration deducted by a reserved instance. The unit of measurement for deduction is the same as that for usage duration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param RiTimeSpan The usage duration deducted by a reserved instance. The unit of measurement for deduction is the same as that for usage duration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetRiTimeSpan(const std::string& _riTimeSpan);
+
+                    /**
+                     * 判断参数 RiTimeSpan 是否已赋值
+                     * @return RiTimeSpan 是否已赋值
+                     */
+                    bool RiTimeSpanHasBeenSet() const;
+
+                    /**
+                     * 获取The amount deducted by a reserved instance based on the original component cost.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return OriginalCostWithRI The amount deducted by a reserved instance based on the original component cost.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetOriginalCostWithRI() const;
+
+                    /**
+                     * 设置The amount deducted by a reserved instance based on the original component cost.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param OriginalCostWithRI The amount deducted by a reserved instance based on the original component cost.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetOriginalCostWithRI(const std::string& _originalCostWithRI);
+
+                    /**
+                     * 判断参数 OriginalCostWithRI 是否已赋值
+                     * @return OriginalCostWithRI 是否已赋值
+                     */
+                    bool OriginalCostWithRIHasBeenSet() const;
+
+                    /**
+                     * 获取The discount multiplier that applies to the component based on the remaining commitment of the savings plan.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return SPDeductionRate The discount multiplier that applies to the component based on the remaining commitment of the savings plan.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetSPDeductionRate() const;
+
+                    /**
+                     * 设置The discount multiplier that applies to the component based on the remaining commitment of the savings plan.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param SPDeductionRate The discount multiplier that applies to the component based on the remaining commitment of the savings plan.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetSPDeductionRate(const std::string& _sPDeductionRate);
+
+                    /**
+                     * 判断参数 SPDeductionRate 是否已赋值
+                     * @return SPDeductionRate 是否已赋值
+                     */
+                    bool SPDeductionRateHasBeenSet() const;
+
+                    /**
+                     * 获取The savings plan deduction amount.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return SPDeduction The savings plan deduction amount.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetSPDeduction() const;
+
+                    /**
+                     * 设置The savings plan deduction amount.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param SPDeduction The savings plan deduction amount.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetSPDeduction(const std::string& _sPDeduction);
+
+                    /**
+                     * 判断参数 SPDeduction 是否已赋值
+                     * @return SPDeduction 是否已赋值
+                     */
+                    bool SPDeductionHasBeenSet() const;
+
+                    /**
+                     * 获取The amount deducted by a savings plan based on the original component cost.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return OriginalCostWithSP The amount deducted by a savings plan based on the original component cost.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetOriginalCostWithSP() const;
+
+                    /**
+                     * 设置The amount deducted by a savings plan based on the original component cost.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param OriginalCostWithSP The amount deducted by a savings plan based on the original component cost.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetOriginalCostWithSP(const std::string& _originalCostWithSP);
+
+                    /**
+                     * 判断参数 OriginalCostWithSP 是否已赋值
+                     * @return OriginalCostWithSP 是否已赋值
+                     */
+                    bool OriginalCostWithSPHasBeenSet() const;
+
+                    /**
+                     * 获取The blended discount multiplier that combines the official website discount, reserved instance discount, and savings plan discount. If no reserved instance and savings plan discounts are available, the blended discount multiplier equals the discount multiplier.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return BlendedDiscount The blended discount multiplier that combines the official website discount, reserved instance discount, and savings plan discount. If no reserved instance and savings plan discounts are available, the blended discount multiplier equals the discount multiplier.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetBlendedDiscount() const;
+
+                    /**
+                     * 设置The blended discount multiplier that combines the official website discount, reserved instance discount, and savings plan discount. If no reserved instance and savings plan discounts are available, the blended discount multiplier equals the discount multiplier.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param BlendedDiscount The blended discount multiplier that combines the official website discount, reserved instance discount, and savings plan discount. If no reserved instance and savings plan discounts are available, the blended discount multiplier equals the discount multiplier.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetBlendedDiscount(const std::string& _blendedDiscount);
+
+                    /**
+                     * 判断参数 BlendedDiscount 是否已赋值
+                     * @return BlendedDiscount 是否已赋值
+                     */
+                    bool BlendedDiscountHasBeenSet() const;
+
                 private:
 
                     /**
@@ -513,6 +667,55 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_contractPrice;
                     bool m_contractPriceHasBeenSet;
+
+                    /**
+                     * The special instance (resource pack, reserved instance, savings plan, or spot instance) that is applied to deduction. Valid values:
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_instanceType;
+                    bool m_instanceTypeHasBeenSet;
+
+                    /**
+                     * The usage duration deducted by a reserved instance. The unit of measurement for deduction is the same as that for usage duration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_riTimeSpan;
+                    bool m_riTimeSpanHasBeenSet;
+
+                    /**
+                     * The amount deducted by a reserved instance based on the original component cost.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_originalCostWithRI;
+                    bool m_originalCostWithRIHasBeenSet;
+
+                    /**
+                     * The discount multiplier that applies to the component based on the remaining commitment of the savings plan.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_sPDeductionRate;
+                    bool m_sPDeductionRateHasBeenSet;
+
+                    /**
+                     * The savings plan deduction amount.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_sPDeduction;
+                    bool m_sPDeductionHasBeenSet;
+
+                    /**
+                     * The amount deducted by a savings plan based on the original component cost.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_originalCostWithSP;
+                    bool m_originalCostWithSPHasBeenSet;
+
+                    /**
+                     * The blended discount multiplier that combines the official website discount, reserved instance discount, and savings plan discount. If no reserved instance and savings plan discounts are available, the blended discount multiplier equals the discount multiplier.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_blendedDiscount;
+                    bool m_blendedDiscountHasBeenSet;
 
                 };
             }
