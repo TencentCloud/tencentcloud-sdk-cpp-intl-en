@@ -191,6 +191,42 @@ namespace TencentCloud
                     bool TaintsHasBeenSet() const;
 
                     /**
+                     * 获取Node pool runtime type and version
+                     * @return ContainerRuntime Node pool runtime type and version
+                     */
+                    std::string GetContainerRuntime() const;
+
+                    /**
+                     * 设置Node pool runtime type and version
+                     * @param ContainerRuntime Node pool runtime type and version
+                     */
+                    void SetContainerRuntime(const std::string& _containerRuntime);
+
+                    /**
+                     * 判断参数 ContainerRuntime 是否已赋值
+                     * @return ContainerRuntime 是否已赋值
+                     */
+                    bool ContainerRuntimeHasBeenSet() const;
+
+                    /**
+                     * 获取Runtime version
+                     * @return RuntimeVersion Runtime version
+                     */
+                    std::string GetRuntimeVersion() const;
+
+                    /**
+                     * 设置Runtime version
+                     * @param RuntimeVersion Runtime version
+                     */
+                    void SetRuntimeVersion(const std::string& _runtimeVersion);
+
+                    /**
+                     * 判断参数 RuntimeVersion 是否已赋值
+                     * @return RuntimeVersion 是否已赋值
+                     */
+                    bool RuntimeVersionHasBeenSet() const;
+
+                    /**
                      * 获取Operating system of the node pool
                      * @return NodePoolOs Operating system of the node pool
                      */
@@ -293,6 +329,18 @@ namespace TencentCloud
                      */
                     std::vector<Taint> m_taints;
                     bool m_taintsHasBeenSet;
+
+                    /**
+                     * Node pool runtime type and version
+                     */
+                    std::string m_containerRuntime;
+                    bool m_containerRuntimeHasBeenSet;
+
+                    /**
+                     * Runtime version
+                     */
+                    std::string m_runtimeVersion;
+                    bool m_runtimeVersionHasBeenSet;
 
                     /**
                      * Operating system of the node pool

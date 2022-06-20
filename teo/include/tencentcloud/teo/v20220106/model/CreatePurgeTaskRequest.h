@@ -95,14 +95,46 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取The target resource to be purged. One target per line.
-                     * @return Targets The target resource to be purged. One target per line.
+                     * 获取Target resource to be purged, which depends on the `Type` field.
+1. When `Type = purge_host`:
+Hostnames are purged, such as www.example.com and foo.bar.example.com.
+2. When `Type = purge_prefix`:
+Prefixes are purged, such as http://www.example.com/example.
+3. When `Type = purge_url`:
+URLs are purged, such as https://www.example.com/example.jpg.
+4. When `Type = purge_all`: All types of resources are purged.
+`Targets` is not a required field.
+                     * @return Targets Target resource to be purged, which depends on the `Type` field.
+1. When `Type = purge_host`:
+Hostnames are purged, such as www.example.com and foo.bar.example.com.
+2. When `Type = purge_prefix`:
+Prefixes are purged, such as http://www.example.com/example.
+3. When `Type = purge_url`:
+URLs are purged, such as https://www.example.com/example.jpg.
+4. When `Type = purge_all`: All types of resources are purged.
+`Targets` is not a required field.
                      */
                     std::vector<std::string> GetTargets() const;
 
                     /**
-                     * 设置The target resource to be purged. One target per line.
-                     * @param Targets The target resource to be purged. One target per line.
+                     * 设置Target resource to be purged, which depends on the `Type` field.
+1. When `Type = purge_host`:
+Hostnames are purged, such as www.example.com and foo.bar.example.com.
+2. When `Type = purge_prefix`:
+Prefixes are purged, such as http://www.example.com/example.
+3. When `Type = purge_url`:
+URLs are purged, such as https://www.example.com/example.jpg.
+4. When `Type = purge_all`: All types of resources are purged.
+`Targets` is not a required field.
+                     * @param Targets Target resource to be purged, which depends on the `Type` field.
+1. When `Type = purge_host`:
+Hostnames are purged, such as www.example.com and foo.bar.example.com.
+2. When `Type = purge_prefix`:
+Prefixes are purged, such as http://www.example.com/example.
+3. When `Type = purge_url`:
+URLs are purged, such as https://www.example.com/example.jpg.
+4. When `Type = purge_all`: All types of resources are purged.
+`Targets` is not a required field.
                      */
                     void SetTargets(const std::vector<std::string>& _targets);
 
@@ -153,7 +185,15 @@ Note that if it’s enabled, the purging is based on the converted URLs.
                     bool m_typeHasBeenSet;
 
                     /**
-                     * The target resource to be purged. One target per line.
+                     * Target resource to be purged, which depends on the `Type` field.
+1. When `Type = purge_host`:
+Hostnames are purged, such as www.example.com and foo.bar.example.com.
+2. When `Type = purge_prefix`:
+Prefixes are purged, such as http://www.example.com/example.
+3. When `Type = purge_url`:
+URLs are purged, such as https://www.example.com/example.jpg.
+4. When `Type = purge_all`: All types of resources are purged.
+`Targets` is not a required field.
                      */
                     std::vector<std::string> m_targets;
                     bool m_targetsHasBeenSet;

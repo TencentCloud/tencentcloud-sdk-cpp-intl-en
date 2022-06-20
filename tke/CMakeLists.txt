@@ -90,7 +90,6 @@ set(tke_public_header_model
   include/tencentcloud/tke/v20180525/model/DescribeTKEEdgeScriptResponse.h
   include/tencentcloud/tke/v20180525/model/DescribeClusterStatusRequest.h
   include/tencentcloud/tke/v20180525/model/VersionInstance.h
-  include/tencentcloud/tke/v20180525/model/DescribeClusterStatusResponse.h
   include/tencentcloud/tke/v20180525/model/DeleteClusterNodePoolRequest.h
   include/tencentcloud/tke/v20180525/model/DescribeClusterKubeconfigRequest.h
   include/tencentcloud/tke/v20180525/model/ClusterCIDRSettings.h
@@ -125,7 +124,7 @@ set(tke_public_header_model
   include/tencentcloud/tke/v20180525/model/GetClusterLevelPriceResponse.h
   include/tencentcloud/tke/v20180525/model/PrometheusAlertRule.h
   include/tencentcloud/tke/v20180525/model/DescribeResourceUsageResponse.h
-  include/tencentcloud/tke/v20180525/model/CreateClusterAsGroupRequest.h
+  include/tencentcloud/tke/v20180525/model/DescribeClusterStatusResponse.h
   include/tencentcloud/tke/v20180525/model/DescribeRouteTableConflictsResponse.h
   include/tencentcloud/tke/v20180525/model/ServiceAccountAuthenticationOptions.h
   include/tencentcloud/tke/v20180525/model/DescribeVersionsRequest.h
@@ -137,7 +136,6 @@ set(tke_public_header_model
   include/tencentcloud/tke/v20180525/model/CreateClusterRequest.h
   include/tencentcloud/tke/v20180525/model/DeletePrometheusAlertRuleResponse.h
   include/tencentcloud/tke/v20180525/model/AcquireClusterAdminRoleRequest.h
-  include/tencentcloud/tke/v20180525/model/CreateClusterAsGroupResponse.h
   include/tencentcloud/tke/v20180525/model/ModifyClusterAuthenticationOptionsResponse.h
   include/tencentcloud/tke/v20180525/model/DescribeClusterAuthenticationOptionsResponse.h
   include/tencentcloud/tke/v20180525/model/DeleteClusterAsGroupsResponse.h
@@ -294,7 +292,6 @@ set(tke_src
   src/v20180525/model/DescribeTKEEdgeScriptResponse.cpp
   src/v20180525/model/DescribeClusterStatusRequest.cpp
   src/v20180525/model/VersionInstance.cpp
-  src/v20180525/model/DescribeClusterStatusResponse.cpp
   src/v20180525/model/DeleteClusterNodePoolRequest.cpp
   src/v20180525/model/DescribeClusterKubeconfigRequest.cpp
   src/v20180525/model/ClusterCIDRSettings.cpp
@@ -329,7 +326,7 @@ set(tke_src
   src/v20180525/model/GetClusterLevelPriceResponse.cpp
   src/v20180525/model/PrometheusAlertRule.cpp
   src/v20180525/model/DescribeResourceUsageResponse.cpp
-  src/v20180525/model/CreateClusterAsGroupRequest.cpp
+  src/v20180525/model/DescribeClusterStatusResponse.cpp
   src/v20180525/model/DescribeRouteTableConflictsResponse.cpp
   src/v20180525/model/ServiceAccountAuthenticationOptions.cpp
   src/v20180525/model/DescribeVersionsRequest.cpp
@@ -341,7 +338,6 @@ set(tke_src
   src/v20180525/model/CreateClusterRequest.cpp
   src/v20180525/model/DeletePrometheusAlertRuleResponse.cpp
   src/v20180525/model/AcquireClusterAdminRoleRequest.cpp
-  src/v20180525/model/CreateClusterAsGroupResponse.cpp
   src/v20180525/model/ModifyClusterAuthenticationOptionsResponse.cpp
   src/v20180525/model/DescribeClusterAuthenticationOptionsResponse.cpp
   src/v20180525/model/DeleteClusterAsGroupsResponse.cpp

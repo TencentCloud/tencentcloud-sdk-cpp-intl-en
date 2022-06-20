@@ -27,6 +27,7 @@
 #include <tencentcloud/tke/v20180525/model/Label.h>
 #include <tencentcloud/tke/v20180525/model/DataDisk.h>
 #include <tencentcloud/tke/v20180525/model/InstanceExtraArgs.h>
+#include <tencentcloud/tke/v20180525/model/Taint.h>
 
 
 namespace TencentCloud
@@ -247,6 +248,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool PreStartUserScriptHasBeenSet() const;
 
+                    /**
+                     * 获取Node taint
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return Taints Node taint
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::vector<Taint> GetTaints() const;
+
+                    /**
+                     * 设置Node taint
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param Taints Node taint
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetTaints(const std::vector<Taint>& _taints);
+
+                    /**
+                     * 判断参数 Taints 是否已赋值
+                     * @return Taints 是否已赋值
+                     */
+                    bool TaintsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -311,6 +334,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_preStartUserScript;
                     bool m_preStartUserScriptHasBeenSet;
+
+                    /**
+                     * Node taint
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::vector<Taint> m_taints;
+                    bool m_taintsHasBeenSet;
 
                 };
             }

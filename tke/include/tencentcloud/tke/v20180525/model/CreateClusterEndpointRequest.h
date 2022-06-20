@@ -96,6 +96,60 @@ namespace TencentCloud
                      */
                     bool IsExtranetHasBeenSet() const;
 
+                    /**
+                     * 获取The domain name
+                     * @return Domain The domain name
+                     */
+                    std::string GetDomain() const;
+
+                    /**
+                     * 设置The domain name
+                     * @param Domain The domain name
+                     */
+                    void SetDomain(const std::string& _domain);
+
+                    /**
+                     * 判断参数 Domain 是否已赋值
+                     * @return Domain 是否已赋值
+                     */
+                    bool DomainHasBeenSet() const;
+
+                    /**
+                     * 获取The security group in use. Required only for public network access.
+                     * @return SecurityGroup The security group in use. Required only for public network access.
+                     */
+                    std::string GetSecurityGroup() const;
+
+                    /**
+                     * 设置The security group in use. Required only for public network access.
+                     * @param SecurityGroup The security group in use. Required only for public network access.
+                     */
+                    void SetSecurityGroup(const std::string& _securityGroup);
+
+                    /**
+                     * 判断参数 SecurityGroup 是否已赋值
+                     * @return SecurityGroup 是否已赋值
+                     */
+                    bool SecurityGroupHasBeenSet() const;
+
+                    /**
+                     * 获取The LB parameter. Required only for public network access.
+                     * @return ExtensiveParameters The LB parameter. Required only for public network access.
+                     */
+                    std::string GetExtensiveParameters() const;
+
+                    /**
+                     * 设置The LB parameter. Required only for public network access.
+                     * @param ExtensiveParameters The LB parameter. Required only for public network access.
+                     */
+                    void SetExtensiveParameters(const std::string& _extensiveParameters);
+
+                    /**
+                     * 判断参数 ExtensiveParameters 是否已赋值
+                     * @return ExtensiveParameters 是否已赋值
+                     */
+                    bool ExtensiveParametersHasBeenSet() const;
+
                 private:
 
                     /**
@@ -115,6 +169,24 @@ namespace TencentCloud
                      */
                     bool m_isExtranet;
                     bool m_isExtranetHasBeenSet;
+
+                    /**
+                     * The domain name
+                     */
+                    std::string m_domain;
+                    bool m_domainHasBeenSet;
+
+                    /**
+                     * The security group in use. Required only for public network access.
+                     */
+                    std::string m_securityGroup;
+                    bool m_securityGroupHasBeenSet;
+
+                    /**
+                     * The LB parameter. Required only for public network access.
+                     */
+                    std::string m_extensiveParameters;
+                    bool m_extensiveParametersHasBeenSet;
 
                 };
             }

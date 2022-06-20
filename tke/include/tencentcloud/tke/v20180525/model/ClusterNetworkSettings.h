@@ -238,6 +238,28 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                      */
                     bool SubnetsHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to ignore ServiceCIDR conflict errors. It is only valid in VPC-CNI mode. Default value: `false`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return IgnoreServiceCIDRConflict Whether to ignore ServiceCIDR conflict errors. It is only valid in VPC-CNI mode. Default value: `false`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    bool GetIgnoreServiceCIDRConflict() const;
+
+                    /**
+                     * 设置Whether to ignore ServiceCIDR conflict errors. It is only valid in VPC-CNI mode. Default value: `false`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param IgnoreServiceCIDRConflict Whether to ignore ServiceCIDR conflict errors. It is only valid in VPC-CNI mode. Default value: `false`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetIgnoreServiceCIDRConflict(const bool& _ignoreServiceCIDRConflict);
+
+                    /**
+                     * 判断参数 IgnoreServiceCIDRConflict 是否已赋值
+                     * @return IgnoreServiceCIDRConflict 是否已赋值
+                     */
+                    bool IgnoreServiceCIDRConflictHasBeenSet() const;
+
                 private:
 
                     /**
@@ -302,6 +324,13 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                      */
                     std::vector<std::string> m_subnets;
                     bool m_subnetsHasBeenSet;
+
+                    /**
+                     * Whether to ignore ServiceCIDR conflict errors. It is only valid in VPC-CNI mode. Default value: `false`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    bool m_ignoreServiceCIDRConflict;
+                    bool m_ignoreServiceCIDRConflictHasBeenSet;
 
                 };
             }

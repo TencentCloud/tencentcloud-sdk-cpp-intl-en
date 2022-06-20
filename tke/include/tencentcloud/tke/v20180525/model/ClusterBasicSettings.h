@@ -193,14 +193,14 @@ namespace TencentCloud
                     bool OsCustomizeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the node’s default security group (default: `No`, Aphla feature)
-                     * @return NeedWorkSecurityGroup Whether to enable the node’s default security group (default: `No`, Aphla feature)
+                     * 获取Whether to enable the node’s default security group (default: `No`, Alpha feature)
+                     * @return NeedWorkSecurityGroup Whether to enable the node’s default security group (default: `No`, Alpha feature)
                      */
                     bool GetNeedWorkSecurityGroup() const;
 
                     /**
-                     * 设置Whether to enable the node’s default security group (default: `No`, Aphla feature)
-                     * @param NeedWorkSecurityGroup Whether to enable the node’s default security group (default: `No`, Aphla feature)
+                     * 设置Whether to enable the node’s default security group (default: `No`, Alpha feature)
+                     * @param NeedWorkSecurityGroup Whether to enable the node’s default security group (default: `No`, Alpha feature)
                      */
                     void SetNeedWorkSecurityGroup(const bool& _needWorkSecurityGroup);
 
@@ -315,7 +315,7 @@ namespace TencentCloud
                     bool m_osCustomizeTypeHasBeenSet;
 
                     /**
-                     * Whether to enable the node’s default security group (default: `No`, Aphla feature)
+                     * Whether to enable the node’s default security group (default: `No`, Alpha feature)
                      */
                     bool m_needWorkSecurityGroup;
                     bool m_needWorkSecurityGroupHasBeenSet;

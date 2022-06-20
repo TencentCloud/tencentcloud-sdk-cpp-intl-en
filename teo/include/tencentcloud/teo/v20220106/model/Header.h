@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_TEO_V20220106_MODEL_FAILREASON_H_
-#define TENCENTCLOUD_TEO_V20220106_MODEL_FAILREASON_H_
+#ifndef TENCENTCLOUD_TEO_V20220106_MODEL_HEADER_H_
+#define TENCENTCLOUD_TEO_V20220106_MODEL_HEADER_H_
 
 #include <string>
 #include <vector>
@@ -35,71 +35,66 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Failure reason
+                * HTTP header, used as input for the CreatePrefetchTask API
                 */
-                class FailReason : public AbstractModel
+                class Header : public AbstractModel
                 {
                 public:
-                    FailReason();
-                    ~FailReason() = default;
+                    Header();
+                    ~Header() = default;
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
                     /**
-                     * 获取Failure reason
-                     * @return Reason Failure reason
+                     * 获取HTTP header name
+                     * @return Name HTTP header name
                      */
-                    std::string GetReason() const;
+                    std::string GetName() const;
 
                     /**
-                     * 设置Failure reason
-                     * @param Reason Failure reason
+                     * 设置HTTP header name
+                     * @param Name HTTP header name
                      */
-                    void SetReason(const std::string& _reason);
+                    void SetName(const std::string& _name);
 
                     /**
-                     * 判断参数 Reason 是否已赋值
-                     * @return Reason 是否已赋值
+                     * 判断参数 Name 是否已赋值
+                     * @return Name 是否已赋值
                      */
-                    bool ReasonHasBeenSet() const;
+                    bool NameHasBeenSet() const;
 
                     /**
-                     * 获取List of resources failed to be processed. 
- 
-                     * @return Targets List of resources failed to be processed. 
- 
+                     * 获取HTTP header value
+                     * @return Value HTTP header value
                      */
-                    std::vector<std::string> GetTargets() const;
+                    std::string GetValue() const;
 
                     /**
-                     * 设置List of resources failed to be processed. 
- 
-                     * @param Targets List of resources failed to be processed. 
- 
+                     * 设置HTTP header value
+                     * @param Value HTTP header value
                      */
-                    void SetTargets(const std::vector<std::string>& _targets);
+                    void SetValue(const std::string& _value);
 
                     /**
-                     * 判断参数 Targets 是否已赋值
-                     * @return Targets 是否已赋值
+                     * 判断参数 Value 是否已赋值
+                     * @return Value 是否已赋值
                      */
-                    bool TargetsHasBeenSet() const;
+                    bool ValueHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Failure reason
+                     * HTTP header name
                      */
-                    std::string m_reason;
-                    bool m_reasonHasBeenSet;
+                    std::string m_name;
+                    bool m_nameHasBeenSet;
 
                     /**
-                     * List of resources failed to be processed. 
- 
+                     * HTTP header value
                      */
-                    std::vector<std::string> m_targets;
-                    bool m_targetsHasBeenSet;
+                    std::string m_value;
+                    bool m_valueHasBeenSet;
 
                 };
             }
@@ -107,4 +102,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_TEO_V20220106_MODEL_FAILREASON_H_
+#endif // !TENCENTCLOUD_TEO_V20220106_MODEL_HEADER_H_
