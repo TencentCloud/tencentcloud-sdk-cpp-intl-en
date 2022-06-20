@@ -101,6 +101,24 @@ namespace TencentCloud
                     bool SecurityGroupsHasBeenSet() const;
 
                     /**
+                     * 获取The role bound with the instance. If it is not specified, it indicates to unbind the current role of the CVM.
+                     * @return CamRoleName The role bound with the instance. If it is not specified, it indicates to unbind the current role of the CVM.
+                     */
+                    std::string GetCamRoleName() const;
+
+                    /**
+                     * 设置The role bound with the instance. If it is not specified, it indicates to unbind the current role of the CVM.
+                     * @param CamRoleName The role bound with the instance. If it is not specified, it indicates to unbind the current role of the CVM.
+                     */
+                    void SetCamRoleName(const std::string& _camRoleName);
+
+                    /**
+                     * 判断参数 CamRoleName 是否已赋值
+                     * @return CamRoleName 是否已赋值
+                     */
+                    bool CamRoleNameHasBeenSet() const;
+
+                    /**
                      * 获取Whether the termination protection is enabled. Values: <br><li>`TRUE`: enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: do not enable the instance protection.<br><br>Default Value: `FALSE`.
                      * @return DisableApiTermination Whether the termination protection is enabled. Values: <br><li>`TRUE`: enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: do not enable the instance protection.<br><br>Default Value: `FALSE`.
                      */
@@ -117,6 +135,32 @@ namespace TencentCloud
                      * @return DisableApiTermination 是否已赋值
                      */
                     bool DisableApiTerminationHasBeenSet() const;
+
+                    /**
+                     * 获取The role type, which is used in conjunction with `CamRoleName`. The value is obtained in `RoleType` field, returning by `CAM DescribeRoleList` and `GetRole` APIs. Valid value: `user`, `system` and `service_linked`.
+For example, when `LinkedRoleIn` is contained in `CamRoleName` (such as `TKE_QCSLinkedRoleInPrometheusService`), the returned `RoleType` of `DescribeRoleList` and `GetRoleis` is `service_linked`, and the `CamRoleType` `service_linked`.
+When the value obtained in `RoleType` is `user` (default) or `system`, `CamRoleType` can be left empty.
+                     * @return CamRoleType The role type, which is used in conjunction with `CamRoleName`. The value is obtained in `RoleType` field, returning by `CAM DescribeRoleList` and `GetRole` APIs. Valid value: `user`, `system` and `service_linked`.
+For example, when `LinkedRoleIn` is contained in `CamRoleName` (such as `TKE_QCSLinkedRoleInPrometheusService`), the returned `RoleType` of `DescribeRoleList` and `GetRoleis` is `service_linked`, and the `CamRoleType` `service_linked`.
+When the value obtained in `RoleType` is `user` (default) or `system`, `CamRoleType` can be left empty.
+                     */
+                    std::string GetCamRoleType() const;
+
+                    /**
+                     * 设置The role type, which is used in conjunction with `CamRoleName`. The value is obtained in `RoleType` field, returning by `CAM DescribeRoleList` and `GetRole` APIs. Valid value: `user`, `system` and `service_linked`.
+For example, when `LinkedRoleIn` is contained in `CamRoleName` (such as `TKE_QCSLinkedRoleInPrometheusService`), the returned `RoleType` of `DescribeRoleList` and `GetRoleis` is `service_linked`, and the `CamRoleType` `service_linked`.
+When the value obtained in `RoleType` is `user` (default) or `system`, `CamRoleType` can be left empty.
+                     * @param CamRoleType The role type, which is used in conjunction with `CamRoleName`. The value is obtained in `RoleType` field, returning by `CAM DescribeRoleList` and `GetRole` APIs. Valid value: `user`, `system` and `service_linked`.
+For example, when `LinkedRoleIn` is contained in `CamRoleName` (such as `TKE_QCSLinkedRoleInPrometheusService`), the returned `RoleType` of `DescribeRoleList` and `GetRoleis` is `service_linked`, and the `CamRoleType` `service_linked`.
+When the value obtained in `RoleType` is `user` (default) or `system`, `CamRoleType` can be left empty.
+                     */
+                    void SetCamRoleType(const std::string& _camRoleType);
+
+                    /**
+                     * 判断参数 CamRoleType 是否已赋值
+                     * @return CamRoleType 是否已赋值
+                     */
+                    bool CamRoleTypeHasBeenSet() const;
 
                 private:
 
@@ -140,10 +184,24 @@ namespace TencentCloud
                     bool m_securityGroupsHasBeenSet;
 
                     /**
+                     * The role bound with the instance. If it is not specified, it indicates to unbind the current role of the CVM.
+                     */
+                    std::string m_camRoleName;
+                    bool m_camRoleNameHasBeenSet;
+
+                    /**
                      * Whether the termination protection is enabled. Values: <br><li>`TRUE`: enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: do not enable the instance protection.<br><br>Default Value: `FALSE`.
                      */
                     bool m_disableApiTermination;
                     bool m_disableApiTerminationHasBeenSet;
+
+                    /**
+                     * The role type, which is used in conjunction with `CamRoleName`. The value is obtained in `RoleType` field, returning by `CAM DescribeRoleList` and `GetRole` APIs. Valid value: `user`, `system` and `service_linked`.
+For example, when `LinkedRoleIn` is contained in `CamRoleName` (such as `TKE_QCSLinkedRoleInPrometheusService`), the returned `RoleType` of `DescribeRoleList` and `GetRoleis` is `service_linked`, and the `CamRoleType` `service_linked`.
+When the value obtained in `RoleType` is `user` (default) or `system`, `CamRoleType` can be left empty.
+                     */
+                    std::string m_camRoleType;
+                    bool m_camRoleTypeHasBeenSet;
 
                 };
             }

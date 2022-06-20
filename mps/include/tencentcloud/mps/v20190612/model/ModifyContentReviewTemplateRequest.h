@@ -48,14 +48,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique ID of an intelligent content recognition template
-                     * @return Definition Unique ID of an intelligent content recognition template
+                     * 获取The unique ID of the content moderation template.
+                     * @return Definition The unique ID of the content moderation template.
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Unique ID of an intelligent content recognition template
-                     * @param Definition Unique ID of an intelligent content recognition template
+                     * 设置The unique ID of the content moderation template.
+                     * @param Definition The unique ID of the content moderation template.
                      */
                     void SetDefinition(const int64_t& _definition);
 
@@ -66,14 +66,14 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Name of an intelligent content recognition template. Length limit: 64 characters
-                     * @return Name Name of an intelligent content recognition template. Length limit: 64 characters
+                     * 获取The name of the content moderation template. Length limit: 64 characters.
+                     * @return Name The name of the content moderation template. Length limit: 64 characters.
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Name of an intelligent content recognition template. Length limit: 64 characters
-                     * @param Name Name of an intelligent content recognition template. Length limit: 64 characters
+                     * 设置The name of the content moderation template. Length limit: 64 characters.
+                     * @param Name The name of the content moderation template. Length limit: 64 characters.
                      */
                     void SetName(const std::string& _name);
 
@@ -84,14 +84,14 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Description of an intelligent content recognition template. Length limit: 256 characters
-                     * @return Comment Description of an intelligent content recognition template. Length limit: 256 characters
+                     * 获取The template description. Length limit: 256 characters.
+                     * @return Comment The template description. Length limit: 256 characters.
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置Description of an intelligent content recognition template. Length limit: 256 characters
-                     * @param Comment Description of an intelligent content recognition template. Length limit: 256 characters
+                     * 设置The template description. Length limit: 256 characters.
+                     * @param Comment The template description. Length limit: 256 characters.
                      */
                     void SetComment(const std::string& _comment);
 
@@ -186,14 +186,14 @@ Note: this parameter is not supported yet.
                     bool ProhibitedConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Control parameter for custom intelligent content recognition tasks
-                     * @return UserDefineConfigure Control parameter for custom intelligent content recognition tasks
+                     * 获取Custom content moderation parameters.
+                     * @return UserDefineConfigure Custom content moderation parameters.
                      */
                     UserDefineConfigureInfoForUpdate GetUserDefineConfigure() const;
 
                     /**
-                     * 设置Control parameter for custom intelligent content recognition tasks
-                     * @param UserDefineConfigure Control parameter for custom intelligent content recognition tasks
+                     * 设置Custom content moderation parameters.
+                     * @param UserDefineConfigure Custom content moderation parameters.
                      */
                     void SetUserDefineConfigure(const UserDefineConfigureInfoForUpdate& _userDefineConfigure);
 
@@ -206,19 +206,19 @@ Note: this parameter is not supported yet.
                 private:
 
                     /**
-                     * Unique ID of an intelligent content recognition template
+                     * The unique ID of the content moderation template.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Name of an intelligent content recognition template. Length limit: 64 characters
+                     * The name of the content moderation template. Length limit: 64 characters.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Description of an intelligent content recognition template. Length limit: 256 characters
+                     * The template description. Length limit: 256 characters.
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
@@ -251,7 +251,7 @@ Note: this parameter is not supported yet.
                     bool m_prohibitedConfigureHasBeenSet;
 
                     /**
-                     * Control parameter for custom intelligent content recognition tasks
+                     * Custom content moderation parameters.
                      */
                     UserDefineConfigureInfoForUpdate m_userDefineConfigure;
                     bool m_userDefineConfigureHasBeenSet;

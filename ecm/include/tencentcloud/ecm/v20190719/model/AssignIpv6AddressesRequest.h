@@ -115,6 +115,36 @@ namespace TencentCloud
                      */
                     bool Ipv6AddressCountHasBeenSet() const;
 
+                    /**
+                     * 获取Ipv6 ISP. Valid values:
+`CTCC`: China Telecom
+`CUCC`: China Unicom
+`CMCC`: China Mobile
+                     * @return Ipv6ISP Ipv6 ISP. Valid values:
+`CTCC`: China Telecom
+`CUCC`: China Unicom
+`CMCC`: China Mobile
+                     */
+                    std::string GetIpv6ISP() const;
+
+                    /**
+                     * 设置Ipv6 ISP. Valid values:
+`CTCC`: China Telecom
+`CUCC`: China Unicom
+`CMCC`: China Mobile
+                     * @param Ipv6ISP Ipv6 ISP. Valid values:
+`CTCC`: China Telecom
+`CUCC`: China Unicom
+`CMCC`: China Mobile
+                     */
+                    void SetIpv6ISP(const std::string& _ipv6ISP);
+
+                    /**
+                     * 判断参数 Ipv6ISP 是否已赋值
+                     * @return Ipv6ISP 是否已赋值
+                     */
+                    bool Ipv6ISPHasBeenSet() const;
+
                 private:
 
                     /**
@@ -140,6 +170,15 @@ namespace TencentCloud
                      */
                     int64_t m_ipv6AddressCount;
                     bool m_ipv6AddressCountHasBeenSet;
+
+                    /**
+                     * Ipv6 ISP. Valid values:
+`CTCC`: China Telecom
+`CUCC`: China Unicom
+`CMCC`: China Mobile
+                     */
+                    std::string m_ipv6ISP;
+                    bool m_ipv6ISPHasBeenSet;
 
                 };
             }

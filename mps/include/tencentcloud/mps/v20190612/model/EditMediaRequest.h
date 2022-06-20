@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool FileInfosHasBeenSet() const;
 
                     /**
-                     * 获取Target storage of video processing output file.
-                     * @return OutputStorage Target storage of video processing output file.
+                     * 获取The storage location of the media processing output file.
+                     * @return OutputStorage The storage location of the media processing output file.
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置Target storage of video processing output file.
-                     * @param OutputStorage Target storage of video processing output file.
+                     * 设置The storage location of the media processing output file.
+                     * @param OutputStorage The storage location of the media processing output file.
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
 
@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool OutputStorageHasBeenSet() const;
 
                     /**
-                     * 获取Target path of video processing output file.
-                     * @return OutputObjectPath Target path of video processing output file.
+                     * 获取The path to save the media processing output file.
+                     * @return OutputObjectPath The path to save the media processing output file.
                      */
                     std::string GetOutputObjectPath() const;
 
                     /**
-                     * 设置Target path of video processing output file.
-                     * @param OutputObjectPath Target path of video processing output file.
+                     * 设置The path to save the media processing output file.
+                     * @param OutputObjectPath The path to save the media processing output file.
                      */
                     void SetOutputObjectPath(const std::string& _outputObjectPath);
 
@@ -199,13 +199,13 @@ namespace TencentCloud
                     bool m_fileInfosHasBeenSet;
 
                     /**
-                     * Target storage of video processing output file.
+                     * The storage location of the media processing output file.
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;
 
                     /**
-                     * Target path of video processing output file.
+                     * The path to save the media processing output file.
                      */
                     std::string m_outputObjectPath;
                     bool m_outputObjectPathHasBeenSet;

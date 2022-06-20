@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
-                     * @return CmqModel CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
+                     * 获取The CMQ or TDMQ-CMQ model. Valid values: Queue, Topic.
+                     * @return CmqModel The CMQ or TDMQ-CMQ model. Valid values: Queue, Topic.
                      */
                     std::string GetCmqModel() const;
 
                     /**
-                     * 设置CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
-                     * @param CmqModel CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
+                     * 设置The CMQ or TDMQ-CMQ model. Valid values: Queue, Topic.
+                     * @param CmqModel The CMQ or TDMQ-CMQ model. Valid values: Queue, Topic.
                      */
                     void SetCmqModel(const std::string& _cmqModel);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool CmqModelHasBeenSet() const;
 
                     /**
-                     * 获取CMQ region, such as `sh` and `bj`.
-                     * @return CmqRegion CMQ region, such as `sh` and `bj`.
+                     * 获取The CMQ or TDMQ-CMQ region, such as `sh` (Shanghai) or `bj` (Beijing).
+                     * @return CmqRegion The CMQ or TDMQ-CMQ region, such as `sh` (Shanghai) or `bj` (Beijing).
                      */
                     std::string GetCmqRegion() const;
 
                     /**
-                     * 设置CMQ region, such as `sh` and `bj`.
-                     * @param CmqRegion CMQ region, such as `sh` and `bj`.
+                     * 设置The CMQ or TDMQ-CMQ region, such as `sh` (Shanghai) or `bj` (Beijing).
+                     * @param CmqRegion The CMQ or TDMQ-CMQ region, such as `sh` (Shanghai) or `bj` (Beijing).
                      */
                     void SetCmqRegion(const std::string& _cmqRegion);
 
@@ -83,32 +83,14 @@ namespace TencentCloud
                     bool CmqRegionHasBeenSet() const;
 
                     /**
-                     * 获取This parameter is valid when the model is `Queue`, indicating the name of the CMQ queue for receiving event notifications.
-                     * @return QueueName This parameter is valid when the model is `Queue`, indicating the name of the CMQ queue for receiving event notifications.
-                     */
-                    std::string GetQueueName() const;
-
-                    /**
-                     * 设置This parameter is valid when the model is `Queue`, indicating the name of the CMQ queue for receiving event notifications.
-                     * @param QueueName This parameter is valid when the model is `Queue`, indicating the name of the CMQ queue for receiving event notifications.
-                     */
-                    void SetQueueName(const std::string& _queueName);
-
-                    /**
-                     * 判断参数 QueueName 是否已赋值
-                     * @return QueueName 是否已赋值
-                     */
-                    bool QueueNameHasBeenSet() const;
-
-                    /**
-                     * 获取This parameter is valid when the model is `Topic`, indicating the name of the CMQ topic for receiving event notifications.
-                     * @return TopicName This parameter is valid when the model is `Topic`, indicating the name of the CMQ topic for receiving event notifications.
+                     * 获取The CMQ or TDMQ-CMQ topic to receive notifications. This parameter is valid when `CmqModel` is `Topic`.
+                     * @return TopicName The CMQ or TDMQ-CMQ topic to receive notifications. This parameter is valid when `CmqModel` is `Topic`.
                      */
                     std::string GetTopicName() const;
 
                     /**
-                     * 设置This parameter is valid when the model is `Topic`, indicating the name of the CMQ topic for receiving event notifications.
-                     * @param TopicName This parameter is valid when the model is `Topic`, indicating the name of the CMQ topic for receiving event notifications.
+                     * 设置The CMQ or TDMQ-CMQ topic to receive notifications. This parameter is valid when `CmqModel` is `Topic`.
+                     * @param TopicName The CMQ or TDMQ-CMQ topic to receive notifications. This parameter is valid when `CmqModel` is `Topic`.
                      */
                     void SetTopicName(const std::string& _topicName);
 
@@ -117,6 +99,24 @@ namespace TencentCloud
                      * @return TopicName 是否已赋值
                      */
                     bool TopicNameHasBeenSet() const;
+
+                    /**
+                     * 获取The CMQ or TDMQ-CMQ queue to receive notifications. This parameter is valid when `CmqModel` is `Queue`.
+                     * @return QueueName The CMQ or TDMQ-CMQ queue to receive notifications. This parameter is valid when `CmqModel` is `Queue`.
+                     */
+                    std::string GetQueueName() const;
+
+                    /**
+                     * 设置The CMQ or TDMQ-CMQ queue to receive notifications. This parameter is valid when `CmqModel` is `Queue`.
+                     * @param QueueName The CMQ or TDMQ-CMQ queue to receive notifications. This parameter is valid when `CmqModel` is `Queue`.
+                     */
+                    void SetQueueName(const std::string& _queueName);
+
+                    /**
+                     * 判断参数 QueueName 是否已赋值
+                     * @return QueueName 是否已赋值
+                     */
+                    bool QueueNameHasBeenSet() const;
 
                     /**
                      * 获取Workflow notification method. Valid values: Finish, Change. If this parameter is left empty, `Finish` will be used.
@@ -137,14 +137,30 @@ namespace TencentCloud
                     bool NotifyModeHasBeenSet() const;
 
                     /**
-                     * 获取Notification type, `CMQ` by default. If `URL` is passed in, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
-                     * @return NotifyType Notification type, `CMQ` by default. If `URL` is passed in, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+                     * 获取The notification type. Valid values:
+<li>CMQ: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
+<li>TDMQ-CMQ: Message queue</li>
+<li>URL: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
+Default value: `TDMQ-CMQ`.
+                     * @return NotifyType The notification type. Valid values:
+<li>CMQ: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
+<li>TDMQ-CMQ: Message queue</li>
+<li>URL: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
+Default value: `TDMQ-CMQ`.
                      */
                     std::string GetNotifyType() const;
 
                     /**
-                     * 设置Notification type, `CMQ` by default. If `URL` is passed in, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
-                     * @param NotifyType Notification type, `CMQ` by default. If `URL` is passed in, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+                     * 设置The notification type. Valid values:
+<li>CMQ: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
+<li>TDMQ-CMQ: Message queue</li>
+<li>URL: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
+Default value: `TDMQ-CMQ`.
+                     * @param NotifyType The notification type. Valid values:
+<li>CMQ: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
+<li>TDMQ-CMQ: Message queue</li>
+<li>URL: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
+Default value: `TDMQ-CMQ`.
                      */
                     void SetNotifyType(const std::string& _notifyType);
 
@@ -175,28 +191,28 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
+                     * The CMQ or TDMQ-CMQ model. Valid values: Queue, Topic.
                      */
                     std::string m_cmqModel;
                     bool m_cmqModelHasBeenSet;
 
                     /**
-                     * CMQ region, such as `sh` and `bj`.
+                     * The CMQ or TDMQ-CMQ region, such as `sh` (Shanghai) or `bj` (Beijing).
                      */
                     std::string m_cmqRegion;
                     bool m_cmqRegionHasBeenSet;
 
                     /**
-                     * This parameter is valid when the model is `Queue`, indicating the name of the CMQ queue for receiving event notifications.
-                     */
-                    std::string m_queueName;
-                    bool m_queueNameHasBeenSet;
-
-                    /**
-                     * This parameter is valid when the model is `Topic`, indicating the name of the CMQ topic for receiving event notifications.
+                     * The CMQ or TDMQ-CMQ topic to receive notifications. This parameter is valid when `CmqModel` is `Topic`.
                      */
                     std::string m_topicName;
                     bool m_topicNameHasBeenSet;
+
+                    /**
+                     * The CMQ or TDMQ-CMQ queue to receive notifications. This parameter is valid when `CmqModel` is `Queue`.
+                     */
+                    std::string m_queueName;
+                    bool m_queueNameHasBeenSet;
 
                     /**
                      * Workflow notification method. Valid values: Finish, Change. If this parameter is left empty, `Finish` will be used.
@@ -205,7 +221,11 @@ namespace TencentCloud
                     bool m_notifyModeHasBeenSet;
 
                     /**
-                     * Notification type, `CMQ` by default. If `URL` is passed in, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+                     * The notification type. Valid values:
+<li>CMQ: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
+<li>TDMQ-CMQ: Message queue</li>
+<li>URL: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
+Default value: `TDMQ-CMQ`.
                      */
                     std::string m_notifyType;
                     bool m_notifyTypeHasBeenSet;

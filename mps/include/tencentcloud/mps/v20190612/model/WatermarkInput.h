@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Watermark parameter type of a video processing task
+                * The watermark parameters to use in a media processing task.
                 */
                 class WatermarkInput : public AbstractModel
                 {

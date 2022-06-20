@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Resource information of a CDH instance
+                * Resource information of the CDH instance
                 */
                 class HostResource : public AbstractModel
                 {
@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool CpuAvailableHasBeenSet() const;
 
                     /**
-                     * 获取Total memory of the CDH instance; unit: GiB
-                     * @return MemTotal Total memory of the CDH instance; unit: GiB
+                     * 获取Total memory size of the CDH instance (unit: GiB)
+                     * @return MemTotal Total memory size of the CDH instance (unit: GiB)
                      */
                     double GetMemTotal() const;
 
                     /**
-                     * 设置Total memory of the CDH instance; unit: GiB
-                     * @param MemTotal Total memory of the CDH instance; unit: GiB
+                     * 设置Total memory size of the CDH instance (unit: GiB)
+                     * @param MemTotal Total memory size of the CDH instance (unit: GiB)
                      */
                     void SetMemTotal(const double& _memTotal);
 
@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool MemTotalHasBeenSet() const;
 
                     /**
-                     * 获取Available memory of the CDH instance; unit: GiB
-                     * @return MemAvailable Available memory of the CDH instance; unit: GiB
+                     * 获取Available memory size of the CDH instance (unit: GiB)
+                     * @return MemAvailable Available memory size of the CDH instance (unit: GiB)
                      */
                     double GetMemAvailable() const;
 
                     /**
-                     * 设置Available memory of the CDH instance; unit: GiB
-                     * @param MemAvailable Available memory of the CDH instance; unit: GiB
+                     * 设置Available memory size of the CDH instance (unit: GiB)
+                     * @param MemAvailable Available memory size of the CDH instance (unit: GiB)
                      */
                     void SetMemAvailable(const double& _memAvailable);
 
@@ -119,14 +119,14 @@ namespace TencentCloud
                     bool MemAvailableHasBeenSet() const;
 
                     /**
-                     * 获取Total disk size of the CDH instance; unit: GiB
-                     * @return DiskTotal Total disk size of the CDH instance; unit: GiB
+                     * 获取Total disk size of the CDH instance (unit: GiB)
+                     * @return DiskTotal Total disk size of the CDH instance (unit: GiB)
                      */
                     uint64_t GetDiskTotal() const;
 
                     /**
-                     * 设置Total disk size of the CDH instance; unit: GiB
-                     * @param DiskTotal Total disk size of the CDH instance; unit: GiB
+                     * 设置Total disk size of the CDH instance (unit: GiB)
+                     * @param DiskTotal Total disk size of the CDH instance (unit: GiB)
                      */
                     void SetDiskTotal(const uint64_t& _diskTotal);
 
@@ -137,14 +137,14 @@ namespace TencentCloud
                     bool DiskTotalHasBeenSet() const;
 
                     /**
-                     * 获取Avilable disk size of the CDH instance; unit: GiB
-                     * @return DiskAvailable Avilable disk size of the CDH instance; unit: GiB
+                     * 获取Available disk size of the CDH instance (unit: GiB)
+                     * @return DiskAvailable Available disk size of the CDH instance (unit: GiB)
                      */
                     uint64_t GetDiskAvailable() const;
 
                     /**
-                     * 设置Avilable disk size of the CDH instance; unit: GiB
-                     * @param DiskAvailable Avilable disk size of the CDH instance; unit: GiB
+                     * 设置Available disk size of the CDH instance (unit: GiB)
+                     * @param DiskAvailable Available disk size of the CDH instance (unit: GiB)
                      */
                     void SetDiskAvailable(const uint64_t& _diskAvailable);
 
@@ -155,14 +155,14 @@ namespace TencentCloud
                     bool DiskAvailableHasBeenSet() const;
 
                     /**
-                     * 获取CDH instance disk type.
-                     * @return DiskType CDH instance disk type.
+                     * 获取Disk type of the CDH instance
+                     * @return DiskType Disk type of the CDH instance
                      */
                     std::string GetDiskType() const;
 
                     /**
-                     * 设置CDH instance disk type.
-                     * @param DiskType CDH instance disk type.
+                     * 设置Disk type of the CDH instance
+                     * @param DiskType Disk type of the CDH instance
                      */
                     void SetDiskType(const std::string& _diskType);
 
@@ -171,6 +171,42 @@ namespace TencentCloud
                      * @return DiskType 是否已赋值
                      */
                     bool DiskTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Total number of GPU cards in the CDH instance
+                     * @return GpuTotal Total number of GPU cards in the CDH instance
+                     */
+                    uint64_t GetGpuTotal() const;
+
+                    /**
+                     * 设置Total number of GPU cards in the CDH instance
+                     * @param GpuTotal Total number of GPU cards in the CDH instance
+                     */
+                    void SetGpuTotal(const uint64_t& _gpuTotal);
+
+                    /**
+                     * 判断参数 GpuTotal 是否已赋值
+                     * @return GpuTotal 是否已赋值
+                     */
+                    bool GpuTotalHasBeenSet() const;
+
+                    /**
+                     * 获取Number of available GPU cards in the CDH instance
+                     * @return GpuAvailable Number of available GPU cards in the CDH instance
+                     */
+                    uint64_t GetGpuAvailable() const;
+
+                    /**
+                     * 设置Number of available GPU cards in the CDH instance
+                     * @param GpuAvailable Number of available GPU cards in the CDH instance
+                     */
+                    void SetGpuAvailable(const uint64_t& _gpuAvailable);
+
+                    /**
+                     * 判断参数 GpuAvailable 是否已赋值
+                     * @return GpuAvailable 是否已赋值
+                     */
+                    bool GpuAvailableHasBeenSet() const;
 
                 private:
 
@@ -187,34 +223,46 @@ namespace TencentCloud
                     bool m_cpuAvailableHasBeenSet;
 
                     /**
-                     * Total memory of the CDH instance; unit: GiB
+                     * Total memory size of the CDH instance (unit: GiB)
                      */
                     double m_memTotal;
                     bool m_memTotalHasBeenSet;
 
                     /**
-                     * Available memory of the CDH instance; unit: GiB
+                     * Available memory size of the CDH instance (unit: GiB)
                      */
                     double m_memAvailable;
                     bool m_memAvailableHasBeenSet;
 
                     /**
-                     * Total disk size of the CDH instance; unit: GiB
+                     * Total disk size of the CDH instance (unit: GiB)
                      */
                     uint64_t m_diskTotal;
                     bool m_diskTotalHasBeenSet;
 
                     /**
-                     * Avilable disk size of the CDH instance; unit: GiB
+                     * Available disk size of the CDH instance (unit: GiB)
                      */
                     uint64_t m_diskAvailable;
                     bool m_diskAvailableHasBeenSet;
 
                     /**
-                     * CDH instance disk type.
+                     * Disk type of the CDH instance
                      */
                     std::string m_diskType;
                     bool m_diskTypeHasBeenSet;
+
+                    /**
+                     * Total number of GPU cards in the CDH instance
+                     */
+                    uint64_t m_gpuTotal;
+                    bool m_gpuTotalHasBeenSet;
+
+                    /**
+                     * Number of available GPU cards in the CDH instance
+                     */
+                    uint64_t m_gpuAvailable;
+                    bool m_gpuAvailableHasBeenSet;
 
                 };
             }

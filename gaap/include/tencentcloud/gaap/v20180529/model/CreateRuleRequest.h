@@ -192,14 +192,14 @@ If this field is not passed in, it indicates that the ForwardProtocol of the cor
                     bool ForwardProtocolHasBeenSet() const;
 
                     /**
-                     * 获取The forwarding host. If it’s not specified, the default host is used, that is the host with which the client initiates HTTP requests.
-                     * @return ForwardHost The forwarding host. If it’s not specified, the default host is used, that is the host with which the client initiates HTTP requests.
+                     * 获取The host to which the acceleration connection forwards. If this parameter is not specified, the default host will be used, i.e., the host with which the client initiates HTTP requests.
+                     * @return ForwardHost The host to which the acceleration connection forwards. If this parameter is not specified, the default host will be used, i.e., the host with which the client initiates HTTP requests.
                      */
                     std::string GetForwardHost() const;
 
                     /**
-                     * 设置The forwarding host. If it’s not specified, the default host is used, that is the host with which the client initiates HTTP requests.
-                     * @param ForwardHost The forwarding host. If it’s not specified, the default host is used, that is the host with which the client initiates HTTP requests.
+                     * 设置The host to which the acceleration connection forwards. If this parameter is not specified, the default host will be used, i.e., the host with which the client initiates HTTP requests.
+                     * @param ForwardHost The host to which the acceleration connection forwards. If this parameter is not specified, the default host will be used, i.e., the host with which the client initiates HTTP requests.
                      */
                     void SetForwardHost(const std::string& _forwardHost);
 
@@ -297,7 +297,7 @@ If this field is not passed in, it indicates that the ForwardProtocol of the cor
                     bool m_forwardProtocolHasBeenSet;
 
                     /**
-                     * The forwarding host. If it’s not specified, the default host is used, that is the host with which the client initiates HTTP requests.
+                     * The host to which the acceleration connection forwards. If this parameter is not specified, the default host will be used, i.e., the host with which the client initiates HTTP requests.
                      */
                     std::string m_forwardHost;
                     bool m_forwardHostHasBeenSet;

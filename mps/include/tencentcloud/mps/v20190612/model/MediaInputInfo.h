@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information of a video processing input object.
+                * The information of the object to process.
                 */
                 class MediaInputInfo : public AbstractModel
                 {
@@ -67,14 +67,14 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取This parameter is required and valid when `Type` is `COS`, indicating the information of a COS object for video processing.
-                     * @return CosInputInfo This parameter is required and valid when `Type` is `COS`, indicating the information of a COS object for video processing.
+                     * 获取The information of the COS object to process. This parameter is valid and required when `Type` is `COS`.
+                     * @return CosInputInfo The information of the COS object to process. This parameter is valid and required when `Type` is `COS`.
                      */
                     CosInputInfo GetCosInputInfo() const;
 
                     /**
-                     * 设置This parameter is required and valid when `Type` is `COS`, indicating the information of a COS object for video processing.
-                     * @param CosInputInfo This parameter is required and valid when `Type` is `COS`, indicating the information of a COS object for video processing.
+                     * 设置The information of the COS object to process. This parameter is valid and required when `Type` is `COS`.
+                     * @param CosInputInfo The information of the COS object to process. This parameter is valid and required when `Type` is `COS`.
                      */
                     void SetCosInputInfo(const CosInputInfo& _cosInputInfo);
 
@@ -85,18 +85,18 @@ namespace TencentCloud
                     bool CosInputInfoHasBeenSet() const;
 
                     /**
-                     * 获取This parameter is required and valid when `Type` is `URL`, indicating the information of a URL object for video processing.
-Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @return UrlInputInfo This parameter is required and valid when `Type` is `URL`, indicating the information of a URL object for video processing.
-Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 获取The URL of the object to process. This parameter is valid and required when `Type` is `URL`.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return UrlInputInfo The URL of the object to process. This parameter is valid and required when `Type` is `URL`.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     UrlInputInfo GetUrlInputInfo() const;
 
                     /**
-                     * 设置This parameter is required and valid when `Type` is `URL`, indicating the information of a URL object for video processing.
-Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param UrlInputInfo This parameter is required and valid when `Type` is `URL`, indicating the information of a URL object for video processing.
-Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 设置The URL of the object to process. This parameter is valid and required when `Type` is `URL`.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param UrlInputInfo The URL of the object to process. This parameter is valid and required when `Type` is `URL`.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     void SetUrlInputInfo(const UrlInputInfo& _urlInputInfo);
 
@@ -115,14 +115,14 @@ Note: this field may return `null`, indicating that no valid value is obtained.
                     bool m_typeHasBeenSet;
 
                     /**
-                     * This parameter is required and valid when `Type` is `COS`, indicating the information of a COS object for video processing.
+                     * The information of the COS object to process. This parameter is valid and required when `Type` is `COS`.
                      */
                     CosInputInfo m_cosInputInfo;
                     bool m_cosInputInfoHasBeenSet;
 
                     /**
-                     * This parameter is required and valid when `Type` is `URL`, indicating the information of a URL object for video processing.
-Note: this field may return `null`, indicating that no valid value is obtained.
+                     * The URL of the object to process. This parameter is valid and required when `Type` is `URL`.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     UrlInputInfo m_urlInputInfo;
                     bool m_urlInputInfoHasBeenSet;

@@ -48,14 +48,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Name of an intelligent content recognition template. Length limit: 64 characters
-                     * @return Name Name of an intelligent content recognition template. Length limit: 64 characters
+                     * 获取The name of the content moderation template. Length limit: 64 characters.
+                     * @return Name The name of the content moderation template. Length limit: 64 characters.
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Name of an intelligent content recognition template. Length limit: 64 characters
-                     * @param Name Name of an intelligent content recognition template. Length limit: 64 characters
+                     * 设置The name of the content moderation template. Length limit: 64 characters.
+                     * @param Name The name of the content moderation template. Length limit: 64 characters.
                      */
                     void SetName(const std::string& _name);
 
@@ -66,14 +66,14 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Description of an intelligent content recognition template. Length limit: 256 characters
-                     * @return Comment Description of an intelligent content recognition template. Length limit: 256 characters
+                     * 获取The template description. Length limit: 256 characters.
+                     * @return Comment The template description. Length limit: 256 characters.
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置Description of an intelligent content recognition template. Length limit: 256 characters
-                     * @param Comment Description of an intelligent content recognition template. Length limit: 256 characters
+                     * 设置The template description. Length limit: 256 characters.
+                     * @param Comment The template description. Length limit: 256 characters.
                      */
                     void SetComment(const std::string& _comment);
 
@@ -168,14 +168,14 @@ Note: this parameter is not supported yet.
                     bool ProhibitedConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Control parameter for custom intelligent content recognition tasks
-                     * @return UserDefineConfigure Control parameter for custom intelligent content recognition tasks
+                     * 获取Custom content moderation parameters.
+                     * @return UserDefineConfigure Custom content moderation parameters.
                      */
                     UserDefineConfigureInfo GetUserDefineConfigure() const;
 
                     /**
-                     * 设置Control parameter for custom intelligent content recognition tasks
-                     * @param UserDefineConfigure Control parameter for custom intelligent content recognition tasks
+                     * 设置Custom content moderation parameters.
+                     * @param UserDefineConfigure Custom content moderation parameters.
                      */
                     void SetUserDefineConfigure(const UserDefineConfigureInfo& _userDefineConfigure);
 
@@ -188,13 +188,13 @@ Note: this parameter is not supported yet.
                 private:
 
                     /**
-                     * Name of an intelligent content recognition template. Length limit: 64 characters
+                     * The name of the content moderation template. Length limit: 64 characters.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Description of an intelligent content recognition template. Length limit: 256 characters
+                     * The template description. Length limit: 256 characters.
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
@@ -227,7 +227,7 @@ Note: this parameter is not supported yet.
                     bool m_prohibitedConfigureHasBeenSet;
 
                     /**
-                     * Control parameter for custom intelligent content recognition tasks
+                     * Custom content moderation parameters.
                      */
                     UserDefineConfigureInfo m_userDefineConfigure;
                     bool m_userDefineConfigureHasBeenSet;

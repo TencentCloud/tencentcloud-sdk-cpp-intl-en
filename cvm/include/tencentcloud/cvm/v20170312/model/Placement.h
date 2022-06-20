@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Describes the location of an instance, including its availability zone, project, host (for CDH products only), primary host IP, etc.
+                * Placement of an instance, including its availability zone, project, host (for CDH products only), master host IP, etc.
                 */
                 class Placement : public AbstractModel
                 {

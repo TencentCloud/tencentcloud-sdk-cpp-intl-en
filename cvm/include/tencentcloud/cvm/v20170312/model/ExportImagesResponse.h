@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_MPS_V20190612_MODEL_CREATECONTENTREVIEWTEMPLATERESPONSE_H_
-#define TENCENTCLOUD_MPS_V20190612_MODEL_CREATECONTENTREVIEWTEMPLATERESPONSE_H_
+#ifndef TENCENTCLOUD_CVM_V20170312_MODEL_EXPORTIMAGESRESPONSE_H_
+#define TENCENTCLOUD_CVM_V20170312_MODEL_EXPORTIMAGESRESPONSE_H_
 
 #include <string>
 #include <vector>
@@ -25,43 +25,43 @@
 
 namespace TencentCloud
 {
-    namespace Mps
+    namespace Cvm
     {
-        namespace V20190612
+        namespace V20170312
         {
             namespace Model
             {
                 /**
-                * CreateContentReviewTemplate response structure.
+                * ExportImages response structure.
                 */
-                class CreateContentReviewTemplateResponse : public AbstractModel
+                class ExportImagesResponse : public AbstractModel
                 {
                 public:
-                    CreateContentReviewTemplateResponse();
-                    ~CreateContentReviewTemplateResponse() = default;
+                    ExportImagesResponse();
+                    ~ExportImagesResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取The unique ID of the content moderation template.
-                     * @return Definition The unique ID of the content moderation template.
+                     * 获取ID of the image export task
+                     * @return TaskId ID of the image export task
                      */
-                    int64_t GetDefinition() const;
+                    uint64_t GetTaskId() const;
 
                     /**
-                     * 判断参数 Definition 是否已赋值
-                     * @return Definition 是否已赋值
+                     * 判断参数 TaskId 是否已赋值
+                     * @return TaskId 是否已赋值
                      */
-                    bool DefinitionHasBeenSet() const;
+                    bool TaskIdHasBeenSet() const;
 
                 private:
 
                     /**
-                     * The unique ID of the content moderation template.
+                     * ID of the image export task
                      */
-                    int64_t m_definition;
-                    bool m_definitionHasBeenSet;
+                    uint64_t m_taskId;
+                    bool m_taskIdHasBeenSet;
 
                 };
             }
@@ -69,4 +69,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_MPS_V20190612_MODEL_CREATECONTENTREVIEWTEMPLATERESPONSE_H_
+#endif // !TENCENTCLOUD_CVM_V20170312_MODEL_EXPORTIMAGESRESPONSE_H_

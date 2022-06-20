@@ -134,18 +134,18 @@ namespace TencentCloud
                     bool TriggerHasBeenSet() const;
 
                     /**
-                     * 获取Target storage of a video processing output file.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OutputStorage Target storage of a video processing output file.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The location to save the media processing output file.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return OutputStorage The location to save the media processing output file.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置Target storage of a video processing output file.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param OutputStorage Target storage of a video processing output file.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The location to save the media processing output file.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param OutputStorage The location to save the media processing output file.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
 
@@ -156,18 +156,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OutputStorageHasBeenSet() const;
 
                     /**
-                     * 获取Parameter of a video processing task.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MediaProcessTask Parameter of a video processing task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The media processing parameters to use.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return MediaProcessTask The media processing parameters to use.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     MediaProcessTaskInput GetMediaProcessTask() const;
 
                     /**
-                     * 设置Parameter of a video processing task.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MediaProcessTask Parameter of a video processing task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The media processing parameters to use.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param MediaProcessTask The media processing parameters to use.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     void SetMediaProcessTask(const MediaProcessTaskInput& _mediaProcessTask);
 
@@ -280,14 +280,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TaskPriorityHasBeenSet() const;
 
                     /**
-                     * 获取Target directory of a video processing output file, such as `/movie/201907/`.
-                     * @return OutputDir Target directory of a video processing output file, such as `/movie/201907/`.
+                     * 获取The directory to save the media processing output file, such as `/movie/201907/`.
+                     * @return OutputDir The directory to save the media processing output file, such as `/movie/201907/`.
                      */
                     std::string GetOutputDir() const;
 
                     /**
-                     * 设置Target directory of a video processing output file, such as `/movie/201907/`.
-                     * @param OutputDir Target directory of a video processing output file, such as `/movie/201907/`.
+                     * 设置The directory to save the media processing output file, such as `/movie/201907/`.
+                     * @param OutputDir The directory to save the media processing output file, such as `/movie/201907/`.
                      */
                     void SetOutputDir(const std::string& _outputDir);
 
@@ -362,15 +362,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_triggerHasBeenSet;
 
                     /**
-                     * Target storage of a video processing output file.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The location to save the media processing output file.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;
 
                     /**
-                     * Parameter of a video processing task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The media processing parameters to use.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     MediaProcessTaskInput m_mediaProcessTask;
                     bool m_mediaProcessTaskHasBeenSet;
@@ -409,7 +409,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_taskPriorityHasBeenSet;
 
                     /**
-                     * Target directory of a video processing output file, such as `/movie/201907/`.
+                     * The directory to save the media processing output file, such as `/movie/201907/`.
                      */
                     std::string m_outputDir;
                     bool m_outputDirHasBeenSet;

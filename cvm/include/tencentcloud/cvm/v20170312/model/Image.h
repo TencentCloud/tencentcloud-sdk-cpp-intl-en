@@ -352,6 +352,24 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     bool TagsHasBeenSet() const;
 
+                    /**
+                     * 获取Image license type
+                     * @return LicenseType Image license type
+                     */
+                    std::string GetLicenseType() const;
+
+                    /**
+                     * 设置Image license type
+                     * @param LicenseType Image license type
+                     */
+                    void SetLicenseType(const std::string& _licenseType);
+
+                    /**
+                     * 判断参数 LicenseType 是否已赋值
+                     * @return LicenseType 是否已赋值
+                     */
+                    bool LicenseTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -453,6 +471,12 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * Image license type
+                     */
+                    std::string m_licenseType;
+                    bool m_licenseTypeHasBeenSet;
 
                 };
             }

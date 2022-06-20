@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Blur parameter type of video processing task
+                * The mosaic effect parameters to use in a media processing task.
                 */
                 class MosaicInput : public AbstractModel
                 {

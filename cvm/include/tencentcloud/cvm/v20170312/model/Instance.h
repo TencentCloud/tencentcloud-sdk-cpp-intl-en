@@ -724,6 +724,24 @@ Note: this field may return null, indicating that no valid value was found.
                      */
                     bool GPUInfoHasBeenSet() const;
 
+                    /**
+                     * 获取Instance OS license type. Default value: `TencentCloud`
+                     * @return LicenseType Instance OS license type. Default value: `TencentCloud`
+                     */
+                    std::string GetLicenseType() const;
+
+                    /**
+                     * 设置Instance OS license type. Default value: `TencentCloud`
+                     * @param LicenseType Instance OS license type. Default value: `TencentCloud`
+                     */
+                    void SetLicenseType(const std::string& _licenseType);
+
+                    /**
+                     * 判断参数 LicenseType 是否已赋值
+                     * @return LicenseType 是否已赋值
+                     */
+                    bool LicenseTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -945,6 +963,12 @@ Note: this field may return null, indicating that no valid value was found.
                      */
                     GPUInfo m_gPUInfo;
                     bool m_gPUInfoHasBeenSet;
+
+                    /**
+                     * Instance OS license type. Default value: `TencentCloud`
+                     */
+                    std::string m_licenseType;
+                    bool m_licenseTypeHasBeenSet;
 
                 };
             }

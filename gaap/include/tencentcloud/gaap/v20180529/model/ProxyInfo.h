@@ -199,53 +199,57 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Connection status. Valid values:
-`RUNNING`: running
-`CREATING`: creating
-`DESTROYING`: terminating
-`OPENING`: enabling
-`CLOSING`: disabling
-`CLOSED`: disabled
-`ADJUSTING`: adjusting configuration
-`ISOLATING`: isolating
-`ISOLATED`: isolated
-`CLONING`: copying
+`RUNNING`: Running
+`CREATING`: Creating
+`DESTROYING`: Terminating
+`OPENING`: Enabling
+`CLOSING`: Disabling
+`CLOSED`: Disabled
+`ADJUSTING`: Adjusting configuration
+`ISOLATING`: Isolating
+`ISOLATED`: Isolated
+`CLONING`: Copying
+`RECOVERING`: Maintaining
                      * @return Status Connection status. Valid values:
-`RUNNING`: running
-`CREATING`: creating
-`DESTROYING`: terminating
-`OPENING`: enabling
-`CLOSING`: disabling
-`CLOSED`: disabled
-`ADJUSTING`: adjusting configuration
-`ISOLATING`: isolating
-`ISOLATED`: isolated
-`CLONING`: copying
+`RUNNING`: Running
+`CREATING`: Creating
+`DESTROYING`: Terminating
+`OPENING`: Enabling
+`CLOSING`: Disabling
+`CLOSED`: Disabled
+`ADJUSTING`: Adjusting configuration
+`ISOLATING`: Isolating
+`ISOLATED`: Isolated
+`CLONING`: Copying
+`RECOVERING`: Maintaining
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Connection status. Valid values:
-`RUNNING`: running
-`CREATING`: creating
-`DESTROYING`: terminating
-`OPENING`: enabling
-`CLOSING`: disabling
-`CLOSED`: disabled
-`ADJUSTING`: adjusting configuration
-`ISOLATING`: isolating
-`ISOLATED`: isolated
-`CLONING`: copying
+`RUNNING`: Running
+`CREATING`: Creating
+`DESTROYING`: Terminating
+`OPENING`: Enabling
+`CLOSING`: Disabling
+`CLOSED`: Disabled
+`ADJUSTING`: Adjusting configuration
+`ISOLATING`: Isolating
+`ISOLATED`: Isolated
+`CLONING`: Copying
+`RECOVERING`: Maintaining
                      * @param Status Connection status. Valid values:
-`RUNNING`: running
-`CREATING`: creating
-`DESTROYING`: terminating
-`OPENING`: enabling
-`CLOSING`: disabling
-`CLOSED`: disabled
-`ADJUSTING`: adjusting configuration
-`ISOLATING`: isolating
-`ISOLATED`: isolated
-`CLONING`: copying
+`RUNNING`: Running
+`CREATING`: Creating
+`DESTROYING`: Terminating
+`OPENING`: Enabling
+`CLOSING`: Disabling
+`CLOSED`: Disabled
+`ADJUSTING`: Adjusting configuration
+`ISOLATING`: Isolating
+`ISOLATED`: Isolated
+`CLONING`: Copying
+`RECOVERING`: Maintaining
                      */
                     void SetStatus(const std::string& _status);
 
@@ -650,18 +654,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool IPAddressVersionHasBeenSet() const;
 
                     /**
-                     * 获取Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
-Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @return NetworkType Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
-Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: custom security EIP.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return NetworkType Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: custom security EIP.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetNetworkType() const;
 
                     /**
-                     * 设置Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
-Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @param NetworkType Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
-Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: custom security EIP.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param NetworkType Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: custom security EIP.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetNetworkType(const std::string& _networkType);
 
@@ -842,16 +846,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Connection status. Valid values:
-`RUNNING`: running
-`CREATING`: creating
-`DESTROYING`: terminating
-`OPENING`: enabling
-`CLOSING`: disabling
-`CLOSED`: disabled
-`ADJUSTING`: adjusting configuration
-`ISOLATING`: isolating
-`ISOLATED`: isolated
-`CLONING`: copying
+`RUNNING`: Running
+`CREATING`: Creating
+`DESTROYING`: Terminating
+`OPENING`: Enabling
+`CLOSING`: Disabling
+`CLOSED`: Disabled
+`ADJUSTING`: Adjusting configuration
+`ISOLATING`: Isolating
+`ISOLATED`: Isolated
+`CLONING`: Copying
+`RECOVERING`: Maintaining
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
@@ -984,8 +989,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_iPAddressVersionHasBeenSet;
 
                     /**
-                     * Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
-Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: custom security EIP.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_networkType;
                     bool m_networkTypeHasBeenSet;

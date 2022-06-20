@@ -77,6 +77,7 @@ set(cvm_public_header_model
   include/tencentcloud/cvm/v20170312/model/DescribeZonesRequest.h
   include/tencentcloud/cvm/v20170312/model/StartInstancesRequest.h
   include/tencentcloud/cvm/v20170312/model/Tag.h
+  include/tencentcloud/cvm/v20170312/model/RunSecurityServiceEnabled.h
   include/tencentcloud/cvm/v20170312/model/Placement.h
   include/tencentcloud/cvm/v20170312/model/DescribeDisasterRecoverGroupsRequest.h
   include/tencentcloud/cvm/v20170312/model/ModifyKeyPairAttributeResponse.h
@@ -113,7 +114,7 @@ set(cvm_public_header_model
   include/tencentcloud/cvm/v20170312/model/DescribeReservedInstancesOfferingsRequest.h
   include/tencentcloud/cvm/v20170312/model/ReservedInstanceFamilyItem.h
   include/tencentcloud/cvm/v20170312/model/DescribeDisasterRecoverGroupsResponse.h
-  include/tencentcloud/cvm/v20170312/model/RunSecurityServiceEnabled.h
+  include/tencentcloud/cvm/v20170312/model/ExportImagesRequest.h
   include/tencentcloud/cvm/v20170312/model/ActionTimer.h
   include/tencentcloud/cvm/v20170312/model/DescribeReservedInstancesConfigInfosRequest.h
   include/tencentcloud/cvm/v20170312/model/TagSpecification.h
@@ -147,7 +148,7 @@ set(cvm_public_header_model
   include/tencentcloud/cvm/v20170312/model/InstanceTypeQuotaItem.h
   include/tencentcloud/cvm/v20170312/model/ImageOsList.h
   include/tencentcloud/cvm/v20170312/model/ReservedInstanceTypeItem.h
-  include/tencentcloud/cvm/v20170312/model/RunAutomationServiceEnabled.h
+  include/tencentcloud/cvm/v20170312/model/ExportImagesResponse.h
   include/tencentcloud/cvm/v20170312/model/ReservedInstancePrice.h
   include/tencentcloud/cvm/v20170312/model/DescribeHostsRequest.h
   include/tencentcloud/cvm/v20170312/model/DescribeInstancesStatusRequest.h
@@ -179,6 +180,7 @@ set(cvm_public_header_model
   include/tencentcloud/cvm/v20170312/model/KeyPair.h
   include/tencentcloud/cvm/v20170312/model/DescribeReservedInstancesOfferingsResponse.h
   include/tencentcloud/cvm/v20170312/model/DescribeLaunchTemplateVersionsResponse.h
+  include/tencentcloud/cvm/v20170312/model/RunAutomationServiceEnabled.h
   include/tencentcloud/cvm/v20170312/model/RunMonitorServiceEnabled.h
   include/tencentcloud/cvm/v20170312/model/ResetInstanceResponse.h
   include/tencentcloud/cvm/v20170312/model/VirtualPrivateCloud.h
@@ -256,6 +258,7 @@ set(cvm_src
   src/v20170312/model/DescribeZonesRequest.cpp
   src/v20170312/model/StartInstancesRequest.cpp
   src/v20170312/model/Tag.cpp
+  src/v20170312/model/RunSecurityServiceEnabled.cpp
   src/v20170312/model/Placement.cpp
   src/v20170312/model/DescribeDisasterRecoverGroupsRequest.cpp
   src/v20170312/model/ModifyKeyPairAttributeResponse.cpp
@@ -292,7 +295,7 @@ set(cvm_src
   src/v20170312/model/DescribeReservedInstancesOfferingsRequest.cpp
   src/v20170312/model/ReservedInstanceFamilyItem.cpp
   src/v20170312/model/DescribeDisasterRecoverGroupsResponse.cpp
-  src/v20170312/model/RunSecurityServiceEnabled.cpp
+  src/v20170312/model/ExportImagesRequest.cpp
   src/v20170312/model/ActionTimer.cpp
   src/v20170312/model/DescribeReservedInstancesConfigInfosRequest.cpp
   src/v20170312/model/TagSpecification.cpp
@@ -326,7 +329,7 @@ set(cvm_src
   src/v20170312/model/InstanceTypeQuotaItem.cpp
   src/v20170312/model/ImageOsList.cpp
   src/v20170312/model/ReservedInstanceTypeItem.cpp
-  src/v20170312/model/RunAutomationServiceEnabled.cpp
+  src/v20170312/model/ExportImagesResponse.cpp
   src/v20170312/model/ReservedInstancePrice.cpp
   src/v20170312/model/DescribeHostsRequest.cpp
   src/v20170312/model/DescribeInstancesStatusRequest.cpp
@@ -358,6 +361,7 @@ set(cvm_src
   src/v20170312/model/KeyPair.cpp
   src/v20170312/model/DescribeReservedInstancesOfferingsResponse.cpp
   src/v20170312/model/DescribeLaunchTemplateVersionsResponse.cpp
+  src/v20170312/model/RunAutomationServiceEnabled.cpp
   src/v20170312/model/RunMonitorServiceEnabled.cpp
   src/v20170312/model/ResetInstanceResponse.cpp
   src/v20170312/model/VirtualPrivateCloud.cpp

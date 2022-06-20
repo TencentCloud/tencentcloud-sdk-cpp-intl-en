@@ -86,14 +86,14 @@ namespace TencentCloud
                     bool TriggerHasBeenSet() const;
 
                     /**
-                     * 获取Storage location of a video processing output file. If this parameter is left empty, the storage location in `Trigger` will be inherited.
-                     * @return OutputStorage Storage location of a video processing output file. If this parameter is left empty, the storage location in `Trigger` will be inherited.
+                     * 获取The location to save the output file of media processing. If this parameter is left empty, the storage location in `Trigger` will be inherited.
+                     * @return OutputStorage The location to save the output file of media processing. If this parameter is left empty, the storage location in `Trigger` will be inherited.
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置Storage location of a video processing output file. If this parameter is left empty, the storage location in `Trigger` will be inherited.
-                     * @param OutputStorage Storage location of a video processing output file. If this parameter is left empty, the storage location in `Trigger` will be inherited.
+                     * 设置The location to save the output file of media processing. If this parameter is left empty, the storage location in `Trigger` will be inherited.
+                     * @param OutputStorage The location to save the output file of media processing. If this parameter is left empty, the storage location in `Trigger` will be inherited.
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
 
@@ -104,14 +104,14 @@ namespace TencentCloud
                     bool OutputStorageHasBeenSet() const;
 
                     /**
-                     * 获取Target directory of a video processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be outputted to the same directory where the source file is located.
-                     * @return OutputDir Target directory of a video processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be outputted to the same directory where the source file is located.
+                     * 获取The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the output file will be saved to the same directory where the source file is located.
+                     * @return OutputDir The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the output file will be saved to the same directory where the source file is located.
                      */
                     std::string GetOutputDir() const;
 
                     /**
-                     * 设置Target directory of a video processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be outputted to the same directory where the source file is located.
-                     * @param OutputDir Target directory of a video processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be outputted to the same directory where the source file is located.
+                     * 设置The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the output file will be saved to the same directory where the source file is located.
+                     * @param OutputDir The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the output file will be saved to the same directory where the source file is located.
                      */
                     void SetOutputDir(const std::string& _outputDir);
 
@@ -122,14 +122,14 @@ namespace TencentCloud
                     bool OutputDirHasBeenSet() const;
 
                     /**
-                     * 获取Parameter of a video processing task.
-                     * @return MediaProcessTask Parameter of a video processing task.
+                     * 获取The media processing parameters to use.
+                     * @return MediaProcessTask The media processing parameters to use.
                      */
                     MediaProcessTaskInput GetMediaProcessTask() const;
 
                     /**
-                     * 设置Parameter of a video processing task.
-                     * @param MediaProcessTask Parameter of a video processing task.
+                     * 设置The media processing parameters to use.
+                     * @param MediaProcessTask The media processing parameters to use.
                      */
                     void SetMediaProcessTask(const MediaProcessTaskInput& _mediaProcessTask);
 
@@ -244,19 +244,19 @@ namespace TencentCloud
                     bool m_triggerHasBeenSet;
 
                     /**
-                     * Storage location of a video processing output file. If this parameter is left empty, the storage location in `Trigger` will be inherited.
+                     * The location to save the output file of media processing. If this parameter is left empty, the storage location in `Trigger` will be inherited.
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;
 
                     /**
-                     * Target directory of a video processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be outputted to the same directory where the source file is located.
+                     * The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the output file will be saved to the same directory where the source file is located.
                      */
                     std::string m_outputDir;
                     bool m_outputDirHasBeenSet;
 
                     /**
-                     * Parameter of a video processing task.
+                     * The media processing parameters to use.
                      */
                     MediaProcessTaskInput m_mediaProcessTask;
                     bool m_mediaProcessTaskHasBeenSet;

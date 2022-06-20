@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information of the COS object for video processing.
+                * The information of the COS object to process.
                 */
                 class CosInputInfo : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Name of the COS bucket where a video processing object file is located, such as `TopRankVideo-125xxx88`.
-                     * @return Bucket Name of the COS bucket where a video processing object file is located, such as `TopRankVideo-125xxx88`.
+                     * 获取The COS bucket of the object to process, such as `TopRankVideo-125xxx88`.
+                     * @return Bucket The COS bucket of the object to process, such as `TopRankVideo-125xxx88`.
                      */
                     std::string GetBucket() const;
 
                     /**
-                     * 设置Name of the COS bucket where a video processing object file is located, such as `TopRankVideo-125xxx88`.
-                     * @param Bucket Name of the COS bucket where a video processing object file is located, such as `TopRankVideo-125xxx88`.
+                     * 设置The COS bucket of the object to process, such as `TopRankVideo-125xxx88`.
+                     * @param Bucket The COS bucket of the object to process, such as `TopRankVideo-125xxx88`.
                      */
                     void SetBucket(const std::string& _bucket);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool BucketHasBeenSet() const;
 
                     /**
-                     * 获取Region of the COS bucket where a video processing object file is located, such as `ap-chongqing`.
-                     * @return Region Region of the COS bucket where a video processing object file is located, such as `ap-chongqing`.
+                     * 获取The region of the COS bucket, such as `ap-chongqing`.
+                     * @return Region The region of the COS bucket, such as `ap-chongqing`.
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Region of the COS bucket where a video processing object file is located, such as `ap-chongqing`.
-                     * @param Region Region of the COS bucket where a video processing object file is located, such as `ap-chongqing`.
+                     * 设置The region of the COS bucket, such as `ap-chongqing`.
+                     * @param Region The region of the COS bucket, such as `ap-chongqing`.
                      */
                     void SetRegion(const std::string& _region);
 
@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Path to an input object file for video processing, such as `/movie/201907/WildAnimal.mov`.
-                     * @return Object Path to an input object file for video processing, such as `/movie/201907/WildAnimal.mov`.
+                     * 获取The path of the object to process, such as `/movie/201907/WildAnimal.mov`.
+                     * @return Object The path of the object to process, such as `/movie/201907/WildAnimal.mov`.
                      */
                     std::string GetObject() const;
 
                     /**
-                     * 设置Path to an input object file for video processing, such as `/movie/201907/WildAnimal.mov`.
-                     * @param Object Path to an input object file for video processing, such as `/movie/201907/WildAnimal.mov`.
+                     * 设置The path of the object to process, such as `/movie/201907/WildAnimal.mov`.
+                     * @param Object The path of the object to process, such as `/movie/201907/WildAnimal.mov`.
                      */
                     void SetObject(const std::string& _object);
 
@@ -103,19 +103,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Name of the COS bucket where a video processing object file is located, such as `TopRankVideo-125xxx88`.
+                     * The COS bucket of the object to process, such as `TopRankVideo-125xxx88`.
                      */
                     std::string m_bucket;
                     bool m_bucketHasBeenSet;
 
                     /**
-                     * Region of the COS bucket where a video processing object file is located, such as `ap-chongqing`.
+                     * The region of the COS bucket, such as `ap-chongqing`.
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Path to an input object file for video processing, such as `/movie/201907/WildAnimal.mov`.
+                     * The path of the object to process, such as `/movie/201907/WildAnimal.mov`.
                      */
                     std::string m_object;
                     bool m_objectHasBeenSet;

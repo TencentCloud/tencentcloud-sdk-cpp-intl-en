@@ -50,14 +50,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Input information of a file for video processing.
-                     * @return InputInfo Input information of a file for video processing.
+                     * 获取The information of the file to process.
+                     * @return InputInfo The information of the file to process.
                      */
                     MediaInputInfo GetInputInfo() const;
 
                     /**
-                     * 设置Input information of a file for video processing.
-                     * @param InputInfo Input information of a file for video processing.
+                     * 设置The information of the file to process.
+                     * @param InputInfo The information of the file to process.
                      */
                     void SetInputInfo(const MediaInputInfo& _inputInfo);
 
@@ -68,14 +68,14 @@ namespace TencentCloud
                     bool InputInfoHasBeenSet() const;
 
                     /**
-                     * 获取Target bucket of a video processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
-                     * @return OutputStorage Target bucket of a video processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
+                     * 获取The storage location of the media processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
+                     * @return OutputStorage The storage location of the media processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置Target bucket of a video processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
-                     * @param OutputStorage Target bucket of a video processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
+                     * 设置The storage location of the media processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
+                     * @param OutputStorage The storage location of the media processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
 
@@ -86,14 +86,14 @@ namespace TencentCloud
                     bool OutputStorageHasBeenSet() const;
 
                     /**
-                     * 获取Target directory of a video processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be outputted to the same directory as that in `InputInfo`.
-                     * @return OutputDir Target directory of a video processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be outputted to the same directory as that in `InputInfo`.
+                     * 获取The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be saved to the directory in `InputInfo`.
+                     * @return OutputDir The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be saved to the directory in `InputInfo`.
                      */
                     std::string GetOutputDir() const;
 
                     /**
-                     * 设置Target directory of a video processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be outputted to the same directory as that in `InputInfo`.
-                     * @param OutputDir Target directory of a video processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be outputted to the same directory as that in `InputInfo`.
+                     * 设置The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be saved to the directory in `InputInfo`.
+                     * @param OutputDir The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be saved to the directory in `InputInfo`.
                      */
                     void SetOutputDir(const std::string& _outputDir);
 
@@ -104,14 +104,14 @@ namespace TencentCloud
                     bool OutputDirHasBeenSet() const;
 
                     /**
-                     * 获取Parameter of a video processing task.
-                     * @return MediaProcessTask Parameter of a video processing task.
+                     * 获取The media processing parameters to use.
+                     * @return MediaProcessTask The media processing parameters to use.
                      */
                     MediaProcessTaskInput GetMediaProcessTask() const;
 
                     /**
-                     * 设置Parameter of a video processing task.
-                     * @param MediaProcessTask Parameter of a video processing task.
+                     * 设置The media processing parameters to use.
+                     * @param MediaProcessTask The media processing parameters to use.
                      */
                     void SetMediaProcessTask(const MediaProcessTaskInput& _mediaProcessTask);
 
@@ -250,25 +250,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Input information of a file for video processing.
+                     * The information of the file to process.
                      */
                     MediaInputInfo m_inputInfo;
                     bool m_inputInfoHasBeenSet;
 
                     /**
-                     * Target bucket of a video processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
+                     * The storage location of the media processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;
 
                     /**
-                     * Target directory of a video processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be outputted to the same directory as that in `InputInfo`.
+                     * The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be saved to the directory in `InputInfo`.
                      */
                     std::string m_outputDir;
                     bool m_outputDirHasBeenSet;
 
                     /**
-                     * Parameter of a video processing task.
+                     * The media processing parameters to use.
                      */
                     MediaProcessTaskInput m_mediaProcessTask;
                     bool m_mediaProcessTaskHasBeenSet;

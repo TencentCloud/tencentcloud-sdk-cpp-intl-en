@@ -41,7 +41,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Type of a video processing task
+                * The type of media processing task.
                 */
                 class MediaProcessTaskInput : public AbstractModel
                 {

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information of a video processing URL object.
+                * The URL of the object to process.
                 */
                 class UrlInputInfo : public AbstractModel
                 {

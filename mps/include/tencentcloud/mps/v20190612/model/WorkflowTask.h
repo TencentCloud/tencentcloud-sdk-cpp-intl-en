@@ -41,7 +41,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information of a video processing task
+                * The information of the media processing task.
                 */
                 class WorkflowTask : public AbstractModel
                 {
@@ -53,14 +53,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Video processing task ID.
-                     * @return TaskId Video processing task ID.
+                     * 获取The media processing task ID.
+                     * @return TaskId The media processing task ID.
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置Video processing task ID.
-                     * @param TaskId Video processing task ID.
+                     * 设置The media processing task ID.
+                     * @param TaskId The media processing task ID.
                      */
                     void SetTaskId(const std::string& _taskId);
 
@@ -133,18 +133,18 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Information of a target file of video processing.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InputInfo Information of a target file of video processing.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The information of the file processed.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return InputInfo The information of the file processed.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     MediaInputInfo GetInputInfo() const;
 
                     /**
-                     * 设置Information of a target file of video processing.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param InputInfo Information of a target file of video processing.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The information of the file processed.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param InputInfo The information of the file processed.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     void SetInputInfo(const MediaInputInfo& _inputInfo);
 
@@ -177,14 +177,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MetaDataHasBeenSet() const;
 
                     /**
-                     * 获取Execution status and result of a video processing task.
-                     * @return MediaProcessResultSet Execution status and result of a video processing task.
+                     * 获取The execution status and result of the media processing task.
+                     * @return MediaProcessResultSet The execution status and result of the media processing task.
                      */
                     std::vector<MediaProcessTaskResult> GetMediaProcessResultSet() const;
 
                     /**
-                     * 设置Execution status and result of a video processing task.
-                     * @param MediaProcessResultSet Execution status and result of a video processing task.
+                     * 设置The execution status and result of the media processing task.
+                     * @param MediaProcessResultSet The execution status and result of the media processing task.
                      */
                     void SetMediaProcessResultSet(const std::vector<MediaProcessTaskResult>& _mediaProcessResultSet);
 
@@ -251,7 +251,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Video processing task ID.
+                     * The media processing task ID.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
@@ -277,8 +277,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Information of a target file of video processing.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The information of the file processed.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     MediaInputInfo m_inputInfo;
                     bool m_inputInfoHasBeenSet;
@@ -291,7 +291,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_metaDataHasBeenSet;
 
                     /**
-                     * Execution status and result of a video processing task.
+                     * The execution status and result of the media processing task.
                      */
                     std::vector<MediaProcessTaskResult> m_mediaProcessResultSet;
                     bool m_mediaProcessResultSetHasBeenSet;
