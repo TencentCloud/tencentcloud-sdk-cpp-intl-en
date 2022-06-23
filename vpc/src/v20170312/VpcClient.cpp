@@ -427,6 +427,92 @@ VpcClient::AssociateDirectConnectGatewayNatGatewayOutcomeCallable VpcClient::Ass
     return task->get_future();
 }
 
+VpcClient::AssociateNatGatewayAddressOutcome VpcClient::AssociateNatGatewayAddress(const AssociateNatGatewayAddressRequest &request)
+{
+    auto outcome = MakeRequest(request, "AssociateNatGatewayAddress");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AssociateNatGatewayAddressResponse rsp = AssociateNatGatewayAddressResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AssociateNatGatewayAddressOutcome(rsp);
+        else
+            return AssociateNatGatewayAddressOutcome(o.GetError());
+    }
+    else
+    {
+        return AssociateNatGatewayAddressOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::AssociateNatGatewayAddressAsync(const AssociateNatGatewayAddressRequest& request, const AssociateNatGatewayAddressAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->AssociateNatGatewayAddress(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::AssociateNatGatewayAddressOutcomeCallable VpcClient::AssociateNatGatewayAddressCallable(const AssociateNatGatewayAddressRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<AssociateNatGatewayAddressOutcome()>>(
+        [this, request]()
+        {
+            return this->AssociateNatGatewayAddress(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VpcClient::AssociateNetworkAclSubnetsOutcome VpcClient::AssociateNetworkAclSubnets(const AssociateNetworkAclSubnetsRequest &request)
+{
+    auto outcome = MakeRequest(request, "AssociateNetworkAclSubnets");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AssociateNetworkAclSubnetsResponse rsp = AssociateNetworkAclSubnetsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AssociateNetworkAclSubnetsOutcome(rsp);
+        else
+            return AssociateNetworkAclSubnetsOutcome(o.GetError());
+    }
+    else
+    {
+        return AssociateNetworkAclSubnetsOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::AssociateNetworkAclSubnetsAsync(const AssociateNetworkAclSubnetsRequest& request, const AssociateNetworkAclSubnetsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->AssociateNetworkAclSubnets(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::AssociateNetworkAclSubnetsOutcomeCallable VpcClient::AssociateNetworkAclSubnetsCallable(const AssociateNetworkAclSubnetsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<AssociateNetworkAclSubnetsOutcome()>>(
+        [this, request]()
+        {
+            return this->AssociateNetworkAclSubnets(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VpcClient::AssociateNetworkInterfaceSecurityGroupsOutcome VpcClient::AssociateNetworkInterfaceSecurityGroups(const AssociateNetworkInterfaceSecurityGroupsRequest &request)
 {
     auto outcome = MakeRequest(request, "AssociateNetworkInterfaceSecurityGroups");
@@ -900,6 +986,49 @@ VpcClient::CreateAndAttachNetworkInterfaceOutcomeCallable VpcClient::CreateAndAt
     return task->get_future();
 }
 
+VpcClient::CreateAssistantCidrOutcome VpcClient::CreateAssistantCidr(const CreateAssistantCidrRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateAssistantCidr");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateAssistantCidrResponse rsp = CreateAssistantCidrResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateAssistantCidrOutcome(rsp);
+        else
+            return CreateAssistantCidrOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateAssistantCidrOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::CreateAssistantCidrAsync(const CreateAssistantCidrRequest& request, const CreateAssistantCidrAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateAssistantCidr(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::CreateAssistantCidrOutcomeCallable VpcClient::CreateAssistantCidrCallable(const CreateAssistantCidrRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateAssistantCidrOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateAssistantCidr(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VpcClient::CreateBandwidthPackageOutcome VpcClient::CreateBandwidthPackage(const CreateBandwidthPackageRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateBandwidthPackage");
@@ -1287,6 +1416,135 @@ VpcClient::CreateLocalGatewayOutcomeCallable VpcClient::CreateLocalGatewayCallab
     return task->get_future();
 }
 
+VpcClient::CreateNatGatewayOutcome VpcClient::CreateNatGateway(const CreateNatGatewayRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateNatGateway");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateNatGatewayResponse rsp = CreateNatGatewayResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateNatGatewayOutcome(rsp);
+        else
+            return CreateNatGatewayOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateNatGatewayOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::CreateNatGatewayAsync(const CreateNatGatewayRequest& request, const CreateNatGatewayAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateNatGateway(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::CreateNatGatewayOutcomeCallable VpcClient::CreateNatGatewayCallable(const CreateNatGatewayRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateNatGatewayOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateNatGateway(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VpcClient::CreateNatGatewayDestinationIpPortTranslationNatRuleOutcome VpcClient::CreateNatGatewayDestinationIpPortTranslationNatRule(const CreateNatGatewayDestinationIpPortTranslationNatRuleRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateNatGatewayDestinationIpPortTranslationNatRule");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateNatGatewayDestinationIpPortTranslationNatRuleResponse rsp = CreateNatGatewayDestinationIpPortTranslationNatRuleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateNatGatewayDestinationIpPortTranslationNatRuleOutcome(rsp);
+        else
+            return CreateNatGatewayDestinationIpPortTranslationNatRuleOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateNatGatewayDestinationIpPortTranslationNatRuleOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::CreateNatGatewayDestinationIpPortTranslationNatRuleAsync(const CreateNatGatewayDestinationIpPortTranslationNatRuleRequest& request, const CreateNatGatewayDestinationIpPortTranslationNatRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateNatGatewayDestinationIpPortTranslationNatRule(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::CreateNatGatewayDestinationIpPortTranslationNatRuleOutcomeCallable VpcClient::CreateNatGatewayDestinationIpPortTranslationNatRuleCallable(const CreateNatGatewayDestinationIpPortTranslationNatRuleRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateNatGatewayDestinationIpPortTranslationNatRuleOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateNatGatewayDestinationIpPortTranslationNatRule(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VpcClient::CreateNatGatewaySourceIpTranslationNatRuleOutcome VpcClient::CreateNatGatewaySourceIpTranslationNatRule(const CreateNatGatewaySourceIpTranslationNatRuleRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateNatGatewaySourceIpTranslationNatRule");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateNatGatewaySourceIpTranslationNatRuleResponse rsp = CreateNatGatewaySourceIpTranslationNatRuleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateNatGatewaySourceIpTranslationNatRuleOutcome(rsp);
+        else
+            return CreateNatGatewaySourceIpTranslationNatRuleOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateNatGatewaySourceIpTranslationNatRuleOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::CreateNatGatewaySourceIpTranslationNatRuleAsync(const CreateNatGatewaySourceIpTranslationNatRuleRequest& request, const CreateNatGatewaySourceIpTranslationNatRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateNatGatewaySourceIpTranslationNatRule(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::CreateNatGatewaySourceIpTranslationNatRuleOutcomeCallable VpcClient::CreateNatGatewaySourceIpTranslationNatRuleCallable(const CreateNatGatewaySourceIpTranslationNatRuleRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateNatGatewaySourceIpTranslationNatRuleOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateNatGatewaySourceIpTranslationNatRule(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VpcClient::CreateNetDetectOutcome VpcClient::CreateNetDetect(const CreateNetDetectRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateNetDetect");
@@ -1323,6 +1581,49 @@ VpcClient::CreateNetDetectOutcomeCallable VpcClient::CreateNetDetectCallable(con
         [this, request]()
         {
             return this->CreateNetDetect(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VpcClient::CreateNetworkAclOutcome VpcClient::CreateNetworkAcl(const CreateNetworkAclRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateNetworkAcl");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateNetworkAclResponse rsp = CreateNetworkAclResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateNetworkAclOutcome(rsp);
+        else
+            return CreateNetworkAclOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateNetworkAclOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::CreateNetworkAclAsync(const CreateNetworkAclRequest& request, const CreateNetworkAclAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateNetworkAcl(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::CreateNetworkAclOutcomeCallable VpcClient::CreateNetworkAclCallable(const CreateNetworkAclRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateNetworkAclOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateNetworkAcl(request);
         }
     );
 
@@ -2147,6 +2448,49 @@ VpcClient::DeleteAddressTemplateGroupOutcomeCallable VpcClient::DeleteAddressTem
     return task->get_future();
 }
 
+VpcClient::DeleteAssistantCidrOutcome VpcClient::DeleteAssistantCidr(const DeleteAssistantCidrRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteAssistantCidr");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteAssistantCidrResponse rsp = DeleteAssistantCidrResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteAssistantCidrOutcome(rsp);
+        else
+            return DeleteAssistantCidrOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteAssistantCidrOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::DeleteAssistantCidrAsync(const DeleteAssistantCidrRequest& request, const DeleteAssistantCidrAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteAssistantCidr(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::DeleteAssistantCidrOutcomeCallable VpcClient::DeleteAssistantCidrCallable(const DeleteAssistantCidrRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteAssistantCidrOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteAssistantCidr(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VpcClient::DeleteBandwidthPackageOutcome VpcClient::DeleteBandwidthPackage(const DeleteBandwidthPackageRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteBandwidthPackage");
@@ -2491,6 +2835,135 @@ VpcClient::DeleteLocalGatewayOutcomeCallable VpcClient::DeleteLocalGatewayCallab
     return task->get_future();
 }
 
+VpcClient::DeleteNatGatewayOutcome VpcClient::DeleteNatGateway(const DeleteNatGatewayRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteNatGateway");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteNatGatewayResponse rsp = DeleteNatGatewayResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteNatGatewayOutcome(rsp);
+        else
+            return DeleteNatGatewayOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteNatGatewayOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::DeleteNatGatewayAsync(const DeleteNatGatewayRequest& request, const DeleteNatGatewayAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteNatGateway(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::DeleteNatGatewayOutcomeCallable VpcClient::DeleteNatGatewayCallable(const DeleteNatGatewayRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteNatGatewayOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteNatGateway(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VpcClient::DeleteNatGatewayDestinationIpPortTranslationNatRuleOutcome VpcClient::DeleteNatGatewayDestinationIpPortTranslationNatRule(const DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteNatGatewayDestinationIpPortTranslationNatRule");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteNatGatewayDestinationIpPortTranslationNatRuleResponse rsp = DeleteNatGatewayDestinationIpPortTranslationNatRuleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteNatGatewayDestinationIpPortTranslationNatRuleOutcome(rsp);
+        else
+            return DeleteNatGatewayDestinationIpPortTranslationNatRuleOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteNatGatewayDestinationIpPortTranslationNatRuleOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::DeleteNatGatewayDestinationIpPortTranslationNatRuleAsync(const DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest& request, const DeleteNatGatewayDestinationIpPortTranslationNatRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteNatGatewayDestinationIpPortTranslationNatRule(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::DeleteNatGatewayDestinationIpPortTranslationNatRuleOutcomeCallable VpcClient::DeleteNatGatewayDestinationIpPortTranslationNatRuleCallable(const DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteNatGatewayDestinationIpPortTranslationNatRuleOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteNatGatewayDestinationIpPortTranslationNatRule(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VpcClient::DeleteNatGatewaySourceIpTranslationNatRuleOutcome VpcClient::DeleteNatGatewaySourceIpTranslationNatRule(const DeleteNatGatewaySourceIpTranslationNatRuleRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteNatGatewaySourceIpTranslationNatRule");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteNatGatewaySourceIpTranslationNatRuleResponse rsp = DeleteNatGatewaySourceIpTranslationNatRuleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteNatGatewaySourceIpTranslationNatRuleOutcome(rsp);
+        else
+            return DeleteNatGatewaySourceIpTranslationNatRuleOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteNatGatewaySourceIpTranslationNatRuleOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::DeleteNatGatewaySourceIpTranslationNatRuleAsync(const DeleteNatGatewaySourceIpTranslationNatRuleRequest& request, const DeleteNatGatewaySourceIpTranslationNatRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteNatGatewaySourceIpTranslationNatRule(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::DeleteNatGatewaySourceIpTranslationNatRuleOutcomeCallable VpcClient::DeleteNatGatewaySourceIpTranslationNatRuleCallable(const DeleteNatGatewaySourceIpTranslationNatRuleRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteNatGatewaySourceIpTranslationNatRuleOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteNatGatewaySourceIpTranslationNatRule(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VpcClient::DeleteNetDetectOutcome VpcClient::DeleteNetDetect(const DeleteNetDetectRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteNetDetect");
@@ -2527,6 +3000,49 @@ VpcClient::DeleteNetDetectOutcomeCallable VpcClient::DeleteNetDetectCallable(con
         [this, request]()
         {
             return this->DeleteNetDetect(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VpcClient::DeleteNetworkAclOutcome VpcClient::DeleteNetworkAcl(const DeleteNetworkAclRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteNetworkAcl");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteNetworkAclResponse rsp = DeleteNetworkAclResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteNetworkAclOutcome(rsp);
+        else
+            return DeleteNetworkAclOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteNetworkAclOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::DeleteNetworkAclAsync(const DeleteNetworkAclRequest& request, const DeleteNetworkAclAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteNetworkAcl(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::DeleteNetworkAclOutcomeCallable VpcClient::DeleteNetworkAclCallable(const DeleteNetworkAclRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteNetworkAclOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteNetworkAcl(request);
         }
     );
 
@@ -4168,6 +4684,49 @@ VpcClient::DescribeGatewayFlowMonitorDetailOutcomeCallable VpcClient::DescribeGa
     return task->get_future();
 }
 
+VpcClient::DescribeGatewayFlowQosOutcome VpcClient::DescribeGatewayFlowQos(const DescribeGatewayFlowQosRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeGatewayFlowQos");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeGatewayFlowQosResponse rsp = DescribeGatewayFlowQosResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeGatewayFlowQosOutcome(rsp);
+        else
+            return DescribeGatewayFlowQosOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeGatewayFlowQosOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::DescribeGatewayFlowQosAsync(const DescribeGatewayFlowQosRequest& request, const DescribeGatewayFlowQosAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeGatewayFlowQos(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::DescribeGatewayFlowQosOutcomeCallable VpcClient::DescribeGatewayFlowQosCallable(const DescribeGatewayFlowQosRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeGatewayFlowQosOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeGatewayFlowQos(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VpcClient::DescribeHaVipsOutcome VpcClient::DescribeHaVips(const DescribeHaVipsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeHaVips");
@@ -4333,6 +4892,135 @@ VpcClient::DescribeLocalGatewayOutcomeCallable VpcClient::DescribeLocalGatewayCa
         [this, request]()
         {
             return this->DescribeLocalGateway(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VpcClient::DescribeNatGatewayDestinationIpPortTranslationNatRulesOutcome VpcClient::DescribeNatGatewayDestinationIpPortTranslationNatRules(const DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeNatGatewayDestinationIpPortTranslationNatRules");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse rsp = DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeNatGatewayDestinationIpPortTranslationNatRulesOutcome(rsp);
+        else
+            return DescribeNatGatewayDestinationIpPortTranslationNatRulesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeNatGatewayDestinationIpPortTranslationNatRulesOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::DescribeNatGatewayDestinationIpPortTranslationNatRulesAsync(const DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest& request, const DescribeNatGatewayDestinationIpPortTranslationNatRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeNatGatewayDestinationIpPortTranslationNatRules(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::DescribeNatGatewayDestinationIpPortTranslationNatRulesOutcomeCallable VpcClient::DescribeNatGatewayDestinationIpPortTranslationNatRulesCallable(const DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeNatGatewayDestinationIpPortTranslationNatRulesOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeNatGatewayDestinationIpPortTranslationNatRules(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VpcClient::DescribeNatGatewaySourceIpTranslationNatRulesOutcome VpcClient::DescribeNatGatewaySourceIpTranslationNatRules(const DescribeNatGatewaySourceIpTranslationNatRulesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeNatGatewaySourceIpTranslationNatRules");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeNatGatewaySourceIpTranslationNatRulesResponse rsp = DescribeNatGatewaySourceIpTranslationNatRulesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeNatGatewaySourceIpTranslationNatRulesOutcome(rsp);
+        else
+            return DescribeNatGatewaySourceIpTranslationNatRulesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeNatGatewaySourceIpTranslationNatRulesOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::DescribeNatGatewaySourceIpTranslationNatRulesAsync(const DescribeNatGatewaySourceIpTranslationNatRulesRequest& request, const DescribeNatGatewaySourceIpTranslationNatRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeNatGatewaySourceIpTranslationNatRules(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::DescribeNatGatewaySourceIpTranslationNatRulesOutcomeCallable VpcClient::DescribeNatGatewaySourceIpTranslationNatRulesCallable(const DescribeNatGatewaySourceIpTranslationNatRulesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeNatGatewaySourceIpTranslationNatRulesOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeNatGatewaySourceIpTranslationNatRules(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VpcClient::DescribeNatGatewaysOutcome VpcClient::DescribeNatGateways(const DescribeNatGatewaysRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeNatGateways");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeNatGatewaysResponse rsp = DescribeNatGatewaysResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeNatGatewaysOutcome(rsp);
+        else
+            return DescribeNatGatewaysOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeNatGatewaysOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::DescribeNatGatewaysAsync(const DescribeNatGatewaysRequest& request, const DescribeNatGatewaysAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeNatGateways(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::DescribeNatGatewaysOutcomeCallable VpcClient::DescribeNatGatewaysCallable(const DescribeNatGatewaysRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeNatGatewaysOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeNatGateways(request);
         }
     );
 
@@ -5243,6 +5931,49 @@ VpcClient::DescribeVpcResourceDashboardOutcomeCallable VpcClient::DescribeVpcRes
     return task->get_future();
 }
 
+VpcClient::DescribeVpcTaskResultOutcome VpcClient::DescribeVpcTaskResult(const DescribeVpcTaskResultRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeVpcTaskResult");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeVpcTaskResultResponse rsp = DescribeVpcTaskResultResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeVpcTaskResultOutcome(rsp);
+        else
+            return DescribeVpcTaskResultOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeVpcTaskResultOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::DescribeVpcTaskResultAsync(const DescribeVpcTaskResultRequest& request, const DescribeVpcTaskResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeVpcTaskResult(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::DescribeVpcTaskResultOutcomeCallable VpcClient::DescribeVpcTaskResultCallable(const DescribeVpcTaskResultRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeVpcTaskResultOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeVpcTaskResult(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VpcClient::DescribeVpcsOutcome VpcClient::DescribeVpcs(const DescribeVpcsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeVpcs");
@@ -5673,6 +6404,49 @@ VpcClient::DisableFlowLogsOutcomeCallable VpcClient::DisableFlowLogsCallable(con
     return task->get_future();
 }
 
+VpcClient::DisableGatewayFlowMonitorOutcome VpcClient::DisableGatewayFlowMonitor(const DisableGatewayFlowMonitorRequest &request)
+{
+    auto outcome = MakeRequest(request, "DisableGatewayFlowMonitor");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DisableGatewayFlowMonitorResponse rsp = DisableGatewayFlowMonitorResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DisableGatewayFlowMonitorOutcome(rsp);
+        else
+            return DisableGatewayFlowMonitorOutcome(o.GetError());
+    }
+    else
+    {
+        return DisableGatewayFlowMonitorOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::DisableGatewayFlowMonitorAsync(const DisableGatewayFlowMonitorRequest& request, const DisableGatewayFlowMonitorAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DisableGatewayFlowMonitor(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::DisableGatewayFlowMonitorOutcomeCallable VpcClient::DisableGatewayFlowMonitorCallable(const DisableGatewayFlowMonitorRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DisableGatewayFlowMonitorOutcome()>>(
+        [this, request]()
+        {
+            return this->DisableGatewayFlowMonitor(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VpcClient::DisassociateAddressOutcome VpcClient::DisassociateAddress(const DisassociateAddressRequest &request)
 {
     auto outcome = MakeRequest(request, "DisassociateAddress");
@@ -5752,6 +6526,92 @@ VpcClient::DisassociateDirectConnectGatewayNatGatewayOutcomeCallable VpcClient::
         [this, request]()
         {
             return this->DisassociateDirectConnectGatewayNatGateway(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VpcClient::DisassociateNatGatewayAddressOutcome VpcClient::DisassociateNatGatewayAddress(const DisassociateNatGatewayAddressRequest &request)
+{
+    auto outcome = MakeRequest(request, "DisassociateNatGatewayAddress");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DisassociateNatGatewayAddressResponse rsp = DisassociateNatGatewayAddressResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DisassociateNatGatewayAddressOutcome(rsp);
+        else
+            return DisassociateNatGatewayAddressOutcome(o.GetError());
+    }
+    else
+    {
+        return DisassociateNatGatewayAddressOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::DisassociateNatGatewayAddressAsync(const DisassociateNatGatewayAddressRequest& request, const DisassociateNatGatewayAddressAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DisassociateNatGatewayAddress(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::DisassociateNatGatewayAddressOutcomeCallable VpcClient::DisassociateNatGatewayAddressCallable(const DisassociateNatGatewayAddressRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DisassociateNatGatewayAddressOutcome()>>(
+        [this, request]()
+        {
+            return this->DisassociateNatGatewayAddress(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VpcClient::DisassociateNetworkAclSubnetsOutcome VpcClient::DisassociateNetworkAclSubnets(const DisassociateNetworkAclSubnetsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DisassociateNetworkAclSubnets");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DisassociateNetworkAclSubnetsResponse rsp = DisassociateNetworkAclSubnetsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DisassociateNetworkAclSubnetsOutcome(rsp);
+        else
+            return DisassociateNetworkAclSubnetsOutcome(o.GetError());
+    }
+    else
+    {
+        return DisassociateNetworkAclSubnetsOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::DisassociateNetworkAclSubnetsAsync(const DisassociateNetworkAclSubnetsRequest& request, const DisassociateNetworkAclSubnetsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DisassociateNetworkAclSubnets(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::DisassociateNetworkAclSubnetsOutcomeCallable VpcClient::DisassociateNetworkAclSubnetsCallable(const DisassociateNetworkAclSubnetsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DisassociateNetworkAclSubnetsOutcome()>>(
+        [this, request]()
+        {
+            return this->DisassociateNetworkAclSubnets(request);
         }
     );
 
@@ -5967,6 +6827,49 @@ VpcClient::EnableFlowLogsOutcomeCallable VpcClient::EnableFlowLogsCallable(const
         [this, request]()
         {
             return this->EnableFlowLogs(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VpcClient::EnableGatewayFlowMonitorOutcome VpcClient::EnableGatewayFlowMonitor(const EnableGatewayFlowMonitorRequest &request)
+{
+    auto outcome = MakeRequest(request, "EnableGatewayFlowMonitor");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        EnableGatewayFlowMonitorResponse rsp = EnableGatewayFlowMonitorResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return EnableGatewayFlowMonitorOutcome(rsp);
+        else
+            return EnableGatewayFlowMonitorOutcome(o.GetError());
+    }
+    else
+    {
+        return EnableGatewayFlowMonitorOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::EnableGatewayFlowMonitorAsync(const EnableGatewayFlowMonitorRequest& request, const EnableGatewayFlowMonitorAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->EnableGatewayFlowMonitor(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::EnableGatewayFlowMonitorOutcomeCallable VpcClient::EnableGatewayFlowMonitorCallable(const EnableGatewayFlowMonitorRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<EnableGatewayFlowMonitorOutcome()>>(
+        [this, request]()
+        {
+            return this->EnableGatewayFlowMonitor(request);
         }
     );
 
@@ -6576,6 +7479,49 @@ VpcClient::ModifyAddressesBandwidthOutcomeCallable VpcClient::ModifyAddressesBan
     return task->get_future();
 }
 
+VpcClient::ModifyAssistantCidrOutcome VpcClient::ModifyAssistantCidr(const ModifyAssistantCidrRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyAssistantCidr");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyAssistantCidrResponse rsp = ModifyAssistantCidrResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyAssistantCidrOutcome(rsp);
+        else
+            return ModifyAssistantCidrOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyAssistantCidrOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::ModifyAssistantCidrAsync(const ModifyAssistantCidrRequest& request, const ModifyAssistantCidrAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyAssistantCidr(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::ModifyAssistantCidrOutcomeCallable VpcClient::ModifyAssistantCidrCallable(const ModifyAssistantCidrRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyAssistantCidrOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyAssistantCidr(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VpcClient::ModifyBandwidthPackageAttributeOutcome VpcClient::ModifyBandwidthPackageAttribute(const ModifyBandwidthPackageAttributeRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyBandwidthPackageAttribute");
@@ -6877,6 +7823,49 @@ VpcClient::ModifyFlowLogAttributeOutcomeCallable VpcClient::ModifyFlowLogAttribu
     return task->get_future();
 }
 
+VpcClient::ModifyGatewayFlowQosOutcome VpcClient::ModifyGatewayFlowQos(const ModifyGatewayFlowQosRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyGatewayFlowQos");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyGatewayFlowQosResponse rsp = ModifyGatewayFlowQosResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyGatewayFlowQosOutcome(rsp);
+        else
+            return ModifyGatewayFlowQosOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyGatewayFlowQosOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::ModifyGatewayFlowQosAsync(const ModifyGatewayFlowQosRequest& request, const ModifyGatewayFlowQosAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyGatewayFlowQos(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::ModifyGatewayFlowQosOutcomeCallable VpcClient::ModifyGatewayFlowQosCallable(const ModifyGatewayFlowQosRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyGatewayFlowQosOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyGatewayFlowQos(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VpcClient::ModifyHaVipAttributeOutcome VpcClient::ModifyHaVipAttribute(const ModifyHaVipAttributeRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyHaVipAttribute");
@@ -7006,6 +7995,135 @@ VpcClient::ModifyLocalGatewayOutcomeCallable VpcClient::ModifyLocalGatewayCallab
     return task->get_future();
 }
 
+VpcClient::ModifyNatGatewayAttributeOutcome VpcClient::ModifyNatGatewayAttribute(const ModifyNatGatewayAttributeRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyNatGatewayAttribute");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyNatGatewayAttributeResponse rsp = ModifyNatGatewayAttributeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyNatGatewayAttributeOutcome(rsp);
+        else
+            return ModifyNatGatewayAttributeOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyNatGatewayAttributeOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::ModifyNatGatewayAttributeAsync(const ModifyNatGatewayAttributeRequest& request, const ModifyNatGatewayAttributeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyNatGatewayAttribute(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::ModifyNatGatewayAttributeOutcomeCallable VpcClient::ModifyNatGatewayAttributeCallable(const ModifyNatGatewayAttributeRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyNatGatewayAttributeOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyNatGatewayAttribute(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VpcClient::ModifyNatGatewayDestinationIpPortTranslationNatRuleOutcome VpcClient::ModifyNatGatewayDestinationIpPortTranslationNatRule(const ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyNatGatewayDestinationIpPortTranslationNatRule");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyNatGatewayDestinationIpPortTranslationNatRuleResponse rsp = ModifyNatGatewayDestinationIpPortTranslationNatRuleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyNatGatewayDestinationIpPortTranslationNatRuleOutcome(rsp);
+        else
+            return ModifyNatGatewayDestinationIpPortTranslationNatRuleOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyNatGatewayDestinationIpPortTranslationNatRuleOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::ModifyNatGatewayDestinationIpPortTranslationNatRuleAsync(const ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest& request, const ModifyNatGatewayDestinationIpPortTranslationNatRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyNatGatewayDestinationIpPortTranslationNatRule(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::ModifyNatGatewayDestinationIpPortTranslationNatRuleOutcomeCallable VpcClient::ModifyNatGatewayDestinationIpPortTranslationNatRuleCallable(const ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyNatGatewayDestinationIpPortTranslationNatRuleOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyNatGatewayDestinationIpPortTranslationNatRule(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VpcClient::ModifyNatGatewaySourceIpTranslationNatRuleOutcome VpcClient::ModifyNatGatewaySourceIpTranslationNatRule(const ModifyNatGatewaySourceIpTranslationNatRuleRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyNatGatewaySourceIpTranslationNatRule");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyNatGatewaySourceIpTranslationNatRuleResponse rsp = ModifyNatGatewaySourceIpTranslationNatRuleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyNatGatewaySourceIpTranslationNatRuleOutcome(rsp);
+        else
+            return ModifyNatGatewaySourceIpTranslationNatRuleOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyNatGatewaySourceIpTranslationNatRuleOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::ModifyNatGatewaySourceIpTranslationNatRuleAsync(const ModifyNatGatewaySourceIpTranslationNatRuleRequest& request, const ModifyNatGatewaySourceIpTranslationNatRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyNatGatewaySourceIpTranslationNatRule(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::ModifyNatGatewaySourceIpTranslationNatRuleOutcomeCallable VpcClient::ModifyNatGatewaySourceIpTranslationNatRuleCallable(const ModifyNatGatewaySourceIpTranslationNatRuleRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyNatGatewaySourceIpTranslationNatRuleOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyNatGatewaySourceIpTranslationNatRule(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VpcClient::ModifyNetDetectOutcome VpcClient::ModifyNetDetect(const ModifyNetDetectRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyNetDetect");
@@ -7042,6 +8160,92 @@ VpcClient::ModifyNetDetectOutcomeCallable VpcClient::ModifyNetDetectCallable(con
         [this, request]()
         {
             return this->ModifyNetDetect(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VpcClient::ModifyNetworkAclAttributeOutcome VpcClient::ModifyNetworkAclAttribute(const ModifyNetworkAclAttributeRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyNetworkAclAttribute");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyNetworkAclAttributeResponse rsp = ModifyNetworkAclAttributeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyNetworkAclAttributeOutcome(rsp);
+        else
+            return ModifyNetworkAclAttributeOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyNetworkAclAttributeOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::ModifyNetworkAclAttributeAsync(const ModifyNetworkAclAttributeRequest& request, const ModifyNetworkAclAttributeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyNetworkAclAttribute(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::ModifyNetworkAclAttributeOutcomeCallable VpcClient::ModifyNetworkAclAttributeCallable(const ModifyNetworkAclAttributeRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyNetworkAclAttributeOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyNetworkAclAttribute(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VpcClient::ModifyNetworkAclEntriesOutcome VpcClient::ModifyNetworkAclEntries(const ModifyNetworkAclEntriesRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyNetworkAclEntries");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyNetworkAclEntriesResponse rsp = ModifyNetworkAclEntriesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyNetworkAclEntriesOutcome(rsp);
+        else
+            return ModifyNetworkAclEntriesOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyNetworkAclEntriesOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::ModifyNetworkAclEntriesAsync(const ModifyNetworkAclEntriesRequest& request, const ModifyNetworkAclEntriesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyNetworkAclEntries(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::ModifyNetworkAclEntriesOutcomeCallable VpcClient::ModifyNetworkAclEntriesCallable(const ModifyNetworkAclEntriesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyNetworkAclEntriesOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyNetworkAclEntries(request);
         }
     );
 
@@ -7737,6 +8941,49 @@ VpcClient::ModifyVpnGatewayRoutesOutcomeCallable VpcClient::ModifyVpnGatewayRout
     return task->get_future();
 }
 
+VpcClient::NotifyRoutesOutcome VpcClient::NotifyRoutes(const NotifyRoutesRequest &request)
+{
+    auto outcome = MakeRequest(request, "NotifyRoutes");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        NotifyRoutesResponse rsp = NotifyRoutesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return NotifyRoutesOutcome(rsp);
+        else
+            return NotifyRoutesOutcome(o.GetError());
+    }
+    else
+    {
+        return NotifyRoutesOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::NotifyRoutesAsync(const NotifyRoutesRequest& request, const NotifyRoutesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->NotifyRoutes(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::NotifyRoutesOutcomeCallable VpcClient::NotifyRoutesCallable(const NotifyRoutesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<NotifyRoutesOutcome()>>(
+        [this, request]()
+        {
+            return this->NotifyRoutes(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VpcClient::RejectAttachCcnInstancesOutcome VpcClient::RejectAttachCcnInstances(const RejectAttachCcnInstancesRequest &request)
 {
     auto outcome = MakeRequest(request, "RejectAttachCcnInstances");
@@ -8124,6 +9371,49 @@ VpcClient::ResetAttachCcnInstancesOutcomeCallable VpcClient::ResetAttachCcnInsta
     return task->get_future();
 }
 
+VpcClient::ResetNatGatewayConnectionOutcome VpcClient::ResetNatGatewayConnection(const ResetNatGatewayConnectionRequest &request)
+{
+    auto outcome = MakeRequest(request, "ResetNatGatewayConnection");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ResetNatGatewayConnectionResponse rsp = ResetNatGatewayConnectionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ResetNatGatewayConnectionOutcome(rsp);
+        else
+            return ResetNatGatewayConnectionOutcome(o.GetError());
+    }
+    else
+    {
+        return ResetNatGatewayConnectionOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::ResetNatGatewayConnectionAsync(const ResetNatGatewayConnectionRequest& request, const ResetNatGatewayConnectionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ResetNatGatewayConnection(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::ResetNatGatewayConnectionOutcomeCallable VpcClient::ResetNatGatewayConnectionCallable(const ResetNatGatewayConnectionRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ResetNatGatewayConnectionOutcome()>>(
+        [this, request]()
+        {
+            return this->ResetNatGatewayConnection(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VpcClient::ResetRoutesOutcome VpcClient::ResetRoutes(const ResetRoutesRequest &request)
 {
     auto outcome = MakeRequest(request, "ResetRoutes");
@@ -8504,6 +9794,49 @@ VpcClient::UnassignPrivateIpAddressesOutcomeCallable VpcClient::UnassignPrivateI
         [this, request]()
         {
             return this->UnassignPrivateIpAddresses(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VpcClient::WithdrawNotifyRoutesOutcome VpcClient::WithdrawNotifyRoutes(const WithdrawNotifyRoutesRequest &request)
+{
+    auto outcome = MakeRequest(request, "WithdrawNotifyRoutes");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        WithdrawNotifyRoutesResponse rsp = WithdrawNotifyRoutesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return WithdrawNotifyRoutesOutcome(rsp);
+        else
+            return WithdrawNotifyRoutesOutcome(o.GetError());
+    }
+    else
+    {
+        return WithdrawNotifyRoutesOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::WithdrawNotifyRoutesAsync(const WithdrawNotifyRoutesRequest& request, const WithdrawNotifyRoutesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->WithdrawNotifyRoutes(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::WithdrawNotifyRoutesOutcomeCallable VpcClient::WithdrawNotifyRoutesCallable(const WithdrawNotifyRoutesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<WithdrawNotifyRoutesOutcome()>>(
+        [this, request]()
+        {
+            return this->WithdrawNotifyRoutes(request);
         }
     );
 
