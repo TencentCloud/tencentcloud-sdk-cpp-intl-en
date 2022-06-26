@@ -341,6 +341,49 @@ LighthouseClient::CreateInstanceSnapshotOutcomeCallable LighthouseClient::Create
     return task->get_future();
 }
 
+LighthouseClient::CreateInstancesOutcome LighthouseClient::CreateInstances(const CreateInstancesRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateInstances");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateInstancesResponse rsp = CreateInstancesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateInstancesOutcome(rsp);
+        else
+            return CreateInstancesOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateInstancesOutcome(outcome.GetError());
+    }
+}
+
+void LighthouseClient::CreateInstancesAsync(const CreateInstancesRequest& request, const CreateInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateInstances(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+LighthouseClient::CreateInstancesOutcomeCallable LighthouseClient::CreateInstancesCallable(const CreateInstancesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateInstancesOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateInstances(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 LighthouseClient::CreateKeyPairOutcome LighthouseClient::CreateKeyPair(const CreateKeyPairRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateKeyPair");
@@ -1072,6 +1115,49 @@ LighthouseClient::DescribeFirewallRulesTemplateOutcomeCallable LighthouseClient:
     return task->get_future();
 }
 
+LighthouseClient::DescribeGeneralResourceQuotasOutcome LighthouseClient::DescribeGeneralResourceQuotas(const DescribeGeneralResourceQuotasRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeGeneralResourceQuotas");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeGeneralResourceQuotasResponse rsp = DescribeGeneralResourceQuotasResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeGeneralResourceQuotasOutcome(rsp);
+        else
+            return DescribeGeneralResourceQuotasOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeGeneralResourceQuotasOutcome(outcome.GetError());
+    }
+}
+
+void LighthouseClient::DescribeGeneralResourceQuotasAsync(const DescribeGeneralResourceQuotasRequest& request, const DescribeGeneralResourceQuotasAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeGeneralResourceQuotas(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+LighthouseClient::DescribeGeneralResourceQuotasOutcomeCallable LighthouseClient::DescribeGeneralResourceQuotasCallable(const DescribeGeneralResourceQuotasRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeGeneralResourceQuotasOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeGeneralResourceQuotas(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 LighthouseClient::DescribeInstanceLoginKeyPairAttributeOutcome LighthouseClient::DescribeInstanceLoginKeyPairAttribute(const DescribeInstanceLoginKeyPairAttributeRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeInstanceLoginKeyPairAttribute");
@@ -1151,6 +1237,49 @@ LighthouseClient::DescribeInstanceVncUrlOutcomeCallable LighthouseClient::Descri
         [this, request]()
         {
             return this->DescribeInstanceVncUrl(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+LighthouseClient::DescribeInstancesOutcome LighthouseClient::DescribeInstances(const DescribeInstancesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeInstances");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeInstancesResponse rsp = DescribeInstancesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeInstancesOutcome(rsp);
+        else
+            return DescribeInstancesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeInstancesOutcome(outcome.GetError());
+    }
+}
+
+void LighthouseClient::DescribeInstancesAsync(const DescribeInstancesRequest& request, const DescribeInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeInstances(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+LighthouseClient::DescribeInstancesOutcomeCallable LighthouseClient::DescribeInstancesCallable(const DescribeInstancesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeInstancesOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeInstances(request);
         }
     );
 
@@ -1968,6 +2097,49 @@ LighthouseClient::InquirePriceRenewDisksOutcomeCallable LighthouseClient::Inquir
         [this, request]()
         {
             return this->InquirePriceRenewDisks(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+LighthouseClient::InquirePriceRenewInstancesOutcome LighthouseClient::InquirePriceRenewInstances(const InquirePriceRenewInstancesRequest &request)
+{
+    auto outcome = MakeRequest(request, "InquirePriceRenewInstances");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        InquirePriceRenewInstancesResponse rsp = InquirePriceRenewInstancesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return InquirePriceRenewInstancesOutcome(rsp);
+        else
+            return InquirePriceRenewInstancesOutcome(o.GetError());
+    }
+    else
+    {
+        return InquirePriceRenewInstancesOutcome(outcome.GetError());
+    }
+}
+
+void LighthouseClient::InquirePriceRenewInstancesAsync(const InquirePriceRenewInstancesRequest& request, const InquirePriceRenewInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->InquirePriceRenewInstances(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+LighthouseClient::InquirePriceRenewInstancesOutcomeCallable LighthouseClient::InquirePriceRenewInstancesCallable(const InquirePriceRenewInstancesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<InquirePriceRenewInstancesOutcome()>>(
+        [this, request]()
+        {
+            return this->InquirePriceRenewInstances(request);
         }
     );
 

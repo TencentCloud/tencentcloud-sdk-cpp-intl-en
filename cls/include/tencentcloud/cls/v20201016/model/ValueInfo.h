@@ -65,14 +65,26 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Field delimiter, which is meaningful only if the field type is `text`. Each character in the entered string represents a delimiter.
-                     * @return Tokenizer Field delimiter, which is meaningful only if the field type is `text`. Each character in the entered string represents a delimiter.
+                     * 获取Separator of fields. Each character represents a separator;
+Supports only English punctuation marks and (\n\t\r);
+`long` and `double` fields need to be null;
+We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\\) as separators for `text` fields;
+                     * @return Tokenizer Separator of fields. Each character represents a separator;
+Supports only English punctuation marks and (\n\t\r);
+`long` and `double` fields need to be null;
+We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\\) as separators for `text` fields;
                      */
                     std::string GetTokenizer() const;
 
                     /**
-                     * 设置Field delimiter, which is meaningful only if the field type is `text`. Each character in the entered string represents a delimiter.
-                     * @param Tokenizer Field delimiter, which is meaningful only if the field type is `text`. Each character in the entered string represents a delimiter.
+                     * 设置Separator of fields. Each character represents a separator;
+Supports only English punctuation marks and (\n\t\r);
+`long` and `double` fields need to be null;
+We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\\) as separators for `text` fields;
+                     * @param Tokenizer Separator of fields. Each character represents a separator;
+Supports only English punctuation marks and (\n\t\r);
+`long` and `double` fields need to be null;
+We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\\) as separators for `text` fields;
                      */
                     void SetTokenizer(const std::string& _tokenizer);
 
@@ -131,7 +143,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Field delimiter, which is meaningful only if the field type is `text`. Each character in the entered string represents a delimiter.
+                     * Separator of fields. Each character represents a separator;
+Supports only English punctuation marks and (\n\t\r);
+`long` and `double` fields need to be null;
+We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\\) as separators for `text` fields;
                      */
                     std::string m_tokenizer;
                     bool m_tokenizerHasBeenSet;

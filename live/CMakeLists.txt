@@ -20,6 +20,7 @@ set(live_public_header
 
 set(live_public_header_model
   include/tencentcloud/live/v20180801/model/CreateLiveSnapshotRuleRequest.h
+  include/tencentcloud/live/v20180801/model/TimeShiftBillData.h
   include/tencentcloud/live/v20180801/model/EnableLiveDomainResponse.h
   include/tencentcloud/live/v20180801/model/CreateLiveCertRequest.h
   include/tencentcloud/live/v20180801/model/StopRecordTaskResponse.h
@@ -104,6 +105,7 @@ set(live_public_header_model
   include/tencentcloud/live/v20180801/model/ModifyLivePlayDomainResponse.h
   include/tencentcloud/live/v20180801/model/CancelCommonMixStreamResponse.h
   include/tencentcloud/live/v20180801/model/AddLiveWatermarkRequest.h
+  include/tencentcloud/live/v20180801/model/DescribeLiveTimeShiftBillInfoListRequest.h
   include/tencentcloud/live/v20180801/model/DescribeLiveCertsResponse.h
   include/tencentcloud/live/v20180801/model/CommonMixInputParam.h
   include/tencentcloud/live/v20180801/model/DescribeProvinceIspPlayInfoListResponse.h
@@ -145,6 +147,7 @@ set(live_public_header_model
   include/tencentcloud/live/v20180801/model/DescribeVisitTopSumInfoListRequest.h
   include/tencentcloud/live/v20180801/model/DescribeLiveWatermarkResponse.h
   include/tencentcloud/live/v20180801/model/ResumeLiveStreamResponse.h
+  include/tencentcloud/live/v20180801/model/ModifyLiveRecordTemplateRequest.h
   include/tencentcloud/live/v20180801/model/DescribeLiveStreamPushInfoListRequest.h
   include/tencentcloud/live/v20180801/model/DescribeLiveWatermarksResponse.h
   include/tencentcloud/live/v20180801/model/WatermarkInfo.h
@@ -162,7 +165,7 @@ set(live_public_header_model
   include/tencentcloud/live/v20180801/model/SnapshotTemplateInfo.h
   include/tencentcloud/live/v20180801/model/DeleteLiveSnapshotRuleResponse.h
   include/tencentcloud/live/v20180801/model/CreateLiveRecordRequest.h
-  include/tencentcloud/live/v20180801/model/ForbidLiveStreamResponse.h
+  include/tencentcloud/live/v20180801/model/DescribeLiveTimeShiftBillInfoListResponse.h
   include/tencentcloud/live/v20180801/model/BandwidthInfo.h
   include/tencentcloud/live/v20180801/model/CancelCommonMixStreamRequest.h
   include/tencentcloud/live/v20180801/model/CertInfo.h
@@ -184,7 +187,7 @@ set(live_public_header_model
   include/tencentcloud/live/v20180801/model/DescribePlayErrorCodeDetailInfoListResponse.h
   include/tencentcloud/live/v20180801/model/CreateLiveRecordTemplateResponse.h
   include/tencentcloud/live/v20180801/model/RecordParam.h
-  include/tencentcloud/live/v20180801/model/ModifyLiveRecordTemplateRequest.h
+  include/tencentcloud/live/v20180801/model/ForbidLiveStreamResponse.h
   include/tencentcloud/live/v20180801/model/HttpStatusInfo.h
   include/tencentcloud/live/v20180801/model/DeleteLiveRecordRequest.h
   include/tencentcloud/live/v20180801/model/DescribeLiveSnapshotTemplatesResponse.h
@@ -262,6 +265,7 @@ set(live_public_header_model
 set(live_src
   src/v20180801/LiveClient.cpp
   src/v20180801/model/CreateLiveSnapshotRuleRequest.cpp
+  src/v20180801/model/TimeShiftBillData.cpp
   src/v20180801/model/EnableLiveDomainResponse.cpp
   src/v20180801/model/CreateLiveCertRequest.cpp
   src/v20180801/model/StopRecordTaskResponse.cpp
@@ -346,6 +350,7 @@ set(live_src
   src/v20180801/model/ModifyLivePlayDomainResponse.cpp
   src/v20180801/model/CancelCommonMixStreamResponse.cpp
   src/v20180801/model/AddLiveWatermarkRequest.cpp
+  src/v20180801/model/DescribeLiveTimeShiftBillInfoListRequest.cpp
   src/v20180801/model/DescribeLiveCertsResponse.cpp
   src/v20180801/model/CommonMixInputParam.cpp
   src/v20180801/model/DescribeProvinceIspPlayInfoListResponse.cpp
@@ -387,6 +392,7 @@ set(live_src
   src/v20180801/model/DescribeVisitTopSumInfoListRequest.cpp
   src/v20180801/model/DescribeLiveWatermarkResponse.cpp
   src/v20180801/model/ResumeLiveStreamResponse.cpp
+  src/v20180801/model/ModifyLiveRecordTemplateRequest.cpp
   src/v20180801/model/DescribeLiveStreamPushInfoListRequest.cpp
   src/v20180801/model/DescribeLiveWatermarksResponse.cpp
   src/v20180801/model/WatermarkInfo.cpp
@@ -404,7 +410,7 @@ set(live_src
   src/v20180801/model/SnapshotTemplateInfo.cpp
   src/v20180801/model/DeleteLiveSnapshotRuleResponse.cpp
   src/v20180801/model/CreateLiveRecordRequest.cpp
-  src/v20180801/model/ForbidLiveStreamResponse.cpp
+  src/v20180801/model/DescribeLiveTimeShiftBillInfoListResponse.cpp
   src/v20180801/model/BandwidthInfo.cpp
   src/v20180801/model/CancelCommonMixStreamRequest.cpp
   src/v20180801/model/CertInfo.cpp
@@ -426,7 +432,7 @@ set(live_src
   src/v20180801/model/DescribePlayErrorCodeDetailInfoListResponse.cpp
   src/v20180801/model/CreateLiveRecordTemplateResponse.cpp
   src/v20180801/model/RecordParam.cpp
-  src/v20180801/model/ModifyLiveRecordTemplateRequest.cpp
+  src/v20180801/model/ForbidLiveStreamResponse.cpp
   src/v20180801/model/HttpStatusInfo.cpp
   src/v20180801/model/DeleteLiveRecordRequest.cpp
   src/v20180801/model/DescribeLiveSnapshotTemplatesResponse.cpp

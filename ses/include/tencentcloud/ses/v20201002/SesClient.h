@@ -49,6 +49,8 @@
 #include <tencentcloud/ses/v20201002/model/GetEmailIdentityResponse.h>
 #include <tencentcloud/ses/v20201002/model/GetEmailTemplateRequest.h>
 #include <tencentcloud/ses/v20201002/model/GetEmailTemplateResponse.h>
+#include <tencentcloud/ses/v20201002/model/GetSendEmailStatusRequest.h>
+#include <tencentcloud/ses/v20201002/model/GetSendEmailStatusResponse.h>
 #include <tencentcloud/ses/v20201002/model/GetStatisticsReportRequest.h>
 #include <tencentcloud/ses/v20201002/model/GetStatisticsReportResponse.h>
 #include <tencentcloud/ses/v20201002/model/ListBlackEmailAddressRequest.h>
@@ -122,6 +124,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::GetEmailTemplateResponse> GetEmailTemplateOutcome;
                 typedef std::future<GetEmailTemplateOutcome> GetEmailTemplateOutcomeCallable;
                 typedef std::function<void(const SesClient*, const Model::GetEmailTemplateRequest&, GetEmailTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetEmailTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetSendEmailStatusResponse> GetSendEmailStatusOutcome;
+                typedef std::future<GetSendEmailStatusOutcome> GetSendEmailStatusOutcomeCallable;
+                typedef std::function<void(const SesClient*, const Model::GetSendEmailStatusRequest&, GetSendEmailStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetSendEmailStatusAsyncHandler;
                 typedef Outcome<Core::Error, Model::GetStatisticsReportResponse> GetStatisticsReportOutcome;
                 typedef std::future<GetStatisticsReportOutcome> GetStatisticsReportOutcomeCallable;
                 typedef std::function<void(const SesClient*, const Model::GetStatisticsReportRequest&, GetStatisticsReportOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetStatisticsReportAsyncHandler;
@@ -272,6 +277,15 @@ Note: Only an approved template can be used to send emails.
                 GetEmailTemplateOutcome GetEmailTemplate(const Model::GetEmailTemplateRequest &request);
                 void GetEmailTemplateAsync(const Model::GetEmailTemplateRequest& request, const GetEmailTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 GetEmailTemplateOutcomeCallable GetEmailTemplateCallable(const Model::GetEmailTemplateRequest& request);
+
+                /**
+                 *This API is used to get email sending status. Only data within 30 days can be queried.
+                 * @param req GetSendEmailStatusRequest
+                 * @return GetSendEmailStatusOutcome
+                 */
+                GetSendEmailStatusOutcome GetSendEmailStatus(const Model::GetSendEmailStatusRequest &request);
+                void GetSendEmailStatusAsync(const Model::GetSendEmailStatusRequest& request, const GetSendEmailStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetSendEmailStatusOutcomeCallable GetSendEmailStatusCallable(const Model::GetSendEmailStatusRequest& request);
 
                 /**
                  *This API is used to get the email sending statistics over a recent period, including data on sent emails, delivery success rate, open rate, bounce rate, and so on.

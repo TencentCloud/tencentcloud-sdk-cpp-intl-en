@@ -22,6 +22,7 @@ set(tem_public_header
 set(tem_public_header_model
   include/tencentcloud/tem/v20210701/model/MountedSettingConf.h
   include/tencentcloud/tem/v20210701/model/RestartApplicationPodResponse.h
+  include/tencentcloud/tem/v20210701/model/DeleteApplicationRequest.h
   include/tencentcloud/tem/v20210701/model/CreateResourceRequest.h
   include/tencentcloud/tem/v20210701/model/RestartApplicationResponse.h
   include/tencentcloud/tem/v20210701/model/StopApplicationRequest.h
@@ -41,6 +42,7 @@ set(tem_public_header_model
   include/tencentcloud/tem/v20210701/model/DescribeEnvironmentsResponse.h
   include/tencentcloud/tem/v20210701/model/ModifyIngressRequest.h
   include/tencentcloud/tem/v20210701/model/DescribeApplicationPodsRequest.h
+  include/tencentcloud/tem/v20210701/model/CreateApplicationRequest.h
   include/tencentcloud/tem/v20210701/model/EnablePrometheusConf.h
   include/tencentcloud/tem/v20210701/model/DescribeRelatedIngressesResponse.h
   include/tencentcloud/tem/v20210701/model/DescribeIngressesRequest.h
@@ -63,10 +65,12 @@ set(tem_public_header_model
   include/tencentcloud/tem/v20210701/model/CreateResourceResponse.h
   include/tencentcloud/tem/v20210701/model/ModifyApplicationInfoRequest.h
   include/tencentcloud/tem/v20210701/model/ModifyApplicationInfoResponse.h
+  include/tencentcloud/tem/v20210701/model/DeleteApplicationResponse.h
   include/tencentcloud/tem/v20210701/model/IngressRulePath.h
   include/tencentcloud/tem/v20210701/model/CreateEnvironmentResponse.h
   include/tencentcloud/tem/v20210701/model/NamespacePage.h
   include/tencentcloud/tem/v20210701/model/RestartApplicationRequest.h
+  include/tencentcloud/tem/v20210701/model/CreateApplicationResponse.h
   include/tencentcloud/tem/v20210701/model/HorizontalAutoscaler.h
   include/tencentcloud/tem/v20210701/model/StorageMountConf.h
   include/tencentcloud/tem/v20210701/model/PortMapping.h
@@ -141,6 +145,7 @@ set(tem_src
   src/v20201221/TemClient.cpp
   src/v20210701/model/MountedSettingConf.cpp
   src/v20210701/model/RestartApplicationPodResponse.cpp
+  src/v20210701/model/DeleteApplicationRequest.cpp
   src/v20210701/model/CreateResourceRequest.cpp
   src/v20210701/model/RestartApplicationResponse.cpp
   src/v20210701/model/StopApplicationRequest.cpp
@@ -160,6 +165,7 @@ set(tem_src
   src/v20210701/model/DescribeEnvironmentsResponse.cpp
   src/v20210701/model/ModifyIngressRequest.cpp
   src/v20210701/model/DescribeApplicationPodsRequest.cpp
+  src/v20210701/model/CreateApplicationRequest.cpp
   src/v20210701/model/EnablePrometheusConf.cpp
   src/v20210701/model/DescribeRelatedIngressesResponse.cpp
   src/v20210701/model/DescribeIngressesRequest.cpp
@@ -182,10 +188,12 @@ set(tem_src
   src/v20210701/model/CreateResourceResponse.cpp
   src/v20210701/model/ModifyApplicationInfoRequest.cpp
   src/v20210701/model/ModifyApplicationInfoResponse.cpp
+  src/v20210701/model/DeleteApplicationResponse.cpp
   src/v20210701/model/IngressRulePath.cpp
   src/v20210701/model/CreateEnvironmentResponse.cpp
   src/v20210701/model/NamespacePage.cpp
   src/v20210701/model/RestartApplicationRequest.cpp
+  src/v20210701/model/CreateApplicationResponse.cpp
   src/v20210701/model/HorizontalAutoscaler.cpp
   src/v20210701/model/StorageMountConf.cpp
   src/v20210701/model/PortMapping.cpp

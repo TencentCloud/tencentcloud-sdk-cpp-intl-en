@@ -32,6 +32,7 @@ set(ses_public_header_model
   include/tencentcloud/ses/v20201002/model/Attachment.h
   include/tencentcloud/ses/v20201002/model/Template.h
   include/tencentcloud/ses/v20201002/model/ListSendTasksRequest.h
+  include/tencentcloud/ses/v20201002/model/GetSendEmailStatusResponse.h
   include/tencentcloud/ses/v20201002/model/SendEmailRequest.h
   include/tencentcloud/ses/v20201002/model/EmailSender.h
   include/tencentcloud/ses/v20201002/model/BatchSendEmailResponse.h
@@ -51,12 +52,14 @@ set(ses_public_header_model
   include/tencentcloud/ses/v20201002/model/DeleteEmailTemplateRequest.h
   include/tencentcloud/ses/v20201002/model/DeleteBlackListResponse.h
   include/tencentcloud/ses/v20201002/model/UpdateEmailTemplateRequest.h
+  include/tencentcloud/ses/v20201002/model/SendEmailStatus.h
   include/tencentcloud/ses/v20201002/model/ListEmailTemplatesRequest.h
   include/tencentcloud/ses/v20201002/model/CreateReceiverRequest.h
   include/tencentcloud/ses/v20201002/model/CreateReceiverDetailResponse.h
   include/tencentcloud/ses/v20201002/model/ListEmailTemplatesResponse.h
   include/tencentcloud/ses/v20201002/model/SendEmailResponse.h
   include/tencentcloud/ses/v20201002/model/ListBlackEmailAddressResponse.h
+  include/tencentcloud/ses/v20201002/model/GetSendEmailStatusRequest.h
   include/tencentcloud/ses/v20201002/model/Simple.h
   include/tencentcloud/ses/v20201002/model/DeleteReceiverRequest.h
   include/tencentcloud/ses/v20201002/model/ListEmailIdentitiesResponse.h
@@ -96,6 +99,7 @@ set(ses_src
   src/v20201002/model/Attachment.cpp
   src/v20201002/model/Template.cpp
   src/v20201002/model/ListSendTasksRequest.cpp
+  src/v20201002/model/GetSendEmailStatusResponse.cpp
   src/v20201002/model/SendEmailRequest.cpp
   src/v20201002/model/EmailSender.cpp
   src/v20201002/model/BatchSendEmailResponse.cpp
@@ -115,12 +119,14 @@ set(ses_src
   src/v20201002/model/DeleteEmailTemplateRequest.cpp
   src/v20201002/model/DeleteBlackListResponse.cpp
   src/v20201002/model/UpdateEmailTemplateRequest.cpp
+  src/v20201002/model/SendEmailStatus.cpp
   src/v20201002/model/ListEmailTemplatesRequest.cpp
   src/v20201002/model/CreateReceiverRequest.cpp
   src/v20201002/model/CreateReceiverDetailResponse.cpp
   src/v20201002/model/ListEmailTemplatesResponse.cpp
   src/v20201002/model/SendEmailResponse.cpp
   src/v20201002/model/ListBlackEmailAddressResponse.cpp
+  src/v20201002/model/GetSendEmailStatusRequest.cpp
   src/v20201002/model/Simple.cpp
   src/v20201002/model/DeleteReceiverRequest.cpp
   src/v20201002/model/ListEmailIdentitiesResponse.cpp

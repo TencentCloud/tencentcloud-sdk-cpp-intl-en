@@ -69,18 +69,18 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool EnableTagHasBeenSet() const;
 
                     /**
-                     * 获取List of metadata to ship. Currently, only __SOURCE__, __FILENAME__, and __TIMESTAMP__ are supported.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return MetaFields List of metadata to ship. Currently, only __SOURCE__, __FILENAME__, and __TIMESTAMP__ are supported.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取List of metadata to ship. Only \_\_SOURCE\_\_, \_\_FILENAME\_\_, and \_\_TIMESTAMP\_\_ are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MetaFields List of metadata to ship. Only \_\_SOURCE\_\_, \_\_FILENAME\_\_, and \_\_TIMESTAMP\_\_ are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> GetMetaFields() const;
 
                     /**
-                     * 设置List of metadata to ship. Currently, only __SOURCE__, __FILENAME__, and __TIMESTAMP__ are supported.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param MetaFields List of metadata to ship. Currently, only __SOURCE__, __FILENAME__, and __TIMESTAMP__ are supported.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置List of metadata to ship. Only \_\_SOURCE\_\_, \_\_FILENAME\_\_, and \_\_TIMESTAMP\_\_ are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param MetaFields List of metadata to ship. Only \_\_SOURCE\_\_, \_\_FILENAME\_\_, and \_\_TIMESTAMP\_\_ are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetMetaFields(const std::vector<std::string>& _metaFields);
 
@@ -112,6 +112,28 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     bool TagJsonNotTiledHasBeenSet() const;
 
+                    /**
+                     * 获取Shipping timestamp precision in seconds (default) or milliseconds
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TimestampAccuracy Shipping timestamp precision in seconds (default) or milliseconds
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetTimestampAccuracy() const;
+
+                    /**
+                     * 设置Shipping timestamp precision in seconds (default) or milliseconds
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param TimestampAccuracy Shipping timestamp precision in seconds (default) or milliseconds
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetTimestampAccuracy(const int64_t& _timestampAccuracy);
+
+                    /**
+                     * 判断参数 TimestampAccuracy 是否已赋值
+                     * @return TimestampAccuracy 是否已赋值
+                     */
+                    bool TimestampAccuracyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -122,8 +144,8 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_enableTagHasBeenSet;
 
                     /**
-                     * List of metadata to ship. Currently, only __SOURCE__, __FILENAME__, and __TIMESTAMP__ are supported.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * List of metadata to ship. Only \_\_SOURCE\_\_, \_\_FILENAME\_\_, and \_\_TIMESTAMP\_\_ are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_metaFields;
                     bool m_metaFieldsHasBeenSet;
@@ -134,6 +156,13 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     bool m_tagJsonNotTiled;
                     bool m_tagJsonNotTiledHasBeenSet;
+
+                    /**
+                     * Shipping timestamp precision in seconds (default) or milliseconds
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_timestampAccuracy;
+                    bool m_timestampAccuracyHasBeenSet;
 
                 };
             }

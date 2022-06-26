@@ -65,14 +65,22 @@ namespace TencentCloud
                     bool CaseSensitiveHasBeenSet() const;
 
                     /**
-                     * 获取Full-Text index delimiter. Each character in the string represents a delimiter.
-                     * @return Tokenizer Full-Text index delimiter. Each character in the string represents a delimiter.
+                     * 获取Separator of the full-text index. Each character represents a separator;
+Supports only English punctuation marks and (\n\t\r);
+We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\) as separators;
+                     * @return Tokenizer Separator of the full-text index. Each character represents a separator;
+Supports only English punctuation marks and (\n\t\r);
+We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\) as separators;
                      */
                     std::string GetTokenizer() const;
 
                     /**
-                     * 设置Full-Text index delimiter. Each character in the string represents a delimiter.
-                     * @param Tokenizer Full-Text index delimiter. Each character in the string represents a delimiter.
+                     * 设置Separator of the full-text index. Each character represents a separator;
+Supports only English punctuation marks and (\n\t\r);
+We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\) as separators;
+                     * @param Tokenizer Separator of the full-text index. Each character represents a separator;
+Supports only English punctuation marks and (\n\t\r);
+We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\) as separators;
                      */
                     void SetTokenizer(const std::string& _tokenizer);
 
@@ -113,7 +121,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_caseSensitiveHasBeenSet;
 
                     /**
-                     * Full-Text index delimiter. Each character in the string represents a delimiter.
+                     * Separator of the full-text index. Each character represents a separator;
+Supports only English punctuation marks and (\n\t\r);
+We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\) as separators;
                      */
                     std::string m_tokenizer;
                     bool m_tokenizerHasBeenSet;
