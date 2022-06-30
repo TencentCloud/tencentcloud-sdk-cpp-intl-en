@@ -506,6 +506,50 @@ Value range: 0.0-0.5.
                      */
                     bool ShortEdgeAsHeightHasBeenSet() const;
 
+                    /**
+                     * 获取The DRM encryption type. Valid values: fairplay, normalaes, widevine.
+If you do not pass this parameter or pass in an empty string, the existing configuration will be reset.
+                     * @return DRMType The DRM encryption type. Valid values: fairplay, normalaes, widevine.
+If you do not pass this parameter or pass in an empty string, the existing configuration will be reset.
+                     */
+                    std::string GetDRMType() const;
+
+                    /**
+                     * 设置The DRM encryption type. Valid values: fairplay, normalaes, widevine.
+If you do not pass this parameter or pass in an empty string, the existing configuration will be reset.
+                     * @param DRMType The DRM encryption type. Valid values: fairplay, normalaes, widevine.
+If you do not pass this parameter or pass in an empty string, the existing configuration will be reset.
+                     */
+                    void SetDRMType(const std::string& _dRMType);
+
+                    /**
+                     * 判断参数 DRMType 是否已赋值
+                     * @return DRMType 是否已赋值
+                     */
+                    bool DRMTypeHasBeenSet() const;
+
+                    /**
+                     * 获取The tracks to encrypt. Valid values: AUDIO, SD, HD, UHD1, UHD2. You can choose only one video track (SD, HD, UHD1, or UHD2).
+If you do not pass this parameter or pass in an empty string, the existing configuration will be reset.
+                     * @return DRMTracks The tracks to encrypt. Valid values: AUDIO, SD, HD, UHD1, UHD2. You can choose only one video track (SD, HD, UHD1, or UHD2).
+If you do not pass this parameter or pass in an empty string, the existing configuration will be reset.
+                     */
+                    std::string GetDRMTracks() const;
+
+                    /**
+                     * 设置The tracks to encrypt. Valid values: AUDIO, SD, HD, UHD1, UHD2. You can choose only one video track (SD, HD, UHD1, or UHD2).
+If you do not pass this parameter or pass in an empty string, the existing configuration will be reset.
+                     * @param DRMTracks The tracks to encrypt. Valid values: AUDIO, SD, HD, UHD1, UHD2. You can choose only one video track (SD, HD, UHD1, or UHD2).
+If you do not pass this parameter or pass in an empty string, the existing configuration will be reset.
+                     */
+                    void SetDRMTracks(const std::string& _dRMTracks);
+
+                    /**
+                     * 判断参数 DRMTracks 是否已赋值
+                     * @return DRMTracks 是否已赋值
+                     */
+                    bool DRMTracksHasBeenSet() const;
+
                 private:
 
                     /**
@@ -653,6 +697,20 @@ Value range: 0.0-0.5.
                      */
                     int64_t m_shortEdgeAsHeight;
                     bool m_shortEdgeAsHeightHasBeenSet;
+
+                    /**
+                     * The DRM encryption type. Valid values: fairplay, normalaes, widevine.
+If you do not pass this parameter or pass in an empty string, the existing configuration will be reset.
+                     */
+                    std::string m_dRMType;
+                    bool m_dRMTypeHasBeenSet;
+
+                    /**
+                     * The tracks to encrypt. Valid values: AUDIO, SD, HD, UHD1, UHD2. You can choose only one video track (SD, HD, UHD1, or UHD2).
+If you do not pass this parameter or pass in an empty string, the existing configuration will be reset.
+                     */
+                    std::string m_dRMTracks;
+                    bool m_dRMTracksHasBeenSet;
 
                 };
             }

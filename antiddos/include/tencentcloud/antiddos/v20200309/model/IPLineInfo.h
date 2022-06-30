@@ -106,6 +106,42 @@ namespace TencentCloud
                      */
                     bool EipHasBeenSet() const;
 
+                    /**
+                     * 获取CNAME of the instance
+                     * @return Cname CNAME of the instance
+                     */
+                    std::string GetCname() const;
+
+                    /**
+                     * 设置CNAME of the instance
+                     * @param Cname CNAME of the instance
+                     */
+                    void SetCname(const std::string& _cname);
+
+                    /**
+                     * 判断参数 Cname 是否已赋值
+                     * @return Cname 是否已赋值
+                     */
+                    bool CnameHasBeenSet() const;
+
+                    /**
+                     * 获取Flag of the instance. `0`: Anti-DDoS Pro instance; `1`: Anti-DDoS Advanced instance; `2`: Non-Anti-DDoS Advanced instance.
+                     * @return ResourceFlag Flag of the instance. `0`: Anti-DDoS Pro instance; `1`: Anti-DDoS Advanced instance; `2`: Non-Anti-DDoS Advanced instance.
+                     */
+                    int64_t GetResourceFlag() const;
+
+                    /**
+                     * 设置Flag of the instance. `0`: Anti-DDoS Pro instance; `1`: Anti-DDoS Advanced instance; `2`: Non-Anti-DDoS Advanced instance.
+                     * @param ResourceFlag Flag of the instance. `0`: Anti-DDoS Pro instance; `1`: Anti-DDoS Advanced instance; `2`: Non-Anti-DDoS Advanced instance.
+                     */
+                    void SetResourceFlag(const int64_t& _resourceFlag);
+
+                    /**
+                     * 判断参数 ResourceFlag 是否已赋值
+                     * @return ResourceFlag 是否已赋值
+                     */
+                    bool ResourceFlagHasBeenSet() const;
+
                 private:
 
                     /**
@@ -125,6 +161,18 @@ namespace TencentCloud
                      */
                     std::string m_eip;
                     bool m_eipHasBeenSet;
+
+                    /**
+                     * CNAME of the instance
+                     */
+                    std::string m_cname;
+                    bool m_cnameHasBeenSet;
+
+                    /**
+                     * Flag of the instance. `0`: Anti-DDoS Pro instance; `1`: Anti-DDoS Advanced instance; `2`: Non-Anti-DDoS Advanced instance.
+                     */
+                    int64_t m_resourceFlag;
+                    bool m_resourceFlagHasBeenSet;
 
                 };
             }

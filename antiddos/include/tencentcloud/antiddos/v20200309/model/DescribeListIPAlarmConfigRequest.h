@@ -144,6 +144,24 @@ namespace TencentCloud
                      */
                     bool FilterIpHasBeenSet() const;
 
+                    /**
+                     * 获取CNAME of the Anti-DDoS Advanced instance
+                     * @return FilterCname CNAME of the Anti-DDoS Advanced instance
+                     */
+                    std::string GetFilterCname() const;
+
+                    /**
+                     * 设置CNAME of the Anti-DDoS Advanced instance
+                     * @param FilterCname CNAME of the Anti-DDoS Advanced instance
+                     */
+                    void SetFilterCname(const std::string& _filterCname);
+
+                    /**
+                     * 判断参数 FilterCname 是否已赋值
+                     * @return FilterCname 是否已赋值
+                     */
+                    bool FilterCnameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -178,6 +196,12 @@ namespace TencentCloud
                      */
                     std::string m_filterIp;
                     bool m_filterIpHasBeenSet;
+
+                    /**
+                     * CNAME of the Anti-DDoS Advanced instance
+                     */
+                    std::string m_filterCname;
+                    bool m_filterCnameHasBeenSet;
 
                 };
             }

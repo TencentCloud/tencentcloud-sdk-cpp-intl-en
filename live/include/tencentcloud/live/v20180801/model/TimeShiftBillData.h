@@ -119,14 +119,14 @@ namespace TencentCloud
                     bool TimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TotalDuration 
+                     * 获取The total time-shift duration (minutes).
+                     * @return TotalDuration The total time-shift duration (minutes).
                      */
                     double GetTotalDuration() const;
 
                     /**
-                     * 设置
-                     * @param TotalDuration 
+                     * 设置The total time-shift duration (minutes).
+                     * @param TotalDuration The total time-shift duration (minutes).
                      */
                     void SetTotalDuration(const double& _totalDuration);
 
@@ -163,7 +163,7 @@ namespace TencentCloud
                     bool m_timeHasBeenSet;
 
                     /**
-                     * 
+                     * The total time-shift duration (minutes).
                      */
                     double m_totalDuration;
                     bool m_totalDurationHasBeenSet;

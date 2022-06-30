@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool NatGatewayIdHasBeenSet() const;
 
                     /**
-                     * 获取The number of EIPs you want to apply for. The system will create the same number of EIPs as you require. Either `AddressCount` or `PublicAddresses` must be passed in.
-                     * @return AddressCount The number of EIPs you want to apply for. The system will create the same number of EIPs as you require. Either `AddressCount` or `PublicAddresses` must be passed in.
+                     * 获取The number of EIPs you want to apply for. Either `AddressCount` or `PublicAddresses` must be passed in.
+                     * @return AddressCount The number of EIPs you want to apply for. Either `AddressCount` or `PublicAddresses` must be passed in.
                      */
                     uint64_t GetAddressCount() const;
 
                     /**
-                     * 设置The number of EIPs you want to apply for. The system will create the same number of EIPs as you require. Either `AddressCount` or `PublicAddresses` must be passed in.
-                     * @param AddressCount The number of EIPs you want to apply for. The system will create the same number of EIPs as you require. Either `AddressCount` or `PublicAddresses` must be passed in.
+                     * 设置The number of EIPs you want to apply for. Either `AddressCount` or `PublicAddresses` must be passed in.
+                     * @param AddressCount The number of EIPs you want to apply for. Either `AddressCount` or `PublicAddresses` must be passed in.
                      */
                     void SetAddressCount(const uint64_t& _addressCount);
 
@@ -133,14 +133,14 @@ namespace TencentCloud
                     bool StockPublicIpAddressesBandwidthOutHasBeenSet() const;
 
                     /**
-                     * 获取The requested size of the public network IP bandwidth (in Mbps), which defaults to the maximum value applicable for the current user type.
-                     * @return PublicIpAddressesBandwidthOut The requested size of the public network IP bandwidth (in Mbps), which defaults to the maximum value applicable for the current user type.
+                     * 获取The size of the public network IP bandwidth to be applied for (in Mbps), which defaults to the maximum value applicable for the current user type.
+                     * @return PublicIpAddressesBandwidthOut The size of the public network IP bandwidth to be applied for (in Mbps), which defaults to the maximum value applicable for the current user type.
                      */
                     uint64_t GetPublicIpAddressesBandwidthOut() const;
 
                     /**
-                     * 设置The requested size of the public network IP bandwidth (in Mbps), which defaults to the maximum value applicable for the current user type.
-                     * @param PublicIpAddressesBandwidthOut The requested size of the public network IP bandwidth (in Mbps), which defaults to the maximum value applicable for the current user type.
+                     * 设置The size of the public network IP bandwidth to be applied for (in Mbps), which defaults to the maximum value applicable for the current user type.
+                     * @param PublicIpAddressesBandwidthOut The size of the public network IP bandwidth to be applied for (in Mbps), which defaults to the maximum value applicable for the current user type.
                      */
                     void SetPublicIpAddressesBandwidthOut(const uint64_t& _publicIpAddressesBandwidthOut);
 
@@ -151,14 +151,14 @@ namespace TencentCloud
                     bool PublicIpAddressesBandwidthOutHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PublicIpFromSameZone 
+                     * 获取Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified.
+                     * @return PublicIpFromSameZone Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified.
                      */
                     bool GetPublicIpFromSameZone() const;
 
                     /**
-                     * 设置
-                     * @param PublicIpFromSameZone 
+                     * 设置Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified.
+                     * @param PublicIpFromSameZone Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified.
                      */
                     void SetPublicIpFromSameZone(const bool& _publicIpFromSameZone);
 
@@ -177,7 +177,7 @@ namespace TencentCloud
                     bool m_natGatewayIdHasBeenSet;
 
                     /**
-                     * The number of EIPs you want to apply for. The system will create the same number of EIPs as you require. Either `AddressCount` or `PublicAddresses` must be passed in.
+                     * The number of EIPs you want to apply for. Either `AddressCount` or `PublicAddresses` must be passed in.
                      */
                     uint64_t m_addressCount;
                     bool m_addressCountHasBeenSet;
@@ -201,13 +201,13 @@ namespace TencentCloud
                     bool m_stockPublicIpAddressesBandwidthOutHasBeenSet;
 
                     /**
-                     * The requested size of the public network IP bandwidth (in Mbps), which defaults to the maximum value applicable for the current user type.
+                     * The size of the public network IP bandwidth to be applied for (in Mbps), which defaults to the maximum value applicable for the current user type.
                      */
                     uint64_t m_publicIpAddressesBandwidthOut;
                     bool m_publicIpAddressesBandwidthOutHasBeenSet;
 
                     /**
-                     * 
+                     * Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified.
                      */
                     bool m_publicIpFromSameZone;
                     bool m_publicIpFromSameZoneHasBeenSet;

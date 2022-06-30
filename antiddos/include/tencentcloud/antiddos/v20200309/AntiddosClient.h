@@ -135,6 +135,8 @@
 #include <tencentcloud/antiddos/v20200309/model/DescribeListSchedulingDomainResponse.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeListWaterPrintConfigRequest.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeListWaterPrintConfigResponse.h>
+#include <tencentcloud/antiddos/v20200309/model/DescribeOverviewDDoSEventListRequest.h>
+#include <tencentcloud/antiddos/v20200309/model/DescribeOverviewDDoSEventListResponse.h>
 #include <tencentcloud/antiddos/v20200309/model/DisassociateDDoSEipAddressRequest.h>
 #include <tencentcloud/antiddos/v20200309/model/DisassociateDDoSEipAddressResponse.h>
 #include <tencentcloud/antiddos/v20200309/model/ModifyCCPrecisionPolicyRequest.h>
@@ -335,6 +337,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeListWaterPrintConfigResponse> DescribeListWaterPrintConfigOutcome;
                 typedef std::future<DescribeListWaterPrintConfigOutcome> DescribeListWaterPrintConfigOutcomeCallable;
                 typedef std::function<void(const AntiddosClient*, const Model::DescribeListWaterPrintConfigRequest&, DescribeListWaterPrintConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeListWaterPrintConfigAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeOverviewDDoSEventListResponse> DescribeOverviewDDoSEventListOutcome;
+                typedef std::future<DescribeOverviewDDoSEventListOutcome> DescribeOverviewDDoSEventListOutcomeCallable;
+                typedef std::function<void(const AntiddosClient*, const Model::DescribeOverviewDDoSEventListRequest&, DescribeOverviewDDoSEventListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOverviewDDoSEventListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DisassociateDDoSEipAddressResponse> DisassociateDDoSEipAddressOutcome;
                 typedef std::future<DisassociateDDoSEipAddressOutcome> DisassociateDDoSEipAddressOutcomeCallable;
                 typedef std::function<void(const AntiddosClient*, const Model::DisassociateDDoSEipAddressRequest&, DisassociateDDoSEipAddressOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisassociateDDoSEipAddressAsyncHandler;
@@ -870,6 +875,15 @@ namespace TencentCloud
                 DescribeListWaterPrintConfigOutcome DescribeListWaterPrintConfig(const Model::DescribeListWaterPrintConfigRequest &request);
                 void DescribeListWaterPrintConfigAsync(const Model::DescribeListWaterPrintConfigRequest& request, const DescribeListWaterPrintConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeListWaterPrintConfigOutcomeCallable DescribeListWaterPrintConfigCallable(const Model::DescribeListWaterPrintConfigRequest& request);
+
+                /**
+                 *This API is used to obtain the list of DDoS attacks.
+                 * @param req DescribeOverviewDDoSEventListRequest
+                 * @return DescribeOverviewDDoSEventListOutcome
+                 */
+                DescribeOverviewDDoSEventListOutcome DescribeOverviewDDoSEventList(const Model::DescribeOverviewDDoSEventListRequest &request);
+                void DescribeOverviewDDoSEventListAsync(const Model::DescribeOverviewDDoSEventListRequest& request, const DescribeOverviewDDoSEventListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeOverviewDDoSEventListOutcomeCallable DescribeOverviewDDoSEventListCallable(const Model::DescribeOverviewDDoSEventListRequest& request);
 
                 /**
                  *This API is used to unbind an Anti-DDoS EIP.

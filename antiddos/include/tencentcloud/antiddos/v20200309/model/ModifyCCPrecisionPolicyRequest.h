@@ -80,14 +80,14 @@ namespace TencentCloud
                     bool PolicyIdHasBeenSet() const;
 
                     /**
-                     * 获取Action of limiting request frequency. Valid values: `alg` (limit request frequency via verification codes) and `drop`(drop requests).
-                     * @return PolicyAction Action of limiting request frequency. Valid values: `alg` (limit request frequency via verification codes) and `drop`(drop requests).
+                     * 获取Specifies the action. `alg`: Verify the access request via CAPTCHA; `drop`: Drop the access request.
+                     * @return PolicyAction Specifies the action. `alg`: Verify the access request via CAPTCHA; `drop`: Drop the access request.
                      */
                     std::string GetPolicyAction() const;
 
                     /**
-                     * 设置Action of limiting request frequency. Valid values: `alg` (limit request frequency via verification codes) and `drop`(drop requests).
-                     * @param PolicyAction Action of limiting request frequency. Valid values: `alg` (limit request frequency via verification codes) and `drop`(drop requests).
+                     * 设置Specifies the action. `alg`: Verify the access request via CAPTCHA; `drop`: Drop the access request.
+                     * @param PolicyAction Specifies the action. `alg`: Verify the access request via CAPTCHA; `drop`: Drop the access request.
                      */
                     void SetPolicyAction(const std::string& _policyAction);
 
@@ -130,7 +130,7 @@ namespace TencentCloud
                     bool m_policyIdHasBeenSet;
 
                     /**
-                     * Action of limiting request frequency. Valid values: `alg` (limit request frequency via verification codes) and `drop`(drop requests).
+                     * Specifies the action. `alg`: Verify the access request via CAPTCHA; `drop`: Drop the access request.
                      */
                     std::string m_policyAction;
                     bool m_policyActionHasBeenSet;

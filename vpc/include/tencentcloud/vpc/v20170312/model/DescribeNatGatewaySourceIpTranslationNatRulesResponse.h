@@ -45,9 +45,9 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Object array of the SNAT rule for a NAT Gateway.
+                     * 获取Array of objects of a NAT gateway's SNAT rules.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return SourceIpTranslationNatRuleSet Object array of the SNAT rule for a NAT Gateway.
+                     * @return SourceIpTranslationNatRuleSet Array of objects of a NAT gateway's SNAT rules.
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<SourceIpTranslationNatRule> GetSourceIpTranslationNatRuleSet() const;
@@ -59,8 +59,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool SourceIpTranslationNatRuleSetHasBeenSet() const;
 
                     /**
-                     * 获取The number of object arrays of eligible forwarding rules for a NAT Gateway
-                     * @return TotalCount The number of object arrays of eligible forwarding rules for a NAT Gateway
+                     * 获取The number of eligible object arrays of a NAT gateway's forwarding rules.
+                     * @return TotalCount The number of eligible object arrays of a NAT gateway's forwarding rules.
                      */
                     int64_t GetTotalCount() const;
 
@@ -73,14 +73,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Object array of the SNAT rule for a NAT Gateway.
+                     * Array of objects of a NAT gateway's SNAT rules.
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<SourceIpTranslationNatRule> m_sourceIpTranslationNatRuleSet;
                     bool m_sourceIpTranslationNatRuleSetHasBeenSet;
 
                     /**
-                     * The number of object arrays of eligible forwarding rules for a NAT Gateway
+                     * The number of eligible object arrays of a NAT gateway's forwarding rules.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

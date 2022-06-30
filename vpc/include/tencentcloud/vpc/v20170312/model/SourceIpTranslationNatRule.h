@@ -66,17 +66,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Resource type. Valid values: SUBNET, NETWORKINTERFACE
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ResourceType Resource type. Valid values: SUBNET, NETWORKINTERFACE
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetResourceType() const;
 
                     /**
                      * 设置Resource type. Valid values: SUBNET, NETWORKINTERFACE
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @param ResourceType Resource type. Valid values: SUBNET, NETWORKINTERFACE
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetResourceType(const std::string& _resourceType);
 
@@ -159,18 +159,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool NatGatewaySnatIdHasBeenSet() const;
 
                     /**
-                     * 获取NAT Gateway ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return NatGatewayId NAT Gateway ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取NAT gateway ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return NatGatewayId NAT gateway ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetNatGatewayId() const;
 
                     /**
-                     * 设置NAT Gateway ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param NatGatewayId NAT Gateway ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置NAT gateway ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param NatGatewayId NAT gateway ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetNatGatewayId(const std::string& _natGatewayId);
 
@@ -181,18 +181,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool NatGatewayIdHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return VpcId VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取VPC ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return VpcId VPC ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param VpcId VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置VPC ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param VpcId VPC ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetVpcId(const std::string& _vpcId);
 
@@ -203,18 +203,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Creation time of a SNAT rule for a NAT Gateway
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return CreatedTime Creation time of a SNAT rule for a NAT Gateway
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取The creation time of a NAT gateway's SNAT rule.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return CreatedTime The creation time of a NAT gateway's SNAT rule.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetCreatedTime() const;
 
                     /**
-                     * 设置Creation time of a SNAT rule for a NAT Gateway
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param CreatedTime Creation time of a SNAT rule for a NAT Gateway
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置The creation time of a NAT gateway's SNAT rule.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param CreatedTime The creation time of a NAT gateway's SNAT rule.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
@@ -234,7 +234,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * Resource type. Valid values: SUBNET, NETWORKINTERFACE
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_resourceType;
                     bool m_resourceTypeHasBeenSet;
@@ -264,22 +264,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_natGatewaySnatIdHasBeenSet;
 
                     /**
-                     * NAT Gateway ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * NAT gateway ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_natGatewayId;
                     bool m_natGatewayIdHasBeenSet;
 
                     /**
-                     * VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * VPC ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Creation time of a SNAT rule for a NAT Gateway
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * The creation time of a NAT gateway's SNAT rule.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_createdTime;
                     bool m_createdTimeHasBeenSet;

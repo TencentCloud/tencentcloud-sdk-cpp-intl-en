@@ -57,8 +57,8 @@ namespace TencentCloud
                     bool NatGatewaySetHasBeenSet() const;
 
                     /**
-                     * 获取The number of NAT gateway objects meeting the conditions.
-                     * @return TotalCount The number of NAT gateway objects meeting the conditions.
+                     * 获取The number of eligible NAT gateway objects.
+                     * @return TotalCount The number of eligible NAT gateway objects.
                      */
                     uint64_t GetTotalCount() const;
 
@@ -77,7 +77,7 @@ namespace TencentCloud
                     bool m_natGatewaySetHasBeenSet;
 
                     /**
-                     * The number of NAT gateway objects meeting the conditions.
+                     * The number of eligible NAT gateway objects.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

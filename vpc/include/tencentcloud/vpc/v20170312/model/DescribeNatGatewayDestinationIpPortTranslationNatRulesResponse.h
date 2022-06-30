@@ -57,8 +57,8 @@ namespace TencentCloud
                     bool NatGatewayDestinationIpPortTranslationNatRuleSetHasBeenSet() const;
 
                     /**
-                     * 获取The number of object arrays of NAT port forwarding rules meeting the conditions.
-                     * @return TotalCount The number of object arrays of NAT port forwarding rules meeting the conditions.
+                     * 获取The number of eligible object arrays of NAT port forwarding rules.
+                     * @return TotalCount The number of eligible object arrays of NAT port forwarding rules.
                      */
                     uint64_t GetTotalCount() const;
 
@@ -77,7 +77,7 @@ namespace TencentCloud
                     bool m_natGatewayDestinationIpPortTranslationNatRuleSetHasBeenSet;
 
                     /**
-                     * The number of object arrays of NAT port forwarding rules meeting the conditions.
+                     * The number of eligible object arrays of NAT port forwarding rules.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

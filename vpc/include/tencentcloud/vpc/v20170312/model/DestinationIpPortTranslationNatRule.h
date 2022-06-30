@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Network protocol. Available choices: `TCP`, `UDP`.
-                     * @return IpProtocol Network protocol. Available choices: `TCP`, `UDP`.
+                     * 获取Network protocol. Valid values: `TCP`, `UDP`.
+                     * @return IpProtocol Network protocol. Valid values: `TCP`, `UDP`.
                      */
                     std::string GetIpProtocol() const;
 
                     /**
-                     * 设置Network protocol. Available choices: `TCP`, `UDP`.
-                     * @param IpProtocol Network protocol. Available choices: `TCP`, `UDP`.
+                     * 设置Network protocol. Valid values: `TCP`, `UDP`.
+                     * @param IpProtocol Network protocol. Valid values: `TCP`, `UDP`.
                      */
                     void SetIpProtocol(const std::string& _ipProtocol);
 
@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool PublicIpAddressHasBeenSet() const;
 
                     /**
-                     * 获取Public port.
-                     * @return PublicPort Public port.
+                     * 获取Public network port.
+                     * @return PublicPort Public network port.
                      */
                     uint64_t GetPublicPort() const;
 
                     /**
-                     * 设置Public port.
-                     * @param PublicPort Public port.
+                     * 设置Public network port.
+                     * @param PublicPort Public network port.
                      */
                     void SetPublicPort(const uint64_t& _publicPort);
 
@@ -137,14 +137,14 @@ namespace TencentCloud
                     bool PrivatePortHasBeenSet() const;
 
                     /**
-                     * 获取NAT gateway forwarding rule description.
-                     * @return Description NAT gateway forwarding rule description.
+                     * 获取Description of NAT gateway forwarding rules.
+                     * @return Description Description of NAT gateway forwarding rules.
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置NAT gateway forwarding rule description.
-                     * @param Description NAT gateway forwarding rule description.
+                     * 设置Description of NAT gateway forwarding rules.
+                     * @param Description Description of NAT gateway forwarding rules.
                      */
                     void SetDescription(const std::string& _description);
 
@@ -157,7 +157,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Network protocol. Available choices: `TCP`, `UDP`.
+                     * Network protocol. Valid values: `TCP`, `UDP`.
                      */
                     std::string m_ipProtocol;
                     bool m_ipProtocolHasBeenSet;
@@ -169,7 +169,7 @@ namespace TencentCloud
                     bool m_publicIpAddressHasBeenSet;
 
                     /**
-                     * Public port.
+                     * Public network port.
                      */
                     uint64_t m_publicPort;
                     bool m_publicPortHasBeenSet;
@@ -187,7 +187,7 @@ namespace TencentCloud
                     bool m_privatePortHasBeenSet;
 
                     /**
-                     * NAT gateway forwarding rule description.
+                     * Description of NAT gateway forwarding rules.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;

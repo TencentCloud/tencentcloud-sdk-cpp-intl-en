@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取NAT gateway ID.
-                     * @return NatGatewayId NAT gateway ID.
+                     * 获取The NAT gateway ID.
+                     * @return NatGatewayId The NAT gateway ID.
                      */
                     std::string GetNatGatewayId() const;
 
                     /**
-                     * 设置NAT gateway ID.
-                     * @param NatGatewayId NAT gateway ID.
+                     * 设置The NAT gateway ID.
+                     * @param NatGatewayId The NAT gateway ID.
                      */
                     void SetNatGatewayId(const std::string& _natGatewayId);
 
@@ -81,7 +81,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * NAT gateway ID.
+                     * The NAT gateway ID.
                      */
                     std::string m_natGatewayId;
                     bool m_natGatewayIdHasBeenSet;

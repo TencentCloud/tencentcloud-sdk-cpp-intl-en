@@ -62,26 +62,26 @@ namespace TencentCloud
                     bool NatGatewayIdHasBeenSet() const;
 
                     /**
-                     * 获取Filter conditions:
-<li> resource-id, the subnet ID (such as `subnet-0yi4hekt`) or CVM ID</li>
-<li> public-ip-address, the EIP, such as `139.199.232.238`</li>
-<li>description, the rule description</li>
-                     * @return Filters Filter conditions:
-<li> resource-id, the subnet ID (such as `subnet-0yi4hekt`) or CVM ID</li>
-<li> public-ip-address, the EIP, such as `139.199.232.238`</li>
-<li>description, the rule description</li>
+                     * 获取Filter:
+<li>`resource-id`: The subnet ID (such as `subnet-0yi4hekt`) or CVM ID</li>
+<li>`public-ip-address`: The EIP, such as `139.199.232.238`</li>
+<li>`description` The rule description</li>
+                     * @return Filters Filter:
+<li>`resource-id`: The subnet ID (such as `subnet-0yi4hekt`) or CVM ID</li>
+<li>`public-ip-address`: The EIP, such as `139.199.232.238`</li>
+<li>`description` The rule description</li>
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter conditions:
-<li> resource-id, the subnet ID (such as `subnet-0yi4hekt`) or CVM ID</li>
-<li> public-ip-address, the EIP, such as `139.199.232.238`</li>
-<li>description, the rule description</li>
-                     * @param Filters Filter conditions:
-<li> resource-id, the subnet ID (such as `subnet-0yi4hekt`) or CVM ID</li>
-<li> public-ip-address, the EIP, such as `139.199.232.238`</li>
-<li>description, the rule description</li>
+                     * 设置Filter:
+<li>`resource-id`: The subnet ID (such as `subnet-0yi4hekt`) or CVM ID</li>
+<li>`public-ip-address`: The EIP, such as `139.199.232.238`</li>
+<li>`description` The rule description</li>
+                     * @param Filters Filter:
+<li>`resource-id`: The subnet ID (such as `subnet-0yi4hekt`) or CVM ID</li>
+<li>`public-ip-address`: The EIP, such as `139.199.232.238`</li>
+<li>`description` The rule description</li>
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
@@ -92,14 +92,14 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Offset. Default is 0.
-                     * @return Offset Offset. Default is 0.
+                     * 获取Offset. Default value: 0.
+                     * @return Offset Offset. Default value: 0.
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset. Default is 0.
-                     * @param Offset Offset. Default is 0.
+                     * 设置Offset. Default value: 0.
+                     * @param Offset Offset. Default value: 0.
                      */
                     void SetOffset(const int64_t& _offset);
 
@@ -136,16 +136,16 @@ namespace TencentCloud
                     bool m_natGatewayIdHasBeenSet;
 
                     /**
-                     * Filter conditions:
-<li> resource-id, the subnet ID (such as `subnet-0yi4hekt`) or CVM ID</li>
-<li> public-ip-address, the EIP, such as `139.199.232.238`</li>
-<li>description, the rule description</li>
+                     * Filter:
+<li>`resource-id`: The subnet ID (such as `subnet-0yi4hekt`) or CVM ID</li>
+<li>`public-ip-address`: The EIP, such as `139.199.232.238`</li>
+<li>`description` The rule description</li>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Offset. Default is 0.
+                     * Offset. Default value: 0.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;

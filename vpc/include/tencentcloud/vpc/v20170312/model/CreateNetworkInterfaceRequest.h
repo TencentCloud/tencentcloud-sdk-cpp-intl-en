@@ -188,6 +188,24 @@ namespace TencentCloud
                      */
                     bool TagsHasBeenSet() const;
 
+                    /**
+                     * 获取Configuration of the ENI trunking mode. Valid values: `Enable` and `Disable`. Default value: `Disable`.
+                     * @return TrunkingFlag Configuration of the ENI trunking mode. Valid values: `Enable` and `Disable`. Default value: `Disable`.
+                     */
+                    std::string GetTrunkingFlag() const;
+
+                    /**
+                     * 设置Configuration of the ENI trunking mode. Valid values: `Enable` and `Disable`. Default value: `Disable`.
+                     * @param TrunkingFlag Configuration of the ENI trunking mode. Valid values: `Enable` and `Disable`. Default value: `Disable`.
+                     */
+                    void SetTrunkingFlag(const std::string& _trunkingFlag);
+
+                    /**
+                     * 判断参数 TrunkingFlag 是否已赋值
+                     * @return TrunkingFlag 是否已赋值
+                     */
+                    bool TrunkingFlagHasBeenSet() const;
+
                 private:
 
                     /**
@@ -237,6 +255,12 @@ namespace TencentCloud
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * Configuration of the ENI trunking mode. Valid values: `Enable` and `Disable`. Default value: `Disable`.
+                     */
+                    std::string m_trunkingFlag;
+                    bool m_trunkingFlagHasBeenSet;
 
                 };
             }

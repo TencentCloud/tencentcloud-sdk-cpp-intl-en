@@ -32,6 +32,7 @@
 #include <tencentcloud/antiddos/v20200309/model/StaticPackRelation.h>
 #include <tencentcloud/antiddos/v20200309/model/EipAddressPackRelation.h>
 #include <tencentcloud/antiddos/v20200309/model/EipAddressRelation.h>
+#include <tencentcloud/antiddos/v20200309/model/TagInfo.h>
 
 
 namespace TencentCloud
@@ -476,6 +477,46 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool V6FlagHasBeenSet() const;
 
+                    /**
+                     * 获取Whether it’s an Anti-DDoS Advanced instance from Tencent Cloud channels. `1`: Yes; `0`: No.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return BGPIPChannelFlag Whether it’s an Anti-DDoS Advanced instance from Tencent Cloud channels. `1`: Yes; `0`: No.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    uint64_t GetBGPIPChannelFlag() const;
+
+                    /**
+                     * 设置Whether it’s an Anti-DDoS Advanced instance from Tencent Cloud channels. `1`: Yes; `0`: No.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param BGPIPChannelFlag Whether it’s an Anti-DDoS Advanced instance from Tencent Cloud channels. `1`: Yes; `0`: No.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetBGPIPChannelFlag(const uint64_t& _bGPIPChannelFlag);
+
+                    /**
+                     * 判断参数 BGPIPChannelFlag 是否已赋值
+                     * @return BGPIPChannelFlag 是否已赋值
+                     */
+                    bool BGPIPChannelFlagHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return TagInfoList 
+                     */
+                    std::vector<TagInfo> GetTagInfoList() const;
+
+                    /**
+                     * 设置
+                     * @param TagInfoList 
+                     */
+                    void SetTagInfoList(const std::vector<TagInfo>& _tagInfoList);
+
+                    /**
+                     * 判断参数 TagInfoList 是否已赋值
+                     * @return TagInfoList 是否已赋值
+                     */
+                    bool TagInfoListHasBeenSet() const;
+
                 private:
 
                     /**
@@ -611,6 +652,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     uint64_t m_v6Flag;
                     bool m_v6FlagHasBeenSet;
+
+                    /**
+                     * Whether it’s an Anti-DDoS Advanced instance from Tencent Cloud channels. `1`: Yes; `0`: No.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    uint64_t m_bGPIPChannelFlag;
+                    bool m_bGPIPChannelFlagHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<TagInfo> m_tagInfoList;
+                    bool m_tagInfoListHasBeenSet;
 
                 };
             }

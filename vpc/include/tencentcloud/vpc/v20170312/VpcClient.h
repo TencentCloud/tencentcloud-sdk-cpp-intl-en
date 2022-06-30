@@ -251,6 +251,8 @@
 #include <tencentcloud/vpc/v20170312/model/DescribeLocalGatewayResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse.h>
+#include <tencentcloud/vpc/v20170312/model/DescribeNatGatewayDirectConnectGatewayRouteRequest.h>
+#include <tencentcloud/vpc/v20170312/model/DescribeNatGatewayDirectConnectGatewayRouteResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeNatGatewaySourceIpTranslationNatRulesRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeNatGatewaySourceIpTranslationNatRulesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeNatGatewaysRequest.h>
@@ -439,6 +441,8 @@
 #include <tencentcloud/vpc/v20170312/model/ModifyVpnGatewayRoutesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/NotifyRoutesRequest.h>
 #include <tencentcloud/vpc/v20170312/model/NotifyRoutesResponse.h>
+#include <tencentcloud/vpc/v20170312/model/RefreshDirectConnectGatewayRouteToNatGatewayRequest.h>
+#include <tencentcloud/vpc/v20170312/model/RefreshDirectConnectGatewayRouteToNatGatewayResponse.h>
 #include <tencentcloud/vpc/v20170312/model/RejectAttachCcnInstancesRequest.h>
 #include <tencentcloud/vpc/v20170312/model/RejectAttachCcnInstancesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ReleaseAddressesRequest.h>
@@ -835,6 +839,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse> DescribeNatGatewayDestinationIpPortTranslationNatRulesOutcome;
                 typedef std::future<DescribeNatGatewayDestinationIpPortTranslationNatRulesOutcome> DescribeNatGatewayDestinationIpPortTranslationNatRulesOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest&, DescribeNatGatewayDestinationIpPortTranslationNatRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeNatGatewayDestinationIpPortTranslationNatRulesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeNatGatewayDirectConnectGatewayRouteResponse> DescribeNatGatewayDirectConnectGatewayRouteOutcome;
+                typedef std::future<DescribeNatGatewayDirectConnectGatewayRouteOutcome> DescribeNatGatewayDirectConnectGatewayRouteOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::DescribeNatGatewayDirectConnectGatewayRouteRequest&, DescribeNatGatewayDirectConnectGatewayRouteOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeNatGatewayDirectConnectGatewayRouteAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeNatGatewaySourceIpTranslationNatRulesResponse> DescribeNatGatewaySourceIpTranslationNatRulesOutcome;
                 typedef std::future<DescribeNatGatewaySourceIpTranslationNatRulesOutcome> DescribeNatGatewaySourceIpTranslationNatRulesOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DescribeNatGatewaySourceIpTranslationNatRulesRequest&, DescribeNatGatewaySourceIpTranslationNatRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeNatGatewaySourceIpTranslationNatRulesAsyncHandler;
@@ -1117,6 +1124,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::NotifyRoutesResponse> NotifyRoutesOutcome;
                 typedef std::future<NotifyRoutesOutcome> NotifyRoutesOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::NotifyRoutesRequest&, NotifyRoutesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> NotifyRoutesAsyncHandler;
+                typedef Outcome<Core::Error, Model::RefreshDirectConnectGatewayRouteToNatGatewayResponse> RefreshDirectConnectGatewayRouteToNatGatewayOutcome;
+                typedef std::future<RefreshDirectConnectGatewayRouteToNatGatewayOutcome> RefreshDirectConnectGatewayRouteToNatGatewayOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::RefreshDirectConnectGatewayRouteToNatGatewayRequest&, RefreshDirectConnectGatewayRouteToNatGatewayOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RefreshDirectConnectGatewayRouteToNatGatewayAsyncHandler;
                 typedef Outcome<Core::Error, Model::RejectAttachCcnInstancesResponse> RejectAttachCcnInstancesOutcome;
                 typedef std::future<RejectAttachCcnInstancesOutcome> RejectAttachCcnInstancesOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::RejectAttachCcnInstancesRequest&, RejectAttachCcnInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RejectAttachCcnInstancesAsyncHandler;
@@ -1285,7 +1295,7 @@ This API is completed asynchronously. If you need to query the execution result 
                 AssociateDirectConnectGatewayNatGatewayOutcomeCallable AssociateDirectConnectGatewayNatGatewayCallable(const Model::AssociateDirectConnectGatewayNatGatewayRequest& request);
 
                 /**
-                 *This API is used to bind an EIP to NAT Gateway.
+                 *This API is used to bind an EIP to a NAT gateway.
                  * @param req AssociateNatGatewayAddressRequest
                  * @return AssociateNatGatewayAddressOutcome
                  */
@@ -1527,7 +1537,7 @@ You can also use the Force parameter to forcibly return a default VPC.
 
                 /**
                  *This API is used to create a NAT Gateway.
-Before taking actions on a NAT Gateway, ensure that it has been successfully created, namely, the `State` field in the response of the `DescribeNatGateway` API is `AVAILABLE`.
+Before taking actions on a NAT gateway, ensure that it has been successfully created, namely, the `State` field in the response of the `DescribeNatGateway` API is `AVAILABLE`.
                  * @param req CreateNatGatewayRequest
                  * @return CreateNatGatewayOutcome
                  */
@@ -1536,7 +1546,7 @@ Before taking actions on a NAT Gateway, ensure that it has been successfully cre
                 CreateNatGatewayOutcomeCallable CreateNatGatewayCallable(const Model::CreateNatGatewayRequest& request);
 
                 /**
-                 *This API (CreateNatGatewayDestinationIpPortTranslationNatRule) is used to create a port forwarding rule for a NAT gateway.
+                 *This API is used to create the port forwarding rules of a NAT gateway.
                  * @param req CreateNatGatewayDestinationIpPortTranslationNatRuleRequest
                  * @return CreateNatGatewayDestinationIpPortTranslationNatRuleOutcome
                  */
@@ -1545,7 +1555,7 @@ Before taking actions on a NAT Gateway, ensure that it has been successfully cre
                 CreateNatGatewayDestinationIpPortTranslationNatRuleOutcomeCallable CreateNatGatewayDestinationIpPortTranslationNatRuleCallable(const Model::CreateNatGatewayDestinationIpPortTranslationNatRuleRequest& request);
 
                 /**
-                 *This API is used to create a SNAT rule for the NAT Gateway.
+                 *This API is used to create SNAT rules for a NAT gateway.
                  * @param req CreateNatGatewaySourceIpTranslationNatRuleRequest
                  * @return CreateNatGatewaySourceIpTranslationNatRuleOutcome
                  */
@@ -1622,20 +1632,20 @@ Before taking actions on a NAT Gateway, ensure that it has been successfully cre
                 CreateSecurityGroupOutcomeCallable CreateSecurityGroupCallable(const Model::CreateSecurityGroupRequest& request);
 
                 /**
-                 *This API is used to create a security group policy (SecurityGroupPolicy).
+                 *This API is used to create security group policies.
 
 For parameters of SecurityGroupPolicySet,
 <ul>
-<li>`Version`: the version number of a security group policy, which automatically increases by one each time you update the security policy, to prevent expiration of the updated routing policies. If it is left empty, any conflicts will be ignored.</li>
-<li>When creating the `Egress` and `Ingress` policies,<ul>
-<li>`Protocol`: allows `TCP`, `UDP`, `ICMP`, `ICMPV6`, `GRE`, or `ALL`.</li>
-<li>`CidrBlock`: a CIDR block in the correct format. In the classic network, if a `CidrBlock` contains private IPs of devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.</li>
-<li>`Ipv6CidrBlock`: an IPv6 CIDR block in the correct format. In a classic network, if an `Ipv6CidrBlock` contains private IPv6 addresses on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.</li>
-<li>`SecurityGroupId`: ID of the security group. It can be the ID of security group to be modified, or the ID of another security group in the same project. All private IPs of all CVMs under the security group will be covered. If this field is used, the policy will automatically change according to the CVM associated with the group ID while being used to match network messages. You don’t need to change it manually.</li>
-<li>`Port`: a single port number such as 80, or a port range in the format of “8000-8010”. You may use this field only if the `Protocol` field takes the value `TCP` or `UDP`. Otherwise `Protocol` and `Port` are mutually exclusive.</li>
-<li>`Action`: only allows `ACCEPT` or `DROP`.</li>
+<li>`Version`: The version number of a security group policy, which automatically increases by one each time you update the security policy, to prevent expiration of the updated routing policies. If it is left empty, any conflicts will be ignored.</li>
+<li>When creating the `Egress` and `Ingress` polices,<ul>
+<li>`Protocol`: `TCP`, `UDP`, `ICMP`, `ICMPV6`, `GRE`, or `ALL`.</li>
+<li>`CidrBlock`: A CIDR block in the correct format. </li>For 
+<li>`Ipv6CidrBlock`: An IPv6 CIDR block in the correct format. In a classic network, if an `Ipv6CidrBlock` contains private IPv6 addresses on Tencent Cloud for devices under your account other than CVMs, it does not mean this policy allows you to access these devices. The network isolation policies between tenants take priority over the private network policies in security groups.</li>
+<li>`SecurityGroupId`: ID of the security group. It can be the ID of security group to be modified, or the ID of other security group in the same project. All private IPs of all CVMs under the security group will be covered. If this field is used, the policy will automatically change according to the CVM associated with the group ID while being used to match network messages. You don’t need to change it manually.</li>
+<li>`Port`: A single port number such as 80, or a port range in the format of "8000-8010". This parameter is only available when the `Protocol` is `TCP` or `UDP`. Otherwise, `Protocol` and `Port` are mutually exclusive.</li>
+<li>`Action`: `ACCEPT` or `DROP`.</li>
 <li>`CidrBlock`, `Ipv6CidrBlock`, `SecurityGroupId`, and `AddressTemplate` are mutually exclusive. `Protocol` + `Port` and `ServiceTemplate` are mutually exclusive.</li>
-<li>You can only create policies in one direction in each request. To specify the `PolicyIndex` parameter, use the same index number in policies.</li>
+<li>You can only create policies in one direction in each request. To specify the `PolicyIndex` parameter, use the same index number in policies. If you want to insert a rule before the first rule, enter 0; if you want to add a rule after the last rule, leave it empty.</li>
 </ul></li></ul>
                  * @param req CreateSecurityGroupPoliciesRequest
                  * @return CreateSecurityGroupPoliciesOutcome
@@ -1889,8 +1899,8 @@ This API is completed asynchronously. If you need to query the execution result 
                 DeleteLocalGatewayOutcomeCallable DeleteLocalGatewayCallable(const Model::DeleteLocalGatewayRequest& request);
 
                 /**
-                 *This API (DeleteNatGateway) is used to delete a NAT gateway.
-After the deletion of a NAT gateway, the system will automatically delete the routing entry that contains the NAT gateway from the route table. It will also unbind the Elastic IP.
+                 *This API is used to delete a NAT gateway.
+When a NAT gateway is deleted, all routes containing this gateway are deleted automatically, and the elastic IP is unbound.
                  * @param req DeleteNatGatewayRequest
                  * @return DeleteNatGatewayOutcome
                  */
@@ -1899,7 +1909,7 @@ After the deletion of a NAT gateway, the system will automatically delete the ro
                 DeleteNatGatewayOutcomeCallable DeleteNatGatewayCallable(const Model::DeleteNatGatewayRequest& request);
 
                 /**
-                 *This API (DeleteNatGatewayDestinationIpPortTranslationNatRule) is used to delete a port forwarding rule for a NAT gateway.
+                 *This API is used to delete the port forwarding rule of a NAT gateway.
                  * @param req DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest
                  * @return DeleteNatGatewayDestinationIpPortTranslationNatRuleOutcome
                  */
@@ -1908,7 +1918,7 @@ After the deletion of a NAT gateway, the system will automatically delete the ro
                 DeleteNatGatewayDestinationIpPortTranslationNatRuleOutcomeCallable DeleteNatGatewayDestinationIpPortTranslationNatRuleCallable(const Model::DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest& request);
 
                 /**
-                 *This API is used to delete a SNAT forwarding rule of the NAT Gateway.
+                 *This API is used to delete a SNAT forwarding rule of a NAT gateway.
                  * @param req DeleteNatGatewaySourceIpTranslationNatRuleRequest
                  * @return DeleteNatGatewaySourceIpTranslationNatRuleOutcome
                  */
@@ -2341,7 +2351,7 @@ This API is currently in beta test. To use it, please [submit a ticket](https://
                 DescribeLocalGatewayOutcomeCallable DescribeLocalGatewayCallable(const Model::DescribeLocalGatewayRequest& request);
 
                 /**
-                 *This API (DescribeNatGatewayDestinationIpPortTranslationNatRules) is used to query the array of objects of the port forwarding rules for a NAT gateway.
+                 *This API is used to query the array of objects of a NAT gateway's port forwarding rules.
                  * @param req DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest
                  * @return DescribeNatGatewayDestinationIpPortTranslationNatRulesOutcome
                  */
@@ -2350,7 +2360,16 @@ This API is currently in beta test. To use it, please [submit a ticket](https://
                 DescribeNatGatewayDestinationIpPortTranslationNatRulesOutcomeCallable DescribeNatGatewayDestinationIpPortTranslationNatRulesCallable(const Model::DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest& request);
 
                 /**
-                 *This API is used to query the object arrays of SNAT forwarding rules of the NAT Gateway.
+                 *This API is used to query the routes between a NAT gateway and Direct Connect.
+                 * @param req DescribeNatGatewayDirectConnectGatewayRouteRequest
+                 * @return DescribeNatGatewayDirectConnectGatewayRouteOutcome
+                 */
+                DescribeNatGatewayDirectConnectGatewayRouteOutcome DescribeNatGatewayDirectConnectGatewayRoute(const Model::DescribeNatGatewayDirectConnectGatewayRouteRequest &request);
+                void DescribeNatGatewayDirectConnectGatewayRouteAsync(const Model::DescribeNatGatewayDirectConnectGatewayRouteRequest& request, const DescribeNatGatewayDirectConnectGatewayRouteAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeNatGatewayDirectConnectGatewayRouteOutcomeCallable DescribeNatGatewayDirectConnectGatewayRouteCallable(const Model::DescribeNatGatewayDirectConnectGatewayRouteRequest& request);
+
+                /**
+                 *This API is used to query the NAT gateway's SNAT forwarding rules.
                  * @param req DescribeNatGatewaySourceIpTranslationNatRulesRequest
                  * @return DescribeNatGatewaySourceIpTranslationNatRulesOutcome
                  */
@@ -2359,7 +2378,7 @@ This API is currently in beta test. To use it, please [submit a ticket](https://
                 DescribeNatGatewaySourceIpTranslationNatRulesOutcomeCallable DescribeNatGatewaySourceIpTranslationNatRulesCallable(const Model::DescribeNatGatewaySourceIpTranslationNatRulesRequest& request);
 
                 /**
-                 *This API (DescribeNatGateways) is used to query NAT gateways.
+                 *This API is used to query NAT gateways.
                  * @param req DescribeNatGatewaysRequest
                  * @return DescribeNatGatewaysOutcome
                  */
@@ -2693,7 +2712,7 @@ This API is completed asynchronously. If you need to query the execution result 
                 DisassociateDirectConnectGatewayNatGatewayOutcomeCallable DisassociateDirectConnectGatewayNatGatewayCallable(const Model::DisassociateDirectConnectGatewayNatGatewayRequest& request);
 
                 /**
-                 *This API (DisassociateNatGatewayAddress) is used to unbind an EIP from a NAT gateway.
+                 *This API is used to unbind an EIP from a NAT gateway.
                  * @param req DisassociateNatGatewayAddressRequest
                  * @return DisassociateNatGatewayAddressOutcome
                  */
@@ -3010,7 +3029,7 @@ This API is completed asynchronously. If you need to query the execution result 
                 ModifyLocalGatewayOutcomeCallable ModifyLocalGatewayCallable(const Model::ModifyLocalGatewayRequest& request);
 
                 /**
-                 *This API (ModifyNatGatewayAttribute) is used to modify the attributes of a NAT gateway.
+                 *This API is used to modify the attributes of a NAT gateway.
                  * @param req ModifyNatGatewayAttributeRequest
                  * @return ModifyNatGatewayAttributeOutcome
                  */
@@ -3019,7 +3038,7 @@ This API is completed asynchronously. If you need to query the execution result 
                 ModifyNatGatewayAttributeOutcomeCallable ModifyNatGatewayAttributeCallable(const Model::ModifyNatGatewayAttributeRequest& request);
 
                 /**
-                 *This API (ModifyNatGatewayDestinationIpPortTranslationNatRule) is used to modify a port forwarding rule for a NAT gateway.
+                 *This API is used to modify the port forwarding rule of a NAT gateway.
                  * @param req ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest
                  * @return ModifyNatGatewayDestinationIpPortTranslationNatRuleOutcome
                  */
@@ -3028,7 +3047,7 @@ This API is completed asynchronously. If you need to query the execution result 
                 ModifyNatGatewayDestinationIpPortTranslationNatRuleOutcomeCallable ModifyNatGatewayDestinationIpPortTranslationNatRuleCallable(const Model::ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest& request);
 
                 /**
-                 *This API is used to modify a SNAT forwarding rule of the NAT Gateway.
+                 *This API is used to modify a NAT gateway's SNAT forwarding rules.
                  * @param req ModifyNatGatewaySourceIpTranslationNatRuleRequest
                  * @return ModifyNatGatewaySourceIpTranslationNatRuleOutcome
                  */
@@ -3234,6 +3253,15 @@ This API is completed asynchronously. If you need to query the execution result 
                 NotifyRoutesOutcomeCallable NotifyRoutesCallable(const Model::NotifyRoutesRequest& request);
 
                 /**
+                 *This API is used to refresh the route between a NAT gateway and  Direct Connect and update the associated route table.
+                 * @param req RefreshDirectConnectGatewayRouteToNatGatewayRequest
+                 * @return RefreshDirectConnectGatewayRouteToNatGatewayOutcome
+                 */
+                RefreshDirectConnectGatewayRouteToNatGatewayOutcome RefreshDirectConnectGatewayRouteToNatGateway(const Model::RefreshDirectConnectGatewayRouteToNatGatewayRequest &request);
+                void RefreshDirectConnectGatewayRouteToNatGatewayAsync(const Model::RefreshDirectConnectGatewayRouteToNatGatewayRequest& request, const RefreshDirectConnectGatewayRouteToNatGatewayAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RefreshDirectConnectGatewayRouteToNatGatewayOutcomeCallable RefreshDirectConnectGatewayRouteToNatGatewayCallable(const Model::RefreshDirectConnectGatewayRouteToNatGatewayRequest& request);
+
+                /**
                  *This API (RejectAttachCcnInstances) is used to reject association operations when instances are associated across accounts for the CCN owner.
 
                  * @param req RejectAttachCcnInstancesRequest
@@ -3320,7 +3348,7 @@ Only one policy in a single direction can be replaced in each request, and the P
                 ResetAttachCcnInstancesOutcomeCallable ResetAttachCcnInstancesCallable(const Model::ResetAttachCcnInstancesRequest& request);
 
                 /**
-                 *This API (ResetNatGatewayConnection) is used to adjust concurrent connection cap for the NAT gateway.
+                 *This API is used to adjust concurrent connection cap for the NAT gateway.
                  * @param req ResetNatGatewayConnectionRequest
                  * @return ResetNatGatewayConnectionOutcome
                  */

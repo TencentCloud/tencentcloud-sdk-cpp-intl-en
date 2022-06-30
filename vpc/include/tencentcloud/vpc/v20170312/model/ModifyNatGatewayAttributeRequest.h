@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool InternetMaxBandwidthOutHasBeenSet() const;
 
                     /**
-                     * 获取Whether to modify the security group bound to the NAT Gateway
-                     * @return ModifySecurityGroup Whether to modify the security group bound to the NAT Gateway
+                     * 获取Whether to modify the security group bound to the NAT gateway
+                     * @return ModifySecurityGroup Whether to modify the security group bound to the NAT gateway
                      */
                     bool GetModifySecurityGroup() const;
 
                     /**
-                     * 设置Whether to modify the security group bound to the NAT Gateway
-                     * @param ModifySecurityGroup Whether to modify the security group bound to the NAT Gateway
+                     * 设置Whether to modify the security group bound to the NAT gateway
+                     * @param ModifySecurityGroup Whether to modify the security group bound to the NAT gateway
                      */
                     void SetModifySecurityGroup(const bool& _modifySecurityGroup);
 
@@ -153,7 +153,7 @@ namespace TencentCloud
                     bool m_internetMaxBandwidthOutHasBeenSet;
 
                     /**
-                     * Whether to modify the security group bound to the NAT Gateway
+                     * Whether to modify the security group bound to the NAT gateway
                      */
                     bool m_modifySecurityGroup;
                     bool m_modifySecurityGroupHasBeenSet;

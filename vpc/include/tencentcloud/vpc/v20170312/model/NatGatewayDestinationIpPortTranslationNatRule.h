@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool PublicPortHasBeenSet() const;
 
                     /**
-                     * 获取Private network address.
-                     * @return PrivateIpAddress Private network address.
+                     * 获取Private IP.
+                     * @return PrivateIpAddress Private IP.
                      */
                     std::string GetPrivateIpAddress() const;
 
                     /**
-                     * 设置Private network address.
-                     * @param PrivateIpAddress Private network address.
+                     * 设置Private IP.
+                     * @param PrivateIpAddress Private IP.
                      */
                     void SetPrivateIpAddress(const std::string& _privateIpAddress);
 
@@ -119,14 +119,14 @@ namespace TencentCloud
                     bool PrivateIpAddressHasBeenSet() const;
 
                     /**
-                     * 获取Private network port.
-                     * @return PrivatePort Private network port.
+                     * 获取Private port.
+                     * @return PrivatePort Private port.
                      */
                     uint64_t GetPrivatePort() const;
 
                     /**
-                     * 设置Private network port.
-                     * @param PrivatePort Private network port.
+                     * 设置Private port.
+                     * @param PrivatePort Private port.
                      */
                     void SetPrivatePort(const uint64_t& _privatePort);
 
@@ -156,17 +156,17 @@ namespace TencentCloud
 
                     /**
                      * 获取NAT gateway ID.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return NatGatewayId NAT gateway ID.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetNatGatewayId() const;
 
                     /**
                      * 设置NAT gateway ID.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @param NatGatewayId NAT gateway ID.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetNatGatewayId(const std::string& _natGatewayId);
 
@@ -178,17 +178,17 @@ Note: This field may return null, indicating no valid value.
 
                     /**
                      * 获取VPC ID.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return VpcId VPC ID.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC ID.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @param VpcId VPC ID.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetVpcId(const std::string& _vpcId);
 
@@ -200,17 +200,17 @@ Note: This field may return null, indicating no valid value.
 
                     /**
                      * 获取The creation time of the NAT gateway forwarding rule.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return CreatedTime The creation time of the NAT gateway forwarding rule.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置The creation time of the NAT gateway forwarding rule.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @param CreatedTime The creation time of the NAT gateway forwarding rule.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
@@ -241,13 +241,13 @@ Note: This field may return null, indicating no valid value.
                     bool m_publicPortHasBeenSet;
 
                     /**
-                     * Private network address.
+                     * Private IP.
                      */
                     std::string m_privateIpAddress;
                     bool m_privateIpAddressHasBeenSet;
 
                     /**
-                     * Private network port.
+                     * Private port.
                      */
                     uint64_t m_privatePort;
                     bool m_privatePortHasBeenSet;
@@ -260,21 +260,21 @@ Note: This field may return null, indicating no valid value.
 
                     /**
                      * NAT gateway ID.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_natGatewayId;
                     bool m_natGatewayIdHasBeenSet;
 
                     /**
                      * VPC ID.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
                      * The creation time of the NAT gateway forwarding rule.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_createdTime;
                     bool m_createdTimeHasBeenSet;

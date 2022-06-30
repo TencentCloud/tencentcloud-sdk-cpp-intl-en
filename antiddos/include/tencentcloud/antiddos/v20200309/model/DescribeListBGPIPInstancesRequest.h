@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/antiddos/v20200309/model/TagFilter.h>
 
 
 namespace TencentCloud
@@ -264,6 +265,60 @@ namespace TencentCloud
                      */
                     bool FilterStatusHasBeenSet() const;
 
+                    /**
+                     * 获取Filters by the instance CNAME
+                     * @return FilterCname Filters by the instance CNAME
+                     */
+                    std::string GetFilterCname() const;
+
+                    /**
+                     * 设置Filters by the instance CNAME
+                     * @param FilterCname Filters by the instance CNAME
+                     */
+                    void SetFilterCname(const std::string& _filterCname);
+
+                    /**
+                     * 判断参数 FilterCname 是否已赋值
+                     * @return FilterCname 是否已赋值
+                     */
+                    bool FilterCnameHasBeenSet() const;
+
+                    /**
+                     * 获取Filters by the instance ID
+                     * @return FilterInstanceIdList Filters by the instance ID
+                     */
+                    std::vector<std::string> GetFilterInstanceIdList() const;
+
+                    /**
+                     * 设置Filters by the instance ID
+                     * @param FilterInstanceIdList Filters by the instance ID
+                     */
+                    void SetFilterInstanceIdList(const std::vector<std::string>& _filterInstanceIdList);
+
+                    /**
+                     * 判断参数 FilterInstanceIdList 是否已赋值
+                     * @return FilterInstanceIdList 是否已赋值
+                     */
+                    bool FilterInstanceIdListHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return FilterTag 
+                     */
+                    TagFilter GetFilterTag() const;
+
+                    /**
+                     * 设置
+                     * @param FilterTag 
+                     */
+                    void SetFilterTag(const TagFilter& _filterTag);
+
+                    /**
+                     * 判断参数 FilterTag 是否已赋值
+                     * @return FilterTag 是否已赋值
+                     */
+                    bool FilterTagHasBeenSet() const;
+
                 private:
 
                     /**
@@ -337,6 +392,24 @@ namespace TencentCloud
                      */
                     std::string m_filterStatus;
                     bool m_filterStatusHasBeenSet;
+
+                    /**
+                     * Filters by the instance CNAME
+                     */
+                    std::string m_filterCname;
+                    bool m_filterCnameHasBeenSet;
+
+                    /**
+                     * Filters by the instance ID
+                     */
+                    std::vector<std::string> m_filterInstanceIdList;
+                    bool m_filterInstanceIdListHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    TagFilter m_filterTag;
+                    bool m_filterTagHasBeenSet;
 
                 };
             }

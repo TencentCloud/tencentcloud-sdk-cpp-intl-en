@@ -62,14 +62,14 @@ namespace TencentCloud
                     bool NatGatewayNameHasBeenSet() const;
 
                     /**
-                     * 获取The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
-                     * @return VpcId The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+                     * 获取The ID of the VPC instance, which can be obtained from the `VpcId` field in response of the `DescribeVpcs` API.
+                     * @return VpcId The ID of the VPC instance, which can be obtained from the `VpcId` field in response of the `DescribeVpcs` API.
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
-                     * @param VpcId The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+                     * 设置The ID of the VPC instance, which can be obtained from the `VpcId` field in response of the `DescribeVpcs` API.
+                     * @param VpcId The ID of the VPC instance, which can be obtained from the `VpcId` field in response of the `DescribeVpcs` API.
                      */
                     void SetVpcId(const std::string& _vpcId);
 
@@ -80,14 +80,14 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取The maximum outbound bandwidth of the NAT gateway (unit: Mbps). Supported parameter values: `20, 50, 100, 200, 500, 1000, 2000, 5000`. Default: `100Mbps`.
-                     * @return InternetMaxBandwidthOut The maximum outbound bandwidth of the NAT gateway (unit: Mbps). Supported parameter values: `20, 50, 100, 200, 500, 1000, 2000, 5000`. Default: `100Mbps`.
+                     * 获取The maximum outbound bandwidth of the NAT gateway (unit: Mbps). Supported parameter values: `20, 50, 100, 200, 500, 1000, 2000, 5000`. Default: `100`.
+                     * @return InternetMaxBandwidthOut The maximum outbound bandwidth of the NAT gateway (unit: Mbps). Supported parameter values: `20, 50, 100, 200, 500, 1000, 2000, 5000`. Default: `100`.
                      */
                     uint64_t GetInternetMaxBandwidthOut() const;
 
                     /**
-                     * 设置The maximum outbound bandwidth of the NAT gateway (unit: Mbps). Supported parameter values: `20, 50, 100, 200, 500, 1000, 2000, 5000`. Default: `100Mbps`.
-                     * @param InternetMaxBandwidthOut The maximum outbound bandwidth of the NAT gateway (unit: Mbps). Supported parameter values: `20, 50, 100, 200, 500, 1000, 2000, 5000`. Default: `100Mbps`.
+                     * 设置The maximum outbound bandwidth of the NAT gateway (unit: Mbps). Supported parameter values: `20, 50, 100, 200, 500, 1000, 2000, 5000`. Default: `100`.
+                     * @param InternetMaxBandwidthOut The maximum outbound bandwidth of the NAT gateway (unit: Mbps). Supported parameter values: `20, 50, 100, 200, 500, 1000, 2000, 5000`. Default: `100`.
                      */
                     void SetInternetMaxBandwidthOut(const uint64_t& _internetMaxBandwidthOut);
 
@@ -98,14 +98,14 @@ namespace TencentCloud
                     bool InternetMaxBandwidthOutHasBeenSet() const;
 
                     /**
-                     * 获取The concurrent connection cap of the NAT gateway. Supported parameter values: `1000000, 3000000, 10000000`. The default value is `100000`.
-                     * @return MaxConcurrentConnection The concurrent connection cap of the NAT gateway. Supported parameter values: `1000000, 3000000, 10000000`. The default value is `100000`.
+                     * 获取The concurrent connection cap of the NAT gateway. Values: `1000000, 3000000, 10000000`. The default value is `1000000`.
+                     * @return MaxConcurrentConnection The concurrent connection cap of the NAT gateway. Values: `1000000, 3000000, 10000000`. The default value is `1000000`.
                      */
                     uint64_t GetMaxConcurrentConnection() const;
 
                     /**
-                     * 设置The concurrent connection cap of the NAT gateway. Supported parameter values: `1000000, 3000000, 10000000`. The default value is `100000`.
-                     * @param MaxConcurrentConnection The concurrent connection cap of the NAT gateway. Supported parameter values: `1000000, 3000000, 10000000`. The default value is `100000`.
+                     * 设置The concurrent connection cap of the NAT gateway. Values: `1000000, 3000000, 10000000`. The default value is `1000000`.
+                     * @param MaxConcurrentConnection The concurrent connection cap of the NAT gateway. Values: `1000000, 3000000, 10000000`. The default value is `1000000`.
                      */
                     void SetMaxConcurrentConnection(const uint64_t& _maxConcurrentConnection);
 
@@ -116,14 +116,14 @@ namespace TencentCloud
                     bool MaxConcurrentConnectionHasBeenSet() const;
 
                     /**
-                     * 获取The number of EIPs that needs to be applied for. The system will create N number of EIPs according to your requirements. Either AddressCount or PublicAddresses must be passed in.
-                     * @return AddressCount The number of EIPs that needs to be applied for. The system will create N number of EIPs according to your requirements. Either AddressCount or PublicAddresses must be passed in.
+                     * 获取The number of EIPs that you want to apply for. Either `AddressCount` or `PublicIpAddresses` must be passed in.
+                     * @return AddressCount The number of EIPs that you want to apply for. Either `AddressCount` or `PublicIpAddresses` must be passed in.
                      */
                     uint64_t GetAddressCount() const;
 
                     /**
-                     * 设置The number of EIPs that needs to be applied for. The system will create N number of EIPs according to your requirements. Either AddressCount or PublicAddresses must be passed in.
-                     * @param AddressCount The number of EIPs that needs to be applied for. The system will create N number of EIPs according to your requirements. Either AddressCount or PublicAddresses must be passed in.
+                     * 设置The number of EIPs that you want to apply for. Either `AddressCount` or `PublicIpAddresses` must be passed in.
+                     * @param AddressCount The number of EIPs that you want to apply for. Either `AddressCount` or `PublicIpAddresses` must be passed in.
                      */
                     void SetAddressCount(const uint64_t& _addressCount);
 
@@ -134,14 +134,14 @@ namespace TencentCloud
                     bool AddressCountHasBeenSet() const;
 
                     /**
-                     * 获取The EIP array bound to the NAT gateway. Either AddressCount or PublicAddresses must be passed in.
-                     * @return PublicIpAddresses The EIP array bound to the NAT gateway. Either AddressCount or PublicAddresses must be passed in.
+                     * 获取The EIP array bound to the NAT gateway. Either AddressCount or PublicIpAddresses must be passed in.
+                     * @return PublicIpAddresses The EIP array bound to the NAT gateway. Either AddressCount or PublicIpAddresses must be passed in.
                      */
                     std::vector<std::string> GetPublicIpAddresses() const;
 
                     /**
-                     * 设置The EIP array bound to the NAT gateway. Either AddressCount or PublicAddresses must be passed in.
-                     * @param PublicIpAddresses The EIP array bound to the NAT gateway. Either AddressCount or PublicAddresses must be passed in.
+                     * 设置The EIP array bound to the NAT gateway. Either AddressCount or PublicIpAddresses must be passed in.
+                     * @param PublicIpAddresses The EIP array bound to the NAT gateway. Either AddressCount or PublicIpAddresses must be passed in.
                      */
                     void SetPublicIpAddresses(const std::vector<std::string>& _publicIpAddresses);
 
@@ -170,14 +170,14 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
-                     * @return Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     * 获取Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
+                     * @return Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
-                     * @param Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     * 设置Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
+                     * @param Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
@@ -224,14 +224,14 @@ namespace TencentCloud
                     bool StockPublicIpAddressesBandwidthOutHasBeenSet() const;
 
                     /**
-                     * 获取The requested size of the public network IP bandwidth (in Mbps), which defaults to the maximum value applicable for the current user type.
-                     * @return PublicIpAddressesBandwidthOut The requested size of the public network IP bandwidth (in Mbps), which defaults to the maximum value applicable for the current user type.
+                     * 获取The size of the public network IP bandwidth to be applied for (in Mbps), which defaults to the maximum value applicable for the current user type.
+                     * @return PublicIpAddressesBandwidthOut The size of the public network IP bandwidth to be applied for (in Mbps), which defaults to the maximum value applicable for the current user type.
                      */
                     uint64_t GetPublicIpAddressesBandwidthOut() const;
 
                     /**
-                     * 设置The requested size of the public network IP bandwidth (in Mbps), which defaults to the maximum value applicable for the current user type.
-                     * @param PublicIpAddressesBandwidthOut The requested size of the public network IP bandwidth (in Mbps), which defaults to the maximum value applicable for the current user type.
+                     * 设置The size of the public network IP bandwidth to be applied for (in Mbps), which defaults to the maximum value applicable for the current user type.
+                     * @param PublicIpAddressesBandwidthOut The size of the public network IP bandwidth to be applied for (in Mbps), which defaults to the maximum value applicable for the current user type.
                      */
                     void SetPublicIpAddressesBandwidthOut(const uint64_t& _publicIpAddressesBandwidthOut);
 
@@ -242,14 +242,14 @@ namespace TencentCloud
                     bool PublicIpAddressesBandwidthOutHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PublicIpFromSameZone 
+                     * 获取Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified.
+                     * @return PublicIpFromSameZone Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified.
                      */
                     bool GetPublicIpFromSameZone() const;
 
                     /**
-                     * 设置
-                     * @param PublicIpFromSameZone 
+                     * 设置Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified.
+                     * @param PublicIpFromSameZone Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified.
                      */
                     void SetPublicIpFromSameZone(const bool& _publicIpFromSameZone);
 
@@ -268,31 +268,31 @@ namespace TencentCloud
                     bool m_natGatewayNameHasBeenSet;
 
                     /**
-                     * The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+                     * The ID of the VPC instance, which can be obtained from the `VpcId` field in response of the `DescribeVpcs` API.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * The maximum outbound bandwidth of the NAT gateway (unit: Mbps). Supported parameter values: `20, 50, 100, 200, 500, 1000, 2000, 5000`. Default: `100Mbps`.
+                     * The maximum outbound bandwidth of the NAT gateway (unit: Mbps). Supported parameter values: `20, 50, 100, 200, 500, 1000, 2000, 5000`. Default: `100`.
                      */
                     uint64_t m_internetMaxBandwidthOut;
                     bool m_internetMaxBandwidthOutHasBeenSet;
 
                     /**
-                     * The concurrent connection cap of the NAT gateway. Supported parameter values: `1000000, 3000000, 10000000`. The default value is `100000`.
+                     * The concurrent connection cap of the NAT gateway. Values: `1000000, 3000000, 10000000`. The default value is `1000000`.
                      */
                     uint64_t m_maxConcurrentConnection;
                     bool m_maxConcurrentConnectionHasBeenSet;
 
                     /**
-                     * The number of EIPs that needs to be applied for. The system will create N number of EIPs according to your requirements. Either AddressCount or PublicAddresses must be passed in.
+                     * The number of EIPs that you want to apply for. Either `AddressCount` or `PublicIpAddresses` must be passed in.
                      */
                     uint64_t m_addressCount;
                     bool m_addressCountHasBeenSet;
 
                     /**
-                     * The EIP array bound to the NAT gateway. Either AddressCount or PublicAddresses must be passed in.
+                     * The EIP array bound to the NAT gateway. Either AddressCount or PublicIpAddresses must be passed in.
                      */
                     std::vector<std::string> m_publicIpAddresses;
                     bool m_publicIpAddressesHasBeenSet;
@@ -304,7 +304,7 @@ namespace TencentCloud
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+                     * Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
@@ -322,13 +322,13 @@ namespace TencentCloud
                     bool m_stockPublicIpAddressesBandwidthOutHasBeenSet;
 
                     /**
-                     * The requested size of the public network IP bandwidth (in Mbps), which defaults to the maximum value applicable for the current user type.
+                     * The size of the public network IP bandwidth to be applied for (in Mbps), which defaults to the maximum value applicable for the current user type.
                      */
                     uint64_t m_publicIpAddressesBandwidthOut;
                     bool m_publicIpAddressesBandwidthOutHasBeenSet;
 
                     /**
-                     * 
+                     * Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified.
                      */
                     bool m_publicIpFromSameZone;
                     bool m_publicIpFromSameZoneHasBeenSet;

@@ -62,30 +62,30 @@ namespace TencentCloud
                     bool NatGatewayIdsHasBeenSet() const;
 
                     /**
-                     * 获取Filter condition. `NatGatewayIds` and `Filters` cannot be specified at the same time.
-<li>nat-gateway-id - String - (Filter condition) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
-<li>vpc-id - String - (Filter condition) The unique ID of the VPC, such as `vpc-123xx454`.</li>
-<li>nat-gateway-name - String - (Filter condition) The name of the protocol port template instance, such as `test_nat`.</li>
-<li>tag-key - String - (Filter condition) The tag key, such as `test-key`.</li>
-                     * @return Filters Filter condition. `NatGatewayIds` and `Filters` cannot be specified at the same time.
-<li>nat-gateway-id - String - (Filter condition) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
-<li>vpc-id - String - (Filter condition) The unique ID of the VPC, such as `vpc-123xx454`.</li>
-<li>nat-gateway-name - String - (Filter condition) The name of the protocol port template instance, such as `test_nat`.</li>
-<li>tag-key - String - (Filter condition) The tag key, such as `test-key`.</li>
+                     * 获取Filters. `NatGatewayIds` and `Filters` cannot be specified at the same time.
+<li>nat-gateway-id - String - (Filter) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
+<li>vpc-id - String - (Filter) The unique ID of the VPC, such as `vpc-123xx454`.</li>
+<li>nat-gateway-name - String - (Filter) The ID of the protocol port template instance, such as `test_nat`.</li>
+<li>tag-key - String - (Filter) The tag key, such as `test-key`.</li>
+                     * @return Filters Filters. `NatGatewayIds` and `Filters` cannot be specified at the same time.
+<li>nat-gateway-id - String - (Filter) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
+<li>vpc-id - String - (Filter) The unique ID of the VPC, such as `vpc-123xx454`.</li>
+<li>nat-gateway-name - String - (Filter) The ID of the protocol port template instance, such as `test_nat`.</li>
+<li>tag-key - String - (Filter) The tag key, such as `test-key`.</li>
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter condition. `NatGatewayIds` and `Filters` cannot be specified at the same time.
-<li>nat-gateway-id - String - (Filter condition) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
-<li>vpc-id - String - (Filter condition) The unique ID of the VPC, such as `vpc-123xx454`.</li>
-<li>nat-gateway-name - String - (Filter condition) The name of the protocol port template instance, such as `test_nat`.</li>
-<li>tag-key - String - (Filter condition) The tag key, such as `test-key`.</li>
-                     * @param Filters Filter condition. `NatGatewayIds` and `Filters` cannot be specified at the same time.
-<li>nat-gateway-id - String - (Filter condition) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
-<li>vpc-id - String - (Filter condition) The unique ID of the VPC, such as `vpc-123xx454`.</li>
-<li>nat-gateway-name - String - (Filter condition) The name of the protocol port template instance, such as `test_nat`.</li>
-<li>tag-key - String - (Filter condition) The tag key, such as `test-key`.</li>
+                     * 设置Filters. `NatGatewayIds` and `Filters` cannot be specified at the same time.
+<li>nat-gateway-id - String - (Filter) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
+<li>vpc-id - String - (Filter) The unique ID of the VPC, such as `vpc-123xx454`.</li>
+<li>nat-gateway-name - String - (Filter) The ID of the protocol port template instance, such as `test_nat`.</li>
+<li>tag-key - String - (Filter) The tag key, such as `test-key`.</li>
+                     * @param Filters Filters. `NatGatewayIds` and `Filters` cannot be specified at the same time.
+<li>nat-gateway-id - String - (Filter) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
+<li>vpc-id - String - (Filter) The unique ID of the VPC, such as `vpc-123xx454`.</li>
+<li>nat-gateway-name - String - (Filter) The ID of the protocol port template instance, such as `test_nat`.</li>
+<li>tag-key - String - (Filter) The tag key, such as `test-key`.</li>
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
@@ -96,14 +96,14 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Offset. The default value is 0.
-                     * @return Offset Offset. The default value is 0.
+                     * 获取Offset. Default value: 0.
+                     * @return Offset Offset. Default value: 0.
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset. The default value is 0.
-                     * @param Offset Offset. The default value is 0.
+                     * 设置Offset. Default value: 0.
+                     * @param Offset Offset. Default value: 0.
                      */
                     void SetOffset(const uint64_t& _offset);
 
@@ -114,14 +114,14 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of values to be returned. The default value is 20. Maximum is 100.
-                     * @return Limit Number of values to be returned. The default value is 20. Maximum is 100.
+                     * 获取Number of returned results. Default value: 20. Maximum value: 100.
+                     * @return Limit Number of returned results. Default value: 20. Maximum value: 100.
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of values to be returned. The default value is 20. Maximum is 100.
-                     * @param Limit Number of values to be returned. The default value is 20. Maximum is 100.
+                     * 设置Number of returned results. Default value: 20. Maximum value: 100.
+                     * @param Limit Number of returned results. Default value: 20. Maximum value: 100.
                      */
                     void SetLimit(const uint64_t& _limit);
 
@@ -140,23 +140,23 @@ namespace TencentCloud
                     bool m_natGatewayIdsHasBeenSet;
 
                     /**
-                     * Filter condition. `NatGatewayIds` and `Filters` cannot be specified at the same time.
-<li>nat-gateway-id - String - (Filter condition) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
-<li>vpc-id - String - (Filter condition) The unique ID of the VPC, such as `vpc-123xx454`.</li>
-<li>nat-gateway-name - String - (Filter condition) The name of the protocol port template instance, such as `test_nat`.</li>
-<li>tag-key - String - (Filter condition) The tag key, such as `test-key`.</li>
+                     * Filters. `NatGatewayIds` and `Filters` cannot be specified at the same time.
+<li>nat-gateway-id - String - (Filter) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
+<li>vpc-id - String - (Filter) The unique ID of the VPC, such as `vpc-123xx454`.</li>
+<li>nat-gateway-name - String - (Filter) The ID of the protocol port template instance, such as `test_nat`.</li>
+<li>tag-key - String - (Filter) The tag key, such as `test-key`.</li>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Offset. The default value is 0.
+                     * Offset. Default value: 0.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of values to be returned. The default value is 20. Maximum is 100.
+                     * Number of returned results. Default value: 20. Maximum value: 100.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;

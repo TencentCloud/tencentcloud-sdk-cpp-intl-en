@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/antiddos/v20200309/model/SourceServer.h>
 #include <tencentcloud/antiddos/v20200309/model/InstanceRelation.h>
+#include <tencentcloud/antiddos/v20200309/model/RuleInstanceRelation.h>
 
 
 namespace TencentCloud
@@ -133,14 +134,14 @@ UDP
                     bool RealServersHasBeenSet() const;
 
                     /**
-                     * 获取Anti-DDoS instance configured
-                     * @return InstanceDetails Anti-DDoS instance configured
+                     * 获取Information of the Anti-DDoS instance
+                     * @return InstanceDetails Information of the Anti-DDoS instance
                      */
                     std::vector<InstanceRelation> GetInstanceDetails() const;
 
                     /**
-                     * 设置Anti-DDoS instance configured
-                     * @param InstanceDetails Anti-DDoS instance configured
+                     * 设置Information of the Anti-DDoS instance
+                     * @param InstanceDetails Information of the Anti-DDoS instance
                      */
                     void SetInstanceDetails(const std::vector<InstanceRelation>& _instanceDetails);
 
@@ -149,6 +150,24 @@ UDP
                      * @return InstanceDetails 是否已赋值
                      */
                     bool InstanceDetailsHasBeenSet() const;
+
+                    /**
+                     * 获取Information of the Anti-DDoS instance configured
+                     * @return InstanceDetailRule Information of the Anti-DDoS instance configured
+                     */
+                    std::vector<RuleInstanceRelation> GetInstanceDetailRule() const;
+
+                    /**
+                     * 设置Information of the Anti-DDoS instance configured
+                     * @param InstanceDetailRule Information of the Anti-DDoS instance configured
+                     */
+                    void SetInstanceDetailRule(const std::vector<RuleInstanceRelation>& _instanceDetailRule);
+
+                    /**
+                     * 判断参数 InstanceDetailRule 是否已赋值
+                     * @return InstanceDetailRule 是否已赋值
+                     */
+                    bool InstanceDetailRuleHasBeenSet() const;
 
                 private:
 
@@ -180,10 +199,16 @@ UDP
                     bool m_realServersHasBeenSet;
 
                     /**
-                     * Anti-DDoS instance configured
+                     * Information of the Anti-DDoS instance
                      */
                     std::vector<InstanceRelation> m_instanceDetails;
                     bool m_instanceDetailsHasBeenSet;
+
+                    /**
+                     * Information of the Anti-DDoS instance configured
+                     */
+                    std::vector<RuleInstanceRelation> m_instanceDetailRule;
+                    bool m_instanceDetailRuleHasBeenSet;
 
                 };
             }

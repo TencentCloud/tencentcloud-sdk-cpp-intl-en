@@ -524,6 +524,50 @@ Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     bool ShortEdgeAsHeightHasBeenSet() const;
 
+                    /**
+                     * 获取The DRM encryption type. Valid values: fairplay, normalaes, widevine.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DRMType The DRM encryption type. Valid values: fairplay, normalaes, widevine.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetDRMType() const;
+
+                    /**
+                     * 设置The DRM encryption type. Valid values: fairplay, normalaes, widevine.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param DRMType The DRM encryption type. Valid values: fairplay, normalaes, widevine.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetDRMType(const std::string& _dRMType);
+
+                    /**
+                     * 判断参数 DRMType 是否已赋值
+                     * @return DRMType 是否已赋值
+                     */
+                    bool DRMTypeHasBeenSet() const;
+
+                    /**
+                     * 获取The tracks to encrypt. Valid values: AUDIO, SD, HD, UHD1, UHD2. Separate multiple tracks with “|”. You can choose only one video track (SD, HD, UHD1, or UHD2).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DRMTracks The tracks to encrypt. Valid values: AUDIO, SD, HD, UHD1, UHD2. Separate multiple tracks with “|”. You can choose only one video track (SD, HD, UHD1, or UHD2).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetDRMTracks() const;
+
+                    /**
+                     * 设置The tracks to encrypt. Valid values: AUDIO, SD, HD, UHD1, UHD2. Separate multiple tracks with “|”. You can choose only one video track (SD, HD, UHD1, or UHD2).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param DRMTracks The tracks to encrypt. Valid values: AUDIO, SD, HD, UHD1, UHD2. Separate multiple tracks with “|”. You can choose only one video track (SD, HD, UHD1, or UHD2).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetDRMTracks(const std::string& _dRMTracks);
+
+                    /**
+                     * 判断参数 DRMTracks 是否已赋值
+                     * @return DRMTracks 是否已赋值
+                     */
+                    bool DRMTracksHasBeenSet() const;
+
                 private:
 
                     /**
@@ -676,6 +720,20 @@ Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     int64_t m_shortEdgeAsHeight;
                     bool m_shortEdgeAsHeightHasBeenSet;
+
+                    /**
+                     * The DRM encryption type. Valid values: fairplay, normalaes, widevine.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_dRMType;
+                    bool m_dRMTypeHasBeenSet;
+
+                    /**
+                     * The tracks to encrypt. Valid values: AUDIO, SD, HD, UHD1, UHD2. Separate multiple tracks with “|”. You can choose only one video track (SD, HD, UHD1, or UHD2).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_dRMTracks;
+                    bool m_dRMTracksHasBeenSet;
 
                 };
             }

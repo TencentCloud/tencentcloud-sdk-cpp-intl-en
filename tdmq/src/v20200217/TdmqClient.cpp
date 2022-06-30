@@ -1201,6 +1201,135 @@ TdmqClient::DeleteRolesOutcomeCallable TdmqClient::DeleteRolesCallable(const Del
     return task->get_future();
 }
 
+TdmqClient::DeleteSubscriptionsOutcome TdmqClient::DeleteSubscriptions(const DeleteSubscriptionsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteSubscriptions");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteSubscriptionsResponse rsp = DeleteSubscriptionsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteSubscriptionsOutcome(rsp);
+        else
+            return DeleteSubscriptionsOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteSubscriptionsOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DeleteSubscriptionsAsync(const DeleteSubscriptionsRequest& request, const DeleteSubscriptionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteSubscriptions(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TdmqClient::DeleteSubscriptionsOutcomeCallable TdmqClient::DeleteSubscriptionsCallable(const DeleteSubscriptionsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteSubscriptionsOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteSubscriptions(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TdmqClient::DeleteTopicsOutcome TdmqClient::DeleteTopics(const DeleteTopicsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteTopics");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteTopicsResponse rsp = DeleteTopicsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteTopicsOutcome(rsp);
+        else
+            return DeleteTopicsOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteTopicsOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DeleteTopicsAsync(const DeleteTopicsRequest& request, const DeleteTopicsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteTopics(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TdmqClient::DeleteTopicsOutcomeCallable TdmqClient::DeleteTopicsCallable(const DeleteTopicsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteTopicsOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteTopics(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TdmqClient::DescribeBindClustersOutcome TdmqClient::DescribeBindClusters(const DescribeBindClustersRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeBindClusters");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeBindClustersResponse rsp = DescribeBindClustersResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeBindClustersOutcome(rsp);
+        else
+            return DescribeBindClustersOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeBindClustersOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DescribeBindClustersAsync(const DescribeBindClustersRequest& request, const DescribeBindClustersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeBindClusters(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TdmqClient::DescribeBindClustersOutcomeCallable TdmqClient::DescribeBindClustersCallable(const DescribeBindClustersRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeBindClustersOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeBindClusters(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TdmqClient::DescribeBindVpcsOutcome TdmqClient::DescribeBindVpcs(const DescribeBindVpcsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeBindVpcs");
@@ -1280,6 +1409,49 @@ TdmqClient::DescribeClusterDetailOutcomeCallable TdmqClient::DescribeClusterDeta
         [this, request]()
         {
             return this->DescribeClusterDetail(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TdmqClient::DescribeClustersOutcome TdmqClient::DescribeClusters(const DescribeClustersRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeClusters");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeClustersResponse rsp = DescribeClustersResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeClustersOutcome(rsp);
+        else
+            return DescribeClustersOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeClustersOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DescribeClustersAsync(const DescribeClustersRequest& request, const DescribeClustersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeClusters(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TdmqClient::DescribeClustersOutcomeCallable TdmqClient::DescribeClustersCallable(const DescribeClustersRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeClustersOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeClusters(request);
         }
     );
 
@@ -1373,6 +1545,49 @@ TdmqClient::DescribeCmqQueueDetailOutcomeCallable TdmqClient::DescribeCmqQueueDe
     return task->get_future();
 }
 
+TdmqClient::DescribeCmqQueuesOutcome TdmqClient::DescribeCmqQueues(const DescribeCmqQueuesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCmqQueues");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCmqQueuesResponse rsp = DescribeCmqQueuesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCmqQueuesOutcome(rsp);
+        else
+            return DescribeCmqQueuesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCmqQueuesOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DescribeCmqQueuesAsync(const DescribeCmqQueuesRequest& request, const DescribeCmqQueuesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeCmqQueues(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TdmqClient::DescribeCmqQueuesOutcomeCallable TdmqClient::DescribeCmqQueuesCallable(const DescribeCmqQueuesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeCmqQueuesOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeCmqQueues(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TdmqClient::DescribeCmqSubscriptionDetailOutcome TdmqClient::DescribeCmqSubscriptionDetail(const DescribeCmqSubscriptionDetailRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeCmqSubscriptionDetail");
@@ -1459,6 +1674,49 @@ TdmqClient::DescribeCmqTopicDetailOutcomeCallable TdmqClient::DescribeCmqTopicDe
     return task->get_future();
 }
 
+TdmqClient::DescribeCmqTopicsOutcome TdmqClient::DescribeCmqTopics(const DescribeCmqTopicsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCmqTopics");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCmqTopicsResponse rsp = DescribeCmqTopicsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCmqTopicsOutcome(rsp);
+        else
+            return DescribeCmqTopicsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCmqTopicsOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DescribeCmqTopicsAsync(const DescribeCmqTopicsRequest& request, const DescribeCmqTopicsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeCmqTopics(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TdmqClient::DescribeCmqTopicsOutcomeCallable TdmqClient::DescribeCmqTopicsCallable(const DescribeCmqTopicsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeCmqTopicsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeCmqTopics(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TdmqClient::DescribeEnvironmentAttributesOutcome TdmqClient::DescribeEnvironmentAttributes(const DescribeEnvironmentAttributesRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeEnvironmentAttributes");
@@ -1495,6 +1753,92 @@ TdmqClient::DescribeEnvironmentAttributesOutcomeCallable TdmqClient::DescribeEnv
         [this, request]()
         {
             return this->DescribeEnvironmentAttributes(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TdmqClient::DescribeEnvironmentRolesOutcome TdmqClient::DescribeEnvironmentRoles(const DescribeEnvironmentRolesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeEnvironmentRoles");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeEnvironmentRolesResponse rsp = DescribeEnvironmentRolesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeEnvironmentRolesOutcome(rsp);
+        else
+            return DescribeEnvironmentRolesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeEnvironmentRolesOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DescribeEnvironmentRolesAsync(const DescribeEnvironmentRolesRequest& request, const DescribeEnvironmentRolesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeEnvironmentRoles(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TdmqClient::DescribeEnvironmentRolesOutcomeCallable TdmqClient::DescribeEnvironmentRolesCallable(const DescribeEnvironmentRolesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeEnvironmentRolesOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeEnvironmentRoles(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TdmqClient::DescribeEnvironmentsOutcome TdmqClient::DescribeEnvironments(const DescribeEnvironmentsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeEnvironments");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeEnvironmentsResponse rsp = DescribeEnvironmentsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeEnvironmentsOutcome(rsp);
+        else
+            return DescribeEnvironmentsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeEnvironmentsOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DescribeEnvironmentsAsync(const DescribeEnvironmentsRequest& request, const DescribeEnvironmentsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeEnvironments(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TdmqClient::DescribeEnvironmentsOutcomeCallable TdmqClient::DescribeEnvironmentsCallable(const DescribeEnvironmentsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeEnvironmentsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeEnvironments(request);
         }
     );
 
@@ -1631,6 +1975,178 @@ TdmqClient::DescribeRocketMQClusterOutcomeCallable TdmqClient::DescribeRocketMQC
     return task->get_future();
 }
 
+TdmqClient::DescribeRocketMQClustersOutcome TdmqClient::DescribeRocketMQClusters(const DescribeRocketMQClustersRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRocketMQClusters");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRocketMQClustersResponse rsp = DescribeRocketMQClustersResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRocketMQClustersOutcome(rsp);
+        else
+            return DescribeRocketMQClustersOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRocketMQClustersOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DescribeRocketMQClustersAsync(const DescribeRocketMQClustersRequest& request, const DescribeRocketMQClustersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeRocketMQClusters(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TdmqClient::DescribeRocketMQClustersOutcomeCallable TdmqClient::DescribeRocketMQClustersCallable(const DescribeRocketMQClustersRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeRocketMQClustersOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeRocketMQClusters(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TdmqClient::DescribeRocketMQGroupsOutcome TdmqClient::DescribeRocketMQGroups(const DescribeRocketMQGroupsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRocketMQGroups");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRocketMQGroupsResponse rsp = DescribeRocketMQGroupsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRocketMQGroupsOutcome(rsp);
+        else
+            return DescribeRocketMQGroupsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRocketMQGroupsOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DescribeRocketMQGroupsAsync(const DescribeRocketMQGroupsRequest& request, const DescribeRocketMQGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeRocketMQGroups(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TdmqClient::DescribeRocketMQGroupsOutcomeCallable TdmqClient::DescribeRocketMQGroupsCallable(const DescribeRocketMQGroupsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeRocketMQGroupsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeRocketMQGroups(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TdmqClient::DescribeRocketMQNamespacesOutcome TdmqClient::DescribeRocketMQNamespaces(const DescribeRocketMQNamespacesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRocketMQNamespaces");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRocketMQNamespacesResponse rsp = DescribeRocketMQNamespacesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRocketMQNamespacesOutcome(rsp);
+        else
+            return DescribeRocketMQNamespacesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRocketMQNamespacesOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DescribeRocketMQNamespacesAsync(const DescribeRocketMQNamespacesRequest& request, const DescribeRocketMQNamespacesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeRocketMQNamespaces(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TdmqClient::DescribeRocketMQNamespacesOutcomeCallable TdmqClient::DescribeRocketMQNamespacesCallable(const DescribeRocketMQNamespacesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeRocketMQNamespacesOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeRocketMQNamespaces(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TdmqClient::DescribeRocketMQTopicsOutcome TdmqClient::DescribeRocketMQTopics(const DescribeRocketMQTopicsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRocketMQTopics");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRocketMQTopicsResponse rsp = DescribeRocketMQTopicsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRocketMQTopicsOutcome(rsp);
+        else
+            return DescribeRocketMQTopicsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRocketMQTopicsOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DescribeRocketMQTopicsAsync(const DescribeRocketMQTopicsRequest& request, const DescribeRocketMQTopicsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeRocketMQTopics(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TdmqClient::DescribeRocketMQTopicsOutcomeCallable TdmqClient::DescribeRocketMQTopicsCallable(const DescribeRocketMQTopicsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeRocketMQTopicsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeRocketMQTopics(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TdmqClient::DescribeRolesOutcome TdmqClient::DescribeRoles(const DescribeRolesRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeRoles");
@@ -1667,6 +2183,92 @@ TdmqClient::DescribeRolesOutcomeCallable TdmqClient::DescribeRolesCallable(const
         [this, request]()
         {
             return this->DescribeRoles(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TdmqClient::DescribeSubscriptionsOutcome TdmqClient::DescribeSubscriptions(const DescribeSubscriptionsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeSubscriptions");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeSubscriptionsResponse rsp = DescribeSubscriptionsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeSubscriptionsOutcome(rsp);
+        else
+            return DescribeSubscriptionsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeSubscriptionsOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DescribeSubscriptionsAsync(const DescribeSubscriptionsRequest& request, const DescribeSubscriptionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeSubscriptions(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TdmqClient::DescribeSubscriptionsOutcomeCallable TdmqClient::DescribeSubscriptionsCallable(const DescribeSubscriptionsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeSubscriptionsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeSubscriptions(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TdmqClient::DescribeTopicsOutcome TdmqClient::DescribeTopics(const DescribeTopicsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeTopics");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeTopicsResponse rsp = DescribeTopicsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeTopicsOutcome(rsp);
+        else
+            return DescribeTopicsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeTopicsOutcome(outcome.GetError());
+    }
+}
+
+void TdmqClient::DescribeTopicsAsync(const DescribeTopicsRequest& request, const DescribeTopicsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeTopics(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TdmqClient::DescribeTopicsOutcomeCallable TdmqClient::DescribeTopicsCallable(const DescribeTopicsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeTopicsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeTopics(request);
         }
     );
 

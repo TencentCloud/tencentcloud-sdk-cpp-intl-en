@@ -95,6 +95,34 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool ExtendEniPrivateIpAddressQuantityHasBeenSet() const;
 
+                    /**
+                     * 获取The quota of relayed ENIs
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return SubEniQuantity The quota of relayed ENIs
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetSubEniQuantity() const;
+
+                    /**
+                     * 判断参数 SubEniQuantity 是否已赋值
+                     * @return SubEniQuantity 是否已赋值
+                     */
+                    bool SubEniQuantityHasBeenSet() const;
+
+                    /**
+                     * 获取The quota of IPs that can be assigned to each relayed ENI.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return SubEniPrivateIpAddressQuantity The quota of IPs that can be assigned to each relayed ENI.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetSubEniPrivateIpAddressQuantity() const;
+
+                    /**
+                     * 判断参数 SubEniPrivateIpAddressQuantity 是否已赋值
+                     * @return SubEniPrivateIpAddressQuantity 是否已赋值
+                     */
+                    bool SubEniPrivateIpAddressQuantityHasBeenSet() const;
+
                 private:
 
                     /**
@@ -122,6 +150,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     int64_t m_extendEniPrivateIpAddressQuantity;
                     bool m_extendEniPrivateIpAddressQuantityHasBeenSet;
+
+                    /**
+                     * The quota of relayed ENIs
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_subEniQuantity;
+                    bool m_subEniQuantityHasBeenSet;
+
+                    /**
+                     * The quota of IPs that can be assigned to each relayed ENI.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_subEniPrivateIpAddressQuantity;
+                    bool m_subEniPrivateIpAddressQuantityHasBeenSet;
 
                 };
             }
