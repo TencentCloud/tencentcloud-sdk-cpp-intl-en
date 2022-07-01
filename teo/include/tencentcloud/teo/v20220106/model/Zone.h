@@ -232,6 +232,36 @@ namespace TencentCloud
                      */
                     bool ModifiedOnHasBeenSet() const;
 
+                    /**
+                     * 获取Ownership verification status of the site when it is connected to EdgeOne via CNAME.
+- `finished`: The site is verified.
+- `pending`: Verifying the ownership of the site.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return CnameStatus Ownership verification status of the site when it is connected to EdgeOne via CNAME.
+- `finished`: The site is verified.
+- `pending`: Verifying the ownership of the site.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetCnameStatus() const;
+
+                    /**
+                     * 设置Ownership verification status of the site when it is connected to EdgeOne via CNAME.
+- `finished`: The site is verified.
+- `pending`: Verifying the ownership of the site.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param CnameStatus Ownership verification status of the site when it is connected to EdgeOne via CNAME.
+- `finished`: The site is verified.
+- `pending`: Verifying the ownership of the site.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetCnameStatus(const std::string& _cnameStatus);
+
+                    /**
+                     * 判断参数 CnameStatus 是否已赋值
+                     * @return CnameStatus 是否已赋值
+                     */
+                    bool CnameStatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -293,6 +323,15 @@ namespace TencentCloud
                      */
                     std::string m_modifiedOn;
                     bool m_modifiedOnHasBeenSet;
+
+                    /**
+                     * Ownership verification status of the site when it is connected to EdgeOne via CNAME.
+- `finished`: The site is verified.
+- `pending`: Verifying the ownership of the site.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_cnameStatus;
+                    bool m_cnameStatusHasBeenSet;
 
                 };
             }
