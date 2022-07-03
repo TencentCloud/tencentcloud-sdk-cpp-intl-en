@@ -117,18 +117,18 @@ Default value: `mainland`. You can prefetch a URL to nodes in a region provided 
                     bool AreaHasBeenSet() const;
 
                     /**
-                     * 获取If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node.
-Note: resources prefetched outside the Chinese mainland will be cached to CDN nodes outside the Chinese mainland and the traffic generated will incur costs.
-                     * @return Layer If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node.
-Note: resources prefetched outside the Chinese mainland will be cached to CDN nodes outside the Chinese mainland and the traffic generated will incur costs.
+                     * 获取By default, prefetch for regions in the Chinese mainland is performed onto the intermediate nodes, while prefetch for regions outside the Chinese mainland is performed onto the edge nodes and the traffic generated will be billed.
+If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node.
+                     * @return Layer By default, prefetch for regions in the Chinese mainland is performed onto the intermediate nodes, while prefetch for regions outside the Chinese mainland is performed onto the edge nodes and the traffic generated will be billed.
+If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node.
                      */
                     std::string GetLayer() const;
 
                     /**
-                     * 设置If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node.
-Note: resources prefetched outside the Chinese mainland will be cached to CDN nodes outside the Chinese mainland and the traffic generated will incur costs.
-                     * @param Layer If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node.
-Note: resources prefetched outside the Chinese mainland will be cached to CDN nodes outside the Chinese mainland and the traffic generated will incur costs.
+                     * 设置By default, prefetch for regions in the Chinese mainland is performed onto the intermediate nodes, while prefetch for regions outside the Chinese mainland is performed onto the edge nodes and the traffic generated will be billed.
+If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node.
+                     * @param Layer By default, prefetch for regions in the Chinese mainland is performed onto the intermediate nodes, while prefetch for regions outside the Chinese mainland is performed onto the edge nodes and the traffic generated will be billed.
+If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node.
                      */
                     void SetLayer(const std::string& _layer);
 
@@ -224,8 +224,8 @@ Default value: `mainland`. You can prefetch a URL to nodes in a region provided 
                     bool m_areaHasBeenSet;
 
                     /**
-                     * If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node.
-Note: resources prefetched outside the Chinese mainland will be cached to CDN nodes outside the Chinese mainland and the traffic generated will incur costs.
+                     * By default, prefetch for regions in the Chinese mainland is performed onto the intermediate nodes, while prefetch for regions outside the Chinese mainland is performed onto the edge nodes and the traffic generated will be billed.
+If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node.
                      */
                     std::string m_layer;
                     bool m_layerHasBeenSet;

@@ -61,7 +61,7 @@ set(cdn_public_header_model
   include/tencentcloud/cdn/v20180606/model/GuetzliAdapter.h
   include/tencentcloud/cdn/v20180606/model/UpdateScdnDomainResponse.h
   include/tencentcloud/cdn/v20180606/model/Origin.h
-  include/tencentcloud/cdn/v20180606/model/DescribeDomainsConfigRequest.h
+  include/tencentcloud/cdn/v20180606/model/AdvancedAuthenticationTypeF.h
   include/tencentcloud/cdn/v20180606/model/TopData.h
   include/tencentcloud/cdn/v20180606/model/EnableCachesRequest.h
   include/tencentcloud/cdn/v20180606/model/Quota.h
@@ -92,7 +92,6 @@ set(cdn_public_header_model
   include/tencentcloud/cdn/v20180606/model/EnableClsLogTopicResponse.h
   include/tencentcloud/cdn/v20180606/model/ListClsLogTopicsResponse.h
   include/tencentcloud/cdn/v20180606/model/OverseaConfig.h
-  include/tencentcloud/cdn/v20180606/model/AddCdnDomainRequest.h
   include/tencentcloud/cdn/v20180606/model/UserAgentFilterRule.h
   include/tencentcloud/cdn/v20180606/model/UpdateDomainConfigRequest.h
   include/tencentcloud/cdn/v20180606/model/Tag.h
@@ -100,7 +99,7 @@ set(cdn_public_header_model
   include/tencentcloud/cdn/v20180606/model/MaxAgeRule.h
   include/tencentcloud/cdn/v20180606/model/AdvancedAuthenticationTypeE.h
   include/tencentcloud/cdn/v20180606/model/DescribeCertDomainsRequest.h
-  include/tencentcloud/cdn/v20180606/model/AdvancedAuthenticationTypeF.h
+  include/tencentcloud/cdn/v20180606/model/DescribeDomainsConfigRequest.h
   include/tencentcloud/cdn/v20180606/model/AdvancedAuthenticationTypeA.h
   include/tencentcloud/cdn/v20180606/model/AdvancedCache.h
   include/tencentcloud/cdn/v20180606/model/AdvancedAuthenticationTypeC.h
@@ -120,13 +119,12 @@ set(cdn_public_header_model
   include/tencentcloud/cdn/v20180606/model/DescribePushTasksResponse.h
   include/tencentcloud/cdn/v20180606/model/ResourceOriginData.h
   include/tencentcloud/cdn/v20180606/model/IpStatus.h
-  include/tencentcloud/cdn/v20180606/model/AddCdnDomainResponse.h
   include/tencentcloud/cdn/v20180606/model/DomainAreaConfig.h
   include/tencentcloud/cdn/v20180606/model/ServerCert.h
   include/tencentcloud/cdn/v20180606/model/AccessControlRule.h
   include/tencentcloud/cdn/v20180606/model/HttpHeaderPathRule.h
   include/tencentcloud/cdn/v20180606/model/DisableCachesRequest.h
-  include/tencentcloud/cdn/v20180606/model/ScdnAclRule.h
+  include/tencentcloud/cdn/v20180606/model/AddCLSTopicDomainsResponse.h
   include/tencentcloud/cdn/v20180606/model/SimpleCacheRule.h
   include/tencentcloud/cdn/v20180606/model/DisableClsLogTopicResponse.h
   include/tencentcloud/cdn/v20180606/model/Hsts.h
@@ -141,6 +139,7 @@ set(cdn_public_header_model
   include/tencentcloud/cdn/v20180606/model/UpdateScdnDomainRequest.h
   include/tencentcloud/cdn/v20180606/model/UpdatePayTypeRequest.h
   include/tencentcloud/cdn/v20180606/model/ManageClsTopicDomainsRequest.h
+  include/tencentcloud/cdn/v20180606/model/AddCLSTopicDomainsRequest.h
   include/tencentcloud/cdn/v20180606/model/ScdnWafConfig.h
   include/tencentcloud/cdn/v20180606/model/CreateScdnFailedLogTaskRequest.h
   include/tencentcloud/cdn/v20180606/model/Cache.h
@@ -254,6 +253,7 @@ set(cdn_public_header_model
   include/tencentcloud/cdn/v20180606/model/OfflineCache.h
   include/tencentcloud/cdn/v20180606/model/UrlRedirectRule.h
   include/tencentcloud/cdn/v20180606/model/IpFilterPathRule.h
+  include/tencentcloud/cdn/v20180606/model/ScdnAclRule.h
   )
 
 set(cdn_src
@@ -300,7 +300,7 @@ set(cdn_src
   src/v20180606/model/GuetzliAdapter.cpp
   src/v20180606/model/UpdateScdnDomainResponse.cpp
   src/v20180606/model/Origin.cpp
-  src/v20180606/model/DescribeDomainsConfigRequest.cpp
+  src/v20180606/model/AdvancedAuthenticationTypeF.cpp
   src/v20180606/model/TopData.cpp
   src/v20180606/model/EnableCachesRequest.cpp
   src/v20180606/model/Quota.cpp
@@ -331,7 +331,6 @@ set(cdn_src
   src/v20180606/model/EnableClsLogTopicResponse.cpp
   src/v20180606/model/ListClsLogTopicsResponse.cpp
   src/v20180606/model/OverseaConfig.cpp
-  src/v20180606/model/AddCdnDomainRequest.cpp
   src/v20180606/model/UserAgentFilterRule.cpp
   src/v20180606/model/UpdateDomainConfigRequest.cpp
   src/v20180606/model/Tag.cpp
@@ -339,7 +338,7 @@ set(cdn_src
   src/v20180606/model/MaxAgeRule.cpp
   src/v20180606/model/AdvancedAuthenticationTypeE.cpp
   src/v20180606/model/DescribeCertDomainsRequest.cpp
-  src/v20180606/model/AdvancedAuthenticationTypeF.cpp
+  src/v20180606/model/DescribeDomainsConfigRequest.cpp
   src/v20180606/model/AdvancedAuthenticationTypeA.cpp
   src/v20180606/model/AdvancedCache.cpp
   src/v20180606/model/AdvancedAuthenticationTypeC.cpp
@@ -359,13 +358,12 @@ set(cdn_src
   src/v20180606/model/DescribePushTasksResponse.cpp
   src/v20180606/model/ResourceOriginData.cpp
   src/v20180606/model/IpStatus.cpp
-  src/v20180606/model/AddCdnDomainResponse.cpp
   src/v20180606/model/DomainAreaConfig.cpp
   src/v20180606/model/ServerCert.cpp
   src/v20180606/model/AccessControlRule.cpp
   src/v20180606/model/HttpHeaderPathRule.cpp
   src/v20180606/model/DisableCachesRequest.cpp
-  src/v20180606/model/ScdnAclRule.cpp
+  src/v20180606/model/AddCLSTopicDomainsResponse.cpp
   src/v20180606/model/SimpleCacheRule.cpp
   src/v20180606/model/DisableClsLogTopicResponse.cpp
   src/v20180606/model/Hsts.cpp
@@ -380,6 +378,7 @@ set(cdn_src
   src/v20180606/model/UpdateScdnDomainRequest.cpp
   src/v20180606/model/UpdatePayTypeRequest.cpp
   src/v20180606/model/ManageClsTopicDomainsRequest.cpp
+  src/v20180606/model/AddCLSTopicDomainsRequest.cpp
   src/v20180606/model/ScdnWafConfig.cpp
   src/v20180606/model/CreateScdnFailedLogTaskRequest.cpp
   src/v20180606/model/Cache.cpp
@@ -493,6 +492,7 @@ set(cdn_src
   src/v20180606/model/OfflineCache.cpp
   src/v20180606/model/UrlRedirectRule.cpp
   src/v20180606/model/IpFilterPathRule.cpp
+  src/v20180606/model/ScdnAclRule.cpp
   )
 
 set(cdn_include

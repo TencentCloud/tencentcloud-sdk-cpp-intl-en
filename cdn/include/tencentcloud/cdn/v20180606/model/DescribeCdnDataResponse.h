@@ -45,16 +45,16 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Time granularity of the returned data. Specify one of the following during querying:
-min: 1 minute
-5min: 5 minutes
-hour: 1 hour
-day: 1 day
-                     * @return Interval Time granularity of the returned data. Specify one of the following during querying:
-min: 1 minute
-5min: 5 minutes
-hour: 1 hour
-day: 1 day
+                     * 获取Time granularity of the returned data. 
+`min`: 1 minute
+`5min`: 5 minutes
+`hour`: 1 hour
+`day`: 1 day
+                     * @return Interval Time granularity of the returned data. 
+`min`: 1 minute
+`5min`: 5 minutes
+`hour`: 1 hour
+`day`: 1 day
                      */
                     std::string GetInterval() const;
 
@@ -79,11 +79,11 @@ day: 1 day
                 private:
 
                     /**
-                     * Time granularity of the returned data. Specify one of the following during querying:
-min: 1 minute
-5min: 5 minutes
-hour: 1 hour
-day: 1 day
+                     * Time granularity of the returned data. 
+`min`: 1 minute
+`5min`: 5 minutes
+`hour`: 1 hour
+`day`: 1 day
                      */
                     std::string m_interval;
                     bool m_intervalHasBeenSet;

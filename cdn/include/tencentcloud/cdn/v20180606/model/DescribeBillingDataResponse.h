@@ -46,15 +46,15 @@ namespace TencentCloud
 
                     /**
                      * 获取Time granularity, which is specified by the parameter passed in during the query:
-min: 1-minute
-5min: 5-minute
-hour: 1-hour
-day: 1-day
+`min`: 1 minute
+`5min`: 5 minutes
+`hour`: 1 hour
+`day`: 1 day
                      * @return Interval Time granularity, which is specified by the parameter passed in during the query:
-min: 1-minute
-5min: 5-minute
-hour: 1-hour
-day: 1-day
+`min`: 1 minute
+`5min`: 5 minutes
+`hour`: 1 hour
+`day`: 1 day
                      */
                     std::string GetInterval() const;
 
@@ -80,10 +80,10 @@ day: 1-day
 
                     /**
                      * Time granularity, which is specified by the parameter passed in during the query:
-min: 1-minute
-5min: 5-minute
-hour: 1-hour
-day: 1-day
+`min`: 1 minute
+`5min`: 5 minutes
+`hour`: 1 hour
+`day`: 1 day
                      */
                     std::string m_interval;
                     bool m_intervalHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Domain name region configuration
+                * Region configuration for domain names
                 */
                 class DomainAreaConfig : public AbstractModel
                 {
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取Region list, where the element can be `mainland/overseas`
-                     * @return Area Region list, where the element can be `mainland/overseas`
+                     * 获取Region list, where the element can be `mainland`/`overseas`
+                     * @return Area Region list, where the element can be `mainland`/`overseas`
                      */
                     std::vector<std::string> GetArea() const;
 
                     /**
-                     * 设置Region list, where the element can be `mainland/overseas`
-                     * @param Area Region list, where the element can be `mainland/overseas`
+                     * 设置Region list, where the element can be `mainland`/`overseas`
+                     * @param Area Region list, where the element can be `mainland`/`overseas`
                      */
                     void SetArea(const std::vector<std::string>& _area);
 
@@ -91,7 +91,7 @@ namespace TencentCloud
                     bool m_domainHasBeenSet;
 
                     /**
-                     * Region list, where the element can be `mainland/overseas`
+                     * Region list, where the element can be `mainland`/`overseas`
                      */
                     std::vector<std::string> m_area;
                     bool m_areaHasBeenSet;

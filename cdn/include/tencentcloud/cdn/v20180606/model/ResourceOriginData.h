@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * This API is used to query an object and its origin-pull details
+                * This API is used to query an object and its origin-pull details.
                 */
                 class ResourceOriginData : public AbstractModel
                 {
@@ -48,30 +48,30 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Resource name, which is classified as follows based on different query conditions:
-A specific domain name: This indicates the details of this domain name
-multiDomains: This indicates the aggregate details of multiple domain names
-Project ID: This displays the ID of the specifically queried project
-all: This indicates the details at the account level
-                     * @return Resource Resource name, which is classified as follows based on different query conditions:
-A specific domain name: This indicates the details of this domain name
-multiDomains: This indicates the aggregate details of multiple domain names
-Project ID: This displays the ID of the specifically queried project
-all: This indicates the details at the account level
+                     * 获取Resource name, which is classified as follows based on different query filters:
+A specific domain name: Details of the domain name
+`multiDomains`: Aggregated details of multiple domain names
+Project ID: ID of the specifically queried project
+`all`: Details at the account level
+                     * @return Resource Resource name, which is classified as follows based on different query filters:
+A specific domain name: Details of the domain name
+`multiDomains`: Aggregated details of multiple domain names
+Project ID: ID of the specifically queried project
+`all`: Details at the account level
                      */
                     std::string GetResource() const;
 
                     /**
-                     * 设置Resource name, which is classified as follows based on different query conditions:
-A specific domain name: This indicates the details of this domain name
-multiDomains: This indicates the aggregate details of multiple domain names
-Project ID: This displays the ID of the specifically queried project
-all: This indicates the details at the account level
-                     * @param Resource Resource name, which is classified as follows based on different query conditions:
-A specific domain name: This indicates the details of this domain name
-multiDomains: This indicates the aggregate details of multiple domain names
-Project ID: This displays the ID of the specifically queried project
-all: This indicates the details at the account level
+                     * 设置Resource name, which is classified as follows based on different query filters:
+A specific domain name: Details of the domain name
+`multiDomains`: Aggregated details of multiple domain names
+Project ID: ID of the specifically queried project
+`all`: Details at the account level
+                     * @param Resource Resource name, which is classified as follows based on different query filters:
+A specific domain name: Details of the domain name
+`multiDomains`: Aggregated details of multiple domain names
+Project ID: ID of the specifically queried project
+`all`: Details at the account level
                      */
                     void SetResource(const std::string& _resource);
 
@@ -102,11 +102,11 @@ all: This indicates the details at the account level
                 private:
 
                     /**
-                     * Resource name, which is classified as follows based on different query conditions:
-A specific domain name: This indicates the details of this domain name
-multiDomains: This indicates the aggregate details of multiple domain names
-Project ID: This displays the ID of the specifically queried project
-all: This indicates the details at the account level
+                     * Resource name, which is classified as follows based on different query filters:
+A specific domain name: Details of the domain name
+`multiDomains`: Aggregated details of multiple domain names
+Project ID: ID of the specifically queried project
+`all`: Details at the account level
                      */
                     std::string m_resource;
                     bool m_resourceHasBeenSet;

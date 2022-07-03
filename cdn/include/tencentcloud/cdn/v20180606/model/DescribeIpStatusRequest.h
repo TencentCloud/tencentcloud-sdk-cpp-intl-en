@@ -62,24 +62,24 @@ namespace TencentCloud
 
                     /**
                      * 获取Node type.
-edge: edge server
-last: intermediate server
+`edge`: Edge server
+`last`: Intermediate server
 If this parameter is left empty, edge server information will be returned by default
                      * @return Layer Node type.
-edge: edge server
-last: intermediate server
+`edge`: Edge server
+`last`: Intermediate server
 If this parameter is left empty, edge server information will be returned by default
                      */
                     std::string GetLayer() const;
 
                     /**
                      * 设置Node type.
-edge: edge server
-last: intermediate server
+`edge`: Edge server
+`last`: Intermediate server
 If this parameter is left empty, edge server information will be returned by default
                      * @param Layer Node type.
-edge: edge server
-last: intermediate server
+`edge`: Edge server
+`last`: Intermediate server
 If this parameter is left empty, edge server information will be returned by default
                      */
                     void SetLayer(const std::string& _layer);
@@ -91,26 +91,26 @@ If this parameter is left empty, edge server information will be returned by def
                     bool LayerHasBeenSet() const;
 
                     /**
-                     * 获取Region to be queried.
-mainland: domestic nodes
-overseas: overseas nodes
-global: global nodes
-                     * @return Area Region to be queried.
-mainland: domestic nodes
-overseas: overseas nodes
-global: global nodes
+                     * 获取Specifies a region to query.
+`mainland`: Nodes in the Chinese mainland
+`overseas`: Nodes outside the Chinese mainland
+`global`: Global nodes
+                     * @return Area Specifies a region to query.
+`mainland`: Nodes in the Chinese mainland
+`overseas`: Nodes outside the Chinese mainland
+`global`: Global nodes
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置Region to be queried.
-mainland: domestic nodes
-overseas: overseas nodes
-global: global nodes
-                     * @param Area Region to be queried.
-mainland: domestic nodes
-overseas: overseas nodes
-global: global nodes
+                     * 设置Specifies a region to query.
+`mainland`: Nodes in the Chinese mainland
+`overseas`: Nodes outside the Chinese mainland
+`global`: Global nodes
+                     * @param Area Specifies a region to query.
+`mainland`: Nodes in the Chinese mainland
+`overseas`: Nodes outside the Chinese mainland
+`global`: Global nodes
                      */
                     void SetArea(const std::string& _area);
 
@@ -148,18 +148,18 @@ global: global nodes
 
                     /**
                      * Node type.
-edge: edge server
-last: intermediate server
+`edge`: Edge server
+`last`: Intermediate server
 If this parameter is left empty, edge server information will be returned by default
                      */
                     std::string m_layer;
                     bool m_layerHasBeenSet;
 
                     /**
-                     * Region to be queried.
-mainland: domestic nodes
-overseas: overseas nodes
-global: global nodes
+                     * Specifies a region to query.
+`mainland`: Nodes in the Chinese mainland
+`overseas`: Nodes outside the Chinese mainland
+`global`: Global nodes
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;

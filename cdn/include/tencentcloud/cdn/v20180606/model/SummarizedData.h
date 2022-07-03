@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Aggregate values of details; each metric has different aggregation methods based on its characteristics
+                * Aggregated value, which is aggregated from all data of each metric. Aggregation methods are used depending on the metric attributes.
                 */
                 class SummarizedData : public AbstractModel
                 {
@@ -48,25 +48,25 @@ namespace TencentCloud
 
                     /**
                      * 获取Aggregation method, which can be:
-sum: aggregate summation
-max: maximum value; in bandwidth mode, the peak bandwidth is calculated based on the aggregate data with 5-minute granularity.
-avg: average value
+`sum`: Aggregate summation
+`max`: Maximum value. In bandwidth mode, the peak bandwidth is calculated based on the data aggregated in 5 minutes.
+`avg`: Average value
                      * @return Name Aggregation method, which can be:
-sum: aggregate summation
-max: maximum value; in bandwidth mode, the peak bandwidth is calculated based on the aggregate data with 5-minute granularity.
-avg: average value
+`sum`: Aggregate summation
+`max`: Maximum value. In bandwidth mode, the peak bandwidth is calculated based on the data aggregated in 5 minutes.
+`avg`: Average value
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Aggregation method, which can be:
-sum: aggregate summation
-max: maximum value; in bandwidth mode, the peak bandwidth is calculated based on the aggregate data with 5-minute granularity.
-avg: average value
+`sum`: Aggregate summation
+`max`: Maximum value. In bandwidth mode, the peak bandwidth is calculated based on the data aggregated in 5 minutes.
+`avg`: Average value
                      * @param Name Aggregation method, which can be:
-sum: aggregate summation
-max: maximum value; in bandwidth mode, the peak bandwidth is calculated based on the aggregate data with 5-minute granularity.
-avg: average value
+`sum`: Aggregate summation
+`max`: Maximum value. In bandwidth mode, the peak bandwidth is calculated based on the data aggregated in 5 minutes.
+`avg`: Average value
                      */
                     void SetName(const std::string& _name);
 
@@ -77,14 +77,14 @@ avg: average value
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Aggregate data value
-                     * @return Value Aggregate data value
+                     * 获取Aggregated value
+                     * @return Value Aggregated value
                      */
                     double GetValue() const;
 
                     /**
-                     * 设置Aggregate data value
-                     * @param Value Aggregate data value
+                     * 设置Aggregated value
+                     * @param Value Aggregated value
                      */
                     void SetValue(const double& _value);
 
@@ -98,15 +98,15 @@ avg: average value
 
                     /**
                      * Aggregation method, which can be:
-sum: aggregate summation
-max: maximum value; in bandwidth mode, the peak bandwidth is calculated based on the aggregate data with 5-minute granularity.
-avg: average value
+`sum`: Aggregate summation
+`max`: Maximum value. In bandwidth mode, the peak bandwidth is calculated based on the data aggregated in 5 minutes.
+`avg`: Average value
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Aggregate data value
+                     * Aggregated value
                      */
                     double m_value;
                     bool m_valueHasBeenSet;

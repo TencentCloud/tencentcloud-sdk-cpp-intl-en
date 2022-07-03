@@ -23,8 +23,8 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
-#include <tencentcloud/cdn/v20180606/model/AddCdnDomainRequest.h>
-#include <tencentcloud/cdn/v20180606/model/AddCdnDomainResponse.h>
+#include <tencentcloud/cdn/v20180606/model/AddCLSTopicDomainsRequest.h>
+#include <tencentcloud/cdn/v20180606/model/AddCLSTopicDomainsResponse.h>
 #include <tencentcloud/cdn/v20180606/model/CreateClsLogTopicRequest.h>
 #include <tencentcloud/cdn/v20180606/model/CreateClsLogTopicResponse.h>
 #include <tencentcloud/cdn/v20180606/model/CreateScdnFailedLogTaskRequest.h>
@@ -121,9 +121,9 @@ namespace TencentCloud
                 CdnClient(const Credential &credential, const std::string &region);
                 CdnClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
-                typedef Outcome<Core::Error, Model::AddCdnDomainResponse> AddCdnDomainOutcome;
-                typedef std::future<AddCdnDomainOutcome> AddCdnDomainOutcomeCallable;
-                typedef std::function<void(const CdnClient*, const Model::AddCdnDomainRequest&, AddCdnDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddCdnDomainAsyncHandler;
+                typedef Outcome<Core::Error, Model::AddCLSTopicDomainsResponse> AddCLSTopicDomainsOutcome;
+                typedef std::future<AddCLSTopicDomainsOutcome> AddCLSTopicDomainsOutcomeCallable;
+                typedef std::function<void(const CdnClient*, const Model::AddCLSTopicDomainsRequest&, AddCLSTopicDomainsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddCLSTopicDomainsAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateClsLogTopicResponse> CreateClsLogTopicOutcome;
                 typedef std::future<CreateClsLogTopicOutcome> CreateClsLogTopicOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::CreateClsLogTopicRequest&, CreateClsLogTopicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateClsLogTopicAsyncHandler;
@@ -251,13 +251,13 @@ namespace TencentCloud
 
 
                 /**
-                 *This API is used to add a CDN acceleration domain name.
-                 * @param req AddCdnDomainRequest
-                 * @return AddCdnDomainOutcome
+                 *This API is used to add one or more domains to a specified log topic.
+                 * @param req AddCLSTopicDomainsRequest
+                 * @return AddCLSTopicDomainsOutcome
                  */
-                AddCdnDomainOutcome AddCdnDomain(const Model::AddCdnDomainRequest &request);
-                void AddCdnDomainAsync(const Model::AddCdnDomainRequest& request, const AddCdnDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                AddCdnDomainOutcomeCallable AddCdnDomainCallable(const Model::AddCdnDomainRequest& request);
+                AddCLSTopicDomainsOutcome AddCLSTopicDomains(const Model::AddCLSTopicDomainsRequest &request);
+                void AddCLSTopicDomainsAsync(const Model::AddCLSTopicDomainsRequest& request, const AddCLSTopicDomainsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AddCLSTopicDomainsOutcomeCallable AddCLSTopicDomainsCallable(const Model::AddCLSTopicDomainsRequest& request);
 
                 /**
                  *This API is used to create a log topic. Up to 10 log topics can be created under one logset.
@@ -305,7 +305,7 @@ namespace TencentCloud
                 DescribeBillingDataOutcomeCallable DescribeBillingDataCallable(const Model::DescribeBillingDataRequest& request);
 
                 /**
-                 *This API (DescribeCdnData) is used to query CDN real-time access monitoring data and supports the following metrics:
+                 *This API is used to query CDN real-time access monitoring data and supports the following metrics:
 
 + Traffic (in bytes)
 + Bandwidth (in bps)
@@ -413,7 +413,7 @@ namespace TencentCloud
                 DescribeMapInfoOutcomeCallable DescribeMapInfoCallable(const Model::DescribeMapInfoRequest& request);
 
                 /**
-                 *This API (DescribeOriginData) is used to query CDN real-time origin-pull monitoring data and supports the following metrics:
+                 *This API is used to query CDN real-time origin-pull monitoring data and supports the following metrics:
 
 + Origin-pull traffic (in bytes)
 + Origin-pull bandwidth (in bps)

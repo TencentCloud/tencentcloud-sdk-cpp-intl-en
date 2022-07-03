@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_CDN_V20180606_MODEL_ADDCDNDOMAINRESPONSE_H_
-#define TENCENTCLOUD_CDN_V20180606_MODEL_ADDCDNDOMAINRESPONSE_H_
+#ifndef TENCENTCLOUD_CDN_V20180606_MODEL_ADDCLSTOPICDOMAINSRESPONSE_H_
+#define TENCENTCLOUD_CDN_V20180606_MODEL_ADDCLSTOPICDOMAINSRESPONSE_H_
 
 #include <string>
 #include <vector>
@@ -32,13 +32,13 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * AddCdnDomain response structure.
+                * AddCLSTopicDomains response structure.
                 */
-                class AddCdnDomainResponse : public AbstractModel
+                class AddCLSTopicDomainsResponse : public AbstractModel
                 {
                 public:
-                    AddCdnDomainResponse();
-                    ~AddCdnDomainResponse() = default;
+                    AddCLSTopicDomainsResponse();
+                    ~AddCLSTopicDomainsResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
@@ -51,4 +51,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_CDN_V20180606_MODEL_ADDCDNDOMAINRESPONSE_H_
+#endif // !TENCENTCLOUD_CDN_V20180606_MODEL_ADDCLSTOPICDOMAINSRESPONSE_H_

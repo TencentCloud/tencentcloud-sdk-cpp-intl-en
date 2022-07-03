@@ -43,22 +43,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Query start time, e.g., 2018-09-04 10:40:00. The returned result will be later than or equal to the specified time
-The time will be rounded forward based on the granularity parameter `Interval`. For example, if the query start time is 2018-09-04 10:40:00 and the query time granularity is 1-hour, the time for the first returned entry will be 2018-09-04 10:00:00
-The range between the start time and end time should be less than or equal to 90 days
-                     * @return StartTime Query start time, e.g., 2018-09-04 10:40:00. The returned result will be later than or equal to the specified time
-The time will be rounded forward based on the granularity parameter `Interval`. For example, if the query start time is 2018-09-04 10:40:00 and the query time granularity is 1-hour, the time for the first returned entry will be 2018-09-04 10:00:00
-The range between the start time and end time should be less than or equal to 90 days
+                     * 获取Start time of the query, e.g., 2018-09-04 10:40:00.
+The specified start time will be rounded down based on the granularity parameter `Interval`. For example, if you set the start time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
+                     * @return StartTime Start time of the query, e.g., 2018-09-04 10:40:00.
+The specified start time will be rounded down based on the granularity parameter `Interval`. For example, if you set the start time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Query start time, e.g., 2018-09-04 10:40:00. The returned result will be later than or equal to the specified time
-The time will be rounded forward based on the granularity parameter `Interval`. For example, if the query start time is 2018-09-04 10:40:00 and the query time granularity is 1-hour, the time for the first returned entry will be 2018-09-04 10:00:00
-The range between the start time and end time should be less than or equal to 90 days
-                     * @param StartTime Query start time, e.g., 2018-09-04 10:40:00. The returned result will be later than or equal to the specified time
-The time will be rounded forward based on the granularity parameter `Interval`. For example, if the query start time is 2018-09-04 10:40:00 and the query time granularity is 1-hour, the time for the first returned entry will be 2018-09-04 10:00:00
-The range between the start time and end time should be less than or equal to 90 days
+                     * 设置Start time of the query, e.g., 2018-09-04 10:40:00.
+The specified start time will be rounded down based on the granularity parameter `Interval`. For example, if you set the start time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
+                     * @param StartTime Start time of the query, e.g., 2018-09-04 10:40:00.
+The specified start time will be rounded down based on the granularity parameter `Interval`. For example, if you set the start time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
                      */
                     void SetStartTime(const std::string& _startTime);
 
@@ -69,22 +69,22 @@ The range between the start time and end time should be less than or equal to 90
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Query end time, e.g. 2018-09-04 10:40:00. The returned result will be earlier than or equal to the specified time
-The time will be rounded forward based on the granularity parameter `Interval`. For example, if the query end time is 2018-09-04 10:40:00 and the query time granularity is 1-hour, the time for the last returned entry will be 2018-09-04 10:00:00
-The range between the start time and end time should be less than or equal to 90 days
-                     * @return EndTime Query end time, e.g. 2018-09-04 10:40:00. The returned result will be earlier than or equal to the specified time
-The time will be rounded forward based on the granularity parameter `Interval`. For example, if the query end time is 2018-09-04 10:40:00 and the query time granularity is 1-hour, the time for the last returned entry will be 2018-09-04 10:00:00
-The range between the start time and end time should be less than or equal to 90 days
+                     * 获取End time of the query, e.g. 2018-09-04 10:40:00.
+The specified end time will be rounded down based on the granularity parameter `Interval`. For example, if you set the end time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
+                     * @return EndTime End time of the query, e.g. 2018-09-04 10:40:00.
+The specified end time will be rounded down based on the granularity parameter `Interval`. For example, if you set the end time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置Query end time, e.g. 2018-09-04 10:40:00. The returned result will be earlier than or equal to the specified time
-The time will be rounded forward based on the granularity parameter `Interval`. For example, if the query end time is 2018-09-04 10:40:00 and the query time granularity is 1-hour, the time for the last returned entry will be 2018-09-04 10:00:00
-The range between the start time and end time should be less than or equal to 90 days
-                     * @param EndTime Query end time, e.g. 2018-09-04 10:40:00. The returned result will be earlier than or equal to the specified time
-The time will be rounded forward based on the granularity parameter `Interval`. For example, if the query end time is 2018-09-04 10:40:00 and the query time granularity is 1-hour, the time for the last returned entry will be 2018-09-04 10:00:00
-The range between the start time and end time should be less than or equal to 90 days
+                     * 设置End time of the query, e.g. 2018-09-04 10:40:00.
+The specified end time will be rounded down based on the granularity parameter `Interval`. For example, if you set the end time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
+                     * @param EndTime End time of the query, e.g. 2018-09-04 10:40:00.
+The specified end time will be rounded down based on the granularity parameter `Interval`. For example, if you set the end time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
                      */
                     void SetEndTime(const std::string& _endTime);
 
@@ -101,14 +101,14 @@ The range between the start time and end time should be less than or equal to 90
 `hour`: 1-hour granularity. The query period cannot exceed 31 days.
 `day`: 1-day granularity. The query period cannot exceed 31 days.
 
-Querying 1-minute granularity data is not supported if the `Area` field is `overseas`.
+`min` is not supported if the `Area` field is `overseas`.
                      * @return Interval Time granularity, which can be:
 `min`: 1-minute granularity. The query period cannot exceed 24 hours.
 `5min`: 5-minute granularity. The query range cannot exceed 31 days.
 `hour`: 1-hour granularity. The query period cannot exceed 31 days.
 `day`: 1-day granularity. The query period cannot exceed 31 days.
 
-Querying 1-minute granularity data is not supported if the `Area` field is `overseas`.
+`min` is not supported if the `Area` field is `overseas`.
                      */
                     std::string GetInterval() const;
 
@@ -119,14 +119,14 @@ Querying 1-minute granularity data is not supported if the `Area` field is `over
 `hour`: 1-hour granularity. The query period cannot exceed 31 days.
 `day`: 1-day granularity. The query period cannot exceed 31 days.
 
-Querying 1-minute granularity data is not supported if the `Area` field is `overseas`.
+`min` is not supported if the `Area` field is `overseas`.
                      * @param Interval Time granularity, which can be:
 `min`: 1-minute granularity. The query period cannot exceed 24 hours.
 `5min`: 5-minute granularity. The query range cannot exceed 31 days.
 `hour`: 1-hour granularity. The query period cannot exceed 31 days.
 `day`: 1-day granularity. The query period cannot exceed 31 days.
 
-Querying 1-minute granularity data is not supported if the `Area` field is `overseas`.
+`min` is not supported if the `Area` field is `overseas`.
                      */
                     void SetInterval(const std::string& _interval);
 
@@ -155,18 +155,18 @@ Querying 1-minute granularity data is not supported if the `Area` field is `over
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取Project ID, which can be viewed [here](https://console.cloud.tencent.com/project)
-If the `Domain` parameter is populated with specific domain name information, then the billing data of this domain name instead of the specified project will be returned
-                     * @return Project Project ID, which can be viewed [here](https://console.cloud.tencent.com/project)
-If the `Domain` parameter is populated with specific domain name information, then the billing data of this domain name instead of the specified project will be returned
+                     * 获取Specifies the project ID to be queried. [Check project ID in the console](https://console.cloud.tencent.com/project)
+If the `Domain` parameter is passed in, the `Proejct` parameter is ignored. Only the billing data of the specified domain name is returned. 
+                     * @return Project Specifies the project ID to be queried. [Check project ID in the console](https://console.cloud.tencent.com/project)
+If the `Domain` parameter is passed in, the `Proejct` parameter is ignored. Only the billing data of the specified domain name is returned. 
                      */
                     int64_t GetProject() const;
 
                     /**
-                     * 设置Project ID, which can be viewed [here](https://console.cloud.tencent.com/project)
-If the `Domain` parameter is populated with specific domain name information, then the billing data of this domain name instead of the specified project will be returned
-                     * @param Project Project ID, which can be viewed [here](https://console.cloud.tencent.com/project)
-If the `Domain` parameter is populated with specific domain name information, then the billing data of this domain name instead of the specified project will be returned
+                     * 设置Specifies the project ID to be queried. [Check project ID in the console](https://console.cloud.tencent.com/project)
+If the `Domain` parameter is passed in, the `Proejct` parameter is ignored. Only the billing data of the specified domain name is returned. 
+                     * @param Project Specifies the project ID to be queried. [Check project ID in the console](https://console.cloud.tencent.com/project)
+If the `Domain` parameter is passed in, the `Proejct` parameter is ignored. Only the billing data of the specified domain name is returned. 
                      */
                     void SetProject(const int64_t& _project);
 
@@ -178,24 +178,24 @@ If the `Domain` parameter is populated with specific domain name information, th
 
                     /**
                      * 获取Acceleration region whose billing data is to be queried:
-mainland: in the mainland of China
-overseas: outside the mainland of China
+`mainland`: Regions within the Chinese mainland
+`overseas`: Regions outside the Chinese mainland
 If this parameter is left empty, `mainland` will be used by default
                      * @return Area Acceleration region whose billing data is to be queried:
-mainland: in the mainland of China
-overseas: outside the mainland of China
+`mainland`: Regions within the Chinese mainland
+`overseas`: Regions outside the Chinese mainland
 If this parameter is left empty, `mainland` will be used by default
                      */
                     std::string GetArea() const;
 
                     /**
                      * 设置Acceleration region whose billing data is to be queried:
-mainland: in the mainland of China
-overseas: outside the mainland of China
+`mainland`: Regions within the Chinese mainland
+`overseas`: Regions outside the Chinese mainland
 If this parameter is left empty, `mainland` will be used by default
                      * @param Area Acceleration region whose billing data is to be queried:
-mainland: in the mainland of China
-overseas: outside the mainland of China
+`mainland`: Regions within the Chinese mainland
+`overseas`: Regions outside the Chinese mainland
 If this parameter is left empty, `mainland` will be used by default
                      */
                     void SetArea(const std::string& _area);
@@ -208,20 +208,20 @@ If this parameter is left empty, `mainland` will be used by default
 
                     /**
                      * 获取Country/region to be queried if `Area` is `overseas`
-For district or country/region codes, please see [District Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
 If this parameter is left empty, all countries/regions will be queried
                      * @return District Country/region to be queried if `Area` is `overseas`
-For district or country/region codes, please see [District Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
 If this parameter is left empty, all countries/regions will be queried
                      */
                     int64_t GetDistrict() const;
 
                     /**
                      * 设置Country/region to be queried if `Area` is `overseas`
-For district or country/region codes, please see [District Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
 If this parameter is left empty, all countries/regions will be queried
                      * @param District Country/region to be queried if `Area` is `overseas`
-For district or country/region codes, please see [District Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
 If this parameter is left empty, all countries/regions will be queried
                      */
                     void SetDistrict(const int64_t& _district);
@@ -234,24 +234,24 @@ If this parameter is left empty, all countries/regions will be queried
 
                     /**
                      * 获取Billing statistics type
-flux: bill-by-traffic
-bandwidth: bill-by-bandwidth
+`flux`: Bill by traffic
+`bandwidth`: Bill by bandwidth
 Default value: `bandwidth`
                      * @return Metric Billing statistics type
-flux: bill-by-traffic
-bandwidth: bill-by-bandwidth
+`flux`: Bill by traffic
+`bandwidth`: Bill by bandwidth
 Default value: `bandwidth`
                      */
                     std::string GetMetric() const;
 
                     /**
                      * 设置Billing statistics type
-flux: bill-by-traffic
-bandwidth: bill-by-bandwidth
+`flux`: Bill by traffic
+`bandwidth`: Bill by bandwidth
 Default value: `bandwidth`
                      * @param Metric Billing statistics type
-flux: bill-by-traffic
-bandwidth: bill-by-bandwidth
+`flux`: Bill by traffic
+`bandwidth`: Bill by bandwidth
 Default value: `bandwidth`
                      */
                     void SetMetric(const std::string& _metric);
@@ -280,20 +280,38 @@ Default value: `bandwidth`
                      */
                     bool ProductHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return TimeZone 
+                     */
+                    std::string GetTimeZone() const;
+
+                    /**
+                     * 设置
+                     * @param TimeZone 
+                     */
+                    void SetTimeZone(const std::string& _timeZone);
+
+                    /**
+                     * 判断参数 TimeZone 是否已赋值
+                     * @return TimeZone 是否已赋值
+                     */
+                    bool TimeZoneHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Query start time, e.g., 2018-09-04 10:40:00. The returned result will be later than or equal to the specified time
-The time will be rounded forward based on the granularity parameter `Interval`. For example, if the query start time is 2018-09-04 10:40:00 and the query time granularity is 1-hour, the time for the first returned entry will be 2018-09-04 10:00:00
-The range between the start time and end time should be less than or equal to 90 days
+                     * Start time of the query, e.g., 2018-09-04 10:40:00.
+The specified start time will be rounded down based on the granularity parameter `Interval`. For example, if you set the start time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Query end time, e.g. 2018-09-04 10:40:00. The returned result will be earlier than or equal to the specified time
-The time will be rounded forward based on the granularity parameter `Interval`. For example, if the query end time is 2018-09-04 10:40:00 and the query time granularity is 1-hour, the time for the last returned entry will be 2018-09-04 10:00:00
-The range between the start time and end time should be less than or equal to 90 days
+                     * End time of the query, e.g. 2018-09-04 10:40:00.
+The specified end time will be rounded down based on the granularity parameter `Interval`. For example, if you set the end time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
@@ -305,7 +323,7 @@ The range between the start time and end time should be less than or equal to 90
 `hour`: 1-hour granularity. The query period cannot exceed 31 days.
 `day`: 1-day granularity. The query period cannot exceed 31 days.
 
-Querying 1-minute granularity data is not supported if the `Area` field is `overseas`.
+`min` is not supported if the `Area` field is `overseas`.
                      */
                     std::string m_interval;
                     bool m_intervalHasBeenSet;
@@ -317,16 +335,16 @@ Querying 1-minute granularity data is not supported if the `Area` field is `over
                     bool m_domainHasBeenSet;
 
                     /**
-                     * Project ID, which can be viewed [here](https://console.cloud.tencent.com/project)
-If the `Domain` parameter is populated with specific domain name information, then the billing data of this domain name instead of the specified project will be returned
+                     * Specifies the project ID to be queried. [Check project ID in the console](https://console.cloud.tencent.com/project)
+If the `Domain` parameter is passed in, the `Proejct` parameter is ignored. Only the billing data of the specified domain name is returned. 
                      */
                     int64_t m_project;
                     bool m_projectHasBeenSet;
 
                     /**
                      * Acceleration region whose billing data is to be queried:
-mainland: in the mainland of China
-overseas: outside the mainland of China
+`mainland`: Regions within the Chinese mainland
+`overseas`: Regions outside the Chinese mainland
 If this parameter is left empty, `mainland` will be used by default
                      */
                     std::string m_area;
@@ -334,7 +352,7 @@ If this parameter is left empty, `mainland` will be used by default
 
                     /**
                      * Country/region to be queried if `Area` is `overseas`
-For district or country/region codes, please see [District Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
 If this parameter is left empty, all countries/regions will be queried
                      */
                     int64_t m_district;
@@ -342,8 +360,8 @@ If this parameter is left empty, all countries/regions will be queried
 
                     /**
                      * Billing statistics type
-flux: bill-by-traffic
-bandwidth: bill-by-bandwidth
+`flux`: Bill by traffic
+`bandwidth`: Bill by bandwidth
 Default value: `bandwidth`
                      */
                     std::string m_metric;
@@ -354,6 +372,12 @@ Default value: `bandwidth`
                      */
                     std::string m_product;
                     bool m_productHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_timeZone;
+                    bool m_timeZoneHasBeenSet;
 
                 };
             }

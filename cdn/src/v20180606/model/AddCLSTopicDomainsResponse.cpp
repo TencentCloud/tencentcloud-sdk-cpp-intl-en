@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/cdn/v20180606/model/AddCdnDomainResponse.h>
+#include <tencentcloud/cdn/v20180606/model/AddCLSTopicDomainsResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,11 +23,11 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdn::V20180606::Model;
 using namespace std;
 
-AddCdnDomainResponse::AddCdnDomainResponse()
+AddCLSTopicDomainsResponse::AddCLSTopicDomainsResponse()
 {
 }
 
-CoreInternalOutcome AddCdnDomainResponse::Deserialize(const string &payload)
+CoreInternalOutcome AddCLSTopicDomainsResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -65,7 +65,7 @@ CoreInternalOutcome AddCdnDomainResponse::Deserialize(const string &payload)
     return CoreInternalOutcome(true);
 }
 
-string AddCdnDomainResponse::ToJsonString() const
+string AddCLSTopicDomainsResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();

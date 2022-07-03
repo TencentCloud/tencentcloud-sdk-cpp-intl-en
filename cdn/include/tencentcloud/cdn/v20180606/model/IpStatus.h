@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool IpHasBeenSet() const;
 
                     /**
-                     * 获取Node region
-                     * @return District Node region
+                     * 获取Region of the node
+                     * @return District Region of the node
                      */
                     std::string GetDistrict() const;
 
                     /**
-                     * 设置Node region
-                     * @param District Node region
+                     * 设置Region of the node
+                     * @param District Region of the node
                      */
                     void SetDistrict(const std::string& _district);
 
@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool DistrictHasBeenSet() const;
 
                     /**
-                     * 获取Node ISP
-                     * @return Isp Node ISP
+                     * 获取ISP of the node
+                     * @return Isp ISP of the node
                      */
                     std::string GetIsp() const;
 
                     /**
-                     * 设置Node ISP
-                     * @param Isp Node ISP
+                     * 设置ISP of the node
+                     * @param Isp ISP of the node
                      */
                     void SetIsp(const std::string& _isp);
 
@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool IspHasBeenSet() const;
 
                     /**
-                     * 获取Node city
-                     * @return City Node city
+                     * 获取City of the node
+                     * @return City City of the node
                      */
                     std::string GetCity() const;
 
                     /**
-                     * 设置Node city
-                     * @param City Node city
+                     * 设置City of the node
+                     * @param City City of the node
                      */
                     void SetCity(const std::string& _city);
 
@@ -119,22 +119,22 @@ namespace TencentCloud
                     bool CityHasBeenSet() const;
 
                     /**
-                     * 获取Node status
-online: the node is online; scheduling service running
-offline: the node is offline
-                     * @return Status Node status
-online: the node is online; scheduling service running
-offline: the node is offline
+                     * 获取Status of the node
+`online`: The node is active and scheduling normally.
+`offline`: The node is inactive.
+                     * @return Status Status of the node
+`online`: The node is active and scheduling normally.
+`offline`: The node is inactive.
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Node status
-online: the node is online; scheduling service running
-offline: the node is offline
-                     * @param Status Node status
-online: the node is online; scheduling service running
-offline: the node is offline
+                     * 设置Status of the node
+`online`: The node is active and scheduling normally.
+`offline`: The node is inactive.
+                     * @param Status Status of the node
+`online`: The node is active and scheduling normally.
+`offline`: The node is inactive.
                      */
                     void SetStatus(const std::string& _status);
 
@@ -153,27 +153,27 @@ offline: the node is offline
                     bool m_ipHasBeenSet;
 
                     /**
-                     * Node region
+                     * Region of the node
                      */
                     std::string m_district;
                     bool m_districtHasBeenSet;
 
                     /**
-                     * Node ISP
+                     * ISP of the node
                      */
                     std::string m_isp;
                     bool m_ispHasBeenSet;
 
                     /**
-                     * Node city
+                     * City of the node
                      */
                     std::string m_city;
                     bool m_cityHasBeenSet;
 
                     /**
-                     * Node status
-online: the node is online; scheduling service running
-offline: the node is offline
+                     * Status of the node
+`online`: The node is active and scheduling normally.
+`offline`: The node is inactive.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

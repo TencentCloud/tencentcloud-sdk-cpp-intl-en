@@ -47,18 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Statistical point in time in forward rounding mode
-Taking the 5-minute granularity as an example, 13:35:00 indicates that the statistical interval is between 13:35:00 and 13:39:59.
-                     * @return Time Statistical point in time in forward rounding mode
-Taking the 5-minute granularity as an example, 13:35:00 indicates that the statistical interval is between 13:35:00 and 13:39:59.
+                     * 获取The start point of the sampling period. 
+For example, if the time is set to 13:35:00, and `interval` is `5min`, the data returned is collected between 13:35:00 and 13:39:59
+                     * @return Time The start point of the sampling period. 
+For example, if the time is set to 13:35:00, and `interval` is `5min`, the data returned is collected between 13:35:00 and 13:39:59
                      */
                     std::string GetTime() const;
 
                     /**
-                     * 设置Statistical point in time in forward rounding mode
-Taking the 5-minute granularity as an example, 13:35:00 indicates that the statistical interval is between 13:35:00 and 13:39:59.
-                     * @param Time Statistical point in time in forward rounding mode
-Taking the 5-minute granularity as an example, 13:35:00 indicates that the statistical interval is between 13:35:00 and 13:39:59.
+                     * 设置The start point of the sampling period. 
+For example, if the time is set to 13:35:00, and `interval` is `5min`, the data returned is collected between 13:35:00 and 13:39:59
+                     * @param Time The start point of the sampling period. 
+For example, if the time is set to 13:35:00, and `interval` is `5min`, the data returned is collected between 13:35:00 and 13:39:59
                      */
                     void SetTime(const std::string& _time);
 
@@ -89,8 +89,8 @@ Taking the 5-minute granularity as an example, 13:35:00 indicates that the stati
                 private:
 
                     /**
-                     * Statistical point in time in forward rounding mode
-Taking the 5-minute granularity as an example, 13:35:00 indicates that the statistical interval is between 13:35:00 and 13:39:59.
+                     * The start point of the sampling period. 
+For example, if the time is set to 13:35:00, and `interval` is `5min`, the data returned is collected between 13:35:00 and 13:39:59
                      */
                     std::string m_time;
                     bool m_timeHasBeenSet;

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Time granularity of data statistics, which supports min (1 minute), 5min (5 minutes), hour (1 hour), and day (1 day).
-                     * @return Interval Time granularity of data statistics, which supports min (1 minute), 5min (5 minutes), hour (1 hour), and day (1 day).
+                     * 获取Time granularity of data statistics, which supports `min` (1 minute), `5min` (5 minutes), `hour` (1 hour), and `day` (1 day).
+                     * @return Interval Time granularity of data statistics, which supports `min` (1 minute), `5min` (5 minutes), `hour` (1 hour), and `day` (1 day).
                      */
                     std::string GetInterval() const;
 
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Time granularity of data statistics, which supports min (1 minute), 5min (5 minutes), hour (1 hour), and day (1 day).
+                     * Time granularity of data statistics, which supports `min` (1 minute), `5min` (5 minutes), `hour` (1 hour), and `day` (1 day).
                      */
                     std::string m_interval;
                     bool m_intervalHasBeenSet;
