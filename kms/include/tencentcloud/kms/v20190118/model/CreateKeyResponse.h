@@ -139,6 +139,20 @@ namespace TencentCloud
                      */
                     bool TagMsgHasBeenSet() const;
 
+                    /**
+                     * 获取ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return HsmClusterId ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetHsmClusterId() const;
+
+                    /**
+                     * 判断参数 HsmClusterId 是否已赋值
+                     * @return HsmClusterId 是否已赋值
+                     */
+                    bool HsmClusterIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -188,6 +202,13 @@ namespace TencentCloud
                      */
                     std::string m_tagMsg;
                     bool m_tagMsgHasBeenSet;
+
+                    /**
+                     * ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_hsmClusterId;
+                    bool m_hsmClusterIdHasBeenSet;
 
                 };
             }

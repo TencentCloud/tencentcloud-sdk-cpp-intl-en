@@ -121,6 +121,34 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool ProResourceIdHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to activate Managed KMS
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return ExclusiveVSMEnabled Whether to activate Managed KMS
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    bool GetExclusiveVSMEnabled() const;
+
+                    /**
+                     * 判断参数 ExclusiveVSMEnabled 是否已赋值
+                     * @return ExclusiveVSMEnabled 是否已赋值
+                     */
+                    bool ExclusiveVSMEnabledHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to activate Exclusive KMS
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return ExclusiveHSMEnabled Whether to activate Exclusive KMS
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    bool GetExclusiveHSMEnabled() const;
+
+                    /**
+                     * 判断参数 ExclusiveHSMEnabled 是否已赋值
+                     * @return ExclusiveHSMEnabled 是否已赋值
+                     */
+                    bool ExclusiveHSMEnabledHasBeenSet() const;
+
                 private:
 
                     /**
@@ -161,6 +189,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_proResourceId;
                     bool m_proResourceIdHasBeenSet;
+
+                    /**
+                     * Whether to activate Managed KMS
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    bool m_exclusiveVSMEnabled;
+                    bool m_exclusiveVSMEnabledHasBeenSet;
+
+                    /**
+                     * Whether to activate Exclusive KMS
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    bool m_exclusiveHSMEnabled;
+                    bool m_exclusiveHSMEnabledHasBeenSet;
 
                 };
             }

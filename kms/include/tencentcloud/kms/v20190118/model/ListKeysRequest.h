@@ -96,6 +96,24 @@ namespace TencentCloud
                      */
                     bool RoleHasBeenSet() const;
 
+                    /**
+                     * 获取ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+                     * @return HsmClusterId ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+                     */
+                    std::string GetHsmClusterId() const;
+
+                    /**
+                     * 设置ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+                     * @param HsmClusterId ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+                     */
+                    void SetHsmClusterId(const std::string& _hsmClusterId);
+
+                    /**
+                     * 判断参数 HsmClusterId 是否已赋值
+                     * @return HsmClusterId 是否已赋值
+                     */
+                    bool HsmClusterIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -115,6 +133,12 @@ namespace TencentCloud
                      */
                     uint64_t m_role;
                     bool m_roleHasBeenSet;
+
+                    /**
+                     * ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+                     */
+                    std::string m_hsmClusterId;
+                    bool m_hsmClusterIdHasBeenSet;
 
                 };
             }

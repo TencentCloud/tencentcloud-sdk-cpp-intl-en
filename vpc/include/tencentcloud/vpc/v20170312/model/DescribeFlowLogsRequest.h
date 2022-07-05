@@ -285,6 +285,24 @@ namespace TencentCloud
                      */
                     bool FiltersHasBeenSet() const;
 
+                    /**
+                     * 获取The region corresponding to the flow log storage ID.
+                     * @return CloudLogRegion The region corresponding to the flow log storage ID.
+                     */
+                    std::string GetCloudLogRegion() const;
+
+                    /**
+                     * 设置The region corresponding to the flow log storage ID.
+                     * @param CloudLogRegion The region corresponding to the flow log storage ID.
+                     */
+                    void SetCloudLogRegion(const std::string& _cloudLogRegion);
+
+                    /**
+                     * 判断参数 CloudLogRegion 是否已赋值
+                     * @return CloudLogRegion 是否已赋值
+                     */
+                    bool CloudLogRegionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -366,6 +384,12 @@ namespace TencentCloud
                      */
                     Filter m_filters;
                     bool m_filtersHasBeenSet;
+
+                    /**
+                     * The region corresponding to the flow log storage ID.
+                     */
+                    std::string m_cloudLogRegion;
+                    bool m_cloudLogRegionHasBeenSet;
 
                 };
             }

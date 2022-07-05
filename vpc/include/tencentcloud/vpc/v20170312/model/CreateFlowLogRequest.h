@@ -224,6 +224,24 @@ namespace TencentCloud
                      */
                     bool FlowLogStorageHasBeenSet() const;
 
+                    /**
+                     * 获取The region corresponding to the flow log storage ID. If not passed in, this field defaults to the current region.
+                     * @return CloudLogRegion The region corresponding to the flow log storage ID. If not passed in, this field defaults to the current region.
+                     */
+                    std::string GetCloudLogRegion() const;
+
+                    /**
+                     * 设置The region corresponding to the flow log storage ID. If not passed in, this field defaults to the current region.
+                     * @param CloudLogRegion The region corresponding to the flow log storage ID. If not passed in, this field defaults to the current region.
+                     */
+                    void SetCloudLogRegion(const std::string& _cloudLogRegion);
+
+                    /**
+                     * 判断参数 CloudLogRegion 是否已赋值
+                     * @return CloudLogRegion 是否已赋值
+                     */
+                    bool CloudLogRegionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -285,6 +303,12 @@ namespace TencentCloud
                      */
                     FlowLogStorage m_flowLogStorage;
                     bool m_flowLogStorageHasBeenSet;
+
+                    /**
+                     * The region corresponding to the flow log storage ID. If not passed in, this field defaults to the current region.
+                     */
+                    std::string m_cloudLogRegion;
+                    bool m_cloudLogRegionHasBeenSet;
 
                 };
             }

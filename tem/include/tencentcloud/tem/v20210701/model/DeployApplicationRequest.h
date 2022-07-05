@@ -663,14 +663,14 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
                     bool DeployStrategyConfHasBeenSet() const;
 
                     /**
-                     * 获取Auto scaling policy
-                     * @return HorizontalAutoscaler Auto scaling policy
+                     * 获取Auto scaling policy. (Disused. Please use APIs for auto scaling policy combinations)
+                     * @return HorizontalAutoscaler Auto scaling policy. (Disused. Please use APIs for auto scaling policy combinations)
                      */
                     std::vector<HorizontalAutoscaler> GetHorizontalAutoscaler() const;
 
                     /**
-                     * 设置Auto scaling policy
-                     * @param HorizontalAutoscaler Auto scaling policy
+                     * 设置Auto scaling policy. (Disused. Please use APIs for auto scaling policy combinations)
+                     * @param HorizontalAutoscaler Auto scaling policy. (Disused. Please use APIs for auto scaling policy combinations)
                      */
                     void SetHorizontalAutoscaler(const std::vector<HorizontalAutoscaler>& _horizontalAutoscaler);
 
@@ -681,14 +681,14 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
                     bool HorizontalAutoscalerHasBeenSet() const;
 
                     /**
-                     * 获取Scheduled auto scaling policy
-                     * @return CronHorizontalAutoscaler Scheduled auto scaling policy
+                     * 获取Scheduled scaling policy (Disused. Please use APIs for auto scaling policy combinations)
+                     * @return CronHorizontalAutoscaler Scheduled scaling policy (Disused. Please use APIs for auto scaling policy combinations)
                      */
                     std::vector<CronHorizontalAutoscaler> GetCronHorizontalAutoscaler() const;
 
                     /**
-                     * 设置Scheduled auto scaling policy
-                     * @param CronHorizontalAutoscaler Scheduled auto scaling policy
+                     * 设置Scheduled scaling policy (Disused. Please use APIs for auto scaling policy combinations)
+                     * @param CronHorizontalAutoscaler Scheduled scaling policy (Disused. Please use APIs for auto scaling policy combinations)
                      */
                     void SetCronHorizontalAutoscaler(const std::vector<CronHorizontalAutoscaler>& _cronHorizontalAutoscaler);
 
@@ -829,6 +829,24 @@ If `konajdk` is selected, the value can be:
                      * @return EnablePrometheusConf 是否已赋值
                      */
                     bool EnablePrometheusConfHasBeenSet() const;
+
+                    /**
+                     * 获取`1`: Enable APM collection; `0`: Disable APM collection
+                     * @return EnableTracing `1`: Enable APM collection; `0`: Disable APM collection
+                     */
+                    int64_t GetEnableTracing() const;
+
+                    /**
+                     * 设置`1`: Enable APM collection; `0`: Disable APM collection
+                     * @param EnableTracing `1`: Enable APM collection; `0`: Disable APM collection
+                     */
+                    void SetEnableTracing(const int64_t& _enableTracing);
+
+                    /**
+                     * 判断参数 EnableTracing 是否已赋值
+                     * @return EnableTracing 是否已赋值
+                     */
+                    bool EnableTracingHasBeenSet() const;
 
                 private:
 
@@ -1033,13 +1051,13 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
                     bool m_deployStrategyConfHasBeenSet;
 
                     /**
-                     * Auto scaling policy
+                     * Auto scaling policy. (Disused. Please use APIs for auto scaling policy combinations)
                      */
                     std::vector<HorizontalAutoscaler> m_horizontalAutoscaler;
                     bool m_horizontalAutoscalerHasBeenSet;
 
                     /**
-                     * Scheduled auto scaling policy
+                     * Scheduled scaling policy (Disused. Please use APIs for auto scaling policy combinations)
                      */
                     std::vector<CronHorizontalAutoscaler> m_cronHorizontalAutoscaler;
                     bool m_cronHorizontalAutoscalerHasBeenSet;
@@ -1085,6 +1103,12 @@ If `konajdk` is selected, the value can be:
                      */
                     EnablePrometheusConf m_enablePrometheusConf;
                     bool m_enablePrometheusConfHasBeenSet;
+
+                    /**
+                     * `1`: Enable APM collection; `0`: Disable APM collection
+                     */
+                    int64_t m_enableTracing;
+                    bool m_enableTracingHasBeenSet;
 
                 };
             }

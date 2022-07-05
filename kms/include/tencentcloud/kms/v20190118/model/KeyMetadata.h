@@ -324,6 +324,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ResourceIdHasBeenSet() const;
 
+                    /**
+                     * 获取ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return HsmClusterId ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetHsmClusterId() const;
+
+                    /**
+                     * 设置ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param HsmClusterId ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetHsmClusterId(const std::string& _hsmClusterId);
+
+                    /**
+                     * 判断参数 HsmClusterId 是否已赋值
+                     * @return HsmClusterId 是否已赋值
+                     */
+                    bool HsmClusterIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -417,6 +439,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_resourceId;
                     bool m_resourceIdHasBeenSet;
+
+                    /**
+                     * ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_hsmClusterId;
+                    bool m_hsmClusterIdHasBeenSet;
 
                 };
             }

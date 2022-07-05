@@ -308,6 +308,28 @@ Note: this field may return `null`, indicating that no valid value can be found.
                      */
                     bool FlowLogStorageHasBeenSet() const;
 
+                    /**
+                     * 获取The region corresponding to the flow log storage ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return CloudLogRegion The region corresponding to the flow log storage ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetCloudLogRegion() const;
+
+                    /**
+                     * 设置The region corresponding to the flow log storage ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param CloudLogRegion The region corresponding to the flow log storage ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetCloudLogRegion(const std::string& _cloudLogRegion);
+
+                    /**
+                     * 判断参数 CloudLogRegion 是否已赋值
+                     * @return CloudLogRegion 是否已赋值
+                     */
+                    bool CloudLogRegionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -395,6 +417,13 @@ Note: this field may return `null`, indicating that no valid value can be found.
                      */
                     FlowLogStorage m_flowLogStorage;
                     bool m_flowLogStorageHasBeenSet;
+
+                    /**
+                     * The region corresponding to the flow log storage ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_cloudLogRegion;
+                    bool m_cloudLogRegionHasBeenSet;
 
                 };
             }

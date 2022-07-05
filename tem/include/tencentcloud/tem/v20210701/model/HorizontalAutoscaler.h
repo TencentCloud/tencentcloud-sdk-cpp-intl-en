@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Minimum number of instances
-                     * @return MinReplicas Minimum number of instances
+                     * 获取(Optional) Minimum number of instances
+                     * @return MinReplicas (Optional) Minimum number of instances
                      */
                     int64_t GetMinReplicas() const;
 
                     /**
-                     * 设置Minimum number of instances
-                     * @param MinReplicas Minimum number of instances
+                     * 设置(Optional) Minimum number of instances
+                     * @param MinReplicas (Optional) Minimum number of instances
                      */
                     void SetMinReplicas(const int64_t& _minReplicas);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool MinReplicasHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of instances
-                     * @return MaxReplicas Maximum number of instances
+                     * 获取(Optional) Maximum number of instances
+                     * @return MaxReplicas (Optional) Maximum number of instances
                      */
                     int64_t GetMaxReplicas() const;
 
                     /**
-                     * 设置Maximum number of instances
-                     * @param MaxReplicas Maximum number of instances
+                     * 设置(Optional) Maximum number of instances
+                     * @param MaxReplicas (Optional) Maximum number of instances
                      */
                     void SetMaxReplicas(const int64_t& _maxReplicas);
 
@@ -118,16 +118,34 @@ namespace TencentCloud
                      */
                     bool ThresholdHasBeenSet() const;
 
+                    /**
+                     * 获取Whether it is enabled
+                     * @return Enabled Whether it is enabled
+                     */
+                    bool GetEnabled() const;
+
+                    /**
+                     * 设置Whether it is enabled
+                     * @param Enabled Whether it is enabled
+                     */
+                    void SetEnabled(const bool& _enabled);
+
+                    /**
+                     * 判断参数 Enabled 是否已赋值
+                     * @return Enabled 是否已赋值
+                     */
+                    bool EnabledHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Minimum number of instances
+                     * (Optional) Minimum number of instances
                      */
                     int64_t m_minReplicas;
                     bool m_minReplicasHasBeenSet;
 
                     /**
-                     * Maximum number of instances
+                     * (Optional) Maximum number of instances
                      */
                     int64_t m_maxReplicas;
                     bool m_maxReplicasHasBeenSet;
@@ -143,6 +161,12 @@ namespace TencentCloud
                      */
                     int64_t m_threshold;
                     bool m_thresholdHasBeenSet;
+
+                    /**
+                     * Whether it is enabled
+                     */
+                    bool m_enabled;
+                    bool m_enabledHasBeenSet;
 
                 };
             }
