@@ -96,6 +96,24 @@ namespace TencentCloud
                      */
                     bool ReplicationRegionNameHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to sync TCR cloud tags to the COS Bucket
+                     * @return SyncTag Whether to sync TCR cloud tags to the COS Bucket
+                     */
+                    bool GetSyncTag() const;
+
+                    /**
+                     * 设置Whether to sync TCR cloud tags to the COS Bucket
+                     * @param SyncTag Whether to sync TCR cloud tags to the COS Bucket
+                     */
+                    void SetSyncTag(const bool& _syncTag);
+
+                    /**
+                     * 判断参数 SyncTag 是否已赋值
+                     * @return SyncTag 是否已赋值
+                     */
+                    bool SyncTagHasBeenSet() const;
+
                 private:
 
                     /**
@@ -115,6 +133,12 @@ namespace TencentCloud
                      */
                     std::string m_replicationRegionName;
                     bool m_replicationRegionNameHasBeenSet;
+
+                    /**
+                     * Whether to sync TCR cloud tags to the COS Bucket
+                     */
+                    bool m_syncTag;
+                    bool m_syncTagHasBeenSet;
 
                 };
             }

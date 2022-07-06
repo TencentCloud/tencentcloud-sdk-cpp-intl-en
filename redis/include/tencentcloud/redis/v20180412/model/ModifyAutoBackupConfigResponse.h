@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Auto backup type: 1 "scheduled rollback"
-                     * @return AutoBackupType Auto backup type: 1 "scheduled rollback"
+                     * 获取Automatic backup type: 1 (scheduled rollback)
+                     * @return AutoBackupType Automatic backup type: 1 (scheduled rollback)
                      */
                     int64_t GetAutoBackupType() const;
 
@@ -79,10 +79,22 @@ namespace TencentCloud
                      */
                     bool TimePeriodHasBeenSet() const;
 
+                    /**
+                     * 获取Retention time of full backup files in days
+                     * @return BackupStorageDays Retention time of full backup files in days
+                     */
+                    int64_t GetBackupStorageDays() const;
+
+                    /**
+                     * 判断参数 BackupStorageDays 是否已赋值
+                     * @return BackupStorageDays 是否已赋值
+                     */
+                    bool BackupStorageDaysHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Auto backup type: 1 "scheduled rollback"
+                     * Automatic backup type: 1 (scheduled rollback)
                      */
                     int64_t m_autoBackupType;
                     bool m_autoBackupTypeHasBeenSet;
@@ -98,6 +110,12 @@ namespace TencentCloud
                      */
                     std::string m_timePeriod;
                     bool m_timePeriodHasBeenSet;
+
+                    /**
+                     * Retention time of full backup files in days
+                     */
+                    int64_t m_backupStorageDays;
+                    bool m_backupStorageDaysHasBeenSet;
 
                 };
             }

@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. However, this parameter is now invalid.
-                     * @return WeekDays Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. However, this parameter is now invalid.
+                     * 获取Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter cannot be modified for now.
+                     * @return WeekDays Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter cannot be modified for now.
                      */
                     std::vector<std::string> GetWeekDays() const;
 
                     /**
-                     * 设置Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. However, this parameter is now invalid.
-                     * @param WeekDays Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. However, this parameter is now invalid.
+                     * 设置Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter cannot be modified for now.
+                     * @param WeekDays Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter cannot be modified for now.
                      */
                     void SetWeekDays(const std::vector<std::string>& _weekDays);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool TimePeriodHasBeenSet() const;
 
                     /**
-                     * 获取Auto backup type: 1 "scheduled rollback"
-                     * @return AutoBackupType Auto backup type: 1 "scheduled rollback"
+                     * 获取Automatic backup type: 1 (scheduled rollback)
+                     * @return AutoBackupType Automatic backup type: 1 (scheduled rollback)
                      */
                     int64_t GetAutoBackupType() const;
 
                     /**
-                     * 设置Auto backup type: 1 "scheduled rollback"
-                     * @param AutoBackupType Auto backup type: 1 "scheduled rollback"
+                     * 设置Automatic backup type: 1 (scheduled rollback)
+                     * @param AutoBackupType Automatic backup type: 1 (scheduled rollback)
                      */
                     void SetAutoBackupType(const int64_t& _autoBackupType);
 
@@ -123,7 +123,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. However, this parameter is now invalid.
+                     * Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter cannot be modified for now.
                      */
                     std::vector<std::string> m_weekDays;
                     bool m_weekDaysHasBeenSet;
@@ -135,7 +135,7 @@ namespace TencentCloud
                     bool m_timePeriodHasBeenSet;
 
                     /**
-                     * Auto backup type: 1 "scheduled rollback"
+                     * Automatic backup type: 1 (scheduled rollback)
                      */
                     int64_t m_autoBackupType;
                     bool m_autoBackupTypeHasBeenSet;

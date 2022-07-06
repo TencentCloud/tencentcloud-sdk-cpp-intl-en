@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool BackupIdHasBeenSet() const;
 
                     /**
-                     * 获取Backup type. manualBackupInstance: manual backup initiated by user; systemBackupInstance: midnight backup initiated by system
-                     * @return BackupType Backup type. manualBackupInstance: manual backup initiated by user; systemBackupInstance: midnight backup initiated by system
+                     * 获取Backup type. 1: manual backup initiated by the user; 0: automatic backup in the early morning initiated by the system
+                     * @return BackupType Backup type. 1: manual backup initiated by the user; 0: automatic backup in the early morning initiated by the system
                      */
                     std::string GetBackupType() const;
 
                     /**
-                     * 设置Backup type. manualBackupInstance: manual backup initiated by user; systemBackupInstance: midnight backup initiated by system
-                     * @param BackupType Backup type. manualBackupInstance: manual backup initiated by user; systemBackupInstance: midnight backup initiated by system
+                     * 设置Backup type. 1: manual backup initiated by the user; 0: automatic backup in the early morning initiated by the system
+                     * @param BackupType Backup type. 1: manual backup initiated by the user; 0: automatic backup in the early morning initiated by the system
                      */
                     void SetBackupType(const std::string& _backupType);
 
@@ -137,14 +137,14 @@ namespace TencentCloud
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取Whether a backup is locked. 0: no; 1: yes
-                     * @return Locked Whether a backup is locked. 0: no; 1: yes
+                     * 获取Whether a backup is locked. 0: no; 1: yes.
+                     * @return Locked Whether a backup is locked. 0: no; 1: yes.
                      */
                     int64_t GetLocked() const;
 
                     /**
-                     * 设置Whether a backup is locked. 0: no; 1: yes
-                     * @param Locked Whether a backup is locked. 0: no; 1: yes
+                     * 设置Whether a backup is locked. 0: no; 1: yes.
+                     * @param Locked Whether a backup is locked. 0: no; 1: yes.
                      */
                     void SetLocked(const int64_t& _locked);
 
@@ -153,6 +153,72 @@ namespace TencentCloud
                      * @return Locked 是否已赋值
                      */
                     bool LockedHasBeenSet() const;
+
+                    /**
+                     * 获取Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return BackupSize Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetBackupSize() const;
+
+                    /**
+                     * 设置Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param BackupSize Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetBackupSize(const int64_t& _backupSize);
+
+                    /**
+                     * 判断参数 BackupSize 是否已赋值
+                     * @return BackupSize 是否已赋值
+                     */
+                    bool BackupSizeHasBeenSet() const;
+
+                    /**
+                     * 获取Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return FullBackup Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetFullBackup() const;
+
+                    /**
+                     * 设置Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param FullBackup Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetFullBackup(const int64_t& _fullBackup);
+
+                    /**
+                     * 判断参数 FullBackup 是否已赋值
+                     * @return FullBackup 是否已赋值
+                     */
+                    bool FullBackupHasBeenSet() const;
+
+                    /**
+                     * 获取Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return InstanceType Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetInstanceType() const;
+
+                    /**
+                     * 设置Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param InstanceType Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetInstanceType(const int64_t& _instanceType);
+
+                    /**
+                     * 判断参数 InstanceType 是否已赋值
+                     * @return InstanceType 是否已赋值
+                     */
+                    bool InstanceTypeHasBeenSet() const;
 
                 private:
 
@@ -169,7 +235,7 @@ namespace TencentCloud
                     bool m_backupIdHasBeenSet;
 
                     /**
-                     * Backup type. manualBackupInstance: manual backup initiated by user; systemBackupInstance: midnight backup initiated by system
+                     * Backup type. 1: manual backup initiated by the user; 0: automatic backup in the early morning initiated by the system
                      */
                     std::string m_backupType;
                     bool m_backupTypeHasBeenSet;
@@ -187,10 +253,31 @@ namespace TencentCloud
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * Whether a backup is locked. 0: no; 1: yes
+                     * Whether a backup is locked. 0: no; 1: yes.
                      */
                     int64_t m_locked;
                     bool m_lockedHasBeenSet;
+
+                    /**
+                     * Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_backupSize;
+                    bool m_backupSizeHasBeenSet;
+
+                    /**
+                     * Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_fullBackup;
+                    bool m_fullBackupHasBeenSet;
+
+                    /**
+                     * Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_instanceType;
+                    bool m_instanceTypeHasBeenSet;
 
                 };
             }

@@ -92,8 +92,8 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded
-                     * @return TaskMessage Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded
+                     * 获取Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded.
+                     * @return TaskMessage Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded.
                      */
                     std::string GetTaskMessage() const;
 
@@ -130,7 +130,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded
+                     * Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded.
                      */
                     std::string m_taskMessage;
                     bool m_taskMessageHasBeenSet;

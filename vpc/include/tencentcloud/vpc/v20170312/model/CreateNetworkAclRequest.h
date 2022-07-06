@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of the DescribeVpcs API.
-                     * @return VpcId ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of the DescribeVpcs API.
+                     * 获取VPC instance ID, which can be obtained from the `VpcId` field returned by `DescribeVpcs` API.
+                     * @return VpcId VPC instance ID, which can be obtained from the `VpcId` field returned by `DescribeVpcs` API.
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of the DescribeVpcs API.
-                     * @param VpcId ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of the DescribeVpcs API.
+                     * 设置VPC instance ID, which can be obtained from the `VpcId` field returned by `DescribeVpcs` API.
+                     * @param VpcId VPC instance ID, which can be obtained from the `VpcId` field returned by `DescribeVpcs` API.
                      */
                     void SetVpcId(const std::string& _vpcId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Name of the network ACL. The maximum length is 60 bytes.
-                     * @return NetworkAclName Name of the network ACL. The maximum length is 60 bytes.
+                     * 获取Network ACL name, which can contain up to 60 bytes.
+                     * @return NetworkAclName Network ACL name, which can contain up to 60 bytes.
                      */
                     std::string GetNetworkAclName() const;
 
                     /**
-                     * 设置Name of the network ACL. The maximum length is 60 bytes.
-                     * @param NetworkAclName Name of the network ACL. The maximum length is 60 bytes.
+                     * 设置Network ACL name, which can contain up to 60 bytes.
+                     * @param NetworkAclName Network ACL name, which can contain up to 60 bytes.
                      */
                     void SetNetworkAclName(const std::string& _networkAclName);
 
@@ -81,13 +81,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of the DescribeVpcs API.
+                     * VPC instance ID, which can be obtained from the `VpcId` field returned by `DescribeVpcs` API.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Name of the network ACL. The maximum length is 60 bytes.
+                     * Network ACL name, which can contain up to 60 bytes.
                      */
                     std::string m_networkAclName;
                     bool m_networkAclNameHasBeenSet;

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Security group of a project
-                     * @return SecurityGroupDetails Security group of a project
+                     * 获取Security group of the project
+                     * @return SecurityGroupDetails Security group of the project
                      */
                     std::vector<SecurityGroupDetail> GetSecurityGroupDetails() const;
 
@@ -59,7 +59,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Security group of a project
+                     * Security group of the project
                      */
                     std::vector<SecurityGroupDetail> m_securityGroupDetails;
                     bool m_securityGroupDetailsHasBeenSet;

@@ -45,10 +45,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取A set of secondary CIDR blocks.
-Note: This field may return null, indicating that no valid value was found.
-                     * @return AssistantCidrSet A set of secondary CIDR blocks.
-Note: This field may return null, indicating that no valid value was found.
+                     * 获取Array of secondary CIDR blocks.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AssistantCidrSet Array of secondary CIDR blocks.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<AssistantCidr> GetAssistantCidrSet() const;
 
@@ -61,8 +61,8 @@ Note: This field may return null, indicating that no valid value was found.
                 private:
 
                     /**
-                     * A set of secondary CIDR blocks.
-Note: This field may return null, indicating that no valid value was found.
+                     * Array of secondary CIDR blocks.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<AssistantCidr> m_assistantCidrSet;
                     bool m_assistantCidrSetHasBeenSet;

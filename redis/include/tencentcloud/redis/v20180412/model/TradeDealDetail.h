@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Order deal information
+                * Order transaction information
                 */
                 class TradeDealDetail : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Order ID, which is used when a TencentCloud API is called
-                     * @return DealId Order ID, which is used when a TencentCloud API is called
+                     * 获取Order ID, which is used when a TencentCloud API is called.
+                     * @return DealId Order ID, which is used when a TencentCloud API is called.
                      */
                     std::string GetDealId() const;
 
                     /**
-                     * 设置Order ID, which is used when a TencentCloud API is called
-                     * @param DealId Order ID, which is used when a TencentCloud API is called
+                     * 设置Order ID, which is used when a TencentCloud API is called.
+                     * @param DealId Order ID, which is used when a TencentCloud API is called.
                      */
                     void SetDealId(const std::string& _dealId);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool DealIdHasBeenSet() const;
 
                     /**
-                     * 获取Long order ID, which is used when an order issue is submitted for assistance
-                     * @return DealName Long order ID, which is used when an order issue is submitted for assistance
+                     * 获取Long order ID, which is used when an order issue is submitted for assistance.
+                     * @return DealName Long order ID, which is used when an order issue is submitted for assistance.
                      */
                     std::string GetDealName() const;
 
                     /**
-                     * 设置Long order ID, which is used when an order issue is submitted for assistance
-                     * @param DealName Long order ID, which is used when an order issue is submitted for assistance
+                     * 设置Long order ID, which is used when an order issue is submitted for assistance.
+                     * @param DealName Long order ID, which is used when an order issue is submitted for assistance.
                      */
                     void SetDealName(const std::string& _dealName);
 
@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Number of instances associated with an order
-                     * @return GoodsNum Number of instances associated with an order
+                     * 获取Number of instances associated with the order
+                     * @return GoodsNum Number of instances associated with the order
                      */
                     int64_t GetGoodsNum() const;
 
                     /**
-                     * 设置Number of instances associated with an order
-                     * @param GoodsNum Number of instances associated with an order
+                     * 设置Number of instances associated with the order
+                     * @param GoodsNum Number of instances associated with the order
                      */
                     void SetGoodsNum(const int64_t& _goodsNum);
 
@@ -119,14 +119,14 @@ namespace TencentCloud
                     bool GoodsNumHasBeenSet() const;
 
                     /**
-                     * 获取Creates a user uin
-                     * @return Creater Creates a user uin
+                     * 获取Creator UIN
+                     * @return Creater Creator UIN
                      */
                     std::string GetCreater() const;
 
                     /**
-                     * 设置Creates a user uin
-                     * @param Creater Creates a user uin
+                     * 设置Creator UIN
+                     * @param Creater Creator UIN
                      */
                     void SetCreater(const std::string& _creater);
 
@@ -227,14 +227,14 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Actual total price of an order in 0.01 CNY
-                     * @return Price Actual total price of an order in 0.01 CNY
+                     * 获取Actual total price of the order in 0.01 CNY
+                     * @return Price Actual total price of the order in 0.01 CNY
                      */
                     int64_t GetPrice() const;
 
                     /**
-                     * 设置Actual total price of an order in 0.01 CNY
-                     * @param Price Actual total price of an order in 0.01 CNY
+                     * 设置Actual total price of the order in 0.01 CNY
+                     * @param Price Actual total price of the order in 0.01 CNY
                      */
                     void SetPrice(const int64_t& _price);
 
@@ -265,13 +265,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Order ID, which is used when a TencentCloud API is called
+                     * Order ID, which is used when a TencentCloud API is called.
                      */
                     std::string m_dealId;
                     bool m_dealIdHasBeenSet;
 
                     /**
-                     * Long order ID, which is used when an order issue is submitted for assistance
+                     * Long order ID, which is used when an order issue is submitted for assistance.
                      */
                     std::string m_dealName;
                     bool m_dealNameHasBeenSet;
@@ -283,13 +283,13 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Number of instances associated with an order
+                     * Number of instances associated with the order
                      */
                     int64_t m_goodsNum;
                     bool m_goodsNumHasBeenSet;
 
                     /**
-                     * Creates a user uin
+                     * Creator UIN
                      */
                     std::string m_creater;
                     bool m_createrHasBeenSet;
@@ -325,7 +325,7 @@ namespace TencentCloud
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Actual total price of an order in 0.01 CNY
+                     * Actual total price of the order in 0.01 CNY
                      */
                     int64_t m_price;
                     bool m_priceHasBeenSet;

@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool MinQueryTimeHasBeenSet() const;
 
                     /**
-                     * 获取The maximum number of results returned per page. Default value: `20`
-                     * @return Limit The maximum number of results returned per page. Default value: `20`
+                     * 获取Maximum number of results returned per page. Default value: 20.
+                     * @return Limit Maximum number of results returned per page. Default value: 20.
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置The maximum number of results returned per page. Default value: `20`
-                     * @param Limit The maximum number of results returned per page. Default value: `20`
+                     * 设置Maximum number of results returned per page. Default value: 20.
+                     * @param Limit Maximum number of results returned per page. Default value: 20.
                      */
                     void SetLimit(const int64_t& _limit);
 
@@ -133,14 +133,14 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset, which is an integral multiple of `Limit`
-                     * @return Offset Offset, which is an integral multiple of `Limit`
+                     * 获取Offset, which is an integral multiple of `Limit`.
+                     * @return Offset Offset, which is an integral multiple of `Limit`.
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset, which is an integral multiple of `Limit`
-                     * @param Offset Offset, which is an integral multiple of `Limit`
+                     * 设置Offset, which is an integral multiple of `Limit`.
+                     * @param Offset Offset, which is an integral multiple of `Limit`.
                      */
                     void SetOffset(const int64_t& _offset);
 
@@ -177,13 +177,13 @@ namespace TencentCloud
                     bool m_minQueryTimeHasBeenSet;
 
                     /**
-                     * The maximum number of results returned per page. Default value: `20`
+                     * Maximum number of results returned per page. Default value: 20.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset, which is an integral multiple of `Limit`
+                     * Offset, which is an integral multiple of `Limit`.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;

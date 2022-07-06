@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool FileSizeHasBeenSet() const;
 
                     /**
-                     * 获取Address (valid for 6 hours) used to download the backup file over a public network
-                     * @return DownloadUrl Address (valid for 6 hours) used to download the backup file over a public network
+                     * 获取Address (valid for six hours) used to download the backup file over the public network
+                     * @return DownloadUrl Address (valid for six hours) used to download the backup file over the public network
                      */
                     std::string GetDownloadUrl() const;
 
                     /**
-                     * 设置Address (valid for 6 hours) used to download the backup file over a public network
-                     * @param DownloadUrl Address (valid for 6 hours) used to download the backup file over a public network
+                     * 设置Address (valid for six hours) used to download the backup file over the public network
+                     * @param DownloadUrl Address (valid for six hours) used to download the backup file over the public network
                      */
                     void SetDownloadUrl(const std::string& _downloadUrl);
 
@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool DownloadUrlHasBeenSet() const;
 
                     /**
-                     * 获取Address (valid for 6 hours) used to download the backup file over a private network
-                     * @return InnerDownloadUrl Address (valid for 6 hours) used to download the backup file over a private network
+                     * 获取Address (valid for six hours) used to download the backup file over the private network
+                     * @return InnerDownloadUrl Address (valid for six hours) used to download the backup file over the private network
                      */
                     std::string GetInnerDownloadUrl() const;
 
                     /**
-                     * 设置Address (valid for 6 hours) used to download the backup file over a private network
-                     * @param InnerDownloadUrl Address (valid for 6 hours) used to download the backup file over a private network
+                     * 设置Address (valid for six hours) used to download the backup file over the private network
+                     * @param InnerDownloadUrl Address (valid for six hours) used to download the backup file over the private network
                      */
                     void SetInnerDownloadUrl(const std::string& _innerDownloadUrl);
 
@@ -133,13 +133,13 @@ namespace TencentCloud
                     bool m_fileSizeHasBeenSet;
 
                     /**
-                     * Address (valid for 6 hours) used to download the backup file over a public network
+                     * Address (valid for six hours) used to download the backup file over the public network
                      */
                     std::string m_downloadUrl;
                     bool m_downloadUrlHasBeenSet;
 
                     /**
-                     * Address (valid for 6 hours) used to download the backup file over a private network
+                     * Address (valid for six hours) used to download the backup file over the private network
                      */
                     std::string m_innerDownloadUrl;
                     bool m_innerDownloadUrlHasBeenSet;

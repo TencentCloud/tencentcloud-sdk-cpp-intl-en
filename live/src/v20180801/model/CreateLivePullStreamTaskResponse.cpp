@@ -14,22 +14,21 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/redis/v20180412/model/DescribeTaskListResponse.h>
+#include <tencentcloud/live/v20180801/model/CreateLivePullStreamTaskResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using TencentCloud::CoreInternalOutcome;
-using namespace TencentCloud::Redis::V20180412::Model;
+using namespace TencentCloud::Live::V20180801::Model;
 using namespace std;
 
-DescribeTaskListResponse::DescribeTaskListResponse() :
-    m_totalCountHasBeenSet(false),
-    m_tasksHasBeenSet(false)
+CreateLivePullStreamTaskResponse::CreateLivePullStreamTaskResponse() :
+    m_taskIdHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome DescribeTaskListResponse::Deserialize(const string &payload)
+CoreInternalOutcome CreateLivePullStreamTaskResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -63,67 +62,32 @@ CoreInternalOutcome DescribeTaskListResponse::Deserialize(const string &payload)
     }
 
 
-    if (rsp.HasMember("TotalCount") && !rsp["TotalCount"].IsNull())
+    if (rsp.HasMember("TaskId") && !rsp["TaskId"].IsNull())
     {
-        if (!rsp["TotalCount"].IsInt64())
+        if (!rsp["TaskId"].IsString())
         {
-            return CoreInternalOutcome(Core::Error("response `TotalCount` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TaskId` IsString=false incorrectly").SetRequestId(requestId));
         }
-        m_totalCount = rsp["TotalCount"].GetInt64();
-        m_totalCountHasBeenSet = true;
-    }
-
-    if (rsp.HasMember("Tasks") && !rsp["Tasks"].IsNull())
-    {
-        if (!rsp["Tasks"].IsArray())
-            return CoreInternalOutcome(Core::Error("response `Tasks` is not array type"));
-
-        const rapidjson::Value &tmpValue = rsp["Tasks"];
-        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
-        {
-            TaskInfoDetail item;
-            CoreInternalOutcome outcome = item.Deserialize(*itr);
-            if (!outcome.IsSuccess())
-            {
-                outcome.GetError().SetRequestId(requestId);
-                return outcome;
-            }
-            m_tasks.push_back(item);
-        }
-        m_tasksHasBeenSet = true;
+        m_taskId = string(rsp["TaskId"].GetString());
+        m_taskIdHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string DescribeTaskListResponse::ToJsonString() const
+string CreateLivePullStreamTaskResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_totalCountHasBeenSet)
+    if (m_taskIdHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "TotalCount";
+        string key = "TaskId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_totalCount, allocator);
-    }
-
-    if (m_tasksHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Tasks";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
-
-        int i=0;
-        for (auto itr = m_tasks.begin(); itr != m_tasks.end(); ++itr, ++i)
-        {
-            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
-            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
-        }
+        value.AddMember(iKey, rapidjson::Value(m_taskId.c_str(), allocator).Move(), allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -138,24 +102,14 @@ string DescribeTaskListResponse::ToJsonString() const
 }
 
 
-int64_t DescribeTaskListResponse::GetTotalCount() const
+string CreateLivePullStreamTaskResponse::GetTaskId() const
 {
-    return m_totalCount;
+    return m_taskId;
 }
 
-bool DescribeTaskListResponse::TotalCountHasBeenSet() const
+bool CreateLivePullStreamTaskResponse::TaskIdHasBeenSet() const
 {
-    return m_totalCountHasBeenSet;
-}
-
-vector<TaskInfoDetail> DescribeTaskListResponse::GetTasks() const
-{
-    return m_tasks;
-}
-
-bool DescribeTaskListResponse::TasksHasBeenSet() const
-{
-    return m_tasksHasBeenSet;
+    return m_taskIdHasBeenSet;
 }
 
 

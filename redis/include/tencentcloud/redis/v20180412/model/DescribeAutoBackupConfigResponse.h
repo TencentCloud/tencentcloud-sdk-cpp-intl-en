@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Backup type. Auto backup type: 1 "scheduled rollback"
-                     * @return AutoBackupType Backup type. Auto backup type: 1 "scheduled rollback"
+                     * 获取Backup type. Automatic backup type: 1 (scheduled rollback)
+                     * @return AutoBackupType Backup type. Automatic backup type: 1 (scheduled rollback)
                      */
                     int64_t GetAutoBackupType() const;
 
@@ -79,10 +79,34 @@ namespace TencentCloud
                      */
                     bool TimePeriodHasBeenSet() const;
 
+                    /**
+                     * 获取Number of days to retain full backup files
+                     * @return BackupStorageDays Number of days to retain full backup files
+                     */
+                    int64_t GetBackupStorageDays() const;
+
+                    /**
+                     * 判断参数 BackupStorageDays 是否已赋值
+                     * @return BackupStorageDays 是否已赋值
+                     */
+                    bool BackupStorageDaysHasBeenSet() const;
+
+                    /**
+                     * 获取Number of days to retain Tendis binlog backup files
+                     * @return BinlogStorageDays Number of days to retain Tendis binlog backup files
+                     */
+                    int64_t GetBinlogStorageDays() const;
+
+                    /**
+                     * 判断参数 BinlogStorageDays 是否已赋值
+                     * @return BinlogStorageDays 是否已赋值
+                     */
+                    bool BinlogStorageDaysHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Backup type. Auto backup type: 1 "scheduled rollback"
+                     * Backup type. Automatic backup type: 1 (scheduled rollback)
                      */
                     int64_t m_autoBackupType;
                     bool m_autoBackupTypeHasBeenSet;
@@ -98,6 +122,18 @@ namespace TencentCloud
                      */
                     std::string m_timePeriod;
                     bool m_timePeriodHasBeenSet;
+
+                    /**
+                     * Number of days to retain full backup files
+                     */
+                    int64_t m_backupStorageDays;
+                    bool m_backupStorageDaysHasBeenSet;
+
+                    /**
+                     * Number of days to retain Tendis binlog backup files
+                     */
+                    int64_t m_binlogStorageDays;
+                    bool m_binlogStorageDaysHasBeenSet;
 
                 };
             }

@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the DescribeInstance API.
-                     * @return InstanceId ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the DescribeInstance API.
+                     * 获取ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
+                     * @return InstanceId ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the DescribeInstance API.
-                     * @param InstanceId ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the DescribeInstance API.
+                     * 设置ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
+                     * @param InstanceId ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset, which is an integral multiple of `Limit`
-                     * @return Offset Offset, which is an integral multiple of `Limit`
+                     * 获取Offset, which is an integral multiple of `Limit`.
+                     * @return Offset Offset, which is an integral multiple of `Limit`.
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset, which is an integral multiple of `Limit`
-                     * @param Offset Offset, which is an integral multiple of `Limit`
+                     * 设置Offset, which is an integral multiple of `Limit`.
+                     * @param Offset Offset, which is an integral multiple of `Limit`.
                      */
                     void SetOffset(const int64_t& _offset);
 
@@ -153,7 +153,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the DescribeInstance API.
+                     * ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -165,7 +165,7 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset, which is an integral multiple of `Limit`
+                     * Offset, which is an integral multiple of `Limit`.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;

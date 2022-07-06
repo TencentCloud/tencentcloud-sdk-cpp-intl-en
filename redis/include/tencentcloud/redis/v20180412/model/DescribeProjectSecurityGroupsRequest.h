@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取The number of security groups to be pulled.
-                     * @return Limit The number of security groups to be pulled.
+                     * 获取Number of results to be pulled. Default value: 20
+                     * @return Limit Number of results to be pulled. Default value: 20
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置The number of security groups to be pulled.
-                     * @param Limit The number of security groups to be pulled.
+                     * 设置Number of results to be pulled. Default value: 20
+                     * @param Limit Number of results to be pulled. Default value: 20
                      */
                     void SetLimit(const uint64_t& _limit);
 
@@ -153,7 +153,7 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * The number of security groups to be pulled.
+                     * Number of results to be pulled. Default value: 20
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;

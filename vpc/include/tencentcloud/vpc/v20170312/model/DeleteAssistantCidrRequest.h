@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取`VPC` instance `ID`, e.g. `vpc-6v2ht8q5`.
-                     * @return VpcId `VPC` instance `ID`, e.g. `vpc-6v2ht8q5`.
+                     * 获取`VPC` instance `ID`, such as `vpc-6v2ht8q5`.
+                     * @return VpcId `VPC` instance `ID`, such as `vpc-6v2ht8q5`.
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置`VPC` instance `ID`, e.g. `vpc-6v2ht8q5`.
-                     * @param VpcId `VPC` instance `ID`, e.g. `vpc-6v2ht8q5`.
+                     * 设置`VPC` instance `ID`, such as `vpc-6v2ht8q5`.
+                     * @param VpcId `VPC` instance `ID`, such as `vpc-6v2ht8q5`.
                      */
                     void SetVpcId(const std::string& _vpcId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取CIDR set, e.g. ["10.0.0.0/16", "172.16.0.0/16"]
-                     * @return CidrBlocks CIDR set, e.g. ["10.0.0.0/16", "172.16.0.0/16"]
+                     * 获取Array of CIDR blocks, such as ["10.0.0.0/16", "172.16.0.0/16"]
+                     * @return CidrBlocks Array of CIDR blocks, such as ["10.0.0.0/16", "172.16.0.0/16"]
                      */
                     std::vector<std::string> GetCidrBlocks() const;
 
                     /**
-                     * 设置CIDR set, e.g. ["10.0.0.0/16", "172.16.0.0/16"]
-                     * @param CidrBlocks CIDR set, e.g. ["10.0.0.0/16", "172.16.0.0/16"]
+                     * 设置Array of CIDR blocks, such as ["10.0.0.0/16", "172.16.0.0/16"]
+                     * @param CidrBlocks Array of CIDR blocks, such as ["10.0.0.0/16", "172.16.0.0/16"]
                      */
                     void SetCidrBlocks(const std::vector<std::string>& _cidrBlocks);
 
@@ -81,13 +81,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * `VPC` instance `ID`, e.g. `vpc-6v2ht8q5`.
+                     * `VPC` instance `ID`, such as `vpc-6v2ht8q5`.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * CIDR set, e.g. ["10.0.0.0/16", "172.16.0.0/16"]
+                     * Array of CIDR blocks, such as ["10.0.0.0/16", "172.16.0.0/16"]
                      */
                     std::vector<std::string> m_cidrBlocks;
                     bool m_cidrBlocksHasBeenSet;

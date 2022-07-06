@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Slow query threshold in microseconds
-                     * @return MinQueryTime Slow query threshold in microseconds
+                     * 获取Slow query threshold in milliseconds
+                     * @return MinQueryTime Slow query threshold in milliseconds
                      */
                     int64_t GetMinQueryTime() const;
 
                     /**
-                     * 设置Slow query threshold in microseconds
-                     * @param MinQueryTime Slow query threshold in microseconds
+                     * 设置Slow query threshold in milliseconds
+                     * @param MinQueryTime Slow query threshold in milliseconds
                      */
                     void SetMinQueryTime(const int64_t& _minQueryTime);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool MinQueryTimeHasBeenSet() const;
 
                     /**
-                     * 获取Page size
-                     * @return Limit Page size
+                     * 获取Maximum number of results returned per page
+                     * @return Limit Maximum number of results returned per page
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Page size
-                     * @param Limit Page size
+                     * 设置Maximum number of results returned per page
+                     * @param Limit Maximum number of results returned per page
                      */
                     void SetLimit(const int64_t& _limit);
 
@@ -133,14 +133,14 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset, which is an integral multiple of `Limit`
-                     * @return Offset Offset, which is an integral multiple of `Limit`
+                     * 获取Offset, which is an integral multiple of `Limit`.
+                     * @return Offset Offset, which is an integral multiple of `Limit`.
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset, which is an integral multiple of `Limit`
-                     * @param Offset Offset, which is an integral multiple of `Limit`
+                     * 设置Offset, which is an integral multiple of `Limit`.
+                     * @param Offset Offset, which is an integral multiple of `Limit`.
                      */
                     void SetOffset(const int64_t& _offset);
 
@@ -171,19 +171,19 @@ namespace TencentCloud
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Slow query threshold in microseconds
+                     * Slow query threshold in milliseconds
                      */
                     int64_t m_minQueryTime;
                     bool m_minQueryTimeHasBeenSet;
 
                     /**
-                     * Page size
+                     * Maximum number of results returned per page
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset, which is an integral multiple of `Limit`
+                     * Offset, which is an integral multiple of `Limit`.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;

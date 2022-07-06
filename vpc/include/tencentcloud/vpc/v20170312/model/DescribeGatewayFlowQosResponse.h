@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of instance details.
-                     * @return GatewayQosSet List of instance details.
+                     * 获取List of instance details
+                     * @return GatewayQosSet List of instance details
                      */
                     std::vector<GatewayQos> GetGatewayQosSet() const;
 
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of instance details.
+                     * List of instance details
                      */
                     std::vector<GatewayQos> m_gatewayQosSet;
                     bool m_gatewayQosSetHasBeenSet;

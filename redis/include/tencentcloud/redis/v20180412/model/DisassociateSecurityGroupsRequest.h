@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool SecurityGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID list, which is an array of one or more instance IDs.
-                     * @return InstanceIds Instance ID list, which is an array of one or more instance IDs.
+                     * 获取List of instance IDs, which is an array of one or more instance IDs.
+                     * @return InstanceIds List of instance IDs, which is an array of one or more instance IDs.
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置Instance ID list, which is an array of one or more instance IDs.
-                     * @param InstanceIds Instance ID list, which is an array of one or more instance IDs.
+                     * 设置List of instance IDs, which is an array of one or more instance IDs.
+                     * @param InstanceIds List of instance IDs, which is an array of one or more instance IDs.
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
@@ -111,7 +111,7 @@ namespace TencentCloud
                     bool m_securityGroupIdHasBeenSet;
 
                     /**
-                     * Instance ID list, which is an array of one or more instance IDs.
+                     * List of instance IDs, which is an array of one or more instance IDs.
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;

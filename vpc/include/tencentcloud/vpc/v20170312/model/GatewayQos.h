@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Gateway bandwidth limit information
+                * Information of the gateway bandwidth limit
                 */
                 class GatewayQos : public AbstractModel
                 {
@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool BandwidthHasBeenSet() const;
 
                     /**
-                     * 获取The creation time.
-                     * @return CreateTime The creation time.
+                     * 获取Creation time.
+                     * @return CreateTime Creation time.
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置The creation time.
-                     * @param CreateTime The creation time.
+                     * 设置Creation time.
+                     * @param CreateTime Creation time.
                      */
                     void SetCreateTime(const std::string& _createTime);
 
@@ -139,7 +139,7 @@ namespace TencentCloud
                     bool m_bandwidthHasBeenSet;
 
                     /**
-                     * The creation time.
+                     * Creation time.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;

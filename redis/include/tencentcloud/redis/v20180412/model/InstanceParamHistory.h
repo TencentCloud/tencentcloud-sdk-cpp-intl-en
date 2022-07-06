@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool NewValueHasBeenSet() const;
 
                     /**
-                     * 获取Status. 1: modifying parameter configuration; 2: parameter configuration modified successfully; 3: failed to modify parameter configuration
-                     * @return Status Status. 1: modifying parameter configuration; 2: parameter configuration modified successfully; 3: failed to modify parameter configuration
+                     * 获取Status. 1: modifying the parameter configuration; 2: modified the parameter configuration successfully; 3: failed to modify the parameter configuration
+                     * @return Status Status. 1: modifying the parameter configuration; 2: modified the parameter configuration successfully; 3: failed to modify the parameter configuration
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Status. 1: modifying parameter configuration; 2: parameter configuration modified successfully; 3: failed to modify parameter configuration
-                     * @param Status Status. 1: modifying parameter configuration; 2: parameter configuration modified successfully; 3: failed to modify parameter configuration
+                     * 设置Status. 1: modifying the parameter configuration; 2: modified the parameter configuration successfully; 3: failed to modify the parameter configuration
+                     * @param Status Status. 1: modifying the parameter configuration; 2: modified the parameter configuration successfully; 3: failed to modify the parameter configuration
                      */
                     void SetStatus(const int64_t& _status);
 
@@ -157,7 +157,7 @@ namespace TencentCloud
                     bool m_newValueHasBeenSet;
 
                     /**
-                     * Status. 1: modifying parameter configuration; 2: parameter configuration modified successfully; 3: failed to modify parameter configuration
+                     * Status. 1: modifying the parameter configuration; 2: modified the parameter configuration successfully; 3: failed to modify the parameter configuration
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;

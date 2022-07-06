@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Descriptions of text parameters of the instance
+                * Description of instance parameter in Char type
                 */
                 class InstanceTextParam : public AbstractModel
                 {
@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool ValueTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether restart is required after a modification is made. Value range: true, false
-                     * @return NeedRestart Whether restart is required after a modification is made. Value range: true, false
+                     * 获取Whether restart is required after a modification is made. Valid values: true, false
+                     * @return NeedRestart Whether restart is required after a modification is made. Valid values: true, false
                      */
                     std::string GetNeedRestart() const;
 
                     /**
-                     * 设置Whether restart is required after a modification is made. Value range: true, false
-                     * @param NeedRestart Whether restart is required after a modification is made. Value range: true, false
+                     * 设置Whether restart is required after a modification is made. Valid values: true, false
+                     * @param NeedRestart Whether restart is required after a modification is made. Valid values: true, false
                      */
                     void SetNeedRestart(const std::string& _needRestart);
 
@@ -119,14 +119,14 @@ namespace TencentCloud
                     bool DefaultValueHasBeenSet() const;
 
                     /**
-                     * 获取Current value of a parameter
-                     * @return CurrentValue Current value of a parameter
+                     * 获取Current value
+                     * @return CurrentValue Current value
                      */
                     std::string GetCurrentValue() const;
 
                     /**
-                     * 设置Current value of a parameter
-                     * @param CurrentValue Current value of a parameter
+                     * 设置Current value
+                     * @param CurrentValue Current value
                      */
                     void SetCurrentValue(const std::string& _currentValue);
 
@@ -155,14 +155,14 @@ namespace TencentCloud
                     bool TipsHasBeenSet() const;
 
                     /**
-                     * 获取Value range of a parameter
-                     * @return TextValue Value range of a parameter
+                     * 获取Valid values of the parameter
+                     * @return TextValue Valid values of the parameter
                      */
                     std::vector<std::string> GetTextValue() const;
 
                     /**
-                     * 设置Value range of a parameter
-                     * @param TextValue Value range of a parameter
+                     * 设置Valid values of the parameter
+                     * @param TextValue Valid values of the parameter
                      */
                     void SetTextValue(const std::vector<std::string>& _textValue);
 
@@ -205,7 +205,7 @@ namespace TencentCloud
                     bool m_valueTypeHasBeenSet;
 
                     /**
-                     * Whether restart is required after a modification is made. Value range: true, false
+                     * Whether restart is required after a modification is made. Valid values: true, false
                      */
                     std::string m_needRestart;
                     bool m_needRestartHasBeenSet;
@@ -217,7 +217,7 @@ namespace TencentCloud
                     bool m_defaultValueHasBeenSet;
 
                     /**
-                     * Current value of a parameter
+                     * Current value
                      */
                     std::string m_currentValue;
                     bool m_currentValueHasBeenSet;
@@ -229,7 +229,7 @@ namespace TencentCloud
                     bool m_tipsHasBeenSet;
 
                     /**
-                     * Value range of a parameter
+                     * Valid values of the parameter
                      */
                     std::vector<std::string> m_textValue;
                     bool m_textValueHasBeenSet;

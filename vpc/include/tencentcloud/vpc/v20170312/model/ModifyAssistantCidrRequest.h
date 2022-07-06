@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取`VPC` instance `ID`, e.g. `vpc-6v2ht8q5`.
-                     * @return VpcId `VPC` instance `ID`, e.g. `vpc-6v2ht8q5`.
+                     * 获取`VPC` instance `ID`, such as `vpc-6v2ht8q5`.
+                     * @return VpcId `VPC` instance `ID`, such as `vpc-6v2ht8q5`.
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置`VPC` instance `ID`, e.g. `vpc-6v2ht8q5`.
-                     * @param VpcId `VPC` instance `ID`, e.g. `vpc-6v2ht8q5`.
+                     * 设置`VPC` instance `ID`, such as `vpc-6v2ht8q5`.
+                     * @param VpcId `VPC` instance `ID`, such as `vpc-6v2ht8q5`.
                      */
                     void SetVpcId(const std::string& _vpcId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Array of the secondary CIDR blocks to be added, such as ["10.0.0.0/16", "172.16.0.0/16"]. Either or both of `NewCidrBlocks` and `OldCidrBlocks` must be specified.
-                     * @return NewCidrBlocks Array of the secondary CIDR blocks to be added, such as ["10.0.0.0/16", "172.16.0.0/16"]. Either or both of `NewCidrBlocks` and `OldCidrBlocks` must be specified.
+                     * 获取Array of the secondary CIDR blocks to be added, such as ["10.0.0.0/16", "172.16.0.0/16"]. At least one of `NewCidrBlocks` and `OldCidrBlocks` must be specified.
+                     * @return NewCidrBlocks Array of the secondary CIDR blocks to be added, such as ["10.0.0.0/16", "172.16.0.0/16"]. At least one of `NewCidrBlocks` and `OldCidrBlocks` must be specified.
                      */
                     std::vector<std::string> GetNewCidrBlocks() const;
 
                     /**
-                     * 设置Array of the secondary CIDR blocks to be added, such as ["10.0.0.0/16", "172.16.0.0/16"]. Either or both of `NewCidrBlocks` and `OldCidrBlocks` must be specified.
-                     * @param NewCidrBlocks Array of the secondary CIDR blocks to be added, such as ["10.0.0.0/16", "172.16.0.0/16"]. Either or both of `NewCidrBlocks` and `OldCidrBlocks` must be specified.
+                     * 设置Array of the secondary CIDR blocks to be added, such as ["10.0.0.0/16", "172.16.0.0/16"]. At least one of `NewCidrBlocks` and `OldCidrBlocks` must be specified.
+                     * @param NewCidrBlocks Array of the secondary CIDR blocks to be added, such as ["10.0.0.0/16", "172.16.0.0/16"]. At least one of `NewCidrBlocks` and `OldCidrBlocks` must be specified.
                      */
                     void SetNewCidrBlocks(const std::vector<std::string>& _newCidrBlocks);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool NewCidrBlocksHasBeenSet() const;
 
                     /**
-                     * 获取Array of the secondary CIDR blocks to be deleted, such as ["10.0.0.0/16", "172.16.0.0/16"]. Either or both of `NewCidrBlocks` and `OldCidrBlocks` must be specified.
-                     * @return OldCidrBlocks Array of the secondary CIDR blocks to be deleted, such as ["10.0.0.0/16", "172.16.0.0/16"]. Either or both of `NewCidrBlocks` and `OldCidrBlocks` must be specified.
+                     * 获取Array of the secondary CIDR blocks to be deleted, such as ["10.0.0.0/16", "172.16.0.0/16"]. At least one of `NewCidrBlocks` or `OldCidrBlocks` must be specified.
+                     * @return OldCidrBlocks Array of the secondary CIDR blocks to be deleted, such as ["10.0.0.0/16", "172.16.0.0/16"]. At least one of `NewCidrBlocks` or `OldCidrBlocks` must be specified.
                      */
                     std::vector<std::string> GetOldCidrBlocks() const;
 
                     /**
-                     * 设置Array of the secondary CIDR blocks to be deleted, such as ["10.0.0.0/16", "172.16.0.0/16"]. Either or both of `NewCidrBlocks` and `OldCidrBlocks` must be specified.
-                     * @param OldCidrBlocks Array of the secondary CIDR blocks to be deleted, such as ["10.0.0.0/16", "172.16.0.0/16"]. Either or both of `NewCidrBlocks` and `OldCidrBlocks` must be specified.
+                     * 设置Array of the secondary CIDR blocks to be deleted, such as ["10.0.0.0/16", "172.16.0.0/16"]. At least one of `NewCidrBlocks` or `OldCidrBlocks` must be specified.
+                     * @param OldCidrBlocks Array of the secondary CIDR blocks to be deleted, such as ["10.0.0.0/16", "172.16.0.0/16"]. At least one of `NewCidrBlocks` or `OldCidrBlocks` must be specified.
                      */
                     void SetOldCidrBlocks(const std::vector<std::string>& _oldCidrBlocks);
 
@@ -99,19 +99,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * `VPC` instance `ID`, e.g. `vpc-6v2ht8q5`.
+                     * `VPC` instance `ID`, such as `vpc-6v2ht8q5`.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Array of the secondary CIDR blocks to be added, such as ["10.0.0.0/16", "172.16.0.0/16"]. Either or both of `NewCidrBlocks` and `OldCidrBlocks` must be specified.
+                     * Array of the secondary CIDR blocks to be added, such as ["10.0.0.0/16", "172.16.0.0/16"]. At least one of `NewCidrBlocks` and `OldCidrBlocks` must be specified.
                      */
                     std::vector<std::string> m_newCidrBlocks;
                     bool m_newCidrBlocksHasBeenSet;
 
                     /**
-                     * Array of the secondary CIDR blocks to be deleted, such as ["10.0.0.0/16", "172.16.0.0/16"]. Either or both of `NewCidrBlocks` and `OldCidrBlocks` must be specified.
+                     * Array of the secondary CIDR blocks to be deleted, such as ["10.0.0.0/16", "172.16.0.0/16"]. At least one of `NewCidrBlocks` or `OldCidrBlocks` must be specified.
                      */
                     std::vector<std::string> m_oldCidrBlocks;
                     bool m_oldCidrBlocksHasBeenSet;

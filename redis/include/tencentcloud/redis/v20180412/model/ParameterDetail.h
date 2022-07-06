@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Details of the parameters in a parameter template
+                * Details of the parameters in the parameter template
                 */
                 class ParameterDetail : public AbstractModel
                 {
@@ -119,14 +119,14 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Current value of the parameter
-                     * @return CurrentValue Current value of the parameter
+                     * 获取Current value
+                     * @return CurrentValue Current value
                      */
                     std::string GetCurrentValue() const;
 
                     /**
-                     * 设置Current value of the parameter
-                     * @param CurrentValue Current value of the parameter
+                     * 设置Current value
+                     * @param CurrentValue Current value
                      */
                     void SetCurrentValue(const std::string& _currentValue);
 
@@ -137,14 +137,14 @@ namespace TencentCloud
                     bool CurrentValueHasBeenSet() const;
 
                     /**
-                     * 获取Whether the database needs to be restarted for the modified parameter to take effect. Valid values: `0` (no),`1` (yes)
-                     * @return NeedReboot Whether the database needs to be restarted for the modified parameter to take effect. Valid values: `0` (no),`1` (yes)
+                     * 获取Whether the database needs to be restarted for the modified parameter to take effect. Valid values: 0 (no); 1 (yes).
+                     * @return NeedReboot Whether the database needs to be restarted for the modified parameter to take effect. Valid values: 0 (no); 1 (yes).
                      */
                     int64_t GetNeedReboot() const;
 
                     /**
-                     * 设置Whether the database needs to be restarted for the modified parameter to take effect. Valid values: `0` (no),`1` (yes)
-                     * @param NeedReboot Whether the database needs to be restarted for the modified parameter to take effect. Valid values: `0` (no),`1` (yes)
+                     * 设置Whether the database needs to be restarted for the modified parameter to take effect. Valid values: 0 (no); 1 (yes).
+                     * @param NeedReboot Whether the database needs to be restarted for the modified parameter to take effect. Valid values: 0 (no); 1 (yes).
                      */
                     void SetNeedReboot(const int64_t& _needReboot);
 
@@ -156,17 +156,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Maximum value of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Max Maximum value of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetMax() const;
 
                     /**
                      * 设置Maximum value of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param Max Maximum value of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetMax(const std::string& _max);
 
@@ -178,17 +178,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 获取Minimum value of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Min Minimum value of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetMin() const;
 
                     /**
                      * 设置Minimum value of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param Min Minimum value of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetMin(const std::string& _min);
 
@@ -199,18 +199,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool MinHasBeenSet() const;
 
                     /**
-                     * 获取Enumerated values of the parameter. It is null if the parameter is non-enumerated
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return EnumValue Enumerated values of the parameter. It is null if the parameter is non-enumerated
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Enumerated values of the parameter. It is null if the parameter is non-enumerated.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return EnumValue Enumerated values of the parameter. It is null if the parameter is non-enumerated.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> GetEnumValue() const;
 
                     /**
-                     * 设置Enumerated values of the parameter. It is null if the parameter is non-enumerated
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param EnumValue Enumerated values of the parameter. It is null if the parameter is non-enumerated
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Enumerated values of the parameter. It is null if the parameter is non-enumerated.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param EnumValue Enumerated values of the parameter. It is null if the parameter is non-enumerated.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetEnumValue(const std::vector<std::string>& _enumValue);
 
@@ -247,34 +247,34 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Current value of the parameter
+                     * Current value
                      */
                     std::string m_currentValue;
                     bool m_currentValueHasBeenSet;
 
                     /**
-                     * Whether the database needs to be restarted for the modified parameter to take effect. Valid values: `0` (no),`1` (yes)
+                     * Whether the database needs to be restarted for the modified parameter to take effect. Valid values: 0 (no); 1 (yes).
                      */
                     int64_t m_needReboot;
                     bool m_needRebootHasBeenSet;
 
                     /**
                      * Maximum value of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_max;
                     bool m_maxHasBeenSet;
 
                     /**
                      * Minimum value of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_min;
                     bool m_minHasBeenSet;
 
                     /**
-                     * Enumerated values of the parameter. It is null if the parameter is non-enumerated
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Enumerated values of the parameter. It is null if the parameter is non-enumerated.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_enumValue;
                     bool m_enumValueHasBeenSet;

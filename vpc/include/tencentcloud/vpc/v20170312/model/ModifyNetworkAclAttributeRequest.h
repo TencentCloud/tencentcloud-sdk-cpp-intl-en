@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Network ACL instance ID. Example: acl-12345678.
-                     * @return NetworkAclId Network ACL instance ID. Example: acl-12345678.
+                     * 获取Network ACL instance ID, such as `acl-12345678`.
+                     * @return NetworkAclId Network ACL instance ID, such as `acl-12345678`.
                      */
                     std::string GetNetworkAclId() const;
 
                     /**
-                     * 设置Network ACL instance ID. Example: acl-12345678.
-                     * @param NetworkAclId Network ACL instance ID. Example: acl-12345678.
+                     * 设置Network ACL instance ID, such as `acl-12345678`.
+                     * @param NetworkAclId Network ACL instance ID, such as `acl-12345678`.
                      */
                     void SetNetworkAclId(const std::string& _networkAclId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool NetworkAclIdHasBeenSet() const;
 
                     /**
-                     * 获取Name of the network ACL. The maximum length is 60 bytes.
-                     * @return NetworkAclName Name of the network ACL. The maximum length is 60 bytes.
+                     * 获取Network ACL name, which can contain up to 60 bytes.
+                     * @return NetworkAclName Network ACL name, which can contain up to 60 bytes.
                      */
                     std::string GetNetworkAclName() const;
 
                     /**
-                     * 设置Name of the network ACL. The maximum length is 60 bytes.
-                     * @param NetworkAclName Name of the network ACL. The maximum length is 60 bytes.
+                     * 设置Network ACL name, which can contain up to 60 bytes.
+                     * @param NetworkAclName Network ACL name, which can contain up to 60 bytes.
                      */
                     void SetNetworkAclName(const std::string& _networkAclName);
 
@@ -81,13 +81,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Network ACL instance ID. Example: acl-12345678.
+                     * Network ACL instance ID, such as `acl-12345678`.
                      */
                     std::string m_networkAclId;
                     bool m_networkAclIdHasBeenSet;
 
                     /**
-                     * Name of the network ACL. The maximum length is 60 bytes.
+                     * Network ACL name, which can contain up to 60 bytes.
                      */
                     std::string m_networkAclName;
                     bool m_networkAclNameHasBeenSet;

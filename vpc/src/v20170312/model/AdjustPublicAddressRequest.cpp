@@ -14,22 +14,21 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/redis/v20180412/model/KillMasterGroupRequest.h>
+#include <tencentcloud/vpc/v20170312/model/AdjustPublicAddressRequest.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
-using namespace TencentCloud::Redis::V20180412::Model;
+using namespace TencentCloud::Vpc::V20170312::Model;
 using namespace std;
 
-KillMasterGroupRequest::KillMasterGroupRequest() :
+AdjustPublicAddressRequest::AdjustPublicAddressRequest() :
     m_instanceIdHasBeenSet(false),
-    m_passwordHasBeenSet(false),
-    m_shardIdsHasBeenSet(false)
+    m_addressIdHasBeenSet(false)
 {
 }
 
-string KillMasterGroupRequest::ToJsonString() const
+string AdjustPublicAddressRequest::ToJsonString() const
 {
     rapidjson::Document d;
     d.SetObject();
@@ -44,25 +43,12 @@ string KillMasterGroupRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_passwordHasBeenSet)
+    if (m_addressIdHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Password";
+        string key = "AddressId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_password.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_shardIdsHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "ShardIds";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
-
-        for (auto itr = m_shardIds.begin(); itr != m_shardIds.end(); ++itr)
-        {
-            d[key.c_str()].PushBack(rapidjson::Value().SetInt64(*itr), allocator);
-        }
+        d.AddMember(iKey, rapidjson::Value(m_addressId.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -73,52 +59,36 @@ string KillMasterGroupRequest::ToJsonString() const
 }
 
 
-string KillMasterGroupRequest::GetInstanceId() const
+string AdjustPublicAddressRequest::GetInstanceId() const
 {
     return m_instanceId;
 }
 
-void KillMasterGroupRequest::SetInstanceId(const string& _instanceId)
+void AdjustPublicAddressRequest::SetInstanceId(const string& _instanceId)
 {
     m_instanceId = _instanceId;
     m_instanceIdHasBeenSet = true;
 }
 
-bool KillMasterGroupRequest::InstanceIdHasBeenSet() const
+bool AdjustPublicAddressRequest::InstanceIdHasBeenSet() const
 {
     return m_instanceIdHasBeenSet;
 }
 
-string KillMasterGroupRequest::GetPassword() const
+string AdjustPublicAddressRequest::GetAddressId() const
 {
-    return m_password;
+    return m_addressId;
 }
 
-void KillMasterGroupRequest::SetPassword(const string& _password)
+void AdjustPublicAddressRequest::SetAddressId(const string& _addressId)
 {
-    m_password = _password;
-    m_passwordHasBeenSet = true;
+    m_addressId = _addressId;
+    m_addressIdHasBeenSet = true;
 }
 
-bool KillMasterGroupRequest::PasswordHasBeenSet() const
+bool AdjustPublicAddressRequest::AddressIdHasBeenSet() const
 {
-    return m_passwordHasBeenSet;
-}
-
-vector<int64_t> KillMasterGroupRequest::GetShardIds() const
-{
-    return m_shardIds;
-}
-
-void KillMasterGroupRequest::SetShardIds(const vector<int64_t>& _shardIds)
-{
-    m_shardIds = _shardIds;
-    m_shardIdsHasBeenSet = true;
-}
-
-bool KillMasterGroupRequest::ShardIdsHasBeenSet() const
-{
-    return m_shardIdsHasBeenSet;
+    return m_addressIdHasBeenSet;
 }
 
 

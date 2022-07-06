@@ -57,8 +57,8 @@ namespace TencentCloud
                     bool GroupsHasBeenSet() const;
 
                     /**
-                     * 获取Total number of the security groups meeting the condition.
-                     * @return Total Total number of the security groups meeting the condition.
+                     * 获取Total number of eligible security groups.
+                     * @return Total Total number of eligible security groups.
                      */
                     uint64_t GetTotal() const;
 
@@ -77,7 +77,7 @@ namespace TencentCloud
                     bool m_groupsHasBeenSet;
 
                     /**
-                     * Total number of the security groups meeting the condition.
+                     * Total number of eligible security groups.
                      */
                     uint64_t m_total;
                     bool m_totalHasBeenSet;

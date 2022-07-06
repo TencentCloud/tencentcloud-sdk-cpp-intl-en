@@ -44,14 +44,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the parameter template to be modified.
-                     * @return TemplateId ID of the parameter template to be modified.
+                     * 获取ID of the source parameter template.
+                     * @return TemplateId ID of the source parameter template.
                      */
                     std::string GetTemplateId() const;
 
                     /**
-                     * 设置ID of the parameter template to be modified.
-                     * @param TemplateId ID of the parameter template to be modified.
+                     * 设置ID of the source parameter template.
+                     * @param TemplateId ID of the source parameter template.
                      */
                     void SetTemplateId(const std::string& _templateId);
 
@@ -118,7 +118,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the parameter template to be modified.
+                     * ID of the source parameter template.
                      */
                     std::string m_templateId;
                     bool m_templateIdHasBeenSet;

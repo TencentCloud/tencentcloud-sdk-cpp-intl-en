@@ -27,6 +27,8 @@
 #include <tencentcloud/vpc/v20170312/model/AcceptAttachCcnInstancesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/AddBandwidthPackageResourcesRequest.h>
 #include <tencentcloud/vpc/v20170312/model/AddBandwidthPackageResourcesResponse.h>
+#include <tencentcloud/vpc/v20170312/model/AdjustPublicAddressRequest.h>
+#include <tencentcloud/vpc/v20170312/model/AdjustPublicAddressResponse.h>
 #include <tencentcloud/vpc/v20170312/model/AllocateAddressesRequest.h>
 #include <tencentcloud/vpc/v20170312/model/AllocateAddressesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/AssignIpv6AddressesRequest.h>
@@ -503,6 +505,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::AddBandwidthPackageResourcesResponse> AddBandwidthPackageResourcesOutcome;
                 typedef std::future<AddBandwidthPackageResourcesOutcome> AddBandwidthPackageResourcesOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::AddBandwidthPackageResourcesRequest&, AddBandwidthPackageResourcesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddBandwidthPackageResourcesAsyncHandler;
+                typedef Outcome<Core::Error, Model::AdjustPublicAddressResponse> AdjustPublicAddressOutcome;
+                typedef std::future<AdjustPublicAddressOutcome> AdjustPublicAddressOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::AdjustPublicAddressRequest&, AdjustPublicAddressOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AdjustPublicAddressAsyncHandler;
                 typedef Outcome<Core::Error, Model::AllocateAddressesResponse> AllocateAddressesOutcome;
                 typedef std::future<AllocateAddressesOutcome> AllocateAddressesOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::AllocateAddressesRequest&, AllocateAddressesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AllocateAddressesAsyncHandler;
@@ -1209,6 +1214,16 @@ namespace TencentCloud
                 AddBandwidthPackageResourcesOutcomeCallable AddBandwidthPackageResourcesCallable(const Model::AddBandwidthPackageResourcesRequest& request);
 
                 /**
+                 *This API is used to change the IP address. It supports changing the common public IPs and EIPs billed by monthly subscribed bandwidth of a CVM instance.
+
+                 * @param req AdjustPublicAddressRequest
+                 * @return AdjustPublicAddressOutcome
+                 */
+                AdjustPublicAddressOutcome AdjustPublicAddress(const Model::AdjustPublicAddressRequest &request);
+                void AdjustPublicAddressAsync(const Model::AdjustPublicAddressRequest& request, const AdjustPublicAddressAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AdjustPublicAddressOutcomeCallable AdjustPublicAddressCallable(const Model::AdjustPublicAddressRequest& request);
+
+                /**
                  *This API is used to apply for one or more [Elastic IP Addresses](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1) (EIPs for short).
 * An EIP is a static IP address that is dedicated for dynamic cloud computing. You can quickly re-map an EIP to another instance under your account to protect against instance failures.
 * Your EIP is associated with your Tencent Cloud account rather than an instance. It remains associated with your Tencent Cloud account until you choose to explicitly release it or your account is in arrears for more than 24 hours.
@@ -1436,7 +1451,7 @@ This API is completed asynchronously. If you need to query the execution result 
                 CreateAndAttachNetworkInterfaceOutcomeCallable CreateAndAttachNetworkInterfaceCallable(const Model::CreateAndAttachNetworkInterfaceRequest& request);
 
                 /**
-                 *This API (CreateAssistantCidr) is used to batch create secondary CIDR blocks. (To use this API that is in Beta, please submit a ticket.)
+                 *This API is used to batch create secondary CIDR blocks. This API is in beta test. To use it, please submit a ticket.
                  * @param req CreateAssistantCidrRequest
                  * @return CreateAssistantCidrOutcome
                  */
@@ -1574,7 +1589,7 @@ Before taking actions on a NAT gateway, ensure that it has been successfully cre
 
                 /**
                  *This API is used to create a <a href="https://intl.cloud.tencent.com/document/product/215/20088?from_cn_redirect=1">network ACL</a>.
-* The inbound and outbound rules for a new network ACL are "Deny All" by default. You need to call `ModifyNetworkAclEntries` after creation to set rules for the network ACL as needed.
+* The inbound and outbound rules for a new network ACL are "Deny All" by default. You need to call `ModifyNetworkAclEntries` to set rules for the new network ACL as needed.
                  * @param req CreateNetworkAclRequest
                  * @return CreateNetworkAclOutcome
                  */
@@ -1811,7 +1826,7 @@ Description:
                 DeleteAddressTemplateGroupOutcomeCallable DeleteAddressTemplateGroupCallable(const Model::DeleteAddressTemplateGroupRequest& request);
 
                 /**
-                 *This API (DeleteAssistantCidr) is used to delete secondary CIDR blocks. (To use this API that is in Beta, please submit a ticket.)
+                 *This API is used to delete secondary CIDR blocks. This API is in beta test. To use it, please submit a ticket.
                  * @param req DeleteAssistantCidrRequest
                  * @return DeleteAssistantCidrOutcome
                  */
@@ -2305,7 +2320,7 @@ A service provider can query all review requests created by any `APPID` under it
                 DescribeGatewayFlowMonitorDetailOutcomeCallable DescribeGatewayFlowMonitorDetailCallable(const Model::DescribeGatewayFlowMonitorDetailRequest& request);
 
                 /**
-                 *This API (DescribeGatewayFlowQos) is used to query the QoS bandwidth limit of inbound IP flow in a gateway.
+                 *This API is used to query the inbound IP bandwidth limit of a gateway.
                  * @param req DescribeGatewayFlowQosRequest
                  * @return DescribeGatewayFlowQosOutcome
                  */
@@ -2681,7 +2696,7 @@ This API is completed asynchronously. If you need to query the execution result 
                 DisableFlowLogsOutcomeCallable DisableFlowLogsCallable(const Model::DisableFlowLogsRequest& request);
 
                 /**
-                 *This API (DisableGatewayFlowMonitor) is used to disable gateway flow monitor.
+                 *This API is used to disable gateway traffic monitor.
                  * @param req DisableGatewayFlowMonitorRequest
                  * @return DisableGatewayFlowMonitorOutcome
                  */
@@ -2776,7 +2791,7 @@ This API is used to verify whether there will be conflict with an existing route
                 EnableFlowLogsOutcomeCallable EnableFlowLogsCallable(const Model::EnableFlowLogsRequest& request);
 
                 /**
-                 *This API (EnableGatewayFlowMonitor) is used to enable gateway flow monitor.
+                 *This API is used to enable gateway traffic monitor.
                  * @param req EnableGatewayFlowMonitorRequest
                  * @return EnableGatewayFlowMonitorOutcome
                  */
@@ -2920,7 +2935,7 @@ This API is completed asynchronously. If you need to query the execution result 
                 ModifyAddressesBandwidthOutcomeCallable ModifyAddressesBandwidthCallable(const Model::ModifyAddressesBandwidthRequest& request);
 
                 /**
-                 *This API (ModifyAssistantCidr) is used to batch modify (e.g. add and delete) secondary CIDR blocks. (To use this API that is in Beta, please submit a ticket.)
+                 *This API is used to modify (add or delete) secondary CIDR blocks in batch. This API is in beta test. To use it, please submit a ticket.
                  * @param req ModifyAssistantCidrRequest
                  * @return ModifyAssistantCidrOutcome
                  */
@@ -2993,7 +3008,7 @@ This API is completed asynchronously. If you need to query the execution result 
                 ModifyFlowLogAttributeOutcomeCallable ModifyFlowLogAttributeCallable(const Model::ModifyFlowLogAttributeRequest& request);
 
                 /**
-                 *This API (ModifyGatewayFlowQos) is used to adjust the QoS bandwidth limit in a gateway.
+                 *This API is used to adjust the bandwidth limit of a gateway.
                  * @param req ModifyGatewayFlowQosRequest
                  * @return ModifyGatewayFlowQosOutcome
                  */
@@ -3074,7 +3089,9 @@ This API is completed asynchronously. If you need to query the execution result 
                 ModifyNetworkAclAttributeOutcomeCallable ModifyNetworkAclAttributeCallable(const Model::ModifyNetworkAclAttributeRequest& request);
 
                 /**
-                 *This API is used to modify (add or delete) the inbound and outbound rules of a network ACL.
+                 *This API is used to modify (add or delete) the inbound and outbound rules of a network ACL. In `NetworkAclEntrySet` parameters,
+* Passing in the new inbound/outbound rules will reset the original rules.
+* Passing in the inbound rules will only reset the original inbound rules and not affect the original outbound rules, and vice versa.
                  * @param req ModifyNetworkAclEntriesRequest
                  * @return ModifyNetworkAclEntriesOutcome
                  */
@@ -3244,7 +3261,7 @@ This API is completed asynchronously. If you need to query the execution result 
                 ModifyVpnGatewayRoutesOutcomeCallable ModifyVpnGatewayRoutesCallable(const Model::ModifyVpnGatewayRoutesRequest& request);
 
                 /**
-                 *This API is used to publish a route to CCN. This can also be done by clicking the **Publish to CCN** button on the route table page.
+                 *This API is used to publish a route to CCN. This can also be done by clicking "Publish to CCN" in the operation column on the page of route table list.
                  * @param req NotifyRoutesRequest
                  * @return NotifyRoutesOutcome
                  */
@@ -3446,7 +3463,7 @@ This API is completed asynchronously. If you need to query the execution result 
                 UnassignPrivateIpAddressesOutcomeCallable UnassignPrivateIpAddressesCallable(const Model::UnassignPrivateIpAddressesRequest& request);
 
                 /**
-                 *This API is used to withdraw a route from CCN. This can also be done by clicking the **Withdraw from CCN** button on the route table page.
+                 *This API is used to withdraw a route from CCN. 
                  * @param req WithdrawNotifyRoutesRequest
                  * @return WithdrawNotifyRoutesOutcome
                  */

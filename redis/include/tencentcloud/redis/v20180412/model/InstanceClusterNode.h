@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取ID of the runtime node of an instance
-                     * @return RunId ID of the runtime node of an instance
+                     * 获取ID of the runtime node of the instance
+                     * @return RunId ID of the runtime node of the instance
                      */
                     std::string GetRunId() const;
 
                     /**
-                     * 设置ID of the runtime node of an instance
-                     * @param RunId ID of the runtime node of an instance
+                     * 设置ID of the runtime node of the instance
+                     * @param RunId ID of the runtime node of the instance
                      */
                     void SetRunId(const std::string& _runId);
 
@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool RunIdHasBeenSet() const;
 
                     /**
-                     * 获取Cluster role. 0: primary; 1: secondary
-                     * @return Role Cluster role. 0: primary; 1: secondary
+                     * 获取Cluster role. 0: master; 1: replica
+                     * @return Role Cluster role. 0: master; 1: replica
                      */
                     int64_t GetRole() const;
 
                     /**
-                     * 设置Cluster role. 0: primary; 1: secondary
-                     * @param Role Cluster role. 0: primary; 1: secondary
+                     * 设置Cluster role. 0: master; 1: replica
+                     * @param Role Cluster role. 0: master; 1: replica
                      */
                     void SetRole(const int64_t& _role);
 
@@ -155,14 +155,14 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Node deactivation time
-                     * @return DownTime Node deactivation time
+                     * 获取Node elimination time
+                     * @return DownTime Node elimination time
                      */
                     std::string GetDownTime() const;
 
                     /**
-                     * 设置Node deactivation time
-                     * @param DownTime Node deactivation time
+                     * 设置Node elimination time
+                     * @param DownTime Node elimination time
                      */
                     void SetDownTime(const std::string& _downTime);
 
@@ -227,14 +227,14 @@ namespace TencentCloud
                     bool QpsHasBeenSet() const;
 
                     /**
-                     * 获取QPS slope of a node
-                     * @return QpsSlope QPS slope of a node
+                     * 获取Node QPS slope
+                     * @return QpsSlope Node QPS slope
                      */
                     double GetQpsSlope() const;
 
                     /**
-                     * 设置QPS slope of a node
-                     * @param QpsSlope QPS slope of a node
+                     * 设置Node QPS slope
+                     * @param QpsSlope Node QPS slope
                      */
                     void SetQpsSlope(const double& _qpsSlope);
 
@@ -263,14 +263,14 @@ namespace TencentCloud
                     bool StorageHasBeenSet() const;
 
                     /**
-                     * 获取Storage slope of a node
-                     * @return StorageSlope Storage slope of a node
+                     * 获取Node storage slope
+                     * @return StorageSlope Node storage slope
                      */
                     double GetStorageSlope() const;
 
                     /**
-                     * 设置Storage slope of a node
-                     * @param StorageSlope Storage slope of a node
+                     * 设置Node storage slope
+                     * @param StorageSlope Node storage slope
                      */
                     void SetStorageSlope(const double& _storageSlope);
 
@@ -289,13 +289,13 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * ID of the runtime node of an instance
+                     * ID of the runtime node of the instance
                      */
                     std::string m_runId;
                     bool m_runIdHasBeenSet;
 
                     /**
-                     * Cluster role. 0: primary; 1: secondary
+                     * Cluster role. 0: master; 1: replica
                      */
                     int64_t m_role;
                     bool m_roleHasBeenSet;
@@ -319,7 +319,7 @@ namespace TencentCloud
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Node deactivation time
+                     * Node elimination time
                      */
                     std::string m_downTime;
                     bool m_downTimeHasBeenSet;
@@ -343,7 +343,7 @@ namespace TencentCloud
                     bool m_qpsHasBeenSet;
 
                     /**
-                     * QPS slope of a node
+                     * Node QPS slope
                      */
                     double m_qpsSlope;
                     bool m_qpsSlopeHasBeenSet;
@@ -355,7 +355,7 @@ namespace TencentCloud
                     bool m_storageHasBeenSet;
 
                     /**
-                     * Storage slope of a node
+                     * Node storage slope
                      */
                     double m_storageSlope;
                     bool m_storageSlopeHasBeenSet;

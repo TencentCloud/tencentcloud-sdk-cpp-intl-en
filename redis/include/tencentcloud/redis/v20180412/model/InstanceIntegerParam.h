@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Descriptions of integer parameters of the instance
+                * Description of the instance parameter in Integer type
                 */
                 class InstanceIntegerParam : public AbstractModel
                 {
@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool ValueTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether restart is required after a modification is made. Value range: true, false
-                     * @return NeedRestart Whether restart is required after a modification is made. Value range: true, false
+                     * 获取Whether restart is required after a modification is made. Valid values: true, false
+                     * @return NeedRestart Whether restart is required after a modification is made. Valid values: true, false
                      */
                     std::string GetNeedRestart() const;
 
                     /**
-                     * 设置Whether restart is required after a modification is made. Value range: true, false
-                     * @param NeedRestart Whether restart is required after a modification is made. Value range: true, false
+                     * 设置Whether restart is required after a modification is made. Valid values: true, false
+                     * @param NeedRestart Whether restart is required after a modification is made. Valid values: true, false
                      */
                     void SetNeedRestart(const std::string& _needRestart);
 
@@ -119,14 +119,14 @@ namespace TencentCloud
                     bool DefaultValueHasBeenSet() const;
 
                     /**
-                     * 获取Current value of a parameter
-                     * @return CurrentValue Current value of a parameter
+                     * 获取Current value
+                     * @return CurrentValue Current value
                      */
                     std::string GetCurrentValue() const;
 
                     /**
-                     * 设置Current value of a parameter
-                     * @param CurrentValue Current value of a parameter
+                     * 设置Current value
+                     * @param CurrentValue Current value
                      */
                     void SetCurrentValue(const std::string& _currentValue);
 
@@ -155,14 +155,14 @@ namespace TencentCloud
                     bool TipsHasBeenSet() const;
 
                     /**
-                     * 获取Minimum value of a parameter
-                     * @return Min Minimum value of a parameter
+                     * 获取Minimum value of the parameter
+                     * @return Min Minimum value of the parameter
                      */
                     std::string GetMin() const;
 
                     /**
-                     * 设置Minimum value of a parameter
-                     * @param Min Minimum value of a parameter
+                     * 设置Minimum value of the parameter
+                     * @param Min Minimum value of the parameter
                      */
                     void SetMin(const std::string& _min);
 
@@ -173,14 +173,14 @@ namespace TencentCloud
                     bool MinHasBeenSet() const;
 
                     /**
-                     * 获取Maximum value of a parameter
-                     * @return Max Maximum value of a parameter
+                     * 获取Maximum value of the parameter
+                     * @return Max Maximum value of the parameter
                      */
                     std::string GetMax() const;
 
                     /**
-                     * 设置Maximum value of a parameter
-                     * @param Max Maximum value of a parameter
+                     * 设置Maximum value of the parameter
+                     * @param Max Maximum value of the parameter
                      */
                     void SetMax(const std::string& _max);
 
@@ -210,17 +210,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Parameter unit
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Unit Parameter unit
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetUnit() const;
 
                     /**
                      * 设置Parameter unit
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param Unit Parameter unit
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetUnit(const std::string& _unit);
 
@@ -245,7 +245,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_valueTypeHasBeenSet;
 
                     /**
-                     * Whether restart is required after a modification is made. Value range: true, false
+                     * Whether restart is required after a modification is made. Valid values: true, false
                      */
                     std::string m_needRestart;
                     bool m_needRestartHasBeenSet;
@@ -257,7 +257,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_defaultValueHasBeenSet;
 
                     /**
-                     * Current value of a parameter
+                     * Current value
                      */
                     std::string m_currentValue;
                     bool m_currentValueHasBeenSet;
@@ -269,13 +269,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_tipsHasBeenSet;
 
                     /**
-                     * Minimum value of a parameter
+                     * Minimum value of the parameter
                      */
                     std::string m_min;
                     bool m_minHasBeenSet;
 
                     /**
-                     * Maximum value of a parameter
+                     * Maximum value of the parameter
                      */
                     std::string m_max;
                     bool m_maxHasBeenSet;
@@ -288,7 +288,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * Parameter unit
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_unit;
                     bool m_unitHasBeenSet;

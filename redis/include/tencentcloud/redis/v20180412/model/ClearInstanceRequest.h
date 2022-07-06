@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Redis instance password (this parameter is not required for password-free instances but for password-enabled instances)
-                     * @return Password Redis instance password (this parameter is not required for password-free instances but for password-enabled instances)
+                     * 获取Redis instance password (this parameter is required for password-enabled instances but not for password-free instances)
+                     * @return Password Redis instance password (this parameter is required for password-enabled instances but not for password-free instances)
                      */
                     std::string GetPassword() const;
 
                     /**
-                     * 设置Redis instance password (this parameter is not required for password-free instances but for password-enabled instances)
-                     * @param Password Redis instance password (this parameter is not required for password-free instances but for password-enabled instances)
+                     * 设置Redis instance password (this parameter is required for password-enabled instances but not for password-free instances)
+                     * @param Password Redis instance password (this parameter is required for password-enabled instances but not for password-free instances)
                      */
                     void SetPassword(const std::string& _password);
 
@@ -87,7 +87,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Redis instance password (this parameter is not required for password-free instances but for password-enabled instances)
+                     * Redis instance password (this parameter is required for password-enabled instances but not for password-free instances)
                      */
                     std::string m_password;
                     bool m_passwordHasBeenSet;

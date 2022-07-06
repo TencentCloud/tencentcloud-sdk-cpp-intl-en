@@ -119,14 +119,14 @@ namespace TencentCloud
                     bool DescHasBeenSet() const;
 
                     /**
-                     * 获取Network protocol, such as UDP and TCP, etc.
-                     * @return IpProtocol Network protocol, such as UDP and TCP, etc.
+                     * 获取Network protocol, such as UDP and TCP.
+                     * @return IpProtocol Network protocol, such as UDP and TCP.
                      */
                     std::string GetIpProtocol() const;
 
                     /**
-                     * 设置Network protocol, such as UDP and TCP, etc.
-                     * @param IpProtocol Network protocol, such as UDP and TCP, etc.
+                     * 设置Network protocol, such as UDP and TCP.
+                     * @param IpProtocol Network protocol, such as UDP and TCP.
                      */
                     void SetIpProtocol(const std::string& _ipProtocol);
 
@@ -217,7 +217,7 @@ namespace TencentCloud
                     bool m_descHasBeenSet;
 
                     /**
-                     * Network protocol, such as UDP and TCP, etc.
+                     * Network protocol, such as UDP and TCP.
                      */
                     std::string m_ipProtocol;
                     bool m_ipProtocolHasBeenSet;

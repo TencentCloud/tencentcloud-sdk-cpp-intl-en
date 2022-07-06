@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Public network download address (valid for six hours). This field will be deprecated soon.
-                     * @return DownloadUrl Public network download address (valid for six hours). This field will be deprecated soon.
+                     * 获取Public network download address (valid for six hours). This field will be disused soon.
+                     * @return DownloadUrl Public network download address (valid for six hours). This field will be disused soon.
                      */
                     std::vector<std::string> GetDownloadUrl() const;
 
@@ -57,8 +57,8 @@ namespace TencentCloud
                     bool DownloadUrlHasBeenSet() const;
 
                     /**
-                     * 获取Private network download address (valid for six hours). This field will be deprecated soon.
-                     * @return InnerDownloadUrl Private network download address (valid for six hours). This field will be deprecated soon.
+                     * 获取Private network download address (valid for six hours). This field will be disused soon.
+                     * @return InnerDownloadUrl Private network download address (valid for six hours). This field will be disused soon.
                      */
                     std::vector<std::string> GetInnerDownloadUrl() const;
 
@@ -69,10 +69,10 @@ namespace TencentCloud
                     bool InnerDownloadUrlHasBeenSet() const;
 
                     /**
-                     * 获取Filename. This field will be deprecated soon.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Filenames Filename. This field will be deprecated soon.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Filename. This field will be disused soon.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Filenames Filename. This field will be disused soon.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> GetFilenames() const;
 
@@ -84,9 +84,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 获取List of backup file information
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BackupInfos List of backup file information
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<BackupDownloadInfo> GetBackupInfos() const;
 
@@ -99,27 +99,27 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Public network download address (valid for six hours). This field will be deprecated soon.
+                     * Public network download address (valid for six hours). This field will be disused soon.
                      */
                     std::vector<std::string> m_downloadUrl;
                     bool m_downloadUrlHasBeenSet;
 
                     /**
-                     * Private network download address (valid for six hours). This field will be deprecated soon.
+                     * Private network download address (valid for six hours). This field will be disused soon.
                      */
                     std::vector<std::string> m_innerDownloadUrl;
                     bool m_innerDownloadUrlHasBeenSet;
 
                     /**
-                     * Filename. This field will be deprecated soon.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Filename. This field will be disused soon.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_filenames;
                     bool m_filenamesHasBeenSet;
 
                     /**
                      * List of backup file information
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<BackupDownloadInfo> m_backupInfos;
                     bool m_backupInfosHasBeenSet;

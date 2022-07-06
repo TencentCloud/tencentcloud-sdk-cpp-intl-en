@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Start time of the maintenance window, such as 17:00
-                     * @return StartTime Start time of the maintenance window, such as 17:00
+                     * 获取Maintenance start time, such as 17:00
+                     * @return StartTime Maintenance start time, such as 17:00
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Start time of the maintenance window, such as 17:00
-                     * @param StartTime Start time of the maintenance window, such as 17:00
+                     * 设置Maintenance start time, such as 17:00
+                     * @param StartTime Maintenance start time, such as 17:00
                      */
                     void SetStartTime(const std::string& _startTime);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time of the maintenance window, such as 19:00
-                     * @return EndTime End time of the maintenance window, such as 19:00
+                     * 获取Maintenance end time, such as 19:00
+                     * @return EndTime Maintenance end time, such as 19:00
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time of the maintenance window, such as 19:00
-                     * @param EndTime End time of the maintenance window, such as 19:00
+                     * 设置Maintenance end time, such as 19:00
+                     * @param EndTime Maintenance end time, such as 19:00
                      */
                     void SetEndTime(const std::string& _endTime);
 
@@ -105,13 +105,13 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Start time of the maintenance window, such as 17:00
+                     * Maintenance start time, such as 17:00
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time of the maintenance window, such as 19:00
+                     * Maintenance end time, such as 19:00
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;

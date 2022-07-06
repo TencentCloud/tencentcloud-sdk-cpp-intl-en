@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Security group information of an instance
+                * Security group information of the instance
                 */
                 class InstanceSecurityGroupDetail : public AbstractModel
                 {

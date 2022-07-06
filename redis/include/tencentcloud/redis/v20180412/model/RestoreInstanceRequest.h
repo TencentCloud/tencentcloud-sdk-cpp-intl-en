@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the instance to be operated on, which can be obtained through the `redisId` field in the return value of the DescribeRedis API.
-                     * @return InstanceId ID of the instance to be operated on, which can be obtained through the `redisId` field in the return value of the DescribeRedis API.
+                     * 获取ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstances` API.
+                     * @return InstanceId ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstances` API.
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置ID of the instance to be operated on, which can be obtained through the `redisId` field in the return value of the DescribeRedis API.
-                     * @param InstanceId ID of the instance to be operated on, which can be obtained through the `redisId` field in the return value of the DescribeRedis API.
+                     * 设置ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstances` API.
+                     * @param InstanceId ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstances` API.
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Backup ID, which can be obtained through the `backupId` field in the return value of the GetRedisBackupList API
-                     * @return BackupId Backup ID, which can be obtained through the `backupId` field in the return value of the GetRedisBackupList API
+                     * 获取Backup ID, which can be obtained through the `backupId` field in the return value of the `GetRedisBackupList` API.
+                     * @return BackupId Backup ID, which can be obtained through the `backupId` field in the return value of the `GetRedisBackupList` API.
                      */
                     std::string GetBackupId() const;
 
                     /**
-                     * 设置Backup ID, which can be obtained through the `backupId` field in the return value of the GetRedisBackupList API
-                     * @param BackupId Backup ID, which can be obtained through the `backupId` field in the return value of the GetRedisBackupList API
+                     * 设置Backup ID, which can be obtained through the `backupId` field in the return value of the `GetRedisBackupList` API.
+                     * @param BackupId Backup ID, which can be obtained through the `backupId` field in the return value of the `GetRedisBackupList` API.
                      */
                     void SetBackupId(const std::string& _backupId);
 
@@ -99,13 +99,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the instance to be operated on, which can be obtained through the `redisId` field in the return value of the DescribeRedis API.
+                     * ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstances` API.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Backup ID, which can be obtained through the `backupId` field in the return value of the GetRedisBackupList API
+                     * Backup ID, which can be obtained through the `backupId` field in the return value of the `GetRedisBackupList` API.
                      */
                     std::string m_backupId;
                     bool m_backupIdHasBeenSet;

@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/redis/v20180412/model/InstanceTagInfo.h>
 
 
 namespace TencentCloud
@@ -43,14 +44,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance list size. Default value: 20
-                     * @return Limit Instance list size. Default value: 20
+                     * 获取Size of the instance list. If no value is specified for this parameter, it will be 20 by default. If the specified value is greater than the `DescribeInstancesPageLimit` configuration item in the specific configuration file `etc/conf/component.properties` (which is 1,000 by default if the configuration cannot be read), then the configuration item shall prevail.
+                     * @return Limit Size of the instance list. If no value is specified for this parameter, it will be 20 by default. If the specified value is greater than the `DescribeInstancesPageLimit` configuration item in the specific configuration file `etc/conf/component.properties` (which is 1,000 by default if the configuration cannot be read), then the configuration item shall prevail.
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Instance list size. Default value: 20
-                     * @param Limit Instance list size. Default value: 20
+                     * 设置Size of the instance list. If no value is specified for this parameter, it will be 20 by default. If the specified value is greater than the `DescribeInstancesPageLimit` configuration item in the specific configuration file `etc/conf/component.properties` (which is 1,000 by default if the configuration cannot be read), then the configuration item shall prevail.
+                     * @param Limit Size of the instance list. If no value is specified for this parameter, it will be 20 by default. If the specified value is greater than the `DescribeInstancesPageLimit` configuration item in the specific configuration file `etc/conf/component.properties` (which is 1,000 by default if the configuration cannot be read), then the configuration item shall prevail.
                      */
                     void SetLimit(const uint64_t& _limit);
 
@@ -61,14 +62,14 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset, which is an integral multiple of `Limit`
-                     * @return Offset Offset, which is an integral multiple of `Limit`
+                     * 获取Offset, which is an integral multiple of `Limit`.
+                     * @return Offset Offset, which is an integral multiple of `Limit`.
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset, which is an integral multiple of `Limit`
-                     * @param Offset Offset, which is an integral multiple of `Limit`
+                     * 设置Offset, which is an integral multiple of `Limit`.
+                     * @param Offset Offset, which is an integral multiple of `Limit`.
                      */
                     void SetOffset(const uint64_t& _offset);
 
@@ -133,14 +134,14 @@ namespace TencentCloud
                     bool OrderTypeHasBeenSet() const;
 
                     /**
-                     * 获取Array of VPC IDs such as 47525. The array subscript starts from 0. If this parameter is not passed in, the basic network will be selected by default
-                     * @return VpcIds Array of VPC IDs such as 47525. The array subscript starts from 0. If this parameter is not passed in, the basic network will be selected by default
+                     * 获取Array of VPC IDs such as 47525. The array subscript starts from 0. If this parameter is not passed in, the classic network will be selected by default
+                     * @return VpcIds Array of VPC IDs such as 47525. The array subscript starts from 0. If this parameter is not passed in, the classic network will be selected by default
                      */
                     std::vector<std::string> GetVpcIds() const;
 
                     /**
-                     * 设置Array of VPC IDs such as 47525. The array subscript starts from 0. If this parameter is not passed in, the basic network will be selected by default
-                     * @param VpcIds Array of VPC IDs such as 47525. The array subscript starts from 0. If this parameter is not passed in, the basic network will be selected by default
+                     * 设置Array of VPC IDs such as 47525. The array subscript starts from 0. If this parameter is not passed in, the classic network will be selected by default
+                     * @param VpcIds Array of VPC IDs such as 47525. The array subscript starts from 0. If this parameter is not passed in, the classic network will be selected by default
                      */
                     void SetVpcIds(const std::vector<std::string>& _vpcIds);
 
@@ -151,14 +152,14 @@ namespace TencentCloud
                     bool VpcIdsHasBeenSet() const;
 
                     /**
-                     * 获取Array of subnet IDs such as 56854. The array subscript starts from 0
-                     * @return SubnetIds Array of subnet IDs such as 56854. The array subscript starts from 0
+                     * 获取Array of subnet IDs such as 56854. The array subscript starts from 0.
+                     * @return SubnetIds Array of subnet IDs such as 56854. The array subscript starts from 0.
                      */
                     std::vector<std::string> GetSubnetIds() const;
 
                     /**
-                     * 设置Array of subnet IDs such as 56854. The array subscript starts from 0
-                     * @param SubnetIds Array of subnet IDs such as 56854. The array subscript starts from 0
+                     * 设置Array of subnet IDs such as 56854. The array subscript starts from 0.
+                     * @param SubnetIds Array of subnet IDs such as 56854. The array subscript starts from 0.
                      */
                     void SetSubnetIds(const std::vector<std::string>& _subnetIds);
 
@@ -169,14 +170,14 @@ namespace TencentCloud
                     bool SubnetIdsHasBeenSet() const;
 
                     /**
-                     * 获取Array of project IDs. The array subscript starts from 0
-                     * @return ProjectIds Array of project IDs. The array subscript starts from 0
+                     * 获取Array of project IDs. The array subscript starts from 0.
+                     * @return ProjectIds Array of project IDs. The array subscript starts from 0.
                      */
                     std::vector<int64_t> GetProjectIds() const;
 
                     /**
-                     * 设置Array of project IDs. The array subscript starts from 0
-                     * @param ProjectIds Array of project IDs. The array subscript starts from 0
+                     * 设置Array of project IDs. The array subscript starts from 0.
+                     * @param ProjectIds Array of project IDs. The array subscript starts from 0.
                      */
                     void SetProjectIds(const std::vector<int64_t>& _projectIds);
 
@@ -223,14 +224,14 @@ namespace TencentCloud
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Array of VPC IDs such as vpc-sad23jfdfk. The array subscript starts from 0. If this parameter is not passed in, the basic network will be selected by default
-                     * @return UniqVpcIds Array of VPC IDs such as vpc-sad23jfdfk. The array subscript starts from 0. If this parameter is not passed in, the basic network will be selected by default
+                     * 获取Array of VPC IDs such as vpc-sad23jfdfk. The array subscript starts from 0. If this parameter is not passed in, the classic network will be selected by default
+                     * @return UniqVpcIds Array of VPC IDs such as vpc-sad23jfdfk. The array subscript starts from 0. If this parameter is not passed in, the classic network will be selected by default
                      */
                     std::vector<std::string> GetUniqVpcIds() const;
 
                     /**
-                     * 设置Array of VPC IDs such as vpc-sad23jfdfk. The array subscript starts from 0. If this parameter is not passed in, the basic network will be selected by default
-                     * @param UniqVpcIds Array of VPC IDs such as vpc-sad23jfdfk. The array subscript starts from 0. If this parameter is not passed in, the basic network will be selected by default
+                     * 设置Array of VPC IDs such as vpc-sad23jfdfk. The array subscript starts from 0. If this parameter is not passed in, the classic network will be selected by default
+                     * @param UniqVpcIds Array of VPC IDs such as vpc-sad23jfdfk. The array subscript starts from 0. If this parameter is not passed in, the classic network will be selected by default
                      */
                     void SetUniqVpcIds(const std::vector<std::string>& _uniqVpcIds);
 
@@ -241,14 +242,14 @@ namespace TencentCloud
                     bool UniqVpcIdsHasBeenSet() const;
 
                     /**
-                     * 获取Array of subnet IDs such as subnet-fdj24n34j2. The array subscript starts from 0
-                     * @return UniqSubnetIds Array of subnet IDs such as subnet-fdj24n34j2. The array subscript starts from 0
+                     * 获取Array of subnet IDs such as subnet-fdj24n34j2. The array subscript starts from 0.
+                     * @return UniqSubnetIds Array of subnet IDs such as subnet-fdj24n34j2. The array subscript starts from 0.
                      */
                     std::vector<std::string> GetUniqSubnetIds() const;
 
                     /**
-                     * 设置Array of subnet IDs such as subnet-fdj24n34j2. The array subscript starts from 0
-                     * @param UniqSubnetIds Array of subnet IDs such as subnet-fdj24n34j2. The array subscript starts from 0
+                     * 设置Array of subnet IDs such as subnet-fdj24n34j2. The array subscript starts from 0.
+                     * @param UniqSubnetIds Array of subnet IDs such as subnet-fdj24n34j2. The array subscript starts from 0.
                      */
                     void SetUniqSubnetIds(const std::vector<std::string>& _uniqSubnetIds);
 
@@ -259,14 +260,14 @@ namespace TencentCloud
                     bool UniqSubnetIdsHasBeenSet() const;
 
                     /**
-                     * 获取Region ID, which has already been disused. The corresponding region can be queried through the common parameter `Region`
-                     * @return RegionIds Region ID, which has already been disused. The corresponding region can be queried through the common parameter `Region`
+                     * 获取Region ID, which has already been disused. The corresponding region can be queried through the common parameter `Region`.
+                     * @return RegionIds Region ID, which has already been disused. The corresponding region can be queried through the common parameter `Region`.
                      */
                     std::vector<int64_t> GetRegionIds() const;
 
                     /**
-                     * 设置Region ID, which has already been disused. The corresponding region can be queried through the common parameter `Region`
-                     * @param RegionIds Region ID, which has already been disused. The corresponding region can be queried through the common parameter `Region`
+                     * 设置Region ID, which has already been disused. The corresponding region can be queried through the common parameter `Region`.
+                     * @param RegionIds Region ID, which has already been disused. The corresponding region can be queried through the common parameter `Region`.
                      */
                     void SetRegionIds(const std::vector<int64_t>& _regionIds);
 
@@ -295,14 +296,14 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Type edition. 1: standalone edition; 2: primary-secondary edition; 3: cluster edition
-                     * @return TypeVersion Type edition. 1: standalone edition; 2: primary-secondary edition; 3: cluster edition
+                     * 获取Type edition. 1: Standalone Edition; 2: Master-Replica Edition; 3: Cluster Edition
+                     * @return TypeVersion Type edition. 1: Standalone Edition; 2: Master-Replica Edition; 3: Cluster Edition
                      */
                     int64_t GetTypeVersion() const;
 
                     /**
-                     * 设置Type edition. 1: standalone edition; 2: primary-secondary edition; 3: cluster edition
-                     * @param TypeVersion Type edition. 1: standalone edition; 2: primary-secondary edition; 3: cluster edition
+                     * 设置Type edition. 1: Standalone Edition; 2: Master-Replica Edition; 3: Cluster Edition
+                     * @param TypeVersion Type edition. 1: Standalone Edition; 2: Master-Replica Edition; 3: Cluster Edition
                      */
                     void SetTypeVersion(const int64_t& _typeVersion);
 
@@ -349,14 +350,14 @@ namespace TencentCloud
                     bool AutoRenewHasBeenSet() const;
 
                     /**
-                     * 获取Billing method. postpaid: pay-as-you-go; prepaid: monthly subscription
-                     * @return BillingMode Billing method. postpaid: pay-as-you-go; prepaid: monthly subscription
+                     * 获取Billing mode. postpaid: pay-as-you-go; prepaid: monthly subscription
+                     * @return BillingMode Billing mode. postpaid: pay-as-you-go; prepaid: monthly subscription
                      */
                     std::string GetBillingMode() const;
 
                     /**
-                     * 设置Billing method. postpaid: pay-as-you-go; prepaid: monthly subscription
-                     * @param BillingMode Billing method. postpaid: pay-as-you-go; prepaid: monthly subscription
+                     * 设置Billing mode. postpaid: pay-as-you-go; prepaid: monthly subscription
+                     * @param BillingMode Billing mode. postpaid: pay-as-you-go; prepaid: monthly subscription
                      */
                     void SetBillingMode(const std::string& _billingMode);
 
@@ -367,14 +368,14 @@ namespace TencentCloud
                     bool BillingModeHasBeenSet() const;
 
                     /**
-                     * 获取Instance type. 1: legacy Redis Cluster Edition, 2: Redis 2.8 Master-Slave Edition, 3: CKV Master-Slave Edition, 4: CKV Cluster Edition, 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
-                     * @return Type Instance type. 1: legacy Redis Cluster Edition, 2: Redis 2.8 Master-Slave Edition, 3: CKV Master-Slave Edition, 4: CKV Cluster Edition, 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
+                     * 获取Instance type. 1: legacy Redis Cluster Edition, 2: Redis 2.8 Master-Replica Edition, 3: CKV Master-Replica Edition, 4: CKV Cluster Edition, 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Replica Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Replica Edition, 9: Redis 5.0 Cluster Edition
+                     * @return Type Instance type. 1: legacy Redis Cluster Edition, 2: Redis 2.8 Master-Replica Edition, 3: CKV Master-Replica Edition, 4: CKV Cluster Edition, 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Replica Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Replica Edition, 9: Redis 5.0 Cluster Edition
                      */
                     int64_t GetType() const;
 
                     /**
-                     * 设置Instance type. 1: legacy Redis Cluster Edition, 2: Redis 2.8 Master-Slave Edition, 3: CKV Master-Slave Edition, 4: CKV Cluster Edition, 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
-                     * @param Type Instance type. 1: legacy Redis Cluster Edition, 2: Redis 2.8 Master-Slave Edition, 3: CKV Master-Slave Edition, 4: CKV Cluster Edition, 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
+                     * 设置Instance type. 1: legacy Redis Cluster Edition, 2: Redis 2.8 Master-Replica Edition, 3: CKV Master-Replica Edition, 4: CKV Cluster Edition, 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Replica Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Replica Edition, 9: Redis 5.0 Cluster Edition
+                     * @param Type Instance type. 1: legacy Redis Cluster Edition, 2: Redis 2.8 Master-Replica Edition, 3: CKV Master-Replica Edition, 4: CKV Cluster Edition, 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Replica Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Replica Edition, 9: Redis 5.0 Cluster Edition
                      */
                     void SetType(const int64_t& _type);
 
@@ -385,14 +386,14 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Search keywords, which can be instance ID, instance name, or complete IP
-                     * @return SearchKeys Search keywords, which can be instance ID, instance name, or complete IP
+                     * 获取Search keywords, which can be instance ID, instance name, or complete IP.
+                     * @return SearchKeys Search keywords, which can be instance ID, instance name, or complete IP.
                      */
                     std::vector<std::string> GetSearchKeys() const;
 
                     /**
-                     * 设置Search keywords, which can be instance ID, instance name, or complete IP
-                     * @param SearchKeys Search keywords, which can be instance ID, instance name, or complete IP
+                     * 设置Search keywords, which can be instance ID, instance name, or complete IP.
+                     * @param SearchKeys Search keywords, which can be instance ID, instance name, or complete IP.
                      */
                     void SetSearchKeys(const std::vector<std::string>& _searchKeys);
 
@@ -403,14 +404,14 @@ namespace TencentCloud
                     bool SearchKeysHasBeenSet() const;
 
                     /**
-                     * 获取Internal parameter, which can be ignored
-                     * @return TypeList Internal parameter, which can be ignored
+                     * 获取Internal parameter, which can be ignored.
+                     * @return TypeList Internal parameter, which can be ignored.
                      */
                     std::vector<int64_t> GetTypeList() const;
 
                     /**
-                     * 设置Internal parameter, which can be ignored
-                     * @param TypeList Internal parameter, which can be ignored
+                     * 设置Internal parameter, which can be ignored.
+                     * @param TypeList Internal parameter, which can be ignored.
                      */
                     void SetTypeList(const std::vector<int64_t>& _typeList);
 
@@ -421,14 +422,14 @@ namespace TencentCloud
                     bool TypeListHasBeenSet() const;
 
                     /**
-                     * 获取Internal parameter, which can be ignored
-                     * @return MonitorVersion Internal parameter, which can be ignored
+                     * 获取Internal parameter, which can be ignored.
+                     * @return MonitorVersion Internal parameter, which can be ignored.
                      */
                     std::string GetMonitorVersion() const;
 
                     /**
-                     * 设置Internal parameter, which can be ignored
-                     * @param MonitorVersion Internal parameter, which can be ignored
+                     * 设置Internal parameter, which can be ignored.
+                     * @param MonitorVersion Internal parameter, which can be ignored.
                      */
                     void SetMonitorVersion(const std::string& _monitorVersion);
 
@@ -438,16 +439,52 @@ namespace TencentCloud
                      */
                     bool MonitorVersionHasBeenSet() const;
 
+                    /**
+                     * 获取Filters resources by tag key and value. If this parameter is not specified or is an empty array, resources will not be filtered.
+                     * @return InstanceTags Filters resources by tag key and value. If this parameter is not specified or is an empty array, resources will not be filtered.
+                     */
+                    std::vector<InstanceTagInfo> GetInstanceTags() const;
+
+                    /**
+                     * 设置Filters resources by tag key and value. If this parameter is not specified or is an empty array, resources will not be filtered.
+                     * @param InstanceTags Filters resources by tag key and value. If this parameter is not specified or is an empty array, resources will not be filtered.
+                     */
+                    void SetInstanceTags(const std::vector<InstanceTagInfo>& _instanceTags);
+
+                    /**
+                     * 判断参数 InstanceTags 是否已赋值
+                     * @return InstanceTags 是否已赋值
+                     */
+                    bool InstanceTagsHasBeenSet() const;
+
+                    /**
+                     * 获取Filters resources by tag key. If this parameter is not specified or is an empty array, resources will not be filtered.
+                     * @return TagKeys Filters resources by tag key. If this parameter is not specified or is an empty array, resources will not be filtered.
+                     */
+                    std::vector<std::string> GetTagKeys() const;
+
+                    /**
+                     * 设置Filters resources by tag key. If this parameter is not specified or is an empty array, resources will not be filtered.
+                     * @param TagKeys Filters resources by tag key. If this parameter is not specified or is an empty array, resources will not be filtered.
+                     */
+                    void SetTagKeys(const std::vector<std::string>& _tagKeys);
+
+                    /**
+                     * 判断参数 TagKeys 是否已赋值
+                     * @return TagKeys 是否已赋值
+                     */
+                    bool TagKeysHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Instance list size. Default value: 20
+                     * Size of the instance list. If no value is specified for this parameter, it will be 20 by default. If the specified value is greater than the `DescribeInstancesPageLimit` configuration item in the specific configuration file `etc/conf/component.properties` (which is 1,000 by default if the configuration cannot be read), then the configuration item shall prevail.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset, which is an integral multiple of `Limit`
+                     * Offset, which is an integral multiple of `Limit`.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
@@ -471,19 +508,19 @@ namespace TencentCloud
                     bool m_orderTypeHasBeenSet;
 
                     /**
-                     * Array of VPC IDs such as 47525. The array subscript starts from 0. If this parameter is not passed in, the basic network will be selected by default
+                     * Array of VPC IDs such as 47525. The array subscript starts from 0. If this parameter is not passed in, the classic network will be selected by default
                      */
                     std::vector<std::string> m_vpcIds;
                     bool m_vpcIdsHasBeenSet;
 
                     /**
-                     * Array of subnet IDs such as 56854. The array subscript starts from 0
+                     * Array of subnet IDs such as 56854. The array subscript starts from 0.
                      */
                     std::vector<std::string> m_subnetIds;
                     bool m_subnetIdsHasBeenSet;
 
                     /**
-                     * Array of project IDs. The array subscript starts from 0
+                     * Array of project IDs. The array subscript starts from 0.
                      */
                     std::vector<int64_t> m_projectIds;
                     bool m_projectIdsHasBeenSet;
@@ -501,19 +538,19 @@ namespace TencentCloud
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Array of VPC IDs such as vpc-sad23jfdfk. The array subscript starts from 0. If this parameter is not passed in, the basic network will be selected by default
+                     * Array of VPC IDs such as vpc-sad23jfdfk. The array subscript starts from 0. If this parameter is not passed in, the classic network will be selected by default
                      */
                     std::vector<std::string> m_uniqVpcIds;
                     bool m_uniqVpcIdsHasBeenSet;
 
                     /**
-                     * Array of subnet IDs such as subnet-fdj24n34j2. The array subscript starts from 0
+                     * Array of subnet IDs such as subnet-fdj24n34j2. The array subscript starts from 0.
                      */
                     std::vector<std::string> m_uniqSubnetIds;
                     bool m_uniqSubnetIdsHasBeenSet;
 
                     /**
-                     * Region ID, which has already been disused. The corresponding region can be queried through the common parameter `Region`
+                     * Region ID, which has already been disused. The corresponding region can be queried through the common parameter `Region`.
                      */
                     std::vector<int64_t> m_regionIds;
                     bool m_regionIdsHasBeenSet;
@@ -525,7 +562,7 @@ namespace TencentCloud
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Type edition. 1: standalone edition; 2: primary-secondary edition; 3: cluster edition
+                     * Type edition. 1: Standalone Edition; 2: Master-Replica Edition; 3: Cluster Edition
                      */
                     int64_t m_typeVersion;
                     bool m_typeVersionHasBeenSet;
@@ -543,34 +580,46 @@ namespace TencentCloud
                     bool m_autoRenewHasBeenSet;
 
                     /**
-                     * Billing method. postpaid: pay-as-you-go; prepaid: monthly subscription
+                     * Billing mode. postpaid: pay-as-you-go; prepaid: monthly subscription
                      */
                     std::string m_billingMode;
                     bool m_billingModeHasBeenSet;
 
                     /**
-                     * Instance type. 1: legacy Redis Cluster Edition, 2: Redis 2.8 Master-Slave Edition, 3: CKV Master-Slave Edition, 4: CKV Cluster Edition, 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Slave Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Slave Edition, 9: Redis 5.0 Cluster Edition,
+                     * Instance type. 1: legacy Redis Cluster Edition, 2: Redis 2.8 Master-Replica Edition, 3: CKV Master-Replica Edition, 4: CKV Cluster Edition, 5: Redis 2.8 Standalone Edition, 6: Redis 4.0 Master-Replica Edition, 7: Redis 4.0 Cluster Edition, 8: Redis 5.0 Master-Replica Edition, 9: Redis 5.0 Cluster Edition
                      */
                     int64_t m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Search keywords, which can be instance ID, instance name, or complete IP
+                     * Search keywords, which can be instance ID, instance name, or complete IP.
                      */
                     std::vector<std::string> m_searchKeys;
                     bool m_searchKeysHasBeenSet;
 
                     /**
-                     * Internal parameter, which can be ignored
+                     * Internal parameter, which can be ignored.
                      */
                     std::vector<int64_t> m_typeList;
                     bool m_typeListHasBeenSet;
 
                     /**
-                     * Internal parameter, which can be ignored
+                     * Internal parameter, which can be ignored.
                      */
                     std::string m_monitorVersion;
                     bool m_monitorVersionHasBeenSet;
+
+                    /**
+                     * Filters resources by tag key and value. If this parameter is not specified or is an empty array, resources will not be filtered.
+                     */
+                    std::vector<InstanceTagInfo> m_instanceTags;
+                    bool m_instanceTagsHasBeenSet;
+
+                    /**
+                     * Filters resources by tag key. If this parameter is not specified or is an empty array, resources will not be filtered.
+                     */
+                    std::vector<std::string> m_tagKeys;
+                    bool m_tagKeysHasBeenSet;
 
                 };
             }

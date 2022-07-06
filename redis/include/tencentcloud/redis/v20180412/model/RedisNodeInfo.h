@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Node type. Valid values: `0` (master node), `1` (replica node)
-                     * @return NodeType Node type. Valid values: `0` (master node), `1` (replica node)
+                     * 获取Node type. 0: master node; 1: replica node
+                     * @return NodeType Node type. 0: master node; 1: replica node
                      */
                     int64_t GetNodeType() const;
 
                     /**
-                     * 设置Node type. Valid values: `0` (master node), `1` (replica node)
-                     * @param NodeType Node type. Valid values: `0` (master node), `1` (replica node)
+                     * 设置Node type. 0: master node; 1: replica node
+                     * @param NodeType Node type. 0: master node; 1: replica node
                      */
                     void SetNodeType(const int64_t& _nodeType);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool NodeTypeHasBeenSet() const;
 
                     /**
-                     * 获取ID of the master or replica node, which is not required upon creation of the instance
-                     * @return NodeId ID of the master or replica node, which is not required upon creation of the instance
+                     * 获取ID of the master or replica node, which is not required during instance creation
+                     * @return NodeId ID of the master or replica node, which is not required during instance creation
                      */
                     int64_t GetNodeId() const;
 
                     /**
-                     * 设置ID of the master or replica node, which is not required upon creation of the instance
-                     * @param NodeId ID of the master or replica node, which is not required upon creation of the instance
+                     * 设置ID of the master or replica node, which is not required during instance creation
+                     * @param NodeId ID of the master or replica node, which is not required during instance creation
                      */
                     void SetNodeId(const int64_t& _nodeId);
 
@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool NodeIdHasBeenSet() const;
 
                     /**
-                     * 获取ID of the availability zone of the master or replica node
-                     * @return ZoneId ID of the availability zone of the master or replica node
+                     * 获取AZ ID of the master or replica node
+                     * @return ZoneId AZ ID of the master or replica node
                      */
                     uint64_t GetZoneId() const;
 
                     /**
-                     * 设置ID of the availability zone of the master or replica node
-                     * @param ZoneId ID of the availability zone of the master or replica node
+                     * 设置AZ ID of the master or replica node
+                     * @param ZoneId AZ ID of the master or replica node
                      */
                     void SetZoneId(const uint64_t& _zoneId);
 
@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取ID of the availability zone of the master or replica node
-                     * @return ZoneName ID of the availability zone of the master or replica node
+                     * 获取AZ name of the master or replica node
+                     * @return ZoneName AZ name of the master or replica node
                      */
                     std::string GetZoneName() const;
 
                     /**
-                     * 设置ID of the availability zone of the master or replica node
-                     * @param ZoneName ID of the availability zone of the master or replica node
+                     * 设置AZ name of the master or replica node
+                     * @param ZoneName AZ name of the master or replica node
                      */
                     void SetZoneName(const std::string& _zoneName);
 
@@ -121,25 +121,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Node type. Valid values: `0` (master node), `1` (replica node)
+                     * Node type. 0: master node; 1: replica node
                      */
                     int64_t m_nodeType;
                     bool m_nodeTypeHasBeenSet;
 
                     /**
-                     * ID of the master or replica node, which is not required upon creation of the instance
+                     * ID of the master or replica node, which is not required during instance creation
                      */
                     int64_t m_nodeId;
                     bool m_nodeIdHasBeenSet;
 
                     /**
-                     * ID of the availability zone of the master or replica node
+                     * AZ ID of the master or replica node
                      */
                     uint64_t m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * ID of the availability zone of the master or replica node
+                     * AZ name of the master or replica node
                      */
                     std::string m_zoneName;
                     bool m_zoneNameHasBeenSet;

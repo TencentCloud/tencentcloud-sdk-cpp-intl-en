@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool RouteTableIdHasBeenSet() const;
 
                     /**
-                     * 获取The unique ID of the routing policy
-                     * @return RouteItemIds The unique ID of the routing policy
+                     * 获取The unique ID of the route
+                     * @return RouteItemIds The unique ID of the route
                      */
                     std::vector<std::string> GetRouteItemIds() const;
 
                     /**
-                     * 设置The unique ID of the routing policy
-                     * @param RouteItemIds The unique ID of the routing policy
+                     * 设置The unique ID of the route
+                     * @param RouteItemIds The unique ID of the route
                      */
                     void SetRouteItemIds(const std::vector<std::string>& _routeItemIds);
 
@@ -87,7 +87,7 @@ namespace TencentCloud
                     bool m_routeTableIdHasBeenSet;
 
                     /**
-                     * The unique ID of the routing policy
+                     * The unique ID of the route
                      */
                     std::vector<std::string> m_routeItemIds;
                     bool m_routeItemIdsHasBeenSet;

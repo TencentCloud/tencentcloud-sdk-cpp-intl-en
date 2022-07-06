@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Sub-account name. If the root account is to be modified, enter `root`
-                     * @return AccountName Sub-account name. If the root account is to be modified, enter `root`
+                     * 获取Sub-account name. If the root account is to be modified, enter `root`.
+                     * @return AccountName Sub-account name. If the root account is to be modified, enter `root`.
                      */
                     std::string GetAccountName() const;
 
                     /**
-                     * 设置Sub-account name. If the root account is to be modified, enter `root`
-                     * @param AccountName Sub-account name. If the root account is to be modified, enter `root`
+                     * 设置Sub-account name. If the root account is to be modified, enter `root`.
+                     * @param AccountName Sub-account name. If the root account is to be modified, enter `root`.
                      */
                     void SetAccountName(const std::string& _accountName);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取Sub-account routing policy. Enter `master` to route to the primary node or `slave` to route to the secondary node
-                     * @return ReadonlyPolicy Sub-account routing policy. Enter `master` to route to the primary node or `slave` to route to the secondary node
+                     * 获取Routing policy. Valid values: master (master node); replication (replica node)
+                     * @return ReadonlyPolicy Routing policy. Valid values: master (master node); replication (replica node)
                      */
                     std::vector<std::string> GetReadonlyPolicy() const;
 
                     /**
-                     * 设置Sub-account routing policy. Enter `master` to route to the primary node or `slave` to route to the secondary node
-                     * @param ReadonlyPolicy Sub-account routing policy. Enter `master` to route to the primary node or `slave` to route to the secondary node
+                     * 设置Routing policy. Valid values: master (master node); replication (replica node)
+                     * @param ReadonlyPolicy Routing policy. Valid values: master (master node); replication (replica node)
                      */
                     void SetReadonlyPolicy(const std::vector<std::string>& _readonlyPolicy);
 
@@ -133,14 +133,14 @@ namespace TencentCloud
                     bool ReadonlyPolicyHasBeenSet() const;
 
                     /**
-                     * 获取Sub-account read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write
-                     * @return Privilege Sub-account read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write
+                     * 获取Sub-account read/write policy. Valid values: r (read-only); w (write-only); rw (read/write).
+                     * @return Privilege Sub-account read/write policy. Valid values: r (read-only); w (write-only); rw (read/write).
                      */
                     std::string GetPrivilege() const;
 
                     /**
-                     * 设置Sub-account read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write
-                     * @param Privilege Sub-account read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write
+                     * 设置Sub-account read/write policy. Valid values: r (read-only); w (write-only); rw (read/write).
+                     * @param Privilege Sub-account read/write policy. Valid values: r (read-only); w (write-only); rw (read/write).
                      */
                     void SetPrivilege(const std::string& _privilege);
 
@@ -151,14 +151,14 @@ namespace TencentCloud
                     bool PrivilegeHasBeenSet() const;
 
                     /**
-                     * 获取true: make the root account password-free. This is applicable to root accounts only; sub-accounts cannot be made password-free
-                     * @return NoAuth true: make the root account password-free. This is applicable to root accounts only; sub-accounts cannot be made password-free
+                     * 获取true: make the root account password-free. This is applicable to root accounts only. Sub-accounts cannot be made password-free.
+                     * @return NoAuth true: make the root account password-free. This is applicable to root accounts only. Sub-accounts cannot be made password-free.
                      */
                     bool GetNoAuth() const;
 
                     /**
-                     * 设置true: make the root account password-free. This is applicable to root accounts only; sub-accounts cannot be made password-free
-                     * @param NoAuth true: make the root account password-free. This is applicable to root accounts only; sub-accounts cannot be made password-free
+                     * 设置true: make the root account password-free. This is applicable to root accounts only. Sub-accounts cannot be made password-free.
+                     * @param NoAuth true: make the root account password-free. This is applicable to root accounts only. Sub-accounts cannot be made password-free.
                      */
                     void SetNoAuth(const bool& _noAuth);
 
@@ -177,7 +177,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Sub-account name. If the root account is to be modified, enter `root`
+                     * Sub-account name. If the root account is to be modified, enter `root`.
                      */
                     std::string m_accountName;
                     bool m_accountNameHasBeenSet;
@@ -195,19 +195,19 @@ namespace TencentCloud
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * Sub-account routing policy. Enter `master` to route to the primary node or `slave` to route to the secondary node
+                     * Routing policy. Valid values: master (master node); replication (replica node)
                      */
                     std::vector<std::string> m_readonlyPolicy;
                     bool m_readonlyPolicyHasBeenSet;
 
                     /**
-                     * Sub-account read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write
+                     * Sub-account read/write policy. Valid values: r (read-only); w (write-only); rw (read/write).
                      */
                     std::string m_privilege;
                     bool m_privilegeHasBeenSet;
 
                     /**
-                     * true: make the root account password-free. This is applicable to root accounts only; sub-accounts cannot be made password-free
+                     * true: make the root account password-free. This is applicable to root accounts only. Sub-accounts cannot be made password-free.
                      */
                     bool m_noAuth;
                     bool m_noAuthHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information of an instance
+                * Instance information
                 */
                 class RedisCommonInstanceList : public AbstractModel
                 {
@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取Project ID of the instance
-                     * @return ProjectId Project ID of the instance
+                     * 获取Instance project ID
+                     * @return ProjectId Instance project ID
                      */
                     int64_t GetProjectId() const;
 
                     /**
-                     * 设置Project ID of the instance
-                     * @param ProjectId Project ID of the instance
+                     * 设置Instance project ID
+                     * @param ProjectId Instance project ID
                      */
                     void SetProjectId(const int64_t& _projectId);
 
@@ -137,14 +137,14 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Instance availability zone
-                     * @return Zone Instance availability zone
+                     * 获取Instance AZ
+                     * @return Zone Instance AZ
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置Instance availability zone
-                     * @param Zone Instance availability zone
+                     * 设置Instance AZ
+                     * @param Zone Instance AZ
                      */
                     void SetZone(const std::string& _zone);
 
@@ -191,14 +191,14 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance status. Valid values: `1` (task running), `2` (instance running), `-2` (instance isolated), `-3` (instance being eliminated), `-4` (instance eliminated)
-                     * @return Status Instance status. Valid values: `1` (task running), `2` (instance running), `-2` (instance isolated), `-3` (instance being eliminated), `-4` (instance eliminated)
+                     * 获取Instance status. 1: task running; 2: instance running; -2: instance isolated; -3: instance being eliminated; -4: instance eliminated
+                     * @return Status Instance status. 1: task running; 2: instance running; -2: instance isolated; -3: instance being eliminated; -4: instance eliminated
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Instance status. Valid values: `1` (task running), `2` (instance running), `-2` (instance isolated), `-3` (instance being eliminated), `-4` (instance eliminated)
-                     * @param Status Instance status. Valid values: `1` (task running), `2` (instance running), `-2` (instance isolated), `-3` (instance being eliminated), `-4` (instance eliminated)
+                     * 设置Instance status. 1: task running; 2: instance running; -2: instance isolated; -3: instance being eliminated; -4: instance eliminated
+                     * @param Status Instance status. 1: task running; 2: instance running; -2: instance isolated; -3: instance being eliminated; -4: instance eliminated
                      */
                     void SetStatus(const std::string& _status);
 
@@ -263,14 +263,14 @@ namespace TencentCloud
                     bool CreatetimeHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode. Valid values: `0` (pay-as-you-go), `1` (monthly subscription)
-                     * @return PayMode Billing mode. Valid values: `0` (pay-as-you-go), `1` (monthly subscription)
+                     * 获取Billing mode. 0: pay-as-you-go; 1: monthly subscription
+                     * @return PayMode Billing mode. 0: pay-as-you-go; 1: monthly subscription
                      */
                     int64_t GetPayMode() const;
 
                     /**
-                     * 设置Billing mode. Valid values: `0` (pay-as-you-go), `1` (monthly subscription)
-                     * @param PayMode Billing mode. Valid values: `0` (pay-as-you-go), `1` (monthly subscription)
+                     * 设置Billing mode. 0: pay-as-you-go; 1: monthly subscription
+                     * @param PayMode Billing mode. 0: pay-as-you-go; 1: monthly subscription
                      */
                     void SetPayMode(const int64_t& _payMode);
 
@@ -281,14 +281,14 @@ namespace TencentCloud
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取Network type. Valid values: `0` (classic network), `1` (VPC)
-                     * @return NetType Network type. Valid values: `0` (classic network), `1` (VPC)
+                     * 获取Network type. Valid values: 0 (classic network); 1 (VPC).
+                     * @return NetType Network type. Valid values: 0 (classic network); 1 (VPC).
                      */
                     int64_t GetNetType() const;
 
                     /**
-                     * 设置Network type. Valid values: `0` (classic network), `1` (VPC)
-                     * @param NetType Network type. Valid values: `0` (classic network), `1` (VPC)
+                     * 设置Network type. Valid values: 0 (classic network); 1 (VPC).
+                     * @param NetType Network type. Valid values: 0 (classic network); 1 (VPC).
                      */
                     void SetNetType(const int64_t& _netType);
 
@@ -319,7 +319,7 @@ namespace TencentCloud
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * Project ID of the instance
+                     * Instance project ID
                      */
                     int64_t m_projectId;
                     bool m_projectIdHasBeenSet;
@@ -331,7 +331,7 @@ namespace TencentCloud
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Instance availability zone
+                     * Instance AZ
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
@@ -349,7 +349,7 @@ namespace TencentCloud
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * Instance status. Valid values: `1` (task running), `2` (instance running), `-2` (instance isolated), `-3` (instance being eliminated), `-4` (instance eliminated)
+                     * Instance status. 1: task running; 2: instance running; -2: instance isolated; -3: instance being eliminated; -4: instance eliminated
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
@@ -373,13 +373,13 @@ namespace TencentCloud
                     bool m_createtimeHasBeenSet;
 
                     /**
-                     * Billing mode. Valid values: `0` (pay-as-you-go), `1` (monthly subscription)
+                     * Billing mode. 0: pay-as-you-go; 1: monthly subscription
                      */
                     int64_t m_payMode;
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * Network type. Valid values: `0` (classic network), `1` (VPC)
+                     * Network type. Valid values: 0 (classic network); 1 (VPC).
                      */
                     int64_t m_netType;
                     bool m_netTypeHasBeenSet;

@@ -66,14 +66,14 @@ namespace TencentCloud
                     bool GroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Node group name
-                     * @return GroupName Node group name
+                     * 获取Node group name, which is empty for the master node
+                     * @return GroupName Node group name, which is empty for the master node
                      */
                     std::string GetGroupName() const;
 
                     /**
-                     * 设置Node group name
-                     * @param GroupName Node group name
+                     * 设置Node group name, which is empty for the master node
+                     * @param GroupName Node group name, which is empty for the master node
                      */
                     void SetGroupName(const std::string& _groupName);
 
@@ -84,14 +84,14 @@ namespace TencentCloud
                     bool GroupNameHasBeenSet() const;
 
                     /**
-                     * 获取Node availability zone ID, such as ap-guangzhou-1
-                     * @return ZoneId Node availability zone ID, such as ap-guangzhou-1
+                     * 获取Node AZ ID, such as ap-guangzhou-1
+                     * @return ZoneId Node AZ ID, such as ap-guangzhou-1
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置Node availability zone ID, such as ap-guangzhou-1
-                     * @param ZoneId Node availability zone ID, such as ap-guangzhou-1
+                     * 设置Node AZ ID, such as ap-guangzhou-1
+                     * @param ZoneId Node AZ ID, such as ap-guangzhou-1
                      */
                     void SetZoneId(const std::string& _zoneId);
 
@@ -102,14 +102,14 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Node group type. Valid values: `master` (master node group), `replica` (replica node group)
-                     * @return Role Node group type. Valid values: `master` (master node group), `replica` (replica node group)
+                     * 获取Node group type. Valid values: master (master node group); replica (replica node group)
+                     * @return Role Node group type. Valid values: master (master node group); replica (replica node group)
                      */
                     std::string GetRole() const;
 
                     /**
-                     * 设置Node group type. Valid values: `master` (master node group), `replica` (replica node group)
-                     * @param Role Node group type. Valid values: `master` (master node group), `replica` (replica node group)
+                     * 设置Node group type. Valid values: master (master node group); replica (replica node group)
+                     * @param Role Node group type. Valid values: master (master node group); replica (replica node group)
                      */
                     void SetRole(const std::string& _role);
 
@@ -120,14 +120,14 @@ namespace TencentCloud
                     bool RoleHasBeenSet() const;
 
                     /**
-                     * 获取The list of nodes in a node group
-                     * @return RedisNodes The list of nodes in a node group
+                     * 获取List of nodes in the node group
+                     * @return RedisNodes List of nodes in the node group
                      */
                     std::vector<RedisNode> GetRedisNodes() const;
 
                     /**
-                     * 设置The list of nodes in a node group
-                     * @param RedisNodes The list of nodes in a node group
+                     * 设置List of nodes in the node group
+                     * @param RedisNodes List of nodes in the node group
                      */
                     void SetRedisNodes(const std::vector<RedisNode>& _redisNodes);
 
@@ -146,25 +146,25 @@ namespace TencentCloud
                     bool m_groupIdHasBeenSet;
 
                     /**
-                     * Node group name
+                     * Node group name, which is empty for the master node
                      */
                     std::string m_groupName;
                     bool m_groupNameHasBeenSet;
 
                     /**
-                     * Node availability zone ID, such as ap-guangzhou-1
+                     * Node AZ ID, such as ap-guangzhou-1
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Node group type. Valid values: `master` (master node group), `replica` (replica node group)
+                     * Node group type. Valid values: master (master node group); replica (replica node group)
                      */
                     std::string m_role;
                     bool m_roleHasBeenSet;
 
                     /**
-                     * The list of nodes in a node group
+                     * List of nodes in the node group
                      */
                     std::vector<RedisNode> m_redisNodes;
                     bool m_redisNodesHasBeenSet;

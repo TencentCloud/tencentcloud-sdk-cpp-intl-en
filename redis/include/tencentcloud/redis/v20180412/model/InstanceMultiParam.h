@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Description of an instance parameter in Multi type
+                * Description of the instance parameter in Multi type
                 */
                 class InstanceMultiParam : public AbstractModel
                 {
@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool ValueTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether restart is required after a modification is made. Value range: true, false
-                     * @return NeedRestart Whether restart is required after a modification is made. Value range: true, false
+                     * 获取Whether restart is required after a modification is made. Valid values: true, false
+                     * @return NeedRestart Whether restart is required after a modification is made. Valid values: true, false
                      */
                     std::string GetNeedRestart() const;
 
                     /**
-                     * 设置Whether restart is required after a modification is made. Value range: true, false
-                     * @param NeedRestart Whether restart is required after a modification is made. Value range: true, false
+                     * 设置Whether restart is required after a modification is made. Valid values: true, false
+                     * @param NeedRestart Whether restart is required after a modification is made. Valid values: true, false
                      */
                     void SetNeedRestart(const std::string& _needRestart);
 
@@ -119,14 +119,14 @@ namespace TencentCloud
                     bool DefaultValueHasBeenSet() const;
 
                     /**
-                     * 获取Current value of a parameter
-                     * @return CurrentValue Current value of a parameter
+                     * 获取Current value
+                     * @return CurrentValue Current value
                      */
                     std::string GetCurrentValue() const;
 
                     /**
-                     * 设置Current value of a parameter
-                     * @param CurrentValue Current value of a parameter
+                     * 设置Current value
+                     * @param CurrentValue Current value
                      */
                     void SetCurrentValue(const std::string& _currentValue);
 
@@ -205,7 +205,7 @@ namespace TencentCloud
                     bool m_valueTypeHasBeenSet;
 
                     /**
-                     * Whether restart is required after a modification is made. Value range: true, false
+                     * Whether restart is required after a modification is made. Valid values: true, false
                      */
                     std::string m_needRestart;
                     bool m_needRestartHasBeenSet;
@@ -217,7 +217,7 @@ namespace TencentCloud
                     bool m_defaultValueHasBeenSet;
 
                     /**
-                     * Current value of a parameter
+                     * Current value
                      */
                     std::string m_currentValue;
                     bool m_currentValueHasBeenSet;

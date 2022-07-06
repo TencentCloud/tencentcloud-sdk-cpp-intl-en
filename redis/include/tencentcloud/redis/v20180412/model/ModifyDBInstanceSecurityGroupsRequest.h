@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool ProductHasBeenSet() const;
 
                     /**
-                     * 获取The ID list of the security groups to be modified, which is an array of one or more security group IDs.
-                     * @return SecurityGroupIds The ID list of the security groups to be modified, which is an array of one or more security group IDs.
+                     * 获取ID list of the security groups to be modified, which is an array of one or more security group IDs.
+                     * @return SecurityGroupIds ID list of the security groups to be modified, which is an array of one or more security group IDs.
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
-                     * 设置The ID list of the security groups to be modified, which is an array of one or more security group IDs.
-                     * @param SecurityGroupIds The ID list of the security groups to be modified, which is an array of one or more security group IDs.
+                     * 设置ID list of the security groups to be modified, which is an array of one or more security group IDs.
+                     * @param SecurityGroupIds ID list of the security groups to be modified, which is an array of one or more security group IDs.
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool SecurityGroupIdsHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB Console.
-                     * @return InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB Console.
+                     * 获取Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+                     * @return InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB Console.
-                     * @param InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB Console.
+                     * 设置Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+                     * @param InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
@@ -105,13 +105,13 @@ namespace TencentCloud
                     bool m_productHasBeenSet;
 
                     /**
-                     * The ID list of the security groups to be modified, which is an array of one or more security group IDs.
+                     * ID list of the security groups to be modified, which is an array of one or more security group IDs.
                      */
                     std::vector<std::string> m_securityGroupIds;
                     bool m_securityGroupIdsHasBeenSet;
 
                     /**
-                     * Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB Console.
+                     * Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;

@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to filter out the secondary node information
-                     * @return FilterSlave Whether to filter out the secondary node information
+                     * 获取Whether to filter out the replica node information
+                     * @return FilterSlave Whether to filter out the replica node information
                      */
                     bool GetFilterSlave() const;
 
                     /**
-                     * 设置Whether to filter out the secondary node information
-                     * @param FilterSlave Whether to filter out the secondary node information
+                     * 设置Whether to filter out the replica node information
+                     * @param FilterSlave Whether to filter out the replica node information
                      */
                     void SetFilterSlave(const bool& _filterSlave);
 
@@ -87,7 +87,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Whether to filter out the secondary node information
+                     * Whether to filter out the replica node information
                      */
                     bool m_filterSlave;
                     bool m_filterSlaveHasBeenSet;

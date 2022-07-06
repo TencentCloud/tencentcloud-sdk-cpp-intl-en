@@ -41,6 +41,8 @@
 #include <tencentcloud/live/v20180801/model/CreateLiveCallbackTemplateResponse.h>
 #include <tencentcloud/live/v20180801/model/CreateLiveCertRequest.h>
 #include <tencentcloud/live/v20180801/model/CreateLiveCertResponse.h>
+#include <tencentcloud/live/v20180801/model/CreateLivePullStreamTaskRequest.h>
+#include <tencentcloud/live/v20180801/model/CreateLivePullStreamTaskResponse.h>
 #include <tencentcloud/live/v20180801/model/CreateLiveRecordRequest.h>
 #include <tencentcloud/live/v20180801/model/CreateLiveRecordResponse.h>
 #include <tencentcloud/live/v20180801/model/CreateLiveRecordRuleRequest.h>
@@ -67,6 +69,8 @@
 #include <tencentcloud/live/v20180801/model/DeleteLiveCertResponse.h>
 #include <tencentcloud/live/v20180801/model/DeleteLiveDomainRequest.h>
 #include <tencentcloud/live/v20180801/model/DeleteLiveDomainResponse.h>
+#include <tencentcloud/live/v20180801/model/DeleteLivePullStreamTaskRequest.h>
+#include <tencentcloud/live/v20180801/model/DeleteLivePullStreamTaskResponse.h>
 #include <tencentcloud/live/v20180801/model/DeleteLiveRecordRequest.h>
 #include <tencentcloud/live/v20180801/model/DeleteLiveRecordResponse.h>
 #include <tencentcloud/live/v20180801/model/DeleteLiveRecordRuleRequest.h>
@@ -119,6 +123,8 @@
 #include <tencentcloud/live/v20180801/model/DescribeLiveForbidStreamListResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeLivePlayAuthKeyRequest.h>
 #include <tencentcloud/live/v20180801/model/DescribeLivePlayAuthKeyResponse.h>
+#include <tencentcloud/live/v20180801/model/DescribeLivePullStreamTasksRequest.h>
+#include <tencentcloud/live/v20180801/model/DescribeLivePullStreamTasksResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeLivePushAuthKeyRequest.h>
 #include <tencentcloud/live/v20180801/model/DescribeLivePushAuthKeyResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeLiveRecordRulesRequest.h>
@@ -197,6 +203,8 @@
 #include <tencentcloud/live/v20180801/model/ModifyLivePlayAuthKeyResponse.h>
 #include <tencentcloud/live/v20180801/model/ModifyLivePlayDomainRequest.h>
 #include <tencentcloud/live/v20180801/model/ModifyLivePlayDomainResponse.h>
+#include <tencentcloud/live/v20180801/model/ModifyLivePullStreamTaskRequest.h>
+#include <tencentcloud/live/v20180801/model/ModifyLivePullStreamTaskResponse.h>
 #include <tencentcloud/live/v20180801/model/ModifyLivePushAuthKeyRequest.h>
 #include <tencentcloud/live/v20180801/model/ModifyLivePushAuthKeyResponse.h>
 #include <tencentcloud/live/v20180801/model/ModifyLiveRecordTemplateRequest.h>
@@ -258,6 +266,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateLiveCertResponse> CreateLiveCertOutcome;
                 typedef std::future<CreateLiveCertOutcome> CreateLiveCertOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::CreateLiveCertRequest&, CreateLiveCertOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLiveCertAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateLivePullStreamTaskResponse> CreateLivePullStreamTaskOutcome;
+                typedef std::future<CreateLivePullStreamTaskOutcome> CreateLivePullStreamTaskOutcomeCallable;
+                typedef std::function<void(const LiveClient*, const Model::CreateLivePullStreamTaskRequest&, CreateLivePullStreamTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLivePullStreamTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateLiveRecordResponse> CreateLiveRecordOutcome;
                 typedef std::future<CreateLiveRecordOutcome> CreateLiveRecordOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::CreateLiveRecordRequest&, CreateLiveRecordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLiveRecordAsyncHandler;
@@ -297,6 +308,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteLiveDomainResponse> DeleteLiveDomainOutcome;
                 typedef std::future<DeleteLiveDomainOutcome> DeleteLiveDomainOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DeleteLiveDomainRequest&, DeleteLiveDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLiveDomainAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteLivePullStreamTaskResponse> DeleteLivePullStreamTaskOutcome;
+                typedef std::future<DeleteLivePullStreamTaskOutcome> DeleteLivePullStreamTaskOutcomeCallable;
+                typedef std::function<void(const LiveClient*, const Model::DeleteLivePullStreamTaskRequest&, DeleteLivePullStreamTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLivePullStreamTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteLiveRecordResponse> DeleteLiveRecordOutcome;
                 typedef std::future<DeleteLiveRecordOutcome> DeleteLiveRecordOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DeleteLiveRecordRequest&, DeleteLiveRecordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLiveRecordAsyncHandler;
@@ -375,6 +389,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeLivePlayAuthKeyResponse> DescribeLivePlayAuthKeyOutcome;
                 typedef std::future<DescribeLivePlayAuthKeyOutcome> DescribeLivePlayAuthKeyOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLivePlayAuthKeyRequest&, DescribeLivePlayAuthKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLivePlayAuthKeyAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeLivePullStreamTasksResponse> DescribeLivePullStreamTasksOutcome;
+                typedef std::future<DescribeLivePullStreamTasksOutcome> DescribeLivePullStreamTasksOutcomeCallable;
+                typedef std::function<void(const LiveClient*, const Model::DescribeLivePullStreamTasksRequest&, DescribeLivePullStreamTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLivePullStreamTasksAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeLivePushAuthKeyResponse> DescribeLivePushAuthKeyOutcome;
                 typedef std::future<DescribeLivePushAuthKeyOutcome> DescribeLivePushAuthKeyOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLivePushAuthKeyRequest&, DescribeLivePushAuthKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLivePushAuthKeyAsyncHandler;
@@ -492,6 +509,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyLivePlayDomainResponse> ModifyLivePlayDomainOutcome;
                 typedef std::future<ModifyLivePlayDomainOutcome> ModifyLivePlayDomainOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::ModifyLivePlayDomainRequest&, ModifyLivePlayDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLivePlayDomainAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyLivePullStreamTaskResponse> ModifyLivePullStreamTaskOutcome;
+                typedef std::future<ModifyLivePullStreamTaskOutcome> ModifyLivePullStreamTaskOutcomeCallable;
+                typedef std::function<void(const LiveClient*, const Model::ModifyLivePullStreamTaskRequest&, ModifyLivePullStreamTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLivePullStreamTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyLivePushAuthKeyResponse> ModifyLivePushAuthKeyOutcome;
                 typedef std::future<ModifyLivePushAuthKeyOutcome> ModifyLivePushAuthKeyOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::ModifyLivePushAuthKeyRequest&, ModifyLivePushAuthKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLivePushAuthKeyAsyncHandler;
@@ -614,6 +634,22 @@ Note: at least enter one callback URL.
                 CreateLiveCertOutcome CreateLiveCert(const Model::CreateLiveCertRequest &request);
                 void CreateLiveCertAsync(const Model::CreateLiveCertRequest& request, const CreateLiveCertAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateLiveCertOutcomeCallable CreateLiveCertCallable(const Model::CreateLiveCertRequest& request);
+
+                /**
+                 *This API is used to create a task to pull streams from video files or an external live streaming source and publish them to a specified destination URL.
+Notes:
+1. By default, you can have at most 20 stream pulling tasks at a time. You can submit a ticket to raise the limit.
+2. Only H.264 and H.265 are supported for video. If the source video is in a different format, please transcode it first.
+3. Only AAC is supported for audio. If the source audio is in a different format, please transcode it first.
+4. You can enable auto deletion in the console to delete expired tasks automatically.
+5. The pull and relay feature is a paid feature. For its billing details, see [Relay](https://intl.cloud.tencent.com/document/product/267/53308?from_cn_redirect=1).
+6. CSS is only responsible for pulling and relaying content. Please make sure that your content is authorized and complies with relevant laws and regulations. In case of copyright infringement or violation of laws or regulations, CSS will suspend its service for you and reserves the right to seek legal remedies.
+                 * @param req CreateLivePullStreamTaskRequest
+                 * @return CreateLivePullStreamTaskOutcome
+                 */
+                CreateLivePullStreamTaskOutcome CreateLivePullStreamTask(const Model::CreateLivePullStreamTaskRequest &request);
+                void CreateLivePullStreamTaskAsync(const Model::CreateLivePullStreamTaskRequest& request, const CreateLivePullStreamTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateLivePullStreamTaskOutcomeCallable CreateLivePullStreamTaskCallable(const Model::CreateLivePullStreamTaskRequest& request);
 
                 /**
                  *- Prerequisites
@@ -762,6 +798,18 @@ Note: only one screencapturing template can be associated with one domain name.
                 DeleteLiveDomainOutcome DeleteLiveDomain(const Model::DeleteLiveDomainRequest &request);
                 void DeleteLiveDomainAsync(const Model::DeleteLiveDomainRequest& request, const DeleteLiveDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteLiveDomainOutcomeCallable DeleteLiveDomainCallable(const Model::DeleteLiveDomainRequest& request);
+
+                /**
+                 *This API is used to delete a task created by `CreateLivePullStreamTask`.
+Notes:
+1. For the `TaskId` request parameter, pass in the task ID returned by the `CreateLivePullStreamTask` API.
+2. You can query the ID of a task using the `DescribeLivePullStreamTasks` API.
+                 * @param req DeleteLivePullStreamTaskRequest
+                 * @return DeleteLivePullStreamTaskOutcome
+                 */
+                DeleteLivePullStreamTaskOutcome DeleteLivePullStreamTask(const Model::DeleteLivePullStreamTaskRequest &request);
+                void DeleteLivePullStreamTaskAsync(const Model::DeleteLivePullStreamTaskRequest& request, const DeleteLivePullStreamTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteLivePullStreamTaskOutcomeCallable DeleteLivePullStreamTaskCallable(const Model::DeleteLivePullStreamTaskRequest& request);
 
                 /**
                  *Note: The `DeleteLiveRecord` API is only used to delete the record of recording tasks but not stop recording or deleting an ongoing recording task. If you need to stop a recording task, please use the [StopLiveRecord](https://intl.cloud.tencent.com/document/product/267/30146?from_cn_redirect=1) API.
@@ -1001,6 +1049,16 @@ Note: this API is used for query only and should not be relied too much upon in 
                 DescribeLivePlayAuthKeyOutcome DescribeLivePlayAuthKey(const Model::DescribeLivePlayAuthKeyRequest &request);
                 void DescribeLivePlayAuthKeyAsync(const Model::DescribeLivePlayAuthKeyRequest& request, const DescribeLivePlayAuthKeyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeLivePlayAuthKeyOutcomeCallable DescribeLivePlayAuthKeyCallable(const Model::DescribeLivePlayAuthKeyRequest& request);
+
+                /**
+                 *This API is used to query the stream pulling tasks created by `CreateLivePullStreamTask`.
+The tasks returned are sorted by last updated time in descending order.
+                 * @param req DescribeLivePullStreamTasksRequest
+                 * @return DescribeLivePullStreamTasksOutcome
+                 */
+                DescribeLivePullStreamTasksOutcome DescribeLivePullStreamTasks(const Model::DescribeLivePullStreamTasksRequest &request);
+                void DescribeLivePullStreamTasksAsync(const Model::DescribeLivePullStreamTasksRequest& request, const DescribeLivePullStreamTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeLivePullStreamTasksOutcomeCallable DescribeLivePullStreamTasksCallable(const Model::DescribeLivePullStreamTasksRequest& request);
 
                 /**
                  *This API is used to query the LVB push authentication key.
@@ -1378,6 +1436,17 @@ Referer information is included in HTTP requests. After you enable referer confi
                 ModifyLivePlayDomainOutcome ModifyLivePlayDomain(const Model::ModifyLivePlayDomainRequest &request);
                 void ModifyLivePlayDomainAsync(const Model::ModifyLivePlayDomainRequest& request, const ModifyLivePlayDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyLivePlayDomainOutcomeCallable ModifyLivePlayDomainCallable(const Model::ModifyLivePlayDomainRequest& request);
+
+                /**
+                 *This API is used to modify a stream pulling task. 
+1. You cannot modify the destination URL. To publish to a new destination, please create a new task.
+2. You cannot modify the source type. To use a different source type, please create a new task.
+                 * @param req ModifyLivePullStreamTaskRequest
+                 * @return ModifyLivePullStreamTaskOutcome
+                 */
+                ModifyLivePullStreamTaskOutcome ModifyLivePullStreamTask(const Model::ModifyLivePullStreamTaskRequest &request);
+                void ModifyLivePullStreamTaskAsync(const Model::ModifyLivePullStreamTaskRequest& request, const ModifyLivePullStreamTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyLivePullStreamTaskOutcomeCallable ModifyLivePullStreamTaskCallable(const Model::ModifyLivePullStreamTaskRequest& request);
 
                 /**
                  *This API is used to modify the LVB push authentication key.

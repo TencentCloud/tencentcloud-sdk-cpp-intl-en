@@ -173,14 +173,14 @@ namespace TencentCloud
                     bool StorageSlopeHasBeenSet() const;
 
                     /**
-                     * 获取ID of the runtime node of an instance
-                     * @return Runid ID of the runtime node of an instance
+                     * 获取ID of the runtime node of the instance
+                     * @return Runid ID of the runtime node of the instance
                      */
                     std::string GetRunid() const;
 
                     /**
-                     * 设置ID of the runtime node of an instance
-                     * @param Runid ID of the runtime node of an instance
+                     * 设置ID of the runtime node of the instance
+                     * @param Runid ID of the runtime node of the instance
                      */
                     void SetRunid(const std::string& _runid);
 
@@ -253,7 +253,7 @@ namespace TencentCloud
                     bool m_storageSlopeHasBeenSet;
 
                     /**
-                     * ID of the runtime node of an instance
+                     * ID of the runtime node of the instance
                      */
                     std::string m_runid;
                     bool m_runidHasBeenSet;

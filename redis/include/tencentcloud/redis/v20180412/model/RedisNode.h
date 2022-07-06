@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The operation information of Redis nodes
+                * Running information of Redis nodes
                 */
                 class RedisNode : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The number of keys on a node
-                     * @return Keys The number of keys on a node
+                     * 获取Number of keys on the node
+                     * @return Keys Number of keys on the node
                      */
                     int64_t GetKeys() const;
 
                     /**
-                     * 设置The number of keys on a node
-                     * @param Keys The number of keys on a node
+                     * 设置Number of keys on the node
+                     * @param Keys Number of keys on the node
                      */
                     void SetKeys(const int64_t& _keys);
 
@@ -139,7 +139,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The number of keys on a node
+                     * Number of keys on the node
                      */
                     int64_t m_keys;
                     bool m_keysHasBeenSet;

@@ -79,37 +79,37 @@ namespace TencentCloud
                     bool AccountNameHasBeenSet() const;
 
                     /**
-                     * 获取1. The password must contain 8-30 characters. A password of 12 or more characters is recommended.
-2. The password cannot start with a slash (/).
-3. The password must contain at least two of the following four types:
-    a. Lowercase letters (a-z)
-    b. Uppercase letters (A-Z)
-    c. Digits (0-9)
+                     * 获取1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
+2. It cannot start with a slash (/).
+3. It must contain characters in at least two of the following types:
+    a. Lowercase letters (a–z)
+    b. Uppercase letters (A–Z)
+    c. Digits (0–9)
     d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
-                     * @return AccountPassword 1. The password must contain 8-30 characters. A password of 12 or more characters is recommended.
-2. The password cannot start with a slash (/).
-3. The password must contain at least two of the following four types:
-    a. Lowercase letters (a-z)
-    b. Uppercase letters (A-Z)
-    c. Digits (0-9)
+                     * @return AccountPassword 1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
+2. It cannot start with a slash (/).
+3. It must contain characters in at least two of the following types:
+    a. Lowercase letters (a–z)
+    b. Uppercase letters (A–Z)
+    c. Digits (0–9)
     d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
                      */
                     std::string GetAccountPassword() const;
 
                     /**
-                     * 设置1. The password must contain 8-30 characters. A password of 12 or more characters is recommended.
-2. The password cannot start with a slash (/).
-3. The password must contain at least two of the following four types:
-    a. Lowercase letters (a-z)
-    b. Uppercase letters (A-Z)
-    c. Digits (0-9)
+                     * 设置1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
+2. It cannot start with a slash (/).
+3. It must contain characters in at least two of the following types:
+    a. Lowercase letters (a–z)
+    b. Uppercase letters (A–Z)
+    c. Digits (0–9)
     d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
-                     * @param AccountPassword 1. The password must contain 8-30 characters. A password of 12 or more characters is recommended.
-2. The password cannot start with a slash (/).
-3. The password must contain at least two of the following four types:
-    a. Lowercase letters (a-z)
-    b. Uppercase letters (A-Z)
-    c. Digits (0-9)
+                     * @param AccountPassword 1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
+2. It cannot start with a slash (/).
+3. It must contain characters in at least two of the following types:
+    a. Lowercase letters (a–z)
+    b. Uppercase letters (A–Z)
+    c. Digits (0–9)
     d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
                      */
                     void SetAccountPassword(const std::string& _accountPassword);
@@ -121,14 +121,14 @@ namespace TencentCloud
                     bool AccountPasswordHasBeenSet() const;
 
                     /**
-                     * 获取Routing policy. Enter `master` for primary node or `replication` for secondary node
-                     * @return ReadonlyPolicy Routing policy. Enter `master` for primary node or `replication` for secondary node
+                     * 获取Routing policy. Valid values: master (master node); replication (replica node)
+                     * @return ReadonlyPolicy Routing policy. Valid values: master (master node); replication (replica node)
                      */
                     std::vector<std::string> GetReadonlyPolicy() const;
 
                     /**
-                     * 设置Routing policy. Enter `master` for primary node or `replication` for secondary node
-                     * @param ReadonlyPolicy Routing policy. Enter `master` for primary node or `replication` for secondary node
+                     * 设置Routing policy. Valid values: master (master node); replication (replica node)
+                     * @param ReadonlyPolicy Routing policy. Valid values: master (master node); replication (replica node)
                      */
                     void SetReadonlyPolicy(const std::vector<std::string>& _readonlyPolicy);
 
@@ -139,14 +139,14 @@ namespace TencentCloud
                     bool ReadonlyPolicyHasBeenSet() const;
 
                     /**
-                     * 获取Read/write policy. Valid values: r (read-only), rw (read/write).
-                     * @return Privilege Read/write policy. Valid values: r (read-only), rw (read/write).
+                     * 获取Read/Write policy. Valid values: r (read-only); rw (read/write).
+                     * @return Privilege Read/Write policy. Valid values: r (read-only); rw (read/write).
                      */
                     std::string GetPrivilege() const;
 
                     /**
-                     * 设置Read/write policy. Valid values: r (read-only), rw (read/write).
-                     * @param Privilege Read/write policy. Valid values: r (read-only), rw (read/write).
+                     * 设置Read/Write policy. Valid values: r (read-only); rw (read/write).
+                     * @param Privilege Read/Write policy. Valid values: r (read-only); rw (read/write).
                      */
                     void SetPrivilege(const std::string& _privilege);
 
@@ -189,25 +189,25 @@ namespace TencentCloud
                     bool m_accountNameHasBeenSet;
 
                     /**
-                     * 1. The password must contain 8-30 characters. A password of 12 or more characters is recommended.
-2. The password cannot start with a slash (/).
-3. The password must contain at least two of the following four types:
-    a. Lowercase letters (a-z)
-    b. Uppercase letters (A-Z)
-    c. Digits (0-9)
+                     * 1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
+2. It cannot start with a slash (/).
+3. It must contain characters in at least two of the following types:
+    a. Lowercase letters (a–z)
+    b. Uppercase letters (A–Z)
+    c. Digits (0–9)
     d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
                      */
                     std::string m_accountPassword;
                     bool m_accountPasswordHasBeenSet;
 
                     /**
-                     * Routing policy. Enter `master` for primary node or `replication` for secondary node
+                     * Routing policy. Valid values: master (master node); replication (replica node)
                      */
                     std::vector<std::string> m_readonlyPolicy;
                     bool m_readonlyPolicyHasBeenSet;
 
                     /**
-                     * Read/write policy. Valid values: r (read-only), rw (read/write).
+                     * Read/Write policy. Valid values: r (read-only); rw (read/write).
                      */
                     std::string m_privilege;
                     bool m_privilegeHasBeenSet;

@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Source instance ID.
-                     * @return SrcInstanceId Source instance ID.
+                     * 获取Source instance ID
+                     * @return SrcInstanceId Source instance ID
                      */
                     std::string GetSrcInstanceId() const;
 
                     /**
-                     * 设置Source instance ID.
-                     * @param SrcInstanceId Source instance ID.
+                     * 设置Source instance ID
+                     * @param SrcInstanceId Source instance ID
                      */
                     void SetSrcInstanceId(const std::string& _srcInstanceId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool SrcInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Target instance ID.
-                     * @return DstInstanceId Target instance ID.
+                     * 获取Target instance ID
+                     * @return DstInstanceId Target instance ID
                      */
                     std::string GetDstInstanceId() const;
 
                     /**
-                     * 设置Target instance ID.
-                     * @param DstInstanceId Target instance ID.
+                     * 设置Target instance ID
+                     * @param DstInstanceId Target instance ID
                      */
                     void SetDstInstanceId(const std::string& _dstInstanceId);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool DstInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取The time that lapses in seconds since DTS is disconnected between the source instance and the target instance. If the DTS disconnection time period is greater than `TimeDelay`, the VIP will not be switched. We recommend setting an acceptable value based on the actual business conditions.
-                     * @return TimeDelay The time that lapses in seconds since DTS is disconnected between the source instance and the target instance. If the DTS disconnection time period is greater than `TimeDelay`, the VIP will not be switched. We recommend setting an acceptable value based on the actual business conditions.
+                     * 获取The time that lapses in seconds since DTS is disconnected between the source instance and the target instance. If the DTS disconnection time period is greater than TimeDelay, the VIP will not be switched. We recommend you set an acceptable value based on the actual business conditions.
+                     * @return TimeDelay The time that lapses in seconds since DTS is disconnected between the source instance and the target instance. If the DTS disconnection time period is greater than TimeDelay, the VIP will not be switched. We recommend you set an acceptable value based on the actual business conditions.
                      */
                     int64_t GetTimeDelay() const;
 
                     /**
-                     * 设置The time that lapses in seconds since DTS is disconnected between the source instance and the target instance. If the DTS disconnection time period is greater than `TimeDelay`, the VIP will not be switched. We recommend setting an acceptable value based on the actual business conditions.
-                     * @param TimeDelay The time that lapses in seconds since DTS is disconnected between the source instance and the target instance. If the DTS disconnection time period is greater than `TimeDelay`, the VIP will not be switched. We recommend setting an acceptable value based on the actual business conditions.
+                     * 设置The time that lapses in seconds since DTS is disconnected between the source instance and the target instance. If the DTS disconnection time period is greater than TimeDelay, the VIP will not be switched. We recommend you set an acceptable value based on the actual business conditions.
+                     * @param TimeDelay The time that lapses in seconds since DTS is disconnected between the source instance and the target instance. If the DTS disconnection time period is greater than TimeDelay, the VIP will not be switched. We recommend you set an acceptable value based on the actual business conditions.
                      */
                     void SetTimeDelay(const int64_t& _timeDelay);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool TimeDelayHasBeenSet() const;
 
                     /**
-                     * 获取Whether to force the switch when DTS is disconnected. Valid values: 1 (yes), 0 (no).
-                     * @return ForceSwitch Whether to force the switch when DTS is disconnected. Valid values: 1 (yes), 0 (no).
+                     * 获取Whether to force the switch when DTS is disconnected. 1: yes; 0: no.
+                     * @return ForceSwitch Whether to force the switch when DTS is disconnected. 1: yes; 0: no.
                      */
                     int64_t GetForceSwitch() const;
 
                     /**
-                     * 设置Whether to force the switch when DTS is disconnected. Valid values: 1 (yes), 0 (no).
-                     * @param ForceSwitch Whether to force the switch when DTS is disconnected. Valid values: 1 (yes), 0 (no).
+                     * 设置Whether to force the switch when DTS is disconnected. 1: yes; 0: no.
+                     * @param ForceSwitch Whether to force the switch when DTS is disconnected. 1: yes; 0: no.
                      */
                     void SetForceSwitch(const int64_t& _forceSwitch);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool ForceSwitchHasBeenSet() const;
 
                     /**
-                     * 获取Valid values: now (switch now), syncComplete (switch after sync is completed).
-                     * @return SwitchTime Valid values: now (switch now), syncComplete (switch after sync is completed).
+                     * 获取now: switch now; syncComplete: switch after sync is completed
+                     * @return SwitchTime now: switch now; syncComplete: switch after sync is completed
                      */
                     std::string GetSwitchTime() const;
 
                     /**
-                     * 设置Valid values: now (switch now), syncComplete (switch after sync is completed).
-                     * @param SwitchTime Valid values: now (switch now), syncComplete (switch after sync is completed).
+                     * 设置now: switch now; syncComplete: switch after sync is completed
+                     * @param SwitchTime now: switch now; syncComplete: switch after sync is completed
                      */
                     void SetSwitchTime(const std::string& _switchTime);
 
@@ -135,31 +135,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Source instance ID.
+                     * Source instance ID
                      */
                     std::string m_srcInstanceId;
                     bool m_srcInstanceIdHasBeenSet;
 
                     /**
-                     * Target instance ID.
+                     * Target instance ID
                      */
                     std::string m_dstInstanceId;
                     bool m_dstInstanceIdHasBeenSet;
 
                     /**
-                     * The time that lapses in seconds since DTS is disconnected between the source instance and the target instance. If the DTS disconnection time period is greater than `TimeDelay`, the VIP will not be switched. We recommend setting an acceptable value based on the actual business conditions.
+                     * The time that lapses in seconds since DTS is disconnected between the source instance and the target instance. If the DTS disconnection time period is greater than TimeDelay, the VIP will not be switched. We recommend you set an acceptable value based on the actual business conditions.
                      */
                     int64_t m_timeDelay;
                     bool m_timeDelayHasBeenSet;
 
                     /**
-                     * Whether to force the switch when DTS is disconnected. Valid values: 1 (yes), 0 (no).
+                     * Whether to force the switch when DTS is disconnected. 1: yes; 0: no.
                      */
                     int64_t m_forceSwitch;
                     bool m_forceSwitchHasBeenSet;
 
                     /**
-                     * Valid values: now (switch now), syncComplete (switch after sync is completed).
+                     * now: switch now; syncComplete: switch after sync is completed
                      */
                     std::string m_switchTime;
                     bool m_switchTimeHasBeenSet;

@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Network ACL instance ID. Example: acl-12345678.
-                     * @return NetworkAclId Network ACL instance ID. Example: acl-12345678.
+                     * 获取Network ACL instance ID, such as `acl-12345678`.
+                     * @return NetworkAclId Network ACL instance ID, such as `acl-12345678`.
                      */
                     std::string GetNetworkAclId() const;
 
                     /**
-                     * 设置Network ACL instance ID. Example: acl-12345678.
-                     * @param NetworkAclId Network ACL instance ID. Example: acl-12345678.
+                     * 设置Network ACL instance ID, such as `acl-12345678`.
+                     * @param NetworkAclId Network ACL instance ID, such as `acl-12345678`.
                      */
                     void SetNetworkAclId(const std::string& _networkAclId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool NetworkAclIdHasBeenSet() const;
 
                     /**
-                     * 获取Array of subnet instance IDs. Example: [subnet-12345678]
-                     * @return SubnetIds Array of subnet instance IDs. Example: [subnet-12345678]
+                     * 获取Array of subnet instance IDs, such as [subnet-12345678]
+                     * @return SubnetIds Array of subnet instance IDs, such as [subnet-12345678]
                      */
                     std::vector<std::string> GetSubnetIds() const;
 
                     /**
-                     * 设置Array of subnet instance IDs. Example: [subnet-12345678]
-                     * @param SubnetIds Array of subnet instance IDs. Example: [subnet-12345678]
+                     * 设置Array of subnet instance IDs, such as [subnet-12345678]
+                     * @param SubnetIds Array of subnet instance IDs, such as [subnet-12345678]
                      */
                     void SetSubnetIds(const std::vector<std::string>& _subnetIds);
 
@@ -81,13 +81,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Network ACL instance ID. Example: acl-12345678.
+                     * Network ACL instance ID, such as `acl-12345678`.
                      */
                     std::string m_networkAclId;
                     bool m_networkAclIdHasBeenSet;
 
                     /**
-                     * Array of subnet instance IDs. Example: [subnet-12345678]
+                     * Array of subnet instance IDs, such as [subnet-12345678]
                      */
                     std::vector<std::string> m_subnetIds;
                     bool m_subnetIdsHasBeenSet;

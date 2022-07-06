@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_REDIS_V20180412_MODEL_KILLMASTERGROUPRESPONSE_H_
-#define TENCENTCLOUD_REDIS_V20180412_MODEL_KILLMASTERGROUPRESPONSE_H_
+#ifndef TENCENTCLOUD_VPC_V20170312_MODEL_ADJUSTPUBLICADDRESSRESPONSE_H_
+#define TENCENTCLOUD_VPC_V20170312_MODEL_ADJUSTPUBLICADDRESSRESPONSE_H_
 
 #include <string>
 #include <vector>
@@ -25,29 +25,29 @@
 
 namespace TencentCloud
 {
-    namespace Redis
+    namespace Vpc
     {
-        namespace V20180412
+        namespace V20170312
         {
             namespace Model
             {
                 /**
-                * KillMasterGroup response structure.
+                * AdjustPublicAddress response structure.
                 */
-                class KillMasterGroupResponse : public AbstractModel
+                class AdjustPublicAddressResponse : public AbstractModel
                 {
                 public:
-                    KillMasterGroupResponse();
-                    ~KillMasterGroupResponse() = default;
+                    AdjustPublicAddressResponse();
+                    ~AdjustPublicAddressResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Async task ID
-                     * @return TaskId Async task ID
+                     * 获取The async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status.
+                     * @return TaskId The async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status.
                      */
-                    int64_t GetTaskId() const;
+                    uint64_t GetTaskId() const;
 
                     /**
                      * 判断参数 TaskId 是否已赋值
@@ -58,9 +58,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Async task ID
+                     * The async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status.
                      */
-                    int64_t m_taskId;
+                    uint64_t m_taskId;
                     bool m_taskIdHasBeenSet;
 
                 };
@@ -69,4 +69,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_REDIS_V20180412_MODEL_KILLMASTERGROUPRESPONSE_H_
+#endif // !TENCENTCLOUD_VPC_V20170312_MODEL_ADJUSTPUBLICADDRESSRESPONSE_H_

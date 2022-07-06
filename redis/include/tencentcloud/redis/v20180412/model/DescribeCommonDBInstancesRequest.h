@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of instance VIPs
-                     * @return VpcIds List of instance VIPs
+                     * 获取List of VPC IDs
+                     * @return VpcIds List of VPC IDs
                      */
                     std::vector<int64_t> GetVpcIds() const;
 
                     /**
-                     * 设置List of instance VIPs
-                     * @param VpcIds List of instance VIPs
+                     * 设置List of VPC IDs
+                     * @param VpcIds List of VPC IDs
                      */
                     void SetVpcIds(const std::vector<int64_t>& _vpcIds);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool SubnetIdsHasBeenSet() const;
 
                     /**
-                     * 获取List of billing modes. Valid values: `0` (monthly subscription), `1` (pay-as-you-go)
-                     * @return PayMode List of billing modes. Valid values: `0` (monthly subscription), `1` (pay-as-you-go)
+                     * 获取List of billing modes. 0: monthly subscription; 1: pay-as-you-go
+                     * @return PayMode List of billing modes. 0: monthly subscription; 1: pay-as-you-go
                      */
                     int64_t GetPayMode() const;
 
                     /**
-                     * 设置List of billing modes. Valid values: `0` (monthly subscription), `1` (pay-as-you-go)
-                     * @param PayMode List of billing modes. Valid values: `0` (monthly subscription), `1` (pay-as-you-go)
+                     * 设置List of billing modes. 0: monthly subscription; 1: pay-as-you-go
+                     * @param PayMode List of billing modes. 0: monthly subscription; 1: pay-as-you-go
                      */
                     void SetPayMode(const int64_t& _payMode);
 
@@ -151,14 +151,14 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Sort field
-                     * @return OrderBy Sort field
+                     * 获取Sorting field
+                     * @return OrderBy Sorting field
                      */
                     std::string GetOrderBy() const;
 
                     /**
-                     * 设置Sort field
-                     * @param OrderBy Sort field
+                     * 设置Sorting field
+                     * @param OrderBy Sorting field
                      */
                     void SetOrderBy(const std::string& _orderBy);
 
@@ -169,14 +169,14 @@ namespace TencentCloud
                     bool OrderByHasBeenSet() const;
 
                     /**
-                     * 获取Sort order
-                     * @return OrderByType Sort order
+                     * 获取Sorting order
+                     * @return OrderByType Sorting order
                      */
                     std::string GetOrderByType() const;
 
                     /**
-                     * 设置Sort order
-                     * @param OrderByType Sort order
+                     * 设置Sorting order
+                     * @param OrderByType Sorting order
                      */
                     void SetOrderByType(const std::string& _orderByType);
 
@@ -241,14 +241,14 @@ namespace TencentCloud
                     bool UniqSubnetIdsHasBeenSet() const;
 
                     /**
-                     * 获取Quantity limit. The default value `100` is recommended.
-                     * @return Limit Quantity limit. The default value `100` is recommended.
+                     * 获取Quantity limit. Recommended default value: 100.
+                     * @return Limit Quantity limit. Recommended default value: 100.
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Quantity limit. The default value `100` is recommended.
-                     * @param Limit Quantity limit. The default value `100` is recommended.
+                     * 设置Quantity limit. Recommended default value: 100.
+                     * @param Limit Quantity limit. Recommended default value: 100.
                      */
                     void SetLimit(const int64_t& _limit);
 
@@ -279,7 +279,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of instance VIPs
+                     * List of VPC IDs
                      */
                     std::vector<int64_t> m_vpcIds;
                     bool m_vpcIdsHasBeenSet;
@@ -291,7 +291,7 @@ namespace TencentCloud
                     bool m_subnetIdsHasBeenSet;
 
                     /**
-                     * List of billing modes. Valid values: `0` (monthly subscription), `1` (pay-as-you-go)
+                     * List of billing modes. 0: monthly subscription; 1: pay-as-you-go
                      */
                     int64_t m_payMode;
                     bool m_payModeHasBeenSet;
@@ -315,13 +315,13 @@ namespace TencentCloud
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Sort field
+                     * Sorting field
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;
 
                     /**
-                     * Sort order
+                     * Sorting order
                      */
                     std::string m_orderByType;
                     bool m_orderByTypeHasBeenSet;
@@ -345,7 +345,7 @@ namespace TencentCloud
                     bool m_uniqSubnetIdsHasBeenSet;
 
                     /**
-                     * Quantity limit. The default value `100` is recommended.
+                     * Quantity limit. Recommended default value: 100.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

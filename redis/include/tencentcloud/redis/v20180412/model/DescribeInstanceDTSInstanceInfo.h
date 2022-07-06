@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Details of instances in a DTS task
+                * Details of instances in the DTS task
                 */
                 class DescribeInstanceDTSInstanceInfo : public AbstractModel
                 {
@@ -48,17 +48,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Region ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RegionId Region ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetRegionId() const;
 
                     /**
                      * 设置Region ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param RegionId Region ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetRegionId(const int64_t& _regionId);
 
@@ -70,17 +70,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Instance ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InstanceId Instance ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Instance ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param InstanceId Instance ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
@@ -92,17 +92,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Repository ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SetId Repository ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetSetId() const;
 
                     /**
                      * 设置Repository ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param SetId Repository ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetSetId(const int64_t& _setId);
 
@@ -113,18 +113,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SetIdHasBeenSet() const;
 
                     /**
-                     * 获取Availability zone ID
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ZoneId Availability zone ID
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取AZ ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ZoneId AZ ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetZoneId() const;
 
                     /**
-                     * 设置Availability zone ID
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ZoneId Availability zone ID
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置AZ ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ZoneId AZ ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetZoneId(const int64_t& _zoneId);
 
@@ -136,17 +136,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Instance type
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Type Instance type
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetType() const;
 
                     /**
                      * 设置Instance type
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param Type Instance type
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetType(const int64_t& _type);
 
@@ -158,17 +158,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Instance name
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InstanceName Instance name
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetInstanceName() const;
 
                     /**
                      * 设置Instance name
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param InstanceName Instance name
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
@@ -180,17 +180,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Instance access address
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Vip Instance access address
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetVip() const;
 
                     /**
                      * 设置Instance access address
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param Vip Instance access address
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetVip(const std::string& _vip);
 
@@ -202,17 +202,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Status
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Status Status
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 设置Status
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param Status Status
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetStatus(const int64_t& _status);
 
@@ -226,56 +226,56 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Region ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_regionId;
                     bool m_regionIdHasBeenSet;
 
                     /**
                      * Instance ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
                      * Repository ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_setId;
                     bool m_setIdHasBeenSet;
 
                     /**
-                     * Availability zone ID
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * AZ ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
                      * Instance type
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_type;
                     bool m_typeHasBeenSet;
 
                     /**
                      * Instance name
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
                      * Instance access address
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_vip;
                     bool m_vipHasBeenSet;
 
                     /**
                      * Status
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;

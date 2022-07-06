@@ -119,14 +119,14 @@ namespace TencentCloud
                     bool CommandLineHasBeenSet() const;
 
                     /**
-                     * 获取Execution duration
-                     * @return ExecuteTime Execution duration
+                     * 获取Execution time
+                     * @return ExecuteTime Execution time
                      */
                     std::string GetExecuteTime() const;
 
                     /**
-                     * 设置Execution duration
-                     * @param ExecuteTime Execution duration
+                     * 设置Execution time
+                     * @param ExecuteTime Execution time
                      */
                     void SetExecuteTime(const std::string& _executeTime);
 
@@ -163,7 +163,7 @@ namespace TencentCloud
                     bool m_commandLineHasBeenSet;
 
                     /**
-                     * Execution duration
+                     * Execution time
                      */
                     std::string m_executeTime;
                     bool m_executeTimeHasBeenSet;

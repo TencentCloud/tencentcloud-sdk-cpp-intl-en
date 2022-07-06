@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID list
-                     * @return InstanceIds Instance ID list
+                     * 获取List of instance IDs
+                     * @return InstanceIds List of instance IDs
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置Instance ID list
-                     * @param InstanceIds Instance ID list
+                     * 设置List of instance IDs
+                     * @param InstanceIds List of instance IDs
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取The ID of the parameter template to be applied
-                     * @return TemplateId The ID of the parameter template to be applied
+                     * 获取ID of the parameter template to be applied
+                     * @return TemplateId ID of the parameter template to be applied
                      */
                     std::string GetTemplateId() const;
 
                     /**
-                     * 设置The ID of the parameter template to be applied
-                     * @param TemplateId The ID of the parameter template to be applied
+                     * 设置ID of the parameter template to be applied
+                     * @param TemplateId ID of the parameter template to be applied
                      */
                     void SetTemplateId(const std::string& _templateId);
 
@@ -81,13 +81,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID list
+                     * List of instance IDs
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * The ID of the parameter template to be applied
+                     * ID of the parameter template to be applied
                      */
                     std::string m_templateId;
                     bool m_templateIdHasBeenSet;

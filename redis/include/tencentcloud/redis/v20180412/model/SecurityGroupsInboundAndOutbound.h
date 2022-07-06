@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Inbound and outbound rules of the security group
+                * Security group inbound/outbound rules
                 */
                 class SecurityGroupsInboundAndOutbound : public AbstractModel
                 {
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取IP address
-                     * @return Ip IP address
+                     * 获取IP addresses
+                     * @return Ip IP addresses
                      */
                     std::string GetIp() const;
 
                     /**
-                     * 设置IP address
-                     * @param Ip IP address
+                     * 设置IP addresses
+                     * @param Ip IP addresses
                      */
                     void SetIp(const std::string& _ip);
 
@@ -127,7 +127,7 @@ namespace TencentCloud
                     bool m_actionHasBeenSet;
 
                     /**
-                     * IP address
+                     * IP addresses
                      */
                     std::string m_ip;
                     bool m_ipHasBeenSet;

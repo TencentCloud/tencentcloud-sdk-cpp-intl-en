@@ -60,6 +60,24 @@ namespace TencentCloud
                      */
                     bool InstanceIdHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to upgrade the proxy and Redis kernel. After the upgrade, the "Read Local Nodes Only" feature can be supported.
+                     * @return UpgradeProxyAndRedisServer Whether to upgrade the proxy and Redis kernel. After the upgrade, the "Read Local Nodes Only" feature can be supported.
+                     */
+                    bool GetUpgradeProxyAndRedisServer() const;
+
+                    /**
+                     * 设置Whether to upgrade the proxy and Redis kernel. After the upgrade, the "Read Local Nodes Only" feature can be supported.
+                     * @param UpgradeProxyAndRedisServer Whether to upgrade the proxy and Redis kernel. After the upgrade, the "Read Local Nodes Only" feature can be supported.
+                     */
+                    void SetUpgradeProxyAndRedisServer(const bool& _upgradeProxyAndRedisServer);
+
+                    /**
+                     * 判断参数 UpgradeProxyAndRedisServer 是否已赋值
+                     * @return UpgradeProxyAndRedisServer 是否已赋值
+                     */
+                    bool UpgradeProxyAndRedisServerHasBeenSet() const;
+
                 private:
 
                     /**
@@ -67,6 +85,12 @@ namespace TencentCloud
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
+
+                    /**
+                     * Whether to upgrade the proxy and Redis kernel. After the upgrade, the "Read Local Nodes Only" feature can be supported.
+                     */
+                    bool m_upgradeProxyAndRedisServer;
+                    bool m_upgradeProxyAndRedisServerHasBeenSet;
 
                 };
             }

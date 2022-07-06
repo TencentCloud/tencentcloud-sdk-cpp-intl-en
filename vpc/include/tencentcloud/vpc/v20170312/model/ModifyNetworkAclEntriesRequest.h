@@ -44,14 +44,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Network ACL instance ID. Example: acl-12345678.
-                     * @return NetworkAclId Network ACL instance ID. Example: acl-12345678.
+                     * 获取Network ACL instance ID, such as `acl-12345678`.
+                     * @return NetworkAclId Network ACL instance ID, such as `acl-12345678`.
                      */
                     std::string GetNetworkAclId() const;
 
                     /**
-                     * 设置Network ACL instance ID. Example: acl-12345678.
-                     * @param NetworkAclId Network ACL instance ID. Example: acl-12345678.
+                     * 设置Network ACL instance ID, such as `acl-12345678`.
+                     * @param NetworkAclId Network ACL instance ID, such as `acl-12345678`.
                      */
                     void SetNetworkAclId(const std::string& _networkAclId);
 
@@ -62,14 +62,14 @@ namespace TencentCloud
                     bool NetworkAclIdHasBeenSet() const;
 
                     /**
-                     * 获取Network ACL rule set.
-                     * @return NetworkAclEntrySet Network ACL rule set.
+                     * 获取Network ACL rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
+                     * @return NetworkAclEntrySet Network ACL rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
                      */
                     NetworkAclEntrySet GetNetworkAclEntrySet() const;
 
                     /**
-                     * 设置Network ACL rule set.
-                     * @param NetworkAclEntrySet Network ACL rule set.
+                     * 设置Network ACL rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
+                     * @param NetworkAclEntrySet Network ACL rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
                      */
                     void SetNetworkAclEntrySet(const NetworkAclEntrySet& _networkAclEntrySet);
 
@@ -82,13 +82,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Network ACL instance ID. Example: acl-12345678.
+                     * Network ACL instance ID, such as `acl-12345678`.
                      */
                     std::string m_networkAclId;
                     bool m_networkAclIdHasBeenSet;
 
                     /**
-                     * Network ACL rule set.
+                     * Network ACL rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
                      */
                     NetworkAclEntrySet m_networkAclEntrySet;
                     bool m_networkAclEntrySetHasBeenSet;

@@ -44,10 +44,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Valid values: `ERROR`, `OK`. This field has been deprecated.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Status Valid values: `ERROR`, `OK`. This field has been deprecated.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Valid values: `ERROR`, `OK`. This field has been disused.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Status Valid values: `ERROR`, `OK`. This field has been disused.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetStatus() const;
 
@@ -59,9 +59,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 获取Task ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TaskId Task ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetTaskId() const;
 
@@ -74,15 +74,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Valid values: `ERROR`, `OK`. This field has been deprecated.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Valid values: `ERROR`, `OK`. This field has been disused.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
                      * Task ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_taskId;
                     bool m_taskIdHasBeenSet;

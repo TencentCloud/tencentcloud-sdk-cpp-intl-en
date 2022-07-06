@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Number of entries per page
-                     * @return Limit Number of entries per page
+                     * 获取Maximum number of results returned per page
+                     * @return Limit Maximum number of results returned per page
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of entries per page
-                     * @param Limit Number of entries per page
+                     * 设置Maximum number of results returned per page
+                     * @param Limit Maximum number of results returned per page
                      */
                     void SetLimit(const uint64_t& _limit);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset, which is an integral multiple of `Limit`
-                     * @return Offset Offset, which is an integral multiple of `Limit`
+                     * 获取Offset, which is an integral multiple of `Limit`.
+                     * @return Offset Offset, which is an integral multiple of `Limit`.
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset, which is an integral multiple of `Limit`
-                     * @param Offset Offset, which is an integral multiple of `Limit`
+                     * 设置Offset, which is an integral multiple of `Limit`.
+                     * @param Offset Offset, which is an integral multiple of `Limit`.
                      */
                     void SetOffset(const uint64_t& _offset);
 
@@ -105,13 +105,13 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Number of entries per page
+                     * Maximum number of results returned per page
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset, which is an integral multiple of `Limit`
+                     * Offset, which is an integral multiple of `Limit`.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;

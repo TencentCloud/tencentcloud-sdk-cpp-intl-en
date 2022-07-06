@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The number of instance node groups
-                     * @return TotalCount The number of instance node groups
+                     * 获取Number of instance node groups
+                     * @return TotalCount Number of instance node groups
                      */
                     int64_t GetTotalCount() const;
 
@@ -57,8 +57,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取The list of instance node groups
-                     * @return ReplicaGroups The list of instance node groups
+                     * 获取List of instance node groups
+                     * @return ReplicaGroups List of instance node groups
                      */
                     std::vector<ReplicaGroup> GetReplicaGroups() const;
 
@@ -71,13 +71,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The number of instance node groups
+                     * Number of instance node groups
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * The list of instance node groups
+                     * List of instance node groups
                      */
                     std::vector<ReplicaGroup> m_replicaGroups;
                     bool m_replicaGroupsHasBeenSet;

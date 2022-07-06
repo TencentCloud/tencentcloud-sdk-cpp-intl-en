@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The target instance type to which the instance will change. It is the same as the `TypeId` parameter in the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
-                     * @return TargetInstanceType The target instance type to which the instance will change. It is the same as the `TypeId` parameter in the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+                     * 获取Target instance type after the change, which is the same as the `Type` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+                     * @return TargetInstanceType Target instance type after the change, which is the same as the `Type` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
                      */
                     std::string GetTargetInstanceType() const;
 
                     /**
-                     * 设置The target instance type to which the instance will change. It is the same as the `TypeId` parameter in the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
-                     * @param TargetInstanceType The target instance type to which the instance will change. It is the same as the `TypeId` parameter in the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+                     * 设置Target instance type after the change, which is the same as the `Type` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+                     * @param TargetInstanceType Target instance type after the change, which is the same as the `Type` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
                      */
                     void SetTargetInstanceType(const std::string& _targetInstanceType);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool TargetInstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Switch mode. Valid values: 1 (switch during the maintenance window), 2 (switch immediately).
-                     * @return SwitchOption Switch mode. Valid values: 1 (switch during the maintenance window), 2 (switch immediately).
+                     * 获取Switch mode. Valid values: 1 (switch during the maintenance time), 2 (switch now).
+                     * @return SwitchOption Switch mode. Valid values: 1 (switch during the maintenance time), 2 (switch now).
                      */
                     int64_t GetSwitchOption() const;
 
                     /**
-                     * 设置Switch mode. Valid values: 1 (switch during the maintenance window), 2 (switch immediately).
-                     * @param SwitchOption Switch mode. Valid values: 1 (switch during the maintenance window), 2 (switch immediately).
+                     * 设置Switch mode. Valid values: 1 (switch during the maintenance time), 2 (switch now).
+                     * @param SwitchOption Switch mode. Valid values: 1 (switch during the maintenance time), 2 (switch now).
                      */
                     void SetSwitchOption(const int64_t& _switchOption);
 
@@ -99,13 +99,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The target instance type to which the instance will change. It is the same as the `TypeId` parameter in the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+                     * Target instance type after the change, which is the same as the `Type` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
                      */
                     std::string m_targetInstanceType;
                     bool m_targetInstanceTypeHasBeenSet;
 
                     /**
-                     * Switch mode. Valid values: 1 (switch during the maintenance window), 2 (switch immediately).
+                     * Switch mode. Valid values: 1 (switch during the maintenance time), 2 (switch now).
                      */
                     int64_t m_switchOption;
                     bool m_switchOptionHasBeenSet;

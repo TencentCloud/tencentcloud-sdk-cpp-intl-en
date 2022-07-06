@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The tag bound with the instance purchased via APIs
+                * Tag bound to the instance purchased via API
                 */
                 class ResourceTag : public AbstractModel
                 {
