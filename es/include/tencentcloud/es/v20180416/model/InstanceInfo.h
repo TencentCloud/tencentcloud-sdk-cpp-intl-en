@@ -33,6 +33,7 @@
 #include <tencentcloud/es/v20180416/model/ZoneDetail.h>
 #include <tencentcloud/es/v20180416/model/KibanaNodeInfo.h>
 #include <tencentcloud/es/v20180416/model/WebNodeTypeInfo.h>
+#include <tencentcloud/es/v20180416/model/EsConfigSetInfo.h>
 
 
 namespace TencentCloud
@@ -218,6 +219,24 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
+                     * 获取This parameter is not used on the global website
+                     * @return RenewFlag This parameter is not used on the global website
+                     */
+                    std::string GetRenewFlag() const;
+
+                    /**
+                     * 设置This parameter is not used on the global website
+                     * @param RenewFlag This parameter is not used on the global website
+                     */
+                    void SetRenewFlag(const std::string& _renewFlag);
+
+                    /**
+                     * 判断参数 RenewFlag 是否已赋值
+                     * @return RenewFlag 是否已赋值
+                     */
+                    bool RenewFlagHasBeenSet() const;
+
+                    /**
                      * 获取Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
                      * @return ChargeType Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
                      */
@@ -252,24 +271,6 @@ namespace TencentCloud
                      * @return ChargePeriod 是否已赋值
                      */
                     bool ChargePeriodHasBeenSet() const;
-
-                    /**
-                     * 获取This parameter is not used on the global website
-                     * @return RenewFlag This parameter is not used on the global website
-                     */
-                    std::string GetRenewFlag() const;
-
-                    /**
-                     * 设置This parameter is not used on the global website
-                     * @param RenewFlag This parameter is not used on the global website
-                     */
-                    void SetRenewFlag(const std::string& _renewFlag);
-
-                    /**
-                     * 判断参数 RenewFlag 是否已赋值
-                     * @return RenewFlag 是否已赋值
-                     */
-                    bool RenewFlagHasBeenSet() const;
 
                     /**
                      * 获取Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
@@ -1539,6 +1540,28 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     bool EsPrivateDomainHasBeenSet() const;
 
+                    /**
+                     * 获取Configuration set info of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return EsConfigSets Configuration set info of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<EsConfigSetInfo> GetEsConfigSets() const;
+
+                    /**
+                     * 设置Configuration set info of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param EsConfigSets Configuration set info of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetEsConfigSets(const std::vector<EsConfigSetInfo>& _esConfigSets);
+
+                    /**
+                     * 判断参数 EsConfigSets 是否已赋值
+                     * @return EsConfigSets 是否已赋值
+                     */
+                    bool EsConfigSetsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1596,6 +1619,12 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_statusHasBeenSet;
 
                     /**
+                     * This parameter is not used on the global website
+                     */
+                    std::string m_renewFlag;
+                    bool m_renewFlagHasBeenSet;
+
+                    /**
                      * Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
                      */
                     std::string m_chargeType;
@@ -1606,12 +1635,6 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     uint64_t m_chargePeriod;
                     bool m_chargePeriodHasBeenSet;
-
-                    /**
-                     * This parameter is not used on the global website
-                     */
-                    std::string m_renewFlag;
-                    bool m_renewFlagHasBeenSet;
 
                     /**
                      * Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
@@ -2022,6 +2045,13 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::string m_esPrivateDomain;
                     bool m_esPrivateDomainHasBeenSet;
+
+                    /**
+                     * Configuration set info of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<EsConfigSetInfo> m_esConfigSets;
+                    bool m_esConfigSetsHasBeenSet;
 
                 };
             }

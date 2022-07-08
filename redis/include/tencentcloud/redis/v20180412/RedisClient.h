@@ -111,6 +111,8 @@
 #include <tencentcloud/redis/v20180412/model/DescribeSlowLogResponse.h>
 #include <tencentcloud/redis/v20180412/model/DescribeTaskInfoRequest.h>
 #include <tencentcloud/redis/v20180412/model/DescribeTaskInfoResponse.h>
+#include <tencentcloud/redis/v20180412/model/DescribeTaskListRequest.h>
+#include <tencentcloud/redis/v20180412/model/DescribeTaskListResponse.h>
 #include <tencentcloud/redis/v20180412/model/DescribeTendisSlowLogRequest.h>
 #include <tencentcloud/redis/v20180412/model/DescribeTendisSlowLogResponse.h>
 #include <tencentcloud/redis/v20180412/model/DestroyPostpaidInstanceRequest.h>
@@ -127,6 +129,8 @@
 #include <tencentcloud/redis/v20180412/model/InquiryPriceCreateInstanceResponse.h>
 #include <tencentcloud/redis/v20180412/model/InquiryPriceUpgradeInstanceRequest.h>
 #include <tencentcloud/redis/v20180412/model/InquiryPriceUpgradeInstanceResponse.h>
+#include <tencentcloud/redis/v20180412/model/KillMasterGroupRequest.h>
+#include <tencentcloud/redis/v20180412/model/KillMasterGroupResponse.h>
 #include <tencentcloud/redis/v20180412/model/ManualBackupInstanceRequest.h>
 #include <tencentcloud/redis/v20180412/model/ManualBackupInstanceResponse.h>
 #include <tencentcloud/redis/v20180412/model/ModfiyInstancePasswordRequest.h>
@@ -317,6 +321,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeTaskInfoResponse> DescribeTaskInfoOutcome;
                 typedef std::future<DescribeTaskInfoOutcome> DescribeTaskInfoOutcomeCallable;
                 typedef std::function<void(const RedisClient*, const Model::DescribeTaskInfoRequest&, DescribeTaskInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTaskInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeTaskListResponse> DescribeTaskListOutcome;
+                typedef std::future<DescribeTaskListOutcome> DescribeTaskListOutcomeCallable;
+                typedef std::function<void(const RedisClient*, const Model::DescribeTaskListRequest&, DescribeTaskListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTaskListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeTendisSlowLogResponse> DescribeTendisSlowLogOutcome;
                 typedef std::future<DescribeTendisSlowLogOutcome> DescribeTendisSlowLogOutcomeCallable;
                 typedef std::function<void(const RedisClient*, const Model::DescribeTendisSlowLogRequest&, DescribeTendisSlowLogOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTendisSlowLogAsyncHandler;
@@ -341,6 +348,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::InquiryPriceUpgradeInstanceResponse> InquiryPriceUpgradeInstanceOutcome;
                 typedef std::future<InquiryPriceUpgradeInstanceOutcome> InquiryPriceUpgradeInstanceOutcomeCallable;
                 typedef std::function<void(const RedisClient*, const Model::InquiryPriceUpgradeInstanceRequest&, InquiryPriceUpgradeInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquiryPriceUpgradeInstanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::KillMasterGroupResponse> KillMasterGroupOutcome;
+                typedef std::future<KillMasterGroupOutcome> KillMasterGroupOutcomeCallable;
+                typedef std::function<void(const RedisClient*, const Model::KillMasterGroupRequest&, KillMasterGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> KillMasterGroupAsyncHandler;
                 typedef Outcome<Core::Error, Model::ManualBackupInstanceResponse> ManualBackupInstanceOutcome;
                 typedef std::future<ManualBackupInstanceOutcome> ManualBackupInstanceOutcomeCallable;
                 typedef std::function<void(const RedisClient*, const Model::ManualBackupInstanceRequest&, ManualBackupInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ManualBackupInstanceAsyncHandler;
@@ -807,6 +817,15 @@ namespace TencentCloud
                 DescribeTaskInfoOutcomeCallable DescribeTaskInfoCallable(const Model::DescribeTaskInfoRequest& request);
 
                 /**
+                 *This API is used to query the list of tasks.
+                 * @param req DescribeTaskListRequest
+                 * @return DescribeTaskListOutcome
+                 */
+                DescribeTaskListOutcome DescribeTaskList(const Model::DescribeTaskListRequest &request);
+                void DescribeTaskListAsync(const Model::DescribeTaskListRequest& request, const DescribeTaskListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeTaskListOutcomeCallable DescribeTaskListCallable(const Model::DescribeTaskListRequest& request);
+
+                /**
                  *This API is used to query slow queries of a Tendis instance.
                  * @param req DescribeTendisSlowLogRequest
                  * @return DescribeTendisSlowLogOutcome
@@ -877,6 +896,15 @@ namespace TencentCloud
                 InquiryPriceUpgradeInstanceOutcome InquiryPriceUpgradeInstance(const Model::InquiryPriceUpgradeInstanceRequest &request);
                 void InquiryPriceUpgradeInstanceAsync(const Model::InquiryPriceUpgradeInstanceRequest& request, const InquiryPriceUpgradeInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 InquiryPriceUpgradeInstanceOutcomeCallable InquiryPriceUpgradeInstanceCallable(const Model::InquiryPriceUpgradeInstanceRequest& request);
+
+                /**
+                 *This API is used to perform a failure simulation.
+                 * @param req KillMasterGroupRequest
+                 * @return KillMasterGroupOutcome
+                 */
+                KillMasterGroupOutcome KillMasterGroup(const Model::KillMasterGroupRequest &request);
+                void KillMasterGroupAsync(const Model::KillMasterGroupRequest& request, const KillMasterGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                KillMasterGroupOutcomeCallable KillMasterGroupCallable(const Model::KillMasterGroupRequest& request);
 
                 /**
                  *This API is used to manually back up a Redis instance.
