@@ -100,6 +100,24 @@ db-tag-key: filter by tag key (in string format)
                     bool LimitHasBeenSet() const;
 
                     /**
+                     * 获取Data offset, which starts from 0.
+                     * @return Offset Data offset, which starts from 0.
+                     */
+                    uint64_t GetOffset() const;
+
+                    /**
+                     * 设置Data offset, which starts from 0.
+                     * @param Offset Data offset, which starts from 0.
+                     */
+                    void SetOffset(const uint64_t& _offset);
+
+                    /**
+                     * 判断参数 Offset 是否已赋值
+                     * @return Offset 是否已赋值
+                     */
+                    bool OffsetHasBeenSet() const;
+
+                    /**
                      * 获取Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
                      * @return OrderBy Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
                      */
@@ -116,24 +134,6 @@ db-tag-key: filter by tag key (in string format)
                      * @return OrderBy 是否已赋值
                      */
                     bool OrderByHasBeenSet() const;
-
-                    /**
-                     * 获取Pagination offset, starting from 0
-                     * @return Offset Pagination offset, starting from 0
-                     */
-                    uint64_t GetOffset() const;
-
-                    /**
-                     * 设置Pagination offset, starting from 0
-                     * @param Offset Pagination offset, starting from 0
-                     */
-                    void SetOffset(const uint64_t& _offset);
-
-                    /**
-                     * 判断参数 Offset 是否已赋值
-                     * @return Offset 是否已赋值
-                     */
-                    bool OffsetHasBeenSet() const;
 
                     /**
                      * 获取Sorting order. Valid values: `asc` (ascending), `desc` (descending)
@@ -173,16 +173,16 @@ db-tag-key: filter by tag key (in string format)
                     bool m_limitHasBeenSet;
 
                     /**
+                     * Data offset, which starts from 0.
+                     */
+                    uint64_t m_offset;
+                    bool m_offsetHasBeenSet;
+
+                    /**
                      * Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;
-
-                    /**
-                     * Pagination offset, starting from 0
-                     */
-                    uint64_t m_offset;
-                    bool m_offsetHasBeenSet;
 
                     /**
                      * Sorting order. Valid values: `asc` (ascending), `desc` (descending)

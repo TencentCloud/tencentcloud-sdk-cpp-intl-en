@@ -219,8 +219,6 @@
 #include <tencentcloud/vod/v20180717/model/ModifyWordSampleResponse.h>
 #include <tencentcloud/vod/v20180717/model/ParseStreamingManifestRequest.h>
 #include <tencentcloud/vod/v20180717/model/ParseStreamingManifestResponse.h>
-#include <tencentcloud/vod/v20180717/model/ProcessImageRequest.h>
-#include <tencentcloud/vod/v20180717/model/ProcessImageResponse.h>
 #include <tencentcloud/vod/v20180717/model/ProcessMediaRequest.h>
 #include <tencentcloud/vod/v20180717/model/ProcessMediaResponse.h>
 #include <tencentcloud/vod/v20180717/model/ProcessMediaByProcedureRequest.h>
@@ -233,10 +231,12 @@
 #include <tencentcloud/vod/v20180717/model/PullUploadResponse.h>
 #include <tencentcloud/vod/v20180717/model/PushUrlCacheRequest.h>
 #include <tencentcloud/vod/v20180717/model/PushUrlCacheResponse.h>
+#include <tencentcloud/vod/v20180717/model/RefreshUrlCacheRequest.h>
+#include <tencentcloud/vod/v20180717/model/RefreshUrlCacheResponse.h>
 #include <tencentcloud/vod/v20180717/model/ResetProcedureTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/ResetProcedureTemplateResponse.h>
-#include <tencentcloud/vod/v20180717/model/ReviewImageRequest.h>
-#include <tencentcloud/vod/v20180717/model/ReviewImageResponse.h>
+#include <tencentcloud/vod/v20180717/model/RestoreMediaRequest.h>
+#include <tencentcloud/vod/v20180717/model/RestoreMediaResponse.h>
 #include <tencentcloud/vod/v20180717/model/SearchMediaRequest.h>
 #include <tencentcloud/vod/v20180717/model/SearchMediaResponse.h>
 #include <tencentcloud/vod/v20180717/model/SimpleHlsClipRequest.h>
@@ -549,9 +549,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ParseStreamingManifestResponse> ParseStreamingManifestOutcome;
                 typedef std::future<ParseStreamingManifestOutcome> ParseStreamingManifestOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ParseStreamingManifestRequest&, ParseStreamingManifestOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ParseStreamingManifestAsyncHandler;
-                typedef Outcome<Core::Error, Model::ProcessImageResponse> ProcessImageOutcome;
-                typedef std::future<ProcessImageOutcome> ProcessImageOutcomeCallable;
-                typedef std::function<void(const VodClient*, const Model::ProcessImageRequest&, ProcessImageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ProcessImageAsyncHandler;
                 typedef Outcome<Core::Error, Model::ProcessMediaResponse> ProcessMediaOutcome;
                 typedef std::future<ProcessMediaOutcome> ProcessMediaOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ProcessMediaRequest&, ProcessMediaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ProcessMediaAsyncHandler;
@@ -570,12 +567,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::PushUrlCacheResponse> PushUrlCacheOutcome;
                 typedef std::future<PushUrlCacheOutcome> PushUrlCacheOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::PushUrlCacheRequest&, PushUrlCacheOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PushUrlCacheAsyncHandler;
+                typedef Outcome<Core::Error, Model::RefreshUrlCacheResponse> RefreshUrlCacheOutcome;
+                typedef std::future<RefreshUrlCacheOutcome> RefreshUrlCacheOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::RefreshUrlCacheRequest&, RefreshUrlCacheOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RefreshUrlCacheAsyncHandler;
                 typedef Outcome<Core::Error, Model::ResetProcedureTemplateResponse> ResetProcedureTemplateOutcome;
                 typedef std::future<ResetProcedureTemplateOutcome> ResetProcedureTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ResetProcedureTemplateRequest&, ResetProcedureTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetProcedureTemplateAsyncHandler;
-                typedef Outcome<Core::Error, Model::ReviewImageResponse> ReviewImageOutcome;
-                typedef std::future<ReviewImageOutcome> ReviewImageOutcomeCallable;
-                typedef std::function<void(const VodClient*, const Model::ReviewImageRequest&, ReviewImageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ReviewImageAsyncHandler;
+                typedef Outcome<Core::Error, Model::RestoreMediaResponse> RestoreMediaOutcome;
+                typedef std::future<RestoreMediaOutcome> RestoreMediaOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::RestoreMediaRequest&, RestoreMediaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RestoreMediaAsyncHandler;
                 typedef Outcome<Core::Error, Model::SearchMediaResponse> SearchMediaOutcome;
                 typedef std::future<SearchMediaOutcome> SearchMediaOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::SearchMediaRequest&, SearchMediaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SearchMediaAsyncHandler;
@@ -1581,24 +1581,6 @@ If the current storage class is DEEP ARCHIVE, it can be changed to the following
                 ParseStreamingManifestOutcomeCallable ParseStreamingManifestCallable(const Model::ParseStreamingManifestRequest& request);
 
                 /**
-                 *This API is <font color='red'>no longer used</font>. To initiate image recognition tasks, please use [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1).
-
-This API is used to initiate an image processing task. Image processing operations include the following:
-
-1. Intelligent recognition of pornographic, terroristic, and politically sensitive content
-
-><li>File size: < 5 MB</li>
-><li>Resolution: Preferably higher than 256 x 256. Resolution lower than this may compromise the recognition performance.</li>
-><li>Supported image formats: PNG, JPG, JPEG, BMP, GIF, WEBP</li>
-
-                 * @param req ProcessImageRequest
-                 * @return ProcessImageOutcome
-                 */
-                ProcessImageOutcome ProcessImage(const Model::ProcessImageRequest &request);
-                void ProcessImageAsync(const Model::ProcessImageRequest& request, const ProcessImageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                ProcessImageOutcomeCallable ProcessImageCallable(const Model::ProcessImageRequest& request);
-
-                /**
                  *This API is used to initiate a media processing task on a VOD file. The task may include:
 1. Video transcoding (with watermark)
 2. Animated image generating
@@ -1612,6 +1594,12 @@ This API is used to initiate an image processing task. Image processing operatio
 10. Recognition of opening and closing credits, faces, full text, text keywords, full speech, speech keywords, and objects
 
 If event notifications are used, the event type is [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1).
+
+A digital watermark has the following restrictions:
+<li>Digital watermarks can only be image watermarks.</li>
+<li>Digital watermarks must be looped.</li>
+<li>If you use digital watermarks, the output video must be in HLS format.</li>
+<li>Digital watermarks can only be displayed in the upper half of a video.</li>
                  * @param req ProcessMediaRequest
                  * @return ProcessMediaOutcome
                  */
@@ -1667,12 +1655,25 @@ There are two ways to create a task flow template:
                  *1. This API is used to prefetch a list of specified URLs.
 2. The URL domain names must have already been registered with VOD.
 3. Up to 20 URLs can be specified in one request.
+4. By default, the maximum number of URLs that can be refreshed per day is 10,000.
                  * @param req PushUrlCacheRequest
                  * @return PushUrlCacheOutcome
                  */
                 PushUrlCacheOutcome PushUrlCache(const Model::PushUrlCacheRequest &request);
                 void PushUrlCacheAsync(const Model::PushUrlCacheRequest& request, const PushUrlCacheAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 PushUrlCacheOutcomeCallable PushUrlCacheCallable(const Model::PushUrlCacheRequest& request);
+
+                /**
+                 *1. This API is used to purge URLs.
+2. The URL domain names must have already been registered with VOD.
+3. Up to 20 URLs can be specified in one request.
+4. By default, the maximum number of URLs allowed for purge per day is 100,000.
+                 * @param req RefreshUrlCacheRequest
+                 * @return RefreshUrlCacheOutcome
+                 */
+                RefreshUrlCacheOutcome RefreshUrlCache(const Model::RefreshUrlCacheRequest &request);
+                void RefreshUrlCacheAsync(const Model::RefreshUrlCacheRequest& request, const RefreshUrlCacheAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RefreshUrlCacheOutcomeCallable RefreshUrlCacheCallable(const Model::RefreshUrlCacheRequest& request);
 
                 /**
                  *This API is used to reset a custom task flow template.  
@@ -1684,18 +1685,13 @@ There are two ways to create a task flow template:
                 ResetProcedureTemplateOutcomeCallable ResetProcedureTemplateCallable(const Model::ResetProcedureTemplateRequest& request);
 
                 /**
-                 *This API is used to initiate an image recognition task to identify pornographic, terroristic, and politically sensitive content in images saved in VOD.
-
-><li>File size: < 5 MB</li>
-><li>Resolution: Preferably higher than 256 x 256. Resolution lower than this may compromise the recognition performance.</li>
-><li>Supported image formats: PNG, JPG, JPEG, BMP, GIF, WEBP</li>
-
-                 * @param req ReviewImageRequest
-                 * @return ReviewImageOutcome
+                 *This API is used to restore files from ARCHIVE or DEEP ARCHIVE. Files stored in ARCHIVE or DEEP ARCHIVE must be restored before they can be accessed. Restored files are available for a limited period of time.
+                 * @param req RestoreMediaRequest
+                 * @return RestoreMediaOutcome
                  */
-                ReviewImageOutcome ReviewImage(const Model::ReviewImageRequest &request);
-                void ReviewImageAsync(const Model::ReviewImageRequest& request, const ReviewImageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                ReviewImageOutcomeCallable ReviewImageCallable(const Model::ReviewImageRequest& request);
+                RestoreMediaOutcome RestoreMedia(const Model::RestoreMediaRequest &request);
+                void RestoreMediaAsync(const Model::RestoreMediaRequest& request, const RestoreMediaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RestoreMediaOutcomeCallable RestoreMediaCallable(const Model::RestoreMediaRequest& request);
 
                 /**
                  *This API is used to search for media information and supports filtering and sorting the returned results in many ways. You can:

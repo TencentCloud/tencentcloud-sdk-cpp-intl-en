@@ -56,10 +56,8 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取Media playback address.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return MediaUrl Media playback address.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取The media playback URL.
+                     * @return MediaUrl The media playback URL.
                      */
                     std::string GetMediaUrl() const;
 
@@ -70,10 +68,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MediaUrlHasBeenSet() const;
 
                     /**
-                     * 获取Media cover address.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return CoverUrl Media cover address.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取The thumbnail URL.
+                     * @return CoverUrl The thumbnail URL.
                      */
                     std::string GetCoverUrl() const;
 
@@ -92,15 +88,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * Media playback address.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * The media playback URL.
                      */
                     std::string m_mediaUrl;
                     bool m_mediaUrlHasBeenSet;
 
                     /**
-                     * Media cover address.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * The thumbnail URL.
                      */
                     std::string m_coverUrl;
                     bool m_coverUrlHasBeenSet;

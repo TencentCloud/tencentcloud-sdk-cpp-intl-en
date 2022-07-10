@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_VOD_V20180717_MODEL_IMAGECONTENTREVIEWINPUT_H_
-#define TENCENTCLOUD_VOD_V20180717_MODEL_IMAGECONTENTREVIEWINPUT_H_
+#ifndef TENCENTCLOUD_VOD_V20180717_MODEL_TRACEWATERMARKINPUT_H_
+#define TENCENTCLOUD_VOD_V20180717_MODEL_TRACEWATERMARKINPUT_H_
 
 #include <string>
 #include <vector>
@@ -35,30 +35,26 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The request parameters for an image recognition task.
+                * The information of a digital watermark.
                 */
-                class ImageContentReviewInput : public AbstractModel
+                class TraceWatermarkInput : public AbstractModel
                 {
                 public:
-                    ImageContentReviewInput();
-                    ~ImageContentReviewInput() = default;
+                    TraceWatermarkInput();
+                    ~TraceWatermarkInput() = default;
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
                     /**
-                     * 获取The ID of the image recognition template to use. Valid values:
-<li>10: All recognition types enabled</li>
-                     * @return Definition The ID of the image recognition template to use. Valid values:
-<li>10: All recognition types enabled</li>
+                     * 获取The watermark template ID.
+                     * @return Definition The watermark template ID.
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置The ID of the image recognition template to use. Valid values:
-<li>10: All recognition types enabled</li>
-                     * @param Definition The ID of the image recognition template to use. Valid values:
-<li>10: All recognition types enabled</li>
+                     * 设置The watermark template ID.
+                     * @param Definition The watermark template ID.
                      */
                     void SetDefinition(const uint64_t& _definition);
 
@@ -71,8 +67,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The ID of the image recognition template to use. Valid values:
-<li>10: All recognition types enabled</li>
+                     * The watermark template ID.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
@@ -83,4 +78,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_VOD_V20180717_MODEL_IMAGECONTENTREVIEWINPUT_H_
+#endif // !TENCENTCLOUD_VOD_V20180717_MODEL_TRACEWATERMARKINPUT_H_

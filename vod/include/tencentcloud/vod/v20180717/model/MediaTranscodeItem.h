@@ -24,8 +24,8 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/vod/v20180717/model/MediaAudioStreamItem.h>
 #include <tencentcloud/vod/v20180717/model/MediaVideoStreamItem.h>
+#include <tencentcloud/vod/v20180717/model/MediaAudioStreamItem.h>
 
 
 namespace TencentCloud
@@ -159,18 +159,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取Total size of a media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Size Total size of a media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取The file size (bytes).
+<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
+                     * @return Size The file size (bytes).
+<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
                      */
                     int64_t GetSize() const;
 
                     /**
-                     * 设置Total size of a media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Size Total size of a media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置The file size (bytes).
+<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
+                     * @param Size The file size (bytes).
+<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
                      */
                     void SetSize(const int64_t& _size);
 
@@ -203,28 +203,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DurationHasBeenSet() const;
 
                     /**
-                     * 获取Container, such as m4a and mp4.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Container Container, such as m4a and mp4.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     */
-                    std::string GetContainer() const;
-
-                    /**
-                     * 设置Container, such as m4a and mp4.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Container Container, such as m4a and mp4.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     */
-                    void SetContainer(const std::string& _container);
-
-                    /**
-                     * 判断参数 Container 是否已赋值
-                     * @return Container 是否已赋值
-                     */
-                    bool ContainerHasBeenSet() const;
-
-                    /**
                      * 获取MD5 value of video.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return Md5 MD5 value of video.
@@ -247,26 +225,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool Md5HasBeenSet() const;
 
                     /**
-                     * 获取Audio stream information.
+                     * 获取Container, such as m4a and mp4.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return AudioStreamSet Audio stream information.
+                     * @return Container Container, such as m4a and mp4.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
-                    std::vector<MediaAudioStreamItem> GetAudioStreamSet() const;
+                    std::string GetContainer() const;
 
                     /**
-                     * 设置Audio stream information.
+                     * 设置Container, such as m4a and mp4.
 Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param AudioStreamSet Audio stream information.
+                     * @param Container Container, such as m4a and mp4.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
-                    void SetAudioStreamSet(const std::vector<MediaAudioStreamItem>& _audioStreamSet);
+                    void SetContainer(const std::string& _container);
 
                     /**
-                     * 判断参数 AudioStreamSet 是否已赋值
-                     * @return AudioStreamSet 是否已赋值
+                     * 判断参数 Container 是否已赋值
+                     * @return Container 是否已赋值
                      */
-                    bool AudioStreamSetHasBeenSet() const;
+                    bool ContainerHasBeenSet() const;
 
                     /**
                      * 获取Video stream information.
@@ -289,6 +267,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return VideoStreamSet 是否已赋值
                      */
                     bool VideoStreamSetHasBeenSet() const;
+
+                    /**
+                     * 获取Audio stream information.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return AudioStreamSet Audio stream information.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<MediaAudioStreamItem> GetAudioStreamSet() const;
+
+                    /**
+                     * 设置Audio stream information.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param AudioStreamSet Audio stream information.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetAudioStreamSet(const std::vector<MediaAudioStreamItem>& _audioStreamSet);
+
+                    /**
+                     * 判断参数 AudioStreamSet 是否已赋值
+                     * @return AudioStreamSet 是否已赋值
+                     */
+                    bool AudioStreamSetHasBeenSet() const;
 
                 private:
 
@@ -328,8 +328,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_widthHasBeenSet;
 
                     /**
-                     * Total size of a media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * The file size (bytes).
+<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
                      */
                     int64_t m_size;
                     bool m_sizeHasBeenSet;
@@ -342,13 +342,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_durationHasBeenSet;
 
                     /**
-                     * Container, such as m4a and mp4.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     */
-                    std::string m_container;
-                    bool m_containerHasBeenSet;
-
-                    /**
                      * MD5 value of video.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
@@ -356,11 +349,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_md5HasBeenSet;
 
                     /**
-                     * Audio stream information.
+                     * Container, such as m4a and mp4.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
-                    std::vector<MediaAudioStreamItem> m_audioStreamSet;
-                    bool m_audioStreamSetHasBeenSet;
+                    std::string m_container;
+                    bool m_containerHasBeenSet;
 
                     /**
                      * Video stream information.
@@ -368,6 +361,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<MediaVideoStreamItem> m_videoStreamSet;
                     bool m_videoStreamSetHasBeenSet;
+
+                    /**
+                     * Audio stream information.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<MediaAudioStreamItem> m_audioStreamSet;
+                    bool m_audioStreamSetHasBeenSet;
 
                 };
             }

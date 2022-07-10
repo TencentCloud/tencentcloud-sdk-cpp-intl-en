@@ -80,14 +80,14 @@ namespace TencentCloud
                     bool DBNodeSetHasBeenSet() const;
 
                     /**
-                     * 获取Switch time. Valid values: `0` (switch immediately), `1` (switch at a specified time). Default value: `0`.
-                     * @return SwitchTag Switch time. Valid values: `0` (switch immediately), `1` (switch at a specified time). Default value: `0`.
+                     * 获取Switch time. Valid values: `0` (switch now), `1` (switch at a specified time), `2` (switch during maintenance time). Default value: `0`.
+                     * @return SwitchTag Switch time. Valid values: `0` (switch now), `1` (switch at a specified time), `2` (switch during maintenance time). Default value: `0`.
                      */
                     int64_t GetSwitchTag() const;
 
                     /**
-                     * 设置Switch time. Valid values: `0` (switch immediately), `1` (switch at a specified time). Default value: `0`.
-                     * @param SwitchTag Switch time. Valid values: `0` (switch immediately), `1` (switch at a specified time). Default value: `0`.
+                     * 设置Switch time. Valid values: `0` (switch now), `1` (switch at a specified time), `2` (switch during maintenance time). Default value: `0`.
+                     * @param SwitchTag Switch time. Valid values: `0` (switch now), `1` (switch at a specified time), `2` (switch during maintenance time). Default value: `0`.
                      */
                     void SetSwitchTag(const int64_t& _switchTag);
 
@@ -98,14 +98,14 @@ namespace TencentCloud
                     bool SwitchTagHasBeenSet() const;
 
                     /**
-                     * 获取The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00".
-                     * @return SwitchStartTime The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00".
+                     * 获取Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
+                     * @return SwitchStartTime Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
                      */
                     std::string GetSwitchStartTime() const;
 
                     /**
-                     * 设置The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00".
-                     * @param SwitchStartTime The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00".
+                     * 设置Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
+                     * @param SwitchStartTime Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
                      */
                     void SetSwitchStartTime(const std::string& _switchStartTime);
 
@@ -116,14 +116,14 @@ namespace TencentCloud
                     bool SwitchStartTimeHasBeenSet() const;
 
                     /**
-                     * 获取The latest time to start a switch in the format of "HH:MM:SS", such as "01:30:00".
-                     * @return SwitchEndTime The latest time to start a switch in the format of "HH:MM:SS", such as "01:30:00".
+                     * 获取Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
+                     * @return SwitchEndTime Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
                      */
                     std::string GetSwitchEndTime() const;
 
                     /**
-                     * 设置The latest time to start a switch in the format of "HH:MM:SS", such as "01:30:00".
-                     * @param SwitchEndTime The latest time to start a switch in the format of "HH:MM:SS", such as "01:30:00".
+                     * 设置Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
+                     * @param SwitchEndTime Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
                      */
                     void SetSwitchEndTime(const std::string& _switchEndTime);
 
@@ -148,19 +148,19 @@ namespace TencentCloud
                     bool m_dBNodeSetHasBeenSet;
 
                     /**
-                     * Switch time. Valid values: `0` (switch immediately), `1` (switch at a specified time). Default value: `0`.
+                     * Switch time. Valid values: `0` (switch now), `1` (switch at a specified time), `2` (switch during maintenance time). Default value: `0`.
                      */
                     int64_t m_switchTag;
                     bool m_switchTagHasBeenSet;
 
                     /**
-                     * The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00".
+                     * Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
                      */
                     std::string m_switchStartTime;
                     bool m_switchStartTimeHasBeenSet;
 
                     /**
-                     * The latest time to start a switch in the format of "HH:MM:SS", such as "01:30:00".
+                     * Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
                      */
                     std::string m_switchEndTime;
                     bool m_switchEndTimeHasBeenSet;

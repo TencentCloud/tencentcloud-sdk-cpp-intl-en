@@ -25,8 +25,9 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/vod/v20180717/model/WatermarkInput.h>
-#include <tencentcloud/vod/v20180717/model/MosaicInput.h>
+#include <tencentcloud/vod/v20180717/model/TraceWatermarkInput.h>
 #include <tencentcloud/vod/v20180717/model/HeadTailTaskInput.h>
+#include <tencentcloud/vod/v20180717/model/MosaicInput.h>
 
 
 namespace TencentCloud
@@ -90,22 +91,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool WatermarkSetHasBeenSet() const;
 
                     /**
-                     * 获取List of blurs. Up to 10 ones can be supported.
-                     * @return MosaicSet List of blurs. Up to 10 ones can be supported.
+                     * 获取Digital watermark.
+                     * @return TraceWatermark Digital watermark.
                      */
-                    std::vector<MosaicInput> GetMosaicSet() const;
+                    TraceWatermarkInput GetTraceWatermark() const;
 
                     /**
-                     * 设置List of blurs. Up to 10 ones can be supported.
-                     * @param MosaicSet List of blurs. Up to 10 ones can be supported.
+                     * 设置Digital watermark.
+                     * @param TraceWatermark Digital watermark.
                      */
-                    void SetMosaicSet(const std::vector<MosaicInput>& _mosaicSet);
+                    void SetTraceWatermark(const TraceWatermarkInput& _traceWatermark);
 
                     /**
-                     * 判断参数 MosaicSet 是否已赋值
-                     * @return MosaicSet 是否已赋值
+                     * 判断参数 TraceWatermark 是否已赋值
+                     * @return TraceWatermark 是否已赋值
                      */
-                    bool MosaicSetHasBeenSet() const;
+                    bool TraceWatermarkHasBeenSet() const;
 
                     /**
                      * 获取List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
@@ -126,34 +127,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool HeadTailSetHasBeenSet() const;
 
                     /**
-                     * 获取Start time offset of a transcoded video, in seconds.
-<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
-<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
-<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
-                     * @return StartTimeOffset Start time offset of a transcoded video, in seconds.
-<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
-<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
-<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+                     * 获取List of blurs. Up to 10 ones can be supported.
+                     * @return MosaicSet List of blurs. Up to 10 ones can be supported.
                      */
-                    double GetStartTimeOffset() const;
+                    std::vector<MosaicInput> GetMosaicSet() const;
 
                     /**
-                     * 设置Start time offset of a transcoded video, in seconds.
-<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
-<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
-<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
-                     * @param StartTimeOffset Start time offset of a transcoded video, in seconds.
-<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
-<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
-<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+                     * 设置List of blurs. Up to 10 ones can be supported.
+                     * @param MosaicSet List of blurs. Up to 10 ones can be supported.
                      */
-                    void SetStartTimeOffset(const double& _startTimeOffset);
+                    void SetMosaicSet(const std::vector<MosaicInput>& _mosaicSet);
 
                     /**
-                     * 判断参数 StartTimeOffset 是否已赋值
-                     * @return StartTimeOffset 是否已赋值
+                     * 判断参数 MosaicSet 是否已赋值
+                     * @return MosaicSet 是否已赋值
                      */
-                    bool StartTimeOffsetHasBeenSet() const;
+                    bool MosaicSetHasBeenSet() const;
 
                     /**
                      * 获取End time offset of a transcoded video, in seconds.
@@ -185,6 +174,36 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool EndTimeOffsetHasBeenSet() const;
 
+                    /**
+                     * 获取Start time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+                     * @return StartTimeOffset Start time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+                     */
+                    double GetStartTimeOffset() const;
+
+                    /**
+                     * 设置Start time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+                     * @param StartTimeOffset Start time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+                     */
+                    void SetStartTimeOffset(const double& _startTimeOffset);
+
+                    /**
+                     * 判断参数 StartTimeOffset 是否已赋值
+                     * @return StartTimeOffset 是否已赋值
+                     */
+                    bool StartTimeOffsetHasBeenSet() const;
+
                 private:
 
                     /**
@@ -201,10 +220,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_watermarkSetHasBeenSet;
 
                     /**
-                     * List of blurs. Up to 10 ones can be supported.
+                     * Digital watermark.
                      */
-                    std::vector<MosaicInput> m_mosaicSet;
-                    bool m_mosaicSetHasBeenSet;
+                    TraceWatermarkInput m_traceWatermark;
+                    bool m_traceWatermarkHasBeenSet;
 
                     /**
                      * List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
@@ -213,13 +232,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_headTailSetHasBeenSet;
 
                     /**
-                     * Start time offset of a transcoded video, in seconds.
-<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
-<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
-<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+                     * List of blurs. Up to 10 ones can be supported.
                      */
-                    double m_startTimeOffset;
-                    bool m_startTimeOffsetHasBeenSet;
+                    std::vector<MosaicInput> m_mosaicSet;
+                    bool m_mosaicSetHasBeenSet;
 
                     /**
                      * End time offset of a transcoded video, in seconds.
@@ -229,6 +245,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;
+
+                    /**
+                     * Start time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+                     */
+                    double m_startTimeOffset;
+                    bool m_startTimeOffsetHasBeenSet;
 
                 };
             }

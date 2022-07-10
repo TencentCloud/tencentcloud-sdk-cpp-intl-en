@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取TencentDB for PostgreSQL instance ID array
-                     * @return DBInstanceIdSet TencentDB for PostgreSQL instance ID array
+                     * 获取List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
+                     * @return DBInstanceIdSet List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
                      */
                     std::vector<std::string> GetDBInstanceIdSet() const;
 
                     /**
-                     * 设置TencentDB for PostgreSQL instance ID array
-                     * @param DBInstanceIdSet TencentDB for PostgreSQL instance ID array
+                     * 设置List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
+                     * @param DBInstanceIdSet List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
                      */
                     void SetDBInstanceIdSet(const std::vector<std::string>& _dBInstanceIdSet);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool DBInstanceIdSetHasBeenSet() const;
 
                     /**
-                     * 获取New project ID of TencentDB for PostgreSQL instance
-                     * @return ProjectId New project ID of TencentDB for PostgreSQL instance
+                     * 获取ID of the new project
+                     * @return ProjectId ID of the new project
                      */
                     std::string GetProjectId() const;
 
                     /**
-                     * 设置New project ID of TencentDB for PostgreSQL instance
-                     * @param ProjectId New project ID of TencentDB for PostgreSQL instance
+                     * 设置ID of the new project
+                     * @param ProjectId ID of the new project
                      */
                     void SetProjectId(const std::string& _projectId);
 
@@ -81,13 +81,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * TencentDB for PostgreSQL instance ID array
+                     * List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
                      */
                     std::vector<std::string> m_dBInstanceIdSet;
                     bool m_dBInstanceIdSetHasBeenSet;
 
                     /**
-                     * New project ID of TencentDB for PostgreSQL instance
+                     * ID of the new project
                      */
                     std::string m_projectId;
                     bool m_projectIdHasBeenSet;

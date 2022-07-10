@@ -14,18 +14,18 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/vod/v20180717/model/ImageContentReviewInput.h>
+#include <tencentcloud/vod/v20180717/model/TraceWatermarkInput.h>
 
 using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
 using namespace std;
 
-ImageContentReviewInput::ImageContentReviewInput() :
+TraceWatermarkInput::TraceWatermarkInput() :
     m_definitionHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome ImageContentReviewInput::Deserialize(const rapidjson::Value &value)
+CoreInternalOutcome TraceWatermarkInput::Deserialize(const rapidjson::Value &value)
 {
     string requestId = "";
 
@@ -34,7 +34,7 @@ CoreInternalOutcome ImageContentReviewInput::Deserialize(const rapidjson::Value 
     {
         if (!value["Definition"].IsUint64())
         {
-            return CoreInternalOutcome(Core::Error("response `ImageContentReviewInput.Definition` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TraceWatermarkInput.Definition` IsUint64=false incorrectly").SetRequestId(requestId));
         }
         m_definition = value["Definition"].GetUint64();
         m_definitionHasBeenSet = true;
@@ -44,7 +44,7 @@ CoreInternalOutcome ImageContentReviewInput::Deserialize(const rapidjson::Value 
     return CoreInternalOutcome(true);
 }
 
-void ImageContentReviewInput::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
+void TraceWatermarkInput::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
     if (m_definitionHasBeenSet)
@@ -58,18 +58,18 @@ void ImageContentReviewInput::ToJsonObject(rapidjson::Value &value, rapidjson::D
 }
 
 
-uint64_t ImageContentReviewInput::GetDefinition() const
+uint64_t TraceWatermarkInput::GetDefinition() const
 {
     return m_definition;
 }
 
-void ImageContentReviewInput::SetDefinition(const uint64_t& _definition)
+void TraceWatermarkInput::SetDefinition(const uint64_t& _definition)
 {
     m_definition = _definition;
     m_definitionHasBeenSet = true;
 }
 
-bool ImageContentReviewInput::DefinitionHasBeenSet() const
+bool TraceWatermarkInput::DefinitionHasBeenSet() const
 {
     return m_definitionHasBeenSet;
 }

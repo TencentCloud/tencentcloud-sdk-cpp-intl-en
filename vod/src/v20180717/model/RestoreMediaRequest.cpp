@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/vod/v20180717/model/ProcessImageRequest.h>
+#include <tencentcloud/vod/v20180717/model/RestoreMediaRequest.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -22,44 +22,48 @@
 using namespace TencentCloud::Vod::V20180717::Model;
 using namespace std;
 
-ProcessImageRequest::ProcessImageRequest() :
-    m_fileIdHasBeenSet(false),
-    m_operationHasBeenSet(false),
-    m_contentReviewInputHasBeenSet(false),
+RestoreMediaRequest::RestoreMediaRequest() :
+    m_fileIdsHasBeenSet(false),
+    m_restoreDayHasBeenSet(false),
+    m_restoreTierHasBeenSet(false),
     m_subAppIdHasBeenSet(false)
 {
 }
 
-string ProcessImageRequest::ToJsonString() const
+string RestoreMediaRequest::ToJsonString() const
 {
     rapidjson::Document d;
     d.SetObject();
     rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
-    if (m_fileIdHasBeenSet)
+    if (m_fileIdsHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "FileId";
+        string key = "FileIds";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_fileId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_fileIds.begin(); itr != m_fileIds.end(); ++itr)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
     }
 
-    if (m_operationHasBeenSet)
+    if (m_restoreDayHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Operation";
+        string key = "RestoreDay";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_operation.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, m_restoreDay, allocator);
     }
 
-    if (m_contentReviewInputHasBeenSet)
+    if (m_restoreTierHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "ContentReviewInput";
+        string key = "RestoreTier";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
-        m_contentReviewInput.ToJsonObject(d[key.c_str()], allocator);
+        d.AddMember(iKey, rapidjson::Value(m_restoreTier.c_str(), allocator).Move(), allocator);
     }
 
     if (m_subAppIdHasBeenSet)
@@ -78,66 +82,66 @@ string ProcessImageRequest::ToJsonString() const
 }
 
 
-string ProcessImageRequest::GetFileId() const
+vector<string> RestoreMediaRequest::GetFileIds() const
 {
-    return m_fileId;
+    return m_fileIds;
 }
 
-void ProcessImageRequest::SetFileId(const string& _fileId)
+void RestoreMediaRequest::SetFileIds(const vector<string>& _fileIds)
 {
-    m_fileId = _fileId;
-    m_fileIdHasBeenSet = true;
+    m_fileIds = _fileIds;
+    m_fileIdsHasBeenSet = true;
 }
 
-bool ProcessImageRequest::FileIdHasBeenSet() const
+bool RestoreMediaRequest::FileIdsHasBeenSet() const
 {
-    return m_fileIdHasBeenSet;
+    return m_fileIdsHasBeenSet;
 }
 
-string ProcessImageRequest::GetOperation() const
+uint64_t RestoreMediaRequest::GetRestoreDay() const
 {
-    return m_operation;
+    return m_restoreDay;
 }
 
-void ProcessImageRequest::SetOperation(const string& _operation)
+void RestoreMediaRequest::SetRestoreDay(const uint64_t& _restoreDay)
 {
-    m_operation = _operation;
-    m_operationHasBeenSet = true;
+    m_restoreDay = _restoreDay;
+    m_restoreDayHasBeenSet = true;
 }
 
-bool ProcessImageRequest::OperationHasBeenSet() const
+bool RestoreMediaRequest::RestoreDayHasBeenSet() const
 {
-    return m_operationHasBeenSet;
+    return m_restoreDayHasBeenSet;
 }
 
-ImageContentReviewInput ProcessImageRequest::GetContentReviewInput() const
+string RestoreMediaRequest::GetRestoreTier() const
 {
-    return m_contentReviewInput;
+    return m_restoreTier;
 }
 
-void ProcessImageRequest::SetContentReviewInput(const ImageContentReviewInput& _contentReviewInput)
+void RestoreMediaRequest::SetRestoreTier(const string& _restoreTier)
 {
-    m_contentReviewInput = _contentReviewInput;
-    m_contentReviewInputHasBeenSet = true;
+    m_restoreTier = _restoreTier;
+    m_restoreTierHasBeenSet = true;
 }
 
-bool ProcessImageRequest::ContentReviewInputHasBeenSet() const
+bool RestoreMediaRequest::RestoreTierHasBeenSet() const
 {
-    return m_contentReviewInputHasBeenSet;
+    return m_restoreTierHasBeenSet;
 }
 
-uint64_t ProcessImageRequest::GetSubAppId() const
+uint64_t RestoreMediaRequest::GetSubAppId() const
 {
     return m_subAppId;
 }
 
-void ProcessImageRequest::SetSubAppId(const uint64_t& _subAppId)
+void RestoreMediaRequest::SetSubAppId(const uint64_t& _subAppId)
 {
     m_subAppId = _subAppId;
     m_subAppIdHasBeenSet = true;
 }
 
-bool ProcessImageRequest::SubAppIdHasBeenSet() const
+bool RestoreMediaRequest::SubAppIdHasBeenSet() const
 {
     return m_subAppIdHasBeenSet;
 }

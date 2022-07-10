@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/vod/v20180717/model/WatermarkInput.h>
+#include <tencentcloud/vod/v20180717/model/TraceWatermarkInput.h>
 
 
 namespace TencentCloud
@@ -88,6 +89,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool WatermarkSetHasBeenSet() const;
 
                     /**
+                     * 获取Digital watermark.
+                     * @return TraceWatermark Digital watermark.
+                     */
+                    TraceWatermarkInput GetTraceWatermark() const;
+
+                    /**
+                     * 设置Digital watermark.
+                     * @param TraceWatermark Digital watermark.
+                     */
+                    void SetTraceWatermark(const TraceWatermarkInput& _traceWatermark);
+
+                    /**
+                     * 判断参数 TraceWatermark 是否已赋值
+                     * @return TraceWatermark 是否已赋值
+                     */
+                    bool TraceWatermarkHasBeenSet() const;
+
+                    /**
                      * 获取List of subtitle IDs (maximum: 16)
                      * @return SubtitleSet List of subtitle IDs (maximum: 16)
                      */
@@ -119,6 +138,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<WatermarkInput> m_watermarkSet;
                     bool m_watermarkSetHasBeenSet;
+
+                    /**
+                     * Digital watermark.
+                     */
+                    TraceWatermarkInput m_traceWatermark;
+                    bool m_traceWatermarkHasBeenSet;
 
                     /**
                      * List of subtitle IDs (maximum: 16)

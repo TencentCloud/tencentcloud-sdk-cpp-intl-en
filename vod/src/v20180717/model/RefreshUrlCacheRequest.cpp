@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/vod/v20180717/model/ReviewImageRequest.h>
+#include <tencentcloud/vod/v20180717/model/RefreshUrlCacheRequest.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -22,34 +22,30 @@
 using namespace TencentCloud::Vod::V20180717::Model;
 using namespace std;
 
-ReviewImageRequest::ReviewImageRequest() :
-    m_fileIdHasBeenSet(false),
-    m_definitionHasBeenSet(false),
+RefreshUrlCacheRequest::RefreshUrlCacheRequest() :
+    m_urlsHasBeenSet(false),
     m_subAppIdHasBeenSet(false)
 {
 }
 
-string ReviewImageRequest::ToJsonString() const
+string RefreshUrlCacheRequest::ToJsonString() const
 {
     rapidjson::Document d;
     d.SetObject();
     rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
-    if (m_fileIdHasBeenSet)
+    if (m_urlsHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "FileId";
+        string key = "Urls";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_fileId.c_str(), allocator).Move(), allocator);
-    }
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
-    if (m_definitionHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Definition";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, m_definition, allocator);
+        for (auto itr = m_urls.begin(); itr != m_urls.end(); ++itr)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
     }
 
     if (m_subAppIdHasBeenSet)
@@ -68,50 +64,34 @@ string ReviewImageRequest::ToJsonString() const
 }
 
 
-string ReviewImageRequest::GetFileId() const
+vector<string> RefreshUrlCacheRequest::GetUrls() const
 {
-    return m_fileId;
+    return m_urls;
 }
 
-void ReviewImageRequest::SetFileId(const string& _fileId)
+void RefreshUrlCacheRequest::SetUrls(const vector<string>& _urls)
 {
-    m_fileId = _fileId;
-    m_fileIdHasBeenSet = true;
+    m_urls = _urls;
+    m_urlsHasBeenSet = true;
 }
 
-bool ReviewImageRequest::FileIdHasBeenSet() const
+bool RefreshUrlCacheRequest::UrlsHasBeenSet() const
 {
-    return m_fileIdHasBeenSet;
+    return m_urlsHasBeenSet;
 }
 
-uint64_t ReviewImageRequest::GetDefinition() const
-{
-    return m_definition;
-}
-
-void ReviewImageRequest::SetDefinition(const uint64_t& _definition)
-{
-    m_definition = _definition;
-    m_definitionHasBeenSet = true;
-}
-
-bool ReviewImageRequest::DefinitionHasBeenSet() const
-{
-    return m_definitionHasBeenSet;
-}
-
-uint64_t ReviewImageRequest::GetSubAppId() const
+uint64_t RefreshUrlCacheRequest::GetSubAppId() const
 {
     return m_subAppId;
 }
 
-void ReviewImageRequest::SetSubAppId(const uint64_t& _subAppId)
+void RefreshUrlCacheRequest::SetSubAppId(const uint64_t& _subAppId)
 {
     m_subAppId = _subAppId;
     m_subAppIdHasBeenSet = true;
 }
 
-bool ReviewImageRequest::SubAppIdHasBeenSet() const
+bool RefreshUrlCacheRequest::SubAppIdHasBeenSet() const
 {
     return m_subAppIdHasBeenSet;
 }

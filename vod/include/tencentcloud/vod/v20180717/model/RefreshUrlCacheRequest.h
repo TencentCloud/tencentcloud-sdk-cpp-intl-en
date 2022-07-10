@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_VOD_V20180717_MODEL_DELETEANIMATEDGRAPHICSTEMPLATEREQUEST_H_
-#define TENCENTCLOUD_VOD_V20180717_MODEL_DELETEANIMATEDGRAPHICSTEMPLATEREQUEST_H_
+#ifndef TENCENTCLOUD_VOD_V20180717_MODEL_REFRESHURLCACHEREQUEST_H_
+#define TENCENTCLOUD_VOD_V20180717_MODEL_REFRESHURLCACHEREQUEST_H_
 
 #include <string>
 #include <vector>
@@ -32,33 +32,33 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * DeleteAnimatedGraphicsTemplate request structure.
+                * RefreshUrlCache request structure.
                 */
-                class DeleteAnimatedGraphicsTemplateRequest : public AbstractModel
+                class RefreshUrlCacheRequest : public AbstractModel
                 {
                 public:
-                    DeleteAnimatedGraphicsTemplateRequest();
-                    ~DeleteAnimatedGraphicsTemplateRequest() = default;
+                    RefreshUrlCacheRequest();
+                    ~RefreshUrlCacheRequest() = default;
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Unique ID of an animated image generating template.
-                     * @return Definition Unique ID of an animated image generating template.
+                     * 获取The URLs to purge. You can specify up to 20 URLs per request.
+                     * @return Urls The URLs to purge. You can specify up to 20 URLs per request.
                      */
-                    uint64_t GetDefinition() const;
+                    std::vector<std::string> GetUrls() const;
 
                     /**
-                     * 设置Unique ID of an animated image generating template.
-                     * @param Definition Unique ID of an animated image generating template.
+                     * 设置The URLs to purge. You can specify up to 20 URLs per request.
+                     * @param Urls The URLs to purge. You can specify up to 20 URLs per request.
                      */
-                    void SetDefinition(const uint64_t& _definition);
+                    void SetUrls(const std::vector<std::string>& _urls);
 
                     /**
-                     * 判断参数 Definition 是否已赋值
-                     * @return Definition 是否已赋值
+                     * 判断参数 Urls 是否已赋值
+                     * @return Urls 是否已赋值
                      */
-                    bool DefinitionHasBeenSet() const;
+                    bool UrlsHasBeenSet() const;
 
                     /**
                      * 获取<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
@@ -81,10 +81,10 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Unique ID of an animated image generating template.
+                     * The URLs to purge. You can specify up to 20 URLs per request.
                      */
-                    uint64_t m_definition;
-                    bool m_definitionHasBeenSet;
+                    std::vector<std::string> m_urls;
+                    bool m_urlsHasBeenSet;
 
                     /**
                      * <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
@@ -98,4 +98,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_VOD_V20180717_MODEL_DELETEANIMATEDGRAPHICSTEMPLATEREQUEST_H_
+#endif // !TENCENTCLOUD_VOD_V20180717_MODEL_REFRESHURLCACHEREQUEST_H_

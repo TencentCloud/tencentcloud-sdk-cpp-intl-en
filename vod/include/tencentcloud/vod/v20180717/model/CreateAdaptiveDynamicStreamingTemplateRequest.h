@@ -44,18 +44,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Adaptive bitstream format. Valid values:
-<li>HLS.</li>
-                     * @return Format Adaptive bitstream format. Valid values:
-<li>HLS.</li>
+                     * 获取The adaptive bitrate streaming format. Valid values:
+<li>HLS</li>
+<li>MPEG-DASH</li>
+                     * @return Format The adaptive bitrate streaming format. Valid values:
+<li>HLS</li>
+<li>MPEG-DASH</li>
                      */
                     std::string GetFormat() const;
 
                     /**
-                     * 设置Adaptive bitstream format. Valid values:
-<li>HLS.</li>
-                     * @param Format Adaptive bitstream format. Valid values:
-<li>HLS.</li>
+                     * 设置The adaptive bitrate streaming format. Valid values:
+<li>HLS</li>
+<li>MPEG-DASH</li>
+                     * @param Format The adaptive bitrate streaming format. Valid values:
+<li>HLS</li>
+<li>MPEG-DASH</li>
                      */
                     void SetFormat(const std::string& _format);
 
@@ -86,6 +90,24 @@ Note: the frame rate of all substreams must be the same; otherwise, the frame ra
                      * @return StreamInfos 是否已赋值
                      */
                     bool StreamInfosHasBeenSet() const;
+
+                    /**
+                     * 获取<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     */
+                    uint64_t GetSubAppId() const;
+
+                    /**
+                     * 设置<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     */
+                    void SetSubAppId(const uint64_t& _subAppId);
+
+                    /**
+                     * 判断参数 SubAppId 是否已赋值
+                     * @return SubAppId 是否已赋值
+                     */
+                    bool SubAppIdHasBeenSet() const;
 
                     /**
                      * 获取Template name. Length limit: 64 characters.
@@ -217,29 +239,12 @@ Default value: no.
                      */
                     bool CommentHasBeenSet() const;
 
-                    /**
-                     * 获取[Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-                     * @return SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-                     */
-                    uint64_t GetSubAppId() const;
-
-                    /**
-                     * 设置[Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-                     * @param SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-                     */
-                    void SetSubAppId(const uint64_t& _subAppId);
-
-                    /**
-                     * 判断参数 SubAppId 是否已赋值
-                     * @return SubAppId 是否已赋值
-                     */
-                    bool SubAppIdHasBeenSet() const;
-
                 private:
 
                     /**
-                     * Adaptive bitstream format. Valid values:
-<li>HLS.</li>
+                     * The adaptive bitrate streaming format. Valid values:
+<li>HLS</li>
+<li>MPEG-DASH</li>
                      */
                     std::string m_format;
                     bool m_formatHasBeenSet;
@@ -250,6 +255,12 @@ Note: the frame rate of all substreams must be the same; otherwise, the frame ra
                      */
                     std::vector<AdaptiveStreamTemplate> m_streamInfos;
                     bool m_streamInfosHasBeenSet;
+
+                    /**
+                     * <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     */
+                    uint64_t m_subAppId;
+                    bool m_subAppIdHasBeenSet;
 
                     /**
                      * Template name. Length limit: 64 characters.
@@ -290,12 +301,6 @@ Default value: no.
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
-
-                    /**
-                     * [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-                     */
-                    uint64_t m_subAppId;
-                    bool m_subAppIdHasBeenSet;
 
                 };
             }

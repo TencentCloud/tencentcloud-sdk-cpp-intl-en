@@ -43,22 +43,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique ID filter of watermarking templates. Array length limit: 100.
-                     * @return Definitions Unique ID filter of watermarking templates. Array length limit: 100.
+                     * 获取<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
                      */
-                    std::vector<int64_t> GetDefinitions() const;
+                    uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置Unique ID filter of watermarking templates. Array length limit: 100.
-                     * @param Definitions Unique ID filter of watermarking templates. Array length limit: 100.
+                     * 设置<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
                      */
-                    void SetDefinitions(const std::vector<int64_t>& _definitions);
+                    void SetSubAppId(const uint64_t& _subAppId);
 
                     /**
-                     * 判断参数 Definitions 是否已赋值
-                     * @return Definitions 是否已赋值
+                     * 判断参数 SubAppId 是否已赋值
+                     * @return SubAppId 是否已赋值
                      */
-                    bool DefinitionsHasBeenSet() const;
+                    bool SubAppIdHasBeenSet() const;
 
                     /**
                      * 获取Watermark type filter. Valid values:
@@ -105,6 +105,24 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
+                     * 获取Unique ID filter of watermarking templates. Array length limit: 100.
+                     * @return Definitions Unique ID filter of watermarking templates. Array length limit: 100.
+                     */
+                    std::vector<int64_t> GetDefinitions() const;
+
+                    /**
+                     * 设置Unique ID filter of watermarking templates. Array length limit: 100.
+                     * @param Definitions Unique ID filter of watermarking templates. Array length limit: 100.
+                     */
+                    void SetDefinitions(const std::vector<int64_t>& _definitions);
+
+                    /**
+                     * 判断参数 Definitions 是否已赋值
+                     * @return Definitions 是否已赋值
+                     */
+                    bool DefinitionsHasBeenSet() const;
+
+                    /**
                      * 获取Number of returned entries
 <li>Default value: 10;</li>
 <li>Maximum value: 100.</li>
@@ -130,31 +148,13 @@ namespace TencentCloud
                      */
                     bool LimitHasBeenSet() const;
 
-                    /**
-                     * 获取[Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-                     * @return SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-                     */
-                    uint64_t GetSubAppId() const;
-
-                    /**
-                     * 设置[Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-                     * @param SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-                     */
-                    void SetSubAppId(const uint64_t& _subAppId);
-
-                    /**
-                     * 判断参数 SubAppId 是否已赋值
-                     * @return SubAppId 是否已赋值
-                     */
-                    bool SubAppIdHasBeenSet() const;
-
                 private:
 
                     /**
-                     * Unique ID filter of watermarking templates. Array length limit: 100.
+                     * <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
                      */
-                    std::vector<int64_t> m_definitions;
-                    bool m_definitionsHasBeenSet;
+                    uint64_t m_subAppId;
+                    bool m_subAppIdHasBeenSet;
 
                     /**
                      * Watermark type filter. Valid values:
@@ -171,18 +171,18 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
+                     * Unique ID filter of watermarking templates. Array length limit: 100.
+                     */
+                    std::vector<int64_t> m_definitions;
+                    bool m_definitionsHasBeenSet;
+
+                    /**
                      * Number of returned entries
 <li>Default value: 10;</li>
 <li>Maximum value: 100.</li>
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
-
-                    /**
-                     * [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-                     */
-                    uint64_t m_subAppId;
-                    bool m_subAppIdHasBeenSet;
 
                 };
             }

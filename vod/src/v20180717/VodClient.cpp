@@ -4254,49 +4254,6 @@ VodClient::ParseStreamingManifestOutcomeCallable VodClient::ParseStreamingManife
     return task->get_future();
 }
 
-VodClient::ProcessImageOutcome VodClient::ProcessImage(const ProcessImageRequest &request)
-{
-    auto outcome = MakeRequest(request, "ProcessImage");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        ProcessImageResponse rsp = ProcessImageResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return ProcessImageOutcome(rsp);
-        else
-            return ProcessImageOutcome(o.GetError());
-    }
-    else
-    {
-        return ProcessImageOutcome(outcome.GetError());
-    }
-}
-
-void VodClient::ProcessImageAsync(const ProcessImageRequest& request, const ProcessImageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ProcessImage(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-VodClient::ProcessImageOutcomeCallable VodClient::ProcessImageCallable(const ProcessImageRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<ProcessImageOutcome()>>(
-        [this, request]()
-        {
-            return this->ProcessImage(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
 VodClient::ProcessMediaOutcome VodClient::ProcessMedia(const ProcessMediaRequest &request)
 {
     auto outcome = MakeRequest(request, "ProcessMedia");
@@ -4555,6 +4512,49 @@ VodClient::PushUrlCacheOutcomeCallable VodClient::PushUrlCacheCallable(const Pus
     return task->get_future();
 }
 
+VodClient::RefreshUrlCacheOutcome VodClient::RefreshUrlCache(const RefreshUrlCacheRequest &request)
+{
+    auto outcome = MakeRequest(request, "RefreshUrlCache");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RefreshUrlCacheResponse rsp = RefreshUrlCacheResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RefreshUrlCacheOutcome(rsp);
+        else
+            return RefreshUrlCacheOutcome(o.GetError());
+    }
+    else
+    {
+        return RefreshUrlCacheOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::RefreshUrlCacheAsync(const RefreshUrlCacheRequest& request, const RefreshUrlCacheAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->RefreshUrlCache(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VodClient::RefreshUrlCacheOutcomeCallable VodClient::RefreshUrlCacheCallable(const RefreshUrlCacheRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<RefreshUrlCacheOutcome()>>(
+        [this, request]()
+        {
+            return this->RefreshUrlCache(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VodClient::ResetProcedureTemplateOutcome VodClient::ResetProcedureTemplate(const ResetProcedureTemplateRequest &request)
 {
     auto outcome = MakeRequest(request, "ResetProcedureTemplate");
@@ -4598,42 +4598,42 @@ VodClient::ResetProcedureTemplateOutcomeCallable VodClient::ResetProcedureTempla
     return task->get_future();
 }
 
-VodClient::ReviewImageOutcome VodClient::ReviewImage(const ReviewImageRequest &request)
+VodClient::RestoreMediaOutcome VodClient::RestoreMedia(const RestoreMediaRequest &request)
 {
-    auto outcome = MakeRequest(request, "ReviewImage");
+    auto outcome = MakeRequest(request, "RestoreMedia");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        ReviewImageResponse rsp = ReviewImageResponse();
+        RestoreMediaResponse rsp = RestoreMediaResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return ReviewImageOutcome(rsp);
+            return RestoreMediaOutcome(rsp);
         else
-            return ReviewImageOutcome(o.GetError());
+            return RestoreMediaOutcome(o.GetError());
     }
     else
     {
-        return ReviewImageOutcome(outcome.GetError());
+        return RestoreMediaOutcome(outcome.GetError());
     }
 }
 
-void VodClient::ReviewImageAsync(const ReviewImageRequest& request, const ReviewImageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void VodClient::RestoreMediaAsync(const RestoreMediaRequest& request, const RestoreMediaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
     auto fn = [this, request, handler, context]()
     {
-        handler(this, request, this->ReviewImage(request), context);
+        handler(this, request, this->RestoreMedia(request), context);
     };
 
     Executor::GetInstance()->Submit(new Runnable(fn));
 }
 
-VodClient::ReviewImageOutcomeCallable VodClient::ReviewImageCallable(const ReviewImageRequest &request)
+VodClient::RestoreMediaOutcomeCallable VodClient::RestoreMediaCallable(const RestoreMediaRequest &request)
 {
-    auto task = std::make_shared<std::packaged_task<ReviewImageOutcome()>>(
+    auto task = std::make_shared<std::packaged_task<RestoreMediaOutcome()>>(
         [this, request]()
         {
-            return this->ReviewImage(request);
+            return this->RestoreMedia(request);
         }
     );
 

@@ -45,6 +45,24 @@ namespace TencentCloud
 
 
                     /**
+                     * 获取<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     */
+                    uint64_t GetSubAppId() const;
+
+                    /**
+                     * 设置<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     */
+                    void SetSubAppId(const uint64_t& _subAppId);
+
+                    /**
+                     * 判断参数 SubAppId 是否已赋值
+                     * @return SubAppId 是否已赋值
+                     */
+                    bool SubAppIdHasBeenSet() const;
+
+                    /**
                      * 获取File ID set. Any element in the set can be matched.
 <li>Array length limit: 10.</li>
 <li>ID length limit: 40 characters.</li>
@@ -171,21 +189,21 @@ namespace TencentCloud
                     bool ClassIdsHasBeenSet() const;
 
                     /**
-                     * 获取Tag set, which matches any element in the set.
-<li>Tag length limit: 8 characters.</li>
+                     * 获取The tag set. A file is considered a match if it has any of the tags in the tag set.
+<li>Tag length limit: 16 characters.</li>
 <li>Array length limit: 10.</li>
-                     * @return Tags Tag set, which matches any element in the set.
-<li>Tag length limit: 8 characters.</li>
+                     * @return Tags The tag set. A file is considered a match if it has any of the tags in the tag set.
+<li>Tag length limit: 16 characters.</li>
 <li>Array length limit: 10.</li>
                      */
                     std::vector<std::string> GetTags() const;
 
                     /**
-                     * 设置Tag set, which matches any element in the set.
-<li>Tag length limit: 8 characters.</li>
+                     * 设置The tag set. A file is considered a match if it has any of the tags in the tag set.
+<li>Tag length limit: 16 characters.</li>
 <li>Array length limit: 10.</li>
-                     * @param Tags Tag set, which matches any element in the set.
-<li>Tag length limit: 8 characters.</li>
+                     * @param Tags The tag set. A file is considered a match if it has any of the tags in the tag set.
+<li>Tag length limit: 16 characters.</li>
 <li>Array length limit: 10.</li>
                      */
                     void SetTags(const std::vector<std::string>& _tags);
@@ -491,24 +509,6 @@ namespace TencentCloud
                     bool StorageRegionsHasBeenSet() const;
 
                     /**
-                     * 获取[Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-                     * @return SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-                     */
-                    uint64_t GetSubAppId() const;
-
-                    /**
-                     * 设置[Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-                     * @param SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-                     */
-                    void SetSubAppId(const uint64_t& _subAppId);
-
-                    /**
-                     * 判断参数 SubAppId 是否已赋值
-                     * @return SubAppId 是否已赋值
-                     */
-                    bool SubAppIdHasBeenSet() const;
-
-                    /**
                      * 获取An array of storage classes. Valid values:
 <li>STANDARD</li>
 <li>STANDARD_IA</li>
@@ -701,6 +701,12 @@ End time in the creation time range.
                 private:
 
                     /**
+                     * <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     */
+                    uint64_t m_subAppId;
+                    bool m_subAppIdHasBeenSet;
+
+                    /**
                      * File ID set. Any element in the set can be matched.
 <li>Array length limit: 10.</li>
 <li>ID length limit: 40 characters.</li>
@@ -740,8 +746,8 @@ End time in the creation time range.
                     bool m_classIdsHasBeenSet;
 
                     /**
-                     * Tag set, which matches any element in the set.
-<li>Tag length limit: 8 characters.</li>
+                     * The tag set. A file is considered a match if it has any of the tags in the tag set.
+<li>Tag length limit: 16 characters.</li>
 <li>Array length limit: 10.</li>
                      */
                     std::vector<std::string> m_tags;
@@ -836,12 +842,6 @@ End time in the creation time range.
                      */
                     std::vector<std::string> m_storageRegions;
                     bool m_storageRegionsHasBeenSet;
-
-                    /**
-                     * [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-                     */
-                    uint64_t m_subAppId;
-                    bool m_subAppIdHasBeenSet;
 
                     /**
                      * An array of storage classes. Valid values:

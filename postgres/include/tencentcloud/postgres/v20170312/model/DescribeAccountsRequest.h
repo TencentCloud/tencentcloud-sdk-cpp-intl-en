@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool DBInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Number of entries returned per page. Default value: 20. Value range: 1-100.
-                     * @return Limit Number of entries returned per page. Default value: 20. Value range: 1-100.
+                     * 获取Number of entries returned per page. Default value: 10. Value range: 1–100.
+                     * @return Limit Number of entries returned per page. Default value: 10. Value range: 1–100.
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of entries returned per page. Default value: 20. Value range: 1-100.
-                     * @param Limit Number of entries returned per page. Default value: 20. Value range: 1-100.
+                     * 设置Number of entries returned per page. Default value: 10. Value range: 1–100.
+                     * @param Limit Number of entries returned per page. Default value: 10. Value range: 1–100.
                      */
                     void SetLimit(const int64_t& _limit);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Page number for data return in paged query. Pagination starts from 0
-                     * @return Offset Page number for data return in paged query. Pagination starts from 0
+                     * 获取Data offset, which starts from 0.
+                     * @return Offset Data offset, which starts from 0.
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Page number for data return in paged query. Pagination starts from 0
-                     * @param Offset Page number for data return in paged query. Pagination starts from 0
+                     * 设置Data offset, which starts from 0.
+                     * @param Offset Data offset, which starts from 0.
                      */
                     void SetOffset(const int64_t& _offset);
 
@@ -141,13 +141,13 @@ namespace TencentCloud
                     bool m_dBInstanceIdHasBeenSet;
 
                     /**
-                     * Number of entries returned per page. Default value: 20. Value range: 1-100.
+                     * Number of entries returned per page. Default value: 10. Value range: 1–100.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Page number for data return in paged query. Pagination starts from 0
+                     * Data offset, which starts from 0.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;

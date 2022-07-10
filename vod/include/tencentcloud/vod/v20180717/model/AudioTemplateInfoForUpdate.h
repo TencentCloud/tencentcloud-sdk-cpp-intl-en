@@ -47,74 +47,78 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Audio stream encoder.
-When the outer `Container` parameter is `mp3`, the valid value is:
-<li>libmp3lame.</li>
-When the outer `Container` parameter is `ogg` or `flac`, the valid value is:
-<li>flac.</li>
-When the outer `Container` parameter is `m4a`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame;</li>
-<li>ac3.</li>
-When the outer `Container` parameter is `mp4` or `flv`, the valid values include:
-<li>libfdk_aac: more suitable for mp4;</li>
-<li>libmp3lame: More suitable for flv;</li>
-<li>mp2.</li>
-When the outer `Container` parameter is `hls`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame.</li>
-                     * @return Codec Audio stream encoder.
-When the outer `Container` parameter is `mp3`, the valid value is:
-<li>libmp3lame.</li>
-When the outer `Container` parameter is `ogg` or `flac`, the valid value is:
-<li>flac.</li>
-When the outer `Container` parameter is `m4a`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame;</li>
-<li>ac3.</li>
-When the outer `Container` parameter is `mp4` or `flv`, the valid values include:
-<li>libfdk_aac: more suitable for mp4;</li>
-<li>libmp3lame: More suitable for flv;</li>
-<li>mp2.</li>
-When the outer `Container` parameter is `hls`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame.</li>
+                     * 获取The audio codec.
+If `Container` parameter is `mp3`, the valid value is:
+<li>libmp3lame</li>
+If `Container` is `ogg` or `flac`, the valid value is:
+<li>flac</li>
+If `Container` is `m4a`, the valid values are:
+<li>libfdk_aac</li>
+<li>libmp3lame</li>
+<li>ac3</li>
+If `Container` is `mp4` or `flv`, the valid values are:
+<li>libfdk_aac: more suitable for mp4</li>
+<li>libmp3lame: More suitable for flv</li>
+<li>mp2</li>
+If `Container` is `hls`, the valid values are:
+<li>libfdk_aac</li>
+If `Format` is `HLS` or `MPEG-DASH`, the valid values are:
+<li>libfdk_aac</li>
+                     * @return Codec The audio codec.
+If `Container` parameter is `mp3`, the valid value is:
+<li>libmp3lame</li>
+If `Container` is `ogg` or `flac`, the valid value is:
+<li>flac</li>
+If `Container` is `m4a`, the valid values are:
+<li>libfdk_aac</li>
+<li>libmp3lame</li>
+<li>ac3</li>
+If `Container` is `mp4` or `flv`, the valid values are:
+<li>libfdk_aac: more suitable for mp4</li>
+<li>libmp3lame: More suitable for flv</li>
+<li>mp2</li>
+If `Container` is `hls`, the valid values are:
+<li>libfdk_aac</li>
+If `Format` is `HLS` or `MPEG-DASH`, the valid values are:
+<li>libfdk_aac</li>
                      */
                     std::string GetCodec() const;
 
                     /**
-                     * 设置Audio stream encoder.
-When the outer `Container` parameter is `mp3`, the valid value is:
-<li>libmp3lame.</li>
-When the outer `Container` parameter is `ogg` or `flac`, the valid value is:
-<li>flac.</li>
-When the outer `Container` parameter is `m4a`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame;</li>
-<li>ac3.</li>
-When the outer `Container` parameter is `mp4` or `flv`, the valid values include:
-<li>libfdk_aac: more suitable for mp4;</li>
-<li>libmp3lame: More suitable for flv;</li>
-<li>mp2.</li>
-When the outer `Container` parameter is `hls`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame.</li>
-                     * @param Codec Audio stream encoder.
-When the outer `Container` parameter is `mp3`, the valid value is:
-<li>libmp3lame.</li>
-When the outer `Container` parameter is `ogg` or `flac`, the valid value is:
-<li>flac.</li>
-When the outer `Container` parameter is `m4a`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame;</li>
-<li>ac3.</li>
-When the outer `Container` parameter is `mp4` or `flv`, the valid values include:
-<li>libfdk_aac: more suitable for mp4;</li>
-<li>libmp3lame: More suitable for flv;</li>
-<li>mp2.</li>
-When the outer `Container` parameter is `hls`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame.</li>
+                     * 设置The audio codec.
+If `Container` parameter is `mp3`, the valid value is:
+<li>libmp3lame</li>
+If `Container` is `ogg` or `flac`, the valid value is:
+<li>flac</li>
+If `Container` is `m4a`, the valid values are:
+<li>libfdk_aac</li>
+<li>libmp3lame</li>
+<li>ac3</li>
+If `Container` is `mp4` or `flv`, the valid values are:
+<li>libfdk_aac: more suitable for mp4</li>
+<li>libmp3lame: More suitable for flv</li>
+<li>mp2</li>
+If `Container` is `hls`, the valid values are:
+<li>libfdk_aac</li>
+If `Format` is `HLS` or `MPEG-DASH`, the valid values are:
+<li>libfdk_aac</li>
+                     * @param Codec The audio codec.
+If `Container` parameter is `mp3`, the valid value is:
+<li>libmp3lame</li>
+If `Container` is `ogg` or `flac`, the valid value is:
+<li>flac</li>
+If `Container` is `m4a`, the valid values are:
+<li>libfdk_aac</li>
+<li>libmp3lame</li>
+<li>ac3</li>
+If `Container` is `mp4` or `flv`, the valid values are:
+<li>libfdk_aac: more suitable for mp4</li>
+<li>libmp3lame: More suitable for flv</li>
+<li>mp2</li>
+If `Container` is `hls`, the valid values are:
+<li>libfdk_aac</li>
+If `Format` is `HLS` or `MPEG-DASH`, the valid values are:
+<li>libfdk_aac</li>
                      */
                     void SetCodec(const std::string& _codec);
 
@@ -213,22 +217,23 @@ You cannot set the sound channel as stereo for media files in container formats 
                 private:
 
                     /**
-                     * Audio stream encoder.
-When the outer `Container` parameter is `mp3`, the valid value is:
-<li>libmp3lame.</li>
-When the outer `Container` parameter is `ogg` or `flac`, the valid value is:
-<li>flac.</li>
-When the outer `Container` parameter is `m4a`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame;</li>
-<li>ac3.</li>
-When the outer `Container` parameter is `mp4` or `flv`, the valid values include:
-<li>libfdk_aac: more suitable for mp4;</li>
-<li>libmp3lame: More suitable for flv;</li>
-<li>mp2.</li>
-When the outer `Container` parameter is `hls`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame.</li>
+                     * The audio codec.
+If `Container` parameter is `mp3`, the valid value is:
+<li>libmp3lame</li>
+If `Container` is `ogg` or `flac`, the valid value is:
+<li>flac</li>
+If `Container` is `m4a`, the valid values are:
+<li>libfdk_aac</li>
+<li>libmp3lame</li>
+<li>ac3</li>
+If `Container` is `mp4` or `flv`, the valid values are:
+<li>libfdk_aac: more suitable for mp4</li>
+<li>libmp3lame: More suitable for flv</li>
+<li>mp2</li>
+If `Container` is `hls`, the valid values are:
+<li>libfdk_aac</li>
+If `Format` is `HLS` or `MPEG-DASH`, the valid values are:
+<li>libfdk_aac</li>
                      */
                     std::string m_codec;
                     bool m_codecHasBeenSet;

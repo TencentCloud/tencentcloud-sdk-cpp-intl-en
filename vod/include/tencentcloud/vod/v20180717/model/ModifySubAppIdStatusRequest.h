@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Subapplication ID.
-                     * @return SubAppId Subapplication ID.
+                     * 获取<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置Subapplication ID.
-                     * @param SubAppId Subapplication ID.
+                     * 设置<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+                     * @param SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
 
@@ -97,7 +97,7 @@ You cannot enable a subapplication whose status is “Destroying”. You can ena
                 private:
 
                     /**
-                     * Subapplication ID.
+                     * <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;

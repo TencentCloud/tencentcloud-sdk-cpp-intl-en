@@ -69,6 +69,18 @@ namespace TencentCloud
                     bool TotalStorageHasBeenSet() const;
 
                     /**
+                     * 获取Current Standard storage capacity in bytes.
+                     * @return StandardStorage Current Standard storage capacity in bytes.
+                     */
+                    uint64_t GetStandardStorage() const;
+
+                    /**
+                     * 判断参数 StandardStorage 是否已赋值
+                     * @return StandardStorage 是否已赋值
+                     */
+                    bool StandardStorageHasBeenSet() const;
+
+                    /**
                      * 获取Current Standard_IA storage capacity in bytes.
                      * @return InfrequentStorage Current Standard_IA storage capacity in bytes.
                      */
@@ -81,16 +93,28 @@ namespace TencentCloud
                     bool InfrequentStorageHasBeenSet() const;
 
                     /**
-                     * 获取Current Standard storage capacity in bytes.
-                     * @return StandardStorage Current Standard storage capacity in bytes.
+                     * 获取The current ARCHIVE storage usage in bytes.
+                     * @return ArchiveStorage The current ARCHIVE storage usage in bytes.
                      */
-                    uint64_t GetStandardStorage() const;
+                    uint64_t GetArchiveStorage() const;
 
                     /**
-                     * 判断参数 StandardStorage 是否已赋值
-                     * @return StandardStorage 是否已赋值
+                     * 判断参数 ArchiveStorage 是否已赋值
+                     * @return ArchiveStorage 是否已赋值
                      */
-                    bool StandardStorageHasBeenSet() const;
+                    bool ArchiveStorageHasBeenSet() const;
+
+                    /**
+                     * 获取The current DEEP ARCHIVE storage usage in bytes.
+                     * @return DeepArchiveStorage The current DEEP ARCHIVE storage usage in bytes.
+                     */
+                    uint64_t GetDeepArchiveStorage() const;
+
+                    /**
+                     * 判断参数 DeepArchiveStorage 是否已赋值
+                     * @return DeepArchiveStorage 是否已赋值
+                     */
+                    bool DeepArchiveStorageHasBeenSet() const;
 
                     /**
                      * 获取Storage usage by billing region.
@@ -119,16 +143,28 @@ namespace TencentCloud
                     bool m_totalStorageHasBeenSet;
 
                     /**
+                     * Current Standard storage capacity in bytes.
+                     */
+                    uint64_t m_standardStorage;
+                    bool m_standardStorageHasBeenSet;
+
+                    /**
                      * Current Standard_IA storage capacity in bytes.
                      */
                     uint64_t m_infrequentStorage;
                     bool m_infrequentStorageHasBeenSet;
 
                     /**
-                     * Current Standard storage capacity in bytes.
+                     * The current ARCHIVE storage usage in bytes.
                      */
-                    uint64_t m_standardStorage;
-                    bool m_standardStorageHasBeenSet;
+                    uint64_t m_archiveStorage;
+                    bool m_archiveStorageHasBeenSet;
+
+                    /**
+                     * The current DEEP ARCHIVE storage usage in bytes.
+                     */
+                    uint64_t m_deepArchiveStorage;
+                    bool m_deepArchiveStorageHasBeenSet;
 
                     /**
                      * Storage usage by billing region.
