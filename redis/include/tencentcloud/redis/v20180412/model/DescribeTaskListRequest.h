@@ -223,14 +223,14 @@ namespace TencentCloud
                     bool ResultHasBeenSet() const;
 
                     /**
-                     * 获取Operator UIN
-                     * @return OperatorUin Operator UIN
+                     * 获取The field `OperatorUin` has been disused and replaced by `OperateUin`.
+                     * @return OperatorUin The field `OperatorUin` has been disused and replaced by `OperateUin`.
                      */
                     std::vector<int64_t> GetOperatorUin() const;
 
                     /**
-                     * 设置Operator UIN
-                     * @param OperatorUin Operator UIN
+                     * 设置The field `OperatorUin` has been disused and replaced by `OperateUin`.
+                     * @param OperatorUin The field `OperatorUin` has been disused and replaced by `OperateUin`.
                      */
                     void SetOperatorUin(const std::vector<int64_t>& _operatorUin);
 
@@ -241,14 +241,14 @@ namespace TencentCloud
                     bool OperatorUinHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OperateUin 
+                     * 获取Operator Uin
+                     * @return OperateUin Operator Uin
                      */
                     std::vector<std::string> GetOperateUin() const;
 
                     /**
-                     * 设置
-                     * @param OperateUin 
+                     * 设置Operator Uin
+                     * @param OperateUin Operator Uin
                      */
                     void SetOperateUin(const std::vector<std::string>& _operateUin);
 
@@ -321,13 +321,13 @@ namespace TencentCloud
                     bool m_resultHasBeenSet;
 
                     /**
-                     * Operator UIN
+                     * The field `OperatorUin` has been disused and replaced by `OperateUin`.
                      */
                     std::vector<int64_t> m_operatorUin;
                     bool m_operatorUinHasBeenSet;
 
                     /**
-                     * 
+                     * Operator Uin
                      */
                     std::vector<std::string> m_operateUin;
                     bool m_operateUinHasBeenSet;
