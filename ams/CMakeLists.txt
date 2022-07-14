@@ -34,12 +34,14 @@ set(ams_public_header_model
   include/tencentcloud/ams/v20201229/model/InputInfo.h
   include/tencentcloud/ams/v20201229/model/DescribeTasksResponse.h
   include/tencentcloud/ams/v20201229/model/AudioResultDetailLanguageResult.h
+  include/tencentcloud/ams/v20201229/model/RecognitionResult.h
   include/tencentcloud/ams/v20201229/model/CancelTaskResponse.h
   include/tencentcloud/ams/v20201229/model/AudioResultDetailTextResult.h
   include/tencentcloud/ams/v20201229/model/AudioResult.h
   include/tencentcloud/ams/v20201229/model/AudioResultDetailMoanResult.h
   include/tencentcloud/ams/v20201229/model/TaskData.h
   include/tencentcloud/ams/v20201229/model/MediaInfo.h
+  include/tencentcloud/ams/v20201229/model/Tag.h
   include/tencentcloud/ams/v20201229/model/AudioSegments.h
   )
 
@@ -60,12 +62,14 @@ set(ams_src
   src/v20201229/model/InputInfo.cpp
   src/v20201229/model/DescribeTasksResponse.cpp
   src/v20201229/model/AudioResultDetailLanguageResult.cpp
+  src/v20201229/model/RecognitionResult.cpp
   src/v20201229/model/CancelTaskResponse.cpp
   src/v20201229/model/AudioResultDetailTextResult.cpp
   src/v20201229/model/AudioResult.cpp
   src/v20201229/model/AudioResultDetailMoanResult.cpp
   src/v20201229/model/TaskData.cpp
   src/v20201229/model/MediaInfo.cpp
+  src/v20201229/model/Tag.cpp
   src/v20201229/model/AudioSegments.cpp
   )
 

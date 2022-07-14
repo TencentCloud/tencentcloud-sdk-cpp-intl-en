@@ -39,6 +39,8 @@
 #include <tencentcloud/tem/v20210701/model/DeployApplicationResponse.h>
 #include <tencentcloud/tem/v20210701/model/DescribeApplicationPodsRequest.h>
 #include <tencentcloud/tem/v20210701/model/DescribeApplicationPodsResponse.h>
+#include <tencentcloud/tem/v20210701/model/DescribeApplicationsStatusRequest.h>
+#include <tencentcloud/tem/v20210701/model/DescribeApplicationsStatusResponse.h>
 #include <tencentcloud/tem/v20210701/model/DescribeEnvironmentsRequest.h>
 #include <tencentcloud/tem/v20210701/model/DescribeEnvironmentsResponse.h>
 #include <tencentcloud/tem/v20210701/model/DescribeIngressRequest.h>
@@ -101,6 +103,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeApplicationPodsResponse> DescribeApplicationPodsOutcome;
                 typedef std::future<DescribeApplicationPodsOutcome> DescribeApplicationPodsOutcomeCallable;
                 typedef std::function<void(const TemClient*, const Model::DescribeApplicationPodsRequest&, DescribeApplicationPodsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeApplicationPodsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeApplicationsStatusResponse> DescribeApplicationsStatusOutcome;
+                typedef std::future<DescribeApplicationsStatusOutcome> DescribeApplicationsStatusOutcomeCallable;
+                typedef std::function<void(const TemClient*, const Model::DescribeApplicationsStatusRequest&, DescribeApplicationsStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeApplicationsStatusAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeEnvironmentsResponse> DescribeEnvironmentsOutcome;
                 typedef std::future<DescribeEnvironmentsOutcome> DescribeEnvironmentsOutcomeCallable;
                 typedef std::function<void(const TemClient*, const Model::DescribeEnvironmentsRequest&, DescribeEnvironmentsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeEnvironmentsAsyncHandler;
@@ -214,6 +219,15 @@ namespace TencentCloud
                 DescribeApplicationPodsOutcome DescribeApplicationPods(const Model::DescribeApplicationPodsRequest &request);
                 void DescribeApplicationPodsAsync(const Model::DescribeApplicationPodsRequest& request, const DescribeApplicationPodsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeApplicationPodsOutcomeCallable DescribeApplicationPodsCallable(const Model::DescribeApplicationPodsRequest& request);
+
+                /**
+                 *This API is used to query the status of all applications in an envrionment.
+                 * @param req DescribeApplicationsStatusRequest
+                 * @return DescribeApplicationsStatusOutcome
+                 */
+                DescribeApplicationsStatusOutcome DescribeApplicationsStatus(const Model::DescribeApplicationsStatusRequest &request);
+                void DescribeApplicationsStatusAsync(const Model::DescribeApplicationsStatusRequest& request, const DescribeApplicationsStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeApplicationsStatusOutcomeCallable DescribeApplicationsStatusCallable(const Model::DescribeApplicationsStatusRequest& request);
 
                 /**
                  *This API is used to get the list of tenant environments.

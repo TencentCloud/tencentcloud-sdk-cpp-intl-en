@@ -27,6 +27,7 @@
 #include <tencentcloud/ams/v20201229/model/AudioResultDetailTextResult.h>
 #include <tencentcloud/ams/v20201229/model/AudioResultDetailMoanResult.h>
 #include <tencentcloud/ams/v20201229/model/AudioResultDetailLanguageResult.h>
+#include <tencentcloud/ams/v20201229/model/RecognitionResult.h>
 
 
 namespace TencentCloud
@@ -297,6 +298,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool SubLabelHasBeenSet() const;
 
+                    /**
+                     * 获取List of audio recognition results 
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return RecognitionResults List of audio recognition results 
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::vector<RecognitionResult> GetRecognitionResults() const;
+
+                    /**
+                     * 设置List of audio recognition results 
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param RecognitionResults List of audio recognition results 
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetRecognitionResults(const std::vector<RecognitionResult>& _recognitionResults);
+
+                    /**
+                     * 判断参数 RecognitionResults 是否已赋值
+                     * @return RecognitionResults 是否已赋值
+                     */
+                    bool RecognitionResultsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -378,6 +401,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_subLabel;
                     bool m_subLabelHasBeenSet;
+
+                    /**
+                     * List of audio recognition results 
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::vector<RecognitionResult> m_recognitionResults;
+                    bool m_recognitionResultsHasBeenSet;
 
                 };
             }

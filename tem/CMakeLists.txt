@@ -25,7 +25,7 @@ set(tem_public_header_model
   include/tencentcloud/tem/v20210701/model/DeleteApplicationRequest.h
   include/tencentcloud/tem/v20210701/model/CreateResourceRequest.h
   include/tencentcloud/tem/v20210701/model/RestartApplicationResponse.h
-  include/tencentcloud/tem/v20210701/model/StopApplicationRequest.h
+  include/tencentcloud/tem/v20210701/model/DescribeApplicationsStatusResponse.h
   include/tencentcloud/tem/v20210701/model/HealthCheckConfig.h
   include/tencentcloud/tem/v20210701/model/ModifyEnvironmentRequest.h
   include/tencentcloud/tem/v20210701/model/EsInfo.h
@@ -58,6 +58,7 @@ set(tem_public_header_model
   include/tencentcloud/tem/v20210701/model/CreateCosTokenResponse.h
   include/tencentcloud/tem/v20210701/model/IngressRule.h
   include/tencentcloud/tem/v20210701/model/CronHorizontalAutoscaler.h
+  include/tencentcloud/tem/v20210701/model/DescribeApplicationsStatusRequest.h
   include/tencentcloud/tem/v20210701/model/RollingUpdateApplicationByVersionResponse.h
   include/tencentcloud/tem/v20210701/model/RollingUpdateApplicationByVersionRequest.h
   include/tencentcloud/tem/v20210701/model/RunVersionPod.h
@@ -75,6 +76,7 @@ set(tem_public_header_model
   include/tencentcloud/tem/v20210701/model/StorageMountConf.h
   include/tencentcloud/tem/v20210701/model/PortMapping.h
   include/tencentcloud/tem/v20210701/model/DeployStrategyConf.h
+  include/tencentcloud/tem/v20210701/model/StopApplicationRequest.h
   include/tencentcloud/tem/v20210701/model/DescribeIngressRequest.h
   include/tencentcloud/tem/v20210701/model/CreateCosTokenRequest.h
   include/tencentcloud/tem/v20210701/model/DescribeEnvironmentsRequest.h
@@ -83,6 +85,7 @@ set(tem_public_header_model
   include/tencentcloud/tem/v20210701/model/CronHorizontalAutoscalerSchedule.h
   include/tencentcloud/tem/v20210701/model/DeployApplicationResponse.h
   include/tencentcloud/tem/v20210701/model/StorageConf.h
+  include/tencentcloud/tem/v20210701/model/ServiceVersionBrief.h
   include/tencentcloud/tem/v20210701/model/CreateEnvironmentRequest.h
   include/tencentcloud/tem/v20210701/model/Pair.h
   include/tencentcloud/tem/v20201221/model/MountedSettingConf.h
@@ -148,7 +151,7 @@ set(tem_src
   src/v20210701/model/DeleteApplicationRequest.cpp
   src/v20210701/model/CreateResourceRequest.cpp
   src/v20210701/model/RestartApplicationResponse.cpp
-  src/v20210701/model/StopApplicationRequest.cpp
+  src/v20210701/model/DescribeApplicationsStatusResponse.cpp
   src/v20210701/model/HealthCheckConfig.cpp
   src/v20210701/model/ModifyEnvironmentRequest.cpp
   src/v20210701/model/EsInfo.cpp
@@ -181,6 +184,7 @@ set(tem_src
   src/v20210701/model/CreateCosTokenResponse.cpp
   src/v20210701/model/IngressRule.cpp
   src/v20210701/model/CronHorizontalAutoscaler.cpp
+  src/v20210701/model/DescribeApplicationsStatusRequest.cpp
   src/v20210701/model/RollingUpdateApplicationByVersionResponse.cpp
   src/v20210701/model/RollingUpdateApplicationByVersionRequest.cpp
   src/v20210701/model/RunVersionPod.cpp
@@ -198,6 +202,7 @@ set(tem_src
   src/v20210701/model/StorageMountConf.cpp
   src/v20210701/model/PortMapping.cpp
   src/v20210701/model/DeployStrategyConf.cpp
+  src/v20210701/model/StopApplicationRequest.cpp
   src/v20210701/model/DescribeIngressRequest.cpp
   src/v20210701/model/CreateCosTokenRequest.cpp
   src/v20210701/model/DescribeEnvironmentsRequest.cpp
@@ -206,6 +211,7 @@ set(tem_src
   src/v20210701/model/CronHorizontalAutoscalerSchedule.cpp
   src/v20210701/model/DeployApplicationResponse.cpp
   src/v20210701/model/StorageConf.cpp
+  src/v20210701/model/ServiceVersionBrief.cpp
   src/v20210701/model/CreateEnvironmentRequest.cpp
   src/v20210701/model/Pair.cpp
   src/v20201221/model/MountedSettingConf.cpp
