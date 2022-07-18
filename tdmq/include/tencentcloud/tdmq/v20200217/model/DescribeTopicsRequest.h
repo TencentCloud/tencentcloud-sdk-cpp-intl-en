@@ -80,14 +80,14 @@ namespace TencentCloud
                     bool TopicNameHasBeenSet() const;
 
                     /**
-                     * 获取Offset. If this parameter is left empty, 0 will be used by default.
-                     * @return Offset Offset. If this parameter is left empty, 0 will be used by default.
+                     * 获取Offset, which defaults to 0 if left empty.
+                     * @return Offset Offset, which defaults to 0 if left empty.
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset. If this parameter is left empty, 0 will be used by default.
-                     * @param Offset Offset. If this parameter is left empty, 0 will be used by default.
+                     * 设置Offset, which defaults to 0 if left empty.
+                     * @param Offset Offset, which defaults to 0 if left empty.
                      */
                     void SetOffset(const uint64_t& _offset);
 
@@ -98,14 +98,14 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
-                     * @return Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+                     * 获取The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
+                     * @return Limit The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
-                     * @param Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+                     * 设置The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
+                     * @param Limit The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
                      */
                     void SetLimit(const uint64_t& _limit);
 
@@ -117,37 +117,29 @@ namespace TencentCloud
 
                     /**
                      * 获取Topic type description:
-0: general message;
-1: globally sequential message;
-2: partitionally sequential message;
-3: retry letter queue;
-4: dead letter queue;
-5: transaction message.
+0: Non-persistent and non-partitioned topic;
+1: Non-persistent and partitioned topic;
+2: Persistent and non-partitioned topic;
+3: Persistent and partitioned topic.
                      * @return TopicType Topic type description:
-0: general message;
-1: globally sequential message;
-2: partitionally sequential message;
-3: retry letter queue;
-4: dead letter queue;
-5: transaction message.
+0: Non-persistent and non-partitioned topic;
+1: Non-persistent and partitioned topic;
+2: Persistent and non-partitioned topic;
+3: Persistent and partitioned topic.
                      */
                     uint64_t GetTopicType() const;
 
                     /**
                      * 设置Topic type description:
-0: general message;
-1: globally sequential message;
-2: partitionally sequential message;
-3: retry letter queue;
-4: dead letter queue;
-5: transaction message.
+0: Non-persistent and non-partitioned topic;
+1: Non-persistent and partitioned topic;
+2: Persistent and non-partitioned topic;
+3: Persistent and partitioned topic.
                      * @param TopicType Topic type description:
-0: general message;
-1: globally sequential message;
-2: partitionally sequential message;
-3: retry letter queue;
-4: dead letter queue;
-5: transaction message.
+0: Non-persistent and non-partitioned topic;
+1: Non-persistent and partitioned topic;
+2: Persistent and non-partitioned topic;
+3: Persistent and partitioned topic.
                      */
                     void SetTopicType(const uint64_t& _topicType);
 
@@ -158,14 +150,14 @@ namespace TencentCloud
                     bool TopicTypeHasBeenSet() const;
 
                     /**
-                     * 获取Pulsar cluster ID
-                     * @return ClusterId Pulsar cluster ID
+                     * 获取Pulsar cluster ID.
+                     * @return ClusterId Pulsar cluster ID.
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Pulsar cluster ID
-                     * @param ClusterId Pulsar cluster ID
+                     * 设置Pulsar cluster ID.
+                     * @param ClusterId Pulsar cluster ID.
                      */
                     void SetClusterId(const std::string& _clusterId);
 
@@ -179,11 +171,11 @@ namespace TencentCloud
                      * 获取* TopicName
 Query by topic name for exact search.
 Type: String
-Required: no
+Required: No
                      * @return Filters * TopicName
 Query by topic name for exact search.
 Type: String
-Required: no
+Required: No
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -191,11 +183,11 @@ Required: no
                      * 设置* TopicName
 Query by topic name for exact search.
 Type: String
-Required: no
+Required: No
                      * @param Filters * TopicName
 Query by topic name for exact search.
 Type: String
-Required: no
+Required: No
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
@@ -204,6 +196,32 @@ Required: no
                      * @return Filters 是否已赋值
                      */
                     bool FiltersHasBeenSet() const;
+
+                    /**
+                     * 获取Topic creator:
+1: User
+2: System
+                     * @return TopicCreator Topic creator:
+1: User
+2: System
+                     */
+                    uint64_t GetTopicCreator() const;
+
+                    /**
+                     * 设置Topic creator:
+1: User
+2: System
+                     * @param TopicCreator Topic creator:
+1: User
+2: System
+                     */
+                    void SetTopicCreator(const uint64_t& _topicCreator);
+
+                    /**
+                     * 判断参数 TopicCreator 是否已赋值
+                     * @return TopicCreator 是否已赋值
+                     */
+                    bool TopicCreatorHasBeenSet() const;
 
                 private:
 
@@ -220,31 +238,29 @@ Required: no
                     bool m_topicNameHasBeenSet;
 
                     /**
-                     * Offset. If this parameter is left empty, 0 will be used by default.
+                     * Offset, which defaults to 0 if left empty.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+                     * The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
                      * Topic type description:
-0: general message;
-1: globally sequential message;
-2: partitionally sequential message;
-3: retry letter queue;
-4: dead letter queue;
-5: transaction message.
+0: Non-persistent and non-partitioned topic;
+1: Non-persistent and partitioned topic;
+2: Persistent and non-partitioned topic;
+3: Persistent and partitioned topic.
                      */
                     uint64_t m_topicType;
                     bool m_topicTypeHasBeenSet;
 
                     /**
-                     * Pulsar cluster ID
+                     * Pulsar cluster ID.
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
@@ -253,10 +269,18 @@ Required: no
                      * * TopicName
 Query by topic name for exact search.
 Type: String
-Required: no
+Required: No
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;
+
+                    /**
+                     * Topic creator:
+1: User
+2: System
+                     */
+                    uint64_t m_topicCreator;
+                    bool m_topicCreatorHasBeenSet;
 
                 };
             }

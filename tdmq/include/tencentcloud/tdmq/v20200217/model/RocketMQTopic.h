@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Topic name
-                     * @return Name Topic name
+                     * 获取Topic name.
+                     * @return Name Topic name.
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Topic name
-                     * @param Name Topic name
+                     * 设置Topic name.
+                     * @param Name Topic name.
                      */
                     void SetName(const std::string& _name);
 
@@ -65,18 +65,18 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Remark Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Description.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Remark Description.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetRemark() const;
 
                     /**
-                     * 设置Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Remark Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Description.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Remark Description.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetRemark(const std::string& _remark);
 
@@ -87,14 +87,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取Number of read/write partitions
-                     * @return PartitionNum Number of read/write partitions
+                     * 获取The number of read/write partitions.
+                     * @return PartitionNum The number of read/write partitions.
                      */
                     uint64_t GetPartitionNum() const;
 
                     /**
-                     * 设置Number of read/write partitions
-                     * @param PartitionNum Number of read/write partitions
+                     * 设置The number of read/write partitions.
+                     * @param PartitionNum The number of read/write partitions.
                      */
                     void SetPartitionNum(const uint64_t& _partitionNum);
 
@@ -105,14 +105,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PartitionNumHasBeenSet() const;
 
                     /**
-                     * 获取Creation time in milliseconds
-                     * @return CreateTime Creation time in milliseconds
+                     * 获取Creation time in milliseconds.
+                     * @return CreateTime Creation time in milliseconds.
                      */
                     uint64_t GetCreateTime() const;
 
                     /**
-                     * 设置Creation time in milliseconds
-                     * @param CreateTime Creation time in milliseconds
+                     * 设置Creation time in milliseconds.
+                     * @param CreateTime Creation time in milliseconds.
                      */
                     void SetCreateTime(const uint64_t& _createTime);
 
@@ -123,14 +123,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Creation time in milliseconds
-                     * @return UpdateTime Creation time in milliseconds
+                     * 获取Creation time in milliseconds.
+                     * @return UpdateTime Creation time in milliseconds.
                      */
                     uint64_t GetUpdateTime() const;
 
                     /**
-                     * 设置Creation time in milliseconds
-                     * @param UpdateTime Creation time in milliseconds
+                     * 设置Creation time in milliseconds.
+                     * @param UpdateTime Creation time in milliseconds.
                      */
                     void SetUpdateTime(const uint64_t& _updateTime);
 
@@ -143,32 +143,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Topic name
+                     * Topic name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Description.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * Number of read/write partitions
+                     * The number of read/write partitions.
                      */
                     uint64_t m_partitionNum;
                     bool m_partitionNumHasBeenSet;
 
                     /**
-                     * Creation time in milliseconds
+                     * Creation time in milliseconds.
                      */
                     uint64_t m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Creation time in milliseconds
+                     * Creation time in milliseconds.
                      */
                     uint64_t m_updateTime;
                     bool m_updateTimeHasBeenSet;

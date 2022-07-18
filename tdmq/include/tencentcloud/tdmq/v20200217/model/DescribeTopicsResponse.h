@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Array set of topics.
-                     * @return TopicSets Array set of topics.
+                     * 获取Array of topic sets.
+                     * @return TopicSets Array of topic sets.
                      */
                     std::vector<Topic> GetTopicSets() const;
 
@@ -57,8 +57,8 @@ namespace TencentCloud
                     bool TopicSetsHasBeenSet() const;
 
                     /**
-                     * 获取Number of topics.
-                     * @return TotalCount Number of topics.
+                     * 获取The number of topics.
+                     * @return TotalCount The number of topics.
                      */
                     uint64_t GetTotalCount() const;
 
@@ -71,13 +71,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Array set of topics.
+                     * Array of topic sets.
                      */
                     std::vector<Topic> m_topicSets;
                     bool m_topicSetsHasBeenSet;
 
                     /**
-                     * Number of topics.
+                     * The number of topics.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

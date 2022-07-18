@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool ResourceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Auto-Renewal flag
-                     * @return AutoRenewFlag Auto-Renewal flag
+                     * 获取Auto-renewal flag. 0: normal renewal, 1: auto-renewal, 2: no renewal.
+                     * @return AutoRenewFlag Auto-renewal flag. 0: normal renewal, 1: auto-renewal, 2: no renewal.
                      */
                     int64_t GetAutoRenewFlag() const;
 
                     /**
-                     * 设置Auto-Renewal flag
-                     * @param AutoRenewFlag Auto-Renewal flag
+                     * 设置Auto-renewal flag. 0: normal renewal, 1: auto-renewal, 2: no renewal.
+                     * @param AutoRenewFlag Auto-renewal flag. 0: normal renewal, 1: auto-renewal, 2: no renewal.
                      */
                     void SetAutoRenewFlag(const int64_t& _autoRenewFlag);
 
@@ -87,7 +87,7 @@ namespace TencentCloud
                     bool m_resourceIdsHasBeenSet;
 
                     /**
-                     * Auto-Renewal flag
+                     * Auto-renewal flag. 0: normal renewal, 1: auto-renewal, 2: no renewal.
                      */
                     int64_t m_autoRenewFlag;
                     bool m_autoRenewFlagHasBeenSet;

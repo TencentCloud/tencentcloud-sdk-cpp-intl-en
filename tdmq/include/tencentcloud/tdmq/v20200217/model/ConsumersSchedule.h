@@ -47,18 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Current partition ID.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Partitions Current partition ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取ID of the current partition.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Partitions ID of the current partition.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetPartitions() const;
 
                     /**
-                     * 设置Current partition ID.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Partitions Current partition ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置ID of the current partition.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Partitions ID of the current partition.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetPartitions(const uint64_t& _partitions);
 
@@ -69,18 +69,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PartitionsHasBeenSet() const;
 
                     /**
-                     * 获取Number of messages.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return NumberOfEntries Number of messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取The number of messages.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return NumberOfEntries The number of messages.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetNumberOfEntries() const;
 
                     /**
-                     * 设置Number of messages.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param NumberOfEntries Number of messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置The number of messages.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param NumberOfEntries The number of messages.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetNumberOfEntries(const uint64_t& _numberOfEntries);
 
@@ -91,18 +91,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool NumberOfEntriesHasBeenSet() const;
 
                     /**
-                     * 获取Number of retained messages.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return MsgBacklog Number of retained messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取The number of heaped messages.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MsgBacklog The number of heaped messages.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetMsgBacklog() const;
 
                     /**
-                     * 设置Number of retained messages.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MsgBacklog Number of retained messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置The number of heaped messages.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param MsgBacklog The number of heaped messages.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetMsgBacklog(const uint64_t& _msgBacklog);
 
@@ -113,14 +113,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MsgBacklogHasBeenSet() const;
 
                     /**
-                     * 获取Sum of the numbers of messages delivered by the consumer per second.
-                     * @return MsgRateOut Sum of the numbers of messages delivered by the consumer per second.
+                     * 获取The total number of messages delivered by the consumer per second.
+                     * @return MsgRateOut The total number of messages delivered by the consumer per second.
                      */
                     std::string GetMsgRateOut() const;
 
                     /**
-                     * 设置Sum of the numbers of messages delivered by the consumer per second.
-                     * @param MsgRateOut Sum of the numbers of messages delivered by the consumer per second.
+                     * 设置The total number of messages delivered by the consumer per second.
+                     * @param MsgRateOut The total number of messages delivered by the consumer per second.
                      */
                     void SetMsgRateOut(const std::string& _msgRateOut);
 
@@ -131,14 +131,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MsgRateOutHasBeenSet() const;
 
                     /**
-                     * 获取Number of bytes of messages consumed by the consumer per second.
-                     * @return MsgThroughputOut Number of bytes of messages consumed by the consumer per second.
+                     * 获取The size (in bytes) of messages consumed by the consumer per second.
+                     * @return MsgThroughputOut The size (in bytes) of messages consumed by the consumer per second.
                      */
                     std::string GetMsgThroughputOut() const;
 
                     /**
-                     * 设置Number of bytes of messages consumed by the consumer per second.
-                     * @param MsgThroughputOut Number of bytes of messages consumed by the consumer per second.
+                     * 设置The size (in bytes) of messages consumed by the consumer per second.
+                     * @param MsgThroughputOut The size (in bytes) of messages consumed by the consumer per second.
                      */
                     void SetMsgThroughputOut(const std::string& _msgThroughputOut);
 
@@ -150,17 +150,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Percentage of messages discarded due to timeout.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MsgRateExpired Percentage of messages discarded due to timeout.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetMsgRateExpired() const;
 
                     /**
                      * 设置Percentage of messages discarded due to timeout.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param MsgRateExpired Percentage of messages discarded due to timeout.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetMsgRateExpired(const std::string& _msgRateExpired);
 
@@ -173,41 +173,41 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Current partition ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * ID of the current partition.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_partitions;
                     bool m_partitionsHasBeenSet;
 
                     /**
-                     * Number of messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * The number of messages.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_numberOfEntries;
                     bool m_numberOfEntriesHasBeenSet;
 
                     /**
-                     * Number of retained messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * The number of heaped messages.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_msgBacklog;
                     bool m_msgBacklogHasBeenSet;
 
                     /**
-                     * Sum of the numbers of messages delivered by the consumer per second.
+                     * The total number of messages delivered by the consumer per second.
                      */
                     std::string m_msgRateOut;
                     bool m_msgRateOutHasBeenSet;
 
                     /**
-                     * Number of bytes of messages consumed by the consumer per second.
+                     * The size (in bytes) of messages consumed by the consumer per second.
                      */
                     std::string m_msgThroughputOut;
                     bool m_msgThroughputOutHasBeenSet;
 
                     /**
                      * Percentage of messages discarded due to timeout.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_msgRateExpired;
                     bool m_msgRateExpiredHasBeenSet;

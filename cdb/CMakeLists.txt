@@ -53,6 +53,7 @@ set(cdb_public_header_model
   include/tencentcloud/cdb/v20170320/model/ApplyCDBProxyResponse.h
   include/tencentcloud/cdb/v20170320/model/MasterInfo.h
   include/tencentcloud/cdb/v20170320/model/DescribeBinlogsResponse.h
+  include/tencentcloud/cdb/v20170320/model/StopReplicationResponse.h
   include/tencentcloud/cdb/v20170320/model/ResetRootAccountResponse.h
   include/tencentcloud/cdb/v20170320/model/DeleteParamTemplateResponse.h
   include/tencentcloud/cdb/v20170320/model/ProxyNodeInfo.h
@@ -60,6 +61,7 @@ set(cdb_public_header_model
   include/tencentcloud/cdb/v20170320/model/DescribeDefaultParamsRequest.h
   include/tencentcloud/cdb/v20170320/model/RoGroupAttr.h
   include/tencentcloud/cdb/v20170320/model/DBSwitchInfo.h
+  include/tencentcloud/cdb/v20170320/model/StartReplicationResponse.h
   include/tencentcloud/cdb/v20170320/model/ModifyTimeWindowResponse.h
   include/tencentcloud/cdb/v20170320/model/InitDBInstancesResponse.h
   include/tencentcloud/cdb/v20170320/model/CloseCDBProxyResponse.h
@@ -131,7 +133,7 @@ set(cdb_public_header_model
   include/tencentcloud/cdb/v20170320/model/ModifyInstanceTagRequest.h
   include/tencentcloud/cdb/v20170320/model/CloseWanServiceRequest.h
   include/tencentcloud/cdb/v20170320/model/DeleteAccountsResponse.h
-  include/tencentcloud/cdb/v20170320/model/StartReplicationResponse.h
+  include/tencentcloud/cdb/v20170320/model/OpenAuditServiceResponse.h
   include/tencentcloud/cdb/v20170320/model/DescribeDBInstanceCharsetResponse.h
   include/tencentcloud/cdb/v20170320/model/RestartDBInstancesResponse.h
   include/tencentcloud/cdb/v20170320/model/CreateRoInstanceIpResponse.h
@@ -155,7 +157,7 @@ set(cdb_public_header_model
   include/tencentcloud/cdb/v20170320/model/ModifyInstanceParamResponse.h
   include/tencentcloud/cdb/v20170320/model/DescribeDBImportRecordsResponse.h
   include/tencentcloud/cdb/v20170320/model/DescribeTimeWindowResponse.h
-  include/tencentcloud/cdb/v20170320/model/StopReplicationResponse.h
+  include/tencentcloud/cdb/v20170320/model/OpenAuditServiceRequest.h
   include/tencentcloud/cdb/v20170320/model/BackupItem.h
   include/tencentcloud/cdb/v20170320/model/ModifyCDBProxyVipVPortRequest.h
   include/tencentcloud/cdb/v20170320/model/DescribeCDBProxyRequest.h
@@ -357,6 +359,7 @@ set(cdb_src
   src/v20170320/model/ApplyCDBProxyResponse.cpp
   src/v20170320/model/MasterInfo.cpp
   src/v20170320/model/DescribeBinlogsResponse.cpp
+  src/v20170320/model/StopReplicationResponse.cpp
   src/v20170320/model/ResetRootAccountResponse.cpp
   src/v20170320/model/DeleteParamTemplateResponse.cpp
   src/v20170320/model/ProxyNodeInfo.cpp
@@ -364,6 +367,7 @@ set(cdb_src
   src/v20170320/model/DescribeDefaultParamsRequest.cpp
   src/v20170320/model/RoGroupAttr.cpp
   src/v20170320/model/DBSwitchInfo.cpp
+  src/v20170320/model/StartReplicationResponse.cpp
   src/v20170320/model/ModifyTimeWindowResponse.cpp
   src/v20170320/model/InitDBInstancesResponse.cpp
   src/v20170320/model/CloseCDBProxyResponse.cpp
@@ -435,7 +439,7 @@ set(cdb_src
   src/v20170320/model/ModifyInstanceTagRequest.cpp
   src/v20170320/model/CloseWanServiceRequest.cpp
   src/v20170320/model/DeleteAccountsResponse.cpp
-  src/v20170320/model/StartReplicationResponse.cpp
+  src/v20170320/model/OpenAuditServiceResponse.cpp
   src/v20170320/model/DescribeDBInstanceCharsetResponse.cpp
   src/v20170320/model/RestartDBInstancesResponse.cpp
   src/v20170320/model/CreateRoInstanceIpResponse.cpp
@@ -459,7 +463,7 @@ set(cdb_src
   src/v20170320/model/ModifyInstanceParamResponse.cpp
   src/v20170320/model/DescribeDBImportRecordsResponse.cpp
   src/v20170320/model/DescribeTimeWindowResponse.cpp
-  src/v20170320/model/StopReplicationResponse.cpp
+  src/v20170320/model/OpenAuditServiceRequest.cpp
   src/v20170320/model/BackupItem.cpp
   src/v20170320/model/ModifyCDBProxyVipVPortRequest.cpp
   src/v20170320/model/DescribeCDBProxyRequest.cpp

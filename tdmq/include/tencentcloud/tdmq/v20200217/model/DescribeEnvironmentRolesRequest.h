@@ -44,14 +44,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Environment (namespace) name (required).
-                     * @return EnvironmentId Environment (namespace) name (required).
+                     * 获取Environment/namespace name (required).
+                     * @return EnvironmentId Environment/namespace name (required).
                      */
                     std::string GetEnvironmentId() const;
 
                     /**
-                     * 设置Environment (namespace) name (required).
-                     * @param EnvironmentId Environment (namespace) name (required).
+                     * 设置Environment/namespace name (required).
+                     * @param EnvironmentId Environment/namespace name (required).
                      */
                     void SetEnvironmentId(const std::string& _environmentId);
 
@@ -62,14 +62,14 @@ namespace TencentCloud
                     bool EnvironmentIdHasBeenSet() const;
 
                     /**
-                     * 获取Offset. If this parameter is left empty, 0 will be used by default.
-                     * @return Offset Offset. If this parameter is left empty, 0 will be used by default.
+                     * 获取Offset, which defaults to 0 if left empty.
+                     * @return Offset Offset, which defaults to 0 if left empty.
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset. If this parameter is left empty, 0 will be used by default.
-                     * @param Offset Offset. If this parameter is left empty, 0 will be used by default.
+                     * 设置Offset, which defaults to 0 if left empty.
+                     * @param Offset Offset, which defaults to 0 if left empty.
                      */
                     void SetOffset(const int64_t& _offset);
 
@@ -80,14 +80,14 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
-                     * @return Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+                     * 获取The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
+                     * @return Limit The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
-                     * @param Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+                     * 设置The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
+                     * @param Limit The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
                      */
                     void SetLimit(const int64_t& _limit);
 
@@ -98,14 +98,14 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Pulsar cluster ID (required)
-                     * @return ClusterId Pulsar cluster ID (required)
+                     * 获取Pulsar cluster ID (required).
+                     * @return ClusterId Pulsar cluster ID (required).
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Pulsar cluster ID (required)
-                     * @param ClusterId Pulsar cluster ID (required)
+                     * 设置Pulsar cluster ID (required).
+                     * @param ClusterId Pulsar cluster ID (required).
                      */
                     void SetClusterId(const std::string& _clusterId);
 
@@ -116,14 +116,14 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Role name
-                     * @return RoleName Role name
+                     * 获取Role name.
+                     * @return RoleName Role name.
                      */
                     std::string GetRoleName() const;
 
                     /**
-                     * 设置Role name
-                     * @param RoleName Role name
+                     * 设置Role name.
+                     * @param RoleName Role name.
                      */
                     void SetRoleName(const std::string& _roleName);
 
@@ -137,11 +137,11 @@ namespace TencentCloud
                      * 获取* RoleName
 Filter by role name for exact query.
 Type: String
-Required: no
+Required: No
                      * @return Filters * RoleName
 Filter by role name for exact query.
 Type: String
-Required: no
+Required: No
                      */
                     std::vector<Filter> GetFilters() const;
 
@@ -149,11 +149,11 @@ Required: no
                      * 设置* RoleName
 Filter by role name for exact query.
 Type: String
-Required: no
+Required: No
                      * @param Filters * RoleName
 Filter by role name for exact query.
 Type: String
-Required: no
+Required: No
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
@@ -166,31 +166,31 @@ Required: no
                 private:
 
                     /**
-                     * Environment (namespace) name (required).
+                     * Environment/namespace name (required).
                      */
                     std::string m_environmentId;
                     bool m_environmentIdHasBeenSet;
 
                     /**
-                     * Offset. If this parameter is left empty, 0 will be used by default.
+                     * Offset, which defaults to 0 if left empty.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+                     * The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Pulsar cluster ID (required)
+                     * Pulsar cluster ID (required).
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Role name
+                     * Role name.
                      */
                     std::string m_roleName;
                     bool m_roleNameHasBeenSet;
@@ -199,7 +199,7 @@ Required: no
                      * * RoleName
 Filter by role name for exact query.
 Type: String
-Required: no
+Required: No
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

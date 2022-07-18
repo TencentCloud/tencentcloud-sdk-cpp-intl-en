@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Query offset
-                     * @return Offset Query offset
+                     * 获取Offset for query.
+                     * @return Offset Offset for query.
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Query offset
-                     * @param Offset Query offset
+                     * 设置Offset for query.
+                     * @param Offset Offset for query.
                      */
                     void SetOffset(const uint64_t& _offset);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Query limit
-                     * @return Limit Query limit
+                     * 获取Query limit.
+                     * @return Limit Query limit.
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Query limit
-                     * @param Limit Query limit
+                     * 设置Query limit.
+                     * @param Limit Query limit.
                      */
                     void SetLimit(const uint64_t& _limit);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterId Cluster ID
+                     * 获取Cluster ID.
+                     * @return ClusterId Cluster ID.
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * 设置Cluster ID.
+                     * @param ClusterId Cluster ID.
                      */
                     void SetClusterId(const std::string& _clusterId);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Namespace
-                     * @return NamespaceId Namespace
+                     * 获取Namespace.
+                     * @return NamespaceId Namespace.
                      */
                     std::string GetNamespaceId() const;
 
                     /**
-                     * 设置Namespace
-                     * @param NamespaceId Namespace
+                     * 设置Namespace.
+                     * @param NamespaceId Namespace.
                      */
                     void SetNamespaceId(const std::string& _namespaceId);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool NamespaceIdHasBeenSet() const;
 
                     /**
-                     * 获取Filter by topic type. Valid values: Normal, GlobalOrder, PartitionedOrder, Transaction.
-                     * @return FilterType Filter by topic type. Valid values: Normal, GlobalOrder, PartitionedOrder, Transaction.
+                     * 获取Filter by topic type. Valid values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`.
+                     * @return FilterType Filter by topic type. Valid values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`.
                      */
                     std::vector<std::string> GetFilterType() const;
 
                     /**
-                     * 设置Filter by topic type. Valid values: Normal, GlobalOrder, PartitionedOrder, Transaction.
-                     * @param FilterType Filter by topic type. Valid values: Normal, GlobalOrder, PartitionedOrder, Transaction.
+                     * 设置Filter by topic type. Valid values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`.
+                     * @param FilterType Filter by topic type. Valid values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`.
                      */
                     void SetFilterType(const std::vector<std::string>& _filterType);
 
@@ -153,31 +153,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Query offset
+                     * Offset for query.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Query limit
+                     * Query limit.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Cluster ID
+                     * Cluster ID.
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Namespace
+                     * Namespace.
                      */
                     std::string m_namespaceId;
                     bool m_namespaceIdHasBeenSet;
 
                     /**
-                     * Filter by topic type. Valid values: Normal, GlobalOrder, PartitionedOrder, Transaction.
+                     * Filter by topic type. Valid values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`.
                      */
                     std::vector<std::string> m_filterType;
                     bool m_filterTypeHasBeenSet;

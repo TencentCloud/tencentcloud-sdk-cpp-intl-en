@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取Memory
-                     * @return Memory Memory
+                     * 获取Memory in GB
+                     * @return Memory Memory in GB
                      */
                     int64_t GetMemory() const;
 
                     /**
-                     * 设置Memory
-                     * @param Memory Memory
+                     * 设置Memory in GB
+                     * @param Memory Memory in GB
                      */
                     void SetMemory(const int64_t& _memory);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取Number of added read-only instances
-                     * @return ReadOnlyCount Number of added read-only instances
+                     * 获取Number of added read-only instances. Value range: (0,16].
+                     * @return ReadOnlyCount Number of added read-only instances. Value range: (0,16].
                      */
                     int64_t GetReadOnlyCount() const;
 
                     /**
-                     * 设置Number of added read-only instances
-                     * @param ReadOnlyCount Number of added read-only instances
+                     * 设置Number of added read-only instances. Value range: (0,16].
+                     * @param ReadOnlyCount Number of added read-only instances. Value range: (0,16].
                      */
                     void SetReadOnlyCount(const int64_t& _readOnlyCount);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool ReadOnlyCountHasBeenSet() const;
 
                     /**
-                     * 获取Instance group ID, which is used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created.
-                     * @return InstanceGrpId Instance group ID, which is used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created.
+                     * 获取Instance group ID, which is used when you add an instance to an existing RO group. If this parameter is left empty, an RO group will be created. We recommend you not pass in this value on the current version.
+                     * @return InstanceGrpId Instance group ID, which is used when you add an instance to an existing RO group. If this parameter is left empty, an RO group will be created. We recommend you not pass in this value on the current version.
                      */
                     std::string GetInstanceGrpId() const;
 
                     /**
-                     * 设置Instance group ID, which is used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created.
-                     * @param InstanceGrpId Instance group ID, which is used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created.
+                     * 设置Instance group ID, which is used when you add an instance to an existing RO group. If this parameter is left empty, an RO group will be created. We recommend you not pass in this value on the current version.
+                     * @param InstanceGrpId Instance group ID, which is used when you add an instance to an existing RO group. If this parameter is left empty, an RO group will be created. We recommend you not pass in this value on the current version.
                      */
                     void SetInstanceGrpId(const std::string& _instanceGrpId);
 
@@ -133,14 +133,14 @@ namespace TencentCloud
                     bool InstanceGrpIdHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID
-                     * @return VpcId VPC ID
+                     * 获取VPC ID. This parameter has been disused.
+                     * @return VpcId VPC ID. This parameter has been disused.
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置VPC ID
-                     * @param VpcId VPC ID
+                     * 设置VPC ID. This parameter has been disused.
+                     * @param VpcId VPC ID. This parameter has been disused.
                      */
                     void SetVpcId(const std::string& _vpcId);
 
@@ -151,14 +151,14 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Subnet ID
-                     * @return SubnetId Subnet ID
+                     * 获取Subnet ID. If `VpcId` is set, `SubnetId` is required. This parameter has been disused.
+                     * @return SubnetId Subnet ID. If `VpcId` is set, `SubnetId` is required. This parameter has been disused.
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置Subnet ID
-                     * @param SubnetId Subnet ID
+                     * 设置Subnet ID. If `VpcId` is set, `SubnetId` is required. This parameter has been disused.
+                     * @param SubnetId Subnet ID. If `VpcId` is set, `SubnetId` is required. This parameter has been disused.
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
@@ -169,14 +169,14 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Port used when adding RO group
-                     * @return Port Port used when adding RO group
+                     * 获取The port used when adding an RO group. Value range: [0,65535).
+                     * @return Port The port used when adding an RO group. Value range: [0,65535).
                      */
                     int64_t GetPort() const;
 
                     /**
-                     * 设置Port used when adding RO group
-                     * @param Port Port used when adding RO group
+                     * 设置The port used when adding an RO group. Value range: [0,65535).
+                     * @param Port The port used when adding an RO group. Value range: [0,65535).
                      */
                     void SetPort(const int64_t& _port);
 
@@ -187,14 +187,14 @@ namespace TencentCloud
                     bool PortHasBeenSet() const;
 
                     /**
-                     * 获取Instance name
-                     * @return InstanceName Instance name
+                     * 获取Instance name. String length range: [0,64).
+                     * @return InstanceName Instance name. String length range: [0,64).
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name
-                     * @param InstanceName Instance name
+                     * 设置Instance name. String length range: [0,64).
+                     * @param InstanceName Instance name. String length range: [0,64).
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
@@ -245,14 +245,14 @@ namespace TencentCloud
                     bool DbTypeHasBeenSet() const;
 
                     /**
-                     * 获取Order source
-                     * @return OrderSource Order source
+                     * 获取Order source. String length range: [0,64).
+                     * @return OrderSource Order source. String length range: [0,64).
                      */
                     std::string GetOrderSource() const;
 
                     /**
-                     * 设置Order source
-                     * @param OrderSource Order source
+                     * 设置Order source. String length range: [0,64).
+                     * @param OrderSource Order source. String length range: [0,64).
                      */
                     void SetOrderSource(const std::string& _orderSource);
 
@@ -295,43 +295,43 @@ namespace TencentCloud
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * Memory
+                     * Memory in GB
                      */
                     int64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * Number of added read-only instances
+                     * Number of added read-only instances. Value range: (0,16].
                      */
                     int64_t m_readOnlyCount;
                     bool m_readOnlyCountHasBeenSet;
 
                     /**
-                     * Instance group ID, which is used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created.
+                     * Instance group ID, which is used when you add an instance to an existing RO group. If this parameter is left empty, an RO group will be created. We recommend you not pass in this value on the current version.
                      */
                     std::string m_instanceGrpId;
                     bool m_instanceGrpIdHasBeenSet;
 
                     /**
-                     * VPC ID
+                     * VPC ID. This parameter has been disused.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Subnet ID
+                     * Subnet ID. If `VpcId` is set, `SubnetId` is required. This parameter has been disused.
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * Port used when adding RO group
+                     * The port used when adding an RO group. Value range: [0,65535).
                      */
                     int64_t m_port;
                     bool m_portHasBeenSet;
 
                     /**
-                     * Instance name
+                     * Instance name. String length range: [0,64).
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
@@ -350,7 +350,7 @@ namespace TencentCloud
                     bool m_dbTypeHasBeenSet;
 
                     /**
-                     * Order source
+                     * Order source. String length range: [0,64).
                      */
                     std::string m_orderSource;
                     bool m_orderSourceHasBeenSet;

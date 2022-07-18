@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Filters subscriptions
+                * Filter subscriptions
                 */
                 class FilterSubscription : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to display only subscriptions that include real consumers.
-                     * @return ConsumerHasCount Whether to display only subscriptions that include real consumers.
+                     * 获取Whether to only display subscriptions that include real consumers.
+                     * @return ConsumerHasCount Whether to only display subscriptions that include real consumers.
                      */
                     bool GetConsumerHasCount() const;
 
                     /**
-                     * 设置Whether to display only subscriptions that include real consumers.
-                     * @param ConsumerHasCount Whether to display only subscriptions that include real consumers.
+                     * 设置Whether to only display subscriptions that include real consumers.
+                     * @param ConsumerHasCount Whether to only display subscriptions that include real consumers.
                      */
                     void SetConsumerHasCount(const bool& _consumerHasCount);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool ConsumerHasCountHasBeenSet() const;
 
                     /**
-                     * 获取Whether to display only subscriptions with retained messages.
-                     * @return ConsumerHasBacklog Whether to display only subscriptions with retained messages.
+                     * 获取Whether to only display subscriptions with heaped messages.
+                     * @return ConsumerHasBacklog Whether to only display subscriptions with heaped messages.
                      */
                     bool GetConsumerHasBacklog() const;
 
                     /**
-                     * 设置Whether to display only subscriptions with retained messages.
-                     * @param ConsumerHasBacklog Whether to display only subscriptions with retained messages.
+                     * 设置Whether to only display subscriptions with heaped messages.
+                     * @param ConsumerHasBacklog Whether to only display subscriptions with heaped messages.
                      */
                     void SetConsumerHasBacklog(const bool& _consumerHasBacklog);
 
@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool ConsumerHasBacklogHasBeenSet() const;
 
                     /**
-                     * 获取Whether to display only subscriptions with messages discarded after expiration.
-                     * @return ConsumerHasExpired Whether to display only subscriptions with messages discarded after expiration.
+                     * 获取Whether to only display subscriptions with messages discarded after expiration.
+                     * @return ConsumerHasExpired Whether to only display subscriptions with messages discarded after expiration.
                      */
                     bool GetConsumerHasExpired() const;
 
                     /**
-                     * 设置Whether to display only subscriptions with messages discarded after expiration.
-                     * @param ConsumerHasExpired Whether to display only subscriptions with messages discarded after expiration.
+                     * 设置Whether to only display subscriptions with messages discarded after expiration.
+                     * @param ConsumerHasExpired Whether to only display subscriptions with messages discarded after expiration.
                      */
                     void SetConsumerHasExpired(const bool& _consumerHasExpired);
 
@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool ConsumerHasExpiredHasBeenSet() const;
 
                     /**
-                     * 获取Filter by subscription name for exact search.
-                     * @return SubscriptionNames Filter by subscription name for exact search.
+                     * 获取Filter by subscription name for exact query.
+                     * @return SubscriptionNames Filter by subscription name for exact query.
                      */
                     std::vector<std::string> GetSubscriptionNames() const;
 
                     /**
-                     * 设置Filter by subscription name for exact search.
-                     * @param SubscriptionNames Filter by subscription name for exact search.
+                     * 设置Filter by subscription name for exact query.
+                     * @param SubscriptionNames Filter by subscription name for exact query.
                      */
                     void SetSubscriptionNames(const std::vector<std::string>& _subscriptionNames);
 
@@ -121,25 +121,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to display only subscriptions that include real consumers.
+                     * Whether to only display subscriptions that include real consumers.
                      */
                     bool m_consumerHasCount;
                     bool m_consumerHasCountHasBeenSet;
 
                     /**
-                     * Whether to display only subscriptions with retained messages.
+                     * Whether to only display subscriptions with heaped messages.
                      */
                     bool m_consumerHasBacklog;
                     bool m_consumerHasBacklogHasBeenSet;
 
                     /**
-                     * Whether to display only subscriptions with messages discarded after expiration.
+                     * Whether to only display subscriptions with messages discarded after expiration.
                      */
                     bool m_consumerHasExpired;
                     bool m_consumerHasExpiredHasBeenSet;
 
                     /**
-                     * Filter by subscription name for exact search.
+                     * Filter by subscription name for exact query.
                      */
                     std::vector<std::string> m_subscriptionNames;
                     bool m_subscriptionNamesHasBeenSet;

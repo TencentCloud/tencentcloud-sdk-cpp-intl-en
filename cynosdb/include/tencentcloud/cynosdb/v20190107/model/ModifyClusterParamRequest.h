@@ -62,14 +62,14 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取The list of parameters to be modified
-                     * @return ParamList The list of parameters to be modified
+                     * 获取List of the parameters to be modified. Each element in the list is a combination of `ParamName`, `CurrentValue`, and `OldValue`.
+                     * @return ParamList List of the parameters to be modified. Each element in the list is a combination of `ParamName`, `CurrentValue`, and `OldValue`.
                      */
                     std::vector<ParamItem> GetParamList() const;
 
                     /**
-                     * 设置The list of parameters to be modified
-                     * @param ParamList The list of parameters to be modified
+                     * 设置List of the parameters to be modified. Each element in the list is a combination of `ParamName`, `CurrentValue`, and `OldValue`.
+                     * @param ParamList List of the parameters to be modified. Each element in the list is a combination of `ParamName`, `CurrentValue`, and `OldValue`.
                      */
                     void SetParamList(const std::vector<ParamItem>& _paramList);
 
@@ -106,7 +106,7 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * The list of parameters to be modified
+                     * List of the parameters to be modified. Each element in the list is a combination of `ParamName`, `CurrentValue`, and `OldValue`.
                      */
                     std::vector<ParamItem> m_paramList;
                     bool m_paramListHasBeenSet;

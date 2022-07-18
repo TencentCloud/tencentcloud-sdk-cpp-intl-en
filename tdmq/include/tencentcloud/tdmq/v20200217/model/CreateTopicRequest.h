@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool TopicNameHasBeenSet() const;
 
                     /**
-                     * 获取0: non-partitioned topic; other values: number of partitions in the partitioned topic (up to 128).
-                     * @return Partitions 0: non-partitioned topic; other values: number of partitions in the partitioned topic (up to 128).
+                     * 获取The value “1” indicates a non-partitioned topic (a topic with no partitions) will be created. A value between 1 (exclusive) and 128 (inclusive) indicates the partition count of a partitioned topic.
+                     * @return Partitions The value “1” indicates a non-partitioned topic (a topic with no partitions) will be created. A value between 1 (exclusive) and 128 (inclusive) indicates the partition count of a partitioned topic.
                      */
                     uint64_t GetPartitions() const;
 
                     /**
-                     * 设置0: non-partitioned topic; other values: number of partitions in the partitioned topic (up to 128).
-                     * @param Partitions 0: non-partitioned topic; other values: number of partitions in the partitioned topic (up to 128).
+                     * 设置The value “1” indicates a non-partitioned topic (a topic with no partitions) will be created. A value between 1 (exclusive) and 128 (inclusive) indicates the partition count of a partitioned topic.
+                     * @param Partitions The value “1” indicates a non-partitioned topic (a topic with no partitions) will be created. A value between 1 (exclusive) and 128 (inclusive) indicates the partition count of a partitioned topic.
                      */
                     void SetPartitions(const uint64_t& _partitions);
 
@@ -115,30 +115,34 @@ namespace TencentCloud
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取0: general message;
-1: globally sequential message;
-2: partitionally sequential message;
-3: retry letter queue;
-4: dead letter queue.
-                     * @return TopicType 0: general message;
-1: globally sequential message;
-2: partitionally sequential message;
-3: retry letter queue;
-4: dead letter queue.
+                     * 获取This input parameter will be disused soon. You can use `PulsarTopicType` instead.
+0: General message;
+1: Globally sequential message;
+2: Partitionally sequential message;
+3: Retry letter topic;
+4: Dead letter topic.
+                     * @return TopicType This input parameter will be disused soon. You can use `PulsarTopicType` instead.
+0: General message;
+1: Globally sequential message;
+2: Partitionally sequential message;
+3: Retry letter topic;
+4: Dead letter topic.
                      */
                     uint64_t GetTopicType() const;
 
                     /**
-                     * 设置0: general message;
-1: globally sequential message;
-2: partitionally sequential message;
-3: retry letter queue;
-4: dead letter queue.
-                     * @param TopicType 0: general message;
-1: globally sequential message;
-2: partitionally sequential message;
-3: retry letter queue;
-4: dead letter queue.
+                     * 设置This input parameter will be disused soon. You can use `PulsarTopicType` instead.
+0: General message;
+1: Globally sequential message;
+2: Partitionally sequential message;
+3: Retry letter topic;
+4: Dead letter topic.
+                     * @param TopicType This input parameter will be disused soon. You can use `PulsarTopicType` instead.
+0: General message;
+1: Globally sequential message;
+2: Partitionally sequential message;
+3: Retry letter topic;
+4: Dead letter topic.
                      */
                     void SetTopicType(const uint64_t& _topicType);
 
@@ -215,7 +219,7 @@ namespace TencentCloud
                     bool m_topicNameHasBeenSet;
 
                     /**
-                     * 0: non-partitioned topic; other values: number of partitions in the partitioned topic (up to 128).
+                     * The value “1” indicates a non-partitioned topic (a topic with no partitions) will be created. A value between 1 (exclusive) and 128 (inclusive) indicates the partition count of a partitioned topic.
                      */
                     uint64_t m_partitions;
                     bool m_partitionsHasBeenSet;
@@ -227,11 +231,12 @@ namespace TencentCloud
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * 0: general message;
-1: globally sequential message;
-2: partitionally sequential message;
-3: retry letter queue;
-4: dead letter queue.
+                     * This input parameter will be disused soon. You can use `PulsarTopicType` instead.
+0: General message;
+1: Globally sequential message;
+2: Partitionally sequential message;
+3: Retry letter topic;
+4: Dead letter topic.
                      */
                     uint64_t m_topicType;
                     bool m_topicTypeHasBeenSet;

@@ -44,14 +44,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Engine type. Valid values: MYSQL, POSTGRESQL
-                     * @return DbType Engine type. Valid values: MYSQL, POSTGRESQL
+                     * 获取Engine type. Currently, `MYSQL` is supported.
+                     * @return DbType Engine type. Currently, `MYSQL` is supported.
                      */
                     std::string GetDbType() const;
 
                     /**
-                     * 设置Engine type. Valid values: MYSQL, POSTGRESQL
-                     * @param DbType Engine type. Valid values: MYSQL, POSTGRESQL
+                     * 设置Engine type. Currently, `MYSQL` is supported.
+                     * @param DbType Engine type. Currently, `MYSQL` is supported.
                      */
                     void SetDbType(const std::string& _dbType);
 
@@ -170,7 +170,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Engine type. Valid values: MYSQL, POSTGRESQL
+                     * Engine type. Currently, `MYSQL` is supported.
                      */
                     std::string m_dbType;
                     bool m_dbTypeHasBeenSet;

@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterId Cluster ID
+                     * 获取Cluster ID.
+                     * @return ClusterId Cluster ID.
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * 设置Cluster ID.
+                     * @param ClusterId Cluster ID.
                      */
                     void SetClusterId(const std::string& _clusterId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Offset
-                     * @return Offset Offset
+                     * 获取Offset.
+                     * @return Offset Offset.
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset
-                     * @param Offset Offset
+                     * 设置Offset.
+                     * @param Offset Offset.
                      */
                     void SetOffset(const uint64_t& _offset);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number
-                     * @return Limit Maximum number
+                     * 获取The max number of returned results.
+                     * @return Limit The max number of returned results.
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Maximum number
-                     * @param Limit Maximum number
+                     * 设置The max number of returned results.
+                     * @param Limit The max number of returned results.
                      */
                     void SetLimit(const uint64_t& _limit);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Search by name
-                     * @return NameKeyword Search by name
+                     * 获取Search by name.
+                     * @return NameKeyword Search by name.
                      */
                     std::string GetNameKeyword() const;
 
                     /**
-                     * 设置Search by name
-                     * @param NameKeyword Search by name
+                     * 设置Search by name.
+                     * @param NameKeyword Search by name.
                      */
                     void SetNameKeyword(const std::string& _nameKeyword);
 
@@ -117,25 +117,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster ID
+                     * Cluster ID.
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Offset
+                     * Offset.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Maximum number
+                     * The max number of returned results.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Search by name
+                     * Search by name.
                      */
                     std::string m_nameKeyword;
                     bool m_nameKeywordHasBeenSet;

@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool TopicNameHasBeenSet() const;
 
                     /**
-                     * 获取Message content
-                     * @return MsgContent Message content
+                     * 获取Message content. The total message size is up to 1,024 KB.
+                     * @return MsgContent Message content. The total message size is up to 1,024 KB.
                      */
                     std::string GetMsgContent() const;
 
                     /**
-                     * 设置Message content
-                     * @param MsgContent Message content
+                     * 设置Message content. The total message size is up to 1,024 KB.
+                     * @param MsgContent Message content. The total message size is up to 1,024 KB.
                      */
                     void SetMsgContent(const std::string& _msgContent);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool MsgContentHasBeenSet() const;
 
                     /**
-                     * 获取Message tag
-                     * @return MsgTag Message tag
+                     * 获取Message tag. You can pass in multiple tags or a single route. Each tag or route can contain up to 64 characters.
+                     * @return MsgTag Message tag. You can pass in multiple tags or a single route. Each tag or route can contain up to 64 characters.
                      */
                     std::vector<std::string> GetMsgTag() const;
 
                     /**
-                     * 设置Message tag
-                     * @param MsgTag Message tag
+                     * 设置Message tag. You can pass in multiple tags or a single route. Each tag or route can contain up to 64 characters.
+                     * @param MsgTag Message tag. You can pass in multiple tags or a single route. Each tag or route can contain up to 64 characters.
                      */
                     void SetMsgTag(const std::vector<std::string>& _msgTag);
 
@@ -105,13 +105,13 @@ namespace TencentCloud
                     bool m_topicNameHasBeenSet;
 
                     /**
-                     * Message content
+                     * Message content. The total message size is up to 1,024 KB.
                      */
                     std::string m_msgContent;
                     bool m_msgContentHasBeenSet;
 
                     /**
-                     * Message tag
+                     * Message tag. You can pass in multiple tags or a single route. Each tag or route can contain up to 64 characters.
                      */
                     std::vector<std::string> m_msgTag;
                     bool m_msgTagHasBeenSet;

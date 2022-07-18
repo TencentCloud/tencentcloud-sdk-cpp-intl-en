@@ -45,10 +45,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of topics
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TopicList List of topics
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Topic list.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TopicList Topic list.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<CmqTopic> GetTopicList() const;
 
@@ -59,8 +59,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TopicListHasBeenSet() const;
 
                     /**
-                     * 获取Total number of topics
-                     * @return TotalCount Total number of topics
+                     * 获取The total number of topics.
+                     * @return TotalCount The total number of topics.
                      */
                     uint64_t GetTotalCount() const;
 
@@ -73,14 +73,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * List of topics
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Topic list.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<CmqTopic> m_topicList;
                     bool m_topicListHasBeenSet;
 
                     /**
-                     * Total number of topics
+                     * The total number of topics.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

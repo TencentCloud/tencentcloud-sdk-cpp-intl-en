@@ -44,14 +44,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Set of topics. Up to 20 topics can be deleted at a time.
-                     * @return TopicSets Set of topics. Up to 20 topics can be deleted at a time.
+                     * 获取Topic set. Up to 20 topics can be deleted at a time.
+                     * @return TopicSets Topic set. Up to 20 topics can be deleted at a time.
                      */
                     std::vector<TopicRecord> GetTopicSets() const;
 
                     /**
-                     * 设置Set of topics. Up to 20 topics can be deleted at a time.
-                     * @param TopicSets Set of topics. Up to 20 topics can be deleted at a time.
+                     * 设置Topic set. Up to 20 topics can be deleted at a time.
+                     * @param TopicSets Topic set. Up to 20 topics can be deleted at a time.
                      */
                     void SetTopicSets(const std::vector<TopicRecord>& _topicSets);
 
@@ -98,14 +98,14 @@ namespace TencentCloud
                     bool EnvironmentIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to force deletion. Default value: false
-                     * @return Force Whether to force deletion. Default value: false
+                     * 获取Whether to forcibly delete a topic. Default value: `false`.
+                     * @return Force Whether to forcibly delete a topic. Default value: `false`.
                      */
                     bool GetForce() const;
 
                     /**
-                     * 设置Whether to force deletion. Default value: false
-                     * @param Force Whether to force deletion. Default value: false
+                     * 设置Whether to forcibly delete a topic. Default value: `false`.
+                     * @param Force Whether to forcibly delete a topic. Default value: `false`.
                      */
                     void SetForce(const bool& _force);
 
@@ -118,7 +118,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Set of topics. Up to 20 topics can be deleted at a time.
+                     * Topic set. Up to 20 topics can be deleted at a time.
                      */
                     std::vector<TopicRecord> m_topicSets;
                     bool m_topicSetsHasBeenSet;
@@ -136,7 +136,7 @@ namespace TencentCloud
                     bool m_environmentIdHasBeenSet;
 
                     /**
-                     * Whether to force deletion. Default value: false
+                     * Whether to forcibly delete a topic. Default value: `false`.
                      */
                     bool m_force;
                     bool m_forceHasBeenSet;

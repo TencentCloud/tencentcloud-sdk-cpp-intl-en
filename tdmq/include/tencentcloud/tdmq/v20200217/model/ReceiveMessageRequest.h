@@ -114,6 +114,60 @@ namespace TencentCloud
                      */
                     bool SubInitialPositionHasBeenSet() const;
 
+                    /**
+                     * 获取This parameter is used to specify the maximum number of received messages in a batch for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+                     * @return MaxNumMessages This parameter is used to specify the maximum number of received messages in a batch for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+                     */
+                    int64_t GetMaxNumMessages() const;
+
+                    /**
+                     * 设置This parameter is used to specify the maximum number of received messages in a batch for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+                     * @param MaxNumMessages This parameter is used to specify the maximum number of received messages in a batch for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+                     */
+                    void SetMaxNumMessages(const int64_t& _maxNumMessages);
+
+                    /**
+                     * 判断参数 MaxNumMessages 是否已赋值
+                     * @return MaxNumMessages 是否已赋值
+                     */
+                    bool MaxNumMessagesHasBeenSet() const;
+
+                    /**
+                     * 获取This parameter is used to specify the maximum body size (in bytes) of received messages in a batch for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+                     * @return MaxNumBytes This parameter is used to specify the maximum body size (in bytes) of received messages in a batch for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+                     */
+                    int64_t GetMaxNumBytes() const;
+
+                    /**
+                     * 设置This parameter is used to specify the maximum body size (in bytes) of received messages in a batch for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+                     * @param MaxNumBytes This parameter is used to specify the maximum body size (in bytes) of received messages in a batch for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+                     */
+                    void SetMaxNumBytes(const int64_t& _maxNumBytes);
+
+                    /**
+                     * 判断参数 MaxNumBytes 是否已赋值
+                     * @return MaxNumBytes 是否已赋值
+                     */
+                    bool MaxNumBytesHasBeenSet() const;
+
+                    /**
+                     * 获取This parameter is used to specify the maximum wait timeout (in milliseconds) for receiving a batch of messages for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+                     * @return Timeout This parameter is used to specify the maximum wait timeout (in milliseconds) for receiving a batch of messages for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+                     */
+                    int64_t GetTimeout() const;
+
+                    /**
+                     * 设置This parameter is used to specify the maximum wait timeout (in milliseconds) for receiving a batch of messages for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+                     * @param Timeout This parameter is used to specify the maximum wait timeout (in milliseconds) for receiving a batch of messages for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+                     */
+                    void SetTimeout(const int64_t& _timeout);
+
+                    /**
+                     * 判断参数 Timeout 是否已赋值
+                     * @return Timeout 是否已赋值
+                     */
+                    bool TimeoutHasBeenSet() const;
+
                 private:
 
                     /**
@@ -139,6 +193,24 @@ namespace TencentCloud
                      */
                     std::string m_subInitialPosition;
                     bool m_subInitialPositionHasBeenSet;
+
+                    /**
+                     * This parameter is used to specify the maximum number of received messages in a batch for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+                     */
+                    int64_t m_maxNumMessages;
+                    bool m_maxNumMessagesHasBeenSet;
+
+                    /**
+                     * This parameter is used to specify the maximum body size (in bytes) of received messages in a batch for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+                     */
+                    int64_t m_maxNumBytes;
+                    bool m_maxNumBytesHasBeenSet;
+
+                    /**
+                     * This parameter is used to specify the maximum wait timeout (in milliseconds) for receiving a batch of messages for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+                     */
+                    int64_t m_timeout;
+                    bool m_timeoutHasBeenSet;
 
                 };
             }

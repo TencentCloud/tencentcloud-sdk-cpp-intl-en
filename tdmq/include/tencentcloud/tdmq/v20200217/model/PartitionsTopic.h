@@ -48,17 +48,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Average size of the messages published in the last interval in bytes.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AverageMsgSize Average size of the messages published in the last interval in bytes.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetAverageMsgSize() const;
 
                     /**
                      * 设置Average size of the messages published in the last interval in bytes.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param AverageMsgSize Average size of the messages published in the last interval in bytes.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetAverageMsgSize(const std::string& _averageMsgSize);
 
@@ -69,18 +69,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool AverageMsgSizeHasBeenSet() const;
 
                     /**
-                     * 获取Number of consumers.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ConsumerCount Number of consumers.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取The number of consumers.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ConsumerCount The number of consumers.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetConsumerCount() const;
 
                     /**
-                     * 设置Number of consumers.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ConsumerCount Number of consumers.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置The number of consumers.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ConsumerCount The number of consumers.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetConsumerCount(const std::string& _consumerCount);
 
@@ -91,18 +91,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ConsumerCountHasBeenSet() const;
 
                     /**
-                     * 获取Total number of recorded messages.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return LastConfirmedEntry Total number of recorded messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取The total number of recorded messages.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return LastConfirmedEntry The total number of recorded messages.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetLastConfirmedEntry() const;
 
                     /**
-                     * 设置Total number of recorded messages.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param LastConfirmedEntry Total number of recorded messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置The total number of recorded messages.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param LastConfirmedEntry The total number of recorded messages.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetLastConfirmedEntry(const std::string& _lastConfirmedEntry);
 
@@ -114,17 +114,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Time when the last ledger was created.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LastLedgerCreatedTimestamp Time when the last ledger was created.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetLastLedgerCreatedTimestamp() const;
 
                     /**
                      * 设置Time when the last ledger was created.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param LastLedgerCreatedTimestamp Time when the last ledger was created.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetLastLedgerCreatedTimestamp(const std::string& _lastLedgerCreatedTimestamp);
 
@@ -135,18 +135,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool LastLedgerCreatedTimestampHasBeenSet() const;
 
                     /**
-                     * 获取Number of messages published by local and replicated publishers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return MsgRateIn Number of messages published by local and replicated publishers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取The number of messages published by local and replicated publishers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MsgRateIn The number of messages published by local and replicated publishers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetMsgRateIn() const;
 
                     /**
-                     * 设置Number of messages published by local and replicated publishers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MsgRateIn Number of messages published by local and replicated publishers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置The number of messages published by local and replicated publishers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param MsgRateIn The number of messages published by local and replicated publishers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetMsgRateIn(const std::string& _msgRateIn);
 
@@ -157,18 +157,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MsgRateInHasBeenSet() const;
 
                     /**
-                     * 获取Sum of the numbers of messages delivered by local and replicated consumers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return MsgRateOut Sum of the numbers of messages delivered by local and replicated consumers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取The total number of messages delivered by local and replicated consumers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MsgRateOut The total number of messages delivered by local and replicated consumers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetMsgRateOut() const;
 
                     /**
-                     * 设置Sum of the numbers of messages delivered by local and replicated consumers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MsgRateOut Sum of the numbers of messages delivered by local and replicated consumers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置The total number of messages delivered by local and replicated consumers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param MsgRateOut The total number of messages delivered by local and replicated consumers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetMsgRateOut(const std::string& _msgRateOut);
 
@@ -179,18 +179,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MsgRateOutHasBeenSet() const;
 
                     /**
-                     * 获取Number of bytes of messages published by local and replicated publishers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return MsgThroughputIn Number of bytes of messages published by local and replicated publishers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取The size (in bytes) of messages published by local and replicated publishers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MsgThroughputIn The size (in bytes) of messages published by local and replicated publishers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetMsgThroughputIn() const;
 
                     /**
-                     * 设置Number of bytes of messages published by local and replicated publishers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MsgThroughputIn Number of bytes of messages published by local and replicated publishers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置The size (in bytes) of messages published by local and replicated publishers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param MsgThroughputIn The size (in bytes) of messages published by local and replicated publishers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetMsgThroughputIn(const std::string& _msgThroughputIn);
 
@@ -201,18 +201,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MsgThroughputInHasBeenSet() const;
 
                     /**
-                     * 获取Number of bytes of messages delivered by local and replicated consumers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return MsgThroughputOut Number of bytes of messages delivered by local and replicated consumers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取The size (in bytes) of messages delivered by local and replicated consumers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MsgThroughputOut The size (in bytes) of messages delivered by local and replicated consumers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetMsgThroughputOut() const;
 
                     /**
-                     * 设置Number of bytes of messages delivered by local and replicated consumers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MsgThroughputOut Number of bytes of messages delivered by local and replicated consumers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置The size (in bytes) of messages delivered by local and replicated consumers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param MsgThroughputOut The size (in bytes) of messages delivered by local and replicated consumers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetMsgThroughputOut(const std::string& _msgThroughputOut);
 
@@ -223,18 +223,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MsgThroughputOutHasBeenSet() const;
 
                     /**
-                     * 获取Total number of recorded messages.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return NumberOfEntries Total number of recorded messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取The total number of recorded messages.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return NumberOfEntries The total number of recorded messages.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetNumberOfEntries() const;
 
                     /**
-                     * 设置Total number of recorded messages.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param NumberOfEntries Total number of recorded messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置The total number of recorded messages.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param NumberOfEntries The total number of recorded messages.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetNumberOfEntries(const std::string& _numberOfEntries);
 
@@ -246,17 +246,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Subpartition ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Partitions Subpartition ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetPartitions() const;
 
                     /**
                      * 设置Subpartition ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param Partitions Subpartition ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetPartitions(const int64_t& _partitions);
 
@@ -267,18 +267,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PartitionsHasBeenSet() const;
 
                     /**
-                     * 获取Number of producers.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ProducerCount Number of producers.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取The number of producers.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ProducerCount The number of producers.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetProducerCount() const;
 
                     /**
-                     * 设置Number of producers.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ProducerCount Number of producers.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置The number of producers.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ProducerCount The number of producers.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetProducerCount(const std::string& _producerCount);
 
@@ -289,18 +289,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ProducerCountHasBeenSet() const;
 
                     /**
-                     * 获取Total amount of all stored messages in bytes.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TotalSize Total amount of all stored messages in bytes.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Total size of all stored messages in bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TotalSize Total size of all stored messages in bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetTotalSize() const;
 
                     /**
-                     * 设置Total amount of all stored messages in bytes.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param TotalSize Total amount of all stored messages in bytes.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Total size of all stored messages in bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param TotalSize Total size of all stored messages in bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetTotalSize(const std::string& _totalSize);
 
@@ -312,17 +312,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Topic type description.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TopicType Topic type description.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetTopicType() const;
 
                     /**
                      * 设置Topic type description.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param TopicType Topic type description.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetTopicType(const uint64_t& _topicType);
 
@@ -336,91 +336,91 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Average size of the messages published in the last interval in bytes.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_averageMsgSize;
                     bool m_averageMsgSizeHasBeenSet;
 
                     /**
-                     * Number of consumers.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * The number of consumers.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_consumerCount;
                     bool m_consumerCountHasBeenSet;
 
                     /**
-                     * Total number of recorded messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * The total number of recorded messages.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_lastConfirmedEntry;
                     bool m_lastConfirmedEntryHasBeenSet;
 
                     /**
                      * Time when the last ledger was created.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_lastLedgerCreatedTimestamp;
                     bool m_lastLedgerCreatedTimestampHasBeenSet;
 
                     /**
-                     * Number of messages published by local and replicated publishers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * The number of messages published by local and replicated publishers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_msgRateIn;
                     bool m_msgRateInHasBeenSet;
 
                     /**
-                     * Sum of the numbers of messages delivered by local and replicated consumers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * The total number of messages delivered by local and replicated consumers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_msgRateOut;
                     bool m_msgRateOutHasBeenSet;
 
                     /**
-                     * Number of bytes of messages published by local and replicated publishers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * The size (in bytes) of messages published by local and replicated publishers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_msgThroughputIn;
                     bool m_msgThroughputInHasBeenSet;
 
                     /**
-                     * Number of bytes of messages delivered by local and replicated consumers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * The size (in bytes) of messages delivered by local and replicated consumers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_msgThroughputOut;
                     bool m_msgThroughputOutHasBeenSet;
 
                     /**
-                     * Total number of recorded messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * The total number of recorded messages.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_numberOfEntries;
                     bool m_numberOfEntriesHasBeenSet;
 
                     /**
                      * Subpartition ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_partitions;
                     bool m_partitionsHasBeenSet;
 
                     /**
-                     * Number of producers.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * The number of producers.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_producerCount;
                     bool m_producerCountHasBeenSet;
 
                     /**
-                     * Total amount of all stored messages in bytes.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Total size of all stored messages in bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_totalSize;
                     bool m_totalSizeHasBeenSet;
 
                     /**
                      * Topic type description.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_topicType;
                     bool m_topicTypeHasBeenSet;

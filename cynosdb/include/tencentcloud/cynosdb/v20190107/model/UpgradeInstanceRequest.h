@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取Database memory
-                     * @return Memory Database memory
+                     * 获取Database memory in GB
+                     * @return Memory Database memory in GB
                      */
                     int64_t GetMemory() const;
 
                     /**
-                     * 设置Database memory
-                     * @param Memory Database memory
+                     * 设置Database memory in GB
+                     * @param Memory Database memory in GB
                      */
                     void SetMemory(const int64_t& _memory);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool UpgradeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Storage upper limit. 0 indicates to use the standard configuration
-                     * @return StorageLimit Storage upper limit. 0 indicates to use the standard configuration
+                     * 获取This parameter has been disused.
+                     * @return StorageLimit This parameter has been disused.
                      */
                     uint64_t GetStorageLimit() const;
 
                     /**
-                     * 设置Storage upper limit. 0 indicates to use the standard configuration
-                     * @param StorageLimit Storage upper limit. 0 indicates to use the standard configuration
+                     * 设置This parameter has been disused.
+                     * @param StorageLimit This parameter has been disused.
                      */
                     void SetStorageLimit(const uint64_t& _storageLimit);
 
@@ -151,18 +151,14 @@ namespace TencentCloud
                     bool AutoVoucherHasBeenSet() const;
 
                     /**
-                     * 获取Database type. Valid values: 
-<li> MYSQL </li>
-                     * @return DbType Database type. Valid values: 
-<li> MYSQL </li>
+                     * 获取This parameter has been disused.
+                     * @return DbType This parameter has been disused.
                      */
                     std::string GetDbType() const;
 
                     /**
-                     * 设置Database type. Valid values: 
-<li> MYSQL </li>
-                     * @param DbType Database type. Valid values: 
-<li> MYSQL </li>
+                     * 设置This parameter has been disused.
+                     * @param DbType This parameter has been disused.
                      */
                     void SetDbType(const std::string& _dbType);
 
@@ -205,7 +201,7 @@ namespace TencentCloud
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * Database memory
+                     * Database memory in GB
                      */
                     int64_t m_memory;
                     bool m_memoryHasBeenSet;
@@ -217,7 +213,7 @@ namespace TencentCloud
                     bool m_upgradeTypeHasBeenSet;
 
                     /**
-                     * Storage upper limit. 0 indicates to use the standard configuration
+                     * This parameter has been disused.
                      */
                     uint64_t m_storageLimit;
                     bool m_storageLimitHasBeenSet;
@@ -229,8 +225,7 @@ namespace TencentCloud
                     bool m_autoVoucherHasBeenSet;
 
                     /**
-                     * Database type. Valid values: 
-<li> MYSQL </li>
+                     * This parameter has been disused.
                      */
                     std::string m_dbType;
                     bool m_dbTypeHasBeenSet;

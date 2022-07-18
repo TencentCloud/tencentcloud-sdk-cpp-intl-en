@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Dedicated cluster information
+                * Information of dedicated clusters
                 */
                 class BindCluster : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Physical cluster name
-                     * @return ClusterName Physical cluster name
+                     * 获取Name of a physical cluster.
+                     * @return ClusterName Name of a physical cluster.
                      */
                     std::string GetClusterName() const;
 
                     /**
-                     * 设置Physical cluster name
-                     * @param ClusterName Physical cluster name
+                     * 设置Name of a physical cluster.
+                     * @param ClusterName Name of a physical cluster.
                      */
                     void SetClusterName(const std::string& _clusterName);
 
@@ -67,7 +67,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Physical cluster name
+                     * Name of a physical cluster.
                      */
                     std::string m_clusterName;
                     bool m_clusterNameHasBeenSet;

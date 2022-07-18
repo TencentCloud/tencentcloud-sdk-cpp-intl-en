@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取List of IDs of the security groups to be modified, which is an array of one or more security group IDs.
-                     * @return SecurityGroupIds List of IDs of the security groups to be modified, which is an array of one or more security group IDs.
+                     * 获取List of IDs of security groups to be modified, which is an array of one or more security group IDs.
+                     * @return SecurityGroupIds List of IDs of security groups to be modified, which is an array of one or more security group IDs.
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
-                     * 设置List of IDs of the security groups to be modified, which is an array of one or more security group IDs.
-                     * @param SecurityGroupIds List of IDs of the security groups to be modified, which is an array of one or more security group IDs.
+                     * 设置List of IDs of security groups to be modified, which is an array of one or more security group IDs.
+                     * @param SecurityGroupIds List of IDs of security groups to be modified, which is an array of one or more security group IDs.
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
 
@@ -105,7 +105,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * List of IDs of the security groups to be modified, which is an array of one or more security group IDs.
+                     * List of IDs of security groups to be modified, which is an array of one or more security group IDs.
                      */
                     std::vector<std::string> m_securityGroupIds;
                     bool m_securityGroupIdsHasBeenSet;

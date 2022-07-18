@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool BackupTimeEndHasBeenSet() const;
 
                     /**
-                     * 获取Backup retention period in seconds. Backups will be cleared after this period elapses. 7 days is represented by 3600*24*7 = 604800
-                     * @return ReserveDuration Backup retention period in seconds. Backups will be cleared after this period elapses. 7 days is represented by 3600*24*7 = 604800
+                     * 获取Backup retention period in seconds. Backups will be cleared after this period elapses. 7 days is represented by 3600*24*7 = 604800. Maximum value: 158112000.
+                     * @return ReserveDuration Backup retention period in seconds. Backups will be cleared after this period elapses. 7 days is represented by 3600*24*7 = 604800. Maximum value: 158112000.
                      */
                     uint64_t GetReserveDuration() const;
 
                     /**
-                     * 设置Backup retention period in seconds. Backups will be cleared after this period elapses. 7 days is represented by 3600*24*7 = 604800
-                     * @param ReserveDuration Backup retention period in seconds. Backups will be cleared after this period elapses. 7 days is represented by 3600*24*7 = 604800
+                     * 设置Backup retention period in seconds. Backups will be cleared after this period elapses. 7 days is represented by 3600*24*7 = 604800. Maximum value: 158112000.
+                     * @param ReserveDuration Backup retention period in seconds. Backups will be cleared after this period elapses. 7 days is represented by 3600*24*7 = 604800. Maximum value: 158112000.
                      */
                     void SetReserveDuration(const uint64_t& _reserveDuration);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool ReserveDurationHasBeenSet() const;
 
                     /**
-                     * 获取Backup frequency. It is an array of 7 elements corresponding to Monday through Sunday. full: full backup; increment: incremental backup
-                     * @return BackupFreq Backup frequency. It is an array of 7 elements corresponding to Monday through Sunday. full: full backup; increment: incremental backup
+                     * 获取Backup frequency. It is an array of 7 elements corresponding to Monday through Sunday. full: full backup; increment: incremental backup. This parameter cannot be modified currently and doesn't need to be entered.
+                     * @return BackupFreq Backup frequency. It is an array of 7 elements corresponding to Monday through Sunday. full: full backup; increment: incremental backup. This parameter cannot be modified currently and doesn't need to be entered.
                      */
                     std::vector<std::string> GetBackupFreq() const;
 
                     /**
-                     * 设置Backup frequency. It is an array of 7 elements corresponding to Monday through Sunday. full: full backup; increment: incremental backup
-                     * @param BackupFreq Backup frequency. It is an array of 7 elements corresponding to Monday through Sunday. full: full backup; increment: incremental backup
+                     * 设置Backup frequency. It is an array of 7 elements corresponding to Monday through Sunday. full: full backup; increment: incremental backup. This parameter cannot be modified currently and doesn't need to be entered.
+                     * @param BackupFreq Backup frequency. It is an array of 7 elements corresponding to Monday through Sunday. full: full backup; increment: incremental backup. This parameter cannot be modified currently and doesn't need to be entered.
                      */
                     void SetBackupFreq(const std::vector<std::string>& _backupFreq);
 
@@ -133,14 +133,14 @@ namespace TencentCloud
                     bool BackupFreqHasBeenSet() const;
 
                     /**
-                     * 获取Backup mode. logic: logic backup; snapshot: snapshot backup
-                     * @return BackupType Backup mode. logic: logic backup; snapshot: snapshot backup
+                     * 获取Backup mode. logic: logic backup; snapshot: snapshot backup. This parameter cannot be modified currently and doesn't need to be entered.
+                     * @return BackupType Backup mode. logic: logic backup; snapshot: snapshot backup. This parameter cannot be modified currently and doesn't need to be entered.
                      */
                     std::string GetBackupType() const;
 
                     /**
-                     * 设置Backup mode. logic: logic backup; snapshot: snapshot backup
-                     * @param BackupType Backup mode. logic: logic backup; snapshot: snapshot backup
+                     * 设置Backup mode. logic: logic backup; snapshot: snapshot backup. This parameter cannot be modified currently and doesn't need to be entered.
+                     * @param BackupType Backup mode. logic: logic backup; snapshot: snapshot backup. This parameter cannot be modified currently and doesn't need to be entered.
                      */
                     void SetBackupType(const std::string& _backupType);
 
@@ -171,19 +171,19 @@ namespace TencentCloud
                     bool m_backupTimeEndHasBeenSet;
 
                     /**
-                     * Backup retention period in seconds. Backups will be cleared after this period elapses. 7 days is represented by 3600*24*7 = 604800
+                     * Backup retention period in seconds. Backups will be cleared after this period elapses. 7 days is represented by 3600*24*7 = 604800. Maximum value: 158112000.
                      */
                     uint64_t m_reserveDuration;
                     bool m_reserveDurationHasBeenSet;
 
                     /**
-                     * Backup frequency. It is an array of 7 elements corresponding to Monday through Sunday. full: full backup; increment: incremental backup
+                     * Backup frequency. It is an array of 7 elements corresponding to Monday through Sunday. full: full backup; increment: incremental backup. This parameter cannot be modified currently and doesn't need to be entered.
                      */
                     std::vector<std::string> m_backupFreq;
                     bool m_backupFreqHasBeenSet;
 
                     /**
-                     * Backup mode. logic: logic backup; snapshot: snapshot backup
+                     * Backup mode. logic: logic backup; snapshot: snapshot backup. This parameter cannot be modified currently and doesn't need to be entered.
                      */
                     std::string m_backupType;
                     bool m_backupTypeHasBeenSet;

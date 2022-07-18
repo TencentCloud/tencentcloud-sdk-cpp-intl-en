@@ -57,8 +57,8 @@ namespace TencentCloud
                     bool NamespacesHasBeenSet() const;
 
                     /**
-                     * 获取Total number
-                     * @return TotalCount Total number
+                     * 获取The total number of returned results.
+                     * @return TotalCount The total number of returned results.
                      */
                     uint64_t GetTotalCount() const;
 
@@ -77,7 +77,7 @@ namespace TencentCloud
                     bool m_namespacesHasBeenSet;
 
                     /**
-                     * Total number
+                     * The total number of returned results.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterId Cluster ID
+                     * 获取Cluster ID.
+                     * @return ClusterId Cluster ID.
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param ClusterId Cluster ID
+                     * 设置Cluster ID.
+                     * @param ClusterId Cluster ID.
                      */
                     void SetClusterId(const std::string& _clusterId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Namespace
-                     * @return NamespaceId Namespace
+                     * 获取Namespace.
+                     * @return NamespaceId Namespace.
                      */
                     std::string GetNamespaceId() const;
 
                     /**
-                     * 设置Namespace
-                     * @param NamespaceId Namespace
+                     * 设置Namespace.
+                     * @param NamespaceId Namespace.
                      */
                     void SetNamespaceId(const std::string& _namespaceId);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool NamespaceIdHasBeenSet() const;
 
                     /**
-                     * 获取Offset
-                     * @return Offset Offset
+                     * 获取Offset.
+                     * @return Offset Offset.
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset
-                     * @param Offset Offset
+                     * 设置Offset.
+                     * @param Offset Offset.
                      */
                     void SetOffset(const uint64_t& _offset);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number
-                     * @return Limit Maximum number
+                     * 获取The max number of returned results.
+                     * @return Limit The max number of returned results.
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Maximum number
-                     * @param Limit Maximum number
+                     * 设置The max number of returned results.
+                     * @param Limit The max number of returned results.
                      */
                     void SetLimit(const uint64_t& _limit);
 
@@ -151,14 +151,14 @@ namespace TencentCloud
                     bool FilterGroupHasBeenSet() const;
 
                     /**
-                     * 获取Sort by specified field. Valid values: tps, accumulative.
-                     * @return SortedBy Sort by specified field. Valid values: tps, accumulative.
+                     * 获取Sort by specified field. Valid values: `tps`, `accumulative`.
+                     * @return SortedBy Sort by specified field. Valid values: `tps`, `accumulative`.
                      */
                     std::string GetSortedBy() const;
 
                     /**
-                     * 设置Sort by specified field. Valid values: tps, accumulative.
-                     * @param SortedBy Sort by specified field. Valid values: tps, accumulative.
+                     * 设置Sort by specified field. Valid values: `tps`, `accumulative`.
+                     * @param SortedBy Sort by specified field. Valid values: `tps`, `accumulative`.
                      */
                     void SetSortedBy(const std::string& _sortedBy);
 
@@ -169,14 +169,14 @@ namespace TencentCloud
                     bool SortedByHasBeenSet() const;
 
                     /**
-                     * 获取Sort in ascending or descending order. Valid values: asc, desc.
-                     * @return SortOrder Sort in ascending or descending order. Valid values: asc, desc.
+                     * 获取Sort in ascending or descending order. Valid values: `asc`, `desc`.
+                     * @return SortOrder Sort in ascending or descending order. Valid values: `asc`, `desc`.
                      */
                     std::string GetSortOrder() const;
 
                     /**
-                     * 设置Sort in ascending or descending order. Valid values: asc, desc.
-                     * @param SortOrder Sort in ascending or descending order. Valid values: asc, desc.
+                     * 设置Sort in ascending or descending order. Valid values: `asc`, `desc`.
+                     * @param SortOrder Sort in ascending or descending order. Valid values: `asc`, `desc`.
                      */
                     void SetSortOrder(const std::string& _sortOrder);
 
@@ -187,14 +187,14 @@ namespace TencentCloud
                     bool SortOrderHasBeenSet() const;
 
                     /**
-                     * 获取Subscription group name. After it is specified, only the information of the corresponding subscription group will be returned.
-                     * @return FilterOneGroup Subscription group name. After it is specified, only the information of the corresponding subscription group will be returned.
+                     * 获取Subscription group name. After it is specified, the information of only this subscription group will be returned.
+                     * @return FilterOneGroup Subscription group name. After it is specified, the information of only this subscription group will be returned.
                      */
                     std::string GetFilterOneGroup() const;
 
                     /**
-                     * 设置Subscription group name. After it is specified, only the information of the corresponding subscription group will be returned.
-                     * @param FilterOneGroup Subscription group name. After it is specified, only the information of the corresponding subscription group will be returned.
+                     * 设置Subscription group name. After it is specified, the information of only this subscription group will be returned.
+                     * @param FilterOneGroup Subscription group name. After it is specified, the information of only this subscription group will be returned.
                      */
                     void SetFilterOneGroup(const std::string& _filterOneGroup);
 
@@ -207,25 +207,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster ID
+                     * Cluster ID.
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Namespace
+                     * Namespace.
                      */
                     std::string m_namespaceId;
                     bool m_namespaceIdHasBeenSet;
 
                     /**
-                     * Offset
+                     * Offset.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Maximum number
+                     * The max number of returned results.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
@@ -243,19 +243,19 @@ namespace TencentCloud
                     bool m_filterGroupHasBeenSet;
 
                     /**
-                     * Sort by specified field. Valid values: tps, accumulative.
+                     * Sort by specified field. Valid values: `tps`, `accumulative`.
                      */
                     std::string m_sortedBy;
                     bool m_sortedByHasBeenSet;
 
                     /**
-                     * Sort in ascending or descending order. Valid values: asc, desc.
+                     * Sort in ascending or descending order. Valid values: `asc`, `desc`.
                      */
                     std::string m_sortOrder;
                     bool m_sortOrderHasBeenSet;
 
                     /**
-                     * Subscription group name. After it is specified, only the information of the corresponding subscription group will be returned.
+                     * Subscription group name. After it is specified, the information of only this subscription group will be returned.
                      */
                     std::string m_filterOneGroup;
                     bool m_filterOneGroupHasBeenSet;

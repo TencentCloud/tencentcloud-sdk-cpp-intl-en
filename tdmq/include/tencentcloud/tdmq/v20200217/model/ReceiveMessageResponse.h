@@ -107,6 +107,34 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool SubNameHasBeenSet() const;
 
+                    /**
+                     * 获取MessageIDs returned by `BatchReceivePolicy` at a time, which are separated by “###”.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MessageIDList MessageIDs returned by `BatchReceivePolicy` at a time, which are separated by “###”.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetMessageIDList() const;
+
+                    /**
+                     * 判断参数 MessageIDList 是否已赋值
+                     * @return MessageIDList 是否已赋值
+                     */
+                    bool MessageIDListHasBeenSet() const;
+
+                    /**
+                     * 获取Message contents returned by `BatchReceivePolicy` at a time, which are separated by “###”.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MessagesPayload Message contents returned by `BatchReceivePolicy` at a time, which are separated by “###”.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetMessagesPayload() const;
+
+                    /**
+                     * 判断参数 MessagesPayload 是否已赋值
+                     * @return MessagesPayload 是否已赋值
+                     */
+                    bool MessagesPayloadHasBeenSet() const;
+
                 private:
 
                     /**
@@ -140,6 +168,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_subName;
                     bool m_subNameHasBeenSet;
+
+                    /**
+                     * MessageIDs returned by `BatchReceivePolicy` at a time, which are separated by “###”.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_messageIDList;
+                    bool m_messageIDListHasBeenSet;
+
+                    /**
+                     * Message contents returned by `BatchReceivePolicy` at a time, which are separated by “###”.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_messagesPayload;
+                    bool m_messagesPayloadHasBeenSet;
 
                 };
             }

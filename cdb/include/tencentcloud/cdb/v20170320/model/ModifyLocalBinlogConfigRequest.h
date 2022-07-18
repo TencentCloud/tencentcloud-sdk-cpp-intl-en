@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Retention period of local binlog. Value range: [72,168].
-                     * @return SaveHours Retention period of local binlog. Value range: [72,168].
+                     * 获取Retention period of local binlog. Value range: [120,168].
+                     * @return SaveHours Retention period of local binlog. Value range: [120,168].
                      */
                     int64_t GetSaveHours() const;
 
                     /**
-                     * 设置Retention period of local binlog. Value range: [72,168].
-                     * @param SaveHours Retention period of local binlog. Value range: [72,168].
+                     * 设置Retention period of local binlog. Value range: [120,168].
+                     * @param SaveHours Retention period of local binlog. Value range: [120,168].
                      */
                     void SetSaveHours(const int64_t& _saveHours);
 
@@ -105,7 +105,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Retention period of local binlog. Value range: [72,168].
+                     * Retention period of local binlog. Value range: [120,168].
                      */
                     int64_t m_saveHours;
                     bool m_saveHoursHasBeenSet;

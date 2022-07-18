@@ -68,8 +68,8 @@ namespace TencentCloud
                     bool TopicNameHasBeenSet() const;
 
                     /**
-                     * 获取0: non-partitioned topic; other values: number of partitions in the partitioned topic.
-                     * @return Partitions 0: non-partitioned topic; other values: number of partitions in the partitioned topic.
+                     * 获取Valid value: 0 or 1. Non-partitioned topic: No partitions. A value greater than 1: The partition count of a partitioned topic. `0` is returned for existing non-partitioned topics, and `1` is returned for incremental non-partitioned topics.
+                     * @return Partitions Valid value: 0 or 1. Non-partitioned topic: No partitions. A value greater than 1: The partition count of a partitioned topic. `0` is returned for existing non-partitioned topics, and `1` is returned for incremental non-partitioned topics.
                      */
                     uint64_t GetPartitions() const;
 
@@ -94,20 +94,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取0: general message;
-1: globally sequential message;
-2: partitionally sequential message;
-3: retry letter queue;
-4: dead letter queue;
-5: transaction message.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TopicType 0: general message;
-1: globally sequential message;
-2: partitionally sequential message;
-3: retry letter queue;
-4: dead letter queue;
-5: transaction message.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取0: General message;
+1: Globally sequential message;
+2: Partitionally sequential message;
+3: Retry letter topic;
+4: Dead letter topic.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TopicType 0: General message;
+1: Globally sequential message;
+2: Partitionally sequential message;
+3: Retry letter topic;
+4: Dead letter topic.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetTopicType() const;
 
@@ -132,7 +130,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_topicNameHasBeenSet;
 
                     /**
-                     * 0: non-partitioned topic; other values: number of partitions in the partitioned topic.
+                     * Valid value: 0 or 1. Non-partitioned topic: No partitions. A value greater than 1: The partition count of a partitioned topic. `0` is returned for existing non-partitioned topics, and `1` is returned for incremental non-partitioned topics.
                      */
                     uint64_t m_partitions;
                     bool m_partitionsHasBeenSet;
@@ -145,13 +143,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * 0: general message;
-1: globally sequential message;
-2: partitionally sequential message;
-3: retry letter queue;
-4: dead letter queue;
-5: transaction message.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 0: General message;
+1: Globally sequential message;
+2: Partitionally sequential message;
+3: Retry letter topic;
+4: Dead letter topic.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_topicType;
                     bool m_topicTypeHasBeenSet;

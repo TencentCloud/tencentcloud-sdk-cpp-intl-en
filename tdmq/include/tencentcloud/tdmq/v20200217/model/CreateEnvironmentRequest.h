@@ -62,14 +62,14 @@ namespace TencentCloud
                     bool EnvironmentIdHasBeenSet() const;
 
                     /**
-                     * 获取Unconsumed message expiration time in seconds. Minimum value: 60; maximum value: 1296000 (15 days).
-                     * @return MsgTTL Unconsumed message expiration time in seconds. Minimum value: 60; maximum value: 1296000 (15 days).
+                     * 获取Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s.
+                     * @return MsgTTL Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s.
                      */
                     uint64_t GetMsgTTL() const;
 
                     /**
-                     * 设置Unconsumed message expiration time in seconds. Minimum value: 60; maximum value: 1296000 (15 days).
-                     * @param MsgTTL Unconsumed message expiration time in seconds. Minimum value: 60; maximum value: 1296000 (15 days).
+                     * 设置Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s.
+                     * @param MsgTTL Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s.
                      */
                     void SetMsgTTL(const uint64_t& _msgTTL);
 
@@ -142,7 +142,7 @@ namespace TencentCloud
                     bool m_environmentIdHasBeenSet;
 
                     /**
-                     * Unconsumed message expiration time in seconds. Minimum value: 60; maximum value: 1296000 (15 days).
+                     * Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s.
                      */
                     uint64_t m_msgTTL;
                     bool m_msgTTLHasBeenSet;

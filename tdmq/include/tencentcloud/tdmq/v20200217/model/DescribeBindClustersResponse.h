@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of dedicated clusters
-                     * @return TotalCount Number of dedicated clusters
+                     * 获取The number of dedicated clusters
+                     * @return TotalCount The number of dedicated clusters
                      */
                     int64_t GetTotalCount() const;
 
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of dedicated clusters
+                     * The number of dedicated clusters
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

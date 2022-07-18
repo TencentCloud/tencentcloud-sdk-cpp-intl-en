@@ -313,14 +313,14 @@ namespace TencentCloud
                     bool TransactionHasBeenSet() const;
 
                     /**
-                     * 获取Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
-                     * @return RetentionSizeInMB Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+                     * 获取Queue storage space configured for message rewind. Value range: 10,240-512,000 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+                     * @return RetentionSizeInMB Queue storage space configured for message rewind. Value range: 10,240-512,000 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
                      */
                     uint64_t GetRetentionSizeInMB() const;
 
                     /**
-                     * 设置Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
-                     * @param RetentionSizeInMB Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+                     * 设置Queue storage space configured for message rewind. Value range: 10,240-512,000 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+                     * @param RetentionSizeInMB Queue storage space configured for message rewind. Value range: 10,240-512,000 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
                      */
                     void SetRetentionSizeInMB(const uint64_t& _retentionSizeInMB);
 
@@ -423,7 +423,7 @@ namespace TencentCloud
                     bool m_transactionHasBeenSet;
 
                     /**
-                     * Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+                     * Queue storage space configured for message rewind. Value range: 10,240-512,000 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
                      */
                     uint64_t m_retentionSizeInMB;
                     bool m_retentionSizeInMBHasBeenSet;

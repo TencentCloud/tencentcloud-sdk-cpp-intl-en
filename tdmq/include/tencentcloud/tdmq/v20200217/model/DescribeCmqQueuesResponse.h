@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Quantity
-                     * @return TotalCount Quantity
+                     * 获取The number of queues.
+                     * @return TotalCount The number of queues.
                      */
                     uint64_t GetTotalCount() const;
 
@@ -57,10 +57,10 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of queues
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return QueueList List of queues
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Queue list.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return QueueList Queue list.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<CmqQueue> GetQueueList() const;
 
@@ -73,14 +73,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Quantity
+                     * The number of queues.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of queues
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Queue list.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<CmqQueue> m_queueList;
                     bool m_queueListHasBeenSet;

@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool MaintainDurationHasBeenSet() const;
 
                     /**
-                     * 获取Maintenance days of the week
-                     * @return MaintainWeekDays Maintenance days of the week
+                     * 获取Maintenance days of the week. Valid values: [Mon, Tue, Wed, Thu, Fri, Sat, Sun].
+                     * @return MaintainWeekDays Maintenance days of the week. Valid values: [Mon, Tue, Wed, Thu, Fri, Sat, Sun].
                      */
                     std::vector<std::string> GetMaintainWeekDays() const;
 
                     /**
-                     * 设置Maintenance days of the week
-                     * @param MaintainWeekDays Maintenance days of the week
+                     * 设置Maintenance days of the week. Valid values: [Mon, Tue, Wed, Thu, Fri, Sat, Sun].
+                     * @param MaintainWeekDays Maintenance days of the week. Valid values: [Mon, Tue, Wed, Thu, Fri, Sat, Sun].
                      */
                     void SetMaintainWeekDays(const std::vector<std::string>& _maintainWeekDays);
 
@@ -135,7 +135,7 @@ namespace TencentCloud
                     bool m_maintainDurationHasBeenSet;
 
                     /**
-                     * Maintenance days of the week
+                     * Maintenance days of the week. Valid values: [Mon, Tue, Wed, Thu, Fri, Sat, Sun].
                      */
                     std::vector<std::string> m_maintainWeekDays;
                     bool m_maintainWeekDaysHasBeenSet;

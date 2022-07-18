@@ -44,14 +44,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Offset
-                     * @return Offset Offset
+                     * 获取Offset.
+                     * @return Offset Offset.
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset
-                     * @param Offset Offset
+                     * 设置Offset.
+                     * @param Offset Offset.
                      */
                     void SetOffset(const uint64_t& _offset);
 
@@ -62,14 +62,14 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number
-                     * @return Limit Maximum number
+                     * 获取The max number of returned results.
+                     * @return Limit The max number of returned results.
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Maximum number
-                     * @param Limit Maximum number
+                     * 设置The max number of returned results.
+                     * @param Limit The max number of returned results.
                      */
                     void SetLimit(const uint64_t& _limit);
 
@@ -80,14 +80,14 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Search by cluster ID
-                     * @return IdKeyword Search by cluster ID
+                     * 获取Search by cluster ID.
+                     * @return IdKeyword Search by cluster ID.
                      */
                     std::string GetIdKeyword() const;
 
                     /**
-                     * 设置Search by cluster ID
-                     * @param IdKeyword Search by cluster ID
+                     * 设置Search by cluster ID.
+                     * @param IdKeyword Search by cluster ID.
                      */
                     void SetIdKeyword(const std::string& _idKeyword);
 
@@ -98,14 +98,14 @@ namespace TencentCloud
                     bool IdKeywordHasBeenSet() const;
 
                     /**
-                     * 获取Search by cluster name
-                     * @return NameKeyword Search by cluster name
+                     * 获取Search by cluster name.
+                     * @return NameKeyword Search by cluster name.
                      */
                     std::string GetNameKeyword() const;
 
                     /**
-                     * 设置Search by cluster name
-                     * @param NameKeyword Search by cluster name
+                     * 设置Search by cluster name.
+                     * @param NameKeyword Search by cluster name.
                      */
                     void SetNameKeyword(const std::string& _nameKeyword);
 
@@ -116,14 +116,14 @@ namespace TencentCloud
                     bool NameKeywordHasBeenSet() const;
 
                     /**
-                     * 获取Filter by list of cluster IDs
-                     * @return ClusterIdList Filter by list of cluster IDs
+                     * 获取Filter by cluster ID.
+                     * @return ClusterIdList Filter by cluster ID.
                      */
                     std::vector<std::string> GetClusterIdList() const;
 
                     /**
-                     * 设置Filter by list of cluster IDs
-                     * @param ClusterIdList Filter by list of cluster IDs
+                     * 设置Filter by cluster ID.
+                     * @param ClusterIdList Filter by cluster ID.
                      */
                     void SetClusterIdList(const std::vector<std::string>& _clusterIdList);
 
@@ -134,14 +134,14 @@ namespace TencentCloud
                     bool ClusterIdListHasBeenSet() const;
 
                     /**
-                     * 获取For filtering by tag, this must be configured to `true`
-                     * @return IsTagFilter For filtering by tag, this must be configured to `true`
+                     * 获取For filtering by tag, this parameter must be set to `true`.
+                     * @return IsTagFilter For filtering by tag, this parameter must be set to `true`.
                      */
                     bool GetIsTagFilter() const;
 
                     /**
-                     * 设置For filtering by tag, this must be configured to `true`
-                     * @param IsTagFilter For filtering by tag, this must be configured to `true`
+                     * 设置For filtering by tag, this parameter must be set to `true`.
+                     * @param IsTagFilter For filtering by tag, this parameter must be set to `true`.
                      */
                     void SetIsTagFilter(const bool& _isTagFilter);
 
@@ -172,37 +172,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Offset
+                     * Offset.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Maximum number
+                     * The max number of returned results.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Search by cluster ID
+                     * Search by cluster ID.
                      */
                     std::string m_idKeyword;
                     bool m_idKeywordHasBeenSet;
 
                     /**
-                     * Search by cluster name
+                     * Search by cluster name.
                      */
                     std::string m_nameKeyword;
                     bool m_nameKeywordHasBeenSet;
 
                     /**
-                     * Filter by list of cluster IDs
+                     * Filter by cluster ID.
                      */
                     std::vector<std::string> m_clusterIdList;
                     bool m_clusterIdListHasBeenSet;
 
                     /**
-                     * For filtering by tag, this must be configured to `true`
+                     * For filtering by tag, this parameter must be set to `true`.
                      */
                     bool m_isTagFilter;
                     bool m_isTagFilterHasBeenSet;

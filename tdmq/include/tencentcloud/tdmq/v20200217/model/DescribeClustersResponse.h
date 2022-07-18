@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of clusters
-                     * @return TotalCount Number of clusters
+                     * 获取The number of clusters.
+                     * @return TotalCount The number of clusters.
                      */
                     int64_t GetTotalCount() const;
 
@@ -57,8 +57,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of cluster information
-                     * @return ClusterSet List of cluster information
+                     * 获取Cluster information list
+                     * @return ClusterSet Cluster information list
                      */
                     std::vector<Cluster> GetClusterSet() const;
 
@@ -71,13 +71,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of clusters
+                     * The number of clusters.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of cluster information
+                     * Cluster information list
                      */
                     std::vector<Cluster> m_clusterSet;
                     bool m_clusterSetHasBeenSet;

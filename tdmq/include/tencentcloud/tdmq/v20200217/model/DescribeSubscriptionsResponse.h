@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Array set of subscribers.
-                     * @return SubscriptionSets Array set of subscribers.
+                     * 获取Array of subscriber sets.
+                     * @return SubscriptionSets Array of subscriber sets.
                      */
                     std::vector<Subscription> GetSubscriptionSets() const;
 
@@ -57,8 +57,8 @@ namespace TencentCloud
                     bool SubscriptionSetsHasBeenSet() const;
 
                     /**
-                     * 获取Quantity.
-                     * @return TotalCount Quantity.
+                     * 获取The total number of returned results.
+                     * @return TotalCount The total number of returned results.
                      */
                     uint64_t GetTotalCount() const;
 
@@ -71,13 +71,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Array set of subscribers.
+                     * Array of subscriber sets.
                      */
                     std::vector<Subscription> m_subscriptionSets;
                     bool m_subscriptionSetsHasBeenSet;
 
                     /**
-                     * Quantity.
+                     * The total number of returned results.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

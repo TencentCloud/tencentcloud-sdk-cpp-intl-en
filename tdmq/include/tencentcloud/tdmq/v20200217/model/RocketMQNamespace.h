@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores
-                     * @return NamespaceId Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores
+                     * 获取Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores.
+                     * @return NamespaceId Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores.
                      */
                     std::string GetNamespaceId() const;
 
                     /**
-                     * 设置Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores
-                     * @param NamespaceId Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores
+                     * 设置Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores.
+                     * @param NamespaceId Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores.
                      */
                     void SetNamespaceId(const std::string& _namespaceId);
 
@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool TtlHasBeenSet() const;
 
                     /**
-                     * 获取Retention period for persisted messages in milliseconds
-                     * @return RetentionTime Retention period for persisted messages in milliseconds
+                     * 获取Retention period for persistently stored messages in milliseconds.
+                     * @return RetentionTime Retention period for persistently stored messages in milliseconds.
                      */
                     uint64_t GetRetentionTime() const;
 
                     /**
-                     * 设置Retention period for persisted messages in milliseconds
-                     * @param RetentionTime Retention period for persisted messages in milliseconds
+                     * 设置Retention period for persistently stored messages in milliseconds.
+                     * @param RetentionTime Retention period for persistently stored messages in milliseconds.
                      */
                     void SetRetentionTime(const uint64_t& _retentionTime);
 
@@ -101,18 +101,18 @@ namespace TencentCloud
                     bool RetentionTimeHasBeenSet() const;
 
                     /**
-                     * 获取Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Remark Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Description.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Remark Description.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetRemark() const;
 
                     /**
-                     * 设置Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Remark Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Description.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Remark Description.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetRemark(const std::string& _remark);
 
@@ -122,10 +122,54 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool RemarkHasBeenSet() const;
 
+                    /**
+                     * 获取Public network access point address.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return PublicEndpoint Public network access point address.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetPublicEndpoint() const;
+
+                    /**
+                     * 设置Public network access point address.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param PublicEndpoint Public network access point address.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetPublicEndpoint(const std::string& _publicEndpoint);
+
+                    /**
+                     * 判断参数 PublicEndpoint 是否已赋值
+                     * @return PublicEndpoint 是否已赋值
+                     */
+                    bool PublicEndpointHasBeenSet() const;
+
+                    /**
+                     * 获取VPC access point address.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return VpcEndpoint VPC access point address.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetVpcEndpoint() const;
+
+                    /**
+                     * 设置VPC access point address.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param VpcEndpoint VPC access point address.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetVpcEndpoint(const std::string& _vpcEndpoint);
+
+                    /**
+                     * 判断参数 VpcEndpoint 是否已赋值
+                     * @return VpcEndpoint 是否已赋值
+                     */
+                    bool VpcEndpointHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores
+                     * Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores.
                      */
                     std::string m_namespaceId;
                     bool m_namespaceIdHasBeenSet;
@@ -137,17 +181,31 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_ttlHasBeenSet;
 
                     /**
-                     * Retention period for persisted messages in milliseconds
+                     * Retention period for persistently stored messages in milliseconds.
                      */
                     uint64_t m_retentionTime;
                     bool m_retentionTimeHasBeenSet;
 
                     /**
-                     * Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Description.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
+
+                    /**
+                     * Public network access point address.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_publicEndpoint;
+                    bool m_publicEndpointHasBeenSet;
+
+                    /**
+                     * VPC access point address.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_vpcEndpoint;
+                    bool m_vpcEndpointHasBeenSet;
 
                 };
             }

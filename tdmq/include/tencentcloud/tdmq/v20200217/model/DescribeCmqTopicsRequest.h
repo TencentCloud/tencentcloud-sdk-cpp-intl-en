@@ -44,14 +44,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Starting position of the list of queues to be returned on the current page in case of paginated return. If a value is entered, `limit` is required. If this parameter is left empty, 0 will be used by default
-                     * @return Offset Starting position of the list of queues to be returned on the current page in case of paginated return. If a value is entered, `limit` is required. If this parameter is left empty, 0 will be used by default
+                     * 获取Starting position of a queue list to be returned on the current page in case of paginated return. If a value is entered, `limit` must be specified. If this parameter is left empty, 0 will be used by default.
+                     * @return Offset Starting position of a queue list to be returned on the current page in case of paginated return. If a value is entered, `limit` must be specified. If this parameter is left empty, 0 will be used by default.
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Starting position of the list of queues to be returned on the current page in case of paginated return. If a value is entered, `limit` is required. If this parameter is left empty, 0 will be used by default
-                     * @param Offset Starting position of the list of queues to be returned on the current page in case of paginated return. If a value is entered, `limit` is required. If this parameter is left empty, 0 will be used by default
+                     * 设置Starting position of a queue list to be returned on the current page in case of paginated return. If a value is entered, `limit` must be specified. If this parameter is left empty, 0 will be used by default.
+                     * @param Offset Starting position of a queue list to be returned on the current page in case of paginated return. If a value is entered, `limit` must be specified. If this parameter is left empty, 0 will be used by default.
                      */
                     void SetOffset(const uint64_t& _offset);
 
@@ -62,14 +62,14 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
-                     * @return Limit Number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
+                     * 获取The number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
+                     * @return Limit The number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
-                     * @param Limit Number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
+                     * 设置The number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
+                     * @param Limit The number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
                      */
                     void SetLimit(const uint64_t& _limit);
 
@@ -98,14 +98,14 @@ namespace TencentCloud
                     bool TopicNameHasBeenSet() const;
 
                     /**
-                     * 获取Filter by list of CMQ topic names
-                     * @return TopicNameList Filter by list of CMQ topic names
+                     * 获取Filter by CMQ topic name.
+                     * @return TopicNameList Filter by CMQ topic name.
                      */
                     std::vector<std::string> GetTopicNameList() const;
 
                     /**
-                     * 设置Filter by list of CMQ topic names
-                     * @param TopicNameList Filter by list of CMQ topic names
+                     * 设置Filter by CMQ topic name.
+                     * @param TopicNameList Filter by CMQ topic name.
                      */
                     void SetTopicNameList(const std::vector<std::string>& _topicNameList);
 
@@ -116,14 +116,14 @@ namespace TencentCloud
                     bool TopicNameListHasBeenSet() const;
 
                     /**
-                     * 获取For filtering by tag, this must be configured to `true`.
-                     * @return IsTagFilter For filtering by tag, this must be configured to `true`.
+                     * 获取For filtering by tag, this parameter must be set to `true`.
+                     * @return IsTagFilter For filtering by tag, this parameter must be set to `true`.
                      */
                     bool GetIsTagFilter() const;
 
                     /**
-                     * 设置For filtering by tag, this must be configured to `true`.
-                     * @param IsTagFilter For filtering by tag, this must be configured to `true`.
+                     * 设置For filtering by tag, this parameter must be set to `true`.
+                     * @param IsTagFilter For filtering by tag, this parameter must be set to `true`.
                      */
                     void SetIsTagFilter(const bool& _isTagFilter);
 
@@ -134,14 +134,14 @@ namespace TencentCloud
                     bool IsTagFilterHasBeenSet() const;
 
                     /**
-                     * 获取Filter. Currently, you can filter only by tag.
-                     * @return Filters Filter. Currently, you can filter only by tag.
+                     * 获取Filter. Currently, you can filter by tag. The tag name must be prefixed with “tag:”, such as “tag: owner”, “tag: environment”, or “tag: business”.
+                     * @return Filters Filter. Currently, you can filter by tag. The tag name must be prefixed with “tag:”, such as “tag: owner”, “tag: environment”, or “tag: business”.
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter. Currently, you can filter only by tag.
-                     * @param Filters Filter. Currently, you can filter only by tag.
+                     * 设置Filter. Currently, you can filter by tag. The tag name must be prefixed with “tag:”, such as “tag: owner”, “tag: environment”, or “tag: business”.
+                     * @param Filters Filter. Currently, you can filter by tag. The tag name must be prefixed with “tag:”, such as “tag: owner”, “tag: environment”, or “tag: business”.
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
@@ -154,13 +154,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Starting position of the list of queues to be returned on the current page in case of paginated return. If a value is entered, `limit` is required. If this parameter is left empty, 0 will be used by default
+                     * Starting position of a queue list to be returned on the current page in case of paginated return. If a value is entered, `limit` must be specified. If this parameter is left empty, 0 will be used by default.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
+                     * The number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
@@ -172,19 +172,19 @@ namespace TencentCloud
                     bool m_topicNameHasBeenSet;
 
                     /**
-                     * Filter by list of CMQ topic names
+                     * Filter by CMQ topic name.
                      */
                     std::vector<std::string> m_topicNameList;
                     bool m_topicNameListHasBeenSet;
 
                     /**
-                     * For filtering by tag, this must be configured to `true`.
+                     * For filtering by tag, this parameter must be set to `true`.
                      */
                     bool m_isTagFilter;
                     bool m_isTagFilterHasBeenSet;
 
                     /**
-                     * Filter. Currently, you can filter only by tag.
+                     * Filter. Currently, you can filter by tag. The tag name must be prefixed with “tag:”, such as “tag: owner”, “tag: environment”, or “tag: business”.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

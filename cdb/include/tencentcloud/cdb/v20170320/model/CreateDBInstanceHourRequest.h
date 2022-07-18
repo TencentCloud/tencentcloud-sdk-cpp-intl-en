@@ -424,14 +424,14 @@ namespace TencentCloud
                     bool AutoRenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取Instance name.
-                     * @return InstanceName Instance name.
+                     * 获取Instance name. For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, their instance name is db1, db2 respectively.
+                     * @return InstanceName Instance name. For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, their instance name is db1, db2 respectively.
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name.
-                     * @param InstanceName Instance name.
+                     * 设置Instance name. For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, their instance name is db1, db2 respectively.
+                     * @param InstanceName Instance name. For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, their instance name is db1, db2 respectively.
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
@@ -840,7 +840,7 @@ namespace TencentCloud
                     bool m_autoRenewFlagHasBeenSet;
 
                     /**
-                     * Instance name.
+                     * Instance name. For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, their instance name is db1, db2 respectively.
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;

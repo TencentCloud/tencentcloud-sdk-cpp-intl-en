@@ -44,14 +44,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Set of subscriptions. Up to 20 subscriptions can be deleted at a time.
-                     * @return SubscriptionTopicSets Set of subscriptions. Up to 20 subscriptions can be deleted at a time.
+                     * 获取Subscription set. Up to 20 subscriptions can be deleted at a time.
+                     * @return SubscriptionTopicSets Subscription set. Up to 20 subscriptions can be deleted at a time.
                      */
                     std::vector<SubscriptionTopic> GetSubscriptionTopicSets() const;
 
                     /**
-                     * 设置Set of subscriptions. Up to 20 subscriptions can be deleted at a time.
-                     * @param SubscriptionTopicSets Set of subscriptions. Up to 20 subscriptions can be deleted at a time.
+                     * 设置Subscription set. Up to 20 subscriptions can be deleted at a time.
+                     * @param SubscriptionTopicSets Subscription set. Up to 20 subscriptions can be deleted at a time.
                      */
                     void SetSubscriptionTopicSets(const std::vector<SubscriptionTopic>& _subscriptionTopicSets);
 
@@ -98,14 +98,14 @@ namespace TencentCloud
                     bool EnvironmentIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to force deletion. Default value: false
-                     * @return Force Whether to force deletion. Default value: false
+                     * 获取Whether to forcibly delete a subscription. Default value: `false`.
+                     * @return Force Whether to forcibly delete a subscription. Default value: `false`.
                      */
                     bool GetForce() const;
 
                     /**
-                     * 设置Whether to force deletion. Default value: false
-                     * @param Force Whether to force deletion. Default value: false
+                     * 设置Whether to forcibly delete a subscription. Default value: `false`.
+                     * @param Force Whether to forcibly delete a subscription. Default value: `false`.
                      */
                     void SetForce(const bool& _force);
 
@@ -118,7 +118,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Set of subscriptions. Up to 20 subscriptions can be deleted at a time.
+                     * Subscription set. Up to 20 subscriptions can be deleted at a time.
                      */
                     std::vector<SubscriptionTopic> m_subscriptionTopicSets;
                     bool m_subscriptionTopicSetsHasBeenSet;
@@ -136,7 +136,7 @@ namespace TencentCloud
                     bool m_environmentIdHasBeenSet;
 
                     /**
-                     * Whether to force deletion. Default value: false
+                     * Whether to forcibly delete a subscription. Default value: `false`.
                      */
                     bool m_force;
                     bool m_forceHasBeenSet;

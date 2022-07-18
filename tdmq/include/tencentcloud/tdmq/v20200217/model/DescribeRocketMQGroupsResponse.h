@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number
-                     * @return TotalCount Total number
+                     * 获取The total number of subscription groups.
+                     * @return TotalCount The total number of subscription groups.
                      */
                     uint64_t GetTotalCount() const;
 
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number
+                     * The total number of subscription groups.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

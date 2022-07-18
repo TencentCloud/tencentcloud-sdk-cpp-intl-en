@@ -61,18 +61,14 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Database type. Valid values: 
-<li> MYSQL </li>
-                     * @return DbType Database type. Valid values: 
-<li> MYSQL </li>
+                     * 获取This parameter has been disused.
+                     * @return DbType This parameter has been disused.
                      */
                     std::string GetDbType() const;
 
                     /**
-                     * 设置Database type. Valid values: 
-<li> MYSQL </li>
-                     * @param DbType Database type. Valid values: 
-<li> MYSQL </li>
+                     * 设置This parameter has been disused.
+                     * @param DbType This parameter has been disused.
                      */
                     void SetDbType(const std::string& _dbType);
 
@@ -91,8 +87,7 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Database type. Valid values: 
-<li> MYSQL </li>
+                     * This parameter has been disused.
                      */
                     std::string m_dbType;
                     bool m_dbTypeHasBeenSet;

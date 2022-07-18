@@ -201,6 +201,8 @@
 #include <tencentcloud/cdb/v20170320/model/ModifyTimeWindowResponse.h>
 #include <tencentcloud/cdb/v20170320/model/OfflineIsolatedInstancesRequest.h>
 #include <tencentcloud/cdb/v20170320/model/OfflineIsolatedInstancesResponse.h>
+#include <tencentcloud/cdb/v20170320/model/OpenAuditServiceRequest.h>
+#include <tencentcloud/cdb/v20170320/model/OpenAuditServiceResponse.h>
 #include <tencentcloud/cdb/v20170320/model/OpenDBInstanceGTIDRequest.h>
 #include <tencentcloud/cdb/v20170320/model/OpenDBInstanceGTIDResponse.h>
 #include <tencentcloud/cdb/v20170320/model/OpenWanServiceRequest.h>
@@ -522,6 +524,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::OfflineIsolatedInstancesResponse> OfflineIsolatedInstancesOutcome;
                 typedef std::future<OfflineIsolatedInstancesOutcome> OfflineIsolatedInstancesOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::OfflineIsolatedInstancesRequest&, OfflineIsolatedInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> OfflineIsolatedInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::OpenAuditServiceResponse> OpenAuditServiceOutcome;
+                typedef std::future<OpenAuditServiceOutcome> OpenAuditServiceOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::OpenAuditServiceRequest&, OpenAuditServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> OpenAuditServiceAsyncHandler;
                 typedef Outcome<Core::Error, Model::OpenDBInstanceGTIDResponse> OpenDBInstanceGTIDOutcome;
                 typedef std::future<OpenDBInstanceGTIDOutcome> OpenDBInstanceGTIDOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::OpenDBInstanceGTIDRequest&, OpenDBInstanceGTIDOutcome, const std::shared_ptr<const AsyncCallerContext>&)> OpenDBInstanceGTIDAsyncHandler;
@@ -1404,6 +1409,15 @@ Note that once an instance is deactivated, its resources and data will not be re
                 OfflineIsolatedInstancesOutcome OfflineIsolatedInstances(const Model::OfflineIsolatedInstancesRequest &request);
                 void OfflineIsolatedInstancesAsync(const Model::OfflineIsolatedInstancesRequest& request, const OfflineIsolatedInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 OfflineIsolatedInstancesOutcomeCallable OfflineIsolatedInstancesCallable(const Model::OfflineIsolatedInstancesRequest& request);
+
+                /**
+                 *This API is used to enable the audit service.
+                 * @param req OpenAuditServiceRequest
+                 * @return OpenAuditServiceOutcome
+                 */
+                OpenAuditServiceOutcome OpenAuditService(const Model::OpenAuditServiceRequest &request);
+                void OpenAuditServiceAsync(const Model::OpenAuditServiceRequest& request, const OpenAuditServiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                OpenAuditServiceOutcomeCallable OpenAuditServiceCallable(const Model::OpenAuditServiceRequest& request);
 
                 /**
                  *This API (OpenDBInstanceGTID) is used to enable GTID for a TencentDB instance. Only instances on or above version 5.6 are supported.
