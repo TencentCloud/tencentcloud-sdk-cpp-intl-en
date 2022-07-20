@@ -207,6 +207,50 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool DiskEncryptHasBeenSet() const;
 
+                    /**
+                     * 获取CPU number
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CpuNum CPU number
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetCpuNum() const;
+
+                    /**
+                     * 设置CPU number
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param CpuNum CPU number
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetCpuNum(const uint64_t& _cpuNum);
+
+                    /**
+                     * 判断参数 CpuNum 是否已赋值
+                     * @return CpuNum 是否已赋值
+                     */
+                    bool CpuNumHasBeenSet() const;
+
+                    /**
+                     * 获取Memory size in GB
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MemSize Memory size in GB
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetMemSize() const;
+
+                    /**
+                     * 设置Memory size in GB
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param MemSize Memory size in GB
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetMemSize(const int64_t& _memSize);
+
+                    /**
+                     * 判断参数 MemSize 是否已赋值
+                     * @return MemSize 是否已赋值
+                     */
+                    bool MemSizeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -260,6 +304,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     uint64_t m_diskEncrypt;
                     bool m_diskEncryptHasBeenSet;
+
+                    /**
+                     * CPU number
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_cpuNum;
+                    bool m_cpuNumHasBeenSet;
+
+                    /**
+                     * Memory size in GB
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_memSize;
+                    bool m_memSizeHasBeenSet;
 
                 };
             }
