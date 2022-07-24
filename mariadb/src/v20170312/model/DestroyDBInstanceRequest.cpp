@@ -14,32 +14,32 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/ckafka/v20190819/model/DescribeCkafkaZoneRequest.h>
+#include <tencentcloud/mariadb/v20170312/model/DestroyDBInstanceRequest.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
-using namespace TencentCloud::Ckafka::V20190819::Model;
+using namespace TencentCloud::Mariadb::V20170312::Model;
 using namespace std;
 
-DescribeCkafkaZoneRequest::DescribeCkafkaZoneRequest() :
-    m_cdcIdHasBeenSet(false)
+DestroyDBInstanceRequest::DestroyDBInstanceRequest() :
+    m_instanceIdHasBeenSet(false)
 {
 }
 
-string DescribeCkafkaZoneRequest::ToJsonString() const
+string DestroyDBInstanceRequest::ToJsonString() const
 {
     rapidjson::Document d;
     d.SetObject();
     rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
-    if (m_cdcIdHasBeenSet)
+    if (m_instanceIdHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "CdcId";
+        string key = "InstanceId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_cdcId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -50,20 +50,20 @@ string DescribeCkafkaZoneRequest::ToJsonString() const
 }
 
 
-string DescribeCkafkaZoneRequest::GetCdcId() const
+string DestroyDBInstanceRequest::GetInstanceId() const
 {
-    return m_cdcId;
+    return m_instanceId;
 }
 
-void DescribeCkafkaZoneRequest::SetCdcId(const string& _cdcId)
+void DestroyDBInstanceRequest::SetInstanceId(const string& _instanceId)
 {
-    m_cdcId = _cdcId;
-    m_cdcIdHasBeenSet = true;
+    m_instanceId = _instanceId;
+    m_instanceIdHasBeenSet = true;
 }
 
-bool DescribeCkafkaZoneRequest::CdcIdHasBeenSet() const
+bool DestroyDBInstanceRequest::InstanceIdHasBeenSet() const
 {
-    return m_cdcIdHasBeenSet;
+    return m_instanceIdHasBeenSet;
 }
 
 

@@ -168,6 +168,42 @@ namespace TencentCloud
                      */
                     bool DelayThreshHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to specify a replica server for read-only account. Valid values: `0` (No replica server is specified, which means that the proxy will select another available replica server to keep connection with the client if the current replica server doesn’t meet the requirement). `1` (The replica server is specified, which means that the connection will be disconnected if the specified replica server doesn’t meet the requirement.)
+                     * @return SlaveConst Whether to specify a replica server for read-only account. Valid values: `0` (No replica server is specified, which means that the proxy will select another available replica server to keep connection with the client if the current replica server doesn’t meet the requirement). `1` (The replica server is specified, which means that the connection will be disconnected if the specified replica server doesn’t meet the requirement.)
+                     */
+                    int64_t GetSlaveConst() const;
+
+                    /**
+                     * 设置Whether to specify a replica server for read-only account. Valid values: `0` (No replica server is specified, which means that the proxy will select another available replica server to keep connection with the client if the current replica server doesn’t meet the requirement). `1` (The replica server is specified, which means that the connection will be disconnected if the specified replica server doesn’t meet the requirement.)
+                     * @param SlaveConst Whether to specify a replica server for read-only account. Valid values: `0` (No replica server is specified, which means that the proxy will select another available replica server to keep connection with the client if the current replica server doesn’t meet the requirement). `1` (The replica server is specified, which means that the connection will be disconnected if the specified replica server doesn’t meet the requirement.)
+                     */
+                    void SetSlaveConst(const int64_t& _slaveConst);
+
+                    /**
+                     * 判断参数 SlaveConst 是否已赋值
+                     * @return SlaveConst 是否已赋值
+                     */
+                    bool SlaveConstHasBeenSet() const;
+
+                    /**
+                     * 获取Maximum number of connections. If left empty or `0` is passed in, the connections will be unlimited. This parameter configuration is not supported for kernel version 10.1.
+                     * @return MaxUserConnections Maximum number of connections. If left empty or `0` is passed in, the connections will be unlimited. This parameter configuration is not supported for kernel version 10.1.
+                     */
+                    uint64_t GetMaxUserConnections() const;
+
+                    /**
+                     * 设置Maximum number of connections. If left empty or `0` is passed in, the connections will be unlimited. This parameter configuration is not supported for kernel version 10.1.
+                     * @param MaxUserConnections Maximum number of connections. If left empty or `0` is passed in, the connections will be unlimited. This parameter configuration is not supported for kernel version 10.1.
+                     */
+                    void SetMaxUserConnections(const uint64_t& _maxUserConnections);
+
+                    /**
+                     * 判断参数 MaxUserConnections 是否已赋值
+                     * @return MaxUserConnections 是否已赋值
+                     */
+                    bool MaxUserConnectionsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -211,6 +247,18 @@ namespace TencentCloud
                      */
                     int64_t m_delayThresh;
                     bool m_delayThreshHasBeenSet;
+
+                    /**
+                     * Whether to specify a replica server for read-only account. Valid values: `0` (No replica server is specified, which means that the proxy will select another available replica server to keep connection with the client if the current replica server doesn’t meet the requirement). `1` (The replica server is specified, which means that the connection will be disconnected if the specified replica server doesn’t meet the requirement.)
+                     */
+                    int64_t m_slaveConst;
+                    bool m_slaveConstHasBeenSet;
+
+                    /**
+                     * Maximum number of connections. If left empty or `0` is passed in, the connections will be unlimited. This parameter configuration is not supported for kernel version 10.1.
+                     */
+                    uint64_t m_maxUserConnections;
+                    bool m_maxUserConnectionsHasBeenSet;
 
                 };
             }

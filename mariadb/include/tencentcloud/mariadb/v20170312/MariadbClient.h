@@ -69,6 +69,8 @@
 #include <tencentcloud/mariadb/v20170312/model/DescribeOrdersResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeProjectSecurityGroupsRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeProjectSecurityGroupsResponse.h>
+#include <tencentcloud/mariadb/v20170312/model/DestroyDBInstanceRequest.h>
+#include <tencentcloud/mariadb/v20170312/model/DestroyDBInstanceResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/DestroyHourDBInstanceRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/DestroyHourDBInstanceResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/DisassociateSecurityGroupsRequest.h>
@@ -172,6 +174,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeProjectSecurityGroupsResponse> DescribeProjectSecurityGroupsOutcome;
                 typedef std::future<DescribeProjectSecurityGroupsOutcome> DescribeProjectSecurityGroupsOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::DescribeProjectSecurityGroupsRequest&, DescribeProjectSecurityGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProjectSecurityGroupsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DestroyDBInstanceResponse> DestroyDBInstanceOutcome;
+                typedef std::future<DestroyDBInstanceOutcome> DestroyDBInstanceOutcomeCallable;
+                typedef std::function<void(const MariadbClient*, const Model::DestroyDBInstanceRequest&, DestroyDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DestroyDBInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::DestroyHourDBInstanceResponse> DestroyHourDBInstanceOutcome;
                 typedef std::future<DestroyHourDBInstanceOutcome> DestroyHourDBInstanceOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::DestroyHourDBInstanceRequest&, DestroyHourDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DestroyHourDBInstanceAsyncHandler;
@@ -414,6 +419,15 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
                 DescribeProjectSecurityGroupsOutcome DescribeProjectSecurityGroups(const Model::DescribeProjectSecurityGroupsRequest &request);
                 void DescribeProjectSecurityGroupsAsync(const Model::DescribeProjectSecurityGroupsRequest& request, const DescribeProjectSecurityGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeProjectSecurityGroupsOutcomeCallable DescribeProjectSecurityGroupsCallable(const Model::DescribeProjectSecurityGroupsRequest& request);
+
+                /**
+                 *This API is used to terminate an isolated monthly subscribed instance.
+                 * @param req DestroyDBInstanceRequest
+                 * @return DestroyDBInstanceOutcome
+                 */
+                DestroyDBInstanceOutcome DestroyDBInstance(const Model::DestroyDBInstanceRequest &request);
+                void DestroyDBInstanceAsync(const Model::DestroyDBInstanceRequest& request, const DestroyDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DestroyDBInstanceOutcomeCallable DestroyDBInstanceCallable(const Model::DestroyDBInstanceRequest& request);
 
                 /**
                  *This API is used to terminate a pay-as-you-go instance.

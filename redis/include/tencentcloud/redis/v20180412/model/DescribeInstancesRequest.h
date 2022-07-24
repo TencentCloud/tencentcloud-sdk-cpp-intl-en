@@ -44,14 +44,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Size of the instance list. If no value is specified for this parameter, it will be 20 by default. If the specified value is greater than the `DescribeInstancesPageLimit` configuration item in the specific configuration file `etc/conf/component.properties` (which is 1,000 by default if the configuration cannot be read), then the configuration item shall prevail.
-                     * @return Limit Size of the instance list. If no value is specified for this parameter, it will be 20 by default. If the specified value is greater than the `DescribeInstancesPageLimit` configuration item in the specific configuration file `etc/conf/component.properties` (which is 1,000 by default if the configuration cannot be read), then the configuration item shall prevail.
+                     * 获取Number of returned results. Default value: 20. Maximum value: 1000.
+                     * @return Limit Number of returned results. Default value: 20. Maximum value: 1000.
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Size of the instance list. If no value is specified for this parameter, it will be 20 by default. If the specified value is greater than the `DescribeInstancesPageLimit` configuration item in the specific configuration file `etc/conf/component.properties` (which is 1,000 by default if the configuration cannot be read), then the configuration item shall prevail.
-                     * @param Limit Size of the instance list. If no value is specified for this parameter, it will be 20 by default. If the specified value is greater than the `DescribeInstancesPageLimit` configuration item in the specific configuration file `etc/conf/component.properties` (which is 1,000 by default if the configuration cannot be read), then the configuration item shall prevail.
+                     * 设置Number of returned results. Default value: 20. Maximum value: 1000.
+                     * @param Limit Number of returned results. Default value: 20. Maximum value: 1000.
                      */
                     void SetLimit(const uint64_t& _limit);
 
@@ -475,10 +475,28 @@ namespace TencentCloud
                      */
                     bool TagKeysHasBeenSet() const;
 
+                    /**
+                     * 获取Product editions to be filtered. Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). If this parameter is not passed in, the product will not be filtered by default.
+                     * @return ProductVersions Product editions to be filtered. Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). If this parameter is not passed in, the product will not be filtered by default.
+                     */
+                    std::vector<std::string> GetProductVersions() const;
+
+                    /**
+                     * 设置Product editions to be filtered. Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). If this parameter is not passed in, the product will not be filtered by default.
+                     * @param ProductVersions Product editions to be filtered. Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). If this parameter is not passed in, the product will not be filtered by default.
+                     */
+                    void SetProductVersions(const std::vector<std::string>& _productVersions);
+
+                    /**
+                     * 判断参数 ProductVersions 是否已赋值
+                     * @return ProductVersions 是否已赋值
+                     */
+                    bool ProductVersionsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Size of the instance list. If no value is specified for this parameter, it will be 20 by default. If the specified value is greater than the `DescribeInstancesPageLimit` configuration item in the specific configuration file `etc/conf/component.properties` (which is 1,000 by default if the configuration cannot be read), then the configuration item shall prevail.
+                     * Number of returned results. Default value: 20. Maximum value: 1000.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
@@ -620,6 +638,12 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_tagKeys;
                     bool m_tagKeysHasBeenSet;
+
+                    /**
+                     * Product editions to be filtered. Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). If this parameter is not passed in, the product will not be filtered by default.
+                     */
+                    std::vector<std::string> m_productVersions;
+                    bool m_productVersionsHasBeenSet;
 
                 };
             }

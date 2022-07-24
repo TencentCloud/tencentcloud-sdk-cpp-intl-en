@@ -176,6 +176,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool DelayThreshHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to specify a replica server for read-only account. Valid values: `0` (No replica server is specified, which means that the proxy will select another available replica server to keep connection with the client if the current replica server doesn’t meet the requirement). `1` (The replica server is specified, which means that the connection will be disconnected if the specified replica server doesn’t meet the requirement.)
+                     * @return SlaveConst Whether to specify a replica server for read-only account. Valid values: `0` (No replica server is specified, which means that the proxy will select another available replica server to keep connection with the client if the current replica server doesn’t meet the requirement). `1` (The replica server is specified, which means that the connection will be disconnected if the specified replica server doesn’t meet the requirement.)
+                     */
+                    int64_t GetSlaveConst() const;
+
+                    /**
+                     * 设置Whether to specify a replica server for read-only account. Valid values: `0` (No replica server is specified, which means that the proxy will select another available replica server to keep connection with the client if the current replica server doesn’t meet the requirement). `1` (The replica server is specified, which means that the connection will be disconnected if the specified replica server doesn’t meet the requirement.)
+                     * @param SlaveConst Whether to specify a replica server for read-only account. Valid values: `0` (No replica server is specified, which means that the proxy will select another available replica server to keep connection with the client if the current replica server doesn’t meet the requirement). `1` (The replica server is specified, which means that the connection will be disconnected if the specified replica server doesn’t meet the requirement.)
+                     */
+                    void SetSlaveConst(const int64_t& _slaveConst);
+
+                    /**
+                     * 判断参数 SlaveConst 是否已赋值
+                     * @return SlaveConst 是否已赋值
+                     */
+                    bool SlaveConstHasBeenSet() const;
+
                 private:
 
                     /**
@@ -220,6 +238,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_delayThresh;
                     bool m_delayThreshHasBeenSet;
+
+                    /**
+                     * Whether to specify a replica server for read-only account. Valid values: `0` (No replica server is specified, which means that the proxy will select another available replica server to keep connection with the client if the current replica server doesn’t meet the requirement). `1` (The replica server is specified, which means that the connection will be disconnected if the specified replica server doesn’t meet the requirement.)
+                     */
+                    int64_t m_slaveConst;
+                    bool m_slaveConstHasBeenSet;
 
                 };
             }

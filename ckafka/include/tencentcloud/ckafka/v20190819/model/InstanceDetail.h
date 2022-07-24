@@ -632,6 +632,46 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool PublicNetworkHasBeenSet() const;
 
+                    /**
+                     * 获取Instance type.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ClusterType Instance type.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetClusterType() const;
+
+                    /**
+                     * 设置Instance type.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ClusterType Instance type.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetClusterType(const std::string& _clusterType);
+
+                    /**
+                     * 判断参数 ClusterType 是否已赋值
+                     * @return ClusterType 是否已赋值
+                     */
+                    bool ClusterTypeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return Features 
+                     */
+                    std::vector<std::string> GetFeatures() const;
+
+                    /**
+                     * 设置
+                     * @param Features 
+                     */
+                    void SetFeatures(const std::vector<std::string>& _features);
+
+                    /**
+                     * 判断参数 Features 是否已赋值
+                     * @return Features 是否已赋值
+                     */
+                    bool FeaturesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -824,6 +864,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     int64_t m_publicNetwork;
                     bool m_publicNetworkHasBeenSet;
+
+                    /**
+                     * Instance type.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_clusterType;
+                    bool m_clusterTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<std::string> m_features;
+                    bool m_featuresHasBeenSet;
 
                 };
             }

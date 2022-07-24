@@ -62,14 +62,14 @@ namespace TencentCloud
                     bool DataHubIdHasBeenSet() const;
 
                     /**
-                     * 获取Message content that is sent.
-                     * @return Message Message content that is sent.
+                     * 获取Content of the message that has been sent. Up to 500 messages can be sent in a single request.
+                     * @return Message Content of the message that has been sent. Up to 500 messages can be sent in a single request.
                      */
                     std::vector<BatchContent> GetMessage() const;
 
                     /**
-                     * 设置Message content that is sent.
-                     * @param Message Message content that is sent.
+                     * 设置Content of the message that has been sent. Up to 500 messages can be sent in a single request.
+                     * @param Message Content of the message that has been sent. Up to 500 messages can be sent in a single request.
                      */
                     void SetMessage(const std::vector<BatchContent>& _message);
 
@@ -88,7 +88,7 @@ namespace TencentCloud
                     bool m_dataHubIdHasBeenSet;
 
                     /**
-                     * Message content that is sent.
+                     * Content of the message that has been sent. Up to 500 messages can be sent in a single request.
                      */
                     std::vector<BatchContent> m_message;
                     bool m_messageHasBeenSet;

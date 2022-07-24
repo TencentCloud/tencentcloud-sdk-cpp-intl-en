@@ -96,6 +96,24 @@ namespace TencentCloud
                      */
                     bool BusinessHasBeenSet() const;
 
+                    /**
+                     * 获取CDC business field, which can be ignored.
+                     * @return CdcId CDC business field, which can be ignored.
+                     */
+                    std::string GetCdcId() const;
+
+                    /**
+                     * 设置CDC business field, which can be ignored.
+                     * @param CdcId CDC business field, which can be ignored.
+                     */
+                    void SetCdcId(const std::string& _cdcId);
+
+                    /**
+                     * 判断参数 CdcId 是否已赋值
+                     * @return CdcId 是否已赋值
+                     */
+                    bool CdcIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -115,6 +133,12 @@ namespace TencentCloud
                      */
                     std::string m_business;
                     bool m_businessHasBeenSet;
+
+                    /**
+                     * CDC business field, which can be ignored.
+                     */
+                    std::string m_cdcId;
+                    bool m_cdcIdHasBeenSet;
 
                 };
             }
