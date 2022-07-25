@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool RealServerIdHasBeenSet() const;
 
                     /**
-                     * 获取0: not bound, 1: bound to rule or listener.
-                     * @return BindStatus 0: not bound, 1: bound to rule or listener.
+                     * 获取`0`: Not bound; `1`: Bound to rule or listener.
+                     * @return BindStatus `0`: Not bound; `1`: Bound to rule or listener.
                      */
                     int64_t GetBindStatus() const;
 
                     /**
-                     * 设置0: not bound, 1: bound to rule or listener.
-                     * @param BindStatus 0: not bound, 1: bound to rule or listener.
+                     * 设置`0`: Not bound; `1`: Bound to rule or listener.
+                     * @param BindStatus `0`: Not bound; `1`: Bound to rule or listener.
                      */
                     void SetBindStatus(const int64_t& _bindStatus);
 
@@ -102,17 +102,17 @@ namespace TencentCloud
 
                     /**
                      * 获取ID of the connection group bound to this origin server. This string is null if no connection groups are bound.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return GroupId ID of the connection group bound to this origin server. This string is null if no connection groups are bound.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetGroupId() const;
 
                     /**
                      * 设置ID of the connection group bound to this origin server. This string is null if no connection groups are bound.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param GroupId ID of the connection group bound to this origin server. This string is null if no connection groups are bound.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetGroupId(const std::string& _groupId);
 
@@ -131,7 +131,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_realServerIdHasBeenSet;
 
                     /**
-                     * 0: not bound, 1: bound to rule or listener.
+                     * `0`: Not bound; `1`: Bound to rule or listener.
                      */
                     int64_t m_bindStatus;
                     bool m_bindStatusHasBeenSet;
@@ -144,7 +144,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * ID of the connection group bound to this origin server. This string is null if no connection groups are bound.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_groupId;
                     bool m_groupIdHasBeenSet;

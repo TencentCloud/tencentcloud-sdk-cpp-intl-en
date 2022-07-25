@@ -149,32 +149,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * 获取Connection group status.
 Where:
-0: running;
-1: creating;
-4: terminating;
-11: connection migrating.
+`RUNNING`: Running
+`CREATING`: Creating
+`DESTROYING`: Terminating
+`MOVING`: Migrating
+`CHANGING`: Deploying
                      * @return Status Connection group status.
 Where:
-0: running;
-1: creating;
-4: terminating;
-11: connection migrating.
+`RUNNING`: Running
+`CREATING`: Creating
+`DESTROYING`: Terminating
+`MOVING`: Migrating
+`CHANGING`: Deploying
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Connection group status.
 Where:
-0: running;
-1: creating;
-4: terminating;
-11: connection migrating.
+`RUNNING`: Running
+`CREATING`: Creating
+`DESTROYING`: Terminating
+`MOVING`: Migrating
+`CHANGING`: Deploying
                      * @param Status Connection group status.
 Where:
-0: running;
-1: creating;
-4: terminating;
-11: connection migrating.
+`RUNNING`: Running
+`CREATING`: Creating
+`DESTROYING`: Terminating
+`MOVING`: Migrating
+`CHANGING`: Deploying
                      */
                     void SetStatus(const std::string& _status);
 
@@ -270,25 +274,25 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Specifies whether to enable HTTP3. Valid values:
-`0`: disable HTTP3;
-`1`: enable HTTP3.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`0`: Disable
+`1`: Enable
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Http3Supported Specifies whether to enable HTTP3. Valid values:
-`0`: disable HTTP3;
-`1`: enable HTTP3.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`0`: Disable
+`1`: Enable
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetHttp3Supported() const;
 
                     /**
                      * 设置Specifies whether to enable HTTP3. Valid values:
-`0`: disable HTTP3;
-`1`: enable HTTP3.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`0`: Disable
+`1`: Enable
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param Http3Supported Specifies whether to enable HTTP3. Valid values:
-`0`: disable HTTP3;
-`1`: enable HTTP3.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`0`: Disable
+`1`: Enable
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetHttp3Supported(const int64_t& _http3Supported);
 
@@ -335,10 +339,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * Connection group status.
 Where:
-0: running;
-1: creating;
-4: terminating;
-11: connection migrating.
+`RUNNING`: Running
+`CREATING`: Creating
+`DESTROYING`: Terminating
+`MOVING`: Migrating
+`CHANGING`: Deploying
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
@@ -372,9 +377,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Specifies whether to enable HTTP3. Valid values:
-`0`: disable HTTP3;
-`1`: enable HTTP3.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`0`: Disable
+`1`: Enable
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_http3Supported;
                     bool m_http3SupportedHasBeenSet;

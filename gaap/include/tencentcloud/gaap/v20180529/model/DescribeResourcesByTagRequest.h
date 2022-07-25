@@ -79,12 +79,12 @@ namespace TencentCloud
                     bool TagValueHasBeenSet() const;
 
                     /**
-                     * 获取Resource type, including:
+                     * 获取Resource types:
 Proxy (connection);
 ProxyGroup (connection group);
 RealServer (origin server).
 If this field is not specified, all resources with the tag will be queried.
-                     * @return ResourceType Resource type, including:
+                     * @return ResourceType Resource types:
 Proxy (connection);
 ProxyGroup (connection group);
 RealServer (origin server).
@@ -93,12 +93,12 @@ If this field is not specified, all resources with the tag will be queried.
                     std::string GetResourceType() const;
 
                     /**
-                     * 设置Resource type, including:
+                     * 设置Resource types:
 Proxy (connection);
 ProxyGroup (connection group);
 RealServer (origin server).
 If this field is not specified, all resources with the tag will be queried.
-                     * @param ResourceType Resource type, including:
+                     * @param ResourceType Resource types:
 Proxy (connection);
 ProxyGroup (connection group);
 RealServer (origin server).
@@ -127,7 +127,7 @@ If this field is not specified, all resources with the tag will be queried.
                     bool m_tagValueHasBeenSet;
 
                     /**
-                     * Resource type, including:
+                     * Resource types:
 Proxy (connection);
 ProxyGroup (connection group);
 RealServer (origin server).

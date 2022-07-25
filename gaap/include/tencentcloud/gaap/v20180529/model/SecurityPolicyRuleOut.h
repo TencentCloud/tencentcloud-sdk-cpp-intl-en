@@ -164,13 +164,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Security policy ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PolicyId Security policy ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetPolicyId() const;
 
                     /**
                      * 设置Security policy ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param PolicyId Security policy ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetPolicyId(const std::string& _policyId);
 
@@ -222,6 +226,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Security policy ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_policyId;
                     bool m_policyIdHasBeenSet;

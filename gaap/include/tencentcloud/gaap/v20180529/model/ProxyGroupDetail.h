@@ -104,29 +104,33 @@ namespace TencentCloud
 
                     /**
                      * 获取Connection group status:
-0: running normally;
-1: creating;
-4: terminating;
-11: migrating;
+`0`: Running normally
+`1`: Creating
+`4`: Terminating
+`11`: Migrating
+`12`: Deploying
                      * @return Status Connection group status:
-0: running normally;
-1: creating;
-4: terminating;
-11: migrating;
+`0`: Running normally
+`1`: Creating
+`4`: Terminating
+`11`: Migrating
+`12`: Deploying
                      */
                     int64_t GetStatus() const;
 
                     /**
                      * 设置Connection group status:
-0: running normally;
-1: creating;
-4: terminating;
-11: migrating;
+`0`: Running normally
+`1`: Creating
+`4`: Terminating
+`11`: Migrating
+`12`: Deploying
                      * @param Status Connection group status:
-0: running normally;
-1: creating;
-4: terminating;
-11: migrating;
+`0`: Running normally
+`1`: Creating
+`4`: Terminating
+`11`: Migrating
+`12`: Deploying
                      */
                     void SetStatus(const int64_t& _status);
 
@@ -308,17 +312,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Security policy ID. This field exists if security policies are set.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PolicyId Security policy ID. This field exists if security policies are set.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetPolicyId() const;
 
                     /**
                      * 设置Security policy ID. This field exists if security policies are set.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param PolicyId Security policy ID. This field exists if security policies are set.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetPolicyId(const std::string& _policyId);
 
@@ -330,17 +334,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 获取Connection group version
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Version Connection group version
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetVersion() const;
 
                     /**
                      * 设置Connection group version
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param Version Connection group version
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetVersion(const std::string& _version);
 
@@ -351,18 +355,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool VersionHasBeenSet() const;
 
                     /**
-                     * 获取Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return ClientIPMethod Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Describes how the connection obtains client IPs. `0`: TOA; `1`: Proxy Protocol.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ClientIPMethod Describes how the connection obtains client IPs. `0`: TOA; `1`: Proxy Protocol.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<int64_t> GetClientIPMethod() const;
 
                     /**
-                     * 设置Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param ClientIPMethod Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Describes how the connection obtains client IPs. `0`: TOA; `1`: Proxy Protocol.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ClientIPMethod Describes how the connection obtains client IPs. `0`: TOA; `1`: Proxy Protocol.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetClientIPMethod(const std::vector<int64_t>& _clientIPMethod);
 
@@ -374,17 +378,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 获取IP version. Valid values: `IPv4` (default), `IPv6`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetIPAddressVersion() const;
 
                     /**
                      * 设置IP version. Valid values: `IPv4` (default), `IPv6`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetIPAddressVersion(const std::string& _iPAddressVersion);
 
@@ -396,17 +400,17 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 获取Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (silver connection group), and `CrossBorder` (cross-MLC-border connection group).
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PackageType Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (silver connection group), and `CrossBorder` (cross-MLC-border connection group).
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetPackageType() const;
 
                     /**
                      * 设置Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (silver connection group), and `CrossBorder` (cross-MLC-border connection group).
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param PackageType Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (silver connection group), and `CrossBorder` (cross-MLC-border connection group).
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetPackageType(const std::string& _packageType);
 
@@ -418,25 +422,25 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
                     /**
                      * 获取Specifies whether to enable HTTP3. Valid values:
-`0`: disable;
-`1`: enable.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`0`: Disable
+`1`: Enable
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Http3Supported Specifies whether to enable HTTP3. Valid values:
-`0`: disable;
-`1`: enable.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`0`: Disable
+`1`: Enable
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetHttp3Supported() const;
 
                     /**
                      * 设置Specifies whether to enable HTTP3. Valid values:
-`0`: disable;
-`1`: enable.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`0`: Disable
+`1`: Enable
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param Http3Supported Specifies whether to enable HTTP3. Valid values:
-`0`: disable;
-`1`: enable.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`0`: Disable
+`1`: Enable
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetHttp3Supported(const int64_t& _http3Supported);
 
@@ -468,10 +472,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * Connection group status:
-0: running normally;
-1: creating;
-4: terminating;
-11: migrating;
+`0`: Running normally
+`1`: Creating
+`4`: Terminating
+`11`: Migrating
+`12`: Deploying
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
@@ -534,44 +539,44 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Security policy ID. This field exists if security policies are set.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_policyId;
                     bool m_policyIdHasBeenSet;
 
                     /**
                      * Connection group version
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_version;
                     bool m_versionHasBeenSet;
 
                     /**
-                     * Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Describes how the connection obtains client IPs. `0`: TOA; `1`: Proxy Protocol.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<int64_t> m_clientIPMethod;
                     bool m_clientIPMethodHasBeenSet;
 
                     /**
                      * IP version. Valid values: `IPv4` (default), `IPv6`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_iPAddressVersion;
                     bool m_iPAddressVersionHasBeenSet;
 
                     /**
                      * Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (silver connection group), and `CrossBorder` (cross-MLC-border connection group).
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_packageType;
                     bool m_packageTypeHasBeenSet;
 
                     /**
                      * Specifies whether to enable HTTP3. Valid values:
-`0`: disable;
-`1`: enable.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`0`: Disable
+`1`: Enable
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_http3Supported;
                     bool m_http3SupportedHasBeenSet;

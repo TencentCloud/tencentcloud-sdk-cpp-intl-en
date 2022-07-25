@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
-                     * @return ProxyId Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+                     * 获取Filter condition that filters by connection ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
+                     * @return ProxyId Filter condition that filters by connection ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
                      */
                     std::string GetProxyId() const;
 
                     /**
-                     * 设置Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
-                     * @param ProxyId Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+                     * 设置Filter condition that filters by connection ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
+                     * @param ProxyId Filter condition that filters by connection ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
                      */
                     void SetProxyId(const std::string& _proxyId);
 
@@ -61,14 +61,22 @@ namespace TencentCloud
                     bool ProxyIdHasBeenSet() const;
 
                     /**
-                     * 获取Filter condition. Exact query by listener IDs.
-                     * @return ListenerId Filter condition. Exact query by listener IDs.
+                     * 获取Filter condition. Exact query by listener ID.
+When ProxyId is specified, the listener will be checked whether it belongs to the connection.
+When GroupId is specified, the listener will be checked whether it belongs to the connection group.
+                     * @return ListenerId Filter condition. Exact query by listener ID.
+When ProxyId is specified, the listener will be checked whether it belongs to the connection.
+When GroupId is specified, the listener will be checked whether it belongs to the connection group.
                      */
                     std::string GetListenerId() const;
 
                     /**
-                     * 设置Filter condition. Exact query by listener IDs.
-                     * @param ListenerId Filter condition. Exact query by listener IDs.
+                     * 设置Filter condition. Exact query by listener ID.
+When ProxyId is specified, the listener will be checked whether it belongs to the connection.
+When GroupId is specified, the listener will be checked whether it belongs to the connection group.
+                     * @param ListenerId Filter condition. Exact query by listener ID.
+When ProxyId is specified, the listener will be checked whether it belongs to the connection.
+When GroupId is specified, the listener will be checked whether it belongs to the connection group.
                      */
                     void SetListenerId(const std::string& _listenerId);
 
@@ -79,14 +87,14 @@ namespace TencentCloud
                     bool ListenerIdHasBeenSet() const;
 
                     /**
-                     * 获取Filter condition. Exact query by listener names.
-                     * @return ListenerName Filter condition. Exact query by listener names.
+                     * 获取Filter condition. Exact query by listener name.
+                     * @return ListenerName Filter condition. Exact query by listener name.
                      */
                     std::string GetListenerName() const;
 
                     /**
-                     * 设置Filter condition. Exact query by listener names.
-                     * @param ListenerName Filter condition. Exact query by listener names.
+                     * 设置Filter condition. Exact query by listener name.
+                     * @param ListenerName Filter condition. Exact query by listener name.
                      */
                     void SetListenerName(const std::string& _listenerName);
 
@@ -97,14 +105,14 @@ namespace TencentCloud
                     bool ListenerNameHasBeenSet() const;
 
                     /**
-                     * 获取Filter condition. Exact query by listener ports.
-                     * @return Port Filter condition. Exact query by listener ports.
+                     * 获取Filter condition. Exact query by listener port.
+                     * @return Port Filter condition. Exact query by listener port.
                      */
                     uint64_t GetPort() const;
 
                     /**
-                     * 设置Filter condition. Exact query by listener ports.
-                     * @param Port Filter condition. Exact query by listener ports.
+                     * 设置Filter condition. Exact query by listener port.
+                     * @param Port Filter condition. Exact query by listener port.
                      */
                     void SetPort(const uint64_t& _port);
 
@@ -115,14 +123,14 @@ namespace TencentCloud
                     bool PortHasBeenSet() const;
 
                     /**
-                     * 获取Offset. The default value is 0.
-                     * @return Offset Offset. The default value is 0.
+                     * 获取Offset. Default value: 0.
+                     * @return Offset Offset. Default value: 0.
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset. The default value is 0.
-                     * @param Offset Offset. The default value is 0.
+                     * 设置Offset. Default value: 0.
+                     * @param Offset Offset. Default value: 0.
                      */
                     void SetOffset(const uint64_t& _offset);
 
@@ -151,14 +159,14 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
-                     * @return GroupId Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+                     * 获取Filter condition that filters by connection group ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
+                     * @return GroupId Filter condition that filters by connection group ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
                      */
                     std::string GetGroupId() const;
 
                     /**
-                     * 设置Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
-                     * @param GroupId Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+                     * 设置Filter condition that filters by connection group ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
+                     * @param GroupId Filter condition that filters by connection group ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
                      */
                     void SetGroupId(const std::string& _groupId);
 
@@ -169,14 +177,14 @@ namespace TencentCloud
                     bool GroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Filter condition. It supports fuzzy query by ports or listener names. This parameter cannot be used with `ListenerName` or `Port`.
-                     * @return SearchValue Filter condition. It supports fuzzy query by ports or listener names. This parameter cannot be used with `ListenerName` or `Port`.
+                     * 获取Filter condition. It supports fuzzy query by port or listener name. This parameter cannot be used with `ListenerName` or `Port`.
+                     * @return SearchValue Filter condition. It supports fuzzy query by port or listener name. This parameter cannot be used with `ListenerName` or `Port`.
                      */
                     std::string GetSearchValue() const;
 
                     /**
-                     * 设置Filter condition. It supports fuzzy query by ports or listener names. This parameter cannot be used with `ListenerName` or `Port`.
-                     * @param SearchValue Filter condition. It supports fuzzy query by ports or listener names. This parameter cannot be used with `ListenerName` or `Port`.
+                     * 设置Filter condition. It supports fuzzy query by port or listener name. This parameter cannot be used with `ListenerName` or `Port`.
+                     * @param SearchValue Filter condition. It supports fuzzy query by port or listener name. This parameter cannot be used with `ListenerName` or `Port`.
                      */
                     void SetSearchValue(const std::string& _searchValue);
 
@@ -189,31 +197,33 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+                     * Filter condition that filters by connection ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
                      */
                     std::string m_proxyId;
                     bool m_proxyIdHasBeenSet;
 
                     /**
-                     * Filter condition. Exact query by listener IDs.
+                     * Filter condition. Exact query by listener ID.
+When ProxyId is specified, the listener will be checked whether it belongs to the connection.
+When GroupId is specified, the listener will be checked whether it belongs to the connection group.
                      */
                     std::string m_listenerId;
                     bool m_listenerIdHasBeenSet;
 
                     /**
-                     * Filter condition. Exact query by listener names.
+                     * Filter condition. Exact query by listener name.
                      */
                     std::string m_listenerName;
                     bool m_listenerNameHasBeenSet;
 
                     /**
-                     * Filter condition. Exact query by listener ports.
+                     * Filter condition. Exact query by listener port.
                      */
                     uint64_t m_port;
                     bool m_portHasBeenSet;
 
                     /**
-                     * Offset. The default value is 0.
+                     * Offset. Default value: 0.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
@@ -225,13 +235,13 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+                     * Filter condition that filters by connection group ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
                      */
                     std::string m_groupId;
                     bool m_groupIdHasBeenSet;
 
                     /**
-                     * Filter condition. It supports fuzzy query by ports or listener names. This parameter cannot be used with `ListenerName` or `Port`.
+                     * Filter condition. It supports fuzzy query by port or listener name. This parameter cannot be used with `ListenerName` or `Port`.
                      */
                     std::string m_searchValue;
                     bool m_searchValueHasBeenSet;

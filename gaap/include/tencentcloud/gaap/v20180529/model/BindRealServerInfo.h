@@ -120,17 +120,17 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Tag list
+                     * 获取Tag list.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TagSet Tag list
+                     * @return TagSet Tag list.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<TagPair> GetTagSet() const;
 
                     /**
-                     * 设置Tag list
+                     * 设置Tag list.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TagSet Tag list
+                     * @param TagSet Tag list.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetTagSet(const std::vector<TagPair>& _tagSet);
@@ -168,7 +168,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Tag list
+                     * Tag list.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<TagPair> m_tagSet;

@@ -48,25 +48,25 @@ namespace TencentCloud
 
                     /**
                      * 获取Resource types:
-`Proxy`: connections;
-`ProxyGroup`: connection groups;
-`RealServer`: origin servers.
+`Proxy`: Connection
+`ProxyGroup`: Connection group
+`RealServer`: Origin server
                      * @return ResourceType Resource types:
-`Proxy`: connections;
-`ProxyGroup`: connection groups;
-`RealServer`: origin servers.
+`Proxy`: Connection
+`ProxyGroup`: Connection group
+`RealServer`: Origin server
                      */
                     std::string GetResourceType() const;
 
                     /**
                      * 设置Resource types:
-`Proxy`: connections;
-`ProxyGroup`: connection groups;
-`RealServer`: origin servers.
+`Proxy`: Connection
+`ProxyGroup`: Connection group
+`RealServer`: Origin server
                      * @param ResourceType Resource types:
-`Proxy`: connections;
-`ProxyGroup`: connection groups;
-`RealServer`: origin servers.
+`Proxy`: Connection
+`ProxyGroup`: Connection group
+`RealServer`: Origin server
                      */
                     void SetResourceType(const std::string& _resourceType);
 
@@ -77,14 +77,14 @@ namespace TencentCloud
                     bool ResourceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Resource ID
-                     * @return ResourceId Resource ID
+                     * 获取Instance ID
+                     * @return ResourceId Instance ID
                      */
                     std::string GetResourceId() const;
 
                     /**
-                     * 设置Resource ID
-                     * @param ResourceId Resource ID
+                     * 设置Instance ID
+                     * @param ResourceId Instance ID
                      */
                     void SetResourceId(const std::string& _resourceId);
 
@@ -98,15 +98,15 @@ namespace TencentCloud
 
                     /**
                      * Resource types:
-`Proxy`: connections;
-`ProxyGroup`: connection groups;
-`RealServer`: origin servers.
+`Proxy`: Connection
+`ProxyGroup`: Connection group
+`RealServer`: Origin server
                      */
                     std::string m_resourceType;
                     bool m_resourceTypeHasBeenSet;
 
                     /**
-                     * Resource ID
+                     * Instance ID
                      */
                     std::string m_resourceId;
                     bool m_resourceIdHasBeenSet;

@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of IDs of the connection instances that are not disabled, which cannot be enabled.
-                     * @return InvalidStatusInstanceSet List of IDs of the connection instances that are not disabled, which cannot be enabled.
+                     * 获取The connection instance ID list cannot be enabled if it’s not disabled.
+                     * @return InvalidStatusInstanceSet The connection instance ID list cannot be enabled if it’s not disabled.
                      */
                     std::vector<std::string> GetInvalidStatusInstanceSet() const;
 
@@ -56,8 +56,8 @@ namespace TencentCloud
                     bool InvalidStatusInstanceSetHasBeenSet() const;
 
                     /**
-                     * 获取List of IDs of the connection instances failed to be enabled.
-                     * @return OperationFailedInstanceSet List of IDs of the connection instances failed to be enabled.
+                     * 获取ID list of connection instances failed to be enabled.
+                     * @return OperationFailedInstanceSet ID list of connection instances failed to be enabled.
                      */
                     std::vector<std::string> GetOperationFailedInstanceSet() const;
 
@@ -70,13 +70,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of IDs of the connection instances that are not disabled, which cannot be enabled.
+                     * The connection instance ID list cannot be enabled if it’s not disabled.
                      */
                     std::vector<std::string> m_invalidStatusInstanceSet;
                     bool m_invalidStatusInstanceSetHasBeenSet;
 
                     /**
-                     * List of IDs of the connection instances failed to be enabled.
+                     * ID list of connection instances failed to be enabled.
                      */
                     std::vector<std::string> m_operationFailedInstanceSet;
                     bool m_operationFailedInstanceSetHasBeenSet;

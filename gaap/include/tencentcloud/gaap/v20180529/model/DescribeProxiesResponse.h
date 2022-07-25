@@ -57,8 +57,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Connection instance information list; It's an old parameter, please switch to ProxySet.
-                     * @return InstanceSet Connection instance information list; It's an old parameter, please switch to ProxySet.
+                     * 获取Connection instance information list; It’s an old parameter, please switch to ProxySet.
+                     * @return InstanceSet Connection instance information list; It’s an old parameter, please switch to ProxySet.
                      */
                     std::vector<ProxyInfo> GetInstanceSet() const;
 
@@ -69,8 +69,8 @@ namespace TencentCloud
                     bool InstanceSetHasBeenSet() const;
 
                     /**
-                     * 获取Connection instance information list; It's a new parameter.
-                     * @return ProxySet Connection instance information list; It's a new parameter.
+                     * 获取Connection instance information list; It’s a new parameter.
+                     * @return ProxySet Connection instance information list; It’s a new parameter.
                      */
                     std::vector<ProxyInfo> GetProxySet() const;
 
@@ -89,13 +89,13 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Connection instance information list; It's an old parameter, please switch to ProxySet.
+                     * Connection instance information list; It’s an old parameter, please switch to ProxySet.
                      */
                     std::vector<ProxyInfo> m_instanceSet;
                     bool m_instanceSetHasBeenSet;
 
                     /**
-                     * Connection instance information list; It's a new parameter.
+                     * Connection instance information list; It’s a new parameter.
                      */
                     std::vector<ProxyInfo> m_proxySet;
                     bool m_proxySetHasBeenSet;

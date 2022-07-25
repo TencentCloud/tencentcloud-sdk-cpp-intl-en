@@ -44,33 +44,33 @@ namespace TencentCloud
 
                     /**
                      * 获取Certificate type. Where:
-0: basic authentication configuration;
-1: indicates client CA certificate;
-2: server SSL certificate;
-3: origin server CA certificate;
-4: connection SSL certificate.
+`0`: Basic authentication configuration;
+`1`: Client CA certificate;
+`2`: Server SSL certificate;
+`3`: Origin server CA certificate;
+`4`: Connection SSL certificate.
                      * @return CertificateType Certificate type. Where:
-0: basic authentication configuration;
-1: indicates client CA certificate;
-2: server SSL certificate;
-3: origin server CA certificate;
-4: connection SSL certificate.
+`0`: Basic authentication configuration;
+`1`: Client CA certificate;
+`2`: Server SSL certificate;
+`3`: Origin server CA certificate;
+`4`: Connection SSL certificate.
                      */
                     int64_t GetCertificateType() const;
 
                     /**
                      * 设置Certificate type. Where:
-0: basic authentication configuration;
-1: indicates client CA certificate;
-2: server SSL certificate;
-3: origin server CA certificate;
-4: connection SSL certificate.
+`0`: Basic authentication configuration;
+`1`: Client CA certificate;
+`2`: Server SSL certificate;
+`3`: Origin server CA certificate;
+`4`: Connection SSL certificate.
                      * @param CertificateType Certificate type. Where:
-0: basic authentication configuration;
-1: indicates client CA certificate;
-2: server SSL certificate;
-3: origin server CA certificate;
-4: connection SSL certificate.
+`0`: Basic authentication configuration;
+`1`: Client CA certificate;
+`2`: Server SSL certificate;
+`3`: Origin server CA certificate;
+`4`: Connection SSL certificate.
                      */
                     void SetCertificateType(const int64_t& _certificateType);
 
@@ -82,21 +82,21 @@ namespace TencentCloud
 
                     /**
                      * 获取Certificate content. URL encoding. Where:
-If the certificate type is basic authentication, enter username/password pair for this parameter. Format: 'username:password', for example, root:FSGdT. The password is `htpasswd` or `openssl`, for example, openssl passwd -crypt 123456.
-When the certificate type is CA/SSL certificate, enter the certificate content for this parameter in the format of `pem`.
+If the certificate type is basic authentication, enter username/password pair for this parameter. Format: “username:password”, for example, root:FSGdT. The password is `htpasswd` or `openssl`, for example, openssl passwd -crypt 123456.
+When the certificate type is CA/SSL certificate, enter the certificate content for this parameter in the format of ‘pem’.
                      * @return CertificateContent Certificate content. URL encoding. Where:
-If the certificate type is basic authentication, enter username/password pair for this parameter. Format: 'username:password', for example, root:FSGdT. The password is `htpasswd` or `openssl`, for example, openssl passwd -crypt 123456.
-When the certificate type is CA/SSL certificate, enter the certificate content for this parameter in the format of `pem`.
+If the certificate type is basic authentication, enter username/password pair for this parameter. Format: “username:password”, for example, root:FSGdT. The password is `htpasswd` or `openssl`, for example, openssl passwd -crypt 123456.
+When the certificate type is CA/SSL certificate, enter the certificate content for this parameter in the format of ‘pem’.
                      */
                     std::string GetCertificateContent() const;
 
                     /**
                      * 设置Certificate content. URL encoding. Where:
-If the certificate type is basic authentication, enter username/password pair for this parameter. Format: 'username:password', for example, root:FSGdT. The password is `htpasswd` or `openssl`, for example, openssl passwd -crypt 123456.
-When the certificate type is CA/SSL certificate, enter the certificate content for this parameter in the format of `pem`.
+If the certificate type is basic authentication, enter username/password pair for this parameter. Format: “username:password”, for example, root:FSGdT. The password is `htpasswd` or `openssl`, for example, openssl passwd -crypt 123456.
+When the certificate type is CA/SSL certificate, enter the certificate content for this parameter in the format of ‘pem’.
                      * @param CertificateContent Certificate content. URL encoding. Where:
-If the certificate type is basic authentication, enter username/password pair for this parameter. Format: 'username:password', for example, root:FSGdT. The password is `htpasswd` or `openssl`, for example, openssl passwd -crypt 123456.
-When the certificate type is CA/SSL certificate, enter the certificate content for this parameter in the format of `pem`.
+If the certificate type is basic authentication, enter username/password pair for this parameter. Format: “username:password”, for example, root:FSGdT. The password is `htpasswd` or `openssl`, for example, openssl passwd -crypt 123456.
+When the certificate type is CA/SSL certificate, enter the certificate content for this parameter in the format of ‘pem’.
                      */
                     void SetCertificateContent(const std::string& _certificateContent);
 
@@ -125,14 +125,14 @@ When the certificate type is CA/SSL certificate, enter the certificate content f
                     bool CertificateAliasHasBeenSet() const;
 
                     /**
-                     * 获取Key content. URL encoding. This parameter is required only when the certificate type is SSL certificate. The format is `pem`.
-                     * @return CertificateKey Key content. URL encoding. This parameter is required only when the certificate type is SSL certificate. The format is `pem`.
+                     * 获取URL-encoded key content. This parameter is required only when the certificate type is SSL certificate. Its format is `PEM`.
+                     * @return CertificateKey URL-encoded key content. This parameter is required only when the certificate type is SSL certificate. Its format is `PEM`.
                      */
                     std::string GetCertificateKey() const;
 
                     /**
-                     * 设置Key content. URL encoding. This parameter is required only when the certificate type is SSL certificate. The format is `pem`.
-                     * @param CertificateKey Key content. URL encoding. This parameter is required only when the certificate type is SSL certificate. The format is `pem`.
+                     * 设置URL-encoded key content. This parameter is required only when the certificate type is SSL certificate. Its format is `PEM`.
+                     * @param CertificateKey URL-encoded key content. This parameter is required only when the certificate type is SSL certificate. Its format is `PEM`.
                      */
                     void SetCertificateKey(const std::string& _certificateKey);
 
@@ -146,19 +146,19 @@ When the certificate type is CA/SSL certificate, enter the certificate content f
 
                     /**
                      * Certificate type. Where:
-0: basic authentication configuration;
-1: indicates client CA certificate;
-2: server SSL certificate;
-3: origin server CA certificate;
-4: connection SSL certificate.
+`0`: Basic authentication configuration;
+`1`: Client CA certificate;
+`2`: Server SSL certificate;
+`3`: Origin server CA certificate;
+`4`: Connection SSL certificate.
                      */
                     int64_t m_certificateType;
                     bool m_certificateTypeHasBeenSet;
 
                     /**
                      * Certificate content. URL encoding. Where:
-If the certificate type is basic authentication, enter username/password pair for this parameter. Format: 'username:password', for example, root:FSGdT. The password is `htpasswd` or `openssl`, for example, openssl passwd -crypt 123456.
-When the certificate type is CA/SSL certificate, enter the certificate content for this parameter in the format of `pem`.
+If the certificate type is basic authentication, enter username/password pair for this parameter. Format: “username:password”, for example, root:FSGdT. The password is `htpasswd` or `openssl`, for example, openssl passwd -crypt 123456.
+When the certificate type is CA/SSL certificate, enter the certificate content for this parameter in the format of ‘pem’.
                      */
                     std::string m_certificateContent;
                     bool m_certificateContentHasBeenSet;
@@ -170,7 +170,7 @@ When the certificate type is CA/SSL certificate, enter the certificate content f
                     bool m_certificateAliasHasBeenSet;
 
                     /**
-                     * Key content. URL encoding. This parameter is required only when the certificate type is SSL certificate. The format is `pem`.
+                     * URL-encoded key content. This parameter is required only when the certificate type is SSL certificate. Its format is `PEM`.
                      */
                     std::string m_certificateKey;
                     bool m_certificateKeyHasBeenSet;

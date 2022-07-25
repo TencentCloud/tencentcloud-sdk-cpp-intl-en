@@ -46,9 +46,9 @@ namespace TencentCloud
 
                     /**
                      * 获取Connection ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ProxyId Connection ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetProxyId() const;
 
@@ -118,7 +118,7 @@ UNBINDING (disabling security policies)
 
                     /**
                      * Connection ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_proxyId;
                     bool m_proxyIdHasBeenSet;

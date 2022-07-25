@@ -531,7 +531,7 @@ Note: This API unbinds the previously bound origin servers, and binds the origin
                 CloseProxyGroupOutcomeCallable CloseProxyGroupCallable(const Model::CloseProxyGroupRequest& request);
 
                 /**
-                 *This API is used to disable security policies.
+                 *This API is used to disable a security policy.
                  * @param req CloseSecurityPolicyRequest
                  * @return CloseSecurityPolicyOutcome
                  */
@@ -667,7 +667,7 @@ This API only supports connections of version 3.0.
                 CreateUDPListenersOutcomeCallable CreateUDPListenersCallable(const Model::CreateUDPListenersRequest& request);
 
                 /**
-                 *This API (DeleteCertificate) is used to delete certificates.
+                 *This API is used to delete a certificate.
                  * @param req DeleteCertificateRequest
                  * @return DeleteCertificateOutcome
                  */
@@ -721,7 +721,7 @@ This API only supports connections of version 3.0.
                 DeleteRuleOutcomeCallable DeleteRuleCallable(const Model::DeleteRuleRequest& request);
 
                 /**
-                 *This API is used to delete security policies.
+                 *This API is used to delete a security policy.
                  * @param req DeleteSecurityPolicyRequest
                  * @return DeleteSecurityPolicyOutcome
                  */
@@ -1235,7 +1235,7 @@ Note: Grouped connections currently do not support HTTP/HTTPS listeners.
                 OpenProxyGroupOutcomeCallable OpenProxyGroupCallable(const Model::OpenProxyGroupRequest& request);
 
                 /**
-                 *This API is used to enable security policies.
+                 *This API is used to enable a security policy.
                  * @param req OpenSecurityPolicyRequest
                  * @return OpenSecurityPolicyOutcome
                  */

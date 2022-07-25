@@ -160,34 +160,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取Listener status. Valid values:
-0: running;
-1: creating;
-2: terminating;
-3: adjusting origin server;
-4: adjusting configuration.
-                     * @return ListenerStatus Listener status. Valid values:
-0: running;
-1: creating;
-2: terminating;
-3: adjusting origin server;
-4: adjusting configuration.
+                     * 获取Listener status:
+`0`: Running
+`1`: Creating
+`2`: Terminating
+`3`: Adjusting origin server
+`4`: Adjusting configuration
+                     * @return ListenerStatus Listener status:
+`0`: Running
+`1`: Creating
+`2`: Terminating
+`3`: Adjusting origin server
+`4`: Adjusting configuration
                      */
                     uint64_t GetListenerStatus() const;
 
                     /**
-                     * 设置Listener status. Valid values:
-0: running;
-1: creating;
-2: terminating;
-3: adjusting origin server;
-4: adjusting configuration.
-                     * @param ListenerStatus Listener status. Valid values:
-0: running;
-1: creating;
-2: terminating;
-3: adjusting origin server;
-4: adjusting configuration.
+                     * 设置Listener status:
+`0`: Running
+`1`: Creating
+`2`: Terminating
+`3`: Adjusting origin server
+`4`: Adjusting configuration
+                     * @param ListenerStatus Listener status:
+`0`: Running
+`1`: Creating
+`2`: Terminating
+`3`: Adjusting origin server
+`4`: Adjusting configuration
                      */
                     void SetListenerStatus(const uint64_t& _listenerStatus);
 
@@ -198,26 +198,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ListenerStatusHasBeenSet() const;
 
                     /**
-                     * 获取Origin server access policy of listener. Valid values:
-rr: round robin;
-wrr: weighted round robin;
-lc: least connection.
-                     * @return Scheduler Origin server access policy of listener. Valid values:
-rr: round robin;
-wrr: weighted round robin;
-lc: least connection.
+                     * 获取Origin server access policy of listeners:
+`rr`: Round robin
+`wrr`: Weighted round robin
+`lc`: Least connection
+                     * @return Scheduler Origin server access policy of listeners:
+`rr`: Round robin
+`wrr`: Weighted round robin
+`lc`: Least connection
                      */
                     std::string GetScheduler() const;
 
                     /**
-                     * 设置Origin server access policy of listener. Valid values:
-rr: round robin;
-wrr: weighted round robin;
-lc: least connection.
-                     * @param Scheduler Origin server access policy of listener. Valid values:
-rr: round robin;
-wrr: weighted round robin;
-lc: least connection.
+                     * 设置Origin server access policy of listeners:
+`rr`: Round robin
+`wrr`: Weighted round robin
+`lc`: Least connection
+                     * @param Scheduler Origin server access policy of listeners:
+`rr`: Round robin
+`wrr`: Weighted round robin
+`lc`: Least connection
                      */
                     void SetScheduler(const std::string& _scheduler);
 
@@ -264,22 +264,22 @@ lc: least connection.
                     bool DelayLoopHasBeenSet() const;
 
                     /**
-                     * 获取Whether health check is enabled for listener. Valid values:
-0: disabled;
-1: enabled
-                     * @return HealthCheck Whether health check is enabled for listener. Valid values:
-0: disabled;
-1: enabled
+                     * 获取Whether to enable the listener health check:
+`0`: Disable
+`1`: Enable
+                     * @return HealthCheck Whether to enable the listener health check:
+`0`: Disable
+`1`: Enable
                      */
                     uint64_t GetHealthCheck() const;
 
                     /**
-                     * 设置Whether health check is enabled for listener. Valid values:
-0: disabled;
-1: enabled
-                     * @param HealthCheck Whether health check is enabled for listener. Valid values:
-0: disabled;
-1: enabled
+                     * 设置Whether to enable the listener health check:
+`0`: Disable
+`1`: Enable
+                     * @param HealthCheck Whether to enable the listener health check:
+`0`: Disable
+`1`: Enable
                      */
                     void SetHealthCheck(const uint64_t& _healthCheck);
 
@@ -290,22 +290,22 @@ lc: least connection.
                     bool HealthCheckHasBeenSet() const;
 
                     /**
-                     * 获取Status of origin server bound to listener. Valid values:
-0: exceptional;
-1: normal.
-                     * @return BindStatus Status of origin server bound to listener. Valid values:
-0: exceptional;
-1: normal.
+                     * 获取Status of the origin server bound to listeners:
+`0`: Abnormal
+`1`: Normal
+                     * @return BindStatus Status of the origin server bound to listeners:
+`0`: Abnormal
+`1`: Normal
                      */
                     uint64_t GetBindStatus() const;
 
                     /**
-                     * 设置Status of origin server bound to listener. Valid values:
-0: exceptional;
-1: normal.
-                     * @param BindStatus Status of origin server bound to listener. Valid values:
-0: exceptional;
-1: normal.
+                     * 设置Status of the origin server bound to listeners:
+`0`: Abnormal
+`1`: Normal
+                     * @param BindStatus Status of the origin server bound to listeners:
+`0`: Abnormal
+`1`: Normal
                      */
                     void SetBindStatus(const uint64_t& _bindStatus);
 
@@ -338,14 +338,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RealServerSetHasBeenSet() const;
 
                     /**
-                     * 获取Listener creation time; using UNIX timestamp.
-                     * @return CreateTime Listener creation time; using UNIX timestamp.
+                     * 获取Listener creation time in the format of UNIX timestamp
+                     * @return CreateTime Listener creation time in the format of UNIX timestamp
                      */
                     uint64_t GetCreateTime() const;
 
                     /**
-                     * 设置Listener creation time; using UNIX timestamp.
-                     * @param CreateTime Listener creation time; using UNIX timestamp.
+                     * 设置Listener creation time in the format of UNIX timestamp
+                     * @param CreateTime Listener creation time in the format of UNIX timestamp
                      */
                     void SetCreateTime(const uint64_t& _createTime);
 
@@ -356,18 +356,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Describes how the listener obtains client IPs. 0: TOA; 1: Proxy Protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return ClientIPMethod Describes how the listener obtains client IPs. 0: TOA; 1: Proxy Protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Describes how the listener obtains client IPs. `0`: TOA; `1`: Proxy Protocol.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ClientIPMethod Describes how the listener obtains client IPs. `0`: TOA; `1`: Proxy Protocol.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetClientIPMethod() const;
 
                     /**
-                     * 设置Describes how the listener obtains client IPs. 0: TOA; 1: Proxy Protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param ClientIPMethod Describes how the listener obtains client IPs. 0: TOA; 1: Proxy Protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Describes how the listener obtains client IPs. `0`: TOA; `1`: Proxy Protocol.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ClientIPMethod Describes how the listener obtains client IPs. `0`: TOA; `1`: Proxy Protocol.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetClientIPMethod(const uint64_t& _clientIPMethod);
 
@@ -379,17 +379,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 获取Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HealthyThreshold Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetHealthyThreshold() const;
 
                     /**
                      * 设置Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param HealthyThreshold Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetHealthyThreshold(const uint64_t& _healthyThreshold);
 
@@ -401,17 +401,17 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 获取Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UnhealthyThreshold Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetUnhealthyThreshold() const;
 
                     /**
                      * 设置Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param UnhealthyThreshold Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetUnhealthyThreshold(const uint64_t& _unhealthyThreshold);
 
@@ -423,17 +423,17 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
                     /**
                      * 获取Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FailoverSwitch Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetFailoverSwitch() const;
 
                     /**
                      * 设置Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param FailoverSwitch Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetFailoverSwitch(const uint64_t& _failoverSwitch);
 
@@ -445,17 +445,17 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 获取Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SessionPersist Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetSessionPersist() const;
 
                     /**
                      * 设置Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param SessionPersist Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetSessionPersist(const uint64_t& _sessionPersist);
 
@@ -505,21 +505,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * Listener status. Valid values:
-0: running;
-1: creating;
-2: terminating;
-3: adjusting origin server;
-4: adjusting configuration.
+                     * Listener status:
+`0`: Running
+`1`: Creating
+`2`: Terminating
+`3`: Adjusting origin server
+`4`: Adjusting configuration
                      */
                     uint64_t m_listenerStatus;
                     bool m_listenerStatusHasBeenSet;
 
                     /**
-                     * Origin server access policy of listener. Valid values:
-rr: round robin;
-wrr: weighted round robin;
-lc: least connection.
+                     * Origin server access policy of listeners:
+`rr`: Round robin
+`wrr`: Weighted round robin
+`lc`: Least connection
                      */
                     std::string m_scheduler;
                     bool m_schedulerHasBeenSet;
@@ -537,17 +537,17 @@ lc: least connection.
                     bool m_delayLoopHasBeenSet;
 
                     /**
-                     * Whether health check is enabled for listener. Valid values:
-0: disabled;
-1: enabled
+                     * Whether to enable the listener health check:
+`0`: Disable
+`1`: Enable
                      */
                     uint64_t m_healthCheck;
                     bool m_healthCheckHasBeenSet;
 
                     /**
-                     * Status of origin server bound to listener. Valid values:
-0: exceptional;
-1: normal.
+                     * Status of the origin server bound to listeners:
+`0`: Abnormal
+`1`: Normal
                      */
                     uint64_t m_bindStatus;
                     bool m_bindStatusHasBeenSet;
@@ -560,42 +560,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_realServerSetHasBeenSet;
 
                     /**
-                     * Listener creation time; using UNIX timestamp.
+                     * Listener creation time in the format of UNIX timestamp
                      */
                     uint64_t m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Describes how the listener obtains client IPs. 0: TOA; 1: Proxy Protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Describes how the listener obtains client IPs. `0`: TOA; `1`: Proxy Protocol.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_clientIPMethod;
                     bool m_clientIPMethodHasBeenSet;
 
                     /**
                      * Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_healthyThreshold;
                     bool m_healthyThresholdHasBeenSet;
 
                     /**
                      * Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_unhealthyThreshold;
                     bool m_unhealthyThresholdHasBeenSet;
 
                     /**
                      * Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_failoverSwitch;
                     bool m_failoverSwitchHasBeenSet;
 
                     /**
                      * Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_sessionPersist;
                     bool m_sessionPersistHasBeenSet;

@@ -115,26 +115,26 @@ namespace TencentCloud
                     bool MetricNamesHasBeenSet() const;
 
                     /**
-                     * 获取Monitoring granularity. It currently supports: 60, 300, 3,600, 86,400. Unit: seconds.
-Time range: <= 1 day, supported minimum granularity: 60 seconds;
-Time range: <= 7 days, supported minimum granularity: 3,600 seconds;
-Time range: <= 30 days, supported minimum granularity: 86,400 seconds;
-                     * @return Granularity Monitoring granularity. It currently supports: 60, 300, 3,600, 86,400. Unit: seconds.
-Time range: <= 1 day, supported minimum granularity: 60 seconds;
-Time range: <= 7 days, supported minimum granularity: 3,600 seconds;
-Time range: <= 30 days, supported minimum granularity: 86,400 seconds;
+                     * 获取Monitoring granularity (in seconds). Valid values: 60s, 300s, 3,600s, 86,400s.
+Time range: ≤ 1 day. Supported minimum granularity: 60 seconds;
+Time range: ≤ 7 days. Supported minimum granularity: 3,600 seconds;
+Time range: ≤ 30 days. Supported minimum granularity: 86,400 seconds;
+                     * @return Granularity Monitoring granularity (in seconds). Valid values: 60s, 300s, 3,600s, 86,400s.
+Time range: ≤ 1 day. Supported minimum granularity: 60 seconds;
+Time range: ≤ 7 days. Supported minimum granularity: 3,600 seconds;
+Time range: ≤ 30 days. Supported minimum granularity: 86,400 seconds;
                      */
                     uint64_t GetGranularity() const;
 
                     /**
-                     * 设置Monitoring granularity. It currently supports: 60, 300, 3,600, 86,400. Unit: seconds.
-Time range: <= 1 day, supported minimum granularity: 60 seconds;
-Time range: <= 7 days, supported minimum granularity: 3,600 seconds;
-Time range: <= 30 days, supported minimum granularity: 86,400 seconds;
-                     * @param Granularity Monitoring granularity. It currently supports: 60, 300, 3,600, 86,400. Unit: seconds.
-Time range: <= 1 day, supported minimum granularity: 60 seconds;
-Time range: <= 7 days, supported minimum granularity: 3,600 seconds;
-Time range: <= 30 days, supported minimum granularity: 86,400 seconds;
+                     * 设置Monitoring granularity (in seconds). Valid values: 60s, 300s, 3,600s, 86,400s.
+Time range: ≤ 1 day. Supported minimum granularity: 60 seconds;
+Time range: ≤ 7 days. Supported minimum granularity: 3,600 seconds;
+Time range: ≤ 30 days. Supported minimum granularity: 86,400 seconds;
+                     * @param Granularity Monitoring granularity (in seconds). Valid values: 60s, 300s, 3,600s, 86,400s.
+Time range: ≤ 1 day. Supported minimum granularity: 60 seconds;
+Time range: ≤ 7 days. Supported minimum granularity: 3,600 seconds;
+Time range: ≤ 30 days. Supported minimum granularity: 86,400 seconds;
                      */
                     void SetGranularity(const uint64_t& _granularity);
 
@@ -171,10 +171,10 @@ Time range: <= 30 days, supported minimum granularity: 86,400 seconds;
                     bool m_metricNamesHasBeenSet;
 
                     /**
-                     * Monitoring granularity. It currently supports: 60, 300, 3,600, 86,400. Unit: seconds.
-Time range: <= 1 day, supported minimum granularity: 60 seconds;
-Time range: <= 7 days, supported minimum granularity: 3,600 seconds;
-Time range: <= 30 days, supported minimum granularity: 86,400 seconds;
+                     * Monitoring granularity (in seconds). Valid values: 60s, 300s, 3,600s, 86,400s.
+Time range: ≤ 1 day. Supported minimum granularity: 60 seconds;
+Time range: ≤ 7 days. Supported minimum granularity: 3,600 seconds;
+Time range: ≤ 30 days. Supported minimum granularity: 86,400 seconds;
                      */
                     uint64_t m_granularity;
                     bool m_granularityHasBeenSet;

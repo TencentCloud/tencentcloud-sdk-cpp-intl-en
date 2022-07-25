@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Connection ID list; It's an old parameter, please switch to ProxyIds.
-                     * @return InstanceIds Connection ID list; It's an old parameter, please switch to ProxyIds.
+                     * 获取Connection ID list; It’s an old parameter, please switch to ProxyIds.
+                     * @return InstanceIds Connection ID list; It’s an old parameter, please switch to ProxyIds.
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置Connection ID list; It's an old parameter, please switch to ProxyIds.
-                     * @param InstanceIds Connection ID list; It's an old parameter, please switch to ProxyIds.
+                     * 设置Connection ID list; It’s an old parameter, please switch to ProxyIds.
+                     * @param InstanceIds Connection ID list; It’s an old parameter, please switch to ProxyIds.
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Connection ID list; It's a new parameter.
-                     * @return ProxyIds Connection ID list; It's a new parameter.
+                     * 获取Connection ID list; It’s a new parameter.
+                     * @return ProxyIds Connection ID list; It’s a new parameter.
                      */
                     std::vector<std::string> GetProxyIds() const;
 
                     /**
-                     * 设置Connection ID list; It's a new parameter.
-                     * @param ProxyIds Connection ID list; It's a new parameter.
+                     * 设置Connection ID list; It’s a new parameter.
+                     * @param ProxyIds Connection ID list; It’s a new parameter.
                      */
                     void SetProxyIds(const std::vector<std::string>& _proxyIds);
 
@@ -81,13 +81,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Connection ID list; It's an old parameter, please switch to ProxyIds.
+                     * Connection ID list; It’s an old parameter, please switch to ProxyIds.
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * Connection ID list; It's a new parameter.
+                     * Connection ID list; It’s a new parameter.
                      */
                     std::vector<std::string> m_proxyIds;
                     bool m_proxyIdsHasBeenSet;

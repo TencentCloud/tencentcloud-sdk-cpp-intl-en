@@ -160,34 +160,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取Listener status. Valid values:
-0: running;
-1: creating;
-2: terminating;
-3: adjusting origin server;
-4: adjusting configuration.
-                     * @return ListenerStatus Listener status. Valid values:
-0: running;
-1: creating;
-2: terminating;
-3: adjusting origin server;
-4: adjusting configuration.
+                     * 获取Listener status:
+`0`: Running
+`1`: Creating
+`2`: Terminating
+`3`: Adjusting origin server
+`4`: Adjusting configuration
+                     * @return ListenerStatus Listener status:
+`0`: Running
+`1`: Creating
+`2`: Terminating
+`3`: Adjusting origin server
+`4`: Adjusting configuration
                      */
                     uint64_t GetListenerStatus() const;
 
                     /**
-                     * 设置Listener status. Valid values:
-0: running;
-1: creating;
-2: terminating;
-3: adjusting origin server;
-4: adjusting configuration.
-                     * @param ListenerStatus Listener status. Valid values:
-0: running;
-1: creating;
-2: terminating;
-3: adjusting origin server;
-4: adjusting configuration.
+                     * 设置Listener status:
+`0`: Running
+`1`: Creating
+`2`: Terminating
+`3`: Adjusting origin server
+`4`: Adjusting configuration
+                     * @param ListenerStatus Listener status:
+`0`: Running
+`1`: Creating
+`2`: Terminating
+`3`: Adjusting origin server
+`4`: Adjusting configuration
                      */
                     void SetListenerStatus(const uint64_t& _listenerStatus);
 
@@ -216,14 +216,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SchedulerHasBeenSet() const;
 
                     /**
-                     * 获取Status of origin server bound to listener. 0: normal, 1: exceptional IP, 2: exceptional domain name resolution
-                     * @return BindStatus Status of origin server bound to listener. 0: normal, 1: exceptional IP, 2: exceptional domain name resolution
+                     * 获取Origin server binding status of listeners. `0`: Normal; `1`: IP exception; `2`: Domain name resolution exception.
+                     * @return BindStatus Origin server binding status of listeners. `0`: Normal; `1`: IP exception; `2`: Domain name resolution exception.
                      */
                     uint64_t GetBindStatus() const;
 
                     /**
-                     * 设置Status of origin server bound to listener. 0: normal, 1: exceptional IP, 2: exceptional domain name resolution
-                     * @param BindStatus Status of origin server bound to listener. 0: normal, 1: exceptional IP, 2: exceptional domain name resolution
+                     * 设置Origin server binding status of listeners. `0`: Normal; `1`: IP exception; `2`: Domain name resolution exception.
+                     * @param BindStatus Origin server binding status of listeners. `0`: Normal; `1`: IP exception; `2`: Domain name resolution exception.
                      */
                     void SetBindStatus(const uint64_t& _bindStatus);
 
@@ -252,14 +252,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RealServerSetHasBeenSet() const;
 
                     /**
-                     * 获取Listener creation time; using UNIX timestamp.
-                     * @return CreateTime Listener creation time; using UNIX timestamp.
+                     * 获取Listener creation time in the format of UNIX timestamp
+                     * @return CreateTime Listener creation time in the format of UNIX timestamp
                      */
                     uint64_t GetCreateTime() const;
 
                     /**
-                     * 设置Listener creation time; using UNIX timestamp.
-                     * @param CreateTime Listener creation time; using UNIX timestamp.
+                     * 设置Listener creation time in the format of UNIX timestamp
+                     * @param CreateTime Listener creation time in the format of UNIX timestamp
                      */
                     void SetCreateTime(const uint64_t& _createTime);
 
@@ -271,17 +271,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SessionPersist Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetSessionPersist() const;
 
                     /**
                      * 设置Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param SessionPersist Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetSessionPersist(const uint64_t& _sessionPersist);
 
@@ -331,12 +331,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * Listener status. Valid values:
-0: running;
-1: creating;
-2: terminating;
-3: adjusting origin server;
-4: adjusting configuration.
+                     * Listener status:
+`0`: Running
+`1`: Creating
+`2`: Terminating
+`3`: Adjusting origin server
+`4`: Adjusting configuration
                      */
                     uint64_t m_listenerStatus;
                     bool m_listenerStatusHasBeenSet;
@@ -348,7 +348,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_schedulerHasBeenSet;
 
                     /**
-                     * Status of origin server bound to listener. 0: normal, 1: exceptional IP, 2: exceptional domain name resolution
+                     * Origin server binding status of listeners. `0`: Normal; `1`: IP exception; `2`: Domain name resolution exception.
                      */
                     uint64_t m_bindStatus;
                     bool m_bindStatusHasBeenSet;
@@ -360,14 +360,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_realServerSetHasBeenSet;
 
                     /**
-                     * Listener creation time; using UNIX timestamp.
+                     * Listener creation time in the format of UNIX timestamp
                      */
                     uint64_t m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
                      * Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_sessionPersist;
                     bool m_sessionPersistHasBeenSet;

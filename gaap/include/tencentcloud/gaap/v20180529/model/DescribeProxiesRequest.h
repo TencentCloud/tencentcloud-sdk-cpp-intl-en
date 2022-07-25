@@ -45,14 +45,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's an old parameter, please switch to ProxyIds.
-                     * @return InstanceIds Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's an old parameter, please switch to ProxyIds.
+                     * 获取Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s an old parameter, please switch to ProxyIds.
+                     * @return InstanceIds Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s an old parameter, please switch to ProxyIds.
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's an old parameter, please switch to ProxyIds.
-                     * @param InstanceIds Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's an old parameter, please switch to ProxyIds.
+                     * 设置Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s an old parameter, please switch to ProxyIds.
+                     * @param InstanceIds Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s an old parameter, please switch to ProxyIds.
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
@@ -63,14 +63,14 @@ namespace TencentCloud
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Offset. The default value is 0.
-                     * @return Offset Offset. The default value is 0.
+                     * 获取Offset. Default value: 0.
+                     * @return Offset Offset. Default value: 0.
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset. The default value is 0.
-                     * @param Offset Offset. The default value is 0.
+                     * 设置Offset. Default value: 0.
+                     * @param Offset Offset. Default value: 0.
                      */
                     void SetOffset(const uint64_t& _offset);
 
@@ -81,14 +81,14 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of results to be returned. The default value is 20, and the maximum value is 100.
-                     * @return Limit Number of results to be returned. The default value is 20, and the maximum value is 100.
+                     * 获取Number of returned results. Default value: 20. Maximum value: 100.
+                     * @return Limit Number of returned results. Default value: 20. Maximum value: 100.
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of results to be returned. The default value is 20, and the maximum value is 100.
-                     * @param Limit Number of results to be returned. The default value is 20, and the maximum value is 100.
+                     * 设置Number of returned results. Default value: 20. Maximum value: 100.
+                     * @param Limit Number of returned results. Default value: 20. Maximum value: 100.
                      */
                     void SetLimit(const uint64_t& _limit);
 
@@ -99,40 +99,40 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Filter condition   
-The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` with this parameter. 
-ProjectId - String - Required: No - Filter by project ID.   
-AccessRegion - String - Required: No - Filter by access region.    
-RealServerRegion - String - Required: No - Filter by origin server region.
-GroupId - String - Required: No - Filter by connection group ID.
+                     * 获取Filters   
+The upper limit on Filters for each request is 10, and the upper limit on Filter.Values is 5. This parameter does not support specifying InstanceIds and Filters at the same time. 
+ProjectId - String - Required: No - Filter by a project ID.   
+AccessRegion - String - Required: No - Filter by an access region.    
+RealServerRegion - String - Required: No - Filter by an origin server region.
+GroupId - String - Required: No - Filter by a connection group ID.
 IPAddressVersion - String - Required: No - Filter by IP version.
 PackageType - String - Required: No - Filter by package type of connection groups.
-                     * @return Filters Filter condition   
-The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` with this parameter. 
-ProjectId - String - Required: No - Filter by project ID.   
-AccessRegion - String - Required: No - Filter by access region.    
-RealServerRegion - String - Required: No - Filter by origin server region.
-GroupId - String - Required: No - Filter by connection group ID.
+                     * @return Filters Filters   
+The upper limit on Filters for each request is 10, and the upper limit on Filter.Values is 5. This parameter does not support specifying InstanceIds and Filters at the same time. 
+ProjectId - String - Required: No - Filter by a project ID.   
+AccessRegion - String - Required: No - Filter by an access region.    
+RealServerRegion - String - Required: No - Filter by an origin server region.
+GroupId - String - Required: No - Filter by a connection group ID.
 IPAddressVersion - String - Required: No - Filter by IP version.
 PackageType - String - Required: No - Filter by package type of connection groups.
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter condition   
-The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` with this parameter. 
-ProjectId - String - Required: No - Filter by project ID.   
-AccessRegion - String - Required: No - Filter by access region.    
-RealServerRegion - String - Required: No - Filter by origin server region.
-GroupId - String - Required: No - Filter by connection group ID.
+                     * 设置Filters   
+The upper limit on Filters for each request is 10, and the upper limit on Filter.Values is 5. This parameter does not support specifying InstanceIds and Filters at the same time. 
+ProjectId - String - Required: No - Filter by a project ID.   
+AccessRegion - String - Required: No - Filter by an access region.    
+RealServerRegion - String - Required: No - Filter by an origin server region.
+GroupId - String - Required: No - Filter by a connection group ID.
 IPAddressVersion - String - Required: No - Filter by IP version.
 PackageType - String - Required: No - Filter by package type of connection groups.
-                     * @param Filters Filter condition   
-The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` with this parameter. 
-ProjectId - String - Required: No - Filter by project ID.   
-AccessRegion - String - Required: No - Filter by access region.    
-RealServerRegion - String - Required: No - Filter by origin server region.
-GroupId - String - Required: No - Filter by connection group ID.
+                     * @param Filters Filters   
+The upper limit on Filters for each request is 10, and the upper limit on Filter.Values is 5. This parameter does not support specifying InstanceIds and Filters at the same time. 
+ProjectId - String - Required: No - Filter by a project ID.   
+AccessRegion - String - Required: No - Filter by an access region.    
+RealServerRegion - String - Required: No - Filter by an origin server region.
+GroupId - String - Required: No - Filter by a connection group ID.
 IPAddressVersion - String - Required: No - Filter by IP version.
 PackageType - String - Required: No - Filter by package type of connection groups.
                      */
@@ -145,14 +145,14 @@ PackageType - String - Required: No - Filter by package type of connection group
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's a new parameter, and replaces InstanceIds.
-                     * @return ProxyIds Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's a new parameter, and replaces InstanceIds.
+                     * 获取Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s a new parameter, and replaces InstanceIds.
+                     * @return ProxyIds Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s a new parameter, and replaces InstanceIds.
                      */
                     std::vector<std::string> GetProxyIds() const;
 
                     /**
-                     * 设置Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's a new parameter, and replaces InstanceIds.
-                     * @param ProxyIds Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's a new parameter, and replaces InstanceIds.
+                     * 设置Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s a new parameter, and replaces InstanceIds.
+                     * @param ProxyIds Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s a new parameter, and replaces InstanceIds.
                      */
                     void SetProxyIds(const std::vector<std::string>& _proxyIds);
 
@@ -212,24 +212,24 @@ When this field does not exist, all connections are pulled, including both not-g
 
                     /**
                      * 获取Specifies how connections are listed. Valid values:
-`asc`: ascending order
-`desc`: descending order
+`asc`: Ascending order
+`desc`: Descending order
 Default: `desc`
                      * @return Order Specifies how connections are listed. Valid values:
-`asc`: ascending order
-`desc`: descending order
+`asc`: Ascending order
+`desc`: Descending order
 Default: `desc`
                      */
                     std::string GetOrder() const;
 
                     /**
                      * 设置Specifies how connections are listed. Valid values:
-`asc`: ascending order
-`desc`: descending order
+`asc`: Ascending order
+`desc`: Descending order
 Default: `desc`
                      * @param Order Specifies how connections are listed. Valid values:
-`asc`: ascending order
-`desc`: descending order
+`asc`: Ascending order
+`desc`: Descending order
 Default: `desc`
                      */
                     void SetOrder(const std::string& _order);
@@ -242,32 +242,32 @@ Default: `desc`
 
                     /**
                      * 获取Sorting field. Valid values:
-`create_time`: sort by the creation time
-`proxy_id`: sort by the connection ID
-`bandwidth`:sort by the bandwidth limit
-`concurrent_connections`: sort by the number of concurrent connections
+`create_time`: Sort by creation time
+`proxy_id`: Sort by connection ID
+`bandwidth`:Sort by bandwidth limit
+`concurrent_connections`: Sort by number of concurrent connections
 Default: `create_time`
                      * @return OrderField Sorting field. Valid values:
-`create_time`: sort by the creation time
-`proxy_id`: sort by the connection ID
-`bandwidth`:sort by the bandwidth limit
-`concurrent_connections`: sort by the number of concurrent connections
+`create_time`: Sort by creation time
+`proxy_id`: Sort by connection ID
+`bandwidth`:Sort by bandwidth limit
+`concurrent_connections`: Sort by number of concurrent connections
 Default: `create_time`
                      */
                     std::string GetOrderField() const;
 
                     /**
                      * 设置Sorting field. Valid values:
-`create_time`: sort by the creation time
-`proxy_id`: sort by the connection ID
-`bandwidth`:sort by the bandwidth limit
-`concurrent_connections`: sort by the number of concurrent connections
+`create_time`: Sort by creation time
+`proxy_id`: Sort by connection ID
+`bandwidth`:Sort by bandwidth limit
+`concurrent_connections`: Sort by number of concurrent connections
 Default: `create_time`
                      * @param OrderField Sorting field. Valid values:
-`create_time`: sort by the creation time
-`proxy_id`: sort by the connection ID
-`bandwidth`:sort by the bandwidth limit
-`concurrent_connections`: sort by the number of concurrent connections
+`create_time`: Sort by creation time
+`proxy_id`: Sort by connection ID
+`bandwidth`:Sort by bandwidth limit
+`concurrent_connections`: Sort by number of concurrent connections
 Default: `create_time`
                      */
                     void SetOrderField(const std::string& _orderField);
@@ -281,30 +281,30 @@ Default: `create_time`
                 private:
 
                     /**
-                     * Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's an old parameter, please switch to ProxyIds.
+                     * Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s an old parameter, please switch to ProxyIds.
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * Offset. The default value is 0.
+                     * Offset. Default value: 0.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of results to be returned. The default value is 20, and the maximum value is 100.
+                     * Number of returned results. Default value: 20. Maximum value: 100.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Filter condition   
-The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` with this parameter. 
-ProjectId - String - Required: No - Filter by project ID.   
-AccessRegion - String - Required: No - Filter by access region.    
-RealServerRegion - String - Required: No - Filter by origin server region.
-GroupId - String - Required: No - Filter by connection group ID.
+                     * Filters   
+The upper limit on Filters for each request is 10, and the upper limit on Filter.Values is 5. This parameter does not support specifying InstanceIds and Filters at the same time. 
+ProjectId - String - Required: No - Filter by a project ID.   
+AccessRegion - String - Required: No - Filter by an access region.    
+RealServerRegion - String - Required: No - Filter by an origin server region.
+GroupId - String - Required: No - Filter by a connection group ID.
 IPAddressVersion - String - Required: No - Filter by IP version.
 PackageType - String - Required: No - Filter by package type of connection groups.
                      */
@@ -312,7 +312,7 @@ PackageType - String - Required: No - Filter by package type of connection group
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's a new parameter, and replaces InstanceIds.
+                     * Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s a new parameter, and replaces InstanceIds.
                      */
                     std::vector<std::string> m_proxyIds;
                     bool m_proxyIdsHasBeenSet;
@@ -334,8 +334,8 @@ When this field does not exist, all connections are pulled, including both not-g
 
                     /**
                      * Specifies how connections are listed. Valid values:
-`asc`: ascending order
-`desc`: descending order
+`asc`: Ascending order
+`desc`: Descending order
 Default: `desc`
                      */
                     std::string m_order;
@@ -343,10 +343,10 @@ Default: `desc`
 
                     /**
                      * Sorting field. Valid values:
-`create_time`: sort by the creation time
-`proxy_id`: sort by the connection ID
-`bandwidth`:sort by the bandwidth limit
-`concurrent_connections`: sort by the number of concurrent connections
+`create_time`: Sort by creation time
+`proxy_id`: Sort by connection ID
+`bandwidth`:Sort by bandwidth limit
+`concurrent_connections`: Sort by number of concurrent connections
 Default: `create_time`
                      */
                     std::string m_orderField;

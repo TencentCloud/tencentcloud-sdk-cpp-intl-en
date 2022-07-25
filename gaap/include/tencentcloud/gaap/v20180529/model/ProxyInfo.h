@@ -210,6 +210,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `ISOLATED`: Isolated
 `CLONING`: Copying
 `RECOVERING`: Maintaining
+`MOVING`: Migrating
                      * @return Status Connection status. Valid values:
 `RUNNING`: Running
 `CREATING`: Creating
@@ -222,6 +223,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `ISOLATED`: Isolated
 `CLONING`: Copying
 `RECOVERING`: Maintaining
+`MOVING`: Migrating
                      */
                     std::string GetStatus() const;
 
@@ -238,6 +240,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `ISOLATED`: Isolated
 `CLONING`: Copying
 `RECOVERING`: Maintaining
+`MOVING`: Migrating
                      * @param Status Connection status. Valid values:
 `RUNNING`: Running
 `CREATING`: Creating
@@ -250,6 +253,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `ISOLATED`: Isolated
 `CLONING`: Copying
 `RECOVERING`: Maintaining
+`MOVING`: Migrating
                      */
                     void SetStatus(const std::string& _status);
 
@@ -654,17 +658,17 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool IPAddressVersionHasBeenSet() const;
 
                     /**
-                     * 获取Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: custom security EIP.
+                     * 获取Network type. `normal`: general BGP; `cn2`: Dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: Custom security EIP.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return NetworkType Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: custom security EIP.
+                     * @return NetworkType Network type. `normal`: general BGP; `cn2`: Dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: Custom security EIP.
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetNetworkType() const;
 
                     /**
-                     * 设置Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: custom security EIP.
+                     * 设置Network type. `normal`: general BGP; `cn2`: Dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: Custom security EIP.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param NetworkType Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: custom security EIP.
+                     * @param NetworkType Network type. `normal`: general BGP; `cn2`: Dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: Custom security EIP.
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetNetworkType(const std::string& _networkType);
@@ -857,6 +861,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `ISOLATED`: Isolated
 `CLONING`: Copying
 `RECOVERING`: Maintaining
+`MOVING`: Migrating
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
@@ -989,7 +994,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_iPAddressVersionHasBeenSet;
 
                     /**
-                     * Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: custom security EIP.
+                     * Network type. `normal`: general BGP; `cn2`: Dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: Custom security EIP.
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_networkType;

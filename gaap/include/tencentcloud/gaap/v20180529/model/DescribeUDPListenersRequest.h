@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
-                     * @return ProxyId Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+                     * 获取Filter condition that filters by connection ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
+                     * @return ProxyId Filter condition that filters by connection ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
                      */
                     std::string GetProxyId() const;
 
                     /**
-                     * 设置Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
-                     * @param ProxyId Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+                     * 设置Filter condition that filters by connection ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
+                     * @param ProxyId Filter condition that filters by connection ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
                      */
                     void SetProxyId(const std::string& _proxyId);
 
@@ -62,13 +62,21 @@ namespace TencentCloud
 
                     /**
                      * 获取Filter condition. Exact query by listener IDs.
+When ProxyId is specified, the listener will be checked whether it belongs to the connection.
+When GroupId is specified, the listener will be checked whether it belongs to the connection group.
                      * @return ListenerId Filter condition. Exact query by listener IDs.
+When ProxyId is specified, the listener will be checked whether it belongs to the connection.
+When GroupId is specified, the listener will be checked whether it belongs to the connection group.
                      */
                     std::string GetListenerId() const;
 
                     /**
                      * 设置Filter condition. Exact query by listener IDs.
+When ProxyId is specified, the listener will be checked whether it belongs to the connection.
+When GroupId is specified, the listener will be checked whether it belongs to the connection group.
                      * @param ListenerId Filter condition. Exact query by listener IDs.
+When ProxyId is specified, the listener will be checked whether it belongs to the connection.
+When GroupId is specified, the listener will be checked whether it belongs to the connection group.
                      */
                     void SetListenerId(const std::string& _listenerId);
 
@@ -151,14 +159,14 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
-                     * @return GroupId Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+                     * 获取Filter condition that filters by connection group ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
+                     * @return GroupId Filter condition that filters by connection group ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
                      */
                     std::string GetGroupId() const;
 
                     /**
-                     * 设置Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
-                     * @param GroupId Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+                     * 设置Filter condition that filters by connection group ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
+                     * @param GroupId Filter condition that filters by connection group ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
                      */
                     void SetGroupId(const std::string& _groupId);
 
@@ -189,13 +197,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+                     * Filter condition that filters by connection ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
                      */
                     std::string m_proxyId;
                     bool m_proxyIdHasBeenSet;
 
                     /**
                      * Filter condition. Exact query by listener IDs.
+When ProxyId is specified, the listener will be checked whether it belongs to the connection.
+When GroupId is specified, the listener will be checked whether it belongs to the connection group.
                      */
                     std::string m_listenerId;
                     bool m_listenerIdHasBeenSet;
@@ -225,7 +235,7 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+                     * Filter condition that filters by connection group ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
                      */
                     std::string m_groupId;
                     bool m_groupIdHasBeenSet;
