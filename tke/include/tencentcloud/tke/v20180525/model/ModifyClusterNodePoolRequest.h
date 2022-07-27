@@ -280,6 +280,24 @@ namespace TencentCloud
                      */
                     bool UnschedulableHasBeenSet() const;
 
+                    /**
+                     * 获取Whether Deletion Protection is enabled
+                     * @return DeletionProtection Whether Deletion Protection is enabled
+                     */
+                    bool GetDeletionProtection() const;
+
+                    /**
+                     * 设置Whether Deletion Protection is enabled
+                     * @param DeletionProtection Whether Deletion Protection is enabled
+                     */
+                    void SetDeletionProtection(const bool& _deletionProtection);
+
+                    /**
+                     * 判断参数 DeletionProtection 是否已赋值
+                     * @return DeletionProtection 是否已赋值
+                     */
+                    bool DeletionProtectionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -359,6 +377,12 @@ namespace TencentCloud
                      */
                     int64_t m_unschedulable;
                     bool m_unschedulableHasBeenSet;
+
+                    /**
+                     * Whether Deletion Protection is enabled
+                     */
+                    bool m_deletionProtection;
+                    bool m_deletionProtectionHasBeenSet;
 
                 };
             }

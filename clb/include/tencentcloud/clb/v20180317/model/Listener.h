@@ -434,6 +434,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool DeregisterTargetRstHasBeenSet() const;
 
+                    /**
+                     * 获取Attribute of listener
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return AttrFlags Attribute of listener
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> GetAttrFlags() const;
+
+                    /**
+                     * 设置Attribute of listener
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param AttrFlags Attribute of listener
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetAttrFlags(const std::vector<std::string>& _attrFlags);
+
+                    /**
+                     * 判断参数 AttrFlags 是否已赋值
+                     * @return AttrFlags 是否已赋值
+                     */
+                    bool AttrFlagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -558,6 +580,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool m_deregisterTargetRst;
                     bool m_deregisterTargetRstHasBeenSet;
+
+                    /**
+                     * Attribute of listener
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_attrFlags;
+                    bool m_attrFlagsHasBeenSet;
 
                 };
             }

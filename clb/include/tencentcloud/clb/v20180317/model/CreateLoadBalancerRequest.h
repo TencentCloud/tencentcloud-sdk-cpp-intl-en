@@ -109,14 +109,14 @@ Note: if the name of the new CLB instance already exists, a default name will be
                     bool LoadBalancerNameHasBeenSet() const;
 
                     /**
-                     * 获取Network ID of the target CLB real server, such as `vpc-12345678`, which can be obtained through the [DescribeVpcEx](https://intl.cloud.tencent.com/document/product/215/1372?from_cn_redirect=1) API. If this parameter is not specified, it will default to `DefaultVPC`. This parameter is required for creating a CLB instance.
-                     * @return VpcId Network ID of the target CLB real server, such as `vpc-12345678`, which can be obtained through the [DescribeVpcEx](https://intl.cloud.tencent.com/document/product/215/1372?from_cn_redirect=1) API. If this parameter is not specified, it will default to `DefaultVPC`. This parameter is required for creating a CLB instance.
+                     * 获取Network ID of the target device on the CLB backend, such as `vpc-12345678`, which can be obtained through the `DescribeVpcEx` API. If this parameter is not entered, `DefaultVPC` is used by default. This parameter is required when creating a private network instance.
+                     * @return VpcId Network ID of the target device on the CLB backend, such as `vpc-12345678`, which can be obtained through the `DescribeVpcEx` API. If this parameter is not entered, `DefaultVPC` is used by default. This parameter is required when creating a private network instance.
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置Network ID of the target CLB real server, such as `vpc-12345678`, which can be obtained through the [DescribeVpcEx](https://intl.cloud.tencent.com/document/product/215/1372?from_cn_redirect=1) API. If this parameter is not specified, it will default to `DefaultVPC`. This parameter is required for creating a CLB instance.
-                     * @param VpcId Network ID of the target CLB real server, such as `vpc-12345678`, which can be obtained through the [DescribeVpcEx](https://intl.cloud.tencent.com/document/product/215/1372?from_cn_redirect=1) API. If this parameter is not specified, it will default to `DefaultVPC`. This parameter is required for creating a CLB instance.
+                     * 设置Network ID of the target device on the CLB backend, such as `vpc-12345678`, which can be obtained through the `DescribeVpcEx` API. If this parameter is not entered, `DefaultVPC` is used by default. This parameter is required when creating a private network instance.
+                     * @param VpcId Network ID of the target device on the CLB backend, such as `vpc-12345678`, which can be obtained through the `DescribeVpcEx` API. If this parameter is not entered, `DefaultVPC` is used by default. This parameter is required when creating a private network instance.
                      */
                     void SetVpcId(const std::string& _vpcId);
 
@@ -145,14 +145,14 @@ Note: if the name of the new CLB instance already exists, a default name will be
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Project ID of the CLB instance, which can be obtained through the [DescribeProject](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) API. If this parameter is not specified, it will default to the default project.
-                     * @return ProjectId Project ID of the CLB instance, which can be obtained through the [DescribeProject](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) API. If this parameter is not specified, it will default to the default project.
+                     * 获取ID of the project to which a CLB instance belongs, which can be obtained through the `DescribeProject` API. If this parameter is not entered, the default project will be used.
+                     * @return ProjectId ID of the project to which a CLB instance belongs, which can be obtained through the `DescribeProject` API. If this parameter is not entered, the default project will be used.
                      */
                     int64_t GetProjectId() const;
 
                     /**
-                     * 设置Project ID of the CLB instance, which can be obtained through the [DescribeProject](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) API. If this parameter is not specified, it will default to the default project.
-                     * @param ProjectId Project ID of the CLB instance, which can be obtained through the [DescribeProject](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) API. If this parameter is not specified, it will default to the default project.
+                     * 设置ID of the project to which a CLB instance belongs, which can be obtained through the `DescribeProject` API. If this parameter is not entered, the default project will be used.
+                     * @param ProjectId ID of the project to which a CLB instance belongs, which can be obtained through the `DescribeProject` API. If this parameter is not entered, the default project will be used.
                      */
                     void SetProjectId(const int64_t& _projectId);
 
@@ -275,14 +275,14 @@ Note: By default, the traffic goes to the primary AZ. The secondary AZs only car
                     bool VipIspHasBeenSet() const;
 
                     /**
-                     * 获取Tags a CLB instance when purchasing it.
-                     * @return Tags Tags a CLB instance when purchasing it.
+                     * 获取Tags the CLB instance when purchasing it. Up to 20 tag key value pairs are supported.
+                     * @return Tags Tags the CLB instance when purchasing it. Up to 20 tag key value pairs are supported.
                      */
                     std::vector<TagInfo> GetTags() const;
 
                     /**
-                     * 设置Tags a CLB instance when purchasing it.
-                     * @param Tags Tags a CLB instance when purchasing it.
+                     * 设置Tags the CLB instance when purchasing it. Up to 20 tag key value pairs are supported.
+                     * @param Tags Tags the CLB instance when purchasing it. Up to 20 tag key value pairs are supported.
                      */
                     void SetTags(const std::vector<TagInfo>& _tags);
 
@@ -537,7 +537,7 @@ Note: if the name of the new CLB instance already exists, a default name will be
                     bool m_loadBalancerNameHasBeenSet;
 
                     /**
-                     * Network ID of the target CLB real server, such as `vpc-12345678`, which can be obtained through the [DescribeVpcEx](https://intl.cloud.tencent.com/document/product/215/1372?from_cn_redirect=1) API. If this parameter is not specified, it will default to `DefaultVPC`. This parameter is required for creating a CLB instance.
+                     * Network ID of the target device on the CLB backend, such as `vpc-12345678`, which can be obtained through the `DescribeVpcEx` API. If this parameter is not entered, `DefaultVPC` is used by default. This parameter is required when creating a private network instance.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
@@ -549,7 +549,7 @@ Note: if the name of the new CLB instance already exists, a default name will be
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * Project ID of the CLB instance, which can be obtained through the [DescribeProject](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) API. If this parameter is not specified, it will default to the default project.
+                     * ID of the project to which a CLB instance belongs, which can be obtained through the `DescribeProject` API. If this parameter is not entered, the default project will be used.
                      */
                     int64_t m_projectId;
                     bool m_projectIdHasBeenSet;
@@ -592,7 +592,7 @@ Note: By default, the traffic goes to the primary AZ. The secondary AZs only car
                     bool m_vipIspHasBeenSet;
 
                     /**
-                     * Tags a CLB instance when purchasing it.
+                     * Tags the CLB instance when purchasing it. Up to 20 tag key value pairs are supported.
                      */
                     std::vector<TagInfo> m_tags;
                     bool m_tagsHasBeenSet;

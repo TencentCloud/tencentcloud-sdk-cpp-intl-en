@@ -428,6 +428,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool TagsHasBeenSet() const;
 
+                    /**
+                     * 获取Whether Deletion Protection is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return DeletionProtection Whether Deletion Protection is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool GetDeletionProtection() const;
+
+                    /**
+                     * 设置Whether Deletion Protection is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param DeletionProtection Whether Deletion Protection is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetDeletionProtection(const bool& _deletionProtection);
+
+                    /**
+                     * 判断参数 DeletionProtection 是否已赋值
+                     * @return DeletionProtection 是否已赋值
+                     */
+                    bool DeletionProtectionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -552,6 +574,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * Whether Deletion Protection is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool m_deletionProtection;
+                    bool m_deletionProtectionHasBeenSet;
 
                 };
             }

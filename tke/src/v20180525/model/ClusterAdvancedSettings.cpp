@@ -37,7 +37,9 @@ ClusterAdvancedSettings::ClusterAdvancedSettings() :
     m_runtimeVersionHasBeenSet(false),
     m_enableCustomizedPodCIDRHasBeenSet(false),
     m_basePodNumberHasBeenSet(false),
-    m_ciliumModeHasBeenSet(false)
+    m_ciliumModeHasBeenSet(false),
+    m_isDualStackHasBeenSet(false),
+    m_qGPUShareEnableHasBeenSet(false)
 {
 }
 
@@ -223,6 +225,26 @@ CoreInternalOutcome ClusterAdvancedSettings::Deserialize(const rapidjson::Value 
         m_ciliumModeHasBeenSet = true;
     }
 
+    if (value.HasMember("IsDualStack") && !value["IsDualStack"].IsNull())
+    {
+        if (!value["IsDualStack"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `ClusterAdvancedSettings.IsDualStack` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_isDualStack = value["IsDualStack"].GetBool();
+        m_isDualStackHasBeenSet = true;
+    }
+
+    if (value.HasMember("QGPUShareEnable") && !value["QGPUShareEnable"].IsNull())
+    {
+        if (!value["QGPUShareEnable"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `ClusterAdvancedSettings.QGPUShareEnable` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_qGPUShareEnable = value["QGPUShareEnable"].GetBool();
+        m_qGPUShareEnableHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -365,6 +387,22 @@ void ClusterAdvancedSettings::ToJsonObject(rapidjson::Value &value, rapidjson::D
         string key = "CiliumMode";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_ciliumMode.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_isDualStackHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsDualStack";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_isDualStack, allocator);
+    }
+
+    if (m_qGPUShareEnableHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "QGPUShareEnable";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_qGPUShareEnable, allocator);
     }
 
 }
@@ -640,5 +678,37 @@ void ClusterAdvancedSettings::SetCiliumMode(const string& _ciliumMode)
 bool ClusterAdvancedSettings::CiliumModeHasBeenSet() const
 {
     return m_ciliumModeHasBeenSet;
+}
+
+bool ClusterAdvancedSettings::GetIsDualStack() const
+{
+    return m_isDualStack;
+}
+
+void ClusterAdvancedSettings::SetIsDualStack(const bool& _isDualStack)
+{
+    m_isDualStack = _isDualStack;
+    m_isDualStackHasBeenSet = true;
+}
+
+bool ClusterAdvancedSettings::IsDualStackHasBeenSet() const
+{
+    return m_isDualStackHasBeenSet;
+}
+
+bool ClusterAdvancedSettings::GetQGPUShareEnable() const
+{
+    return m_qGPUShareEnable;
+}
+
+void ClusterAdvancedSettings::SetQGPUShareEnable(const bool& _qGPUShareEnable)
+{
+    m_qGPUShareEnable = _qGPUShareEnable;
+    m_qGPUShareEnableHasBeenSet = true;
+}
+
+bool ClusterAdvancedSettings::QGPUShareEnableHasBeenSet() const
+{
+    return m_qGPUShareEnableHasBeenSet;
 }
 

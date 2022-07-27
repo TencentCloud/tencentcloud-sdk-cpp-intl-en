@@ -377,6 +377,42 @@ The following conditions are required to use ipvs-bpf network mode:
                      */
                     bool CiliumModeHasBeenSet() const;
 
+                    /**
+                     * 获取Whether it is a dual-stack cluster in VPC-CNI mode. Default value: `false`, which indicates it is not a dual-stack cluster.
+                     * @return IsDualStack Whether it is a dual-stack cluster in VPC-CNI mode. Default value: `false`, which indicates it is not a dual-stack cluster.
+                     */
+                    bool GetIsDualStack() const;
+
+                    /**
+                     * 设置Whether it is a dual-stack cluster in VPC-CNI mode. Default value: `false`, which indicates it is not a dual-stack cluster.
+                     * @param IsDualStack Whether it is a dual-stack cluster in VPC-CNI mode. Default value: `false`, which indicates it is not a dual-stack cluster.
+                     */
+                    void SetIsDualStack(const bool& _isDualStack);
+
+                    /**
+                     * 判断参数 IsDualStack 是否已赋值
+                     * @return IsDualStack 是否已赋值
+                     */
+                    bool IsDualStackHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable qGPU Sharing
+                     * @return QGPUShareEnable Whether to enable qGPU Sharing
+                     */
+                    bool GetQGPUShareEnable() const;
+
+                    /**
+                     * 设置Whether to enable qGPU Sharing
+                     * @param QGPUShareEnable Whether to enable qGPU Sharing
+                     */
+                    void SetQGPUShareEnable(const bool& _qGPUShareEnable);
+
+                    /**
+                     * 判断参数 QGPUShareEnable 是否已赋值
+                     * @return QGPUShareEnable 是否已赋值
+                     */
+                    bool QGPUShareEnableHasBeenSet() const;
+
                 private:
 
                     /**
@@ -486,6 +522,18 @@ The following conditions are required to use ipvs-bpf network mode:
                      */
                     std::string m_ciliumMode;
                     bool m_ciliumModeHasBeenSet;
+
+                    /**
+                     * Whether it is a dual-stack cluster in VPC-CNI mode. Default value: `false`, which indicates it is not a dual-stack cluster.
+                     */
+                    bool m_isDualStack;
+                    bool m_isDualStackHasBeenSet;
+
+                    /**
+                     * Whether to enable qGPU Sharing
+                     */
+                    bool m_qGPUShareEnable;
+                    bool m_qGPUShareEnableHasBeenSet;
 
                 };
             }

@@ -62,13 +62,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Order ID.
+Note: Either `TaskId` or `DealName` is required.
                      * @return DealName Order ID.
+Note: Either `TaskId` or `DealName` is required.
                      */
                     std::string GetDealName() const;
 
                     /**
                      * 设置Order ID.
+Note: Either `TaskId` or `DealName` is required.
                      * @param DealName Order ID.
+Note: Either `TaskId` or `DealName` is required.
                      */
                     void SetDealName(const std::string& _dealName);
 
@@ -88,6 +92,7 @@ namespace TencentCloud
 
                     /**
                      * Order ID.
+Note: Either `TaskId` or `DealName` is required.
                      */
                     std::string m_dealName;
                     bool m_dealNameHasBeenSet;

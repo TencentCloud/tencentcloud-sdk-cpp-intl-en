@@ -23,7 +23,10 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Tke::V20180525::Model;
 using namespace std;
 
-DescribeTKEEdgeScriptResponse::DescribeTKEEdgeScriptResponse()
+DescribeTKEEdgeScriptResponse::DescribeTKEEdgeScriptResponse() :
+    m_linkHasBeenSet(false),
+    m_tokenHasBeenSet(false),
+    m_commandHasBeenSet(false)
 {
 }
 
@@ -61,6 +64,36 @@ CoreInternalOutcome DescribeTKEEdgeScriptResponse::Deserialize(const string &pay
     }
 
 
+    if (rsp.HasMember("Link") && !rsp["Link"].IsNull())
+    {
+        if (!rsp["Link"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Link` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_link = string(rsp["Link"].GetString());
+        m_linkHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("Token") && !rsp["Token"].IsNull())
+    {
+        if (!rsp["Token"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Token` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_token = string(rsp["Token"].GetString());
+        m_tokenHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("Command") && !rsp["Command"].IsNull())
+    {
+        if (!rsp["Command"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Command` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_command = string(rsp["Command"].GetString());
+        m_commandHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -70,6 +103,30 @@ string DescribeTKEEdgeScriptResponse::ToJsonString() const
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_linkHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Link";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_link.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_tokenHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Token";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_token.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_commandHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Command";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_command.c_str(), allocator).Move(), allocator);
+    }
 
     rapidjson::Value iKey(rapidjson::kStringType);
     string key = "RequestId";
@@ -82,5 +139,35 @@ string DescribeTKEEdgeScriptResponse::ToJsonString() const
     return buffer.GetString();
 }
 
+
+string DescribeTKEEdgeScriptResponse::GetLink() const
+{
+    return m_link;
+}
+
+bool DescribeTKEEdgeScriptResponse::LinkHasBeenSet() const
+{
+    return m_linkHasBeenSet;
+}
+
+string DescribeTKEEdgeScriptResponse::GetToken() const
+{
+    return m_token;
+}
+
+bool DescribeTKEEdgeScriptResponse::TokenHasBeenSet() const
+{
+    return m_tokenHasBeenSet;
+}
+
+string DescribeTKEEdgeScriptResponse::GetCommand() const
+{
+    return m_command;
+}
+
+bool DescribeTKEEdgeScriptResponse::CommandHasBeenSet() const
+{
+    return m_commandHasBeenSet;
+}
 
 

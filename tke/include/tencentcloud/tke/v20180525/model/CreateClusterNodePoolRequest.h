@@ -227,14 +227,14 @@ namespace TencentCloud
                     bool RuntimeVersionHasBeenSet() const;
 
                     /**
-                     * 获取Operating system of the node pool
-                     * @return NodePoolOs Operating system of the node pool
+                     * 获取Node pool operating system (enter the image ID for a custom image, and enter the OS name for a public image)
+                     * @return NodePoolOs Node pool operating system (enter the image ID for a custom image, and enter the OS name for a public image)
                      */
                     std::string GetNodePoolOs() const;
 
                     /**
-                     * 设置Operating system of the node pool
-                     * @param NodePoolOs Operating system of the node pool
+                     * 设置Node pool operating system (enter the image ID for a custom image, and enter the OS name for a public image)
+                     * @param NodePoolOs Node pool operating system (enter the image ID for a custom image, and enter the OS name for a public image)
                      */
                     void SetNodePoolOs(const std::string& _nodePoolOs);
 
@@ -279,6 +279,24 @@ namespace TencentCloud
                      * @return Tags 是否已赋值
                      */
                     bool TagsHasBeenSet() const;
+
+                    /**
+                     * 获取Whether Deletion Protection is enabled
+                     * @return DeletionProtection Whether Deletion Protection is enabled
+                     */
+                    bool GetDeletionProtection() const;
+
+                    /**
+                     * 设置Whether Deletion Protection is enabled
+                     * @param DeletionProtection Whether Deletion Protection is enabled
+                     */
+                    void SetDeletionProtection(const bool& _deletionProtection);
+
+                    /**
+                     * 判断参数 DeletionProtection 是否已赋值
+                     * @return DeletionProtection 是否已赋值
+                     */
+                    bool DeletionProtectionHasBeenSet() const;
 
                 private:
 
@@ -343,7 +361,7 @@ namespace TencentCloud
                     bool m_runtimeVersionHasBeenSet;
 
                     /**
-                     * Operating system of the node pool
+                     * Node pool operating system (enter the image ID for a custom image, and enter the OS name for a public image)
                      */
                     std::string m_nodePoolOs;
                     bool m_nodePoolOsHasBeenSet;
@@ -359,6 +377,12 @@ namespace TencentCloud
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * Whether Deletion Protection is enabled
+                     */
+                    bool m_deletionProtection;
+                    bool m_deletionProtectionHasBeenSet;
 
                 };
             }

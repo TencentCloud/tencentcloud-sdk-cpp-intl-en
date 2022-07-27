@@ -114,6 +114,20 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool AutoUpgradeClusterLevelHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable qGPU Sharing
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return QGPUShareEnable Whether to enable qGPU Sharing
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    bool GetQGPUShareEnable() const;
+
+                    /**
+                     * 判断参数 QGPUShareEnable 是否已赋值
+                     * @return QGPUShareEnable 是否已赋值
+                     */
+                    bool QGPUShareEnableHasBeenSet() const;
+
                 private:
 
                     /**
@@ -150,6 +164,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     AutoUpgradeClusterLevel m_autoUpgradeClusterLevel;
                     bool m_autoUpgradeClusterLevelHasBeenSet;
+
+                    /**
+                     * Whether to enable qGPU Sharing
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    bool m_qGPUShareEnable;
+                    bool m_qGPUShareEnableHasBeenSet;
 
                 };
             }

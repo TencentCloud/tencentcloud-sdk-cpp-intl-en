@@ -31,6 +31,8 @@
 #include <tencentcloud/tke/v20180525/model/AddNodeToNodePoolResponse.h>
 #include <tencentcloud/tke/v20180525/model/AddVpcCniSubnetsRequest.h>
 #include <tencentcloud/tke/v20180525/model/AddVpcCniSubnetsResponse.h>
+#include <tencentcloud/tke/v20180525/model/CheckEdgeClusterCIDRRequest.h>
+#include <tencentcloud/tke/v20180525/model/CheckEdgeClusterCIDRResponse.h>
 #include <tencentcloud/tke/v20180525/model/CheckInstancesUpgradeAbleRequest.h>
 #include <tencentcloud/tke/v20180525/model/CheckInstancesUpgradeAbleResponse.h>
 #include <tencentcloud/tke/v20180525/model/CreateClusterRequest.h>
@@ -47,8 +49,12 @@
 #include <tencentcloud/tke/v20180525/model/CreateClusterNodePoolFromExistingAsgResponse.h>
 #include <tencentcloud/tke/v20180525/model/CreateClusterRouteTableRequest.h>
 #include <tencentcloud/tke/v20180525/model/CreateClusterRouteTableResponse.h>
+#include <tencentcloud/tke/v20180525/model/CreateECMInstancesRequest.h>
+#include <tencentcloud/tke/v20180525/model/CreateECMInstancesResponse.h>
 #include <tencentcloud/tke/v20180525/model/CreatePrometheusAlertRuleRequest.h>
 #include <tencentcloud/tke/v20180525/model/CreatePrometheusAlertRuleResponse.h>
+#include <tencentcloud/tke/v20180525/model/CreateTKEEdgeClusterRequest.h>
+#include <tencentcloud/tke/v20180525/model/CreateTKEEdgeClusterResponse.h>
 #include <tencentcloud/tke/v20180525/model/DeleteClusterRequest.h>
 #include <tencentcloud/tke/v20180525/model/DeleteClusterResponse.h>
 #include <tencentcloud/tke/v20180525/model/DeleteClusterAsGroupsRequest.h>
@@ -65,10 +71,20 @@
 #include <tencentcloud/tke/v20180525/model/DeleteClusterRouteResponse.h>
 #include <tencentcloud/tke/v20180525/model/DeleteClusterRouteTableRequest.h>
 #include <tencentcloud/tke/v20180525/model/DeleteClusterRouteTableResponse.h>
+#include <tencentcloud/tke/v20180525/model/DeleteECMInstancesRequest.h>
+#include <tencentcloud/tke/v20180525/model/DeleteECMInstancesResponse.h>
+#include <tencentcloud/tke/v20180525/model/DeleteEdgeCVMInstancesRequest.h>
+#include <tencentcloud/tke/v20180525/model/DeleteEdgeCVMInstancesResponse.h>
+#include <tencentcloud/tke/v20180525/model/DeleteEdgeClusterInstancesRequest.h>
+#include <tencentcloud/tke/v20180525/model/DeleteEdgeClusterInstancesResponse.h>
 #include <tencentcloud/tke/v20180525/model/DeletePrometheusAlertRuleRequest.h>
 #include <tencentcloud/tke/v20180525/model/DeletePrometheusAlertRuleResponse.h>
+#include <tencentcloud/tke/v20180525/model/DeleteTKEEdgeClusterRequest.h>
+#include <tencentcloud/tke/v20180525/model/DeleteTKEEdgeClusterResponse.h>
 #include <tencentcloud/tke/v20180525/model/DescribeAvailableClusterVersionRequest.h>
 #include <tencentcloud/tke/v20180525/model/DescribeAvailableClusterVersionResponse.h>
+#include <tencentcloud/tke/v20180525/model/DescribeAvailableTKEEdgeVersionRequest.h>
+#include <tencentcloud/tke/v20180525/model/DescribeAvailableTKEEdgeVersionResponse.h>
 #include <tencentcloud/tke/v20180525/model/DescribeClusterAsGroupOptionRequest.h>
 #include <tencentcloud/tke/v20180525/model/DescribeClusterAsGroupOptionResponse.h>
 #include <tencentcloud/tke/v20180525/model/DescribeClusterAsGroupsRequest.h>
@@ -103,6 +119,16 @@
 #include <tencentcloud/tke/v20180525/model/DescribeClusterStatusResponse.h>
 #include <tencentcloud/tke/v20180525/model/DescribeClustersRequest.h>
 #include <tencentcloud/tke/v20180525/model/DescribeClustersResponse.h>
+#include <tencentcloud/tke/v20180525/model/DescribeECMInstancesRequest.h>
+#include <tencentcloud/tke/v20180525/model/DescribeECMInstancesResponse.h>
+#include <tencentcloud/tke/v20180525/model/DescribeEdgeAvailableExtraArgsRequest.h>
+#include <tencentcloud/tke/v20180525/model/DescribeEdgeAvailableExtraArgsResponse.h>
+#include <tencentcloud/tke/v20180525/model/DescribeEdgeCVMInstancesRequest.h>
+#include <tencentcloud/tke/v20180525/model/DescribeEdgeCVMInstancesResponse.h>
+#include <tencentcloud/tke/v20180525/model/DescribeEdgeClusterExtraArgsRequest.h>
+#include <tencentcloud/tke/v20180525/model/DescribeEdgeClusterExtraArgsResponse.h>
+#include <tencentcloud/tke/v20180525/model/DescribeEdgeClusterInstancesRequest.h>
+#include <tencentcloud/tke/v20180525/model/DescribeEdgeClusterInstancesResponse.h>
 #include <tencentcloud/tke/v20180525/model/DescribeEnableVpcCniProgressRequest.h>
 #include <tencentcloud/tke/v20180525/model/DescribeEnableVpcCniProgressResponse.h>
 #include <tencentcloud/tke/v20180525/model/DescribeExistedInstancesRequest.h>
@@ -117,6 +143,14 @@
 #include <tencentcloud/tke/v20180525/model/DescribeResourceUsageResponse.h>
 #include <tencentcloud/tke/v20180525/model/DescribeRouteTableConflictsRequest.h>
 #include <tencentcloud/tke/v20180525/model/DescribeRouteTableConflictsResponse.h>
+#include <tencentcloud/tke/v20180525/model/DescribeTKEEdgeClusterCredentialRequest.h>
+#include <tencentcloud/tke/v20180525/model/DescribeTKEEdgeClusterCredentialResponse.h>
+#include <tencentcloud/tke/v20180525/model/DescribeTKEEdgeClusterStatusRequest.h>
+#include <tencentcloud/tke/v20180525/model/DescribeTKEEdgeClusterStatusResponse.h>
+#include <tencentcloud/tke/v20180525/model/DescribeTKEEdgeClustersRequest.h>
+#include <tencentcloud/tke/v20180525/model/DescribeTKEEdgeClustersResponse.h>
+#include <tencentcloud/tke/v20180525/model/DescribeTKEEdgeExternalKubeconfigRequest.h>
+#include <tencentcloud/tke/v20180525/model/DescribeTKEEdgeExternalKubeconfigResponse.h>
 #include <tencentcloud/tke/v20180525/model/DescribeTKEEdgeScriptRequest.h>
 #include <tencentcloud/tke/v20180525/model/DescribeTKEEdgeScriptResponse.h>
 #include <tencentcloud/tke/v20180525/model/DescribeVersionsRequest.h>
@@ -129,6 +163,8 @@
 #include <tencentcloud/tke/v20180525/model/EnableClusterDeletionProtectionResponse.h>
 #include <tencentcloud/tke/v20180525/model/EnableVpcCniNetworkTypeRequest.h>
 #include <tencentcloud/tke/v20180525/model/EnableVpcCniNetworkTypeResponse.h>
+#include <tencentcloud/tke/v20180525/model/ForwardTKEEdgeApplicationRequestV3Request.h>
+#include <tencentcloud/tke/v20180525/model/ForwardTKEEdgeApplicationRequestV3Response.h>
 #include <tencentcloud/tke/v20180525/model/GetClusterLevelPriceRequest.h>
 #include <tencentcloud/tke/v20180525/model/GetClusterLevelPriceResponse.h>
 #include <tencentcloud/tke/v20180525/model/GetUpgradeInstanceProgressRequest.h>
@@ -183,6 +219,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::AddVpcCniSubnetsResponse> AddVpcCniSubnetsOutcome;
                 typedef std::future<AddVpcCniSubnetsOutcome> AddVpcCniSubnetsOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::AddVpcCniSubnetsRequest&, AddVpcCniSubnetsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddVpcCniSubnetsAsyncHandler;
+                typedef Outcome<Core::Error, Model::CheckEdgeClusterCIDRResponse> CheckEdgeClusterCIDROutcome;
+                typedef std::future<CheckEdgeClusterCIDROutcome> CheckEdgeClusterCIDROutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::CheckEdgeClusterCIDRRequest&, CheckEdgeClusterCIDROutcome, const std::shared_ptr<const AsyncCallerContext>&)> CheckEdgeClusterCIDRAsyncHandler;
                 typedef Outcome<Core::Error, Model::CheckInstancesUpgradeAbleResponse> CheckInstancesUpgradeAbleOutcome;
                 typedef std::future<CheckInstancesUpgradeAbleOutcome> CheckInstancesUpgradeAbleOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::CheckInstancesUpgradeAbleRequest&, CheckInstancesUpgradeAbleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CheckInstancesUpgradeAbleAsyncHandler;
@@ -207,9 +246,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateClusterRouteTableResponse> CreateClusterRouteTableOutcome;
                 typedef std::future<CreateClusterRouteTableOutcome> CreateClusterRouteTableOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::CreateClusterRouteTableRequest&, CreateClusterRouteTableOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateClusterRouteTableAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateECMInstancesResponse> CreateECMInstancesOutcome;
+                typedef std::future<CreateECMInstancesOutcome> CreateECMInstancesOutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::CreateECMInstancesRequest&, CreateECMInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateECMInstancesAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreatePrometheusAlertRuleResponse> CreatePrometheusAlertRuleOutcome;
                 typedef std::future<CreatePrometheusAlertRuleOutcome> CreatePrometheusAlertRuleOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::CreatePrometheusAlertRuleRequest&, CreatePrometheusAlertRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreatePrometheusAlertRuleAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateTKEEdgeClusterResponse> CreateTKEEdgeClusterOutcome;
+                typedef std::future<CreateTKEEdgeClusterOutcome> CreateTKEEdgeClusterOutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::CreateTKEEdgeClusterRequest&, CreateTKEEdgeClusterOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateTKEEdgeClusterAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteClusterResponse> DeleteClusterOutcome;
                 typedef std::future<DeleteClusterOutcome> DeleteClusterOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::DeleteClusterRequest&, DeleteClusterOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteClusterAsyncHandler;
@@ -234,12 +279,27 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteClusterRouteTableResponse> DeleteClusterRouteTableOutcome;
                 typedef std::future<DeleteClusterRouteTableOutcome> DeleteClusterRouteTableOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::DeleteClusterRouteTableRequest&, DeleteClusterRouteTableOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteClusterRouteTableAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteECMInstancesResponse> DeleteECMInstancesOutcome;
+                typedef std::future<DeleteECMInstancesOutcome> DeleteECMInstancesOutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::DeleteECMInstancesRequest&, DeleteECMInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteECMInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteEdgeCVMInstancesResponse> DeleteEdgeCVMInstancesOutcome;
+                typedef std::future<DeleteEdgeCVMInstancesOutcome> DeleteEdgeCVMInstancesOutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::DeleteEdgeCVMInstancesRequest&, DeleteEdgeCVMInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteEdgeCVMInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteEdgeClusterInstancesResponse> DeleteEdgeClusterInstancesOutcome;
+                typedef std::future<DeleteEdgeClusterInstancesOutcome> DeleteEdgeClusterInstancesOutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::DeleteEdgeClusterInstancesRequest&, DeleteEdgeClusterInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteEdgeClusterInstancesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeletePrometheusAlertRuleResponse> DeletePrometheusAlertRuleOutcome;
                 typedef std::future<DeletePrometheusAlertRuleOutcome> DeletePrometheusAlertRuleOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::DeletePrometheusAlertRuleRequest&, DeletePrometheusAlertRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeletePrometheusAlertRuleAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteTKEEdgeClusterResponse> DeleteTKEEdgeClusterOutcome;
+                typedef std::future<DeleteTKEEdgeClusterOutcome> DeleteTKEEdgeClusterOutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::DeleteTKEEdgeClusterRequest&, DeleteTKEEdgeClusterOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteTKEEdgeClusterAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAvailableClusterVersionResponse> DescribeAvailableClusterVersionOutcome;
                 typedef std::future<DescribeAvailableClusterVersionOutcome> DescribeAvailableClusterVersionOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::DescribeAvailableClusterVersionRequest&, DescribeAvailableClusterVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAvailableClusterVersionAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAvailableTKEEdgeVersionResponse> DescribeAvailableTKEEdgeVersionOutcome;
+                typedef std::future<DescribeAvailableTKEEdgeVersionOutcome> DescribeAvailableTKEEdgeVersionOutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::DescribeAvailableTKEEdgeVersionRequest&, DescribeAvailableTKEEdgeVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAvailableTKEEdgeVersionAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeClusterAsGroupOptionResponse> DescribeClusterAsGroupOptionOutcome;
                 typedef std::future<DescribeClusterAsGroupOptionOutcome> DescribeClusterAsGroupOptionOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::DescribeClusterAsGroupOptionRequest&, DescribeClusterAsGroupOptionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClusterAsGroupOptionAsyncHandler;
@@ -291,6 +351,21 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeClustersResponse> DescribeClustersOutcome;
                 typedef std::future<DescribeClustersOutcome> DescribeClustersOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::DescribeClustersRequest&, DescribeClustersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClustersAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeECMInstancesResponse> DescribeECMInstancesOutcome;
+                typedef std::future<DescribeECMInstancesOutcome> DescribeECMInstancesOutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::DescribeECMInstancesRequest&, DescribeECMInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeECMInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeEdgeAvailableExtraArgsResponse> DescribeEdgeAvailableExtraArgsOutcome;
+                typedef std::future<DescribeEdgeAvailableExtraArgsOutcome> DescribeEdgeAvailableExtraArgsOutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::DescribeEdgeAvailableExtraArgsRequest&, DescribeEdgeAvailableExtraArgsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeEdgeAvailableExtraArgsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeEdgeCVMInstancesResponse> DescribeEdgeCVMInstancesOutcome;
+                typedef std::future<DescribeEdgeCVMInstancesOutcome> DescribeEdgeCVMInstancesOutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::DescribeEdgeCVMInstancesRequest&, DescribeEdgeCVMInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeEdgeCVMInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeEdgeClusterExtraArgsResponse> DescribeEdgeClusterExtraArgsOutcome;
+                typedef std::future<DescribeEdgeClusterExtraArgsOutcome> DescribeEdgeClusterExtraArgsOutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::DescribeEdgeClusterExtraArgsRequest&, DescribeEdgeClusterExtraArgsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeEdgeClusterExtraArgsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeEdgeClusterInstancesResponse> DescribeEdgeClusterInstancesOutcome;
+                typedef std::future<DescribeEdgeClusterInstancesOutcome> DescribeEdgeClusterInstancesOutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::DescribeEdgeClusterInstancesRequest&, DescribeEdgeClusterInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeEdgeClusterInstancesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeEnableVpcCniProgressResponse> DescribeEnableVpcCniProgressOutcome;
                 typedef std::future<DescribeEnableVpcCniProgressOutcome> DescribeEnableVpcCniProgressOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::DescribeEnableVpcCniProgressRequest&, DescribeEnableVpcCniProgressOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeEnableVpcCniProgressAsyncHandler;
@@ -312,6 +387,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeRouteTableConflictsResponse> DescribeRouteTableConflictsOutcome;
                 typedef std::future<DescribeRouteTableConflictsOutcome> DescribeRouteTableConflictsOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::DescribeRouteTableConflictsRequest&, DescribeRouteTableConflictsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRouteTableConflictsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeTKEEdgeClusterCredentialResponse> DescribeTKEEdgeClusterCredentialOutcome;
+                typedef std::future<DescribeTKEEdgeClusterCredentialOutcome> DescribeTKEEdgeClusterCredentialOutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::DescribeTKEEdgeClusterCredentialRequest&, DescribeTKEEdgeClusterCredentialOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTKEEdgeClusterCredentialAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeTKEEdgeClusterStatusResponse> DescribeTKEEdgeClusterStatusOutcome;
+                typedef std::future<DescribeTKEEdgeClusterStatusOutcome> DescribeTKEEdgeClusterStatusOutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::DescribeTKEEdgeClusterStatusRequest&, DescribeTKEEdgeClusterStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTKEEdgeClusterStatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeTKEEdgeClustersResponse> DescribeTKEEdgeClustersOutcome;
+                typedef std::future<DescribeTKEEdgeClustersOutcome> DescribeTKEEdgeClustersOutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::DescribeTKEEdgeClustersRequest&, DescribeTKEEdgeClustersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTKEEdgeClustersAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeTKEEdgeExternalKubeconfigResponse> DescribeTKEEdgeExternalKubeconfigOutcome;
+                typedef std::future<DescribeTKEEdgeExternalKubeconfigOutcome> DescribeTKEEdgeExternalKubeconfigOutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::DescribeTKEEdgeExternalKubeconfigRequest&, DescribeTKEEdgeExternalKubeconfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTKEEdgeExternalKubeconfigAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeTKEEdgeScriptResponse> DescribeTKEEdgeScriptOutcome;
                 typedef std::future<DescribeTKEEdgeScriptOutcome> DescribeTKEEdgeScriptOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::DescribeTKEEdgeScriptRequest&, DescribeTKEEdgeScriptOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTKEEdgeScriptAsyncHandler;
@@ -330,6 +417,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::EnableVpcCniNetworkTypeResponse> EnableVpcCniNetworkTypeOutcome;
                 typedef std::future<EnableVpcCniNetworkTypeOutcome> EnableVpcCniNetworkTypeOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::EnableVpcCniNetworkTypeRequest&, EnableVpcCniNetworkTypeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnableVpcCniNetworkTypeAsyncHandler;
+                typedef Outcome<Core::Error, Model::ForwardTKEEdgeApplicationRequestV3Response> ForwardTKEEdgeApplicationRequestV3Outcome;
+                typedef std::future<ForwardTKEEdgeApplicationRequestV3Outcome> ForwardTKEEdgeApplicationRequestV3OutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::ForwardTKEEdgeApplicationRequestV3Request&, ForwardTKEEdgeApplicationRequestV3Outcome, const std::shared_ptr<const AsyncCallerContext>&)> ForwardTKEEdgeApplicationRequestV3AsyncHandler;
                 typedef Outcome<Core::Error, Model::GetClusterLevelPriceResponse> GetClusterLevelPriceOutcome;
                 typedef std::future<GetClusterLevelPriceOutcome> GetClusterLevelPriceOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::GetClusterLevelPriceRequest&, GetClusterLevelPriceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetClusterLevelPriceAsyncHandler;
@@ -412,6 +502,15 @@ namespace TencentCloud
                 AddVpcCniSubnetsOutcomeCallable AddVpcCniSubnetsCallable(const Model::AddVpcCniSubnetsRequest& request);
 
                 /**
+                 *This API is used to check if the CIDR block of a TKE Edge cluster conflicts with other CIDR blocks.
+                 * @param req CheckEdgeClusterCIDRRequest
+                 * @return CheckEdgeClusterCIDROutcome
+                 */
+                CheckEdgeClusterCIDROutcome CheckEdgeClusterCIDR(const Model::CheckEdgeClusterCIDRRequest &request);
+                void CheckEdgeClusterCIDRAsync(const Model::CheckEdgeClusterCIDRRequest& request, const CheckEdgeClusterCIDRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CheckEdgeClusterCIDROutcomeCallable CheckEdgeClusterCIDRCallable(const Model::CheckEdgeClusterCIDRRequest& request);
+
+                /**
                  *This API is used to check which nodes can be upgraded in the given node list. 
                  * @param req CheckInstancesUpgradeAbleRequest
                  * @return CheckInstancesUpgradeAbleOutcome
@@ -484,6 +583,15 @@ namespace TencentCloud
                 CreateClusterRouteTableOutcomeCallable CreateClusterRouteTableCallable(const Model::CreateClusterRouteTableRequest& request);
 
                 /**
+                 *This API is used to create an ECM instance.
+                 * @param req CreateECMInstancesRequest
+                 * @return CreateECMInstancesOutcome
+                 */
+                CreateECMInstancesOutcome CreateECMInstances(const Model::CreateECMInstancesRequest &request);
+                void CreateECMInstancesAsync(const Model::CreateECMInstancesRequest& request, const CreateECMInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateECMInstancesOutcomeCallable CreateECMInstancesCallable(const Model::CreateECMInstancesRequest& request);
+
+                /**
                  *This API is used to create an alarm rule.
                  * @param req CreatePrometheusAlertRuleRequest
                  * @return CreatePrometheusAlertRuleOutcome
@@ -491,6 +599,15 @@ namespace TencentCloud
                 CreatePrometheusAlertRuleOutcome CreatePrometheusAlertRule(const Model::CreatePrometheusAlertRuleRequest &request);
                 void CreatePrometheusAlertRuleAsync(const Model::CreatePrometheusAlertRuleRequest& request, const CreatePrometheusAlertRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreatePrometheusAlertRuleOutcomeCallable CreatePrometheusAlertRuleCallable(const Model::CreatePrometheusAlertRuleRequest& request);
+
+                /**
+                 *This API is used to create a TKE Edge cluster.
+                 * @param req CreateTKEEdgeClusterRequest
+                 * @return CreateTKEEdgeClusterOutcome
+                 */
+                CreateTKEEdgeClusterOutcome CreateTKEEdgeCluster(const Model::CreateTKEEdgeClusterRequest &request);
+                void CreateTKEEdgeClusterAsync(const Model::CreateTKEEdgeClusterRequest& request, const CreateTKEEdgeClusterAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateTKEEdgeClusterOutcomeCallable CreateTKEEdgeClusterCallable(const Model::CreateTKEEdgeClusterRequest& request);
 
                 /**
                  *This API is used to delete a cluster. (Cloud API v3).
@@ -565,6 +682,33 @@ namespace TencentCloud
                 DeleteClusterRouteTableOutcomeCallable DeleteClusterRouteTableCallable(const Model::DeleteClusterRouteTableRequest& request);
 
                 /**
+                 *This API is used to delete one or more ECM instances.
+                 * @param req DeleteECMInstancesRequest
+                 * @return DeleteECMInstancesOutcome
+                 */
+                DeleteECMInstancesOutcome DeleteECMInstances(const Model::DeleteECMInstancesRequest &request);
+                void DeleteECMInstancesAsync(const Model::DeleteECMInstancesRequest& request, const DeleteECMInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteECMInstancesOutcomeCallable DeleteECMInstancesCallable(const Model::DeleteECMInstancesRequest& request);
+
+                /**
+                 *This API is used to delete one or more edge CVM instances.
+                 * @param req DeleteEdgeCVMInstancesRequest
+                 * @return DeleteEdgeCVMInstancesOutcome
+                 */
+                DeleteEdgeCVMInstancesOutcome DeleteEdgeCVMInstances(const Model::DeleteEdgeCVMInstancesRequest &request);
+                void DeleteEdgeCVMInstancesAsync(const Model::DeleteEdgeCVMInstancesRequest& request, const DeleteEdgeCVMInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteEdgeCVMInstancesOutcomeCallable DeleteEdgeCVMInstancesCallable(const Model::DeleteEdgeCVMInstancesRequest& request);
+
+                /**
+                 *This API is used to delete one or more edge compute instances.
+                 * @param req DeleteEdgeClusterInstancesRequest
+                 * @return DeleteEdgeClusterInstancesOutcome
+                 */
+                DeleteEdgeClusterInstancesOutcome DeleteEdgeClusterInstances(const Model::DeleteEdgeClusterInstancesRequest &request);
+                void DeleteEdgeClusterInstancesAsync(const Model::DeleteEdgeClusterInstancesRequest& request, const DeleteEdgeClusterInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteEdgeClusterInstancesOutcomeCallable DeleteEdgeClusterInstancesCallable(const Model::DeleteEdgeClusterInstancesRequest& request);
+
+                /**
                  *This API is used to delete an alarm rule.
                  * @param req DeletePrometheusAlertRuleRequest
                  * @return DeletePrometheusAlertRuleOutcome
@@ -574,6 +718,15 @@ namespace TencentCloud
                 DeletePrometheusAlertRuleOutcomeCallable DeletePrometheusAlertRuleCallable(const Model::DeletePrometheusAlertRuleRequest& request);
 
                 /**
+                 *This API is used to delete a TKE Edge cluster.
+                 * @param req DeleteTKEEdgeClusterRequest
+                 * @return DeleteTKEEdgeClusterOutcome
+                 */
+                DeleteTKEEdgeClusterOutcome DeleteTKEEdgeCluster(const Model::DeleteTKEEdgeClusterRequest &request);
+                void DeleteTKEEdgeClusterAsync(const Model::DeleteTKEEdgeClusterRequest& request, const DeleteTKEEdgeClusterAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteTKEEdgeClusterOutcomeCallable DeleteTKEEdgeClusterCallable(const Model::DeleteTKEEdgeClusterRequest& request);
+
+                /**
                  *This API is used to obtain all versions that the cluster can upgrade to.
                  * @param req DescribeAvailableClusterVersionRequest
                  * @return DescribeAvailableClusterVersionOutcome
@@ -581,6 +734,15 @@ namespace TencentCloud
                 DescribeAvailableClusterVersionOutcome DescribeAvailableClusterVersion(const Model::DescribeAvailableClusterVersionRequest &request);
                 void DescribeAvailableClusterVersionAsync(const Model::DescribeAvailableClusterVersionRequest& request, const DescribeAvailableClusterVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeAvailableClusterVersionOutcomeCallable DescribeAvailableClusterVersionCallable(const Model::DescribeAvailableClusterVersionRequest& request);
+
+                /**
+                 *This API is used to query the K8s versions supported by TKE Edge.
+                 * @param req DescribeAvailableTKEEdgeVersionRequest
+                 * @return DescribeAvailableTKEEdgeVersionOutcome
+                 */
+                DescribeAvailableTKEEdgeVersionOutcome DescribeAvailableTKEEdgeVersion(const Model::DescribeAvailableTKEEdgeVersionRequest &request);
+                void DescribeAvailableTKEEdgeVersionAsync(const Model::DescribeAvailableTKEEdgeVersionRequest& request, const DescribeAvailableTKEEdgeVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAvailableTKEEdgeVersionOutcomeCallable DescribeAvailableTKEEdgeVersionCallable(const Model::DescribeAvailableTKEEdgeVersionRequest& request);
 
                 /**
                  *Cluster auto scaling configuration
@@ -736,6 +898,51 @@ namespace TencentCloud
                 DescribeClustersOutcomeCallable DescribeClustersCallable(const Model::DescribeClustersRequest& request);
 
                 /**
+                 *This API is used to obtain the ECM instance information.
+                 * @param req DescribeECMInstancesRequest
+                 * @return DescribeECMInstancesOutcome
+                 */
+                DescribeECMInstancesOutcome DescribeECMInstances(const Model::DescribeECMInstancesRequest &request);
+                void DescribeECMInstancesAsync(const Model::DescribeECMInstancesRequest& request, const DescribeECMInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeECMInstancesOutcomeCallable DescribeECMInstancesCallable(const Model::DescribeECMInstancesRequest& request);
+
+                /**
+                 *This API is used to query the custom parameters available for an edge cluster.
+                 * @param req DescribeEdgeAvailableExtraArgsRequest
+                 * @return DescribeEdgeAvailableExtraArgsOutcome
+                 */
+                DescribeEdgeAvailableExtraArgsOutcome DescribeEdgeAvailableExtraArgs(const Model::DescribeEdgeAvailableExtraArgsRequest &request);
+                void DescribeEdgeAvailableExtraArgsAsync(const Model::DescribeEdgeAvailableExtraArgsRequest& request, const DescribeEdgeAvailableExtraArgsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeEdgeAvailableExtraArgsOutcomeCallable DescribeEdgeAvailableExtraArgsCallable(const Model::DescribeEdgeAvailableExtraArgsRequest& request);
+
+                /**
+                 *This API is used to obtain the edge CVM instance information.
+                 * @param req DescribeEdgeCVMInstancesRequest
+                 * @return DescribeEdgeCVMInstancesOutcome
+                 */
+                DescribeEdgeCVMInstancesOutcome DescribeEdgeCVMInstances(const Model::DescribeEdgeCVMInstancesRequest &request);
+                void DescribeEdgeCVMInstancesAsync(const Model::DescribeEdgeCVMInstancesRequest& request, const DescribeEdgeCVMInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeEdgeCVMInstancesOutcomeCallable DescribeEdgeCVMInstancesCallable(const Model::DescribeEdgeCVMInstancesRequest& request);
+
+                /**
+                 *This API is used to query custom parameters of an edge cluster.
+                 * @param req DescribeEdgeClusterExtraArgsRequest
+                 * @return DescribeEdgeClusterExtraArgsOutcome
+                 */
+                DescribeEdgeClusterExtraArgsOutcome DescribeEdgeClusterExtraArgs(const Model::DescribeEdgeClusterExtraArgsRequest &request);
+                void DescribeEdgeClusterExtraArgsAsync(const Model::DescribeEdgeClusterExtraArgsRequest& request, const DescribeEdgeClusterExtraArgsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeEdgeClusterExtraArgsOutcomeCallable DescribeEdgeClusterExtraArgsCallable(const Model::DescribeEdgeClusterExtraArgsRequest& request);
+
+                /**
+                 *This API is used to query the TKE Edge cluster node information.
+                 * @param req DescribeEdgeClusterInstancesRequest
+                 * @return DescribeEdgeClusterInstancesOutcome
+                 */
+                DescribeEdgeClusterInstancesOutcome DescribeEdgeClusterInstances(const Model::DescribeEdgeClusterInstancesRequest &request);
+                void DescribeEdgeClusterInstancesAsync(const Model::DescribeEdgeClusterInstancesRequest& request, const DescribeEdgeClusterInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeEdgeClusterInstancesOutcomeCallable DescribeEdgeClusterInstancesCallable(const Model::DescribeEdgeClusterInstancesRequest& request);
+
+                /**
                  *This API is used to query the task progress of enabling VPC-CNI mode.
                  * @param req DescribeEnableVpcCniProgressRequest
                  * @return DescribeEnableVpcCniProgressOutcome
@@ -799,7 +1006,43 @@ namespace TencentCloud
                 DescribeRouteTableConflictsOutcomeCallable DescribeRouteTableConflictsCallable(const Model::DescribeRouteTableConflictsRequest& request);
 
                 /**
-                 *This API is used to query the URL of TKE edge script.
+                 *This API is used to obtain the authentication information of a TKE Edge cluster.
+                 * @param req DescribeTKEEdgeClusterCredentialRequest
+                 * @return DescribeTKEEdgeClusterCredentialOutcome
+                 */
+                DescribeTKEEdgeClusterCredentialOutcome DescribeTKEEdgeClusterCredential(const Model::DescribeTKEEdgeClusterCredentialRequest &request);
+                void DescribeTKEEdgeClusterCredentialAsync(const Model::DescribeTKEEdgeClusterCredentialRequest& request, const DescribeTKEEdgeClusterCredentialAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeTKEEdgeClusterCredentialOutcomeCallable DescribeTKEEdgeClusterCredentialCallable(const Model::DescribeTKEEdgeClusterCredentialRequest& request);
+
+                /**
+                 *This API is used to query the current status and process information of a TKE Edge cluster.
+                 * @param req DescribeTKEEdgeClusterStatusRequest
+                 * @return DescribeTKEEdgeClusterStatusOutcome
+                 */
+                DescribeTKEEdgeClusterStatusOutcome DescribeTKEEdgeClusterStatus(const Model::DescribeTKEEdgeClusterStatusRequest &request);
+                void DescribeTKEEdgeClusterStatusAsync(const Model::DescribeTKEEdgeClusterStatusRequest& request, const DescribeTKEEdgeClusterStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeTKEEdgeClusterStatusOutcomeCallable DescribeTKEEdgeClusterStatusCallable(const Model::DescribeTKEEdgeClusterStatusRequest& request);
+
+                /**
+                 *This API is used to query the list of TKE Edge clusters.
+                 * @param req DescribeTKEEdgeClustersRequest
+                 * @return DescribeTKEEdgeClustersOutcome
+                 */
+                DescribeTKEEdgeClustersOutcome DescribeTKEEdgeClusters(const Model::DescribeTKEEdgeClustersRequest &request);
+                void DescribeTKEEdgeClustersAsync(const Model::DescribeTKEEdgeClustersRequest& request, const DescribeTKEEdgeClustersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeTKEEdgeClustersOutcomeCallable DescribeTKEEdgeClustersCallable(const Model::DescribeTKEEdgeClustersRequest& request);
+
+                /**
+                 *This API is used to obtain the kubeconfig for access to a TKE Edge cluster through the public network.
+                 * @param req DescribeTKEEdgeExternalKubeconfigRequest
+                 * @return DescribeTKEEdgeExternalKubeconfigOutcome
+                 */
+                DescribeTKEEdgeExternalKubeconfigOutcome DescribeTKEEdgeExternalKubeconfig(const Model::DescribeTKEEdgeExternalKubeconfigRequest &request);
+                void DescribeTKEEdgeExternalKubeconfigAsync(const Model::DescribeTKEEdgeExternalKubeconfigRequest& request, const DescribeTKEEdgeExternalKubeconfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeTKEEdgeExternalKubeconfigOutcomeCallable DescribeTKEEdgeExternalKubeconfigCallable(const Model::DescribeTKEEdgeExternalKubeconfigRequest& request);
+
+                /**
+                 *This API is used to query the URL of TKE edge script. You can add external nodes to a TKE Edge cluster by downloading the URL.
                  * @param req DescribeTKEEdgeScriptRequest
                  * @return DescribeTKEEdgeScriptOutcome
                  */
@@ -851,6 +1094,15 @@ namespace TencentCloud
                 EnableVpcCniNetworkTypeOutcome EnableVpcCniNetworkType(const Model::EnableVpcCniNetworkTypeRequest &request);
                 void EnableVpcCniNetworkTypeAsync(const Model::EnableVpcCniNetworkTypeRequest& request, const EnableVpcCniNetworkTypeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 EnableVpcCniNetworkTypeOutcomeCallable EnableVpcCniNetworkTypeCallable(const Model::EnableVpcCniNetworkTypeRequest& request);
+
+                /**
+                 *This API is used to work with the add-ons of a TKE Edge cluster.
+                 * @param req ForwardTKEEdgeApplicationRequestV3Request
+                 * @return ForwardTKEEdgeApplicationRequestV3Outcome
+                 */
+                ForwardTKEEdgeApplicationRequestV3Outcome ForwardTKEEdgeApplicationRequestV3(const Model::ForwardTKEEdgeApplicationRequestV3Request &request);
+                void ForwardTKEEdgeApplicationRequestV3Async(const Model::ForwardTKEEdgeApplicationRequestV3Request& request, const ForwardTKEEdgeApplicationRequestV3AsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ForwardTKEEdgeApplicationRequestV3OutcomeCallable ForwardTKEEdgeApplicationRequestV3Callable(const Model::ForwardTKEEdgeApplicationRequestV3Request& request);
 
                 /**
                  *Obtaining the price of specified cluster model

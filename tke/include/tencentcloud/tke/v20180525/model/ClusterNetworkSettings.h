@@ -260,6 +260,50 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool IgnoreServiceCIDRConflictHasBeenSet() const;
 
+                    /**
+                     * 获取Whether it is a dual-stack cluster in VPC-CNI mode. Default value: `false`, which indicates it is not a dual-stack cluster.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return IsDualStack Whether it is a dual-stack cluster in VPC-CNI mode. Default value: `false`, which indicates it is not a dual-stack cluster.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    bool GetIsDualStack() const;
+
+                    /**
+                     * 设置Whether it is a dual-stack cluster in VPC-CNI mode. Default value: `false`, which indicates it is not a dual-stack cluster.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param IsDualStack Whether it is a dual-stack cluster in VPC-CNI mode. Default value: `false`, which indicates it is not a dual-stack cluster.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetIsDualStack(const bool& _isDualStack);
+
+                    /**
+                     * 判断参数 IsDualStack 是否已赋值
+                     * @return IsDualStack 是否已赋值
+                     */
+                    bool IsDualStackHasBeenSet() const;
+
+                    /**
+                     * 获取It is used to automatically assign the IP ranges for the service.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return Ipv6ServiceCIDR It is used to automatically assign the IP ranges for the service.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetIpv6ServiceCIDR() const;
+
+                    /**
+                     * 设置It is used to automatically assign the IP ranges for the service.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param Ipv6ServiceCIDR It is used to automatically assign the IP ranges for the service.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetIpv6ServiceCIDR(const std::string& _ipv6ServiceCIDR);
+
+                    /**
+                     * 判断参数 Ipv6ServiceCIDR 是否已赋值
+                     * @return Ipv6ServiceCIDR 是否已赋值
+                     */
+                    bool Ipv6ServiceCIDRHasBeenSet() const;
+
                 private:
 
                     /**
@@ -331,6 +375,20 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool m_ignoreServiceCIDRConflict;
                     bool m_ignoreServiceCIDRConflictHasBeenSet;
+
+                    /**
+                     * Whether it is a dual-stack cluster in VPC-CNI mode. Default value: `false`, which indicates it is not a dual-stack cluster.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    bool m_isDualStack;
+                    bool m_isDualStackHasBeenSet;
+
+                    /**
+                     * It is used to automatically assign the IP ranges for the service.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_ipv6ServiceCIDR;
+                    bool m_ipv6ServiceCIDRHasBeenSet;
 
                 };
             }
