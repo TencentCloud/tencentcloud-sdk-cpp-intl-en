@@ -226,6 +226,24 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
                      */
                     bool ZoneNameHasBeenSet() const;
 
+                    /**
+                     * 获取Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). Default value: `local` (local disk edition)
+                     * @return ProductVersion Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). Default value: `local` (local disk edition)
+                     */
+                    std::string GetProductVersion() const;
+
+                    /**
+                     * 设置Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). Default value: `local` (local disk edition)
+                     * @param ProductVersion Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). Default value: `local` (local disk edition)
+                     */
+                    void SetProductVersion(const std::string& _productVersion);
+
+                    /**
+                     * 判断参数 ProductVersion 是否已赋值
+                     * @return ProductVersion 是否已赋值
+                     */
+                    bool ProductVersionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -288,6 +306,12 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
                      */
                     std::string m_zoneName;
                     bool m_zoneNameHasBeenSet;
+
+                    /**
+                     * Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). Default value: `local` (local disk edition)
+                     */
+                    std::string m_productVersion;
+                    bool m_productVersionHasBeenSet;
 
                 };
             }

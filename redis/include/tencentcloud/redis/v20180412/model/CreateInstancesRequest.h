@@ -470,6 +470,42 @@ If the instance `TypeId` is CKV 3.2, the password can contain 8–30 letters and
                      */
                     bool DryRunHasBeenSet() const;
 
+                    /**
+                     * 获取Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). Default value: `local` (local disk edition)
+                     * @return ProductVersion Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). Default value: `local` (local disk edition)
+                     */
+                    std::string GetProductVersion() const;
+
+                    /**
+                     * 设置Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). Default value: `local` (local disk edition)
+                     * @param ProductVersion Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). Default value: `local` (local disk edition)
+                     */
+                    void SetProductVersion(const std::string& _productVersion);
+
+                    /**
+                     * 判断参数 ProductVersion 是否已赋值
+                     * @return ProductVersion 是否已赋值
+                     */
+                    bool ProductVersionHasBeenSet() const;
+
+                    /**
+                     * 获取Dedicated cluster ID, which is required when `ProductVersion` is "cdc".
+                     * @return RedisClusterId Dedicated cluster ID, which is required when `ProductVersion` is "cdc".
+                     */
+                    std::string GetRedisClusterId() const;
+
+                    /**
+                     * 设置Dedicated cluster ID, which is required when `ProductVersion` is "cdc".
+                     * @param RedisClusterId Dedicated cluster ID, which is required when `ProductVersion` is "cdc".
+                     */
+                    void SetRedisClusterId(const std::string& _redisClusterId);
+
+                    /**
+                     * 判断参数 RedisClusterId 是否已赋值
+                     * @return RedisClusterId 是否已赋值
+                     */
+                    bool RedisClusterIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -612,6 +648,18 @@ If the instance `TypeId` is CKV 3.2, the password can contain 8–30 letters and
                      */
                     bool m_dryRun;
                     bool m_dryRunHasBeenSet;
+
+                    /**
+                     * Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). Default value: `local` (local disk edition)
+                     */
+                    std::string m_productVersion;
+                    bool m_productVersionHasBeenSet;
+
+                    /**
+                     * Dedicated cluster ID, which is required when `ProductVersion` is "cdc".
+                     */
+                    std::string m_redisClusterId;
+                    bool m_redisClusterIdHasBeenSet;
 
                 };
             }
