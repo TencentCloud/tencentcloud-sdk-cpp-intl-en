@@ -46,9 +46,9 @@ namespace TencentCloud
 
                     /**
                      * 获取Submission result
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return CacheOptResult Submission result
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     CacheOptResult GetCacheOptResult() const;
 
@@ -59,10 +59,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CacheOptResultHasBeenSet() const;
 
                     /**
-                     * 获取Task ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return TaskId Task ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Task ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return TaskId Task ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetTaskId() const;
 
@@ -76,14 +76,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * Submission result
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     CacheOptResult m_cacheOptResult;
                     bool m_cacheOptResultHasBeenSet;
 
                     /**
-                     * Task ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Task ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;

@@ -48,17 +48,17 @@ namespace TencentCloud
 
                     /**
                      * 获取List of succeeded URLs
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return SuccessUrls List of succeeded URLs
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<std::string> GetSuccessUrls() const;
 
                     /**
                      * 设置List of succeeded URLs
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param SuccessUrls List of succeeded URLs
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetSuccessUrls(const std::vector<std::string>& _successUrls);
 
@@ -70,17 +70,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取List of failed URLs
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return FailUrls List of failed URLs
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<std::string> GetFailUrls() const;
 
                     /**
                      * 设置List of failed URLs
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param FailUrls List of failed URLs
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetFailUrls(const std::vector<std::string>& _failUrls);
 
@@ -94,14 +94,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * List of succeeded URLs
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<std::string> m_successUrls;
                     bool m_successUrlsHasBeenSet;
 
                     /**
                      * List of failed URLs
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<std::string> m_failUrls;
                     bool m_failUrlsHasBeenSet;

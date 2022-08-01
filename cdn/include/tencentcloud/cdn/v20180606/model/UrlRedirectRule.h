@@ -102,17 +102,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, “http://[current domain name]” will be used by default.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return RedirectHost Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, “http://[current domain name]” will be used by default.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetRedirectHost() const;
 
                     /**
                      * 设置Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, “http://[current domain name]” will be used by default.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param RedirectHost Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, “http://[current domain name]” will be used by default.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetRedirectHost(const std::string& _redirectHost);
 
@@ -124,17 +124,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 获取Whether to use full-path matching or arbitrary matching
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return FullMatch Whether to use full-path matching or arbitrary matching
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     bool GetFullMatch() const;
 
                     /**
                      * 设置Whether to use full-path matching or arbitrary matching
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param FullMatch Whether to use full-path matching or arbitrary matching
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetFullMatch(const bool& _fullMatch);
 
@@ -166,14 +166,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, “http://[current domain name]” will be used by default.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_redirectHost;
                     bool m_redirectHostHasBeenSet;
 
                     /**
                      * Whether to use full-path matching or arbitrary matching
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     bool m_fullMatch;
                     bool m_fullMatchHasBeenSet;

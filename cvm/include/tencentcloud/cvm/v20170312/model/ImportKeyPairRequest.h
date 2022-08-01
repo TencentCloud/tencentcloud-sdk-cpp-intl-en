@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cvm/v20170312/model/TagSpecification.h>
 
 
 namespace TencentCloud
@@ -104,6 +105,24 @@ If you want to use the default project, specify 0 for the parameter.
                      */
                     bool PublicKeyHasBeenSet() const;
 
+                    /**
+                     * 获取Tag description list. This parameter is used to bind a tag to a key pair.
+                     * @return TagSpecification Tag description list. This parameter is used to bind a tag to a key pair.
+                     */
+                    std::vector<TagSpecification> GetTagSpecification() const;
+
+                    /**
+                     * 设置Tag description list. This parameter is used to bind a tag to a key pair.
+                     * @param TagSpecification Tag description list. This parameter is used to bind a tag to a key pair.
+                     */
+                    void SetTagSpecification(const std::vector<TagSpecification>& _tagSpecification);
+
+                    /**
+                     * 判断参数 TagSpecification 是否已赋值
+                     * @return TagSpecification 是否已赋值
+                     */
+                    bool TagSpecificationHasBeenSet() const;
+
                 private:
 
                     /**
@@ -125,6 +144,12 @@ If you want to use the default project, specify 0 for the parameter.
                      */
                     std::string m_publicKey;
                     bool m_publicKeyHasBeenSet;
+
+                    /**
+                     * Tag description list. This parameter is used to bind a tag to a key pair.
+                     */
+                    std::vector<TagSpecification> m_tagSpecification;
+                    bool m_tagSpecificationHasBeenSet;
 
                 };
             }

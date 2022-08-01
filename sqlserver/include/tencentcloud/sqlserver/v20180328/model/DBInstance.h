@@ -849,6 +849,96 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool InstanceTypeHasBeenSet() const;
 
+                    /**
+                     * 获取The target region of cross-region backup. If this parameter left empty, it indicates that cross-region backup is disabled.
+                     * @return CrossRegions The target region of cross-region backup. If this parameter left empty, it indicates that cross-region backup is disabled.
+                     */
+                    std::vector<std::string> GetCrossRegions() const;
+
+                    /**
+                     * 设置The target region of cross-region backup. If this parameter left empty, it indicates that cross-region backup is disabled.
+                     * @param CrossRegions The target region of cross-region backup. If this parameter left empty, it indicates that cross-region backup is disabled.
+                     */
+                    void SetCrossRegions(const std::vector<std::string>& _crossRegions);
+
+                    /**
+                     * 判断参数 CrossRegions 是否已赋值
+                     * @return CrossRegions 是否已赋值
+                     */
+                    bool CrossRegionsHasBeenSet() const;
+
+                    /**
+                     * 获取Cross-region backup status. Valid values: `enable` (enabled), `disable` (disabed)
+                     * @return CrossBackupEnabled Cross-region backup status. Valid values: `enable` (enabled), `disable` (disabed)
+                     */
+                    std::string GetCrossBackupEnabled() const;
+
+                    /**
+                     * 设置Cross-region backup status. Valid values: `enable` (enabled), `disable` (disabed)
+                     * @param CrossBackupEnabled Cross-region backup status. Valid values: `enable` (enabled), `disable` (disabed)
+                     */
+                    void SetCrossBackupEnabled(const std::string& _crossBackupEnabled);
+
+                    /**
+                     * 判断参数 CrossBackupEnabled 是否已赋值
+                     * @return CrossBackupEnabled 是否已赋值
+                     */
+                    bool CrossBackupEnabledHasBeenSet() const;
+
+                    /**
+                     * 获取The retention period of cross-region backup. Default value: 7 days
+                     * @return CrossBackupSaveDays The retention period of cross-region backup. Default value: 7 days
+                     */
+                    uint64_t GetCrossBackupSaveDays() const;
+
+                    /**
+                     * 设置The retention period of cross-region backup. Default value: 7 days
+                     * @param CrossBackupSaveDays The retention period of cross-region backup. Default value: 7 days
+                     */
+                    void SetCrossBackupSaveDays(const uint64_t& _crossBackupSaveDays);
+
+                    /**
+                     * 判断参数 CrossBackupSaveDays 是否已赋值
+                     * @return CrossBackupSaveDays 是否已赋值
+                     */
+                    bool CrossBackupSaveDaysHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return DnsPodDomain 
+                     */
+                    std::string GetDnsPodDomain() const;
+
+                    /**
+                     * 设置
+                     * @param DnsPodDomain 
+                     */
+                    void SetDnsPodDomain(const std::string& _dnsPodDomain);
+
+                    /**
+                     * 判断参数 DnsPodDomain 是否已赋值
+                     * @return DnsPodDomain 是否已赋值
+                     */
+                    bool DnsPodDomainHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return TgwWanVPort 
+                     */
+                    int64_t GetTgwWanVPort() const;
+
+                    /**
+                     * 设置
+                     * @param TgwWanVPort 
+                     */
+                    void SetTgwWanVPort(const int64_t& _tgwWanVPort);
+
+                    /**
+                     * 判断参数 TgwWanVPort 是否已赋值
+                     * @return TgwWanVPort 是否已赋值
+                     */
+                    bool TgwWanVPortHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1115,6 +1205,36 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
+
+                    /**
+                     * The target region of cross-region backup. If this parameter left empty, it indicates that cross-region backup is disabled.
+                     */
+                    std::vector<std::string> m_crossRegions;
+                    bool m_crossRegionsHasBeenSet;
+
+                    /**
+                     * Cross-region backup status. Valid values: `enable` (enabled), `disable` (disabed)
+                     */
+                    std::string m_crossBackupEnabled;
+                    bool m_crossBackupEnabledHasBeenSet;
+
+                    /**
+                     * The retention period of cross-region backup. Default value: 7 days
+                     */
+                    uint64_t m_crossBackupSaveDays;
+                    bool m_crossBackupSaveDaysHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_dnsPodDomain;
+                    bool m_dnsPodDomainHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_tgwWanVPort;
+                    bool m_tgwWanVPortHasBeenSet;
 
                 };
             }

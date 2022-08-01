@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Names 
+                     * 获取The list of successfully created integrations.
+                     * @return Names The list of successfully created integrations.
                      */
                     std::vector<std::string> GetNames() const;
 
@@ -58,7 +58,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * The list of successfully created integrations.
                      */
                     std::vector<std::string> m_names;
                     bool m_namesHasBeenSet;

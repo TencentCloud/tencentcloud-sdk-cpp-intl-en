@@ -47,18 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Switch. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Switch Switch. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Switch. Valid values: `on`, `off`
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return Switch Switch. Valid values: `on`, `off`
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Switch. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Switch Switch. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Switch. Valid values: `on`, `off`
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param Switch Switch. Valid values: `on`, `off`
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetSwitch(const std::string& _switch);
 
@@ -71,8 +71,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Switch. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Switch. Valid values: `on`, `off`
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

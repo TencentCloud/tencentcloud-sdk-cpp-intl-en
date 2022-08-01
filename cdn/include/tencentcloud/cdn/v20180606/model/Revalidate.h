@@ -48,17 +48,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Whether to always forward to the origin server for verification. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Switch Whether to always forward to the origin server for verification. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Whether to always forward to the origin server for verification. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param Switch Whether to always forward to the origin server for verification. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetSwitch(const std::string& _switch);
 
@@ -70,17 +70,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Forwards to the origin server for verification only for specific request path
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Path Forwards to the origin server for verification only for specific request path
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetPath() const;
 
                     /**
                      * 设置Forwards to the origin server for verification only for specific request path
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param Path Forwards to the origin server for verification only for specific request path
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetPath(const std::string& _path);
 
@@ -94,14 +94,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Whether to always forward to the origin server for verification. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
                      * Forwards to the origin server for verification only for specific request path
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_path;
                     bool m_pathHasBeenSet;

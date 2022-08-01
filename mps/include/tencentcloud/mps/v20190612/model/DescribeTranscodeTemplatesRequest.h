@@ -174,6 +174,40 @@ namespace TencentCloud
                      */
                     bool LimitHasBeenSet() const;
 
+                    /**
+                     * 获取The template type (replacing `TEHDType`). Valid values:
+<li>Common: Common transcoding template</li>
+<li>TEHD: TESHD template</li>
+<li>Enhance: Audio/Video enhancement template.</li>
+This parameter is left empty by default, which indicates to return all types of templates.
+                     * @return TranscodeType The template type (replacing `TEHDType`). Valid values:
+<li>Common: Common transcoding template</li>
+<li>TEHD: TESHD template</li>
+<li>Enhance: Audio/Video enhancement template.</li>
+This parameter is left empty by default, which indicates to return all types of templates.
+                     */
+                    std::string GetTranscodeType() const;
+
+                    /**
+                     * 设置The template type (replacing `TEHDType`). Valid values:
+<li>Common: Common transcoding template</li>
+<li>TEHD: TESHD template</li>
+<li>Enhance: Audio/Video enhancement template.</li>
+This parameter is left empty by default, which indicates to return all types of templates.
+                     * @param TranscodeType The template type (replacing `TEHDType`). Valid values:
+<li>Common: Common transcoding template</li>
+<li>TEHD: TESHD template</li>
+<li>Enhance: Audio/Video enhancement template.</li>
+This parameter is left empty by default, which indicates to return all types of templates.
+                     */
+                    void SetTranscodeType(const std::string& _transcodeType);
+
+                    /**
+                     * 判断参数 TranscodeType 是否已赋值
+                     * @return TranscodeType 是否已赋值
+                     */
+                    bool TranscodeTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -217,6 +251,16 @@ namespace TencentCloud
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
+
+                    /**
+                     * The template type (replacing `TEHDType`). Valid values:
+<li>Common: Common transcoding template</li>
+<li>TEHD: TESHD template</li>
+<li>Enhance: Audio/Video enhancement template.</li>
+This parameter is left empty by default, which indicates to return all types of templates.
+                     */
+                    std::string m_transcodeType;
+                    bool m_transcodeTypeHasBeenSet;
 
                 };
             }

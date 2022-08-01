@@ -48,25 +48,25 @@ namespace TencentCloud
 
                     /**
                      * 获取Access forced redirect configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Switch Access forced redirect configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Access forced redirect configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param Switch Access forced redirect configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetSwitch(const std::string& _switch);
 
@@ -80,11 +80,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 获取Access forced redirect types
 http: forced HTTP redirect
 https: forced HTTPS redirect
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return RedirectType Access forced redirect types
 http: forced HTTP redirect
 https: forced HTTPS redirect
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetRedirectType() const;
 
@@ -92,11 +92,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 设置Access forced redirect types
 http: forced HTTP redirect
 https: forced HTTPS redirect
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param RedirectType Access forced redirect types
 http: forced HTTP redirect
 https: forced HTTPS redirect
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetRedirectType(const std::string& _redirectType);
 
@@ -109,20 +109,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     /**
                      * 获取Status code returned for forced redirect 
 Supports 301, 302.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return RedirectStatusCode Status code returned for forced redirect 
 Supports 301, 302.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     int64_t GetRedirectStatusCode() const;
 
                     /**
                      * 设置Status code returned for forced redirect 
 Supports 301, 302.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param RedirectStatusCode Status code returned for forced redirect 
 Supports 301, 302.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetRedirectStatusCode(const int64_t& _redirectStatusCode);
 
@@ -133,18 +133,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool RedirectStatusCodeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to return the added header in forced redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return CarryHeaders Whether to return the added header in forced redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Whether to return the newly added header during force redirection
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return CarryHeaders Whether to return the newly added header during force redirection
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetCarryHeaders() const;
 
                     /**
-                     * 设置Whether to return the added header in forced redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param CarryHeaders Whether to return the added header in forced redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Whether to return the newly added header during force redirection
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param CarryHeaders Whether to return the newly added header during force redirection
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetCarryHeaders(const std::string& _carryHeaders);
 
@@ -158,9 +158,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * Access forced redirect configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
@@ -169,7 +169,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * Access forced redirect types
 http: forced HTTP redirect
 https: forced HTTPS redirect
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_redirectType;
                     bool m_redirectTypeHasBeenSet;
@@ -177,14 +177,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     /**
                      * Status code returned for forced redirect 
 Supports 301, 302.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     int64_t m_redirectStatusCode;
                     bool m_redirectStatusCodeHasBeenSet;
 
                     /**
-                     * Whether to return the added header in forced redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Whether to return the newly added header during force redirection
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_carryHeaders;
                     bool m_carryHeadersHasBeenSet;

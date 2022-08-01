@@ -135,17 +135,17 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 获取Cache configuration
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return CacheConfig Cache configuration
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     RuleCacheConfig GetCacheConfig() const;
 
                     /**
                      * 设置Cache configuration
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param CacheConfig Cache configuration
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetCacheConfig(const RuleCacheConfig& _cacheConfig);
 
@@ -183,7 +183,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * Cache configuration
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     RuleCacheConfig m_cacheConfig;
                     bool m_cacheConfigHasBeenSet;

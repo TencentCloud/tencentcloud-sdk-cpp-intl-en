@@ -49,25 +49,25 @@ namespace TencentCloud
 
                     /**
                      * 获取Status code cache expiration configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Switch Status code cache expiration configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Status code cache expiration configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param Switch Status code cache expiration configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetSwitch(const std::string& _switch);
 
@@ -79,17 +79,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Status code cache expiration rules details
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return CacheRules Status code cache expiration rules details
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<StatusCodeCacheRule> GetCacheRules() const;
 
                     /**
                      * 设置Status code cache expiration rules details
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param CacheRules Status code cache expiration rules details
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetCacheRules(const std::vector<StatusCodeCacheRule>& _cacheRules);
 
@@ -103,16 +103,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Status code cache expiration configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
                      * Status code cache expiration rules details
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<StatusCodeCacheRule> m_cacheRules;
                     bool m_cacheRulesHasBeenSet;

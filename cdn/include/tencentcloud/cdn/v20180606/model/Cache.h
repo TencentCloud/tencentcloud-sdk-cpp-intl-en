@@ -53,17 +53,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Basic cache expiration time configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return SimpleCache Basic cache expiration time configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     SimpleCache GetSimpleCache() const;
 
                     /**
                      * 设置Basic cache expiration time configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @param SimpleCache Basic cache expiration time configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetSimpleCache(const SimpleCache& _simpleCache);
 
@@ -75,17 +75,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取(Disused) Advanced cache validity configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return AdvancedCache (Disused) Advanced cache validity configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     AdvancedCache GetAdvancedCache() const;
 
                     /**
                      * 设置(Disused) Advanced cache validity configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param AdvancedCache (Disused) Advanced cache validity configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetAdvancedCache(const AdvancedCache& _advancedCache);
 
@@ -97,17 +97,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 获取Advanced path cache configuration
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return RuleCache Advanced path cache configuration
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<RuleCache> GetRuleCache() const;
 
                     /**
                      * 设置Advanced path cache configuration
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param RuleCache Advanced path cache configuration
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetRuleCache(const std::vector<RuleCache>& _ruleCache);
 
@@ -121,21 +121,21 @@ Note: this field may return null, indicating that no valid value is obtained.
 
                     /**
                      * Basic cache expiration time configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     SimpleCache m_simpleCache;
                     bool m_simpleCacheHasBeenSet;
 
                     /**
                      * (Disused) Advanced cache validity configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     AdvancedCache m_advancedCache;
                     bool m_advancedCacheHasBeenSet;
 
                     /**
                      * Advanced path cache configuration
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<RuleCache> m_ruleCache;
                     bool m_ruleCacheHasBeenSet;

@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Limit on paged queries. Default value: 100. Maximum value: 1,000
-                     * @return Limit Limit on paged queries. Default value: 100. Maximum value: 1,000
+                     * 获取Limit on paginated queries. Default value: 100. Maximum value: 1,000
+                     * @return Limit Limit on paginated queries. Default value: 100. Maximum value: 1,000
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Limit on paged queries. Default value: 100. Maximum value: 1,000
-                     * @param Limit Limit on paged queries. Default value: 100. Maximum value: 1,000
+                     * 设置Limit on paginated queries. Default value: 100. Maximum value: 1,000
+                     * @param Limit Limit on paginated queries. Default value: 100. Maximum value: 1,000
                      */
                     void SetLimit(const int64_t& _limit);
 
@@ -215,7 +215,7 @@ access: access logs
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Limit on paged queries. Default value: 100. Maximum value: 1,000
+                     * Limit on paginated queries. Default value: 100. Maximum value: 1,000
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time, such as 2018-12-14 10:24:00
-                     * @return EndTime End time, such as 2018-12-14 10:24:00
+                     * 获取End time, such as `2018-12-14 10:24:00`
+                     * @return EndTime End time, such as `2018-12-14 10:24:00`
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time, such as 2018-12-14 10:24:00
-                     * @param EndTime End time, such as 2018-12-14 10:24:00
+                     * 设置End time, such as `2018-12-14 10:24:00`
+                     * @param EndTime End time, such as `2018-12-14 10:24:00`
                      */
                     void SetEndTime(const std::string& _endTime);
 
@@ -141,14 +141,14 @@ enable: The URL is enabled (unblocked) and can be normally accessed
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Limit on paged queries. Default value: 20
-                     * @return Limit Limit on paged queries. Default value: 20
+                     * 获取Pagination limit. Default value: 20.
+                     * @return Limit Pagination limit. Default value: 20.
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Limit on paged queries. Default value: 20
-                     * @param Limit Limit on paged queries. Default value: 20
+                     * 设置Pagination limit. Default value: 20.
+                     * @param Limit Pagination limit. Default value: 20.
                      */
                     void SetLimit(const int64_t& _limit);
 
@@ -191,7 +191,7 @@ enable: The URL is enabled (unblocked) and can be normally accessed
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time, such as 2018-12-14 10:24:00
+                     * End time, such as `2018-12-14 10:24:00`
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
@@ -211,7 +211,7 @@ enable: The URL is enabled (unblocked) and can be normally accessed
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Limit on paged queries. Default value: 20
+                     * Pagination limit. Default value: 20.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

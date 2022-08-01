@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                *  Access authentication for Huawei Cloud OBS origin
                 */
                 class HwPrivateAccess : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Whether to enable access authentication. Valid values: `on`, `off`.
+                     * @return Switch Whether to enable access authentication. Valid values: `on`, `off`.
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param Switch 
+                     * 设置Whether to enable access authentication. Valid values: `on`, `off`.
+                     * @param Switch Whether to enable access authentication. Valid values: `on`, `off`.
                      */
                     void SetSwitch(const std::string& _switch);
 
@@ -65,14 +65,18 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AccessKey 
+                     * 获取Access ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return AccessKey Access ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetAccessKey() const;
 
                     /**
-                     * 设置
-                     * @param AccessKey 
+                     * 设置Access ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param AccessKey Access ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetAccessKey(const std::string& _accessKey);
 
@@ -83,14 +87,18 @@ namespace TencentCloud
                     bool AccessKeyHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SecretKey 
+                     * 获取Key
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return SecretKey Key
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetSecretKey() const;
 
                     /**
-                     * 设置
-                     * @param SecretKey 
+                     * 设置Key
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param SecretKey Key
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetSecretKey(const std::string& _secretKey);
 
@@ -101,14 +109,18 @@ namespace TencentCloud
                     bool SecretKeyHasBeenSet() const;
 
                     /**
-                     * 获取bucketname
-                     * @return Bucket bucketname
+                     * 获取BucketName
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return Bucket BucketName
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetBucket() const;
 
                     /**
-                     * 设置bucketname
-                     * @param Bucket bucketname
+                     * 设置BucketName
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param Bucket BucketName
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetBucket(const std::string& _bucket);
 
@@ -121,25 +133,28 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Whether to enable access authentication. Valid values: `on`, `off`.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Access ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_accessKey;
                     bool m_accessKeyHasBeenSet;
 
                     /**
-                     * 
+                     * Key
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_secretKey;
                     bool m_secretKeyHasBeenSet;
 
                     /**
-                     * bucketname
+                     * BucketName
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_bucket;
                     bool m_bucketHasBeenSet;

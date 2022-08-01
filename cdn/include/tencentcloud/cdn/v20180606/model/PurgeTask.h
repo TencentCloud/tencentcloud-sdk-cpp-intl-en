@@ -84,25 +84,25 @@ namespace TencentCloud
 
                     /**
                      * 获取Purge task status
-`fail`: purge failed
-`done`: purge succeeded
-`process`: purge in progress
+`fail`: Purge failed
+`done`: Purge succeeded
+`process`: Purge in progress
                      * @return Status Purge task status
-`fail`: purge failed
-`done`: purge succeeded
-`process`: purge in progress
+`fail`: Purge failed
+`done`: Purge succeeded
+`process`: Purge in progress
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Purge task status
-`fail`: purge failed
-`done`: purge succeeded
-`process`: purge in progress
+`fail`: Purge failed
+`done`: Purge succeeded
+`process`: Purge in progress
                      * @param Status Purge task status
-`fail`: purge failed
-`done`: purge succeeded
-`process`: purge in progress
+`fail`: Purge failed
+`done`: Purge succeeded
+`process`: Purge in progress
                      */
                     void SetStatus(const std::string& _status);
 
@@ -141,20 +141,20 @@ namespace TencentCloud
                     /**
                      * 获取Purge method
 `flush`: purges updated resources; this type is available only for directory purges
-`delete`: purges all resources
+`delete`: Purge all resources
                      * @return FlushType Purge method
 `flush`: purges updated resources; this type is available only for directory purges
-`delete`: purges all resources
+`delete`: Purge all resources
                      */
                     std::string GetFlushType() const;
 
                     /**
                      * 设置Purge method
 `flush`: purges updated resources; this type is available only for directory purges
-`delete`: purges all resources
+`delete`: Purge all resources
                      * @param FlushType Purge method
 `flush`: purges updated resources; this type is available only for directory purges
-`delete`: purges all resources
+`delete`: Purge all resources
                      */
                     void SetFlushType(const std::string& _flushType);
 
@@ -198,9 +198,9 @@ namespace TencentCloud
 
                     /**
                      * Purge task status
-`fail`: purge failed
-`done`: purge succeeded
-`process`: purge in progress
+`fail`: Purge failed
+`done`: Purge succeeded
+`process`: Purge in progress
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
@@ -216,7 +216,7 @@ namespace TencentCloud
                     /**
                      * Purge method
 `flush`: purges updated resources; this type is available only for directory purges
-`delete`: purges all resources
+`delete`: Purge all resources
                      */
                     std::string m_flushType;
                     bool m_flushTypeHasBeenSet;

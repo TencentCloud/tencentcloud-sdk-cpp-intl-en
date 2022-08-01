@@ -48,21 +48,21 @@ namespace TencentCloud
 
                     /**
                      * 获取Operation type
-online: node is online
-offline: node is offline
+`online`: Nodes activated
+`offline`: Nodes deactivated
                      * @return Status Operation type
-online: node is online
-offline: node is offline
+`online`: Nodes activated
+`offline`: Nodes deactivated
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Operation type
-online: node is online
-offline: node is offline
+`online`: Nodes activated
+`offline`: Nodes deactivated
                      * @param Status Operation type
-online: node is online
-offline: node is offline
+`online`: Nodes activated
+`offline`: Nodes deactivated
                      */
                     void SetStatus(const std::string& _status);
 
@@ -74,21 +74,21 @@ offline: node is offline
 
                     /**
                      * 获取Operation time corresponding to operation type
-If this value is null, there are no status change records
-Note: this field may return null, indicating that no valid values can be obtained.
+If its value is `null`, it means there is no status change record.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Datetime Operation time corresponding to operation type
-If this value is null, there are no status change records
-Note: this field may return null, indicating that no valid values can be obtained.
+If its value is `null`, it means there is no status change record.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetDatetime() const;
 
                     /**
                      * 设置Operation time corresponding to operation type
-If this value is null, there are no status change records
-Note: this field may return null, indicating that no valid values can be obtained.
+If its value is `null`, it means there is no status change record.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param Datetime Operation time corresponding to operation type
-If this value is null, there are no status change records
-Note: this field may return null, indicating that no valid values can be obtained.
+If its value is `null`, it means there is no status change record.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetDatetime(const std::string& _datetime);
 
@@ -102,16 +102,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Operation type
-online: node is online
-offline: node is offline
+`online`: Nodes activated
+`offline`: Nodes deactivated
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
                      * Operation time corresponding to operation type
-If this value is null, there are no status change records
-Note: this field may return null, indicating that no valid values can be obtained.
+If its value is `null`, it means there is no status change record.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_datetime;
                     bool m_datetimeHasBeenSet;

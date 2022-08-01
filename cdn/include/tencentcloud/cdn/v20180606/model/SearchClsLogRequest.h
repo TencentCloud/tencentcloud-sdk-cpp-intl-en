@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool TopicIdsHasBeenSet() const;
 
                     /**
-                     * 获取Start time of log to be queried in the format of `YYYY-mm-dd HH:MM:SS`
-                     * @return StartTime Start time of log to be queried in the format of `YYYY-mm-dd HH:MM:SS`
+                     * 获取Query start time in the format of YYYY-mm-dd HH:MM:SS
+                     * @return StartTime Query start time in the format of YYYY-mm-dd HH:MM:SS
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Start time of log to be queried in the format of `YYYY-mm-dd HH:MM:SS`
-                     * @param StartTime Start time of log to be queried in the format of `YYYY-mm-dd HH:MM:SS`
+                     * 设置Query start time in the format of YYYY-mm-dd HH:MM:SS
+                     * @param StartTime Query start time in the format of YYYY-mm-dd HH:MM:SS
                      */
                     void SetStartTime(const std::string& _startTime);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time of log to be queried in the format of `YYYY-mm-dd HH:MM:SS`
-                     * @return EndTime End time of log to be queried in the format of `YYYY-mm-dd HH:MM:SS`
+                     * 获取Query end time in the format of YYYY-mm-dd HH:MM:SS
+                     * @return EndTime Query end time in the format of YYYY-mm-dd HH:MM:SS
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time of log to be queried in the format of `YYYY-mm-dd HH:MM:SS`
-                     * @param EndTime End time of log to be queried in the format of `YYYY-mm-dd HH:MM:SS`
+                     * 设置Query end time in the format of YYYY-mm-dd HH:MM:SS
+                     * @param EndTime Query end time in the format of YYYY-mm-dd HH:MM:SS
                      */
                     void SetEndTime(const std::string& _endTime);
 
@@ -151,14 +151,14 @@ namespace TencentCloud
                     bool ChannelHasBeenSet() const;
 
                     /**
-                     * 获取Content to be queried. For more information, please visit https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1
-                     * @return Query Content to be queried. For more information, please visit https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1
+                     * 获取Query statement. For more details, see [https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1].
+                     * @return Query Query statement. For more details, see [https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1].
                      */
                     std::string GetQuery() const;
 
                     /**
-                     * 设置Content to be queried. For more information, please visit https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1
-                     * @param Query Content to be queried. For more information, please visit https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1
+                     * 设置Query statement. For more details, see [https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1].
+                     * @param Query Query statement. For more details, see [https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1].
                      */
                     void SetQuery(const std::string& _query);
 
@@ -219,13 +219,13 @@ namespace TencentCloud
                     bool m_topicIdsHasBeenSet;
 
                     /**
-                     * Start time of log to be queried in the format of `YYYY-mm-dd HH:MM:SS`
+                     * Query start time in the format of YYYY-mm-dd HH:MM:SS
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time of log to be queried in the format of `YYYY-mm-dd HH:MM:SS`
+                     * Query end time in the format of YYYY-mm-dd HH:MM:SS
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
@@ -243,7 +243,7 @@ namespace TencentCloud
                     bool m_channelHasBeenSet;
 
                     /**
-                     * Content to be queried. For more information, please visit https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1
+                     * Query statement. For more details, see [https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1].
                      */
                     std::string m_query;
                     bool m_queryHasBeenSet;

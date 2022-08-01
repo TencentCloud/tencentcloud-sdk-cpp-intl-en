@@ -149,24 +149,28 @@ Notes:
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取You can pass through the `Context` value (validity: 1 hour) returned by the last API to continue to get logs, which can get up to 10,000 raw logs.
+                     * 获取You can pass through the `Context` value (validity: an hour) returned by the API last time to continue to get logs (up to 10,000 raw logs).
 Notes:
+* Do not modify any other parameters while passing through the `Context` parameter.
 * This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
 * To continue to get analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
-                     * @return Context You can pass through the `Context` value (validity: 1 hour) returned by the last API to continue to get logs, which can get up to 10,000 raw logs.
+                     * @return Context You can pass through the `Context` value (validity: an hour) returned by the API last time to continue to get logs (up to 10,000 raw logs).
 Notes:
+* Do not modify any other parameters while passing through the `Context` parameter.
 * This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
 * To continue to get analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
                      */
                     std::string GetContext() const;
 
                     /**
-                     * 设置You can pass through the `Context` value (validity: 1 hour) returned by the last API to continue to get logs, which can get up to 10,000 raw logs.
+                     * 设置You can pass through the `Context` value (validity: an hour) returned by the API last time to continue to get logs (up to 10,000 raw logs).
 Notes:
+* Do not modify any other parameters while passing through the `Context` parameter.
 * This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
 * To continue to get analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
-                     * @param Context You can pass through the `Context` value (validity: 1 hour) returned by the last API to continue to get logs, which can get up to 10,000 raw logs.
+                     * @param Context You can pass through the `Context` value (validity: an hour) returned by the API last time to continue to get logs (up to 10,000 raw logs).
 Notes:
+* Do not modify any other parameters while passing through the `Context` parameter.
 * This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
 * To continue to get analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
                      */
@@ -271,8 +275,9 @@ Notes:
                     bool m_limitHasBeenSet;
 
                     /**
-                     * You can pass through the `Context` value (validity: 1 hour) returned by the last API to continue to get logs, which can get up to 10,000 raw logs.
+                     * You can pass through the `Context` value (validity: an hour) returned by the API last time to continue to get logs (up to 10,000 raw logs).
 Notes:
+* Do not modify any other parameters while passing through the `Context` parameter.
 * This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
 * To continue to get analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
                      */

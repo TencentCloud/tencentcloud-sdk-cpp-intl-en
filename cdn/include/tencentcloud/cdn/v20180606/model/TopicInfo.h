@@ -102,17 +102,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Creation time
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return CreateTime Creation time
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param CreateTime Creation time
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetCreateTime(const std::string& _createTime);
 
@@ -124,17 +124,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Either `cdn` or `ecdn`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Channel Either `cdn` or `ecdn`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetChannel() const;
 
                     /**
                      * 设置Either `cdn` or `ecdn`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param Channel Either `cdn` or `ecdn`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetChannel(const std::string& _channel);
 
@@ -145,18 +145,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool ChannelHasBeenSet() const;
 
                     /**
-                     * 获取Whether the log topic has been removed from CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Deleted Whether the log topic has been removed from CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Whether the logset has been removed from CLS
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return Deleted Whether the logset has been removed from CLS
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetDeleted() const;
 
                     /**
-                     * 设置Whether the log topic has been removed from CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Deleted Whether the log topic has been removed from CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Whether the logset has been removed from CLS
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param Deleted Whether the logset has been removed from CLS
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetDeleted(const std::string& _deleted);
 
@@ -188,21 +188,21 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * Creation time
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
                      * Either `cdn` or `ecdn`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_channel;
                     bool m_channelHasBeenSet;
 
                     /**
-                     * Whether the log topic has been removed from CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Whether the logset has been removed from CLS
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_deleted;
                     bool m_deletedHasBeenSet;

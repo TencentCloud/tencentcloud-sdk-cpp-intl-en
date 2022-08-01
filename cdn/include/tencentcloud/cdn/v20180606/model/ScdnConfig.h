@@ -90,17 +90,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 获取Advanced custom CC attack defense rule
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return AdvancedRules Advanced custom CC attack defense rule
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<AdvancedCCRules> GetAdvancedRules() const;
 
                     /**
                      * 设置Advanced custom CC attack defense rule
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param AdvancedRules Advanced custom CC attack defense rule
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetAdvancedRules(const std::vector<AdvancedCCRules>& _advancedRules);
 
@@ -127,7 +127,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * Advanced custom CC attack defense rule
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<AdvancedCCRules> m_advancedRules;
                     bool m_advancedRulesHasBeenSet;

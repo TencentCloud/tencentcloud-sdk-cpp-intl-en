@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool IgnoreClusterCIDRConflictHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of pods on each node in the cluster
-                     * @return MaxNodePodNum Maximum number of pods on each node in the cluster
+                     * 获取Maximum number of Pods on each node. Value range: 16 to 256. When its power is not 2, it will round upward to the closest power of 2.
+                     * @return MaxNodePodNum Maximum number of Pods on each node. Value range: 16 to 256. When its power is not 2, it will round upward to the closest power of 2.
                      */
                     uint64_t GetMaxNodePodNum() const;
 
                     /**
-                     * 设置Maximum number of pods on each node in the cluster
-                     * @param MaxNodePodNum Maximum number of pods on each node in the cluster
+                     * 设置Maximum number of Pods on each node. Value range: 16 to 256. When its power is not 2, it will round upward to the closest power of 2.
+                     * @param MaxNodePodNum Maximum number of Pods on each node. Value range: 16 to 256. When its power is not 2, it will round upward to the closest power of 2.
                      */
                     void SetMaxNodePodNum(const uint64_t& _maxNodePodNum);
 
@@ -205,7 +205,7 @@ namespace TencentCloud
                     bool m_ignoreClusterCIDRConflictHasBeenSet;
 
                     /**
-                     * Maximum number of pods on each node in the cluster
+                     * Maximum number of Pods on each node. Value range: 16 to 256. When its power is not 2, it will round upward to the closest power of 2.
                      */
                     uint64_t m_maxNodePodNum;
                     bool m_maxNodePodNumHasBeenSet;

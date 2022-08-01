@@ -29,6 +29,10 @@
 #include <tencentcloud/cvm/v20170312/model/AssociateInstancesKeyPairsResponse.h>
 #include <tencentcloud/cvm/v20170312/model/AssociateSecurityGroupsRequest.h>
 #include <tencentcloud/cvm/v20170312/model/AssociateSecurityGroupsResponse.h>
+#include <tencentcloud/cvm/v20170312/model/ConfigureChcAssistVpcRequest.h>
+#include <tencentcloud/cvm/v20170312/model/ConfigureChcAssistVpcResponse.h>
+#include <tencentcloud/cvm/v20170312/model/ConfigureChcDeployVpcRequest.h>
+#include <tencentcloud/cvm/v20170312/model/ConfigureChcDeployVpcResponse.h>
 #include <tencentcloud/cvm/v20170312/model/CreateDisasterRecoverGroupRequest.h>
 #include <tencentcloud/cvm/v20170312/model/CreateDisasterRecoverGroupResponse.h>
 #include <tencentcloud/cvm/v20170312/model/CreateImageRequest.h>
@@ -47,6 +51,8 @@
 #include <tencentcloud/cvm/v20170312/model/DeleteLaunchTemplateResponse.h>
 #include <tencentcloud/cvm/v20170312/model/DeleteLaunchTemplateVersionsRequest.h>
 #include <tencentcloud/cvm/v20170312/model/DeleteLaunchTemplateVersionsResponse.h>
+#include <tencentcloud/cvm/v20170312/model/DescribeChcHostsRequest.h>
+#include <tencentcloud/cvm/v20170312/model/DescribeChcHostsResponse.h>
 #include <tencentcloud/cvm/v20170312/model/DescribeDisasterRecoverGroupQuotaRequest.h>
 #include <tencentcloud/cvm/v20170312/model/DescribeDisasterRecoverGroupQuotaResponse.h>
 #include <tencentcloud/cvm/v20170312/model/DescribeDisasterRecoverGroupsRequest.h>
@@ -107,6 +113,8 @@
 #include <tencentcloud/cvm/v20170312/model/InquiryPriceResetInstancesTypeResponse.h>
 #include <tencentcloud/cvm/v20170312/model/InquiryPriceResizeInstanceDisksRequest.h>
 #include <tencentcloud/cvm/v20170312/model/InquiryPriceResizeInstanceDisksResponse.h>
+#include <tencentcloud/cvm/v20170312/model/ModifyChcAttributeRequest.h>
+#include <tencentcloud/cvm/v20170312/model/ModifyChcAttributeResponse.h>
 #include <tencentcloud/cvm/v20170312/model/ModifyDisasterRecoverGroupAttributeRequest.h>
 #include <tencentcloud/cvm/v20170312/model/ModifyDisasterRecoverGroupAttributeResponse.h>
 #include <tencentcloud/cvm/v20170312/model/ModifyHostsAttributeRequest.h>
@@ -129,6 +137,10 @@
 #include <tencentcloud/cvm/v20170312/model/PurchaseReservedInstancesOfferingResponse.h>
 #include <tencentcloud/cvm/v20170312/model/RebootInstancesRequest.h>
 #include <tencentcloud/cvm/v20170312/model/RebootInstancesResponse.h>
+#include <tencentcloud/cvm/v20170312/model/RemoveChcAssistVpcRequest.h>
+#include <tencentcloud/cvm/v20170312/model/RemoveChcAssistVpcResponse.h>
+#include <tencentcloud/cvm/v20170312/model/RemoveChcDeployVpcRequest.h>
+#include <tencentcloud/cvm/v20170312/model/RemoveChcDeployVpcResponse.h>
 #include <tencentcloud/cvm/v20170312/model/ResetInstanceRequest.h>
 #include <tencentcloud/cvm/v20170312/model/ResetInstanceResponse.h>
 #include <tencentcloud/cvm/v20170312/model/ResetInstancesInternetMaxBandwidthRequest.h>
@@ -172,6 +184,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::AssociateSecurityGroupsResponse> AssociateSecurityGroupsOutcome;
                 typedef std::future<AssociateSecurityGroupsOutcome> AssociateSecurityGroupsOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::AssociateSecurityGroupsRequest&, AssociateSecurityGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AssociateSecurityGroupsAsyncHandler;
+                typedef Outcome<Core::Error, Model::ConfigureChcAssistVpcResponse> ConfigureChcAssistVpcOutcome;
+                typedef std::future<ConfigureChcAssistVpcOutcome> ConfigureChcAssistVpcOutcomeCallable;
+                typedef std::function<void(const CvmClient*, const Model::ConfigureChcAssistVpcRequest&, ConfigureChcAssistVpcOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ConfigureChcAssistVpcAsyncHandler;
+                typedef Outcome<Core::Error, Model::ConfigureChcDeployVpcResponse> ConfigureChcDeployVpcOutcome;
+                typedef std::future<ConfigureChcDeployVpcOutcome> ConfigureChcDeployVpcOutcomeCallable;
+                typedef std::function<void(const CvmClient*, const Model::ConfigureChcDeployVpcRequest&, ConfigureChcDeployVpcOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ConfigureChcDeployVpcAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateDisasterRecoverGroupResponse> CreateDisasterRecoverGroupOutcome;
                 typedef std::future<CreateDisasterRecoverGroupOutcome> CreateDisasterRecoverGroupOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::CreateDisasterRecoverGroupRequest&, CreateDisasterRecoverGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDisasterRecoverGroupAsyncHandler;
@@ -199,6 +217,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteLaunchTemplateVersionsResponse> DeleteLaunchTemplateVersionsOutcome;
                 typedef std::future<DeleteLaunchTemplateVersionsOutcome> DeleteLaunchTemplateVersionsOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DeleteLaunchTemplateVersionsRequest&, DeleteLaunchTemplateVersionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLaunchTemplateVersionsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeChcHostsResponse> DescribeChcHostsOutcome;
+                typedef std::future<DescribeChcHostsOutcome> DescribeChcHostsOutcomeCallable;
+                typedef std::function<void(const CvmClient*, const Model::DescribeChcHostsRequest&, DescribeChcHostsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeChcHostsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDisasterRecoverGroupQuotaResponse> DescribeDisasterRecoverGroupQuotaOutcome;
                 typedef std::future<DescribeDisasterRecoverGroupQuotaOutcome> DescribeDisasterRecoverGroupQuotaOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DescribeDisasterRecoverGroupQuotaRequest&, DescribeDisasterRecoverGroupQuotaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDisasterRecoverGroupQuotaAsyncHandler;
@@ -289,6 +310,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::InquiryPriceResizeInstanceDisksResponse> InquiryPriceResizeInstanceDisksOutcome;
                 typedef std::future<InquiryPriceResizeInstanceDisksOutcome> InquiryPriceResizeInstanceDisksOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::InquiryPriceResizeInstanceDisksRequest&, InquiryPriceResizeInstanceDisksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquiryPriceResizeInstanceDisksAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyChcAttributeResponse> ModifyChcAttributeOutcome;
+                typedef std::future<ModifyChcAttributeOutcome> ModifyChcAttributeOutcomeCallable;
+                typedef std::function<void(const CvmClient*, const Model::ModifyChcAttributeRequest&, ModifyChcAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyChcAttributeAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyDisasterRecoverGroupAttributeResponse> ModifyDisasterRecoverGroupAttributeOutcome;
                 typedef std::future<ModifyDisasterRecoverGroupAttributeOutcome> ModifyDisasterRecoverGroupAttributeOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::ModifyDisasterRecoverGroupAttributeRequest&, ModifyDisasterRecoverGroupAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDisasterRecoverGroupAttributeAsyncHandler;
@@ -322,6 +346,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::RebootInstancesResponse> RebootInstancesOutcome;
                 typedef std::future<RebootInstancesOutcome> RebootInstancesOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::RebootInstancesRequest&, RebootInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RebootInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::RemoveChcAssistVpcResponse> RemoveChcAssistVpcOutcome;
+                typedef std::future<RemoveChcAssistVpcOutcome> RemoveChcAssistVpcOutcomeCallable;
+                typedef std::function<void(const CvmClient*, const Model::RemoveChcAssistVpcRequest&, RemoveChcAssistVpcOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RemoveChcAssistVpcAsyncHandler;
+                typedef Outcome<Core::Error, Model::RemoveChcDeployVpcResponse> RemoveChcDeployVpcOutcome;
+                typedef std::future<RemoveChcDeployVpcOutcome> RemoveChcDeployVpcOutcomeCallable;
+                typedef std::function<void(const CvmClient*, const Model::RemoveChcDeployVpcRequest&, RemoveChcDeployVpcOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RemoveChcDeployVpcAsyncHandler;
                 typedef Outcome<Core::Error, Model::ResetInstanceResponse> ResetInstanceOutcome;
                 typedef std::future<ResetInstanceOutcome> ResetInstanceOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::ResetInstanceRequest&, ResetInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetInstanceAsyncHandler;
@@ -387,6 +417,24 @@ If you currently use a password to log in, you will no longer be able to do so a
                 AssociateSecurityGroupsOutcome AssociateSecurityGroups(const Model::AssociateSecurityGroupsRequest &request);
                 void AssociateSecurityGroupsAsync(const Model::AssociateSecurityGroupsRequest& request, const AssociateSecurityGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 AssociateSecurityGroupsOutcomeCallable AssociateSecurityGroupsCallable(const Model::AssociateSecurityGroupsRequest& request);
+
+                /**
+                 *This API is used to configure the out-of-band network and deployment network of a CHC host.
+                 * @param req ConfigureChcAssistVpcRequest
+                 * @return ConfigureChcAssistVpcOutcome
+                 */
+                ConfigureChcAssistVpcOutcome ConfigureChcAssistVpc(const Model::ConfigureChcAssistVpcRequest &request);
+                void ConfigureChcAssistVpcAsync(const Model::ConfigureChcAssistVpcRequest& request, const ConfigureChcAssistVpcAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ConfigureChcAssistVpcOutcomeCallable ConfigureChcAssistVpcCallable(const Model::ConfigureChcAssistVpcRequest& request);
+
+                /**
+                 *This API is used to configure the deployment network of a CHC host.
+                 * @param req ConfigureChcDeployVpcRequest
+                 * @return ConfigureChcDeployVpcOutcome
+                 */
+                ConfigureChcDeployVpcOutcome ConfigureChcDeployVpc(const Model::ConfigureChcDeployVpcRequest &request);
+                void ConfigureChcDeployVpcAsync(const Model::ConfigureChcDeployVpcRequest& request, const ConfigureChcDeployVpcAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ConfigureChcDeployVpcOutcomeCallable ConfigureChcDeployVpcCallable(const Model::ConfigureChcDeployVpcRequest& request);
 
                 /**
                  *This API is used to create a [spread placement group](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1). After you create one, you can specify it for an instance when you [create the instance](https://intl.cloud.tencent.com/document/api/213/15730?from_cn_redirect=1), 
@@ -480,6 +528,18 @@ If you currently use a password to log in, you will no longer be able to do so a
                 DeleteLaunchTemplateVersionsOutcome DeleteLaunchTemplateVersions(const Model::DeleteLaunchTemplateVersionsRequest &request);
                 void DeleteLaunchTemplateVersionsAsync(const Model::DeleteLaunchTemplateVersionsRequest& request, const DeleteLaunchTemplateVersionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteLaunchTemplateVersionsOutcomeCallable DeleteLaunchTemplateVersionsCallable(const Model::DeleteLaunchTemplateVersionsRequest& request);
+
+                /**
+                 *This API is used to query the details of one or more CHC host.
+
+* You can filter the query results with the instance ID, name or device type. See `Filter` for more information.
+* If no parameter is defined, a certain number of instances under the current account will be returned. The number is specified by `Limit` and is `20` by default.
+                 * @param req DescribeChcHostsRequest
+                 * @return DescribeChcHostsOutcome
+                 */
+                DescribeChcHostsOutcome DescribeChcHosts(const Model::DescribeChcHostsRequest &request);
+                void DescribeChcHostsAsync(const Model::DescribeChcHostsRequest& request, const DescribeChcHostsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeChcHostsOutcomeCallable DescribeChcHostsCallable(const Model::DescribeChcHostsRequest& request);
 
                 /**
                  *This API is used to query the quota of [spread placement groups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1).
@@ -787,6 +847,15 @@ If you currently use a password to log in, you will no longer be able to do so a
                 InquiryPriceResizeInstanceDisksOutcomeCallable InquiryPriceResizeInstanceDisksCallable(const Model::InquiryPriceResizeInstanceDisksRequest& request);
 
                 /**
+                 *This API is used to modify the CHC host attributes.
+                 * @param req ModifyChcAttributeRequest
+                 * @return ModifyChcAttributeOutcome
+                 */
+                ModifyChcAttributeOutcome ModifyChcAttribute(const Model::ModifyChcAttributeRequest &request);
+                void ModifyChcAttributeAsync(const Model::ModifyChcAttributeRequest& request, const ModifyChcAttributeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyChcAttributeOutcomeCallable ModifyChcAttributeCallable(const Model::ModifyChcAttributeRequest& request);
+
+                /**
                  *This API is used to modify the attributes of [spread placement groups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1).
                  * @param req ModifyDisasterRecoverGroupAttributeRequest
                  * @return ModifyDisasterRecoverGroupAttributeOutcome
@@ -846,13 +915,12 @@ If you currently use a password to log in, you will no longer be able to do so a
                 ModifyInstancesAttributeOutcomeCallable ModifyInstancesAttributeCallable(const Model::ModifyInstancesAttributeRequest& request);
 
                 /**
-                 *This API is used to change the project to which an instance belongs.
+                 *This API is used to change the project to which an instance is assigned.
 
-* Project is a virtual concept. You can create multiple projects under one account, manage different resources in each project, and assign different instances to different projects. You may use the [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) API to query instances and use the project ID to filter results.
-* You cannot modify the project of an instance that is bound to a load balancer. You need to firstly unbind the load balancer from the instance by using the [`DeregisterInstancesFromLoadBalancer`](https://intl.cloud.tencent.com/document/api/214/1258?from_cn_redirect=1) API.
-[^_^]: # (If you modify the project of an instance, security groups associated with the instance will be automatically disassociated. You can use the [`ModifyInstancesAttribute`](https://intl.cloud.tencent.com/document/api/213/15739?from_cn_redirect=1) API to associate the instance with the security groups again.
-* Batch operations are supported. You can operate up to 100 instances in each request.
-* You can call the [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) API and find the result of the operation in the response parameter `LatestOperationState`. If the value is `SUCCESS`, the operation is successful.
+* Project is a virtual concept. You can create multiple projects under one account, manage different resources in each project, and assign different instances to different projects. You may use the [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) API to query instances and use the project ID to filter the results.
+* You cannot modify the project of an instance that is bound to a load balancer. You need to unbind the load balancer from the instance by using the [DeregisterInstancesFromLoadBalancer](https://intl.cloud.tencent.com/document/api/214/1258?from_cn_redirect=1) API before using this API.
+* Batch operations are supported. Up to 100 instances per request is allowed.
+* You can use the API [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) to query the operation result. If the `LatestOperationState` in the response is `SUCCESS`, the operation is successful.
                  * @param req ModifyInstancesProjectRequest
                  * @return ModifyInstancesProjectOutcome
                  */
@@ -915,6 +983,24 @@ If you currently use a password to log in, you will no longer be able to do so a
                 RebootInstancesOutcome RebootInstances(const Model::RebootInstancesRequest &request);
                 void RebootInstancesAsync(const Model::RebootInstancesRequest& request, const RebootInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 RebootInstancesOutcomeCallable RebootInstancesCallable(const Model::RebootInstancesRequest& request);
+
+                /**
+                 *This API is used to remove the out-of-band network and deployment network of a CHC host.
+                 * @param req RemoveChcAssistVpcRequest
+                 * @return RemoveChcAssistVpcOutcome
+                 */
+                RemoveChcAssistVpcOutcome RemoveChcAssistVpc(const Model::RemoveChcAssistVpcRequest &request);
+                void RemoveChcAssistVpcAsync(const Model::RemoveChcAssistVpcRequest& request, const RemoveChcAssistVpcAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RemoveChcAssistVpcOutcomeCallable RemoveChcAssistVpcCallable(const Model::RemoveChcAssistVpcRequest& request);
+
+                /**
+                 *This API is used to remove the deployment network of a CHC host.
+                 * @param req RemoveChcDeployVpcRequest
+                 * @return RemoveChcDeployVpcOutcome
+                 */
+                RemoveChcDeployVpcOutcome RemoveChcDeployVpc(const Model::RemoveChcDeployVpcRequest &request);
+                void RemoveChcDeployVpcAsync(const Model::RemoveChcDeployVpcRequest& request, const RemoveChcDeployVpcAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RemoveChcDeployVpcOutcomeCallable RemoveChcDeployVpcCallable(const Model::RemoveChcDeployVpcRequest& request);
 
                 /**
                  *This API is used to reinstall the operating system of the specified instance.

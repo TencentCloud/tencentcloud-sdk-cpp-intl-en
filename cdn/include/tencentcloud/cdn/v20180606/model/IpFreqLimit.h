@@ -48,21 +48,21 @@ namespace TencentCloud
 
                     /**
                      * 获取IP access limit configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      * @return Switch IP access limit configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置IP access limit configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      * @param Switch IP access limit configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      */
                     void SetSwitch(const std::string& _switch);
 
@@ -75,20 +75,20 @@ off: disabled
                     /**
                      * 获取Sets the limited number of requests per second
 514 will be returned for requests that exceed the limit
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Qps Sets the limited number of requests per second
 514 will be returned for requests that exceed the limit
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     int64_t GetQps() const;
 
                     /**
                      * 设置Sets the limited number of requests per second
 514 will be returned for requests that exceed the limit
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param Qps Sets the limited number of requests per second
 514 will be returned for requests that exceed the limit
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetQps(const int64_t& _qps);
 
@@ -102,8 +102,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * IP access limit configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
@@ -111,7 +111,7 @@ off: disabled
                     /**
                      * Sets the limited number of requests per second
 514 will be returned for requests that exceed the limit
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     int64_t m_qps;
                     bool m_qpsHasBeenSet;

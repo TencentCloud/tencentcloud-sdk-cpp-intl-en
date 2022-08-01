@@ -121,29 +121,29 @@ namespace TencentCloud
 
                     /**
                      * 获取Acceleration service status
-rejected: the domain name is rejected due to expiration/deregistration of its ICP filing
-processing: deploying
-online: activated
-offline: disabled
+`rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
+`processing`: Deploying
+`online`: Activated
+`offline`: Disabled
                      * @return Status Acceleration service status
-rejected: the domain name is rejected due to expiration/deregistration of its ICP filing
-processing: deploying
-online: activated
-offline: disabled
+`rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
+`processing`: Deploying
+`online`: Activated
+`offline`: Disabled
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Acceleration service status
-rejected: the domain name is rejected due to expiration/deregistration of its ICP filing
-processing: deploying
-online: activated
-offline: disabled
+`rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
+`processing`: Deploying
+`online`: Activated
+`offline`: Disabled
                      * @param Status Acceleration service status
-rejected: the domain name is rejected due to expiration/deregistration of its ICP filing
-processing: deploying
-online: activated
-offline: disabled
+`rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
+`processing`: Deploying
+`online`: Activated
+`offline`: Disabled
                      */
                     void SetStatus(const std::string& _status);
 
@@ -173,25 +173,25 @@ offline: disabled
 
                     /**
                      * 获取Domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming VOD acceleration
+`web`: Static acceleration
+`download`: Download acceleration
+`media`: Streaming media VOD acceleration
                      * @return ServiceType Domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming VOD acceleration
+`web`: Static acceleration
+`download`: Download acceleration
+`media`: Streaming media VOD acceleration
                      */
                     std::string GetServiceType() const;
 
                     /**
                      * 设置Domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming VOD acceleration
+`web`: Static acceleration
+`download`: Download acceleration
+`media`: Streaming media VOD acceleration
                      * @param ServiceType Domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming VOD acceleration
+`web`: Static acceleration
+`download`: Download acceleration
+`media`: Streaming media VOD acceleration
                      */
                     void SetServiceType(const std::string& _serviceType);
 
@@ -202,14 +202,14 @@ media: streaming VOD acceleration
                     bool ServiceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Domain name creation time
-                     * @return CreateTime Domain name creation time
+                     * 获取Domain name creation time.
+                     * @return CreateTime Domain name creation time.
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Domain name creation time
-                     * @param CreateTime Domain name creation time
+                     * 设置Domain name creation time.
+                     * @param CreateTime Domain name creation time.
                      */
                     void SetCreateTime(const std::string& _createTime);
 
@@ -220,14 +220,14 @@ media: streaming VOD acceleration
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Last modified time of domain name
-                     * @return UpdateTime Last modified time of domain name
+                     * 获取Domain name update time.
+                     * @return UpdateTime Domain name update time.
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Last modified time of domain name
-                     * @param UpdateTime Last modified time of domain name
+                     * 设置Domain name update time.
+                     * @param UpdateTime Domain name update time.
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
@@ -238,14 +238,14 @@ media: streaming VOD acceleration
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Origin server configuration details
-                     * @return Origin Origin server configuration details
+                     * 获取Origin server configuration details.
+                     * @return Origin Origin server configuration details.
                      */
                     Origin GetOrigin() const;
 
                     /**
-                     * 设置Origin server configuration details
-                     * @param Origin Origin server configuration details
+                     * 设置Origin server configuration details.
+                     * @param Origin Origin server configuration details.
                      */
                     void SetOrigin(const Origin& _origin);
 
@@ -257,45 +257,45 @@ media: streaming VOD acceleration
 
                     /**
                      * 获取Domain name block status
-normal: normal
-overdue: the domain name has been disabled due to account arrears. The acceleration service can be resumed after the account is topped up.
-malicious: the acceleration service has been forcibly disabled due to detection of malicious behavior.
-ddos: the acceleration service has been disabled due to large-scale DDoS attacks to the domain name
-idle: no operations or data has been detected for more than 90 days. The domain name is determined to be inactive which automatically disables the acceleration service. You can restart the service.
-unlicensed: the acceleration service has been automatically disabled as the domain name has no ICP filing or its ICP filing is deregistered. Service can be resumed after an ICP filing is obtained.
-capping: the configured upper limit for bandwidth has been reached.
-readonly: the domain name has a special configuration and has been locked.
+`normal`: Normal
+`overdue`: The domain name has been disabled due to account arrears. The acceleration service can be resumed after the account is topped up.
+`malicious`: The acceleration service has been forcibly disabled due to detection of malicious behavior.
+`ddos`: The acceleration service has been disabled due to large-scale DDoS attacks to the domain name
+`idle`: No operations or data has been detected for more than 90 days. The domain name is determined to be inactive which automatically disables the acceleration service. You can restart the service.
+`unlicensed`: The acceleration service has been automatically disabled as the domain name has no ICP filing or its ICP filing is deregistered. Service can be resumed after an ICP filing is obtained.
+`capping`: The configured upper limit for bandwidth has been reached.
+`readonly`: The domain name has a special configuration and has been locked.
                      * @return Disable Domain name block status
-normal: normal
-overdue: the domain name has been disabled due to account arrears. The acceleration service can be resumed after the account is topped up.
-malicious: the acceleration service has been forcibly disabled due to detection of malicious behavior.
-ddos: the acceleration service has been disabled due to large-scale DDoS attacks to the domain name
-idle: no operations or data has been detected for more than 90 days. The domain name is determined to be inactive which automatically disables the acceleration service. You can restart the service.
-unlicensed: the acceleration service has been automatically disabled as the domain name has no ICP filing or its ICP filing is deregistered. Service can be resumed after an ICP filing is obtained.
-capping: the configured upper limit for bandwidth has been reached.
-readonly: the domain name has a special configuration and has been locked.
+`normal`: Normal
+`overdue`: The domain name has been disabled due to account arrears. The acceleration service can be resumed after the account is topped up.
+`malicious`: The acceleration service has been forcibly disabled due to detection of malicious behavior.
+`ddos`: The acceleration service has been disabled due to large-scale DDoS attacks to the domain name
+`idle`: No operations or data has been detected for more than 90 days. The domain name is determined to be inactive which automatically disables the acceleration service. You can restart the service.
+`unlicensed`: The acceleration service has been automatically disabled as the domain name has no ICP filing or its ICP filing is deregistered. Service can be resumed after an ICP filing is obtained.
+`capping`: The configured upper limit for bandwidth has been reached.
+`readonly`: The domain name has a special configuration and has been locked.
                      */
                     std::string GetDisable() const;
 
                     /**
                      * 设置Domain name block status
-normal: normal
-overdue: the domain name has been disabled due to account arrears. The acceleration service can be resumed after the account is topped up.
-malicious: the acceleration service has been forcibly disabled due to detection of malicious behavior.
-ddos: the acceleration service has been disabled due to large-scale DDoS attacks to the domain name
-idle: no operations or data has been detected for more than 90 days. The domain name is determined to be inactive which automatically disables the acceleration service. You can restart the service.
-unlicensed: the acceleration service has been automatically disabled as the domain name has no ICP filing or its ICP filing is deregistered. Service can be resumed after an ICP filing is obtained.
-capping: the configured upper limit for bandwidth has been reached.
-readonly: the domain name has a special configuration and has been locked.
+`normal`: Normal
+`overdue`: The domain name has been disabled due to account arrears. The acceleration service can be resumed after the account is topped up.
+`malicious`: The acceleration service has been forcibly disabled due to detection of malicious behavior.
+`ddos`: The acceleration service has been disabled due to large-scale DDoS attacks to the domain name
+`idle`: No operations or data has been detected for more than 90 days. The domain name is determined to be inactive which automatically disables the acceleration service. You can restart the service.
+`unlicensed`: The acceleration service has been automatically disabled as the domain name has no ICP filing or its ICP filing is deregistered. Service can be resumed after an ICP filing is obtained.
+`capping`: The configured upper limit for bandwidth has been reached.
+`readonly`: The domain name has a special configuration and has been locked.
                      * @param Disable Domain name block status
-normal: normal
-overdue: the domain name has been disabled due to account arrears. The acceleration service can be resumed after the account is topped up.
-malicious: the acceleration service has been forcibly disabled due to detection of malicious behavior.
-ddos: the acceleration service has been disabled due to large-scale DDoS attacks to the domain name
-idle: no operations or data has been detected for more than 90 days. The domain name is determined to be inactive which automatically disables the acceleration service. You can restart the service.
-unlicensed: the acceleration service has been automatically disabled as the domain name has no ICP filing or its ICP filing is deregistered. Service can be resumed after an ICP filing is obtained.
-capping: the configured upper limit for bandwidth has been reached.
-readonly: the domain name has a special configuration and has been locked.
+`normal`: Normal
+`overdue`: The domain name has been disabled due to account arrears. The acceleration service can be resumed after the account is topped up.
+`malicious`: The acceleration service has been forcibly disabled due to detection of malicious behavior.
+`ddos`: The acceleration service has been disabled due to large-scale DDoS attacks to the domain name
+`idle`: No operations or data has been detected for more than 90 days. The domain name is determined to be inactive which automatically disables the acceleration service. You can restart the service.
+`unlicensed`: The acceleration service has been automatically disabled as the domain name has no ICP filing or its ICP filing is deregistered. Service can be resumed after an ICP filing is obtained.
+`capping`: The configured upper limit for bandwidth has been reached.
+`readonly`: The domain name has a special configuration and has been locked.
                      */
                     void SetDisable(const std::string& _disable);
 
@@ -307,25 +307,25 @@ readonly: the domain name has a special configuration and has been locked.
 
                     /**
                      * 获取Acceleration region
-mainland: acceleration in Mainland China
-overseas: acceleration outside Mainland China
-global: global acceleration
+`mainland`: Acceleration inside the Chinese mainland
+`overseas`: Acceleration outside the Chinese mainland
+`global`: Acceleration over the globe
                      * @return Area Acceleration region
-mainland: acceleration in Mainland China
-overseas: acceleration outside Mainland China
-global: global acceleration
+`mainland`: Acceleration inside the Chinese mainland
+`overseas`: Acceleration outside the Chinese mainland
+`global`: Acceleration over the globe
                      */
                     std::string GetArea() const;
 
                     /**
                      * 设置Acceleration region
-mainland: acceleration in Mainland China
-overseas: acceleration outside Mainland China
-global: global acceleration
+`mainland`: Acceleration inside the Chinese mainland
+`overseas`: Acceleration outside the Chinese mainland
+`global`: Acceleration over the globe
                      * @param Area Acceleration region
-mainland: acceleration in Mainland China
-overseas: acceleration outside Mainland China
-global: global acceleration
+`mainland`: Acceleration inside the Chinese mainland
+`overseas`: Acceleration outside the Chinese mainland
+`global`: Acceleration over the globe
                      */
                     void SetArea(const std::string& _area);
 
@@ -337,29 +337,29 @@ global: global acceleration
 
                     /**
                      * 获取Domain name lock status
-normal: not locked
-mainland: locked in Mainland China
-overseas: locked outside Mainland China
-global: locked globally
+`normal`: Not locked
+`mainland`: Locked in the Chinese mainland
+overseas: Locked outside the Chinese mainland
+global: Locked globally
                      * @return Readonly Domain name lock status
-normal: not locked
-mainland: locked in Mainland China
-overseas: locked outside Mainland China
-global: locked globally
+`normal`: Not locked
+`mainland`: Locked in the Chinese mainland
+overseas: Locked outside the Chinese mainland
+global: Locked globally
                      */
                     std::string GetReadonly() const;
 
                     /**
                      * 设置Domain name lock status
-normal: not locked
-mainland: locked in Mainland China
-overseas: locked outside Mainland China
-global: locked globally
+`normal`: Not locked
+`mainland`: Locked in the Chinese mainland
+overseas: Locked outside the Chinese mainland
+global: Locked globally
                      * @param Readonly Domain name lock status
-normal: not locked
-mainland: locked in Mainland China
-overseas: locked outside Mainland China
-global: locked globally
+`normal`: Not locked
+`mainland`: Locked in the Chinese mainland
+overseas: Locked outside the Chinese mainland
+global: Locked globally
                      */
                     void SetReadonly(const std::string& _readonly);
 
@@ -433,10 +433,10 @@ global: locked globally
 
                     /**
                      * Acceleration service status
-rejected: the domain name is rejected due to expiration/deregistration of its ICP filing
-processing: deploying
-online: activated
-offline: disabled
+`rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
+`processing`: Deploying
+`online`: Activated
+`offline`: Disabled
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
@@ -449,60 +449,60 @@ offline: disabled
 
                     /**
                      * Domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming VOD acceleration
+`web`: Static acceleration
+`download`: Download acceleration
+`media`: Streaming media VOD acceleration
                      */
                     std::string m_serviceType;
                     bool m_serviceTypeHasBeenSet;
 
                     /**
-                     * Domain name creation time
+                     * Domain name creation time.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Last modified time of domain name
+                     * Domain name update time.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * Origin server configuration details
+                     * Origin server configuration details.
                      */
                     Origin m_origin;
                     bool m_originHasBeenSet;
 
                     /**
                      * Domain name block status
-normal: normal
-overdue: the domain name has been disabled due to account arrears. The acceleration service can be resumed after the account is topped up.
-malicious: the acceleration service has been forcibly disabled due to detection of malicious behavior.
-ddos: the acceleration service has been disabled due to large-scale DDoS attacks to the domain name
-idle: no operations or data has been detected for more than 90 days. The domain name is determined to be inactive which automatically disables the acceleration service. You can restart the service.
-unlicensed: the acceleration service has been automatically disabled as the domain name has no ICP filing or its ICP filing is deregistered. Service can be resumed after an ICP filing is obtained.
-capping: the configured upper limit for bandwidth has been reached.
-readonly: the domain name has a special configuration and has been locked.
+`normal`: Normal
+`overdue`: The domain name has been disabled due to account arrears. The acceleration service can be resumed after the account is topped up.
+`malicious`: The acceleration service has been forcibly disabled due to detection of malicious behavior.
+`ddos`: The acceleration service has been disabled due to large-scale DDoS attacks to the domain name
+`idle`: No operations or data has been detected for more than 90 days. The domain name is determined to be inactive which automatically disables the acceleration service. You can restart the service.
+`unlicensed`: The acceleration service has been automatically disabled as the domain name has no ICP filing or its ICP filing is deregistered. Service can be resumed after an ICP filing is obtained.
+`capping`: The configured upper limit for bandwidth has been reached.
+`readonly`: The domain name has a special configuration and has been locked.
                      */
                     std::string m_disable;
                     bool m_disableHasBeenSet;
 
                     /**
                      * Acceleration region
-mainland: acceleration in Mainland China
-overseas: acceleration outside Mainland China
-global: global acceleration
+`mainland`: Acceleration inside the Chinese mainland
+`overseas`: Acceleration outside the Chinese mainland
+`global`: Acceleration over the globe
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;
 
                     /**
                      * Domain name lock status
-normal: not locked
-mainland: locked in Mainland China
-overseas: locked outside Mainland China
-global: locked globally
+`normal`: Not locked
+`mainland`: Locked in the Chinese mainland
+overseas: Locked outside the Chinese mainland
+global: Locked globally
                      */
                     std::string m_readonly;
                     bool m_readonlyHasBeenSet;

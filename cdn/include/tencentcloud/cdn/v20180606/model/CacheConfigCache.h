@@ -50,11 +50,11 @@ namespace TencentCloud
                      * 获取Cache configuration switch
 on: enable
 off: disable
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Switch Cache configuration switch
 on: enable
 off: disable
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetSwitch() const;
 
@@ -62,11 +62,11 @@ Note: this field may return null, indicating that no valid value is obtained.
                      * 设置Cache configuration switch
 on: enable
 off: disable
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param Switch Cache configuration switch
 on: enable
 off: disable
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetSwitch(const std::string& _switch);
 
@@ -79,20 +79,20 @@ Note: this field may return null, indicating that no valid value is obtained.
                     /**
                      * 获取Cache expiration time settings
 Unit: second. The maximum value is 365 days.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return CacheTime Cache expiration time settings
 Unit: second. The maximum value is 365 days.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     int64_t GetCacheTime() const;
 
                     /**
                      * 设置Cache expiration time settings
 Unit: second. The maximum value is 365 days.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param CacheTime Cache expiration time settings
 Unit: second. The maximum value is 365 days.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetCacheTime(const int64_t& _cacheTime);
 
@@ -104,29 +104,29 @@ Note: this field may return null, indicating that no valid value is obtained.
 
                     /**
                      * 获取Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return CompareMaxAge Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetCompareMaxAge() const;
 
                     /**
                      * 设置Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param CompareMaxAge Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetCompareMaxAge(const std::string& _compareMaxAge);
 
@@ -138,29 +138,29 @@ Note: this field may return null, indicating that no valid value is obtained.
 
                     /**
                      * 获取Force cache
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return IgnoreCacheControl Force cache
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetIgnoreCacheControl() const;
 
                     /**
                      * 设置Force cache
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param IgnoreCacheControl Force cache
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetIgnoreCacheControl(const std::string& _ignoreCacheControl);
 
@@ -210,7 +210,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * Cache configuration switch
 on: enable
 off: disable
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
@@ -218,27 +218,27 @@ Note: this field may return null, indicating that no valid value is obtained.
                     /**
                      * Cache expiration time settings
 Unit: second. The maximum value is 365 days.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     int64_t m_cacheTime;
                     bool m_cacheTimeHasBeenSet;
 
                     /**
                      * Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_compareMaxAge;
                     bool m_compareMaxAgeHasBeenSet;
 
                     /**
                      * Force cache
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_ignoreCacheControl;
                     bool m_ignoreCacheControlHasBeenSet;

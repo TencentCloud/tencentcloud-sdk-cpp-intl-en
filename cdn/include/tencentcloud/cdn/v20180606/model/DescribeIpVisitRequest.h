@@ -127,20 +127,20 @@ Please note that if domain names are specified, this parameter will be ignored.
                     bool ProjectHasBeenSet() const;
 
                     /**
-                     * 获取Time granularity, which can be:
+                     * 获取Sampling interval in minutes. The available options vary for different query period. See below: 
 5min: 5 minutes. If the query period is within 24 hours, `5min` will be used by default.
 day: 1 day. If the query period is longer than 24 hours, `day` will be used by default.
-                     * @return Interval Time granularity, which can be:
+                     * @return Interval Sampling interval in minutes. The available options vary for different query period. See below: 
 5min: 5 minutes. If the query period is within 24 hours, `5min` will be used by default.
 day: 1 day. If the query period is longer than 24 hours, `day` will be used by default.
                      */
                     std::string GetInterval() const;
 
                     /**
-                     * 设置Time granularity, which can be:
+                     * 设置Sampling interval in minutes. The available options vary for different query period. See below: 
 5min: 5 minutes. If the query period is within 24 hours, `5min` will be used by default.
 day: 1 day. If the query period is longer than 24 hours, `day` will be used by default.
-                     * @param Interval Time granularity, which can be:
+                     * @param Interval Sampling interval in minutes. The available options vary for different query period. See below: 
 5min: 5 minutes. If the query period is within 24 hours, `5min` will be used by default.
 day: 1 day. If the query period is longer than 24 hours, `day` will be used by default.
                      */
@@ -182,7 +182,7 @@ Please note that if domain names are specified, this parameter will be ignored.
                     bool m_projectHasBeenSet;
 
                     /**
-                     * Time granularity, which can be:
+                     * Sampling interval in minutes. The available options vary for different query period. See below: 
 5min: 5 minutes. If the query period is within 24 hours, `5min` will be used by default.
 day: 1 day. If the query period is longer than 24 hours, `day` will be used by default.
                      */

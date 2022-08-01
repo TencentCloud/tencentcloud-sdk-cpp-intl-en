@@ -53,17 +53,17 @@ Note: this version does not support setting cache expiration rules if the origin
 
                     /**
                      * 获取Cache expiration time rules
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return CacheRules Cache expiration time rules
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<SimpleCacheRule> GetCacheRules() const;
 
                     /**
                      * 设置Cache expiration time rules
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param CacheRules Cache expiration time rules
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetCacheRules(const std::vector<SimpleCacheRule>& _cacheRules);
 
@@ -75,33 +75,33 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Follows origin server Cache-Control: max-age configurations
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 If this is enabled, resources that do not match CacheRules rules will be cached by the node according to the max-age value returned by the origin server. Resources that match CacheRules rules will be cached on the node according to the cache expiration time set in CacheRules.
 This conflicts with CompareMaxAge. The two cannot be enabled at the same time.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return FollowOrigin Follows origin server Cache-Control: max-age configurations
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 If this is enabled, resources that do not match CacheRules rules will be cached by the node according to the max-age value returned by the origin server. Resources that match CacheRules rules will be cached on the node according to the cache expiration time set in CacheRules.
 This conflicts with CompareMaxAge. The two cannot be enabled at the same time.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetFollowOrigin() const;
 
                     /**
                      * 设置Follows origin server Cache-Control: max-age configurations
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 If this is enabled, resources that do not match CacheRules rules will be cached by the node according to the max-age value returned by the origin server. Resources that match CacheRules rules will be cached on the node according to the cache expiration time set in CacheRules.
 This conflicts with CompareMaxAge. The two cannot be enabled at the same time.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param FollowOrigin Follows origin server Cache-Control: max-age configurations
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 If this is enabled, resources that do not match CacheRules rules will be cached by the node according to the max-age value returned by the origin server. Resources that match CacheRules rules will be cached on the node according to the cache expiration time set in CacheRules.
 This conflicts with CompareMaxAge. The two cannot be enabled at the same time.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetFollowOrigin(const std::string& _followOrigin);
 
@@ -113,29 +113,29 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Forced cache
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return IgnoreCacheControl Forced cache
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetIgnoreCacheControl() const;
 
                     /**
                      * 设置Forced cache
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param IgnoreCacheControl Forced cache
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetIgnoreCacheControl(const std::string& _ignoreCacheControl);
 
@@ -147,29 +147,29 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Ignores the Set-Cookie header of the origin server
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return IgnoreSetCookie Ignores the Set-Cookie header of the origin server
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetIgnoreSetCookie() const;
 
                     /**
                      * 设置Ignores the Set-Cookie header of the origin server
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param IgnoreSetCookie Ignores the Set-Cookie header of the origin server
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetIgnoreSetCookie(const std::string& _ignoreSetCookie);
 
@@ -181,29 +181,29 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return CompareMaxAge Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetCompareMaxAge() const;
 
                     /**
                      * 设置Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param CompareMaxAge Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetCompareMaxAge(const std::string& _compareMaxAge);
 
@@ -215,17 +215,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Always forwards to the origin server for verification
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Revalidate Always forwards to the origin server for verification
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     Revalidate GetRevalidate() const;
 
                     /**
                      * 设置Always forwards to the origin server for verification
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param Revalidate Always forwards to the origin server for verification
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetRevalidate(const Revalidate& _revalidate);
 
@@ -239,55 +239,55 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Cache expiration time rules
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<SimpleCacheRule> m_cacheRules;
                     bool m_cacheRulesHasBeenSet;
 
                     /**
                      * Follows origin server Cache-Control: max-age configurations
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 If this is enabled, resources that do not match CacheRules rules will be cached by the node according to the max-age value returned by the origin server. Resources that match CacheRules rules will be cached on the node according to the cache expiration time set in CacheRules.
 This conflicts with CompareMaxAge. The two cannot be enabled at the same time.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_followOrigin;
                     bool m_followOriginHasBeenSet;
 
                     /**
                      * Forced cache
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_ignoreCacheControl;
                     bool m_ignoreCacheControlHasBeenSet;
 
                     /**
                      * Ignores the Set-Cookie header of the origin server
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_ignoreSetCookie;
                     bool m_ignoreSetCookieHasBeenSet;
 
                     /**
                      * Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_compareMaxAge;
                     bool m_compareMaxAgeHasBeenSet;
 
                     /**
                      * Always forwards to the origin server for verification
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     Revalidate m_revalidate;
                     bool m_revalidateHasBeenSet;

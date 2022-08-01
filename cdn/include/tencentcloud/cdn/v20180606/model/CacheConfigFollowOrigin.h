@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cdn/v20180606/model/HeuristicCache.h>
 
 
 namespace TencentCloud
@@ -48,21 +49,21 @@ namespace TencentCloud
 
                     /**
                      * 获取Follow origin server switch configuration
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
                      * @return Switch Follow origin server switch configuration
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Follow origin server switch configuration
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
                      * @param Switch Follow origin server switch configuration
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
                      */
                     void SetSwitch(const std::string& _switch);
 
@@ -72,15 +73,44 @@ off: disable
                      */
                     bool SwitchHasBeenSet() const;
 
+                    /**
+                     * 获取Heuristic cache configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return HeuristicCache Heuristic cache configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    HeuristicCache GetHeuristicCache() const;
+
+                    /**
+                     * 设置Heuristic cache configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param HeuristicCache Heuristic cache configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetHeuristicCache(const HeuristicCache& _heuristicCache);
+
+                    /**
+                     * 判断参数 HeuristicCache 是否已赋值
+                     * @return HeuristicCache 是否已赋值
+                     */
+                    bool HeuristicCacheHasBeenSet() const;
+
                 private:
 
                     /**
                      * Follow origin server switch configuration
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
+
+                    /**
+                     * Heuristic cache configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    HeuristicCache m_heuristicCache;
+                    bool m_heuristicCacheHasBeenSet;
 
                 };
             }

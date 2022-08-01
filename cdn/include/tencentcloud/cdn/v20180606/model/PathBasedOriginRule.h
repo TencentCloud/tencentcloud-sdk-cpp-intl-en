@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Path-based origin-pull rules
+                * Path-based origin-pull rule
                 */
                 class PathBasedOriginRule : public AbstractModel
                 {
@@ -48,29 +48,29 @@ namespace TencentCloud
 
                     /**
                      * 获取Rule types:
-`file`: effective for files with specified suffixes.
-`directory`: effective for specified paths.
-`path`: effective for specified absolute paths.
-`index`: effective for specified homepages.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
+`index`: Apply to specified homepages.
                      * @return RuleType Rule types:
-`file`: effective for files with specified suffixes.
-`directory`: effective for specified paths.
-`path`: effective for specified absolute paths.
-`index`: effective for specified homepages.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
+`index`: Apply to specified homepages.
                      */
                     std::string GetRuleType() const;
 
                     /**
                      * 设置Rule types:
-`file`: effective for files with specified suffixes.
-`directory`: effective for specified paths.
-`path`: effective for specified absolute paths.
-`index`: effective for specified homepages.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
+`index`: Apply to specified homepages.
                      * @param RuleType Rule types:
-`file`: effective for files with specified suffixes.
-`directory`: effective for specified paths.
-`path`: effective for specified absolute paths.
-`index`: effective for specified homepages.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
+`index`: Apply to specified homepages.
                      */
                     void SetRuleType(const std::string& _ruleType);
 
@@ -115,14 +115,14 @@ For `index`, enter a forward slash `/`.
                     bool RulePathsHasBeenSet() const;
 
                     /**
-                     * 获取Origin server list. Domain names and IPv4 addresses are supported.
-                     * @return Origin Origin server list. Domain names and IPv4 addresses are supported.
+                     * 获取Origin server list. Domain name and IPv4 addresses are supported.
+                     * @return Origin Origin server list. Domain name and IPv4 addresses are supported.
                      */
                     std::vector<std::string> GetOrigin() const;
 
                     /**
-                     * 设置Origin server list. Domain names and IPv4 addresses are supported.
-                     * @param Origin Origin server list. Domain names and IPv4 addresses are supported.
+                     * 设置Origin server list. Domain name and IPv4 addresses are supported.
+                     * @param Origin Origin server list. Domain name and IPv4 addresses are supported.
                      */
                     void SetOrigin(const std::vector<std::string>& _origin);
 
@@ -136,10 +136,10 @@ For `index`, enter a forward slash `/`.
 
                     /**
                      * Rule types:
-`file`: effective for files with specified suffixes.
-`directory`: effective for specified paths.
-`path`: effective for specified absolute paths.
-`index`: effective for specified homepages.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
+`index`: Apply to specified homepages.
                      */
                     std::string m_ruleType;
                     bool m_ruleTypeHasBeenSet;
@@ -155,7 +155,7 @@ For `index`, enter a forward slash `/`.
                     bool m_rulePathsHasBeenSet;
 
                     /**
-                     * Origin server list. Domain names and IPv4 addresses are supported.
+                     * Origin server list. Domain name and IPv4 addresses are supported.
                      */
                     std::vector<std::string> m_origin;
                     bool m_originHasBeenSet;

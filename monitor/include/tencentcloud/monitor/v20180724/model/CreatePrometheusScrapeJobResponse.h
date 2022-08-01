@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return JobId 
+                     * 获取ID of a successfully created scrape task.
+                     * @return JobId ID of a successfully created scrape task.
                      */
                     std::string GetJobId() const;
 
@@ -58,7 +58,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * ID of a successfully created scrape task.
                      */
                     std::string m_jobId;
                     bool m_jobIdHasBeenSet;

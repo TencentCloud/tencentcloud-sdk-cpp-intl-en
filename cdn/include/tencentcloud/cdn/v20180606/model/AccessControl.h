@@ -67,17 +67,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Request header and request URL access rule
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return AccessControlRules Request header and request URL access rule
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<AccessControlRule> GetAccessControlRules() const;
 
                     /**
                      * 设置Request header and request URL access rule
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param AccessControlRules Request header and request URL access rule
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetAccessControlRules(const std::vector<AccessControlRule>& _accessControlRules);
 
@@ -88,18 +88,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool AccessControlRulesHasBeenSet() const;
 
                     /**
-                     * 获取Returned status code
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ReturnCode Returned status code
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Returns status code
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return ReturnCode Returns status code
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     int64_t GetReturnCode() const;
 
                     /**
-                     * 设置Returned status code
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ReturnCode Returned status code
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Returns status code
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param ReturnCode Returns status code
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetReturnCode(const int64_t& _returnCode);
 
@@ -119,14 +119,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Request header and request URL access rule
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<AccessControlRule> m_accessControlRules;
                     bool m_accessControlRulesHasBeenSet;
 
                     /**
-                     * Returned status code
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Returns status code
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     int64_t m_returnCode;
                     bool m_returnCodeHasBeenSet;

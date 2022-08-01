@@ -80,14 +80,14 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Query condition filter, complex type.
-                     * @return Filters Query condition filter, complex type.
+                     * 获取Query condition filter, which supports complex type.
+                     * @return Filters Query condition filter, which supports complex type.
                      */
                     std::vector<DomainFilter> GetFilters() const;
 
                     /**
-                     * 设置Query condition filter, complex type.
-                     * @param Filters Query condition filter, complex type.
+                     * 设置Query condition filter, which supports complex type.
+                     * @param Filters Query condition filter, which supports complex type.
                      */
                     void SetFilters(const std::vector<DomainFilter>& _filters);
 
@@ -112,7 +112,7 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Query condition filter, complex type.
+                     * Query condition filter, which supports complex type.
                      */
                     std::vector<DomainFilter> m_filters;
                     bool m_filtersHasBeenSet;

@@ -48,17 +48,17 @@ namespace TencentCloud
 
                     /**
                      * 获取The origin-pull connection timeout (in seconds). Valid range: 5-60.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ConnectTimeout The origin-pull connection timeout (in seconds). Valid range: 5-60.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     uint64_t GetConnectTimeout() const;
 
                     /**
                      * 设置The origin-pull connection timeout (in seconds). Valid range: 5-60.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param ConnectTimeout The origin-pull connection timeout (in seconds). Valid range: 5-60.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetConnectTimeout(const uint64_t& _connectTimeout);
 
@@ -70,17 +70,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取The origin-pull receipt timeout (in seconds). Valid range: 10-60.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ReceiveTimeout The origin-pull receipt timeout (in seconds). Valid range: 10-60.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     uint64_t GetReceiveTimeout() const;
 
                     /**
                      * 设置The origin-pull receipt timeout (in seconds). Valid range: 10-60.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param ReceiveTimeout The origin-pull receipt timeout (in seconds). Valid range: 10-60.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetReceiveTimeout(const uint64_t& _receiveTimeout);
 
@@ -94,14 +94,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * The origin-pull connection timeout (in seconds). Valid range: 5-60.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     uint64_t m_connectTimeout;
                     bool m_connectTimeoutHasBeenSet;
 
                     /**
                      * The origin-pull receipt timeout (in seconds). Valid range: 10-60.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     uint64_t m_receiveTimeout;
                     bool m_receiveTimeoutHasBeenSet;

@@ -46,9 +46,9 @@ namespace TencentCloud
 
                     /**
                      * 获取Result list
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return CacheOptResult Result list
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     CacheOptResult GetCacheOptResult() const;
 
@@ -60,9 +60,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Task ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return TaskId Task ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetTaskId() const;
 
@@ -76,14 +76,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * Result list
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     CacheOptResult m_cacheOptResult;
                     bool m_cacheOptResultHasBeenSet;
 
                     /**
                      * Task ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;

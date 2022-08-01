@@ -49,25 +49,25 @@ namespace TencentCloud
 
                     /**
                      * 获取Whether to enable wildcard match (`*`).
-false: disable
-true: enable
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`false`: disabled
+`true`: enabled
+Note: this field may return `null`, indicating that no valid value can be obtained.
                      * @return Regex Whether to enable wildcard match (`*`).
-false: disable
-true: enable
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`false`: disabled
+`true`: enabled
+Note: this field may return `null`, indicating that no valid value can be obtained.
                      */
                     bool GetRegex() const;
 
                     /**
                      * 设置Whether to enable wildcard match (`*`).
-false: disable
-true: enable
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`false`: disabled
+`true`: enabled
+Note: this field may return `null`, indicating that no valid value can be obtained.
                      * @param Regex Whether to enable wildcard match (`*`).
-false: disable
-true: enable
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`false`: disabled
+`true`: enabled
+Note: this field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetRegex(const bool& _regex);
 
@@ -144,28 +144,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool ServerNameHasBeenSet() const;
 
                     /**
-                     * 获取Origin server region. Valid values: `CN` and `OV`.
-CN: the Chinese mainland
-OV: outside the Chinese mainland
+                     * 获取Region of the origin server. Valid values: `CN` and `OV`.
+`CN`: Within the Chinese mainland
+`OV`: Outside the Chinese mainland
 Default value: `CN`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return OriginArea Origin server region. Valid values: `CN` and `OV`.
-CN: the Chinese mainland
-OV: outside the Chinese mainland
+                     * @return OriginArea Region of the origin server. Valid values: `CN` and `OV`.
+`CN`: Within the Chinese mainland
+`OV`: Outside the Chinese mainland
 Default value: `CN`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetOriginArea() const;
 
                     /**
-                     * 设置Origin server region. Valid values: `CN` and `OV`.
-CN: the Chinese mainland
-OV: outside the Chinese mainland
+                     * 设置Region of the origin server. Valid values: `CN` and `OV`.
+`CN`: Within the Chinese mainland
+`OV`: Outside the Chinese mainland
 Default value: `CN`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param OriginArea Origin server region. Valid values: `CN` and `OV`.
-CN: the Chinese mainland
-OV: outside the Chinese mainland
+                     * @param OriginArea Region of the origin server. Valid values: `CN` and `OV`.
+`CN`: Within the Chinese mainland
+`OV`: Outside the Chinese mainland
 Default value: `CN`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
@@ -179,17 +179,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 获取Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the match path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ForwardUri Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the match path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetForwardUri() const;
 
                     /**
                      * 设置Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the match path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param ForwardUri Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the match path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetForwardUri(const std::string& _forwardUri);
 
@@ -201,17 +201,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 获取Origin-pull header setting when the path matches.
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return RequestHeaders Origin-pull header setting when the path matches.
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<HttpHeaderRule> GetRequestHeaders() const;
 
                     /**
                      * 设置Origin-pull header setting when the path matches.
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param RequestHeaders Origin-pull header setting when the path matches.
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetRequestHeaders(const std::vector<HttpHeaderRule>& _requestHeaders);
 
@@ -223,25 +223,25 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 
                     /**
                      * 获取When `Regex` is `false`, this parameter should be `true`.
-`false`: disabled
+`false`: Disabled
 `true`: enabled
-Note: this field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return FullMatch When `Regex` is `false`, this parameter should be `true`.
-`false`: disabled
+`false`: Disabled
 `true`: enabled
-Note: this field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     bool GetFullMatch() const;
 
                     /**
                      * 设置When `Regex` is `false`, this parameter should be `true`.
-`false`: disabled
+`false`: Disabled
 `true`: enabled
-Note: this field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param FullMatch When `Regex` is `false`, this parameter should be `true`.
-`false`: disabled
+`false`: Disabled
 `true`: enabled
-Note: this field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetFullMatch(const bool& _fullMatch);
 
@@ -255,9 +255,9 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 
                     /**
                      * Whether to enable wildcard match (`*`).
-false: disable
-true: enable
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`false`: disabled
+`true`: enabled
+Note: this field may return `null`, indicating that no valid value can be obtained.
                      */
                     bool m_regex;
                     bool m_regexHasBeenSet;
@@ -284,9 +284,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_serverNameHasBeenSet;
 
                     /**
-                     * Origin server region. Valid values: `CN` and `OV`.
-CN: the Chinese mainland
-OV: outside the Chinese mainland
+                     * Region of the origin server. Valid values: `CN` and `OV`.
+`CN`: Within the Chinese mainland
+`OV`: Outside the Chinese mainland
 Default value: `CN`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
@@ -295,23 +295,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * Origin server URI path when the path matches, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the match path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_forwardUri;
                     bool m_forwardUriHasBeenSet;
 
                     /**
                      * Origin-pull header setting when the path matches.
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<HttpHeaderRule> m_requestHeaders;
                     bool m_requestHeadersHasBeenSet;
 
                     /**
                      * When `Regex` is `false`, this parameter should be `true`.
-`false`: disabled
+`false`: Disabled
 `true`: enabled
-Note: this field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     bool m_fullMatch;
                     bool m_fullMatchHasBeenSet;

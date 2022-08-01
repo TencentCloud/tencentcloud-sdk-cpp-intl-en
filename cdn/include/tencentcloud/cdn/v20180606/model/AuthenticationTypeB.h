@@ -48,21 +48,21 @@ namespace TencentCloud
 
                     /**
                      * 获取The key for signature calculation
-Only digits, upper and lower-case letters are allowed. Length limit: 6-32 characters.
-Note: this field may return null, indicating that no valid values can be obtained.
+6-32 characters. Only digits and letters are allowed. 
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return SecretKey The key for signature calculation
-Only digits, upper and lower-case letters are allowed. Length limit: 6-32 characters.
-Note: this field may return null, indicating that no valid values can be obtained.
+6-32 characters. Only digits and letters are allowed. 
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetSecretKey() const;
 
                     /**
                      * 设置The key for signature calculation
-Only digits, upper and lower-case letters are allowed. Length limit: 6-32 characters.
-Note: this field may return null, indicating that no valid values can be obtained.
+6-32 characters. Only digits and letters are allowed. 
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @param SecretKey The key for signature calculation
-Only digits, upper and lower-case letters are allowed. Length limit: 6-32 characters.
-Note: this field may return null, indicating that no valid values can be obtained.
+6-32 characters. Only digits and letters are allowed. 
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetSecretKey(const std::string& _secretKey);
 
@@ -117,17 +117,17 @@ If it contains an asterisk (*), this indicates all files.
                     bool FileExtensionsHasBeenSet() const;
 
                     /**
-                     * 获取allowlist: indicates that all file types apart from the FileExtensions list are authenticated
+                     * 获取whitelist: indicates that all file types apart from the FileExtensions list are authenticated
 blacklist: indicates that only the file types in the FileExtensions list are authenticated
-                     * @return FilterType allowlist: indicates that all file types apart from the FileExtensions list are authenticated
+                     * @return FilterType whitelist: indicates that all file types apart from the FileExtensions list are authenticated
 blacklist: indicates that only the file types in the FileExtensions list are authenticated
                      */
                     std::string GetFilterType() const;
 
                     /**
-                     * 设置allowlist: indicates that all file types apart from the FileExtensions list are authenticated
+                     * 设置whitelist: indicates that all file types apart from the FileExtensions list are authenticated
 blacklist: indicates that only the file types in the FileExtensions list are authenticated
-                     * @param FilterType allowlist: indicates that all file types apart from the FileExtensions list are authenticated
+                     * @param FilterType whitelist: indicates that all file types apart from the FileExtensions list are authenticated
 blacklist: indicates that only the file types in the FileExtensions list are authenticated
                      */
                     void SetFilterType(const std::string& _filterType);
@@ -141,20 +141,20 @@ blacklist: indicates that only the file types in the FileExtensions list are aut
                     /**
                      * 获取Backup key, which is used to calculate a signature.
 6-32 characters. Only digits and letters are allowed. 
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return BackupSecretKey Backup key, which is used to calculate a signature.
 6-32 characters. Only digits and letters are allowed. 
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetBackupSecretKey() const;
 
                     /**
                      * 设置Backup key, which is used to calculate a signature.
 6-32 characters. Only digits and letters are allowed. 
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param BackupSecretKey Backup key, which is used to calculate a signature.
 6-32 characters. Only digits and letters are allowed. 
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetBackupSecretKey(const std::string& _backupSecretKey);
 
@@ -168,8 +168,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * The key for signature calculation
-Only digits, upper and lower-case letters are allowed. Length limit: 6-32 characters.
-Note: this field may return null, indicating that no valid values can be obtained.
+6-32 characters. Only digits and letters are allowed. 
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_secretKey;
                     bool m_secretKeyHasBeenSet;
@@ -189,7 +189,7 @@ If it contains an asterisk (*), this indicates all files.
                     bool m_fileExtensionsHasBeenSet;
 
                     /**
-                     * allowlist: indicates that all file types apart from the FileExtensions list are authenticated
+                     * whitelist: indicates that all file types apart from the FileExtensions list are authenticated
 blacklist: indicates that only the file types in the FileExtensions list are authenticated
                      */
                     std::string m_filterType;
@@ -198,7 +198,7 @@ blacklist: indicates that only the file types in the FileExtensions list are aut
                     /**
                      * Backup key, which is used to calculate a signature.
 6-32 characters. Only digits and letters are allowed. 
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_backupSecretKey;
                     bool m_backupSecretKeyHasBeenSet;

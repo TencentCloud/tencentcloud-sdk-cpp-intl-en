@@ -86,16 +86,16 @@ When you change a daily billing mode to another, and there is network usage on t
                     bool BillingCycleHasBeenSet() const;
 
                     /**
-                     * 获取`monthMax`: billed by the monthly average of daily peak traffic (monthly settlement)
-`day95`: billed by the daily 95th percentile bandwidth (monthly settlement)
-`month95`: billed by the monthly 95th percentile bandwidth (monthly settlement)
-`sum`: billed by the total traffic/total requests (daily or monthly settlement)
-`max`: billed by the peak bandwidth (daily settlement)
-                     * @return StatType `monthMax`: billed by the monthly average of daily peak traffic (monthly settlement)
-`day95`: billed by the daily 95th percentile bandwidth (monthly settlement)
-`month95`: billed by the monthly 95th percentile bandwidth (monthly settlement)
-`sum`: billed by the total traffic/total requests (daily or monthly settlement)
-`max`: billed by the peak bandwidth (daily settlement)
+                     * 获取`monthMax`: Billed by the monthly average of daily peak traffic (monthly settlement)
+`day95`: Billed by the daily 95th percentile bandwidth (monthly settlement)
+`month95`: Billed by the monthly 95th percentile bandwidth (monthly settlement)
+`sum`: Billed by the total traffic/total requests (daily or monthly settlement)
+`max`: Billed by the peak bandwidth (daily settlement)
+                     * @return StatType `monthMax`: Billed by the monthly average of daily peak traffic (monthly settlement)
+`day95`: Billed by the daily 95th percentile bandwidth (monthly settlement)
+`month95`: Billed by the monthly 95th percentile bandwidth (monthly settlement)
+`sum`: Billed by the total traffic/total requests (daily or monthly settlement)
+`max`: Billed by the peak bandwidth (daily settlement)
                      */
                     std::string GetStatType() const;
 
@@ -106,12 +106,12 @@ When you change a daily billing mode to another, and there is network usage on t
                     bool StatTypeHasBeenSet() const;
 
                     /**
-                     * 获取Billing method outside Mainland China:
-`all`: unified billing for all regions
-`multiple`: separate billing for different regions
-                     * @return RegionType Billing method outside Mainland China:
-`all`: unified billing for all regions
-`multiple`: separate billing for different regions
+                     * 获取Billing method for regions outside the Chinese mainland:
+`all`: Unified billing for all regions
+`multiple`: Region-specific billing
+                     * @return RegionType Billing method for regions outside the Chinese mainland:
+`all`: Unified billing for all regions
+`multiple`: Region-specific billing
                      */
                     std::string GetRegionType() const;
 
@@ -123,15 +123,15 @@ When you change a daily billing mode to another, and there is network usage on t
 
                     /**
                      * 获取The current billing mode in effect:
-`flux`: Bill by traffic
-`bandwidth`: Bill by bandwidth
-`request`: Bill by the number of requests
+`flux`: Billed by traffic
+`bandwidth`: Billed by bandwidth
+`request`: Billed by the number of requests
 `flux_sep`: Disused field
 `bandwidth_sep`: Disused field
                      * @return CurrentPayType The current billing mode in effect:
-`flux`: Bill by traffic
-`bandwidth`: Bill by bandwidth
-`request`: Bill by the number of requests
+`flux`: Billed by traffic
+`bandwidth`: Billed by bandwidth
+`request`: Billed by the number of requests
 `flux_sep`: Disused field
 `bandwidth_sep`: Disused field
                      */
@@ -167,28 +167,28 @@ When you change a daily billing mode to another, and there is network usage on t
                     bool m_billingCycleHasBeenSet;
 
                     /**
-                     * `monthMax`: billed by the monthly average of daily peak traffic (monthly settlement)
-`day95`: billed by the daily 95th percentile bandwidth (monthly settlement)
-`month95`: billed by the monthly 95th percentile bandwidth (monthly settlement)
-`sum`: billed by the total traffic/total requests (daily or monthly settlement)
-`max`: billed by the peak bandwidth (daily settlement)
+                     * `monthMax`: Billed by the monthly average of daily peak traffic (monthly settlement)
+`day95`: Billed by the daily 95th percentile bandwidth (monthly settlement)
+`month95`: Billed by the monthly 95th percentile bandwidth (monthly settlement)
+`sum`: Billed by the total traffic/total requests (daily or monthly settlement)
+`max`: Billed by the peak bandwidth (daily settlement)
                      */
                     std::string m_statType;
                     bool m_statTypeHasBeenSet;
 
                     /**
-                     * Billing method outside Mainland China:
-`all`: unified billing for all regions
-`multiple`: separate billing for different regions
+                     * Billing method for regions outside the Chinese mainland:
+`all`: Unified billing for all regions
+`multiple`: Region-specific billing
                      */
                     std::string m_regionType;
                     bool m_regionTypeHasBeenSet;
 
                     /**
                      * The current billing mode in effect:
-`flux`: Bill by traffic
-`bandwidth`: Bill by bandwidth
-`request`: Bill by the number of requests
+`flux`: Billed by traffic
+`bandwidth`: Billed by bandwidth
+`request`: Billed by the number of requests
 `flux_sep`: Disused field
 `bandwidth_sep`: Disused field
                      */

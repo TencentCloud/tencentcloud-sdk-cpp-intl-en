@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * `ImageOptimization` configuration
+                * Image optimization configuration
                 */
                 class ImageOptimization : public AbstractModel
                 {
@@ -51,17 +51,17 @@ namespace TencentCloud
 
                     /**
                      * 获取`WebpAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return WebpAdapter `WebpAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     WebpAdapter GetWebpAdapter() const;
 
                     /**
                      * 设置`WebpAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param WebpAdapter `WebpAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetWebpAdapter(const WebpAdapter& _webpAdapter);
 
@@ -73,17 +73,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取`TpgAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return TpgAdapter `TpgAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     TpgAdapter GetTpgAdapter() const;
 
                     /**
                      * 设置`TpgAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param TpgAdapter `TpgAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetTpgAdapter(const TpgAdapter& _tpgAdapter);
 
@@ -95,17 +95,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取`GuetzliAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return GuetzliAdapter `GuetzliAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     GuetzliAdapter GetGuetzliAdapter() const;
 
                     /**
                      * 设置`GuetzliAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param GuetzliAdapter `GuetzliAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetGuetzliAdapter(const GuetzliAdapter& _guetzliAdapter);
 
@@ -119,21 +119,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * `WebpAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     WebpAdapter m_webpAdapter;
                     bool m_webpAdapterHasBeenSet;
 
                     /**
                      * `TpgAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     TpgAdapter m_tpgAdapter;
                     bool m_tpgAdapterHasBeenSet;
 
                     /**
                      * `GuetzliAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     GuetzliAdapter m_guetzliAdapter;
                     bool m_guetzliAdapterHasBeenSet;

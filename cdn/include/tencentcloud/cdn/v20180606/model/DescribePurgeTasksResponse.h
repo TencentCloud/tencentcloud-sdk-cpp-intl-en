@@ -46,9 +46,9 @@ namespace TencentCloud
 
                     /**
                      * 获取Detailed purge record.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return PurgeLogs Detailed purge record.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<PurgeTask> GetPurgeLogs() const;
 
@@ -60,9 +60,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Total number of tasks, which is used for pagination.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return TotalCount Total number of tasks, which is used for pagination.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     int64_t GetTotalCount() const;
 
@@ -76,14 +76,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Detailed purge record.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<PurgeTask> m_purgeLogs;
                     bool m_purgeLogsHasBeenSet;
 
                     /**
                      * Total number of tasks, which is used for pagination.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

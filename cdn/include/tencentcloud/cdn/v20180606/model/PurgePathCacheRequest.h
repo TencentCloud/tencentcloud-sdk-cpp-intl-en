@@ -104,6 +104,40 @@ namespace TencentCloud
                      */
                     bool UrlEncodeHasBeenSet() const;
 
+                    /**
+                     * 获取Region to purge
+The acceleration region of the acceleration domain name will be purged if this parameter is not passed in.
+If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged.
+If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged.
+The specified region to purge should match the domain name’s acceleration region.
+                     * @return Area Region to purge
+The acceleration region of the acceleration domain name will be purged if this parameter is not passed in.
+If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged.
+If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged.
+The specified region to purge should match the domain name’s acceleration region.
+                     */
+                    std::string GetArea() const;
+
+                    /**
+                     * 设置Region to purge
+The acceleration region of the acceleration domain name will be purged if this parameter is not passed in.
+If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged.
+If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged.
+The specified region to purge should match the domain name’s acceleration region.
+                     * @param Area Region to purge
+The acceleration region of the acceleration domain name will be purged if this parameter is not passed in.
+If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged.
+If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged.
+The specified region to purge should match the domain name’s acceleration region.
+                     */
+                    void SetArea(const std::string& _area);
+
+                    /**
+                     * 判断参数 Area 是否已赋值
+                     * @return Area 是否已赋值
+                     */
+                    bool AreaHasBeenSet() const;
+
                 private:
 
                     /**
@@ -125,6 +159,16 @@ namespace TencentCloud
                      */
                     bool m_urlEncode;
                     bool m_urlEncodeHasBeenSet;
+
+                    /**
+                     * Region to purge
+The acceleration region of the acceleration domain name will be purged if this parameter is not passed in.
+If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged.
+If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged.
+The specified region to purge should match the domain name’s acceleration region.
+                     */
+                    std::string m_area;
+                    bool m_areaHasBeenSet;
 
                 };
             }

@@ -77,14 +77,14 @@ Default value: createTime.
                     bool KeyHasBeenSet() const;
 
                     /**
-                     * 获取`asc` or `desc`. Default: `desc`.
-                     * @return Sequence `asc` or `desc`. Default: `desc`.
+                     * 获取asc/desc. Default value: desc.
+                     * @return Sequence asc/desc. Default value: desc.
                      */
                     std::string GetSequence() const;
 
                     /**
-                     * 设置`asc` or `desc`. Default: `desc`.
-                     * @param Sequence `asc` or `desc`. Default: `desc`.
+                     * 设置asc/desc. Default value: desc.
+                     * @param Sequence asc/desc. Default value: desc.
                      */
                     void SetSequence(const std::string& _sequence);
 
@@ -106,7 +106,7 @@ Default value: createTime.
                     bool m_keyHasBeenSet;
 
                     /**
-                     * `asc` or `desc`. Default: `desc`.
+                     * asc/desc. Default value: desc.
                      */
                     std::string m_sequence;
                     bool m_sequenceHasBeenSet;

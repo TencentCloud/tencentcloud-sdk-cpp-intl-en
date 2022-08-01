@@ -47,25 +47,25 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取No cache configuration switch
-on: enable
-off: disable
+                     * 获取No-cache configuration switch
+`on`: Enable
+`off`: Disable
 Note: this field may return null, indicating that no valid value is obtained.
-                     * @return Switch No cache configuration switch
-on: enable
-off: disable
+                     * @return Switch No-cache configuration switch
+`on`: Enable
+`off`: Disable
 Note: this field may return null, indicating that no valid value is obtained.
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置No cache configuration switch
-on: enable
-off: disable
+                     * 设置No-cache configuration switch
+`on`: Enable
+`off`: Disable
 Note: this field may return null, indicating that no valid value is obtained.
-                     * @param Switch No cache configuration switch
-on: enable
-off: disable
+                     * @param Switch No-cache configuration switch
+`on`: Enable
+`off`: Disable
 Note: this field may return null, indicating that no valid value is obtained.
                      */
                     void SetSwitch(const std::string& _switch);
@@ -78,29 +78,29 @@ Note: this field may return null, indicating that no valid value is obtained.
 
                     /**
                      * 获取Always forwards to the origin server for verification
-on: enable
-off: disable
-This is disabled by default.
-Note: this field may return null, indicating that no valid value is obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Revalidate Always forwards to the origin server for verification
-on: enable
-off: disable
-This is disabled by default.
-Note: this field may return null, indicating that no valid value is obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetRevalidate() const;
 
                     /**
                      * 设置Always forwards to the origin server for verification
-on: enable
-off: disable
-This is disabled by default.
-Note: this field may return null, indicating that no valid value is obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param Revalidate Always forwards to the origin server for verification
-on: enable
-off: disable
-This is disabled by default.
-Note: this field may return null, indicating that no valid value is obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetRevalidate(const std::string& _revalidate);
 
@@ -113,9 +113,9 @@ Note: this field may return null, indicating that no valid value is obtained.
                 private:
 
                     /**
-                     * No cache configuration switch
-on: enable
-off: disable
+                     * No-cache configuration switch
+`on`: Enable
+`off`: Disable
 Note: this field may return null, indicating that no valid value is obtained.
                      */
                     std::string m_switch;
@@ -123,10 +123,10 @@ Note: this field may return null, indicating that no valid value is obtained.
 
                     /**
                      * Always forwards to the origin server for verification
-on: enable
-off: disable
-This is disabled by default.
-Note: this field may return null, indicating that no valid value is obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_revalidate;
                     bool m_revalidateHasBeenSet;

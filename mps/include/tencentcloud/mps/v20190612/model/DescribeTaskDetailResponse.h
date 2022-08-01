@@ -21,10 +21,11 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/mps/v20190612/model/WorkflowTask.h>
 #include <tencentcloud/mps/v20190612/model/EditMediaTask.h>
+#include <tencentcloud/mps/v20190612/model/WorkflowTask.h>
 #include <tencentcloud/mps/v20190612/model/LiveStreamProcessTask.h>
 #include <tencentcloud/mps/v20190612/model/TaskNotifyConfig.h>
+#include <tencentcloud/mps/v20190612/model/ScheduleTask.h>
 
 
 namespace TencentCloud
@@ -48,12 +49,16 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task type. Currently valid values:
-<li>WorkflowTask: Video workflow processing task.</li>
-<li>LiveStreamProcessTask: Live stream processing task.</li>
-                     * @return TaskType Task type. Currently valid values:
-<li>WorkflowTask: Video workflow processing task.</li>
-<li>LiveStreamProcessTask: Live stream processing task.</li>
+                     * 获取The task type. Valid values:
+<li>WorkflowTask</li>
+<li>EditMediaTask</li>
+<li>LiveStreamProcessTask</li>
+<li>ScheduleTask (scheme)</li>
+                     * @return TaskType The task type. Valid values:
+<li>WorkflowTask</li>
+<li>EditMediaTask</li>
+<li>LiveStreamProcessTask</li>
+<li>ScheduleTask (scheme)</li>
                      */
                     std::string GetTaskType() const;
 
@@ -118,6 +123,18 @@ namespace TencentCloud
                     bool FinishTimeHasBeenSet() const;
 
                     /**
+                     * 获取Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
+                     * @return EditMediaTask Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
+                     */
+                    EditMediaTask GetEditMediaTask() const;
+
+                    /**
+                     * 判断参数 EditMediaTask 是否已赋值
+                     * @return EditMediaTask 是否已赋值
+                     */
+                    bool EditMediaTaskHasBeenSet() const;
+
+                    /**
                      * 获取Information of a video processing task. This field has a value only when `TaskType` is `WorkflowTask`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return WorkflowTask Information of a video processing task. This field has a value only when `TaskType` is `WorkflowTask`.
@@ -130,18 +147,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return WorkflowTask 是否已赋值
                      */
                     bool WorkflowTaskHasBeenSet() const;
-
-                    /**
-                     * 获取Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
-                     * @return EditMediaTask Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
-                     */
-                    EditMediaTask GetEditMediaTask() const;
-
-                    /**
-                     * 判断参数 EditMediaTask 是否已赋值
-                     * @return EditMediaTask 是否已赋值
-                     */
-                    bool EditMediaTaskHasBeenSet() const;
 
                     /**
                      * 获取Information of a live stream processing task. This field has a value only when `TaskType` is `LiveStreamProcessTask`.
@@ -219,12 +224,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ExtInfoHasBeenSet() const;
 
+                    /**
+                     * 获取The information of a scheme. This parameter is valid only if `TaskType` is `ScheduleTask`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ScheduleTask The information of a scheme. This parameter is valid only if `TaskType` is `ScheduleTask`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    ScheduleTask GetScheduleTask() const;
+
+                    /**
+                     * 判断参数 ScheduleTask 是否已赋值
+                     * @return ScheduleTask 是否已赋值
+                     */
+                    bool ScheduleTaskHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Task type. Currently valid values:
-<li>WorkflowTask: Video workflow processing task.</li>
-<li>LiveStreamProcessTask: Live stream processing task.</li>
+                     * The task type. Valid values:
+<li>WorkflowTask</li>
+<li>EditMediaTask</li>
+<li>LiveStreamProcessTask</li>
+<li>ScheduleTask (scheme)</li>
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;
@@ -257,17 +278,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_finishTimeHasBeenSet;
 
                     /**
+                     * Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
+                     */
+                    EditMediaTask m_editMediaTask;
+                    bool m_editMediaTaskHasBeenSet;
+
+                    /**
                      * Information of a video processing task. This field has a value only when `TaskType` is `WorkflowTask`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     WorkflowTask m_workflowTask;
                     bool m_workflowTaskHasBeenSet;
-
-                    /**
-                     * Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
-                     */
-                    EditMediaTask m_editMediaTask;
-                    bool m_editMediaTaskHasBeenSet;
 
                     /**
                      * Information of a live stream processing task. This field has a value only when `TaskType` is `LiveStreamProcessTask`.
@@ -306,6 +327,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_extInfo;
                     bool m_extInfoHasBeenSet;
+
+                    /**
+                     * The information of a scheme. This parameter is valid only if `TaskType` is `ScheduleTask`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    ScheduleTask m_scheduleTask;
+                    bool m_scheduleTaskHasBeenSet;
 
                 };
             }

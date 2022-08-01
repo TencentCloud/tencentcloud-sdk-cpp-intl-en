@@ -193,6 +193,24 @@ They represent weighted round robin and least connections, respectively. Default
                     bool SniSwitchHasBeenSet() const;
 
                     /**
+                     * 获取Target backend type. `NODE`: A single node; `TARGETGROUP`: A target group.
+                     * @return TargetType Target backend type. `NODE`: A single node; `TARGETGROUP`: A target group.
+                     */
+                    std::string GetTargetType() const;
+
+                    /**
+                     * 设置Target backend type. `NODE`: A single node; `TARGETGROUP`: A target group.
+                     * @param TargetType Target backend type. `NODE`: A single node; `TARGETGROUP`: A target group.
+                     */
+                    void SetTargetType(const std::string& _targetType);
+
+                    /**
+                     * 判断参数 TargetType 是否已赋值
+                     * @return TargetType 是否已赋值
+                     */
+                    bool TargetTypeHasBeenSet() const;
+
+                    /**
                      * 获取Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners.
                      * @return KeepaliveEnable Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners.
                      */
@@ -296,6 +314,12 @@ They represent weighted round robin and least connections, respectively. Default
                      */
                     int64_t m_sniSwitch;
                     bool m_sniSwitchHasBeenSet;
+
+                    /**
+                     * Target backend type. `NODE`: A single node; `TARGETGROUP`: A target group.
+                     */
+                    std::string m_targetType;
+                    bool m_targetTypeHasBeenSet;
 
                     /**
                      * Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners.

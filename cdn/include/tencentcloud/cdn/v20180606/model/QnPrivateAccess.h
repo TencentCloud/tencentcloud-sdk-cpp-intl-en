@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Access authentication for QiNiu Cloud Kodo origin
                 */
                 class QnPrivateAccess : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Switch. Valid values: `on`, `off`.
+                     * @return Switch Switch. Valid values: `on`, `off`.
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param Switch 
+                     * 设置Switch. Valid values: `on`, `off`.
+                     * @param Switch Switch. Valid values: `on`, `off`.
                      */
                     void SetSwitch(const std::string& _switch);
 
@@ -65,14 +65,18 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AccessKey 
+                     * 获取Access ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return AccessKey Access ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetAccessKey() const;
 
                     /**
-                     * 设置
-                     * @param AccessKey 
+                     * 设置Access ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param AccessKey Access ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetAccessKey(const std::string& _accessKey);
 
@@ -83,14 +87,14 @@ namespace TencentCloud
                     bool AccessKeyHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SecretKey 
+                     * 获取Key
+                     * @return SecretKey Key
                      */
                     std::string GetSecretKey() const;
 
                     /**
-                     * 设置
-                     * @param SecretKey 
+                     * 设置Key
+                     * @param SecretKey Key
                      */
                     void SetSecretKey(const std::string& _secretKey);
 
@@ -103,19 +107,20 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Switch. Valid values: `on`, `off`.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Access ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_accessKey;
                     bool m_accessKeyHasBeenSet;
 
                     /**
-                     * 
+                     * Key
                      */
                     std::string m_secretKey;
                     bool m_secretKeyHasBeenSet;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Referer blocklist/allowlist configuration. This is disabled by default.
+                * Referer blacklist/whitelist configuration. This is disabled by default.
                 */
                 class Referer : public AbstractModel
                 {
@@ -48,22 +48,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Referer blocklist/allowlist configuration switch
-on: enabled
-off: disabled
-                     * @return Switch Referer blocklist/allowlist configuration switch
-on: enabled
-off: disabled
+                     * 获取Referer blacklist/whitelist configuration switch
+`on`: Enable
+`off`: Disable
+                     * @return Switch Referer blacklist/whitelist configuration switch
+`on`: Enable
+`off`: Disable
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Referer blocklist/allowlist configuration switch
-on: enabled
-off: disabled
-                     * @param Switch Referer blocklist/allowlist configuration switch
-on: enabled
-off: disabled
+                     * 设置Referer blacklist/whitelist configuration switch
+`on`: Enable
+`off`: Disable
+                     * @param Switch Referer blacklist/whitelist configuration switch
+`on`: Enable
+`off`: Disable
                      */
                     void SetSwitch(const std::string& _switch);
 
@@ -74,18 +74,18 @@ off: disabled
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Referer blocklist/allowlist configuration rule
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return RefererRules Referer blocklist/allowlist configuration rule
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Referer blacklist/whitelist configuration rule
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return RefererRules Referer blacklist/whitelist configuration rule
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<RefererRule> GetRefererRules() const;
 
                     /**
-                     * 设置Referer blocklist/allowlist configuration rule
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param RefererRules Referer blocklist/allowlist configuration rule
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Referer blacklist/whitelist configuration rule
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param RefererRules Referer blacklist/whitelist configuration rule
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetRefererRules(const std::vector<RefererRule>& _refererRules);
 
@@ -98,16 +98,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Referer blocklist/allowlist configuration switch
-on: enabled
-off: disabled
+                     * Referer blacklist/whitelist configuration switch
+`on`: Enable
+`off`: Disable
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Referer blocklist/allowlist configuration rule
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Referer blacklist/whitelist configuration rule
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<RefererRule> m_refererRules;
                     bool m_refererRulesHasBeenSet;

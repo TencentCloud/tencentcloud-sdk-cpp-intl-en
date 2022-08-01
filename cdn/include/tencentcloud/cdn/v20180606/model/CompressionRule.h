@@ -48,17 +48,17 @@ namespace TencentCloud
 
                     /**
                      * 获取true: must be set as true, enables compression
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Compress true: must be set as true, enables compression
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     bool GetCompress() const;
 
                     /**
                      * 设置true: must be set as true, enables compression
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @param Compress true: must be set as true, enables compression
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetCompress(const bool& _compress);
 
@@ -70,17 +70,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取The minimum file size to trigger compression (in bytes)
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return MinLength The minimum file size to trigger compression (in bytes)
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     int64_t GetMinLength() const;
 
                     /**
                      * 设置The minimum file size to trigger compression (in bytes)
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @param MinLength The minimum file size to trigger compression (in bytes)
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetMinLength(const int64_t& _minLength);
 
@@ -91,22 +91,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MinLengthHasBeenSet() const;
 
                     /**
-                     * 获取The maximum file size to trigger compression (in bytes)
-The maximum value is 30 MB
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return MaxLength The maximum file size to trigger compression (in bytes)
-The maximum value is 30 MB
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取The maximum file size to trigger compression (in bytes).
+The maximum value is 30 MB.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return MaxLength The maximum file size to trigger compression (in bytes).
+The maximum value is 30 MB.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     int64_t GetMaxLength() const;
 
                     /**
-                     * 设置The maximum file size to trigger compression (in bytes)
-The maximum value is 30 MB
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MaxLength The maximum file size to trigger compression (in bytes)
-The maximum value is 30 MB
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置The maximum file size to trigger compression (in bytes).
+The maximum value is 30 MB.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param MaxLength The maximum file size to trigger compression (in bytes).
+The maximum value is 30 MB.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetMaxLength(const int64_t& _maxLength);
 
@@ -118,25 +118,25 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取File compression algorithm
-gzip: specifies Gzip compression
-brotli: specifies Brotli compression
-Note: this field may return null, indicating that no valid values can be obtained.
+`gzip`: Gzip compression
+`brotli`: Brotli compression
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Algorithms File compression algorithm
-gzip: specifies Gzip compression
-brotli: specifies Brotli compression
-Note: this field may return null, indicating that no valid values can be obtained.
+`gzip`: Gzip compression
+`brotli`: Brotli compression
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<std::string> GetAlgorithms() const;
 
                     /**
                      * 设置File compression algorithm
-gzip: specifies Gzip compression
-brotli: specifies Brotli compression
-Note: this field may return null, indicating that no valid values can be obtained.
+`gzip`: Gzip compression
+`brotli`: Brotli compression
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param Algorithms File compression algorithm
-gzip: specifies Gzip compression
-brotli: specifies Brotli compression
-Note: this field may return null, indicating that no valid values can be obtained.
+`gzip`: Gzip compression
+`brotli`: Brotli compression
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetAlgorithms(const std::vector<std::string>& _algorithms);
 
@@ -147,22 +147,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool AlgorithmsHasBeenSet() const;
 
                     /**
-                     * 获取Compress according to the file suffix type
-Such as: jpg, txt
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return FileExtensions Compress according to the file suffix type
-Such as: jpg, txt
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Compress based on file suffix.
+File suffixes such as jpg and txt are supported.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return FileExtensions Compress based on file suffix.
+File suffixes such as jpg and txt are supported.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<std::string> GetFileExtensions() const;
 
                     /**
-                     * 设置Compress according to the file suffix type
-Such as: jpg, txt
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param FileExtensions Compress according to the file suffix type
-Such as: jpg, txt
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Compress based on file suffix.
+File suffixes such as jpg and txt are supported.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param FileExtensions Compress based on file suffix.
+File suffixes such as jpg and txt are supported.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetFileExtensions(const std::vector<std::string>& _fileExtensions);
 
@@ -174,41 +174,41 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Rule types:
-`all`: effective for all files.
-`file`: effective for specified file suffixes.
-`directory`: effective for specified paths.
-`path`: effective for specified absolute paths.
-`contentType`: effective when the `ContentType` is specified
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
+`contentType`: Apply when the `ContentType` is specified.
 If this field is specified, `FileExtensions` does not take effect.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return RuleType Rule types:
-`all`: effective for all files.
-`file`: effective for specified file suffixes.
-`directory`: effective for specified paths.
-`path`: effective for specified absolute paths.
-`contentType`: effective when the `ContentType` is specified
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
+`contentType`: Apply when the `ContentType` is specified.
 If this field is specified, `FileExtensions` does not take effect.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetRuleType() const;
 
                     /**
                      * 设置Rule types:
-`all`: effective for all files.
-`file`: effective for specified file suffixes.
-`directory`: effective for specified paths.
-`path`: effective for specified absolute paths.
-`contentType`: effective when the `ContentType` is specified
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
+`contentType`: Apply when the `ContentType` is specified.
 If this field is specified, `FileExtensions` does not take effect.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param RuleType Rule types:
-`all`: effective for all files.
-`file`: effective for specified file suffixes.
-`directory`: effective for specified paths.
-`path`: effective for specified absolute paths.
-`contentType`: effective when the `ContentType` is specified
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
+`contentType`: Apply when the `ContentType` is specified.
 If this field is specified, `FileExtensions` does not take effect.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetRuleType(const std::string& _ruleType);
 
@@ -225,14 +225,14 @@ For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `contentType`, enter `text/html`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return RulePaths Content for each `CacheType`:
 For `all`, enter a wildcard `*`.
 For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `contentType`, enter `text/html`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<std::string> GetRulePaths() const;
 
@@ -243,14 +243,14 @@ For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `contentType`, enter `text/html`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param RulePaths Content for each `CacheType`:
 For `all`, enter a wildcard `*`.
 For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `contentType`, enter `text/html`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetRulePaths(const std::vector<std::string>& _rulePaths);
 
@@ -264,52 +264,52 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * true: must be set as true, enables compression
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     bool m_compress;
                     bool m_compressHasBeenSet;
 
                     /**
                      * The minimum file size to trigger compression (in bytes)
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     int64_t m_minLength;
                     bool m_minLengthHasBeenSet;
 
                     /**
-                     * The maximum file size to trigger compression (in bytes)
-The maximum value is 30 MB
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * The maximum file size to trigger compression (in bytes).
+The maximum value is 30 MB.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     int64_t m_maxLength;
                     bool m_maxLengthHasBeenSet;
 
                     /**
                      * File compression algorithm
-gzip: specifies Gzip compression
-brotli: specifies Brotli compression
-Note: this field may return null, indicating that no valid values can be obtained.
+`gzip`: Gzip compression
+`brotli`: Brotli compression
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<std::string> m_algorithms;
                     bool m_algorithmsHasBeenSet;
 
                     /**
-                     * Compress according to the file suffix type
-Such as: jpg, txt
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Compress based on file suffix.
+File suffixes such as jpg and txt are supported.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<std::string> m_fileExtensions;
                     bool m_fileExtensionsHasBeenSet;
 
                     /**
                      * Rule types:
-`all`: effective for all files.
-`file`: effective for specified file suffixes.
-`directory`: effective for specified paths.
-`path`: effective for specified absolute paths.
-`contentType`: effective when the `ContentType` is specified
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
+`contentType`: Apply when the `ContentType` is specified.
 If this field is specified, `FileExtensions` does not take effect.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_ruleType;
                     bool m_ruleTypeHasBeenSet;
@@ -321,7 +321,7 @@ For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `contentType`, enter `text/html`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<std::string> m_rulePaths;
                     bool m_rulePathsHasBeenSet;

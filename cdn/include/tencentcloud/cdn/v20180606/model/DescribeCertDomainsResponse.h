@@ -45,9 +45,9 @@ namespace TencentCloud
 
                     /**
                      * 获取List of domain names connected to CDN
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Domains List of domain names connected to CDN
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<std::string> GetDomains() const;
 
@@ -59,9 +59,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取List of CDN domain names with certificates configured
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return CertifiedDomains List of CDN domain names with certificates configured
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<std::string> GetCertifiedDomains() const;
 
@@ -75,14 +75,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * List of domain names connected to CDN
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<std::string> m_domains;
                     bool m_domainsHasBeenSet;
 
                     /**
                      * List of CDN domain names with certificates configured
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<std::string> m_certifiedDomains;
                     bool m_certifiedDomainsHasBeenSet;

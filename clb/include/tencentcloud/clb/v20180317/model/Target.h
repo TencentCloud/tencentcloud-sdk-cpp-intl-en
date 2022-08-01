@@ -96,21 +96,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API. It indicates binding the primary IP of the primary ENI.
-Note: either `InstanceId` or `EniIp` must be passed in.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: Either `InstanceId` or `EniIp` can be passed in.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return InstanceId Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API. It indicates binding the primary IP of the primary ENI.
-Note: either `InstanceId` or `EniIp` must be passed in.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: Either `InstanceId` or `EniIp` can be passed in.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API. It indicates binding the primary IP of the primary ENI.
-Note: either `InstanceId` or `EniIp` must be passed in.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: Either `InstanceId` or `EniIp` can be passed in.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @param InstanceId Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API. It indicates binding the primary IP of the primary ENI.
-Note: either `InstanceId` or `EniIp` must be passed in.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: Either `InstanceId` or `EniIp` can be passed in.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
@@ -140,21 +140,21 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 获取It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
-Note: either `InstanceId` or `EniIp` must be passed in. It is required when binding a dual-stack IPv6 CVM instance.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: Either `InstanceId` or `EniIp` can be passed in. `EniIp` is required in a cross-region binding or when the dual-stack IPV6 CVM is bound.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return EniIp It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
-Note: either `InstanceId` or `EniIp` must be passed in. It is required when binding a dual-stack IPv6 CVM instance.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: Either `InstanceId` or `EniIp` can be passed in. `EniIp` is required in a cross-region binding or when the dual-stack IPV6 CVM is bound.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetEniIp() const;
 
                     /**
                      * 设置It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
-Note: either `InstanceId` or `EniIp` must be passed in. It is required when binding a dual-stack IPv6 CVM instance.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: Either `InstanceId` or `EniIp` can be passed in. `EniIp` is required in a cross-region binding or when the dual-stack IPV6 CVM is bound.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @param EniIp It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
-Note: either `InstanceId` or `EniIp` must be passed in. It is required when binding a dual-stack IPv6 CVM instance.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: Either `InstanceId` or `EniIp` can be passed in. `EniIp` is required in a cross-region binding or when the dual-stack IPV6 CVM is bound.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetEniIp(const std::string& _eniIp);
 
@@ -183,8 +183,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API. It indicates binding the primary IP of the primary ENI.
-Note: either `InstanceId` or `EniIp` must be passed in.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: Either `InstanceId` or `EniIp` can be passed in.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -197,8 +197,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
-Note: either `InstanceId` or `EniIp` must be passed in. It is required when binding a dual-stack IPv6 CVM instance.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: Either `InstanceId` or `EniIp` can be passed in. `EniIp` is required in a cross-region binding or when the dual-stack IPV6 CVM is bound.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_eniIp;
                     bool m_eniIpHasBeenSet;

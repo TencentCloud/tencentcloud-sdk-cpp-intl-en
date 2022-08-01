@@ -113,17 +113,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 获取ACL rule group, which is required when the access control is on.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return AdvancedScriptData ACL rule group, which is required when the access control is on.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<AdvancedScdnAclGroup> GetAdvancedScriptData() const;
 
                     /**
                      * 设置ACL rule group, which is required when the access control is on.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param AdvancedScriptData ACL rule group, which is required when the access control is on.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetAdvancedScriptData(const std::vector<AdvancedScdnAclGroup>& _advancedScriptData);
 
@@ -157,7 +157,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * ACL rule group, which is required when the access control is on.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<AdvancedScdnAclGroup> m_advancedScriptData;
                     bool m_advancedScriptDataHasBeenSet;

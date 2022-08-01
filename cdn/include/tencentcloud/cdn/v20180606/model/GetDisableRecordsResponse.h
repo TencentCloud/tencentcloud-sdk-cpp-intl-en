@@ -46,9 +46,9 @@ namespace TencentCloud
 
                     /**
                      * 获取Blocking history
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return UrlRecordList Blocking history
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<UrlRecord> GetUrlRecordList() const;
 
@@ -59,10 +59,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UrlRecordListHasBeenSet() const;
 
                     /**
-                     * 获取Total number of tasks, which is used for pagination
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TotalCount Total number of tasks, which is used for pagination
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Total number of tasks, which is used for pagination.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return TotalCount Total number of tasks, which is used for pagination.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     int64_t GetTotalCount() const;
 
@@ -76,14 +76,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Blocking history
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<UrlRecord> m_urlRecordList;
                     bool m_urlRecordListHasBeenSet;
 
                     /**
-                     * Total number of tasks, which is used for pagination
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Total number of tasks, which is used for pagination.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

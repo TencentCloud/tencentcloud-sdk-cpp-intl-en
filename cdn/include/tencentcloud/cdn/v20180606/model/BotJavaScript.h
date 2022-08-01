@@ -120,17 +120,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Redirection target page
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RedirectUrl Redirection target page
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetRedirectUrl() const;
 
                     /**
                      * 设置Redirection target page
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param RedirectUrl Redirection target page
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetRedirectUrl(const std::string& _redirectUrl);
 
@@ -142,17 +142,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 获取Update time
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UpdateTime Update time
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Update time
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param UpdateTime Update time
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
@@ -190,14 +190,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * Redirection target page
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_redirectUrl;
                     bool m_redirectUrlHasBeenSet;
 
                     /**
                      * Update time
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

@@ -49,33 +49,33 @@ namespace TencentCloud
 
                     /**
                      * 获取Content for each CacheType:
-For `file`, enter the suffix, such as jpg, txt.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a backslash (/).
-Note: this field may return null, indicating that no valid value is obtained.
+Note: this field may return `null`, indicating that no valid value can be obtained.
                      * @return RulePaths Content for each CacheType:
-For `file`, enter the suffix, such as jpg, txt.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a backslash (/).
-Note: this field may return null, indicating that no valid value is obtained.
+Note: this field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<std::string> GetRulePaths() const;
 
                     /**
                      * 设置Content for each CacheType:
-For `file`, enter the suffix, such as jpg, txt.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a backslash (/).
-Note: this field may return null, indicating that no valid value is obtained.
+Note: this field may return `null`, indicating that no valid value can be obtained.
                      * @param RulePaths Content for each CacheType:
-For `file`, enter the suffix, such as jpg, txt.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a backslash (/).
-Note: this field may return null, indicating that no valid value is obtained.
+Note: this field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetRulePaths(const std::vector<std::string>& _rulePaths);
 
@@ -87,33 +87,33 @@ Note: this field may return null, indicating that no valid value is obtained.
 
                     /**
                      * 获取Rule types:
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 `index`: home page
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return RuleType Rule types:
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 `index`: home page
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetRuleType() const;
 
                     /**
                      * 设置Rule types:
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 `index`: home page
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param RuleType Rule types:
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 `index`: home page
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetRuleType(const std::string& _ruleType);
 
@@ -124,26 +124,26 @@ Note: this field may return null, indicating that no valid value is obtained.
                     bool RuleTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether full-path cache is enaled
-`on`: enables full-path cache (i.e., disables ignore query string)
-`off`: disables full-path cache (i.e., enables ignore query string)
-Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @return FullUrlCache Whether full-path cache is enaled
-`on`: enables full-path cache (i.e., disables ignore query string)
-`off`: disables full-path cache (i.e., enables ignore query string)
-Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Whether to enable full-path cache
+`on`: Enable full-path cache (i.e., disable Ignore Query String).
+`off`: Disable full-path cache (i.e., enable Ignore Query String).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return FullUrlCache Whether to enable full-path cache
+`on`: Enable full-path cache (i.e., disable Ignore Query String).
+`off`: Disable full-path cache (i.e., enable Ignore Query String).
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetFullUrlCache() const;
 
                     /**
-                     * 设置Whether full-path cache is enaled
-`on`: enables full-path cache (i.e., disables ignore query string)
-`off`: disables full-path cache (i.e., enables ignore query string)
-Note: this field may return `null`, indicating that no valid value can be obtained.
-                     * @param FullUrlCache Whether full-path cache is enaled
-`on`: enables full-path cache (i.e., disables ignore query string)
-`off`: disables full-path cache (i.e., enables ignore query string)
-Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Whether to enable full-path cache
+`on`: Enable full-path cache (i.e., disable Ignore Query String).
+`off`: Disable full-path cache (i.e., enable Ignore Query String).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param FullUrlCache Whether to enable full-path cache
+`on`: Enable full-path cache (i.e., disable Ignore Query String).
+`off`: Disable full-path cache (i.e., enable Ignore Query String).
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetFullUrlCache(const std::string& _fullUrlCache);
 
@@ -155,17 +155,17 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 
                     /**
                      * 获取Whether caches are case insensitive
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return IgnoreCase Whether caches are case insensitive
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetIgnoreCase() const;
 
                     /**
                      * 设置Whether caches are case insensitive
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param IgnoreCase Whether caches are case insensitive
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetIgnoreCase(const std::string& _ignoreCase);
 
@@ -177,17 +177,17 @@ Note: this field may return null, indicating that no valid value is obtained.
 
                     /**
                      * 获取Request parameter contained in `CacheKey`
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return QueryString Request parameter contained in `CacheKey`
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     RuleQueryString GetQueryString() const;
 
                     /**
                      * 设置Request parameter contained in `CacheKey`
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param QueryString Request parameter contained in `CacheKey`
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetQueryString(const RuleQueryString& _queryString);
 
@@ -199,17 +199,17 @@ Note: this field may return null, indicating that no valid value is obtained.
 
                     /**
                      * 获取Path cache key tag, the value "user" is passed.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return RuleTag Path cache key tag, the value "user" is passed.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetRuleTag() const;
 
                     /**
                      * 设置Path cache key tag, the value "user" is passed.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param RuleTag Path cache key tag, the value "user" is passed.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetRuleTag(const std::string& _ruleTag);
 
@@ -223,52 +223,52 @@ Note: this field may return null, indicating that no valid value is obtained.
 
                     /**
                      * Content for each CacheType:
-For `file`, enter the suffix, such as jpg, txt.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a backslash (/).
-Note: this field may return null, indicating that no valid value is obtained.
+Note: this field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<std::string> m_rulePaths;
                     bool m_rulePathsHasBeenSet;
 
                     /**
                      * Rule types:
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 `index`: home page
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_ruleType;
                     bool m_ruleTypeHasBeenSet;
 
                     /**
-                     * Whether full-path cache is enaled
-`on`: enables full-path cache (i.e., disables ignore query string)
-`off`: disables full-path cache (i.e., enables ignore query string)
-Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * Whether to enable full-path cache
+`on`: Enable full-path cache (i.e., disable Ignore Query String).
+`off`: Disable full-path cache (i.e., enable Ignore Query String).
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_fullUrlCache;
                     bool m_fullUrlCacheHasBeenSet;
 
                     /**
                      * Whether caches are case insensitive
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_ignoreCase;
                     bool m_ignoreCaseHasBeenSet;
 
                     /**
                      * Request parameter contained in `CacheKey`
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     RuleQueryString m_queryString;
                     bool m_queryStringHasBeenSet;
 
                     /**
                      * Path cache key tag, the value "user" is passed.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_ruleTag;
                     bool m_ruleTagHasBeenSet;

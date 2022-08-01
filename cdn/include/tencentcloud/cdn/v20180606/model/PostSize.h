@@ -47,20 +47,20 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Limit the size of a POST request. The default value is 32 MB.
+                     * 获取Limit the size of POST requests. The default value is 32 MB.
 off: Disable
 on: Enable
-                     * @return Switch Limit the size of a POST request. The default value is 32 MB.
+                     * @return Switch Limit the size of POST requests. The default value is 32 MB.
 off: Disable
 on: Enable
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Limit the size of a POST request. The default value is 32 MB.
+                     * 设置Limit the size of POST requests. The default value is 32 MB.
 off: Disable
 on: Enable
-                     * @param Switch Limit the size of a POST request. The default value is 32 MB.
+                     * @param Switch Limit the size of POST requests. The default value is 32 MB.
 off: Disable
 on: Enable
                      */
@@ -93,7 +93,7 @@ on: Enable
                 private:
 
                     /**
-                     * Limit the size of a POST request. The default value is 32 MB.
+                     * Limit the size of POST requests. The default value is 32 MB.
 off: Disable
 on: Enable
                      */

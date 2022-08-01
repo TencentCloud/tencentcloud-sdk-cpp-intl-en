@@ -68,6 +68,18 @@ namespace TencentCloud
                      */
                     bool ScrollTokenHasBeenSet() const;
 
+                    /**
+                     * 获取The total number of records that meet the conditions.
+                     * @return TotalCount The total number of records that meet the conditions.
+                     */
+                    uint64_t GetTotalCount() const;
+
+                    /**
+                     * 判断参数 TotalCount 是否已赋值
+                     * @return TotalCount 是否已赋值
+                     */
+                    bool TotalCountHasBeenSet() const;
+
                 private:
 
                     /**
@@ -81,6 +93,12 @@ namespace TencentCloud
                      */
                     std::string m_scrollToken;
                     bool m_scrollTokenHasBeenSet;
+
+                    /**
+                     * The total number of records that meet the conditions.
+                     */
+                    uint64_t m_totalCount;
+                    bool m_totalCountHasBeenSet;
 
                 };
             }

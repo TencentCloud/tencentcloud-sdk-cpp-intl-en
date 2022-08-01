@@ -49,21 +49,21 @@ namespace TencentCloud
 
                     /**
                      * 获取Smart compression configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      * @return Switch Smart compression configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Smart compression configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      * @param Switch Smart compression configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      */
                     void SetSwitch(const std::string& _switch);
 
@@ -75,17 +75,17 @@ off: disabled
 
                     /**
                      * 获取Compression rules array
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return CompressionRules Compression rules array
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<CompressionRule> GetCompressionRules() const;
 
                     /**
                      * 设置Compression rules array
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param CompressionRules Compression rules array
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetCompressionRules(const std::vector<CompressionRule>& _compressionRules);
 
@@ -99,15 +99,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Smart compression configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
                      * Compression rules array
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<CompressionRule> m_compressionRules;
                     bool m_compressionRulesHasBeenSet;

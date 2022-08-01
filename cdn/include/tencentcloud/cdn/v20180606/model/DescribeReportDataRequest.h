@@ -44,25 +44,25 @@ namespace TencentCloud
 
                     /**
                      * 获取Query the start time in the format of `yyyy-MM-dd`
-If the report type is `daily`, the start time and end time must be the same day.
+If the report type is `daily`, the start time and end time must be of the same day.
 If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
-If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
+If the report type is `monthly`, the start time must be the first day of the month and the end time must be the last day of the same month.
                      * @return StartTime Query the start time in the format of `yyyy-MM-dd`
-If the report type is `daily`, the start time and end time must be the same day.
+If the report type is `daily`, the start time and end time must be of the same day.
 If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
-If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
+If the report type is `monthly`, the start time must be the first day of the month and the end time must be the last day of the same month.
                      */
                     std::string GetStartTime() const;
 
                     /**
                      * 设置Query the start time in the format of `yyyy-MM-dd`
-If the report type is `daily`, the start time and end time must be the same day.
+If the report type is `daily`, the start time and end time must be of the same day.
 If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
-If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
+If the report type is `monthly`, the start time must be the first day of the month and the end time must be the last day of the same month.
                      * @param StartTime Query the start time in the format of `yyyy-MM-dd`
-If the report type is `daily`, the start time and end time must be the same day.
+If the report type is `daily`, the start time and end time must be of the same day.
 If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
-If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
+If the report type is `monthly`, the start time must be the first day of the month and the end time must be the last day of the same month.
                      */
                     void SetStartTime(const std::string& _startTime);
 
@@ -76,11 +76,11 @@ If the report type is `monthly`, the start time must be the first day of the cal
                      * 获取Query the end time in the format of `yyyy-MM-dd`
 If the report type is `daily`, the start time and end time must be of the same day.
 If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
-If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
+If the report type is `monthly`, the start time must be the first day of the month and the end time must be the last day of the same month.
                      * @return EndTime Query the end time in the format of `yyyy-MM-dd`
 If the report type is `daily`, the start time and end time must be of the same day.
 If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
-If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
+If the report type is `monthly`, the start time must be the first day of the month and the end time must be the last day of the same month.
                      */
                     std::string GetEndTime() const;
 
@@ -88,11 +88,11 @@ If the report type is `monthly`, the start time must be the first day of the cal
                      * 设置Query the end time in the format of `yyyy-MM-dd`
 If the report type is `daily`, the start time and end time must be of the same day.
 If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
-If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
+If the report type is `monthly`, the start time must be the first day of the month and the end time must be the last day of the same month.
                      * @param EndTime Query the end time in the format of `yyyy-MM-dd`
 If the report type is `daily`, the start time and end time must be of the same day.
 If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
-If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
+If the report type is `monthly`, the start time must be the first day of the month and the end time must be the last day of the same month.
                      */
                     void SetEndTime(const std::string& _endTime);
 
@@ -134,21 +134,21 @@ monthly: monthly report (calendar month)
 
                     /**
                      * 获取Domain name acceleration region
-mainland: in Mainland China
-overseas: outside Mainland China
+`mainland`: Regions within the Chinese mainland
+`overseas`: Regions outside the Chinese mainland
                      * @return Area Domain name acceleration region
-mainland: in Mainland China
-overseas: outside Mainland China
+`mainland`: Regions within the Chinese mainland
+`overseas`: Regions outside the Chinese mainland
                      */
                     std::string GetArea() const;
 
                     /**
                      * 设置Domain name acceleration region
-mainland: in Mainland China
-overseas: outside Mainland China
+`mainland`: Regions within the Chinese mainland
+`overseas`: Regions outside the Chinese mainland
                      * @param Area Domain name acceleration region
-mainland: in Mainland China
-overseas: outside Mainland China
+`mainland`: Regions within the Chinese mainland
+`overseas`: Regions outside the Chinese mainland
                      */
                     void SetArea(const std::string& _area);
 
@@ -216,9 +216,9 @@ overseas: outside Mainland China
 
                     /**
                      * Query the start time in the format of `yyyy-MM-dd`
-If the report type is `daily`, the start time and end time must be the same day.
+If the report type is `daily`, the start time and end time must be of the same day.
 If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
-If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
+If the report type is `monthly`, the start time must be the first day of the month and the end time must be the last day of the same month.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
@@ -227,7 +227,7 @@ If the report type is `monthly`, the start time must be the first day of the cal
                      * Query the end time in the format of `yyyy-MM-dd`
 If the report type is `daily`, the start time and end time must be of the same day.
 If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
-If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
+If the report type is `monthly`, the start time must be the first day of the month and the end time must be the last day of the same month.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
@@ -243,8 +243,8 @@ monthly: monthly report (calendar month)
 
                     /**
                      * Domain name acceleration region
-mainland: in Mainland China
-overseas: outside Mainland China
+`mainland`: Regions within the Chinese mainland
+`overseas`: Regions outside the Chinese mainland
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;

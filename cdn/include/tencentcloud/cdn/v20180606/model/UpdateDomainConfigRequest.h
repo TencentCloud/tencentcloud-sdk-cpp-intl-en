@@ -55,11 +55,14 @@
 #include <tencentcloud/cdn/v20180606/model/Ipv6Access.h>
 #include <tencentcloud/cdn/v20180606/model/OfflineCache.h>
 #include <tencentcloud/cdn/v20180606/model/OriginCombine.h>
+#include <tencentcloud/cdn/v20180606/model/PostSize.h>
 #include <tencentcloud/cdn/v20180606/model/Quic.h>
 #include <tencentcloud/cdn/v20180606/model/OssPrivateAccess.h>
 #include <tencentcloud/cdn/v20180606/model/WebSocket.h>
 #include <tencentcloud/cdn/v20180606/model/RemoteAuthentication.h>
 #include <tencentcloud/cdn/v20180606/model/ShareCname.h>
+#include <tencentcloud/cdn/v20180606/model/HwPrivateAccess.h>
+#include <tencentcloud/cdn/v20180606/model/QnPrivateAccess.h>
 
 
 namespace TencentCloud
@@ -478,14 +481,14 @@ namespace TencentCloud
                     bool SeoHasBeenSet() const;
 
                     /**
-                     * 获取Access protocol forced redirect configuration
-                     * @return ForceRedirect Access protocol forced redirect configuration
+                     * 获取Protocol redirect configuration
+                     * @return ForceRedirect Protocol redirect configuration
                      */
                     ForceRedirect GetForceRedirect() const;
 
                     /**
-                     * 设置Access protocol forced redirect configuration
-                     * @param ForceRedirect Access protocol forced redirect configuration
+                     * 设置Protocol redirect configuration
+                     * @param ForceRedirect Protocol redirect configuration
                      */
                     void SetForceRedirect(const ForceRedirect& _forceRedirect);
 
@@ -496,14 +499,14 @@ namespace TencentCloud
                     bool ForceRedirectHasBeenSet() const;
 
                     /**
-                     * 获取Referer hotlink protection configuration
-                     * @return Referer Referer hotlink protection configuration
+                     * 获取Referer configuration
+                     * @return Referer Referer configuration
                      */
                     Referer GetReferer() const;
 
                     /**
-                     * 设置Referer hotlink protection configuration
-                     * @param Referer Referer hotlink protection configuration
+                     * 设置Referer configuration
+                     * @param Referer Referer configuration
                      */
                     void SetReferer(const Referer& _referer);
 
@@ -532,48 +535,18 @@ namespace TencentCloud
                     bool MaxAgeHasBeenSet() const;
 
                     /**
-                     * 获取Domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming media VOD acceleration
-                     * @return ServiceType Domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming media VOD acceleration
-                     */
-                    std::string GetServiceType() const;
-
-                    /**
-                     * 设置Domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming media VOD acceleration
-                     * @param ServiceType Domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming media VOD acceleration
-                     */
-                    void SetServiceType(const std::string& _serviceType);
-
-                    /**
-                     * 判断参数 ServiceType 是否已赋值
-                     * @return ServiceType 是否已赋值
-                     */
-                    bool ServiceTypeHasBeenSet() const;
-
-                    /**
-                     * 获取Specific region configuration
-Applicable to cases where the acceleration domain name configuration differs for regions in and outside mainland China.
-                     * @return SpecificConfig Specific region configuration
-Applicable to cases where the acceleration domain name configuration differs for regions in and outside mainland China.
+                     * 获取Specific-region special configuration
+Applicable to cases where the acceleration domain name configuration differs for regions in and outside the Chinese mainland.
+                     * @return SpecificConfig Specific-region special configuration
+Applicable to cases where the acceleration domain name configuration differs for regions in and outside the Chinese mainland.
                      */
                     SpecificConfig GetSpecificConfig() const;
 
                     /**
-                     * 设置Specific region configuration
-Applicable to cases where the acceleration domain name configuration differs for regions in and outside mainland China.
-                     * @param SpecificConfig Specific region configuration
-Applicable to cases where the acceleration domain name configuration differs for regions in and outside mainland China.
+                     * 设置Specific-region special configuration
+Applicable to cases where the acceleration domain name configuration differs for regions in and outside the Chinese mainland.
+                     * @param SpecificConfig Specific-region special configuration
+Applicable to cases where the acceleration domain name configuration differs for regions in and outside the Chinese mainland.
                      */
                     void SetSpecificConfig(const SpecificConfig& _specificConfig);
 
@@ -584,30 +557,60 @@ Applicable to cases where the acceleration domain name configuration differs for
                     bool SpecificConfigHasBeenSet() const;
 
                     /**
+                     * 获取Domain name service type
+`web`: Static acceleration
+`download`: Download acceleration
+`media`: Streaming media VOD acceleration
+                     * @return ServiceType Domain name service type
+`web`: Static acceleration
+`download`: Download acceleration
+`media`: Streaming media VOD acceleration
+                     */
+                    std::string GetServiceType() const;
+
+                    /**
+                     * 设置Domain name service type
+`web`: Static acceleration
+`download`: Download acceleration
+`media`: Streaming media VOD acceleration
+                     * @param ServiceType Domain name service type
+`web`: Static acceleration
+`download`: Download acceleration
+`media`: Streaming media VOD acceleration
+                     */
+                    void SetServiceType(const std::string& _serviceType);
+
+                    /**
+                     * 判断参数 ServiceType 是否已赋值
+                     * @return ServiceType 是否已赋值
+                     */
+                    bool ServiceTypeHasBeenSet() const;
+
+                    /**
                      * 获取Domain name acceleration region
-`mainland`: acceleration inside the Chinese mainland
-`overseas`: acceleration outside the Chinese mainland
-`global`: global acceleration
-When you change it to from `mainland`/`overseas` to `global`, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
+`mainland`: Acceleration inside the Chinese mainland
+`overseas`: Acceleration outside the Chinese mainland
+`global`: Acceleration over the globe
+After switching to global acceleration, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
                      * @return Area Domain name acceleration region
-`mainland`: acceleration inside the Chinese mainland
-`overseas`: acceleration outside the Chinese mainland
-`global`: global acceleration
-When you change it to from `mainland`/`overseas` to `global`, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
+`mainland`: Acceleration inside the Chinese mainland
+`overseas`: Acceleration outside the Chinese mainland
+`global`: Acceleration over the globe
+After switching to global acceleration, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
                      */
                     std::string GetArea() const;
 
                     /**
                      * 设置Domain name acceleration region
-`mainland`: acceleration inside the Chinese mainland
-`overseas`: acceleration outside the Chinese mainland
-`global`: global acceleration
-When you change it to from `mainland`/`overseas` to `global`, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
+`mainland`: Acceleration inside the Chinese mainland
+`overseas`: Acceleration outside the Chinese mainland
+`global`: Acceleration over the globe
+After switching to global acceleration, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
                      * @param Area Domain name acceleration region
-`mainland`: acceleration inside the Chinese mainland
-`overseas`: acceleration outside the Chinese mainland
-`global`: global acceleration
-When you change it to from `mainland`/`overseas` to `global`, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
+`mainland`: Acceleration inside the Chinese mainland
+`overseas`: Acceleration outside the Chinese mainland
+`global`: Acceleration over the globe
+After switching to global acceleration, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
                      */
                     void SetArea(const std::string& _area);
 
@@ -636,14 +639,14 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
                     bool OriginPullTimeoutHasBeenSet() const;
 
                     /**
-                     * 获取Origin access authentication for S3 bucket
-                     * @return AwsPrivateAccess Origin access authentication for S3 bucket
+                     * 获取Access authentication for S3 origin
+                     * @return AwsPrivateAccess Access authentication for S3 origin
                      */
                     AwsPrivateAccess GetAwsPrivateAccess() const;
 
                     /**
-                     * 设置Origin access authentication for S3 bucket
-                     * @param AwsPrivateAccess Origin access authentication for S3 bucket
+                     * 设置Access authentication for S3 origin
+                     * @param AwsPrivateAccess Access authentication for S3 origin
                      */
                     void SetAwsPrivateAccess(const AwsPrivateAccess& _awsPrivateAccess);
 
@@ -654,14 +657,14 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
                     bool AwsPrivateAccessHasBeenSet() const;
 
                     /**
-                     * 获取UA blocklist/allowlist Configuration
-                     * @return UserAgentFilter UA blocklist/allowlist Configuration
+                     * 获取UA blocklist/allowlist configuration
+                     * @return UserAgentFilter UA blocklist/allowlist configuration
                      */
                     UserAgentFilter GetUserAgentFilter() const;
 
                     /**
-                     * 设置UA blocklist/allowlist Configuration
-                     * @param UserAgentFilter UA blocklist/allowlist Configuration
+                     * 设置UA blocklist/allowlist configuration
+                     * @param UserAgentFilter UA blocklist/allowlist configuration
                      */
                     void SetUserAgentFilter(const UserAgentFilter& _userAgentFilter);
 
@@ -690,14 +693,14 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
                     bool AccessControlHasBeenSet() const;
 
                     /**
-                     * 获取Configuration of URL rewriting
-                     * @return UrlRedirect Configuration of URL rewriting
+                     * 获取URL rewriting configuration
+                     * @return UrlRedirect URL rewriting configuration
                      */
                     UrlRedirect GetUrlRedirect() const;
 
                     /**
-                     * 设置Configuration of URL rewriting
-                     * @param UrlRedirect Configuration of URL rewriting
+                     * 设置URL rewriting configuration
+                     * @param UrlRedirect URL rewriting configuration
                      */
                     void SetUrlRedirect(const UrlRedirect& _urlRedirect);
 
@@ -816,6 +819,24 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
                     bool OriginCombineHasBeenSet() const;
 
                     /**
+                     * 获取Post transport configuration
+                     * @return PostMaxSize Post transport configuration
+                     */
+                    PostSize GetPostMaxSize() const;
+
+                    /**
+                     * 设置Post transport configuration
+                     * @param PostMaxSize Post transport configuration
+                     */
+                    void SetPostMaxSize(const PostSize& _postMaxSize);
+
+                    /**
+                     * 判断参数 PostMaxSize 是否已赋值
+                     * @return PostMaxSize 是否已赋值
+                     */
+                    bool PostMaxSizeHasBeenSet() const;
+
+                    /**
                      * 获取QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
                      * @return Quic QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
                      */
@@ -852,14 +873,14 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
                     bool OssPrivateAccessHasBeenSet() const;
 
                     /**
-                     * 获取WebSocket configuration.
-                     * @return WebSocket WebSocket configuration.
+                     * 获取WebSocket configuration
+                     * @return WebSocket WebSocket configuration
                      */
                     WebSocket GetWebSocket() const;
 
                     /**
-                     * 设置WebSocket configuration.
-                     * @param WebSocket WebSocket configuration.
+                     * 设置WebSocket configuration
+                     * @param WebSocket WebSocket configuration
                      */
                     void SetWebSocket(const WebSocket& _webSocket);
 
@@ -870,14 +891,14 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
                     bool WebSocketHasBeenSet() const;
 
                     /**
-                     * 获取Configuration of remote authentication
-                     * @return RemoteAuthentication Configuration of remote authentication
+                     * 获取Remote authentication configuration
+                     * @return RemoteAuthentication Remote authentication configuration
                      */
                     RemoteAuthentication GetRemoteAuthentication() const;
 
                     /**
-                     * 设置Configuration of remote authentication
-                     * @param RemoteAuthentication Configuration of remote authentication
+                     * 设置Remote authentication configuration
+                     * @param RemoteAuthentication Remote authentication configuration
                      */
                     void SetRemoteAuthentication(const RemoteAuthentication& _remoteAuthentication);
 
@@ -904,6 +925,42 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
                      * @return ShareCname 是否已赋值
                      */
                     bool ShareCnameHasBeenSet() const;
+
+                    /**
+                     * 获取Access authentication for Huawei Cloud OBS origin
+                     * @return HwPrivateAccess Access authentication for Huawei Cloud OBS origin
+                     */
+                    HwPrivateAccess GetHwPrivateAccess() const;
+
+                    /**
+                     * 设置Access authentication for Huawei Cloud OBS origin
+                     * @param HwPrivateAccess Access authentication for Huawei Cloud OBS origin
+                     */
+                    void SetHwPrivateAccess(const HwPrivateAccess& _hwPrivateAccess);
+
+                    /**
+                     * 判断参数 HwPrivateAccess 是否已赋值
+                     * @return HwPrivateAccess 是否已赋值
+                     */
+                    bool HwPrivateAccessHasBeenSet() const;
+
+                    /**
+                     * 获取Access authentication for QiNiu Cloud Kodo origin
+                     * @return QnPrivateAccess Access authentication for QiNiu Cloud Kodo origin
+                     */
+                    QnPrivateAccess GetQnPrivateAccess() const;
+
+                    /**
+                     * 设置Access authentication for QiNiu Cloud Kodo origin
+                     * @param QnPrivateAccess Access authentication for QiNiu Cloud Kodo origin
+                     */
+                    void SetQnPrivateAccess(const QnPrivateAccess& _qnPrivateAccess);
+
+                    /**
+                     * 判断参数 QnPrivateAccess 是否已赋值
+                     * @return QnPrivateAccess 是否已赋值
+                     */
+                    bool QnPrivateAccessHasBeenSet() const;
 
                 private:
 
@@ -1040,13 +1097,13 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
                     bool m_seoHasBeenSet;
 
                     /**
-                     * Access protocol forced redirect configuration
+                     * Protocol redirect configuration
                      */
                     ForceRedirect m_forceRedirect;
                     bool m_forceRedirectHasBeenSet;
 
                     /**
-                     * Referer hotlink protection configuration
+                     * Referer configuration
                      */
                     Referer m_referer;
                     bool m_refererHasBeenSet;
@@ -1058,27 +1115,27 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
                     bool m_maxAgeHasBeenSet;
 
                     /**
-                     * Domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming media VOD acceleration
-                     */
-                    std::string m_serviceType;
-                    bool m_serviceTypeHasBeenSet;
-
-                    /**
-                     * Specific region configuration
-Applicable to cases where the acceleration domain name configuration differs for regions in and outside mainland China.
+                     * Specific-region special configuration
+Applicable to cases where the acceleration domain name configuration differs for regions in and outside the Chinese mainland.
                      */
                     SpecificConfig m_specificConfig;
                     bool m_specificConfigHasBeenSet;
 
                     /**
+                     * Domain name service type
+`web`: Static acceleration
+`download`: Download acceleration
+`media`: Streaming media VOD acceleration
+                     */
+                    std::string m_serviceType;
+                    bool m_serviceTypeHasBeenSet;
+
+                    /**
                      * Domain name acceleration region
-`mainland`: acceleration inside the Chinese mainland
-`overseas`: acceleration outside the Chinese mainland
-`global`: global acceleration
-When you change it to from `mainland`/`overseas` to `global`, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
+`mainland`: Acceleration inside the Chinese mainland
+`overseas`: Acceleration outside the Chinese mainland
+`global`: Acceleration over the globe
+After switching to global acceleration, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;
@@ -1090,13 +1147,13 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
                     bool m_originPullTimeoutHasBeenSet;
 
                     /**
-                     * Origin access authentication for S3 bucket
+                     * Access authentication for S3 origin
                      */
                     AwsPrivateAccess m_awsPrivateAccess;
                     bool m_awsPrivateAccessHasBeenSet;
 
                     /**
-                     * UA blocklist/allowlist Configuration
+                     * UA blocklist/allowlist configuration
                      */
                     UserAgentFilter m_userAgentFilter;
                     bool m_userAgentFilterHasBeenSet;
@@ -1108,7 +1165,7 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
                     bool m_accessControlHasBeenSet;
 
                     /**
-                     * Configuration of URL rewriting
+                     * URL rewriting configuration
                      */
                     UrlRedirect m_urlRedirect;
                     bool m_urlRedirectHasBeenSet;
@@ -1150,6 +1207,12 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
                     bool m_originCombineHasBeenSet;
 
                     /**
+                     * Post transport configuration
+                     */
+                    PostSize m_postMaxSize;
+                    bool m_postMaxSizeHasBeenSet;
+
+                    /**
                      * QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
                      */
                     Quic m_quic;
@@ -1162,13 +1225,13 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
                     bool m_ossPrivateAccessHasBeenSet;
 
                     /**
-                     * WebSocket configuration.
+                     * WebSocket configuration
                      */
                     WebSocket m_webSocket;
                     bool m_webSocketHasBeenSet;
 
                     /**
-                     * Configuration of remote authentication
+                     * Remote authentication configuration
                      */
                     RemoteAuthentication m_remoteAuthentication;
                     bool m_remoteAuthenticationHasBeenSet;
@@ -1178,6 +1241,18 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
                      */
                     ShareCname m_shareCname;
                     bool m_shareCnameHasBeenSet;
+
+                    /**
+                     * Access authentication for Huawei Cloud OBS origin
+                     */
+                    HwPrivateAccess m_hwPrivateAccess;
+                    bool m_hwPrivateAccessHasBeenSet;
+
+                    /**
+                     * Access authentication for QiNiu Cloud Kodo origin
+                     */
+                    QnPrivateAccess m_qnPrivateAccess;
+                    bool m_qnPrivateAccessHasBeenSet;
 
                 };
             }

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Advanced configuration set
+                * Advanced configuration settings
                 */
                 class AdvanceConfig : public AbstractModel
                 {
@@ -48,17 +48,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Advanced configuration name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Name Advanced configuration name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Advanced configuration name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param Name Advanced configuration name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetName(const std::string& _name);
 
@@ -69,26 +69,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Whether advanced configuration is supported:
-`on`: support
-`off`: do not support
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Value Whether advanced configuration is supported:
-`on`: support
-`off`: do not support
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Whether to support advanced configuration
+`on`: Supported
+`off`: Not supported
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return Value Whether to support advanced configuration
+`on`: Supported
+`off`: Not supported
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置Whether advanced configuration is supported:
-`on`: support
-`off`: do not support
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Value Whether advanced configuration is supported:
-`on`: support
-`off`: do not support
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Whether to support advanced configuration
+`on`: Supported
+`off`: Not supported
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param Value Whether to support advanced configuration
+`on`: Supported
+`off`: Not supported
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetValue(const std::string& _value);
 
@@ -102,16 +102,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * Advanced configuration name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Whether advanced configuration is supported:
-`on`: support
-`off`: do not support
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Whether to support advanced configuration
+`on`: Supported
+`off`: Not supported
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;

@@ -62,29 +62,29 @@ namespace TencentCloud
 
                     /**
                      * 获取Purging region
-The acceleration region of the acceleration domain name will be purged if this parameter is not passed in
-If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged
-If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged
-The specified purging region should match the domain name acceleration region
+The acceleration region of the acceleration domain name will be purged if this parameter is not passed in.
+If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged.
+If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged.
+The specified purging region should match the domain name acceleration region.
                      * @return Area Purging region
-The acceleration region of the acceleration domain name will be purged if this parameter is not passed in
-If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged
-If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged
-The specified purging region should match the domain name acceleration region
+The acceleration region of the acceleration domain name will be purged if this parameter is not passed in.
+If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged.
+If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged.
+The specified purging region should match the domain name acceleration region.
                      */
                     std::string GetArea() const;
 
                     /**
                      * 设置Purging region
-The acceleration region of the acceleration domain name will be purged if this parameter is not passed in
-If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged
-If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged
-The specified purging region should match the domain name acceleration region
+The acceleration region of the acceleration domain name will be purged if this parameter is not passed in.
+If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged.
+If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged.
+The specified purging region should match the domain name acceleration region.
                      * @param Area Purging region
-The acceleration region of the acceleration domain name will be purged if this parameter is not passed in
-If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged
-If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged
-The specified purging region should match the domain name acceleration region
+The acceleration region of the acceleration domain name will be purged if this parameter is not passed in.
+If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged.
+If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged.
+The specified purging region should match the domain name acceleration region.
                      */
                     void SetArea(const std::string& _area);
 
@@ -95,14 +95,14 @@ The specified purging region should match the domain name acceleration region
                     bool AreaHasBeenSet() const;
 
                     /**
-                     * 获取Whether to encode Chinese characters before purge.
-                     * @return UrlEncode Whether to encode Chinese characters before purge.
+                     * 获取Whether to encode Chinese characters for purge
+                     * @return UrlEncode Whether to encode Chinese characters for purge
                      */
                     bool GetUrlEncode() const;
 
                     /**
-                     * 设置Whether to encode Chinese characters before purge.
-                     * @param UrlEncode Whether to encode Chinese characters before purge.
+                     * 设置Whether to encode Chinese characters for purge
+                     * @param UrlEncode Whether to encode Chinese characters for purge
                      */
                     void SetUrlEncode(const bool& _urlEncode);
 
@@ -122,16 +122,16 @@ The specified purging region should match the domain name acceleration region
 
                     /**
                      * Purging region
-The acceleration region of the acceleration domain name will be purged if this parameter is not passed in
-If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged
-If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged
-The specified purging region should match the domain name acceleration region
+The acceleration region of the acceleration domain name will be purged if this parameter is not passed in.
+If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged.
+If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged.
+The specified purging region should match the domain name acceleration region.
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;
 
                     /**
-                     * Whether to encode Chinese characters before purge.
+                     * Whether to encode Chinese characters for purge
                      */
                     bool m_urlEncode;
                     bool m_urlEncodeHasBeenSet;

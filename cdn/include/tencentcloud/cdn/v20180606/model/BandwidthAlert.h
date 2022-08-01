@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cdn/v20180606/model/StatisticItem.h>
 
 
 namespace TencentCloud
@@ -48,21 +49,21 @@ namespace TencentCloud
 
                     /**
                      * 获取Specifies whether to enable the bandwidth cap
-`on`: enable
-`off`: disable
+`on`: Enable
+`off`: Disable
                      * @return Switch Specifies whether to enable the bandwidth cap
-`on`: enable
-`off`: disable
+`on`: Enable
+`off`: Disable
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Specifies whether to enable the bandwidth cap
-`on`: enable
-`off`: disable
+`on`: Enable
+`off`: Disable
                      * @param Switch Specifies whether to enable the bandwidth cap
-`on`: enable
-`off`: disable
+`on`: Enable
+`off`: Disable
                      */
                     void SetSwitch(const std::string& _switch);
 
@@ -96,25 +97,25 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 获取Action taken when threshold is reached
-RESOLVE_DNS_TO_ORIGIN: requests will be forwarded to the origin server. This is only supported for domain names of external origin.
-RETURN_404: a 404 error will be returned for all requests.
-Note: this field may return null, indicating that no valid values can be obtained.
+`RESOLVE_DNS_TO_ORIGIN`: Requests will be forwarded to the origin server. This is only supported for domain names of external origin.
+`RETURN_404`: A 404 error will be returned for all requests.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return CounterMeasure Action taken when threshold is reached
-RESOLVE_DNS_TO_ORIGIN: requests will be forwarded to the origin server. This is only supported for domain names of external origin.
-RETURN_404: a 404 error will be returned for all requests.
-Note: this field may return null, indicating that no valid values can be obtained.
+`RESOLVE_DNS_TO_ORIGIN`: Requests will be forwarded to the origin server. This is only supported for domain names of external origin.
+`RETURN_404`: A 404 error will be returned for all requests.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetCounterMeasure() const;
 
                     /**
                      * 设置Action taken when threshold is reached
-RESOLVE_DNS_TO_ORIGIN: requests will be forwarded to the origin server. This is only supported for domain names of external origin.
-RETURN_404: a 404 error will be returned for all requests.
-Note: this field may return null, indicating that no valid values can be obtained.
+`RESOLVE_DNS_TO_ORIGIN`: Requests will be forwarded to the origin server. This is only supported for domain names of external origin.
+`RETURN_404`: A 404 error will be returned for all requests.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @param CounterMeasure Action taken when threshold is reached
-RESOLVE_DNS_TO_ORIGIN: requests will be forwarded to the origin server. This is only supported for domain names of external origin.
-RETURN_404: a 404 error will be returned for all requests.
-Note: this field may return null, indicating that no valid values can be obtained.
+`RESOLVE_DNS_TO_ORIGIN`: Requests will be forwarded to the origin server. This is only supported for domain names of external origin.
+`RETURN_404`: A 404 error will be returned for all requests.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetCounterMeasure(const std::string& _counterMeasure);
 
@@ -148,24 +149,24 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 获取Indicates whether to trigger alerts when the upper limit is reached
-`on`: enable
-`off`: disable
+`on`: Enable
+`off`: Disable
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return AlertSwitch Indicates whether to trigger alerts when the upper limit is reached
-`on`: enable
-`off`: disable
+`on`: Enable
+`off`: Disable
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetAlertSwitch() const;
 
                     /**
                      * 设置Indicates whether to trigger alerts when the upper limit is reached
-`on`: enable
-`off`: disable
+`on`: Enable
+`off`: Disable
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @param AlertSwitch Indicates whether to trigger alerts when the upper limit is reached
-`on`: enable
-`off`: disable
+`on`: Enable
+`off`: Disable
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetAlertSwitch(const std::string& _alertSwitch);
@@ -222,25 +223,25 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 获取Dimension of the usage limit
-`bandwidth`: bandwidth
-`flux`: traffic
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`bandwidth`: Bandwidth
+`flux`: Traffic
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Metric Dimension of the usage limit
-`bandwidth`: bandwidth
-`flux`: traffic
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`bandwidth`: Bandwidth
+`flux`: Traffic
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetMetric() const;
 
                     /**
                      * 设置Dimension of the usage limit
-`bandwidth`: bandwidth
-`flux`: traffic
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`bandwidth`: Bandwidth
+`flux`: Traffic
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param Metric Dimension of the usage limit
-`bandwidth`: bandwidth
-`flux`: traffic
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`bandwidth`: Bandwidth
+`flux`: Traffic
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetMetric(const std::string& _metric);
 
@@ -250,12 +251,34 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool MetricHasBeenSet() const;
 
+                    /**
+                     * 获取Usage limit configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return StatisticItems Usage limit configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::vector<StatisticItem> GetStatisticItems() const;
+
+                    /**
+                     * 设置Usage limit configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param StatisticItems Usage limit configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetStatisticItems(const std::vector<StatisticItem>& _statisticItems);
+
+                    /**
+                     * 判断参数 StatisticItems 是否已赋值
+                     * @return StatisticItems 是否已赋值
+                     */
+                    bool StatisticItemsHasBeenSet() const;
+
                 private:
 
                     /**
                      * Specifies whether to enable the bandwidth cap
-`on`: enable
-`off`: disable
+`on`: Enable
+`off`: Disable
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
@@ -269,9 +292,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * Action taken when threshold is reached
-RESOLVE_DNS_TO_ORIGIN: requests will be forwarded to the origin server. This is only supported for domain names of external origin.
-RETURN_404: a 404 error will be returned for all requests.
-Note: this field may return null, indicating that no valid values can be obtained.
+`RESOLVE_DNS_TO_ORIGIN`: Requests will be forwarded to the origin server. This is only supported for domain names of external origin.
+`RETURN_404`: A 404 error will be returned for all requests.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_counterMeasure;
                     bool m_counterMeasureHasBeenSet;
@@ -285,8 +308,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * Indicates whether to trigger alerts when the upper limit is reached
-`on`: enable
-`off`: disable
+`on`: Enable
+`off`: Disable
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_alertSwitch;
@@ -308,12 +331,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * Dimension of the usage limit
-`bandwidth`: bandwidth
-`flux`: traffic
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`bandwidth`: Bandwidth
+`flux`: Traffic
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_metric;
                     bool m_metricHasBeenSet;
+
+                    /**
+                     * Usage limit configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::vector<StatisticItem> m_statisticItems;
+                    bool m_statisticItemsHasBeenSet;
 
                 };
             }

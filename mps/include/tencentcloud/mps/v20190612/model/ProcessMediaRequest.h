@@ -247,6 +247,36 @@ namespace TencentCloud
                      */
                     bool SessionContextHasBeenSet() const;
 
+                    /**
+                     * 获取The scheme ID.
+Notes: 1. If output information is not specified for a scheme, the request parameters `OutputStorage` and `OutputDir` will be used.
+2. If a notification is not configured for a scheme, the request parameter `TaskNotifyConfig` will be used.
+3. The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
+                     * @return ScheduleId The scheme ID.
+Notes: 1. If output information is not specified for a scheme, the request parameters `OutputStorage` and `OutputDir` will be used.
+2. If a notification is not configured for a scheme, the request parameter `TaskNotifyConfig` will be used.
+3. The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
+                     */
+                    int64_t GetScheduleId() const;
+
+                    /**
+                     * 设置The scheme ID.
+Notes: 1. If output information is not specified for a scheme, the request parameters `OutputStorage` and `OutputDir` will be used.
+2. If a notification is not configured for a scheme, the request parameter `TaskNotifyConfig` will be used.
+3. The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
+                     * @param ScheduleId The scheme ID.
+Notes: 1. If output information is not specified for a scheme, the request parameters `OutputStorage` and `OutputDir` will be used.
+2. If a notification is not configured for a scheme, the request parameter `TaskNotifyConfig` will be used.
+3. The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
+                     */
+                    void SetScheduleId(const int64_t& _scheduleId);
+
+                    /**
+                     * 判断参数 ScheduleId 是否已赋值
+                     * @return ScheduleId 是否已赋值
+                     */
+                    bool ScheduleIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -314,6 +344,15 @@ namespace TencentCloud
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;
+
+                    /**
+                     * The scheme ID.
+Notes: 1. If output information is not specified for a scheme, the request parameters `OutputStorage` and `OutputDir` will be used.
+2. If a notification is not configured for a scheme, the request parameter `TaskNotifyConfig` will be used.
+3. The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
+                     */
+                    int64_t m_scheduleId;
+                    bool m_scheduleIdHasBeenSet;
 
                 };
             }

@@ -48,17 +48,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Compatibility flag status code.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Code Compatibility flag status code.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     int64_t GetCode() const;
 
                     /**
                      * 设置Compatibility flag status code.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param Code Compatibility flag status code.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetCode(const int64_t& _code);
 
@@ -72,7 +72,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Compatibility flag status code.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     int64_t m_code;
                     bool m_codeHasBeenSet;

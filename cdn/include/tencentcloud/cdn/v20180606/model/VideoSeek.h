@@ -48,21 +48,21 @@ namespace TencentCloud
 
                     /**
                      * 获取Video dragging switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      * @return Switch Video dragging switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Video dragging switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      * @param Switch Video dragging switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      */
                     void SetSwitch(const std::string& _switch);
 
@@ -76,8 +76,8 @@ off: disabled
 
                     /**
                      * Video dragging switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

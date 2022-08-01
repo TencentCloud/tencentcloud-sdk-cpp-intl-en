@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * `HSTS` configuration.
+                * HSTS configuration.
                 */
                 class Hsts : public AbstractModel
                 {
@@ -66,17 +66,17 @@ namespace TencentCloud
 
                     /**
                      * 获取`MaxAge` value.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return MaxAge `MaxAge` value.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     int64_t GetMaxAge() const;
 
                     /**
                      * 设置`MaxAge` value.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param MaxAge `MaxAge` value.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetMaxAge(const int64_t& _maxAge);
 
@@ -88,17 +88,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Whether to include subdomain names. Valid values: on, off.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return IncludeSubDomains Whether to include subdomain names. Valid values: on, off.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetIncludeSubDomains() const;
 
                     /**
                      * 设置Whether to include subdomain names. Valid values: on, off.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param IncludeSubDomains Whether to include subdomain names. Valid values: on, off.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetIncludeSubDomains(const std::string& _includeSubDomains);
 
@@ -118,14 +118,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * `MaxAge` value.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     int64_t m_maxAge;
                     bool m_maxAgeHasBeenSet;
 
                     /**
                      * Whether to include subdomain names. Valid values: on, off.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_includeSubDomains;
                     bool m_includeSubDomainsHasBeenSet;

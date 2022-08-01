@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Query result
-                     * @return Logs Query result
+                     * 获取Query results
+                     * @return Logs Query results
                      */
                     ClsSearchLogs GetLogs() const;
 
@@ -59,7 +59,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Query result
+                     * Query results
                      */
                     ClsSearchLogs m_logs;
                     bool m_logsHasBeenSet;

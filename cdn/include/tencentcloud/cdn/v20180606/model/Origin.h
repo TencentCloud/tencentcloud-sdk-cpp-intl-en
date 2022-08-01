@@ -57,22 +57,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Master origin server list
+                     * 获取Primary origin server list
 When modifying the origin server, you need to enter the corresponding OriginType.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Origins Master origin server list
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return Origins Primary origin server list
 When modifying the origin server, you need to enter the corresponding OriginType.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::vector<std::string> GetOrigins() const;
 
                     /**
-                     * 设置Master origin server list
+                     * 设置Primary origin server list
 When modifying the origin server, you need to enter the corresponding OriginType.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Origins Master origin server list
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param Origins Primary origin server list
 When modifying the origin server, you need to enter the corresponding OriginType.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     void SetOrigins(const std::vector<std::string>& _origins);
 
@@ -84,105 +84,105 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Primary origin server type
-Input:
-`domain`: Domain name
+The following types are supported for input parameters:
+`domain`: domain name
 `domainv6`: IPv6 domain name
-`cos`: COS bucket address
+cos: COS origin
 `ip`: IP address
-`ipv6`: A single IPv6 address
-`ip_ipv6`: Multiple IPv4 addresses and one IPv6 address
+ipv6: origin server list is a single IPv6 address
+`ip_ipv6`: multiple IPv4 addresses and one IPv6 address
 `ip_domain`: IP addresses and domain names (only available to beta users)
 `ip_domainv6`: Multiple IPv4 addresses and one IPv6 domain name
-`ipv6_domain`: Multiple IPv6 addresses and one domain name
+`ipv6_domain`: multiple IPv6 addresses and one domain name
 `ipv6_domainv6`: Multiple IPv6 addresses and one IPv6 domain name
 `domain_domainv6`: Multiple IPv4 domain names and one IPv6 domain name
-`ip_ipv6_domain`: Multiple IPv4 and IPv6 addresses and one domain name
+`ip_ipv6_domain`: multiple IPv4 and IPv6 addresses and one domain name
 `ip_ipv6_domainv6`: Multiple IPv4 and IPv6 addresses and one IPv6 domain name
 `ip_domain_domainv6`: Multiple IPv4 addresses and IPv4 domain names and one IPv6 domain name
 `ipv6_domain_domainv6`: Multiple IPv4 domain names and IPv6 addresses and one IPv6 domain name
 `ip_ipv6_domain_domainv6`: Multiple IPv4 and IPv6 addresses and IPv4 domain names and one IPv6 domain name
-Output: 
-`image`: Cloud Infinite origin
-`ftp`: FTP origin (disused)
-When modifying `Origins`, you need to enter the corresponding `OriginType`.
-The IPv6 feature is now only available to beta users. Please submit an application to use this feature.
-Note: This field may return `null`, indicating that no valid value was found.
+The following types of output parameters are added:
+image: Cloud Infinite origin
+ftp: legacy FTP origin, which is no longer maintained.
+When modifying `Origins`, you need to enter the corresponding OriginType.
+The IPv6 feature is not generally available yet. Please send in a whitelist application to use this feature.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return OriginType Primary origin server type
-Input:
-`domain`: Domain name
+The following types are supported for input parameters:
+`domain`: domain name
 `domainv6`: IPv6 domain name
-`cos`: COS bucket address
+cos: COS origin
 `ip`: IP address
-`ipv6`: A single IPv6 address
-`ip_ipv6`: Multiple IPv4 addresses and one IPv6 address
+ipv6: origin server list is a single IPv6 address
+`ip_ipv6`: multiple IPv4 addresses and one IPv6 address
 `ip_domain`: IP addresses and domain names (only available to beta users)
 `ip_domainv6`: Multiple IPv4 addresses and one IPv6 domain name
-`ipv6_domain`: Multiple IPv6 addresses and one domain name
+`ipv6_domain`: multiple IPv6 addresses and one domain name
 `ipv6_domainv6`: Multiple IPv6 addresses and one IPv6 domain name
 `domain_domainv6`: Multiple IPv4 domain names and one IPv6 domain name
-`ip_ipv6_domain`: Multiple IPv4 and IPv6 addresses and one domain name
+`ip_ipv6_domain`: multiple IPv4 and IPv6 addresses and one domain name
 `ip_ipv6_domainv6`: Multiple IPv4 and IPv6 addresses and one IPv6 domain name
 `ip_domain_domainv6`: Multiple IPv4 addresses and IPv4 domain names and one IPv6 domain name
 `ipv6_domain_domainv6`: Multiple IPv4 domain names and IPv6 addresses and one IPv6 domain name
 `ip_ipv6_domain_domainv6`: Multiple IPv4 and IPv6 addresses and IPv4 domain names and one IPv6 domain name
-Output: 
-`image`: Cloud Infinite origin
-`ftp`: FTP origin (disused)
-When modifying `Origins`, you need to enter the corresponding `OriginType`.
-The IPv6 feature is now only available to beta users. Please submit an application to use this feature.
-Note: This field may return `null`, indicating that no valid value was found.
+The following types of output parameters are added:
+image: Cloud Infinite origin
+ftp: legacy FTP origin, which is no longer maintained.
+When modifying `Origins`, you need to enter the corresponding OriginType.
+The IPv6 feature is not generally available yet. Please send in a whitelist application to use this feature.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetOriginType() const;
 
                     /**
                      * 设置Primary origin server type
-Input:
-`domain`: Domain name
+The following types are supported for input parameters:
+`domain`: domain name
 `domainv6`: IPv6 domain name
-`cos`: COS bucket address
+cos: COS origin
 `ip`: IP address
-`ipv6`: A single IPv6 address
-`ip_ipv6`: Multiple IPv4 addresses and one IPv6 address
+ipv6: origin server list is a single IPv6 address
+`ip_ipv6`: multiple IPv4 addresses and one IPv6 address
 `ip_domain`: IP addresses and domain names (only available to beta users)
 `ip_domainv6`: Multiple IPv4 addresses and one IPv6 domain name
-`ipv6_domain`: Multiple IPv6 addresses and one domain name
+`ipv6_domain`: multiple IPv6 addresses and one domain name
 `ipv6_domainv6`: Multiple IPv6 addresses and one IPv6 domain name
 `domain_domainv6`: Multiple IPv4 domain names and one IPv6 domain name
-`ip_ipv6_domain`: Multiple IPv4 and IPv6 addresses and one domain name
+`ip_ipv6_domain`: multiple IPv4 and IPv6 addresses and one domain name
 `ip_ipv6_domainv6`: Multiple IPv4 and IPv6 addresses and one IPv6 domain name
 `ip_domain_domainv6`: Multiple IPv4 addresses and IPv4 domain names and one IPv6 domain name
 `ipv6_domain_domainv6`: Multiple IPv4 domain names and IPv6 addresses and one IPv6 domain name
 `ip_ipv6_domain_domainv6`: Multiple IPv4 and IPv6 addresses and IPv4 domain names and one IPv6 domain name
-Output: 
-`image`: Cloud Infinite origin
-`ftp`: FTP origin (disused)
-When modifying `Origins`, you need to enter the corresponding `OriginType`.
-The IPv6 feature is now only available to beta users. Please submit an application to use this feature.
-Note: This field may return `null`, indicating that no valid value was found.
+The following types of output parameters are added:
+image: Cloud Infinite origin
+ftp: legacy FTP origin, which is no longer maintained.
+When modifying `Origins`, you need to enter the corresponding OriginType.
+The IPv6 feature is not generally available yet. Please send in a whitelist application to use this feature.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @param OriginType Primary origin server type
-Input:
-`domain`: Domain name
+The following types are supported for input parameters:
+`domain`: domain name
 `domainv6`: IPv6 domain name
-`cos`: COS bucket address
+cos: COS origin
 `ip`: IP address
-`ipv6`: A single IPv6 address
-`ip_ipv6`: Multiple IPv4 addresses and one IPv6 address
+ipv6: origin server list is a single IPv6 address
+`ip_ipv6`: multiple IPv4 addresses and one IPv6 address
 `ip_domain`: IP addresses and domain names (only available to beta users)
 `ip_domainv6`: Multiple IPv4 addresses and one IPv6 domain name
-`ipv6_domain`: Multiple IPv6 addresses and one domain name
+`ipv6_domain`: multiple IPv6 addresses and one domain name
 `ipv6_domainv6`: Multiple IPv6 addresses and one IPv6 domain name
 `domain_domainv6`: Multiple IPv4 domain names and one IPv6 domain name
-`ip_ipv6_domain`: Multiple IPv4 and IPv6 addresses and one domain name
+`ip_ipv6_domain`: multiple IPv4 and IPv6 addresses and one domain name
 `ip_ipv6_domainv6`: Multiple IPv4 and IPv6 addresses and one IPv6 domain name
 `ip_domain_domainv6`: Multiple IPv4 addresses and IPv4 domain names and one IPv6 domain name
 `ipv6_domain_domainv6`: Multiple IPv4 domain names and IPv6 addresses and one IPv6 domain name
 `ip_ipv6_domain_domainv6`: Multiple IPv4 and IPv6 addresses and IPv4 domain names and one IPv6 domain name
-Output: 
-`image`: Cloud Infinite origin
-`ftp`: FTP origin (disused)
-When modifying `Origins`, you need to enter the corresponding `OriginType`.
-The IPv6 feature is now only available to beta users. Please submit an application to use this feature.
-Note: This field may return `null`, indicating that no valid value was found.
+The following types of output parameters are added:
+image: Cloud Infinite origin
+ftp: legacy FTP origin, which is no longer maintained.
+When modifying `Origins`, you need to enter the corresponding OriginType.
+The IPv6 feature is not generally available yet. Please send in a whitelist application to use this feature.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetOriginType(const std::string& _originType);
 
@@ -193,22 +193,26 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool OriginTypeHasBeenSet() const;
 
                     /**
-                     * 获取Host header used when accessing the master origin server. If left empty, the acceleration domain name will be used by default.
+                     * 获取It is required when a COS origin or third-party origin is used for acceleration.
+Host header used when accessing the primary origin server. If it is left empty, the acceleration domain name will be used by default.
 If a wildcard domain name is accessed, then the sub-domain name during the access will be used by default.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ServerName Host header used when accessing the master origin server. If left empty, the acceleration domain name will be used by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return ServerName It is required when a COS origin or third-party origin is used for acceleration.
+Host header used when accessing the primary origin server. If it is left empty, the acceleration domain name will be used by default.
 If a wildcard domain name is accessed, then the sub-domain name during the access will be used by default.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetServerName() const;
 
                     /**
-                     * 设置Host header used when accessing the master origin server. If left empty, the acceleration domain name will be used by default.
+                     * 设置It is required when a COS origin or third-party origin is used for acceleration.
+Host header used when accessing the primary origin server. If it is left empty, the acceleration domain name will be used by default.
 If a wildcard domain name is accessed, then the sub-domain name during the access will be used by default.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ServerName Host header used when accessing the master origin server. If left empty, the acceleration domain name will be used by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param ServerName It is required when a COS origin or third-party origin is used for acceleration.
+Host header used when accessing the primary origin server. If it is left empty, the acceleration domain name will be used by default.
 If a wildcard domain name is accessed, then the sub-domain name during the access will be used by default.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetServerName(const std::string& _serverName);
 
@@ -220,21 +224,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取When OriginType is COS, you can specify if access to private buckets is allowed.
-Note: to enable this configuration, you need to first grant CDN access to the private bucket.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: To enable this configuration, you need to first grant CDN access to the private bucket. Values: `on` and `off`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return CosPrivateAccess When OriginType is COS, you can specify if access to private buckets is allowed.
-Note: to enable this configuration, you need to first grant CDN access to the private bucket.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: To enable this configuration, you need to first grant CDN access to the private bucket. Values: `on` and `off`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetCosPrivateAccess() const;
 
                     /**
                      * 设置When OriginType is COS, you can specify if access to private buckets is allowed.
-Note: to enable this configuration, you need to first grant CDN access to the private bucket.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: To enable this configuration, you need to first grant CDN access to the private bucket. Values: `on` and `off`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param CosPrivateAccess When OriginType is COS, you can specify if access to private buckets is allowed.
-Note: to enable this configuration, you need to first grant CDN access to the private bucket.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: To enable this configuration, you need to first grant CDN access to the private bucket. Values: `on` and `off`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetCosPrivateAccess(const std::string& _cosPrivateAccess);
 
@@ -249,12 +253,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 http: forced HTTP origin-pull
 follow: protocol follow origin-pull
 https: forced HTTPS origin-pull. This only supports origin server port 443 for origin-pull.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return OriginPullProtocol Origin-pull protocol configuration
 http: forced HTTP origin-pull
 follow: protocol follow origin-pull
 https: forced HTTPS origin-pull. This only supports origin server port 443 for origin-pull.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetOriginPullProtocol() const;
 
@@ -263,12 +267,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 http: forced HTTP origin-pull
 follow: protocol follow origin-pull
 https: forced HTTPS origin-pull. This only supports origin server port 443 for origin-pull.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param OriginPullProtocol Origin-pull protocol configuration
 http: forced HTTP origin-pull
 follow: protocol follow origin-pull
 https: forced HTTPS origin-pull. This only supports origin server port 443 for origin-pull.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetOriginPullProtocol(const std::string& _originPullProtocol);
 
@@ -281,20 +285,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     /**
                      * 获取Backup origin server list
 When modifying the backup origin server, you need to enter the corresponding BackupOriginType.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return BackupOrigins Backup origin server list
 When modifying the backup origin server, you need to enter the corresponding BackupOriginType.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<std::string> GetBackupOrigins() const;
 
                     /**
                      * 设置Backup origin server list
 When modifying the backup origin server, you need to enter the corresponding BackupOriginType.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param BackupOrigins Backup origin server list
 When modifying the backup origin server, you need to enter the corresponding BackupOriginType.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetBackupOrigins(const std::vector<std::string>& _backupOrigins);
 
@@ -305,50 +309,50 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool BackupOriginsHasBeenSet() const;
 
                     /**
-                     * 获取Secondary origin type. Values:
-`domain`: domain name
+                     * 获取Backup origin server type, which supports the following types:
+`domain`: Domain name
 `ip`: IP address
-When modifying `BackupOrigins`, you need to enter the corresponding `BackupOriginType`.
+When modifying BackupOrigins, you need to enter the corresponding BackupOriginType.
 The following backup origin servers are only available to beta users. Submit an application if you want to become a beta user.
-`ipv6_domain`: multiple IPv6 addresses and one domain name
-`ip_ipv6`: multiple IPv4 addresses and one IPv6 address
-`ipv6_domain`: multiple IPv6 addresses and one domain name
-`ip_ipv6_domain`: multiple IPv4 and IPv6 addresses and one domain name
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return BackupOriginType Secondary origin type. Values:
-`domain`: domain name
+`ipv6_domain`: Multiple IPv6 addresses and one domain name
+`ip_ipv6`: Multiple IPv4 addresses and one IPv6 address
+`ipv6_domain`: Multiple IPv6 addresses and one domain name
+`ip_ipv6_domain`: Multiple IPv4 and IPv6 addresses and one domain name
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return BackupOriginType Backup origin server type, which supports the following types:
+`domain`: Domain name
 `ip`: IP address
-When modifying `BackupOrigins`, you need to enter the corresponding `BackupOriginType`.
+When modifying BackupOrigins, you need to enter the corresponding BackupOriginType.
 The following backup origin servers are only available to beta users. Submit an application if you want to become a beta user.
-`ipv6_domain`: multiple IPv6 addresses and one domain name
-`ip_ipv6`: multiple IPv4 addresses and one IPv6 address
-`ipv6_domain`: multiple IPv6 addresses and one domain name
-`ip_ipv6_domain`: multiple IPv4 and IPv6 addresses and one domain name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`ipv6_domain`: Multiple IPv6 addresses and one domain name
+`ip_ipv6`: Multiple IPv4 addresses and one IPv6 address
+`ipv6_domain`: Multiple IPv6 addresses and one domain name
+`ip_ipv6_domain`: Multiple IPv4 and IPv6 addresses and one domain name
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetBackupOriginType() const;
 
                     /**
-                     * 设置Secondary origin type. Values:
-`domain`: domain name
+                     * 设置Backup origin server type, which supports the following types:
+`domain`: Domain name
 `ip`: IP address
-When modifying `BackupOrigins`, you need to enter the corresponding `BackupOriginType`.
+When modifying BackupOrigins, you need to enter the corresponding BackupOriginType.
 The following backup origin servers are only available to beta users. Submit an application if you want to become a beta user.
-`ipv6_domain`: multiple IPv6 addresses and one domain name
-`ip_ipv6`: multiple IPv4 addresses and one IPv6 address
-`ipv6_domain`: multiple IPv6 addresses and one domain name
-`ip_ipv6_domain`: multiple IPv4 and IPv6 addresses and one domain name
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param BackupOriginType Secondary origin type. Values:
-`domain`: domain name
+`ipv6_domain`: Multiple IPv6 addresses and one domain name
+`ip_ipv6`: Multiple IPv4 addresses and one IPv6 address
+`ipv6_domain`: Multiple IPv6 addresses and one domain name
+`ip_ipv6_domain`: Multiple IPv4 and IPv6 addresses and one domain name
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param BackupOriginType Backup origin server type, which supports the following types:
+`domain`: Domain name
 `ip`: IP address
-When modifying `BackupOrigins`, you need to enter the corresponding `BackupOriginType`.
+When modifying BackupOrigins, you need to enter the corresponding BackupOriginType.
 The following backup origin servers are only available to beta users. Submit an application if you want to become a beta user.
-`ipv6_domain`: multiple IPv6 addresses and one domain name
-`ip_ipv6`: multiple IPv4 addresses and one IPv6 address
-`ipv6_domain`: multiple IPv6 addresses and one domain name
-`ip_ipv6_domain`: multiple IPv4 and IPv6 addresses and one domain name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`ipv6_domain`: Multiple IPv6 addresses and one domain name
+`ip_ipv6`: Multiple IPv4 addresses and one IPv6 address
+`ipv6_domain`: Multiple IPv6 addresses and one domain name
+`ip_ipv6_domain`: Multiple IPv4 and IPv6 addresses and one domain name
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetBackupOriginType(const std::string& _backupOriginType);
 
@@ -359,18 +363,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool BackupOriginTypeHasBeenSet() const;
 
                     /**
-                     * 获取Host header used when accessing the backup origin server. If left empty, the ServerName of master origin server will be used by default.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return BackupServerName Host header used when accessing the backup origin server. If left empty, the ServerName of master origin server will be used by default.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Host header used when accessing the backup origin server. If it is left empty, the `ServerName` of primary origin server will be used by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return BackupServerName Host header used when accessing the backup origin server. If it is left empty, the `ServerName` of primary origin server will be used by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetBackupServerName() const;
 
                     /**
-                     * 设置Host header used when accessing the backup origin server. If left empty, the ServerName of master origin server will be used by default.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param BackupServerName Host header used when accessing the backup origin server. If left empty, the ServerName of master origin server will be used by default.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Host header used when accessing the backup origin server. If it is left empty, the `ServerName` of primary origin server will be used by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param BackupServerName Host header used when accessing the backup origin server. If it is left empty, the `ServerName` of primary origin server will be used by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetBackupServerName(const std::string& _backupServerName);
 
@@ -381,14 +385,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool BackupServerNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BasePath 
+                     * 获取Origin-pull path
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return BasePath Origin-pull path
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetBasePath() const;
 
                     /**
-                     * 设置
-                     * @param BasePath 
+                     * 设置Origin-pull path
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param BasePath Origin-pull path
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetBasePath(const std::string& _basePath);
 
@@ -399,18 +407,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool BasePathHasBeenSet() const;
 
                     /**
-                     * 获取Origin URL rewrite rule configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return PathRules Origin URL rewrite rule configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Origin-pull path rewriting configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return PathRules Origin-pull path rewriting configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<PathRule> GetPathRules() const;
 
                     /**
-                     * 设置Origin URL rewrite rule configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param PathRules Origin URL rewrite rule configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Origin-pull path rewriting configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param PathRules Origin-pull path rewriting configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetPathRules(const std::vector<PathRule>& _pathRules);
 
@@ -421,18 +429,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool PathRulesHasBeenSet() const;
 
                     /**
-                     * 获取Path-based origin-pull configurations
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return PathBasedOrigin Path-based origin-pull configurations
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Path-based origin-pull configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return PathBasedOrigin Path-based origin-pull configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<PathBasedOriginRule> GetPathBasedOrigin() const;
 
                     /**
-                     * 设置Path-based origin-pull configurations
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param PathBasedOrigin Path-based origin-pull configurations
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Path-based origin-pull configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param PathBasedOrigin Path-based origin-pull configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetPathBasedOrigin(const std::vector<PathBasedOriginRule>& _pathBasedOrigin);
 
@@ -443,18 +451,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool PathBasedOriginHasBeenSet() const;
 
                     /**
-                     * 获取Advanced HTTPS forwarding configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return AdvanceHttps Advanced HTTPS forwarding configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取HTTPS advanced origin-pull configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return AdvanceHttps HTTPS advanced origin-pull configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     AdvanceHttps GetAdvanceHttps() const;
 
                     /**
-                     * 设置Advanced HTTPS forwarding configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param AdvanceHttps Advanced HTTPS forwarding configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置HTTPS advanced origin-pull configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param AdvanceHttps HTTPS advanced origin-pull configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetAdvanceHttps(const AdvanceHttps& _advanceHttps);
 
@@ -465,14 +473,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool AdvanceHttpsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OriginCompany 
+                     * 获取Object storage vendor
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return OriginCompany Object storage vendor
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetOriginCompany() const;
 
                     /**
-                     * 设置
-                     * @param OriginCompany 
+                     * 设置Object storage vendor
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param OriginCompany Object storage vendor
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetOriginCompany(const std::string& _originCompany);
 
@@ -485,54 +497,55 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Master origin server list
+                     * Primary origin server list
 When modifying the origin server, you need to enter the corresponding OriginType.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::vector<std::string> m_origins;
                     bool m_originsHasBeenSet;
 
                     /**
                      * Primary origin server type
-Input:
-`domain`: Domain name
+The following types are supported for input parameters:
+`domain`: domain name
 `domainv6`: IPv6 domain name
-`cos`: COS bucket address
+cos: COS origin
 `ip`: IP address
-`ipv6`: A single IPv6 address
-`ip_ipv6`: Multiple IPv4 addresses and one IPv6 address
+ipv6: origin server list is a single IPv6 address
+`ip_ipv6`: multiple IPv4 addresses and one IPv6 address
 `ip_domain`: IP addresses and domain names (only available to beta users)
 `ip_domainv6`: Multiple IPv4 addresses and one IPv6 domain name
-`ipv6_domain`: Multiple IPv6 addresses and one domain name
+`ipv6_domain`: multiple IPv6 addresses and one domain name
 `ipv6_domainv6`: Multiple IPv6 addresses and one IPv6 domain name
 `domain_domainv6`: Multiple IPv4 domain names and one IPv6 domain name
-`ip_ipv6_domain`: Multiple IPv4 and IPv6 addresses and one domain name
+`ip_ipv6_domain`: multiple IPv4 and IPv6 addresses and one domain name
 `ip_ipv6_domainv6`: Multiple IPv4 and IPv6 addresses and one IPv6 domain name
 `ip_domain_domainv6`: Multiple IPv4 addresses and IPv4 domain names and one IPv6 domain name
 `ipv6_domain_domainv6`: Multiple IPv4 domain names and IPv6 addresses and one IPv6 domain name
 `ip_ipv6_domain_domainv6`: Multiple IPv4 and IPv6 addresses and IPv4 domain names and one IPv6 domain name
-Output: 
-`image`: Cloud Infinite origin
-`ftp`: FTP origin (disused)
-When modifying `Origins`, you need to enter the corresponding `OriginType`.
-The IPv6 feature is now only available to beta users. Please submit an application to use this feature.
-Note: This field may return `null`, indicating that no valid value was found.
+The following types of output parameters are added:
+image: Cloud Infinite origin
+ftp: legacy FTP origin, which is no longer maintained.
+When modifying `Origins`, you need to enter the corresponding OriginType.
+The IPv6 feature is not generally available yet. Please send in a whitelist application to use this feature.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_originType;
                     bool m_originTypeHasBeenSet;
 
                     /**
-                     * Host header used when accessing the master origin server. If left empty, the acceleration domain name will be used by default.
+                     * It is required when a COS origin or third-party origin is used for acceleration.
+Host header used when accessing the primary origin server. If it is left empty, the acceleration domain name will be used by default.
 If a wildcard domain name is accessed, then the sub-domain name during the access will be used by default.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_serverName;
                     bool m_serverNameHasBeenSet;
 
                     /**
                      * When OriginType is COS, you can specify if access to private buckets is allowed.
-Note: to enable this configuration, you need to first grant CDN access to the private bucket.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: To enable this configuration, you need to first grant CDN access to the private bucket. Values: `on` and `off`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_cosPrivateAccess;
                     bool m_cosPrivateAccessHasBeenSet;
@@ -542,7 +555,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 http: forced HTTP origin-pull
 follow: protocol follow origin-pull
 https: forced HTTPS origin-pull. This only supports origin server port 443 for origin-pull.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_originPullProtocol;
                     bool m_originPullProtocolHasBeenSet;
@@ -550,62 +563,64 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     /**
                      * Backup origin server list
 When modifying the backup origin server, you need to enter the corresponding BackupOriginType.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<std::string> m_backupOrigins;
                     bool m_backupOriginsHasBeenSet;
 
                     /**
-                     * Secondary origin type. Values:
-`domain`: domain name
+                     * Backup origin server type, which supports the following types:
+`domain`: Domain name
 `ip`: IP address
-When modifying `BackupOrigins`, you need to enter the corresponding `BackupOriginType`.
+When modifying BackupOrigins, you need to enter the corresponding BackupOriginType.
 The following backup origin servers are only available to beta users. Submit an application if you want to become a beta user.
-`ipv6_domain`: multiple IPv6 addresses and one domain name
-`ip_ipv6`: multiple IPv4 addresses and one IPv6 address
-`ipv6_domain`: multiple IPv6 addresses and one domain name
-`ip_ipv6_domain`: multiple IPv4 and IPv6 addresses and one domain name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`ipv6_domain`: Multiple IPv6 addresses and one domain name
+`ip_ipv6`: Multiple IPv4 addresses and one IPv6 address
+`ipv6_domain`: Multiple IPv6 addresses and one domain name
+`ip_ipv6_domain`: Multiple IPv4 and IPv6 addresses and one domain name
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_backupOriginType;
                     bool m_backupOriginTypeHasBeenSet;
 
                     /**
-                     * Host header used when accessing the backup origin server. If left empty, the ServerName of master origin server will be used by default.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Host header used when accessing the backup origin server. If it is left empty, the `ServerName` of primary origin server will be used by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_backupServerName;
                     bool m_backupServerNameHasBeenSet;
 
                     /**
-                     * 
+                     * Origin-pull path
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_basePath;
                     bool m_basePathHasBeenSet;
 
                     /**
-                     * Origin URL rewrite rule configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Origin-pull path rewriting configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<PathRule> m_pathRules;
                     bool m_pathRulesHasBeenSet;
 
                     /**
-                     * Path-based origin-pull configurations
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Path-based origin-pull configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<PathBasedOriginRule> m_pathBasedOrigin;
                     bool m_pathBasedOriginHasBeenSet;
 
                     /**
-                     * Advanced HTTPS forwarding configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * HTTPS advanced origin-pull configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     AdvanceHttps m_advanceHttps;
                     bool m_advanceHttpsHasBeenSet;
 
                     /**
-                     * 
+                     * Object storage vendor
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_originCompany;
                     bool m_originCompanyHasBeenSet;

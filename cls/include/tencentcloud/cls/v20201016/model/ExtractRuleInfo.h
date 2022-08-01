@@ -267,6 +267,50 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool BacktrackingHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to be encoded in GBK format. Valid values: `0` (No) and `1` (Yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IsGBK Whether to be encoded in GBK format. Valid values: `0` (No) and `1` (Yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetIsGBK() const;
+
+                    /**
+                     * 设置Whether to be encoded in GBK format. Valid values: `0` (No) and `1` (Yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param IsGBK Whether to be encoded in GBK format. Valid values: `0` (No) and `1` (Yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetIsGBK(const int64_t& _isGBK);
+
+                    /**
+                     * 判断参数 IsGBK 是否已赋值
+                     * @return IsGBK 是否已赋值
+                     */
+                    bool IsGBKHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to be formatted as JSON (standard). Valid values: `0` (No) and `1` (Yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return JsonStandard Whether to be formatted as JSON (standard). Valid values: `0` (No) and `1` (Yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetJsonStandard() const;
+
+                    /**
+                     * 设置Whether to be formatted as JSON (standard). Valid values: `0` (No) and `1` (Yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param JsonStandard Whether to be formatted as JSON (standard). Valid values: `0` (No) and `1` (Yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetJsonStandard(const int64_t& _jsonStandard);
+
+                    /**
+                     * 判断参数 JsonStandard 是否已赋值
+                     * @return JsonStandard 是否已赋值
+                     */
+                    bool JsonStandardHasBeenSet() const;
+
                 private:
 
                     /**
@@ -338,6 +382,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     int64_t m_backtracking;
                     bool m_backtrackingHasBeenSet;
+
+                    /**
+                     * Whether to be encoded in GBK format. Valid values: `0` (No) and `1` (Yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_isGBK;
+                    bool m_isGBKHasBeenSet;
+
+                    /**
+                     * Whether to be formatted as JSON (standard). Valid values: `0` (No) and `1` (Yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_jsonStandard;
+                    bool m_jsonStandardHasBeenSet;
 
                 };
             }

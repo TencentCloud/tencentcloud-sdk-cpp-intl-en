@@ -58,10 +58,10 @@ namespace TencentCloud
                     bool MapInfoListHasBeenSet() const;
 
                     /**
-                     * 获取The relationship between server region ID and sub-region ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ServerRegionRelation The relationship between server region ID and sub-region ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Mapping relationship between server region ID and sub-region ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return ServerRegionRelation Mapping relationship between server region ID and sub-region ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<RegionMapRelation> GetServerRegionRelation() const;
 
@@ -72,10 +72,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ServerRegionRelationHasBeenSet() const;
 
                     /**
-                     * 获取The relationship between client region ID and sub-region ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ClientRegionRelation The relationship between client region ID and sub-region ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Mapping relationship between client region ID and sub-region ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return ClientRegionRelation Mapping relationship between client region ID and sub-region ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<RegionMapRelation> GetClientRegionRelation() const;
 
@@ -94,15 +94,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_mapInfoListHasBeenSet;
 
                     /**
-                     * The relationship between server region ID and sub-region ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Mapping relationship between server region ID and sub-region ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<RegionMapRelation> m_serverRegionRelation;
                     bool m_serverRegionRelationHasBeenSet;
 
                     /**
-                     * The relationship between client region ID and sub-region ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Mapping relationship between client region ID and sub-region ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<RegionMapRelation> m_clientRegionRelation;
                     bool m_clientRegionRelationHasBeenSet;

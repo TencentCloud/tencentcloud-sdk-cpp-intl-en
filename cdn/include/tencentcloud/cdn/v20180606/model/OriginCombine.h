@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Merging pull requests configurations
+                * Merging pull requests configuration item
                 */
                 class OriginCombine : public AbstractModel
                 {

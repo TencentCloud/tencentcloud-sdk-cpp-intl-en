@@ -46,9 +46,9 @@ namespace TencentCloud
 
                     /**
                      * 获取Details of URLs in violation
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return UrlRecordList Details of URLs in violation
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<ViolationUrl> GetUrlRecordList() const;
 
@@ -74,7 +74,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Details of URLs in violation
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<ViolationUrl> m_urlRecordList;
                     bool m_urlRecordListHasBeenSet;

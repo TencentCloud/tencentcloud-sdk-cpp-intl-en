@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Whether to enable offline cache
+                * Offline cache feature status switch.
                 */
                 class OfflineCache : public AbstractModel
                 {

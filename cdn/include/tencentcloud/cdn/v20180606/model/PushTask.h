@@ -84,29 +84,29 @@ namespace TencentCloud
 
                     /**
                      * 获取Prefetch task status
-`fail`: prefetch failed
-`done`: prefetch succeeded
-`process`: prefetch in progress
-`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
+`fail`: Prefetch failed
+`done`: Prefetch succeeded
+`process`: Prefetch in progress
+`invalid`: Invalid prefetch with 4XX/5XX status code returned from the origin server
                      * @return Status Prefetch task status
-`fail`: prefetch failed
-`done`: prefetch succeeded
-`process`: prefetch in progress
-`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
+`fail`: Prefetch failed
+`done`: Prefetch succeeded
+`process`: Prefetch in progress
+`invalid`: Invalid prefetch with 4XX/5XX status code returned from the origin server
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Prefetch task status
-`fail`: prefetch failed
-`done`: prefetch succeeded
-`process`: prefetch in progress
-`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
+`fail`: Prefetch failed
+`done`: Prefetch succeeded
+`process`: Prefetch in progress
+`invalid`: Invalid prefetch with 4XX/5XX status code returned from the origin server
                      * @param Status Prefetch task status
-`fail`: prefetch failed
-`done`: prefetch succeeded
-`process`: prefetch in progress
-`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
+`fail`: Prefetch failed
+`done`: Prefetch succeeded
+`process`: Prefetch in progress
+`invalid`: Invalid prefetch with 4XX/5XX status code returned from the origin server
                      */
                     void SetStatus(const std::string& _status);
 
@@ -154,25 +154,25 @@ namespace TencentCloud
 
                     /**
                      * 获取Prefetch region
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
-`global`: global
+`mainland`: Within the Chinese mainland
+`overseas`: Outside the Chinese mainland
+`global`: Globe
                      * @return Area Prefetch region
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
-`global`: global
+`mainland`: Within the Chinese mainland
+`overseas`: Outside the Chinese mainland
+`global`: Globe
                      */
                     std::string GetArea() const;
 
                     /**
                      * 设置Prefetch region
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
-`global`: global
+`mainland`: Within the Chinese mainland
+`overseas`: Outside the Chinese mainland
+`global`: Globe
                      * @param Area Prefetch region
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
-`global`: global
+`mainland`: Within the Chinese mainland
+`overseas`: Outside the Chinese mainland
+`global`: Globe
                      */
                     void SetArea(const std::string& _area);
 
@@ -184,17 +184,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Prefetch task update time
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return UpdateTime Prefetch task update time
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Prefetch task update time
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param UpdateTime Prefetch task update time
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
@@ -220,10 +220,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Prefetch task status
-`fail`: prefetch failed
-`done`: prefetch succeeded
-`process`: prefetch in progress
-`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
+`fail`: Prefetch failed
+`done`: Prefetch succeeded
+`process`: Prefetch in progress
+`invalid`: Invalid prefetch with 4XX/5XX status code returned from the origin server
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
@@ -242,16 +242,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Prefetch region
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
-`global`: global
+`mainland`: Within the Chinese mainland
+`overseas`: Outside the Chinese mainland
+`global`: Globe
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;
 
                     /**
                      * Prefetch task update time
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

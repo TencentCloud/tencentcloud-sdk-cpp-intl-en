@@ -137,14 +137,14 @@ You must specify either a task ID or a starting time.
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Limit on paged queries. Default value: 20
-                     * @return Limit Limit on paged queries. Default value: 20
+                     * 获取Limit on paginated queries. Default value: 20
+                     * @return Limit Limit on paginated queries. Default value: 20
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Limit on paged queries. Default value: 20
-                     * @param Limit Limit on paged queries. Default value: 20
+                     * 设置Limit on paginated queries. Default value: 20
+                     * @param Limit Limit on paginated queries. Default value: 20
                      */
                     void SetLimit(const int64_t& _limit);
 
@@ -156,25 +156,25 @@ You must specify either a task ID or a starting time.
 
                     /**
                      * 获取Specifies a region for your query:
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
-`global`: global
+`mainland`: Chinese mainland
+`overseas`: Outside the Chinese mainland
+`global`: Globe
                      * @return Area Specifies a region for your query:
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
-`global`: global
+`mainland`: Chinese mainland
+`overseas`: Outside the Chinese mainland
+`global`: Globe
                      */
                     std::string GetArea() const;
 
                     /**
                      * 设置Specifies a region for your query:
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
-`global`: global
+`mainland`: Chinese mainland
+`overseas`: Outside the Chinese mainland
+`global`: Globe
                      * @param Area Specifies a region for your query:
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
-`global`: global
+`mainland`: Chinese mainland
+`overseas`: Outside the Chinese mainland
+`global`: Globe
                      */
                     void SetArea(const std::string& _area);
 
@@ -186,29 +186,29 @@ You must specify either a task ID or a starting time.
 
                     /**
                      * 获取Queries the status of a specified task
-`fail`: prefetch failed
-`done`: prefetch succeeded
-`process`: prefetch in progress
-`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
+`fail`: Prefetch failed
+`done`: Prefetch succeeded
+`process`: Prefetch in progress
+`invalid`: Invalid prefetch with 4XX/5XX status code returned from the origin server
                      * @return Status Queries the status of a specified task
-`fail`: prefetch failed
-`done`: prefetch succeeded
-`process`: prefetch in progress
-`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
+`fail`: Prefetch failed
+`done`: Prefetch succeeded
+`process`: Prefetch in progress
+`invalid`: Invalid prefetch with 4XX/5XX status code returned from the origin server
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Queries the status of a specified task
-`fail`: prefetch failed
-`done`: prefetch succeeded
-`process`: prefetch in progress
-`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
+`fail`: Prefetch failed
+`done`: Prefetch succeeded
+`process`: Prefetch in progress
+`invalid`: Invalid prefetch with 4XX/5XX status code returned from the origin server
                      * @param Status Queries the status of a specified task
-`fail`: prefetch failed
-`done`: prefetch succeeded
-`process`: prefetch in progress
-`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
+`fail`: Prefetch failed
+`done`: Prefetch succeeded
+`process`: Prefetch in progress
+`invalid`: Invalid prefetch with 4XX/5XX status code returned from the origin server
                      */
                     void SetStatus(const std::string& _status);
 
@@ -252,26 +252,26 @@ You must specify either a task ID or a starting time.
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Limit on paged queries. Default value: 20
+                     * Limit on paginated queries. Default value: 20
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
                      * Specifies a region for your query:
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
-`global`: global
+`mainland`: Chinese mainland
+`overseas`: Outside the Chinese mainland
+`global`: Globe
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;
 
                     /**
                      * Queries the status of a specified task
-`fail`: prefetch failed
-`done`: prefetch succeeded
-`process`: prefetch in progress
-`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
+`fail`: Prefetch failed
+`done`: Prefetch succeeded
+`process`: Prefetch in progress
+`invalid`: Invalid prefetch with 4XX/5XX status code returned from the origin server
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

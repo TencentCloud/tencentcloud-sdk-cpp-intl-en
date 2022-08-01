@@ -49,20 +49,20 @@ namespace TencentCloud
                     /**
                      * 获取Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
 
-* WebSocket is now only available for beta users. To use it, please submit a ticket.
+* WebSocket is an ECDN feature. You can enable it in the ECDN domain name configuration.
                      * @return Switch Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
 
-* WebSocket is now only available for beta users. To use it, please submit a ticket.
+* WebSocket is an ECDN feature. You can enable it in the ECDN domain name configuration.
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
 
-* WebSocket is now only available for beta users. To use it, please submit a ticket.
+* WebSocket is an ECDN feature. You can enable it in the ECDN domain name configuration.
                      * @param Switch Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
 
-* WebSocket is now only available for beta users. To use it, please submit a ticket.
+* WebSocket is an ECDN feature. You can enable it in the ECDN domain name configuration.
                      */
                     void SetSwitch(const std::string& _switch);
 
@@ -73,17 +73,17 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Sets the timeout period in seconds. Maximum value: 65.
+                     * 获取Sets timeout period in seconds. Maximum value: 300
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Timeout Sets the timeout period in seconds. Maximum value: 65.
+                     * @return Timeout Sets timeout period in seconds. Maximum value: 300
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     int64_t GetTimeout() const;
 
                     /**
-                     * 设置Sets the timeout period in seconds. Maximum value: 65.
+                     * 设置Sets timeout period in seconds. Maximum value: 300
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Timeout Sets the timeout period in seconds. Maximum value: 65.
+                     * @param Timeout Sets timeout period in seconds. Maximum value: 300
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetTimeout(const int64_t& _timeout);
@@ -99,13 +99,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     /**
                      * Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
 
-* WebSocket is now only available for beta users. To use it, please submit a ticket.
+* WebSocket is an ECDN feature. You can enable it in the ECDN domain name configuration.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Sets the timeout period in seconds. Maximum value: 65.
+                     * Sets timeout period in seconds. Maximum value: 300
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     int64_t m_timeout;

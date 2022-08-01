@@ -48,17 +48,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Whether to use `CacheTag` as part of `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Switch Whether to use `CacheTag` as part of `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Whether to use `CacheTag` as part of `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param Switch Whether to use `CacheTag` as part of `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetSwitch(const std::string& _switch);
 
@@ -70,17 +70,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Value of custom `CacheTag`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Value Value of custom `CacheTag`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置Value of custom `CacheTag`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param Value Value of custom `CacheTag`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetValue(const std::string& _value);
 
@@ -94,14 +94,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Whether to use `CacheTag` as part of `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
                      * Value of custom `CacheTag`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;

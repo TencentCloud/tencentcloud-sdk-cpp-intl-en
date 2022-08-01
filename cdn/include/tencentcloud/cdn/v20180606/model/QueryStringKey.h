@@ -48,17 +48,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Whether to use `QueryString` as part of `CacheKey`. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Switch Whether to use `QueryString` as part of `CacheKey`. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Whether to use `QueryString` as part of `CacheKey`. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param Switch Whether to use `QueryString` as part of `CacheKey`. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetSwitch(const std::string& _switch);
 
@@ -70,17 +70,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Whether to sort again
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Reorder Whether to sort again
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetReorder() const;
 
                     /**
                      * 设置Whether to sort again
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param Reorder Whether to sort again
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetReorder(const std::string& _reorder);
 
@@ -92,17 +92,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Include/exclude query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeAll`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Action Include/exclude query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeAll`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetAction() const;
 
                     /**
                      * 设置Include/exclude query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeAll`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param Action Include/exclude query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeAll`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetAction(const std::string& _action);
 
@@ -113,18 +113,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取Array of included/excluded URL parameters (separated by ';')
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Value Array of included/excluded URL parameters (separated by ';')
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Array of included/excluded query strings (separated by ';')
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return Value Array of included/excluded query strings (separated by ';')
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置Array of included/excluded URL parameters (separated by ';')
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Value Array of included/excluded URL parameters (separated by ';')
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Array of included/excluded query strings (separated by ';')
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param Value Array of included/excluded query strings (separated by ';')
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetValue(const std::string& _value);
 
@@ -138,28 +138,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Whether to use `QueryString` as part of `CacheKey`. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
                      * Whether to sort again
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_reorder;
                     bool m_reorderHasBeenSet;
 
                     /**
                      * Include/exclude query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeAll`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
 
                     /**
-                     * Array of included/excluded URL parameters (separated by ';')
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Array of included/excluded query strings (separated by ';')
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;

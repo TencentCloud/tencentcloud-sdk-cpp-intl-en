@@ -48,21 +48,21 @@ namespace TencentCloud
 
                     /**
                      * 获取Origin server header cache switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      * @return Switch Origin server header cache switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Origin server header cache switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      * @param Switch Origin server header cache switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      */
                     void SetSwitch(const std::string& _switch);
 
@@ -76,8 +76,8 @@ off: disabled
 
                     /**
                      * Origin server header cache switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

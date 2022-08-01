@@ -52,24 +52,24 @@ namespace TencentCloud
 
                     /**
                      * 获取Hotlink protection configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 When this is enabled, one mode needs to be configured. Other modes need to be set to null.
                      * @return Switch Hotlink protection configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 When this is enabled, one mode needs to be configured. Other modes need to be set to null.
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Hotlink protection configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 When this is enabled, one mode needs to be configured. Other modes need to be set to null.
                      * @param Switch Hotlink protection configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 When this is enabled, one mode needs to be configured. Other modes need to be set to null.
                      */
                     void SetSwitch(const std::string& _switch);
@@ -82,17 +82,17 @@ When this is enabled, one mode needs to be configured. Other modes need to be se
 
                     /**
                      * 获取Timestamp hotlink protection mode A configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return TypeA Timestamp hotlink protection mode A configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     AuthenticationTypeA GetTypeA() const;
 
                     /**
                      * 设置Timestamp hotlink protection mode A configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param TypeA Timestamp hotlink protection mode A configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetTypeA(const AuthenticationTypeA& _typeA);
 
@@ -104,17 +104,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Timestamp hotlink protection mode B configuration (mode B is being upgraded and is currently not supported)
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return TypeB Timestamp hotlink protection mode B configuration (mode B is being upgraded and is currently not supported)
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     AuthenticationTypeB GetTypeB() const;
 
                     /**
                      * 设置Timestamp hotlink protection mode B configuration (mode B is being upgraded and is currently not supported)
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param TypeB Timestamp hotlink protection mode B configuration (mode B is being upgraded and is currently not supported)
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetTypeB(const AuthenticationTypeB& _typeB);
 
@@ -126,17 +126,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Timestamp hotlink protection mode C configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return TypeC Timestamp hotlink protection mode C configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     AuthenticationTypeC GetTypeC() const;
 
                     /**
                      * 设置Timestamp hotlink protection mode C configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param TypeC Timestamp hotlink protection mode C configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetTypeC(const AuthenticationTypeC& _typeC);
 
@@ -148,17 +148,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Timestamp hotlink protection mode D configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return TypeD Timestamp hotlink protection mode D configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     AuthenticationTypeD GetTypeD() const;
 
                     /**
                      * 设置Timestamp hotlink protection mode D configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param TypeD Timestamp hotlink protection mode D configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetTypeD(const AuthenticationTypeD& _typeD);
 
@@ -172,8 +172,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Hotlink protection configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 When this is enabled, one mode needs to be configured. Other modes need to be set to null.
                      */
                     std::string m_switch;
@@ -181,28 +181,28 @@ When this is enabled, one mode needs to be configured. Other modes need to be se
 
                     /**
                      * Timestamp hotlink protection mode A configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     AuthenticationTypeA m_typeA;
                     bool m_typeAHasBeenSet;
 
                     /**
                      * Timestamp hotlink protection mode B configuration (mode B is being upgraded and is currently not supported)
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     AuthenticationTypeB m_typeB;
                     bool m_typeBHasBeenSet;
 
                     /**
                      * Timestamp hotlink protection mode C configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     AuthenticationTypeC m_typeC;
                     bool m_typeCHasBeenSet;
 
                     /**
                      * Timestamp hotlink protection mode D configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     AuthenticationTypeD m_typeD;
                     bool m_typeDHasBeenSet;

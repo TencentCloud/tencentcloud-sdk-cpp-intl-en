@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mps/v20190612/model/WorkflowTask.h>
 #include <tencentcloud/mps/v20190612/model/EditMediaTask.h>
+#include <tencentcloud/mps/v20190612/model/ScheduleTask.h>
 
 
 namespace TencentCloud
@@ -46,10 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Supported event type. Valid values:
-<li>WorkflowTask: Video workflow processing task.</li>
-                     * @return EventType Supported event type. Valid values:
-<li>WorkflowTask: Video workflow processing task.</li>
+                     * 获取The event type. Valid values:
+<li>WorkflowTask</li>
+<li>EditMediaTask</li>
+<li>ScheduleTask (scheme)</li>
+                     * @return EventType The event type. Valid values:
+<li>WorkflowTask</li>
+<li>EditMediaTask</li>
+<li>ScheduleTask (scheme)</li>
                      */
                     std::string GetEventType() const;
 
@@ -109,11 +114,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool SessionContextHasBeenSet() const;
 
+                    /**
+                     * 获取The information of a scheme. This parameter is valid only if `TaskType` is `ScheduleTask`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ScheduleTaskEvent The information of a scheme. This parameter is valid only if `TaskType` is `ScheduleTask`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    ScheduleTask GetScheduleTaskEvent() const;
+
+                    /**
+                     * 判断参数 ScheduleTaskEvent 是否已赋值
+                     * @return ScheduleTaskEvent 是否已赋值
+                     */
+                    bool ScheduleTaskEventHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Supported event type. Valid values:
-<li>WorkflowTask: Video workflow processing task.</li>
+                     * The event type. Valid values:
+<li>WorkflowTask</li>
+<li>EditMediaTask</li>
+<li>ScheduleTask (scheme)</li>
                      */
                     std::string m_eventType;
                     bool m_eventTypeHasBeenSet;
@@ -142,6 +163,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;
+
+                    /**
+                     * The information of a scheme. This parameter is valid only if `TaskType` is `ScheduleTask`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    ScheduleTask m_scheduleTaskEvent;
+                    bool m_scheduleTaskEventHasBeenSet;
 
                 };
             }

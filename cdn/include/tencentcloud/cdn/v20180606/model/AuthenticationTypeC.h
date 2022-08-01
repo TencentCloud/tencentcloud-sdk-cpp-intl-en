@@ -38,7 +38,7 @@ namespace TencentCloud
                 * Timestamp hotlink protection mode C configuration
 The access URL format of timestamp hotlink protection mode C is as follows: http://DomainName/md5hash/timestamp/FileName
 Here, timestamp is a hexadecimal timestamp in Unix format;
-md5hash: MD5 (custom key + file path + timestamp)
+`md5hash`: MD5 (custom key + file path + timestamp)
                 */
                 class AuthenticationTypeC : public AbstractModel
                 {
@@ -51,21 +51,21 @@ md5hash: MD5 (custom key + file path + timestamp)
 
                     /**
                      * 获取The key for signature calculation
-Only digits, upper and lower-case letters are allowed. Length limit: 6-32 characters.
-Note: this field may return null, indicating that no valid values can be obtained.
+6-32 characters. Only digits and letters are allowed. 
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return SecretKey The key for signature calculation
-Only digits, upper and lower-case letters are allowed. Length limit: 6-32 characters.
-Note: this field may return null, indicating that no valid values can be obtained.
+6-32 characters. Only digits and letters are allowed. 
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetSecretKey() const;
 
                     /**
                      * 设置The key for signature calculation
-Only digits, upper and lower-case letters are allowed. Length limit: 6-32 characters.
-Note: this field may return null, indicating that no valid values can be obtained.
+6-32 characters. Only digits and letters are allowed. 
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @param SecretKey The key for signature calculation
-Only digits, upper and lower-case letters are allowed. Length limit: 6-32 characters.
-Note: this field may return null, indicating that no valid values can be obtained.
+6-32 characters. Only digits and letters are allowed. 
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetSecretKey(const std::string& _secretKey);
 
@@ -120,18 +120,18 @@ If it contains an asterisk (*), this indicates all files.
                     bool FileExtensionsHasBeenSet() const;
 
                     /**
-                     * 获取allowlist: indicates that all file types apart from the FileExtensions list are authenticated
-blacklist: indicates that only the file types in the FileExtensions list are authenticated
-                     * @return FilterType allowlist: indicates that all file types apart from the FileExtensions list are authenticated
-blacklist: indicates that only the file types in the FileExtensions list are authenticated
+                     * 获取`whitelist`: All file types apart from the FileExtensions list are authenticated.
+`blacklist`: Only the file types in the FileExtensions list are authenticated.
+                     * @return FilterType `whitelist`: All file types apart from the FileExtensions list are authenticated.
+`blacklist`: Only the file types in the FileExtensions list are authenticated.
                      */
                     std::string GetFilterType() const;
 
                     /**
-                     * 设置allowlist: indicates that all file types apart from the FileExtensions list are authenticated
-blacklist: indicates that only the file types in the FileExtensions list are authenticated
-                     * @param FilterType allowlist: indicates that all file types apart from the FileExtensions list are authenticated
-blacklist: indicates that only the file types in the FileExtensions list are authenticated
+                     * 设置`whitelist`: All file types apart from the FileExtensions list are authenticated.
+`blacklist`: Only the file types in the FileExtensions list are authenticated.
+                     * @param FilterType `whitelist`: All file types apart from the FileExtensions list are authenticated.
+`blacklist`: Only the file types in the FileExtensions list are authenticated.
                      */
                     void SetFilterType(const std::string& _filterType);
 
@@ -143,25 +143,25 @@ blacklist: indicates that only the file types in the FileExtensions list are aut
 
                     /**
                      * 获取Timestamp settings
-dec: decimal
-hex: hexadecimal
-Note: this field may return `null`, indicating that no valid value is obtained.
+`dec`: Decimal
+`hex`: Hexadecimal
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return TimeFormat Timestamp settings
-dec: decimal
-hex: hexadecimal
-Note: this field may return `null`, indicating that no valid value is obtained.
+`dec`: Decimal
+`hex`: Hexadecimal
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetTimeFormat() const;
 
                     /**
                      * 设置Timestamp settings
-dec: decimal
-hex: hexadecimal
-Note: this field may return `null`, indicating that no valid value is obtained.
+`dec`: Decimal
+`hex`: Hexadecimal
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param TimeFormat Timestamp settings
-dec: decimal
-hex: hexadecimal
-Note: this field may return `null`, indicating that no valid value is obtained.
+`dec`: Decimal
+`hex`: Hexadecimal
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetTimeFormat(const std::string& _timeFormat);
 
@@ -174,20 +174,20 @@ Note: this field may return `null`, indicating that no valid value is obtained.
                     /**
                      * 获取Backup key, which is used to calculate a signature.
 6-32 characters. Only digits and letters are allowed. 
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return BackupSecretKey Backup key, which is used to calculate a signature.
 6-32 characters. Only digits and letters are allowed. 
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetBackupSecretKey() const;
 
                     /**
                      * 设置Backup key, which is used to calculate a signature.
 6-32 characters. Only digits and letters are allowed. 
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param BackupSecretKey Backup key, which is used to calculate a signature.
 6-32 characters. Only digits and letters are allowed. 
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetBackupSecretKey(const std::string& _backupSecretKey);
 
@@ -201,8 +201,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * The key for signature calculation
-Only digits, upper and lower-case letters are allowed. Length limit: 6-32 characters.
-Note: this field may return null, indicating that no valid values can be obtained.
+6-32 characters. Only digits and letters are allowed. 
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_secretKey;
                     bool m_secretKeyHasBeenSet;
@@ -222,17 +222,17 @@ If it contains an asterisk (*), this indicates all files.
                     bool m_fileExtensionsHasBeenSet;
 
                     /**
-                     * allowlist: indicates that all file types apart from the FileExtensions list are authenticated
-blacklist: indicates that only the file types in the FileExtensions list are authenticated
+                     * `whitelist`: All file types apart from the FileExtensions list are authenticated.
+`blacklist`: Only the file types in the FileExtensions list are authenticated.
                      */
                     std::string m_filterType;
                     bool m_filterTypeHasBeenSet;
 
                     /**
                      * Timestamp settings
-dec: decimal
-hex: hexadecimal
-Note: this field may return `null`, indicating that no valid value is obtained.
+`dec`: Decimal
+`hex`: Hexadecimal
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_timeFormat;
                     bool m_timeFormatHasBeenSet;
@@ -240,7 +240,7 @@ Note: this field may return `null`, indicating that no valid value is obtained.
                     /**
                      * Backup key, which is used to calculate a signature.
 6-32 characters. Only digits and letters are allowed. 
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_backupSecretKey;
                     bool m_backupSecretKeyHasBeenSet;

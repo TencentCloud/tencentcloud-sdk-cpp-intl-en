@@ -49,21 +49,21 @@ namespace TencentCloud
 
                     /**
                      * 获取Custom response header switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      * @return Switch Custom response header switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Custom response header switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      * @param Switch Custom response header switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      */
                     void SetSwitch(const std::string& _switch);
 
@@ -75,17 +75,17 @@ off: disabled
 
                     /**
                      * 获取Custom response header rules
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return HeaderRules Custom response header rules
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<HttpHeaderPathRule> GetHeaderRules() const;
 
                     /**
                      * 设置Custom response header rules
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param HeaderRules Custom response header rules
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetHeaderRules(const std::vector<HttpHeaderPathRule>& _headerRules);
 
@@ -99,15 +99,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Custom response header switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
                      * Custom response header rules
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<HttpHeaderPathRule> m_headerRules;
                     bool m_headerRulesHasBeenSet;

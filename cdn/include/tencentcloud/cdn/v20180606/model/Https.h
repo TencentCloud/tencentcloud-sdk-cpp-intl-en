@@ -51,25 +51,25 @@ namespace TencentCloud
 
                     /**
                      * 获取HTTPS configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Switch HTTPS configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置HTTPS configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @param Switch HTTPS configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetSwitch(const std::string& _switch);
 
@@ -81,29 +81,29 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取HTTP2 configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Http2 HTTP2 configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetHttp2() const;
 
                     /**
                      * 设置HTTP2 configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param Http2 HTTP2 configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetHttp2(const std::string& _http2);
 
@@ -115,29 +115,29 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取OCSP configuration switch
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return OcspStapling OCSP configuration switch
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetOcspStapling() const;
 
                     /**
                      * 设置OCSP configuration switch
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param OcspStapling OCSP configuration switch
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetOcspStapling(const std::string& _ocspStapling);
 
@@ -149,29 +149,29 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Client certificate authentication feature
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 This is disabled by default. The client certificate information is needed when enabled. This is still in beta and not generally available yet.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return VerifyClient Client certificate authentication feature
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 This is disabled by default. The client certificate information is needed when enabled. This is still in beta and not generally available yet.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetVerifyClient() const;
 
                     /**
                      * 设置Client certificate authentication feature
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 This is disabled by default. The client certificate information is needed when enabled. This is still in beta and not generally available yet.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param VerifyClient Client certificate authentication feature
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 This is disabled by default. The client certificate information is needed when enabled. This is still in beta and not generally available yet.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetVerifyClient(const std::string& _verifyClient);
 
@@ -183,17 +183,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Server certificate configuration information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return CertInfo Server certificate configuration information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     ServerCert GetCertInfo() const;
 
                     /**
                      * 设置Server certificate configuration information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param CertInfo Server certificate configuration information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetCertInfo(const ServerCert& _certInfo);
 
@@ -205,17 +205,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Client certificate configuration information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ClientCertInfo Client certificate configuration information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     ClientCert GetClientCertInfo() const;
 
                     /**
                      * 设置Client certificate configuration information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param ClientCertInfo Client certificate configuration information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetClientCertInfo(const ClientCert& _clientCertInfo);
 
@@ -227,29 +227,29 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Spdy configuration switch
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Spdy Spdy configuration switch
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetSpdy() const;
 
                     /**
                      * 设置Spdy configuration switch
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param Spdy Spdy configuration switch
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetSpdy(const std::string& _spdy);
 
@@ -265,13 +265,13 @@ closed: already closed
 deploying: in deployment
 deployed: successfully deployed
 failed: deployment failed
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return SslStatus HTTPS certificate deployment status
 closed: already closed
 deploying: in deployment
 deployed: successfully deployed
 failed: deployment failed
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetSslStatus() const;
 
@@ -281,13 +281,13 @@ closed: already closed
 deploying: in deployment
 deployed: successfully deployed
 failed: deployment failed
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param SslStatus HTTPS certificate deployment status
 closed: already closed
 deploying: in deployment
 deployed: successfully deployed
 failed: deployment failed
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetSslStatus(const std::string& _sslStatus);
 
@@ -299,13 +299,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取HSTS configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Hsts HSTS configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     Hsts GetHsts() const;
 
                     /**
                      * 设置HSTS configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param Hsts HSTS configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetHsts(const Hsts& _hsts);
 
@@ -317,17 +321,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return TlsVersion TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<std::string> GetTlsVersion() const;
 
                     /**
                      * 设置TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param TlsVersion TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetTlsVersion(const std::vector<std::string>& _tlsVersion);
 
@@ -341,63 +345,63 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * HTTPS configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
                      * HTTP2 configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_http2;
                     bool m_http2HasBeenSet;
 
                     /**
                      * OCSP configuration switch
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_ocspStapling;
                     bool m_ocspStaplingHasBeenSet;
 
                     /**
                      * Client certificate authentication feature
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 This is disabled by default. The client certificate information is needed when enabled. This is still in beta and not generally available yet.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_verifyClient;
                     bool m_verifyClientHasBeenSet;
 
                     /**
                      * Server certificate configuration information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     ServerCert m_certInfo;
                     bool m_certInfoHasBeenSet;
 
                     /**
                      * Client certificate configuration information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     ClientCert m_clientCertInfo;
                     bool m_clientCertInfoHasBeenSet;
 
                     /**
                      * Spdy configuration switch
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_spdy;
                     bool m_spdyHasBeenSet;
@@ -408,20 +412,21 @@ closed: already closed
 deploying: in deployment
 deployed: successfully deployed
 failed: deployment failed
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_sslStatus;
                     bool m_sslStatusHasBeenSet;
 
                     /**
                      * HSTS configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     Hsts m_hsts;
                     bool m_hstsHasBeenSet;
 
                     /**
                      * TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<std::string> m_tlsVersion;
                     bool m_tlsVersionHasBeenSet;

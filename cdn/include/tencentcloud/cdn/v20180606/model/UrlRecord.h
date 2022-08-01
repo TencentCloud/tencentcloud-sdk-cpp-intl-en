@@ -47,18 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Status (disable: blocked; enable: unblocked)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status Status (disable: blocked; enable: unblocked)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Status. `disable`: Blocked; `enable`: Unblocked.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return Status Status. `disable`: Blocked; `enable`: Unblocked.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Status (disable: blocked; enable: unblocked)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Status Status (disable: blocked; enable: unblocked)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Status. `disable`: Blocked; `enable`: Unblocked.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param Status Status. `disable`: Blocked; `enable`: Unblocked.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetStatus(const std::string& _status);
 
@@ -70,17 +70,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Corresponding URL
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return RealUrl Corresponding URL
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetRealUrl() const;
 
                     /**
                      * 设置Corresponding URL
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param RealUrl Corresponding URL
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetRealUrl(const std::string& _realUrl);
 
@@ -92,17 +92,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetCreateTime(const std::string& _createTime);
 
@@ -113,18 +113,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Update time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UpdateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Update time.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return UpdateTime Update time.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Update time
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param UpdateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Update time.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param UpdateTime Update time.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
@@ -137,29 +137,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Status (disable: blocked; enable: unblocked)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Status. `disable`: Blocked; `enable`: Unblocked.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
                      * Corresponding URL
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_realUrl;
                     bool m_realUrlHasBeenSet;
 
                     /**
                      * Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Update time
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Update time.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

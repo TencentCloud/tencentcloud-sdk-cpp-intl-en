@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cls/v20201016/model/AlarmAnalysisConfig.h>
 
 
 namespace TencentCloud
@@ -65,14 +66,14 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Analysis type. Valid values: `query`, `field`
-                     * @return Type Analysis type. Valid values: `query`, `field`
+                     * 获取Type of data being analyzed. Valid values: `query`; `field`; `original`
+                     * @return Type Type of data being analyzed. Valid values: `query`; `field`; `original`
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Analysis type. Valid values: `query`, `field`
-                     * @param Type Analysis type. Valid values: `query`, `field`
+                     * 设置Type of data being analyzed. Valid values: `query`; `field`; `original`
+                     * @param Type Type of data being analyzed. Valid values: `query`; `field`; `original`
                      */
                     void SetType(const std::string& _type);
 
@@ -100,6 +101,24 @@ namespace TencentCloud
                      */
                     bool ContentHasBeenSet() const;
 
+                    /**
+                     * 获取Configuration
+                     * @return ConfigInfo Configuration
+                     */
+                    std::vector<AlarmAnalysisConfig> GetConfigInfo() const;
+
+                    /**
+                     * 设置Configuration
+                     * @param ConfigInfo Configuration
+                     */
+                    void SetConfigInfo(const std::vector<AlarmAnalysisConfig>& _configInfo);
+
+                    /**
+                     * 判断参数 ConfigInfo 是否已赋值
+                     * @return ConfigInfo 是否已赋值
+                     */
+                    bool ConfigInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -109,7 +128,7 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Analysis type. Valid values: `query`, `field`
+                     * Type of data being analyzed. Valid values: `query`; `field`; `original`
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -119,6 +138,12 @@ namespace TencentCloud
                      */
                     std::string m_content;
                     bool m_contentHasBeenSet;
+
+                    /**
+                     * Configuration
+                     */
+                    std::vector<AlarmAnalysisConfig> m_configInfo;
+                    bool m_configInfoHasBeenSet;
 
                 };
             }

@@ -73,14 +73,14 @@ namespace TencentCloud
                     bool RedirectCodeHasBeenSet() const;
 
                     /**
-                     * 获取Redirection URL
-                     * @return RedirectUrl Redirection URL
+                     * 获取URL to be redirected
+                     * @return RedirectUrl URL to be redirected
                      */
                     std::string GetRedirectUrl() const;
 
                     /**
-                     * 设置Redirection URL
-                     * @param RedirectUrl Redirection URL
+                     * 设置URL to be redirected
+                     * @param RedirectUrl URL to be redirected
                      */
                     void SetRedirectUrl(const std::string& _redirectUrl);
 
@@ -101,7 +101,7 @@ namespace TencentCloud
                     bool m_redirectCodeHasBeenSet;
 
                     /**
-                     * Redirection URL
+                     * URL to be redirected
                      */
                     std::string m_redirectUrl;
                     bool m_redirectUrlHasBeenSet;

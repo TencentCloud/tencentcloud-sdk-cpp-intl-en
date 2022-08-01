@@ -24,6 +24,8 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/sqlserver/v20180328/model/CrossBackupAddr.h>
+#include <tencentcloud/sqlserver/v20180328/model/CrossRegionStatus.h>
 
 
 namespace TencentCloud
@@ -298,6 +300,60 @@ namespace TencentCloud
                      */
                     bool BackupFormatHasBeenSet() const;
 
+                    /**
+                     * 获取The code of current region where the instance resides
+                     * @return Region The code of current region where the instance resides
+                     */
+                    std::string GetRegion() const;
+
+                    /**
+                     * 设置The code of current region where the instance resides
+                     * @param Region The code of current region where the instance resides
+                     */
+                    void SetRegion(const std::string& _region);
+
+                    /**
+                     * 判断参数 Region 是否已赋值
+                     * @return Region 是否已赋值
+                     */
+                    bool RegionHasBeenSet() const;
+
+                    /**
+                     * 获取The download address of cross-region backup in target region
+                     * @return CrossBackupAddr The download address of cross-region backup in target region
+                     */
+                    std::vector<CrossBackupAddr> GetCrossBackupAddr() const;
+
+                    /**
+                     * 设置The download address of cross-region backup in target region
+                     * @param CrossBackupAddr The download address of cross-region backup in target region
+                     */
+                    void SetCrossBackupAddr(const std::vector<CrossBackupAddr>& _crossBackupAddr);
+
+                    /**
+                     * 判断参数 CrossBackupAddr 是否已赋值
+                     * @return CrossBackupAddr 是否已赋值
+                     */
+                    bool CrossBackupAddrHasBeenSet() const;
+
+                    /**
+                     * 获取The target region and status of cross-region backup
+                     * @return CrossBackupStatus The target region and status of cross-region backup
+                     */
+                    std::vector<CrossRegionStatus> GetCrossBackupStatus() const;
+
+                    /**
+                     * 设置The target region and status of cross-region backup
+                     * @param CrossBackupStatus The target region and status of cross-region backup
+                     */
+                    void SetCrossBackupStatus(const std::vector<CrossRegionStatus>& _crossBackupStatus);
+
+                    /**
+                     * 判断参数 CrossBackupStatus 是否已赋值
+                     * @return CrossBackupStatus 是否已赋值
+                     */
+                    bool CrossBackupStatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -383,6 +439,24 @@ namespace TencentCloud
                      */
                     std::string m_backupFormat;
                     bool m_backupFormatHasBeenSet;
+
+                    /**
+                     * The code of current region where the instance resides
+                     */
+                    std::string m_region;
+                    bool m_regionHasBeenSet;
+
+                    /**
+                     * The download address of cross-region backup in target region
+                     */
+                    std::vector<CrossBackupAddr> m_crossBackupAddr;
+                    bool m_crossBackupAddrHasBeenSet;
+
+                    /**
+                     * The target region and status of cross-region backup
+                     */
+                    std::vector<CrossRegionStatus> m_crossBackupStatus;
+                    bool m_crossBackupStatusHasBeenSet;
 
                 };
             }

@@ -114,14 +114,14 @@ unknown: unknown node location
                     bool LocationHasBeenSet() const;
 
                     /**
-                     * 获取Node activation and deactivation history
-                     * @return History Node activation and deactivation history
+                     * 获取Activation and deactivation history of the node.
+                     * @return History Activation and deactivation history of the node.
                      */
                     std::vector<CdnIpHistory> GetHistory() const;
 
                     /**
-                     * 设置Node activation and deactivation history
-                     * @param History Node activation and deactivation history
+                     * 设置Activation and deactivation history of the node.
+                     * @param History Activation and deactivation history of the node.
                      */
                     void SetHistory(const std::vector<CdnIpHistory>& _history);
 
@@ -133,25 +133,25 @@ unknown: unknown node location
 
                     /**
                      * 获取Node region
-mainland: cache node in Mainland China
-overseas: cache node outside Mainland China
-unknown: service region unknown
+`mainland`: Acceleration nodes inside the Chinese mainland
+`overseas`: Acceleration nodes outside the Chinese mainland
+`unknown`: Service region unknown
                      * @return Area Node region
-mainland: cache node in Mainland China
-overseas: cache node outside Mainland China
-unknown: service region unknown
+`mainland`: Acceleration nodes inside the Chinese mainland
+`overseas`: Acceleration nodes outside the Chinese mainland
+`unknown`: Service region unknown
                      */
                     std::string GetArea() const;
 
                     /**
                      * 设置Node region
-mainland: cache node in Mainland China
-overseas: cache node outside Mainland China
-unknown: service region unknown
+`mainland`: Acceleration nodes inside the Chinese mainland
+`overseas`: Acceleration nodes outside the Chinese mainland
+`unknown`: Service region unknown
                      * @param Area Node region
-mainland: cache node in Mainland China
-overseas: cache node outside Mainland China
-unknown: service region unknown
+`mainland`: Acceleration nodes inside the Chinese mainland
+`overseas`: Acceleration nodes outside the Chinese mainland
+`unknown`: Service region unknown
                      */
                     void SetArea(const std::string& _area);
 
@@ -162,18 +162,18 @@ unknown: service region unknown
                     bool AreaHasBeenSet() const;
 
                     /**
-                     * 获取City where the node resides
-Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @return City City where the node resides
-Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 获取City where the nodes reside
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return City City where the nodes reside
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetCity() const;
 
                     /**
-                     * 设置City where the node resides
-Note: this field may return `null`, indicating that no valid value is obtained.
-                     * @param City City where the node resides
-Note: this field may return `null`, indicating that no valid value is obtained.
+                     * 设置City where the nodes reside
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param City City where the nodes reside
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetCity(const std::string& _city);
 
@@ -207,23 +207,23 @@ unknown: unknown node location
                     bool m_locationHasBeenSet;
 
                     /**
-                     * Node activation and deactivation history
+                     * Activation and deactivation history of the node.
                      */
                     std::vector<CdnIpHistory> m_history;
                     bool m_historyHasBeenSet;
 
                     /**
                      * Node region
-mainland: cache node in Mainland China
-overseas: cache node outside Mainland China
-unknown: service region unknown
+`mainland`: Acceleration nodes inside the Chinese mainland
+`overseas`: Acceleration nodes outside the Chinese mainland
+`unknown`: Service region unknown
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;
 
                     /**
-                     * City where the node resides
-Note: this field may return `null`, indicating that no valid value is obtained.
+                     * City where the nodes reside
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_city;
                     bool m_cityHasBeenSet;

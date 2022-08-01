@@ -66,17 +66,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Channel
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Channel Channel
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetChannel() const;
 
                     /**
                      * 设置Channel
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @param Channel Channel
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetChannel(const std::string& _channel);
 
@@ -159,14 +159,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool LogsetSavePeriodHasBeenSet() const;
 
                     /**
-                     * 获取Creation date
-                     * @return CreateTime Creation date
+                     * 获取Creation time
+                     * @return CreateTime Creation time
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation date
-                     * @param CreateTime Creation date
+                     * 设置Creation time
+                     * @param CreateTime Creation time
                      */
                     void SetCreateTime(const std::string& _createTime);
 
@@ -196,17 +196,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Whether the logset has been removed from CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Deleted Whether the logset has been removed from CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetDeleted() const;
 
                     /**
                      * 设置Whether the logset has been removed from CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param Deleted Whether the logset has been removed from CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetDeleted(const std::string& _deleted);
 
@@ -218,17 +218,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 获取Whether English is used in this region
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return RegionEn Whether English is used in this region
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetRegionEn() const;
 
                     /**
                      * 设置Whether English is used in this region
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param RegionEn Whether English is used in this region
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetRegionEn(const std::string& _regionEn);
 
@@ -248,7 +248,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * Channel
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_channel;
                     bool m_channelHasBeenSet;
@@ -278,7 +278,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_logsetSavePeriodHasBeenSet;
 
                     /**
-                     * Creation date
+                     * Creation time
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
@@ -291,14 +291,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Whether the logset has been removed from CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_deleted;
                     bool m_deletedHasBeenSet;
 
                     /**
                      * Whether English is used in this region
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_regionEn;
                     bool m_regionEnHasBeenSet;

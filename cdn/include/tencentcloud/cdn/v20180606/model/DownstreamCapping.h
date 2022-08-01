@@ -49,21 +49,21 @@ namespace TencentCloud
 
                     /**
                      * 获取Downstream speed configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      * @return Switch Downstream speed configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Downstream speed configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      * @param Switch Downstream speed configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      */
                     void SetSwitch(const std::string& _switch);
 
@@ -75,17 +75,17 @@ off: disabled
 
                     /**
                      * 获取Downstream speed limiting rules
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return CappingRules Downstream speed limiting rules
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<CappingRule> GetCappingRules() const;
 
                     /**
                      * 设置Downstream speed limiting rules
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param CappingRules Downstream speed limiting rules
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetCappingRules(const std::vector<CappingRule>& _cappingRules);
 
@@ -99,15 +99,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Downstream speed configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
                      * Downstream speed limiting rules
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<CappingRule> m_cappingRules;
                     bool m_cappingRulesHasBeenSet;

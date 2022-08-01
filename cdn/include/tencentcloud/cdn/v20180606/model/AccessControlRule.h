@@ -49,20 +49,20 @@ namespace TencentCloud
                     /**
                      * 获取requestHeader: access control over request header
 url: access control over access URL
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return RuleType requestHeader: access control over request header
 url: access control over access URL
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetRuleType() const;
 
                     /**
                      * 设置requestHeader: access control over request header
 url: access control over access URL
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param RuleType requestHeader: access control over request header
 url: access control over access URL
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetRuleType(const std::string& _ruleType);
 
@@ -74,17 +74,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Blocked content
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return RuleContent Blocked content
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetRuleContent() const;
 
                     /**
                      * 设置Blocked content
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param RuleContent Blocked content
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetRuleContent(const std::string& _ruleContent);
 
@@ -97,20 +97,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     /**
                      * 获取on: regular match
 off: exact match
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Regex on: regular match
 off: exact match
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetRegex() const;
 
                     /**
                      * 设置on: regular match
 off: exact match
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param Regex on: regular match
 off: exact match
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetRegex(const std::string& _regex);
 
@@ -122,17 +122,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取This parameter is required only if `RuleType` is `requestHeader`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return RuleHeader This parameter is required only if `RuleType` is `requestHeader`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetRuleHeader() const;
 
                     /**
                      * 设置This parameter is required only if `RuleType` is `requestHeader`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param RuleHeader This parameter is required only if `RuleType` is `requestHeader`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetRuleHeader(const std::string& _ruleHeader);
 
@@ -147,14 +147,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     /**
                      * requestHeader: access control over request header
 url: access control over access URL
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_ruleType;
                     bool m_ruleTypeHasBeenSet;
 
                     /**
                      * Blocked content
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_ruleContent;
                     bool m_ruleContentHasBeenSet;
@@ -162,14 +162,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     /**
                      * on: regular match
 off: exact match
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_regex;
                     bool m_regexHasBeenSet;
 
                     /**
                      * This parameter is required only if `RuleType` is `requestHeader`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_ruleHeader;
                     bool m_ruleHeaderHasBeenSet;

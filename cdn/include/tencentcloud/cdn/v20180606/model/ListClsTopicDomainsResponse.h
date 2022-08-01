@@ -118,9 +118,9 @@ namespace TencentCloud
 
                     /**
                      * 获取Last modified time of log topic
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return UpdateTime Last modified time of log topic
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetUpdateTime() const;
 
@@ -170,7 +170,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Last modified time of log topic
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

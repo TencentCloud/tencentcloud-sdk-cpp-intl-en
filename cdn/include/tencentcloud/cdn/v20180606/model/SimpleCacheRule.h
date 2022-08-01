@@ -48,32 +48,32 @@ namespace TencentCloud
 
                     /**
                      * 获取Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 index: home page
                      * @return CacheType Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 index: home page
                      */
                     std::string GetCacheType() const;
 
                     /**
                      * 设置Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 index: home page
                      * @param CacheType Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 index: home page
                      */
                     void SetCacheType(const std::string& _cacheType);
@@ -85,34 +85,34 @@ index: home page
                     bool CacheTypeHasBeenSet() const;
 
                     /**
-                     * 获取Content for each CacheType:
-Enter `*` for `all`
-Enter an extension for `file`, such as `jpg` or `txt`
-Enter a path for `directory`, such as `/xxx/test`
-Enter an absolute path for `path`, such as `/xxx/test.html`
-Enter `/` for `index`
-                     * @return CacheContents Content for each CacheType:
-Enter `*` for `all`
-Enter an extension for `file`, such as `jpg` or `txt`
-Enter a path for `directory`, such as `/xxx/test`
-Enter an absolute path for `path`, such as `/xxx/test.html`
-Enter `/` for `index`
+                     * 获取Content for each `CacheType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `index`, enter a forward slash `/`.
+                     * @return CacheContents Content for each `CacheType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `index`, enter a forward slash `/`.
                      */
                     std::vector<std::string> GetCacheContents() const;
 
                     /**
-                     * 设置Content for each CacheType:
-Enter `*` for `all`
-Enter an extension for `file`, such as `jpg` or `txt`
-Enter a path for `directory`, such as `/xxx/test`
-Enter an absolute path for `path`, such as `/xxx/test.html`
-Enter `/` for `index`
-                     * @param CacheContents Content for each CacheType:
-Enter `*` for `all`
-Enter an extension for `file`, such as `jpg` or `txt`
-Enter a path for `directory`, such as `/xxx/test`
-Enter an absolute path for `path`, such as `/xxx/test.html`
-Enter `/` for `index`
+                     * 设置Content for each `CacheType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `index`, enter a forward slash `/`.
+                     * @param CacheContents Content for each `CacheType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `index`, enter a forward slash `/`.
                      */
                     void SetCacheContents(const std::vector<std::string>& _cacheContents);
 
@@ -148,22 +148,22 @@ Unit: second. The maximum value is 365 days.
 
                     /**
                      * Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 index: home page
                      */
                     std::string m_cacheType;
                     bool m_cacheTypeHasBeenSet;
 
                     /**
-                     * Content for each CacheType:
-Enter `*` for `all`
-Enter an extension for `file`, such as `jpg` or `txt`
-Enter a path for `directory`, such as `/xxx/test`
-Enter an absolute path for `path`, such as `/xxx/test.html`
-Enter `/` for `index`
+                     * Content for each `CacheType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `index`, enter a forward slash `/`.
                      */
                     std::vector<std::string> m_cacheContents;
                     bool m_cacheContentsHasBeenSet;

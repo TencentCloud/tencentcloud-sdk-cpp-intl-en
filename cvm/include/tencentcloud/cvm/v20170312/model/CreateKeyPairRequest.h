@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cvm/v20170312/model/TagSpecification.h>
 
 
 namespace TencentCloud
@@ -90,6 +91,24 @@ You can query the project IDs in two ways:
                      */
                     bool ProjectIdHasBeenSet() const;
 
+                    /**
+                     * 获取Tag description list. This parameter is used to bind a tag to a key pair.
+                     * @return TagSpecification Tag description list. This parameter is used to bind a tag to a key pair.
+                     */
+                    std::vector<TagSpecification> GetTagSpecification() const;
+
+                    /**
+                     * 设置Tag description list. This parameter is used to bind a tag to a key pair.
+                     * @param TagSpecification Tag description list. This parameter is used to bind a tag to a key pair.
+                     */
+                    void SetTagSpecification(const std::vector<TagSpecification>& _tagSpecification);
+
+                    /**
+                     * 判断参数 TagSpecification 是否已赋值
+                     * @return TagSpecification 是否已赋值
+                     */
+                    bool TagSpecificationHasBeenSet() const;
+
                 private:
 
                     /**
@@ -106,6 +125,12 @@ You can query the project IDs in two ways:
                      */
                     int64_t m_projectId;
                     bool m_projectIdHasBeenSet;
+
+                    /**
+                     * Tag description list. This parameter is used to bind a tag to a key pair.
+                     */
+                    std::vector<TagSpecification> m_tagSpecification;
+                    bool m_tagSpecificationHasBeenSet;
 
                 };
             }

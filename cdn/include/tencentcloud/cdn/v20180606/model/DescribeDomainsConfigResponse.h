@@ -57,9 +57,9 @@ namespace TencentCloud
                     bool DomainsHasBeenSet() const;
 
                     /**
-                     * 获取The number of domain names that matched the query conditions
+                     * 获取Number of domain names that match the specified query conditions
 Used for paginated queries
-                     * @return TotalNumber The number of domain names that matched the query conditions
+                     * @return TotalNumber Number of domain names that match the specified query conditions
 Used for paginated queries
                      */
                     int64_t GetTotalNumber() const;
@@ -79,7 +79,7 @@ Used for paginated queries
                     bool m_domainsHasBeenSet;
 
                     /**
-                     * The number of domain names that matched the query conditions
+                     * Number of domain names that match the specified query conditions
 Used for paginated queries
                      */
                     int64_t m_totalNumber;

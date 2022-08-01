@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Billing region, which can be mainland or overseas.
-                     * @return Area Billing region, which can be mainland or overseas.
+                     * 获取Billing region, which can be `mainland` or `overseas`.
+                     * @return Area Billing region, which can be `mainland` or `overseas`.
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置Billing region, which can be mainland or overseas.
-                     * @param Area Billing region, which can be mainland or overseas.
+                     * 设置Billing region, which can be `mainland` or `overseas`.
+                     * @param Area Billing region, which can be `mainland` or `overseas`.
                      */
                     void SetArea(const std::string& _area);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool AreaHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode, which can be flux or bandwidth.
-                     * @return PayType Billing mode, which can be flux or bandwidth.
+                     * 获取Billing mode, which can be `flux` or `bandwidth`.
+                     * @return PayType Billing mode, which can be `flux` or `bandwidth`.
                      */
                     std::string GetPayType() const;
 
                     /**
-                     * 设置Billing mode, which can be flux or bandwidth.
-                     * @param PayType Billing mode, which can be flux or bandwidth.
+                     * 设置Billing mode, which can be `flux` or `bandwidth`.
+                     * @param PayType Billing mode, which can be `flux` or `bandwidth`.
                      */
                     void SetPayType(const std::string& _payType);
 
@@ -81,13 +81,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Billing region, which can be mainland or overseas.
+                     * Billing region, which can be `mainland` or `overseas`.
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;
 
                     /**
-                     * Billing mode, which can be flux or bandwidth.
+                     * Billing mode, which can be `flux` or `bandwidth`.
                      */
                     std::string m_payType;
                     bool m_payTypeHasBeenSet;

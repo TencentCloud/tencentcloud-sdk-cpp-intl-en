@@ -50,17 +50,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Specific configuration for domain name inside mainland China.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Mainland Specific configuration for domain name inside mainland China.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     MainlandConfig GetMainland() const;
 
                     /**
                      * 设置Specific configuration for domain name inside mainland China.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param Mainland Specific configuration for domain name inside mainland China.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetMainland(const MainlandConfig& _mainland);
 
@@ -72,17 +72,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Specific configuration for domain name outside mainland China.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Overseas Specific configuration for domain name outside mainland China.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     OverseaConfig GetOverseas() const;
 
                     /**
                      * 设置Specific configuration for domain name outside mainland China.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param Overseas Specific configuration for domain name outside mainland China.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetOverseas(const OverseaConfig& _overseas);
 
@@ -96,14 +96,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Specific configuration for domain name inside mainland China.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     MainlandConfig m_mainland;
                     bool m_mainlandHasBeenSet;
 
                     /**
                      * Specific configuration for domain name outside mainland China.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     OverseaConfig m_overseas;
                     bool m_overseasHasBeenSet;

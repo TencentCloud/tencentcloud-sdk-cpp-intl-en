@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * `UserAgent` blocklist/allowlist configuration
+                * `UserAgent` blacklist/whitelist configuration
                 */
                 class UserAgentFilter : public AbstractModel
                 {
@@ -49,17 +49,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Switch. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Switch Switch. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Switch. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param Switch Switch. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetSwitch(const std::string& _switch);
 
@@ -70,18 +70,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取UA blocklist/allowlist effect rule list
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return FilterRules UA blocklist/allowlist effect rule list
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取UA blacklist/whitelist effect rule list
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return FilterRules UA blacklist/whitelist effect rule list
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<UserAgentFilterRule> GetFilterRules() const;
 
                     /**
-                     * 设置UA blocklist/allowlist effect rule list
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param FilterRules UA blocklist/allowlist effect rule list
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置UA blacklist/whitelist effect rule list
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param FilterRules UA blacklist/whitelist effect rule list
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetFilterRules(const std::vector<UserAgentFilterRule>& _filterRules);
 
@@ -95,14 +95,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Switch. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * UA blocklist/allowlist effect rule list
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * UA blacklist/whitelist effect rule list
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<UserAgentFilterRule> m_filterRules;
                     bool m_filterRulesHasBeenSet;

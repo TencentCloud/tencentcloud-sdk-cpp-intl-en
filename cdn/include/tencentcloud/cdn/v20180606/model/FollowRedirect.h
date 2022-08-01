@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cdn/v20180606/model/RedirectConfig.h>
 
 
 namespace TencentCloud
@@ -48,21 +49,21 @@ namespace TencentCloud
 
                     /**
                      * 获取Origin-pull follow-redirect switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      * @return Switch Origin-pull follow-redirect switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Origin-pull follow-redirect switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      * @param Switch Origin-pull follow-redirect switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      */
                     void SetSwitch(const std::string& _switch);
 
@@ -72,15 +73,39 @@ off: disabled
                      */
                     bool SwitchHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return RedirectConfig 
+                     */
+                    RedirectConfig GetRedirectConfig() const;
+
+                    /**
+                     * 设置
+                     * @param RedirectConfig 
+                     */
+                    void SetRedirectConfig(const RedirectConfig& _redirectConfig);
+
+                    /**
+                     * 判断参数 RedirectConfig 是否已赋值
+                     * @return RedirectConfig 是否已赋值
+                     */
+                    bool RedirectConfigHasBeenSet() const;
+
                 private:
 
                     /**
                      * Origin-pull follow-redirect switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    RedirectConfig m_redirectConfig;
+                    bool m_redirectConfigHasBeenSet;
 
                 };
             }

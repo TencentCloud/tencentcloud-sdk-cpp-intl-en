@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Custom HTTPS forwarding configuration
+                * Custom HTTPS configuration for origin-pull
                 */
                 class AdvanceHttps : public AbstractModel
                 {
@@ -71,17 +71,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool CustomTlsStatusHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the TLS version. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
+                     * 获取TLS version settings. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return TlsVersion Specifies the TLS version. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
+                     * @return TlsVersion TLS version settings. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> GetTlsVersion() const;
 
                     /**
-                     * 设置Specifies the TLS version. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
+                     * 设置TLS version settings. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param TlsVersion Specifies the TLS version. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
+                     * @param TlsVersion TLS version settings. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetTlsVersion(const std::vector<std::string>& _tlsVersion);
@@ -115,29 +115,29 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool CipherHasBeenSet() const;
 
                     /**
-                     * 获取Origin authentication type
-`off`: disable authentication
-`oneWay`: authenticate the origin 
-`twoWay`: two-way authentication
+                     * 获取Origin-pull verification status
+`off`: Disables origin-pull verification
+`oneWay`: Only verify the origin
+`twoWay`: Enables two-way origin-pull verification
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return VerifyOriginType Origin authentication type
-`off`: disable authentication
-`oneWay`: authenticate the origin 
-`twoWay`: two-way authentication
+                     * @return VerifyOriginType Origin-pull verification status
+`off`: Disables origin-pull verification
+`oneWay`: Only verify the origin
+`twoWay`: Enables two-way origin-pull verification
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetVerifyOriginType() const;
 
                     /**
-                     * 设置Origin authentication type
-`off`: disable authentication
-`oneWay`: authenticate the origin 
-`twoWay`: two-way authentication
+                     * 设置Origin-pull verification status
+`off`: Disables origin-pull verification
+`oneWay`: Only verify the origin
+`twoWay`: Enables two-way origin-pull verification
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param VerifyOriginType Origin authentication type
-`off`: disable authentication
-`oneWay`: authenticate the origin 
-`twoWay`: two-way authentication
+                     * @param VerifyOriginType Origin-pull verification status
+`off`: Disables origin-pull verification
+`oneWay`: Only verify the origin
+`twoWay`: Enables two-way origin-pull verification
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetVerifyOriginType(const std::string& _verifyOriginType);
@@ -149,17 +149,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool VerifyOriginTypeHasBeenSet() const;
 
                     /**
-                     * 获取Information of the origin-pull certificate
+                     * 获取Configuration information of the origin-pull certificate
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return CertInfo Information of the origin-pull certificate
+                     * @return CertInfo Configuration information of the origin-pull certificate
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     ServerCert GetCertInfo() const;
 
                     /**
-                     * 设置Information of the origin-pull certificate
+                     * 设置Configuration information of the origin-pull certificate
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param CertInfo Information of the origin-pull certificate
+                     * @param CertInfo Configuration information of the origin-pull certificate
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetCertInfo(const ServerCert& _certInfo);
@@ -171,17 +171,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool CertInfoHasBeenSet() const;
 
                     /**
-                     * 获取Information of the origin server certificate
+                     * 获取Configuration information of the origin server certificate
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return OriginCertInfo Information of the origin server certificate
+                     * @return OriginCertInfo Configuration information of the origin server certificate
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     ClientCert GetOriginCertInfo() const;
 
                     /**
-                     * 设置Information of the origin server certificate
+                     * 设置Configuration information of the origin server certificate
 Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param OriginCertInfo Information of the origin server certificate
+                     * @param OriginCertInfo Configuration information of the origin server certificate
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetOriginCertInfo(const ClientCert& _originCertInfo);
@@ -202,7 +202,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_customTlsStatusHasBeenSet;
 
                     /**
-                     * Specifies the TLS version. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
+                     * TLS version settings. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_tlsVersion;
@@ -216,24 +216,24 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_cipherHasBeenSet;
 
                     /**
-                     * Origin authentication type
-`off`: disable authentication
-`oneWay`: authenticate the origin 
-`twoWay`: two-way authentication
+                     * Origin-pull verification status
+`off`: Disables origin-pull verification
+`oneWay`: Only verify the origin
+`twoWay`: Enables two-way origin-pull verification
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_verifyOriginType;
                     bool m_verifyOriginTypeHasBeenSet;
 
                     /**
-                     * Information of the origin-pull certificate
+                     * Configuration information of the origin-pull certificate
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     ServerCert m_certInfo;
                     bool m_certInfoHasBeenSet;
 
                     /**
-                     * Information of the origin server certificate
+                     * Configuration information of the origin server certificate
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     ClientCert m_originCertInfo;

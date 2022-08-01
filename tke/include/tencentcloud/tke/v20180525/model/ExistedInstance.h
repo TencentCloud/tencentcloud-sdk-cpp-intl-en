@@ -350,6 +350,32 @@ Note: This field may return null, indicating that no valid value was found.
                      */
                     bool InstanceChargeTypeHasBeenSet() const;
 
+                    /**
+                     * 获取IPv6 address of the instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return IPv6Addresses IPv6 address of the instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> GetIPv6Addresses() const;
+
+                    /**
+                     * 设置IPv6 address of the instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param IPv6Addresses IPv6 address of the instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetIPv6Addresses(const std::vector<std::string>& _iPv6Addresses);
+
+                    /**
+                     * 判断参数 IPv6Addresses 是否已赋值
+                     * @return IPv6Addresses 是否已赋值
+                     */
+                    bool IPv6AddressesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -448,6 +474,14 @@ Note: This field may return null, indicating that no valid value was found.
                      */
                     std::string m_instanceChargeType;
                     bool m_instanceChargeTypeHasBeenSet;
+
+                    /**
+                     * IPv6 address of the instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_iPv6Addresses;
+                    bool m_iPv6AddressesHasBeenSet;
 
                 };
             }

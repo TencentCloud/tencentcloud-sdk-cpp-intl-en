@@ -49,21 +49,21 @@ namespace TencentCloud
 
                     /**
                      * 获取Range GETs configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      * @return Switch Range GETs configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Range GETs configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      * @param Switch Range GETs configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      */
                     void SetSwitch(const std::string& _switch);
 
@@ -75,17 +75,17 @@ off: disabled
 
                     /**
                      * 获取Range GETs configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return RangeRules Range GETs configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<RangeOriginPullRule> GetRangeRules() const;
 
                     /**
                      * 设置Range GETs configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param RangeRules Range GETs configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetRangeRules(const std::vector<RangeOriginPullRule>& _rangeRules);
 
@@ -99,15 +99,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * Range GETs configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
                      * Range GETs configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<RangeOriginPullRule> m_rangeRules;
                     bool m_rangeRulesHasBeenSet;

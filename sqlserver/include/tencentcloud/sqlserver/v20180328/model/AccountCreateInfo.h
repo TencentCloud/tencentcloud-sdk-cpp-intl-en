@@ -138,14 +138,14 @@ namespace TencentCloud
                     bool IsAdminHasBeenSet() const;
 
                     /**
-                     * 获取Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`.
-                     * @return Authentication Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`.
+                     * 获取Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`
+                     * @return Authentication Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`
                      */
                     std::string GetAuthentication() const;
 
                     /**
-                     * 设置Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`.
-                     * @param Authentication Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`.
+                     * 设置Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`
+                     * @param Authentication Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`
                      */
                     void SetAuthentication(const std::string& _authentication);
 
@@ -188,7 +188,7 @@ namespace TencentCloud
                     bool m_isAdminHasBeenSet;
 
                     /**
-                     * Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`.
+                     * Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`
                      */
                     std::string m_authentication;
                     bool m_authenticationHasBeenSet;

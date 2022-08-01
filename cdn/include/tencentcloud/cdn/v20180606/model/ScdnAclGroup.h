@@ -103,14 +103,14 @@ namespace TencentCloud
                     bool ResultHasBeenSet() const;
 
                     /**
-                     * 获取Whether the rule is effective. Valid values: `active` and `inactive`.
-                     * @return Status Whether the rule is effective. Valid values: `active` and `inactive`.
+                     * 获取Whether the rule is activated. Valid values: `active` and `inactive`.
+                     * @return Status Whether the rule is activated. Valid values: `active` and `inactive`.
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Whether the rule is effective. Valid values: `active` and `inactive`.
-                     * @param Status Whether the rule is effective. Valid values: `active` and `inactive`.
+                     * 设置Whether the rule is activated. Valid values: `active` and `inactive`.
+                     * @param Status Whether the rule is activated. Valid values: `active` and `inactive`.
                      */
                     void SetStatus(const std::string& _status);
 
@@ -121,18 +121,18 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Error page configuration.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return ErrorPage Error page configuration.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Error page configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return ErrorPage Error page configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     ScdnErrorPage GetErrorPage() const;
 
                     /**
-                     * 设置Error page configuration.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param ErrorPage Error page configuration.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Error page configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param ErrorPage Error page configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetErrorPage(const ScdnErrorPage& _errorPage);
 
@@ -163,14 +163,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_resultHasBeenSet;
 
                     /**
-                     * Whether the rule is effective. Valid values: `active` and `inactive`.
+                     * Whether the rule is activated. Valid values: `active` and `inactive`.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Error page configuration.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Error page configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     ScdnErrorPage m_errorPage;
                     bool m_errorPageHasBeenSet;

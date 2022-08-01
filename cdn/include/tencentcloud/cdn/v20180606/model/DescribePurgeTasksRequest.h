@@ -145,14 +145,14 @@ You must specify either a task ID or a starting time for your query.
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Limit on paged queries. Default value: 20
-                     * @return Limit Limit on paged queries. Default value: 20
+                     * 获取Limit on paginated queries. Default value: 20
+                     * @return Limit Limit on paginated queries. Default value: 20
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Limit on paged queries. Default value: 20
-                     * @param Limit Limit on paged queries. Default value: 20
+                     * 设置Limit on paginated queries. Default value: 20
+                     * @param Limit Limit on paginated queries. Default value: 20
                      */
                     void SetLimit(const int64_t& _limit);
 
@@ -276,7 +276,7 @@ You must specify either a task ID or a starting time for your query.
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Limit on paged queries. Default value: 20
+                     * Limit on paginated queries. Default value: 20
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

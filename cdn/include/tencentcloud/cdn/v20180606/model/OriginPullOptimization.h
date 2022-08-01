@@ -48,21 +48,21 @@ namespace TencentCloud
 
                     /**
                      * 获取Cross-border origin-pull optimization configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      * @return Switch Cross-border origin-pull optimization configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置Cross-border origin-pull optimization configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      * @param Switch Cross-border origin-pull optimization configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      */
                     void SetSwitch(const std::string& _switch);
 
@@ -76,11 +76,11 @@ off: disabled
                      * 获取Cross-border types
 OVToCN: origin-pull from outside mainland China to inside mainland China
 CNToOV: origin-pull from inside mainland China to outside mainland China
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return OptimizationType Cross-border types
 OVToCN: origin-pull from outside mainland China to inside mainland China
 CNToOV: origin-pull from inside mainland China to outside mainland China
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetOptimizationType() const;
 
@@ -88,11 +88,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * 设置Cross-border types
 OVToCN: origin-pull from outside mainland China to inside mainland China
 CNToOV: origin-pull from inside mainland China to outside mainland China
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param OptimizationType Cross-border types
 OVToCN: origin-pull from outside mainland China to inside mainland China
 CNToOV: origin-pull from inside mainland China to outside mainland China
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetOptimizationType(const std::string& _optimizationType);
 
@@ -106,8 +106,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Cross-border origin-pull optimization configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
@@ -116,7 +116,7 @@ off: disabled
                      * Cross-border types
 OVToCN: origin-pull from outside mainland China to inside mainland China
 CNToOV: origin-pull from inside mainland China to outside mainland China
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_optimizationType;
                     bool m_optimizationTypeHasBeenSet;

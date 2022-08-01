@@ -102,33 +102,33 @@ namespace TencentCloud
 
                     /**
                      * 获取Current status of the resources in violation
-forbid: blocked
-release: unblocked
-delay: processing delayed 
-reject: appeal dismissed. The status is still blocked.
-complain: appeal in process
+`forbid`: Blocked
+`release`: Unblocked
+`delay`: Processing delayed
+`reject`: Appeal dismissed. The status is still blocked.
+`complain`: Appeal in process
                      * @return UrlStatus Current status of the resources in violation
-forbid: blocked
-release: unblocked
-delay: processing delayed 
-reject: appeal dismissed. The status is still blocked.
-complain: appeal in process
+`forbid`: Blocked
+`release`: Unblocked
+`delay`: Processing delayed
+`reject`: Appeal dismissed. The status is still blocked.
+`complain`: Appeal in process
                      */
                     std::string GetUrlStatus() const;
 
                     /**
                      * 设置Current status of the resources in violation
-forbid: blocked
-release: unblocked
-delay: processing delayed 
-reject: appeal dismissed. The status is still blocked.
-complain: appeal in process
+`forbid`: Blocked
+`release`: Unblocked
+`delay`: Processing delayed
+`reject`: Appeal dismissed. The status is still blocked.
+`complain`: Appeal in process
                      * @param UrlStatus Current status of the resources in violation
-forbid: blocked
-release: unblocked
-delay: processing delayed 
-reject: appeal dismissed. The status is still blocked.
-complain: appeal in process
+`forbid`: Blocked
+`release`: Unblocked
+`delay`: Processing delayed
+`reject`: Appeal dismissed. The status is still blocked.
+`complain`: Appeal in process
                      */
                     void SetUrlStatus(const std::string& _urlStatus);
 
@@ -196,11 +196,11 @@ complain: appeal in process
 
                     /**
                      * Current status of the resources in violation
-forbid: blocked
-release: unblocked
-delay: processing delayed 
-reject: appeal dismissed. The status is still blocked.
-complain: appeal in process
+`forbid`: Blocked
+`release`: Unblocked
+`delay`: Processing delayed
+`reject`: Appeal dismissed. The status is still blocked.
+`complain`: Appeal in process
                      */
                     std::string m_urlStatus;
                     bool m_urlStatusHasBeenSet;

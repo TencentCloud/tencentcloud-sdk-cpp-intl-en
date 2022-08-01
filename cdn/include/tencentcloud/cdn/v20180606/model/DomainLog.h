@@ -102,21 +102,21 @@ namespace TencentCloud
 
                     /**
                      * 获取Acceleration region corresponding to the log package
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
+`mainland`: Within the Chinese mainland
+`overseas`: Outside the Chinese mainland
                      * @return Area Acceleration region corresponding to the log package
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
+`mainland`: Within the Chinese mainland
+`overseas`: Outside the Chinese mainland
                      */
                     std::string GetArea() const;
 
                     /**
                      * 设置Acceleration region corresponding to the log package
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
+`mainland`: Within the Chinese mainland
+`overseas`: Outside the Chinese mainland
                      * @param Area Acceleration region corresponding to the log package
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
+`mainland`: Within the Chinese mainland
+`overseas`: Outside the Chinese mainland
                      */
                     void SetArea(const std::string& _area);
 
@@ -166,8 +166,8 @@ namespace TencentCloud
 
                     /**
                      * Acceleration region corresponding to the log package
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
+`mainland`: Within the Chinese mainland
+`overseas`: Outside the Chinese mainland
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;

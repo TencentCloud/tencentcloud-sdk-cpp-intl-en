@@ -46,9 +46,9 @@ namespace TencentCloud
 
                     /**
                      * 获取Prefetch history
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return PushLogs Prefetch history
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<PushTask> GetPushLogs() const;
 
@@ -60,9 +60,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Total number of tasks, which is used for pagination.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return TotalCount Total number of tasks, which is used for pagination.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     uint64_t GetTotalCount() const;
 
@@ -76,14 +76,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Prefetch history
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<PushTask> m_pushLogs;
                     bool m_pushLogsHasBeenSet;
 
                     /**
                      * Total number of tasks, which is used for pagination.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

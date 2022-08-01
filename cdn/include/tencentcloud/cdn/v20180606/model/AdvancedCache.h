@@ -49,17 +49,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Cache expiration rule
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return CacheRules Cache expiration rule
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<AdvanceCacheRule> GetCacheRules() const;
 
                     /**
                      * 设置Cache expiration rule
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @param CacheRules Cache expiration rule
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetCacheRules(const std::vector<AdvanceCacheRule>& _cacheRules);
 
@@ -75,13 +75,13 @@ on: enabled
 off: disabled
 When this is enabled, if the origin server returns no-cache, no-store headers, node caching will still be performed according to the cache expiration rules.
 This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return IgnoreCacheControl Forced cache configuration
 on: enabled
 off: disabled
 When this is enabled, if the origin server returns no-cache, no-store headers, node caching will still be performed according to the cache expiration rules.
 This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetIgnoreCacheControl() const;
 
@@ -91,13 +91,13 @@ on: enabled
 off: disabled
 When this is enabled, if the origin server returns no-cache, no-store headers, node caching will still be performed according to the cache expiration rules.
 This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param IgnoreCacheControl Forced cache configuration
 on: enabled
 off: disabled
 When this is enabled, if the origin server returns no-cache, no-store headers, node caching will still be performed according to the cache expiration rules.
 This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetIgnoreCacheControl(const std::string& _ignoreCacheControl);
 
@@ -108,30 +108,30 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool IgnoreCacheControlHasBeenSet() const;
 
                     /**
-                     * 获取Whether to cache the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
-on: Enable; do not cache the header and body.
-off: Disable; follow the custom cache rules of cache nodes.
+                     * 获取Whether to ignore the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
+`on`: Ignore; do not cache the header and body.
+`off`: Do not ignore; follow the custom cache rules of cache nodes.
 It is disabled by default.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return IgnoreSetCookie Whether to cache the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
-on: Enable; do not cache the header and body.
-off: Disable; follow the custom cache rules of cache nodes.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return IgnoreSetCookie Whether to ignore the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
+`on`: Ignore; do not cache the header and body.
+`off`: Do not ignore; follow the custom cache rules of cache nodes.
 It is disabled by default.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetIgnoreSetCookie() const;
 
                     /**
-                     * 设置Whether to cache the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
-on: Enable; do not cache the header and body.
-off: Disable; follow the custom cache rules of cache nodes.
+                     * 设置Whether to ignore the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
+`on`: Ignore; do not cache the header and body.
+`off`: Do not ignore; follow the custom cache rules of cache nodes.
 It is disabled by default.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param IgnoreSetCookie Whether to cache the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
-on: Enable; do not cache the header and body.
-off: Disable; follow the custom cache rules of cache nodes.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param IgnoreSetCookie Whether to ignore the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
+`on`: Ignore; do not cache the header and body.
+`off`: Do not ignore; follow the custom cache rules of cache nodes.
 It is disabled by default.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetIgnoreSetCookie(const std::string& _ignoreSetCookie);
 
@@ -145,7 +145,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * Cache expiration rule
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<AdvanceCacheRule> m_cacheRules;
                     bool m_cacheRulesHasBeenSet;
@@ -156,17 +156,17 @@ on: enabled
 off: disabled
 When this is enabled, if the origin server returns no-cache, no-store headers, node caching will still be performed according to the cache expiration rules.
 This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_ignoreCacheControl;
                     bool m_ignoreCacheControlHasBeenSet;
 
                     /**
-                     * Whether to cache the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
-on: Enable; do not cache the header and body.
-off: Disable; follow the custom cache rules of cache nodes.
+                     * Whether to ignore the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
+`on`: Ignore; do not cache the header and body.
+`off`: Do not ignore; follow the custom cache rules of cache nodes.
 It is disabled by default.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_ignoreSetCookie;
                     bool m_ignoreSetCookieHasBeenSet;

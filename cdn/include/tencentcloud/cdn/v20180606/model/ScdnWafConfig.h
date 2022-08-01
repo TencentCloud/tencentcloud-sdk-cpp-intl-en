@@ -157,17 +157,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 获取WAF rule level. Valid values: 100, 200, and 300.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Level WAF rule level. Valid values: 100, 200, and 300.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     int64_t GetLevel() const;
 
                     /**
                      * 设置WAF rule level. Valid values: 100, 200, and 300.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param Level WAF rule level. Valid values: 100, 200, and 300.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetLevel(const int64_t& _level);
 
@@ -179,17 +179,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 获取WAF sub-rule switch
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return SubRuleSwitch WAF sub-rule switch
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<WafSubRuleStatus> GetSubRuleSwitch() const;
 
                     /**
                      * 设置WAF sub-rule switch
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param SubRuleSwitch WAF sub-rule switch
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetSubRuleSwitch(const std::vector<WafSubRuleStatus>& _subRuleSwitch);
 
@@ -237,14 +237,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * WAF rule level. Valid values: 100, 200, and 300.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     int64_t m_level;
                     bool m_levelHasBeenSet;
 
                     /**
                      * WAF sub-rule switch
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<WafSubRuleStatus> m_subRuleSwitch;
                     bool m_subRuleSwitchHasBeenSet;

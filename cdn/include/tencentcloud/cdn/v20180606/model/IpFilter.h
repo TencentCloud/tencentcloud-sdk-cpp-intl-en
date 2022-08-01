@@ -49,21 +49,21 @@ namespace TencentCloud
 
                     /**
                      * 获取IP blocklist/allowlist configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      * @return Switch IP blocklist/allowlist configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      */
                     std::string GetSwitch() const;
 
                     /**
                      * 设置IP blocklist/allowlist configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      * @param Switch IP blocklist/allowlist configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      */
                     void SetSwitch(const std::string& _switch);
 
@@ -75,25 +75,25 @@ off: disabled
 
                     /**
                      * 获取IP blocklist/allowlist type
-whitelist: allowlist
-blacklist: blocklist
-Note: this field may return null, indicating that no valid values can be obtained.
+`whitelist`: IP allowlist
+`blacklist`: IP blocklist
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return FilterType IP blocklist/allowlist type
-whitelist: allowlist
-blacklist: blocklist
-Note: this field may return null, indicating that no valid values can be obtained.
+`whitelist`: IP allowlist
+`blacklist`: IP blocklist
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetFilterType() const;
 
                     /**
                      * 设置IP blocklist/allowlist type
-whitelist: allowlist
-blacklist: blocklist
-Note: this field may return null, indicating that no valid values can be obtained.
+`whitelist`: IP allowlist
+`blacklist`: IP blocklist
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param FilterType IP blocklist/allowlist type
-whitelist: allowlist
-blacklist: blocklist
-Note: this field may return null, indicating that no valid values can be obtained.
+`whitelist`: IP allowlist
+`blacklist`: IP blocklist
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetFilterType(const std::string& _filterType);
 
@@ -104,26 +104,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool FilterTypeHasBeenSet() const;
 
                     /**
-                     * 获取IP blocklist/allowlist list
-Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-Up to 50 allowlists or blocklists can be entered
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Filters IP blocklist/allowlist list
-Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-Up to 50 allowlists or blocklists can be entered
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取IP blocklist/allowlist
+Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format.
+Up to 50 whitelists or blacklists can be entered
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return Filters IP blocklist/allowlist
+Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format.
+Up to 50 whitelists or blacklists can be entered
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<std::string> GetFilters() const;
 
                     /**
-                     * 设置IP blocklist/allowlist list
-Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-Up to 50 allowlists or blocklists can be entered
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Filters IP blocklist/allowlist list
-Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-Up to 50 allowlists or blocklists can be entered
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置IP blocklist/allowlist
+Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format.
+Up to 50 whitelists or blacklists can be entered
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param Filters IP blocklist/allowlist
+Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format.
+Up to 50 whitelists or blacklists can be entered
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetFilters(const std::vector<std::string>& _filters);
 
@@ -135,17 +135,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return FilterRules IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<IpFilterPathRule> GetFilterRules() const;
 
                     /**
                      * 设置IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param FilterRules IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetFilterRules(const std::vector<IpFilterPathRule>& _filterRules);
 
@@ -158,20 +158,20 @@ Note: this field may return `null`, indicating that no valid value is obtained.
                     /**
                      * 获取HTTP code returned when the IP allowlist/blocklist verification fails
 Valid values: 400-499
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return ReturnCode HTTP code returned when the IP allowlist/blocklist verification fails
 Valid values: 400-499
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     int64_t GetReturnCode() const;
 
                     /**
                      * 设置HTTP code returned when the IP allowlist/blocklist verification fails
 Valid values: 400-499
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param ReturnCode HTTP code returned when the IP allowlist/blocklist verification fails
 Valid values: 400-499
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetReturnCode(const int64_t& _returnCode);
 
@@ -185,33 +185,33 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * IP blocklist/allowlist configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
                      * IP blocklist/allowlist type
-whitelist: allowlist
-blacklist: blocklist
-Note: this field may return null, indicating that no valid values can be obtained.
+`whitelist`: IP allowlist
+`blacklist`: IP blocklist
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_filterType;
                     bool m_filterTypeHasBeenSet;
 
                     /**
-                     * IP blocklist/allowlist list
-Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-Up to 50 allowlists or blocklists can be entered
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * IP blocklist/allowlist
+Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format.
+Up to 50 whitelists or blacklists can be entered
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<std::string> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
                      * IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<IpFilterPathRule> m_filterRules;
                     bool m_filterRulesHasBeenSet;
@@ -219,7 +219,7 @@ Note: this field may return `null`, indicating that no valid value is obtained.
                     /**
                      * HTTP code returned when the IP allowlist/blocklist verification fails
 Valid values: 400-499
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     int64_t m_returnCode;
                     bool m_returnCodeHasBeenSet;
