@@ -655,14 +655,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ClusterTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Features 
+                     * 获取Instance feature list.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Features Instance feature list.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> GetFeatures() const;
 
                     /**
-                     * 设置
-                     * @param Features 
+                     * 设置Instance feature list.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Features Instance feature list.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetFeatures(const std::vector<std::string>& _features);
 
@@ -873,7 +877,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_clusterTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Instance feature list.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_features;
                     bool m_featuresHasBeenSet;
