@@ -29,6 +29,8 @@
 #include <tencentcloud/emr/v20190103/model/CreateInstanceResponse.h>
 #include <tencentcloud/emr/v20190103/model/DescribeClusterNodesRequest.h>
 #include <tencentcloud/emr/v20190103/model/DescribeClusterNodesResponse.h>
+#include <tencentcloud/emr/v20190103/model/DescribeEmrApplicationStaticsRequest.h>
+#include <tencentcloud/emr/v20190103/model/DescribeEmrApplicationStaticsResponse.h>
 #include <tencentcloud/emr/v20190103/model/DescribeInstancesRequest.h>
 #include <tencentcloud/emr/v20190103/model/DescribeInstancesResponse.h>
 #include <tencentcloud/emr/v20190103/model/DescribeInstancesListRequest.h>
@@ -41,12 +43,18 @@
 #include <tencentcloud/emr/v20190103/model/InquiryPriceCreateInstanceResponse.h>
 #include <tencentcloud/emr/v20190103/model/InquiryPriceRenewInstanceRequest.h>
 #include <tencentcloud/emr/v20190103/model/InquiryPriceRenewInstanceResponse.h>
+#include <tencentcloud/emr/v20190103/model/InquiryPriceScaleOutInstanceRequest.h>
+#include <tencentcloud/emr/v20190103/model/InquiryPriceScaleOutInstanceResponse.h>
 #include <tencentcloud/emr/v20190103/model/InquiryPriceUpdateInstanceRequest.h>
 #include <tencentcloud/emr/v20190103/model/InquiryPriceUpdateInstanceResponse.h>
 #include <tencentcloud/emr/v20190103/model/ModifyResourceScheduleConfigRequest.h>
 #include <tencentcloud/emr/v20190103/model/ModifyResourceScheduleConfigResponse.h>
 #include <tencentcloud/emr/v20190103/model/ModifyResourceSchedulerRequest.h>
 #include <tencentcloud/emr/v20190103/model/ModifyResourceSchedulerResponse.h>
+#include <tencentcloud/emr/v20190103/model/ScaleOutInstanceRequest.h>
+#include <tencentcloud/emr/v20190103/model/ScaleOutInstanceResponse.h>
+#include <tencentcloud/emr/v20190103/model/TerminateInstanceRequest.h>
+#include <tencentcloud/emr/v20190103/model/TerminateInstanceResponse.h>
 #include <tencentcloud/emr/v20190103/model/TerminateTasksRequest.h>
 #include <tencentcloud/emr/v20190103/model/TerminateTasksResponse.h>
 
@@ -72,6 +80,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeClusterNodesResponse> DescribeClusterNodesOutcome;
                 typedef std::future<DescribeClusterNodesOutcome> DescribeClusterNodesOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::DescribeClusterNodesRequest&, DescribeClusterNodesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClusterNodesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeEmrApplicationStaticsResponse> DescribeEmrApplicationStaticsOutcome;
+                typedef std::future<DescribeEmrApplicationStaticsOutcome> DescribeEmrApplicationStaticsOutcomeCallable;
+                typedef std::function<void(const EmrClient*, const Model::DescribeEmrApplicationStaticsRequest&, DescribeEmrApplicationStaticsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeEmrApplicationStaticsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeInstancesResponse> DescribeInstancesOutcome;
                 typedef std::future<DescribeInstancesOutcome> DescribeInstancesOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::DescribeInstancesRequest&, DescribeInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstancesAsyncHandler;
@@ -90,6 +101,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::InquiryPriceRenewInstanceResponse> InquiryPriceRenewInstanceOutcome;
                 typedef std::future<InquiryPriceRenewInstanceOutcome> InquiryPriceRenewInstanceOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::InquiryPriceRenewInstanceRequest&, InquiryPriceRenewInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquiryPriceRenewInstanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::InquiryPriceScaleOutInstanceResponse> InquiryPriceScaleOutInstanceOutcome;
+                typedef std::future<InquiryPriceScaleOutInstanceOutcome> InquiryPriceScaleOutInstanceOutcomeCallable;
+                typedef std::function<void(const EmrClient*, const Model::InquiryPriceScaleOutInstanceRequest&, InquiryPriceScaleOutInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquiryPriceScaleOutInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::InquiryPriceUpdateInstanceResponse> InquiryPriceUpdateInstanceOutcome;
                 typedef std::future<InquiryPriceUpdateInstanceOutcome> InquiryPriceUpdateInstanceOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::InquiryPriceUpdateInstanceRequest&, InquiryPriceUpdateInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquiryPriceUpdateInstanceAsyncHandler;
@@ -99,6 +113,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyResourceSchedulerResponse> ModifyResourceSchedulerOutcome;
                 typedef std::future<ModifyResourceSchedulerOutcome> ModifyResourceSchedulerOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::ModifyResourceSchedulerRequest&, ModifyResourceSchedulerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyResourceSchedulerAsyncHandler;
+                typedef Outcome<Core::Error, Model::ScaleOutInstanceResponse> ScaleOutInstanceOutcome;
+                typedef std::future<ScaleOutInstanceOutcome> ScaleOutInstanceOutcomeCallable;
+                typedef std::function<void(const EmrClient*, const Model::ScaleOutInstanceRequest&, ScaleOutInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ScaleOutInstanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::TerminateInstanceResponse> TerminateInstanceOutcome;
+                typedef std::future<TerminateInstanceOutcome> TerminateInstanceOutcomeCallable;
+                typedef std::function<void(const EmrClient*, const Model::TerminateInstanceRequest&, TerminateInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TerminateInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::TerminateTasksResponse> TerminateTasksOutcome;
                 typedef std::future<TerminateTasksOutcome> TerminateTasksOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::TerminateTasksRequest&, TerminateTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TerminateTasksAsyncHandler;
@@ -132,6 +152,15 @@ This API is used to add user lists (user management).
                 DescribeClusterNodesOutcome DescribeClusterNodes(const Model::DescribeClusterNodesRequest &request);
                 void DescribeClusterNodesAsync(const Model::DescribeClusterNodesRequest& request, const DescribeClusterNodesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeClusterNodesOutcomeCallable DescribeClusterNodesCallable(const Model::DescribeClusterNodesRequest& request);
+
+                /**
+                 * This API is used to query the Yarn application statistics.
+                 * @param req DescribeEmrApplicationStaticsRequest
+                 * @return DescribeEmrApplicationStaticsOutcome
+                 */
+                DescribeEmrApplicationStaticsOutcome DescribeEmrApplicationStatics(const Model::DescribeEmrApplicationStaticsRequest &request);
+                void DescribeEmrApplicationStaticsAsync(const Model::DescribeEmrApplicationStaticsRequest& request, const DescribeEmrApplicationStaticsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeEmrApplicationStaticsOutcomeCallable DescribeEmrApplicationStaticsCallable(const Model::DescribeEmrApplicationStaticsRequest& request);
 
                 /**
                  *This API is used to query EMR instances.
@@ -189,6 +218,15 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
                 InquiryPriceRenewInstanceOutcomeCallable InquiryPriceRenewInstanceCallable(const Model::InquiryPriceRenewInstanceRequest& request);
 
                 /**
+                 *This API is used to query price of scale-out.
+                 * @param req InquiryPriceScaleOutInstanceRequest
+                 * @return InquiryPriceScaleOutInstanceOutcome
+                 */
+                InquiryPriceScaleOutInstanceOutcome InquiryPriceScaleOutInstance(const Model::InquiryPriceScaleOutInstanceRequest &request);
+                void InquiryPriceScaleOutInstanceAsync(const Model::InquiryPriceScaleOutInstanceRequest& request, const InquiryPriceScaleOutInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                InquiryPriceScaleOutInstanceOutcomeCallable InquiryPriceScaleOutInstanceCallable(const Model::InquiryPriceScaleOutInstanceRequest& request);
+
+                /**
                  *This API is used to query price of scaling.
                  * @param req InquiryPriceUpdateInstanceRequest
                  * @return InquiryPriceUpdateInstanceOutcome
@@ -214,6 +252,24 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
                 ModifyResourceSchedulerOutcome ModifyResourceScheduler(const Model::ModifyResourceSchedulerRequest &request);
                 void ModifyResourceSchedulerAsync(const Model::ModifyResourceSchedulerRequest& request, const ModifyResourceSchedulerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyResourceSchedulerOutcomeCallable ModifyResourceSchedulerCallable(const Model::ModifyResourceSchedulerRequest& request);
+
+                /**
+                 *This API is used to scale out instances.
+                 * @param req ScaleOutInstanceRequest
+                 * @return ScaleOutInstanceOutcome
+                 */
+                ScaleOutInstanceOutcome ScaleOutInstance(const Model::ScaleOutInstanceRequest &request);
+                void ScaleOutInstanceAsync(const Model::ScaleOutInstanceRequest& request, const ScaleOutInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ScaleOutInstanceOutcomeCallable ScaleOutInstanceCallable(const Model::ScaleOutInstanceRequest& request);
+
+                /**
+                 *This API is used to terminate EMR instances. It is only supported in the official paid edition of EMR.
+                 * @param req TerminateInstanceRequest
+                 * @return TerminateInstanceOutcome
+                 */
+                TerminateInstanceOutcome TerminateInstance(const Model::TerminateInstanceRequest &request);
+                void TerminateInstanceAsync(const Model::TerminateInstanceRequest& request, const TerminateInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                TerminateInstanceOutcomeCallable TerminateInstanceCallable(const Model::TerminateInstanceRequest& request);
 
                 /**
                  *This API is used to terminate a task node.

@@ -212,49 +212,6 @@ OcrClient::HKIDCardOCROutcomeCallable OcrClient::HKIDCardOCRCallable(const HKIDC
     return task->get_future();
 }
 
-OcrClient::MLIDCardOCROutcome OcrClient::MLIDCardOCR(const MLIDCardOCRRequest &request)
-{
-    auto outcome = MakeRequest(request, "MLIDCardOCR");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        MLIDCardOCRResponse rsp = MLIDCardOCRResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return MLIDCardOCROutcome(rsp);
-        else
-            return MLIDCardOCROutcome(o.GetError());
-    }
-    else
-    {
-        return MLIDCardOCROutcome(outcome.GetError());
-    }
-}
-
-void OcrClient::MLIDCardOCRAsync(const MLIDCardOCRRequest& request, const MLIDCardOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->MLIDCardOCR(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-OcrClient::MLIDCardOCROutcomeCallable OcrClient::MLIDCardOCRCallable(const MLIDCardOCRRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<MLIDCardOCROutcome()>>(
-        [this, request]()
-        {
-            return this->MLIDCardOCR(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
 OcrClient::MLIDPassportOCROutcome OcrClient::MLIDPassportOCR(const MLIDPassportOCRRequest &request)
 {
     auto outcome = MakeRequest(request, "MLIDPassportOCR");
