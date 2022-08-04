@@ -438,6 +438,24 @@ namespace TencentCloud
                      */
                     bool EnvHasBeenSet() const;
 
+                    /**
+                     * 获取The obtained package.
+                     * @return PackageType The obtained package.
+                     */
+                    std::string GetPackageType() const;
+
+                    /**
+                     * 设置The obtained package.
+                     * @param PackageType The obtained package.
+                     */
+                    void SetPackageType(const std::string& _packageType);
+
+                    /**
+                     * 判断参数 PackageType 是否已赋值
+                     * @return PackageType 是否已赋值
+                     */
+                    bool PackageTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -571,6 +589,12 @@ namespace TencentCloud
                      */
                     std::string m_env;
                     bool m_envHasBeenSet;
+
+                    /**
+                     * The obtained package.
+                     */
+                    std::string m_packageType;
+                    bool m_packageTypeHasBeenSet;
 
                 };
             }

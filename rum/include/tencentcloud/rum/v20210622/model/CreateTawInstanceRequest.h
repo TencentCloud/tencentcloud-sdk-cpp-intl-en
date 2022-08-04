@@ -62,14 +62,14 @@ namespace TencentCloud
                     bool AreaIdHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode (1: trial; 2: prepaid; 3: postpaid)
-                     * @return ChargeType Billing mode (1: trial; 2: prepaid; 3: postpaid)
+                     * 获取Billing type (1: Pay-as-you-go).
+                     * @return ChargeType Billing type (1: Pay-as-you-go).
                      */
                     int64_t GetChargeType() const;
 
                     /**
-                     * 设置Billing mode (1: trial; 2: prepaid; 3: postpaid)
-                     * @param ChargeType Billing mode (1: trial; 2: prepaid; 3: postpaid)
+                     * 设置Billing type (1: Pay-as-you-go).
+                     * @param ChargeType Billing type (1: Pay-as-you-go).
                      */
                     void SetChargeType(const int64_t& _chargeType);
 
@@ -214,7 +214,7 @@ namespace TencentCloud
                     bool m_areaIdHasBeenSet;
 
                     /**
-                     * Billing mode (1: trial; 2: prepaid; 3: postpaid)
+                     * Billing type (1: Pay-as-you-go).
                      */
                     int64_t m_chargeType;
                     bool m_chargeTypeHasBeenSet;
