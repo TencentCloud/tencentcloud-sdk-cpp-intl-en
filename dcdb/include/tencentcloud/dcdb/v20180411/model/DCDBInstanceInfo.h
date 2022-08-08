@@ -974,6 +974,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool ResourceTagsHasBeenSet() const;
 
+                    /**
+                     * 获取Database engine version
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DbVersionId Database engine version
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetDbVersionId() const;
+
+                    /**
+                     * 设置Database engine version
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param DbVersionId Database engine version
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetDbVersionId(const std::string& _dbVersionId);
+
+                    /**
+                     * 判断参数 DbVersionId 是否已赋值
+                     * @return DbVersionId 是否已赋值
+                     */
+                    bool DbVersionIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1280,6 +1302,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::vector<ResourceTag> m_resourceTags;
                     bool m_resourceTagsHasBeenSet;
+
+                    /**
+                     * Database engine version
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_dbVersionId;
+                    bool m_dbVersionIdHasBeenSet;
 
                 };
             }
