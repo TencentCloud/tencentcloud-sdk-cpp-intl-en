@@ -41,7 +41,9 @@ BGPIPInstance::BGPIPInstance() :
     m_damDDoSStatusHasBeenSet(false),
     m_v6FlagHasBeenSet(false),
     m_bGPIPChannelFlagHasBeenSet(false),
-    m_tagInfoListHasBeenSet(false)
+    m_tagInfoListHasBeenSet(false),
+    m_anycastOutPackRelationHasBeenSet(false),
+    m_instanceVersionHasBeenSet(false)
 {
 }
 
@@ -326,6 +328,33 @@ CoreInternalOutcome BGPIPInstance::Deserialize(const rapidjson::Value &value)
         m_tagInfoListHasBeenSet = true;
     }
 
+    if (value.HasMember("AnycastOutPackRelation") && !value["AnycastOutPackRelation"].IsNull())
+    {
+        if (!value["AnycastOutPackRelation"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `BGPIPInstance.AnycastOutPackRelation` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_anycastOutPackRelation.Deserialize(value["AnycastOutPackRelation"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_anycastOutPackRelationHasBeenSet = true;
+    }
+
+    if (value.HasMember("InstanceVersion") && !value["InstanceVersion"].IsNull())
+    {
+        if (!value["InstanceVersion"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `BGPIPInstance.InstanceVersion` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_instanceVersion = value["InstanceVersion"].GetUint64();
+        m_instanceVersionHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -514,6 +543,23 @@ void BGPIPInstance::ToJsonObject(rapidjson::Value &value, rapidjson::Document::A
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_anycastOutPackRelationHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AnycastOutPackRelation";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_anycastOutPackRelation.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_instanceVersionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceVersion";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_instanceVersion, allocator);
     }
 
 }
@@ -853,5 +899,37 @@ void BGPIPInstance::SetTagInfoList(const vector<TagInfo>& _tagInfoList)
 bool BGPIPInstance::TagInfoListHasBeenSet() const
 {
     return m_tagInfoListHasBeenSet;
+}
+
+AnycastOutPackRelation BGPIPInstance::GetAnycastOutPackRelation() const
+{
+    return m_anycastOutPackRelation;
+}
+
+void BGPIPInstance::SetAnycastOutPackRelation(const AnycastOutPackRelation& _anycastOutPackRelation)
+{
+    m_anycastOutPackRelation = _anycastOutPackRelation;
+    m_anycastOutPackRelationHasBeenSet = true;
+}
+
+bool BGPIPInstance::AnycastOutPackRelationHasBeenSet() const
+{
+    return m_anycastOutPackRelationHasBeenSet;
+}
+
+uint64_t BGPIPInstance::GetInstanceVersion() const
+{
+    return m_instanceVersion;
+}
+
+void BGPIPInstance::SetInstanceVersion(const uint64_t& _instanceVersion)
+{
+    m_instanceVersion = _instanceVersion;
+    m_instanceVersionHasBeenSet = true;
+}
+
+bool BGPIPInstance::InstanceVersionHasBeenSet() const
+{
+    return m_instanceVersionHasBeenSet;
 }
 

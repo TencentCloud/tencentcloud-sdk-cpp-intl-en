@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool PageNoHasBeenSet() const;
 
                     /**
-                     * 获取List of sites
-                     * @return Zones List of sites
+                     * 获取Array of site names
+                     * @return Zones Array of site names
                      */
                     std::vector<std::string> GetZones() const;
 
                     /**
-                     * 设置List of sites
-                     * @param Zones List of sites
+                     * 设置Array of site names
+                     * @param Zones Array of site names
                      */
                     void SetZones(const std::vector<std::string>& _zones);
 
@@ -133,14 +133,14 @@ namespace TencentCloud
                     bool ZonesHasBeenSet() const;
 
                     /**
-                     * 获取List of domain names
-                     * @return Domains List of domain names
+                     * 获取Array of subdomain names
+                     * @return Domains Array of subdomain names
                      */
                     std::vector<std::string> GetDomains() const;
 
                     /**
-                     * 设置List of domain names
-                     * @param Domains List of domain names
+                     * 设置Array of subdomain names
+                     * @param Domains Array of subdomain names
                      */
                     void SetDomains(const std::vector<std::string>& _domains);
 
@@ -177,13 +177,13 @@ namespace TencentCloud
                     bool m_pageNoHasBeenSet;
 
                     /**
-                     * List of sites
+                     * Array of site names
                      */
                     std::vector<std::string> m_zones;
                     bool m_zonesHasBeenSet;
 
                     /**
-                     * List of domain names
+                     * Array of subdomain names
                      */
                     std::vector<std::string> m_domains;
                     bool m_domainsHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Cache prefresh
                 */
                 class CachePrefresh : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Configuration switch
+                     * @return Switch Configuration switch
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param Switch 
+                     * 设置Configuration switch
+                     * @param Switch Configuration switch
                      */
                     void SetSwitch(const std::string& _switch);
 
@@ -65,14 +65,18 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Percent 
+                     * 获取Cache prefresh percentage. Values: 1-99
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Percent Cache prefresh percentage. Values: 1-99
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetPercent() const;
 
                     /**
-                     * 设置
-                     * @param Percent 
+                     * 设置Cache prefresh percentage. Values: 1-99
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Percent Cache prefresh percentage. Values: 1-99
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetPercent(const int64_t& _percent);
 
@@ -85,13 +89,14 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Configuration switch
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Cache prefresh percentage. Values: 1-99
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_percent;
                     bool m_percentHasBeenSet;

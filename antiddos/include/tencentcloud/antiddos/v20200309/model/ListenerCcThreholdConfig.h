@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取Protocol. Value: htttps
-                     * @return Protocol Protocol. Value: htttps
+                     * 获取Protocol. Value: `https`.
+                     * @return Protocol Protocol. Value: `https`.
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置Protocol. Value: htttps
-                     * @param Protocol Protocol. Value: htttps
+                     * 设置Protocol. Value: `https`.
+                     * @param Protocol Protocol. Value: `https`.
                      */
                     void SetProtocol(const std::string& _protocol);
 
@@ -127,7 +127,7 @@ namespace TencentCloud
                     bool m_domainHasBeenSet;
 
                     /**
-                     * Protocol. Value: htttps
+                     * Protocol. Value: `https`.
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;

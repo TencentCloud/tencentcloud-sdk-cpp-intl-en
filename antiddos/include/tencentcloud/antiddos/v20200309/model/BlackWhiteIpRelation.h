@@ -119,6 +119,24 @@ namespace TencentCloud
                      */
                     bool MaskHasBeenSet() const;
 
+                    /**
+                     * 获取Modification time
+                     * @return ModifyTime Modification time
+                     */
+                    std::string GetModifyTime() const;
+
+                    /**
+                     * 设置Modification time
+                     * @param ModifyTime Modification time
+                     */
+                    void SetModifyTime(const std::string& _modifyTime);
+
+                    /**
+                     * 判断参数 ModifyTime 是否已赋值
+                     * @return ModifyTime 是否已赋值
+                     */
+                    bool ModifyTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -144,6 +162,12 @@ namespace TencentCloud
                      */
                     uint64_t m_mask;
                     bool m_maskHasBeenSet;
+
+                    /**
+                     * Modification time
+                     */
+                    std::string m_modifyTime;
+                    bool m_modifyTimeHasBeenSet;
 
                 };
             }

@@ -85,14 +85,22 @@ namespace TencentCloud
                     bool OriginNameHasBeenSet() const;
 
                     /**
-                     * 获取Origin server type
-                     * @return Type Origin server type
+                     * 获取Origin-pull configuration type
+`area`: Origin-pull by the client IP’s region specified by `Area` in `OriginRecord`.
+`weight`: Origin-pull by the weight specified by `Weight` in `OriginRecord`.
+                     * @return Type Origin-pull configuration type
+`area`: Origin-pull by the client IP’s region specified by `Area` in `OriginRecord`.
+`weight`: Origin-pull by the weight specified by `Weight` in `OriginRecord`.
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Origin server type
-                     * @param Type Origin server type
+                     * 设置Origin-pull configuration type
+`area`: Origin-pull by the client IP’s region specified by `Area` in `OriginRecord`.
+`weight`: Origin-pull by the weight specified by `Weight` in `OriginRecord`.
+                     * @param Type Origin-pull configuration type
+`area`: Origin-pull by the client IP’s region specified by `Area` in `OriginRecord`.
+`weight`: Origin-pull by the weight specified by `Weight` in `OriginRecord`.
                      */
                     void SetType(const std::string& _type);
 
@@ -197,18 +205,18 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool OriginTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether the origin group is used for layer-4 proxy
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return ApplicationProxyUsed Whether the origin group is used for layer-4 proxy
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Whether the origin group uses layer-4 proxy.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ApplicationProxyUsed Whether the origin group uses layer-4 proxy.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     bool GetApplicationProxyUsed() const;
 
                     /**
-                     * 设置Whether the origin group is used for layer-4 proxy
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param ApplicationProxyUsed Whether the origin group is used for layer-4 proxy
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Whether the origin group uses layer-4 proxy.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ApplicationProxyUsed Whether the origin group uses layer-4 proxy.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetApplicationProxyUsed(const bool& _applicationProxyUsed);
 
@@ -219,18 +227,18 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool ApplicationProxyUsedHasBeenSet() const;
 
                     /**
-                     * 获取Whether the origin group is used for load balancing
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return LoadBalancingUsed Whether the origin group is used for load balancing
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Whether the origin group is used for load balancing.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return LoadBalancingUsed Whether the origin group is used for load balancing.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     bool GetLoadBalancingUsed() const;
 
                     /**
-                     * 设置Whether the origin group is used for load balancing
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param LoadBalancingUsed Whether the origin group is used for load balancing
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Whether the origin group is used for load balancing.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param LoadBalancingUsed Whether the origin group is used for load balancing.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetLoadBalancingUsed(const bool& _loadBalancingUsed);
 
@@ -241,14 +249,18 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool LoadBalancingUsedHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取Origin status 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Status Origin status 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     OriginCheckOriginStatus GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param Status 
+                     * 设置Origin status 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Status Origin status 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetStatus(const OriginCheckOriginStatus& _status);
 
@@ -259,14 +271,34 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LoadBalancingUsedType 
+                     * 获取Proxy mode of the load balancing task associated with the origin group.
+`none`: This origin group is not used for load balancing.
+`dns_only`: Used for DNS-only load balancing 
+`proxied`: Used for proxied load balancing
+`both`: It’s used for both DNS-only and proxied load balancing.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return LoadBalancingUsedType Proxy mode of the load balancing task associated with the origin group.
+`none`: This origin group is not used for load balancing.
+`dns_only`: Used for DNS-only load balancing 
+`proxied`: Used for proxied load balancing
+`both`: It’s used for both DNS-only and proxied load balancing.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetLoadBalancingUsedType() const;
 
                     /**
-                     * 设置
-                     * @param LoadBalancingUsedType 
+                     * 设置Proxy mode of the load balancing task associated with the origin group.
+`none`: This origin group is not used for load balancing.
+`dns_only`: Used for DNS-only load balancing 
+`proxied`: Used for proxied load balancing
+`both`: It’s used for both DNS-only and proxied load balancing.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param LoadBalancingUsedType Proxy mode of the load balancing task associated with the origin group.
+`none`: This origin group is not used for load balancing.
+`dns_only`: Used for DNS-only load balancing 
+`proxied`: Used for proxied load balancing
+`both`: It’s used for both DNS-only and proxied load balancing.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetLoadBalancingUsedType(const std::string& _loadBalancingUsedType);
 
@@ -291,7 +323,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_originNameHasBeenSet;
 
                     /**
-                     * Origin server type
+                     * Origin-pull configuration type
+`area`: Origin-pull by the client IP’s region specified by `Area` in `OriginRecord`.
+`weight`: Origin-pull by the weight specified by `Weight` in `OriginRecord`.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -328,27 +362,33 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_originTypeHasBeenSet;
 
                     /**
-                     * Whether the origin group is used for layer-4 proxy
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Whether the origin group uses layer-4 proxy.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_applicationProxyUsed;
                     bool m_applicationProxyUsedHasBeenSet;
 
                     /**
-                     * Whether the origin group is used for load balancing
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Whether the origin group is used for load balancing.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_loadBalancingUsed;
                     bool m_loadBalancingUsedHasBeenSet;
 
                     /**
-                     * 
+                     * Origin status 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     OriginCheckOriginStatus m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * 
+                     * Proxy mode of the load balancing task associated with the origin group.
+`none`: This origin group is not used for load balancing.
+`dns_only`: Used for DNS-only load balancing 
+`proxied`: Used for proxied load balancing
+`both`: It’s used for both DNS-only and proxied load balancing.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_loadBalancingUsedType;
                     bool m_loadBalancingUsedTypeHasBeenSet;

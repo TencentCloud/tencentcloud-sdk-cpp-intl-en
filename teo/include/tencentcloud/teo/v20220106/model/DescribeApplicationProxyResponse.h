@@ -73,9 +73,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Indicates the number of instances that can be created by the site when `ZoneId` is specified
+                     * 获取Disused
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return Quota Indicates the number of instances that can be created by the site when `ZoneId` is specified
+                     * @return Quota Disused
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     int64_t GetQuota() const;
@@ -87,8 +87,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool QuotaHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IpCount 
+                     * 获取When `PlatType` is `ip`, it indicates the number of proxies that schedule via Anycast IP.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return IpCount When `PlatType` is `ip`, it indicates the number of proxies that schedule via Anycast IP.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     uint64_t GetIpCount() const;
 
@@ -99,8 +101,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool IpCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DomainCount 
+                     * 获取When `PlatType` is `domain`, it indicates the number of proxies that schedule via CNAME.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return DomainCount When `PlatType` is `domain`, it indicates the number of proxies that schedule via CNAME.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     uint64_t GetDomainCount() const;
 
@@ -127,20 +131,22 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Indicates the number of instances that can be created by the site when `ZoneId` is specified
+                     * Disused
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     int64_t m_quota;
                     bool m_quotaHasBeenSet;
 
                     /**
-                     * 
+                     * When `PlatType` is `ip`, it indicates the number of proxies that schedule via Anycast IP.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     uint64_t m_ipCount;
                     bool m_ipCountHasBeenSet;
 
                     /**
-                     * 
+                     * When `PlatType` is `domain`, it indicates the number of proxies that schedule via CNAME.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     uint64_t m_domainCount;
                     bool m_domainCountHasBeenSet;

@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Layer-4 proxy ID
-                     * @return ProxyId Layer-4 proxy ID
+                     * 获取ID of the proxy
+                     * @return ProxyId ID of the proxy
                      */
                     std::string GetProxyId() const;
 
                     /**
-                     * 设置Layer-4 proxy ID
-                     * @param ProxyId Layer-4 proxy ID
+                     * 设置ID of the proxy
+                     * @param ProxyId ID of the proxy
                      */
                     void SetProxyId(const std::string& _proxyId);
 
@@ -79,14 +79,22 @@ namespace TencentCloud
                     bool ProxyIdHasBeenSet() const;
 
                     /**
-                     * 获取Layer-4 proxy name
-                     * @return ProxyName Layer-4 proxy name
+                     * 获取Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
+                     * @return ProxyName Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
                      */
                     std::string GetProxyName() const;
 
                     /**
-                     * 设置Layer-4 proxy name
-                     * @param ProxyName Layer-4 proxy name
+                     * 设置Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
+                     * @param ProxyName Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
                      */
                     void SetProxyName(const std::string& _proxyName);
 
@@ -152,21 +160,21 @@ namespace TencentCloud
 
                     /**
                      * 获取Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
+`hostname`: Create by subdomain name
+`instance`: Create by instance
                      * @return ProxyType Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
+`hostname`: Create by subdomain name
+`instance`: Create by instance
                      */
                     std::string GetProxyType() const;
 
                     /**
                      * 设置Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
+`hostname`: Create by subdomain name
+`instance`: Create by instance
                      * @param ProxyType Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
+`hostname`: Create by subdomain name
+`instance`: Create by instance
                      */
                     void SetProxyType(const std::string& _proxyType);
 
@@ -185,13 +193,15 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Layer-4 proxy ID
+                     * ID of the proxy
                      */
                     std::string m_proxyId;
                     bool m_proxyIdHasBeenSet;
 
                     /**
-                     * Layer-4 proxy name
+                     * Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
                      */
                     std::string m_proxyName;
                     bool m_proxyNameHasBeenSet;
@@ -216,8 +226,8 @@ namespace TencentCloud
 
                     /**
                      * Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
+`hostname`: Create by subdomain name
+`instance`: Create by instance
                      */
                     std::string m_proxyType;
                     bool m_proxyTypeHasBeenSet;

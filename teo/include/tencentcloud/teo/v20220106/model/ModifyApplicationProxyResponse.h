@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Layer-4 proxy ID
-                     * @return ProxyId Layer-4 proxy ID
+                     * 获取ID of the proxy
+                     * @return ProxyId ID of the proxy
                      */
                     std::string GetProxyId() const;
 
@@ -58,7 +58,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Layer-4 proxy ID
+                     * ID of the proxy
                      */
                     std::string m_proxyId;
                     bool m_proxyIdHasBeenSet;

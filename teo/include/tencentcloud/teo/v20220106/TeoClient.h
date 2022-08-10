@@ -31,10 +31,14 @@
 #include <tencentcloud/teo/v20220106/model/CreateApplicationProxyRuleResponse.h>
 #include <tencentcloud/teo/v20220106/model/CreateApplicationProxyRulesRequest.h>
 #include <tencentcloud/teo/v20220106/model/CreateApplicationProxyRulesResponse.h>
+#include <tencentcloud/teo/v20220106/model/CreateCustomErrorPageRequest.h>
+#include <tencentcloud/teo/v20220106/model/CreateCustomErrorPageResponse.h>
 #include <tencentcloud/teo/v20220106/model/CreateDnsRecordRequest.h>
 #include <tencentcloud/teo/v20220106/model/CreateDnsRecordResponse.h>
 #include <tencentcloud/teo/v20220106/model/CreateLoadBalancingRequest.h>
 #include <tencentcloud/teo/v20220106/model/CreateLoadBalancingResponse.h>
+#include <tencentcloud/teo/v20220106/model/CreateOriginGroupRequest.h>
+#include <tencentcloud/teo/v20220106/model/CreateOriginGroupResponse.h>
 #include <tencentcloud/teo/v20220106/model/CreatePrefetchTaskRequest.h>
 #include <tencentcloud/teo/v20220106/model/CreatePrefetchTaskResponse.h>
 #include <tencentcloud/teo/v20220106/model/CreatePurgeTaskRequest.h>
@@ -49,14 +53,34 @@
 #include <tencentcloud/teo/v20220106/model/DeleteDnsRecordsResponse.h>
 #include <tencentcloud/teo/v20220106/model/DeleteLoadBalancingRequest.h>
 #include <tencentcloud/teo/v20220106/model/DeleteLoadBalancingResponse.h>
+#include <tencentcloud/teo/v20220106/model/DeleteOriginGroupRequest.h>
+#include <tencentcloud/teo/v20220106/model/DeleteOriginGroupResponse.h>
 #include <tencentcloud/teo/v20220106/model/DeleteZoneRequest.h>
 #include <tencentcloud/teo/v20220106/model/DeleteZoneResponse.h>
 #include <tencentcloud/teo/v20220106/model/DescribeApplicationProxyRequest.h>
 #include <tencentcloud/teo/v20220106/model/DescribeApplicationProxyResponse.h>
 #include <tencentcloud/teo/v20220106/model/DescribeApplicationProxyDetailRequest.h>
 #include <tencentcloud/teo/v20220106/model/DescribeApplicationProxyDetailResponse.h>
+#include <tencentcloud/teo/v20220106/model/DescribeBotLogRequest.h>
+#include <tencentcloud/teo/v20220106/model/DescribeBotLogResponse.h>
+#include <tencentcloud/teo/v20220106/model/DescribeBotManagedRulesRequest.h>
+#include <tencentcloud/teo/v20220106/model/DescribeBotManagedRulesResponse.h>
 #include <tencentcloud/teo/v20220106/model/DescribeCnameStatusRequest.h>
 #include <tencentcloud/teo/v20220106/model/DescribeCnameStatusResponse.h>
+#include <tencentcloud/teo/v20220106/model/DescribeDDoSPolicyRequest.h>
+#include <tencentcloud/teo/v20220106/model/DescribeDDoSPolicyResponse.h>
+#include <tencentcloud/teo/v20220106/model/DescribeDDosAttackDataRequest.h>
+#include <tencentcloud/teo/v20220106/model/DescribeDDosAttackDataResponse.h>
+#include <tencentcloud/teo/v20220106/model/DescribeDDosAttackEventRequest.h>
+#include <tencentcloud/teo/v20220106/model/DescribeDDosAttackEventResponse.h>
+#include <tencentcloud/teo/v20220106/model/DescribeDDosAttackEventDetailRequest.h>
+#include <tencentcloud/teo/v20220106/model/DescribeDDosAttackEventDetailResponse.h>
+#include <tencentcloud/teo/v20220106/model/DescribeDDosAttackSourceEventRequest.h>
+#include <tencentcloud/teo/v20220106/model/DescribeDDosAttackSourceEventResponse.h>
+#include <tencentcloud/teo/v20220106/model/DescribeDDosAttackTopDataRequest.h>
+#include <tencentcloud/teo/v20220106/model/DescribeDDosAttackTopDataResponse.h>
+#include <tencentcloud/teo/v20220106/model/DescribeDDosMajorAttackEventRequest.h>
+#include <tencentcloud/teo/v20220106/model/DescribeDDosMajorAttackEventResponse.h>
 #include <tencentcloud/teo/v20220106/model/DescribeDefaultCertificatesRequest.h>
 #include <tencentcloud/teo/v20220106/model/DescribeDefaultCertificatesResponse.h>
 #include <tencentcloud/teo/v20220106/model/DescribeDnsDataRequest.h>
@@ -75,10 +99,54 @@
 #include <tencentcloud/teo/v20220106/model/DescribeLoadBalancingResponse.h>
 #include <tencentcloud/teo/v20220106/model/DescribeLoadBalancingDetailRequest.h>
 #include <tencentcloud/teo/v20220106/model/DescribeLoadBalancingDetailResponse.h>
+#include <tencentcloud/teo/v20220106/model/DescribeOriginGroupRequest.h>
+#include <tencentcloud/teo/v20220106/model/DescribeOriginGroupResponse.h>
+#include <tencentcloud/teo/v20220106/model/DescribeOriginGroupDetailRequest.h>
+#include <tencentcloud/teo/v20220106/model/DescribeOriginGroupDetailResponse.h>
+#include <tencentcloud/teo/v20220106/model/DescribeOverviewL7DataRequest.h>
+#include <tencentcloud/teo/v20220106/model/DescribeOverviewL7DataResponse.h>
 #include <tencentcloud/teo/v20220106/model/DescribePrefetchTasksRequest.h>
 #include <tencentcloud/teo/v20220106/model/DescribePrefetchTasksResponse.h>
 #include <tencentcloud/teo/v20220106/model/DescribePurgeTasksRequest.h>
 #include <tencentcloud/teo/v20220106/model/DescribePurgeTasksResponse.h>
+#include <tencentcloud/teo/v20220106/model/DescribeSecurityPolicyRequest.h>
+#include <tencentcloud/teo/v20220106/model/DescribeSecurityPolicyResponse.h>
+#include <tencentcloud/teo/v20220106/model/DescribeSecurityPolicyListRequest.h>
+#include <tencentcloud/teo/v20220106/model/DescribeSecurityPolicyListResponse.h>
+#include <tencentcloud/teo/v20220106/model/DescribeSecurityPolicyManagedRulesRequest.h>
+#include <tencentcloud/teo/v20220106/model/DescribeSecurityPolicyManagedRulesResponse.h>
+#include <tencentcloud/teo/v20220106/model/DescribeSecurityPolicyManagedRulesIdRequest.h>
+#include <tencentcloud/teo/v20220106/model/DescribeSecurityPolicyManagedRulesIdResponse.h>
+#include <tencentcloud/teo/v20220106/model/DescribeSecurityPolicyRegionsRequest.h>
+#include <tencentcloud/teo/v20220106/model/DescribeSecurityPolicyRegionsResponse.h>
+#include <tencentcloud/teo/v20220106/model/DescribeSecurityPortraitRulesRequest.h>
+#include <tencentcloud/teo/v20220106/model/DescribeSecurityPortraitRulesResponse.h>
+#include <tencentcloud/teo/v20220106/model/DescribeTimingL4DataRequest.h>
+#include <tencentcloud/teo/v20220106/model/DescribeTimingL4DataResponse.h>
+#include <tencentcloud/teo/v20220106/model/DescribeTimingL7AnalysisDataRequest.h>
+#include <tencentcloud/teo/v20220106/model/DescribeTimingL7AnalysisDataResponse.h>
+#include <tencentcloud/teo/v20220106/model/DescribeTimingL7CacheDataRequest.h>
+#include <tencentcloud/teo/v20220106/model/DescribeTimingL7CacheDataResponse.h>
+#include <tencentcloud/teo/v20220106/model/DescribeTopL7AnalysisDataRequest.h>
+#include <tencentcloud/teo/v20220106/model/DescribeTopL7AnalysisDataResponse.h>
+#include <tencentcloud/teo/v20220106/model/DescribeTopL7CacheDataRequest.h>
+#include <tencentcloud/teo/v20220106/model/DescribeTopL7CacheDataResponse.h>
+#include <tencentcloud/teo/v20220106/model/DescribeWebManagedRulesAttackEventsRequest.h>
+#include <tencentcloud/teo/v20220106/model/DescribeWebManagedRulesAttackEventsResponse.h>
+#include <tencentcloud/teo/v20220106/model/DescribeWebManagedRulesDataRequest.h>
+#include <tencentcloud/teo/v20220106/model/DescribeWebManagedRulesDataResponse.h>
+#include <tencentcloud/teo/v20220106/model/DescribeWebManagedRulesLogRequest.h>
+#include <tencentcloud/teo/v20220106/model/DescribeWebManagedRulesLogResponse.h>
+#include <tencentcloud/teo/v20220106/model/DescribeWebManagedRulesTopDataRequest.h>
+#include <tencentcloud/teo/v20220106/model/DescribeWebManagedRulesTopDataResponse.h>
+#include <tencentcloud/teo/v20220106/model/DescribeWebProtectionAttackEventsRequest.h>
+#include <tencentcloud/teo/v20220106/model/DescribeWebProtectionAttackEventsResponse.h>
+#include <tencentcloud/teo/v20220106/model/DescribeWebProtectionDataRequest.h>
+#include <tencentcloud/teo/v20220106/model/DescribeWebProtectionDataResponse.h>
+#include <tencentcloud/teo/v20220106/model/DescribeWebProtectionLogRequest.h>
+#include <tencentcloud/teo/v20220106/model/DescribeWebProtectionLogResponse.h>
+#include <tencentcloud/teo/v20220106/model/DescribeZoneDDoSPolicyRequest.h>
+#include <tencentcloud/teo/v20220106/model/DescribeZoneDDoSPolicyResponse.h>
 #include <tencentcloud/teo/v20220106/model/DescribeZoneDetailsRequest.h>
 #include <tencentcloud/teo/v20220106/model/DescribeZoneDetailsResponse.h>
 #include <tencentcloud/teo/v20220106/model/DescribeZoneSettingRequest.h>
@@ -99,6 +167,10 @@
 #include <tencentcloud/teo/v20220106/model/ModifyApplicationProxyRuleStatusResponse.h>
 #include <tencentcloud/teo/v20220106/model/ModifyApplicationProxyStatusRequest.h>
 #include <tencentcloud/teo/v20220106/model/ModifyApplicationProxyStatusResponse.h>
+#include <tencentcloud/teo/v20220106/model/ModifyDDoSPolicyRequest.h>
+#include <tencentcloud/teo/v20220106/model/ModifyDDoSPolicyResponse.h>
+#include <tencentcloud/teo/v20220106/model/ModifyDDoSPolicyHostRequest.h>
+#include <tencentcloud/teo/v20220106/model/ModifyDDoSPolicyHostResponse.h>
 #include <tencentcloud/teo/v20220106/model/ModifyDefaultCertificateRequest.h>
 #include <tencentcloud/teo/v20220106/model/ModifyDefaultCertificateResponse.h>
 #include <tencentcloud/teo/v20220106/model/ModifyDnsRecordRequest.h>
@@ -111,6 +183,10 @@
 #include <tencentcloud/teo/v20220106/model/ModifyLoadBalancingResponse.h>
 #include <tencentcloud/teo/v20220106/model/ModifyLoadBalancingStatusRequest.h>
 #include <tencentcloud/teo/v20220106/model/ModifyLoadBalancingStatusResponse.h>
+#include <tencentcloud/teo/v20220106/model/ModifyOriginGroupRequest.h>
+#include <tencentcloud/teo/v20220106/model/ModifyOriginGroupResponse.h>
+#include <tencentcloud/teo/v20220106/model/ModifySecurityPolicyRequest.h>
+#include <tencentcloud/teo/v20220106/model/ModifySecurityPolicyResponse.h>
 #include <tencentcloud/teo/v20220106/model/ModifyZoneRequest.h>
 #include <tencentcloud/teo/v20220106/model/ModifyZoneResponse.h>
 #include <tencentcloud/teo/v20220106/model/ModifyZoneCnameSpeedUpRequest.h>
@@ -149,12 +225,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateApplicationProxyRulesResponse> CreateApplicationProxyRulesOutcome;
                 typedef std::future<CreateApplicationProxyRulesOutcome> CreateApplicationProxyRulesOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateApplicationProxyRulesRequest&, CreateApplicationProxyRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateApplicationProxyRulesAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateCustomErrorPageResponse> CreateCustomErrorPageOutcome;
+                typedef std::future<CreateCustomErrorPageOutcome> CreateCustomErrorPageOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::CreateCustomErrorPageRequest&, CreateCustomErrorPageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCustomErrorPageAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateDnsRecordResponse> CreateDnsRecordOutcome;
                 typedef std::future<CreateDnsRecordOutcome> CreateDnsRecordOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateDnsRecordRequest&, CreateDnsRecordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDnsRecordAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateLoadBalancingResponse> CreateLoadBalancingOutcome;
                 typedef std::future<CreateLoadBalancingOutcome> CreateLoadBalancingOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateLoadBalancingRequest&, CreateLoadBalancingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLoadBalancingAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateOriginGroupResponse> CreateOriginGroupOutcome;
+                typedef std::future<CreateOriginGroupOutcome> CreateOriginGroupOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::CreateOriginGroupRequest&, CreateOriginGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateOriginGroupAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreatePrefetchTaskResponse> CreatePrefetchTaskOutcome;
                 typedef std::future<CreatePrefetchTaskOutcome> CreatePrefetchTaskOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreatePrefetchTaskRequest&, CreatePrefetchTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreatePrefetchTaskAsyncHandler;
@@ -176,6 +258,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteLoadBalancingResponse> DeleteLoadBalancingOutcome;
                 typedef std::future<DeleteLoadBalancingOutcome> DeleteLoadBalancingOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DeleteLoadBalancingRequest&, DeleteLoadBalancingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLoadBalancingAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteOriginGroupResponse> DeleteOriginGroupOutcome;
+                typedef std::future<DeleteOriginGroupOutcome> DeleteOriginGroupOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DeleteOriginGroupRequest&, DeleteOriginGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteOriginGroupAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteZoneResponse> DeleteZoneOutcome;
                 typedef std::future<DeleteZoneOutcome> DeleteZoneOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DeleteZoneRequest&, DeleteZoneOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteZoneAsyncHandler;
@@ -185,9 +270,36 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeApplicationProxyDetailResponse> DescribeApplicationProxyDetailOutcome;
                 typedef std::future<DescribeApplicationProxyDetailOutcome> DescribeApplicationProxyDetailOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeApplicationProxyDetailRequest&, DescribeApplicationProxyDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeApplicationProxyDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBotLogResponse> DescribeBotLogOutcome;
+                typedef std::future<DescribeBotLogOutcome> DescribeBotLogOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeBotLogRequest&, DescribeBotLogOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBotLogAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBotManagedRulesResponse> DescribeBotManagedRulesOutcome;
+                typedef std::future<DescribeBotManagedRulesOutcome> DescribeBotManagedRulesOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeBotManagedRulesRequest&, DescribeBotManagedRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBotManagedRulesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeCnameStatusResponse> DescribeCnameStatusOutcome;
                 typedef std::future<DescribeCnameStatusOutcome> DescribeCnameStatusOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeCnameStatusRequest&, DescribeCnameStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCnameStatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDDoSPolicyResponse> DescribeDDoSPolicyOutcome;
+                typedef std::future<DescribeDDoSPolicyOutcome> DescribeDDoSPolicyOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeDDoSPolicyRequest&, DescribeDDoSPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDDoSPolicyAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDDosAttackDataResponse> DescribeDDosAttackDataOutcome;
+                typedef std::future<DescribeDDosAttackDataOutcome> DescribeDDosAttackDataOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeDDosAttackDataRequest&, DescribeDDosAttackDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDDosAttackDataAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDDosAttackEventResponse> DescribeDDosAttackEventOutcome;
+                typedef std::future<DescribeDDosAttackEventOutcome> DescribeDDosAttackEventOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeDDosAttackEventRequest&, DescribeDDosAttackEventOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDDosAttackEventAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDDosAttackEventDetailResponse> DescribeDDosAttackEventDetailOutcome;
+                typedef std::future<DescribeDDosAttackEventDetailOutcome> DescribeDDosAttackEventDetailOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeDDosAttackEventDetailRequest&, DescribeDDosAttackEventDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDDosAttackEventDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDDosAttackSourceEventResponse> DescribeDDosAttackSourceEventOutcome;
+                typedef std::future<DescribeDDosAttackSourceEventOutcome> DescribeDDosAttackSourceEventOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeDDosAttackSourceEventRequest&, DescribeDDosAttackSourceEventOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDDosAttackSourceEventAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDDosAttackTopDataResponse> DescribeDDosAttackTopDataOutcome;
+                typedef std::future<DescribeDDosAttackTopDataOutcome> DescribeDDosAttackTopDataOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeDDosAttackTopDataRequest&, DescribeDDosAttackTopDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDDosAttackTopDataAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDDosMajorAttackEventResponse> DescribeDDosMajorAttackEventOutcome;
+                typedef std::future<DescribeDDosMajorAttackEventOutcome> DescribeDDosMajorAttackEventOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeDDosMajorAttackEventRequest&, DescribeDDosMajorAttackEventOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDDosMajorAttackEventAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDefaultCertificatesResponse> DescribeDefaultCertificatesOutcome;
                 typedef std::future<DescribeDefaultCertificatesOutcome> DescribeDefaultCertificatesOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeDefaultCertificatesRequest&, DescribeDefaultCertificatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDefaultCertificatesAsyncHandler;
@@ -215,12 +327,78 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeLoadBalancingDetailResponse> DescribeLoadBalancingDetailOutcome;
                 typedef std::future<DescribeLoadBalancingDetailOutcome> DescribeLoadBalancingDetailOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeLoadBalancingDetailRequest&, DescribeLoadBalancingDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLoadBalancingDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeOriginGroupResponse> DescribeOriginGroupOutcome;
+                typedef std::future<DescribeOriginGroupOutcome> DescribeOriginGroupOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeOriginGroupRequest&, DescribeOriginGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOriginGroupAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeOriginGroupDetailResponse> DescribeOriginGroupDetailOutcome;
+                typedef std::future<DescribeOriginGroupDetailOutcome> DescribeOriginGroupDetailOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeOriginGroupDetailRequest&, DescribeOriginGroupDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOriginGroupDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeOverviewL7DataResponse> DescribeOverviewL7DataOutcome;
+                typedef std::future<DescribeOverviewL7DataOutcome> DescribeOverviewL7DataOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeOverviewL7DataRequest&, DescribeOverviewL7DataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOverviewL7DataAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribePrefetchTasksResponse> DescribePrefetchTasksOutcome;
                 typedef std::future<DescribePrefetchTasksOutcome> DescribePrefetchTasksOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribePrefetchTasksRequest&, DescribePrefetchTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePrefetchTasksAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribePurgeTasksResponse> DescribePurgeTasksOutcome;
                 typedef std::future<DescribePurgeTasksOutcome> DescribePurgeTasksOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribePurgeTasksRequest&, DescribePurgeTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePurgeTasksAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeSecurityPolicyResponse> DescribeSecurityPolicyOutcome;
+                typedef std::future<DescribeSecurityPolicyOutcome> DescribeSecurityPolicyOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeSecurityPolicyRequest&, DescribeSecurityPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSecurityPolicyAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeSecurityPolicyListResponse> DescribeSecurityPolicyListOutcome;
+                typedef std::future<DescribeSecurityPolicyListOutcome> DescribeSecurityPolicyListOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeSecurityPolicyListRequest&, DescribeSecurityPolicyListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSecurityPolicyListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeSecurityPolicyManagedRulesResponse> DescribeSecurityPolicyManagedRulesOutcome;
+                typedef std::future<DescribeSecurityPolicyManagedRulesOutcome> DescribeSecurityPolicyManagedRulesOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeSecurityPolicyManagedRulesRequest&, DescribeSecurityPolicyManagedRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSecurityPolicyManagedRulesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeSecurityPolicyManagedRulesIdResponse> DescribeSecurityPolicyManagedRulesIdOutcome;
+                typedef std::future<DescribeSecurityPolicyManagedRulesIdOutcome> DescribeSecurityPolicyManagedRulesIdOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeSecurityPolicyManagedRulesIdRequest&, DescribeSecurityPolicyManagedRulesIdOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSecurityPolicyManagedRulesIdAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeSecurityPolicyRegionsResponse> DescribeSecurityPolicyRegionsOutcome;
+                typedef std::future<DescribeSecurityPolicyRegionsOutcome> DescribeSecurityPolicyRegionsOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeSecurityPolicyRegionsRequest&, DescribeSecurityPolicyRegionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSecurityPolicyRegionsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeSecurityPortraitRulesResponse> DescribeSecurityPortraitRulesOutcome;
+                typedef std::future<DescribeSecurityPortraitRulesOutcome> DescribeSecurityPortraitRulesOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeSecurityPortraitRulesRequest&, DescribeSecurityPortraitRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSecurityPortraitRulesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeTimingL4DataResponse> DescribeTimingL4DataOutcome;
+                typedef std::future<DescribeTimingL4DataOutcome> DescribeTimingL4DataOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeTimingL4DataRequest&, DescribeTimingL4DataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTimingL4DataAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeTimingL7AnalysisDataResponse> DescribeTimingL7AnalysisDataOutcome;
+                typedef std::future<DescribeTimingL7AnalysisDataOutcome> DescribeTimingL7AnalysisDataOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeTimingL7AnalysisDataRequest&, DescribeTimingL7AnalysisDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTimingL7AnalysisDataAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeTimingL7CacheDataResponse> DescribeTimingL7CacheDataOutcome;
+                typedef std::future<DescribeTimingL7CacheDataOutcome> DescribeTimingL7CacheDataOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeTimingL7CacheDataRequest&, DescribeTimingL7CacheDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTimingL7CacheDataAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeTopL7AnalysisDataResponse> DescribeTopL7AnalysisDataOutcome;
+                typedef std::future<DescribeTopL7AnalysisDataOutcome> DescribeTopL7AnalysisDataOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeTopL7AnalysisDataRequest&, DescribeTopL7AnalysisDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTopL7AnalysisDataAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeTopL7CacheDataResponse> DescribeTopL7CacheDataOutcome;
+                typedef std::future<DescribeTopL7CacheDataOutcome> DescribeTopL7CacheDataOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeTopL7CacheDataRequest&, DescribeTopL7CacheDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTopL7CacheDataAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeWebManagedRulesAttackEventsResponse> DescribeWebManagedRulesAttackEventsOutcome;
+                typedef std::future<DescribeWebManagedRulesAttackEventsOutcome> DescribeWebManagedRulesAttackEventsOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeWebManagedRulesAttackEventsRequest&, DescribeWebManagedRulesAttackEventsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWebManagedRulesAttackEventsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeWebManagedRulesDataResponse> DescribeWebManagedRulesDataOutcome;
+                typedef std::future<DescribeWebManagedRulesDataOutcome> DescribeWebManagedRulesDataOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeWebManagedRulesDataRequest&, DescribeWebManagedRulesDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWebManagedRulesDataAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeWebManagedRulesLogResponse> DescribeWebManagedRulesLogOutcome;
+                typedef std::future<DescribeWebManagedRulesLogOutcome> DescribeWebManagedRulesLogOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeWebManagedRulesLogRequest&, DescribeWebManagedRulesLogOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWebManagedRulesLogAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeWebManagedRulesTopDataResponse> DescribeWebManagedRulesTopDataOutcome;
+                typedef std::future<DescribeWebManagedRulesTopDataOutcome> DescribeWebManagedRulesTopDataOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeWebManagedRulesTopDataRequest&, DescribeWebManagedRulesTopDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWebManagedRulesTopDataAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeWebProtectionAttackEventsResponse> DescribeWebProtectionAttackEventsOutcome;
+                typedef std::future<DescribeWebProtectionAttackEventsOutcome> DescribeWebProtectionAttackEventsOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeWebProtectionAttackEventsRequest&, DescribeWebProtectionAttackEventsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWebProtectionAttackEventsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeWebProtectionDataResponse> DescribeWebProtectionDataOutcome;
+                typedef std::future<DescribeWebProtectionDataOutcome> DescribeWebProtectionDataOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeWebProtectionDataRequest&, DescribeWebProtectionDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWebProtectionDataAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeWebProtectionLogResponse> DescribeWebProtectionLogOutcome;
+                typedef std::future<DescribeWebProtectionLogOutcome> DescribeWebProtectionLogOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeWebProtectionLogRequest&, DescribeWebProtectionLogOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWebProtectionLogAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeZoneDDoSPolicyResponse> DescribeZoneDDoSPolicyOutcome;
+                typedef std::future<DescribeZoneDDoSPolicyOutcome> DescribeZoneDDoSPolicyOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeZoneDDoSPolicyRequest&, DescribeZoneDDoSPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeZoneDDoSPolicyAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeZoneDetailsResponse> DescribeZoneDetailsOutcome;
                 typedef std::future<DescribeZoneDetailsOutcome> DescribeZoneDetailsOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeZoneDetailsRequest&, DescribeZoneDetailsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeZoneDetailsAsyncHandler;
@@ -251,6 +429,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyApplicationProxyStatusResponse> ModifyApplicationProxyStatusOutcome;
                 typedef std::future<ModifyApplicationProxyStatusOutcome> ModifyApplicationProxyStatusOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyApplicationProxyStatusRequest&, ModifyApplicationProxyStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyApplicationProxyStatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyDDoSPolicyResponse> ModifyDDoSPolicyOutcome;
+                typedef std::future<ModifyDDoSPolicyOutcome> ModifyDDoSPolicyOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::ModifyDDoSPolicyRequest&, ModifyDDoSPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDDoSPolicyAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyDDoSPolicyHostResponse> ModifyDDoSPolicyHostOutcome;
+                typedef std::future<ModifyDDoSPolicyHostOutcome> ModifyDDoSPolicyHostOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::ModifyDDoSPolicyHostRequest&, ModifyDDoSPolicyHostOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDDoSPolicyHostAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyDefaultCertificateResponse> ModifyDefaultCertificateOutcome;
                 typedef std::future<ModifyDefaultCertificateOutcome> ModifyDefaultCertificateOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyDefaultCertificateRequest&, ModifyDefaultCertificateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDefaultCertificateAsyncHandler;
@@ -269,6 +453,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyLoadBalancingStatusResponse> ModifyLoadBalancingStatusOutcome;
                 typedef std::future<ModifyLoadBalancingStatusOutcome> ModifyLoadBalancingStatusOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyLoadBalancingStatusRequest&, ModifyLoadBalancingStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLoadBalancingStatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyOriginGroupResponse> ModifyOriginGroupOutcome;
+                typedef std::future<ModifyOriginGroupOutcome> ModifyOriginGroupOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::ModifyOriginGroupRequest&, ModifyOriginGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyOriginGroupAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifySecurityPolicyResponse> ModifySecurityPolicyOutcome;
+                typedef std::future<ModifySecurityPolicyOutcome> ModifySecurityPolicyOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::ModifySecurityPolicyRequest&, ModifySecurityPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifySecurityPolicyAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyZoneResponse> ModifyZoneOutcome;
                 typedef std::future<ModifyZoneOutcome> ModifyZoneOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyZoneRequest&, ModifyZoneOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyZoneAsyncHandler;
@@ -327,6 +517,15 @@ namespace TencentCloud
                 CreateApplicationProxyRulesOutcomeCallable CreateApplicationProxyRulesCallable(const Model::CreateApplicationProxyRulesRequest& request);
 
                 /**
+                 *This API is used to create a custom error page.
+                 * @param req CreateCustomErrorPageRequest
+                 * @return CreateCustomErrorPageOutcome
+                 */
+                CreateCustomErrorPageOutcome CreateCustomErrorPage(const Model::CreateCustomErrorPageRequest &request);
+                void CreateCustomErrorPageAsync(const Model::CreateCustomErrorPageRequest& request, const CreateCustomErrorPageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateCustomErrorPageOutcomeCallable CreateCustomErrorPageCallable(const Model::CreateCustomErrorPageRequest& request);
+
+                /**
                  *This API is used to create a DNS record.
                  * @param req CreateDnsRecordRequest
                  * @return CreateDnsRecordOutcome
@@ -343,6 +542,15 @@ namespace TencentCloud
                 CreateLoadBalancingOutcome CreateLoadBalancing(const Model::CreateLoadBalancingRequest &request);
                 void CreateLoadBalancingAsync(const Model::CreateLoadBalancingRequest& request, const CreateLoadBalancingAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateLoadBalancingOutcomeCallable CreateLoadBalancingCallable(const Model::CreateLoadBalancingRequest& request);
+
+                /**
+                 *This API is used to create an origin group.
+                 * @param req CreateOriginGroupRequest
+                 * @return CreateOriginGroupOutcome
+                 */
+                CreateOriginGroupOutcome CreateOriginGroup(const Model::CreateOriginGroupRequest &request);
+                void CreateOriginGroupAsync(const Model::CreateOriginGroupRequest& request, const CreateOriginGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateOriginGroupOutcomeCallable CreateOriginGroupCallable(const Model::CreateOriginGroupRequest& request);
 
                 /**
                  *This API is used to create a pre-warming task.
@@ -408,6 +616,15 @@ namespace TencentCloud
                 DeleteLoadBalancingOutcomeCallable DeleteLoadBalancingCallable(const Model::DeleteLoadBalancingRequest& request);
 
                 /**
+                 *This API is used to delete an origin group.
+                 * @param req DeleteOriginGroupRequest
+                 * @return DeleteOriginGroupOutcome
+                 */
+                DeleteOriginGroupOutcome DeleteOriginGroup(const Model::DeleteOriginGroupRequest &request);
+                void DeleteOriginGroupAsync(const Model::DeleteOriginGroupRequest& request, const DeleteOriginGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteOriginGroupOutcomeCallable DeleteOriginGroupCallable(const Model::DeleteOriginGroupRequest& request);
+
+                /**
                  *This API is used to delete a site.
                  * @param req DeleteZoneRequest
                  * @return DeleteZoneOutcome
@@ -435,6 +652,24 @@ namespace TencentCloud
                 DescribeApplicationProxyDetailOutcomeCallable DescribeApplicationProxyDetailCallable(const Model::DescribeApplicationProxyDetailRequest& request);
 
                 /**
+                 *This API is used to query bot attack logs.
+                 * @param req DescribeBotLogRequest
+                 * @return DescribeBotLogOutcome
+                 */
+                DescribeBotLogOutcome DescribeBotLog(const Model::DescribeBotLogRequest &request);
+                void DescribeBotLogAsync(const Model::DescribeBotLogRequest& request, const DescribeBotLogAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBotLogOutcomeCallable DescribeBotLogCallable(const Model::DescribeBotLogRequest& request);
+
+                /**
+                 *This API is used to query bot managed rules.
+                 * @param req DescribeBotManagedRulesRequest
+                 * @return DescribeBotManagedRulesOutcome
+                 */
+                DescribeBotManagedRulesOutcome DescribeBotManagedRules(const Model::DescribeBotManagedRulesRequest &request);
+                void DescribeBotManagedRulesAsync(const Model::DescribeBotManagedRulesRequest& request, const DescribeBotManagedRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBotManagedRulesOutcomeCallable DescribeBotManagedRulesCallable(const Model::DescribeBotManagedRulesRequest& request);
+
+                /**
                  *This API is used to query the CNAME status of a domain name.
                  * @param req DescribeCnameStatusRequest
                  * @return DescribeCnameStatusOutcome
@@ -442,6 +677,69 @@ namespace TencentCloud
                 DescribeCnameStatusOutcome DescribeCnameStatus(const Model::DescribeCnameStatusRequest &request);
                 void DescribeCnameStatusAsync(const Model::DescribeCnameStatusRequest& request, const DescribeCnameStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeCnameStatusOutcomeCallable DescribeCnameStatusCallable(const Model::DescribeCnameStatusRequest& request);
+
+                /**
+                 *This API is used to query the DDoS protection configuration.
+                 * @param req DescribeDDoSPolicyRequest
+                 * @return DescribeDDoSPolicyOutcome
+                 */
+                DescribeDDoSPolicyOutcome DescribeDDoSPolicy(const Model::DescribeDDoSPolicyRequest &request);
+                void DescribeDDoSPolicyAsync(const Model::DescribeDDoSPolicyRequest& request, const DescribeDDoSPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDDoSPolicyOutcomeCallable DescribeDDoSPolicyCallable(const Model::DescribeDDoSPolicyRequest& request);
+
+                /**
+                 *This API is used to query the DDoS attack data.
+                 * @param req DescribeDDosAttackDataRequest
+                 * @return DescribeDDosAttackDataOutcome
+                 */
+                DescribeDDosAttackDataOutcome DescribeDDosAttackData(const Model::DescribeDDosAttackDataRequest &request);
+                void DescribeDDosAttackDataAsync(const Model::DescribeDDosAttackDataRequest& request, const DescribeDDosAttackDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDDosAttackDataOutcomeCallable DescribeDDosAttackDataCallable(const Model::DescribeDDosAttackDataRequest& request);
+
+                /**
+                 *This API is used to query DDoS attack events.
+                 * @param req DescribeDDosAttackEventRequest
+                 * @return DescribeDDosAttackEventOutcome
+                 */
+                DescribeDDosAttackEventOutcome DescribeDDosAttackEvent(const Model::DescribeDDosAttackEventRequest &request);
+                void DescribeDDosAttackEventAsync(const Model::DescribeDDosAttackEventRequest& request, const DescribeDDosAttackEventAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDDosAttackEventOutcomeCallable DescribeDDosAttackEventCallable(const Model::DescribeDDosAttackEventRequest& request);
+
+                /**
+                 *This API is used to query DDoS attack event details.
+                 * @param req DescribeDDosAttackEventDetailRequest
+                 * @return DescribeDDosAttackEventDetailOutcome
+                 */
+                DescribeDDosAttackEventDetailOutcome DescribeDDosAttackEventDetail(const Model::DescribeDDosAttackEventDetailRequest &request);
+                void DescribeDDosAttackEventDetailAsync(const Model::DescribeDDosAttackEventDetailRequest& request, const DescribeDDosAttackEventDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDDosAttackEventDetailOutcomeCallable DescribeDDosAttackEventDetailCallable(const Model::DescribeDDosAttackEventDetailRequest& request);
+
+                /**
+                 *This API is used to query DDoS attack sources.
+                 * @param req DescribeDDosAttackSourceEventRequest
+                 * @return DescribeDDosAttackSourceEventOutcome
+                 */
+                DescribeDDosAttackSourceEventOutcome DescribeDDosAttackSourceEvent(const Model::DescribeDDosAttackSourceEventRequest &request);
+                void DescribeDDosAttackSourceEventAsync(const Model::DescribeDDosAttackSourceEventRequest& request, const DescribeDDosAttackSourceEventAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDDosAttackSourceEventOutcomeCallable DescribeDDosAttackSourceEventCallable(const Model::DescribeDDosAttackSourceEventRequest& request);
+
+                /**
+                 *This API is used to query the top data of DDoS attacks.
+                 * @param req DescribeDDosAttackTopDataRequest
+                 * @return DescribeDDosAttackTopDataOutcome
+                 */
+                DescribeDDosAttackTopDataOutcome DescribeDDosAttackTopData(const Model::DescribeDDosAttackTopDataRequest &request);
+                void DescribeDDosAttackTopDataAsync(const Model::DescribeDDosAttackTopDataRequest& request, const DescribeDDosAttackTopDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDDosAttackTopDataOutcomeCallable DescribeDDosAttackTopDataCallable(const Model::DescribeDDosAttackTopDataRequest& request);
+
+                /**
+                 *This API is used to query the major DDoS attack event.
+                 * @param req DescribeDDosMajorAttackEventRequest
+                 * @return DescribeDDosMajorAttackEventOutcome
+                 */
+                DescribeDDosMajorAttackEventOutcome DescribeDDosMajorAttackEvent(const Model::DescribeDDosMajorAttackEventRequest &request);
+                void DescribeDDosMajorAttackEventAsync(const Model::DescribeDDosMajorAttackEventRequest& request, const DescribeDDosMajorAttackEventAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDDosMajorAttackEventOutcomeCallable DescribeDDosMajorAttackEventCallable(const Model::DescribeDDosMajorAttackEventRequest& request);
 
                 /**
                  *This API is used to query a list of default certificates.
@@ -525,6 +823,33 @@ namespace TencentCloud
                 DescribeLoadBalancingDetailOutcomeCallable DescribeLoadBalancingDetailCallable(const Model::DescribeLoadBalancingDetailRequest& request);
 
                 /**
+                 *This API is used to get the list of origin groups.
+                 * @param req DescribeOriginGroupRequest
+                 * @return DescribeOriginGroupOutcome
+                 */
+                DescribeOriginGroupOutcome DescribeOriginGroup(const Model::DescribeOriginGroupRequest &request);
+                void DescribeOriginGroupAsync(const Model::DescribeOriginGroupRequest& request, const DescribeOriginGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeOriginGroupOutcomeCallable DescribeOriginGroupCallable(const Model::DescribeOriginGroupRequest& request);
+
+                /**
+                 *This API is used to get the details of the origin group.
+                 * @param req DescribeOriginGroupDetailRequest
+                 * @return DescribeOriginGroupDetailOutcome
+                 */
+                DescribeOriginGroupDetailOutcome DescribeOriginGroupDetail(const Model::DescribeOriginGroupDetailRequest &request);
+                void DescribeOriginGroupDetailAsync(const Model::DescribeOriginGroupDetailRequest& request, const DescribeOriginGroupDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeOriginGroupDetailOutcomeCallable DescribeOriginGroupDetailCallable(const Model::DescribeOriginGroupDetailRequest& request);
+
+                /**
+                 *This API is used to query the layer-7 time series traffic data for monitoring.
+                 * @param req DescribeOverviewL7DataRequest
+                 * @return DescribeOverviewL7DataOutcome
+                 */
+                DescribeOverviewL7DataOutcome DescribeOverviewL7Data(const Model::DescribeOverviewL7DataRequest &request);
+                void DescribeOverviewL7DataAsync(const Model::DescribeOverviewL7DataRequest& request, const DescribeOverviewL7DataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeOverviewL7DataOutcomeCallable DescribeOverviewL7DataCallable(const Model::DescribeOverviewL7DataRequest& request);
+
+                /**
                  *This API is used to query the pre-warming task status.
                  * @param req DescribePrefetchTasksRequest
                  * @return DescribePrefetchTasksOutcome
@@ -541,6 +866,177 @@ namespace TencentCloud
                 DescribePurgeTasksOutcome DescribePurgeTasks(const Model::DescribePurgeTasksRequest &request);
                 void DescribePurgeTasksAsync(const Model::DescribePurgeTasksRequest& request, const DescribePurgeTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribePurgeTasksOutcomeCallable DescribePurgeTasksCallable(const Model::DescribePurgeTasksRequest& request);
+
+                /**
+                 *This API is used to query the security protection configuration.
+                 * @param req DescribeSecurityPolicyRequest
+                 * @return DescribeSecurityPolicyOutcome
+                 */
+                DescribeSecurityPolicyOutcome DescribeSecurityPolicy(const Model::DescribeSecurityPolicyRequest &request);
+                void DescribeSecurityPolicyAsync(const Model::DescribeSecurityPolicyRequest& request, const DescribeSecurityPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeSecurityPolicyOutcomeCallable DescribeSecurityPolicyCallable(const Model::DescribeSecurityPolicyRequest& request);
+
+                /**
+                 *This API is used to query all protected subdomain names.
+                 * @param req DescribeSecurityPolicyListRequest
+                 * @return DescribeSecurityPolicyListOutcome
+                 */
+                DescribeSecurityPolicyListOutcome DescribeSecurityPolicyList(const Model::DescribeSecurityPolicyListRequest &request);
+                void DescribeSecurityPolicyListAsync(const Model::DescribeSecurityPolicyListRequest& request, const DescribeSecurityPolicyListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeSecurityPolicyListOutcomeCallable DescribeSecurityPolicyListCallable(const Model::DescribeSecurityPolicyListRequest& request);
+
+                /**
+                 *This API is used to query managed rules.
+                 * @param req DescribeSecurityPolicyManagedRulesRequest
+                 * @return DescribeSecurityPolicyManagedRulesOutcome
+                 */
+                DescribeSecurityPolicyManagedRulesOutcome DescribeSecurityPolicyManagedRules(const Model::DescribeSecurityPolicyManagedRulesRequest &request);
+                void DescribeSecurityPolicyManagedRulesAsync(const Model::DescribeSecurityPolicyManagedRulesRequest& request, const DescribeSecurityPolicyManagedRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeSecurityPolicyManagedRulesOutcomeCallable DescribeSecurityPolicyManagedRulesCallable(const Model::DescribeSecurityPolicyManagedRulesRequest& request);
+
+                /**
+                 *This API is used to query the details of a managed rule by rule ID.
+                 * @param req DescribeSecurityPolicyManagedRulesIdRequest
+                 * @return DescribeSecurityPolicyManagedRulesIdOutcome
+                 */
+                DescribeSecurityPolicyManagedRulesIdOutcome DescribeSecurityPolicyManagedRulesId(const Model::DescribeSecurityPolicyManagedRulesIdRequest &request);
+                void DescribeSecurityPolicyManagedRulesIdAsync(const Model::DescribeSecurityPolicyManagedRulesIdRequest& request, const DescribeSecurityPolicyManagedRulesIdAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeSecurityPolicyManagedRulesIdOutcomeCallable DescribeSecurityPolicyManagedRulesIdCallable(const Model::DescribeSecurityPolicyManagedRulesIdRequest& request);
+
+                /**
+                 *This API is used to query information of all regions.
+                 * @param req DescribeSecurityPolicyRegionsRequest
+                 * @return DescribeSecurityPolicyRegionsOutcome
+                 */
+                DescribeSecurityPolicyRegionsOutcome DescribeSecurityPolicyRegions(const Model::DescribeSecurityPolicyRegionsRequest &request);
+                void DescribeSecurityPolicyRegionsAsync(const Model::DescribeSecurityPolicyRegionsRequest& request, const DescribeSecurityPolicyRegionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeSecurityPolicyRegionsOutcomeCallable DescribeSecurityPolicyRegionsCallable(const Model::DescribeSecurityPolicyRegionsRequest& request);
+
+                /**
+                 *This API is used to query user profiling rules.
+                 * @param req DescribeSecurityPortraitRulesRequest
+                 * @return DescribeSecurityPortraitRulesOutcome
+                 */
+                DescribeSecurityPortraitRulesOutcome DescribeSecurityPortraitRules(const Model::DescribeSecurityPortraitRulesRequest &request);
+                void DescribeSecurityPortraitRulesAsync(const Model::DescribeSecurityPortraitRulesRequest& request, const DescribeSecurityPortraitRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeSecurityPortraitRulesOutcomeCallable DescribeSecurityPortraitRulesCallable(const Model::DescribeSecurityPortraitRulesRequest& request);
+
+                /**
+                 *This API is used to query the layer-4 time series traffic data.
+                 * @param req DescribeTimingL4DataRequest
+                 * @return DescribeTimingL4DataOutcome
+                 */
+                DescribeTimingL4DataOutcome DescribeTimingL4Data(const Model::DescribeTimingL4DataRequest &request);
+                void DescribeTimingL4DataAsync(const Model::DescribeTimingL4DataRequest& request, const DescribeTimingL4DataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeTimingL4DataOutcomeCallable DescribeTimingL4DataCallable(const Model::DescribeTimingL4DataRequest& request);
+
+                /**
+                 *This API is used to query the layer-7 time series traffic data for data analysis.
+                 * @param req DescribeTimingL7AnalysisDataRequest
+                 * @return DescribeTimingL7AnalysisDataOutcome
+                 */
+                DescribeTimingL7AnalysisDataOutcome DescribeTimingL7AnalysisData(const Model::DescribeTimingL7AnalysisDataRequest &request);
+                void DescribeTimingL7AnalysisDataAsync(const Model::DescribeTimingL7AnalysisDataRequest& request, const DescribeTimingL7AnalysisDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeTimingL7AnalysisDataOutcomeCallable DescribeTimingL7AnalysisDataCallable(const Model::DescribeTimingL7AnalysisDataRequest& request);
+
+                /**
+                 *This API is used to query time-series L7 cached data.
+                 * @param req DescribeTimingL7CacheDataRequest
+                 * @return DescribeTimingL7CacheDataOutcome
+                 */
+                DescribeTimingL7CacheDataOutcome DescribeTimingL7CacheData(const Model::DescribeTimingL7CacheDataRequest &request);
+                void DescribeTimingL7CacheDataAsync(const Model::DescribeTimingL7CacheDataRequest& request, const DescribeTimingL7CacheDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeTimingL7CacheDataOutcomeCallable DescribeTimingL7CacheDataCallable(const Model::DescribeTimingL7CacheDataRequest& request);
+
+                /**
+                 *This API is used to query the top traffic data.
+                 * @param req DescribeTopL7AnalysisDataRequest
+                 * @return DescribeTopL7AnalysisDataOutcome
+                 */
+                DescribeTopL7AnalysisDataOutcome DescribeTopL7AnalysisData(const Model::DescribeTopL7AnalysisDataRequest &request);
+                void DescribeTopL7AnalysisDataAsync(const Model::DescribeTopL7AnalysisDataRequest& request, const DescribeTopL7AnalysisDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeTopL7AnalysisDataOutcomeCallable DescribeTopL7AnalysisDataCallable(const Model::DescribeTopL7AnalysisDataRequest& request);
+
+                /**
+                 *This API is used to query the top-ranked L7 cached data.
+                 * @param req DescribeTopL7CacheDataRequest
+                 * @return DescribeTopL7CacheDataOutcome
+                 */
+                DescribeTopL7CacheDataOutcome DescribeTopL7CacheData(const Model::DescribeTopL7CacheDataRequest &request);
+                void DescribeTopL7CacheDataAsync(const Model::DescribeTopL7CacheDataRequest& request, const DescribeTopL7CacheDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeTopL7CacheDataOutcomeCallable DescribeTopL7CacheDataCallable(const Model::DescribeTopL7CacheDataRequest& request);
+
+                /**
+                 *This API is used to query web hosting attack events.
+                 * @param req DescribeWebManagedRulesAttackEventsRequest
+                 * @return DescribeWebManagedRulesAttackEventsOutcome
+                 */
+                DescribeWebManagedRulesAttackEventsOutcome DescribeWebManagedRulesAttackEvents(const Model::DescribeWebManagedRulesAttackEventsRequest &request);
+                void DescribeWebManagedRulesAttackEventsAsync(const Model::DescribeWebManagedRulesAttackEventsRequest& request, const DescribeWebManagedRulesAttackEventsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeWebManagedRulesAttackEventsOutcomeCallable DescribeWebManagedRulesAttackEventsCallable(const Model::DescribeWebManagedRulesAttackEventsRequest& request);
+
+                /**
+                 *This API is used to query the web hosting rule data.
+                 * @param req DescribeWebManagedRulesDataRequest
+                 * @return DescribeWebManagedRulesDataOutcome
+                 */
+                DescribeWebManagedRulesDataOutcome DescribeWebManagedRulesData(const Model::DescribeWebManagedRulesDataRequest &request);
+                void DescribeWebManagedRulesDataAsync(const Model::DescribeWebManagedRulesDataRequest& request, const DescribeWebManagedRulesDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeWebManagedRulesDataOutcomeCallable DescribeWebManagedRulesDataCallable(const Model::DescribeWebManagedRulesDataRequest& request);
+
+                /**
+                 *This API is used to query web hosting logs.
+                 * @param req DescribeWebManagedRulesLogRequest
+                 * @return DescribeWebManagedRulesLogOutcome
+                 */
+                DescribeWebManagedRulesLogOutcome DescribeWebManagedRulesLog(const Model::DescribeWebManagedRulesLogRequest &request);
+                void DescribeWebManagedRulesLogAsync(const Model::DescribeWebManagedRulesLogRequest& request, const DescribeWebManagedRulesLogAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeWebManagedRulesLogOutcomeCallable DescribeWebManagedRulesLogCallable(const Model::DescribeWebManagedRulesLogRequest& request);
+
+                /**
+                 *This API is used to query the top data of web hosting rules.
+                 * @param req DescribeWebManagedRulesTopDataRequest
+                 * @return DescribeWebManagedRulesTopDataOutcome
+                 */
+                DescribeWebManagedRulesTopDataOutcome DescribeWebManagedRulesTopData(const Model::DescribeWebManagedRulesTopDataRequest &request);
+                void DescribeWebManagedRulesTopDataAsync(const Model::DescribeWebManagedRulesTopDataRequest& request, const DescribeWebManagedRulesTopDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeWebManagedRulesTopDataOutcomeCallable DescribeWebManagedRulesTopDataCallable(const Model::DescribeWebManagedRulesTopDataRequest& request);
+
+                /**
+                 *This API is used to query web attack events.
+                 * @param req DescribeWebProtectionAttackEventsRequest
+                 * @return DescribeWebProtectionAttackEventsOutcome
+                 */
+                DescribeWebProtectionAttackEventsOutcome DescribeWebProtectionAttackEvents(const Model::DescribeWebProtectionAttackEventsRequest &request);
+                void DescribeWebProtectionAttackEventsAsync(const Model::DescribeWebProtectionAttackEventsRequest& request, const DescribeWebProtectionAttackEventsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeWebProtectionAttackEventsOutcomeCallable DescribeWebProtectionAttackEventsCallable(const Model::DescribeWebProtectionAttackEventsRequest& request);
+
+                /**
+                 *This API is used to query the web protection data.
+                 * @param req DescribeWebProtectionDataRequest
+                 * @return DescribeWebProtectionDataOutcome
+                 */
+                DescribeWebProtectionDataOutcome DescribeWebProtectionData(const Model::DescribeWebProtectionDataRequest &request);
+                void DescribeWebProtectionDataAsync(const Model::DescribeWebProtectionDataRequest& request, const DescribeWebProtectionDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeWebProtectionDataOutcomeCallable DescribeWebProtectionDataCallable(const Model::DescribeWebProtectionDataRequest& request);
+
+                /**
+                 *This API is used to query web protection logs.
+                 * @param req DescribeWebProtectionLogRequest
+                 * @return DescribeWebProtectionLogOutcome
+                 */
+                DescribeWebProtectionLogOutcome DescribeWebProtectionLog(const Model::DescribeWebProtectionLogRequest &request);
+                void DescribeWebProtectionLogAsync(const Model::DescribeWebProtectionLogRequest& request, const DescribeWebProtectionLogAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeWebProtectionLogOutcomeCallable DescribeWebProtectionLogCallable(const Model::DescribeWebProtectionLogRequest& request);
+
+                /**
+                 *This API is used to query all DDoS mitigation configuration.
+                 * @param req DescribeZoneDDoSPolicyRequest
+                 * @return DescribeZoneDDoSPolicyOutcome
+                 */
+                DescribeZoneDDoSPolicyOutcome DescribeZoneDDoSPolicy(const Model::DescribeZoneDDoSPolicyRequest &request);
+                void DescribeZoneDDoSPolicyAsync(const Model::DescribeZoneDDoSPolicyRequest& request, const DescribeZoneDDoSPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeZoneDDoSPolicyOutcomeCallable DescribeZoneDDoSPolicyCallable(const Model::DescribeZoneDDoSPolicyRequest& request);
 
                 /**
                  *This API is used to query the details of a site by site ID.
@@ -633,6 +1129,24 @@ namespace TencentCloud
                 ModifyApplicationProxyStatusOutcomeCallable ModifyApplicationProxyStatusCallable(const Model::ModifyApplicationProxyStatusRequest& request);
 
                 /**
+                 *This API is used to modify DDoS mitigation configuration.
+                 * @param req ModifyDDoSPolicyRequest
+                 * @return ModifyDDoSPolicyOutcome
+                 */
+                ModifyDDoSPolicyOutcome ModifyDDoSPolicy(const Model::ModifyDDoSPolicyRequest &request);
+                void ModifyDDoSPolicyAsync(const Model::ModifyDDoSPolicyRequest& request, const ModifyDDoSPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyDDoSPolicyOutcomeCallable ModifyDDoSPolicyCallable(const Model::ModifyDDoSPolicyRequest& request);
+
+                /**
+                 *This API is used to enable high availability for domain names.
+                 * @param req ModifyDDoSPolicyHostRequest
+                 * @return ModifyDDoSPolicyHostOutcome
+                 */
+                ModifyDDoSPolicyHostOutcome ModifyDDoSPolicyHost(const Model::ModifyDDoSPolicyHostRequest &request);
+                void ModifyDDoSPolicyHostAsync(const Model::ModifyDDoSPolicyHostRequest& request, const ModifyDDoSPolicyHostAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyDDoSPolicyHostOutcomeCallable ModifyDDoSPolicyHostCallable(const Model::ModifyDDoSPolicyHostRequest& request);
+
+                /**
                  *This API is used to modify the status of a default certificate.
                  * @param req ModifyDefaultCertificateRequest
                  * @return ModifyDefaultCertificateOutcome
@@ -685,6 +1199,24 @@ namespace TencentCloud
                 ModifyLoadBalancingStatusOutcome ModifyLoadBalancingStatus(const Model::ModifyLoadBalancingStatusRequest &request);
                 void ModifyLoadBalancingStatusAsync(const Model::ModifyLoadBalancingStatusRequest& request, const ModifyLoadBalancingStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyLoadBalancingStatusOutcomeCallable ModifyLoadBalancingStatusCallable(const Model::ModifyLoadBalancingStatusRequest& request);
+
+                /**
+                 *This API is used to modify an origin group.
+                 * @param req ModifyOriginGroupRequest
+                 * @return ModifyOriginGroupOutcome
+                 */
+                ModifyOriginGroupOutcome ModifyOriginGroup(const Model::ModifyOriginGroupRequest &request);
+                void ModifyOriginGroupAsync(const Model::ModifyOriginGroupRequest& request, const ModifyOriginGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyOriginGroupOutcomeCallable ModifyOriginGroupCallable(const Model::ModifyOriginGroupRequest& request);
+
+                /**
+                 *This API is used to modify the web and bot security configurations.
+                 * @param req ModifySecurityPolicyRequest
+                 * @return ModifySecurityPolicyOutcome
+                 */
+                ModifySecurityPolicyOutcome ModifySecurityPolicy(const Model::ModifySecurityPolicyRequest &request);
+                void ModifySecurityPolicyAsync(const Model::ModifySecurityPolicyRequest& request, const ModifySecurityPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifySecurityPolicyOutcomeCallable ModifySecurityPolicyCallable(const Model::ModifySecurityPolicyRequest& request);
 
                 /**
                  *This API is used to modify the site information.

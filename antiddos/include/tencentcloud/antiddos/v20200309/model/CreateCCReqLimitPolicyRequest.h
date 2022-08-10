@@ -133,6 +133,24 @@ namespace TencentCloud
                      */
                     bool PolicyHasBeenSet() const;
 
+                    /**
+                     * 获取Whether it’s a global CC frequency limit
+                     * @return IsGlobal Whether it’s a global CC frequency limit
+                     */
+                    int64_t GetIsGlobal() const;
+
+                    /**
+                     * 设置Whether it’s a global CC frequency limit
+                     * @param IsGlobal Whether it’s a global CC frequency limit
+                     */
+                    void SetIsGlobal(const int64_t& _isGlobal);
+
+                    /**
+                     * 判断参数 IsGlobal 是否已赋值
+                     * @return IsGlobal 是否已赋值
+                     */
+                    bool IsGlobalHasBeenSet() const;
+
                 private:
 
                     /**
@@ -164,6 +182,12 @@ namespace TencentCloud
                      */
                     CCReqLimitPolicyRecord m_policy;
                     bool m_policyHasBeenSet;
+
+                    /**
+                     * Whether it’s a global CC frequency limit
+                     */
+                    int64_t m_isGlobal;
+                    bool m_isGlobalHasBeenSet;
 
                 };
             }

@@ -57,8 +57,8 @@ namespace TencentCloud
                     bool TotalHasBeenSet() const;
 
                     /**
-                     * 获取Details of level-defining policies
-                     * @return LevelList Details of level-defining policies
+                     * 获取Total number of level-defining policies
+                     * @return LevelList Total number of level-defining policies
                      */
                     std::vector<CCLevelPolicy> GetLevelList() const;
 
@@ -77,7 +77,7 @@ namespace TencentCloud
                     bool m_totalHasBeenSet;
 
                     /**
-                     * Details of level-defining policies
+                     * Total number of level-defining policies
                      */
                     std::vector<CCLevelPolicy> m_levelList;
                     bool m_levelListHasBeenSet;

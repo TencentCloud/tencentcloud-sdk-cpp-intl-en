@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Origin health status
                 */
                 class OriginCheckOriginStatus : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取`healthy`: Healthy; `unhealthy`: Unhealthy; `process`: Checking origin.
+                     * @return Status `healthy`: Healthy; `unhealthy`: Unhealthy; `process`: Checking origin.
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param Status 
+                     * 设置`healthy`: Healthy; `unhealthy`: Unhealthy; `process`: Checking origin.
+                     * @param Status `healthy`: Healthy; `unhealthy`: Unhealthy; `process`: Checking origin.
                      */
                     void SetStatus(const std::string& _status);
 
@@ -65,14 +65,18 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Host 
+                     * 获取List of unhealthy origin groups when `Status = unhealthy`
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Host List of unhealthy origin groups when `Status = unhealthy`
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> GetHost() const;
 
                     /**
-                     * 设置
-                     * @param Host 
+                     * 设置List of unhealthy origin groups when `Status = unhealthy`
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Host List of unhealthy origin groups when `Status = unhealthy`
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetHost(const std::vector<std::string>& _host);
 
@@ -85,13 +89,14 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * `healthy`: Healthy; `unhealthy`: Unhealthy; `process`: Checking origin.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * 
+                     * List of unhealthy origin groups when `Status = unhealthy`
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_host;
                     bool m_hostHasBeenSet;

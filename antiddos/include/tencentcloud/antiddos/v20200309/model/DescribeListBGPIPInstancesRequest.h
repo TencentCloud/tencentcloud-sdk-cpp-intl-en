@@ -302,14 +302,14 @@ namespace TencentCloud
                     bool FilterInstanceIdListHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FilterTag 
+                     * 获取Searches by tag
+                     * @return FilterTag Searches by tag
                      */
                     TagFilter GetFilterTag() const;
 
                     /**
-                     * 设置
-                     * @param FilterTag 
+                     * 设置Searches by tag
+                     * @param FilterTag Searches by tag
                      */
                     void SetFilterTag(const TagFilter& _filterTag);
 
@@ -318,6 +318,24 @@ namespace TencentCloud
                      * @return FilterTag 是否已赋值
                      */
                     bool FilterTagHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return FilterPackType 
+                     */
+                    std::vector<std::string> GetFilterPackType() const;
+
+                    /**
+                     * 设置
+                     * @param FilterPackType 
+                     */
+                    void SetFilterPackType(const std::vector<std::string>& _filterPackType);
+
+                    /**
+                     * 判断参数 FilterPackType 是否已赋值
+                     * @return FilterPackType 是否已赋值
+                     */
+                    bool FilterPackTypeHasBeenSet() const;
 
                 private:
 
@@ -406,10 +424,16 @@ namespace TencentCloud
                     bool m_filterInstanceIdListHasBeenSet;
 
                     /**
-                     * 
+                     * Searches by tag
                      */
                     TagFilter m_filterTag;
                     bool m_filterTagHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<std::string> m_filterPackType;
+                    bool m_filterPackTypeHasBeenSet;
 
                 };
             }

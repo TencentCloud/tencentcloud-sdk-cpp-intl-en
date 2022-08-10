@@ -66,18 +66,18 @@ namespace TencentCloud
                     bool RecordHasBeenSet() const;
 
                     /**
-                     * 获取Region of the origin group. It’s available when the origin group `Type` is `area`. 
-If it’s left empty, it means to use the default region.
-                     * @return Area Region of the origin group. It’s available when the origin group `Type` is `area`. 
-If it’s left empty, it means to use the default region.
+                     * 获取A specific region when `Type=area`.
+The default region when `Type` is not specified.
+                     * @return Area A specific region when `Type=area`.
+The default region when `Type` is not specified.
                      */
                     std::vector<std::string> GetArea() const;
 
                     /**
-                     * 设置Region of the origin group. It’s available when the origin group `Type` is `area`. 
-If it’s left empty, it means to use the default region.
-                     * @param Area Region of the origin group. It’s available when the origin group `Type` is `area`. 
-If it’s left empty, it means to use the default region.
+                     * 设置A specific region when `Type=area`.
+The default region when `Type` is not specified.
+                     * @param Area A specific region when `Type=area`.
+The default region when `Type` is not specified.
                      */
                     void SetArea(const std::vector<std::string>& _area);
 
@@ -88,14 +88,22 @@ If it’s left empty, it means to use the default region.
                     bool AreaHasBeenSet() const;
 
                     /**
-                     * 获取The weight of the origin group. It’s available when the `Type` is `weight`.
-                     * @return Weight The weight of the origin group. It’s available when the `Type` is `weight`.
+                     * 获取A specific weight when `Type=weight`.
+The value range is [1-100].
+The total weight of multiple origins in an origin group should be 100.
+                     * @return Weight A specific weight when `Type=weight`.
+The value range is [1-100].
+The total weight of multiple origins in an origin group should be 100.
                      */
                     uint64_t GetWeight() const;
 
                     /**
-                     * 设置The weight of the origin group. It’s available when the `Type` is `weight`.
-                     * @param Weight The weight of the origin group. It’s available when the `Type` is `weight`.
+                     * 设置A specific weight when `Type=weight`.
+The value range is [1-100].
+The total weight of multiple origins in an origin group should be 100.
+                     * @param Weight A specific weight when `Type=weight`.
+The value range is [1-100].
+The total weight of multiple origins in an origin group should be 100.
                      */
                     void SetWeight(const uint64_t& _weight);
 
@@ -193,6 +201,24 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool PrivateParameterHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return Proto 
+                     */
+                    std::string GetProto() const;
+
+                    /**
+                     * 设置
+                     * @param Proto 
+                     */
+                    void SetProto(const std::string& _proto);
+
+                    /**
+                     * 判断参数 Proto 是否已赋值
+                     * @return Proto 是否已赋值
+                     */
+                    bool ProtoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -202,14 +228,16 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_recordHasBeenSet;
 
                     /**
-                     * Region of the origin group. It’s available when the origin group `Type` is `area`. 
-If it’s left empty, it means to use the default region.
+                     * A specific region when `Type=area`.
+The default region when `Type` is not specified.
                      */
                     std::vector<std::string> m_area;
                     bool m_areaHasBeenSet;
 
                     /**
-                     * The weight of the origin group. It’s available when the `Type` is `weight`.
+                     * A specific weight when `Type=weight`.
+The value range is [1-100].
+The total weight of multiple origins in an origin group should be 100.
                      */
                     uint64_t m_weight;
                     bool m_weightHasBeenSet;
@@ -241,6 +269,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     std::vector<OriginRecordPrivateParameter> m_privateParameter;
                     bool m_privateParameterHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_proto;
+                    bool m_protoHasBeenSet;
 
                 };
             }

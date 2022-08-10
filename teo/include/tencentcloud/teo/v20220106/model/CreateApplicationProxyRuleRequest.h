@@ -123,26 +123,22 @@ namespace TencentCloud
                     bool PortHasBeenSet() const;
 
                     /**
-                     * 获取Origin server type. Valid values:
+                     * 获取Origin type. Valid values:
 `custom`: Specified origins
-`origins`: An origin group
-`load_balancing`: A load balancer
-                     * @return OriginType Origin server type. Valid values:
+`origins`: Origin group
+                     * @return OriginType Origin type. Valid values:
 `custom`: Specified origins
-`origins`: An origin group
-`load_balancing`: A load balancer
+`origins`: Origin group
                      */
                     std::string GetOriginType() const;
 
                     /**
-                     * 设置Origin server type. Valid values:
+                     * 设置Origin type. Valid values:
 `custom`: Specified origins
-`origins`: An origin group
-`load_balancing`: A load balancer
-                     * @param OriginType Origin server type. Valid values:
+`origins`: Origin group
+                     * @param OriginType Origin type. Valid values:
 `custom`: Specified origins
-`origins`: An origin group
-`load_balancing`: A load balancer
+`origins`: Origin group
                      */
                     void SetOriginType(const std::string& _originType);
 
@@ -153,34 +149,30 @@ namespace TencentCloud
                     bool OriginTypeHasBeenSet() const;
 
                     /**
-                     * 获取Origin server information.
-When `OriginType=custom`, this field value indicates multiple origin servers in either of the following formats:
+                     * 获取Origin information:
+When `OriginType=custom`, it can include one or more origins in either of the following formats:
 IP:Port
 Domain name:Port
-When `OriginType=origins`, it indicates the origin group ID.
- 
-                     * @return OriginValue Origin server information.
-When `OriginType=custom`, this field value indicates multiple origin servers in either of the following formats:
+When `OriginType=origins`, it is an origin group ID.
+                     * @return OriginValue Origin information:
+When `OriginType=custom`, it can include one or more origins in either of the following formats:
 IP:Port
 Domain name:Port
-When `OriginType=origins`, it indicates the origin group ID.
- 
+When `OriginType=origins`, it is an origin group ID.
                      */
                     std::vector<std::string> GetOriginValue() const;
 
                     /**
-                     * 设置Origin server information.
-When `OriginType=custom`, this field value indicates multiple origin servers in either of the following formats:
+                     * 设置Origin information:
+When `OriginType=custom`, it can include one or more origins in either of the following formats:
 IP:Port
 Domain name:Port
-When `OriginType=origins`, it indicates the origin group ID.
- 
-                     * @param OriginValue Origin server information.
-When `OriginType=custom`, this field value indicates multiple origin servers in either of the following formats:
+When `OriginType=origins`, it is an origin group ID.
+                     * @param OriginValue Origin information:
+When `OriginType=custom`, it can include one or more origins in either of the following formats:
 IP:Port
 Domain name:Port
-When `OriginType=origins`, it indicates the origin group ID.
- 
+When `OriginType=origins`, it is an origin group ID.
                      */
                     void SetOriginValue(const std::vector<std::string>& _originValue);
 
@@ -283,21 +275,19 @@ When `Proto=UDP`, valid values:
                     bool m_portHasBeenSet;
 
                     /**
-                     * Origin server type. Valid values:
+                     * Origin type. Valid values:
 `custom`: Specified origins
-`origins`: An origin group
-`load_balancing`: A load balancer
+`origins`: Origin group
                      */
                     std::string m_originType;
                     bool m_originTypeHasBeenSet;
 
                     /**
-                     * Origin server information.
-When `OriginType=custom`, this field value indicates multiple origin servers in either of the following formats:
+                     * Origin information:
+When `OriginType=custom`, it can include one or more origins in either of the following formats:
 IP:Port
 Domain name:Port
-When `OriginType=origins`, it indicates the origin group ID.
- 
+When `OriginType=origins`, it is an origin group ID.
                      */
                     std::vector<std::string> m_originValue;
                     bool m_originValueHasBeenSet;

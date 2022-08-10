@@ -328,14 +328,14 @@ namespace TencentCloud
                     bool ClientIpHeaderHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CachePrefresh 
+                     * 获取Cache prefresh configuration
+                     * @return CachePrefresh Cache prefresh configuration
                      */
                     CachePrefresh GetCachePrefresh() const;
 
                     /**
-                     * 设置
-                     * @param CachePrefresh 
+                     * 设置Cache prefresh configuration
+                     * @param CachePrefresh Cache prefresh configuration
                      */
                     void SetCachePrefresh(const CachePrefresh& _cachePrefresh);
 
@@ -438,7 +438,7 @@ namespace TencentCloud
                     bool m_clientIpHeaderHasBeenSet;
 
                     /**
-                     * 
+                     * Cache prefresh configuration
                      */
                     CachePrefresh m_cachePrefresh;
                     bool m_cachePrefreshHasBeenSet;

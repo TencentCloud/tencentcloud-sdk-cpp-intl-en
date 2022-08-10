@@ -33,6 +33,7 @@
 #include <tencentcloud/antiddos/v20200309/model/EipAddressPackRelation.h>
 #include <tencentcloud/antiddos/v20200309/model/EipAddressRelation.h>
 #include <tencentcloud/antiddos/v20200309/model/TagInfo.h>
+#include <tencentcloud/antiddos/v20200309/model/AnycastOutPackRelation.h>
 
 
 namespace TencentCloud
@@ -500,14 +501,18 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool BGPIPChannelFlagHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TagInfoList 
+                     * 获取Tag that the Anti-DDoS Advanced instance is associated with
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return TagInfoList Tag that the Anti-DDoS Advanced instance is associated with
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<TagInfo> GetTagInfoList() const;
 
                     /**
-                     * 设置
-                     * @param TagInfoList 
+                     * 设置Tag that the Anti-DDoS Advanced instance is associated with
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param TagInfoList Tag that the Anti-DDoS Advanced instance is associated with
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetTagInfoList(const std::vector<TagInfo>& _tagInfoList);
 
@@ -516,6 +521,42 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * @return TagInfoList 是否已赋值
                      */
                     bool TagInfoListHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return AnycastOutPackRelation 
+                     */
+                    AnycastOutPackRelation GetAnycastOutPackRelation() const;
+
+                    /**
+                     * 设置
+                     * @param AnycastOutPackRelation 
+                     */
+                    void SetAnycastOutPackRelation(const AnycastOutPackRelation& _anycastOutPackRelation);
+
+                    /**
+                     * 判断参数 AnycastOutPackRelation 是否已赋值
+                     * @return AnycastOutPackRelation 是否已赋值
+                     */
+                    bool AnycastOutPackRelationHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return InstanceVersion 
+                     */
+                    uint64_t GetInstanceVersion() const;
+
+                    /**
+                     * 设置
+                     * @param InstanceVersion 
+                     */
+                    void SetInstanceVersion(const uint64_t& _instanceVersion);
+
+                    /**
+                     * 判断参数 InstanceVersion 是否已赋值
+                     * @return InstanceVersion 是否已赋值
+                     */
+                    bool InstanceVersionHasBeenSet() const;
 
                 private:
 
@@ -661,10 +702,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_bGPIPChannelFlagHasBeenSet;
 
                     /**
-                     * 
+                     * Tag that the Anti-DDoS Advanced instance is associated with
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<TagInfo> m_tagInfoList;
                     bool m_tagInfoListHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    AnycastOutPackRelation m_anycastOutPackRelation;
+                    bool m_anycastOutPackRelationHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_instanceVersion;
+                    bool m_instanceVersionHasBeenSet;
 
                 };
             }

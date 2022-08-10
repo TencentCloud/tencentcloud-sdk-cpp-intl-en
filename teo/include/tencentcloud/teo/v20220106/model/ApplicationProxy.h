@@ -48,17 +48,17 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
+                     * 获取ID of the proxy
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return ProxyId Instance ID
+                     * @return ProxyId ID of the proxy
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetProxyId() const;
 
                     /**
-                     * 设置Instance ID
+                     * 设置ID of the proxy
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param ProxyId Instance ID
+                     * @param ProxyId ID of the proxy
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetProxyId(const std::string& _proxyId);
@@ -70,14 +70,22 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool ProxyIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance name
-                     * @return ProxyName Instance name
+                     * 获取Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
+                     * @return ProxyName Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
                      */
                     std::string GetProxyName() const;
 
                     /**
-                     * 设置Instance name
-                     * @param ProxyName Instance name
+                     * 设置Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
+                     * @param ProxyName Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
                      */
                     void SetProxyName(const std::string& _proxyName);
 
@@ -357,25 +365,25 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
                     /**
                      * 获取Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
-Note: This field may return `null`, indicating that no valid value can be obtained.
+`hostname`: Create by subdomain name
+`instance`: Create by instance
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ProxyType Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
-Note: This field may return `null`, indicating that no valid value can be obtained.
+`hostname`: Create by subdomain name
+`instance`: Create by instance
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetProxyType() const;
 
                     /**
                      * 设置Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
-Note: This field may return `null`, indicating that no valid value can be obtained.
+`hostname`: Create by subdomain name
+`instance`: Create by instance
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param ProxyType Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
-Note: This field may return `null`, indicating that no valid value can be obtained.
+`hostname`: Create by subdomain name
+`instance`: Create by instance
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetProxyType(const std::string& _proxyType);
 
@@ -386,18 +394,26 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool ProxyTypeHasBeenSet() const;
 
                     /**
-                     * 获取ID of the layer-7 domain name
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return HostId ID of the layer-7 domain name
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取When `ProxyType=hostname`:
+`ProxyName` indicates a specified domain name;
+`HostId` indicates a unique ID of the domain name.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return HostId When `ProxyType=hostname`:
+`ProxyName` indicates a specified domain name;
+`HostId` indicates a unique ID of the domain name.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetHostId() const;
 
                     /**
-                     * 设置ID of the layer-7 domain name
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param HostId ID of the layer-7 domain name
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置When `ProxyType=hostname`:
+`ProxyName` indicates a specified domain name;
+`HostId` indicates a unique ID of the domain name.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param HostId When `ProxyType=hostname`:
+`ProxyName` indicates a specified domain name;
+`HostId` indicates a unique ID of the domain name.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetHostId(const std::string& _hostId);
 
@@ -410,14 +426,16 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 private:
 
                     /**
-                     * Instance ID
+                     * ID of the proxy
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_proxyId;
                     bool m_proxyIdHasBeenSet;
 
                     /**
-                     * Instance name
+                     * Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
                      */
                     std::string m_proxyName;
                     bool m_proxyNameHasBeenSet;
@@ -509,16 +527,18 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
                     /**
                      * Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
-Note: This field may return `null`, indicating that no valid value can be obtained.
+`hostname`: Create by subdomain name
+`instance`: Create by instance
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_proxyType;
                     bool m_proxyTypeHasBeenSet;
 
                     /**
-                     * ID of the layer-7 domain name
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * When `ProxyType=hostname`:
+`ProxyName` indicates a specified domain name;
+`HostId` indicates a unique ID of the domain name.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_hostId;
                     bool m_hostIdHasBeenSet;

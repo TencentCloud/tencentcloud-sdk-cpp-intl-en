@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Tag type
                 */
                 class TagFilter : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TagKey 
+                     * 获取Tag key
+                     * @return TagKey Tag key
                      */
                     std::string GetTagKey() const;
 
                     /**
-                     * 设置
-                     * @param TagKey 
+                     * 设置Tag key
+                     * @param TagKey Tag key
                      */
                     void SetTagKey(const std::string& _tagKey);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool TagKeyHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TagValue 
+                     * 获取Tag value
+                     * @return TagValue Tag value
                      */
                     std::vector<std::string> GetTagValue() const;
 
                     /**
-                     * 设置
-                     * @param TagValue 
+                     * 设置Tag value
+                     * @param TagValue Tag value
                      */
                     void SetTagValue(const std::vector<std::string>& _tagValue);
 
@@ -85,13 +85,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Tag key
                      */
                     std::string m_tagKey;
                     bool m_tagKeyHasBeenSet;
 
                     /**
-                     * 
+                     * Tag value
                      */
                     std::vector<std::string> m_tagValue;
                     bool m_tagValueHasBeenSet;

@@ -69,17 +69,17 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool LogTimeHasBeenSet() const;
 
                     /**
-                     * 获取Site name
+                     * 获取Subdomain name
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return Domain Site name
+                     * @return Domain Subdomain name
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置Site name
+                     * 设置Subdomain name
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Domain Site name
+                     * @param Domain Subdomain name
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetDomain(const std::string& _domain);
@@ -166,7 +166,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_logTimeHasBeenSet;
 
                     /**
-                     * Site name
+                     * Subdomain name
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_domain;

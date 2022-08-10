@@ -61,8 +61,6 @@
 #include <tencentcloud/antiddos/v20200309/model/CreateWaterPrintConfigResponse.h>
 #include <tencentcloud/antiddos/v20200309/model/CreateWaterPrintKeyRequest.h>
 #include <tencentcloud/antiddos/v20200309/model/CreateWaterPrintKeyResponse.h>
-#include <tencentcloud/antiddos/v20200309/model/DeleteBlackWhiteIpListRequest.h>
-#include <tencentcloud/antiddos/v20200309/model/DeleteBlackWhiteIpListResponse.h>
 #include <tencentcloud/antiddos/v20200309/model/DeleteCCLevelPolicyRequest.h>
 #include <tencentcloud/antiddos/v20200309/model/DeleteCCLevelPolicyResponse.h>
 #include <tencentcloud/antiddos/v20200309/model/DeleteCCPrecisionPolicyRequest.h>
@@ -226,9 +224,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateWaterPrintKeyResponse> CreateWaterPrintKeyOutcome;
                 typedef std::future<CreateWaterPrintKeyOutcome> CreateWaterPrintKeyOutcomeCallable;
                 typedef std::function<void(const AntiddosClient*, const Model::CreateWaterPrintKeyRequest&, CreateWaterPrintKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateWaterPrintKeyAsyncHandler;
-                typedef Outcome<Core::Error, Model::DeleteBlackWhiteIpListResponse> DeleteBlackWhiteIpListOutcome;
-                typedef std::future<DeleteBlackWhiteIpListOutcome> DeleteBlackWhiteIpListOutcomeCallable;
-                typedef std::function<void(const AntiddosClient*, const Model::DeleteBlackWhiteIpListRequest&, DeleteBlackWhiteIpListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteBlackWhiteIpListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteCCLevelPolicyResponse> DeleteCCLevelPolicyOutcome;
                 typedef std::future<DeleteCCLevelPolicyOutcome> DeleteCCLevelPolicyOutcomeCallable;
                 typedef std::function<void(const AntiddosClient*, const Model::DeleteCCLevelPolicyRequest&, DeleteCCLevelPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteCCLevelPolicyAsyncHandler;
@@ -542,15 +537,6 @@ namespace TencentCloud
                 CreateWaterPrintKeyOutcomeCallable CreateWaterPrintKeyCallable(const Model::CreateWaterPrintKeyRequest& request);
 
                 /**
-                 *This API is used to delete an Anti-DDoS IP blocklist/allowlist.
-                 * @param req DeleteBlackWhiteIpListRequest
-                 * @return DeleteBlackWhiteIpListOutcome
-                 */
-                DeleteBlackWhiteIpListOutcome DeleteBlackWhiteIpList(const Model::DeleteBlackWhiteIpListRequest &request);
-                void DeleteBlackWhiteIpListAsync(const Model::DeleteBlackWhiteIpListRequest& request, const DeleteBlackWhiteIpListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DeleteBlackWhiteIpListOutcomeCallable DeleteBlackWhiteIpListCallable(const Model::DeleteBlackWhiteIpListRequest& request);
-
-                /**
                  *This API is used to delete a level-defining policy of CC attacks. 
                  * @param req DeleteCCLevelPolicyRequest
                  * @return DeleteCCLevelPolicyOutcome
@@ -668,7 +654,7 @@ namespace TencentCloud
                 DescribeBlackWhiteIpListOutcomeCallable DescribeBlackWhiteIpListCallable(const Model::DescribeBlackWhiteIpListRequest& request);
 
                 /**
-                 *This API is used to query the list of CC protection levels.
+                 *Gets the list of CC protection levels
                  * @param req DescribeCCLevelListRequest
                  * @return DescribeCCLevelListOutcome
                  */

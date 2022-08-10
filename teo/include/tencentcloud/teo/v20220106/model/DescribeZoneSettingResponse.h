@@ -279,8 +279,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool ClientIpHeaderHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CachePrefresh 
+                     * 获取Cache prefresh configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return CachePrefresh Cache prefresh configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     CachePrefresh GetCachePrefresh() const;
 
@@ -403,7 +405,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_clientIpHeaderHasBeenSet;
 
                     /**
-                     * 
+                     * Cache prefresh configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     CachePrefresh m_cachePrefresh;
                     bool m_cachePrefreshHasBeenSet;

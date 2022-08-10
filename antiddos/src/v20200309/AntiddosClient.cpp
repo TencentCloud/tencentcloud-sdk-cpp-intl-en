@@ -857,49 +857,6 @@ AntiddosClient::CreateWaterPrintKeyOutcomeCallable AntiddosClient::CreateWaterPr
     return task->get_future();
 }
 
-AntiddosClient::DeleteBlackWhiteIpListOutcome AntiddosClient::DeleteBlackWhiteIpList(const DeleteBlackWhiteIpListRequest &request)
-{
-    auto outcome = MakeRequest(request, "DeleteBlackWhiteIpList");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        DeleteBlackWhiteIpListResponse rsp = DeleteBlackWhiteIpListResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return DeleteBlackWhiteIpListOutcome(rsp);
-        else
-            return DeleteBlackWhiteIpListOutcome(o.GetError());
-    }
-    else
-    {
-        return DeleteBlackWhiteIpListOutcome(outcome.GetError());
-    }
-}
-
-void AntiddosClient::DeleteBlackWhiteIpListAsync(const DeleteBlackWhiteIpListRequest& request, const DeleteBlackWhiteIpListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DeleteBlackWhiteIpList(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-AntiddosClient::DeleteBlackWhiteIpListOutcomeCallable AntiddosClient::DeleteBlackWhiteIpListCallable(const DeleteBlackWhiteIpListRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<DeleteBlackWhiteIpListOutcome()>>(
-        [this, request]()
-        {
-            return this->DeleteBlackWhiteIpList(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
 AntiddosClient::DeleteCCLevelPolicyOutcome AntiddosClient::DeleteCCLevelPolicy(const DeleteCCLevelPolicyRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteCCLevelPolicy");

@@ -315,30 +315,30 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool CnameHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether to enable load balancing, layer-4 proxy, or security protection for the domain name.
-- `lb`: Load balancing.
-- `security`: Security protection.
-- `l4`: Layer-4 proxy.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return DomainStatus Specifies whether to enable load balancing, layer-4 proxy, or security protection for the domain name.
-- `lb`: Load balancing.
-- `security`: Security protection.
-- `l4`: Layer-4 proxy.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Which service is enabled for the domain name.
+- `lb`: Load balancing
+- `security`: Security acceleration
+- `l4`: L4 proxy
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DomainStatus Which service is enabled for the domain name.
+- `lb`: Load balancing
+- `security`: Security acceleration
+- `l4`: L4 proxy
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> GetDomainStatus() const;
 
                     /**
-                     * 设置Specifies whether to enable load balancing, layer-4 proxy, or security protection for the domain name.
-- `lb`: Load balancing.
-- `security`: Security protection.
-- `l4`: Layer-4 proxy.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param DomainStatus Specifies whether to enable load balancing, layer-4 proxy, or security protection for the domain name.
-- `lb`: Load balancing.
-- `security`: Security protection.
-- `l4`: Layer-4 proxy.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Which service is enabled for the domain name.
+- `lb`: Load balancing
+- `security`: Security acceleration
+- `l4`: L4 proxy
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param DomainStatus Which service is enabled for the domain name.
+- `lb`: Load balancing
+- `security`: Security acceleration
+- `l4`: L4 proxy
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetDomainStatus(const std::vector<std::string>& _domainStatus);
 
@@ -439,11 +439,11 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_cnameHasBeenSet;
 
                     /**
-                     * Specifies whether to enable load balancing, layer-4 proxy, or security protection for the domain name.
-- `lb`: Load balancing.
-- `security`: Security protection.
-- `l4`: Layer-4 proxy.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Which service is enabled for the domain name.
+- `lb`: Load balancing
+- `security`: Security acceleration
+- `l4`: L4 proxy
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_domainStatus;
                     bool m_domainStatusHasBeenSet;
