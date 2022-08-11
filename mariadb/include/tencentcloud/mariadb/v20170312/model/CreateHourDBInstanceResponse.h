@@ -71,6 +71,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool InstanceIdsHasBeenSet() const;
 
+                    /**
+                     * 获取Async task ID, which can be used in the [DescribeFlow](https://www.tencentcloud.com/document/product/237/16177) API to query the async task result.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return FlowId Async task ID, which can be used in the [DescribeFlow](https://www.tencentcloud.com/document/product/237/16177) API to query the async task result.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetFlowId() const;
+
+                    /**
+                     * 判断参数 FlowId 是否已赋值
+                     * @return FlowId 是否已赋值
+                     */
+                    bool FlowIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -86,6 +100,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
+
+                    /**
+                     * Async task ID, which can be used in the [DescribeFlow](https://www.tencentcloud.com/document/product/237/16177) API to query the async task result.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_flowId;
+                    bool m_flowIdHasBeenSet;
 
                 };
             }

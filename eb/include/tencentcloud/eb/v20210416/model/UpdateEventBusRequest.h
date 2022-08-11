@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool EventBusIdHasBeenSet() const;
 
                     /**
-                     * 获取Event bus description, which can contain up to 200 characters of any type
-                     * @return Description Event bus description, which can contain up to 200 characters of any type
+                     * 获取Event bus description, which can contain up to 200 characters of any type.
+                     * @return Description Event bus description, which can contain up to 200 characters of any type.
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Event bus description, which can contain up to 200 characters of any type
-                     * @param Description Event bus description, which can contain up to 200 characters of any type
+                     * 设置Event bus description, which can contain up to 200 characters of any type.
+                     * @param Description Event bus description, which can contain up to 200 characters of any type.
                      */
                     void SetDescription(const std::string& _description);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Event bus name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter
-                     * @return EventBusName Event bus name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter
+                     * 获取Event bus name: it can contain 2-60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter.
+                     * @return EventBusName Event bus name: it can contain 2-60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter.
                      */
                     std::string GetEventBusName() const;
 
                     /**
-                     * 设置Event bus name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter
-                     * @param EventBusName Event bus name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter
+                     * 设置Event bus name: it can contain 2-60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter.
+                     * @param EventBusName Event bus name: it can contain 2-60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter.
                      */
                     void SetEventBusName(const std::string& _eventBusName);
 
@@ -105,13 +105,13 @@ namespace TencentCloud
                     bool m_eventBusIdHasBeenSet;
 
                     /**
-                     * Event bus description, which can contain up to 200 characters of any type
+                     * Event bus description, which can contain up to 200 characters of any type.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Event bus name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter
+                     * Event bus name: it can contain 2-60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter.
                      */
                     std::string m_eventBusName;
                     bool m_eventBusNameHasBeenSet;

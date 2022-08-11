@@ -328,6 +328,28 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool ServerNameIndicationHasBeenSet() const;
 
+                    /**
+                     * 获取Forces requests to redirect to HTTPS. When `https:` is passed in, all requests are redirected to HTTPS.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ForcedRedirect Forces requests to redirect to HTTPS. When `https:` is passed in, all requests are redirected to HTTPS.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetForcedRedirect() const;
+
+                    /**
+                     * 设置Forces requests to redirect to HTTPS. When `https:` is passed in, all requests are redirected to HTTPS.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ForcedRedirect Forces requests to redirect to HTTPS. When `https:` is passed in, all requests are redirected to HTTPS.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetForcedRedirect(const std::string& _forcedRedirect);
+
+                    /**
+                     * 判断参数 ForcedRedirect 是否已赋值
+                     * @return ForcedRedirect 是否已赋值
+                     */
+                    bool ForcedRedirectHasBeenSet() const;
+
                 private:
 
                     /**
@@ -420,6 +442,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     std::string m_serverNameIndication;
                     bool m_serverNameIndicationHasBeenSet;
+
+                    /**
+                     * Forces requests to redirect to HTTPS. When `https:` is passed in, all requests are redirected to HTTPS.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_forcedRedirect;
+                    bool m_forcedRedirectHasBeenSet;
 
                 };
             }

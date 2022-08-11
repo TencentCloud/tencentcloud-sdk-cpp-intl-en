@@ -80,8 +80,8 @@ namespace TencentCloud
                     bool ClsTopicIdHasBeenSet() const;
 
                     /**
-                     * 获取Creation time
-                     * @return AddTime Creation time
+                     * 获取Creation time.
+                     * @return AddTime Creation time.
                      */
                     std::string GetAddTime() const;
 
@@ -160,7 +160,7 @@ namespace TencentCloud
                     bool m_clsTopicIdHasBeenSet;
 
                     /**
-                     * Creation time
+                     * Creation time.
                      */
                     std::string m_addTime;
                     bool m_addTimeHasBeenSet;

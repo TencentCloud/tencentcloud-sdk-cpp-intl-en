@@ -245,6 +245,24 @@ If this field is not passed in, it indicates that the ForwardProtocol of the cor
                      */
                     bool ServerNameIndicationHasBeenSet() const;
 
+                    /**
+                     * 获取Enables HTTP-to-HTTPS force redirect for a forwarding rule. Enter a hostname and path of the current forwarding rule.
+                     * @return ForcedRedirect Enables HTTP-to-HTTPS force redirect for a forwarding rule. Enter a hostname and path of the current forwarding rule.
+                     */
+                    std::string GetForcedRedirect() const;
+
+                    /**
+                     * 设置Enables HTTP-to-HTTPS force redirect for a forwarding rule. Enter a hostname and path of the current forwarding rule.
+                     * @param ForcedRedirect Enables HTTP-to-HTTPS force redirect for a forwarding rule. Enter a hostname and path of the current forwarding rule.
+                     */
+                    void SetForcedRedirect(const std::string& _forcedRedirect);
+
+                    /**
+                     * 判断参数 ForcedRedirect 是否已赋值
+                     * @return ForcedRedirect 是否已赋值
+                     */
+                    bool ForcedRedirectHasBeenSet() const;
+
                 private:
 
                     /**
@@ -313,6 +331,12 @@ If this field is not passed in, it indicates that the ForwardProtocol of the cor
                      */
                     std::string m_serverNameIndication;
                     bool m_serverNameIndicationHasBeenSet;
+
+                    /**
+                     * Enables HTTP-to-HTTPS force redirect for a forwarding rule. Enter a hostname and path of the current forwarding rule.
+                     */
+                    std::string m_forcedRedirect;
+                    bool m_forcedRedirectHasBeenSet;
 
                 };
             }

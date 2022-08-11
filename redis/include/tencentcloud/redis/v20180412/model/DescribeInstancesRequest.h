@@ -493,6 +493,24 @@ namespace TencentCloud
                      */
                     bool ProductVersionsHasBeenSet() const;
 
+                    /**
+                     * 获取The specified instances for batch query
+                     * @return InstanceIds The specified instances for batch query
+                     */
+                    std::vector<std::string> GetInstanceIds() const;
+
+                    /**
+                     * 设置The specified instances for batch query
+                     * @param InstanceIds The specified instances for batch query
+                     */
+                    void SetInstanceIds(const std::vector<std::string>& _instanceIds);
+
+                    /**
+                     * 判断参数 InstanceIds 是否已赋值
+                     * @return InstanceIds 是否已赋值
+                     */
+                    bool InstanceIdsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -644,6 +662,12 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_productVersions;
                     bool m_productVersionsHasBeenSet;
+
+                    /**
+                     * The specified instances for batch query
+                     */
+                    std::vector<std::string> m_instanceIds;
+                    bool m_instanceIdsHasBeenSet;
 
                 };
             }

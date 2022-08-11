@@ -205,6 +205,36 @@ namespace TencentCloud
                      */
                     bool TagSpecificationHasBeenSet() const;
 
+                    /**
+                     * 获取The license type used to activate the OS after importing an image.
+Valid values:
+`TencentCloud`: Tencent Cloud official license
+`BYOL`: Bring Your Own License
+                     * @return LicenseType The license type used to activate the OS after importing an image.
+Valid values:
+`TencentCloud`: Tencent Cloud official license
+`BYOL`: Bring Your Own License
+                     */
+                    std::string GetLicenseType() const;
+
+                    /**
+                     * 设置The license type used to activate the OS after importing an image.
+Valid values:
+`TencentCloud`: Tencent Cloud official license
+`BYOL`: Bring Your Own License
+                     * @param LicenseType The license type used to activate the OS after importing an image.
+Valid values:
+`TencentCloud`: Tencent Cloud official license
+`BYOL`: Bring Your Own License
+                     */
+                    void SetLicenseType(const std::string& _licenseType);
+
+                    /**
+                     * 判断参数 LicenseType 是否已赋值
+                     * @return LicenseType 是否已赋值
+                     */
+                    bool LicenseTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -260,6 +290,15 @@ namespace TencentCloud
                      */
                     std::vector<TagSpecification> m_tagSpecification;
                     bool m_tagSpecificationHasBeenSet;
+
+                    /**
+                     * The license type used to activate the OS after importing an image.
+Valid values:
+`TencentCloud`: Tencent Cloud official license
+`BYOL`: Bring Your Own License
+                     */
+                    std::string m_licenseType;
+                    bool m_licenseTypeHasBeenSet;
 
                 };
             }

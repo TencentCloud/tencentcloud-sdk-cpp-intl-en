@@ -29,6 +29,10 @@
 #include <tencentcloud/redis/v20180412/model/ApplyParamsTemplateResponse.h>
 #include <tencentcloud/redis/v20180412/model/AssociateSecurityGroupsRequest.h>
 #include <tencentcloud/redis/v20180412/model/AssociateSecurityGroupsResponse.h>
+#include <tencentcloud/redis/v20180412/model/ChangeInstanceRoleRequest.h>
+#include <tencentcloud/redis/v20180412/model/ChangeInstanceRoleResponse.h>
+#include <tencentcloud/redis/v20180412/model/ChangeMasterInstanceRequest.h>
+#include <tencentcloud/redis/v20180412/model/ChangeMasterInstanceResponse.h>
 #include <tencentcloud/redis/v20180412/model/ChangeReplicaToMasterRequest.h>
 #include <tencentcloud/redis/v20180412/model/ChangeReplicaToMasterResponse.h>
 #include <tencentcloud/redis/v20180412/model/CleanUpInstanceRequest.h>
@@ -198,6 +202,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::AssociateSecurityGroupsResponse> AssociateSecurityGroupsOutcome;
                 typedef std::future<AssociateSecurityGroupsOutcome> AssociateSecurityGroupsOutcomeCallable;
                 typedef std::function<void(const RedisClient*, const Model::AssociateSecurityGroupsRequest&, AssociateSecurityGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AssociateSecurityGroupsAsyncHandler;
+                typedef Outcome<Core::Error, Model::ChangeInstanceRoleResponse> ChangeInstanceRoleOutcome;
+                typedef std::future<ChangeInstanceRoleOutcome> ChangeInstanceRoleOutcomeCallable;
+                typedef std::function<void(const RedisClient*, const Model::ChangeInstanceRoleRequest&, ChangeInstanceRoleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ChangeInstanceRoleAsyncHandler;
+                typedef Outcome<Core::Error, Model::ChangeMasterInstanceResponse> ChangeMasterInstanceOutcome;
+                typedef std::future<ChangeMasterInstanceOutcome> ChangeMasterInstanceOutcomeCallable;
+                typedef std::function<void(const RedisClient*, const Model::ChangeMasterInstanceRequest&, ChangeMasterInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ChangeMasterInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::ChangeReplicaToMasterResponse> ChangeReplicaToMasterOutcome;
                 typedef std::future<ChangeReplicaToMasterOutcome> ChangeReplicaToMasterOutcomeCallable;
                 typedef std::function<void(const RedisClient*, const Model::ChangeReplicaToMasterRequest&, ChangeReplicaToMasterOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ChangeReplicaToMasterAsyncHandler;
@@ -446,6 +456,24 @@ namespace TencentCloud
                 AssociateSecurityGroupsOutcome AssociateSecurityGroups(const Model::AssociateSecurityGroupsRequest &request);
                 void AssociateSecurityGroupsAsync(const Model::AssociateSecurityGroupsRequest& request, const AssociateSecurityGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 AssociateSecurityGroupsOutcomeCallable AssociateSecurityGroupsCallable(const Model::AssociateSecurityGroupsRequest& request);
+
+                /**
+                 *This API is used to modify the role of an instance in a replication group.
+                 * @param req ChangeInstanceRoleRequest
+                 * @return ChangeInstanceRoleOutcome
+                 */
+                ChangeInstanceRoleOutcome ChangeInstanceRole(const Model::ChangeInstanceRoleRequest &request);
+                void ChangeInstanceRoleAsync(const Model::ChangeInstanceRoleRequest& request, const ChangeInstanceRoleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ChangeInstanceRoleOutcomeCallable ChangeInstanceRoleCallable(const Model::ChangeInstanceRoleRequest& request);
+
+                /**
+                 *This API is used to switch with master instance in a replication group.
+                 * @param req ChangeMasterInstanceRequest
+                 * @return ChangeMasterInstanceOutcome
+                 */
+                ChangeMasterInstanceOutcome ChangeMasterInstance(const Model::ChangeMasterInstanceRequest &request);
+                void ChangeMasterInstanceAsync(const Model::ChangeMasterInstanceRequest& request, const ChangeMasterInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ChangeMasterInstanceOutcomeCallable ChangeMasterInstanceCallable(const Model::ChangeMasterInstanceRequest& request);
 
                 /**
                  *This API is used to promote a replica node group of a multi-AZ deployed instance to master node group or a replica node of a single-AZ deployed instance to master node.

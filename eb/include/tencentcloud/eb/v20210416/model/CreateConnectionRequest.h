@@ -116,14 +116,14 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Switch
-                     * @return Enable Switch
+                     * 获取Whether to enable
+                     * @return Enable Whether to enable
                      */
                     bool GetEnable() const;
 
                     /**
-                     * 设置Switch
-                     * @param Enable Switch
+                     * 设置Whether to enable
+                     * @param Enable Whether to enable
                      */
                     void SetEnable(const bool& _enable);
 
@@ -134,14 +134,14 @@ namespace TencentCloud
                     bool EnableHasBeenSet() const;
 
                     /**
-                     * 获取Type
-                     * @return Type Type
+                     * 获取Type of the connector
+                     * @return Type Type of the connector
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Type
-                     * @param Type Type
+                     * 设置Type of the connector
+                     * @param Type Type of the connector
                      */
                     void SetType(const std::string& _type);
 
@@ -178,13 +178,13 @@ namespace TencentCloud
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Switch
+                     * Whether to enable
                      */
                     bool m_enable;
                     bool m_enableHasBeenSet;
 
                     /**
-                     * Type
+                     * Type of the connector
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
