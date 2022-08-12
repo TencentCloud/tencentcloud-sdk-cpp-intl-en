@@ -57,8 +57,8 @@ namespace TencentCloud
                     bool TemplatesMetadataHasBeenSet() const;
 
                     /**
-                     * 获取Total number of templates.
-                     * @return TotalCount Total number of templates.
+                     * 获取Total number of templates
+                     * @return TotalCount Total number of templates
                      */
                     uint64_t GetTotalCount() const;
 
@@ -77,7 +77,7 @@ namespace TencentCloud
                     bool m_templatesMetadataHasBeenSet;
 
                     /**
-                     * Total number of templates.
+                     * Total number of templates
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

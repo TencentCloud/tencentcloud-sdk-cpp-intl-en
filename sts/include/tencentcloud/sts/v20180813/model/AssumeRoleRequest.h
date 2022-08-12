@@ -191,6 +191,24 @@ It can contain 2-128 letters, digits, and symbols (=,.@:/-). Regex: [\w+=,.@:\/-
                      */
                     bool TagsHasBeenSet() const;
 
+                    /**
+                     * 获取UIN of the initiator
+                     * @return SourceIdentity UIN of the initiator
+                     */
+                    std::string GetSourceIdentity() const;
+
+                    /**
+                     * 设置UIN of the initiator
+                     * @param SourceIdentity UIN of the initiator
+                     */
+                    void SetSourceIdentity(const std::string& _sourceIdentity);
+
+                    /**
+                     * 判断参数 SourceIdentity 是否已赋值
+                     * @return SourceIdentity 是否已赋值
+                     */
+                    bool SourceIdentityHasBeenSet() const;
+
                 private:
 
                     /**
@@ -238,6 +256,12 @@ It can contain 2-128 letters, digits, and symbols (=,.@:/-). Regex: [\w+=,.@:\/-
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * UIN of the initiator
+                     */
+                    std::string m_sourceIdentity;
+                    bool m_sourceIdentityHasBeenSet;
 
                 };
             }

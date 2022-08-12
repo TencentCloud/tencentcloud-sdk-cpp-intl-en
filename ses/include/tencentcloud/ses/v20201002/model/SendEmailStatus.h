@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Describes the email sending status.
+                * Describes the email sending status
                 */
                 class SendEmailStatus : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取`MessageId` field returned by the `SendEmail` API
-                     * @return MessageId `MessageId` field returned by the `SendEmail` API
+                     * 获取The `MessageId` field returned by the `SendEmail` API
+                     * @return MessageId The `MessageId` field returned by the `SendEmail` API
                      */
                     std::string GetMessageId() const;
 
                     /**
-                     * 设置`MessageId` field returned by the `SendEmail` API
-                     * @param MessageId `MessageId` field returned by the `SendEmail` API
+                     * 设置The `MessageId` field returned by the `SendEmail` API
+                     * @param MessageId The `MessageId` field returned by the `SendEmail` API
                      */
                     void SetMessageId(const std::string& _messageId);
 
@@ -101,102 +101,102 @@ namespace TencentCloud
                     bool FromEmailAddressHasBeenSet() const;
 
                     /**
-                     * 获取Tencent Cloud processing status:
-0: successful.
-1001: internal system exception.
-1002: internal system exception.
-1003: internal system exception.
-1003: internal system exception.
-1004: email sending timeout.
-1005: internal system exception.
-1006: you have sent too many emails to the same address in a short period.
-1007: the email address is in the blocklist.
-1009: internal system exception.
-1010: daily email sending limit exceeded.
-1011: no permission to send custom content. Use a template.
-2001: no results found.
-3007: invalid template ID or unavailable template.
-3008: template status exception.
-3009: no permission to use this template.
-3010: the format of the `TemplateData` field is incorrect. 
-3014: unable to send the email because the sender domain is not verified.
-3020: the recipient email address is in the blocklist.
-3024: failed to pre-check the email address format.
-3030: email sending is restricted temporarily due to high bounce rate.
-3033: the account has insufficient balance or overdue payment.
-                     * @return SendStatus Tencent Cloud processing status:
-0: successful.
-1001: internal system exception.
-1002: internal system exception.
-1003: internal system exception.
-1003: internal system exception.
-1004: email sending timeout.
-1005: internal system exception.
-1006: you have sent too many emails to the same address in a short period.
-1007: the email address is in the blocklist.
-1009: internal system exception.
-1010: daily email sending limit exceeded.
-1011: no permission to send custom content. Use a template.
-2001: no results found.
-3007: invalid template ID or unavailable template.
-3008: template status exception.
-3009: no permission to use this template.
-3010: the format of the `TemplateData` field is incorrect. 
-3014: unable to send the email because the sender domain is not verified.
-3020: the recipient email address is in the blocklist.
-3024: failed to pre-check the email address format.
-3030: email sending is restricted temporarily due to high bounce rate.
-3033: the account has insufficient balance or overdue payment.
+                     * 获取Tencent Cloud processing status
+0: Successful.
+1001: Internal system exception.
+1002: Internal system exception.
+1003: Internal system exception.
+1003: Internal system exception.
+1004: Email sending timed out.
+1005: Internal system exception.
+1006: You have sent too many emails to the same address in a short period.
+1007: The email address is in the blocklist.
+1009: Internal system exception.
+1010: The daily email sending limit is exceeded.
+1011: You have no permission to send custom content. Use a template.
+2001: No results were found.
+3007: The template ID is invalid or the template is unavailable.
+3008: Template status exception.
+3009: You have no permission to use this template.
+3010: The format of the `TemplateData` field is incorrect. 
+3014: The email cannot be sent because the sender domain is not verified.
+3020: The recipient email address is in the blocklist.
+3024: Failed to precheck the email address format.
+3030: Email sending is restricted temporarily due to high bounce rate.
+3033: The account has insufficient balance or overdue payment.
+                     * @return SendStatus Tencent Cloud processing status
+0: Successful.
+1001: Internal system exception.
+1002: Internal system exception.
+1003: Internal system exception.
+1003: Internal system exception.
+1004: Email sending timed out.
+1005: Internal system exception.
+1006: You have sent too many emails to the same address in a short period.
+1007: The email address is in the blocklist.
+1009: Internal system exception.
+1010: The daily email sending limit is exceeded.
+1011: You have no permission to send custom content. Use a template.
+2001: No results were found.
+3007: The template ID is invalid or the template is unavailable.
+3008: Template status exception.
+3009: You have no permission to use this template.
+3010: The format of the `TemplateData` field is incorrect. 
+3014: The email cannot be sent because the sender domain is not verified.
+3020: The recipient email address is in the blocklist.
+3024: Failed to precheck the email address format.
+3030: Email sending is restricted temporarily due to high bounce rate.
+3033: The account has insufficient balance or overdue payment.
                      */
                     int64_t GetSendStatus() const;
 
                     /**
-                     * 设置Tencent Cloud processing status:
-0: successful.
-1001: internal system exception.
-1002: internal system exception.
-1003: internal system exception.
-1003: internal system exception.
-1004: email sending timeout.
-1005: internal system exception.
-1006: you have sent too many emails to the same address in a short period.
-1007: the email address is in the blocklist.
-1009: internal system exception.
-1010: daily email sending limit exceeded.
-1011: no permission to send custom content. Use a template.
-2001: no results found.
-3007: invalid template ID or unavailable template.
-3008: template status exception.
-3009: no permission to use this template.
-3010: the format of the `TemplateData` field is incorrect. 
-3014: unable to send the email because the sender domain is not verified.
-3020: the recipient email address is in the blocklist.
-3024: failed to pre-check the email address format.
-3030: email sending is restricted temporarily due to high bounce rate.
-3033: the account has insufficient balance or overdue payment.
-                     * @param SendStatus Tencent Cloud processing status:
-0: successful.
-1001: internal system exception.
-1002: internal system exception.
-1003: internal system exception.
-1003: internal system exception.
-1004: email sending timeout.
-1005: internal system exception.
-1006: you have sent too many emails to the same address in a short period.
-1007: the email address is in the blocklist.
-1009: internal system exception.
-1010: daily email sending limit exceeded.
-1011: no permission to send custom content. Use a template.
-2001: no results found.
-3007: invalid template ID or unavailable template.
-3008: template status exception.
-3009: no permission to use this template.
-3010: the format of the `TemplateData` field is incorrect. 
-3014: unable to send the email because the sender domain is not verified.
-3020: the recipient email address is in the blocklist.
-3024: failed to pre-check the email address format.
-3030: email sending is restricted temporarily due to high bounce rate.
-3033: the account has insufficient balance or overdue payment.
+                     * 设置Tencent Cloud processing status
+0: Successful.
+1001: Internal system exception.
+1002: Internal system exception.
+1003: Internal system exception.
+1003: Internal system exception.
+1004: Email sending timed out.
+1005: Internal system exception.
+1006: You have sent too many emails to the same address in a short period.
+1007: The email address is in the blocklist.
+1009: Internal system exception.
+1010: The daily email sending limit is exceeded.
+1011: You have no permission to send custom content. Use a template.
+2001: No results were found.
+3007: The template ID is invalid or the template is unavailable.
+3008: Template status exception.
+3009: You have no permission to use this template.
+3010: The format of the `TemplateData` field is incorrect. 
+3014: The email cannot be sent because the sender domain is not verified.
+3020: The recipient email address is in the blocklist.
+3024: Failed to precheck the email address format.
+3030: Email sending is restricted temporarily due to high bounce rate.
+3033: The account has insufficient balance or overdue payment.
+                     * @param SendStatus Tencent Cloud processing status
+0: Successful.
+1001: Internal system exception.
+1002: Internal system exception.
+1003: Internal system exception.
+1003: Internal system exception.
+1004: Email sending timed out.
+1005: Internal system exception.
+1006: You have sent too many emails to the same address in a short period.
+1007: The email address is in the blocklist.
+1009: Internal system exception.
+1010: The daily email sending limit is exceeded.
+1011: You have no permission to send custom content. Use a template.
+2001: No results were found.
+3007: The template ID is invalid or the template is unavailable.
+3008: Template status exception.
+3009: You have no permission to use this template.
+3010: The format of the `TemplateData` field is incorrect. 
+3014: The email cannot be sent because the sender domain is not verified.
+3020: The recipient email address is in the blocklist.
+3024: Failed to precheck the email address format.
+3030: Email sending is restricted temporarily due to high bounce rate.
+3033: The account has insufficient balance or overdue payment.
                      */
                     void SetSendStatus(const int64_t& _sendStatus);
 
@@ -207,34 +207,34 @@ namespace TencentCloud
                     bool SendStatusHasBeenSet() const;
 
                     /**
-                     * 获取Recipient processing status:
+                     * 获取Recipient processing status
 0: Tencent Cloud has accepted the request and added it to the send queue.
-1: the email is delivered successfully, `DeliverTime` indicates the time when the email is delivered successfully.
-2: the email is discarded. `DeliverMessage` indicates the reason for discarding.
-3: the recipient's ESP rejects the email, probably because the email address does not exist or due to other reasons.
-8: the email is delayed by the ESP. `DeliverMessage` indicates the reason for delay.
-                     * @return DeliverStatus Recipient processing status:
+1: The email is delivered successfully. `DeliverTime` indicates the time when the email is delivered successfully.
+2: The email is discarded. `DeliverMessage` indicates the reason for discarding.
+3: The recipient's ESP rejects the email, probably because the email address does not exist or due to other reasons.
+8: The email is delayed by the ESP. `DeliverMessage` indicates the reason for delay.
+                     * @return DeliverStatus Recipient processing status
 0: Tencent Cloud has accepted the request and added it to the send queue.
-1: the email is delivered successfully, `DeliverTime` indicates the time when the email is delivered successfully.
-2: the email is discarded. `DeliverMessage` indicates the reason for discarding.
-3: the recipient's ESP rejects the email, probably because the email address does not exist or due to other reasons.
-8: the email is delayed by the ESP. `DeliverMessage` indicates the reason for delay.
+1: The email is delivered successfully. `DeliverTime` indicates the time when the email is delivered successfully.
+2: The email is discarded. `DeliverMessage` indicates the reason for discarding.
+3: The recipient's ESP rejects the email, probably because the email address does not exist or due to other reasons.
+8: The email is delayed by the ESP. `DeliverMessage` indicates the reason for delay.
                      */
                     int64_t GetDeliverStatus() const;
 
                     /**
-                     * 设置Recipient processing status:
+                     * 设置Recipient processing status
 0: Tencent Cloud has accepted the request and added it to the send queue.
-1: the email is delivered successfully, `DeliverTime` indicates the time when the email is delivered successfully.
-2: the email is discarded. `DeliverMessage` indicates the reason for discarding.
-3: the recipient's ESP rejects the email, probably because the email address does not exist or due to other reasons.
-8: the email is delayed by the ESP. `DeliverMessage` indicates the reason for delay.
-                     * @param DeliverStatus Recipient processing status:
+1: The email is delivered successfully. `DeliverTime` indicates the time when the email is delivered successfully.
+2: The email is discarded. `DeliverMessage` indicates the reason for discarding.
+3: The recipient's ESP rejects the email, probably because the email address does not exist or due to other reasons.
+8: The email is delayed by the ESP. `DeliverMessage` indicates the reason for delay.
+                     * @param DeliverStatus Recipient processing status
 0: Tencent Cloud has accepted the request and added it to the send queue.
-1: the email is delivered successfully, `DeliverTime` indicates the time when the email is delivered successfully.
-2: the email is discarded. `DeliverMessage` indicates the reason for discarding.
-3: the recipient's ESP rejects the email, probably because the email address does not exist or due to other reasons.
-8: the email is delayed by the ESP. `DeliverMessage` indicates the reason for delay.
+1: The email is delivered successfully. `DeliverTime` indicates the time when the email is delivered successfully.
+2: The email is discarded. `DeliverMessage` indicates the reason for discarding.
+3: The recipient's ESP rejects the email, probably because the email address does not exist or due to other reasons.
+8: The email is delayed by the ESP. `DeliverMessage` indicates the reason for delay.
                      */
                     void SetDeliverStatus(const int64_t& _deliverStatus);
 
@@ -335,14 +335,14 @@ namespace TencentCloud
                     bool UserClickedHasBeenSet() const;
 
                     /**
-                     * 获取Whether the recipient has unsubscribed from emails sent by the sender
-                     * @return UserUnsubscribed Whether the recipient has unsubscribed from emails sent by the sender
+                     * 获取Whether the recipient has unsubscribed from the email sent by the sender
+                     * @return UserUnsubscribed Whether the recipient has unsubscribed from the email sent by the sender
                      */
                     bool GetUserUnsubscribed() const;
 
                     /**
-                     * 设置Whether the recipient has unsubscribed from emails sent by the sender
-                     * @param UserUnsubscribed Whether the recipient has unsubscribed from emails sent by the sender
+                     * 设置Whether the recipient has unsubscribed from the email sent by the sender
+                     * @param UserUnsubscribed Whether the recipient has unsubscribed from the email sent by the sender
                      */
                     void SetUserUnsubscribed(const bool& _userUnsubscribed);
 
@@ -373,7 +373,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * `MessageId` field returned by the `SendEmail` API
+                     * The `MessageId` field returned by the `SendEmail` API
                      */
                     std::string m_messageId;
                     bool m_messageIdHasBeenSet;
@@ -391,40 +391,40 @@ namespace TencentCloud
                     bool m_fromEmailAddressHasBeenSet;
 
                     /**
-                     * Tencent Cloud processing status:
-0: successful.
-1001: internal system exception.
-1002: internal system exception.
-1003: internal system exception.
-1003: internal system exception.
-1004: email sending timeout.
-1005: internal system exception.
-1006: you have sent too many emails to the same address in a short period.
-1007: the email address is in the blocklist.
-1009: internal system exception.
-1010: daily email sending limit exceeded.
-1011: no permission to send custom content. Use a template.
-2001: no results found.
-3007: invalid template ID or unavailable template.
-3008: template status exception.
-3009: no permission to use this template.
-3010: the format of the `TemplateData` field is incorrect. 
-3014: unable to send the email because the sender domain is not verified.
-3020: the recipient email address is in the blocklist.
-3024: failed to pre-check the email address format.
-3030: email sending is restricted temporarily due to high bounce rate.
-3033: the account has insufficient balance or overdue payment.
+                     * Tencent Cloud processing status
+0: Successful.
+1001: Internal system exception.
+1002: Internal system exception.
+1003: Internal system exception.
+1003: Internal system exception.
+1004: Email sending timed out.
+1005: Internal system exception.
+1006: You have sent too many emails to the same address in a short period.
+1007: The email address is in the blocklist.
+1009: Internal system exception.
+1010: The daily email sending limit is exceeded.
+1011: You have no permission to send custom content. Use a template.
+2001: No results were found.
+3007: The template ID is invalid or the template is unavailable.
+3008: Template status exception.
+3009: You have no permission to use this template.
+3010: The format of the `TemplateData` field is incorrect. 
+3014: The email cannot be sent because the sender domain is not verified.
+3020: The recipient email address is in the blocklist.
+3024: Failed to precheck the email address format.
+3030: Email sending is restricted temporarily due to high bounce rate.
+3033: The account has insufficient balance or overdue payment.
                      */
                     int64_t m_sendStatus;
                     bool m_sendStatusHasBeenSet;
 
                     /**
-                     * Recipient processing status:
+                     * Recipient processing status
 0: Tencent Cloud has accepted the request and added it to the send queue.
-1: the email is delivered successfully, `DeliverTime` indicates the time when the email is delivered successfully.
-2: the email is discarded. `DeliverMessage` indicates the reason for discarding.
-3: the recipient's ESP rejects the email, probably because the email address does not exist or due to other reasons.
-8: the email is delayed by the ESP. `DeliverMessage` indicates the reason for delay.
+1: The email is delivered successfully. `DeliverTime` indicates the time when the email is delivered successfully.
+2: The email is discarded. `DeliverMessage` indicates the reason for discarding.
+3: The recipient's ESP rejects the email, probably because the email address does not exist or due to other reasons.
+8: The email is delayed by the ESP. `DeliverMessage` indicates the reason for delay.
                      */
                     int64_t m_deliverStatus;
                     bool m_deliverStatusHasBeenSet;
@@ -460,7 +460,7 @@ namespace TencentCloud
                     bool m_userClickedHasBeenSet;
 
                     /**
-                     * Whether the recipient has unsubscribed from emails sent by the sender
+                     * Whether the recipient has unsubscribed from the email sent by the sender
                      */
                     bool m_userUnsubscribed;
                     bool m_userUnsubscribedHasBeenSet;

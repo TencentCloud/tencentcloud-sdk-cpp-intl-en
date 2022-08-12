@@ -100,6 +100,42 @@ namespace TencentCloud
                      */
                     bool SendingEnabledHasBeenSet() const;
 
+                    /**
+                     * 获取Current reputation level
+                     * @return CurrentReputationLevel Current reputation level
+                     */
+                    uint64_t GetCurrentReputationLevel() const;
+
+                    /**
+                     * 设置Current reputation level
+                     * @param CurrentReputationLevel Current reputation level
+                     */
+                    void SetCurrentReputationLevel(const uint64_t& _currentReputationLevel);
+
+                    /**
+                     * 判断参数 CurrentReputationLevel 是否已赋值
+                     * @return CurrentReputationLevel 是否已赋值
+                     */
+                    bool CurrentReputationLevelHasBeenSet() const;
+
+                    /**
+                     * 获取Maximum number of messages sent per day
+                     * @return DailyQuota Maximum number of messages sent per day
+                     */
+                    uint64_t GetDailyQuota() const;
+
+                    /**
+                     * 设置Maximum number of messages sent per day
+                     * @param DailyQuota Maximum number of messages sent per day
+                     */
+                    void SetDailyQuota(const uint64_t& _dailyQuota);
+
+                    /**
+                     * 判断参数 DailyQuota 是否已赋值
+                     * @return DailyQuota 是否已赋值
+                     */
+                    bool DailyQuotaHasBeenSet() const;
+
                 private:
 
                     /**
@@ -119,6 +155,18 @@ namespace TencentCloud
                      */
                     bool m_sendingEnabled;
                     bool m_sendingEnabledHasBeenSet;
+
+                    /**
+                     * Current reputation level
+                     */
+                    uint64_t m_currentReputationLevel;
+                    bool m_currentReputationLevelHasBeenSet;
+
+                    /**
+                     * Maximum number of messages sent per day
+                     */
+                    uint64_t m_dailyQuota;
+                    bool m_dailyQuotaHasBeenSet;
 
                 };
             }

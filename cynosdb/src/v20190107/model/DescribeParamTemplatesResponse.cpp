@@ -14,23 +14,22 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/ses/v20201002/model/ListEmailIdentitiesResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeParamTemplatesResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using TencentCloud::CoreInternalOutcome;
-using namespace TencentCloud::Ses::V20201002::Model;
+using namespace TencentCloud::Cynosdb::V20190107::Model;
 using namespace std;
 
-ListEmailIdentitiesResponse::ListEmailIdentitiesResponse() :
-    m_emailIdentitiesHasBeenSet(false),
-    m_maxReputationLevelHasBeenSet(false),
-    m_maxDailyQuotaHasBeenSet(false)
+DescribeParamTemplatesResponse::DescribeParamTemplatesResponse() :
+    m_totalCountHasBeenSet(false),
+    m_itemsHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome ListEmailIdentitiesResponse::Deserialize(const string &payload)
+CoreInternalOutcome DescribeParamTemplatesResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -64,85 +63,67 @@ CoreInternalOutcome ListEmailIdentitiesResponse::Deserialize(const string &paylo
     }
 
 
-    if (rsp.HasMember("EmailIdentities") && !rsp["EmailIdentities"].IsNull())
+    if (rsp.HasMember("TotalCount") && !rsp["TotalCount"].IsNull())
     {
-        if (!rsp["EmailIdentities"].IsArray())
-            return CoreInternalOutcome(Core::Error("response `EmailIdentities` is not array type"));
+        if (!rsp["TotalCount"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `TotalCount` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_totalCount = rsp["TotalCount"].GetInt64();
+        m_totalCountHasBeenSet = true;
+    }
 
-        const rapidjson::Value &tmpValue = rsp["EmailIdentities"];
+    if (rsp.HasMember("Items") && !rsp["Items"].IsNull())
+    {
+        if (!rsp["Items"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `Items` is not array type"));
+
+        const rapidjson::Value &tmpValue = rsp["Items"];
         for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
-            EmailIdentity item;
+            ParamTemplateListInfo item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
             if (!outcome.IsSuccess())
             {
                 outcome.GetError().SetRequestId(requestId);
                 return outcome;
             }
-            m_emailIdentities.push_back(item);
+            m_items.push_back(item);
         }
-        m_emailIdentitiesHasBeenSet = true;
-    }
-
-    if (rsp.HasMember("MaxReputationLevel") && !rsp["MaxReputationLevel"].IsNull())
-    {
-        if (!rsp["MaxReputationLevel"].IsUint64())
-        {
-            return CoreInternalOutcome(Core::Error("response `MaxReputationLevel` IsUint64=false incorrectly").SetRequestId(requestId));
-        }
-        m_maxReputationLevel = rsp["MaxReputationLevel"].GetUint64();
-        m_maxReputationLevelHasBeenSet = true;
-    }
-
-    if (rsp.HasMember("MaxDailyQuota") && !rsp["MaxDailyQuota"].IsNull())
-    {
-        if (!rsp["MaxDailyQuota"].IsUint64())
-        {
-            return CoreInternalOutcome(Core::Error("response `MaxDailyQuota` IsUint64=false incorrectly").SetRequestId(requestId));
-        }
-        m_maxDailyQuota = rsp["MaxDailyQuota"].GetUint64();
-        m_maxDailyQuotaHasBeenSet = true;
+        m_itemsHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string ListEmailIdentitiesResponse::ToJsonString() const
+string DescribeParamTemplatesResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_emailIdentitiesHasBeenSet)
+    if (m_totalCountHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "EmailIdentities";
+        string key = "TotalCount";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_totalCount, allocator);
+    }
+
+    if (m_itemsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Items";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
-        for (auto itr = m_emailIdentities.begin(); itr != m_emailIdentities.end(); ++itr, ++i)
+        for (auto itr = m_items.begin(); itr != m_items.end(); ++itr, ++i)
         {
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
-    }
-
-    if (m_maxReputationLevelHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "MaxReputationLevel";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_maxReputationLevel, allocator);
-    }
-
-    if (m_maxDailyQuotaHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "MaxDailyQuota";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_maxDailyQuota, allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -157,34 +138,24 @@ string ListEmailIdentitiesResponse::ToJsonString() const
 }
 
 
-vector<EmailIdentity> ListEmailIdentitiesResponse::GetEmailIdentities() const
+int64_t DescribeParamTemplatesResponse::GetTotalCount() const
 {
-    return m_emailIdentities;
+    return m_totalCount;
 }
 
-bool ListEmailIdentitiesResponse::EmailIdentitiesHasBeenSet() const
+bool DescribeParamTemplatesResponse::TotalCountHasBeenSet() const
 {
-    return m_emailIdentitiesHasBeenSet;
+    return m_totalCountHasBeenSet;
 }
 
-uint64_t ListEmailIdentitiesResponse::GetMaxReputationLevel() const
+vector<ParamTemplateListInfo> DescribeParamTemplatesResponse::GetItems() const
 {
-    return m_maxReputationLevel;
+    return m_items;
 }
 
-bool ListEmailIdentitiesResponse::MaxReputationLevelHasBeenSet() const
+bool DescribeParamTemplatesResponse::ItemsHasBeenSet() const
 {
-    return m_maxReputationLevelHasBeenSet;
-}
-
-uint64_t ListEmailIdentitiesResponse::GetMaxDailyQuota() const
-{
-    return m_maxDailyQuota;
-}
-
-bool ListEmailIdentitiesResponse::MaxDailyQuotaHasBeenSet() const
-{
-    return m_maxDailyQuotaHasBeenSet;
+    return m_itemsHasBeenSet;
 }
 
 

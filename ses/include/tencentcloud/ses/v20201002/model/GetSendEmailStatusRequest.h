@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Sent date. This parameter is required. You can only query the sending status for a single date at a time.
-                     * @return RequestDate Sent date. This parameter is required. You can only query the sending status for a single date at a time.
+                     * 获取Date sent. This parameter is required. You can only query the sending status for a single date at a time.
+                     * @return RequestDate Date sent. This parameter is required. You can only query the sending status for a single date at a time.
                      */
                     std::string GetRequestDate() const;
 
                     /**
-                     * 设置Sent date. This parameter is required. You can only query the sending status for a single date at a time.
-                     * @param RequestDate Sent date. This parameter is required. You can only query the sending status for a single date at a time.
+                     * 设置Date sent. This parameter is required. You can only query the sending status for a single date at a time.
+                     * @param RequestDate Date sent. This parameter is required. You can only query the sending status for a single date at a time.
                      */
                     void SetRequestDate(const std::string& _requestDate);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool RequestDateHasBeenSet() const;
 
                     /**
-                     * 获取Offset. Default value: `0`
-                     * @return Offset Offset. Default value: `0`
+                     * 获取Offset. Default value: `0`.
+                     * @return Offset Offset. Default value: `0`.
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset. Default value: `0`
-                     * @param Offset Offset. Default value: `0`
+                     * 设置Offset. Default value: `0`.
+                     * @param Offset Offset. Default value: `0`.
                      */
                     void SetOffset(const uint64_t& _offset);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of pulled entries. The maximum value is `100`.
-                     * @return Limit Maximum number of pulled entries. The maximum value is `100`.
+                     * 获取Maximum number of pulled entries. Maximum value: `100`.
+                     * @return Limit Maximum number of pulled entries. Maximum value: `100`.
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Maximum number of pulled entries. The maximum value is `100`.
-                     * @param Limit Maximum number of pulled entries. The maximum value is `100`.
+                     * 设置Maximum number of pulled entries. Maximum value: `100`.
+                     * @param Limit Maximum number of pulled entries. Maximum value: `100`.
                      */
                     void SetLimit(const uint64_t& _limit);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取`MessageId` field returned by the `SendMail` API
-                     * @return MessageId `MessageId` field returned by the `SendMail` API
+                     * 获取The `MessageId` field returned by the `SendMail` API.
+                     * @return MessageId The `MessageId` field returned by the `SendMail` API.
                      */
                     std::string GetMessageId() const;
 
                     /**
-                     * 设置`MessageId` field returned by the `SendMail` API
-                     * @param MessageId `MessageId` field returned by the `SendMail` API
+                     * 设置The `MessageId` field returned by the `SendMail` API.
+                     * @param MessageId The `MessageId` field returned by the `SendMail` API.
                      */
                     void SetMessageId(const std::string& _messageId);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool MessageIdHasBeenSet() const;
 
                     /**
-                     * 获取Recipient email address
-                     * @return ToEmailAddress Recipient email address
+                     * 获取Recipient email address.
+                     * @return ToEmailAddress Recipient email address.
                      */
                     std::string GetToEmailAddress() const;
 
                     /**
-                     * 设置Recipient email address
-                     * @param ToEmailAddress Recipient email address
+                     * 设置Recipient email address.
+                     * @param ToEmailAddress Recipient email address.
                      */
                     void SetToEmailAddress(const std::string& _toEmailAddress);
 
@@ -135,31 +135,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Sent date. This parameter is required. You can only query the sending status for a single date at a time.
+                     * Date sent. This parameter is required. You can only query the sending status for a single date at a time.
                      */
                     std::string m_requestDate;
                     bool m_requestDateHasBeenSet;
 
                     /**
-                     * Offset. Default value: `0`
+                     * Offset. Default value: `0`.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Maximum number of pulled entries. The maximum value is `100`.
+                     * Maximum number of pulled entries. Maximum value: `100`.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * `MessageId` field returned by the `SendMail` API
+                     * The `MessageId` field returned by the `SendMail` API.
                      */
                     std::string m_messageId;
                     bool m_messageIdHasBeenSet;
 
                     /**
-                     * Recipient email address
+                     * Recipient email address.
                      */
                     std::string m_toEmailAddress;
                     bool m_toEmailAddressHasBeenSet;

@@ -108,14 +108,14 @@ Sender <email address>
                     bool SubjectHasBeenSet() const;
 
                     /**
-                     * 获取Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud.
-                     * @return ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud.
+                     * 获取Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
+                     * @return ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
                      */
                     std::string GetReplyToAddresses() const;
 
                     /**
-                     * 设置Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud.
-                     * @param ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud.
+                     * 设置Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
+                     * @param ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
                      */
                     void SetReplyToAddresses(const std::string& _replyToAddresses);
 
@@ -144,14 +144,14 @@ Sender <email address>
                     bool TemplateHasBeenSet() const;
 
                     /**
-                     * 获取Email content when sending emails by calling the API.
-                     * @return Simple Email content when sending emails by calling the API.
+                     * 获取Disused
+                     * @return Simple Disused
                      */
                     Simple GetSimple() const;
 
                     /**
-                     * 设置Email content when sending emails by calling the API.
-                     * @param Simple Email content when sending emails by calling the API.
+                     * 设置Disused
+                     * @param Simple Disused
                      */
                     void SetSimple(const Simple& _simple);
 
@@ -238,7 +238,7 @@ Sender <email address>
                     bool m_subjectHasBeenSet;
 
                     /**
-                     * Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud.
+                     * Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
                      */
                     std::string m_replyToAddresses;
                     bool m_replyToAddressesHasBeenSet;
@@ -250,7 +250,7 @@ Sender <email address>
                     bool m_templateHasBeenSet;
 
                     /**
-                     * Email content when sending emails by calling the API.
+                     * Disused
                      */
                     Simple m_simple;
                     bool m_simpleHasBeenSet;

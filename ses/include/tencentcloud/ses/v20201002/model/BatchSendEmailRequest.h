@@ -128,14 +128,14 @@ Tencent Cloud team <noreply@mail.qcloud.com>
                     bool TaskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will be sent to Tencent Cloud.
-                     * @return ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will be sent to Tencent Cloud.
+                     * 获取Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
+                     * @return ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
                      */
                     std::string GetReplyToAddresses() const;
 
                     /**
-                     * 设置Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will be sent to Tencent Cloud.
-                     * @param ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will be sent to Tencent Cloud.
+                     * 设置Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
+                     * @param ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
                      */
                     void SetReplyToAddresses(const std::string& _replyToAddresses);
 
@@ -164,14 +164,14 @@ Tencent Cloud team <noreply@mail.qcloud.com>
                     bool TemplateHasBeenSet() const;
 
                     /**
-                     * 获取Email content when emails are sent by calling the API. This parameter is currently unavailable.
-                     * @return Simple Email content when emails are sent by calling the API. This parameter is currently unavailable.
+                     * 获取Disused
+                     * @return Simple Disused
                      */
                     Simple GetSimple() const;
 
                     /**
-                     * 设置Email content when emails are sent by calling the API. This parameter is currently unavailable.
-                     * @param Simple Email content when emails are sent by calling the API. This parameter is currently unavailable.
+                     * 设置Disused
+                     * @param Simple Disused
                      */
                     void SetSimple(const Simple& _simple);
 
@@ -300,7 +300,7 @@ Tencent Cloud team <noreply@mail.qcloud.com>
                     bool m_taskTypeHasBeenSet;
 
                     /**
-                     * Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will be sent to Tencent Cloud.
+                     * Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
                      */
                     std::string m_replyToAddresses;
                     bool m_replyToAddressesHasBeenSet;
@@ -312,7 +312,7 @@ Tencent Cloud team <noreply@mail.qcloud.com>
                     bool m_templateHasBeenSet;
 
                     /**
-                     * Email content when emails are sent by calling the API. This parameter is currently unavailable.
+                     * Disused
                      */
                     Simple m_simple;
                     bool m_simpleHasBeenSet;

@@ -14,22 +14,22 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/ses/v20201002/model/GetEmailTemplateResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/InquirePriceCreateResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using TencentCloud::CoreInternalOutcome;
-using namespace TencentCloud::Ses::V20201002::Model;
+using namespace TencentCloud::Cynosdb::V20190107::Model;
 using namespace std;
 
-GetEmailTemplateResponse::GetEmailTemplateResponse() :
-    m_templateContentHasBeenSet(false),
-    m_templateStatusHasBeenSet(false)
+InquirePriceCreateResponse::InquirePriceCreateResponse() :
+    m_instancePriceHasBeenSet(false),
+    m_storagePriceHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome GetEmailTemplateResponse::Deserialize(const string &payload)
+CoreInternalOutcome InquirePriceCreateResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -63,58 +63,66 @@ CoreInternalOutcome GetEmailTemplateResponse::Deserialize(const string &payload)
     }
 
 
-    if (rsp.HasMember("TemplateContent") && !rsp["TemplateContent"].IsNull())
+    if (rsp.HasMember("InstancePrice") && !rsp["InstancePrice"].IsNull())
     {
-        if (!rsp["TemplateContent"].IsObject())
+        if (!rsp["InstancePrice"].IsObject())
         {
-            return CoreInternalOutcome(Core::Error("response `TemplateContent` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `InstancePrice` is not object type").SetRequestId(requestId));
         }
 
-        CoreInternalOutcome outcome = m_templateContent.Deserialize(rsp["TemplateContent"]);
+        CoreInternalOutcome outcome = m_instancePrice.Deserialize(rsp["InstancePrice"]);
         if (!outcome.IsSuccess())
         {
             outcome.GetError().SetRequestId(requestId);
             return outcome;
         }
 
-        m_templateContentHasBeenSet = true;
+        m_instancePriceHasBeenSet = true;
     }
 
-    if (rsp.HasMember("TemplateStatus") && !rsp["TemplateStatus"].IsNull())
+    if (rsp.HasMember("StoragePrice") && !rsp["StoragePrice"].IsNull())
     {
-        if (!rsp["TemplateStatus"].IsUint64())
+        if (!rsp["StoragePrice"].IsObject())
         {
-            return CoreInternalOutcome(Core::Error("response `TemplateStatus` IsUint64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `StoragePrice` is not object type").SetRequestId(requestId));
         }
-        m_templateStatus = rsp["TemplateStatus"].GetUint64();
-        m_templateStatusHasBeenSet = true;
+
+        CoreInternalOutcome outcome = m_storagePrice.Deserialize(rsp["StoragePrice"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_storagePriceHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string GetEmailTemplateResponse::ToJsonString() const
+string InquirePriceCreateResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_templateContentHasBeenSet)
+    if (m_instancePriceHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "TemplateContent";
+        string key = "InstancePrice";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
-        m_templateContent.ToJsonObject(value[key.c_str()], allocator);
+        m_instancePrice.ToJsonObject(value[key.c_str()], allocator);
     }
 
-    if (m_templateStatusHasBeenSet)
+    if (m_storagePriceHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "TemplateStatus";
+        string key = "StoragePrice";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_templateStatus, allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_storagePrice.ToJsonObject(value[key.c_str()], allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -129,24 +137,24 @@ string GetEmailTemplateResponse::ToJsonString() const
 }
 
 
-TemplateContent GetEmailTemplateResponse::GetTemplateContent() const
+TradePrice InquirePriceCreateResponse::GetInstancePrice() const
 {
-    return m_templateContent;
+    return m_instancePrice;
 }
 
-bool GetEmailTemplateResponse::TemplateContentHasBeenSet() const
+bool InquirePriceCreateResponse::InstancePriceHasBeenSet() const
 {
-    return m_templateContentHasBeenSet;
+    return m_instancePriceHasBeenSet;
 }
 
-uint64_t GetEmailTemplateResponse::GetTemplateStatus() const
+TradePrice InquirePriceCreateResponse::GetStoragePrice() const
 {
-    return m_templateStatus;
+    return m_storagePrice;
 }
 
-bool GetEmailTemplateResponse::TemplateStatusHasBeenSet() const
+bool InquirePriceCreateResponse::StoragePriceHasBeenSet() const
 {
-    return m_templateStatusHasBeenSet;
+    return m_storagePriceHasBeenSet;
 }
 
 
