@@ -31,6 +31,8 @@
 #include <tencentcloud/faceid/v20180301/model/GenerateReflectSequenceResponse.h>
 #include <tencentcloud/faceid/v20180301/model/LivenessCompareRequest.h>
 #include <tencentcloud/faceid/v20180301/model/LivenessCompareResponse.h>
+#include <tencentcloud/faceid/v20180301/model/VideoLivenessCompareRequest.h>
+#include <tencentcloud/faceid/v20180301/model/VideoLivenessCompareResponse.h>
 
 
 namespace TencentCloud
@@ -57,6 +59,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::LivenessCompareResponse> LivenessCompareOutcome;
                 typedef std::future<LivenessCompareOutcome> LivenessCompareOutcomeCallable;
                 typedef std::function<void(const FaceidClient*, const Model::LivenessCompareRequest&, LivenessCompareOutcome, const std::shared_ptr<const AsyncCallerContext>&)> LivenessCompareAsyncHandler;
+                typedef Outcome<Core::Error, Model::VideoLivenessCompareResponse> VideoLivenessCompareOutcome;
+                typedef std::future<VideoLivenessCompareOutcome> VideoLivenessCompareOutcomeCallable;
+                typedef std::function<void(const FaceidClient*, const Model::VideoLivenessCompareRequest&, VideoLivenessCompareOutcome, const std::shared_ptr<const AsyncCallerContext>&)> VideoLivenessCompareAsyncHandler;
 
 
 
@@ -98,6 +103,15 @@ The data generated with the SDK must be stored in COS, and the region of the COS
                 LivenessCompareOutcome LivenessCompare(const Model::LivenessCompareRequest &request);
                 void LivenessCompareAsync(const Model::LivenessCompareRequest& request, const LivenessCompareAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 LivenessCompareOutcomeCallable LivenessCompareCallable(const Model::LivenessCompareRequest& request);
+
+                /**
+                 *This API is used to pass in URLs of a video and a photo, determine whether the person in the video is real, and if yes, then determine whether the person in the video is the same as that in the photo.
+                 * @param req VideoLivenessCompareRequest
+                 * @return VideoLivenessCompareOutcome
+                 */
+                VideoLivenessCompareOutcome VideoLivenessCompare(const Model::VideoLivenessCompareRequest &request);
+                void VideoLivenessCompareAsync(const Model::VideoLivenessCompareRequest& request, const VideoLivenessCompareAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                VideoLivenessCompareOutcomeCallable VideoLivenessCompareCallable(const Model::VideoLivenessCompareRequest& request);
 
             };
         }

@@ -24,9 +24,12 @@ set(faceid_public_header_model
   include/tencentcloud/faceid/v20180301/model/LivenessCompareResponse.h
   include/tencentcloud/faceid/v20180301/model/GenerateReflectSequenceRequest.h
   include/tencentcloud/faceid/v20180301/model/DetectReflectLivenessAndCompareResponse.h
+  include/tencentcloud/faceid/v20180301/model/VideoLivenessCompareResponse.h
   include/tencentcloud/faceid/v20180301/model/DetectReflectLivenessAndCompareRequest.h
   include/tencentcloud/faceid/v20180301/model/LivenessCompareRequest.h
   include/tencentcloud/faceid/v20180301/model/CreateUploadUrlRequest.h
+  include/tencentcloud/faceid/v20180301/model/FileInfo.h
+  include/tencentcloud/faceid/v20180301/model/VideoLivenessCompareRequest.h
   )
 
 set(faceid_src
@@ -36,9 +39,12 @@ set(faceid_src
   src/v20180301/model/LivenessCompareResponse.cpp
   src/v20180301/model/GenerateReflectSequenceRequest.cpp
   src/v20180301/model/DetectReflectLivenessAndCompareResponse.cpp
+  src/v20180301/model/VideoLivenessCompareResponse.cpp
   src/v20180301/model/DetectReflectLivenessAndCompareRequest.cpp
   src/v20180301/model/LivenessCompareRequest.cpp
   src/v20180301/model/CreateUploadUrlRequest.cpp
+  src/v20180301/model/FileInfo.cpp
+  src/v20180301/model/VideoLivenessCompareRequest.cpp
   )
 
 set(faceid_include

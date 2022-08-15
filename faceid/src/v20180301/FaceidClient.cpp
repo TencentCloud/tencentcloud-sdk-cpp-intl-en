@@ -212,3 +212,46 @@ FaceidClient::LivenessCompareOutcomeCallable FaceidClient::LivenessCompareCallab
     return task->get_future();
 }
 
+FaceidClient::VideoLivenessCompareOutcome FaceidClient::VideoLivenessCompare(const VideoLivenessCompareRequest &request)
+{
+    auto outcome = MakeRequest(request, "VideoLivenessCompare");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        VideoLivenessCompareResponse rsp = VideoLivenessCompareResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return VideoLivenessCompareOutcome(rsp);
+        else
+            return VideoLivenessCompareOutcome(o.GetError());
+    }
+    else
+    {
+        return VideoLivenessCompareOutcome(outcome.GetError());
+    }
+}
+
+void FaceidClient::VideoLivenessCompareAsync(const VideoLivenessCompareRequest& request, const VideoLivenessCompareAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->VideoLivenessCompare(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+FaceidClient::VideoLivenessCompareOutcomeCallable FaceidClient::VideoLivenessCompareCallable(const VideoLivenessCompareRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<VideoLivenessCompareOutcome()>>(
+        [this, request]()
+        {
+            return this->VideoLivenessCompare(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
