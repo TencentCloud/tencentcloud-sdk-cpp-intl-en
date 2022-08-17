@@ -118,14 +118,14 @@ namespace TencentCloud
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable subdomain recursive DNS. Valid values: ENABLED, DISABLED. Default value: DISABLED
-                     * @return DnsForwardStatus Whether to enable subdomain recursive DNS. Valid values: ENABLED, DISABLED. Default value: DISABLED
+                     * 获取Whether to enable subdomain recursive DNS. Valid values: `ENABLED` (default) and `DISABLED`.
+                     * @return DnsForwardStatus Whether to enable subdomain recursive DNS. Valid values: `ENABLED` (default) and `DISABLED`.
                      */
                     std::string GetDnsForwardStatus() const;
 
                     /**
-                     * 设置Whether to enable subdomain recursive DNS. Valid values: ENABLED, DISABLED. Default value: DISABLED
-                     * @param DnsForwardStatus Whether to enable subdomain recursive DNS. Valid values: ENABLED, DISABLED. Default value: DISABLED
+                     * 设置Whether to enable subdomain recursive DNS. Valid values: `ENABLED` (default) and `DISABLED`.
+                     * @param DnsForwardStatus Whether to enable subdomain recursive DNS. Valid values: `ENABLED` (default) and `DISABLED`.
                      */
                     void SetDnsForwardStatus(const std::string& _dnsForwardStatus);
 
@@ -171,6 +171,24 @@ namespace TencentCloud
                      */
                     bool AccountVpcSetHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable CNAME flattening. Valid values: `ENABLED` (default) and `DISABLED`.
+                     * @return CnameSpeedupStatus Whether to enable CNAME flattening. Valid values: `ENABLED` (default) and `DISABLED`.
+                     */
+                    std::string GetCnameSpeedupStatus() const;
+
+                    /**
+                     * 设置Whether to enable CNAME flattening. Valid values: `ENABLED` (default) and `DISABLED`.
+                     * @param CnameSpeedupStatus Whether to enable CNAME flattening. Valid values: `ENABLED` (default) and `DISABLED`.
+                     */
+                    void SetCnameSpeedupStatus(const std::string& _cnameSpeedupStatus);
+
+                    /**
+                     * 判断参数 CnameSpeedupStatus 是否已赋值
+                     * @return CnameSpeedupStatus 是否已赋值
+                     */
+                    bool CnameSpeedupStatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -198,7 +216,7 @@ namespace TencentCloud
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * Whether to enable subdomain recursive DNS. Valid values: ENABLED, DISABLED. Default value: DISABLED
+                     * Whether to enable subdomain recursive DNS. Valid values: `ENABLED` (default) and `DISABLED`.
                      */
                     std::string m_dnsForwardStatus;
                     bool m_dnsForwardStatusHasBeenSet;
@@ -214,6 +232,12 @@ namespace TencentCloud
                      */
                     std::vector<AccountVpcInfo> m_accountVpcSet;
                     bool m_accountVpcSetHasBeenSet;
+
+                    /**
+                     * Whether to enable CNAME flattening. Valid values: `ENABLED` (default) and `DISABLED`.
+                     */
+                    std::string m_cnameSpeedupStatus;
+                    bool m_cnameSpeedupStatusHasBeenSet;
 
                 };
             }

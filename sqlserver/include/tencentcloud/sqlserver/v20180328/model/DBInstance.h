@@ -904,14 +904,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool CrossBackupSaveDaysHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DnsPodDomain 
+                     * 获取Domain name of the public network address
+                     * @return DnsPodDomain Domain name of the public network address
                      */
                     std::string GetDnsPodDomain() const;
 
                     /**
-                     * 设置
-                     * @param DnsPodDomain 
+                     * 设置Domain name of the public network address
+                     * @param DnsPodDomain Domain name of the public network address
                      */
                     void SetDnsPodDomain(const std::string& _dnsPodDomain);
 
@@ -922,14 +922,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool DnsPodDomainHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TgwWanVPort 
+                     * 获取Port number of the public network
+                     * @return TgwWanVPort Port number of the public network
                      */
                     int64_t GetTgwWanVPort() const;
 
                     /**
-                     * 设置
-                     * @param TgwWanVPort 
+                     * 设置Port number of the public network
+                     * @param TgwWanVPort Port number of the public network
                      */
                     void SetTgwWanVPort(const int64_t& _tgwWanVPort);
 
@@ -938,6 +938,42 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      * @return TgwWanVPort 是否已赋值
                      */
                     bool TgwWanVPortHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return Collation 
+                     */
+                    std::string GetCollation() const;
+
+                    /**
+                     * 设置
+                     * @param Collation 
+                     */
+                    void SetCollation(const std::string& _collation);
+
+                    /**
+                     * 判断参数 Collation 是否已赋值
+                     * @return Collation 是否已赋值
+                     */
+                    bool CollationHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return TimeZone 
+                     */
+                    std::string GetTimeZone() const;
+
+                    /**
+                     * 设置
+                     * @param TimeZone 
+                     */
+                    void SetTimeZone(const std::string& _timeZone);
+
+                    /**
+                     * 判断参数 TimeZone 是否已赋值
+                     * @return TimeZone 是否已赋值
+                     */
+                    bool TimeZoneHasBeenSet() const;
 
                 private:
 
@@ -1225,16 +1261,28 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_crossBackupSaveDaysHasBeenSet;
 
                     /**
-                     * 
+                     * Domain name of the public network address
                      */
                     std::string m_dnsPodDomain;
                     bool m_dnsPodDomainHasBeenSet;
 
                     /**
-                     * 
+                     * Port number of the public network
                      */
                     int64_t m_tgwWanVPort;
                     bool m_tgwWanVPortHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_collation;
+                    bool m_collationHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_timeZone;
+                    bool m_timeZoneHasBeenSet;
 
                 };
             }
