@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Retention period of local binlog. Value range: [120,168].
-                     * @return SaveHours Retention period of local binlog. Value range: [120,168].
+                     * 获取Retention period of local binlog. Valid range: 72-168 hours. When there is disaster recovery instance, the valid range will be 120-168 hours.
+                     * @return SaveHours Retention period of local binlog. Valid range: 72-168 hours. When there is disaster recovery instance, the valid range will be 120-168 hours.
                      */
                     int64_t GetSaveHours() const;
 
                     /**
-                     * 设置Retention period of local binlog. Value range: [120,168].
-                     * @param SaveHours Retention period of local binlog. Value range: [120,168].
+                     * 设置Retention period of local binlog. Valid range: 72-168 hours. When there is disaster recovery instance, the valid range will be 120-168 hours.
+                     * @param SaveHours Retention period of local binlog. Valid range: 72-168 hours. When there is disaster recovery instance, the valid range will be 120-168 hours.
                      */
                     void SetSaveHours(const int64_t& _saveHours);
 
@@ -105,7 +105,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Retention period of local binlog. Value range: [120,168].
+                     * Retention period of local binlog. Valid range: 72-168 hours. When there is disaster recovery instance, the valid range will be 120-168 hours.
                      */
                     int64_t m_saveHours;
                     bool m_saveHoursHasBeenSet;

@@ -35,6 +35,8 @@
 #include <tencentcloud/cdb/v20170320/model/CloseCDBProxyResponse.h>
 #include <tencentcloud/cdb/v20170320/model/CloseWanServiceRequest.h>
 #include <tencentcloud/cdb/v20170320/model/CloseWanServiceResponse.h>
+#include <tencentcloud/cdb/v20170320/model/CreateAccountsRequest.h>
+#include <tencentcloud/cdb/v20170320/model/CreateAccountsResponse.h>
 #include <tencentcloud/cdb/v20170320/model/CreateAuditPolicyRequest.h>
 #include <tencentcloud/cdb/v20170320/model/CreateAuditPolicyResponse.h>
 #include <tencentcloud/cdb/v20170320/model/CreateBackupRequest.h>
@@ -59,6 +61,8 @@
 #include <tencentcloud/cdb/v20170320/model/DeleteTimeWindowResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeAccountPrivilegesRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeAccountPrivilegesResponse.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeAccountsRequest.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeAccountsResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeAsyncRequestInfoRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeAsyncRequestInfoResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeAuditPoliciesRequest.h>
@@ -187,12 +191,18 @@
 #include <tencentcloud/cdb/v20170320/model/ModifyDBInstanceProjectResponse.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyDBInstanceSecurityGroupsRequest.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyDBInstanceSecurityGroupsResponse.h>
+#include <tencentcloud/cdb/v20170320/model/ModifyDBInstanceVipVportRequest.h>
+#include <tencentcloud/cdb/v20170320/model/ModifyDBInstanceVipVportResponse.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyInstanceParamRequest.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyInstanceParamResponse.h>
+#include <tencentcloud/cdb/v20170320/model/ModifyInstancePasswordComplexityRequest.h>
+#include <tencentcloud/cdb/v20170320/model/ModifyInstancePasswordComplexityResponse.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyInstanceTagRequest.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyInstanceTagResponse.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyLocalBinlogConfigRequest.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyLocalBinlogConfigResponse.h>
+#include <tencentcloud/cdb/v20170320/model/ModifyNameOrDescByDpIdRequest.h>
+#include <tencentcloud/cdb/v20170320/model/ModifyNameOrDescByDpIdResponse.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyParamTemplateRequest.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyParamTemplateResponse.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyRoGroupInfoRequest.h>
@@ -275,6 +285,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CloseWanServiceResponse> CloseWanServiceOutcome;
                 typedef std::future<CloseWanServiceOutcome> CloseWanServiceOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::CloseWanServiceRequest&, CloseWanServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CloseWanServiceAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateAccountsResponse> CreateAccountsOutcome;
+                typedef std::future<CreateAccountsOutcome> CreateAccountsOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::CreateAccountsRequest&, CreateAccountsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAccountsAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateAuditPolicyResponse> CreateAuditPolicyOutcome;
                 typedef std::future<CreateAuditPolicyOutcome> CreateAuditPolicyOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::CreateAuditPolicyRequest&, CreateAuditPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAuditPolicyAsyncHandler;
@@ -311,6 +324,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeAccountPrivilegesResponse> DescribeAccountPrivilegesOutcome;
                 typedef std::future<DescribeAccountPrivilegesOutcome> DescribeAccountPrivilegesOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeAccountPrivilegesRequest&, DescribeAccountPrivilegesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccountPrivilegesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAccountsResponse> DescribeAccountsOutcome;
+                typedef std::future<DescribeAccountsOutcome> DescribeAccountsOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::DescribeAccountsRequest&, DescribeAccountsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccountsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAsyncRequestInfoResponse> DescribeAsyncRequestInfoOutcome;
                 typedef std::future<DescribeAsyncRequestInfoOutcome> DescribeAsyncRequestInfoOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeAsyncRequestInfoRequest&, DescribeAsyncRequestInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAsyncRequestInfoAsyncHandler;
@@ -503,15 +519,24 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyDBInstanceSecurityGroupsResponse> ModifyDBInstanceSecurityGroupsOutcome;
                 typedef std::future<ModifyDBInstanceSecurityGroupsOutcome> ModifyDBInstanceSecurityGroupsOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::ModifyDBInstanceSecurityGroupsRequest&, ModifyDBInstanceSecurityGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBInstanceSecurityGroupsAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyDBInstanceVipVportResponse> ModifyDBInstanceVipVportOutcome;
+                typedef std::future<ModifyDBInstanceVipVportOutcome> ModifyDBInstanceVipVportOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::ModifyDBInstanceVipVportRequest&, ModifyDBInstanceVipVportOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBInstanceVipVportAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyInstanceParamResponse> ModifyInstanceParamOutcome;
                 typedef std::future<ModifyInstanceParamOutcome> ModifyInstanceParamOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::ModifyInstanceParamRequest&, ModifyInstanceParamOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstanceParamAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyInstancePasswordComplexityResponse> ModifyInstancePasswordComplexityOutcome;
+                typedef std::future<ModifyInstancePasswordComplexityOutcome> ModifyInstancePasswordComplexityOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::ModifyInstancePasswordComplexityRequest&, ModifyInstancePasswordComplexityOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstancePasswordComplexityAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyInstanceTagResponse> ModifyInstanceTagOutcome;
                 typedef std::future<ModifyInstanceTagOutcome> ModifyInstanceTagOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::ModifyInstanceTagRequest&, ModifyInstanceTagOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstanceTagAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyLocalBinlogConfigResponse> ModifyLocalBinlogConfigOutcome;
                 typedef std::future<ModifyLocalBinlogConfigOutcome> ModifyLocalBinlogConfigOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::ModifyLocalBinlogConfigRequest&, ModifyLocalBinlogConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLocalBinlogConfigAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyNameOrDescByDpIdResponse> ModifyNameOrDescByDpIdOutcome;
+                typedef std::future<ModifyNameOrDescByDpIdOutcome> ModifyNameOrDescByDpIdOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::ModifyNameOrDescByDpIdRequest&, ModifyNameOrDescByDpIdOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyNameOrDescByDpIdAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyParamTemplateResponse> ModifyParamTemplateOutcome;
                 typedef std::future<ModifyParamTemplateOutcome> ModifyParamTemplateOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::ModifyParamTemplateRequest&, ModifyParamTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyParamTemplateAsyncHandler;
@@ -645,6 +670,15 @@ namespace TencentCloud
                 CloseWanServiceOutcomeCallable CloseWanServiceCallable(const Model::CloseWanServiceRequest& request);
 
                 /**
+                 *This API is used to create one or more TencentDB instance accounts. The account names, host addresses, and passwords are required, and account remarks and the maximum connections are optional.
+                 * @param req CreateAccountsRequest
+                 * @return CreateAccountsOutcome
+                 */
+                CreateAccountsOutcome CreateAccounts(const Model::CreateAccountsRequest &request);
+                void CreateAccountsAsync(const Model::CreateAccountsRequest& request, const CreateAccountsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateAccountsOutcomeCallable CreateAccountsCallable(const Model::CreateAccountsRequest& request);
+
+                /**
                  *This API is used to create an audit policy for a TencentDB instance by associating an audit rule with the TencentDB instance.
                  * @param req CreateAuditPolicyRequest
                  * @return CreateAuditPolicyOutcome
@@ -761,6 +795,15 @@ This is an asynchronous API. You can also use the [DescribeDBInstances](https://
                 DescribeAccountPrivilegesOutcome DescribeAccountPrivileges(const Model::DescribeAccountPrivilegesRequest &request);
                 void DescribeAccountPrivilegesAsync(const Model::DescribeAccountPrivilegesRequest& request, const DescribeAccountPrivilegesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeAccountPrivilegesOutcomeCallable DescribeAccountPrivilegesCallable(const Model::DescribeAccountPrivilegesRequest& request);
+
+                /**
+                 *This API (DescribeAccounts) is used to query information of all TencentDB accounts.
+                 * @param req DescribeAccountsRequest
+                 * @return DescribeAccountsOutcome
+                 */
+                DescribeAccountsOutcome DescribeAccounts(const Model::DescribeAccountsRequest &request);
+                void DescribeAccountsAsync(const Model::DescribeAccountsRequest& request, const DescribeAccountsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAccountsOutcomeCallable DescribeAccountsCallable(const Model::DescribeAccountsRequest& request);
 
                 /**
                  *This API (DescribeAsyncRequestInfo) is used to query the async task execution result of a TencentDB instance.
@@ -1344,6 +1387,15 @@ Note that when modifying account permissions, you need to pass in the full permi
                 ModifyDBInstanceSecurityGroupsOutcomeCallable ModifyDBInstanceSecurityGroupsCallable(const Model::ModifyDBInstanceSecurityGroupsRequest& request);
 
                 /**
+                 *This API (ModifyDBInstanceVipVport) is used to modify the IP and port number of a TencentDB instance, switch from the basic network to VPC, or change VPC subnets.
+                 * @param req ModifyDBInstanceVipVportRequest
+                 * @return ModifyDBInstanceVipVportOutcome
+                 */
+                ModifyDBInstanceVipVportOutcome ModifyDBInstanceVipVport(const Model::ModifyDBInstanceVipVportRequest &request);
+                void ModifyDBInstanceVipVportAsync(const Model::ModifyDBInstanceVipVportRequest& request, const ModifyDBInstanceVipVportAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyDBInstanceVipVportOutcomeCallable ModifyDBInstanceVipVportCallable(const Model::ModifyDBInstanceVipVportRequest& request);
+
+                /**
                  *This API (ModifyInstanceParam) is used to modify instance parameters.
                  * @param req ModifyInstanceParamRequest
                  * @return ModifyInstanceParamOutcome
@@ -1351,6 +1403,15 @@ Note that when modifying account permissions, you need to pass in the full permi
                 ModifyInstanceParamOutcome ModifyInstanceParam(const Model::ModifyInstanceParamRequest &request);
                 void ModifyInstanceParamAsync(const Model::ModifyInstanceParamRequest& request, const ModifyInstanceParamAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyInstanceParamOutcomeCallable ModifyInstanceParamCallable(const Model::ModifyInstanceParamRequest& request);
+
+                /**
+                 *This API is used to modify the password complexity of a TencentDB instance.
+                 * @param req ModifyInstancePasswordComplexityRequest
+                 * @return ModifyInstancePasswordComplexityOutcome
+                 */
+                ModifyInstancePasswordComplexityOutcome ModifyInstancePasswordComplexity(const Model::ModifyInstancePasswordComplexityRequest &request);
+                void ModifyInstancePasswordComplexityAsync(const Model::ModifyInstancePasswordComplexityRequest& request, const ModifyInstancePasswordComplexityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyInstancePasswordComplexityOutcomeCallable ModifyInstancePasswordComplexityCallable(const Model::ModifyInstancePasswordComplexityRequest& request);
 
                 /**
                  *This API (ModifyInstanceTag) is used to add, modify, or delete an instance tag.
@@ -1369,6 +1430,15 @@ Note that when modifying account permissions, you need to pass in the full permi
                 ModifyLocalBinlogConfigOutcome ModifyLocalBinlogConfig(const Model::ModifyLocalBinlogConfigRequest &request);
                 void ModifyLocalBinlogConfigAsync(const Model::ModifyLocalBinlogConfigRequest& request, const ModifyLocalBinlogConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyLocalBinlogConfigOutcomeCallable ModifyLocalBinlogConfigCallable(const Model::ModifyLocalBinlogConfigRequest& request);
+
+                /**
+                 *This API is used to modify the name or description of a placement group.
+                 * @param req ModifyNameOrDescByDpIdRequest
+                 * @return ModifyNameOrDescByDpIdOutcome
+                 */
+                ModifyNameOrDescByDpIdOutcome ModifyNameOrDescByDpId(const Model::ModifyNameOrDescByDpIdRequest &request);
+                void ModifyNameOrDescByDpIdAsync(const Model::ModifyNameOrDescByDpIdRequest& request, const ModifyNameOrDescByDpIdAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyNameOrDescByDpIdOutcomeCallable ModifyNameOrDescByDpIdCallable(const Model::ModifyNameOrDescByDpIdRequest& request);
 
                 /**
                  *This API is used to modify a parameter template. The common request parameter `Region` can only be set to `ap-guangzhou`.

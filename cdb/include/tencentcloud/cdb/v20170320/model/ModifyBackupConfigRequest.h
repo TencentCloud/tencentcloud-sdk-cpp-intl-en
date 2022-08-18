@@ -152,14 +152,14 @@ namespace TencentCloud
                     bool BackupTimeWindowHasBeenSet() const;
 
                     /**
-                     * 获取Switch for archive backup retention. Valid values: `off` (disable), `on` (enable). Default value:`off`.
-                     * @return EnableBackupPeriodSave Switch for archive backup retention. Valid values: `off` (disable), `on` (enable). Default value:`off`.
+                     * 获取Switch for periodic archive. Valid values: `off` (disable), `on` (enable). Default value:`off`. When you enable the periodic archive policy for the first time, you need to enter the `BackupPeriodSaveDays`, `BackupPeriodSaveInterval`, `BackupPeriodSaveCount`, and `StartBackupPeriodSaveDate` parameters; otherwise, the policy will not take effect.
+                     * @return EnableBackupPeriodSave Switch for periodic archive. Valid values: `off` (disable), `on` (enable). Default value:`off`. When you enable the periodic archive policy for the first time, you need to enter the `BackupPeriodSaveDays`, `BackupPeriodSaveInterval`, `BackupPeriodSaveCount`, and `StartBackupPeriodSaveDate` parameters; otherwise, the policy will not take effect.
                      */
                     std::string GetEnableBackupPeriodSave() const;
 
                     /**
-                     * 设置Switch for archive backup retention. Valid values: `off` (disable), `on` (enable). Default value:`off`.
-                     * @param EnableBackupPeriodSave Switch for archive backup retention. Valid values: `off` (disable), `on` (enable). Default value:`off`.
+                     * 设置Switch for periodic archive. Valid values: `off` (disable), `on` (enable). Default value:`off`. When you enable the periodic archive policy for the first time, you need to enter the `BackupPeriodSaveDays`, `BackupPeriodSaveInterval`, `BackupPeriodSaveCount`, and `StartBackupPeriodSaveDate` parameters; otherwise, the policy will not take effect.
+                     * @param EnableBackupPeriodSave Switch for periodic archive. Valid values: `off` (disable), `on` (enable). Default value:`off`. When you enable the periodic archive policy for the first time, you need to enter the `BackupPeriodSaveDays`, `BackupPeriodSaveInterval`, `BackupPeriodSaveCount`, and `StartBackupPeriodSaveDate` parameters; otherwise, the policy will not take effect.
                      */
                     void SetEnableBackupPeriodSave(const std::string& _enableBackupPeriodSave);
 
@@ -298,7 +298,7 @@ namespace TencentCloud
                     bool m_backupTimeWindowHasBeenSet;
 
                     /**
-                     * Switch for archive backup retention. Valid values: `off` (disable), `on` (enable). Default value:`off`.
+                     * Switch for periodic archive. Valid values: `off` (disable), `on` (enable). Default value:`off`. When you enable the periodic archive policy for the first time, you need to enter the `BackupPeriodSaveDays`, `BackupPeriodSaveInterval`, `BackupPeriodSaveCount`, and `StartBackupPeriodSaveDate` parameters; otherwise, the policy will not take effect.
                      */
                     std::string m_enableBackupPeriodSave;
                     bool m_enableBackupPeriodSaveHasBeenSet;

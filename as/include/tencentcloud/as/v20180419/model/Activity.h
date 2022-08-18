@@ -27,6 +27,7 @@
 #include <tencentcloud/as/v20180419/model/ActivtyRelatedInstance.h>
 #include <tencentcloud/as/v20180419/model/LifecycleActionResultInfo.h>
 #include <tencentcloud/as/v20180419/model/DetailedStatusMessage.h>
+#include <tencentcloud/as/v20180419/model/InvocationResult.h>
 
 
 namespace TencentCloud
@@ -87,25 +88,29 @@ namespace TencentCloud
 
                     /**
                      * 获取Type of the scaling activity. Valid values:<br>
-<li>SCALE_OUT: scales out. <li>SCALE_IN: scales in. <li>ATTACH_INSTANCES: adds an instance. <li>REMOVE_INSTANCES: terminates an instance. <li>DETACH_INSTANCES: removes an instance. <li>TERMINATE_INSTANCES_UNEXPECTEDLY: terminates an instance in the CVM console. <li>REPLACE_UNHEALTHY_INSTANCE: replaces an unhealthy instance.
-<li>START_INSTANCES: starts an instance.
-<li>STOP_INSTANCES: stops an instance.
+<li>`SCALE_OUT`: Scale out. <li>`SCALE_IN`: Scale in. <li>`ATTACH_INSTANCES`: Add instances. <li>`REMOVE_INSTANCES`: Terminate instances. <li>`DETACH_INSTANCES`: Remove instances. <li>`TERMINATE_INSTANCES_UNEXPECTEDLY`: Terminate instances in the CVM console. <li>`REPLACE_UNHEALTHY_INSTANCE`: Replace an unhealthy instance.
+<li>`START_INSTANCES`: Starts up instances.
+<li>`STOP_INSTANCES`: Shut down instances.
+<li>`INVOKE_COMMAND`: Execute commands
                      * @return ActivityType Type of the scaling activity. Valid values:<br>
-<li>SCALE_OUT: scales out. <li>SCALE_IN: scales in. <li>ATTACH_INSTANCES: adds an instance. <li>REMOVE_INSTANCES: terminates an instance. <li>DETACH_INSTANCES: removes an instance. <li>TERMINATE_INSTANCES_UNEXPECTEDLY: terminates an instance in the CVM console. <li>REPLACE_UNHEALTHY_INSTANCE: replaces an unhealthy instance.
-<li>START_INSTANCES: starts an instance.
-<li>STOP_INSTANCES: stops an instance.
+<li>`SCALE_OUT`: Scale out. <li>`SCALE_IN`: Scale in. <li>`ATTACH_INSTANCES`: Add instances. <li>`REMOVE_INSTANCES`: Terminate instances. <li>`DETACH_INSTANCES`: Remove instances. <li>`TERMINATE_INSTANCES_UNEXPECTEDLY`: Terminate instances in the CVM console. <li>`REPLACE_UNHEALTHY_INSTANCE`: Replace an unhealthy instance.
+<li>`START_INSTANCES`: Starts up instances.
+<li>`STOP_INSTANCES`: Shut down instances.
+<li>`INVOKE_COMMAND`: Execute commands
                      */
                     std::string GetActivityType() const;
 
                     /**
                      * 设置Type of the scaling activity. Valid values:<br>
-<li>SCALE_OUT: scales out. <li>SCALE_IN: scales in. <li>ATTACH_INSTANCES: adds an instance. <li>REMOVE_INSTANCES: terminates an instance. <li>DETACH_INSTANCES: removes an instance. <li>TERMINATE_INSTANCES_UNEXPECTEDLY: terminates an instance in the CVM console. <li>REPLACE_UNHEALTHY_INSTANCE: replaces an unhealthy instance.
-<li>START_INSTANCES: starts an instance.
-<li>STOP_INSTANCES: stops an instance.
+<li>`SCALE_OUT`: Scale out. <li>`SCALE_IN`: Scale in. <li>`ATTACH_INSTANCES`: Add instances. <li>`REMOVE_INSTANCES`: Terminate instances. <li>`DETACH_INSTANCES`: Remove instances. <li>`TERMINATE_INSTANCES_UNEXPECTEDLY`: Terminate instances in the CVM console. <li>`REPLACE_UNHEALTHY_INSTANCE`: Replace an unhealthy instance.
+<li>`START_INSTANCES`: Starts up instances.
+<li>`STOP_INSTANCES`: Shut down instances.
+<li>`INVOKE_COMMAND`: Execute commands
                      * @param ActivityType Type of the scaling activity. Valid values:<br>
-<li>SCALE_OUT: scales out. <li>SCALE_IN: scales in. <li>ATTACH_INSTANCES: adds an instance. <li>REMOVE_INSTANCES: terminates an instance. <li>DETACH_INSTANCES: removes an instance. <li>TERMINATE_INSTANCES_UNEXPECTEDLY: terminates an instance in the CVM console. <li>REPLACE_UNHEALTHY_INSTANCE: replaces an unhealthy instance.
-<li>START_INSTANCES: starts an instance.
-<li>STOP_INSTANCES: stops an instance.
+<li>`SCALE_OUT`: Scale out. <li>`SCALE_IN`: Scale in. <li>`ATTACH_INSTANCES`: Add instances. <li>`REMOVE_INSTANCES`: Terminate instances. <li>`DETACH_INSTANCES`: Remove instances. <li>`TERMINATE_INSTANCES_UNEXPECTEDLY`: Terminate instances in the CVM console. <li>`REPLACE_UNHEALTHY_INSTANCE`: Replace an unhealthy instance.
+<li>`START_INSTANCES`: Starts up instances.
+<li>`STOP_INSTANCES`: Shut down instances.
+<li>`INVOKE_COMMAND`: Execute commands
                      */
                     void SetActivityType(const std::string& _activityType);
 
@@ -337,6 +342,24 @@ namespace TencentCloud
                      */
                     bool DetailedStatusMessageSetHasBeenSet() const;
 
+                    /**
+                     * 获取Result of the command execution
+                     * @return InvocationResultSet Result of the command execution
+                     */
+                    std::vector<InvocationResult> GetInvocationResultSet() const;
+
+                    /**
+                     * 设置Result of the command execution
+                     * @param InvocationResultSet Result of the command execution
+                     */
+                    void SetInvocationResultSet(const std::vector<InvocationResult>& _invocationResultSet);
+
+                    /**
+                     * 判断参数 InvocationResultSet 是否已赋值
+                     * @return InvocationResultSet 是否已赋值
+                     */
+                    bool InvocationResultSetHasBeenSet() const;
+
                 private:
 
                     /**
@@ -353,9 +376,10 @@ namespace TencentCloud
 
                     /**
                      * Type of the scaling activity. Valid values:<br>
-<li>SCALE_OUT: scales out. <li>SCALE_IN: scales in. <li>ATTACH_INSTANCES: adds an instance. <li>REMOVE_INSTANCES: terminates an instance. <li>DETACH_INSTANCES: removes an instance. <li>TERMINATE_INSTANCES_UNEXPECTEDLY: terminates an instance in the CVM console. <li>REPLACE_UNHEALTHY_INSTANCE: replaces an unhealthy instance.
-<li>START_INSTANCES: starts an instance.
-<li>STOP_INSTANCES: stops an instance.
+<li>`SCALE_OUT`: Scale out. <li>`SCALE_IN`: Scale in. <li>`ATTACH_INSTANCES`: Add instances. <li>`REMOVE_INSTANCES`: Terminate instances. <li>`DETACH_INSTANCES`: Remove instances. <li>`TERMINATE_INSTANCES_UNEXPECTEDLY`: Terminate instances in the CVM console. <li>`REPLACE_UNHEALTHY_INSTANCE`: Replace an unhealthy instance.
+<li>`START_INSTANCES`: Starts up instances.
+<li>`STOP_INSTANCES`: Shut down instances.
+<li>`INVOKE_COMMAND`: Execute commands
                      */
                     std::string m_activityType;
                     bool m_activityTypeHasBeenSet;
@@ -431,6 +455,12 @@ namespace TencentCloud
                      */
                     std::vector<DetailedStatusMessage> m_detailedStatusMessageSet;
                     bool m_detailedStatusMessageSetHasBeenSet;
+
+                    /**
+                     * Result of the command execution
+                     */
+                    std::vector<InvocationResult> m_invocationResultSet;
+                    bool m_invocationResultSetHasBeenSet;
 
                 };
             }

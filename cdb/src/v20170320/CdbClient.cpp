@@ -298,6 +298,49 @@ CdbClient::CloseWanServiceOutcomeCallable CdbClient::CloseWanServiceCallable(con
     return task->get_future();
 }
 
+CdbClient::CreateAccountsOutcome CdbClient::CreateAccounts(const CreateAccountsRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateAccounts");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateAccountsResponse rsp = CreateAccountsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateAccountsOutcome(rsp);
+        else
+            return CreateAccountsOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateAccountsOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::CreateAccountsAsync(const CreateAccountsRequest& request, const CreateAccountsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateAccounts(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdbClient::CreateAccountsOutcomeCallable CdbClient::CreateAccountsCallable(const CreateAccountsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateAccountsOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateAccounts(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CdbClient::CreateAuditPolicyOutcome CdbClient::CreateAuditPolicy(const CreateAuditPolicyRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateAuditPolicy");
@@ -807,6 +850,49 @@ CdbClient::DescribeAccountPrivilegesOutcomeCallable CdbClient::DescribeAccountPr
         [this, request]()
         {
             return this->DescribeAccountPrivileges(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CdbClient::DescribeAccountsOutcome CdbClient::DescribeAccounts(const DescribeAccountsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAccounts");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAccountsResponse rsp = DescribeAccountsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAccountsOutcome(rsp);
+        else
+            return DescribeAccountsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAccountsOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::DescribeAccountsAsync(const DescribeAccountsRequest& request, const DescribeAccountsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeAccounts(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdbClient::DescribeAccountsOutcomeCallable CdbClient::DescribeAccountsCallable(const DescribeAccountsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeAccountsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeAccounts(request);
         }
     );
 
@@ -3566,6 +3652,49 @@ CdbClient::ModifyDBInstanceSecurityGroupsOutcomeCallable CdbClient::ModifyDBInst
     return task->get_future();
 }
 
+CdbClient::ModifyDBInstanceVipVportOutcome CdbClient::ModifyDBInstanceVipVport(const ModifyDBInstanceVipVportRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyDBInstanceVipVport");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyDBInstanceVipVportResponse rsp = ModifyDBInstanceVipVportResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyDBInstanceVipVportOutcome(rsp);
+        else
+            return ModifyDBInstanceVipVportOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyDBInstanceVipVportOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::ModifyDBInstanceVipVportAsync(const ModifyDBInstanceVipVportRequest& request, const ModifyDBInstanceVipVportAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyDBInstanceVipVport(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdbClient::ModifyDBInstanceVipVportOutcomeCallable CdbClient::ModifyDBInstanceVipVportCallable(const ModifyDBInstanceVipVportRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyDBInstanceVipVportOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyDBInstanceVipVport(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CdbClient::ModifyInstanceParamOutcome CdbClient::ModifyInstanceParam(const ModifyInstanceParamRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyInstanceParam");
@@ -3602,6 +3731,49 @@ CdbClient::ModifyInstanceParamOutcomeCallable CdbClient::ModifyInstanceParamCall
         [this, request]()
         {
             return this->ModifyInstanceParam(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CdbClient::ModifyInstancePasswordComplexityOutcome CdbClient::ModifyInstancePasswordComplexity(const ModifyInstancePasswordComplexityRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyInstancePasswordComplexity");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyInstancePasswordComplexityResponse rsp = ModifyInstancePasswordComplexityResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyInstancePasswordComplexityOutcome(rsp);
+        else
+            return ModifyInstancePasswordComplexityOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyInstancePasswordComplexityOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::ModifyInstancePasswordComplexityAsync(const ModifyInstancePasswordComplexityRequest& request, const ModifyInstancePasswordComplexityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyInstancePasswordComplexity(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdbClient::ModifyInstancePasswordComplexityOutcomeCallable CdbClient::ModifyInstancePasswordComplexityCallable(const ModifyInstancePasswordComplexityRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyInstancePasswordComplexityOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyInstancePasswordComplexity(request);
         }
     );
 
@@ -3688,6 +3860,49 @@ CdbClient::ModifyLocalBinlogConfigOutcomeCallable CdbClient::ModifyLocalBinlogCo
         [this, request]()
         {
             return this->ModifyLocalBinlogConfig(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CdbClient::ModifyNameOrDescByDpIdOutcome CdbClient::ModifyNameOrDescByDpId(const ModifyNameOrDescByDpIdRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyNameOrDescByDpId");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyNameOrDescByDpIdResponse rsp = ModifyNameOrDescByDpIdResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyNameOrDescByDpIdOutcome(rsp);
+        else
+            return ModifyNameOrDescByDpIdOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyNameOrDescByDpIdOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::ModifyNameOrDescByDpIdAsync(const ModifyNameOrDescByDpIdRequest& request, const ModifyNameOrDescByDpIdAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyNameOrDescByDpId(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdbClient::ModifyNameOrDescByDpIdOutcomeCallable CdbClient::ModifyNameOrDescByDpIdCallable(const ModifyNameOrDescByDpIdRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyNameOrDescByDpIdOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyNameOrDescByDpId(request);
         }
     );
 
