@@ -14,23 +14,21 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/tts/v20190823/model/TextToVoiceResponse.h>
+#include <tencentcloud/tke/v20180525/model/DescribeEdgeLogSwitchesResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using TencentCloud::CoreInternalOutcome;
-using namespace TencentCloud::Tts::V20190823::Model;
+using namespace TencentCloud::Tke::V20180525::Model;
 using namespace std;
 
-TextToVoiceResponse::TextToVoiceResponse() :
-    m_audioHasBeenSet(false),
-    m_sessionIdHasBeenSet(false),
-    m_subtitlesHasBeenSet(false)
+DescribeEdgeLogSwitchesResponse::DescribeEdgeLogSwitchesResponse() :
+    m_switchSetHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome TextToVoiceResponse::Deserialize(const string &payload)
+CoreInternalOutcome DescribeEdgeLogSwitchesResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -64,84 +62,39 @@ CoreInternalOutcome TextToVoiceResponse::Deserialize(const string &payload)
     }
 
 
-    if (rsp.HasMember("Audio") && !rsp["Audio"].IsNull())
+    if (rsp.HasMember("SwitchSet") && !rsp["SwitchSet"].IsNull())
     {
-        if (!rsp["Audio"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `Audio` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_audio = string(rsp["Audio"].GetString());
-        m_audioHasBeenSet = true;
-    }
+        if (!rsp["SwitchSet"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `SwitchSet` is not array type"));
 
-    if (rsp.HasMember("SessionId") && !rsp["SessionId"].IsNull())
-    {
-        if (!rsp["SessionId"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `SessionId` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_sessionId = string(rsp["SessionId"].GetString());
-        m_sessionIdHasBeenSet = true;
-    }
-
-    if (rsp.HasMember("Subtitles") && !rsp["Subtitles"].IsNull())
-    {
-        if (!rsp["Subtitles"].IsArray())
-            return CoreInternalOutcome(Core::Error("response `Subtitles` is not array type"));
-
-        const rapidjson::Value &tmpValue = rsp["Subtitles"];
+        const rapidjson::Value &tmpValue = rsp["SwitchSet"];
         for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
-            Subtitle item;
-            CoreInternalOutcome outcome = item.Deserialize(*itr);
-            if (!outcome.IsSuccess())
-            {
-                outcome.GetError().SetRequestId(requestId);
-                return outcome;
-            }
-            m_subtitles.push_back(item);
+            m_switchSet.push_back((*itr).GetString());
         }
-        m_subtitlesHasBeenSet = true;
+        m_switchSetHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string TextToVoiceResponse::ToJsonString() const
+string DescribeEdgeLogSwitchesResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_audioHasBeenSet)
+    if (m_switchSetHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Audio";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_audio.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_sessionIdHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "SessionId";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_sessionId.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_subtitlesHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Subtitles";
+        string key = "SwitchSet";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
-        int i=0;
-        for (auto itr = m_subtitles.begin(); itr != m_subtitles.end(); ++itr, ++i)
+        for (auto itr = m_switchSet.begin(); itr != m_switchSet.end(); ++itr)
         {
-            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
-            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
     }
 
@@ -157,34 +110,14 @@ string TextToVoiceResponse::ToJsonString() const
 }
 
 
-string TextToVoiceResponse::GetAudio() const
+vector<string> DescribeEdgeLogSwitchesResponse::GetSwitchSet() const
 {
-    return m_audio;
+    return m_switchSet;
 }
 
-bool TextToVoiceResponse::AudioHasBeenSet() const
+bool DescribeEdgeLogSwitchesResponse::SwitchSetHasBeenSet() const
 {
-    return m_audioHasBeenSet;
-}
-
-string TextToVoiceResponse::GetSessionId() const
-{
-    return m_sessionId;
-}
-
-bool TextToVoiceResponse::SessionIdHasBeenSet() const
-{
-    return m_sessionIdHasBeenSet;
-}
-
-vector<Subtitle> TextToVoiceResponse::GetSubtitles() const
-{
-    return m_subtitles;
-}
-
-bool TextToVoiceResponse::SubtitlesHasBeenSet() const
-{
-    return m_subtitlesHasBeenSet;
+    return m_switchSetHasBeenSet;
 }
 
 

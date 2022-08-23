@@ -226,6 +226,24 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
                      */
                     bool CodecHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable the timestamp feature. Default value: `false`.
+                     * @return EnableSubtitle Whether to enable the timestamp feature. Default value: `false`.
+                     */
+                    bool GetEnableSubtitle() const;
+
+                    /**
+                     * 设置Whether to enable the timestamp feature. Default value: `false`.
+                     * @param EnableSubtitle Whether to enable the timestamp feature. Default value: `false`.
+                     */
+                    void SetEnableSubtitle(const bool& _enableSubtitle);
+
+                    /**
+                     * 判断参数 EnableSubtitle 是否已赋值
+                     * @return EnableSubtitle 是否已赋值
+                     */
+                    bool EnableSubtitleHasBeenSet() const;
+
                 private:
 
                     /**
@@ -288,6 +306,12 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
                      */
                     std::string m_codec;
                     bool m_codecHasBeenSet;
+
+                    /**
+                     * Whether to enable the timestamp feature. Default value: `false`.
+                     */
+                    bool m_enableSubtitle;
+                    bool m_enableSubtitleHasBeenSet;
 
                 };
             }

@@ -21,6 +21,7 @@ using namespace TencentCloud::Trtc::V20190722::Model;
 using namespace std;
 
 McuWaterMarkParams::McuWaterMarkParams() :
+    m_waterMarkTypeHasBeenSet(false),
     m_waterMarkImageHasBeenSet(false)
 {
 }
@@ -29,6 +30,16 @@ CoreInternalOutcome McuWaterMarkParams::Deserialize(const rapidjson::Value &valu
 {
     string requestId = "";
 
+
+    if (value.HasMember("WaterMarkType") && !value["WaterMarkType"].IsNull())
+    {
+        if (!value["WaterMarkType"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `McuWaterMarkParams.WaterMarkType` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_waterMarkType = value["WaterMarkType"].GetUint64();
+        m_waterMarkTypeHasBeenSet = true;
+    }
 
     if (value.HasMember("WaterMarkImage") && !value["WaterMarkImage"].IsNull())
     {
@@ -54,6 +65,14 @@ CoreInternalOutcome McuWaterMarkParams::Deserialize(const rapidjson::Value &valu
 void McuWaterMarkParams::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
 
+    if (m_waterMarkTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "WaterMarkType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_waterMarkType, allocator);
+    }
+
     if (m_waterMarkImageHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -65,6 +84,22 @@ void McuWaterMarkParams::ToJsonObject(rapidjson::Value &value, rapidjson::Docume
 
 }
 
+
+uint64_t McuWaterMarkParams::GetWaterMarkType() const
+{
+    return m_waterMarkType;
+}
+
+void McuWaterMarkParams::SetWaterMarkType(const uint64_t& _waterMarkType)
+{
+    m_waterMarkType = _waterMarkType;
+    m_waterMarkTypeHasBeenSet = true;
+}
+
+bool McuWaterMarkParams::WaterMarkTypeHasBeenSet() const
+{
+    return m_waterMarkTypeHasBeenSet;
+}
 
 McuWaterMarkImage McuWaterMarkParams::GetWaterMarkImage() const
 {

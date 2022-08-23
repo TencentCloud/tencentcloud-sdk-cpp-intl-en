@@ -69,6 +69,50 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool ExtraArgsHasBeenSet() const;
 
+                    /**
+                     * 获取Runtime type. Valid values: "docker" (default), "containerd".
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Runtime Runtime type. Valid values: "docker" (default), "containerd".
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetRuntime() const;
+
+                    /**
+                     * 设置Runtime type. Valid values: "docker" (default), "containerd".
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param Runtime Runtime type. Valid values: "docker" (default), "containerd".
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetRuntime(const std::string& _runtime);
+
+                    /**
+                     * 判断参数 Runtime 是否已赋值
+                     * @return Runtime 是否已赋值
+                     */
+                    bool RuntimeHasBeenSet() const;
+
+                    /**
+                     * 获取Forwarding mode of kube-proxy. Valid values: "iptables" (default), "ipvs".
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return ProxyMode Forwarding mode of kube-proxy. Valid values: "iptables" (default), "ipvs".
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetProxyMode() const;
+
+                    /**
+                     * 设置Forwarding mode of kube-proxy. Valid values: "iptables" (default), "ipvs".
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param ProxyMode Forwarding mode of kube-proxy. Valid values: "iptables" (default), "ipvs".
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetProxyMode(const std::string& _proxyMode);
+
+                    /**
+                     * 判断参数 ProxyMode 是否已赋值
+                     * @return ProxyMode 是否已赋值
+                     */
+                    bool ProxyModeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -77,6 +121,20 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     EdgeClusterExtraArgs m_extraArgs;
                     bool m_extraArgsHasBeenSet;
+
+                    /**
+                     * Runtime type. Valid values: "docker" (default), "containerd".
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_runtime;
+                    bool m_runtimeHasBeenSet;
+
+                    /**
+                     * Forwarding mode of kube-proxy. Valid values: "iptables" (default), "ipvs".
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_proxyMode;
+                    bool m_proxyModeHasBeenSet;
 
                 };
             }

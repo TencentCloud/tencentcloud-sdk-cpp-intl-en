@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tke/v20180525/model/EdgeClusterAdvancedSettings.h>
 
 
 namespace TencentCloud
@@ -248,6 +249,28 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool MaxNodePodNumHasBeenSet() const;
 
+                    /**
+                     * 获取Cluster advanced settings
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return ClusterAdvancedSettings Cluster advanced settings
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    EdgeClusterAdvancedSettings GetClusterAdvancedSettings() const;
+
+                    /**
+                     * 设置Cluster advanced settings
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param ClusterAdvancedSettings Cluster advanced settings
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetClusterAdvancedSettings(const EdgeClusterAdvancedSettings& _clusterAdvancedSettings);
+
+                    /**
+                     * 判断参数 ClusterAdvancedSettings 是否已赋值
+                     * @return ClusterAdvancedSettings 是否已赋值
+                     */
+                    bool ClusterAdvancedSettingsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -316,6 +339,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     int64_t m_maxNodePodNum;
                     bool m_maxNodePodNumHasBeenSet;
+
+                    /**
+                     * Cluster advanced settings
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    EdgeClusterAdvancedSettings m_clusterAdvancedSettings;
+                    bool m_clusterAdvancedSettingsHasBeenSet;
 
                 };
             }

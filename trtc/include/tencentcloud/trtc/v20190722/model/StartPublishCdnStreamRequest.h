@@ -26,6 +26,7 @@
 #include <tencentcloud/trtc/v20190722/model/McuVideoParams.h>
 #include <tencentcloud/trtc/v20190722/model/SingleSubscribeParams.h>
 #include <tencentcloud/trtc/v20190722/model/McuPublishCdnParam.h>
+#include <tencentcloud/trtc/v20190722/model/McuSeiParams.h>
 
 
 namespace TencentCloud
@@ -209,6 +210,24 @@ namespace TencentCloud
                      */
                     bool PublishCdnParamsHasBeenSet() const;
 
+                    /**
+                     * 获取The stream mixing SEI parameters.
+                     * @return SeiParams The stream mixing SEI parameters.
+                     */
+                    McuSeiParams GetSeiParams() const;
+
+                    /**
+                     * 设置The stream mixing SEI parameters.
+                     * @param SeiParams The stream mixing SEI parameters.
+                     */
+                    void SetSeiParams(const McuSeiParams& _seiParams);
+
+                    /**
+                     * 判断参数 SeiParams 是否已赋值
+                     * @return SeiParams 是否已赋值
+                     */
+                    bool SeiParamsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -264,6 +283,12 @@ namespace TencentCloud
                      */
                     std::vector<McuPublishCdnParam> m_publishCdnParams;
                     bool m_publishCdnParamsHasBeenSet;
+
+                    /**
+                     * The stream mixing SEI parameters.
+                     */
+                    McuSeiParams m_seiParams;
+                    bool m_seiParamsHasBeenSet;
 
                 };
             }

@@ -114,6 +114,24 @@ namespace TencentCloud
                      */
                     bool ConfigHasBeenSet() const;
 
+                    /**
+                     * 获取A legacy version of edgectl script can be downloaded. The latest version is downloaded by default. The version information can be checked in the script.
+                     * @return ScriptVersion A legacy version of edgectl script can be downloaded. The latest version is downloaded by default. The version information can be checked in the script.
+                     */
+                    std::string GetScriptVersion() const;
+
+                    /**
+                     * 设置A legacy version of edgectl script can be downloaded. The latest version is downloaded by default. The version information can be checked in the script.
+                     * @param ScriptVersion A legacy version of edgectl script can be downloaded. The latest version is downloaded by default. The version information can be checked in the script.
+                     */
+                    void SetScriptVersion(const std::string& _scriptVersion);
+
+                    /**
+                     * 判断参数 ScriptVersion 是否已赋值
+                     * @return ScriptVersion 是否已赋值
+                     */
+                    bool ScriptVersionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -139,6 +157,12 @@ namespace TencentCloud
                      */
                     std::string m_config;
                     bool m_configHasBeenSet;
+
+                    /**
+                     * A legacy version of edgectl script can be downloaded. The latest version is downloaded by default. The version information can be checked in the script.
+                     */
+                    std::string m_scriptVersion;
+                    bool m_scriptVersionHasBeenSet;
 
                 };
             }

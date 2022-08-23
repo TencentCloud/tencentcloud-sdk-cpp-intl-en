@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool RoomIdHasBeenSet() const;
 
                     /**
-                     * 获取The [user ID](https://intl.cloud.tencent.com/document/product/647/37714) of the recording robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include this user ID in the room ID.
-                     * @return UserId The [user ID](https://intl.cloud.tencent.com/document/product/647/37714) of the recording robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include this user ID in the room ID.
+                     * 获取The [user ID](https://intl.cloud.tencent.com/document/product/647/37714) of the recording robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include the room ID in the user ID.
+                     * @return UserId The [user ID](https://intl.cloud.tencent.com/document/product/647/37714) of the recording robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include the room ID in the user ID.
                      */
                     std::string GetUserId() const;
 
                     /**
-                     * 设置The [user ID](https://intl.cloud.tencent.com/document/product/647/37714) of the recording robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include this user ID in the room ID.
-                     * @param UserId The [user ID](https://intl.cloud.tencent.com/document/product/647/37714) of the recording robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include this user ID in the room ID.
+                     * 设置The [user ID](https://intl.cloud.tencent.com/document/product/647/37714) of the recording robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include the room ID in the user ID.
+                     * @param UserId The [user ID](https://intl.cloud.tencent.com/document/product/647/37714) of the recording robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include the room ID in the user ID.
                      */
                     void SetUserId(const std::string& _userId);
 
@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool UserIdHasBeenSet() const;
 
                     /**
-                     * 获取The signature (similar to login password) required for the recording robot to enter the room. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104). |
-                     * @return UserSig The signature (similar to login password) required for the recording robot to enter the room. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104). |
+                     * 获取The signature (similar to a login password) required for the recording robot to enter the room. Each user ID corresponds to a signature. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104).
+                     * @return UserSig The signature (similar to a login password) required for the recording robot to enter the room. Each user ID corresponds to a signature. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104).
                      */
                     std::string GetUserSig() const;
 
                     /**
-                     * 设置The signature (similar to login password) required for the recording robot to enter the room. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104). |
-                     * @param UserSig The signature (similar to login password) required for the recording robot to enter the room. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104). |
+                     * 设置The signature (similar to a login password) required for the recording robot to enter the room. Each user ID corresponds to a signature. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104).
+                     * @param UserSig The signature (similar to a login password) required for the recording robot to enter the room. Each user ID corresponds to a signature. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104).
                      */
                     void SetUserSig(const std::string& _userSig);
 
@@ -137,14 +137,14 @@ namespace TencentCloud
                     bool RecordParamsHasBeenSet() const;
 
                     /**
-                     * 获取The cloud storage parameters.
-                     * @return StorageParams The cloud storage parameters.
+                     * 获取The cloud storage information of the recording file. Currently, you can only save recording files to Tencent Cloud VOD.
+                     * @return StorageParams The cloud storage information of the recording file. Currently, you can only save recording files to Tencent Cloud VOD.
                      */
                     StorageParams GetStorageParams() const;
 
                     /**
-                     * 设置The cloud storage parameters.
-                     * @param StorageParams The cloud storage parameters.
+                     * 设置The cloud storage information of the recording file. Currently, you can only save recording files to Tencent Cloud VOD.
+                     * @param StorageParams The cloud storage information of the recording file. Currently, you can only save recording files to Tencent Cloud VOD.
                      */
                     void SetStorageParams(const StorageParams& _storageParams);
 
@@ -267,13 +267,13 @@ namespace TencentCloud
                     bool m_roomIdHasBeenSet;
 
                     /**
-                     * The [user ID](https://intl.cloud.tencent.com/document/product/647/37714) of the recording robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include this user ID in the room ID.
+                     * The [user ID](https://intl.cloud.tencent.com/document/product/647/37714) of the recording robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include the room ID in the user ID.
                      */
                     std::string m_userId;
                     bool m_userIdHasBeenSet;
 
                     /**
-                     * The signature (similar to login password) required for the recording robot to enter the room. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104). |
+                     * The signature (similar to a login password) required for the recording robot to enter the room. Each user ID corresponds to a signature. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104).
                      */
                     std::string m_userSig;
                     bool m_userSigHasBeenSet;
@@ -285,7 +285,7 @@ namespace TencentCloud
                     bool m_recordParamsHasBeenSet;
 
                     /**
-                     * The cloud storage parameters.
+                     * The cloud storage information of the recording file. Currently, you can only save recording files to Tencent Cloud VOD.
                      */
                     StorageParams m_storageParams;
                     bool m_storageParamsHasBeenSet;

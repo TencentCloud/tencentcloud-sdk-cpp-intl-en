@@ -20,12 +20,14 @@ set(tts_public_header
 
 set(tts_public_header_model
   include/tencentcloud/tts/v20190823/model/TextToVoiceResponse.h
+  include/tencentcloud/tts/v20190823/model/Subtitle.h
   include/tencentcloud/tts/v20190823/model/TextToVoiceRequest.h
   )
 
 set(tts_src
   src/v20190823/TtsClient.cpp
   src/v20190823/model/TextToVoiceResponse.cpp
+  src/v20190823/model/Subtitle.cpp
   src/v20190823/model/TextToVoiceRequest.cpp
   )
 

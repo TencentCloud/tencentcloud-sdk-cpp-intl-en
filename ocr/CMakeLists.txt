@@ -22,6 +22,8 @@ set(ocr_public_header_model
   include/tencentcloud/ocr/v20181119/model/GeneralAccurateOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/GeneralBasicOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/DetectedWords.h
+  include/tencentcloud/ocr/v20181119/model/TextTable.h
+  include/tencentcloud/ocr/v20181119/model/MLIDCardOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/TableOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/TableOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/DetectedWordCoordPoint.h
@@ -35,7 +37,7 @@ set(ocr_public_header_model
   include/tencentcloud/ocr/v20181119/model/TextDetection.h
   include/tencentcloud/ocr/v20181119/model/MLIDPassportOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/HKIDCardOCRResponse.h
-  include/tencentcloud/ocr/v20181119/model/TextTable.h
+  include/tencentcloud/ocr/v20181119/model/MLIDCardOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/GeneralBasicOCRRequest.h
   )
 
@@ -44,6 +46,8 @@ set(ocr_src
   src/v20181119/model/GeneralAccurateOCRRequest.cpp
   src/v20181119/model/GeneralBasicOCRResponse.cpp
   src/v20181119/model/DetectedWords.cpp
+  src/v20181119/model/TextTable.cpp
+  src/v20181119/model/MLIDCardOCRRequest.cpp
   src/v20181119/model/TableOCRRequest.cpp
   src/v20181119/model/TableOCRResponse.cpp
   src/v20181119/model/DetectedWordCoordPoint.cpp
@@ -57,7 +61,7 @@ set(ocr_src
   src/v20181119/model/TextDetection.cpp
   src/v20181119/model/MLIDPassportOCRRequest.cpp
   src/v20181119/model/HKIDCardOCRResponse.cpp
-  src/v20181119/model/TextTable.cpp
+  src/v20181119/model/MLIDCardOCRResponse.cpp
   src/v20181119/model/GeneralBasicOCRRequest.cpp
   )
 

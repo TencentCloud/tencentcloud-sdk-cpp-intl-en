@@ -31,7 +31,8 @@ StartPublishCdnStreamRequest::StartPublishCdnStreamRequest() :
     m_audioParamsHasBeenSet(false),
     m_videoParamsHasBeenSet(false),
     m_singleSubscribeParamsHasBeenSet(false),
-    m_publishCdnParamsHasBeenSet(false)
+    m_publishCdnParamsHasBeenSet(false),
+    m_seiParamsHasBeenSet(false)
 {
 }
 
@@ -123,6 +124,15 @@ string StartPublishCdnStreamRequest::ToJsonString() const
             d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(d[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_seiParamsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SeiParams";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_seiParams.ToJsonObject(d[key.c_str()], allocator);
     }
 
 
@@ -275,6 +285,22 @@ void StartPublishCdnStreamRequest::SetPublishCdnParams(const vector<McuPublishCd
 bool StartPublishCdnStreamRequest::PublishCdnParamsHasBeenSet() const
 {
     return m_publishCdnParamsHasBeenSet;
+}
+
+McuSeiParams StartPublishCdnStreamRequest::GetSeiParams() const
+{
+    return m_seiParams;
+}
+
+void StartPublishCdnStreamRequest::SetSeiParams(const McuSeiParams& _seiParams)
+{
+    m_seiParams = _seiParams;
+    m_seiParamsHasBeenSet = true;
+}
+
+bool StartPublishCdnStreamRequest::SeiParamsHasBeenSet() const
+{
+    return m_seiParamsHasBeenSet;
 }
 
 

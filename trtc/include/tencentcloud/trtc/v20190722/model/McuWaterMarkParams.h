@@ -48,14 +48,32 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The information of the watermark image.
-                     * @return WaterMarkImage The information of the watermark image.
+                     * 获取The watermark type. The default is 0, which indicates an image watermark.
+                     * @return WaterMarkType The watermark type. The default is 0, which indicates an image watermark.
+                     */
+                    uint64_t GetWaterMarkType() const;
+
+                    /**
+                     * 设置The watermark type. The default is 0, which indicates an image watermark.
+                     * @param WaterMarkType The watermark type. The default is 0, which indicates an image watermark.
+                     */
+                    void SetWaterMarkType(const uint64_t& _waterMarkType);
+
+                    /**
+                     * 判断参数 WaterMarkType 是否已赋值
+                     * @return WaterMarkType 是否已赋值
+                     */
+                    bool WaterMarkTypeHasBeenSet() const;
+
+                    /**
+                     * 获取The watermark image information. This parameter is required if `WaterMarkType` is 0.
+                     * @return WaterMarkImage The watermark image information. This parameter is required if `WaterMarkType` is 0.
                      */
                     McuWaterMarkImage GetWaterMarkImage() const;
 
                     /**
-                     * 设置The information of the watermark image.
-                     * @param WaterMarkImage The information of the watermark image.
+                     * 设置The watermark image information. This parameter is required if `WaterMarkType` is 0.
+                     * @param WaterMarkImage The watermark image information. This parameter is required if `WaterMarkType` is 0.
                      */
                     void SetWaterMarkImage(const McuWaterMarkImage& _waterMarkImage);
 
@@ -68,7 +86,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The information of the watermark image.
+                     * The watermark type. The default is 0, which indicates an image watermark.
+                     */
+                    uint64_t m_waterMarkType;
+                    bool m_waterMarkTypeHasBeenSet;
+
+                    /**
+                     * The watermark image information. This parameter is required if `WaterMarkType` is 0.
                      */
                     McuWaterMarkImage m_waterMarkImage;
                     bool m_waterMarkImageHasBeenSet;

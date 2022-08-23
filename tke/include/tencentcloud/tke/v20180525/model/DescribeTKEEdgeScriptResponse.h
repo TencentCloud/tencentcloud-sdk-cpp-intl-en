@@ -79,6 +79,20 @@ namespace TencentCloud
                      */
                     bool CommandHasBeenSet() const;
 
+                    /**
+                     * 获取Version of edgectl script. The latest version is obtained by default.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return ScriptVersion Version of edgectl script. The latest version is obtained by default.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetScriptVersion() const;
+
+                    /**
+                     * 判断参数 ScriptVersion 是否已赋值
+                     * @return ScriptVersion 是否已赋值
+                     */
+                    bool ScriptVersionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -98,6 +112,13 @@ namespace TencentCloud
                      */
                     std::string m_command;
                     bool m_commandHasBeenSet;
+
+                    /**
+                     * Version of edgectl script. The latest version is obtained by default.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_scriptVersion;
+                    bool m_scriptVersionHasBeenSet;
 
                 };
             }
