@@ -93,6 +93,36 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
+                     * 获取The type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming: Adaptive bitrate stream</li>
+<li>Transcode: Transcoded stream</li>
+<li>Original: The original stream</li>
+                     * @return AudioVideoType The type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming: Adaptive bitrate stream</li>
+<li>Transcode: Transcoded stream</li>
+<li>Original: The original stream</li>
+                     */
+                    std::string GetAudioVideoType() const;
+
+                    /**
+                     * 设置The type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming: Adaptive bitrate stream</li>
+<li>Transcode: Transcoded stream</li>
+<li>Original: The original stream</li>
+                     * @param AudioVideoType The type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming: Adaptive bitrate stream</li>
+<li>Transcode: Transcoded stream</li>
+<li>Original: The original stream</li>
+                     */
+                    void SetAudioVideoType(const std::string& _audioVideoType);
+
+                    /**
+                     * 判断参数 AudioVideoType 是否已赋值
+                     * @return AudioVideoType 是否已赋值
+                     */
+                    bool AudioVideoTypeHasBeenSet() const;
+
+                    /**
                      * 获取Switch of DRM-protected adaptive bitstream playback:
 <li>ON: enabled, indicating to play back only output adaptive bitstreams protected by DRM;</li>
 <li>OFF: disabled, indicating to play back unencrypted output adaptive bitstreams.</li>
@@ -153,6 +183,24 @@ namespace TencentCloud
                      * @return DrmStreamingsInfo 是否已赋值
                      */
                     bool DrmStreamingsInfoHasBeenSet() const;
+
+                    /**
+                     * 获取The ID of the transcoding template allowed.
+                     * @return TranscodeDefinition The ID of the transcoding template allowed.
+                     */
+                    uint64_t GetTranscodeDefinition() const;
+
+                    /**
+                     * 设置The ID of the transcoding template allowed.
+                     * @param TranscodeDefinition The ID of the transcoding template allowed.
+                     */
+                    void SetTranscodeDefinition(const uint64_t& _transcodeDefinition);
+
+                    /**
+                     * 判断参数 TranscodeDefinition 是否已赋值
+                     * @return TranscodeDefinition 是否已赋值
+                     */
+                    bool TranscodeDefinitionHasBeenSet() const;
 
                     /**
                      * 获取ID of the image sprite generating template that allows output.
@@ -309,6 +357,15 @@ namespace TencentCloud
                     bool m_typeHasBeenSet;
 
                     /**
+                     * The type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming: Adaptive bitrate stream</li>
+<li>Transcode: Transcoded stream</li>
+<li>Original: The original stream</li>
+                     */
+                    std::string m_audioVideoType;
+                    bool m_audioVideoTypeHasBeenSet;
+
+                    /**
                      * Switch of DRM-protected adaptive bitstream playback:
 <li>ON: enabled, indicating to play back only output adaptive bitstreams protected by DRM;</li>
 <li>OFF: disabled, indicating to play back unencrypted output adaptive bitstreams.</li>
@@ -327,6 +384,12 @@ namespace TencentCloud
                      */
                     DrmStreamingsInfo m_drmStreamingsInfo;
                     bool m_drmStreamingsInfoHasBeenSet;
+
+                    /**
+                     * The ID of the transcoding template allowed.
+                     */
+                    uint64_t m_transcodeDefinition;
+                    bool m_transcodeDefinitionHasBeenSet;
 
                     /**
                      * ID of the image sprite generating template that allows output.

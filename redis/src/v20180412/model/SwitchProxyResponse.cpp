@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/live/v20180801/model/BindLiveDomainCertResponse.h>
+#include <tencentcloud/redis/v20180412/model/SwitchProxyResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using TencentCloud::CoreInternalOutcome;
-using namespace TencentCloud::Live::V20180801::Model;
+using namespace TencentCloud::Redis::V20180412::Model;
 using namespace std;
 
-BindLiveDomainCertResponse::BindLiveDomainCertResponse()
+SwitchProxyResponse::SwitchProxyResponse()
 {
 }
 
-CoreInternalOutcome BindLiveDomainCertResponse::Deserialize(const string &payload)
+CoreInternalOutcome SwitchProxyResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -65,7 +65,7 @@ CoreInternalOutcome BindLiveDomainCertResponse::Deserialize(const string &payloa
     return CoreInternalOutcome(true);
 }
 
-string BindLiveDomainCertResponse::ToJsonString() const
+string SwitchProxyResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();

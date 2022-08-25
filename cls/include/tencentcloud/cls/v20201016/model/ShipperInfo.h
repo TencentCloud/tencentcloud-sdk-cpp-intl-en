@@ -295,6 +295,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool CreateTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Shipping file naming configuration. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return FilenameMode Shipping file naming configuration. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetFilenameMode() const;
+
+                    /**
+                     * 设置Shipping file naming configuration. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param FilenameMode Shipping file naming configuration. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetFilenameMode(const uint64_t& _filenameMode);
+
+                    /**
+                     * 判断参数 FilenameMode 是否已赋值
+                     * @return FilenameMode 是否已赋值
+                     */
+                    bool FilenameModeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -377,6 +399,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
+
+                    /**
+                     * Shipping file naming configuration. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_filenameMode;
+                    bool m_filenameModeHasBeenSet;
 
                 };
             }

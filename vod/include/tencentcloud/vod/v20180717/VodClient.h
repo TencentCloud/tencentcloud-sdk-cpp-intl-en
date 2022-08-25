@@ -119,6 +119,8 @@
 #include <tencentcloud/vod/v20180717/model/DescribeCDNUsageDataResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeCdnLogsRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeCdnLogsResponse.h>
+#include <tencentcloud/vod/v20180717/model/DescribeClientUploadAccelerationUsageDataRequest.h>
+#include <tencentcloud/vod/v20180717/model/DescribeClientUploadAccelerationUsageDataResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeContentReviewTemplatesRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeContentReviewTemplatesResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeDailyPlayStatFileListRequest.h>
@@ -399,6 +401,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeCdnLogsResponse> DescribeCdnLogsOutcome;
                 typedef std::future<DescribeCdnLogsOutcome> DescribeCdnLogsOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeCdnLogsRequest&, DescribeCdnLogsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCdnLogsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeClientUploadAccelerationUsageDataResponse> DescribeClientUploadAccelerationUsageDataOutcome;
+                typedef std::future<DescribeClientUploadAccelerationUsageDataOutcome> DescribeClientUploadAccelerationUsageDataOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::DescribeClientUploadAccelerationUsageDataRequest&, DescribeClientUploadAccelerationUsageDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClientUploadAccelerationUsageDataAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeContentReviewTemplatesResponse> DescribeContentReviewTemplatesOutcome;
                 typedef std::future<DescribeContentReviewTemplatesOutcome> DescribeContentReviewTemplatesOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeContentReviewTemplatesRequest&, DescribeContentReviewTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeContentReviewTemplatesAsyncHandler;
@@ -614,11 +619,18 @@ namespace TencentCloud
                 CommitUploadOutcomeCallable CommitUploadCallable(const Model::CommitUploadRequest& request);
 
                 /**
-                 *This API is used to compose a media file, including:
+                 *This API is used to compose a media file. You can use it to do the following:
 
-1. Clipping a media file to generate a new media file;
-2. Clipping and splicing multiple media files to generate a new media file;
-3. Clipping and splicing the media streams of multiple media files to generate a new media file;
+1. **Rotation/Flipping**: Rotate a video or image by a specific angle or flip a video or image.
+2. **Audio control**: Increase/Lower the volume of an audio/video file or mute an audio/video file.
+3. **Overlaying**: Overlay videos/images in a specified sequence to achieve the picture-in-picture effect.
+4. **Audio mixing**: Mix the audios of audio/video files.
+5 **Audio extraction**: Extract audio from a video.
+6. **Clipping**: Clip segments from audio/video files according to a specified start and end time.
+7. **Splicing**: Splice videos/audios/images in a specified sequence.
+8. **Transition**: Add transition effects between video segments or images that are spliced together.
+
+The output file is in MP4 or MP3 format. In the callback for media composition, the event type is [ComposeMediaComplete](https://intl.cloud.tencent.com/document/product/266/43000?from_cn_redirect=1).
                  * @param req ComposeMediaRequest
                  * @return ComposeMediaOutcome
                  */
@@ -760,7 +772,7 @@ namespace TencentCloud
                 CreateSubAppIdOutcomeCallable CreateSubAppIdCallable(const Model::CreateSubAppIdRequest& request);
 
                 /**
-                 *This API is used to create a superplayer configuration. Up to 100 configurations can be created.
+                 *This API is used to create a player configuration. Up to 100 configurations can be created.
                  * @param req CreateSuperPlayerConfigRequest
                  * @return CreateSuperPlayerConfigOutcome
                  */
@@ -919,8 +931,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DeleteSnapshotByTimeOffsetTemplateOutcomeCallable DeleteSnapshotByTimeOffsetTemplateCallable(const Model::DeleteSnapshotByTimeOffsetTemplateRequest& request);
 
                 /**
-                 *This API is used to delete a superplayer configuration.  
-*Note: preset player configurations cannot be deleted.*
+                 *This API is used to delete a player configuration.  
+*Note: Preset player configurations cannot be deleted.*
                  * @param req DeleteSuperPlayerConfigRequest
                  * @return DeleteSuperPlayerConfigOutcome
                  */
@@ -1046,6 +1058,19 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DescribeCdnLogsOutcome DescribeCdnLogs(const Model::DescribeCdnLogsRequest &request);
                 void DescribeCdnLogsAsync(const Model::DescribeCdnLogsRequest& request, const DescribeCdnLogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeCdnLogsOutcomeCallable DescribeCdnLogsCallable(const Model::DescribeCdnLogsRequest& request);
+
+                /**
+                 *This API is used to query the usage of the client upload acceleration service in a specific time period.
+   1. You can query the usage of client upload acceleration in the last 365 days.
+   2. The maximum time period allowed for query is 90 days.
+   3. If the period specified is longer than one day, the statistics returned will be on a daily basis; otherwise, they will be on a 5-minute basis.
+
+                 * @param req DescribeClientUploadAccelerationUsageDataRequest
+                 * @return DescribeClientUploadAccelerationUsageDataOutcome
+                 */
+                DescribeClientUploadAccelerationUsageDataOutcome DescribeClientUploadAccelerationUsageData(const Model::DescribeClientUploadAccelerationUsageDataRequest &request);
+                void DescribeClientUploadAccelerationUsageDataAsync(const Model::DescribeClientUploadAccelerationUsageDataRequest& request, const DescribeClientUploadAccelerationUsageDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeClientUploadAccelerationUsageDataOutcomeCallable DescribeClientUploadAccelerationUsageDataCallable(const Model::DescribeClientUploadAccelerationUsageDataRequest& request);
 
                 /**
                  *This API is used to get the list of intelligent video content recognition template details according to unique template IDs. The return result includes all eligible custom and [preset intelligent video content recognition templates](https://intl.cloud.tencent.com/document/product/266/33932).
@@ -1242,7 +1267,7 @@ This API returns the video content duration for intelligent recognition in secon
                 DescribeSubAppIdsOutcomeCallable DescribeSubAppIdsCallable(const Model::DescribeSubAppIdsRequest& request);
 
                 /**
-                 *This API is used to query the list of superplayer configurations and supports paginated queries by filters.
+                 *This API is used to query player configurations. It supports pagination.
                  * @param req DescribeSuperPlayerConfigsRequest
                  * @return DescribeSuperPlayerConfigsOutcome
                  */
@@ -1516,7 +1541,7 @@ If the current storage class is DEEP ARCHIVE, it can be changed to the following
                 ModifySubAppIdStatusOutcomeCallable ModifySubAppIdStatusCallable(const Model::ModifySubAppIdStatusRequest& request);
 
                 /**
-                 *This API is used to modify a superplayer configuration.
+                 *This API is used to modify a player configuration.
                  * @param req ModifySuperPlayerConfigRequest
                  * @return ModifySuperPlayerConfigOutcome
                  */

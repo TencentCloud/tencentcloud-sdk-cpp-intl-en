@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_LIVE_V20180801_MODEL_MODIFYLIVECERTRESPONSE_H_
-#define TENCENTCLOUD_LIVE_V20180801_MODEL_MODIFYLIVECERTRESPONSE_H_
+#ifndef TENCENTCLOUD_VPC_V20170312_MODEL_DELETENETWORKACLQUINTUPLEENTRIESRESPONSE_H_
+#define TENCENTCLOUD_VPC_V20170312_MODEL_DELETENETWORKACLQUINTUPLEENTRIESRESPONSE_H_
 
 #include <string>
 #include <vector>
@@ -25,20 +25,20 @@
 
 namespace TencentCloud
 {
-    namespace Live
+    namespace Vpc
     {
-        namespace V20180801
+        namespace V20170312
         {
             namespace Model
             {
                 /**
-                * ModifyLiveCert response structure.
+                * DeleteNetworkAclQuintupleEntries response structure.
                 */
-                class ModifyLiveCertResponse : public AbstractModel
+                class DeleteNetworkAclQuintupleEntriesResponse : public AbstractModel
                 {
                 public:
-                    ModifyLiveCertResponse();
-                    ~ModifyLiveCertResponse() = default;
+                    DeleteNetworkAclQuintupleEntriesResponse();
+                    ~DeleteNetworkAclQuintupleEntriesResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
@@ -51,4 +51,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_LIVE_V20180801_MODEL_MODIFYLIVECERTRESPONSE_H_
+#endif // !TENCENTCLOUD_VPC_V20170312_MODEL_DELETENETWORKACLQUINTUPLEENTRIESRESPONSE_H_

@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/vpc/v20170312/model/NetworkAclEntrySet.h>
+#include <tencentcloud/vpc/v20170312/model/NetworkAclQuintupleEntries.h>
 
 
 namespace TencentCloud
@@ -79,6 +80,24 @@ namespace TencentCloud
                      */
                     bool NetworkAclEntrySetHasBeenSet() const;
 
+                    /**
+                     * 获取Network ACL quintuple rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
+                     * @return NetworkAclQuintupleSet Network ACL quintuple rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
+                     */
+                    NetworkAclQuintupleEntries GetNetworkAclQuintupleSet() const;
+
+                    /**
+                     * 设置Network ACL quintuple rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
+                     * @param NetworkAclQuintupleSet Network ACL quintuple rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
+                     */
+                    void SetNetworkAclQuintupleSet(const NetworkAclQuintupleEntries& _networkAclQuintupleSet);
+
+                    /**
+                     * 判断参数 NetworkAclQuintupleSet 是否已赋值
+                     * @return NetworkAclQuintupleSet 是否已赋值
+                     */
+                    bool NetworkAclQuintupleSetHasBeenSet() const;
+
                 private:
 
                     /**
@@ -92,6 +111,12 @@ namespace TencentCloud
                      */
                     NetworkAclEntrySet m_networkAclEntrySet;
                     bool m_networkAclEntrySetHasBeenSet;
+
+                    /**
+                     * Network ACL quintuple rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
+                     */
+                    NetworkAclQuintupleEntries m_networkAclQuintupleSet;
+                    bool m_networkAclQuintupleSetHasBeenSet;
 
                 };
             }

@@ -75,6 +75,7 @@ set(vod_public_header_model
   include/tencentcloud/vod/v20180717/model/AudioTemplateInfo.h
   include/tencentcloud/vod/v20180717/model/ExecuteFunctionResponse.h
   include/tencentcloud/vod/v20180717/model/CoverConfigureInfo.h
+  include/tencentcloud/vod/v20180717/model/DescribeClientUploadAccelerationUsageDataResponse.h
   include/tencentcloud/vod/v20180717/model/ComposeMediaRequest.h
   include/tencentcloud/vod/v20180717/model/AIRecognitionTemplateItem.h
   include/tencentcloud/vod/v20180717/model/AiReviewPornAsrTaskInput.h
@@ -365,6 +366,7 @@ set(vod_public_header_model
   include/tencentcloud/vod/v20180717/model/DescribeVodDomainsResponse.h
   include/tencentcloud/vod/v20180717/model/AdaptiveStreamTemplate.h
   include/tencentcloud/vod/v20180717/model/TranscodeTaskInput.h
+  include/tencentcloud/vod/v20180717/model/DescribeClientUploadAccelerationUsageDataRequest.h
   include/tencentcloud/vod/v20180717/model/ModifyAIRecognitionTemplateRequest.h
   include/tencentcloud/vod/v20180717/model/DescribeStorageRegionsRequest.h
   include/tencentcloud/vod/v20180717/model/WechatPublishTask.h
@@ -615,6 +617,7 @@ set(vod_src
   src/v20180717/model/AudioTemplateInfo.cpp
   src/v20180717/model/ExecuteFunctionResponse.cpp
   src/v20180717/model/CoverConfigureInfo.cpp
+  src/v20180717/model/DescribeClientUploadAccelerationUsageDataResponse.cpp
   src/v20180717/model/ComposeMediaRequest.cpp
   src/v20180717/model/AIRecognitionTemplateItem.cpp
   src/v20180717/model/AiReviewPornAsrTaskInput.cpp
@@ -905,6 +908,7 @@ set(vod_src
   src/v20180717/model/DescribeVodDomainsResponse.cpp
   src/v20180717/model/AdaptiveStreamTemplate.cpp
   src/v20180717/model/TranscodeTaskInput.cpp
+  src/v20180717/model/DescribeClientUploadAccelerationUsageDataRequest.cpp
   src/v20180717/model/ModifyAIRecognitionTemplateRequest.cpp
   src/v20180717/model/DescribeStorageRegionsRequest.cpp
   src/v20180717/model/WechatPublishTask.cpp

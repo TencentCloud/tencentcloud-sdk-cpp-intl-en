@@ -100,6 +100,50 @@ namespace TencentCloud
                      */
                     bool ExpireTimeHasBeenSet() const;
 
+                    /**
+                     * 获取The push path.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AppName The push path.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetAppName() const;
+
+                    /**
+                     * 设置The push path.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param AppName The push path.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetAppName(const std::string& _appName);
+
+                    /**
+                     * 判断参数 AppName 是否已赋值
+                     * @return AppName 是否已赋值
+                     */
+                    bool AppNameHasBeenSet() const;
+
+                    /**
+                     * 获取The push domain name.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DomainName The push domain name.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetDomainName() const;
+
+                    /**
+                     * 设置The push domain name.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param DomainName The push domain name.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetDomainName(const std::string& _domainName);
+
+                    /**
+                     * 判断参数 DomainName 是否已赋值
+                     * @return DomainName 是否已赋值
+                     */
+                    bool DomainNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -119,6 +163,20 @@ namespace TencentCloud
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;
+
+                    /**
+                     * The push path.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_appName;
+                    bool m_appNameHasBeenSet;
+
+                    /**
+                     * The push domain name.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_domainName;
+                    bool m_domainNameHasBeenSet;
 
                 };
             }

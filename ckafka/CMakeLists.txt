@@ -38,7 +38,7 @@ set(ckafka_public_header_model
   include/tencentcloud/ckafka/v20190819/model/BatchModifyTopicAttributesResponse.h
   include/tencentcloud/ckafka/v20190819/model/CreateInstancePreResp.h
   include/tencentcloud/ckafka/v20190819/model/GroupInfoTopics.h
-  include/tencentcloud/ckafka/v20190819/model/TopicResult.h
+  include/tencentcloud/ckafka/v20190819/model/FetchMessageListByOffsetRequest.h
   include/tencentcloud/ckafka/v20190819/model/Region.h
   include/tencentcloud/ckafka/v20190819/model/ModifyInstancePreRequest.h
   include/tencentcloud/ckafka/v20190819/model/DescribeInstancesDetailResponse.h
@@ -56,6 +56,7 @@ set(ckafka_public_header_model
   include/tencentcloud/ckafka/v20190819/model/BatchModifyGroupOffsetsResponse.h
   include/tencentcloud/ckafka/v20190819/model/GroupResponse.h
   include/tencentcloud/ckafka/v20190819/model/DescribeTopicAttributesResponse.h
+  include/tencentcloud/ckafka/v20190819/model/FetchMessageListByOffsetResponse.h
   include/tencentcloud/ckafka/v20190819/model/CreateConsumerResponse.h
   include/tencentcloud/ckafka/v20190819/model/RouteResponse.h
   include/tencentcloud/ckafka/v20190819/model/DescribeGroupResponse.h
@@ -142,6 +143,7 @@ set(ckafka_public_header_model
   include/tencentcloud/ckafka/v20190819/model/CreateTopicResp.h
   include/tencentcloud/ckafka/v20190819/model/BatchModifyTopicInfo.h
   include/tencentcloud/ckafka/v20190819/model/DescribeRouteResponse.h
+  include/tencentcloud/ckafka/v20190819/model/TopicResult.h
   include/tencentcloud/ckafka/v20190819/model/DescribeTopicDetailRequest.h
   include/tencentcloud/ckafka/v20190819/model/DescribeGroupOffsetsResponse.h
   include/tencentcloud/ckafka/v20190819/model/SendMessageRequest.h
@@ -187,7 +189,7 @@ set(ckafka_src
   src/v20190819/model/BatchModifyTopicAttributesResponse.cpp
   src/v20190819/model/CreateInstancePreResp.cpp
   src/v20190819/model/GroupInfoTopics.cpp
-  src/v20190819/model/TopicResult.cpp
+  src/v20190819/model/FetchMessageListByOffsetRequest.cpp
   src/v20190819/model/Region.cpp
   src/v20190819/model/ModifyInstancePreRequest.cpp
   src/v20190819/model/DescribeInstancesDetailResponse.cpp
@@ -205,6 +207,7 @@ set(ckafka_src
   src/v20190819/model/BatchModifyGroupOffsetsResponse.cpp
   src/v20190819/model/GroupResponse.cpp
   src/v20190819/model/DescribeTopicAttributesResponse.cpp
+  src/v20190819/model/FetchMessageListByOffsetResponse.cpp
   src/v20190819/model/CreateConsumerResponse.cpp
   src/v20190819/model/RouteResponse.cpp
   src/v20190819/model/DescribeGroupResponse.cpp
@@ -291,6 +294,7 @@ set(ckafka_src
   src/v20190819/model/CreateTopicResp.cpp
   src/v20190819/model/BatchModifyTopicInfo.cpp
   src/v20190819/model/DescribeRouteResponse.cpp
+  src/v20190819/model/TopicResult.cpp
   src/v20190819/model/DescribeTopicDetailRequest.cpp
   src/v20190819/model/DescribeGroupOffsetsResponse.cpp
   src/v20190819/model/SendMessageRequest.cpp

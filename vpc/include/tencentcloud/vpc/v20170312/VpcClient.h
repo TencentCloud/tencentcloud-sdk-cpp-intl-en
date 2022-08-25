@@ -99,6 +99,8 @@
 #include <tencentcloud/vpc/v20170312/model/CreateNetDetectResponse.h>
 #include <tencentcloud/vpc/v20170312/model/CreateNetworkAclRequest.h>
 #include <tencentcloud/vpc/v20170312/model/CreateNetworkAclResponse.h>
+#include <tencentcloud/vpc/v20170312/model/CreateNetworkAclQuintupleEntriesRequest.h>
+#include <tencentcloud/vpc/v20170312/model/CreateNetworkAclQuintupleEntriesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/CreateNetworkInterfaceRequest.h>
 #include <tencentcloud/vpc/v20170312/model/CreateNetworkInterfaceResponse.h>
 #include <tencentcloud/vpc/v20170312/model/CreateRouteTableRequest.h>
@@ -165,6 +167,8 @@
 #include <tencentcloud/vpc/v20170312/model/DeleteNetDetectResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DeleteNetworkAclRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DeleteNetworkAclResponse.h>
+#include <tencentcloud/vpc/v20170312/model/DeleteNetworkAclQuintupleEntriesRequest.h>
+#include <tencentcloud/vpc/v20170312/model/DeleteNetworkAclQuintupleEntriesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DeleteNetworkInterfaceRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DeleteNetworkInterfaceResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DeleteRouteTableRequest.h>
@@ -263,6 +267,8 @@
 #include <tencentcloud/vpc/v20170312/model/DescribeNetDetectStatesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeNetDetectsRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeNetDetectsResponse.h>
+#include <tencentcloud/vpc/v20170312/model/DescribeNetworkAclQuintupleEntriesRequest.h>
+#include <tencentcloud/vpc/v20170312/model/DescribeNetworkAclQuintupleEntriesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeNetworkAclsRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeNetworkAclsResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeNetworkInterfaceLimitRequest.h>
@@ -409,6 +415,8 @@
 #include <tencentcloud/vpc/v20170312/model/ModifyNetworkAclAttributeResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyNetworkAclEntriesRequest.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyNetworkAclEntriesResponse.h>
+#include <tencentcloud/vpc/v20170312/model/ModifyNetworkAclQuintupleEntriesRequest.h>
+#include <tencentcloud/vpc/v20170312/model/ModifyNetworkAclQuintupleEntriesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyNetworkInterfaceAttributeRequest.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyNetworkInterfaceAttributeResponse.h>
 #include <tencentcloud/vpc/v20170312/model/ModifyPrivateIpAddressesAttributeRequest.h>
@@ -613,6 +621,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateNetworkAclResponse> CreateNetworkAclOutcome;
                 typedef std::future<CreateNetworkAclOutcome> CreateNetworkAclOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::CreateNetworkAclRequest&, CreateNetworkAclOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateNetworkAclAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateNetworkAclQuintupleEntriesResponse> CreateNetworkAclQuintupleEntriesOutcome;
+                typedef std::future<CreateNetworkAclQuintupleEntriesOutcome> CreateNetworkAclQuintupleEntriesOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::CreateNetworkAclQuintupleEntriesRequest&, CreateNetworkAclQuintupleEntriesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateNetworkAclQuintupleEntriesAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateNetworkInterfaceResponse> CreateNetworkInterfaceOutcome;
                 typedef std::future<CreateNetworkInterfaceOutcome> CreateNetworkInterfaceOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::CreateNetworkInterfaceRequest&, CreateNetworkInterfaceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateNetworkInterfaceAsyncHandler;
@@ -712,6 +723,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteNetworkAclResponse> DeleteNetworkAclOutcome;
                 typedef std::future<DeleteNetworkAclOutcome> DeleteNetworkAclOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DeleteNetworkAclRequest&, DeleteNetworkAclOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteNetworkAclAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteNetworkAclQuintupleEntriesResponse> DeleteNetworkAclQuintupleEntriesOutcome;
+                typedef std::future<DeleteNetworkAclQuintupleEntriesOutcome> DeleteNetworkAclQuintupleEntriesOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::DeleteNetworkAclQuintupleEntriesRequest&, DeleteNetworkAclQuintupleEntriesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteNetworkAclQuintupleEntriesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteNetworkInterfaceResponse> DeleteNetworkInterfaceOutcome;
                 typedef std::future<DeleteNetworkInterfaceOutcome> DeleteNetworkInterfaceOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DeleteNetworkInterfaceRequest&, DeleteNetworkInterfaceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteNetworkInterfaceAsyncHandler;
@@ -859,6 +873,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeNetDetectsResponse> DescribeNetDetectsOutcome;
                 typedef std::future<DescribeNetDetectsOutcome> DescribeNetDetectsOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DescribeNetDetectsRequest&, DescribeNetDetectsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeNetDetectsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeNetworkAclQuintupleEntriesResponse> DescribeNetworkAclQuintupleEntriesOutcome;
+                typedef std::future<DescribeNetworkAclQuintupleEntriesOutcome> DescribeNetworkAclQuintupleEntriesOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::DescribeNetworkAclQuintupleEntriesRequest&, DescribeNetworkAclQuintupleEntriesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeNetworkAclQuintupleEntriesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeNetworkAclsResponse> DescribeNetworkAclsOutcome;
                 typedef std::future<DescribeNetworkAclsOutcome> DescribeNetworkAclsOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DescribeNetworkAclsRequest&, DescribeNetworkAclsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeNetworkAclsAsyncHandler;
@@ -1078,6 +1095,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyNetworkAclEntriesResponse> ModifyNetworkAclEntriesOutcome;
                 typedef std::future<ModifyNetworkAclEntriesOutcome> ModifyNetworkAclEntriesOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::ModifyNetworkAclEntriesRequest&, ModifyNetworkAclEntriesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyNetworkAclEntriesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyNetworkAclQuintupleEntriesResponse> ModifyNetworkAclQuintupleEntriesOutcome;
+                typedef std::future<ModifyNetworkAclQuintupleEntriesOutcome> ModifyNetworkAclQuintupleEntriesOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::ModifyNetworkAclQuintupleEntriesRequest&, ModifyNetworkAclQuintupleEntriesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyNetworkAclQuintupleEntriesAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyNetworkInterfaceAttributeResponse> ModifyNetworkInterfaceAttributeOutcome;
                 typedef std::future<ModifyNetworkInterfaceAttributeOutcome> ModifyNetworkInterfaceAttributeOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::ModifyNetworkInterfaceAttributeRequest&, ModifyNetworkInterfaceAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyNetworkInterfaceAttributeAsyncHandler;
@@ -1598,6 +1618,15 @@ Before taking actions on a NAT gateway, ensure that it has been successfully cre
                 CreateNetworkAclOutcomeCallable CreateNetworkAclCallable(const Model::CreateNetworkAclRequest& request);
 
                 /**
+                 *This API is used to add one or more in/outbound rules of the network ACL quintuple.
+                 * @param req CreateNetworkAclQuintupleEntriesRequest
+                 * @return CreateNetworkAclQuintupleEntriesOutcome
+                 */
+                CreateNetworkAclQuintupleEntriesOutcome CreateNetworkAclQuintupleEntries(const Model::CreateNetworkAclQuintupleEntriesRequest &request);
+                void CreateNetworkAclQuintupleEntriesAsync(const Model::CreateNetworkAclQuintupleEntriesRequest& request, const CreateNetworkAclQuintupleEntriesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateNetworkAclQuintupleEntriesOutcomeCallable CreateNetworkAclQuintupleEntriesCallable(const Model::CreateNetworkAclQuintupleEntriesRequest& request);
+
+                /**
                  *This API is used to create an ENI.
 * You can specify private IP addresses and a primary IP when creating an ENI. The specified private IP must be in the same subnet as the ENI and is not occupied.
 * When creating an ENI, you can specify the number of private IP addresses that you want to apply for. The system will randomly generate private IP addresses.
@@ -1958,6 +1987,15 @@ When a NAT gateway is deleted, all routes containing this gateway are deleted au
                 DeleteNetworkAclOutcome DeleteNetworkAcl(const Model::DeleteNetworkAclRequest &request);
                 void DeleteNetworkAclAsync(const Model::DeleteNetworkAclRequest& request, const DeleteNetworkAclAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteNetworkAclOutcomeCallable DeleteNetworkAclCallable(const Model::DeleteNetworkAclRequest& request);
+
+                /**
+                 *This API is used to delete specified in/outbound rules of the network ACL quintuple. In the `NetworkAclQuintupleEntrySet` parameters, `NetworkAclQuintupleEntryId` is required for `NetworkAclQuintupleEntry`.
+                 * @param req DeleteNetworkAclQuintupleEntriesRequest
+                 * @return DeleteNetworkAclQuintupleEntriesOutcome
+                 */
+                DeleteNetworkAclQuintupleEntriesOutcome DeleteNetworkAclQuintupleEntries(const Model::DeleteNetworkAclQuintupleEntriesRequest &request);
+                void DeleteNetworkAclQuintupleEntriesAsync(const Model::DeleteNetworkAclQuintupleEntriesRequest& request, const DeleteNetworkAclQuintupleEntriesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteNetworkAclQuintupleEntriesOutcomeCallable DeleteNetworkAclQuintupleEntriesCallable(const Model::DeleteNetworkAclQuintupleEntriesRequest& request);
 
                 /**
                  *This API is used to delete an ENI.
@@ -2348,7 +2386,7 @@ A service provider can query all review requests created by any `APPID` under it
 
                 /**
                  *This API is used to query the location and network information of one or more IP addresses.
-This API is currently in beta test. To use it, please [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=660&source=0&data_title=%E5%BC%B9%E6%80%A7%E5%85%AC%E7%BD%91%20EIP&level3_id=662&queue=96&scene_code=16400&step=2).
+This API is only available for existing customers. For any questions, please [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=660&source=0&data_title=%E5%BC%B9%E6%80%A7%E5%85%AC%E7%BD%91%20EIP&level3_id=662&queue=96&scene_code=16400&step=2).
                  * @param req DescribeIpGeolocationInfosRequest
                  * @return DescribeIpGeolocationInfosOutcome
                  */
@@ -2418,6 +2456,15 @@ This API is currently in beta test. To use it, please [submit a ticket](https://
                 DescribeNetDetectsOutcome DescribeNetDetects(const Model::DescribeNetDetectsRequest &request);
                 void DescribeNetDetectsAsync(const Model::DescribeNetDetectsRequest& request, const DescribeNetDetectsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeNetDetectsOutcomeCallable DescribeNetDetectsCallable(const Model::DescribeNetDetectsRequest& request);
+
+                /**
+                 *This API is used to query the list of in/outbound network ACL quintuple entries.
+                 * @param req DescribeNetworkAclQuintupleEntriesRequest
+                 * @return DescribeNetworkAclQuintupleEntriesOutcome
+                 */
+                DescribeNetworkAclQuintupleEntriesOutcome DescribeNetworkAclQuintupleEntries(const Model::DescribeNetworkAclQuintupleEntriesRequest &request);
+                void DescribeNetworkAclQuintupleEntriesAsync(const Model::DescribeNetworkAclQuintupleEntriesRequest& request, const DescribeNetworkAclQuintupleEntriesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeNetworkAclQuintupleEntriesOutcomeCallable DescribeNetworkAclQuintupleEntriesCallable(const Model::DescribeNetworkAclQuintupleEntriesRequest& request);
 
                 /**
                  *This API is used to query a list of network ACLs.
@@ -3098,6 +3145,15 @@ This API is completed asynchronously. If you need to query the execution result 
                 ModifyNetworkAclEntriesOutcome ModifyNetworkAclEntries(const Model::ModifyNetworkAclEntriesRequest &request);
                 void ModifyNetworkAclEntriesAsync(const Model::ModifyNetworkAclEntriesRequest& request, const ModifyNetworkAclEntriesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyNetworkAclEntriesOutcomeCallable ModifyNetworkAclEntriesCallable(const Model::ModifyNetworkAclEntriesRequest& request);
+
+                /**
+                 *This API is used to modify the in/outbound rules of the network ACL quintuple. In the `NetworkAclQuintupleEntrySet` parameters, `NetworkAclQuintupleEntryId` is required for `NetworkAclQuintupleEntry`.
+                 * @param req ModifyNetworkAclQuintupleEntriesRequest
+                 * @return ModifyNetworkAclQuintupleEntriesOutcome
+                 */
+                ModifyNetworkAclQuintupleEntriesOutcome ModifyNetworkAclQuintupleEntries(const Model::ModifyNetworkAclQuintupleEntriesRequest &request);
+                void ModifyNetworkAclQuintupleEntriesAsync(const Model::ModifyNetworkAclQuintupleEntriesRequest& request, const ModifyNetworkAclQuintupleEntriesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyNetworkAclQuintupleEntriesOutcomeCallable ModifyNetworkAclQuintupleEntriesCallable(const Model::ModifyNetworkAclQuintupleEntriesRequest& request);
 
                 /**
                  *This API (ModifyNetworkInterfaceAttribute) is used to modify ENI attributes.

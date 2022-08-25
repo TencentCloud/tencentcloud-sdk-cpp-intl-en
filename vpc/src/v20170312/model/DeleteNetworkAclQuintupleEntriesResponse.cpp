@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/live/v20180801/model/ModifyLiveDomainCertResponse.h>
+#include <tencentcloud/vpc/v20170312/model/DeleteNetworkAclQuintupleEntriesResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using TencentCloud::CoreInternalOutcome;
-using namespace TencentCloud::Live::V20180801::Model;
+using namespace TencentCloud::Vpc::V20170312::Model;
 using namespace std;
 
-ModifyLiveDomainCertResponse::ModifyLiveDomainCertResponse()
+DeleteNetworkAclQuintupleEntriesResponse::DeleteNetworkAclQuintupleEntriesResponse()
 {
 }
 
-CoreInternalOutcome ModifyLiveDomainCertResponse::Deserialize(const string &payload)
+CoreInternalOutcome DeleteNetworkAclQuintupleEntriesResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -65,7 +65,7 @@ CoreInternalOutcome ModifyLiveDomainCertResponse::Deserialize(const string &payl
     return CoreInternalOutcome(true);
 }
 
-string ModifyLiveDomainCertResponse::ToJsonString() const
+string DeleteNetworkAclQuintupleEntriesResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();

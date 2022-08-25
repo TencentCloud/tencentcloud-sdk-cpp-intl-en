@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/live/v20180801/model/PullPushWatermarkInfo.h>
 
 
 namespace TencentCloud
@@ -133,20 +134,20 @@ Notes:
                     /**
                      * 获取The push domain name.
 The pulled stream is pushed to this domain.
-Use a push domain you have added in the CSS console.
+Note: If the destination is not a CSS address and its format is different from that of CSS addresses, pass the full address to `ToUrl`. For details, see the description of the `ToUrl` parameter.
                      * @return DomainName The push domain name.
 The pulled stream is pushed to this domain.
-Use a push domain you have added in the CSS console.
+Note: If the destination is not a CSS address and its format is different from that of CSS addresses, pass the full address to `ToUrl`. For details, see the description of the `ToUrl` parameter.
                      */
                     std::string GetDomainName() const;
 
                     /**
                      * 设置The push domain name.
 The pulled stream is pushed to this domain.
-Use a push domain you have added in the CSS console.
+Note: If the destination is not a CSS address and its format is different from that of CSS addresses, pass the full address to `ToUrl`. For details, see the description of the `ToUrl` parameter.
                      * @param DomainName The push domain name.
 The pulled stream is pushed to this domain.
-Use a push domain you have added in the CSS console.
+Note: If the destination is not a CSS address and its format is different from that of CSS addresses, pass the full address to `ToUrl`. For details, see the description of the `ToUrl` parameter.
                      */
                     void SetDomainName(const std::string& _domainName);
 
@@ -610,6 +611,24 @@ You can specify only one backup source URL.
                      */
                     bool BackupSourceUrlHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return WatermarkList 
+                     */
+                    std::vector<PullPushWatermarkInfo> GetWatermarkList() const;
+
+                    /**
+                     * 设置
+                     * @param WatermarkList 
+                     */
+                    void SetWatermarkList(const std::vector<PullPushWatermarkInfo>& _watermarkList);
+
+                    /**
+                     * 判断参数 WatermarkList 是否已赋值
+                     * @return WatermarkList 是否已赋值
+                     */
+                    bool WatermarkListHasBeenSet() const;
+
                 private:
 
                     /**
@@ -640,7 +659,7 @@ Notes:
                     /**
                      * The push domain name.
 The pulled stream is pushed to this domain.
-Use a push domain you have added in the CSS console.
+Note: If the destination is not a CSS address and its format is different from that of CSS addresses, pass the full address to `ToUrl`. For details, see the description of the `ToUrl` parameter.
                      */
                     std::string m_domainName;
                     bool m_domainNameHasBeenSet;
@@ -780,6 +799,12 @@ You can specify only one backup source URL.
                      */
                     std::string m_backupSourceUrl;
                     bool m_backupSourceUrlHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<PullPushWatermarkInfo> m_watermarkList;
+                    bool m_watermarkListHasBeenSet;
 
                 };
             }

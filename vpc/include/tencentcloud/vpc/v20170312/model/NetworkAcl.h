@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/vpc/v20170312/model/Subnet.h>
 #include <tencentcloud/vpc/v20170312/model/NetworkAclEntry.h>
+#include <tencentcloud/vpc/v20170312/model/Tag.h>
 
 
 namespace TencentCloud
@@ -174,6 +175,42 @@ namespace TencentCloud
                      */
                     bool EgressEntriesHasBeenSet() const;
 
+                    /**
+                     * 获取Network ACL type. Valid values: `TRIPLE` and `QUINTUPLE`.
+                     * @return NetworkAclType Network ACL type. Valid values: `TRIPLE` and `QUINTUPLE`.
+                     */
+                    std::string GetNetworkAclType() const;
+
+                    /**
+                     * 设置Network ACL type. Valid values: `TRIPLE` and `QUINTUPLE`.
+                     * @param NetworkAclType Network ACL type. Valid values: `TRIPLE` and `QUINTUPLE`.
+                     */
+                    void SetNetworkAclType(const std::string& _networkAclType);
+
+                    /**
+                     * 判断参数 NetworkAclType 是否已赋值
+                     * @return NetworkAclType 是否已赋值
+                     */
+                    bool NetworkAclTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Tag key-value pairs
+                     * @return TagSet Tag key-value pairs
+                     */
+                    std::vector<Tag> GetTagSet() const;
+
+                    /**
+                     * 设置Tag key-value pairs
+                     * @param TagSet Tag key-value pairs
+                     */
+                    void SetTagSet(const std::vector<Tag>& _tagSet);
+
+                    /**
+                     * 判断参数 TagSet 是否已赋值
+                     * @return TagSet 是否已赋值
+                     */
+                    bool TagSetHasBeenSet() const;
+
                 private:
 
                     /**
@@ -217,6 +254,18 @@ namespace TencentCloud
                      */
                     std::vector<NetworkAclEntry> m_egressEntries;
                     bool m_egressEntriesHasBeenSet;
+
+                    /**
+                     * Network ACL type. Valid values: `TRIPLE` and `QUINTUPLE`.
+                     */
+                    std::string m_networkAclType;
+                    bool m_networkAclTypeHasBeenSet;
+
+                    /**
+                     * Tag key-value pairs
+                     */
+                    std::vector<Tag> m_tagSet;
+                    bool m_tagSetHasBeenSet;
 
                 };
             }

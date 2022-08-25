@@ -208,6 +208,24 @@ namespace TencentCloud
                      */
                     bool TotalCostHasBeenSet() const;
 
+                    /**
+                     * 获取Payment by commission credits
+                     * @return TransferPayAmount Payment by commission credits
+                     */
+                    std::string GetTransferPayAmount() const;
+
+                    /**
+                     * 设置Payment by commission credits
+                     * @param TransferPayAmount Payment by commission credits
+                     */
+                    void SetTransferPayAmount(const std::string& _transferPayAmount);
+
+                    /**
+                     * 判断参数 TransferPayAmount 是否已赋值
+                     * @return TransferPayAmount 是否已赋值
+                     */
+                    bool TransferPayAmountHasBeenSet() const;
+
                 private:
 
                     /**
@@ -263,6 +281,12 @@ namespace TencentCloud
                      */
                     std::string m_totalCost;
                     bool m_totalCostHasBeenSet;
+
+                    /**
+                     * Payment by commission credits
+                     */
+                    std::string m_transferPayAmount;
+                    bool m_transferPayAmountHasBeenSet;
 
                 };
             }

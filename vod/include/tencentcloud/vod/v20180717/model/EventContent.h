@@ -81,73 +81,73 @@ namespace TencentCloud
 
                     /**
                      * 获取<b>Supported event types:</b>
-<li>NewFileUpload: finished video upload</li>
-<li>ProcedureStateChanged: task flow status changed</li>
-<li>FileDeleted: finished video deletion</li>
-<li>PullComplete: finished pulling for upload</li>
-<li>EditMediaComplete: finished video editing</li>
-<li>SplitMediaComplete: finished video splitting</li>
-<li>WechatPublishComplete: finished publishing on WeChat</li>
-<li>ComposeMediaComplete: finished producing the media file</li>
-<li>WechatMiniProgramPublishComplete: finished publishing on WeChat Mini Program</li>
-<b>Support v2017 task types:</b>
-<li>TranscodeComplete: finished video transcoding</li>
-<li>ConcatComplete: finished video splicing</li>
-<li>ClipComplete: finished video clipping</li>
-<li>CreateImageSpriteComplete: finished image sprite generation</li>
-<li>CreateSnapshotByTimeOffsetComplete: finished point-in-time screencapturing</li>
+<li>NewFileUpload: Video uploaded.</li>
+<li>ProcedureStateChanged: Task flow status changed.</li>
+<li>FileDeleted: Video deleted.</li>
+<li>PullComplete: Finished video pulling.</li>
+<li>EditMediaComplete: Finished video editing.</li>
+<li>SplitMediaComplete: Finished video splitting.</li>
+<li>WechatPublishComplete: Published to WeChat.</li>
+<li>ComposeMediaComplete: Finished composition.</li>
+<li>FastClipMediaComplete: Finished quick clipping.</li>
+<b>v2017 task types:</b>
+<li>TranscodeComplete: Finished video transcoding.</li>
+<li>ConcatComplete: Finished video splicing.</li>
+<li>ClipComplete: Finished video clipping.</li>
+<li>CreateImageSpriteComplete: Finished image sprite generation.</li>
+<li>CreateSnapshotByTimeOffsetComplete: Finished time point screencapturing.</li>
                      * @return EventType <b>Supported event types:</b>
-<li>NewFileUpload: finished video upload</li>
-<li>ProcedureStateChanged: task flow status changed</li>
-<li>FileDeleted: finished video deletion</li>
-<li>PullComplete: finished pulling for upload</li>
-<li>EditMediaComplete: finished video editing</li>
-<li>SplitMediaComplete: finished video splitting</li>
-<li>WechatPublishComplete: finished publishing on WeChat</li>
-<li>ComposeMediaComplete: finished producing the media file</li>
-<li>WechatMiniProgramPublishComplete: finished publishing on WeChat Mini Program</li>
-<b>Support v2017 task types:</b>
-<li>TranscodeComplete: finished video transcoding</li>
-<li>ConcatComplete: finished video splicing</li>
-<li>ClipComplete: finished video clipping</li>
-<li>CreateImageSpriteComplete: finished image sprite generation</li>
-<li>CreateSnapshotByTimeOffsetComplete: finished point-in-time screencapturing</li>
+<li>NewFileUpload: Video uploaded.</li>
+<li>ProcedureStateChanged: Task flow status changed.</li>
+<li>FileDeleted: Video deleted.</li>
+<li>PullComplete: Finished video pulling.</li>
+<li>EditMediaComplete: Finished video editing.</li>
+<li>SplitMediaComplete: Finished video splitting.</li>
+<li>WechatPublishComplete: Published to WeChat.</li>
+<li>ComposeMediaComplete: Finished composition.</li>
+<li>FastClipMediaComplete: Finished quick clipping.</li>
+<b>v2017 task types:</b>
+<li>TranscodeComplete: Finished video transcoding.</li>
+<li>ConcatComplete: Finished video splicing.</li>
+<li>ClipComplete: Finished video clipping.</li>
+<li>CreateImageSpriteComplete: Finished image sprite generation.</li>
+<li>CreateSnapshotByTimeOffsetComplete: Finished time point screencapturing.</li>
                      */
                     std::string GetEventType() const;
 
                     /**
                      * 设置<b>Supported event types:</b>
-<li>NewFileUpload: finished video upload</li>
-<li>ProcedureStateChanged: task flow status changed</li>
-<li>FileDeleted: finished video deletion</li>
-<li>PullComplete: finished pulling for upload</li>
-<li>EditMediaComplete: finished video editing</li>
-<li>SplitMediaComplete: finished video splitting</li>
-<li>WechatPublishComplete: finished publishing on WeChat</li>
-<li>ComposeMediaComplete: finished producing the media file</li>
-<li>WechatMiniProgramPublishComplete: finished publishing on WeChat Mini Program</li>
-<b>Support v2017 task types:</b>
-<li>TranscodeComplete: finished video transcoding</li>
-<li>ConcatComplete: finished video splicing</li>
-<li>ClipComplete: finished video clipping</li>
-<li>CreateImageSpriteComplete: finished image sprite generation</li>
-<li>CreateSnapshotByTimeOffsetComplete: finished point-in-time screencapturing</li>
+<li>NewFileUpload: Video uploaded.</li>
+<li>ProcedureStateChanged: Task flow status changed.</li>
+<li>FileDeleted: Video deleted.</li>
+<li>PullComplete: Finished video pulling.</li>
+<li>EditMediaComplete: Finished video editing.</li>
+<li>SplitMediaComplete: Finished video splitting.</li>
+<li>WechatPublishComplete: Published to WeChat.</li>
+<li>ComposeMediaComplete: Finished composition.</li>
+<li>FastClipMediaComplete: Finished quick clipping.</li>
+<b>v2017 task types:</b>
+<li>TranscodeComplete: Finished video transcoding.</li>
+<li>ConcatComplete: Finished video splicing.</li>
+<li>ClipComplete: Finished video clipping.</li>
+<li>CreateImageSpriteComplete: Finished image sprite generation.</li>
+<li>CreateSnapshotByTimeOffsetComplete: Finished time point screencapturing.</li>
                      * @param EventType <b>Supported event types:</b>
-<li>NewFileUpload: finished video upload</li>
-<li>ProcedureStateChanged: task flow status changed</li>
-<li>FileDeleted: finished video deletion</li>
-<li>PullComplete: finished pulling for upload</li>
-<li>EditMediaComplete: finished video editing</li>
-<li>SplitMediaComplete: finished video splitting</li>
-<li>WechatPublishComplete: finished publishing on WeChat</li>
-<li>ComposeMediaComplete: finished producing the media file</li>
-<li>WechatMiniProgramPublishComplete: finished publishing on WeChat Mini Program</li>
-<b>Support v2017 task types:</b>
-<li>TranscodeComplete: finished video transcoding</li>
-<li>ConcatComplete: finished video splicing</li>
-<li>ClipComplete: finished video clipping</li>
-<li>CreateImageSpriteComplete: finished image sprite generation</li>
-<li>CreateSnapshotByTimeOffsetComplete: finished point-in-time screencapturing</li>
+<li>NewFileUpload: Video uploaded.</li>
+<li>ProcedureStateChanged: Task flow status changed.</li>
+<li>FileDeleted: Video deleted.</li>
+<li>PullComplete: Finished video pulling.</li>
+<li>EditMediaComplete: Finished video editing.</li>
+<li>SplitMediaComplete: Finished video splitting.</li>
+<li>WechatPublishComplete: Published to WeChat.</li>
+<li>ComposeMediaComplete: Finished composition.</li>
+<li>FastClipMediaComplete: Finished quick clipping.</li>
+<b>v2017 task types:</b>
+<li>TranscodeComplete: Finished video transcoding.</li>
+<li>ConcatComplete: Finished video splicing.</li>
+<li>ClipComplete: Finished video clipping.</li>
+<li>CreateImageSpriteComplete: Finished image sprite generation.</li>
+<li>CreateSnapshotByTimeOffsetComplete: Finished time point screencapturing.</li>
                      */
                     void SetEventType(const std::string& _eventType);
 
@@ -497,21 +497,21 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * <b>Supported event types:</b>
-<li>NewFileUpload: finished video upload</li>
-<li>ProcedureStateChanged: task flow status changed</li>
-<li>FileDeleted: finished video deletion</li>
-<li>PullComplete: finished pulling for upload</li>
-<li>EditMediaComplete: finished video editing</li>
-<li>SplitMediaComplete: finished video splitting</li>
-<li>WechatPublishComplete: finished publishing on WeChat</li>
-<li>ComposeMediaComplete: finished producing the media file</li>
-<li>WechatMiniProgramPublishComplete: finished publishing on WeChat Mini Program</li>
-<b>Support v2017 task types:</b>
-<li>TranscodeComplete: finished video transcoding</li>
-<li>ConcatComplete: finished video splicing</li>
-<li>ClipComplete: finished video clipping</li>
-<li>CreateImageSpriteComplete: finished image sprite generation</li>
-<li>CreateSnapshotByTimeOffsetComplete: finished point-in-time screencapturing</li>
+<li>NewFileUpload: Video uploaded.</li>
+<li>ProcedureStateChanged: Task flow status changed.</li>
+<li>FileDeleted: Video deleted.</li>
+<li>PullComplete: Finished video pulling.</li>
+<li>EditMediaComplete: Finished video editing.</li>
+<li>SplitMediaComplete: Finished video splitting.</li>
+<li>WechatPublishComplete: Published to WeChat.</li>
+<li>ComposeMediaComplete: Finished composition.</li>
+<li>FastClipMediaComplete: Finished quick clipping.</li>
+<b>v2017 task types:</b>
+<li>TranscodeComplete: Finished video transcoding.</li>
+<li>ConcatComplete: Finished video splicing.</li>
+<li>ClipComplete: Finished video clipping.</li>
+<li>CreateImageSpriteComplete: Finished image sprite generation.</li>
+<li>CreateSnapshotByTimeOffsetComplete: Finished time point screencapturing.</li>
                      */
                     std::string m_eventType;
                     bool m_eventTypeHasBeenSet;

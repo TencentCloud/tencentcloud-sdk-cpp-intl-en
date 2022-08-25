@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Compression format. Valid values: `gzip`, `lzop`, `none` (no compression)
-                     * @return Format Compression format. Valid values: `gzip`, `lzop`, `none` (no compression)
+                     * 获取Compression format. Valid values: `gzip`; `lzop`; `snappy`; `none` (no compression)
+                     * @return Format Compression format. Valid values: `gzip`; `lzop`; `snappy`; `none` (no compression)
                      */
                     std::string GetFormat() const;
 
                     /**
-                     * 设置Compression format. Valid values: `gzip`, `lzop`, `none` (no compression)
-                     * @param Format Compression format. Valid values: `gzip`, `lzop`, `none` (no compression)
+                     * 设置Compression format. Valid values: `gzip`; `lzop`; `snappy`; `none` (no compression)
+                     * @param Format Compression format. Valid values: `gzip`; `lzop`; `snappy`; `none` (no compression)
                      */
                     void SetFormat(const std::string& _format);
 
@@ -67,7 +67,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Compression format. Valid values: `gzip`, `lzop`, `none` (no compression)
+                     * Compression format. Valid values: `gzip`; `lzop`; `snappy`; `none` (no compression)
                      */
                     std::string m_format;
                     bool m_formatHasBeenSet;

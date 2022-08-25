@@ -134,6 +134,94 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool TotalCostHasBeenSet() const;
 
+                    /**
+                     * 获取Payment by cash credits
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CashPayAmount Payment by cash credits
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetCashPayAmount() const;
+
+                    /**
+                     * 设置Payment by cash credits
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param CashPayAmount Payment by cash credits
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetCashPayAmount(const std::string& _cashPayAmount);
+
+                    /**
+                     * 判断参数 CashPayAmount 是否已赋值
+                     * @return CashPayAmount 是否已赋值
+                     */
+                    bool CashPayAmountHasBeenSet() const;
+
+                    /**
+                     * 获取Payment by free credits
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IncentivePayAmount Payment by free credits
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetIncentivePayAmount() const;
+
+                    /**
+                     * 设置Payment by free credits
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param IncentivePayAmount Payment by free credits
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetIncentivePayAmount(const std::string& _incentivePayAmount);
+
+                    /**
+                     * 判断参数 IncentivePayAmount 是否已赋值
+                     * @return IncentivePayAmount 是否已赋值
+                     */
+                    bool IncentivePayAmountHasBeenSet() const;
+
+                    /**
+                     * 获取Payment by vouchers
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return VoucherPayAmount Payment by vouchers
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetVoucherPayAmount() const;
+
+                    /**
+                     * 设置Payment by vouchers
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param VoucherPayAmount Payment by vouchers
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetVoucherPayAmount(const std::string& _voucherPayAmount);
+
+                    /**
+                     * 判断参数 VoucherPayAmount 是否已赋值
+                     * @return VoucherPayAmount 是否已赋值
+                     */
+                    bool VoucherPayAmountHasBeenSet() const;
+
+                    /**
+                     * 获取Payment by commission credits
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TransferPayAmount Payment by commission credits
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetTransferPayAmount() const;
+
+                    /**
+                     * 设置Payment by commission credits
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param TransferPayAmount Payment by commission credits
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetTransferPayAmount(const std::string& _transferPayAmount);
+
+                    /**
+                     * 判断参数 TransferPayAmount 是否已赋值
+                     * @return TransferPayAmount 是否已赋值
+                     */
+                    bool TransferPayAmountHasBeenSet() const;
+
                 private:
 
                     /**
@@ -163,6 +251,34 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_totalCost;
                     bool m_totalCostHasBeenSet;
+
+                    /**
+                     * Payment by cash credits
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_cashPayAmount;
+                    bool m_cashPayAmountHasBeenSet;
+
+                    /**
+                     * Payment by free credits
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_incentivePayAmount;
+                    bool m_incentivePayAmountHasBeenSet;
+
+                    /**
+                     * Payment by vouchers
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_voucherPayAmount;
+                    bool m_voucherPayAmountHasBeenSet;
+
+                    /**
+                     * Payment by commission credits
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_transferPayAmount;
+                    bool m_transferPayAmountHasBeenSet;
 
                 };
             }

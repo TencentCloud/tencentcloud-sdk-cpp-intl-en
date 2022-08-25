@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Category ID
-                     * @return ClassId Category ID
+                     * 获取The category ID.
+                     * @return ClassId The category ID.
                      */
                     int64_t GetClassId() const;
 
                     /**
-                     * 设置Category ID
-                     * @param ClassId Category ID
+                     * 设置The category ID.
+                     * @param ClassId The category ID.
                      */
                     void SetClassId(const int64_t& _classId);
 
@@ -83,22 +83,22 @@ namespace TencentCloud
                     bool ParentIdHasBeenSet() const;
 
                     /**
-                     * 获取Category name
-                     * @return ClassName Category name
+                     * 获取The category name.
+                     * @return Name The category name.
                      */
-                    std::string GetClassName() const;
+                    std::string GetName() const;
 
                     /**
-                     * 设置Category name
-                     * @param ClassName Category name
+                     * 设置The category name.
+                     * @param Name The category name.
                      */
-                    void SetClassName(const std::string& _className);
+                    void SetName(const std::string& _name);
 
                     /**
-                     * 判断参数 ClassName 是否已赋值
-                     * @return ClassName 是否已赋值
+                     * 判断参数 Name 是否已赋值
+                     * @return Name 是否已赋值
                      */
-                    bool ClassNameHasBeenSet() const;
+                    bool NameHasBeenSet() const;
 
                     /**
                      * 获取Category level. 0 for first-level category, up to 3, i.e., up to 4 levels of categories are allowed.
@@ -119,14 +119,14 @@ namespace TencentCloud
                     bool LevelHasBeenSet() const;
 
                     /**
-                     * 获取Set of IDs of the immediate subcategories in current category
-                     * @return SubClassIdSet Set of IDs of the immediate subcategories in current category
+                     * 获取The IDs of the immediate subcategories of the current category.
+                     * @return SubClassIdSet The IDs of the immediate subcategories of the current category.
                      */
                     std::vector<int64_t> GetSubClassIdSet() const;
 
                     /**
-                     * 设置Set of IDs of the immediate subcategories in current category
-                     * @param SubClassIdSet Set of IDs of the immediate subcategories in current category
+                     * 设置The IDs of the immediate subcategories of the current category.
+                     * @param SubClassIdSet The IDs of the immediate subcategories of the current category.
                      */
                     void SetSubClassIdSet(const std::vector<int64_t>& _subClassIdSet);
 
@@ -136,10 +136,28 @@ namespace TencentCloud
                      */
                     bool SubClassIdSetHasBeenSet() const;
 
+                    /**
+                     * 获取The category name. This parameter is not recommended. Please use `Name` instead.
+                     * @return ClassName The category name. This parameter is not recommended. Please use `Name` instead.
+                     */
+                    std::string GetClassName() const;
+
+                    /**
+                     * 设置The category name. This parameter is not recommended. Please use `Name` instead.
+                     * @param ClassName The category name. This parameter is not recommended. Please use `Name` instead.
+                     */
+                    void SetClassName(const std::string& _className);
+
+                    /**
+                     * 判断参数 ClassName 是否已赋值
+                     * @return ClassName 是否已赋值
+                     */
+                    bool ClassNameHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Category ID
+                     * The category ID.
                      */
                     int64_t m_classId;
                     bool m_classIdHasBeenSet;
@@ -151,10 +169,10 @@ namespace TencentCloud
                     bool m_parentIdHasBeenSet;
 
                     /**
-                     * Category name
+                     * The category name.
                      */
-                    std::string m_className;
-                    bool m_classNameHasBeenSet;
+                    std::string m_name;
+                    bool m_nameHasBeenSet;
 
                     /**
                      * Category level. 0 for first-level category, up to 3, i.e., up to 4 levels of categories are allowed.
@@ -163,10 +181,16 @@ namespace TencentCloud
                     bool m_levelHasBeenSet;
 
                     /**
-                     * Set of IDs of the immediate subcategories in current category
+                     * The IDs of the immediate subcategories of the current category.
                      */
                     std::vector<int64_t> m_subClassIdSet;
                     bool m_subClassIdSetHasBeenSet;
+
+                    /**
+                     * The category name. This parameter is not recommended. Please use `Name` instead.
+                     */
+                    std::string m_className;
+                    bool m_classNameHasBeenSet;
 
                 };
             }

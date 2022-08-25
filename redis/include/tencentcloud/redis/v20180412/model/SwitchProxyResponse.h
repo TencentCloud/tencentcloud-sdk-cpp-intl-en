@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_LIVE_V20180801_MODEL_CREATELIVECERTRESPONSE_H_
-#define TENCENTCLOUD_LIVE_V20180801_MODEL_CREATELIVECERTRESPONSE_H_
+#ifndef TENCENTCLOUD_REDIS_V20180412_MODEL_SWITCHPROXYRESPONSE_H_
+#define TENCENTCLOUD_REDIS_V20180412_MODEL_SWITCHPROXYRESPONSE_H_
 
 #include <string>
 #include <vector>
@@ -25,43 +25,25 @@
 
 namespace TencentCloud
 {
-    namespace Live
+    namespace Redis
     {
-        namespace V20180801
+        namespace V20180412
         {
             namespace Model
             {
                 /**
-                * CreateLiveCert response structure.
+                * SwitchProxy response structure.
                 */
-                class CreateLiveCertResponse : public AbstractModel
+                class SwitchProxyResponse : public AbstractModel
                 {
                 public:
-                    CreateLiveCertResponse();
-                    ~CreateLiveCertResponse() = default;
+                    SwitchProxyResponse();
+                    ~SwitchProxyResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
-                    /**
-                     * 获取Certificate ID
-                     * @return CertId Certificate ID
-                     */
-                    int64_t GetCertId() const;
-
-                    /**
-                     * 判断参数 CertId 是否已赋值
-                     * @return CertId 是否已赋值
-                     */
-                    bool CertIdHasBeenSet() const;
-
                 private:
-
-                    /**
-                     * Certificate ID
-                     */
-                    int64_t m_certId;
-                    bool m_certIdHasBeenSet;
 
                 };
             }
@@ -69,4 +51,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_LIVE_V20180801_MODEL_CREATELIVECERTRESPONSE_H_
+#endif // !TENCENTCLOUD_REDIS_V20180412_MODEL_SWITCHPROXYRESPONSE_H_

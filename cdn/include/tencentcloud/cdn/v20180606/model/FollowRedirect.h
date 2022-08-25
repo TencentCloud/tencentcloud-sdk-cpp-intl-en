@@ -74,14 +74,18 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RedirectConfig 
+                     * 获取Specifies a host header for 302 redirects. This feature is only available to beta users. To join the beta, please submit a ticket.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RedirectConfig Specifies a host header for 302 redirects. This feature is only available to beta users. To join the beta, please submit a ticket.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     RedirectConfig GetRedirectConfig() const;
 
                     /**
-                     * 设置
-                     * @param RedirectConfig 
+                     * 设置Specifies a host header for 302 redirects. This feature is only available to beta users. To join the beta, please submit a ticket.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param RedirectConfig Specifies a host header for 302 redirects. This feature is only available to beta users. To join the beta, please submit a ticket.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetRedirectConfig(const RedirectConfig& _redirectConfig);
 
@@ -102,7 +106,8 @@ namespace TencentCloud
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Specifies a host header for 302 redirects. This feature is only available to beta users. To join the beta, please submit a ticket.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     RedirectConfig m_redirectConfig;
                     bool m_redirectConfigHasBeenSet;

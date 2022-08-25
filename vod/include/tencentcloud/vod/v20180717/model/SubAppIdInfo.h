@@ -65,22 +65,22 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Subapplication name.
-                     * @return Name Subapplication name.
+                     * 获取The subapplication name.
+                     * @return SubAppIdName The subapplication name.
                      */
-                    std::string GetName() const;
+                    std::string GetSubAppIdName() const;
 
                     /**
-                     * 设置Subapplication name.
-                     * @param Name Subapplication name.
+                     * 设置The subapplication name.
+                     * @param SubAppIdName The subapplication name.
                      */
-                    void SetName(const std::string& _name);
+                    void SetSubAppIdName(const std::string& _subAppIdName);
 
                     /**
-                     * 判断参数 Name 是否已赋值
-                     * @return Name 是否已赋值
+                     * 判断参数 SubAppIdName 是否已赋值
+                     * @return SubAppIdName 是否已赋值
                      */
-                    bool NameHasBeenSet() const;
+                    bool SubAppIdNameHasBeenSet() const;
 
                     /**
                      * 获取Subapplication overview.
@@ -152,6 +152,24 @@ namespace TencentCloud
                      */
                     bool StatusHasBeenSet() const;
 
+                    /**
+                     * 获取The subapplication name. This parameter is not recommended. Please use `SubAppIdName` instead.
+                     * @return Name The subapplication name. This parameter is not recommended. Please use `SubAppIdName` instead.
+                     */
+                    std::string GetName() const;
+
+                    /**
+                     * 设置The subapplication name. This parameter is not recommended. Please use `SubAppIdName` instead.
+                     * @param Name The subapplication name. This parameter is not recommended. Please use `SubAppIdName` instead.
+                     */
+                    void SetName(const std::string& _name);
+
+                    /**
+                     * 判断参数 Name 是否已赋值
+                     * @return Name 是否已赋值
+                     */
+                    bool NameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -161,10 +179,10 @@ namespace TencentCloud
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Subapplication name.
+                     * The subapplication name.
                      */
-                    std::string m_name;
-                    bool m_nameHasBeenSet;
+                    std::string m_subAppIdName;
+                    bool m_subAppIdNameHasBeenSet;
 
                     /**
                      * Subapplication overview.
@@ -187,6 +205,12 @@ namespace TencentCloud
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
+
+                    /**
+                     * The subapplication name. This parameter is not recommended. Please use `SubAppIdName` instead.
+                     */
+                    std::string m_name;
+                    bool m_nameHasBeenSet;
 
                 };
             }

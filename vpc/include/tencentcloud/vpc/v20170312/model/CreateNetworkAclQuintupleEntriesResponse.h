@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_LIVE_V20180801_MODEL_MODIFYLIVEDOMAINCERTRESPONSE_H_
-#define TENCENTCLOUD_LIVE_V20180801_MODEL_MODIFYLIVEDOMAINCERTRESPONSE_H_
+#ifndef TENCENTCLOUD_VPC_V20170312_MODEL_CREATENETWORKACLQUINTUPLEENTRIESRESPONSE_H_
+#define TENCENTCLOUD_VPC_V20170312_MODEL_CREATENETWORKACLQUINTUPLEENTRIESRESPONSE_H_
 
 #include <string>
 #include <vector>
@@ -25,20 +25,20 @@
 
 namespace TencentCloud
 {
-    namespace Live
+    namespace Vpc
     {
-        namespace V20180801
+        namespace V20170312
         {
             namespace Model
             {
                 /**
-                * ModifyLiveDomainCert response structure.
+                * CreateNetworkAclQuintupleEntries response structure.
                 */
-                class ModifyLiveDomainCertResponse : public AbstractModel
+                class CreateNetworkAclQuintupleEntriesResponse : public AbstractModel
                 {
                 public:
-                    ModifyLiveDomainCertResponse();
-                    ~ModifyLiveDomainCertResponse() = default;
+                    CreateNetworkAclQuintupleEntriesResponse();
+                    ~CreateNetworkAclQuintupleEntriesResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
@@ -51,4 +51,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_LIVE_V20180801_MODEL_MODIFYLIVEDOMAINCERTRESPONSE_H_
+#endif // !TENCENTCLOUD_VPC_V20170312_MODEL_CREATENETWORKACLQUINTUPLEENTRIESRESPONSE_H_

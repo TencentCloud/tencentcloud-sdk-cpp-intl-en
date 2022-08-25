@@ -82,6 +82,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool CreateLimitCountHasBeenSet() const;
 
+                    /**
+                     * 获取The number of domains accelerated in the Chinese mainland, globally, and outside the Chinese mainland respectively.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return PlayTypeCount The number of domains accelerated in the Chinese mainland, globally, and outside the Chinese mainland respectively.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<int64_t> GetPlayTypeCount() const;
+
+                    /**
+                     * 判断参数 PlayTypeCount 是否已赋值
+                     * @return PlayTypeCount 是否已赋值
+                     */
+                    bool PlayTypeCountHasBeenSet() const;
+
                 private:
 
                     /**
@@ -102,6 +116,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     int64_t m_createLimitCount;
                     bool m_createLimitCountHasBeenSet;
+
+                    /**
+                     * The number of domains accelerated in the Chinese mainland, globally, and outside the Chinese mainland respectively.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<int64_t> m_playTypeCount;
+                    bool m_playTypeCountHasBeenSet;
 
                 };
             }
