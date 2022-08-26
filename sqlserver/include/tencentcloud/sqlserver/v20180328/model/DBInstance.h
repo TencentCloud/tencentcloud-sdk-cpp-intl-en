@@ -940,14 +940,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool TgwWanVPortHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Collation 
+                     * 获取Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
+                     * @return Collation Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
                      */
                     std::string GetCollation() const;
 
                     /**
-                     * 设置
-                     * @param Collation 
+                     * 设置Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
+                     * @param Collation Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
                      */
                     void SetCollation(const std::string& _collation);
 
@@ -958,14 +958,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool CollationHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TimeZone 
+                     * 获取System time zone. Default value: `China Standard Time`.
+                     * @return TimeZone System time zone. Default value: `China Standard Time`.
                      */
                     std::string GetTimeZone() const;
 
                     /**
-                     * 设置
-                     * @param TimeZone 
+                     * 设置System time zone. Default value: `China Standard Time`.
+                     * @param TimeZone System time zone. Default value: `China Standard Time`.
                      */
                     void SetTimeZone(const std::string& _timeZone);
 
@@ -1273,13 +1273,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_tgwWanVPortHasBeenSet;
 
                     /**
-                     * 
+                     * Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
                      */
                     std::string m_collation;
                     bool m_collationHasBeenSet;
 
                     /**
-                     * 
+                     * System time zone. Default value: `China Standard Time`.
                      */
                     std::string m_timeZone;
                     bool m_timeZoneHasBeenSet;

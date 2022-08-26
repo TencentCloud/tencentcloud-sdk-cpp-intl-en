@@ -95,6 +95,20 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     bool CkafkaHasBeenSet() const;
 
+                    /**
+                     * 获取Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Compression Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetCompression() const;
+
+                    /**
+                     * 判断参数 Compression 是否已赋值
+                     * @return Compression 是否已赋值
+                     */
+                    bool CompressionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -121,6 +135,13 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     Ckafka m_ckafka;
                     bool m_ckafkaHasBeenSet;
+
+                    /**
+                     * Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_compression;
+                    bool m_compressionHasBeenSet;
 
                 };
             }

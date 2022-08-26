@@ -53,12 +53,13 @@ set(cvm_public_header_model
   include/tencentcloud/cvm/v20170312/model/RebootInstancesRequest.h
   include/tencentcloud/cvm/v20170312/model/AssociateInstancesKeyPairsRequest.h
   include/tencentcloud/cvm/v20170312/model/DeleteLaunchTemplateResponse.h
-  include/tencentcloud/cvm/v20170312/model/ImportKeyPairResponse.h
+  include/tencentcloud/cvm/v20170312/model/DescribeChcDeniedActionsResponse.h
   include/tencentcloud/cvm/v20170312/model/DescribeInstancesStatusResponse.h
   include/tencentcloud/cvm/v20170312/model/ZoneInfo.h
   include/tencentcloud/cvm/v20170312/model/ModifyLaunchTemplateDefaultVersionResponse.h
   include/tencentcloud/cvm/v20170312/model/LaunchTemplateVersionInfo.h
   include/tencentcloud/cvm/v20170312/model/ModifyImageSharePermissionResponse.h
+  include/tencentcloud/cvm/v20170312/model/ImportKeyPairResponse.h
   include/tencentcloud/cvm/v20170312/model/DescribeKeyPairsResponse.h
   include/tencentcloud/cvm/v20170312/model/ResetInstancesPasswordRequest.h
   include/tencentcloud/cvm/v20170312/model/RemoveChcAssistVpcResponse.h
@@ -180,6 +181,7 @@ set(cvm_public_header_model
   include/tencentcloud/cvm/v20170312/model/GPUInfo.h
   include/tencentcloud/cvm/v20170312/model/DescribeInstancesRequest.h
   include/tencentcloud/cvm/v20170312/model/RegionInfo.h
+  include/tencentcloud/cvm/v20170312/model/DescribeChcDeniedActionsRequest.h
   include/tencentcloud/cvm/v20170312/model/InquiryPriceResetInstancesTypeRequest.h
   include/tencentcloud/cvm/v20170312/model/ModifyLaunchTemplateDefaultVersionRequest.h
   include/tencentcloud/cvm/v20170312/model/StopInstancesRequest.h
@@ -201,6 +203,7 @@ set(cvm_public_header_model
   include/tencentcloud/cvm/v20170312/model/ModifyDisasterRecoverGroupAttributeResponse.h
   include/tencentcloud/cvm/v20170312/model/ResizeInstanceDisksRequest.h
   include/tencentcloud/cvm/v20170312/model/DescribeInstanceFamilyConfigsRequest.h
+  include/tencentcloud/cvm/v20170312/model/ChcHostDeniedActions.h
   include/tencentcloud/cvm/v20170312/model/PurchaseReservedInstancesOfferingResponse.h
   include/tencentcloud/cvm/v20170312/model/StorageBlock.h
   include/tencentcloud/cvm/v20170312/model/InternetAccessible.h
@@ -248,12 +251,13 @@ set(cvm_src
   src/v20170312/model/RebootInstancesRequest.cpp
   src/v20170312/model/AssociateInstancesKeyPairsRequest.cpp
   src/v20170312/model/DeleteLaunchTemplateResponse.cpp
-  src/v20170312/model/ImportKeyPairResponse.cpp
+  src/v20170312/model/DescribeChcDeniedActionsResponse.cpp
   src/v20170312/model/DescribeInstancesStatusResponse.cpp
   src/v20170312/model/ZoneInfo.cpp
   src/v20170312/model/ModifyLaunchTemplateDefaultVersionResponse.cpp
   src/v20170312/model/LaunchTemplateVersionInfo.cpp
   src/v20170312/model/ModifyImageSharePermissionResponse.cpp
+  src/v20170312/model/ImportKeyPairResponse.cpp
   src/v20170312/model/DescribeKeyPairsResponse.cpp
   src/v20170312/model/ResetInstancesPasswordRequest.cpp
   src/v20170312/model/RemoveChcAssistVpcResponse.cpp
@@ -375,6 +379,7 @@ set(cvm_src
   src/v20170312/model/GPUInfo.cpp
   src/v20170312/model/DescribeInstancesRequest.cpp
   src/v20170312/model/RegionInfo.cpp
+  src/v20170312/model/DescribeChcDeniedActionsRequest.cpp
   src/v20170312/model/InquiryPriceResetInstancesTypeRequest.cpp
   src/v20170312/model/ModifyLaunchTemplateDefaultVersionRequest.cpp
   src/v20170312/model/StopInstancesRequest.cpp
@@ -396,6 +401,7 @@ set(cvm_src
   src/v20170312/model/ModifyDisasterRecoverGroupAttributeResponse.cpp
   src/v20170312/model/ResizeInstanceDisksRequest.cpp
   src/v20170312/model/DescribeInstanceFamilyConfigsRequest.cpp
+  src/v20170312/model/ChcHostDeniedActions.cpp
   src/v20170312/model/PurchaseReservedInstancesOfferingResponse.cpp
   src/v20170312/model/StorageBlock.cpp
   src/v20170312/model/InternetAccessible.cpp

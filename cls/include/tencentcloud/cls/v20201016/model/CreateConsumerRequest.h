@@ -116,6 +116,24 @@ namespace TencentCloud
                      */
                     bool CkafkaHasBeenSet() const;
 
+                    /**
+                     * 获取Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
+                     * @return Compression Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
+                     */
+                    int64_t GetCompression() const;
+
+                    /**
+                     * 设置Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
+                     * @param Compression Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
+                     */
+                    void SetCompression(const int64_t& _compression);
+
+                    /**
+                     * 判断参数 Compression 是否已赋值
+                     * @return Compression 是否已赋值
+                     */
+                    bool CompressionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -141,6 +159,12 @@ namespace TencentCloud
                      */
                     Ckafka m_ckafka;
                     bool m_ckafkaHasBeenSet;
+
+                    /**
+                     * Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
+                     */
+                    int64_t m_compression;
+                    bool m_compressionHasBeenSet;
 
                 };
             }

@@ -51,6 +51,8 @@
 #include <tencentcloud/cvm/v20170312/model/DeleteLaunchTemplateResponse.h>
 #include <tencentcloud/cvm/v20170312/model/DeleteLaunchTemplateVersionsRequest.h>
 #include <tencentcloud/cvm/v20170312/model/DeleteLaunchTemplateVersionsResponse.h>
+#include <tencentcloud/cvm/v20170312/model/DescribeChcDeniedActionsRequest.h>
+#include <tencentcloud/cvm/v20170312/model/DescribeChcDeniedActionsResponse.h>
 #include <tencentcloud/cvm/v20170312/model/DescribeChcHostsRequest.h>
 #include <tencentcloud/cvm/v20170312/model/DescribeChcHostsResponse.h>
 #include <tencentcloud/cvm/v20170312/model/DescribeDisasterRecoverGroupQuotaRequest.h>
@@ -217,6 +219,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteLaunchTemplateVersionsResponse> DeleteLaunchTemplateVersionsOutcome;
                 typedef std::future<DeleteLaunchTemplateVersionsOutcome> DeleteLaunchTemplateVersionsOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DeleteLaunchTemplateVersionsRequest&, DeleteLaunchTemplateVersionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLaunchTemplateVersionsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeChcDeniedActionsResponse> DescribeChcDeniedActionsOutcome;
+                typedef std::future<DescribeChcDeniedActionsOutcome> DescribeChcDeniedActionsOutcomeCallable;
+                typedef std::function<void(const CvmClient*, const Model::DescribeChcDeniedActionsRequest&, DescribeChcDeniedActionsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeChcDeniedActionsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeChcHostsResponse> DescribeChcHostsOutcome;
                 typedef std::future<DescribeChcHostsOutcome> DescribeChcHostsOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::DescribeChcHostsRequest&, DescribeChcHostsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeChcHostsAsyncHandler;
@@ -528,6 +533,15 @@ If you currently use a password to log in, you will no longer be able to do so a
                 DeleteLaunchTemplateVersionsOutcome DeleteLaunchTemplateVersions(const Model::DeleteLaunchTemplateVersionsRequest &request);
                 void DeleteLaunchTemplateVersionsAsync(const Model::DeleteLaunchTemplateVersionsRequest& request, const DeleteLaunchTemplateVersionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteLaunchTemplateVersionsOutcomeCallable DeleteLaunchTemplateVersionsCallable(const Model::DeleteLaunchTemplateVersionsRequest& request);
+
+                /**
+                 *This API is used to query the actions not allowed for the specified CHC instances.
+                 * @param req DescribeChcDeniedActionsRequest
+                 * @return DescribeChcDeniedActionsOutcome
+                 */
+                DescribeChcDeniedActionsOutcome DescribeChcDeniedActions(const Model::DescribeChcDeniedActionsRequest &request);
+                void DescribeChcDeniedActionsAsync(const Model::DescribeChcDeniedActionsRequest& request, const DescribeChcDeniedActionsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeChcDeniedActionsOutcomeCallable DescribeChcDeniedActionsCallable(const Model::DescribeChcDeniedActionsRequest& request);
 
                 /**
                  *This API is used to query the details of one or more CHC host.

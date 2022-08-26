@@ -69,17 +69,17 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool EnableTagHasBeenSet() const;
 
                     /**
-                     * 获取List of metadata to ship. Only \_\_SOURCE\_\_, \_\_FILENAME\_\_, and \_\_TIMESTAMP\_\_ are supported.
+                     * 获取List of metadata to ship. Supported metadata types: \_\_SOURCE\_\_, \_\_FILENAME\_\_, \_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MetaFields List of metadata to ship. Only \_\_SOURCE\_\_, \_\_FILENAME\_\_, and \_\_TIMESTAMP\_\_ are supported.
+                     * @return MetaFields List of metadata to ship. Supported metadata types: \_\_SOURCE\_\_, \_\_FILENAME\_\_, \_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> GetMetaFields() const;
 
                     /**
-                     * 设置List of metadata to ship. Only \_\_SOURCE\_\_, \_\_FILENAME\_\_, and \_\_TIMESTAMP\_\_ are supported.
+                     * 设置List of metadata to ship. Supported metadata types: \_\_SOURCE\_\_, \_\_FILENAME\_\_, \_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MetaFields List of metadata to ship. Only \_\_SOURCE\_\_, \_\_FILENAME\_\_, and \_\_TIMESTAMP\_\_ are supported.
+                     * @param MetaFields List of metadata to ship. Supported metadata types: \_\_SOURCE\_\_, \_\_FILENAME\_\_, \_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetMetaFields(const std::vector<std::string>& _metaFields);
@@ -144,7 +144,7 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_enableTagHasBeenSet;
 
                     /**
-                     * List of metadata to ship. Only \_\_SOURCE\_\_, \_\_FILENAME\_\_, and \_\_TIMESTAMP\_\_ are supported.
+                     * List of metadata to ship. Supported metadata types: \_\_SOURCE\_\_, \_\_FILENAME\_\_, \_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_metaFields;

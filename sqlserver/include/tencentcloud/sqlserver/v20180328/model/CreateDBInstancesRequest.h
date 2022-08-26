@@ -403,6 +403,42 @@ namespace TencentCloud
                      */
                     bool ResourceTagsHasBeenSet() const;
 
+                    /**
+                     * 获取Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
+                     * @return Collation Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
+                     */
+                    std::string GetCollation() const;
+
+                    /**
+                     * 设置Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
+                     * @param Collation Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
+                     */
+                    void SetCollation(const std::string& _collation);
+
+                    /**
+                     * 判断参数 Collation 是否已赋值
+                     * @return Collation 是否已赋值
+                     */
+                    bool CollationHasBeenSet() const;
+
+                    /**
+                     * 获取System time zone. Default value: `China Standard Time`.
+                     * @return TimeZone System time zone. Default value: `China Standard Time`.
+                     */
+                    std::string GetTimeZone() const;
+
+                    /**
+                     * 设置System time zone. Default value: `China Standard Time`.
+                     * @param TimeZone System time zone. Default value: `China Standard Time`.
+                     */
+                    void SetTimeZone(const std::string& _timeZone);
+
+                    /**
+                     * 判断参数 TimeZone 是否已赋值
+                     * @return TimeZone 是否已赋值
+                     */
+                    bool TimeZoneHasBeenSet() const;
+
                 private:
 
                     /**
@@ -524,6 +560,18 @@ namespace TencentCloud
                      */
                     std::vector<ResourceTag> m_resourceTags;
                     bool m_resourceTagsHasBeenSet;
+
+                    /**
+                     * Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
+                     */
+                    std::string m_collation;
+                    bool m_collationHasBeenSet;
+
+                    /**
+                     * System time zone. Default value: `China Standard Time`.
+                     */
+                    std::string m_timeZone;
+                    bool m_timeZoneHasBeenSet;
 
                 };
             }

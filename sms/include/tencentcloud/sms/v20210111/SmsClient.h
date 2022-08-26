@@ -51,6 +51,8 @@
 #include <tencentcloud/sms/v20210111/model/PullSmsSendStatusResponse.h>
 #include <tencentcloud/sms/v20210111/model/PullSmsSendStatusByPhoneNumberRequest.h>
 #include <tencentcloud/sms/v20210111/model/PullSmsSendStatusByPhoneNumberResponse.h>
+#include <tencentcloud/sms/v20210111/model/ReportConversionRequest.h>
+#include <tencentcloud/sms/v20210111/model/ReportConversionResponse.h>
 #include <tencentcloud/sms/v20210111/model/SendSmsRequest.h>
 #include <tencentcloud/sms/v20210111/model/SendSmsResponse.h>
 #include <tencentcloud/sms/v20210111/model/SendStatusStatisticsRequest.h>
@@ -111,6 +113,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::PullSmsSendStatusByPhoneNumberResponse> PullSmsSendStatusByPhoneNumberOutcome;
                 typedef std::future<PullSmsSendStatusByPhoneNumberOutcome> PullSmsSendStatusByPhoneNumberOutcomeCallable;
                 typedef std::function<void(const SmsClient*, const Model::PullSmsSendStatusByPhoneNumberRequest&, PullSmsSendStatusByPhoneNumberOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PullSmsSendStatusByPhoneNumberAsyncHandler;
+                typedef Outcome<Core::Error, Model::ReportConversionResponse> ReportConversionOutcome;
+                typedef std::future<ReportConversionOutcome> ReportConversionOutcomeCallable;
+                typedef std::function<void(const SmsClient*, const Model::ReportConversionRequest&, ReportConversionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ReportConversionAsyncHandler;
                 typedef Outcome<Core::Error, Model::SendSmsResponse> SendSmsOutcome;
                 typedef std::future<SendSmsOutcome> SendSmsOutcomeCallable;
                 typedef std::function<void(const SmsClient*, const Model::SendSmsRequest&, SendSmsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SendSmsAsyncHandler;
@@ -291,6 +296,16 @@ Currently, you can also [configure the callback](https://intl.cloud.tencent.com/
                 PullSmsSendStatusByPhoneNumberOutcome PullSmsSendStatusByPhoneNumber(const Model::PullSmsSendStatusByPhoneNumberRequest &request);
                 void PullSmsSendStatusByPhoneNumberAsync(const Model::PullSmsSendStatusByPhoneNumberRequest& request, const PullSmsSendStatusByPhoneNumberAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 PullSmsSendStatusByPhoneNumberOutcomeCallable PullSmsSendStatusByPhoneNumberCallable(const Model::PullSmsSendStatusByPhoneNumberRequest& request);
+
+                /**
+                 *This API is used to report the SMS conversion rate (SMS conversion rate = the number of returned verification codes / the number of verification codes sent) and report the serial numbers of received SMS messages to Tencent Cloud SMS.
+>- Note: To call this API, you need to be added to the allowlist first. If you have any questions, contact [SMS Helper](https://intl.cloud.tencent.com/document/product/382/3773?from_cn_redirect=1#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81).
+                 * @param req ReportConversionRequest
+                 * @return ReportConversionOutcome
+                 */
+                ReportConversionOutcome ReportConversion(const Model::ReportConversionRequest &request);
+                void ReportConversionAsync(const Model::ReportConversionRequest& request, const ReportConversionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ReportConversionOutcomeCallable ReportConversionCallable(const Model::ReportConversionRequest& request);
 
                 /**
                  *This API is used to send SMS verification codes, notification, or marketing messages to users.

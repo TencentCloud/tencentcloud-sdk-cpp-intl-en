@@ -156,6 +156,72 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool NetTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return UniqSubnetId Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetUniqSubnetId() const;
+
+                    /**
+                     * 设置Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param UniqSubnetId Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetUniqSubnetId(const std::string& _uniqSubnetId);
+
+                    /**
+                     * 判断参数 UniqSubnetId 是否已赋值
+                     * @return UniqSubnetId 是否已赋值
+                     */
+                    bool UniqSubnetIdHasBeenSet() const;
+
+                    /**
+                     * 获取VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return UniqVpcId VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetUniqVpcId() const;
+
+                    /**
+                     * 设置VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param UniqVpcId VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetUniqVpcId(const std::string& _uniqVpcId);
+
+                    /**
+                     * 判断参数 UniqVpcId 是否已赋值
+                     * @return UniqVpcId 是否已赋值
+                     */
+                    bool UniqVpcIdHasBeenSet() const;
+
+                    /**
+                     * 获取Description
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Description Description
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetDescription() const;
+
+                    /**
+                     * 设置Description
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Description Description
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetDescription(const std::string& _description);
+
+                    /**
+                     * 判断参数 Description 是否已赋值
+                     * @return Description 是否已赋值
+                     */
+                    bool DescriptionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -192,6 +258,27 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_netType;
                     bool m_netTypeHasBeenSet;
+
+                    /**
+                     * Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_uniqSubnetId;
+                    bool m_uniqSubnetIdHasBeenSet;
+
+                    /**
+                     * VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_uniqVpcId;
+                    bool m_uniqVpcIdHasBeenSet;
+
+                    /**
+                     * Description
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_description;
+                    bool m_descriptionHasBeenSet;
 
                 };
             }
