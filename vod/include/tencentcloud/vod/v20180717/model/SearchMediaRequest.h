@@ -543,6 +543,54 @@ namespace TencentCloud
                     bool StorageClassesHasBeenSet() const;
 
                     /**
+                     * 获取The TRTC application IDs. Any file that matches one of the application IDs will be returned.
+<li>Array length limit: 10</li>
+                     * @return TrtcSdkAppIds The TRTC application IDs. Any file that matches one of the application IDs will be returned.
+<li>Array length limit: 10</li>
+                     */
+                    std::vector<uint64_t> GetTrtcSdkAppIds() const;
+
+                    /**
+                     * 设置The TRTC application IDs. Any file that matches one of the application IDs will be returned.
+<li>Array length limit: 10</li>
+                     * @param TrtcSdkAppIds The TRTC application IDs. Any file that matches one of the application IDs will be returned.
+<li>Array length limit: 10</li>
+                     */
+                    void SetTrtcSdkAppIds(const std::vector<uint64_t>& _trtcSdkAppIds);
+
+                    /**
+                     * 判断参数 TrtcSdkAppIds 是否已赋值
+                     * @return TrtcSdkAppIds 是否已赋值
+                     */
+                    bool TrtcSdkAppIdsHasBeenSet() const;
+
+                    /**
+                     * 获取The TRTC room IDs. Any file that matches one of the room IDs will be returned.
+<li>Element length limit: 64 characters.</li>
+<li>Array length limit: 10.</li>
+                     * @return TrtcRoomIds The TRTC room IDs. Any file that matches one of the room IDs will be returned.
+<li>Element length limit: 64 characters.</li>
+<li>Array length limit: 10.</li>
+                     */
+                    std::vector<std::string> GetTrtcRoomIds() const;
+
+                    /**
+                     * 设置The TRTC room IDs. Any file that matches one of the room IDs will be returned.
+<li>Element length limit: 64 characters.</li>
+<li>Array length limit: 10.</li>
+                     * @param TrtcRoomIds The TRTC room IDs. Any file that matches one of the room IDs will be returned.
+<li>Element length limit: 64 characters.</li>
+<li>Array length limit: 10.</li>
+                     */
+                    void SetTrtcRoomIds(const std::vector<std::string>& _trtcRoomIds);
+
+                    /**
+                     * 判断参数 TrtcRoomIds 是否已赋值
+                     * @return TrtcRoomIds 是否已赋值
+                     */
+                    bool TrtcRoomIdsHasBeenSet() const;
+
+                    /**
                      * 获取(This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
 Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
                      * @return Text (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
@@ -852,6 +900,21 @@ End time in the creation time range.
                      */
                     std::vector<std::string> m_storageClasses;
                     bool m_storageClassesHasBeenSet;
+
+                    /**
+                     * The TRTC application IDs. Any file that matches one of the application IDs will be returned.
+<li>Array length limit: 10</li>
+                     */
+                    std::vector<uint64_t> m_trtcSdkAppIds;
+                    bool m_trtcSdkAppIdsHasBeenSet;
+
+                    /**
+                     * The TRTC room IDs. Any file that matches one of the room IDs will be returned.
+<li>Element length limit: 64 characters.</li>
+<li>Array length limit: 10.</li>
+                     */
+                    std::vector<std::string> m_trtcRoomIds;
+                    bool m_trtcRoomIdsHasBeenSet;
 
                     /**
                      * (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)

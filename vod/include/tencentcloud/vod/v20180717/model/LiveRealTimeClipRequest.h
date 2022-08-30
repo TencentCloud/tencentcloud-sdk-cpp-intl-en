@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/vod/v20180717/model/LiveRealTimeClipStreamInfo.h>
 
 
 namespace TencentCloud
@@ -169,6 +170,68 @@ namespace TencentCloud
                     bool ProcedureHasBeenSet() const;
 
                     /**
+                     * 获取The ID of the media file’s category. You can use the [CreateClass](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API to create a category and get the category ID.
+<li>The default value is `0`, which means the “Other” category.</li>
+This parameter is valid only if `IsPersistence` is `1`.
+                     * @return ClassId The ID of the media file’s category. You can use the [CreateClass](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API to create a category and get the category ID.
+<li>The default value is `0`, which means the “Other” category.</li>
+This parameter is valid only if `IsPersistence` is `1`.
+                     */
+                    int64_t GetClassId() const;
+
+                    /**
+                     * 设置The ID of the media file’s category. You can use the [CreateClass](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API to create a category and get the category ID.
+<li>The default value is `0`, which means the “Other” category.</li>
+This parameter is valid only if `IsPersistence` is `1`.
+                     * @param ClassId The ID of the media file’s category. You can use the [CreateClass](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API to create a category and get the category ID.
+<li>The default value is `0`, which means the “Other” category.</li>
+This parameter is valid only if `IsPersistence` is `1`.
+                     */
+                    void SetClassId(const int64_t& _classId);
+
+                    /**
+                     * 判断参数 ClassId 是否已赋值
+                     * @return ClassId 是否已赋值
+                     */
+                    bool ClassIdHasBeenSet() const;
+
+                    /**
+                     * 获取The source context, which is used to pass through user request information. The [NewFileUpload](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 250 characters and is valid only if `IsPersistence` is `1`.
+                     * @return SourceContext The source context, which is used to pass through user request information. The [NewFileUpload](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 250 characters and is valid only if `IsPersistence` is `1`.
+                     */
+                    std::string GetSourceContext() const;
+
+                    /**
+                     * 设置The source context, which is used to pass through user request information. The [NewFileUpload](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 250 characters and is valid only if `IsPersistence` is `1`.
+                     * @param SourceContext The source context, which is used to pass through user request information. The [NewFileUpload](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 250 characters and is valid only if `IsPersistence` is `1`.
+                     */
+                    void SetSourceContext(const std::string& _sourceContext);
+
+                    /**
+                     * 判断参数 SourceContext 是否已赋值
+                     * @return SourceContext 是否已赋值
+                     */
+                    bool SourceContextHasBeenSet() const;
+
+                    /**
+                     * 获取The session context, which is used to pass through user request information. If the `Procedure` parameter is specified, the [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters and is valid only if `IsPersistence` is `1`.
+                     * @return SessionContext The session context, which is used to pass through user request information. If the `Procedure` parameter is specified, the [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters and is valid only if `IsPersistence` is `1`.
+                     */
+                    std::string GetSessionContext() const;
+
+                    /**
+                     * 设置The session context, which is used to pass through user request information. If the `Procedure` parameter is specified, the [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters and is valid only if `IsPersistence` is `1`.
+                     * @param SessionContext The session context, which is used to pass through user request information. If the `Procedure` parameter is specified, the [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters and is valid only if `IsPersistence` is `1`.
+                     */
+                    void SetSessionContext(const std::string& _sessionContext);
+
+                    /**
+                     * 判断参数 SessionContext 是否已赋值
+                     * @return SessionContext 是否已赋值
+                     */
+                    bool SessionContextHasBeenSet() const;
+
+                    /**
                      * 获取Whether the metadata of clipped video needs to be returned. 0: no, 1: yes. Default value: no.
                      * @return MetaDataRequired Whether the metadata of clipped video needs to be returned. 0: no, 1: yes. Default value: no.
                      */
@@ -203,6 +266,32 @@ namespace TencentCloud
                      * @return Host 是否已赋值
                      */
                     bool HostHasBeenSet() const;
+
+                    /**
+                     * 获取The information of the live stream to clip.
+<li>The video clip is cut from the original stream by default.</li>
+<li>If `Type` of `StreamInfo` is set to `Transcoding`, the video clip will be cut from the output stream of the transcoding template specified by `TemplateId`.</li>
+                     * @return StreamInfo The information of the live stream to clip.
+<li>The video clip is cut from the original stream by default.</li>
+<li>If `Type` of `StreamInfo` is set to `Transcoding`, the video clip will be cut from the output stream of the transcoding template specified by `TemplateId`.</li>
+                     */
+                    LiveRealTimeClipStreamInfo GetStreamInfo() const;
+
+                    /**
+                     * 设置The information of the live stream to clip.
+<li>The video clip is cut from the original stream by default.</li>
+<li>If `Type` of `StreamInfo` is set to `Transcoding`, the video clip will be cut from the output stream of the transcoding template specified by `TemplateId`.</li>
+                     * @param StreamInfo The information of the live stream to clip.
+<li>The video clip is cut from the original stream by default.</li>
+<li>If `Type` of `StreamInfo` is set to `Transcoding`, the video clip will be cut from the output stream of the transcoding template specified by `TemplateId`.</li>
+                     */
+                    void SetStreamInfo(const LiveRealTimeClipStreamInfo& _streamInfo);
+
+                    /**
+                     * 判断参数 StreamInfo 是否已赋值
+                     * @return StreamInfo 是否已赋值
+                     */
+                    bool StreamInfoHasBeenSet() const;
 
                     /**
                      * 获取Reserved field. Do not enter a value for it.
@@ -267,6 +356,26 @@ namespace TencentCloud
                     bool m_procedureHasBeenSet;
 
                     /**
+                     * The ID of the media file’s category. You can use the [CreateClass](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API to create a category and get the category ID.
+<li>The default value is `0`, which means the “Other” category.</li>
+This parameter is valid only if `IsPersistence` is `1`.
+                     */
+                    int64_t m_classId;
+                    bool m_classIdHasBeenSet;
+
+                    /**
+                     * The source context, which is used to pass through user request information. The [NewFileUpload](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 250 characters and is valid only if `IsPersistence` is `1`.
+                     */
+                    std::string m_sourceContext;
+                    bool m_sourceContextHasBeenSet;
+
+                    /**
+                     * The session context, which is used to pass through user request information. If the `Procedure` parameter is specified, the [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters and is valid only if `IsPersistence` is `1`.
+                     */
+                    std::string m_sessionContext;
+                    bool m_sessionContextHasBeenSet;
+
+                    /**
                      * Whether the metadata of clipped video needs to be returned. 0: no, 1: yes. Default value: no.
                      */
                     uint64_t m_metaDataRequired;
@@ -277,6 +386,14 @@ namespace TencentCloud
                      */
                     std::string m_host;
                     bool m_hostHasBeenSet;
+
+                    /**
+                     * The information of the live stream to clip.
+<li>The video clip is cut from the original stream by default.</li>
+<li>If `Type` of `StreamInfo` is set to `Transcoding`, the video clip will be cut from the output stream of the transcoding template specified by `TemplateId`.</li>
+                     */
+                    LiveRealTimeClipStreamInfo m_streamInfo;
+                    bool m_streamInfoHasBeenSet;
 
                     /**
                      * Reserved field. Do not enter a value for it.

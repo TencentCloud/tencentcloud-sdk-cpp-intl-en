@@ -33,6 +33,7 @@
 #include <tencentcloud/vod/v20180717/model/ClipTask2017.h>
 #include <tencentcloud/vod/v20180717/model/CreateImageSpriteTask2017.h>
 #include <tencentcloud/vod/v20180717/model/SnapshotByTimeOffsetTask2017.h>
+#include <tencentcloud/vod/v20180717/model/RemoveWatermarkTask.h>
 
 
 namespace TencentCloud
@@ -62,32 +63,18 @@ namespace TencentCloud
 <li>SplitMedia: Video splitting</li>
 <li>ComposeMedia: Media file producing</li>
 <li>WechatPublish: WeChat publishing</li>
-<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
 <li>PullUpload: Pulling media files for upload</li>
 <li>FastClipMedia: Quick clipping</li>
-
-Task types for v2017:
-<li>Transcode: Transcoding</li>
-<li>SnapshotByTimeOffset: Screencapturing</li>
-<li>Concat: Video splicing</li>
-<li>Clip: Video clipping</li>
-<li>ImageSprites: Image sprite generating</li>
+<li>RemoveWatermarkTask: Watermark removal</li>
                      * @return TaskType The task type. Valid values:
 <li>Procedure: Video processing</li>
 <li>EditMedia: Video editing</li>
 <li>SplitMedia: Video splitting</li>
 <li>ComposeMedia: Media file producing</li>
 <li>WechatPublish: WeChat publishing</li>
-<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
 <li>PullUpload: Pulling media files for upload</li>
 <li>FastClipMedia: Quick clipping</li>
-
-Task types for v2017:
-<li>Transcode: Transcoding</li>
-<li>SnapshotByTimeOffset: Screencapturing</li>
-<li>Concat: Video splicing</li>
-<li>Clip: Video clipping</li>
-<li>ImageSprites: Image sprite generating</li>
+<li>RemoveWatermarkTask: Watermark removal</li>
                      */
                     std::string GetTaskType() const;
 
@@ -319,6 +306,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool SnapshotByTimeOffsetTaskHasBeenSet() const;
 
+                    /**
+                     * 获取The information of a watermark removal task. This parameter is valid only if `TaskType` is `RemoveWatermark`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RemoveWatermarkTask The information of a watermark removal task. This parameter is valid only if `TaskType` is `RemoveWatermark`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    RemoveWatermarkTask GetRemoveWatermarkTask() const;
+
+                    /**
+                     * 判断参数 RemoveWatermarkTask 是否已赋值
+                     * @return RemoveWatermarkTask 是否已赋值
+                     */
+                    bool RemoveWatermarkTaskHasBeenSet() const;
+
                 private:
 
                     /**
@@ -328,16 +329,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>SplitMedia: Video splitting</li>
 <li>ComposeMedia: Media file producing</li>
 <li>WechatPublish: WeChat publishing</li>
-<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
 <li>PullUpload: Pulling media files for upload</li>
 <li>FastClipMedia: Quick clipping</li>
-
-Task types for v2017:
-<li>Transcode: Transcoding</li>
-<li>SnapshotByTimeOffset: Screencapturing</li>
-<li>Concat: Video splicing</li>
-<li>Clip: Video clipping</li>
-<li>ImageSprites: Image sprite generating</li>
+<li>RemoveWatermarkTask: Watermark removal</li>
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;
@@ -452,6 +446,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     SnapshotByTimeOffsetTask2017 m_snapshotByTimeOffsetTask;
                     bool m_snapshotByTimeOffsetTaskHasBeenSet;
+
+                    /**
+                     * The information of a watermark removal task. This parameter is valid only if `TaskType` is `RemoveWatermark`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    RemoveWatermarkTask m_removeWatermarkTask;
+                    bool m_removeWatermarkTaskHasBeenSet;
 
                 };
             }

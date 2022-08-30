@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/vod/v20180717/model/SimpleHlsClipResponse.h>
+#include <tencentcloud/vod/v20180717/model/RemoveWatermarkResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,15 +23,12 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vod::V20180717::Model;
 using namespace std;
 
-SimpleHlsClipResponse::SimpleHlsClipResponse() :
-    m_urlHasBeenSet(false),
-    m_metaDataHasBeenSet(false),
-    m_fileIdHasBeenSet(false),
+RemoveWatermarkResponse::RemoveWatermarkResponse() :
     m_taskIdHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome SimpleHlsClipResponse::Deserialize(const string &payload)
+CoreInternalOutcome RemoveWatermarkResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -65,43 +62,6 @@ CoreInternalOutcome SimpleHlsClipResponse::Deserialize(const string &payload)
     }
 
 
-    if (rsp.HasMember("Url") && !rsp["Url"].IsNull())
-    {
-        if (!rsp["Url"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `Url` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_url = string(rsp["Url"].GetString());
-        m_urlHasBeenSet = true;
-    }
-
-    if (rsp.HasMember("MetaData") && !rsp["MetaData"].IsNull())
-    {
-        if (!rsp["MetaData"].IsObject())
-        {
-            return CoreInternalOutcome(Core::Error("response `MetaData` is not object type").SetRequestId(requestId));
-        }
-
-        CoreInternalOutcome outcome = m_metaData.Deserialize(rsp["MetaData"]);
-        if (!outcome.IsSuccess())
-        {
-            outcome.GetError().SetRequestId(requestId);
-            return outcome;
-        }
-
-        m_metaDataHasBeenSet = true;
-    }
-
-    if (rsp.HasMember("FileId") && !rsp["FileId"].IsNull())
-    {
-        if (!rsp["FileId"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `FileId` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_fileId = string(rsp["FileId"].GetString());
-        m_fileIdHasBeenSet = true;
-    }
-
     if (rsp.HasMember("TaskId") && !rsp["TaskId"].IsNull())
     {
         if (!rsp["TaskId"].IsString())
@@ -116,36 +76,11 @@ CoreInternalOutcome SimpleHlsClipResponse::Deserialize(const string &payload)
     return CoreInternalOutcome(true);
 }
 
-string SimpleHlsClipResponse::ToJsonString() const
+string RemoveWatermarkResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
-
-    if (m_urlHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Url";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_url.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_metaDataHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "MetaData";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
-        m_metaData.ToJsonObject(value[key.c_str()], allocator);
-    }
-
-    if (m_fileIdHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "FileId";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_fileId.c_str(), allocator).Move(), allocator);
-    }
 
     if (m_taskIdHasBeenSet)
     {
@@ -167,42 +102,12 @@ string SimpleHlsClipResponse::ToJsonString() const
 }
 
 
-string SimpleHlsClipResponse::GetUrl() const
-{
-    return m_url;
-}
-
-bool SimpleHlsClipResponse::UrlHasBeenSet() const
-{
-    return m_urlHasBeenSet;
-}
-
-MediaMetaData SimpleHlsClipResponse::GetMetaData() const
-{
-    return m_metaData;
-}
-
-bool SimpleHlsClipResponse::MetaDataHasBeenSet() const
-{
-    return m_metaDataHasBeenSet;
-}
-
-string SimpleHlsClipResponse::GetFileId() const
-{
-    return m_fileId;
-}
-
-bool SimpleHlsClipResponse::FileIdHasBeenSet() const
-{
-    return m_fileIdHasBeenSet;
-}
-
-string SimpleHlsClipResponse::GetTaskId() const
+string RemoveWatermarkResponse::GetTaskId() const
 {
     return m_taskId;
 }
 
-bool SimpleHlsClipResponse::TaskIdHasBeenSet() const
+bool RemoveWatermarkResponse::TaskIdHasBeenSet() const
 {
     return m_taskIdHasBeenSet;
 }

@@ -73,18 +73,52 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Format of generated subtitles file. If this parameter is left empty or a blank string is entered, no subtitles files will be generated. Valid value:
-<li>vtt: generates a WebVTT subtitles file.</li>
-                     * @return SubtitleFormat Format of generated subtitles file. If this parameter is left empty or a blank string is entered, no subtitles files will be generated. Valid value:
-<li>vtt: generates a WebVTT subtitles file.</li>
+                     * 获取The formats of the subtitle files generated. If this parameter is not passed or an empty string is passed in, no subtitles files will be generated. Valid values:
+<li>vtt</li>
+<li>srt</li>
+                     * @return SubtitleFormats The formats of the subtitle files generated. If this parameter is not passed or an empty string is passed in, no subtitles files will be generated. Valid values:
+<li>vtt</li>
+<li>srt</li>
+                     */
+                    std::vector<std::string> GetSubtitleFormats() const;
+
+                    /**
+                     * 设置The formats of the subtitle files generated. If this parameter is not passed or an empty string is passed in, no subtitles files will be generated. Valid values:
+<li>vtt</li>
+<li>srt</li>
+                     * @param SubtitleFormats The formats of the subtitle files generated. If this parameter is not passed or an empty string is passed in, no subtitles files will be generated. Valid values:
+<li>vtt</li>
+<li>srt</li>
+                     */
+                    void SetSubtitleFormats(const std::vector<std::string>& _subtitleFormats);
+
+                    /**
+                     * 判断参数 SubtitleFormats 是否已赋值
+                     * @return SubtitleFormats 是否已赋值
+                     */
+                    bool SubtitleFormatsHasBeenSet() const;
+
+                    /**
+                     * 获取The format of the subtitle file generated. If this parameter is not passed or an empty string is passed in, no subtitles files will be generated. Valid values:
+<li>vtt</li>
+<li>srt</li>
+<font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormats` instead.</font>
+                     * @return SubtitleFormat The format of the subtitle file generated. If this parameter is not passed or an empty string is passed in, no subtitles files will be generated. Valid values:
+<li>vtt</li>
+<li>srt</li>
+<font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormats` instead.</font>
                      */
                     std::string GetSubtitleFormat() const;
 
                     /**
-                     * 设置Format of generated subtitles file. If this parameter is left empty or a blank string is entered, no subtitles files will be generated. Valid value:
-<li>vtt: generates a WebVTT subtitles file.</li>
-                     * @param SubtitleFormat Format of generated subtitles file. If this parameter is left empty or a blank string is entered, no subtitles files will be generated. Valid value:
-<li>vtt: generates a WebVTT subtitles file.</li>
+                     * 设置The format of the subtitle file generated. If this parameter is not passed or an empty string is passed in, no subtitles files will be generated. Valid values:
+<li>vtt</li>
+<li>srt</li>
+<font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormats` instead.</font>
+                     * @param SubtitleFormat The format of the subtitle file generated. If this parameter is not passed or an empty string is passed in, no subtitles files will be generated. Valid values:
+<li>vtt</li>
+<li>srt</li>
+<font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormats` instead.</font>
                      */
                     void SetSubtitleFormat(const std::string& _subtitleFormat);
 
@@ -105,8 +139,18 @@ namespace TencentCloud
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Format of generated subtitles file. If this parameter is left empty or a blank string is entered, no subtitles files will be generated. Valid value:
-<li>vtt: generates a WebVTT subtitles file.</li>
+                     * The formats of the subtitle files generated. If this parameter is not passed or an empty string is passed in, no subtitles files will be generated. Valid values:
+<li>vtt</li>
+<li>srt</li>
+                     */
+                    std::vector<std::string> m_subtitleFormats;
+                    bool m_subtitleFormatsHasBeenSet;
+
+                    /**
+                     * The format of the subtitle file generated. If this parameter is not passed or an empty string is passed in, no subtitles files will be generated. Valid values:
+<li>vtt</li>
+<li>srt</li>
+<font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormats` instead.</font>
                      */
                     std::string m_subtitleFormat;
                     bool m_subtitleFormatHasBeenSet;

@@ -184,6 +184,36 @@ If this parameter is an empty string, it indicates that the video is not protect
                     bool DrmTypeHasBeenSet() const;
 
                     /**
+                     * 获取The provider of the DRM key. Valid values:
+<li>SDMC</li>
+<li>VOD</li>
+The default is `VOD`.
+                     * @return DrmKeyProvider The provider of the DRM key. Valid values:
+<li>SDMC</li>
+<li>VOD</li>
+The default is `VOD`.
+                     */
+                    std::string GetDrmKeyProvider() const;
+
+                    /**
+                     * 设置The provider of the DRM key. Valid values:
+<li>SDMC</li>
+<li>VOD</li>
+The default is `VOD`.
+                     * @param DrmKeyProvider The provider of the DRM key. Valid values:
+<li>SDMC</li>
+<li>VOD</li>
+The default is `VOD`.
+                     */
+                    void SetDrmKeyProvider(const std::string& _drmKeyProvider);
+
+                    /**
+                     * 判断参数 DrmKeyProvider 是否已赋值
+                     * @return DrmKeyProvider 是否已赋值
+                     */
+                    bool DrmKeyProviderHasBeenSet() const;
+
+                    /**
                      * 获取Parameter information of input stream for adaptive bitrate streaming. Up to 10 streams can be input.
                      * @return StreamInfos Parameter information of input stream for adaptive bitrate streaming. Up to 10 streams can be input.
                      */
@@ -333,6 +363,15 @@ If this parameter is an empty string, it indicates that the video is not protect
                      */
                     std::string m_drmType;
                     bool m_drmTypeHasBeenSet;
+
+                    /**
+                     * The provider of the DRM key. Valid values:
+<li>SDMC</li>
+<li>VOD</li>
+The default is `VOD`.
+                     */
+                    std::string m_drmKeyProvider;
+                    bool m_drmKeyProviderHasBeenSet;
 
                     /**
                      * Parameter information of input stream for adaptive bitrate streaming. Up to 10 streams can be input.

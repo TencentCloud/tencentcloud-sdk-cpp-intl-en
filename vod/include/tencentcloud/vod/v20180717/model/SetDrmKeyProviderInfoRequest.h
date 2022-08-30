@@ -14,13 +14,14 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_VOD_V20180717_MODEL_DESCRIBETASKDETAILREQUEST_H_
-#define TENCENTCLOUD_VOD_V20180717_MODEL_DESCRIBETASKDETAILREQUEST_H_
+#ifndef TENCENTCLOUD_VOD_V20180717_MODEL_SETDRMKEYPROVIDERINFOREQUEST_H_
+#define TENCENTCLOUD_VOD_V20180717_MODEL_SETDRMKEYPROVIDERINFOREQUEST_H_
 
 #include <string>
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/vod/v20180717/model/SDMCDrmKeyProviderInfo.h>
 
 
 namespace TencentCloud
@@ -32,33 +33,33 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * DescribeTaskDetail request structure.
+                * SetDrmKeyProviderInfo request structure.
                 */
-                class DescribeTaskDetailRequest : public AbstractModel
+                class SetDrmKeyProviderInfoRequest : public AbstractModel
                 {
                 public:
-                    DescribeTaskDetailRequest();
-                    ~DescribeTaskDetailRequest() = default;
+                    SetDrmKeyProviderInfoRequest();
+                    ~SetDrmKeyProviderInfoRequest() = default;
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Video processing task ID.
-                     * @return TaskId Video processing task ID.
+                     * 获取The DRM key information provided by SDMC.
+                     * @return SDMCInfo The DRM key information provided by SDMC.
                      */
-                    std::string GetTaskId() const;
+                    SDMCDrmKeyProviderInfo GetSDMCInfo() const;
 
                     /**
-                     * 设置Video processing task ID.
-                     * @param TaskId Video processing task ID.
+                     * 设置The DRM key information provided by SDMC.
+                     * @param SDMCInfo The DRM key information provided by SDMC.
                      */
-                    void SetTaskId(const std::string& _taskId);
+                    void SetSDMCInfo(const SDMCDrmKeyProviderInfo& _sDMCInfo);
 
                     /**
-                     * 判断参数 TaskId 是否已赋值
-                     * @return TaskId 是否已赋值
+                     * 判断参数 SDMCInfo 是否已赋值
+                     * @return SDMCInfo 是否已赋值
                      */
-                    bool TaskIdHasBeenSet() const;
+                    bool SDMCInfoHasBeenSet() const;
 
                     /**
                      * 获取<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
@@ -81,10 +82,10 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Video processing task ID.
+                     * The DRM key information provided by SDMC.
                      */
-                    std::string m_taskId;
-                    bool m_taskIdHasBeenSet;
+                    SDMCDrmKeyProviderInfo m_sDMCInfo;
+                    bool m_sDMCInfoHasBeenSet;
 
                     /**
                      * <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
@@ -98,4 +99,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_VOD_V20180717_MODEL_DESCRIBETASKDETAILREQUEST_H_
+#endif // !TENCENTCLOUD_VOD_V20180717_MODEL_SETDRMKEYPROVIDERINFOREQUEST_H_

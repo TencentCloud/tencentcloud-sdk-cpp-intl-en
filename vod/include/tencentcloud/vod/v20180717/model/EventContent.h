@@ -38,6 +38,7 @@
 #include <tencentcloud/vod/v20180717/model/SnapshotByTimeOffsetTask2017.h>
 #include <tencentcloud/vod/v20180717/model/WechatPublishTask.h>
 #include <tencentcloud/vod/v20180717/model/WechatMiniProgramPublishTask.h>
+#include <tencentcloud/vod/v20180717/model/RemoveWatermarkTask.h>
 #include <tencentcloud/vod/v20180717/model/RestoreMediaTask.h>
 
 
@@ -466,6 +467,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool WechatMiniProgramPublishCompleteEventHasBeenSet() const;
 
                     /**
+                     * 获取Watermark removal completion event. This parameter is valid only if `TaskType` is `RemoveWatermark`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return RemoveWatermarkCompleteEvent Watermark removal completion event. This parameter is valid only if `TaskType` is `RemoveWatermark`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    RemoveWatermarkTask GetRemoveWatermarkCompleteEvent() const;
+
+                    /**
+                     * 设置Watermark removal completion event. This parameter is valid only if `TaskType` is `RemoveWatermark`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param RemoveWatermarkCompleteEvent Watermark removal completion event. This parameter is valid only if `TaskType` is `RemoveWatermark`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetRemoveWatermarkCompleteEvent(const RemoveWatermarkTask& _removeWatermarkCompleteEvent);
+
+                    /**
+                     * 判断参数 RemoveWatermarkCompleteEvent 是否已赋值
+                     * @return RemoveWatermarkCompleteEvent 是否已赋值
+                     */
+                    bool RemoveWatermarkCompleteEventHasBeenSet() const;
+
+                    /**
                      * 获取Callback for video retrieval. This parameter is valid when the event type is `RestoreMediaComplete`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return RestoreMediaCompleteEvent Callback for video retrieval. This parameter is valid when the event type is `RestoreMediaComplete`.
@@ -613,6 +636,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     WechatMiniProgramPublishTask m_wechatMiniProgramPublishCompleteEvent;
                     bool m_wechatMiniProgramPublishCompleteEventHasBeenSet;
+
+                    /**
+                     * Watermark removal completion event. This parameter is valid only if `TaskType` is `RemoveWatermark`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    RemoveWatermarkTask m_removeWatermarkCompleteEvent;
+                    bool m_removeWatermarkCompleteEventHasBeenSet;
 
                     /**
                      * Callback for video retrieval. This parameter is valid when the event type is `RestoreMediaComplete`.

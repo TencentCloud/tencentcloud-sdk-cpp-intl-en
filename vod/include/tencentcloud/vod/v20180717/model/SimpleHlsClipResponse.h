@@ -80,6 +80,18 @@ namespace TencentCloud
                      */
                     bool FileIdHasBeenSet() const;
 
+                    /**
+                     * 获取The ID of the task flow to execute on the video clipped for persistent storage.
+                     * @return TaskId The ID of the task flow to execute on the video clipped for persistent storage.
+                     */
+                    std::string GetTaskId() const;
+
+                    /**
+                     * 判断参数 TaskId 是否已赋值
+                     * @return TaskId 是否已赋值
+                     */
+                    bool TaskIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -99,6 +111,12 @@ namespace TencentCloud
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
+
+                    /**
+                     * The ID of the task flow to execute on the video clipped for persistent storage.
+                     */
+                    std::string m_taskId;
+                    bool m_taskIdHasBeenSet;
 
                 };
             }

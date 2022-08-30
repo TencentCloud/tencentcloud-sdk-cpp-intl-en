@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/vod/v20180717/model/TrtcRecordInfo.h>
 
 
 namespace TencentCloud
@@ -106,6 +107,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool SourceContextHasBeenSet() const;
 
+                    /**
+                     * 获取The TRTC recording information.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TrtcRecordInfo The TRTC recording information.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    TrtcRecordInfo GetTrtcRecordInfo() const;
+
+                    /**
+                     * 设置The TRTC recording information.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param TrtcRecordInfo The TRTC recording information.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetTrtcRecordInfo(const TrtcRecordInfo& _trtcRecordInfo);
+
+                    /**
+                     * 判断参数 TrtcRecordInfo 是否已赋值
+                     * @return TrtcRecordInfo 是否已赋值
+                     */
+                    bool TrtcRecordInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -125,6 +148,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_sourceContext;
                     bool m_sourceContextHasBeenSet;
+
+                    /**
+                     * The TRTC recording information.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    TrtcRecordInfo m_trtcRecordInfo;
+                    bool m_trtcRecordInfoHasBeenSet;
 
                 };
             }
