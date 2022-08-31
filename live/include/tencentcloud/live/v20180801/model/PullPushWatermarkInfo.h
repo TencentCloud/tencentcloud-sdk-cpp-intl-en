@@ -35,8 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Watermark information
-
+                * The watermark configuration for a relay task.
                 */
                 class PullPushWatermarkInfo : public AbstractModel
                 {
@@ -48,32 +47,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Watermark ID.
-                     * @return WatermarkId Watermark ID.
-                     */
-                    int64_t GetWatermarkId() const;
-
-                    /**
-                     * 设置Watermark ID.
-                     * @param WatermarkId Watermark ID.
-                     */
-                    void SetWatermarkId(const int64_t& _watermarkId);
-
-                    /**
-                     * 判断参数 WatermarkId 是否已赋值
-                     * @return WatermarkId 是否已赋值
-                     */
-                    bool WatermarkIdHasBeenSet() const;
-
-                    /**
-                     * 获取Watermark image URL.
-                     * @return PictureUrl Watermark image URL.
+                     * 获取The watermark image URL.
+Characters not allowed:
+;(){}$>`#"'|
+                     * @return PictureUrl The watermark image URL.
+Characters not allowed:
+;(){}$>`#"'|
                      */
                     std::string GetPictureUrl() const;
 
                     /**
-                     * 设置Watermark image URL.
-                     * @param PictureUrl Watermark image URL.
+                     * 设置The watermark image URL.
+Characters not allowed:
+;(){}$>`#"'|
+                     * @param PictureUrl The watermark image URL.
+Characters not allowed:
+;(){}$>`#"'|
                      */
                     void SetPictureUrl(const std::string& _pictureUrl);
 
@@ -84,14 +73,14 @@ namespace TencentCloud
                     bool PictureUrlHasBeenSet() const;
 
                     /**
-                     * 获取Display position: X-axis offset.
-                     * @return XPosition Display position: X-axis offset.
+                     * 获取The horizontal offset (%) of the watermark. The default value is 0.
+                     * @return XPosition The horizontal offset (%) of the watermark. The default value is 0.
                      */
                     int64_t GetXPosition() const;
 
                     /**
-                     * 设置Display position: X-axis offset.
-                     * @param XPosition Display position: X-axis offset.
+                     * 设置The horizontal offset (%) of the watermark. The default value is 0.
+                     * @param XPosition The horizontal offset (%) of the watermark. The default value is 0.
                      */
                     void SetXPosition(const int64_t& _xPosition);
 
@@ -102,14 +91,14 @@ namespace TencentCloud
                     bool XPositionHasBeenSet() const;
 
                     /**
-                     * 获取Display position: Y-axis offset.
-                     * @return YPosition Display position: Y-axis offset.
+                     * 获取The vertical offset (%) of the watermark. The default value is 0.
+                     * @return YPosition The vertical offset (%) of the watermark. The default value is 0.
                      */
                     int64_t GetYPosition() const;
 
                     /**
-                     * 设置Display position: Y-axis offset.
-                     * @param YPosition Display position: Y-axis offset.
+                     * 设置The vertical offset (%) of the watermark. The default value is 0.
+                     * @param YPosition The vertical offset (%) of the watermark. The default value is 0.
                      */
                     void SetYPosition(const int64_t& _yPosition);
 
@@ -120,68 +109,14 @@ namespace TencentCloud
                     bool YPositionHasBeenSet() const;
 
                     /**
-                     * 获取Watermark name.
-                     * @return WatermarkName Watermark name.
-                     */
-                    std::string GetWatermarkName() const;
-
-                    /**
-                     * 设置Watermark name.
-                     * @param WatermarkName Watermark name.
-                     */
-                    void SetWatermarkName(const std::string& _watermarkName);
-
-                    /**
-                     * 判断参数 WatermarkName 是否已赋值
-                     * @return WatermarkName 是否已赋值
-                     */
-                    bool WatermarkNameHasBeenSet() const;
-
-                    /**
-                     * 获取Current status. 0: not used. 1: in use.
-                     * @return Status Current status. 0: not used. 1: in use.
-                     */
-                    int64_t GetStatus() const;
-
-                    /**
-                     * 设置Current status. 0: not used. 1: in use.
-                     * @param Status Current status. 0: not used. 1: in use.
-                     */
-                    void SetStatus(const int64_t& _status);
-
-                    /**
-                     * 判断参数 Status 是否已赋值
-                     * @return Status 是否已赋值
-                     */
-                    bool StatusHasBeenSet() const;
-
-                    /**
-                     * 获取Creation time.
-                     * @return CreateTime Creation time.
-                     */
-                    std::string GetCreateTime() const;
-
-                    /**
-                     * 设置Creation time.
-                     * @param CreateTime Creation time.
-                     */
-                    void SetCreateTime(const std::string& _createTime);
-
-                    /**
-                     * 判断参数 CreateTime 是否已赋值
-                     * @return CreateTime 是否已赋值
-                     */
-                    bool CreateTimeHasBeenSet() const;
-
-                    /**
-                     * 获取Watermark width
-                     * @return Width Watermark width
+                     * 获取The watermark width as a percentage of the video width. To avoid distorted images, we recommend you specify only the width or height so that the other side can be scaled proportionally. By default, the original width of the watermark image is used.
+                     * @return Width The watermark width as a percentage of the video width. To avoid distorted images, we recommend you specify only the width or height so that the other side can be scaled proportionally. By default, the original width of the watermark image is used.
                      */
                     int64_t GetWidth() const;
 
                     /**
-                     * 设置Watermark width
-                     * @param Width Watermark width
+                     * 设置The watermark width as a percentage of the video width. To avoid distorted images, we recommend you specify only the width or height so that the other side can be scaled proportionally. By default, the original width of the watermark image is used.
+                     * @param Width The watermark width as a percentage of the video width. To avoid distorted images, we recommend you specify only the width or height so that the other side can be scaled proportionally. By default, the original width of the watermark image is used.
                      */
                     void SetWidth(const int64_t& _width);
 
@@ -192,14 +127,14 @@ namespace TencentCloud
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取Watermark height
-                     * @return Height Watermark height
+                     * 获取The watermark height as a percentage of the video height. To avoid distorted images, we recommend you specify only the width or height so that the other side can be scaled proportionally. By default, the original height of the watermark image is used.
+                     * @return Height The watermark height as a percentage of the video height. To avoid distorted images, we recommend you specify only the width or height so that the other side can be scaled proportionally. By default, the original height of the watermark image is used.
                      */
                     int64_t GetHeight() const;
 
                     /**
-                     * 设置Watermark height
-                     * @param Height Watermark height
+                     * 设置The watermark height as a percentage of the video height. To avoid distorted images, we recommend you specify only the width or height so that the other side can be scaled proportionally. By default, the original height of the watermark image is used.
+                     * @param Height The watermark height as a percentage of the video height. To avoid distorted images, we recommend you specify only the width or height so that the other side can be scaled proportionally. By default, the original height of the watermark image is used.
                      */
                     void SetHeight(const int64_t& _height);
 
@@ -209,61 +144,83 @@ namespace TencentCloud
                      */
                     bool HeightHasBeenSet() const;
 
+                    /**
+                     * 获取The origin. The default value is 0.
+0: Top left corner
+1: Top right corner
+2: Bottom right corner
+3: Bottom left corner
+                     * @return Location The origin. The default value is 0.
+0: Top left corner
+1: Top right corner
+2: Bottom right corner
+3: Bottom left corner
+                     */
+                    int64_t GetLocation() const;
+
+                    /**
+                     * 设置The origin. The default value is 0.
+0: Top left corner
+1: Top right corner
+2: Bottom right corner
+3: Bottom left corner
+                     * @param Location The origin. The default value is 0.
+0: Top left corner
+1: Top right corner
+2: Bottom right corner
+3: Bottom left corner
+                     */
+                    void SetLocation(const int64_t& _location);
+
+                    /**
+                     * 判断参数 Location 是否已赋值
+                     * @return Location 是否已赋值
+                     */
+                    bool LocationHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Watermark ID.
-                     */
-                    int64_t m_watermarkId;
-                    bool m_watermarkIdHasBeenSet;
-
-                    /**
-                     * Watermark image URL.
+                     * The watermark image URL.
+Characters not allowed:
+;(){}$>`#"'|
                      */
                     std::string m_pictureUrl;
                     bool m_pictureUrlHasBeenSet;
 
                     /**
-                     * Display position: X-axis offset.
+                     * The horizontal offset (%) of the watermark. The default value is 0.
                      */
                     int64_t m_xPosition;
                     bool m_xPositionHasBeenSet;
 
                     /**
-                     * Display position: Y-axis offset.
+                     * The vertical offset (%) of the watermark. The default value is 0.
                      */
                     int64_t m_yPosition;
                     bool m_yPositionHasBeenSet;
 
                     /**
-                     * Watermark name.
-                     */
-                    std::string m_watermarkName;
-                    bool m_watermarkNameHasBeenSet;
-
-                    /**
-                     * Current status. 0: not used. 1: in use.
-                     */
-                    int64_t m_status;
-                    bool m_statusHasBeenSet;
-
-                    /**
-                     * Creation time.
-                     */
-                    std::string m_createTime;
-                    bool m_createTimeHasBeenSet;
-
-                    /**
-                     * Watermark width
+                     * The watermark width as a percentage of the video width. To avoid distorted images, we recommend you specify only the width or height so that the other side can be scaled proportionally. By default, the original width of the watermark image is used.
                      */
                     int64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * Watermark height
+                     * The watermark height as a percentage of the video height. To avoid distorted images, we recommend you specify only the width or height so that the other side can be scaled proportionally. By default, the original height of the watermark image is used.
                      */
                     int64_t m_height;
                     bool m_heightHasBeenSet;
+
+                    /**
+                     * The origin. The default value is 0.
+0: Top left corner
+1: Top right corner
+2: Bottom right corner
+3: Bottom left corner
+                     */
+                    int64_t m_location;
+                    bool m_locationHasBeenSet;
 
                 };
             }

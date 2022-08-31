@@ -21,15 +21,12 @@ using namespace TencentCloud::Live::V20180801::Model;
 using namespace std;
 
 PullPushWatermarkInfo::PullPushWatermarkInfo() :
-    m_watermarkIdHasBeenSet(false),
     m_pictureUrlHasBeenSet(false),
     m_xPositionHasBeenSet(false),
     m_yPositionHasBeenSet(false),
-    m_watermarkNameHasBeenSet(false),
-    m_statusHasBeenSet(false),
-    m_createTimeHasBeenSet(false),
     m_widthHasBeenSet(false),
-    m_heightHasBeenSet(false)
+    m_heightHasBeenSet(false),
+    m_locationHasBeenSet(false)
 {
 }
 
@@ -37,16 +34,6 @@ CoreInternalOutcome PullPushWatermarkInfo::Deserialize(const rapidjson::Value &v
 {
     string requestId = "";
 
-
-    if (value.HasMember("WatermarkId") && !value["WatermarkId"].IsNull())
-    {
-        if (!value["WatermarkId"].IsInt64())
-        {
-            return CoreInternalOutcome(Core::Error("response `PullPushWatermarkInfo.WatermarkId` IsInt64=false incorrectly").SetRequestId(requestId));
-        }
-        m_watermarkId = value["WatermarkId"].GetInt64();
-        m_watermarkIdHasBeenSet = true;
-    }
 
     if (value.HasMember("PictureUrl") && !value["PictureUrl"].IsNull())
     {
@@ -78,36 +65,6 @@ CoreInternalOutcome PullPushWatermarkInfo::Deserialize(const rapidjson::Value &v
         m_yPositionHasBeenSet = true;
     }
 
-    if (value.HasMember("WatermarkName") && !value["WatermarkName"].IsNull())
-    {
-        if (!value["WatermarkName"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `PullPushWatermarkInfo.WatermarkName` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_watermarkName = string(value["WatermarkName"].GetString());
-        m_watermarkNameHasBeenSet = true;
-    }
-
-    if (value.HasMember("Status") && !value["Status"].IsNull())
-    {
-        if (!value["Status"].IsInt64())
-        {
-            return CoreInternalOutcome(Core::Error("response `PullPushWatermarkInfo.Status` IsInt64=false incorrectly").SetRequestId(requestId));
-        }
-        m_status = value["Status"].GetInt64();
-        m_statusHasBeenSet = true;
-    }
-
-    if (value.HasMember("CreateTime") && !value["CreateTime"].IsNull())
-    {
-        if (!value["CreateTime"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `PullPushWatermarkInfo.CreateTime` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_createTime = string(value["CreateTime"].GetString());
-        m_createTimeHasBeenSet = true;
-    }
-
     if (value.HasMember("Width") && !value["Width"].IsNull())
     {
         if (!value["Width"].IsInt64())
@@ -128,20 +85,22 @@ CoreInternalOutcome PullPushWatermarkInfo::Deserialize(const rapidjson::Value &v
         m_heightHasBeenSet = true;
     }
 
+    if (value.HasMember("Location") && !value["Location"].IsNull())
+    {
+        if (!value["Location"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `PullPushWatermarkInfo.Location` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_location = value["Location"].GetInt64();
+        m_locationHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
 void PullPushWatermarkInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
 {
-
-    if (m_watermarkIdHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "WatermarkId";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_watermarkId, allocator);
-    }
 
     if (m_pictureUrlHasBeenSet)
     {
@@ -167,30 +126,6 @@ void PullPushWatermarkInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Doc
         value.AddMember(iKey, m_yPosition, allocator);
     }
 
-    if (m_watermarkNameHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "WatermarkName";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_watermarkName.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_statusHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Status";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_status, allocator);
-    }
-
-    if (m_createTimeHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "CreateTime";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_createTime.c_str(), allocator).Move(), allocator);
-    }
-
     if (m_widthHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -207,24 +142,16 @@ void PullPushWatermarkInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Doc
         value.AddMember(iKey, m_height, allocator);
     }
 
+    if (m_locationHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Location";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_location, allocator);
+    }
+
 }
 
-
-int64_t PullPushWatermarkInfo::GetWatermarkId() const
-{
-    return m_watermarkId;
-}
-
-void PullPushWatermarkInfo::SetWatermarkId(const int64_t& _watermarkId)
-{
-    m_watermarkId = _watermarkId;
-    m_watermarkIdHasBeenSet = true;
-}
-
-bool PullPushWatermarkInfo::WatermarkIdHasBeenSet() const
-{
-    return m_watermarkIdHasBeenSet;
-}
 
 string PullPushWatermarkInfo::GetPictureUrl() const
 {
@@ -274,54 +201,6 @@ bool PullPushWatermarkInfo::YPositionHasBeenSet() const
     return m_yPositionHasBeenSet;
 }
 
-string PullPushWatermarkInfo::GetWatermarkName() const
-{
-    return m_watermarkName;
-}
-
-void PullPushWatermarkInfo::SetWatermarkName(const string& _watermarkName)
-{
-    m_watermarkName = _watermarkName;
-    m_watermarkNameHasBeenSet = true;
-}
-
-bool PullPushWatermarkInfo::WatermarkNameHasBeenSet() const
-{
-    return m_watermarkNameHasBeenSet;
-}
-
-int64_t PullPushWatermarkInfo::GetStatus() const
-{
-    return m_status;
-}
-
-void PullPushWatermarkInfo::SetStatus(const int64_t& _status)
-{
-    m_status = _status;
-    m_statusHasBeenSet = true;
-}
-
-bool PullPushWatermarkInfo::StatusHasBeenSet() const
-{
-    return m_statusHasBeenSet;
-}
-
-string PullPushWatermarkInfo::GetCreateTime() const
-{
-    return m_createTime;
-}
-
-void PullPushWatermarkInfo::SetCreateTime(const string& _createTime)
-{
-    m_createTime = _createTime;
-    m_createTimeHasBeenSet = true;
-}
-
-bool PullPushWatermarkInfo::CreateTimeHasBeenSet() const
-{
-    return m_createTimeHasBeenSet;
-}
-
 int64_t PullPushWatermarkInfo::GetWidth() const
 {
     return m_width;
@@ -352,5 +231,21 @@ void PullPushWatermarkInfo::SetHeight(const int64_t& _height)
 bool PullPushWatermarkInfo::HeightHasBeenSet() const
 {
     return m_heightHasBeenSet;
+}
+
+int64_t PullPushWatermarkInfo::GetLocation() const
+{
+    return m_location;
+}
+
+void PullPushWatermarkInfo::SetLocation(const int64_t& _location)
+{
+    m_location = _location;
+    m_locationHasBeenSet = true;
+}
+
+bool PullPushWatermarkInfo::LocationHasBeenSet() const
+{
+    return m_locationHasBeenSet;
 }
 

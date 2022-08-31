@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/live/v20180801/model/RecentPullInfo.h>
+#include <tencentcloud/live/v20180801/model/PullPushWatermarkInfo.h>
 
 
 namespace TencentCloud
@@ -645,6 +646,80 @@ The information includes the source URL, offset, and report time.
                      */
                     bool CommentHasBeenSet() const;
 
+                    /**
+                     * 获取The backup source type. Valid values:
+PullLivePushLive: Live streaming
+PullVodPushLive: Video files
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return BackupSourceType The backup source type. Valid values:
+PullLivePushLive: Live streaming
+PullVodPushLive: Video files
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetBackupSourceType() const;
+
+                    /**
+                     * 设置The backup source type. Valid values:
+PullLivePushLive: Live streaming
+PullVodPushLive: Video files
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param BackupSourceType The backup source type. Valid values:
+PullLivePushLive: Live streaming
+PullVodPushLive: Video files
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetBackupSourceType(const std::string& _backupSourceType);
+
+                    /**
+                     * 判断参数 BackupSourceType 是否已赋值
+                     * @return BackupSourceType 是否已赋值
+                     */
+                    bool BackupSourceTypeHasBeenSet() const;
+
+                    /**
+                     * 获取The URL of the backup source.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return BackupSourceUrl The URL of the backup source.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetBackupSourceUrl() const;
+
+                    /**
+                     * 设置The URL of the backup source.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param BackupSourceUrl The URL of the backup source.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetBackupSourceUrl(const std::string& _backupSourceUrl);
+
+                    /**
+                     * 判断参数 BackupSourceUrl 是否已赋值
+                     * @return BackupSourceUrl 是否已赋值
+                     */
+                    bool BackupSourceUrlHasBeenSet() const;
+
+                    /**
+                     * 获取The information of watermarks to add.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return WatermarkList The information of watermarks to add.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<PullPushWatermarkInfo> GetWatermarkList() const;
+
+                    /**
+                     * 设置The information of watermarks to add.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param WatermarkList The information of watermarks to add.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetWatermarkList(const std::vector<PullPushWatermarkInfo>& _watermarkList);
+
+                    /**
+                     * 判断参数 WatermarkList 是否已赋值
+                     * @return WatermarkList 是否已赋值
+                     */
+                    bool WatermarkListHasBeenSet() const;
+
                 private:
 
                     /**
@@ -830,6 +905,29 @@ The information includes the source URL, offset, and report time.
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
+
+                    /**
+                     * The backup source type. Valid values:
+PullLivePushLive: Live streaming
+PullVodPushLive: Video files
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_backupSourceType;
+                    bool m_backupSourceTypeHasBeenSet;
+
+                    /**
+                     * The URL of the backup source.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_backupSourceUrl;
+                    bool m_backupSourceUrlHasBeenSet;
+
+                    /**
+                     * The information of watermarks to add.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<PullPushWatermarkInfo> m_watermarkList;
+                    bool m_watermarkListHasBeenSet;
 
                 };
             }

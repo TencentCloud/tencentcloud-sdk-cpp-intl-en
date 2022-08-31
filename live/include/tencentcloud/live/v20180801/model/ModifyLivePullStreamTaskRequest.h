@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/live/v20180801/model/PullPushWatermarkInfo.h>
 
 
 namespace TencentCloud
@@ -456,6 +457,56 @@ You can specify only one backup source URL.
                      */
                     bool BackupSourceUrlHasBeenSet() const;
 
+                    /**
+                     * 获取The information of watermarks to add.
+Notes:
+1. You can add up to four watermarks to different locations of the video.
+2. Make sure you use publicly accessible URLs for the watermark images.
+3. Supported image formats include PNG and JPG.
+4. If you change the watermark configuration of a task whose source is a list of video files, the new configuration will take effect for the next file in the list.
+5. If you change the watermark configuration of a task whose source is a live stream, the new configuration will take effect immediately.
+6. If you want to stop using watermarks, pass in an empty array.
+7. Currently, animated watermarks are not supported.
+                     * @return WatermarkList The information of watermarks to add.
+Notes:
+1. You can add up to four watermarks to different locations of the video.
+2. Make sure you use publicly accessible URLs for the watermark images.
+3. Supported image formats include PNG and JPG.
+4. If you change the watermark configuration of a task whose source is a list of video files, the new configuration will take effect for the next file in the list.
+5. If you change the watermark configuration of a task whose source is a live stream, the new configuration will take effect immediately.
+6. If you want to stop using watermarks, pass in an empty array.
+7. Currently, animated watermarks are not supported.
+                     */
+                    std::vector<PullPushWatermarkInfo> GetWatermarkList() const;
+
+                    /**
+                     * 设置The information of watermarks to add.
+Notes:
+1. You can add up to four watermarks to different locations of the video.
+2. Make sure you use publicly accessible URLs for the watermark images.
+3. Supported image formats include PNG and JPG.
+4. If you change the watermark configuration of a task whose source is a list of video files, the new configuration will take effect for the next file in the list.
+5. If you change the watermark configuration of a task whose source is a live stream, the new configuration will take effect immediately.
+6. If you want to stop using watermarks, pass in an empty array.
+7. Currently, animated watermarks are not supported.
+                     * @param WatermarkList The information of watermarks to add.
+Notes:
+1. You can add up to four watermarks to different locations of the video.
+2. Make sure you use publicly accessible URLs for the watermark images.
+3. Supported image formats include PNG and JPG.
+4. If you change the watermark configuration of a task whose source is a list of video files, the new configuration will take effect for the next file in the list.
+5. If you change the watermark configuration of a task whose source is a live stream, the new configuration will take effect immediately.
+6. If you want to stop using watermarks, pass in an empty array.
+7. Currently, animated watermarks are not supported.
+                     */
+                    void SetWatermarkList(const std::vector<PullPushWatermarkInfo>& _watermarkList);
+
+                    /**
+                     * 判断参数 WatermarkList 是否已赋值
+                     * @return WatermarkList 是否已赋值
+                     */
+                    bool WatermarkListHasBeenSet() const;
+
                 private:
 
                     /**
@@ -583,6 +634,20 @@ You can specify only one backup source URL.
                      */
                     std::string m_backupSourceUrl;
                     bool m_backupSourceUrlHasBeenSet;
+
+                    /**
+                     * The information of watermarks to add.
+Notes:
+1. You can add up to four watermarks to different locations of the video.
+2. Make sure you use publicly accessible URLs for the watermark images.
+3. Supported image formats include PNG and JPG.
+4. If you change the watermark configuration of a task whose source is a list of video files, the new configuration will take effect for the next file in the list.
+5. If you change the watermark configuration of a task whose source is a live stream, the new configuration will take effect immediately.
+6. If you want to stop using watermarks, pass in an empty array.
+7. Currently, animated watermarks are not supported.
+                     */
+                    std::vector<PullPushWatermarkInfo> m_watermarkList;
+                    bool m_watermarkListHasBeenSet;
 
                 };
             }

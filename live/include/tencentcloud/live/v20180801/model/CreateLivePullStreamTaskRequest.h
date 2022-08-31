@@ -612,14 +612,30 @@ You can specify only one backup source URL.
                     bool BackupSourceUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return WatermarkList 
+                     * 获取The information of watermarks to add.
+Notes:
+1. You can add up to four watermarks to different locations of the video.
+2. Make sure you use publicly accessible URLs for the watermark images.
+3. Supported image formats include PNG, JPG, and GIF.
+                     * @return WatermarkList The information of watermarks to add.
+Notes:
+1. You can add up to four watermarks to different locations of the video.
+2. Make sure you use publicly accessible URLs for the watermark images.
+3. Supported image formats include PNG, JPG, and GIF.
                      */
                     std::vector<PullPushWatermarkInfo> GetWatermarkList() const;
 
                     /**
-                     * 设置
-                     * @param WatermarkList 
+                     * 设置The information of watermarks to add.
+Notes:
+1. You can add up to four watermarks to different locations of the video.
+2. Make sure you use publicly accessible URLs for the watermark images.
+3. Supported image formats include PNG, JPG, and GIF.
+                     * @param WatermarkList The information of watermarks to add.
+Notes:
+1. You can add up to four watermarks to different locations of the video.
+2. Make sure you use publicly accessible URLs for the watermark images.
+3. Supported image formats include PNG, JPG, and GIF.
                      */
                     void SetWatermarkList(const std::vector<PullPushWatermarkInfo>& _watermarkList);
 
@@ -801,7 +817,11 @@ You can specify only one backup source URL.
                     bool m_backupSourceUrlHasBeenSet;
 
                     /**
-                     * 
+                     * The information of watermarks to add.
+Notes:
+1. You can add up to four watermarks to different locations of the video.
+2. Make sure you use publicly accessible URLs for the watermark images.
+3. Supported image formats include PNG, JPG, and GIF.
                      */
                     std::vector<PullPushWatermarkInfo> m_watermarkList;
                     bool m_watermarkListHasBeenSet;
