@@ -21,6 +21,8 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/teo/v20220106/model/Tag.h>
+#include <tencentcloud/teo/v20220106/model/Resource.h>
 #include <tencentcloud/teo/v20220106/model/VanityNameServers.h>
 #include <tencentcloud/teo/v20220106/model/VanityNameServersIps.h>
 
@@ -146,58 +148,6 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool PausedHasBeenSet() const;
 
                     /**
-                     * 获取Site creation date
-                     * @return CreatedOn Site creation date
-                     */
-                    std::string GetCreatedOn() const;
-
-                    /**
-                     * 判断参数 CreatedOn 是否已赋值
-                     * @return CreatedOn 是否已赋值
-                     */
-                    bool CreatedOnHasBeenSet() const;
-
-                    /**
-                     * 获取Site modification date
-                     * @return ModifiedOn Site modification date
-                     */
-                    std::string GetModifiedOn() const;
-
-                    /**
-                     * 判断参数 ModifiedOn 是否已赋值
-                     * @return ModifiedOn 是否已赋值
-                     */
-                    bool ModifiedOnHasBeenSet() const;
-
-                    /**
-                     * 获取User-defined name server information
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return VanityNameServers User-defined name server information
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     */
-                    VanityNameServers GetVanityNameServers() const;
-
-                    /**
-                     * 判断参数 VanityNameServers 是否已赋值
-                     * @return VanityNameServers 是否已赋值
-                     */
-                    bool VanityNameServersHasBeenSet() const;
-
-                    /**
-                     * 获取User-defined name server IP information
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return VanityNameServersIps User-defined name server IP information
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     */
-                    std::vector<VanityNameServersIps> GetVanityNameServersIps() const;
-
-                    /**
-                     * 判断参数 VanityNameServersIps 是否已赋值
-                     * @return VanityNameServersIps 是否已赋值
-                     */
-                    bool VanityNameServersIpsHasBeenSet() const;
-
-                    /**
                      * 获取Specifies whether to enable CNAME acceleration
 - `enabled`: Enable
 - `disabled`: Disable
@@ -230,6 +180,98 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      * @return CnameStatus 是否已赋值
                      */
                     bool CnameStatusHasBeenSet() const;
+
+                    /**
+                     * 获取Resource tag
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Tags Resource tag
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return Area 
+                     */
+                    std::string GetArea() const;
+
+                    /**
+                     * 判断参数 Area 是否已赋值
+                     * @return Area 是否已赋值
+                     */
+                    bool AreaHasBeenSet() const;
+
+                    /**
+                     * 获取Billable resource
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Resources Billable resource
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<Resource> GetResources() const;
+
+                    /**
+                     * 判断参数 Resources 是否已赋值
+                     * @return Resources 是否已赋值
+                     */
+                    bool ResourcesHasBeenSet() const;
+
+                    /**
+                     * 获取Site modification date
+                     * @return ModifiedOn Site modification date
+                     */
+                    std::string GetModifiedOn() const;
+
+                    /**
+                     * 判断参数 ModifiedOn 是否已赋值
+                     * @return ModifiedOn 是否已赋值
+                     */
+                    bool ModifiedOnHasBeenSet() const;
+
+                    /**
+                     * 获取Site creation date
+                     * @return CreatedOn Site creation date
+                     */
+                    std::string GetCreatedOn() const;
+
+                    /**
+                     * 判断参数 CreatedOn 是否已赋值
+                     * @return CreatedOn 是否已赋值
+                     */
+                    bool CreatedOnHasBeenSet() const;
+
+                    /**
+                     * 获取User-defined name server information
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return VanityNameServers User-defined name server information
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    VanityNameServers GetVanityNameServers() const;
+
+                    /**
+                     * 判断参数 VanityNameServers 是否已赋值
+                     * @return VanityNameServers 是否已赋值
+                     */
+                    bool VanityNameServersHasBeenSet() const;
+
+                    /**
+                     * 获取User-defined name server IP information
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return VanityNameServersIps User-defined name server IP information
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::vector<VanityNameServersIps> GetVanityNameServersIps() const;
+
+                    /**
+                     * 判断参数 VanityNameServersIps 是否已赋值
+                     * @return VanityNameServersIps 是否已赋值
+                     */
+                    bool VanityNameServersIpsHasBeenSet() const;
 
                 private:
 
@@ -284,32 +326,6 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_pausedHasBeenSet;
 
                     /**
-                     * Site creation date
-                     */
-                    std::string m_createdOn;
-                    bool m_createdOnHasBeenSet;
-
-                    /**
-                     * Site modification date
-                     */
-                    std::string m_modifiedOn;
-                    bool m_modifiedOnHasBeenSet;
-
-                    /**
-                     * User-defined name server information
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     */
-                    VanityNameServers m_vanityNameServers;
-                    bool m_vanityNameServersHasBeenSet;
-
-                    /**
-                     * User-defined name server IP information
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     */
-                    std::vector<VanityNameServersIps> m_vanityNameServersIps;
-                    bool m_vanityNameServersIpsHasBeenSet;
-
-                    /**
                      * Specifies whether to enable CNAME acceleration
 - `enabled`: Enable
 - `disabled`: Disable
@@ -325,6 +341,52 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     std::string m_cnameStatus;
                     bool m_cnameStatusHasBeenSet;
+
+                    /**
+                     * Resource tag
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_area;
+                    bool m_areaHasBeenSet;
+
+                    /**
+                     * Billable resource
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<Resource> m_resources;
+                    bool m_resourcesHasBeenSet;
+
+                    /**
+                     * Site modification date
+                     */
+                    std::string m_modifiedOn;
+                    bool m_modifiedOnHasBeenSet;
+
+                    /**
+                     * Site creation date
+                     */
+                    std::string m_createdOn;
+                    bool m_createdOnHasBeenSet;
+
+                    /**
+                     * User-defined name server information
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    VanityNameServers m_vanityNameServers;
+                    bool m_vanityNameServersHasBeenSet;
+
+                    /**
+                     * User-defined name server IP information
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::vector<VanityNameServersIps> m_vanityNameServersIps;
+                    bool m_vanityNameServersIpsHasBeenSet;
 
                 };
             }

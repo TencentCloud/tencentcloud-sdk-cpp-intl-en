@@ -24,6 +24,8 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/teo/v20220106/model/Tag.h>
+#include <tencentcloud/teo/v20220106/model/Resource.h>
 
 
 namespace TencentCloud
@@ -197,6 +199,110 @@ namespace TencentCloud
                     bool PausedHasBeenSet() const;
 
                     /**
+                     * 获取Specifies whether to enable CNAME acceleration
+- `enabled`: Enable
+- `disabled`: Disable
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CnameSpeedUp Specifies whether to enable CNAME acceleration
+- `enabled`: Enable
+- `disabled`: Disable
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetCnameSpeedUp() const;
+
+                    /**
+                     * 设置Specifies whether to enable CNAME acceleration
+- `enabled`: Enable
+- `disabled`: Disable
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param CnameSpeedUp Specifies whether to enable CNAME acceleration
+- `enabled`: Enable
+- `disabled`: Disable
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetCnameSpeedUp(const std::string& _cnameSpeedUp);
+
+                    /**
+                     * 判断参数 CnameSpeedUp 是否已赋值
+                     * @return CnameSpeedUp 是否已赋值
+                     */
+                    bool CnameSpeedUpHasBeenSet() const;
+
+                    /**
+                     * 获取Ownership verification status of the site when it is connected to EdgeOne via CNAME.
+- `finished`: The site is verified.
+- `pending`: Verifying the ownership of the site.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return CnameStatus Ownership verification status of the site when it is connected to EdgeOne via CNAME.
+- `finished`: The site is verified.
+- `pending`: Verifying the ownership of the site.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetCnameStatus() const;
+
+                    /**
+                     * 设置Ownership verification status of the site when it is connected to EdgeOne via CNAME.
+- `finished`: The site is verified.
+- `pending`: Verifying the ownership of the site.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param CnameStatus Ownership verification status of the site when it is connected to EdgeOne via CNAME.
+- `finished`: The site is verified.
+- `pending`: Verifying the ownership of the site.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetCnameStatus(const std::string& _cnameStatus);
+
+                    /**
+                     * 判断参数 CnameStatus 是否已赋值
+                     * @return CnameStatus 是否已赋值
+                     */
+                    bool CnameStatusHasBeenSet() const;
+
+                    /**
+                     * 获取Resource tag
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return Tags Resource tag
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 设置Resource tag
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param Tags Resource tag
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
+                    /**
+                     * 获取Billable resource
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return Resources Billable resource
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::vector<Resource> GetResources() const;
+
+                    /**
+                     * 设置Billable resource
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param Resources Billable resource
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetResources(const std::vector<Resource>& _resources);
+
+                    /**
+                     * 判断参数 Resources 是否已赋值
+                     * @return Resources 是否已赋值
+                     */
+                    bool ResourcesHasBeenSet() const;
+
+                    /**
                      * 获取Site creation date
                      * @return CreatedOn Site creation date
                      */
@@ -233,34 +339,22 @@ namespace TencentCloud
                     bool ModifiedOnHasBeenSet() const;
 
                     /**
-                     * 获取Ownership verification status of the site when it is connected to EdgeOne via CNAME.
-- `finished`: The site is verified.
-- `pending`: Verifying the ownership of the site.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return CnameStatus Ownership verification status of the site when it is connected to EdgeOne via CNAME.
-- `finished`: The site is verified.
-- `pending`: Verifying the ownership of the site.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取
+                     * @return Area 
                      */
-                    std::string GetCnameStatus() const;
+                    std::string GetArea() const;
 
                     /**
-                     * 设置Ownership verification status of the site when it is connected to EdgeOne via CNAME.
-- `finished`: The site is verified.
-- `pending`: Verifying the ownership of the site.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param CnameStatus Ownership verification status of the site when it is connected to EdgeOne via CNAME.
-- `finished`: The site is verified.
-- `pending`: Verifying the ownership of the site.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置
+                     * @param Area 
                      */
-                    void SetCnameStatus(const std::string& _cnameStatus);
+                    void SetArea(const std::string& _area);
 
                     /**
-                     * 判断参数 CnameStatus 是否已赋值
-                     * @return CnameStatus 是否已赋值
+                     * 判断参数 Area 是否已赋值
+                     * @return Area 是否已赋值
                      */
-                    bool CnameStatusHasBeenSet() const;
+                    bool AreaHasBeenSet() const;
 
                 private:
 
@@ -313,6 +407,38 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_pausedHasBeenSet;
 
                     /**
+                     * Specifies whether to enable CNAME acceleration
+- `enabled`: Enable
+- `disabled`: Disable
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_cnameSpeedUp;
+                    bool m_cnameSpeedUpHasBeenSet;
+
+                    /**
+                     * Ownership verification status of the site when it is connected to EdgeOne via CNAME.
+- `finished`: The site is verified.
+- `pending`: Verifying the ownership of the site.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_cnameStatus;
+                    bool m_cnameStatusHasBeenSet;
+
+                    /**
+                     * Resource tag
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
+
+                    /**
+                     * Billable resource
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::vector<Resource> m_resources;
+                    bool m_resourcesHasBeenSet;
+
+                    /**
                      * Site creation date
                      */
                     std::string m_createdOn;
@@ -325,13 +451,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_modifiedOnHasBeenSet;
 
                     /**
-                     * Ownership verification status of the site when it is connected to EdgeOne via CNAME.
-- `finished`: The site is verified.
-- `pending`: Verifying the ownership of the site.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 
                      */
-                    std::string m_cnameStatus;
-                    bool m_cnameStatusHasBeenSet;
+                    std::string m_area;
+                    bool m_areaHasBeenSet;
 
                 };
             }

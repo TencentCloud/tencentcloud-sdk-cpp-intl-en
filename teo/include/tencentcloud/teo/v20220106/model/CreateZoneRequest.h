@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/teo/v20220106/model/Tag.h>
 
 
 namespace TencentCloud
@@ -104,6 +105,24 @@ namespace TencentCloud
                      */
                     bool JumpStartHasBeenSet() const;
 
+                    /**
+                     * 获取Resource tag
+                     * @return Tags Resource tag
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 设置Resource tag
+                     * @param Tags Resource tag
+                     */
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -125,6 +144,12 @@ namespace TencentCloud
                      */
                     bool m_jumpStart;
                     bool m_jumpStartHasBeenSet;
+
+                    /**
+                     * Resource tag
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
 
                 };
             }

@@ -31,12 +31,15 @@ DescribeZoneDetailsResponse::DescribeZoneDetailsResponse() :
     m_statusHasBeenSet(false),
     m_typeHasBeenSet(false),
     m_pausedHasBeenSet(false),
-    m_createdOnHasBeenSet(false),
-    m_modifiedOnHasBeenSet(false),
-    m_vanityNameServersHasBeenSet(false),
-    m_vanityNameServersIpsHasBeenSet(false),
     m_cnameSpeedUpHasBeenSet(false),
-    m_cnameStatusHasBeenSet(false)
+    m_cnameStatusHasBeenSet(false),
+    m_tagsHasBeenSet(false),
+    m_areaHasBeenSet(false),
+    m_resourcesHasBeenSet(false),
+    m_modifiedOnHasBeenSet(false),
+    m_createdOnHasBeenSet(false),
+    m_vanityNameServersHasBeenSet(false),
+    m_vanityNameServersIpsHasBeenSet(false)
 {
 }
 
@@ -150,14 +153,74 @@ CoreInternalOutcome DescribeZoneDetailsResponse::Deserialize(const string &paylo
         m_pausedHasBeenSet = true;
     }
 
-    if (rsp.HasMember("CreatedOn") && !rsp["CreatedOn"].IsNull())
+    if (rsp.HasMember("CnameSpeedUp") && !rsp["CnameSpeedUp"].IsNull())
     {
-        if (!rsp["CreatedOn"].IsString())
+        if (!rsp["CnameSpeedUp"].IsString())
         {
-            return CoreInternalOutcome(Core::Error("response `CreatedOn` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `CnameSpeedUp` IsString=false incorrectly").SetRequestId(requestId));
         }
-        m_createdOn = string(rsp["CreatedOn"].GetString());
-        m_createdOnHasBeenSet = true;
+        m_cnameSpeedUp = string(rsp["CnameSpeedUp"].GetString());
+        m_cnameSpeedUpHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("CnameStatus") && !rsp["CnameStatus"].IsNull())
+    {
+        if (!rsp["CnameStatus"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `CnameStatus` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_cnameStatus = string(rsp["CnameStatus"].GetString());
+        m_cnameStatusHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("Tags") && !rsp["Tags"].IsNull())
+    {
+        if (!rsp["Tags"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `Tags` is not array type"));
+
+        const rapidjson::Value &tmpValue = rsp["Tags"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            Tag item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_tags.push_back(item);
+        }
+        m_tagsHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("Area") && !rsp["Area"].IsNull())
+    {
+        if (!rsp["Area"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Area` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_area = string(rsp["Area"].GetString());
+        m_areaHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("Resources") && !rsp["Resources"].IsNull())
+    {
+        if (!rsp["Resources"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `Resources` is not array type"));
+
+        const rapidjson::Value &tmpValue = rsp["Resources"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            Resource item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_resources.push_back(item);
+        }
+        m_resourcesHasBeenSet = true;
     }
 
     if (rsp.HasMember("ModifiedOn") && !rsp["ModifiedOn"].IsNull())
@@ -168,6 +231,16 @@ CoreInternalOutcome DescribeZoneDetailsResponse::Deserialize(const string &paylo
         }
         m_modifiedOn = string(rsp["ModifiedOn"].GetString());
         m_modifiedOnHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("CreatedOn") && !rsp["CreatedOn"].IsNull())
+    {
+        if (!rsp["CreatedOn"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `CreatedOn` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_createdOn = string(rsp["CreatedOn"].GetString());
+        m_createdOnHasBeenSet = true;
     }
 
     if (rsp.HasMember("VanityNameServers") && !rsp["VanityNameServers"].IsNull())
@@ -205,26 +278,6 @@ CoreInternalOutcome DescribeZoneDetailsResponse::Deserialize(const string &paylo
             m_vanityNameServersIps.push_back(item);
         }
         m_vanityNameServersIpsHasBeenSet = true;
-    }
-
-    if (rsp.HasMember("CnameSpeedUp") && !rsp["CnameSpeedUp"].IsNull())
-    {
-        if (!rsp["CnameSpeedUp"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `CnameSpeedUp` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_cnameSpeedUp = string(rsp["CnameSpeedUp"].GetString());
-        m_cnameSpeedUpHasBeenSet = true;
-    }
-
-    if (rsp.HasMember("CnameStatus") && !rsp["CnameStatus"].IsNull())
-    {
-        if (!rsp["CnameStatus"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `CnameStatus` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_cnameStatus = string(rsp["CnameStatus"].GetString());
-        m_cnameStatusHasBeenSet = true;
     }
 
 
@@ -303,12 +356,58 @@ string DescribeZoneDetailsResponse::ToJsonString() const
         value.AddMember(iKey, m_paused, allocator);
     }
 
-    if (m_createdOnHasBeenSet)
+    if (m_cnameSpeedUpHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "CreatedOn";
+        string key = "CnameSpeedUp";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_createdOn.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cnameSpeedUp.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_cnameStatusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CnameStatus";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cnameStatus.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_tagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tags";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_areaHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Area";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_area.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_resourcesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Resources";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_resources.begin(); itr != m_resources.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
     }
 
     if (m_modifiedOnHasBeenSet)
@@ -317,6 +416,14 @@ string DescribeZoneDetailsResponse::ToJsonString() const
         string key = "ModifiedOn";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_modifiedOn.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_createdOnHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CreatedOn";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_createdOn.c_str(), allocator).Move(), allocator);
     }
 
     if (m_vanityNameServersHasBeenSet)
@@ -341,22 +448,6 @@ string DescribeZoneDetailsResponse::ToJsonString() const
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
-    }
-
-    if (m_cnameSpeedUpHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "CnameSpeedUp";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_cnameSpeedUp.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_cnameStatusHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "CnameStatus";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_cnameStatus.c_str(), allocator).Move(), allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -441,14 +532,54 @@ bool DescribeZoneDetailsResponse::PausedHasBeenSet() const
     return m_pausedHasBeenSet;
 }
 
-string DescribeZoneDetailsResponse::GetCreatedOn() const
+string DescribeZoneDetailsResponse::GetCnameSpeedUp() const
 {
-    return m_createdOn;
+    return m_cnameSpeedUp;
 }
 
-bool DescribeZoneDetailsResponse::CreatedOnHasBeenSet() const
+bool DescribeZoneDetailsResponse::CnameSpeedUpHasBeenSet() const
 {
-    return m_createdOnHasBeenSet;
+    return m_cnameSpeedUpHasBeenSet;
+}
+
+string DescribeZoneDetailsResponse::GetCnameStatus() const
+{
+    return m_cnameStatus;
+}
+
+bool DescribeZoneDetailsResponse::CnameStatusHasBeenSet() const
+{
+    return m_cnameStatusHasBeenSet;
+}
+
+vector<Tag> DescribeZoneDetailsResponse::GetTags() const
+{
+    return m_tags;
+}
+
+bool DescribeZoneDetailsResponse::TagsHasBeenSet() const
+{
+    return m_tagsHasBeenSet;
+}
+
+string DescribeZoneDetailsResponse::GetArea() const
+{
+    return m_area;
+}
+
+bool DescribeZoneDetailsResponse::AreaHasBeenSet() const
+{
+    return m_areaHasBeenSet;
+}
+
+vector<Resource> DescribeZoneDetailsResponse::GetResources() const
+{
+    return m_resources;
+}
+
+bool DescribeZoneDetailsResponse::ResourcesHasBeenSet() const
+{
+    return m_resourcesHasBeenSet;
 }
 
 string DescribeZoneDetailsResponse::GetModifiedOn() const
@@ -459,6 +590,16 @@ string DescribeZoneDetailsResponse::GetModifiedOn() const
 bool DescribeZoneDetailsResponse::ModifiedOnHasBeenSet() const
 {
     return m_modifiedOnHasBeenSet;
+}
+
+string DescribeZoneDetailsResponse::GetCreatedOn() const
+{
+    return m_createdOn;
+}
+
+bool DescribeZoneDetailsResponse::CreatedOnHasBeenSet() const
+{
+    return m_createdOnHasBeenSet;
 }
 
 VanityNameServers DescribeZoneDetailsResponse::GetVanityNameServers() const
@@ -479,26 +620,6 @@ vector<VanityNameServersIps> DescribeZoneDetailsResponse::GetVanityNameServersIp
 bool DescribeZoneDetailsResponse::VanityNameServersIpsHasBeenSet() const
 {
     return m_vanityNameServersIpsHasBeenSet;
-}
-
-string DescribeZoneDetailsResponse::GetCnameSpeedUp() const
-{
-    return m_cnameSpeedUp;
-}
-
-bool DescribeZoneDetailsResponse::CnameSpeedUpHasBeenSet() const
-{
-    return m_cnameSpeedUpHasBeenSet;
-}
-
-string DescribeZoneDetailsResponse::GetCnameStatus() const
-{
-    return m_cnameStatus;
-}
-
-bool DescribeZoneDetailsResponse::CnameStatusHasBeenSet() const
-{
-    return m_cnameStatusHasBeenSet;
 }
 
 

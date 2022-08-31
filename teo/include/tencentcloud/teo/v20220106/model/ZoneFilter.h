@@ -50,9 +50,13 @@ namespace TencentCloud
                      * 获取Filters by the field name. Vaules:
 - `name`: Site name.
 - `status`: Site status.
+- `tagKey`: Tag key.
+- `tagValue`: Tag value.
                      * @return Name Filters by the field name. Vaules:
 - `name`: Site name.
 - `status`: Site status.
+- `tagKey`: Tag key.
+- `tagValue`: Tag value.
                      */
                     std::string GetName() const;
 
@@ -60,9 +64,13 @@ namespace TencentCloud
                      * 设置Filters by the field name. Vaules:
 - `name`: Site name.
 - `status`: Site status.
+- `tagKey`: Tag key.
+- `tagValue`: Tag value.
                      * @param Name Filters by the field name. Vaules:
 - `name`: Site name.
 - `status`: Site status.
+- `tagKey`: Tag key.
+- `tagValue`: Tag value.
                      */
                     void SetName(const std::string& _name);
 
@@ -114,6 +122,8 @@ namespace TencentCloud
                      * Filters by the field name. Vaules:
 - `name`: Site name.
 - `status`: Site status.
+- `tagKey`: Tag key.
+- `tagValue`: Tag value.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

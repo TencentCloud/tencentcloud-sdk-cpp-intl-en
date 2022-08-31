@@ -28,9 +28,13 @@ Zone::Zone() :
     m_statusHasBeenSet(false),
     m_typeHasBeenSet(false),
     m_pausedHasBeenSet(false),
+    m_cnameSpeedUpHasBeenSet(false),
+    m_cnameStatusHasBeenSet(false),
+    m_tagsHasBeenSet(false),
+    m_resourcesHasBeenSet(false),
     m_createdOnHasBeenSet(false),
     m_modifiedOnHasBeenSet(false),
-    m_cnameStatusHasBeenSet(false)
+    m_areaHasBeenSet(false)
 {
 }
 
@@ -115,6 +119,66 @@ CoreInternalOutcome Zone::Deserialize(const rapidjson::Value &value)
         m_pausedHasBeenSet = true;
     }
 
+    if (value.HasMember("CnameSpeedUp") && !value["CnameSpeedUp"].IsNull())
+    {
+        if (!value["CnameSpeedUp"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Zone.CnameSpeedUp` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_cnameSpeedUp = string(value["CnameSpeedUp"].GetString());
+        m_cnameSpeedUpHasBeenSet = true;
+    }
+
+    if (value.HasMember("CnameStatus") && !value["CnameStatus"].IsNull())
+    {
+        if (!value["CnameStatus"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Zone.CnameStatus` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_cnameStatus = string(value["CnameStatus"].GetString());
+        m_cnameStatusHasBeenSet = true;
+    }
+
+    if (value.HasMember("Tags") && !value["Tags"].IsNull())
+    {
+        if (!value["Tags"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `Zone.Tags` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["Tags"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            Tag item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_tags.push_back(item);
+        }
+        m_tagsHasBeenSet = true;
+    }
+
+    if (value.HasMember("Resources") && !value["Resources"].IsNull())
+    {
+        if (!value["Resources"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `Zone.Resources` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["Resources"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            Resource item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_resources.push_back(item);
+        }
+        m_resourcesHasBeenSet = true;
+    }
+
     if (value.HasMember("CreatedOn") && !value["CreatedOn"].IsNull())
     {
         if (!value["CreatedOn"].IsString())
@@ -135,14 +199,14 @@ CoreInternalOutcome Zone::Deserialize(const rapidjson::Value &value)
         m_modifiedOnHasBeenSet = true;
     }
 
-    if (value.HasMember("CnameStatus") && !value["CnameStatus"].IsNull())
+    if (value.HasMember("Area") && !value["Area"].IsNull())
     {
-        if (!value["CnameStatus"].IsString())
+        if (!value["Area"].IsString())
         {
-            return CoreInternalOutcome(Core::Error("response `Zone.CnameStatus` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Zone.Area` IsString=false incorrectly").SetRequestId(requestId));
         }
-        m_cnameStatus = string(value["CnameStatus"].GetString());
-        m_cnameStatusHasBeenSet = true;
+        m_area = string(value["Area"].GetString());
+        m_areaHasBeenSet = true;
     }
 
 
@@ -218,6 +282,52 @@ void Zone::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorT
         value.AddMember(iKey, m_paused, allocator);
     }
 
+    if (m_cnameSpeedUpHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CnameSpeedUp";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cnameSpeedUp.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_cnameStatusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CnameStatus";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cnameStatus.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_tagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tags";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_resourcesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Resources";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_resources.begin(); itr != m_resources.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
     if (m_createdOnHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -234,12 +344,12 @@ void Zone::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorT
         value.AddMember(iKey, rapidjson::Value(m_modifiedOn.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_cnameStatusHasBeenSet)
+    if (m_areaHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "CnameStatus";
+        string key = "Area";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_cnameStatus.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_area.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -357,6 +467,70 @@ bool Zone::PausedHasBeenSet() const
     return m_pausedHasBeenSet;
 }
 
+string Zone::GetCnameSpeedUp() const
+{
+    return m_cnameSpeedUp;
+}
+
+void Zone::SetCnameSpeedUp(const string& _cnameSpeedUp)
+{
+    m_cnameSpeedUp = _cnameSpeedUp;
+    m_cnameSpeedUpHasBeenSet = true;
+}
+
+bool Zone::CnameSpeedUpHasBeenSet() const
+{
+    return m_cnameSpeedUpHasBeenSet;
+}
+
+string Zone::GetCnameStatus() const
+{
+    return m_cnameStatus;
+}
+
+void Zone::SetCnameStatus(const string& _cnameStatus)
+{
+    m_cnameStatus = _cnameStatus;
+    m_cnameStatusHasBeenSet = true;
+}
+
+bool Zone::CnameStatusHasBeenSet() const
+{
+    return m_cnameStatusHasBeenSet;
+}
+
+vector<Tag> Zone::GetTags() const
+{
+    return m_tags;
+}
+
+void Zone::SetTags(const vector<Tag>& _tags)
+{
+    m_tags = _tags;
+    m_tagsHasBeenSet = true;
+}
+
+bool Zone::TagsHasBeenSet() const
+{
+    return m_tagsHasBeenSet;
+}
+
+vector<Resource> Zone::GetResources() const
+{
+    return m_resources;
+}
+
+void Zone::SetResources(const vector<Resource>& _resources)
+{
+    m_resources = _resources;
+    m_resourcesHasBeenSet = true;
+}
+
+bool Zone::ResourcesHasBeenSet() const
+{
+    return m_resourcesHasBeenSet;
+}
+
 string Zone::GetCreatedOn() const
 {
     return m_createdOn;
@@ -389,19 +563,19 @@ bool Zone::ModifiedOnHasBeenSet() const
     return m_modifiedOnHasBeenSet;
 }
 
-string Zone::GetCnameStatus() const
+string Zone::GetArea() const
 {
-    return m_cnameStatus;
+    return m_area;
 }
 
-void Zone::SetCnameStatus(const string& _cnameStatus)
+void Zone::SetArea(const string& _area)
 {
-    m_cnameStatus = _cnameStatus;
-    m_cnameStatusHasBeenSet = true;
+    m_area = _area;
+    m_areaHasBeenSet = true;
 }
 
-bool Zone::CnameStatusHasBeenSet() const
+bool Zone::AreaHasBeenSet() const
 {
-    return m_cnameStatusHasBeenSet;
+    return m_areaHasBeenSet;
 }
 

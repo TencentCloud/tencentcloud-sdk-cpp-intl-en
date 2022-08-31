@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Subdomain name. You can use @ to represent the root domain.
-                     * @return Host Subdomain name. You can use @ to represent the root domain.
+                     * 获取Subdomain name
+                     * @return Host Subdomain name
                      */
                     std::string GetHost() const;
 
                     /**
-                     * 设置Subdomain name. You can use @ to represent the root domain.
-                     * @param Host Subdomain name. You can use @ to represent the root domain.
+                     * 设置Subdomain name
+                     * @param Host Subdomain name
                      */
                     void SetHost(const std::string& _host);
 
@@ -149,7 +149,7 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Subdomain name. You can use @ to represent the root domain.
+                     * Subdomain name
                      */
                     std::string m_host;
                     bool m_hostHasBeenSet;
