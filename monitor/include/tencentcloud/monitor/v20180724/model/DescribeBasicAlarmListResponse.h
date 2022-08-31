@@ -72,6 +72,20 @@ Note: This field may return null, indicating that no valid value was found.
                      */
                     bool TotalHasBeenSet() const;
 
+                    /**
+                     * 获取Remarks
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Warning Remarks
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetWarning() const;
+
+                    /**
+                     * 判断参数 Warning 是否已赋值
+                     * @return Warning 是否已赋值
+                     */
+                    bool WarningHasBeenSet() const;
+
                 private:
 
                     /**
@@ -87,6 +101,13 @@ Note: This field may return null, indicating that no valid value was found.
                      */
                     int64_t m_total;
                     bool m_totalHasBeenSet;
+
+                    /**
+                     * Remarks
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_warning;
+                    bool m_warningHasBeenSet;
 
                 };
             }

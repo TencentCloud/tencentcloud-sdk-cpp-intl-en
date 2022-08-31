@@ -93,14 +93,14 @@ Note: This field may return null, indicating that no valid value was found.
                     bool RenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
-                     * @return DiskType Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
+                     * 获取Cloud disk types. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk <br><li>CLOUD_PREMIUM: Premium Cloud Disk <br><li>CLOUD_BSSD: General Purpose SSD <br><li>CLOUD_SSD: SSD <br><li>CLOUD_HSSD: Enhanced SSD <br><li>CLOUD_TSSD: Tremendous SSD
+                     * @return DiskType Cloud disk types. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk <br><li>CLOUD_PREMIUM: Premium Cloud Disk <br><li>CLOUD_BSSD: General Purpose SSD <br><li>CLOUD_SSD: SSD <br><li>CLOUD_HSSD: Enhanced SSD <br><li>CLOUD_TSSD: Tremendous SSD
                      */
                     std::string GetDiskType() const;
 
                     /**
-                     * 设置Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
-                     * @param DiskType Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
+                     * 设置Cloud disk types. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk <br><li>CLOUD_PREMIUM: Premium Cloud Disk <br><li>CLOUD_BSSD: General Purpose SSD <br><li>CLOUD_SSD: SSD <br><li>CLOUD_HSSD: Enhanced SSD <br><li>CLOUD_TSSD: Tremendous SSD
+                     * @param DiskType Cloud disk types. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk <br><li>CLOUD_PREMIUM: Premium Cloud Disk <br><li>CLOUD_BSSD: General Purpose SSD <br><li>CLOUD_SSD: SSD <br><li>CLOUD_HSSD: Enhanced SSD <br><li>CLOUD_TSSD: Tremendous SSD
                      */
                     void SetDiskType(const std::string& _diskType);
 
@@ -748,6 +748,42 @@ Note: This field may return null, indicating that no valid value was found.
                      */
                     bool DeleteSnapshotHasBeenSet() const;
 
+                    /**
+                     * 获取Number of used cloud disk backups.
+                     * @return DiskBackupCount Number of used cloud disk backups.
+                     */
+                    uint64_t GetDiskBackupCount() const;
+
+                    /**
+                     * 设置Number of used cloud disk backups.
+                     * @param DiskBackupCount Number of used cloud disk backups.
+                     */
+                    void SetDiskBackupCount(const uint64_t& _diskBackupCount);
+
+                    /**
+                     * 判断参数 DiskBackupCount 是否已赋值
+                     * @return DiskBackupCount 是否已赋值
+                     */
+                    bool DiskBackupCountHasBeenSet() const;
+
+                    /**
+                     * 获取Type of the instance mounted to the cloud disk. Valid values: <br><li>CVM<br><li>EKS
+                     * @return InstanceType Type of the instance mounted to the cloud disk. Valid values: <br><li>CVM<br><li>EKS
+                     */
+                    std::string GetInstanceType() const;
+
+                    /**
+                     * 设置Type of the instance mounted to the cloud disk. Valid values: <br><li>CVM<br><li>EKS
+                     * @param InstanceType Type of the instance mounted to the cloud disk. Valid values: <br><li>CVM<br><li>EKS
+                     */
+                    void SetInstanceType(const std::string& _instanceType);
+
+                    /**
+                     * 判断参数 InstanceType 是否已赋值
+                     * @return InstanceType 是否已赋值
+                     */
+                    bool InstanceTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -765,7 +801,7 @@ Note: This field may return null, indicating that no valid value was found.
                     bool m_renewFlagHasBeenSet;
 
                     /**
-                     * Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
+                     * Cloud disk types. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk <br><li>CLOUD_PREMIUM: Premium Cloud Disk <br><li>CLOUD_BSSD: General Purpose SSD <br><li>CLOUD_SSD: SSD <br><li>CLOUD_HSSD: Enhanced SSD <br><li>CLOUD_TSSD: Tremendous SSD
                      */
                     std::string m_diskType;
                     bool m_diskTypeHasBeenSet;
@@ -978,6 +1014,18 @@ Note: This field may return null, indicating that no valid value was found.
                      */
                     int64_t m_deleteSnapshot;
                     bool m_deleteSnapshotHasBeenSet;
+
+                    /**
+                     * Number of used cloud disk backups.
+                     */
+                    uint64_t m_diskBackupCount;
+                    bool m_diskBackupCountHasBeenSet;
+
+                    /**
+                     * Type of the instance mounted to the cloud disk. Valid values: <br><li>CVM<br><li>EKS
+                     */
+                    std::string m_instanceType;
+                    bool m_instanceTypeHasBeenSet;
 
                 };
             }

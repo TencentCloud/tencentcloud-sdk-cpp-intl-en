@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Describes the execution policy for scheduled snapshots. This can be understood as that, on the days specified by DayOfWeek, the scheduled snapshot policy is executed at the hour specified by Hour.
+                * Execution policy for scheduled snapshot. It indicates that a scheduled snapshot policy is executed at the specified `Hour` in the days specified by `DayOfWeek` or `DayOfMonth` or once every `IntervalDays` days. Note: `DayOfWeek`, `DayOfMonth`, and `IntervalDays` are mutually exclusive, and only one policy rule can be set.
                 */
                 class Policy : public AbstractModel
                 {
@@ -45,24 +45,6 @@ namespace TencentCloud
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
-
-                    /**
-                     * 获取Specifies the days of the week, from Monday to Sunday, on which a scheduled snapshot will be triggered. Value range: [0, 6]. 0 indicates triggering on Sunday, 1-6 indicate triggering on Monday-Saturday.
-                     * @return DayOfWeek Specifies the days of the week, from Monday to Sunday, on which a scheduled snapshot will be triggered. Value range: [0, 6]. 0 indicates triggering on Sunday, 1-6 indicate triggering on Monday-Saturday.
-                     */
-                    std::vector<uint64_t> GetDayOfWeek() const;
-
-                    /**
-                     * 设置Specifies the days of the week, from Monday to Sunday, on which a scheduled snapshot will be triggered. Value range: [0, 6]. 0 indicates triggering on Sunday, 1-6 indicate triggering on Monday-Saturday.
-                     * @param DayOfWeek Specifies the days of the week, from Monday to Sunday, on which a scheduled snapshot will be triggered. Value range: [0, 6]. 0 indicates triggering on Sunday, 1-6 indicate triggering on Monday-Saturday.
-                     */
-                    void SetDayOfWeek(const std::vector<uint64_t>& _dayOfWeek);
-
-                    /**
-                     * 判断参数 DayOfWeek 是否已赋值
-                     * @return DayOfWeek 是否已赋值
-                     */
-                    bool DayOfWeekHasBeenSet() const;
 
                     /**
                      * 获取Specifies the time that that the scheduled snapshot policy will be triggered. The unit is hour. The value range is [0-23]. 00:00-23:00 is a total of 24 time points that can be selected. 1 indicates 01:00, and so on.
@@ -82,19 +64,37 @@ namespace TencentCloud
                      */
                     bool HourHasBeenSet() const;
 
-                private:
+                    /**
+                     * 获取Specifies the days of the week, from Monday to Sunday, on which a scheduled snapshot will be triggered. Value range: [0, 6]. 0 indicates triggering on Sunday, 1-6 indicate triggering on Monday-Saturday.
+                     * @return DayOfWeek Specifies the days of the week, from Monday to Sunday, on which a scheduled snapshot will be triggered. Value range: [0, 6]. 0 indicates triggering on Sunday, 1-6 indicate triggering on Monday-Saturday.
+                     */
+                    std::vector<uint64_t> GetDayOfWeek() const;
 
                     /**
-                     * Specifies the days of the week, from Monday to Sunday, on which a scheduled snapshot will be triggered. Value range: [0, 6]. 0 indicates triggering on Sunday, 1-6 indicate triggering on Monday-Saturday.
+                     * 设置Specifies the days of the week, from Monday to Sunday, on which a scheduled snapshot will be triggered. Value range: [0, 6]. 0 indicates triggering on Sunday, 1-6 indicate triggering on Monday-Saturday.
+                     * @param DayOfWeek Specifies the days of the week, from Monday to Sunday, on which a scheduled snapshot will be triggered. Value range: [0, 6]. 0 indicates triggering on Sunday, 1-6 indicate triggering on Monday-Saturday.
                      */
-                    std::vector<uint64_t> m_dayOfWeek;
-                    bool m_dayOfWeekHasBeenSet;
+                    void SetDayOfWeek(const std::vector<uint64_t>& _dayOfWeek);
+
+                    /**
+                     * 判断参数 DayOfWeek 是否已赋值
+                     * @return DayOfWeek 是否已赋值
+                     */
+                    bool DayOfWeekHasBeenSet() const;
+
+                private:
 
                     /**
                      * Specifies the time that that the scheduled snapshot policy will be triggered. The unit is hour. The value range is [0-23]. 00:00-23:00 is a total of 24 time points that can be selected. 1 indicates 01:00, and so on.
                      */
                     std::vector<uint64_t> m_hour;
                     bool m_hourHasBeenSet;
+
+                    /**
+                     * Specifies the days of the week, from Monday to Sunday, on which a scheduled snapshot will be triggered. Value range: [0, 6]. 0 indicates triggering on Sunday, 1-6 indicate triggering on Monday-Saturday.
+                     */
+                    std::vector<uint64_t> m_dayOfWeek;
+                    bool m_dayOfWeekHasBeenSet;
 
                 };
             }

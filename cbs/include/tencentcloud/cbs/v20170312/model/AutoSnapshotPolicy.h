@@ -48,58 +48,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Scheduled snapshot policy ID.
-                     * @return AutoSnapshotPolicyId Scheduled snapshot policy ID.
+                     * 获取The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
+                     * @return DiskIdSet The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
                      */
-                    std::string GetAutoSnapshotPolicyId() const;
+                    std::vector<std::string> GetDiskIdSet() const;
 
                     /**
-                     * 设置Scheduled snapshot policy ID.
-                     * @param AutoSnapshotPolicyId Scheduled snapshot policy ID.
+                     * 设置The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
+                     * @param DiskIdSet The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
                      */
-                    void SetAutoSnapshotPolicyId(const std::string& _autoSnapshotPolicyId);
+                    void SetDiskIdSet(const std::vector<std::string>& _diskIdSet);
 
                     /**
-                     * 判断参数 AutoSnapshotPolicyId 是否已赋值
-                     * @return AutoSnapshotPolicyId 是否已赋值
+                     * 判断参数 DiskIdSet 是否已赋值
+                     * @return DiskIdSet 是否已赋值
                      */
-                    bool AutoSnapshotPolicyIdHasBeenSet() const;
-
-                    /**
-                     * 获取Scheduled snapshot policy name.
-                     * @return AutoSnapshotPolicyName Scheduled snapshot policy name.
-                     */
-                    std::string GetAutoSnapshotPolicyName() const;
-
-                    /**
-                     * 设置Scheduled snapshot policy name.
-                     * @param AutoSnapshotPolicyName Scheduled snapshot policy name.
-                     */
-                    void SetAutoSnapshotPolicyName(const std::string& _autoSnapshotPolicyName);
-
-                    /**
-                     * 判断参数 AutoSnapshotPolicyName 是否已赋值
-                     * @return AutoSnapshotPolicyName 是否已赋值
-                     */
-                    bool AutoSnapshotPolicyNameHasBeenSet() const;
-
-                    /**
-                     * 获取Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
-                     * @return AutoSnapshotPolicyState Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
-                     */
-                    std::string GetAutoSnapshotPolicyState() const;
-
-                    /**
-                     * 设置Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
-                     * @param AutoSnapshotPolicyState Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
-                     */
-                    void SetAutoSnapshotPolicyState(const std::string& _autoSnapshotPolicyState);
-
-                    /**
-                     * 判断参数 AutoSnapshotPolicyState 是否已赋值
-                     * @return AutoSnapshotPolicyState 是否已赋值
-                     */
-                    bool AutoSnapshotPolicyStateHasBeenSet() const;
+                    bool DiskIdSetHasBeenSet() const;
 
                     /**
                      * 获取Whether scheduled snapshot policy is activated.
@@ -120,6 +84,46 @@ namespace TencentCloud
                     bool IsActivatedHasBeenSet() const;
 
                     /**
+                     * 获取Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
+                     * @return AutoSnapshotPolicyState Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
+                     */
+                    std::string GetAutoSnapshotPolicyState() const;
+
+                    /**
+                     * 设置Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
+                     * @param AutoSnapshotPolicyState Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
+                     */
+                    void SetAutoSnapshotPolicyState(const std::string& _autoSnapshotPolicyState);
+
+                    /**
+                     * 判断参数 AutoSnapshotPolicyState 是否已赋值
+                     * @return AutoSnapshotPolicyState 是否已赋值
+                     */
+                    bool AutoSnapshotPolicyStateHasBeenSet() const;
+
+                    /**
+                     * 获取Whether it is to replicate a snapshot across accounts. `1`: yes, `0`: no.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IsCopyToRemote Whether it is to replicate a snapshot across accounts. `1`: yes, `0`: no.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetIsCopyToRemote() const;
+
+                    /**
+                     * 设置Whether it is to replicate a snapshot across accounts. `1`: yes, `0`: no.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param IsCopyToRemote Whether it is to replicate a snapshot across accounts. `1`: yes, `0`: no.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetIsCopyToRemote(const uint64_t& _isCopyToRemote);
+
+                    /**
+                     * 判断参数 IsCopyToRemote 是否已赋值
+                     * @return IsCopyToRemote 是否已赋值
+                     */
+                    bool IsCopyToRemoteHasBeenSet() const;
+
+                    /**
                      * 获取Whether the snapshot created by this scheduled snapshot policy is retained permanently.
                      * @return IsPermanent Whether the snapshot created by this scheduled snapshot policy is retained permanently.
                      */
@@ -136,42 +140,6 @@ namespace TencentCloud
                      * @return IsPermanent 是否已赋值
                      */
                     bool IsPermanentHasBeenSet() const;
-
-                    /**
-                     * 获取Number of days the snapshot created by this scheduled snapshot policy is retained.
-                     * @return RetentionDays Number of days the snapshot created by this scheduled snapshot policy is retained.
-                     */
-                    uint64_t GetRetentionDays() const;
-
-                    /**
-                     * 设置Number of days the snapshot created by this scheduled snapshot policy is retained.
-                     * @param RetentionDays Number of days the snapshot created by this scheduled snapshot policy is retained.
-                     */
-                    void SetRetentionDays(const uint64_t& _retentionDays);
-
-                    /**
-                     * 判断参数 RetentionDays 是否已赋值
-                     * @return RetentionDays 是否已赋值
-                     */
-                    bool RetentionDaysHasBeenSet() const;
-
-                    /**
-                     * 获取The time the scheduled snapshot policy was created.
-                     * @return CreateTime The time the scheduled snapshot policy was created.
-                     */
-                    std::string GetCreateTime() const;
-
-                    /**
-                     * 设置The time the scheduled snapshot policy was created.
-                     * @param CreateTime The time the scheduled snapshot policy was created.
-                     */
-                    void SetCreateTime(const std::string& _createTime);
-
-                    /**
-                     * 判断参数 CreateTime 是否已赋值
-                     * @return CreateTime 是否已赋值
-                     */
-                    bool CreateTimeHasBeenSet() const;
 
                     /**
                      * 获取The time the scheduled snapshot will be triggered again.
@@ -192,6 +160,42 @@ namespace TencentCloud
                     bool NextTriggerTimeHasBeenSet() const;
 
                     /**
+                     * 获取Scheduled snapshot policy name.
+                     * @return AutoSnapshotPolicyName Scheduled snapshot policy name.
+                     */
+                    std::string GetAutoSnapshotPolicyName() const;
+
+                    /**
+                     * 设置Scheduled snapshot policy name.
+                     * @param AutoSnapshotPolicyName Scheduled snapshot policy name.
+                     */
+                    void SetAutoSnapshotPolicyName(const std::string& _autoSnapshotPolicyName);
+
+                    /**
+                     * 判断参数 AutoSnapshotPolicyName 是否已赋值
+                     * @return AutoSnapshotPolicyName 是否已赋值
+                     */
+                    bool AutoSnapshotPolicyNameHasBeenSet() const;
+
+                    /**
+                     * 获取Scheduled snapshot policy ID.
+                     * @return AutoSnapshotPolicyId Scheduled snapshot policy ID.
+                     */
+                    std::string GetAutoSnapshotPolicyId() const;
+
+                    /**
+                     * 设置Scheduled snapshot policy ID.
+                     * @param AutoSnapshotPolicyId Scheduled snapshot policy ID.
+                     */
+                    void SetAutoSnapshotPolicyId(const std::string& _autoSnapshotPolicyId);
+
+                    /**
+                     * 判断参数 AutoSnapshotPolicyId 是否已赋值
+                     * @return AutoSnapshotPolicyId 是否已赋值
+                     */
+                    bool AutoSnapshotPolicyIdHasBeenSet() const;
+
+                    /**
                      * 获取The policy for executing the scheduled snapshot.
                      * @return Policy The policy for executing the scheduled snapshot.
                      */
@@ -210,42 +214,92 @@ namespace TencentCloud
                     bool PolicyHasBeenSet() const;
 
                     /**
-                     * 获取The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
-                     * @return DiskIdSet The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
+                     * 获取The time the scheduled snapshot policy was created.
+                     * @return CreateTime The time the scheduled snapshot policy was created.
                      */
-                    std::vector<std::string> GetDiskIdSet() const;
+                    std::string GetCreateTime() const;
 
                     /**
-                     * 设置The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
-                     * @param DiskIdSet The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
+                     * 设置The time the scheduled snapshot policy was created.
+                     * @param CreateTime The time the scheduled snapshot policy was created.
                      */
-                    void SetDiskIdSet(const std::vector<std::string>& _diskIdSet);
+                    void SetCreateTime(const std::string& _createTime);
 
                     /**
-                     * 判断参数 DiskIdSet 是否已赋值
-                     * @return DiskIdSet 是否已赋值
+                     * 判断参数 CreateTime 是否已赋值
+                     * @return CreateTime 是否已赋值
                      */
-                    bool DiskIdSetHasBeenSet() const;
+                    bool CreateTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Number of days the snapshot created by this scheduled snapshot policy is retained.
+                     * @return RetentionDays Number of days the snapshot created by this scheduled snapshot policy is retained.
+                     */
+                    uint64_t GetRetentionDays() const;
+
+                    /**
+                     * 设置Number of days the snapshot created by this scheduled snapshot policy is retained.
+                     * @param RetentionDays Number of days the snapshot created by this scheduled snapshot policy is retained.
+                     */
+                    void SetRetentionDays(const uint64_t& _retentionDays);
+
+                    /**
+                     * 判断参数 RetentionDays 是否已赋值
+                     * @return RetentionDays 是否已赋值
+                     */
+                    bool RetentionDaysHasBeenSet() const;
+
+                    /**
+                     * 获取ID of the replication target account
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CopyToAccountUin ID of the replication target account
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetCopyToAccountUin() const;
+
+                    /**
+                     * 设置ID of the replication target account
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param CopyToAccountUin ID of the replication target account
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetCopyToAccountUin(const std::string& _copyToAccountUin);
+
+                    /**
+                     * 判断参数 CopyToAccountUin 是否已赋值
+                     * @return CopyToAccountUin 是否已赋值
+                     */
+                    bool CopyToAccountUinHasBeenSet() const;
+
+                    /**
+                     * 获取List of IDs of the instances associated with the scheduled snapshot policy.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return InstanceIdSet List of IDs of the instances associated with the scheduled snapshot policy.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> GetInstanceIdSet() const;
+
+                    /**
+                     * 设置List of IDs of the instances associated with the scheduled snapshot policy.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param InstanceIdSet List of IDs of the instances associated with the scheduled snapshot policy.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetInstanceIdSet(const std::vector<std::string>& _instanceIdSet);
+
+                    /**
+                     * 判断参数 InstanceIdSet 是否已赋值
+                     * @return InstanceIdSet 是否已赋值
+                     */
+                    bool InstanceIdSetHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Scheduled snapshot policy ID.
+                     * The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
                      */
-                    std::string m_autoSnapshotPolicyId;
-                    bool m_autoSnapshotPolicyIdHasBeenSet;
-
-                    /**
-                     * Scheduled snapshot policy name.
-                     */
-                    std::string m_autoSnapshotPolicyName;
-                    bool m_autoSnapshotPolicyNameHasBeenSet;
-
-                    /**
-                     * Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
-                     */
-                    std::string m_autoSnapshotPolicyState;
-                    bool m_autoSnapshotPolicyStateHasBeenSet;
+                    std::vector<std::string> m_diskIdSet;
+                    bool m_diskIdSetHasBeenSet;
 
                     /**
                      * Whether scheduled snapshot policy is activated.
@@ -254,22 +308,23 @@ namespace TencentCloud
                     bool m_isActivatedHasBeenSet;
 
                     /**
+                     * Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
+                     */
+                    std::string m_autoSnapshotPolicyState;
+                    bool m_autoSnapshotPolicyStateHasBeenSet;
+
+                    /**
+                     * Whether it is to replicate a snapshot across accounts. `1`: yes, `0`: no.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_isCopyToRemote;
+                    bool m_isCopyToRemoteHasBeenSet;
+
+                    /**
                      * Whether the snapshot created by this scheduled snapshot policy is retained permanently.
                      */
                     bool m_isPermanent;
                     bool m_isPermanentHasBeenSet;
-
-                    /**
-                     * Number of days the snapshot created by this scheduled snapshot policy is retained.
-                     */
-                    uint64_t m_retentionDays;
-                    bool m_retentionDaysHasBeenSet;
-
-                    /**
-                     * The time the scheduled snapshot policy was created.
-                     */
-                    std::string m_createTime;
-                    bool m_createTimeHasBeenSet;
 
                     /**
                      * The time the scheduled snapshot will be triggered again.
@@ -278,16 +333,48 @@ namespace TencentCloud
                     bool m_nextTriggerTimeHasBeenSet;
 
                     /**
+                     * Scheduled snapshot policy name.
+                     */
+                    std::string m_autoSnapshotPolicyName;
+                    bool m_autoSnapshotPolicyNameHasBeenSet;
+
+                    /**
+                     * Scheduled snapshot policy ID.
+                     */
+                    std::string m_autoSnapshotPolicyId;
+                    bool m_autoSnapshotPolicyIdHasBeenSet;
+
+                    /**
                      * The policy for executing the scheduled snapshot.
                      */
                     std::vector<Policy> m_policy;
                     bool m_policyHasBeenSet;
 
                     /**
-                     * The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
+                     * The time the scheduled snapshot policy was created.
                      */
-                    std::vector<std::string> m_diskIdSet;
-                    bool m_diskIdSetHasBeenSet;
+                    std::string m_createTime;
+                    bool m_createTimeHasBeenSet;
+
+                    /**
+                     * Number of days the snapshot created by this scheduled snapshot policy is retained.
+                     */
+                    uint64_t m_retentionDays;
+                    bool m_retentionDaysHasBeenSet;
+
+                    /**
+                     * ID of the replication target account
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_copyToAccountUin;
+                    bool m_copyToAccountUinHasBeenSet;
+
+                    /**
+                     * List of IDs of the instances associated with the scheduled snapshot policy.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_instanceIdSet;
+                    bool m_instanceIdSetHasBeenSet;
 
                 };
             }

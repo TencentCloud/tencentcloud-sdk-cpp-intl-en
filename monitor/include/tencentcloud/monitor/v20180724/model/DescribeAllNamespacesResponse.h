@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/monitor/v20180724/model/CommonNamespace.h>
+#include <tencentcloud/monitor/v20180724/model/CommonNamespaceNew.h>
 
 
 namespace TencentCloud
@@ -92,6 +93,20 @@ namespace TencentCloud
                      */
                     bool CustomNamespacesNewHasBeenSet() const;
 
+                    /**
+                     * 获取General alarm policy type, including TAPM, RUM, and CAT.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CommonNamespaces General alarm policy type, including TAPM, RUM, and CAT.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<CommonNamespaceNew> GetCommonNamespaces() const;
+
+                    /**
+                     * 判断参数 CommonNamespaces 是否已赋值
+                     * @return CommonNamespaces 是否已赋值
+                     */
+                    bool CommonNamespacesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -117,6 +132,13 @@ namespace TencentCloud
                      */
                     std::vector<CommonNamespace> m_customNamespacesNew;
                     bool m_customNamespacesNewHasBeenSet;
+
+                    /**
+                     * General alarm policy type, including TAPM, RUM, and CAT.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<CommonNamespaceNew> m_commonNamespaces;
+                    bool m_commonNamespacesHasBeenSet;
 
                 };
             }

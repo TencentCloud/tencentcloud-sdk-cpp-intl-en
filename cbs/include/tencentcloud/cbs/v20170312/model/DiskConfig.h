@@ -65,42 +65,6 @@ namespace TencentCloud
                     bool AvailableHasBeenSet() const;
 
                     /**
-                     * 获取Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
-                     * @return DiskType Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
-                     */
-                    std::string GetDiskType() const;
-
-                    /**
-                     * 设置Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
-                     * @param DiskType Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
-                     */
-                    void SetDiskType(const std::string& _diskType);
-
-                    /**
-                     * 判断参数 DiskType 是否已赋值
-                     * @return DiskType 是否已赋值
-                     */
-                    bool DiskTypeHasBeenSet() const;
-
-                    /**
-                     * 获取Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
-                     * @return DiskUsage Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
-                     */
-                    std::string GetDiskUsage() const;
-
-                    /**
-                     * 设置Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
-                     * @param DiskUsage Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
-                     */
-                    void SetDiskUsage(const std::string& _diskUsage);
-
-                    /**
-                     * 判断参数 DiskUsage 是否已赋值
-                     * @return DiskUsage 是否已赋值
-                     */
-                    bool DiskUsageHasBeenSet() const;
-
-                    /**
                      * 获取Billing method. Value range: <br><li>PREPAID: Prepaid, that is, monthly subscription<br><li>POSTPAID_BY_HOUR: Postpaid, that is, pay as you go.
                      * @return DiskChargeType Billing method. Value range: <br><li>PREPAID: Prepaid, that is, monthly subscription<br><li>POSTPAID_BY_HOUR: Postpaid, that is, pay as you go.
                      */
@@ -119,42 +83,6 @@ namespace TencentCloud
                     bool DiskChargeTypeHasBeenSet() const;
 
                     /**
-                     * 获取The maximum configurable cloud disk size (in GB).
-                     * @return MaxDiskSize The maximum configurable cloud disk size (in GB).
-                     */
-                    uint64_t GetMaxDiskSize() const;
-
-                    /**
-                     * 设置The maximum configurable cloud disk size (in GB).
-                     * @param MaxDiskSize The maximum configurable cloud disk size (in GB).
-                     */
-                    void SetMaxDiskSize(const uint64_t& _maxDiskSize);
-
-                    /**
-                     * 判断参数 MaxDiskSize 是否已赋值
-                     * @return MaxDiskSize 是否已赋值
-                     */
-                    bool MaxDiskSizeHasBeenSet() const;
-
-                    /**
-                     * 获取The minimum configurable cloud disk size (in GB).
-                     * @return MinDiskSize The minimum configurable cloud disk size (in GB).
-                     */
-                    uint64_t GetMinDiskSize() const;
-
-                    /**
-                     * 设置The minimum configurable cloud disk size (in GB).
-                     * @param MinDiskSize The minimum configurable cloud disk size (in GB).
-                     */
-                    void SetMinDiskSize(const uint64_t& _minDiskSize);
-
-                    /**
-                     * 判断参数 MinDiskSize 是否已赋值
-                     * @return MinDiskSize 是否已赋值
-                     */
-                    bool MinDiskSizeHasBeenSet() const;
-
-                    /**
                      * 获取The [Availability Region](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo) of the cloud drive.
                      * @return Zone The [Availability Region](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo) of the cloud drive.
                      */
@@ -171,6 +99,90 @@ namespace TencentCloud
                      * @return Zone 是否已赋值
                      */
                     bool ZoneHasBeenSet() const;
+
+                    /**
+                     * 获取Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
+Note: This field may return null, indicating that no valid value was found.
+                     * @return InstanceFamily Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
+Note: This field may return null, indicating that no valid value was found.
+                     */
+                    std::string GetInstanceFamily() const;
+
+                    /**
+                     * 设置Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
+Note: This field may return null, indicating that no valid value was found.
+                     * @param InstanceFamily Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
+Note: This field may return null, indicating that no valid value was found.
+                     */
+                    void SetInstanceFamily(const std::string& _instanceFamily);
+
+                    /**
+                     * 判断参数 InstanceFamily 是否已赋值
+                     * @return InstanceFamily 是否已赋值
+                     */
+                    bool InstanceFamilyHasBeenSet() const;
+
+                    /**
+                     * 获取Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
+                     * @return DiskType Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
+                     */
+                    std::string GetDiskType() const;
+
+                    /**
+                     * 设置Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
+                     * @param DiskType Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
+                     */
+                    void SetDiskType(const std::string& _diskType);
+
+                    /**
+                     * 判断参数 DiskType 是否已赋值
+                     * @return DiskType 是否已赋值
+                     */
+                    bool DiskTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Minimum increment of cloud disk size adjustment in GB.
+Note: This field might return null, indicating that no valid values can be obtained.
+                     * @return StepSize Minimum increment of cloud disk size adjustment in GB.
+Note: This field might return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetStepSize() const;
+
+                    /**
+                     * 设置Minimum increment of cloud disk size adjustment in GB.
+Note: This field might return null, indicating that no valid values can be obtained.
+                     * @param StepSize Minimum increment of cloud disk size adjustment in GB.
+Note: This field might return null, indicating that no valid values can be obtained.
+                     */
+                    void SetStepSize(const uint64_t& _stepSize);
+
+                    /**
+                     * 判断参数 StepSize 是否已赋值
+                     * @return StepSize 是否已赋值
+                     */
+                    bool StepSizeHasBeenSet() const;
+
+                    /**
+                     * 获取Additional performance range.
+Note: This field might return null, indicating that no valid values can be obtained.
+                     * @return ExtraPerformanceRange Additional performance range.
+Note: This field might return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<int64_t> GetExtraPerformanceRange() const;
+
+                    /**
+                     * 设置Additional performance range.
+Note: This field might return null, indicating that no valid values can be obtained.
+                     * @param ExtraPerformanceRange Additional performance range.
+Note: This field might return null, indicating that no valid values can be obtained.
+                     */
+                    void SetExtraPerformanceRange(const std::vector<int64_t>& _extraPerformanceRange);
+
+                    /**
+                     * 判断参数 ExtraPerformanceRange 是否已赋值
+                     * @return ExtraPerformanceRange 是否已赋值
+                     */
+                    bool ExtraPerformanceRangeHasBeenSet() const;
 
                     /**
                      * 获取Instance model.
@@ -195,26 +207,58 @@ Note: This field may return null, indicating that no valid value was found.
                     bool DeviceClassHasBeenSet() const;
 
                     /**
-                     * 获取Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
-Note: This field may return null, indicating that no valid value was found.
-                     * @return InstanceFamily Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
-Note: This field may return null, indicating that no valid value was found.
+                     * 获取Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
+                     * @return DiskUsage Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
                      */
-                    std::string GetInstanceFamily() const;
+                    std::string GetDiskUsage() const;
 
                     /**
-                     * 设置Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
-Note: This field may return null, indicating that no valid value was found.
-                     * @param InstanceFamily Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
-Note: This field may return null, indicating that no valid value was found.
+                     * 设置Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
+                     * @param DiskUsage Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
                      */
-                    void SetInstanceFamily(const std::string& _instanceFamily);
+                    void SetDiskUsage(const std::string& _diskUsage);
 
                     /**
-                     * 判断参数 InstanceFamily 是否已赋值
-                     * @return InstanceFamily 是否已赋值
+                     * 判断参数 DiskUsage 是否已赋值
+                     * @return DiskUsage 是否已赋值
                      */
-                    bool InstanceFamilyHasBeenSet() const;
+                    bool DiskUsageHasBeenSet() const;
+
+                    /**
+                     * 获取The minimum configurable cloud disk size (in GB).
+                     * @return MinDiskSize The minimum configurable cloud disk size (in GB).
+                     */
+                    uint64_t GetMinDiskSize() const;
+
+                    /**
+                     * 设置The minimum configurable cloud disk size (in GB).
+                     * @param MinDiskSize The minimum configurable cloud disk size (in GB).
+                     */
+                    void SetMinDiskSize(const uint64_t& _minDiskSize);
+
+                    /**
+                     * 判断参数 MinDiskSize 是否已赋值
+                     * @return MinDiskSize 是否已赋值
+                     */
+                    bool MinDiskSizeHasBeenSet() const;
+
+                    /**
+                     * 获取The maximum configurable cloud disk size (in GB).
+                     * @return MaxDiskSize The maximum configurable cloud disk size (in GB).
+                     */
+                    uint64_t GetMaxDiskSize() const;
+
+                    /**
+                     * 设置The maximum configurable cloud disk size (in GB).
+                     * @param MaxDiskSize The maximum configurable cloud disk size (in GB).
+                     */
+                    void SetMaxDiskSize(const uint64_t& _maxDiskSize);
+
+                    /**
+                     * 判断参数 MaxDiskSize 是否已赋值
+                     * @return MaxDiskSize 是否已赋值
+                     */
+                    bool MaxDiskSizeHasBeenSet() const;
 
                 private:
 
@@ -225,40 +269,43 @@ Note: This field may return null, indicating that no valid value was found.
                     bool m_availableHasBeenSet;
 
                     /**
-                     * Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
-                     */
-                    std::string m_diskType;
-                    bool m_diskTypeHasBeenSet;
-
-                    /**
-                     * Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
-                     */
-                    std::string m_diskUsage;
-                    bool m_diskUsageHasBeenSet;
-
-                    /**
                      * Billing method. Value range: <br><li>PREPAID: Prepaid, that is, monthly subscription<br><li>POSTPAID_BY_HOUR: Postpaid, that is, pay as you go.
                      */
                     std::string m_diskChargeType;
                     bool m_diskChargeTypeHasBeenSet;
 
                     /**
-                     * The maximum configurable cloud disk size (in GB).
-                     */
-                    uint64_t m_maxDiskSize;
-                    bool m_maxDiskSizeHasBeenSet;
-
-                    /**
-                     * The minimum configurable cloud disk size (in GB).
-                     */
-                    uint64_t m_minDiskSize;
-                    bool m_minDiskSizeHasBeenSet;
-
-                    /**
                      * The [Availability Region](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo) of the cloud drive.
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
+
+                    /**
+                     * Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
+Note: This field may return null, indicating that no valid value was found.
+                     */
+                    std::string m_instanceFamily;
+                    bool m_instanceFamilyHasBeenSet;
+
+                    /**
+                     * Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
+                     */
+                    std::string m_diskType;
+                    bool m_diskTypeHasBeenSet;
+
+                    /**
+                     * Minimum increment of cloud disk size adjustment in GB.
+Note: This field might return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_stepSize;
+                    bool m_stepSizeHasBeenSet;
+
+                    /**
+                     * Additional performance range.
+Note: This field might return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<int64_t> m_extraPerformanceRange;
+                    bool m_extraPerformanceRangeHasBeenSet;
 
                     /**
                      * Instance model.
@@ -268,11 +315,22 @@ Note: This field may return null, indicating that no valid value was found.
                     bool m_deviceClassHasBeenSet;
 
                     /**
-                     * Instance model series. For more information, please see [Instance Models](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
-Note: This field may return null, indicating that no valid value was found.
+                     * Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
                      */
-                    std::string m_instanceFamily;
-                    bool m_instanceFamilyHasBeenSet;
+                    std::string m_diskUsage;
+                    bool m_diskUsageHasBeenSet;
+
+                    /**
+                     * The minimum configurable cloud disk size (in GB).
+                     */
+                    uint64_t m_minDiskSize;
+                    bool m_minDiskSizeHasBeenSet;
+
+                    /**
+                     * The maximum configurable cloud disk size (in GB).
+                     */
+                    uint64_t m_maxDiskSize;
+                    bool m_maxDiskSizeHasBeenSet;
 
                 };
             }
