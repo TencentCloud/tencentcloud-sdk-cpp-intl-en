@@ -23,7 +23,8 @@ using namespace std;
 QueryCreditAllocationHistoryData::QueryCreditAllocationHistoryData() :
     m_allocatedTimeHasBeenSet(false),
     m_operatorHasBeenSet(false),
-    m_creditHasBeenSet(false)
+    m_creditHasBeenSet(false),
+    m_allocatedCreditHasBeenSet(false)
 {
 }
 
@@ -62,6 +63,16 @@ CoreInternalOutcome QueryCreditAllocationHistoryData::Deserialize(const rapidjso
         m_creditHasBeenSet = true;
     }
 
+    if (value.HasMember("AllocatedCredit") && !value["AllocatedCredit"].IsNull())
+    {
+        if (!value["AllocatedCredit"].IsLosslessDouble())
+        {
+            return CoreInternalOutcome(Core::Error("response `QueryCreditAllocationHistoryData.AllocatedCredit` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
+        }
+        m_allocatedCredit = value["AllocatedCredit"].GetDouble();
+        m_allocatedCreditHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -91,6 +102,14 @@ void QueryCreditAllocationHistoryData::ToJsonObject(rapidjson::Value &value, rap
         string key = "Credit";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_credit, allocator);
+    }
+
+    if (m_allocatedCreditHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AllocatedCredit";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_allocatedCredit, allocator);
     }
 
 }
@@ -142,5 +161,21 @@ void QueryCreditAllocationHistoryData::SetCredit(const double& _credit)
 bool QueryCreditAllocationHistoryData::CreditHasBeenSet() const
 {
     return m_creditHasBeenSet;
+}
+
+double QueryCreditAllocationHistoryData::GetAllocatedCredit() const
+{
+    return m_allocatedCredit;
+}
+
+void QueryCreditAllocationHistoryData::SetAllocatedCredit(const double& _allocatedCredit)
+{
+    m_allocatedCredit = _allocatedCredit;
+    m_allocatedCreditHasBeenSet = true;
+}
+
+bool QueryCreditAllocationHistoryData::AllocatedCreditHasBeenSet() const
+{
+    return m_allocatedCreditHasBeenSet;
 }
 

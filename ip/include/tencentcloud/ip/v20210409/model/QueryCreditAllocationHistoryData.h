@@ -100,6 +100,24 @@ namespace TencentCloud
                      */
                     bool CreditHasBeenSet() const;
 
+                    /**
+                     * 获取The allocated total credit
+                     * @return AllocatedCredit The allocated total credit
+                     */
+                    double GetAllocatedCredit() const;
+
+                    /**
+                     * 设置The allocated total credit
+                     * @param AllocatedCredit The allocated total credit
+                     */
+                    void SetAllocatedCredit(const double& _allocatedCredit);
+
+                    /**
+                     * 判断参数 AllocatedCredit 是否已赋值
+                     * @return AllocatedCredit 是否已赋值
+                     */
+                    bool AllocatedCreditHasBeenSet() const;
+
                 private:
 
                     /**
@@ -119,6 +137,12 @@ namespace TencentCloud
                      */
                     double m_credit;
                     bool m_creditHasBeenSet;
+
+                    /**
+                     * The allocated total credit
+                     */
+                    double m_allocatedCredit;
+                    bool m_allocatedCreditHasBeenSet;
 
                 };
             }

@@ -30,7 +30,10 @@ QueryCustomersCreditData::QueryCustomersCreditData() :
     m_recentExpiryHasBeenSet(false),
     m_clientUinHasBeenSet(false),
     m_creditHasBeenSet(false),
-    m_remainingCreditHasBeenSet(false)
+    m_remainingCreditHasBeenSet(false),
+    m_identifyTypeHasBeenSet(false),
+    m_remarkHasBeenSet(false),
+    m_forceHasBeenSet(false)
 {
 }
 
@@ -139,6 +142,36 @@ CoreInternalOutcome QueryCustomersCreditData::Deserialize(const rapidjson::Value
         m_remainingCreditHasBeenSet = true;
     }
 
+    if (value.HasMember("IdentifyType") && !value["IdentifyType"].IsNull())
+    {
+        if (!value["IdentifyType"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `QueryCustomersCreditData.IdentifyType` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_identifyType = value["IdentifyType"].GetUint64();
+        m_identifyTypeHasBeenSet = true;
+    }
+
+    if (value.HasMember("Remark") && !value["Remark"].IsNull())
+    {
+        if (!value["Remark"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `QueryCustomersCreditData.Remark` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_remark = string(value["Remark"].GetString());
+        m_remarkHasBeenSet = true;
+    }
+
+    if (value.HasMember("Force") && !value["Force"].IsNull())
+    {
+        if (!value["Force"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `QueryCustomersCreditData.Force` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_force = value["Force"].GetInt64();
+        m_forceHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -224,6 +257,30 @@ void QueryCustomersCreditData::ToJsonObject(rapidjson::Value &value, rapidjson::
         string key = "RemainingCredit";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_remainingCredit, allocator);
+    }
+
+    if (m_identifyTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IdentifyType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_identifyType, allocator);
+    }
+
+    if (m_remarkHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Remark";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_remark.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_forceHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Force";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_force, allocator);
     }
 
 }
@@ -387,5 +444,53 @@ void QueryCustomersCreditData::SetRemainingCredit(const double& _remainingCredit
 bool QueryCustomersCreditData::RemainingCreditHasBeenSet() const
 {
     return m_remainingCreditHasBeenSet;
+}
+
+uint64_t QueryCustomersCreditData::GetIdentifyType() const
+{
+    return m_identifyType;
+}
+
+void QueryCustomersCreditData::SetIdentifyType(const uint64_t& _identifyType)
+{
+    m_identifyType = _identifyType;
+    m_identifyTypeHasBeenSet = true;
+}
+
+bool QueryCustomersCreditData::IdentifyTypeHasBeenSet() const
+{
+    return m_identifyTypeHasBeenSet;
+}
+
+string QueryCustomersCreditData::GetRemark() const
+{
+    return m_remark;
+}
+
+void QueryCustomersCreditData::SetRemark(const string& _remark)
+{
+    m_remark = _remark;
+    m_remarkHasBeenSet = true;
+}
+
+bool QueryCustomersCreditData::RemarkHasBeenSet() const
+{
+    return m_remarkHasBeenSet;
+}
+
+int64_t QueryCustomersCreditData::GetForce() const
+{
+    return m_force;
+}
+
+void QueryCustomersCreditData::SetForce(const int64_t& _force)
+{
+    m_force = _force;
+    m_forceHasBeenSet = true;
+}
+
+bool QueryCustomersCreditData::ForceHasBeenSet() const
+{
+    return m_forceHasBeenSet;
 }
 

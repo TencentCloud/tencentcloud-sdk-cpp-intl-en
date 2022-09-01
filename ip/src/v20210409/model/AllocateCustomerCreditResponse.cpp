@@ -23,7 +23,9 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Ip::V20210409::Model;
 using namespace std;
 
-AllocateCustomerCreditResponse::AllocateCustomerCreditResponse()
+AllocateCustomerCreditResponse::AllocateCustomerCreditResponse() :
+    m_totalCreditHasBeenSet(false),
+    m_remainingCreditHasBeenSet(false)
 {
 }
 
@@ -61,6 +63,26 @@ CoreInternalOutcome AllocateCustomerCreditResponse::Deserialize(const string &pa
     }
 
 
+    if (rsp.HasMember("TotalCredit") && !rsp["TotalCredit"].IsNull())
+    {
+        if (!rsp["TotalCredit"].IsLosslessDouble())
+        {
+            return CoreInternalOutcome(Core::Error("response `TotalCredit` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
+        }
+        m_totalCredit = rsp["TotalCredit"].GetDouble();
+        m_totalCreditHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("RemainingCredit") && !rsp["RemainingCredit"].IsNull())
+    {
+        if (!rsp["RemainingCredit"].IsLosslessDouble())
+        {
+            return CoreInternalOutcome(Core::Error("response `RemainingCredit` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
+        }
+        m_remainingCredit = rsp["RemainingCredit"].GetDouble();
+        m_remainingCreditHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -70,6 +92,22 @@ string AllocateCustomerCreditResponse::ToJsonString() const
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_totalCreditHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TotalCredit";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_totalCredit, allocator);
+    }
+
+    if (m_remainingCreditHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RemainingCredit";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_remainingCredit, allocator);
+    }
 
     rapidjson::Value iKey(rapidjson::kStringType);
     string key = "RequestId";
@@ -82,5 +120,25 @@ string AllocateCustomerCreditResponse::ToJsonString() const
     return buffer.GetString();
 }
 
+
+double AllocateCustomerCreditResponse::GetTotalCredit() const
+{
+    return m_totalCredit;
+}
+
+bool AllocateCustomerCreditResponse::TotalCreditHasBeenSet() const
+{
+    return m_totalCreditHasBeenSet;
+}
+
+double AllocateCustomerCreditResponse::GetRemainingCredit() const
+{
+    return m_remainingCredit;
+}
+
+bool AllocateCustomerCreditResponse::RemainingCreditHasBeenSet() const
+{
+    return m_remainingCreditHasBeenSet;
+}
 
 

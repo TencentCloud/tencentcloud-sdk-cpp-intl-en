@@ -226,6 +226,60 @@ namespace TencentCloud
                      */
                     bool RemainingCreditHasBeenSet() const;
 
+                    /**
+                     * 获取0: Identity not verified; 1: Individual identity verified; 2: Enterprise identity verified.
+                     * @return IdentifyType 0: Identity not verified; 1: Individual identity verified; 2: Enterprise identity verified.
+                     */
+                    uint64_t GetIdentifyType() const;
+
+                    /**
+                     * 设置0: Identity not verified; 1: Individual identity verified; 2: Enterprise identity verified.
+                     * @param IdentifyType 0: Identity not verified; 1: Individual identity verified; 2: Enterprise identity verified.
+                     */
+                    void SetIdentifyType(const uint64_t& _identifyType);
+
+                    /**
+                     * 判断参数 IdentifyType 是否已赋值
+                     * @return IdentifyType 是否已赋值
+                     */
+                    bool IdentifyTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Customer remarks
+                     * @return Remark Customer remarks
+                     */
+                    std::string GetRemark() const;
+
+                    /**
+                     * 设置Customer remarks
+                     * @param Remark Customer remarks
+                     */
+                    void SetRemark(const std::string& _remark);
+
+                    /**
+                     * 判断参数 Remark 是否已赋值
+                     * @return Remark 是否已赋值
+                     */
+                    bool RemarkHasBeenSet() const;
+
+                    /**
+                     * 获取Forced status
+                     * @return Force Forced status
+                     */
+                    int64_t GetForce() const;
+
+                    /**
+                     * 设置Forced status
+                     * @param Force Forced status
+                     */
+                    void SetForce(const int64_t& _force);
+
+                    /**
+                     * 判断参数 Force 是否已赋值
+                     * @return Force 是否已赋值
+                     */
+                    bool ForceHasBeenSet() const;
+
                 private:
 
                     /**
@@ -287,6 +341,24 @@ namespace TencentCloud
                      */
                     double m_remainingCredit;
                     bool m_remainingCreditHasBeenSet;
+
+                    /**
+                     * 0: Identity not verified; 1: Individual identity verified; 2: Enterprise identity verified.
+                     */
+                    uint64_t m_identifyType;
+                    bool m_identifyTypeHasBeenSet;
+
+                    /**
+                     * Customer remarks
+                     */
+                    std::string m_remark;
+                    bool m_remarkHasBeenSet;
+
+                    /**
+                     * Forced status
+                     */
+                    int64_t m_force;
+                    bool m_forceHasBeenSet;
 
                 };
             }
