@@ -27,6 +27,7 @@
 #include <tencentcloud/vpc/v20170312/model/SecurityPolicyDatabase.h>
 #include <tencentcloud/vpc/v20170312/model/IKEOptionsSpecification.h>
 #include <tencentcloud/vpc/v20170312/model/IPSECOptionsSpecification.h>
+#include <tencentcloud/vpc/v20170312/model/Tag.h>
 
 
 namespace TencentCloud
@@ -391,6 +392,112 @@ namespace TencentCloud
                      */
                     bool HealthCheckStatusHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable DPD. Values: `0` (Disable) and `1` (Enable)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DpdEnable Whether to enable DPD. Values: `0` (Disable) and `1` (Enable)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetDpdEnable() const;
+
+                    /**
+                     * 设置Whether to enable DPD. Values: `0` (Disable) and `1` (Enable)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param DpdEnable Whether to enable DPD. Values: `0` (Disable) and `1` (Enable)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetDpdEnable(const int64_t& _dpdEnable);
+
+                    /**
+                     * 判断参数 DpdEnable 是否已赋值
+                     * @return DpdEnable 是否已赋值
+                     */
+                    bool DpdEnableHasBeenSet() const;
+
+                    /**
+                     * 获取DPD timeout period. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DpdTimeout DPD timeout period. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetDpdTimeout() const;
+
+                    /**
+                     * 设置DPD timeout period. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param DpdTimeout DPD timeout period. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetDpdTimeout(const std::string& _dpdTimeout);
+
+                    /**
+                     * 判断参数 DpdTimeout 是否已赋值
+                     * @return DpdTimeout 是否已赋值
+                     */
+                    bool DpdTimeoutHasBeenSet() const;
+
+                    /**
+                     * 获取The action to take in case of DPD timeout. Values: `clear` (Disconnect) and `restart` (retry). This parameter only takes effect when `DpdEnable` is set to `1`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DpdAction The action to take in case of DPD timeout. Values: `clear` (Disconnect) and `restart` (retry). This parameter only takes effect when `DpdEnable` is set to `1`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetDpdAction() const;
+
+                    /**
+                     * 设置The action to take in case of DPD timeout. Values: `clear` (Disconnect) and `restart` (retry). This parameter only takes effect when `DpdEnable` is set to `1`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param DpdAction The action to take in case of DPD timeout. Values: `clear` (Disconnect) and `restart` (retry). This parameter only takes effect when `DpdEnable` is set to `1`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetDpdAction(const std::string& _dpdAction);
+
+                    /**
+                     * 判断参数 DpdAction 是否已赋值
+                     * @return DpdAction 是否已赋值
+                     */
+                    bool DpdActionHasBeenSet() const;
+
+                    /**
+                     * 获取Array of tag key-value pairs
+                     * @return TagSet Array of tag key-value pairs
+                     */
+                    std::vector<Tag> GetTagSet() const;
+
+                    /**
+                     * 设置Array of tag key-value pairs
+                     * @param TagSet Array of tag key-value pairs
+                     */
+                    void SetTagSet(const std::vector<Tag>& _tagSet);
+
+                    /**
+                     * 判断参数 TagSet 是否已赋值
+                     * @return TagSet 是否已赋值
+                     */
+                    bool TagSetHasBeenSet() const;
+
+                    /**
+                     * 获取Negotiation type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return NegotiationType Negotiation type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetNegotiationType() const;
+
+                    /**
+                     * 设置Negotiation type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param NegotiationType Negotiation type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetNegotiationType(const std::string& _negotiationType);
+
+                    /**
+                     * 判断参数 NegotiationType 是否已赋值
+                     * @return NegotiationType 是否已赋值
+                     */
+                    bool NegotiationTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -506,6 +613,40 @@ namespace TencentCloud
                      */
                     std::string m_healthCheckStatus;
                     bool m_healthCheckStatusHasBeenSet;
+
+                    /**
+                     * Whether to enable DPD. Values: `0` (Disable) and `1` (Enable)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_dpdEnable;
+                    bool m_dpdEnableHasBeenSet;
+
+                    /**
+                     * DPD timeout period. 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_dpdTimeout;
+                    bool m_dpdTimeoutHasBeenSet;
+
+                    /**
+                     * The action to take in case of DPD timeout. Values: `clear` (Disconnect) and `restart` (retry). This parameter only takes effect when `DpdEnable` is set to `1`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_dpdAction;
+                    bool m_dpdActionHasBeenSet;
+
+                    /**
+                     * Array of tag key-value pairs
+                     */
+                    std::vector<Tag> m_tagSet;
+                    bool m_tagSetHasBeenSet;
+
+                    /**
+                     * Negotiation type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_negotiationType;
+                    bool m_negotiationTypeHasBeenSet;
 
                 };
             }

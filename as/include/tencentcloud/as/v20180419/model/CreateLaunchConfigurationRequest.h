@@ -502,14 +502,18 @@ If this field is configured in a launch configuration, the `InstanceName` of a C
                     bool DiskTypePolicyHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HpcClusterId 
+                     * 获取HPC ID<br>
+Note: This field is default to empty
+                     * @return HpcClusterId HPC ID<br>
+Note: This field is default to empty
                      */
                     std::string GetHpcClusterId() const;
 
                     /**
-                     * 设置
-                     * @param HpcClusterId 
+                     * 设置HPC ID<br>
+Note: This field is default to empty
+                     * @param HpcClusterId HPC ID<br>
+Note: This field is default to empty
                      */
                     void SetHpcClusterId(const std::string& _hpcClusterId);
 
@@ -667,7 +671,8 @@ If this field is configured in a launch configuration, the `InstanceName` of a C
                     bool m_diskTypePolicyHasBeenSet;
 
                     /**
-                     * 
+                     * HPC ID<br>
+Note: This field is default to empty
                      */
                     std::string m_hpcClusterId;
                     bool m_hpcClusterIdHasBeenSet;
