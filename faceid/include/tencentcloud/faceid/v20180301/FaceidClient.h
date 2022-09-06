@@ -23,12 +23,24 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/faceid/v20180301/model/ApplyLivenessTokenRequest.h>
+#include <tencentcloud/faceid/v20180301/model/ApplyLivenessTokenResponse.h>
+#include <tencentcloud/faceid/v20180301/model/ApplySdkVerificationTokenRequest.h>
+#include <tencentcloud/faceid/v20180301/model/ApplySdkVerificationTokenResponse.h>
+#include <tencentcloud/faceid/v20180301/model/ApplyWebVerificationTokenRequest.h>
+#include <tencentcloud/faceid/v20180301/model/ApplyWebVerificationTokenResponse.h>
 #include <tencentcloud/faceid/v20180301/model/CreateUploadUrlRequest.h>
 #include <tencentcloud/faceid/v20180301/model/CreateUploadUrlResponse.h>
 #include <tencentcloud/faceid/v20180301/model/DetectReflectLivenessAndCompareRequest.h>
 #include <tencentcloud/faceid/v20180301/model/DetectReflectLivenessAndCompareResponse.h>
 #include <tencentcloud/faceid/v20180301/model/GenerateReflectSequenceRequest.h>
 #include <tencentcloud/faceid/v20180301/model/GenerateReflectSequenceResponse.h>
+#include <tencentcloud/faceid/v20180301/model/GetLivenessResultRequest.h>
+#include <tencentcloud/faceid/v20180301/model/GetLivenessResultResponse.h>
+#include <tencentcloud/faceid/v20180301/model/GetSdkVerificationResultRequest.h>
+#include <tencentcloud/faceid/v20180301/model/GetSdkVerificationResultResponse.h>
+#include <tencentcloud/faceid/v20180301/model/GetWebVerificationResultRequest.h>
+#include <tencentcloud/faceid/v20180301/model/GetWebVerificationResultResponse.h>
 #include <tencentcloud/faceid/v20180301/model/LivenessCompareRequest.h>
 #include <tencentcloud/faceid/v20180301/model/LivenessCompareResponse.h>
 #include <tencentcloud/faceid/v20180301/model/VideoLivenessCompareRequest.h>
@@ -47,6 +59,15 @@ namespace TencentCloud
                 FaceidClient(const Credential &credential, const std::string &region);
                 FaceidClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
+                typedef Outcome<Core::Error, Model::ApplyLivenessTokenResponse> ApplyLivenessTokenOutcome;
+                typedef std::future<ApplyLivenessTokenOutcome> ApplyLivenessTokenOutcomeCallable;
+                typedef std::function<void(const FaceidClient*, const Model::ApplyLivenessTokenRequest&, ApplyLivenessTokenOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ApplyLivenessTokenAsyncHandler;
+                typedef Outcome<Core::Error, Model::ApplySdkVerificationTokenResponse> ApplySdkVerificationTokenOutcome;
+                typedef std::future<ApplySdkVerificationTokenOutcome> ApplySdkVerificationTokenOutcomeCallable;
+                typedef std::function<void(const FaceidClient*, const Model::ApplySdkVerificationTokenRequest&, ApplySdkVerificationTokenOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ApplySdkVerificationTokenAsyncHandler;
+                typedef Outcome<Core::Error, Model::ApplyWebVerificationTokenResponse> ApplyWebVerificationTokenOutcome;
+                typedef std::future<ApplyWebVerificationTokenOutcome> ApplyWebVerificationTokenOutcomeCallable;
+                typedef std::function<void(const FaceidClient*, const Model::ApplyWebVerificationTokenRequest&, ApplyWebVerificationTokenOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ApplyWebVerificationTokenAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateUploadUrlResponse> CreateUploadUrlOutcome;
                 typedef std::future<CreateUploadUrlOutcome> CreateUploadUrlOutcomeCallable;
                 typedef std::function<void(const FaceidClient*, const Model::CreateUploadUrlRequest&, CreateUploadUrlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateUploadUrlAsyncHandler;
@@ -56,6 +77,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::GenerateReflectSequenceResponse> GenerateReflectSequenceOutcome;
                 typedef std::future<GenerateReflectSequenceOutcome> GenerateReflectSequenceOutcomeCallable;
                 typedef std::function<void(const FaceidClient*, const Model::GenerateReflectSequenceRequest&, GenerateReflectSequenceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GenerateReflectSequenceAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetLivenessResultResponse> GetLivenessResultOutcome;
+                typedef std::future<GetLivenessResultOutcome> GetLivenessResultOutcomeCallable;
+                typedef std::function<void(const FaceidClient*, const Model::GetLivenessResultRequest&, GetLivenessResultOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetLivenessResultAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetSdkVerificationResultResponse> GetSdkVerificationResultOutcome;
+                typedef std::future<GetSdkVerificationResultOutcome> GetSdkVerificationResultOutcomeCallable;
+                typedef std::function<void(const FaceidClient*, const Model::GetSdkVerificationResultRequest&, GetSdkVerificationResultOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetSdkVerificationResultAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetWebVerificationResultResponse> GetWebVerificationResultOutcome;
+                typedef std::future<GetWebVerificationResultOutcome> GetWebVerificationResultOutcomeCallable;
+                typedef std::function<void(const FaceidClient*, const Model::GetWebVerificationResultRequest&, GetWebVerificationResultOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetWebVerificationResultAsyncHandler;
                 typedef Outcome<Core::Error, Model::LivenessCompareResponse> LivenessCompareOutcome;
                 typedef std::future<LivenessCompareOutcome> LivenessCompareOutcomeCallable;
                 typedef std::function<void(const FaceidClient*, const Model::LivenessCompareRequest&, LivenessCompareOutcome, const std::shared_ptr<const AsyncCallerContext>&)> LivenessCompareAsyncHandler;
@@ -64,6 +94,33 @@ namespace TencentCloud
                 typedef std::function<void(const FaceidClient*, const Model::VideoLivenessCompareRequest&, VideoLivenessCompareOutcome, const std::shared_ptr<const AsyncCallerContext>&)> VideoLivenessCompareAsyncHandler;
 
 
+
+                /**
+                 *This API is used to apply for a token before calling the liveness detection service each time. This token is required for initiating the verification process and getting the result after the verification is completed.
+                 * @param req ApplyLivenessTokenRequest
+                 * @return ApplyLivenessTokenOutcome
+                 */
+                ApplyLivenessTokenOutcome ApplyLivenessToken(const Model::ApplyLivenessTokenRequest &request);
+                void ApplyLivenessTokenAsync(const Model::ApplyLivenessTokenRequest& request, const ApplyLivenessTokenAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ApplyLivenessTokenOutcomeCallable ApplyLivenessTokenCallable(const Model::ApplyLivenessTokenRequest& request);
+
+                /**
+                 *This API is used to apply for a token before calling the SDK-based verification service each time. This token is required for initiating the verification process and getting the result after the verification is completed.
+                 * @param req ApplySdkVerificationTokenRequest
+                 * @return ApplySdkVerificationTokenOutcome
+                 */
+                ApplySdkVerificationTokenOutcome ApplySdkVerificationToken(const Model::ApplySdkVerificationTokenRequest &request);
+                void ApplySdkVerificationTokenAsync(const Model::ApplySdkVerificationTokenRequest& request, const ApplySdkVerificationTokenAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ApplySdkVerificationTokenOutcomeCallable ApplySdkVerificationTokenCallable(const Model::ApplySdkVerificationTokenRequest& request);
+
+                /**
+                 *This API is used to apply for a token before calling the web-based verification service each time. This token is required for initiating the verification process and getting the result after the verification is completed.
+                 * @param req ApplyWebVerificationTokenRequest
+                 * @return ApplyWebVerificationTokenOutcome
+                 */
+                ApplyWebVerificationTokenOutcome ApplyWebVerificationToken(const Model::ApplyWebVerificationTokenRequest &request);
+                void ApplyWebVerificationTokenAsync(const Model::ApplyWebVerificationTokenRequest& request, const ApplyWebVerificationTokenAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ApplyWebVerificationTokenOutcomeCallable ApplyWebVerificationTokenCallable(const Model::ApplyWebVerificationTokenRequest& request);
 
                 /**
                  *This API is used to generate a temporary `UploadUrl` for uploading resource files (with the `HTTP PUT` method). After resource upload, `ResourceUrl` will be passed to the `TargetAction` API to complete the resource passing (specific fields vary by case). 
@@ -96,7 +153,35 @@ The data generated with the SDK must be stored in COS, and the region of the COS
                 GenerateReflectSequenceOutcomeCallable GenerateReflectSequenceCallable(const Model::GenerateReflectSequenceRequest& request);
 
                 /**
+                 *This API is used to get the verification result with the corresponding token (SdkToken) after the liveness detection is completed. The token is valid for two hours after issuance and can be called multiple times.
+                 * @param req GetLivenessResultRequest
+                 * @return GetLivenessResultOutcome
+                 */
+                GetLivenessResultOutcome GetLivenessResult(const Model::GetLivenessResultRequest &request);
+                void GetLivenessResultAsync(const Model::GetLivenessResultRequest& request, const GetLivenessResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetLivenessResultOutcomeCallable GetLivenessResultCallable(const Model::GetLivenessResultRequest& request);
+
+                /**
+                 *This API is used to get the verification result with the corresponding token after the SDK-based verification is completed. The token is valid for three days after issuance and can be called multiple times.
+                 * @param req GetSdkVerificationResultRequest
+                 * @return GetSdkVerificationResultOutcome
+                 */
+                GetSdkVerificationResultOutcome GetSdkVerificationResult(const Model::GetSdkVerificationResultRequest &request);
+                void GetSdkVerificationResultAsync(const Model::GetSdkVerificationResultRequest& request, const GetSdkVerificationResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetSdkVerificationResultOutcomeCallable GetSdkVerificationResultCallable(const Model::GetSdkVerificationResultRequest& request);
+
+                /**
+                 *This API is used to get the verification result with the corresponding token (BizToken) after the web-based verification is completed. The BizToken is valid for three days (3*24*3,600s) after issuance and can be called multiple times.
+                 * @param req GetWebVerificationResultRequest
+                 * @return GetWebVerificationResultOutcome
+                 */
+                GetWebVerificationResultOutcome GetWebVerificationResult(const Model::GetWebVerificationResultRequest &request);
+                void GetWebVerificationResultAsync(const Model::GetWebVerificationResultRequest& request, const GetWebVerificationResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetWebVerificationResultOutcomeCallable GetWebVerificationResultCallable(const Model::GetWebVerificationResultRequest& request);
+
+                /**
                  *This API is used to pass in a video and a photo, determine whether the person in the video is real, and if yes, then determine whether the person in the video is the same as that in the photo.
+This API on the legacy version will continue to serve existing users but will be unavailable to new users. We recommend you use `VideoLivenessCompare` for better service quality.
                  * @param req LivenessCompareRequest
                  * @return LivenessCompareOutcome
                  */

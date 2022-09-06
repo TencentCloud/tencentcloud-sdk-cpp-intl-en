@@ -40,6 +40,135 @@ FaceidClient::FaceidClient(const Credential &credential, const string &region, c
 }
 
 
+FaceidClient::ApplyLivenessTokenOutcome FaceidClient::ApplyLivenessToken(const ApplyLivenessTokenRequest &request)
+{
+    auto outcome = MakeRequest(request, "ApplyLivenessToken");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ApplyLivenessTokenResponse rsp = ApplyLivenessTokenResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ApplyLivenessTokenOutcome(rsp);
+        else
+            return ApplyLivenessTokenOutcome(o.GetError());
+    }
+    else
+    {
+        return ApplyLivenessTokenOutcome(outcome.GetError());
+    }
+}
+
+void FaceidClient::ApplyLivenessTokenAsync(const ApplyLivenessTokenRequest& request, const ApplyLivenessTokenAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ApplyLivenessToken(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+FaceidClient::ApplyLivenessTokenOutcomeCallable FaceidClient::ApplyLivenessTokenCallable(const ApplyLivenessTokenRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ApplyLivenessTokenOutcome()>>(
+        [this, request]()
+        {
+            return this->ApplyLivenessToken(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+FaceidClient::ApplySdkVerificationTokenOutcome FaceidClient::ApplySdkVerificationToken(const ApplySdkVerificationTokenRequest &request)
+{
+    auto outcome = MakeRequest(request, "ApplySdkVerificationToken");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ApplySdkVerificationTokenResponse rsp = ApplySdkVerificationTokenResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ApplySdkVerificationTokenOutcome(rsp);
+        else
+            return ApplySdkVerificationTokenOutcome(o.GetError());
+    }
+    else
+    {
+        return ApplySdkVerificationTokenOutcome(outcome.GetError());
+    }
+}
+
+void FaceidClient::ApplySdkVerificationTokenAsync(const ApplySdkVerificationTokenRequest& request, const ApplySdkVerificationTokenAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ApplySdkVerificationToken(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+FaceidClient::ApplySdkVerificationTokenOutcomeCallable FaceidClient::ApplySdkVerificationTokenCallable(const ApplySdkVerificationTokenRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ApplySdkVerificationTokenOutcome()>>(
+        [this, request]()
+        {
+            return this->ApplySdkVerificationToken(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+FaceidClient::ApplyWebVerificationTokenOutcome FaceidClient::ApplyWebVerificationToken(const ApplyWebVerificationTokenRequest &request)
+{
+    auto outcome = MakeRequest(request, "ApplyWebVerificationToken");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ApplyWebVerificationTokenResponse rsp = ApplyWebVerificationTokenResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ApplyWebVerificationTokenOutcome(rsp);
+        else
+            return ApplyWebVerificationTokenOutcome(o.GetError());
+    }
+    else
+    {
+        return ApplyWebVerificationTokenOutcome(outcome.GetError());
+    }
+}
+
+void FaceidClient::ApplyWebVerificationTokenAsync(const ApplyWebVerificationTokenRequest& request, const ApplyWebVerificationTokenAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ApplyWebVerificationToken(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+FaceidClient::ApplyWebVerificationTokenOutcomeCallable FaceidClient::ApplyWebVerificationTokenCallable(const ApplyWebVerificationTokenRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ApplyWebVerificationTokenOutcome()>>(
+        [this, request]()
+        {
+            return this->ApplyWebVerificationToken(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 FaceidClient::CreateUploadUrlOutcome FaceidClient::CreateUploadUrl(const CreateUploadUrlRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateUploadUrl");
@@ -162,6 +291,135 @@ FaceidClient::GenerateReflectSequenceOutcomeCallable FaceidClient::GenerateRefle
         [this, request]()
         {
             return this->GenerateReflectSequence(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+FaceidClient::GetLivenessResultOutcome FaceidClient::GetLivenessResult(const GetLivenessResultRequest &request)
+{
+    auto outcome = MakeRequest(request, "GetLivenessResult");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        GetLivenessResultResponse rsp = GetLivenessResultResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return GetLivenessResultOutcome(rsp);
+        else
+            return GetLivenessResultOutcome(o.GetError());
+    }
+    else
+    {
+        return GetLivenessResultOutcome(outcome.GetError());
+    }
+}
+
+void FaceidClient::GetLivenessResultAsync(const GetLivenessResultRequest& request, const GetLivenessResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->GetLivenessResult(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+FaceidClient::GetLivenessResultOutcomeCallable FaceidClient::GetLivenessResultCallable(const GetLivenessResultRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<GetLivenessResultOutcome()>>(
+        [this, request]()
+        {
+            return this->GetLivenessResult(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+FaceidClient::GetSdkVerificationResultOutcome FaceidClient::GetSdkVerificationResult(const GetSdkVerificationResultRequest &request)
+{
+    auto outcome = MakeRequest(request, "GetSdkVerificationResult");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        GetSdkVerificationResultResponse rsp = GetSdkVerificationResultResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return GetSdkVerificationResultOutcome(rsp);
+        else
+            return GetSdkVerificationResultOutcome(o.GetError());
+    }
+    else
+    {
+        return GetSdkVerificationResultOutcome(outcome.GetError());
+    }
+}
+
+void FaceidClient::GetSdkVerificationResultAsync(const GetSdkVerificationResultRequest& request, const GetSdkVerificationResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->GetSdkVerificationResult(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+FaceidClient::GetSdkVerificationResultOutcomeCallable FaceidClient::GetSdkVerificationResultCallable(const GetSdkVerificationResultRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<GetSdkVerificationResultOutcome()>>(
+        [this, request]()
+        {
+            return this->GetSdkVerificationResult(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+FaceidClient::GetWebVerificationResultOutcome FaceidClient::GetWebVerificationResult(const GetWebVerificationResultRequest &request)
+{
+    auto outcome = MakeRequest(request, "GetWebVerificationResult");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        GetWebVerificationResultResponse rsp = GetWebVerificationResultResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return GetWebVerificationResultOutcome(rsp);
+        else
+            return GetWebVerificationResultOutcome(o.GetError());
+    }
+    else
+    {
+        return GetWebVerificationResultOutcome(outcome.GetError());
+    }
+}
+
+void FaceidClient::GetWebVerificationResultAsync(const GetWebVerificationResultRequest& request, const GetWebVerificationResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->GetWebVerificationResult(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+FaceidClient::GetWebVerificationResultOutcomeCallable FaceidClient::GetWebVerificationResultCallable(const GetWebVerificationResultRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<GetWebVerificationResultOutcome()>>(
+        [this, request]()
+        {
+            return this->GetWebVerificationResult(request);
         }
     );
 

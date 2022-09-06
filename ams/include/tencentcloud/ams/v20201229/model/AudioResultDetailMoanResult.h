@@ -162,6 +162,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool SubLabelHasBeenSet() const;
 
+                    /**
+                     * 获取This field returns the suggested action according to the check result. <br>Values: `Block`, `Review`, `Pass`.
+                     * @return Suggestion This field returns the suggested action according to the check result. <br>Values: `Block`, `Review`, `Pass`.
+                     */
+                    std::string GetSuggestion() const;
+
+                    /**
+                     * 设置This field returns the suggested action according to the check result. <br>Values: `Block`, `Review`, `Pass`.
+                     * @param Suggestion This field returns the suggested action according to the check result. <br>Values: `Block`, `Review`, `Pass`.
+                     */
+                    void SetSuggestion(const std::string& _suggestion);
+
+                    /**
+                     * 判断参数 Suggestion 是否已赋值
+                     * @return Suggestion 是否已赋值
+                     */
+                    bool SuggestionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -201,6 +219,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_subLabel;
                     bool m_subLabelHasBeenSet;
+
+                    /**
+                     * This field returns the suggested action according to the check result. <br>Values: `Block`, `Review`, `Pass`.
+                     */
+                    std::string m_suggestion;
+                    bool m_suggestionHasBeenSet;
 
                 };
             }
