@@ -43,7 +43,25 @@ namespace TencentCloud
                     std::string ToJsonString() const;
 
 
+                    /**
+                     * 获取
+                     * @return IntegrationId 
+                     */
+                    std::string GetIntegrationId() const;
+
+                    /**
+                     * 判断参数 IntegrationId 是否已赋值
+                     * @return IntegrationId 是否已赋值
+                     */
+                    bool IntegrationIdHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * 
+                     */
+                    std::string m_integrationId;
+                    bool m_integrationIdHasBeenSet;
 
                 };
             }

@@ -137,6 +137,7 @@ set(vod_public_header_model
   include/tencentcloud/vod/v20180717/model/DeleteTranscodeTemplateRequest.h
   include/tencentcloud/vod/v20180717/model/TraceWatermarkInput.h
   include/tencentcloud/vod/v20180717/model/PornAsrReviewTemplateInfoForUpdate.h
+  include/tencentcloud/vod/v20180717/model/ReviewAudioVideoSegmentItem.h
   include/tencentcloud/vod/v20180717/model/MediaAnimatedGraphicsInfo.h
   include/tencentcloud/vod/v20180717/model/DescribeSnapshotByTimeOffsetTemplatesRequest.h
   include/tencentcloud/vod/v20180717/model/CdnLogInfo.h
@@ -226,6 +227,7 @@ set(vod_public_header_model
   include/tencentcloud/vod/v20180717/model/AiRecognitionTaskObjectResult.h
   include/tencentcloud/vod/v20180717/model/AiAnalysisTaskTagResult.h
   include/tencentcloud/vod/v20180717/model/SearchMediaResponse.h
+  include/tencentcloud/vod/v20180717/model/ReviewAudioVideoTaskOutput.h
   include/tencentcloud/vod/v20180717/model/RemoveWaterMarkTaskOutput.h
   include/tencentcloud/vod/v20180717/model/ModifyMediaStorageClassRequest.h
   include/tencentcloud/vod/v20180717/model/AiAnalysisTaskTagOutput.h
@@ -462,6 +464,7 @@ set(vod_public_header_model
   include/tencentcloud/vod/v20180717/model/ProcedureTask.h
   include/tencentcloud/vod/v20180717/model/ModifySuperPlayerConfigRequest.h
   include/tencentcloud/vod/v20180717/model/TaskSimpleInfo.h
+  include/tencentcloud/vod/v20180717/model/ReviewAudioVideoTask.h
   include/tencentcloud/vod/v20180717/model/DescribeSnapshotByTimeOffsetTemplatesResponse.h
   include/tencentcloud/vod/v20180717/model/MediaVideoStreamItem.h
   include/tencentcloud/vod/v20180717/model/SetDrmKeyProviderInfoRequest.h
@@ -693,6 +696,7 @@ set(vod_src
   src/v20180717/model/DeleteTranscodeTemplateRequest.cpp
   src/v20180717/model/TraceWatermarkInput.cpp
   src/v20180717/model/PornAsrReviewTemplateInfoForUpdate.cpp
+  src/v20180717/model/ReviewAudioVideoSegmentItem.cpp
   src/v20180717/model/MediaAnimatedGraphicsInfo.cpp
   src/v20180717/model/DescribeSnapshotByTimeOffsetTemplatesRequest.cpp
   src/v20180717/model/CdnLogInfo.cpp
@@ -782,6 +786,7 @@ set(vod_src
   src/v20180717/model/AiRecognitionTaskObjectResult.cpp
   src/v20180717/model/AiAnalysisTaskTagResult.cpp
   src/v20180717/model/SearchMediaResponse.cpp
+  src/v20180717/model/ReviewAudioVideoTaskOutput.cpp
   src/v20180717/model/RemoveWaterMarkTaskOutput.cpp
   src/v20180717/model/ModifyMediaStorageClassRequest.cpp
   src/v20180717/model/AiAnalysisTaskTagOutput.cpp
@@ -1018,6 +1023,7 @@ set(vod_src
   src/v20180717/model/ProcedureTask.cpp
   src/v20180717/model/ModifySuperPlayerConfigRequest.cpp
   src/v20180717/model/TaskSimpleInfo.cpp
+  src/v20180717/model/ReviewAudioVideoTask.cpp
   src/v20180717/model/DescribeSnapshotByTimeOffsetTemplatesResponse.cpp
   src/v20180717/model/MediaVideoStreamItem.cpp
   src/v20180717/model/SetDrmKeyProviderInfoRequest.cpp

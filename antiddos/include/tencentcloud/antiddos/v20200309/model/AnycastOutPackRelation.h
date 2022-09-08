@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Details of the Anycast package
                 */
                 class AnycastOutPackRelation : public AbstractModel
                 {
@@ -47,14 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return NormalBandwidth 
+                     * 获取Application bandwidth (in Mbps).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return NormalBandwidth Application bandwidth (in Mbps).
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetNormalBandwidth() const;
 
                     /**
-                     * 设置
-                     * @param NormalBandwidth 
+                     * 设置Application bandwidth (in Mbps).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param NormalBandwidth Application bandwidth (in Mbps).
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetNormalBandwidth(const uint64_t& _normalBandwidth);
 
@@ -65,14 +69,18 @@ namespace TencentCloud
                     bool NormalBandwidthHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ForwardRulesLimit 
+                     * 获取Number of forwarding rules
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ForwardRulesLimit Number of forwarding rules
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetForwardRulesLimit() const;
 
                     /**
-                     * 设置
-                     * @param ForwardRulesLimit 
+                     * 设置Number of forwarding rules
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ForwardRulesLimit Number of forwarding rules
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetForwardRulesLimit(const uint64_t& _forwardRulesLimit);
 
@@ -83,14 +91,18 @@ namespace TencentCloud
                     bool ForwardRulesLimitHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AutoRenewFlag 
+                     * 获取Auto-renewal flag
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AutoRenewFlag Auto-renewal flag
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetAutoRenewFlag() const;
 
                     /**
-                     * 设置
-                     * @param AutoRenewFlag 
+                     * 设置Auto-renewal flag
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param AutoRenewFlag Auto-renewal flag
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetAutoRenewFlag(const uint64_t& _autoRenewFlag);
 
@@ -101,14 +113,18 @@ namespace TencentCloud
                     bool AutoRenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CurDeadline 
+                     * 获取Expiration date
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CurDeadline Expiration date
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetCurDeadline() const;
 
                     /**
-                     * 设置
-                     * @param CurDeadline 
+                     * 设置Expiration date
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param CurDeadline Expiration date
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetCurDeadline(const std::string& _curDeadline);
 
@@ -121,25 +137,29 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Application bandwidth (in Mbps).
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_normalBandwidth;
                     bool m_normalBandwidthHasBeenSet;
 
                     /**
-                     * 
+                     * Number of forwarding rules
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_forwardRulesLimit;
                     bool m_forwardRulesLimitHasBeenSet;
 
                     /**
-                     * 
+                     * Auto-renewal flag
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_autoRenewFlag;
                     bool m_autoRenewFlagHasBeenSet;
 
                     /**
-                     * 
+                     * Expiration date
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_curDeadline;
                     bool m_curDeadlineHasBeenSet;

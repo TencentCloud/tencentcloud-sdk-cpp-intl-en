@@ -33,7 +33,9 @@ BGPInstance::BGPInstance() :
     m_eipProductInfosHasBeenSet(false),
     m_boundStatusHasBeenSet(false),
     m_dDoSLevelHasBeenSet(false),
-    m_cCEnableHasBeenSet(false)
+    m_cCEnableHasBeenSet(false),
+    m_tagInfoListHasBeenSet(false),
+    m_ipCountNewFlagHasBeenSet(false)
 {
 }
 
@@ -217,6 +219,36 @@ CoreInternalOutcome BGPInstance::Deserialize(const rapidjson::Value &value)
         m_cCEnableHasBeenSet = true;
     }
 
+    if (value.HasMember("TagInfoList") && !value["TagInfoList"].IsNull())
+    {
+        if (!value["TagInfoList"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `BGPInstance.TagInfoList` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["TagInfoList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            TagInfo item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_tagInfoList.push_back(item);
+        }
+        m_tagInfoListHasBeenSet = true;
+    }
+
+    if (value.HasMember("IpCountNewFlag") && !value["IpCountNewFlag"].IsNull())
+    {
+        if (!value["IpCountNewFlag"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `BGPInstance.IpCountNewFlag` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_ipCountNewFlag = value["IpCountNewFlag"].GetUint64();
+        m_ipCountNewFlagHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -338,6 +370,29 @@ void BGPInstance::ToJsonObject(rapidjson::Value &value, rapidjson::Document::All
         string key = "CCEnable";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_cCEnable, allocator);
+    }
+
+    if (m_tagInfoListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TagInfoList";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tagInfoList.begin(); itr != m_tagInfoList.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_ipCountNewFlagHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IpCountNewFlag";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_ipCountNewFlag, allocator);
     }
 
 }
@@ -549,5 +604,37 @@ void BGPInstance::SetCCEnable(const int64_t& _cCEnable)
 bool BGPInstance::CCEnableHasBeenSet() const
 {
     return m_cCEnableHasBeenSet;
+}
+
+vector<TagInfo> BGPInstance::GetTagInfoList() const
+{
+    return m_tagInfoList;
+}
+
+void BGPInstance::SetTagInfoList(const vector<TagInfo>& _tagInfoList)
+{
+    m_tagInfoList = _tagInfoList;
+    m_tagInfoListHasBeenSet = true;
+}
+
+bool BGPInstance::TagInfoListHasBeenSet() const
+{
+    return m_tagInfoListHasBeenSet;
+}
+
+uint64_t BGPInstance::GetIpCountNewFlag() const
+{
+    return m_ipCountNewFlag;
+}
+
+void BGPInstance::SetIpCountNewFlag(const uint64_t& _ipCountNewFlag)
+{
+    m_ipCountNewFlag = _ipCountNewFlag;
+    m_ipCountNewFlagHasBeenSet = true;
+}
+
+bool BGPInstance::IpCountNewFlagHasBeenSet() const
+{
+    return m_ipCountNewFlagHasBeenSet;
 }
 

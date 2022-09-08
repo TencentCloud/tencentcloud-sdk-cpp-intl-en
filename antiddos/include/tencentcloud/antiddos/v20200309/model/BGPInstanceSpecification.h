@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool ProtectCountLimitHasBeenSet() const;
 
                     /**
-                     * 获取Number of protection IPs
-                     * @return ProtectIPNumberLimit Number of protection IPs
+                     * 获取Number of protected IPs
+                     * @return ProtectIPNumberLimit Number of protected IPs
                      */
                     uint64_t GetProtectIPNumberLimit() const;
 
                     /**
-                     * 设置Number of protection IPs
-                     * @param ProtectIPNumberLimit Number of protection IPs
+                     * 设置Number of protected IPs
+                     * @param ProtectIPNumberLimit Number of protected IPs
                      */
                     void SetProtectIPNumberLimit(const uint64_t& _protectIPNumberLimit);
 
@@ -101,25 +101,25 @@ namespace TencentCloud
                     bool ProtectIPNumberLimitHasBeenSet() const;
 
                     /**
-                     * 获取Auto-renewal status. Valid values:
-`0`: disabled
-`1`: enabled
+                     * 获取Auto-renewal status. Values:
+`0`: Disabled
+`1`: Enabled
 ]
-                     * @return AutoRenewFlag Auto-renewal status. Valid values:
-`0`: disabled
-`1`: enabled
+                     * @return AutoRenewFlag Auto-renewal status. Values:
+`0`: Disabled
+`1`: Enabled
 ]
                      */
                     uint64_t GetAutoRenewFlag() const;
 
                     /**
-                     * 设置Auto-renewal status. Valid values:
-`0`: disabled
-`1`: enabled
+                     * 设置Auto-renewal status. Values:
+`0`: Disabled
+`1`: Enabled
 ]
-                     * @param AutoRenewFlag Auto-renewal status. Valid values:
-`0`: disabled
-`1`: enabled
+                     * @param AutoRenewFlag Auto-renewal status. Values:
+`0`: Disabled
+`1`: Enabled
 ]
                      */
                     void SetAutoRenewFlag(const uint64_t& _autoRenewFlag);
@@ -132,17 +132,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Protection type of Anti-DDoS Pro. Valid values: `0` (general protection) and `1` (Lighthouse-based protection).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UnionPackFlag Protection type of Anti-DDoS Pro. Valid values: `0` (general protection) and `1` (Lighthouse-based protection).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetUnionPackFlag() const;
 
                     /**
                      * 设置Protection type of Anti-DDoS Pro. Valid values: `0` (general protection) and `1` (Lighthouse-based protection).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param UnionPackFlag Protection type of Anti-DDoS Pro. Valid values: `0` (general protection) and `1` (Lighthouse-based protection).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetUnionPackFlag(const uint64_t& _unionPackFlag);
 
@@ -153,14 +153,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool UnionPackFlagHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ServiceBandWidth 
+                     * 获取Application bandwidth
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ServiceBandWidth Application bandwidth
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetServiceBandWidth() const;
 
                     /**
-                     * 设置
-                     * @param ServiceBandWidth 
+                     * 设置Application bandwidth
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ServiceBandWidth Application bandwidth
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetServiceBandWidth(const uint64_t& _serviceBandWidth);
 
@@ -169,6 +173,94 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      * @return ServiceBandWidth 是否已赋值
                      */
                     bool ServiceBandWidthHasBeenSet() const;
+
+                    /**
+                     * 获取Whether it’s an Anti-DDoS Pro Premium edition. Values: `0` (General edition); `1` (Premium edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return BattleEditionFlag Whether it’s an Anti-DDoS Pro Premium edition. Values: `0` (General edition); `1` (Premium edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetBattleEditionFlag() const;
+
+                    /**
+                     * 设置Whether it’s an Anti-DDoS Pro Premium edition. Values: `0` (General edition); `1` (Premium edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param BattleEditionFlag Whether it’s an Anti-DDoS Pro Premium edition. Values: `0` (General edition); `1` (Premium edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetBattleEditionFlag(const uint64_t& _battleEditionFlag);
+
+                    /**
+                     * 判断参数 BattleEditionFlag 是否已赋值
+                     * @return BattleEditionFlag 是否已赋值
+                     */
+                    bool BattleEditionFlagHasBeenSet() const;
+
+                    /**
+                     * 获取Whether it’s an Anti-DDoS Pro Standard edition. Values: `0` (General edition); `1` (Standard edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ChannelEditionFlag Whether it’s an Anti-DDoS Pro Standard edition. Values: `0` (General edition); `1` (Standard edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetChannelEditionFlag() const;
+
+                    /**
+                     * 设置Whether it’s an Anti-DDoS Pro Standard edition. Values: `0` (General edition); `1` (Standard edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ChannelEditionFlag Whether it’s an Anti-DDoS Pro Standard edition. Values: `0` (General edition); `1` (Standard edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetChannelEditionFlag(const uint64_t& _channelEditionFlag);
+
+                    /**
+                     * 判断参数 ChannelEditionFlag 是否已赋值
+                     * @return ChannelEditionFlag 是否已赋值
+                     */
+                    bool ChannelEditionFlagHasBeenSet() const;
+
+                    /**
+                     * 获取Whether it’s an Anti-DDoS Pro Enterprise edition. Values: `0` (General edition); `1` (Enterprise edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return EnterpriseFlag Whether it’s an Anti-DDoS Pro Enterprise edition. Values: `0` (General edition); `1` (Enterprise edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetEnterpriseFlag() const;
+
+                    /**
+                     * 设置Whether it’s an Anti-DDoS Pro Enterprise edition. Values: `0` (General edition); `1` (Enterprise edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param EnterpriseFlag Whether it’s an Anti-DDoS Pro Enterprise edition. Values: `0` (General edition); `1` (Enterprise edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetEnterpriseFlag(const uint64_t& _enterpriseFlag);
+
+                    /**
+                     * 判断参数 EnterpriseFlag 是否已赋值
+                     * @return EnterpriseFlag 是否已赋值
+                     */
+                    bool EnterpriseFlagHasBeenSet() const;
+
+                    /**
+                     * 获取Elastic bandwidth threshold of the Anti-DDoS Pro Enterprise edition.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ElasticLimit Elastic bandwidth threshold of the Anti-DDoS Pro Enterprise edition.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetElasticLimit() const;
+
+                    /**
+                     * 设置Elastic bandwidth threshold of the Anti-DDoS Pro Enterprise edition.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ElasticLimit Elastic bandwidth threshold of the Anti-DDoS Pro Enterprise edition.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetElasticLimit(const uint64_t& _elasticLimit);
+
+                    /**
+                     * 判断参数 ElasticLimit 是否已赋值
+                     * @return ElasticLimit 是否已赋值
+                     */
+                    bool ElasticLimitHasBeenSet() const;
 
                 private:
 
@@ -185,15 +277,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_protectCountLimitHasBeenSet;
 
                     /**
-                     * Number of protection IPs
+                     * Number of protected IPs
                      */
                     uint64_t m_protectIPNumberLimit;
                     bool m_protectIPNumberLimitHasBeenSet;
 
                     /**
-                     * Auto-renewal status. Valid values:
-`0`: disabled
-`1`: enabled
+                     * Auto-renewal status. Values:
+`0`: Disabled
+`1`: Enabled
 ]
                      */
                     uint64_t m_autoRenewFlag;
@@ -201,16 +293,45 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * Protection type of Anti-DDoS Pro. Valid values: `0` (general protection) and `1` (Lighthouse-based protection).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_unionPackFlag;
                     bool m_unionPackFlagHasBeenSet;
 
                     /**
-                     * 
+                     * Application bandwidth
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_serviceBandWidth;
                     bool m_serviceBandWidthHasBeenSet;
+
+                    /**
+                     * Whether it’s an Anti-DDoS Pro Premium edition. Values: `0` (General edition); `1` (Premium edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_battleEditionFlag;
+                    bool m_battleEditionFlagHasBeenSet;
+
+                    /**
+                     * Whether it’s an Anti-DDoS Pro Standard edition. Values: `0` (General edition); `1` (Standard edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_channelEditionFlag;
+                    bool m_channelEditionFlagHasBeenSet;
+
+                    /**
+                     * Whether it’s an Anti-DDoS Pro Enterprise edition. Values: `0` (General edition); `1` (Enterprise edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_enterpriseFlag;
+                    bool m_enterpriseFlagHasBeenSet;
+
+                    /**
+                     * Elastic bandwidth threshold of the Anti-DDoS Pro Enterprise edition.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_elasticLimit;
+                    bool m_elasticLimitHasBeenSet;
 
                 };
             }

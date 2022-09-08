@@ -43,7 +43,25 @@ namespace TencentCloud
                     std::string ToJsonString() const;
 
 
+                    /**
+                     * 获取
+                     * @return PluginIds 
+                     */
+                    std::vector<std::string> GetPluginIds() const;
+
+                    /**
+                     * 判断参数 PluginIds 是否已赋值
+                     * @return PluginIds 是否已赋值
+                     */
+                    bool PluginIdsHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * 
+                     */
+                    std::vector<std::string> m_pluginIds;
+                    bool m_pluginIdsHasBeenSet;
 
                 };
             }

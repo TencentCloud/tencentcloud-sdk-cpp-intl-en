@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of lists
-                     * @return Total Total number of lists
+                     * 获取Total number of Anti-DDoS Pro instances
+                     * @return Total Total number of Anti-DDoS Pro instances
                      */
                     uint64_t GetTotal() const;
 
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number of lists
+                     * Total number of Anti-DDoS Pro instances
                      */
                     uint64_t m_total;
                     bool m_totalHasBeenSet;

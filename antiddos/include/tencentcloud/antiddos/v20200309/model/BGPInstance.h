@@ -30,6 +30,7 @@
 #include <tencentcloud/antiddos/v20200309/model/RegionInfo.h>
 #include <tencentcloud/antiddos/v20200309/model/PackInfo.h>
 #include <tencentcloud/antiddos/v20200309/model/EipProductInfo.h>
+#include <tencentcloud/antiddos/v20200309/model/TagInfo.h>
 
 
 namespace TencentCloud
@@ -41,7 +42,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Anti-DDoS Pro instance details
+                * Details of the Anti-DDoS Pro instance
                 */
                 class BGPInstance : public AbstractModel
                 {
@@ -53,14 +54,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Anti-DDoS instance details
-                     * @return InstanceDetail Anti-DDoS instance details
+                     * 获取Details of the Anti-DDoS Pro instance
+                     * @return InstanceDetail Details of the Anti-DDoS Pro instance
                      */
                     InstanceRelation GetInstanceDetail() const;
 
                     /**
-                     * 设置Anti-DDoS instance details
-                     * @param InstanceDetail Anti-DDoS instance details
+                     * 设置Details of the Anti-DDoS Pro instance
+                     * @param InstanceDetail Details of the Anti-DDoS Pro instance
                      */
                     void SetInstanceDetail(const InstanceRelation& _instanceDetail);
 
@@ -71,14 +72,14 @@ namespace TencentCloud
                     bool InstanceDetailHasBeenSet() const;
 
                     /**
-                     * 获取Anti-DDoS instance specifications
-                     * @return SpecificationLimit Anti-DDoS instance specifications
+                     * 获取Specifications of the Anti-DDoS Pro instance
+                     * @return SpecificationLimit Specifications of the Anti-DDoS Pro instance
                      */
                     BGPInstanceSpecification GetSpecificationLimit() const;
 
                     /**
-                     * 设置Anti-DDoS instance specifications
-                     * @param SpecificationLimit Anti-DDoS instance specifications
+                     * 设置Specifications of the Anti-DDoS Pro instance
+                     * @param SpecificationLimit Specifications of the Anti-DDoS Pro instance
                      */
                     void SetSpecificationLimit(const BGPInstanceSpecification& _specificationLimit);
 
@@ -89,14 +90,14 @@ namespace TencentCloud
                     bool SpecificationLimitHasBeenSet() const;
 
                     /**
-                     * 获取Anti-DDoS instance usage statistics
-                     * @return Usage Anti-DDoS instance usage statistics
+                     * 获取Usage statistics of the Anti-DDoS Pro instance
+                     * @return Usage Usage statistics of the Anti-DDoS Pro instance
                      */
                     BGPInstanceUsages GetUsage() const;
 
                     /**
-                     * 设置Anti-DDoS instance usage statistics
-                     * @param Usage Anti-DDoS instance usage statistics
+                     * 设置Usage statistics of the Anti-DDoS Pro instance
+                     * @param Usage Usage statistics of the Anti-DDoS Pro instance
                      */
                     void SetUsage(const BGPInstanceUsages& _usage);
 
@@ -107,14 +108,14 @@ namespace TencentCloud
                     bool UsageHasBeenSet() const;
 
                     /**
-                     * 获取Region of the Anti-DDoS instance
-                     * @return Region Region of the Anti-DDoS instance
+                     * 获取Region of the Anti-DDoS Pro instance
+                     * @return Region Region of the Anti-DDoS Pro instance
                      */
                     RegionInfo GetRegion() const;
 
                     /**
-                     * 设置Region of the Anti-DDoS instance
-                     * @param Region Region of the Anti-DDoS instance
+                     * 设置Region of the Anti-DDoS Pro instance
+                     * @param Region Region of the Anti-DDoS Pro instance
                      */
                     void SetRegion(const RegionInfo& _region);
 
@@ -125,38 +126,38 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Status of the Anti-DDoS instance. Valid values:
-`idle`: running
-`attacking`: under attacks
-`blocking`: blocked
-`creating`: creating
-`deblocking`: unblocked
-`isolate`: isolated
-                     * @return Status Status of the Anti-DDoS instance. Valid values:
-`idle`: running
-`attacking`: under attacks
-`blocking`: blocked
-`creating`: creating
-`deblocking`: unblocked
-`isolate`: isolated
+                     * 获取Status of the Anti-DDoS Pro instance. Valid values:
+`idle`: The instance is running normally.
+`attacking`: The instance is under attack.
+`blocking`: The instance is blocked.
+`creating`: The instance is being created.
+`deblocking`: Unblocking the instance
+`isolate`: The instance is being isolated.
+                     * @return Status Status of the Anti-DDoS Pro instance. Valid values:
+`idle`: The instance is running normally.
+`attacking`: The instance is under attack.
+`blocking`: The instance is blocked.
+`creating`: The instance is being created.
+`deblocking`: Unblocking the instance
+`isolate`: The instance is being isolated.
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Status of the Anti-DDoS instance. Valid values:
-`idle`: running
-`attacking`: under attacks
-`blocking`: blocked
-`creating`: creating
-`deblocking`: unblocked
-`isolate`: isolated
-                     * @param Status Status of the Anti-DDoS instance. Valid values:
-`idle`: running
-`attacking`: under attacks
-`blocking`: blocked
-`creating`: creating
-`deblocking`: unblocked
-`isolate`: isolated
+                     * 设置Status of the Anti-DDoS Pro instance. Valid values:
+`idle`: The instance is running normally.
+`attacking`: The instance is under attack.
+`blocking`: The instance is blocked.
+`creating`: The instance is being created.
+`deblocking`: Unblocking the instance
+`isolate`: The instance is being isolated.
+                     * @param Status Status of the Anti-DDoS Pro instance. Valid values:
+`idle`: The instance is running normally.
+`attacking`: The instance is under attack.
+`blocking`: The instance is blocked.
+`creating`: The instance is being created.
+`deblocking`: Unblocking the instance
+`isolate`: The instance is being isolated.
                      */
                     void SetStatus(const std::string& _status);
 
@@ -167,14 +168,14 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Purchase Time
-                     * @return CreatedTime Purchase Time
+                     * 获取Purchase time
+                     * @return CreatedTime Purchase time
                      */
                     std::string GetCreatedTime() const;
 
                     /**
-                     * 设置Purchase Time
-                     * @param CreatedTime Purchase Time
+                     * 设置Purchase time
+                     * @param CreatedTime Purchase time
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
@@ -203,14 +204,14 @@ namespace TencentCloud
                     bool ExpiredTimeHasBeenSet() const;
 
                     /**
-                     * 获取Name of the Anti-DDoS instance
-                     * @return Name Name of the Anti-DDoS instance
+                     * 获取Name of the Anti-DDoS Pro instance
+                     * @return Name Name of the Anti-DDoS Pro instance
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Name of the Anti-DDoS instance
-                     * @param Name Name of the Anti-DDoS instance
+                     * 设置Name of the Anti-DDoS Pro instance
+                     * @param Name Name of the Anti-DDoS Pro instance
                      */
                     void SetName(const std::string& _name);
 
@@ -221,21 +222,21 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Package details of the Anti-DDoS instance.
-Note: This field is `null` for an Anti-DDoS instance without using a package.
+                     * 获取Details of the package to which the Anti-DDoS Pro instance belongs.
+When the package provided is not used by the instance, this field is `null`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return PackInfo Package details of the Anti-DDoS instance.
-Note: This field is `null` for an Anti-DDoS instance without using a package.
+                     * @return PackInfo Details of the package to which the Anti-DDoS Pro instance belongs.
+When the package provided is not used by the instance, this field is `null`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     PackInfo GetPackInfo() const;
 
                     /**
-                     * 设置Package details of the Anti-DDoS instance.
-Note: This field is `null` for an Anti-DDoS instance without using a package.
+                     * 设置Details of the package to which the Anti-DDoS Pro instance belongs.
+When the package provided is not used by the instance, this field is `null`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param PackInfo Package details of the Anti-DDoS instance.
-Note: This field is `null` for an Anti-DDoS instance without using a package.
+                     * @param PackInfo Details of the package to which the Anti-DDoS Pro instance belongs.
+When the package provided is not used by the instance, this field is `null`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetPackInfo(const PackInfo& _packInfo);
@@ -266,28 +267,28 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
                     /**
                      * 获取Binding status of the Anti-DDoS Pro instance
-`idle`: the instance is bound.
- `bounding`: the instance is in binding.
-`failed`: the binding failed.
+`idle`: The instance is bound.
+ `bounding`: Binding the instance.
+`failed`: Failed to bind
 ]
                      * @return BoundStatus Binding status of the Anti-DDoS Pro instance
-`idle`: the instance is bound.
- `bounding`: the instance is in binding.
-`failed`: the binding failed.
+`idle`: The instance is bound.
+ `bounding`: Binding the instance.
+`failed`: Failed to bind
 ]
                      */
                     std::string GetBoundStatus() const;
 
                     /**
                      * 设置Binding status of the Anti-DDoS Pro instance
-`idle`: the instance is bound.
- `bounding`: the instance is in binding.
-`failed`: the binding failed.
+`idle`: The instance is bound.
+ `bounding`: Binding the instance.
+`failed`: Failed to bind
 ]
                      * @param BoundStatus Binding status of the Anti-DDoS Pro instance
-`idle`: the instance is bound.
- `bounding`: the instance is in binding.
-`failed`: the binding failed.
+`idle`: The instance is bound.
+ `bounding`: Binding the instance.
+`failed`: Failed to bind
 ]
                      */
                     void SetBoundStatus(const std::string& _boundStatus);
@@ -317,14 +318,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool DDoSLevelHasBeenSet() const;
 
                     /**
-                     * 获取CC protection switch
-                     * @return CCEnable CC protection switch
+                     * 获取Status of CC protection
+                     * @return CCEnable Status of CC protection
                      */
                     int64_t GetCCEnable() const;
 
                     /**
-                     * 设置CC protection switch
-                     * @param CCEnable CC protection switch
+                     * 设置Status of CC protection
+                     * @param CCEnable Status of CC protection
                      */
                     void SetCCEnable(const int64_t& _cCEnable);
 
@@ -334,46 +335,82 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool CCEnableHasBeenSet() const;
 
+                    /**
+                     * 获取Tags associated with the resource
+                     * @return TagInfoList Tags associated with the resource
+                     */
+                    std::vector<TagInfo> GetTagInfoList() const;
+
+                    /**
+                     * 设置Tags associated with the resource
+                     * @param TagInfoList Tags associated with the resource
+                     */
+                    void SetTagInfoList(const std::vector<TagInfo>& _tagInfoList);
+
+                    /**
+                     * 判断参数 TagInfoList 是否已赋值
+                     * @return TagInfoList 是否已赋值
+                     */
+                    bool TagInfoListHasBeenSet() const;
+
+                    /**
+                     * 获取New edition of Anti-DDoS Pro
+                     * @return IpCountNewFlag New edition of Anti-DDoS Pro
+                     */
+                    uint64_t GetIpCountNewFlag() const;
+
+                    /**
+                     * 设置New edition of Anti-DDoS Pro
+                     * @param IpCountNewFlag New edition of Anti-DDoS Pro
+                     */
+                    void SetIpCountNewFlag(const uint64_t& _ipCountNewFlag);
+
+                    /**
+                     * 判断参数 IpCountNewFlag 是否已赋值
+                     * @return IpCountNewFlag 是否已赋值
+                     */
+                    bool IpCountNewFlagHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Anti-DDoS instance details
+                     * Details of the Anti-DDoS Pro instance
                      */
                     InstanceRelation m_instanceDetail;
                     bool m_instanceDetailHasBeenSet;
 
                     /**
-                     * Anti-DDoS instance specifications
+                     * Specifications of the Anti-DDoS Pro instance
                      */
                     BGPInstanceSpecification m_specificationLimit;
                     bool m_specificationLimitHasBeenSet;
 
                     /**
-                     * Anti-DDoS instance usage statistics
+                     * Usage statistics of the Anti-DDoS Pro instance
                      */
                     BGPInstanceUsages m_usage;
                     bool m_usageHasBeenSet;
 
                     /**
-                     * Region of the Anti-DDoS instance
+                     * Region of the Anti-DDoS Pro instance
                      */
                     RegionInfo m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Status of the Anti-DDoS instance. Valid values:
-`idle`: running
-`attacking`: under attacks
-`blocking`: blocked
-`creating`: creating
-`deblocking`: unblocked
-`isolate`: isolated
+                     * Status of the Anti-DDoS Pro instance. Valid values:
+`idle`: The instance is running normally.
+`attacking`: The instance is under attack.
+`blocking`: The instance is blocked.
+`creating`: The instance is being created.
+`deblocking`: Unblocking the instance
+`isolate`: The instance is being isolated.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Purchase Time
+                     * Purchase time
                      */
                     std::string m_createdTime;
                     bool m_createdTimeHasBeenSet;
@@ -385,14 +422,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_expiredTimeHasBeenSet;
 
                     /**
-                     * Name of the Anti-DDoS instance
+                     * Name of the Anti-DDoS Pro instance
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Package details of the Anti-DDoS instance.
-Note: This field is `null` for an Anti-DDoS instance without using a package.
+                     * Details of the package to which the Anti-DDoS Pro instance belongs.
+When the package provided is not used by the instance, this field is `null`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     PackInfo m_packInfo;
@@ -406,9 +443,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
                     /**
                      * Binding status of the Anti-DDoS Pro instance
-`idle`: the instance is bound.
- `bounding`: the instance is in binding.
-`failed`: the binding failed.
+`idle`: The instance is bound.
+ `bounding`: Binding the instance.
+`failed`: Failed to bind
 ]
                      */
                     std::string m_boundStatus;
@@ -421,10 +458,22 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_dDoSLevelHasBeenSet;
 
                     /**
-                     * CC protection switch
+                     * Status of CC protection
                      */
                     int64_t m_cCEnable;
                     bool m_cCEnableHasBeenSet;
+
+                    /**
+                     * Tags associated with the resource
+                     */
+                    std::vector<TagInfo> m_tagInfoList;
+                    bool m_tagInfoListHasBeenSet;
+
+                    /**
+                     * New edition of Anti-DDoS Pro
+                     */
+                    uint64_t m_ipCountNewFlag;
+                    bool m_ipCountNewFlagHasBeenSet;
 
                 };
             }

@@ -115,8 +115,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VerificationDetailListHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VideoUrl 
+                     * 获取The temporary URL of the video collected from the video stream. It is valid for 10 minutes. Download the video if needed.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return VideoUrl The temporary URL of the video collected from the video stream. It is valid for 10 minutes. Download the video if needed.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetVideoUrl() const;
 
@@ -127,8 +129,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VideoUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VideoMd5 
+                     * 获取The MD5 hash value of the video collected from the video stream. It can be used to check whether the video content is consistent with the file content.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return VideoMd5 The MD5 hash value of the video collected from the video stream. It can be used to check whether the video content is consistent with the file content.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetVideoMd5() const;
 
@@ -176,13 +180,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_verificationDetailListHasBeenSet;
 
                     /**
-                     * 
+                     * The temporary URL of the video collected from the video stream. It is valid for 10 minutes. Download the video if needed.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_videoUrl;
                     bool m_videoUrlHasBeenSet;
 
                     /**
-                     * 
+                     * The MD5 hash value of the video collected from the video stream. It can be used to check whether the video content is consistent with the file content.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_videoMd5;
                     bool m_videoMd5HasBeenSet;

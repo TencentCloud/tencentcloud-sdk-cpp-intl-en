@@ -672,7 +672,7 @@ namespace TencentCloud
                 DescribeCCLevelPolicyOutcomeCallable DescribeCCLevelPolicyCallable(const Model::DescribeCCLevelPolicyRequest& request);
 
                 /**
-                 *This API is used to obtain a CC precise protection policy.
+                 *This API is used to obtain the list of CC precise protection policies.
                  * @param req DescribeCCPrecisionPlyListRequest
                  * @return DescribeCCPrecisionPlyListOutcome
                  */
@@ -699,7 +699,7 @@ namespace TencentCloud
                 DescribeCCTrendOutcomeCallable DescribeCCTrendCallable(const Model::DescribeCCTrendRequest& request);
 
                 /**
-                 *This API is used to obtain a layer-4 access control list.
+                 *This API is used to obtain the layer-4 access control list.
                  * @param req DescribeCcBlackWhiteIpListRequest
                  * @return DescribeCcBlackWhiteIpListOutcome
                  */

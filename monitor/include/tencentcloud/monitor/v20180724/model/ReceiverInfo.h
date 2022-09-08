@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates '10:0:0'.
-                     * @return StartTime Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates '10:0:0'.
+                     * 获取Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates “10:0:0”.
+                     * @return StartTime Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates “10:0:0”.
                      */
                     int64_t GetStartTime() const;
 
                     /**
-                     * 设置Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates '10:0:0'.
-                     * @param StartTime Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates '10:0:0'.
+                     * 设置Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates “10:0:0”.
+                     * @param StartTime Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates “10:0:0”.
                      */
                     void SetStartTime(const int64_t& _startTime);
 
@@ -155,14 +155,14 @@ namespace TencentCloud
                     bool SendForHasBeenSet() const;
 
                     /**
-                     * 获取Uid of the alarm call recipient.
-                     * @return UidList Uid of the alarm call recipient.
+                     * 获取UID of the phone call alarm.
+                     * @return UidList UID of the phone call alarm.
                      */
                     std::vector<int64_t> GetUidList() const;
 
                     /**
-                     * 设置Uid of the alarm call recipient.
-                     * @param UidList Uid of the alarm call recipient.
+                     * 设置UID of the phone call alarm.
+                     * @param UidList UID of the phone call alarm.
                      */
                     void SetUidList(const std::vector<int64_t>& _uidList);
 
@@ -263,14 +263,14 @@ namespace TencentCloud
                     bool NeedSendNoticeHasBeenSet() const;
 
                     /**
-                     * 获取Recipient group list. The list of recipient group IDs that is queried by a platform API.
-                     * @return ReceiverGroupList Recipient group list. The list of recipient group IDs that is queried by a platform API.
+                     * 获取Recipient group list. The list of recipient group IDs that is queried by API.
+                     * @return ReceiverGroupList Recipient group list. The list of recipient group IDs that is queried by API.
                      */
                     std::vector<int64_t> GetReceiverGroupList() const;
 
                     /**
-                     * 设置Recipient group list. The list of recipient group IDs that is queried by a platform API.
-                     * @param ReceiverGroupList Recipient group list. The list of recipient group IDs that is queried by a platform API.
+                     * 设置Recipient group list. The list of recipient group IDs that is queried by API.
+                     * @param ReceiverGroupList Recipient group list. The list of recipient group IDs that is queried by API.
                      */
                     void SetReceiverGroupList(const std::vector<int64_t>& _receiverGroupList);
 
@@ -281,14 +281,14 @@ namespace TencentCloud
                     bool ReceiverGroupListHasBeenSet() const;
 
                     /**
-                     * 获取Recipient list. The list of recipient IDs that is queried by a platform API.
-                     * @return ReceiverUserList Recipient list. The list of recipient IDs that is queried by a platform API.
+                     * 获取Recipient list. The list of recipient IDs that is queried by API.
+                     * @return ReceiverUserList Recipient list. The list of recipient IDs that is queried by API.
                      */
                     std::vector<int64_t> GetReceiverUserList() const;
 
                     /**
-                     * 设置Recipient list. The list of recipient IDs that is queried by a platform API.
-                     * @param ReceiverUserList Recipient list. The list of recipient IDs that is queried by a platform API.
+                     * 设置Recipient list. The list of recipient IDs that is queried by API.
+                     * @param ReceiverUserList Recipient list. The list of recipient IDs that is queried by API.
                      */
                     void SetReceiverUserList(const std::vector<int64_t>& _receiverUserList);
 
@@ -319,7 +319,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates '10:0:0'.
+                     * Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates “10:0:0”.
                      */
                     int64_t m_startTime;
                     bool m_startTimeHasBeenSet;
@@ -355,7 +355,7 @@ namespace TencentCloud
                     bool m_sendForHasBeenSet;
 
                     /**
-                     * Uid of the alarm call recipient.
+                     * UID of the phone call alarm.
                      */
                     std::vector<int64_t> m_uidList;
                     bool m_uidListHasBeenSet;
@@ -391,13 +391,13 @@ namespace TencentCloud
                     bool m_needSendNoticeHasBeenSet;
 
                     /**
-                     * Recipient group list. The list of recipient group IDs that is queried by a platform API.
+                     * Recipient group list. The list of recipient group IDs that is queried by API.
                      */
                     std::vector<int64_t> m_receiverGroupList;
                     bool m_receiverGroupListHasBeenSet;
 
                     /**
-                     * Recipient list. The list of recipient IDs that is queried by a platform API.
+                     * Recipient list. The list of recipient IDs that is queried by API.
                      */
                     std::vector<int64_t> m_receiverUserList;
                     bool m_receiverUserListHasBeenSet;

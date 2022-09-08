@@ -523,14 +523,22 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool TagInfoListHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AnycastOutPackRelation 
+                     * 获取All-out package details of the instance
+When an all-out package is not used by the instance, this field is `null`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return AnycastOutPackRelation All-out package details of the instance
+When an all-out package is not used by the instance, this field is `null`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     AnycastOutPackRelation GetAnycastOutPackRelation() const;
 
                     /**
-                     * 设置
-                     * @param AnycastOutPackRelation 
+                     * 设置All-out package details of the instance
+When an all-out package is not used by the instance, this field is `null`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param AnycastOutPackRelation All-out package details of the instance
+When an all-out package is not used by the instance, this field is `null`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetAnycastOutPackRelation(const AnycastOutPackRelation& _anycastOutPackRelation);
 
@@ -709,7 +717,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_tagInfoListHasBeenSet;
 
                     /**
-                     * 
+                     * All-out package details of the instance
+When an all-out package is not used by the instance, this field is `null`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     AnycastOutPackRelation m_anycastOutPackRelation;
                     bool m_anycastOutPackRelationHasBeenSet;

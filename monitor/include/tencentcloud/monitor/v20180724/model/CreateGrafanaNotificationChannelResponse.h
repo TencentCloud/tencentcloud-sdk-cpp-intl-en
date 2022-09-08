@@ -43,7 +43,25 @@ namespace TencentCloud
                     std::string ToJsonString() const;
 
 
+                    /**
+                     * 获取
+                     * @return ChannelId 
+                     */
+                    std::string GetChannelId() const;
+
+                    /**
+                     * 判断参数 ChannelId 是否已赋值
+                     * @return ChannelId 是否已赋值
+                     */
+                    bool ChannelIdHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * 
+                     */
+                    std::string m_channelId;
+                    bool m_channelIdHasBeenSet;
 
                 };
             }

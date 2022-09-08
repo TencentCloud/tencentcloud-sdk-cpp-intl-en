@@ -40,6 +40,7 @@
 #include <tencentcloud/vod/v20180717/model/WechatMiniProgramPublishTask.h>
 #include <tencentcloud/vod/v20180717/model/RemoveWatermarkTask.h>
 #include <tencentcloud/vod/v20180717/model/RestoreMediaTask.h>
+#include <tencentcloud/vod/v20180717/model/ReviewAudioVideoTask.h>
 
 
 namespace TencentCloud
@@ -89,8 +90,9 @@ namespace TencentCloud
 <li>EditMediaComplete: Finished video editing.</li>
 <li>SplitMediaComplete: Finished video splitting.</li>
 <li>WechatPublishComplete: Published to WeChat.</li>
-<li>ComposeMediaComplete: Finished composition.</li>
+<li>ComposeMediaComplete: Finished producing the media file.</li>
 <li>FastClipMediaComplete: Finished quick clipping.</li>
+<li>ReviewAudioVideoComplete: Finished moderation</li>
 <b>v2017 task types:</b>
 <li>TranscodeComplete: Finished video transcoding.</li>
 <li>ConcatComplete: Finished video splicing.</li>
@@ -105,8 +107,9 @@ namespace TencentCloud
 <li>EditMediaComplete: Finished video editing.</li>
 <li>SplitMediaComplete: Finished video splitting.</li>
 <li>WechatPublishComplete: Published to WeChat.</li>
-<li>ComposeMediaComplete: Finished composition.</li>
+<li>ComposeMediaComplete: Finished producing the media file.</li>
 <li>FastClipMediaComplete: Finished quick clipping.</li>
+<li>ReviewAudioVideoComplete: Finished moderation</li>
 <b>v2017 task types:</b>
 <li>TranscodeComplete: Finished video transcoding.</li>
 <li>ConcatComplete: Finished video splicing.</li>
@@ -125,8 +128,9 @@ namespace TencentCloud
 <li>EditMediaComplete: Finished video editing.</li>
 <li>SplitMediaComplete: Finished video splitting.</li>
 <li>WechatPublishComplete: Published to WeChat.</li>
-<li>ComposeMediaComplete: Finished composition.</li>
+<li>ComposeMediaComplete: Finished producing the media file.</li>
 <li>FastClipMediaComplete: Finished quick clipping.</li>
+<li>ReviewAudioVideoComplete: Finished moderation</li>
 <b>v2017 task types:</b>
 <li>TranscodeComplete: Finished video transcoding.</li>
 <li>ConcatComplete: Finished video splicing.</li>
@@ -141,8 +145,9 @@ namespace TencentCloud
 <li>EditMediaComplete: Finished video editing.</li>
 <li>SplitMediaComplete: Finished video splitting.</li>
 <li>WechatPublishComplete: Published to WeChat.</li>
-<li>ComposeMediaComplete: Finished composition.</li>
+<li>ComposeMediaComplete: Finished producing the media file.</li>
 <li>FastClipMediaComplete: Finished quick clipping.</li>
+<li>ReviewAudioVideoComplete: Finished moderation</li>
 <b>v2017 task types:</b>
 <li>TranscodeComplete: Finished video transcoding.</li>
 <li>ConcatComplete: Finished video splicing.</li>
@@ -510,6 +515,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool RestoreMediaCompleteEventHasBeenSet() const;
 
+                    /**
+                     * 获取The callback for the completion of the moderation task. This parameter is valid only if `EventType` is `ReviewAudioVideoComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ReviewAudioVideoCompleteEvent The callback for the completion of the moderation task. This parameter is valid only if `EventType` is `ReviewAudioVideoComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    ReviewAudioVideoTask GetReviewAudioVideoCompleteEvent() const;
+
+                    /**
+                     * 设置The callback for the completion of the moderation task. This parameter is valid only if `EventType` is `ReviewAudioVideoComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ReviewAudioVideoCompleteEvent The callback for the completion of the moderation task. This parameter is valid only if `EventType` is `ReviewAudioVideoComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetReviewAudioVideoCompleteEvent(const ReviewAudioVideoTask& _reviewAudioVideoCompleteEvent);
+
+                    /**
+                     * 判断参数 ReviewAudioVideoCompleteEvent 是否已赋值
+                     * @return ReviewAudioVideoCompleteEvent 是否已赋值
+                     */
+                    bool ReviewAudioVideoCompleteEventHasBeenSet() const;
+
                 private:
 
                     /**
@@ -527,8 +554,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 <li>EditMediaComplete: Finished video editing.</li>
 <li>SplitMediaComplete: Finished video splitting.</li>
 <li>WechatPublishComplete: Published to WeChat.</li>
-<li>ComposeMediaComplete: Finished composition.</li>
+<li>ComposeMediaComplete: Finished producing the media file.</li>
 <li>FastClipMediaComplete: Finished quick clipping.</li>
+<li>ReviewAudioVideoComplete: Finished moderation</li>
 <b>v2017 task types:</b>
 <li>TranscodeComplete: Finished video transcoding.</li>
 <li>ConcatComplete: Finished video splicing.</li>
@@ -650,6 +678,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     RestoreMediaTask m_restoreMediaCompleteEvent;
                     bool m_restoreMediaCompleteEventHasBeenSet;
+
+                    /**
+                     * The callback for the completion of the moderation task. This parameter is valid only if `EventType` is `ReviewAudioVideoComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    ReviewAudioVideoTask m_reviewAudioVideoCompleteEvent;
+                    bool m_reviewAudioVideoCompleteEventHasBeenSet;
 
                 };
             }

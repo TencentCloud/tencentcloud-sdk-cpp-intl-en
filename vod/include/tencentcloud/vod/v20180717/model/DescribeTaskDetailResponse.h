@@ -34,6 +34,7 @@
 #include <tencentcloud/vod/v20180717/model/CreateImageSpriteTask2017.h>
 #include <tencentcloud/vod/v20180717/model/SnapshotByTimeOffsetTask2017.h>
 #include <tencentcloud/vod/v20180717/model/RemoveWatermarkTask.h>
+#include <tencentcloud/vod/v20180717/model/ReviewAudioVideoTask.h>
 
 
 namespace TencentCloud
@@ -61,20 +62,22 @@ namespace TencentCloud
 <li>Procedure: Video processing</li>
 <li>EditMedia: Video editing</li>
 <li>SplitMedia: Video splitting</li>
-<li>ComposeMedia: Media file producing</li>
+<li>ComposeMedia: Media file production</li>
 <li>WechatPublish: WeChat publishing</li>
 <li>PullUpload: Pulling media files for upload</li>
 <li>FastClipMedia: Quick clipping</li>
 <li>RemoveWatermarkTask: Watermark removal</li>
+<li> ReviewAudioVideo: Moderation</li>
                      * @return TaskType The task type. Valid values:
 <li>Procedure: Video processing</li>
 <li>EditMedia: Video editing</li>
 <li>SplitMedia: Video splitting</li>
-<li>ComposeMedia: Media file producing</li>
+<li>ComposeMedia: Media file production</li>
 <li>WechatPublish: WeChat publishing</li>
 <li>PullUpload: Pulling media files for upload</li>
 <li>FastClipMedia: Quick clipping</li>
 <li>RemoveWatermarkTask: Watermark removal</li>
+<li> ReviewAudioVideo: Moderation</li>
                      */
                     std::string GetTaskType() const;
 
@@ -320,6 +323,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool RemoveWatermarkTaskHasBeenSet() const;
 
+                    /**
+                     * 获取The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ReviewAudioVideoTask The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    ReviewAudioVideoTask GetReviewAudioVideoTask() const;
+
+                    /**
+                     * 判断参数 ReviewAudioVideoTask 是否已赋值
+                     * @return ReviewAudioVideoTask 是否已赋值
+                     */
+                    bool ReviewAudioVideoTaskHasBeenSet() const;
+
                 private:
 
                     /**
@@ -327,11 +344,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>Procedure: Video processing</li>
 <li>EditMedia: Video editing</li>
 <li>SplitMedia: Video splitting</li>
-<li>ComposeMedia: Media file producing</li>
+<li>ComposeMedia: Media file production</li>
 <li>WechatPublish: WeChat publishing</li>
 <li>PullUpload: Pulling media files for upload</li>
 <li>FastClipMedia: Quick clipping</li>
 <li>RemoveWatermarkTask: Watermark removal</li>
+<li> ReviewAudioVideo: Moderation</li>
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;
@@ -453,6 +471,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     RemoveWatermarkTask m_removeWatermarkTask;
                     bool m_removeWatermarkTaskHasBeenSet;
+
+                    /**
+                     * The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    ReviewAudioVideoTask m_reviewAudioVideoTask;
+                    bool m_reviewAudioVideoTaskHasBeenSet;
 
                 };
             }

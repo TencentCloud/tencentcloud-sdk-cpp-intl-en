@@ -116,8 +116,8 @@ namespace TencentCloud
                     bool IssuingCountryHasBeenSet() const;
 
                     /**
-                     * 获取Nationality
-                     * @return Nationality Nationality
+                     * 获取Country/region code
+                     * @return Nationality Country/region code
                      */
                     std::string GetNationality() const;
 
@@ -248,7 +248,7 @@ namespace TencentCloud
                     bool m_issuingCountryHasBeenSet;
 
                     /**
-                     * Nationality
+                     * Country/region code
                      */
                     std::string m_nationality;
                     bool m_nationalityHasBeenSet;

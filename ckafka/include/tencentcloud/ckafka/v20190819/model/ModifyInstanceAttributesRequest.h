@@ -189,6 +189,24 @@ namespace TencentCloud
                      */
                     bool DynamicDiskConfigHasBeenSet() const;
 
+                    /**
+                     * 获取The size of a single message in bytes at the instance level.
+                     * @return MaxMessageByte The size of a single message in bytes at the instance level.
+                     */
+                    uint64_t GetMaxMessageByte() const;
+
+                    /**
+                     * 设置The size of a single message in bytes at the instance level.
+                     * @param MaxMessageByte The size of a single message in bytes at the instance level.
+                     */
+                    void SetMaxMessageByte(const uint64_t& _maxMessageByte);
+
+                    /**
+                     * 判断参数 MaxMessageByte 是否已赋值
+                     * @return MaxMessageByte 是否已赋值
+                     */
+                    bool MaxMessageByteHasBeenSet() const;
+
                 private:
 
                     /**
@@ -238,6 +256,12 @@ namespace TencentCloud
                      */
                     DynamicDiskConfig m_dynamicDiskConfig;
                     bool m_dynamicDiskConfigHasBeenSet;
+
+                    /**
+                     * The size of a single message in bytes at the instance level.
+                     */
+                    uint64_t m_maxMessageByte;
+                    bool m_maxMessageByteHasBeenSet;
 
                 };
             }

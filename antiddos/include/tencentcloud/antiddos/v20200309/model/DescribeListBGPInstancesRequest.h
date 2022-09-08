@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/antiddos/v20200309/model/TagFilter.h>
 
 
 namespace TencentCloud
@@ -79,14 +80,14 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取IP filter
-                     * @return FilterIp IP filter
+                     * 获取Filters by IP.
+                     * @return FilterIp Filters by IP.
                      */
                     std::string GetFilterIp() const;
 
                     /**
-                     * 设置IP filter
-                     * @param FilterIp IP filter
+                     * 设置Filters by IP.
+                     * @param FilterIp Filters by IP.
                      */
                     void SetFilterIp(const std::string& _filterIp);
 
@@ -115,14 +116,14 @@ namespace TencentCloud
                     bool FilterInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Region filter. For example, `ap-guangzhou`.
-                     * @return FilterRegion Region filter. For example, `ap-guangzhou`.
+                     * 获取Filters by region. For example, `ap-guangzhou`.
+                     * @return FilterRegion Filters by region. For example, `ap-guangzhou`.
                      */
                     std::string GetFilterRegion() const;
 
                     /**
-                     * 设置Region filter. For example, `ap-guangzhou`.
-                     * @param FilterRegion Region filter. For example, `ap-guangzhou`.
+                     * 设置Filters by region. For example, `ap-guangzhou`.
+                     * @param FilterRegion Filters by region. For example, `ap-guangzhou`.
                      */
                     void SetFilterRegion(const std::string& _filterRegion);
 
@@ -133,14 +134,14 @@ namespace TencentCloud
                     bool FilterRegionHasBeenSet() const;
 
                     /**
-                     * 获取Name filter
-                     * @return FilterName Name filter
+                     * 获取Filters by name.
+                     * @return FilterName Filters by name.
                      */
                     std::string GetFilterName() const;
 
                     /**
-                     * 设置Name filter
-                     * @param FilterName Name filter
+                     * 设置Filters by name.
+                     * @param FilterName Filters by name.
                      */
                     void SetFilterName(const std::string& _filterName);
 
@@ -187,14 +188,14 @@ namespace TencentCloud
                     bool FilterStatusHasBeenSet() const;
 
                     /**
-                     * 获取Filters by binding status. `bounding`: the instance is bound; `failed`: the binding failed.
-                     * @return FilterBoundStatus Filters by binding status. `bounding`: the instance is bound; `failed`: the binding failed.
+                     * 获取Filters by binding status. `bounding`: The instance is bound; `failed`: The binding failed.
+                     * @return FilterBoundStatus Filters by binding status. `bounding`: The instance is bound; `failed`: The binding failed.
                      */
                     std::string GetFilterBoundStatus() const;
 
                     /**
-                     * 设置Filters by binding status. `bounding`: the instance is bound; `failed`: the binding failed.
-                     * @param FilterBoundStatus Filters by binding status. `bounding`: the instance is bound; `failed`: the binding failed.
+                     * 设置Filters by binding status. `bounding`: The instance is bound; `failed`: The binding failed.
+                     * @param FilterBoundStatus Filters by binding status. `bounding`: The instance is bound; `failed`: The binding failed.
                      */
                     void SetFilterBoundStatus(const std::string& _filterBoundStatus);
 
@@ -203,6 +204,60 @@ namespace TencentCloud
                      * @return FilterBoundStatus 是否已赋值
                      */
                     bool FilterBoundStatusHasBeenSet() const;
+
+                    /**
+                     * 获取Array of instance IDs
+                     * @return FilterInstanceIdList Array of instance IDs
+                     */
+                    std::vector<std::string> GetFilterInstanceIdList() const;
+
+                    /**
+                     * 设置Array of instance IDs
+                     * @param FilterInstanceIdList Array of instance IDs
+                     */
+                    void SetFilterInstanceIdList(const std::vector<std::string>& _filterInstanceIdList);
+
+                    /**
+                     * 判断参数 FilterInstanceIdList 是否已赋值
+                     * @return FilterInstanceIdList 是否已赋值
+                     */
+                    bool FilterInstanceIdListHasBeenSet() const;
+
+                    /**
+                     * 获取Filters by Enterprise edition
+                     * @return FilterEnterpriseFlag Filters by Enterprise edition
+                     */
+                    uint64_t GetFilterEnterpriseFlag() const;
+
+                    /**
+                     * 设置Filters by Enterprise edition
+                     * @param FilterEnterpriseFlag Filters by Enterprise edition
+                     */
+                    void SetFilterEnterpriseFlag(const uint64_t& _filterEnterpriseFlag);
+
+                    /**
+                     * 判断参数 FilterEnterpriseFlag 是否已赋值
+                     * @return FilterEnterpriseFlag 是否已赋值
+                     */
+                    bool FilterEnterpriseFlagHasBeenSet() const;
+
+                    /**
+                     * 获取Filters by tag
+                     * @return FilterTag Filters by tag
+                     */
+                    TagFilter GetFilterTag() const;
+
+                    /**
+                     * 设置Filters by tag
+                     * @param FilterTag Filters by tag
+                     */
+                    void SetFilterTag(const TagFilter& _filterTag);
+
+                    /**
+                     * 判断参数 FilterTag 是否已赋值
+                     * @return FilterTag 是否已赋值
+                     */
+                    bool FilterTagHasBeenSet() const;
 
                 private:
 
@@ -219,7 +274,7 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * IP filter
+                     * Filters by IP.
                      */
                     std::string m_filterIp;
                     bool m_filterIpHasBeenSet;
@@ -231,13 +286,13 @@ namespace TencentCloud
                     bool m_filterInstanceIdHasBeenSet;
 
                     /**
-                     * Region filter. For example, `ap-guangzhou`.
+                     * Filters by region. For example, `ap-guangzhou`.
                      */
                     std::string m_filterRegion;
                     bool m_filterRegionHasBeenSet;
 
                     /**
-                     * Name filter
+                     * Filters by name.
                      */
                     std::string m_filterName;
                     bool m_filterNameHasBeenSet;
@@ -255,10 +310,28 @@ namespace TencentCloud
                     bool m_filterStatusHasBeenSet;
 
                     /**
-                     * Filters by binding status. `bounding`: the instance is bound; `failed`: the binding failed.
+                     * Filters by binding status. `bounding`: The instance is bound; `failed`: The binding failed.
                      */
                     std::string m_filterBoundStatus;
                     bool m_filterBoundStatusHasBeenSet;
+
+                    /**
+                     * Array of instance IDs
+                     */
+                    std::vector<std::string> m_filterInstanceIdList;
+                    bool m_filterInstanceIdListHasBeenSet;
+
+                    /**
+                     * Filters by Enterprise edition
+                     */
+                    uint64_t m_filterEnterpriseFlag;
+                    bool m_filterEnterpriseFlagHasBeenSet;
+
+                    /**
+                     * Filters by tag
+                     */
+                    TagFilter m_filterTag;
+                    bool m_filterTagHasBeenSet;
 
                 };
             }

@@ -320,14 +320,14 @@ namespace TencentCloud
                     bool FilterTagHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FilterPackType 
+                     * 获取Filters by package type.
+                     * @return FilterPackType Filters by package type.
                      */
                     std::vector<std::string> GetFilterPackType() const;
 
                     /**
-                     * 设置
-                     * @param FilterPackType 
+                     * 设置Filters by package type.
+                     * @param FilterPackType Filters by package type.
                      */
                     void SetFilterPackType(const std::vector<std::string>& _filterPackType);
 
@@ -430,7 +430,7 @@ namespace TencentCloud
                     bool m_filterTagHasBeenSet;
 
                     /**
-                     * 
+                     * Filters by package type.
                      */
                     std::vector<std::string> m_filterPackType;
                     bool m_filterPackTypeHasBeenSet;

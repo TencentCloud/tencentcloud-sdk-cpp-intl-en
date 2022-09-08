@@ -270,6 +270,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool PolicyIdsHasBeenSet() const;
 
                     /**
+                     * 获取Backend AMP consumer ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AMPConsumerId Backend AMP consumer ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetAMPConsumerId() const;
+
+                    /**
+                     * 设置Backend AMP consumer ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param AMPConsumerId Backend AMP consumer ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetAMPConsumerId(const std::string& _aMPConsumerId);
+
+                    /**
+                     * 判断参数 AMPConsumerId 是否已赋值
+                     * @return AMPConsumerId 是否已赋值
+                     */
+                    bool AMPConsumerIdHasBeenSet() const;
+
+                    /**
                      * 获取Channel to push alarm notifications to CLS.
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return CLSNotices Channel to push alarm notifications to CLS.
@@ -362,6 +384,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<std::string> m_policyIds;
                     bool m_policyIdsHasBeenSet;
+
+                    /**
+                     * Backend AMP consumer ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_aMPConsumerId;
+                    bool m_aMPConsumerIdHasBeenSet;
 
                     /**
                      * Channel to push alarm notifications to CLS.
