@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cynosdb/v20190107/model/RollbackTimeRange.h>
 
 
 namespace TencentCloud
@@ -44,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start time point of valid rollback time range
-                     * @return TimeRangeStart Start time point of valid rollback time range
+                     * 获取Start time of valid rollback time range (disused)
+                     * @return TimeRangeStart Start time of valid rollback time range (disused)
                      */
                     std::string GetTimeRangeStart() const;
 
@@ -56,8 +57,8 @@ namespace TencentCloud
                     bool TimeRangeStartHasBeenSet() const;
 
                     /**
-                     * 获取End time point of valid rollback time range
-                     * @return TimeRangeEnd End time point of valid rollback time range
+                     * 获取End time of valid rollback time range (disused)
+                     * @return TimeRangeEnd End time of valid rollback time range (disused)
                      */
                     std::string GetTimeRangeEnd() const;
 
@@ -67,19 +68,37 @@ namespace TencentCloud
                      */
                     bool TimeRangeEndHasBeenSet() const;
 
+                    /**
+                     * 获取Time range available for rollback
+                     * @return RollbackTimeRanges Time range available for rollback
+                     */
+                    std::vector<RollbackTimeRange> GetRollbackTimeRanges() const;
+
+                    /**
+                     * 判断参数 RollbackTimeRanges 是否已赋值
+                     * @return RollbackTimeRanges 是否已赋值
+                     */
+                    bool RollbackTimeRangesHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Start time point of valid rollback time range
+                     * Start time of valid rollback time range (disused)
                      */
                     std::string m_timeRangeStart;
                     bool m_timeRangeStartHasBeenSet;
 
                     /**
-                     * End time point of valid rollback time range
+                     * End time of valid rollback time range (disused)
                      */
                     std::string m_timeRangeEnd;
                     bool m_timeRangeEndHasBeenSet;
+
+                    /**
+                     * Time range available for rollback
+                     */
+                    std::vector<RollbackTimeRange> m_rollbackTimeRanges;
+                    bool m_rollbackTimeRangesHasBeenSet;
 
                 };
             }

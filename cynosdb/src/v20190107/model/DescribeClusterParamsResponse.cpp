@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/cynosdb/v20190107/model/DescribeRollbackTimeRangeResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeClusterParamsResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,14 +23,13 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cynosdb::V20190107::Model;
 using namespace std;
 
-DescribeRollbackTimeRangeResponse::DescribeRollbackTimeRangeResponse() :
-    m_timeRangeStartHasBeenSet(false),
-    m_timeRangeEndHasBeenSet(false),
-    m_rollbackTimeRangesHasBeenSet(false)
+DescribeClusterParamsResponse::DescribeClusterParamsResponse() :
+    m_totalCountHasBeenSet(false),
+    m_itemsHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome DescribeRollbackTimeRangeResponse::Deserialize(const string &payload)
+CoreInternalOutcome DescribeClusterParamsResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -64,81 +63,63 @@ CoreInternalOutcome DescribeRollbackTimeRangeResponse::Deserialize(const string 
     }
 
 
-    if (rsp.HasMember("TimeRangeStart") && !rsp["TimeRangeStart"].IsNull())
+    if (rsp.HasMember("TotalCount") && !rsp["TotalCount"].IsNull())
     {
-        if (!rsp["TimeRangeStart"].IsString())
+        if (!rsp["TotalCount"].IsInt64())
         {
-            return CoreInternalOutcome(Core::Error("response `TimeRangeStart` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TotalCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
-        m_timeRangeStart = string(rsp["TimeRangeStart"].GetString());
-        m_timeRangeStartHasBeenSet = true;
+        m_totalCount = rsp["TotalCount"].GetInt64();
+        m_totalCountHasBeenSet = true;
     }
 
-    if (rsp.HasMember("TimeRangeEnd") && !rsp["TimeRangeEnd"].IsNull())
+    if (rsp.HasMember("Items") && !rsp["Items"].IsNull())
     {
-        if (!rsp["TimeRangeEnd"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `TimeRangeEnd` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_timeRangeEnd = string(rsp["TimeRangeEnd"].GetString());
-        m_timeRangeEndHasBeenSet = true;
-    }
+        if (!rsp["Items"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `Items` is not array type"));
 
-    if (rsp.HasMember("RollbackTimeRanges") && !rsp["RollbackTimeRanges"].IsNull())
-    {
-        if (!rsp["RollbackTimeRanges"].IsArray())
-            return CoreInternalOutcome(Core::Error("response `RollbackTimeRanges` is not array type"));
-
-        const rapidjson::Value &tmpValue = rsp["RollbackTimeRanges"];
+        const rapidjson::Value &tmpValue = rsp["Items"];
         for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
-            RollbackTimeRange item;
+            ParamInfo item;
             CoreInternalOutcome outcome = item.Deserialize(*itr);
             if (!outcome.IsSuccess())
             {
                 outcome.GetError().SetRequestId(requestId);
                 return outcome;
             }
-            m_rollbackTimeRanges.push_back(item);
+            m_items.push_back(item);
         }
-        m_rollbackTimeRangesHasBeenSet = true;
+        m_itemsHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string DescribeRollbackTimeRangeResponse::ToJsonString() const
+string DescribeClusterParamsResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_timeRangeStartHasBeenSet)
+    if (m_totalCountHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "TimeRangeStart";
+        string key = "TotalCount";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_timeRangeStart.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, m_totalCount, allocator);
     }
 
-    if (m_timeRangeEndHasBeenSet)
+    if (m_itemsHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "TimeRangeEnd";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_timeRangeEnd.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_rollbackTimeRangesHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "RollbackTimeRanges";
+        string key = "Items";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
         int i=0;
-        for (auto itr = m_rollbackTimeRanges.begin(); itr != m_rollbackTimeRanges.end(); ++itr, ++i)
+        for (auto itr = m_items.begin(); itr != m_items.end(); ++itr, ++i)
         {
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
@@ -157,34 +138,24 @@ string DescribeRollbackTimeRangeResponse::ToJsonString() const
 }
 
 
-string DescribeRollbackTimeRangeResponse::GetTimeRangeStart() const
+int64_t DescribeClusterParamsResponse::GetTotalCount() const
 {
-    return m_timeRangeStart;
+    return m_totalCount;
 }
 
-bool DescribeRollbackTimeRangeResponse::TimeRangeStartHasBeenSet() const
+bool DescribeClusterParamsResponse::TotalCountHasBeenSet() const
 {
-    return m_timeRangeStartHasBeenSet;
+    return m_totalCountHasBeenSet;
 }
 
-string DescribeRollbackTimeRangeResponse::GetTimeRangeEnd() const
+vector<ParamInfo> DescribeClusterParamsResponse::GetItems() const
 {
-    return m_timeRangeEnd;
+    return m_items;
 }
 
-bool DescribeRollbackTimeRangeResponse::TimeRangeEndHasBeenSet() const
+bool DescribeClusterParamsResponse::ItemsHasBeenSet() const
 {
-    return m_timeRangeEndHasBeenSet;
-}
-
-vector<RollbackTimeRange> DescribeRollbackTimeRangeResponse::GetRollbackTimeRanges() const
-{
-    return m_rollbackTimeRanges;
-}
-
-bool DescribeRollbackTimeRangeResponse::RollbackTimeRangesHasBeenSet() const
-{
-    return m_rollbackTimeRangesHasBeenSet;
+    return m_itemsHasBeenSet;
 }
 
 

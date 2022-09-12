@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/cynosdb/v20190107/model/DescribeInstanceSpecsRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/RemoveClusterSlaveZoneRequest.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -22,33 +22,33 @@
 using namespace TencentCloud::Cynosdb::V20190107::Model;
 using namespace std;
 
-DescribeInstanceSpecsRequest::DescribeInstanceSpecsRequest() :
-    m_dbTypeHasBeenSet(false),
-    m_includeZoneStocksHasBeenSet(false)
+RemoveClusterSlaveZoneRequest::RemoveClusterSlaveZoneRequest() :
+    m_clusterIdHasBeenSet(false),
+    m_slaveZoneHasBeenSet(false)
 {
 }
 
-string DescribeInstanceSpecsRequest::ToJsonString() const
+string RemoveClusterSlaveZoneRequest::ToJsonString() const
 {
     rapidjson::Document d;
     d.SetObject();
     rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
-    if (m_dbTypeHasBeenSet)
+    if (m_clusterIdHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "DbType";
+        string key = "ClusterId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_dbType.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_clusterId.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_includeZoneStocksHasBeenSet)
+    if (m_slaveZoneHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "IncludeZoneStocks";
+        string key = "SlaveZone";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, m_includeZoneStocks, allocator);
+        d.AddMember(iKey, rapidjson::Value(m_slaveZone.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -59,36 +59,36 @@ string DescribeInstanceSpecsRequest::ToJsonString() const
 }
 
 
-string DescribeInstanceSpecsRequest::GetDbType() const
+string RemoveClusterSlaveZoneRequest::GetClusterId() const
 {
-    return m_dbType;
+    return m_clusterId;
 }
 
-void DescribeInstanceSpecsRequest::SetDbType(const string& _dbType)
+void RemoveClusterSlaveZoneRequest::SetClusterId(const string& _clusterId)
 {
-    m_dbType = _dbType;
-    m_dbTypeHasBeenSet = true;
+    m_clusterId = _clusterId;
+    m_clusterIdHasBeenSet = true;
 }
 
-bool DescribeInstanceSpecsRequest::DbTypeHasBeenSet() const
+bool RemoveClusterSlaveZoneRequest::ClusterIdHasBeenSet() const
 {
-    return m_dbTypeHasBeenSet;
+    return m_clusterIdHasBeenSet;
 }
 
-bool DescribeInstanceSpecsRequest::GetIncludeZoneStocks() const
+string RemoveClusterSlaveZoneRequest::GetSlaveZone() const
 {
-    return m_includeZoneStocks;
+    return m_slaveZone;
 }
 
-void DescribeInstanceSpecsRequest::SetIncludeZoneStocks(const bool& _includeZoneStocks)
+void RemoveClusterSlaveZoneRequest::SetSlaveZone(const string& _slaveZone)
 {
-    m_includeZoneStocks = _includeZoneStocks;
-    m_includeZoneStocksHasBeenSet = true;
+    m_slaveZone = _slaveZone;
+    m_slaveZoneHasBeenSet = true;
 }
 
-bool DescribeInstanceSpecsRequest::IncludeZoneStocksHasBeenSet() const
+bool RemoveClusterSlaveZoneRequest::SlaveZoneHasBeenSet() const
 {
-    return m_includeZoneStocksHasBeenSet;
+    return m_slaveZoneHasBeenSet;
 }
 
 

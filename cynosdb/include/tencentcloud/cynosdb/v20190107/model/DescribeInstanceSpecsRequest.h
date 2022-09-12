@@ -64,6 +64,24 @@ namespace TencentCloud
                      */
                     bool DbTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to return the AZ information.
+                     * @return IncludeZoneStocks Whether to return the AZ information.
+                     */
+                    bool GetIncludeZoneStocks() const;
+
+                    /**
+                     * 设置Whether to return the AZ information.
+                     * @param IncludeZoneStocks Whether to return the AZ information.
+                     */
+                    void SetIncludeZoneStocks(const bool& _includeZoneStocks);
+
+                    /**
+                     * 判断参数 IncludeZoneStocks 是否已赋值
+                     * @return IncludeZoneStocks 是否已赋值
+                     */
+                    bool IncludeZoneStocksHasBeenSet() const;
+
                 private:
 
                     /**
@@ -72,6 +90,12 @@ namespace TencentCloud
                      */
                     std::string m_dbType;
                     bool m_dbTypeHasBeenSet;
+
+                    /**
+                     * Whether to return the AZ information.
+                     */
+                    bool m_includeZoneStocks;
+                    bool m_includeZoneStocksHasBeenSet;
 
                 };
             }
