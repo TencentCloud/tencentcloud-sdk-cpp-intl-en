@@ -150,6 +150,24 @@ namespace TencentCloud
                      */
                     bool PasswordHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to roll over the backup index
+                     * @return RolloverBackingIndex Whether to roll over the backup index
+                     */
+                    bool GetRolloverBackingIndex() const;
+
+                    /**
+                     * 设置Whether to roll over the backup index
+                     * @param RolloverBackingIndex Whether to roll over the backup index
+                     */
+                    void SetRolloverBackingIndex(const bool& _rolloverBackingIndex);
+
+                    /**
+                     * 判断参数 RolloverBackingIndex 是否已赋值
+                     * @return RolloverBackingIndex 是否已赋值
+                     */
+                    bool RolloverBackingIndexHasBeenSet() const;
+
                 private:
 
                     /**
@@ -187,6 +205,12 @@ namespace TencentCloud
                      */
                     std::string m_password;
                     bool m_passwordHasBeenSet;
+
+                    /**
+                     * Whether to roll over the backup index
+                     */
+                    bool m_rolloverBackingIndex;
+                    bool m_rolloverBackingIndexHasBeenSet;
 
                 };
             }

@@ -42,6 +42,7 @@ set(es_public_header_model
   include/tencentcloud/es/v20180416/model/UpdateDictionariesRequest.h
   include/tencentcloud/es/v20180416/model/ZoneDetail.h
   include/tencentcloud/es/v20180416/model/UpdateRequestTargetNodeTypesRequest.h
+  include/tencentcloud/es/v20180416/model/OperationDuration.h
   include/tencentcloud/es/v20180416/model/NodeView.h
   include/tencentcloud/es/v20180416/model/DescribeIndexListRequest.h
   include/tencentcloud/es/v20180416/model/CosBackup.h
@@ -67,8 +68,10 @@ set(es_public_header_model
   include/tencentcloud/es/v20180416/model/UpdatePluginsRequest.h
   include/tencentcloud/es/v20180416/model/GetRequestTargetNodeTypesRequest.h
   include/tencentcloud/es/v20180416/model/KibanaNodeInfo.h
+  include/tencentcloud/es/v20180416/model/OperationDurationUpdated.h
   include/tencentcloud/es/v20180416/model/UpgradeLicenseResponse.h
   include/tencentcloud/es/v20180416/model/EsAcl.h
+  include/tencentcloud/es/v20180416/model/UpdateRequestTargetNodeTypesResponse.h
   include/tencentcloud/es/v20180416/model/UpdateIndexRequest.h
   include/tencentcloud/es/v20180416/model/MasterNodeInfo.h
   include/tencentcloud/es/v20180416/model/IndexOptionsField.h
@@ -88,7 +91,7 @@ set(es_public_header_model
   include/tencentcloud/es/v20180416/model/Operation.h
   include/tencentcloud/es/v20180416/model/UpdateIndexResponse.h
   include/tencentcloud/es/v20180416/model/UpgradeLicenseRequest.h
-  include/tencentcloud/es/v20180416/model/UpdateRequestTargetNodeTypesResponse.h
+  include/tencentcloud/es/v20180416/model/OptionalWebServiceInfo.h
   )
 
 set(es_src
@@ -116,6 +119,7 @@ set(es_src
   src/v20180416/model/UpdateDictionariesRequest.cpp
   src/v20180416/model/ZoneDetail.cpp
   src/v20180416/model/UpdateRequestTargetNodeTypesRequest.cpp
+  src/v20180416/model/OperationDuration.cpp
   src/v20180416/model/NodeView.cpp
   src/v20180416/model/DescribeIndexListRequest.cpp
   src/v20180416/model/CosBackup.cpp
@@ -141,8 +145,10 @@ set(es_src
   src/v20180416/model/UpdatePluginsRequest.cpp
   src/v20180416/model/GetRequestTargetNodeTypesRequest.cpp
   src/v20180416/model/KibanaNodeInfo.cpp
+  src/v20180416/model/OperationDurationUpdated.cpp
   src/v20180416/model/UpgradeLicenseResponse.cpp
   src/v20180416/model/EsAcl.cpp
+  src/v20180416/model/UpdateRequestTargetNodeTypesResponse.cpp
   src/v20180416/model/UpdateIndexRequest.cpp
   src/v20180416/model/MasterNodeInfo.cpp
   src/v20180416/model/IndexOptionsField.cpp
@@ -162,7 +168,7 @@ set(es_src
   src/v20180416/model/Operation.cpp
   src/v20180416/model/UpdateIndexResponse.cpp
   src/v20180416/model/UpgradeLicenseRequest.cpp
-  src/v20180416/model/UpdateRequestTargetNodeTypesResponse.cpp
+  src/v20180416/model/OptionalWebServiceInfo.cpp
   )
 
 set(es_include

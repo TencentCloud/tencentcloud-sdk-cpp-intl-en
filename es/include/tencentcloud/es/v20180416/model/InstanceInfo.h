@@ -34,6 +34,8 @@
 #include <tencentcloud/es/v20180416/model/KibanaNodeInfo.h>
 #include <tencentcloud/es/v20180416/model/WebNodeTypeInfo.h>
 #include <tencentcloud/es/v20180416/model/EsConfigSetInfo.h>
+#include <tencentcloud/es/v20180416/model/OperationDuration.h>
+#include <tencentcloud/es/v20180416/model/OptionalWebServiceInfo.h>
 
 
 namespace TencentCloud
@@ -1562,6 +1564,94 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool EsConfigSetsHasBeenSet() const;
 
+                    /**
+                     * 获取The maintenance time slot of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return OperationDuration The maintenance time slot of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    OperationDuration GetOperationDuration() const;
+
+                    /**
+                     * 设置The maintenance time slot of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param OperationDuration The maintenance time slot of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetOperationDuration(const OperationDuration& _operationDuration);
+
+                    /**
+                     * 判断参数 OperationDuration 是否已赋值
+                     * @return OperationDuration 是否已赋值
+                     */
+                    bool OperationDurationHasBeenSet() const;
+
+                    /**
+                     * 获取Web node list
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return OptionalWebServiceInfos Web node list
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<OptionalWebServiceInfo> GetOptionalWebServiceInfos() const;
+
+                    /**
+                     * 设置Web node list
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param OptionalWebServiceInfos Web node list
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetOptionalWebServiceInfos(const std::vector<OptionalWebServiceInfo>& _optionalWebServiceInfos);
+
+                    /**
+                     * 判断参数 OptionalWebServiceInfos 是否已赋值
+                     * @return OptionalWebServiceInfos 是否已赋值
+                     */
+                    bool OptionalWebServiceInfosHasBeenSet() const;
+
+                    /**
+                     * 获取Autonomous index option
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AutoIndexEnabled Autonomous index option
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool GetAutoIndexEnabled() const;
+
+                    /**
+                     * 设置Autonomous index option
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param AutoIndexEnabled Autonomous index option
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetAutoIndexEnabled(const bool& _autoIndexEnabled);
+
+                    /**
+                     * 判断参数 AutoIndexEnabled 是否已赋值
+                     * @return AutoIndexEnabled 是否已赋值
+                     */
+                    bool AutoIndexEnabledHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the storage-computing separation feature is enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return EnableHybridStorage Whether the storage-computing separation feature is enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool GetEnableHybridStorage() const;
+
+                    /**
+                     * 设置Whether the storage-computing separation feature is enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param EnableHybridStorage Whether the storage-computing separation feature is enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetEnableHybridStorage(const bool& _enableHybridStorage);
+
+                    /**
+                     * 判断参数 EnableHybridStorage 是否已赋值
+                     * @return EnableHybridStorage 是否已赋值
+                     */
+                    bool EnableHybridStorageHasBeenSet() const;
+
                 private:
 
                     /**
@@ -2052,6 +2142,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<EsConfigSetInfo> m_esConfigSets;
                     bool m_esConfigSetsHasBeenSet;
+
+                    /**
+                     * The maintenance time slot of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    OperationDuration m_operationDuration;
+                    bool m_operationDurationHasBeenSet;
+
+                    /**
+                     * Web node list
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<OptionalWebServiceInfo> m_optionalWebServiceInfos;
+                    bool m_optionalWebServiceInfosHasBeenSet;
+
+                    /**
+                     * Autonomous index option
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool m_autoIndexEnabled;
+                    bool m_autoIndexEnabledHasBeenSet;
+
+                    /**
+                     * Whether the storage-computing separation feature is enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool m_enableHybridStorage;
+                    bool m_enableHybridStorageHasBeenSet;
 
                 };
             }

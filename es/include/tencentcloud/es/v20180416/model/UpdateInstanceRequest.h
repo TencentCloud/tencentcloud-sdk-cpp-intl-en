@@ -28,6 +28,7 @@
 #include <tencentcloud/es/v20180416/model/ZoneDetail.h>
 #include <tencentcloud/es/v20180416/model/WebNodeTypeInfo.h>
 #include <tencentcloud/es/v20180416/model/EsConfigSetInfo.h>
+#include <tencentcloud/es/v20180416/model/OperationDurationUpdated.h>
 
 
 namespace TencentCloud
@@ -613,6 +614,24 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
                      */
                     bool EsConfigSetHasBeenSet() const;
 
+                    /**
+                     * 获取The maintenance time slot
+                     * @return OperationDuration The maintenance time slot
+                     */
+                    OperationDurationUpdated GetOperationDuration() const;
+
+                    /**
+                     * 设置The maintenance time slot
+                     * @param OperationDuration The maintenance time slot
+                     */
+                    void SetOperationDuration(const OperationDurationUpdated& _operationDuration);
+
+                    /**
+                     * 判断参数 OperationDuration 是否已赋值
+                     * @return OperationDuration 是否已赋值
+                     */
+                    bool OperationDurationHasBeenSet() const;
+
                 private:
 
                     /**
@@ -800,6 +819,12 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
                      */
                     EsConfigSetInfo m_esConfigSet;
                     bool m_esConfigSetHasBeenSet;
+
+                    /**
+                     * The maintenance time slot
+                     */
+                    OperationDurationUpdated m_operationDuration;
+                    bool m_operationDurationHasBeenSet;
 
                 };
             }

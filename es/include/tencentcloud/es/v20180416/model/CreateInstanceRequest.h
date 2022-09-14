@@ -25,6 +25,7 @@
 #include <tencentcloud/es/v20180416/model/NodeInfo.h>
 #include <tencentcloud/es/v20180416/model/TagInfo.h>
 #include <tencentcloud/es/v20180416/model/WebNodeTypeInfo.h>
+#include <tencentcloud/es/v20180416/model/OperationDuration.h>
 
 
 namespace TencentCloud
@@ -618,6 +619,42 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
                      */
                     bool ProtocolHasBeenSet() const;
 
+                    /**
+                     * 获取The maintenance time slot
+                     * @return OperationDuration The maintenance time slot
+                     */
+                    OperationDuration GetOperationDuration() const;
+
+                    /**
+                     * 设置The maintenance time slot
+                     * @param OperationDuration The maintenance time slot
+                     */
+                    void SetOperationDuration(const OperationDuration& _operationDuration);
+
+                    /**
+                     * 判断参数 OperationDuration 是否已赋值
+                     * @return OperationDuration 是否已赋值
+                     */
+                    bool OperationDurationHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable the storage-computing separation feature.
+                     * @return EnableHybridStorage Whether to enable the storage-computing separation feature.
+                     */
+                    bool GetEnableHybridStorage() const;
+
+                    /**
+                     * 设置Whether to enable the storage-computing separation feature.
+                     * @param EnableHybridStorage Whether to enable the storage-computing separation feature.
+                     */
+                    void SetEnableHybridStorage(const bool& _enableHybridStorage);
+
+                    /**
+                     * 判断参数 EnableHybridStorage 是否已赋值
+                     * @return EnableHybridStorage 是否已赋值
+                     */
+                    bool EnableHybridStorageHasBeenSet() const;
+
                 private:
 
                     /**
@@ -807,6 +844,18 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;
+
+                    /**
+                     * The maintenance time slot
+                     */
+                    OperationDuration m_operationDuration;
+                    bool m_operationDurationHasBeenSet;
+
+                    /**
+                     * Whether to enable the storage-computing separation feature.
+                     */
+                    bool m_enableHybridStorage;
+                    bool m_enableHybridStorageHasBeenSet;
 
                 };
             }
