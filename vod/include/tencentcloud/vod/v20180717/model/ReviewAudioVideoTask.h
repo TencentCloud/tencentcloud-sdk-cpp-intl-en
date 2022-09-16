@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/vod/v20180717/model/ReviewAudioVideoTaskInput.h>
 #include <tencentcloud/vod/v20180717/model/ReviewAudioVideoTaskOutput.h>
 
 
@@ -128,6 +129,28 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
+                     * 获取The input of a moderation task.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Input The input of a moderation task.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    ReviewAudioVideoTaskInput GetInput() const;
+
+                    /**
+                     * 设置The input of a moderation task.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param Input The input of a moderation task.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetInput(const ReviewAudioVideoTaskInput& _input);
+
+                    /**
+                     * 判断参数 Input 是否已赋值
+                     * @return Input 是否已赋值
+                     */
+                    bool InputHasBeenSet() const;
+
+                    /**
                      * 获取The output of a moderation task.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Output The output of a moderation task.
@@ -168,14 +191,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SessionIdHasBeenSet() const;
 
                     /**
-                     * 获取The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
-                     * @return SessionContext The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
+                     * 获取The source context, which is used to pass through user request information. The `ReviewAudioVideoComplete` callback will return the value of this parameter. It can contain up to 1,000 characters.
+                     * @return SessionContext The source context, which is used to pass through user request information. The `ReviewAudioVideoComplete` callback will return the value of this parameter. It can contain up to 1,000 characters.
                      */
                     std::string GetSessionContext() const;
 
                     /**
-                     * 设置The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
-                     * @param SessionContext The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
+                     * 设置The source context, which is used to pass through user request information. The `ReviewAudioVideoComplete` callback will return the value of this parameter. It can contain up to 1,000 characters.
+                     * @param SessionContext The source context, which is used to pass through user request information. The `ReviewAudioVideoComplete` callback will return the value of this parameter. It can contain up to 1,000 characters.
                      */
                     void SetSessionContext(const std::string& _sessionContext);
 
@@ -214,6 +237,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_messageHasBeenSet;
 
                     /**
+                     * The input of a moderation task.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    ReviewAudioVideoTaskInput m_input;
+                    bool m_inputHasBeenSet;
+
+                    /**
                      * The output of a moderation task.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
@@ -227,7 +257,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_sessionIdHasBeenSet;
 
                     /**
-                     * The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
+                     * The source context, which is used to pass through user request information. The `ReviewAudioVideoComplete` callback will return the value of this parameter. It can contain up to 1,000 characters.
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;
