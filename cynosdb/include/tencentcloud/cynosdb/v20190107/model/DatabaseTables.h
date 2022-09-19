@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_CLS_V20201016_MODEL_JSONINFO_H_
-#define TENCENTCLOUD_CLS_V20201016_MODEL_JSONINFO_H_
+#ifndef TENCENTCLOUD_CYNOSDB_V20190107_MODEL_DATABASETABLES_H_
+#define TENCENTCLOUD_CYNOSDB_V20190107_MODEL_DATABASETABLES_H_
 
 #include <string>
 #include <vector>
@@ -28,78 +28,83 @@
 
 namespace TencentCloud
 {
-    namespace Cls
+    namespace Cynosdb
     {
-        namespace V20201016
+        namespace V20190107
         {
             namespace Model
             {
                 /**
-                * JSON type description
+                * Database table information
                 */
-                class JsonInfo : public AbstractModel
+                class DatabaseTables : public AbstractModel
                 {
                 public:
-                    JsonInfo();
-                    ~JsonInfo() = default;
+                    DatabaseTables();
+                    ~DatabaseTables() = default;
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
                     /**
-                     * 获取Enablement flag
-                     * @return EnableTag Enablement flag
-                     */
-                    bool GetEnableTag() const;
-
-                    /**
-                     * 设置Enablement flag
-                     * @param EnableTag Enablement flag
-                     */
-                    void SetEnableTag(const bool& _enableTag);
-
-                    /**
-                     * 判断参数 EnableTag 是否已赋值
-                     * @return EnableTag 是否已赋值
-                     */
-                    bool EnableTagHasBeenSet() const;
-
-                    /**
-                     * 获取List of metadata. Supported metadata types: __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+                     * 获取Database name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MetaFields List of metadata. Supported metadata types: __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+                     * @return Database Database name
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    std::vector<std::string> GetMetaFields() const;
+                    std::string GetDatabase() const;
 
                     /**
-                     * 设置List of metadata. Supported metadata types: __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+                     * 设置Database name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MetaFields List of metadata. Supported metadata types: __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+                     * @param Database Database name
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    void SetMetaFields(const std::vector<std::string>& _metaFields);
+                    void SetDatabase(const std::string& _database);
 
                     /**
-                     * 判断参数 MetaFields 是否已赋值
-                     * @return MetaFields 是否已赋值
+                     * 判断参数 Database 是否已赋值
+                     * @return Database 是否已赋值
                      */
-                    bool MetaFieldsHasBeenSet() const;
+                    bool DatabaseHasBeenSet() const;
+
+                    /**
+                     * 获取Table name list
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Tables Table name list
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> GetTables() const;
+
+                    /**
+                     * 设置Table name list
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Tables Table name list
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetTables(const std::vector<std::string>& _tables);
+
+                    /**
+                     * 判断参数 Tables 是否已赋值
+                     * @return Tables 是否已赋值
+                     */
+                    bool TablesHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Enablement flag
-                     */
-                    bool m_enableTag;
-                    bool m_enableTagHasBeenSet;
-
-                    /**
-                     * List of metadata. Supported metadata types: __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+                     * Database name
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    std::vector<std::string> m_metaFields;
-                    bool m_metaFieldsHasBeenSet;
+                    std::string m_database;
+                    bool m_databaseHasBeenSet;
+
+                    /**
+                     * Table name list
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_tables;
+                    bool m_tablesHasBeenSet;
 
                 };
             }
@@ -107,4 +112,4 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 }
 
-#endif // !TENCENTCLOUD_CLS_V20201016_MODEL_JSONINFO_H_
+#endif // !TENCENTCLOUD_CYNOSDB_V20190107_MODEL_DATABASETABLES_H_

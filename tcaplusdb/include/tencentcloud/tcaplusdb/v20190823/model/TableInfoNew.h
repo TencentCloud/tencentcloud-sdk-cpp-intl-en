@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/IdlFileInfo.h>
 #include <tencentcloud/tcaplusdb/v20190823/model/ErrorInfo.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/SyncTableInfo.h>
 
 
 namespace TencentCloud
@@ -664,6 +665,28 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool TxhBackupExpireDayHasBeenSet() const;
 
+                    /**
+                     * 获取Cached information of the table
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SyncTableInfo Cached information of the table
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    SyncTableInfo GetSyncTableInfo() const;
+
+                    /**
+                     * 设置Cached information of the table
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param SyncTableInfo Cached information of the table
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetSyncTableInfo(const SyncTableInfo& _syncTableInfo);
+
+                    /**
+                     * 判断参数 SyncTableInfo 是否已赋值
+                     * @return SyncTableInfo 是否已赋值
+                     */
+                    bool SyncTableInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -861,6 +884,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     uint64_t m_txhBackupExpireDay;
                     bool m_txhBackupExpireDayHasBeenSet;
+
+                    /**
+                     * Cached information of the table
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    SyncTableInfo m_syncTableInfo;
+                    bool m_syncTableInfoHasBeenSet;
 
                 };
             }

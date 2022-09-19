@@ -225,6 +225,24 @@ namespace TencentCloud
                      */
                     bool ContentHasBeenSet() const;
 
+                    /**
+                     * 获取Naming a shipping file. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
+                     * @return FilenameMode Naming a shipping file. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
+                     */
+                    uint64_t GetFilenameMode() const;
+
+                    /**
+                     * 设置Naming a shipping file. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
+                     * @param FilenameMode Naming a shipping file. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
+                     */
+                    void SetFilenameMode(const uint64_t& _filenameMode);
+
+                    /**
+                     * 判断参数 FilenameMode 是否已赋值
+                     * @return FilenameMode 是否已赋值
+                     */
+                    bool FilenameModeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -286,6 +304,12 @@ namespace TencentCloud
                      */
                     ContentInfo m_content;
                     bool m_contentHasBeenSet;
+
+                    /**
+                     * Naming a shipping file. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
+                     */
+                    uint64_t m_filenameMode;
+                    bool m_filenameModeHasBeenSet;
 
                 };
             }
