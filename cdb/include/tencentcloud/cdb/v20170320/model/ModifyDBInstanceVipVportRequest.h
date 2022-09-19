@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) to query the ID, whose value is the `InstanceId` value in output parameters.
-                     * @return InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) to query the ID, whose value is the `InstanceId` value in output parameters.
+                     * 获取Instance ID in the format of cdb-c1nl9rpv, cdbro-c2nl9rpv, or cdbrg-c3nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872) API to query the ID, which is the value of the `InstanceId` output parameter.
+                     * @return InstanceId Instance ID in the format of cdb-c1nl9rpv, cdbro-c2nl9rpv, or cdbrg-c3nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872) API to query the ID, which is the value of the `InstanceId` output parameter.
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) to query the ID, whose value is the `InstanceId` value in output parameters.
-                     * @param InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) to query the ID, whose value is the `InstanceId` value in output parameters.
+                     * 设置Instance ID in the format of cdb-c1nl9rpv, cdbro-c2nl9rpv, or cdbrg-c3nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872) API to query the ID, which is the value of the `InstanceId` output parameter.
+                     * @param InstanceId Instance ID in the format of cdb-c1nl9rpv, cdbro-c2nl9rpv, or cdbrg-c3nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872) API to query the ID, which is the value of the `InstanceId` output parameter.
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Destination IP. Either this parameter or `DstPort` must be passed in.
-                     * @return DstIp Destination IP. Either this parameter or `DstPort` must be passed in.
+                     * 获取Target IP. Either this parameter or `DstPort` must be passed in.
+                     * @return DstIp Target IP. Either this parameter or `DstPort` must be passed in.
                      */
                     std::string GetDstIp() const;
 
                     /**
-                     * 设置Destination IP. Either this parameter or `DstPort` must be passed in.
-                     * @param DstIp Destination IP. Either this parameter or `DstPort` must be passed in.
+                     * 设置Target IP. Either this parameter or `DstPort` must be passed in.
+                     * @param DstIp Target IP. Either this parameter or `DstPort` must be passed in.
                      */
                     void SetDstIp(const std::string& _dstIp);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool DstIpHasBeenSet() const;
 
                     /**
-                     * 获取Destination port number. Value range: [1024-65535]. Either this parameter or `DstIp` must be passed in.
-                     * @return DstPort Destination port number. Value range: [1024-65535]. Either this parameter or `DstIp` must be passed in.
+                     * 获取Target port number. Value range: 1024-65535. Either this parameter or `DstIp` must be passed in.
+                     * @return DstPort Target port number. Value range: 1024-65535. Either this parameter or `DstIp` must be passed in.
                      */
                     int64_t GetDstPort() const;
 
                     /**
-                     * 设置Destination port number. Value range: [1024-65535]. Either this parameter or `DstIp` must be passed in.
-                     * @param DstPort Destination port number. Value range: [1024-65535]. Either this parameter or `DstIp` must be passed in.
+                     * 设置Target port number. Value range: 1024-65535. Either this parameter or `DstIp` must be passed in.
+                     * @param DstPort Target port number. Value range: 1024-65535. Either this parameter or `DstIp` must be passed in.
                      */
                     void SetDstPort(const int64_t& _dstPort);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool UniqVpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Unified subnet ID.
-                     * @return UniqSubnetId Unified subnet ID.
+                     * 获取Unified subnet ID
+                     * @return UniqSubnetId Unified subnet ID
                      */
                     std::string GetUniqSubnetId() const;
 
                     /**
-                     * 设置Unified subnet ID.
-                     * @param UniqSubnetId Unified subnet ID.
+                     * 设置Unified subnet ID
+                     * @param UniqSubnetId Unified subnet ID
                      */
                     void SetUniqSubnetId(const std::string& _uniqSubnetId);
 
@@ -133,14 +133,14 @@ namespace TencentCloud
                     bool UniqSubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0-168 hours. Default value: 24 hours.
-                     * @return ReleaseDuration Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0-168 hours. Default value: 24 hours.
+                     * 获取Repossession duration in hours for old IP in the original network when changing from classic network to VPC or changing the VPC subnet. Value range: 0–168. Default value: `24`.
+                     * @return ReleaseDuration Repossession duration in hours for old IP in the original network when changing from classic network to VPC or changing the VPC subnet. Value range: 0–168. Default value: `24`.
                      */
                     int64_t GetReleaseDuration() const;
 
                     /**
-                     * 设置Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0-168 hours. Default value: 24 hours.
-                     * @param ReleaseDuration Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0-168 hours. Default value: 24 hours.
+                     * 设置Repossession duration in hours for old IP in the original network when changing from classic network to VPC or changing the VPC subnet. Value range: 0–168. Default value: `24`.
+                     * @param ReleaseDuration Repossession duration in hours for old IP in the original network when changing from classic network to VPC or changing the VPC subnet. Value range: 0–168. Default value: `24`.
                      */
                     void SetReleaseDuration(const int64_t& _releaseDuration);
 
@@ -153,19 +153,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [instance list querying API](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) to query the ID, whose value is the `InstanceId` value in output parameters.
+                     * Instance ID in the format of cdb-c1nl9rpv, cdbro-c2nl9rpv, or cdbrg-c3nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [DescribeDBInstances](https://www.tencentcloud.com/document/product/236/15872) API to query the ID, which is the value of the `InstanceId` output parameter.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Destination IP. Either this parameter or `DstPort` must be passed in.
+                     * Target IP. Either this parameter or `DstPort` must be passed in.
                      */
                     std::string m_dstIp;
                     bool m_dstIpHasBeenSet;
 
                     /**
-                     * Destination port number. Value range: [1024-65535]. Either this parameter or `DstIp` must be passed in.
+                     * Target port number. Value range: 1024-65535. Either this parameter or `DstIp` must be passed in.
                      */
                     int64_t m_dstPort;
                     bool m_dstPortHasBeenSet;
@@ -177,13 +177,13 @@ namespace TencentCloud
                     bool m_uniqVpcIdHasBeenSet;
 
                     /**
-                     * Unified subnet ID.
+                     * Unified subnet ID
                      */
                     std::string m_uniqSubnetId;
                     bool m_uniqSubnetIdHasBeenSet;
 
                     /**
-                     * Repossession duration in hours for old IP in the original network when changing from the basic network to VPC or changing the VPC subnet. Value range: 0-168 hours. Default value: 24 hours.
+                     * Repossession duration in hours for old IP in the original network when changing from classic network to VPC or changing the VPC subnet. Value range: 0–168. Default value: `24`.
                      */
                     int64_t m_releaseDuration;
                     bool m_releaseDurationHasBeenSet;

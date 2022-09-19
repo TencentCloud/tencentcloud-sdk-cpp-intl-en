@@ -74,6 +74,7 @@ set(cvm_public_header_model
   include/tencentcloud/cvm/v20170312/model/DescribeLaunchTemplateVersionsRequest.h
   include/tencentcloud/cvm/v20170312/model/InquiryPriceResizeInstanceDisksRequest.h
   include/tencentcloud/cvm/v20170312/model/RunInstancesResponse.h
+  include/tencentcloud/cvm/v20170312/model/ReservedInstancePrice.h
   include/tencentcloud/cvm/v20170312/model/ModifyInstancesAttributeResponse.h
   include/tencentcloud/cvm/v20170312/model/DescribeInstancesOperationLimitResponse.h
   include/tencentcloud/cvm/v20170312/model/SyncImagesResponse.h
@@ -98,6 +99,7 @@ set(cvm_public_header_model
   include/tencentcloud/cvm/v20170312/model/DescribeImageSharePermissionResponse.h
   include/tencentcloud/cvm/v20170312/model/DeleteLaunchTemplateVersionsResponse.h
   include/tencentcloud/cvm/v20170312/model/ResetInstancesPasswordResponse.h
+  include/tencentcloud/cvm/v20170312/model/InquiryPriceRunInstancesRequest.h
   include/tencentcloud/cvm/v20170312/model/Image.h
   include/tencentcloud/cvm/v20170312/model/ChcDeployExtraConfig.h
   include/tencentcloud/cvm/v20170312/model/DescribeDisasterRecoverGroupQuotaResponse.h
@@ -161,7 +163,7 @@ set(cvm_public_header_model
   include/tencentcloud/cvm/v20170312/model/ReservedInstanceTypeItem.h
   include/tencentcloud/cvm/v20170312/model/ExportImagesResponse.h
   include/tencentcloud/cvm/v20170312/model/RemoveChcDeployVpcRequest.h
-  include/tencentcloud/cvm/v20170312/model/ReservedInstancePrice.h
+  include/tencentcloud/cvm/v20170312/model/InquiryPriceRunInstancesResponse.h
   include/tencentcloud/cvm/v20170312/model/DescribeHostsRequest.h
   include/tencentcloud/cvm/v20170312/model/ModifyChcAttributeRequest.h
   include/tencentcloud/cvm/v20170312/model/DescribeInstancesStatusRequest.h
@@ -272,6 +274,7 @@ set(cvm_src
   src/v20170312/model/DescribeLaunchTemplateVersionsRequest.cpp
   src/v20170312/model/InquiryPriceResizeInstanceDisksRequest.cpp
   src/v20170312/model/RunInstancesResponse.cpp
+  src/v20170312/model/ReservedInstancePrice.cpp
   src/v20170312/model/ModifyInstancesAttributeResponse.cpp
   src/v20170312/model/DescribeInstancesOperationLimitResponse.cpp
   src/v20170312/model/SyncImagesResponse.cpp
@@ -296,6 +299,7 @@ set(cvm_src
   src/v20170312/model/DescribeImageSharePermissionResponse.cpp
   src/v20170312/model/DeleteLaunchTemplateVersionsResponse.cpp
   src/v20170312/model/ResetInstancesPasswordResponse.cpp
+  src/v20170312/model/InquiryPriceRunInstancesRequest.cpp
   src/v20170312/model/Image.cpp
   src/v20170312/model/ChcDeployExtraConfig.cpp
   src/v20170312/model/DescribeDisasterRecoverGroupQuotaResponse.cpp
@@ -359,7 +363,7 @@ set(cvm_src
   src/v20170312/model/ReservedInstanceTypeItem.cpp
   src/v20170312/model/ExportImagesResponse.cpp
   src/v20170312/model/RemoveChcDeployVpcRequest.cpp
-  src/v20170312/model/ReservedInstancePrice.cpp
+  src/v20170312/model/InquiryPriceRunInstancesResponse.cpp
   src/v20170312/model/DescribeHostsRequest.cpp
   src/v20170312/model/ModifyChcAttributeRequest.cpp
   src/v20170312/model/DescribeInstancesStatusRequest.cpp

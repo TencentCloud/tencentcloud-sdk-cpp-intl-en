@@ -14,54 +14,55 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_CDB_V20170320_MODEL_CREATEACCOUNTSRESPONSE_H_
-#define TENCENTCLOUD_CDB_V20170320_MODEL_CREATEACCOUNTSRESPONSE_H_
+#ifndef TENCENTCLOUD_CVM_V20170312_MODEL_INQUIRYPRICERUNINSTANCESRESPONSE_H_
+#define TENCENTCLOUD_CVM_V20170312_MODEL_INQUIRYPRICERUNINSTANCESRESPONSE_H_
 
 #include <string>
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cvm/v20170312/model/Price.h>
 
 
 namespace TencentCloud
 {
-    namespace Cdb
+    namespace Cvm
     {
-        namespace V20170320
+        namespace V20170312
         {
             namespace Model
             {
                 /**
-                * CreateAccounts response structure.
+                * InquiryPriceRunInstances response structure.
                 */
-                class CreateAccountsResponse : public AbstractModel
+                class InquiryPriceRunInstancesResponse : public AbstractModel
                 {
                 public:
-                    CreateAccountsResponse();
-                    ~CreateAccountsResponse() = default;
+                    InquiryPriceRunInstancesResponse();
+                    ~InquiryPriceRunInstancesResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Async task request ID, which can be used to query the execution result of an async task
-                     * @return AsyncRequestId Async task request ID, which can be used to query the execution result of an async task
+                     * 获取Price of the instance with the specified configurations.
+                     * @return Price Price of the instance with the specified configurations.
                      */
-                    std::string GetAsyncRequestId() const;
+                    Price GetPrice() const;
 
                     /**
-                     * 判断参数 AsyncRequestId 是否已赋值
-                     * @return AsyncRequestId 是否已赋值
+                     * 判断参数 Price 是否已赋值
+                     * @return Price 是否已赋值
                      */
-                    bool AsyncRequestIdHasBeenSet() const;
+                    bool PriceHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Async task request ID, which can be used to query the execution result of an async task
+                     * Price of the instance with the specified configurations.
                      */
-                    std::string m_asyncRequestId;
-                    bool m_asyncRequestIdHasBeenSet;
+                    Price m_price;
+                    bool m_priceHasBeenSet;
 
                 };
             }
@@ -69,4 +70,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_CDB_V20170320_MODEL_CREATEACCOUNTSRESPONSE_H_
+#endif // !TENCENTCLOUD_CVM_V20170312_MODEL_INQUIRYPRICERUNINSTANCESRESPONSE_H_

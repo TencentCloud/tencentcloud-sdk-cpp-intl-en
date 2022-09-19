@@ -107,6 +107,48 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool ClusterExternalACLHasBeenSet() const;
 
+                    /**
+                     * 获取Public network domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return ClusterExternalDomain Public network domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetClusterExternalDomain() const;
+
+                    /**
+                     * 判断参数 ClusterExternalDomain 是否已赋值
+                     * @return ClusterExternalDomain 是否已赋值
+                     */
+                    bool ClusterExternalDomainHasBeenSet() const;
+
+                    /**
+                     * 获取Private network domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return ClusterIntranetDomain Private network domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetClusterIntranetDomain() const;
+
+                    /**
+                     * 判断参数 ClusterIntranetDomain 是否已赋值
+                     * @return ClusterIntranetDomain 是否已赋值
+                     */
+                    bool ClusterIntranetDomainHasBeenSet() const;
+
+                    /**
+                     * 获取Public network security group
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return SecurityGroup Public network security group
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetSecurityGroup() const;
+
+                    /**
+                     * 判断参数 SecurityGroup 是否已赋值
+                     * @return SecurityGroup 是否已赋值
+                     */
+                    bool SecurityGroupHasBeenSet() const;
+
                 private:
 
                     /**
@@ -140,6 +182,27 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     std::vector<std::string> m_clusterExternalACL;
                     bool m_clusterExternalACLHasBeenSet;
+
+                    /**
+                     * Public network domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_clusterExternalDomain;
+                    bool m_clusterExternalDomainHasBeenSet;
+
+                    /**
+                     * Private network domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_clusterIntranetDomain;
+                    bool m_clusterIntranetDomainHasBeenSet;
+
+                    /**
+                     * Public network security group
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_securityGroup;
+                    bool m_securityGroupHasBeenSet;
 
                 };
             }

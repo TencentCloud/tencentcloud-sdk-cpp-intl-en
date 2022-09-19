@@ -219,6 +219,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool ConfigureHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable the rule. Values: `on` (enable), `off` (disable).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Switch Whether to enable the rule. Values: `on` (enable), `off` (disable).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetSwitch() const;
+
+                    /**
+                     * 设置Whether to enable the rule. Values: `on` (enable), `off` (disable).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Switch Whether to enable the rule. Values: `on` (enable), `off` (disable).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetSwitch(const std::string& _switch);
+
+                    /**
+                     * 判断参数 Switch 是否已赋值
+                     * @return Switch 是否已赋值
+                     */
+                    bool SwitchHasBeenSet() const;
+
                 private:
 
                     /**
@@ -275,6 +297,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::vector<ScdnSevenLayerRules> m_configure;
                     bool m_configureHasBeenSet;
+
+                    /**
+                     * Whether to enable the rule. Values: `on` (enable), `off` (disable).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_switch;
+                    bool m_switchHasBeenSet;
 
                 };
             }

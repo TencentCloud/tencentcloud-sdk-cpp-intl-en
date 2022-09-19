@@ -137,14 +137,14 @@ namespace TencentCloud
                     bool ModifyPasswordTimeHasBeenSet() const;
 
                     /**
-                     * 获取This parameter is no longer supported.
-                     * @return CreateTime This parameter is no longer supported.
+                     * 获取This parameter is deprecated.
+                     * @return CreateTime This parameter is deprecated.
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置This parameter is no longer supported.
-                     * @param CreateTime This parameter is no longer supported.
+                     * 设置This parameter is deprecated.
+                     * @param CreateTime This parameter is deprecated.
                      */
                     void SetCreateTime(const std::string& _createTime);
 
@@ -205,7 +205,7 @@ namespace TencentCloud
                     bool m_modifyPasswordTimeHasBeenSet;
 
                     /**
-                     * This parameter is no longer supported.
+                     * This parameter is deprecated.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;

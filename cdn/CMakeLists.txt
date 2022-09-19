@@ -256,6 +256,7 @@ set(cdn_public_header_model
   include/tencentcloud/cdn/v20180606/model/DescribeDomainsRequest.h
   include/tencentcloud/cdn/v20180606/model/OfflineCache.h
   include/tencentcloud/cdn/v20180606/model/UrlRedirectRule.h
+  include/tencentcloud/cdn/v20180606/model/HTTPHeader.h
   include/tencentcloud/cdn/v20180606/model/IpFilterPathRule.h
   include/tencentcloud/cdn/v20180606/model/ScdnAclRule.h
   )
@@ -499,6 +500,7 @@ set(cdn_src
   src/v20180606/model/DescribeDomainsRequest.cpp
   src/v20180606/model/OfflineCache.cpp
   src/v20180606/model/UrlRedirectRule.cpp
+  src/v20180606/model/HTTPHeader.cpp
   src/v20180606/model/IpFilterPathRule.cpp
   src/v20180606/model/ScdnAclRule.cpp
   )

@@ -54,7 +54,7 @@ set(tke_public_header_model
   include/tencentcloud/tke/v20180525/model/IPAddress.h
   include/tencentcloud/tke/v20180525/model/DescribeTKEEdgeClusterCredentialRequest.h
   include/tencentcloud/tke/v20180525/model/AutoUpgradeClusterLevel.h
-  include/tencentcloud/tke/v20180525/model/ClusterAdvancedSettings.h
+  include/tencentcloud/tke/v20180525/model/CheckEdgeClusterCIDRResponse.h
   include/tencentcloud/tke/v20180525/model/RunInstancesForNode.h
   include/tencentcloud/tke/v20180525/model/DescribeTKEEdgeExternalKubeconfigRequest.h
   include/tencentcloud/tke/v20180525/model/DescribeAvailableTKEEdgeVersionRequest.h
@@ -77,6 +77,7 @@ set(tke_public_header_model
   include/tencentcloud/tke/v20180525/model/ECMRunMonitorServiceEnabled.h
   include/tencentcloud/tke/v20180525/model/DeleteEdgeClusterInstancesRequest.h
   include/tencentcloud/tke/v20180525/model/Tag.h
+  include/tencentcloud/tke/v20180525/model/NodePoolOption.h
   include/tencentcloud/tke/v20180525/model/ForwardTKEEdgeApplicationRequestV3Response.h
   include/tencentcloud/tke/v20180525/model/ClusterNetworkSettings.h
   include/tencentcloud/tke/v20180525/model/DescribeImagesResponse.h
@@ -122,31 +123,35 @@ set(tke_public_header_model
   include/tencentcloud/tke/v20180525/model/CheckInstancesUpgradeAbleRequest.h
   include/tencentcloud/tke/v20180525/model/CreateECMInstancesResponse.h
   include/tencentcloud/tke/v20180525/model/ModifyClusterAsGroupOptionAttributeRequest.h
+  include/tencentcloud/tke/v20180525/model/ResourceDeleteOption.h
   include/tencentcloud/tke/v20180525/model/DescribeClusterNodePoolsResponse.h
   include/tencentcloud/tke/v20180525/model/UpgradeAbleInstancesItem.h
   include/tencentcloud/tke/v20180525/model/GetUpgradeInstanceProgressRequest.h
   include/tencentcloud/tke/v20180525/model/DescribeClusterEndpointsRequest.h
   include/tencentcloud/tke/v20180525/model/DescribeEdgeAvailableExtraArgsRequest.h
   include/tencentcloud/tke/v20180525/model/ExistedInstance.h
+  include/tencentcloud/tke/v20180525/model/CreateEdgeCVMInstancesRequest.h
   include/tencentcloud/tke/v20180525/model/AddNodeToNodePoolResponse.h
   include/tencentcloud/tke/v20180525/model/ModifyNodePoolInstanceTypesRequest.h
   include/tencentcloud/tke/v20180525/model/DescribeClusterLevelAttributeRequest.h
   include/tencentcloud/tke/v20180525/model/DisableClusterDeletionProtectionRequest.h
-  include/tencentcloud/tke/v20180525/model/NodePoolOption.h
+  include/tencentcloud/tke/v20180525/model/DriverVersion.h
   include/tencentcloud/tke/v20180525/model/DescribeEdgeCVMInstancesResponse.h
   include/tencentcloud/tke/v20180525/model/CreateECMInstancesRequest.h
+  include/tencentcloud/tke/v20180525/model/CUDNN.h
   include/tencentcloud/tke/v20180525/model/DescribeClustersResponse.h
   include/tencentcloud/tke/v20180525/model/ClusterCredential.h
   include/tencentcloud/tke/v20180525/model/DescribeVpcCniPodLimitsRequest.h
   include/tencentcloud/tke/v20180525/model/DescribeTKEEdgeScriptRequest.h
-  include/tencentcloud/tke/v20180525/model/ClusterExtraArgs.h
+  include/tencentcloud/tke/v20180525/model/CustomDriver.h
+  include/tencentcloud/tke/v20180525/model/CreateEdgeCVMInstancesResponse.h
   include/tencentcloud/tke/v20180525/model/DataDisk.h
   include/tencentcloud/tke/v20180525/model/DescribeEdgeLogSwitchesResponse.h
   include/tencentcloud/tke/v20180525/model/DeleteEdgeCVMInstancesResponse.h
   include/tencentcloud/tke/v20180525/model/ModifyClusterNodePoolResponse.h
   include/tencentcloud/tke/v20180525/model/GetUpgradeInstanceProgressResponse.h
   include/tencentcloud/tke/v20180525/model/DescribeExistedInstancesResponse.h
-  include/tencentcloud/tke/v20180525/model/DescribeEdgeAvailableExtraArgsResponse.h
+  include/tencentcloud/tke/v20180525/model/DescribeClusterAsGroupOptionRequest.h
   include/tencentcloud/tke/v20180525/model/CreatePrometheusAlertRuleResponse.h
   include/tencentcloud/tke/v20180525/model/ECMEnhancedService.h
   include/tencentcloud/tke/v20180525/model/LoginSettings.h
@@ -193,7 +198,7 @@ set(tke_public_header_model
   include/tencentcloud/tke/v20180525/model/CreateClusterEndpointResponse.h
   include/tencentcloud/tke/v20180525/model/DescribeTKEEdgeClusterStatusRequest.h
   include/tencentcloud/tke/v20180525/model/CreateClusterNodePoolRequest.h
-  include/tencentcloud/tke/v20180525/model/CheckEdgeClusterCIDRResponse.h
+  include/tencentcloud/tke/v20180525/model/ClusterAdvancedSettings.h
   include/tencentcloud/tke/v20180525/model/AcquireClusterAdminRoleResponse.h
   include/tencentcloud/tke/v20180525/model/EdgeAvailableExtraArgs.h
   include/tencentcloud/tke/v20180525/model/UpdateClusterVersionRequest.h
@@ -210,7 +215,7 @@ set(tke_public_header_model
   include/tencentcloud/tke/v20180525/model/DeleteClusterRouteTableResponse.h
   include/tencentcloud/tke/v20180525/model/CreateClusterInstancesResponse.h
   include/tencentcloud/tke/v20180525/model/DisableClusterDeletionProtectionResponse.h
-  include/tencentcloud/tke/v20180525/model/DescribeClusterAsGroupOptionRequest.h
+  include/tencentcloud/tke/v20180525/model/DeleteClusterRequest.h
   include/tencentcloud/tke/v20180525/model/ModifyClusterAttributeResponse.h
   include/tencentcloud/tke/v20180525/model/ModifyClusterAsGroupAttributeResponse.h
   include/tencentcloud/tke/v20180525/model/DescribeTKEEdgeClustersResponse.h
@@ -245,6 +250,7 @@ set(tke_public_header_model
   include/tencentcloud/tke/v20180525/model/DescribeAvailableClusterVersionResponse.h
   include/tencentcloud/tke/v20180525/model/TagSpecification.h
   include/tencentcloud/tke/v20180525/model/DescribeClusterLevelChangeRecordsRequest.h
+  include/tencentcloud/tke/v20180525/model/DescribeEdgeAvailableExtraArgsResponse.h
   include/tencentcloud/tke/v20180525/model/AddVpcCniSubnetsRequest.h
   include/tencentcloud/tke/v20180525/model/InstanceUpgradePreCheckResultItem.h
   include/tencentcloud/tke/v20180525/model/DescribeClusterCommonNamesResponse.h
@@ -256,10 +262,9 @@ set(tke_public_header_model
   include/tencentcloud/tke/v20180525/model/DeleteClusterNodePoolResponse.h
   include/tencentcloud/tke/v20180525/model/DeleteECMInstancesResponse.h
   include/tencentcloud/tke/v20180525/model/DescribeEdgeClusterExtraArgsResponse.h
-  include/tencentcloud/tke/v20180525/model/DeleteClusterRequest.h
   include/tencentcloud/tke/v20180525/model/ForwardTKEEdgeApplicationRequestV3Request.h
-  include/tencentcloud/tke/v20180525/model/ResourceDeleteOption.h
-  include/tencentcloud/tke/v20180525/model/RunMonitorServiceEnabled.h
+  include/tencentcloud/tke/v20180525/model/GPUArgs.h
+  include/tencentcloud/tke/v20180525/model/ClusterExtraArgs.h
   include/tencentcloud/tke/v20180525/model/UpdateClusterVersionResponse.h
   include/tencentcloud/tke/v20180525/model/DescribeTKEEdgeClusterCredentialResponse.h
   include/tencentcloud/tke/v20180525/model/DeleteClusterEndpointRequest.h
@@ -277,6 +282,7 @@ set(tke_public_header_model
   include/tencentcloud/tke/v20180525/model/ImageInstance.h
   include/tencentcloud/tke/v20180525/model/EdgeCluster.h
   include/tencentcloud/tke/v20180525/model/DescribeClusterNodePoolDetailResponse.h
+  include/tencentcloud/tke/v20180525/model/RunMonitorServiceEnabled.h
   )
 
 set(tke_src
@@ -316,7 +322,7 @@ set(tke_src
   src/v20180525/model/IPAddress.cpp
   src/v20180525/model/DescribeTKEEdgeClusterCredentialRequest.cpp
   src/v20180525/model/AutoUpgradeClusterLevel.cpp
-  src/v20180525/model/ClusterAdvancedSettings.cpp
+  src/v20180525/model/CheckEdgeClusterCIDRResponse.cpp
   src/v20180525/model/RunInstancesForNode.cpp
   src/v20180525/model/DescribeTKEEdgeExternalKubeconfigRequest.cpp
   src/v20180525/model/DescribeAvailableTKEEdgeVersionRequest.cpp
@@ -339,6 +345,7 @@ set(tke_src
   src/v20180525/model/ECMRunMonitorServiceEnabled.cpp
   src/v20180525/model/DeleteEdgeClusterInstancesRequest.cpp
   src/v20180525/model/Tag.cpp
+  src/v20180525/model/NodePoolOption.cpp
   src/v20180525/model/ForwardTKEEdgeApplicationRequestV3Response.cpp
   src/v20180525/model/ClusterNetworkSettings.cpp
   src/v20180525/model/DescribeImagesResponse.cpp
@@ -384,31 +391,35 @@ set(tke_src
   src/v20180525/model/CheckInstancesUpgradeAbleRequest.cpp
   src/v20180525/model/CreateECMInstancesResponse.cpp
   src/v20180525/model/ModifyClusterAsGroupOptionAttributeRequest.cpp
+  src/v20180525/model/ResourceDeleteOption.cpp
   src/v20180525/model/DescribeClusterNodePoolsResponse.cpp
   src/v20180525/model/UpgradeAbleInstancesItem.cpp
   src/v20180525/model/GetUpgradeInstanceProgressRequest.cpp
   src/v20180525/model/DescribeClusterEndpointsRequest.cpp
   src/v20180525/model/DescribeEdgeAvailableExtraArgsRequest.cpp
   src/v20180525/model/ExistedInstance.cpp
+  src/v20180525/model/CreateEdgeCVMInstancesRequest.cpp
   src/v20180525/model/AddNodeToNodePoolResponse.cpp
   src/v20180525/model/ModifyNodePoolInstanceTypesRequest.cpp
   src/v20180525/model/DescribeClusterLevelAttributeRequest.cpp
   src/v20180525/model/DisableClusterDeletionProtectionRequest.cpp
-  src/v20180525/model/NodePoolOption.cpp
+  src/v20180525/model/DriverVersion.cpp
   src/v20180525/model/DescribeEdgeCVMInstancesResponse.cpp
   src/v20180525/model/CreateECMInstancesRequest.cpp
+  src/v20180525/model/CUDNN.cpp
   src/v20180525/model/DescribeClustersResponse.cpp
   src/v20180525/model/ClusterCredential.cpp
   src/v20180525/model/DescribeVpcCniPodLimitsRequest.cpp
   src/v20180525/model/DescribeTKEEdgeScriptRequest.cpp
-  src/v20180525/model/ClusterExtraArgs.cpp
+  src/v20180525/model/CustomDriver.cpp
+  src/v20180525/model/CreateEdgeCVMInstancesResponse.cpp
   src/v20180525/model/DataDisk.cpp
   src/v20180525/model/DescribeEdgeLogSwitchesResponse.cpp
   src/v20180525/model/DeleteEdgeCVMInstancesResponse.cpp
   src/v20180525/model/ModifyClusterNodePoolResponse.cpp
   src/v20180525/model/GetUpgradeInstanceProgressResponse.cpp
   src/v20180525/model/DescribeExistedInstancesResponse.cpp
-  src/v20180525/model/DescribeEdgeAvailableExtraArgsResponse.cpp
+  src/v20180525/model/DescribeClusterAsGroupOptionRequest.cpp
   src/v20180525/model/CreatePrometheusAlertRuleResponse.cpp
   src/v20180525/model/ECMEnhancedService.cpp
   src/v20180525/model/LoginSettings.cpp
@@ -455,7 +466,7 @@ set(tke_src
   src/v20180525/model/CreateClusterEndpointResponse.cpp
   src/v20180525/model/DescribeTKEEdgeClusterStatusRequest.cpp
   src/v20180525/model/CreateClusterNodePoolRequest.cpp
-  src/v20180525/model/CheckEdgeClusterCIDRResponse.cpp
+  src/v20180525/model/ClusterAdvancedSettings.cpp
   src/v20180525/model/AcquireClusterAdminRoleResponse.cpp
   src/v20180525/model/EdgeAvailableExtraArgs.cpp
   src/v20180525/model/UpdateClusterVersionRequest.cpp
@@ -472,7 +483,7 @@ set(tke_src
   src/v20180525/model/DeleteClusterRouteTableResponse.cpp
   src/v20180525/model/CreateClusterInstancesResponse.cpp
   src/v20180525/model/DisableClusterDeletionProtectionResponse.cpp
-  src/v20180525/model/DescribeClusterAsGroupOptionRequest.cpp
+  src/v20180525/model/DeleteClusterRequest.cpp
   src/v20180525/model/ModifyClusterAttributeResponse.cpp
   src/v20180525/model/ModifyClusterAsGroupAttributeResponse.cpp
   src/v20180525/model/DescribeTKEEdgeClustersResponse.cpp
@@ -507,6 +518,7 @@ set(tke_src
   src/v20180525/model/DescribeAvailableClusterVersionResponse.cpp
   src/v20180525/model/TagSpecification.cpp
   src/v20180525/model/DescribeClusterLevelChangeRecordsRequest.cpp
+  src/v20180525/model/DescribeEdgeAvailableExtraArgsResponse.cpp
   src/v20180525/model/AddVpcCniSubnetsRequest.cpp
   src/v20180525/model/InstanceUpgradePreCheckResultItem.cpp
   src/v20180525/model/DescribeClusterCommonNamesResponse.cpp
@@ -518,10 +530,9 @@ set(tke_src
   src/v20180525/model/DeleteClusterNodePoolResponse.cpp
   src/v20180525/model/DeleteECMInstancesResponse.cpp
   src/v20180525/model/DescribeEdgeClusterExtraArgsResponse.cpp
-  src/v20180525/model/DeleteClusterRequest.cpp
   src/v20180525/model/ForwardTKEEdgeApplicationRequestV3Request.cpp
-  src/v20180525/model/ResourceDeleteOption.cpp
-  src/v20180525/model/RunMonitorServiceEnabled.cpp
+  src/v20180525/model/GPUArgs.cpp
+  src/v20180525/model/ClusterExtraArgs.cpp
   src/v20180525/model/UpdateClusterVersionResponse.cpp
   src/v20180525/model/DescribeTKEEdgeClusterCredentialResponse.cpp
   src/v20180525/model/DeleteClusterEndpointRequest.cpp
@@ -539,6 +550,7 @@ set(tke_src
   src/v20180525/model/ImageInstance.cpp
   src/v20180525/model/EdgeCluster.cpp
   src/v20180525/model/DescribeClusterNodePoolDetailResponse.cpp
+  src/v20180525/model/RunMonitorServiceEnabled.cpp
   )
 
 set(tke_include

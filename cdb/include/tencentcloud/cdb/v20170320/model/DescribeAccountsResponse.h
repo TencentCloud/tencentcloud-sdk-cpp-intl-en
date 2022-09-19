@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of eligible accounts.
-                     * @return TotalCount Number of eligible accounts.
+                     * 获取Number of eligible accounts
+                     * @return TotalCount Number of eligible accounts
                      */
                     int64_t GetTotalCount() const;
 
@@ -57,8 +57,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Details of eligible accounts.
-                     * @return Items Details of eligible accounts.
+                     * 获取Details of eligible accounts
+                     * @return Items Details of eligible accounts
                      */
                     std::vector<AccountInfo> GetItems() const;
 
@@ -69,8 +69,8 @@ namespace TencentCloud
                     bool ItemsHasBeenSet() const;
 
                     /**
-                     * 获取The maximum number of instance connections (set by the MySQL parameter `max_connections`)
-                     * @return MaxUserConnections The maximum number of instance connections (set by the MySQL parameter `max_connections`)
+                     * 获取The maximum number of instance connections
+                     * @return MaxUserConnections The maximum number of instance connections
                      */
                     int64_t GetMaxUserConnections() const;
 
@@ -83,19 +83,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of eligible accounts.
+                     * Number of eligible accounts
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Details of eligible accounts.
+                     * Details of eligible accounts
                      */
                     std::vector<AccountInfo> m_items;
                     bool m_itemsHasBeenSet;
 
                     /**
-                     * The maximum number of instance connections (set by the MySQL parameter `max_connections`)
+                     * The maximum number of instance connections
                      */
                     int64_t m_maxUserConnections;
                     bool m_maxUserConnectionsHasBeenSet;

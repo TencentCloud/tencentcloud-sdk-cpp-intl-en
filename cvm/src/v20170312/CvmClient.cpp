@@ -2018,6 +2018,49 @@ CvmClient::InquiryPriceResizeInstanceDisksOutcomeCallable CvmClient::InquiryPric
     return task->get_future();
 }
 
+CvmClient::InquiryPriceRunInstancesOutcome CvmClient::InquiryPriceRunInstances(const InquiryPriceRunInstancesRequest &request)
+{
+    auto outcome = MakeRequest(request, "InquiryPriceRunInstances");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        InquiryPriceRunInstancesResponse rsp = InquiryPriceRunInstancesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return InquiryPriceRunInstancesOutcome(rsp);
+        else
+            return InquiryPriceRunInstancesOutcome(o.GetError());
+    }
+    else
+    {
+        return InquiryPriceRunInstancesOutcome(outcome.GetError());
+    }
+}
+
+void CvmClient::InquiryPriceRunInstancesAsync(const InquiryPriceRunInstancesRequest& request, const InquiryPriceRunInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->InquiryPriceRunInstances(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CvmClient::InquiryPriceRunInstancesOutcomeCallable CvmClient::InquiryPriceRunInstancesCallable(const InquiryPriceRunInstancesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<InquiryPriceRunInstancesOutcome()>>(
+        [this, request]()
+        {
+            return this->InquiryPriceRunInstances(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CvmClient::ModifyChcAttributeOutcome CvmClient::ModifyChcAttribute(const ModifyChcAttributeRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyChcAttribute");

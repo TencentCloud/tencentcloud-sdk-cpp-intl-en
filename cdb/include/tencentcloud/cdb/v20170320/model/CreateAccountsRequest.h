@@ -44,14 +44,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
-                     * @return InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+                     * 获取Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+                     * @return InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
-                     * @param InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+                     * 设置Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+                     * @param InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
@@ -62,14 +62,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取TencentDB account.
-                     * @return Accounts TencentDB account.
+                     * 获取List of TencentDB accounts
+                     * @return Accounts List of TencentDB accounts
                      */
                     std::vector<Account> GetAccounts() const;
 
                     /**
-                     * 设置TencentDB account.
-                     * @param Accounts TencentDB account.
+                     * 设置List of TencentDB accounts
+                     * @param Accounts List of TencentDB accounts
                      */
                     void SetAccounts(const std::vector<Account>& _accounts);
 
@@ -136,13 +136,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+                     * Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * TencentDB account.
+                     * List of TencentDB accounts
                      */
                     std::vector<Account> m_accounts;
                     bool m_accountsHasBeenSet;

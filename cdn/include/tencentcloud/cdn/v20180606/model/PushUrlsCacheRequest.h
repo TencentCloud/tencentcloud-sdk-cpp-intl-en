@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cdn/v20180606/model/HTTPHeader.h>
 
 
 namespace TencentCloud
@@ -198,6 +199,42 @@ This feature is in beta test.
                      */
                     bool DisableRangeHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return Headers 
+                     */
+                    std::vector<HTTPHeader> GetHeaders() const;
+
+                    /**
+                     * 设置
+                     * @param Headers 
+                     */
+                    void SetHeaders(const std::vector<HTTPHeader>& _headers);
+
+                    /**
+                     * 判断参数 Headers 是否已赋值
+                     * @return Headers 是否已赋值
+                     */
+                    bool HeadersHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to encode the URL
+                     * @return UrlEncode Whether to encode the URL
+                     */
+                    bool GetUrlEncode() const;
+
+                    /**
+                     * 设置Whether to encode the URL
+                     * @param UrlEncode Whether to encode the URL
+                     */
+                    void SetUrlEncode(const bool& _urlEncode);
+
+                    /**
+                     * 判断参数 UrlEncode 是否已赋值
+                     * @return UrlEncode 是否已赋值
+                     */
+                    bool UrlEncodeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -247,6 +284,18 @@ This feature is in beta test.
                      */
                     bool m_disableRange;
                     bool m_disableRangeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<HTTPHeader> m_headers;
+                    bool m_headersHasBeenSet;
+
+                    /**
+                     * Whether to encode the URL
+                     */
+                    bool m_urlEncode;
+                    bool m_urlEncodeHasBeenSet;
 
                 };
             }

@@ -206,6 +206,60 @@ namespace TencentCloud
                      */
                     bool PublicLBHasBeenSet() const;
 
+                    /**
+                     * 获取Cluster specification level
+                     * @return ClusterLevel Cluster specification level
+                     */
+                    std::string GetClusterLevel() const;
+
+                    /**
+                     * 设置Cluster specification level
+                     * @param ClusterLevel Cluster specification level
+                     */
+                    void SetClusterLevel(const std::string& _clusterLevel);
+
+                    /**
+                     * 判断参数 ClusterLevel 是否已赋值
+                     * @return ClusterLevel 是否已赋值
+                     */
+                    bool ClusterLevelHasBeenSet() const;
+
+                    /**
+                     * 获取Whether auto upgrade is supported
+                     * @return AutoUpgradeClusterLevel Whether auto upgrade is supported
+                     */
+                    bool GetAutoUpgradeClusterLevel() const;
+
+                    /**
+                     * 设置Whether auto upgrade is supported
+                     * @param AutoUpgradeClusterLevel Whether auto upgrade is supported
+                     */
+                    void SetAutoUpgradeClusterLevel(const bool& _autoUpgradeClusterLevel);
+
+                    /**
+                     * 判断参数 AutoUpgradeClusterLevel 是否已赋值
+                     * @return AutoUpgradeClusterLevel 是否已赋值
+                     */
+                    bool AutoUpgradeClusterLevelHasBeenSet() const;
+
+                    /**
+                     * 获取Cluster billing mode
+                     * @return ChargeType Cluster billing mode
+                     */
+                    std::string GetChargeType() const;
+
+                    /**
+                     * 设置Cluster billing mode
+                     * @param ChargeType Cluster billing mode
+                     */
+                    void SetChargeType(const std::string& _chargeType);
+
+                    /**
+                     * 判断参数 ChargeType 是否已赋值
+                     * @return ChargeType 是否已赋值
+                     */
+                    bool ChargeTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -261,6 +315,24 @@ namespace TencentCloud
                      */
                     EdgeClusterPublicLB m_publicLB;
                     bool m_publicLBHasBeenSet;
+
+                    /**
+                     * Cluster specification level
+                     */
+                    std::string m_clusterLevel;
+                    bool m_clusterLevelHasBeenSet;
+
+                    /**
+                     * Whether auto upgrade is supported
+                     */
+                    bool m_autoUpgradeClusterLevel;
+                    bool m_autoUpgradeClusterLevelHasBeenSet;
+
+                    /**
+                     * Cluster billing mode
+                     */
+                    std::string m_chargeType;
+                    bool m_chargeTypeHasBeenSet;
 
                 };
             }

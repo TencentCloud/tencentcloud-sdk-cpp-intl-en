@@ -1717,6 +1717,49 @@ CdbClient::DescribeDBInstancesOutcomeCallable CdbClient::DescribeDBInstancesCall
     return task->get_future();
 }
 
+CdbClient::DescribeDBPriceOutcome CdbClient::DescribeDBPrice(const DescribeDBPriceRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDBPrice");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDBPriceResponse rsp = DescribeDBPriceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDBPriceOutcome(rsp);
+        else
+            return DescribeDBPriceOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDBPriceOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::DescribeDBPriceAsync(const DescribeDBPriceRequest& request, const DescribeDBPriceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeDBPrice(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdbClient::DescribeDBPriceOutcomeCallable CdbClient::DescribeDBPriceCallable(const DescribeDBPriceRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeDBPriceOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeDBPrice(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CdbClient::DescribeDBSecurityGroupsOutcome CdbClient::DescribeDBSecurityGroups(const DescribeDBSecurityGroupsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeDBSecurityGroups");
@@ -1796,49 +1839,6 @@ CdbClient::DescribeDBSwitchRecordsOutcomeCallable CdbClient::DescribeDBSwitchRec
         [this, request]()
         {
             return this->DescribeDBSwitchRecords(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
-CdbClient::DescribeDBZoneConfigOutcome CdbClient::DescribeDBZoneConfig(const DescribeDBZoneConfigRequest &request)
-{
-    auto outcome = MakeRequest(request, "DescribeDBZoneConfig");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        DescribeDBZoneConfigResponse rsp = DescribeDBZoneConfigResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return DescribeDBZoneConfigOutcome(rsp);
-        else
-            return DescribeDBZoneConfigOutcome(o.GetError());
-    }
-    else
-    {
-        return DescribeDBZoneConfigOutcome(outcome.GetError());
-    }
-}
-
-void CdbClient::DescribeDBZoneConfigAsync(const DescribeDBZoneConfigRequest& request, const DescribeDBZoneConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->DescribeDBZoneConfig(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-CdbClient::DescribeDBZoneConfigOutcomeCallable CdbClient::DescribeDBZoneConfigCallable(const DescribeDBZoneConfigRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<DescribeDBZoneConfigOutcome()>>(
-        [this, request]()
-        {
-            return this->DescribeDBZoneConfig(request);
         }
     );
 

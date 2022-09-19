@@ -78,6 +78,24 @@ namespace TencentCloud
                      */
                     bool SecurityPoliciesHasBeenSet() const;
 
+                    /**
+                     * 获取Modify public network security group
+                     * @return SecurityGroup Modify public network security group
+                     */
+                    std::string GetSecurityGroup() const;
+
+                    /**
+                     * 设置Modify public network security group
+                     * @param SecurityGroup Modify public network security group
+                     */
+                    void SetSecurityGroup(const std::string& _securityGroup);
+
+                    /**
+                     * 判断参数 SecurityGroup 是否已赋值
+                     * @return SecurityGroup 是否已赋值
+                     */
+                    bool SecurityGroupHasBeenSet() const;
+
                 private:
 
                     /**
@@ -91,6 +109,12 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_securityPolicies;
                     bool m_securityPoliciesHasBeenSet;
+
+                    /**
+                     * Modify public network security group
+                     */
+                    std::string m_securityGroup;
+                    bool m_securityGroupHasBeenSet;
 
                 };
             }

@@ -101,12 +101,12 @@
 #include <tencentcloud/cdb/v20170320/model/DescribeDBInstanceRebootTimeResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeDBInstancesRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeDBInstancesResponse.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeDBPriceRequest.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeDBPriceResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeDBSecurityGroupsRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeDBSecurityGroupsResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeDBSwitchRecordsRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeDBSwitchRecordsResponse.h>
-#include <tencentcloud/cdb/v20170320/model/DescribeDBZoneConfigRequest.h>
-#include <tencentcloud/cdb/v20170320/model/DescribeDBZoneConfigResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeDataBackupOverviewRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeDataBackupOverviewResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeDatabasesRequest.h>
@@ -384,15 +384,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeDBInstancesResponse> DescribeDBInstancesOutcome;
                 typedef std::future<DescribeDBInstancesOutcome> DescribeDBInstancesOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeDBInstancesRequest&, DescribeDBInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDBPriceResponse> DescribeDBPriceOutcome;
+                typedef std::future<DescribeDBPriceOutcome> DescribeDBPriceOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::DescribeDBPriceRequest&, DescribeDBPriceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBPriceAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDBSecurityGroupsResponse> DescribeDBSecurityGroupsOutcome;
                 typedef std::future<DescribeDBSecurityGroupsOutcome> DescribeDBSecurityGroupsOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeDBSecurityGroupsRequest&, DescribeDBSecurityGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBSecurityGroupsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDBSwitchRecordsResponse> DescribeDBSwitchRecordsOutcome;
                 typedef std::future<DescribeDBSwitchRecordsOutcome> DescribeDBSwitchRecordsOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeDBSwitchRecordsRequest&, DescribeDBSwitchRecordsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBSwitchRecordsAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeDBZoneConfigResponse> DescribeDBZoneConfigOutcome;
-                typedef std::future<DescribeDBZoneConfigOutcome> DescribeDBZoneConfigOutcomeCallable;
-                typedef std::function<void(const CdbClient*, const Model::DescribeDBZoneConfigRequest&, DescribeDBZoneConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBZoneConfigAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDataBackupOverviewResponse> DescribeDataBackupOverviewOutcome;
                 typedef std::future<DescribeDataBackupOverviewOutcome> DescribeDataBackupOverviewOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeDataBackupOverviewRequest&, DescribeDataBackupOverviewOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDataBackupOverviewAsyncHandler;
@@ -670,7 +670,7 @@ namespace TencentCloud
                 CloseWanServiceOutcomeCallable CloseWanServiceCallable(const Model::CloseWanServiceRequest& request);
 
                 /**
-                 *This API is used to create one or more TencentDB instance accounts. The account names, host addresses, and passwords are required, and account remarks and the maximum connections are optional.
+                 *This API is used to create a TencentDB account. The account name, host address, and password are required. Account remarks and maximum connections can also be configured.
                  * @param req CreateAccountsRequest
                  * @return CreateAccountsOutcome
                  */
@@ -797,7 +797,7 @@ This is an asynchronous API. You can also use the [DescribeDBInstances](https://
                 DescribeAccountPrivilegesOutcomeCallable DescribeAccountPrivilegesCallable(const Model::DescribeAccountPrivilegesRequest& request);
 
                 /**
-                 *This API (DescribeAccounts) is used to query information of all TencentDB accounts.
+                 *This API is used to query information of all TencentDB accounts.
                  * @param req DescribeAccountsRequest
                  * @return DescribeAccountsOutcome
                  */
@@ -977,6 +977,17 @@ This is an asynchronous API. You can also use the [DescribeDBInstances](https://
                 DescribeDBInstancesOutcomeCallable DescribeDBInstancesCallable(const Model::DescribeDBInstancesRequest& request);
 
                 /**
+                 *This API (DescribeDBPrice) is used to query the prices of pay-as-you-go or monthly subscribed TencentDB instances by passing in information such as instance type, purchased duration, number of purchased instances, memory size, disk size, and AZ.
+
+Note: To query prices in a specific region, please use the access point of the region. For more information on access points, see <a href="https://cloud.tencent.com/document/api/236/15832">Service Addresses</a>. For example, to query prices in Guangzhou, send a request to: cdb.ap-guangzhou.tencentcloudapi.com. Likewise, to query prices in Shanghai, send a request to: cdb.ap-shanghai.tencentcloudapi.com.
+                 * @param req DescribeDBPriceRequest
+                 * @return DescribeDBPriceOutcome
+                 */
+                DescribeDBPriceOutcome DescribeDBPrice(const Model::DescribeDBPriceRequest &request);
+                void DescribeDBPriceAsync(const Model::DescribeDBPriceRequest& request, const DescribeDBPriceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDBPriceOutcomeCallable DescribeDBPriceCallable(const Model::DescribeDBPriceRequest& request);
+
+                /**
                  *This API (DescribeDBSecurityGroups) is used to query the security group details of an instance.
                  * @param req DescribeDBSecurityGroupsRequest
                  * @return DescribeDBSecurityGroupsOutcome
@@ -993,15 +1004,6 @@ This is an asynchronous API. You can also use the [DescribeDBInstances](https://
                 DescribeDBSwitchRecordsOutcome DescribeDBSwitchRecords(const Model::DescribeDBSwitchRecordsRequest &request);
                 void DescribeDBSwitchRecordsAsync(const Model::DescribeDBSwitchRecordsRequest& request, const DescribeDBSwitchRecordsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeDBSwitchRecordsOutcomeCallable DescribeDBSwitchRecordsCallable(const Model::DescribeDBSwitchRecordsRequest& request);
-
-                /**
-                 *This API (DescribeDBZoneConfig) is used to query the specifications of TencentDB instances purchasable in a region.
-                 * @param req DescribeDBZoneConfigRequest
-                 * @return DescribeDBZoneConfigOutcome
-                 */
-                DescribeDBZoneConfigOutcome DescribeDBZoneConfig(const Model::DescribeDBZoneConfigRequest &request);
-                void DescribeDBZoneConfigAsync(const Model::DescribeDBZoneConfigRequest& request, const DescribeDBZoneConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeDBZoneConfigOutcomeCallable DescribeDBZoneConfigCallable(const Model::DescribeDBZoneConfigRequest& request);
 
                 /**
                  *This API is used to query the data backup overview of a user in the current region.
@@ -1387,7 +1389,7 @@ Note that when modifying account permissions, you need to pass in the full permi
                 ModifyDBInstanceSecurityGroupsOutcomeCallable ModifyDBInstanceSecurityGroupsCallable(const Model::ModifyDBInstanceSecurityGroupsRequest& request);
 
                 /**
-                 *This API (ModifyDBInstanceVipVport) is used to modify the IP and port number of a TencentDB instance, switch from the basic network to VPC, or change VPC subnets.
+                 *This API is used to modify the IP and port number of a TencentDB instance, switch from classic network to VPC, or change VPC subnets.
                  * @param req ModifyDBInstanceVipVportRequest
                  * @return ModifyDBInstanceVipVportOutcome
                  */

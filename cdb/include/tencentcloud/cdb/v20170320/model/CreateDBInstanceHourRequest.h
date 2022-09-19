@@ -226,14 +226,14 @@ namespace TencentCloud
                     bool InstanceRoleHasBeenSet() const;
 
                     /**
-                     * 获取AZ information of the primary instance, which is required for purchasing disaster recovery instances.
-                     * @return MasterRegion AZ information of the primary instance, which is required for purchasing disaster recovery instances.
+                     * 获取AZ information of the source instance, which is required for purchasing disaster recovery instances and read-only instances.
+                     * @return MasterRegion AZ information of the source instance, which is required for purchasing disaster recovery instances and read-only instances.
                      */
                     std::string GetMasterRegion() const;
 
                     /**
-                     * 设置AZ information of the primary instance, which is required for purchasing disaster recovery instances.
-                     * @param MasterRegion AZ information of the primary instance, which is required for purchasing disaster recovery instances.
+                     * 设置AZ information of the source instance, which is required for purchasing disaster recovery instances and read-only instances.
+                     * @param MasterRegion AZ information of the source instance, which is required for purchasing disaster recovery instances and read-only instances.
                      */
                     void SetMasterRegion(const std::string& _masterRegion);
 
@@ -532,14 +532,14 @@ namespace TencentCloud
                     bool ParamTemplateIdHasBeenSet() const;
 
                     /**
-                     * 获取The array of alarm policy IDs.
-                     * @return AlarmPolicyList The array of alarm policy IDs.
+                     * 获取Array of alarm policy IDs, which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
+                     * @return AlarmPolicyList Array of alarm policy IDs, which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
                      */
                     std::vector<int64_t> GetAlarmPolicyList() const;
 
                     /**
-                     * 设置The array of alarm policy IDs.
-                     * @param AlarmPolicyList The array of alarm policy IDs.
+                     * 设置Array of alarm policy IDs, which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
+                     * @param AlarmPolicyList Array of alarm policy IDs, which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
                      */
                     void SetAlarmPolicyList(const std::vector<int64_t>& _alarmPolicyList);
 
@@ -774,7 +774,7 @@ namespace TencentCloud
                     bool m_instanceRoleHasBeenSet;
 
                     /**
-                     * AZ information of the primary instance, which is required for purchasing disaster recovery instances.
+                     * AZ information of the source instance, which is required for purchasing disaster recovery instances and read-only instances.
                      */
                     std::string m_masterRegion;
                     bool m_masterRegionHasBeenSet;
@@ -876,7 +876,7 @@ namespace TencentCloud
                     bool m_paramTemplateIdHasBeenSet;
 
                     /**
-                     * The array of alarm policy IDs.
+                     * Array of alarm policy IDs, which is `OriginId` obtained through the `DescribeAlarmPolicy` API.
                      */
                     std::vector<int64_t> m_alarmPolicyList;
                     bool m_alarmPolicyListHasBeenSet;

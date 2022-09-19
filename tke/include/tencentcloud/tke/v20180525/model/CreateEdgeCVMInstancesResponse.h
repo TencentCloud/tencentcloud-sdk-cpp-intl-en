@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_CDB_V20170320_MODEL_CREATEACCOUNTSRESPONSE_H_
-#define TENCENTCLOUD_CDB_V20170320_MODEL_CREATEACCOUNTSRESPONSE_H_
+#ifndef TENCENTCLOUD_TKE_V20180525_MODEL_CREATEEDGECVMINSTANCESRESPONSE_H_
+#define TENCENTCLOUD_TKE_V20180525_MODEL_CREATEEDGECVMINSTANCESRESPONSE_H_
 
 #include <string>
 #include <vector>
@@ -25,43 +25,43 @@
 
 namespace TencentCloud
 {
-    namespace Cdb
+    namespace Tke
     {
-        namespace V20170320
+        namespace V20180525
         {
             namespace Model
             {
                 /**
-                * CreateAccounts response structure.
+                * CreateEdgeCVMInstances response structure.
                 */
-                class CreateAccountsResponse : public AbstractModel
+                class CreateEdgeCVMInstancesResponse : public AbstractModel
                 {
                 public:
-                    CreateAccountsResponse();
-                    ~CreateAccountsResponse() = default;
+                    CreateEdgeCVMInstancesResponse();
+                    ~CreateEdgeCVMInstancesResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Async task request ID, which can be used to query the execution result of an async task
-                     * @return AsyncRequestId Async task request ID, which can be used to query the execution result of an async task
+                     * 获取List of CVM IDs
+                     * @return CvmIdSet List of CVM IDs
                      */
-                    std::string GetAsyncRequestId() const;
+                    std::vector<std::string> GetCvmIdSet() const;
 
                     /**
-                     * 判断参数 AsyncRequestId 是否已赋值
-                     * @return AsyncRequestId 是否已赋值
+                     * 判断参数 CvmIdSet 是否已赋值
+                     * @return CvmIdSet 是否已赋值
                      */
-                    bool AsyncRequestIdHasBeenSet() const;
+                    bool CvmIdSetHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Async task request ID, which can be used to query the execution result of an async task
+                     * List of CVM IDs
                      */
-                    std::string m_asyncRequestId;
-                    bool m_asyncRequestIdHasBeenSet;
+                    std::vector<std::string> m_cvmIdSet;
+                    bool m_cvmIdSetHasBeenSet;
 
                 };
             }
@@ -69,4 +69,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_CDB_V20170320_MODEL_CREATEACCOUNTSRESPONSE_H_
+#endif // !TENCENTCLOUD_TKE_V20180525_MODEL_CREATEEDGECVMINSTANCESRESPONSE_H_

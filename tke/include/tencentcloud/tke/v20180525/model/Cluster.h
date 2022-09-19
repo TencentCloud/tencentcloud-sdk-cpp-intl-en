@@ -480,6 +480,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool QGPUShareEnableHasBeenSet() const;
 
+                    /**
+                     * 获取Runtime version
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return RuntimeVersion Runtime version
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetRuntimeVersion() const;
+
+                    /**
+                     * 设置Runtime version
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param RuntimeVersion Runtime version
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetRuntimeVersion(const std::string& _runtimeVersion);
+
+                    /**
+                     * 判断参数 RuntimeVersion 是否已赋值
+                     * @return RuntimeVersion 是否已赋值
+                     */
+                    bool RuntimeVersionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -622,6 +644,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool m_qGPUShareEnable;
                     bool m_qGPUShareEnableHasBeenSet;
+
+                    /**
+                     * Runtime version
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_runtimeVersion;
+                    bool m_runtimeVersionHasBeenSet;
 
                 };
             }

@@ -61,14 +61,22 @@ namespace TencentCloud
                     bool ImageIdsHasBeenSet() const;
 
                     /**
-                     * 获取List of destination regions for synchronization. A destination region must meet the following requirements: <br><li>It cannot be the source region. <br><li>It must be valid. <br><li>Currently some regions do not support image synchronization. <br>For specific regions, see [Region](https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1).
-                     * @return DestinationRegions List of destination regions for synchronization. A destination region must meet the following requirements: <br><li>It cannot be the source region. <br><li>It must be valid. <br><li>Currently some regions do not support image synchronization. <br>For specific regions, see [Region](https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1).
+                     * 获取List of destination regions for synchronization. Limits:<br><li>It cannot be the same as the source region.<br><li>The Region parameter is correct. See [Region](https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1).<br><li>Image synchronization is only available in limited regions.<br>
+
+For a shared image, the destination region must be the source region, which indicates to create a copy of the image as a custom image in the same region.
+                     * @return DestinationRegions List of destination regions for synchronization. Limits:<br><li>It cannot be the same as the source region.<br><li>The Region parameter is correct. See [Region](https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1).<br><li>Image synchronization is only available in limited regions.<br>
+
+For a shared image, the destination region must be the source region, which indicates to create a copy of the image as a custom image in the same region.
                      */
                     std::vector<std::string> GetDestinationRegions() const;
 
                     /**
-                     * 设置List of destination regions for synchronization. A destination region must meet the following requirements: <br><li>It cannot be the source region. <br><li>It must be valid. <br><li>Currently some regions do not support image synchronization. <br>For specific regions, see [Region](https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1).
-                     * @param DestinationRegions List of destination regions for synchronization. A destination region must meet the following requirements: <br><li>It cannot be the source region. <br><li>It must be valid. <br><li>Currently some regions do not support image synchronization. <br>For specific regions, see [Region](https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1).
+                     * 设置List of destination regions for synchronization. Limits:<br><li>It cannot be the same as the source region.<br><li>The Region parameter is correct. See [Region](https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1).<br><li>Image synchronization is only available in limited regions.<br>
+
+For a shared image, the destination region must be the source region, which indicates to create a copy of the image as a custom image in the same region.
+                     * @param DestinationRegions List of destination regions for synchronization. Limits:<br><li>It cannot be the same as the source region.<br><li>The Region parameter is correct. See [Region](https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1).<br><li>Image synchronization is only available in limited regions.<br>
+
+For a shared image, the destination region must be the source region, which indicates to create a copy of the image as a custom image in the same region.
                      */
                     void SetDestinationRegions(const std::vector<std::string>& _destinationRegions);
 
@@ -79,14 +87,14 @@ namespace TencentCloud
                     bool DestinationRegionsHasBeenSet() const;
 
                     /**
-                     * 获取Checks whether image synchronization can be initiated 
-                     * @return DryRun Checks whether image synchronization can be initiated 
+                     * 获取Checks whether image synchronization can be initiated.
+                     * @return DryRun Checks whether image synchronization can be initiated.
                      */
                     bool GetDryRun() const;
 
                     /**
-                     * 设置Checks whether image synchronization can be initiated 
-                     * @param DryRun Checks whether image synchronization can be initiated 
+                     * 设置Checks whether image synchronization can be initiated.
+                     * @param DryRun Checks whether image synchronization can be initiated.
                      */
                     void SetDryRun(const bool& _dryRun);
 
@@ -95,6 +103,24 @@ namespace TencentCloud
                      * @return DryRun 是否已赋值
                      */
                     bool DryRunHasBeenSet() const;
+
+                    /**
+                     * 获取Destination image name.
+                     * @return ImageName Destination image name.
+                     */
+                    std::string GetImageName() const;
+
+                    /**
+                     * 设置Destination image name.
+                     * @param ImageName Destination image name.
+                     */
+                    void SetImageName(const std::string& _imageName);
+
+                    /**
+                     * 判断参数 ImageName 是否已赋值
+                     * @return ImageName 是否已赋值
+                     */
+                    bool ImageNameHasBeenSet() const;
 
                 private:
 
@@ -105,16 +131,24 @@ namespace TencentCloud
                     bool m_imageIdsHasBeenSet;
 
                     /**
-                     * List of destination regions for synchronization. A destination region must meet the following requirements: <br><li>It cannot be the source region. <br><li>It must be valid. <br><li>Currently some regions do not support image synchronization. <br>For specific regions, see [Region](https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1).
+                     * List of destination regions for synchronization. Limits:<br><li>It cannot be the same as the source region.<br><li>The Region parameter is correct. See [Region](https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1).<br><li>Image synchronization is only available in limited regions.<br>
+
+For a shared image, the destination region must be the source region, which indicates to create a copy of the image as a custom image in the same region.
                      */
                     std::vector<std::string> m_destinationRegions;
                     bool m_destinationRegionsHasBeenSet;
 
                     /**
-                     * Checks whether image synchronization can be initiated 
+                     * Checks whether image synchronization can be initiated.
                      */
                     bool m_dryRun;
                     bool m_dryRunHasBeenSet;
+
+                    /**
+                     * Destination image name.
+                     */
+                    std::string m_imageName;
+                    bool m_imageNameHasBeenSet;
 
                 };
             }

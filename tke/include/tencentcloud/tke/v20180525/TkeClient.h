@@ -51,6 +51,8 @@
 #include <tencentcloud/tke/v20180525/model/CreateClusterRouteTableResponse.h>
 #include <tencentcloud/tke/v20180525/model/CreateECMInstancesRequest.h>
 #include <tencentcloud/tke/v20180525/model/CreateECMInstancesResponse.h>
+#include <tencentcloud/tke/v20180525/model/CreateEdgeCVMInstancesRequest.h>
+#include <tencentcloud/tke/v20180525/model/CreateEdgeCVMInstancesResponse.h>
 #include <tencentcloud/tke/v20180525/model/CreateEdgeLogConfigRequest.h>
 #include <tencentcloud/tke/v20180525/model/CreateEdgeLogConfigResponse.h>
 #include <tencentcloud/tke/v20180525/model/CreatePrometheusAlertRuleRequest.h>
@@ -259,6 +261,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateECMInstancesResponse> CreateECMInstancesOutcome;
                 typedef std::future<CreateECMInstancesOutcome> CreateECMInstancesOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::CreateECMInstancesRequest&, CreateECMInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateECMInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateEdgeCVMInstancesResponse> CreateEdgeCVMInstancesOutcome;
+                typedef std::future<CreateEdgeCVMInstancesOutcome> CreateEdgeCVMInstancesOutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::CreateEdgeCVMInstancesRequest&, CreateEdgeCVMInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateEdgeCVMInstancesAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateEdgeLogConfigResponse> CreateEdgeLogConfigOutcome;
                 typedef std::future<CreateEdgeLogConfigOutcome> CreateEdgeLogConfigOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::CreateEdgeLogConfigRequest&, CreateEdgeLogConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateEdgeLogConfigAsyncHandler;
@@ -615,6 +620,15 @@ namespace TencentCloud
                 CreateECMInstancesOutcome CreateECMInstances(const Model::CreateECMInstancesRequest &request);
                 void CreateECMInstancesAsync(const Model::CreateECMInstancesRequest& request, const CreateECMInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateECMInstancesOutcomeCallable CreateECMInstancesCallable(const Model::CreateECMInstancesRequest& request);
+
+                /**
+                 *This API is used to create CVM instances in the specified TKE edge cluster.
+                 * @param req CreateEdgeCVMInstancesRequest
+                 * @return CreateEdgeCVMInstancesOutcome
+                 */
+                CreateEdgeCVMInstancesOutcome CreateEdgeCVMInstances(const Model::CreateEdgeCVMInstancesRequest &request);
+                void CreateEdgeCVMInstancesAsync(const Model::CreateEdgeCVMInstancesRequest& request, const CreateEdgeCVMInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateEdgeCVMInstancesOutcomeCallable CreateEdgeCVMInstancesCallable(const Model::CreateEdgeCVMInstancesRequest& request);
 
                 /**
                  *This API is used to create log collection configuration for a TKE Edge cluster.

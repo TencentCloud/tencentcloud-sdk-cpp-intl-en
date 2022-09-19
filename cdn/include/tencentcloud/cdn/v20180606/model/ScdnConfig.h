@@ -110,6 +110,28 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool AdvancedRulesHasBeenSet() const;
 
+                    /**
+                     * 获取Global advanced CC protection rules
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return GlobalAdvancedRules Global advanced CC protection rules
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<AdvancedCCRules> GetGlobalAdvancedRules() const;
+
+                    /**
+                     * 设置Global advanced CC protection rules
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param GlobalAdvancedRules Global advanced CC protection rules
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetGlobalAdvancedRules(const std::vector<AdvancedCCRules>& _globalAdvancedRules);
+
+                    /**
+                     * 判断参数 GlobalAdvancedRules 是否已赋值
+                     * @return GlobalAdvancedRules 是否已赋值
+                     */
+                    bool GlobalAdvancedRulesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -131,6 +153,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     std::vector<AdvancedCCRules> m_advancedRules;
                     bool m_advancedRulesHasBeenSet;
+
+                    /**
+                     * Global advanced CC protection rules
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<AdvancedCCRules> m_globalAdvancedRules;
+                    bool m_globalAdvancedRulesHasBeenSet;
 
                 };
             }

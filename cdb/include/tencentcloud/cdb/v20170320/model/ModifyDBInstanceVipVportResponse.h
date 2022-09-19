@@ -44,10 +44,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Async task ID. (This returned field has been disused)
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return AsyncRequestId Async task ID. (This returned field has been disused)
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Async task ID. This parameter is deprecated.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AsyncRequestId Async task ID. This parameter is deprecated.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetAsyncRequestId() const;
 
@@ -60,8 +60,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Async task ID. (This returned field has been disused)
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Async task ID. This parameter is deprecated.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_asyncRequestId;
                     bool m_asyncRequestIdHasBeenSet;

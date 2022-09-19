@@ -115,6 +115,8 @@
 #include <tencentcloud/cvm/v20170312/model/InquiryPriceResetInstancesTypeResponse.h>
 #include <tencentcloud/cvm/v20170312/model/InquiryPriceResizeInstanceDisksRequest.h>
 #include <tencentcloud/cvm/v20170312/model/InquiryPriceResizeInstanceDisksResponse.h>
+#include <tencentcloud/cvm/v20170312/model/InquiryPriceRunInstancesRequest.h>
+#include <tencentcloud/cvm/v20170312/model/InquiryPriceRunInstancesResponse.h>
 #include <tencentcloud/cvm/v20170312/model/ModifyChcAttributeRequest.h>
 #include <tencentcloud/cvm/v20170312/model/ModifyChcAttributeResponse.h>
 #include <tencentcloud/cvm/v20170312/model/ModifyDisasterRecoverGroupAttributeRequest.h>
@@ -315,6 +317,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::InquiryPriceResizeInstanceDisksResponse> InquiryPriceResizeInstanceDisksOutcome;
                 typedef std::future<InquiryPriceResizeInstanceDisksOutcome> InquiryPriceResizeInstanceDisksOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::InquiryPriceResizeInstanceDisksRequest&, InquiryPriceResizeInstanceDisksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquiryPriceResizeInstanceDisksAsyncHandler;
+                typedef Outcome<Core::Error, Model::InquiryPriceRunInstancesResponse> InquiryPriceRunInstancesOutcome;
+                typedef std::future<InquiryPriceRunInstancesOutcome> InquiryPriceRunInstancesOutcomeCallable;
+                typedef std::function<void(const CvmClient*, const Model::InquiryPriceRunInstancesRequest&, InquiryPriceRunInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquiryPriceRunInstancesAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyChcAttributeResponse> ModifyChcAttributeOutcome;
                 typedef std::future<ModifyChcAttributeOutcome> ModifyChcAttributeOutcomeCallable;
                 typedef std::function<void(const CvmClient*, const Model::ModifyChcAttributeRequest&, ModifyChcAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyChcAttributeAsyncHandler;
@@ -859,6 +864,15 @@ If you currently use a password to log in, you will no longer be able to do so a
                 InquiryPriceResizeInstanceDisksOutcome InquiryPriceResizeInstanceDisks(const Model::InquiryPriceResizeInstanceDisksRequest &request);
                 void InquiryPriceResizeInstanceDisksAsync(const Model::InquiryPriceResizeInstanceDisksRequest& request, const InquiryPriceResizeInstanceDisksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 InquiryPriceResizeInstanceDisksOutcomeCallable InquiryPriceResizeInstanceDisksCallable(const Model::InquiryPriceResizeInstanceDisksRequest& request);
+
+                /**
+                 *This API is used to query the price of creating instances. You can only use this API for instances whose configuration is within the purchase limit. For more information, see [RunInstances](https://intl.cloud.tencent.com/document/api/213/15730?from_cn_redirect=1).
+                 * @param req InquiryPriceRunInstancesRequest
+                 * @return InquiryPriceRunInstancesOutcome
+                 */
+                InquiryPriceRunInstancesOutcome InquiryPriceRunInstances(const Model::InquiryPriceRunInstancesRequest &request);
+                void InquiryPriceRunInstancesAsync(const Model::InquiryPriceRunInstancesRequest& request, const InquiryPriceRunInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                InquiryPriceRunInstancesOutcomeCallable InquiryPriceRunInstancesCallable(const Model::InquiryPriceRunInstancesRequest& request);
 
                 /**
                  *This API is used to modify the CHC host attributes.

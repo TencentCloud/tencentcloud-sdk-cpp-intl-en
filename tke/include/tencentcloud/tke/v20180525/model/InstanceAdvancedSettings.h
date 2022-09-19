@@ -27,6 +27,7 @@
 #include <tencentcloud/tke/v20180525/model/Label.h>
 #include <tencentcloud/tke/v20180525/model/DataDisk.h>
 #include <tencentcloud/tke/v20180525/model/InstanceExtraArgs.h>
+#include <tencentcloud/tke/v20180525/model/GPUArgs.h>
 #include <tencentcloud/tke/v20180525/model/Taint.h>
 
 
@@ -227,6 +228,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool DesiredPodNumberHasBeenSet() const;
 
                     /**
+                     * 获取GPU driver parameters
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return GPUArgs GPU driver parameters
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    GPUArgs GetGPUArgs() const;
+
+                    /**
+                     * 设置GPU driver parameters
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param GPUArgs GPU driver parameters
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetGPUArgs(const GPUArgs& _gPUArgs);
+
+                    /**
+                     * 判断参数 GPUArgs 是否已赋值
+                     * @return GPUArgs 是否已赋值
+                     */
+                    bool GPUArgsHasBeenSet() const;
+
+                    /**
                      * 获取Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return PreStartUserScript Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
@@ -327,6 +350,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     int64_t m_desiredPodNumber;
                     bool m_desiredPodNumberHasBeenSet;
+
+                    /**
+                     * GPU driver parameters
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    GPUArgs m_gPUArgs;
+                    bool m_gPUArgsHasBeenSet;
 
                     /**
                      * Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.

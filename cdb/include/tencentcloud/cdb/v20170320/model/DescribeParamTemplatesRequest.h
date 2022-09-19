@@ -60,6 +60,60 @@ namespace TencentCloud
                      */
                     bool EngineVersionsHasBeenSet() const;
 
+                    /**
+                     * 获取Engine type. If it is left empty, all engine types will be queried.
+                     * @return EngineTypes Engine type. If it is left empty, all engine types will be queried.
+                     */
+                    std::vector<std::string> GetEngineTypes() const;
+
+                    /**
+                     * 设置Engine type. If it is left empty, all engine types will be queried.
+                     * @param EngineTypes Engine type. If it is left empty, all engine types will be queried.
+                     */
+                    void SetEngineTypes(const std::vector<std::string>& _engineTypes);
+
+                    /**
+                     * 判断参数 EngineTypes 是否已赋值
+                     * @return EngineTypes 是否已赋值
+                     */
+                    bool EngineTypesHasBeenSet() const;
+
+                    /**
+                     * 获取Template name. If it is left empty, all template names will be queried.
+                     * @return TemplateNames Template name. If it is left empty, all template names will be queried.
+                     */
+                    std::vector<std::string> GetTemplateNames() const;
+
+                    /**
+                     * 设置Template name. If it is left empty, all template names will be queried.
+                     * @param TemplateNames Template name. If it is left empty, all template names will be queried.
+                     */
+                    void SetTemplateNames(const std::vector<std::string>& _templateNames);
+
+                    /**
+                     * 判断参数 TemplateNames 是否已赋值
+                     * @return TemplateNames 是否已赋值
+                     */
+                    bool TemplateNamesHasBeenSet() const;
+
+                    /**
+                     * 获取Template ID. If it is left empty, all template IDs will be queried.
+                     * @return TemplateIds Template ID. If it is left empty, all template IDs will be queried.
+                     */
+                    std::vector<int64_t> GetTemplateIds() const;
+
+                    /**
+                     * 设置Template ID. If it is left empty, all template IDs will be queried.
+                     * @param TemplateIds Template ID. If it is left empty, all template IDs will be queried.
+                     */
+                    void SetTemplateIds(const std::vector<int64_t>& _templateIds);
+
+                    /**
+                     * 判断参数 TemplateIds 是否已赋值
+                     * @return TemplateIds 是否已赋值
+                     */
+                    bool TemplateIdsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -67,6 +121,24 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_engineVersions;
                     bool m_engineVersionsHasBeenSet;
+
+                    /**
+                     * Engine type. If it is left empty, all engine types will be queried.
+                     */
+                    std::vector<std::string> m_engineTypes;
+                    bool m_engineTypesHasBeenSet;
+
+                    /**
+                     * Template name. If it is left empty, all template names will be queried.
+                     */
+                    std::vector<std::string> m_templateNames;
+                    bool m_templateNamesHasBeenSet;
+
+                    /**
+                     * Template ID. If it is left empty, all template IDs will be queried.
+                     */
+                    std::vector<int64_t> m_templateIds;
+                    bool m_templateIdsHasBeenSet;
 
                 };
             }
