@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/trtc/v20190722/model/UserMediaStream.h>
+#include <tencentcloud/trtc/v20190722/model/McuCustomCrop.h>
 
 
 namespace TencentCloud
@@ -237,6 +238,24 @@ Grey: 0x999999
                      */
                     bool BackgroundImageUrlHasBeenSet() const;
 
+                    /**
+                     * 获取Custom cropping.
+                     * @return CustomCrop Custom cropping.
+                     */
+                    McuCustomCrop GetCustomCrop() const;
+
+                    /**
+                     * 设置Custom cropping.
+                     * @param CustomCrop Custom cropping.
+                     */
+                    void SetCustomCrop(const McuCustomCrop& _customCrop);
+
+                    /**
+                     * 判断参数 CustomCrop 是否已赋值
+                     * @return CustomCrop 是否已赋值
+                     */
+                    bool CustomCropHasBeenSet() const;
+
                 private:
 
                     /**
@@ -299,6 +318,12 @@ Grey: 0x999999
                      */
                     std::string m_backgroundImageUrl;
                     bool m_backgroundImageUrlHasBeenSet;
+
+                    /**
+                     * Custom cropping.
+                     */
+                    McuCustomCrop m_customCrop;
+                    bool m_customCropHasBeenSet;
 
                 };
             }

@@ -49,14 +49,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The cloud storage information.
-                     * @return CloudStorage The cloud storage information.
+                     * 获取The third-party cloud storage information (not supported currently).
+                     * @return CloudStorage The third-party cloud storage information (not supported currently).
                      */
                     CloudStorage GetCloudStorage() const;
 
                     /**
-                     * 设置The cloud storage information.
-                     * @param CloudStorage The cloud storage information.
+                     * 设置The third-party cloud storage information (not supported currently).
+                     * @param CloudStorage The third-party cloud storage information (not supported currently).
                      */
                     void SetCloudStorage(const CloudStorage& _cloudStorage);
 
@@ -87,7 +87,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The cloud storage information.
+                     * The third-party cloud storage information (not supported currently).
                      */
                     CloudStorage m_cloudStorage;
                     bool m_cloudStorageHasBeenSet;

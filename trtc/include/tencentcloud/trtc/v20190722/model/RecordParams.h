@@ -140,14 +140,14 @@ namespace TencentCloud
                     bool SubscribeStreamUserIdsHasBeenSet() const;
 
                     /**
-                     * 获取The format of recording files. 0 (default): HLS; 1: HLS + MP4 (recorded in HLS and converted to MP4). This parameter is invalid if recording files are saved to VOD.
-                     * @return OutputFormat The format of recording files. 0 (default): HLS; 1: HLS + MP4 (recorded in HLS and converted to MP4). This parameter is invalid if recording files are saved to VOD.
+                     * 获取The output format. 0 (default): HLS; 1: HLS + MP4 (recorded in HLS and converted to MP4). This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
+                     * @return OutputFormat The output format. 0 (default): HLS; 1: HLS + MP4 (recorded in HLS and converted to MP4). This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
                      */
                     uint64_t GetOutputFormat() const;
 
                     /**
-                     * 设置The format of recording files. 0 (default): HLS; 1: HLS + MP4 (recorded in HLS and converted to MP4). This parameter is invalid if recording files are saved to VOD.
-                     * @param OutputFormat The format of recording files. 0 (default): HLS; 1: HLS + MP4 (recorded in HLS and converted to MP4). This parameter is invalid if recording files are saved to VOD.
+                     * 设置The output format. 0 (default): HLS; 1: HLS + MP4 (recorded in HLS and converted to MP4). This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
+                     * @param OutputFormat The output format. 0 (default): HLS; 1: HLS + MP4 (recorded in HLS and converted to MP4). This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
                      */
                     void SetOutputFormat(const uint64_t& _outputFormat);
 
@@ -156,6 +156,24 @@ namespace TencentCloud
                      * @return OutputFormat 是否已赋值
                      */
                     bool OutputFormatHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to merge the audio and video of a user in the single-stream recording mode. 0 (default): Do not mix the audio and video; 1: Mix the audio and video into one TS file. You don’t need to specify this parameter for mixed-stream recording, which merges audios and videos by default.
+                     * @return AvMerge Whether to merge the audio and video of a user in the single-stream recording mode. 0 (default): Do not mix the audio and video; 1: Mix the audio and video into one TS file. You don’t need to specify this parameter for mixed-stream recording, which merges audios and videos by default.
+                     */
+                    uint64_t GetAvMerge() const;
+
+                    /**
+                     * 设置Whether to merge the audio and video of a user in the single-stream recording mode. 0 (default): Do not mix the audio and video; 1: Mix the audio and video into one TS file. You don’t need to specify this parameter for mixed-stream recording, which merges audios and videos by default.
+                     * @param AvMerge Whether to merge the audio and video of a user in the single-stream recording mode. 0 (default): Do not mix the audio and video; 1: Mix the audio and video into one TS file. You don’t need to specify this parameter for mixed-stream recording, which merges audios and videos by default.
+                     */
+                    void SetAvMerge(const uint64_t& _avMerge);
+
+                    /**
+                     * 判断参数 AvMerge 是否已赋值
+                     * @return AvMerge 是否已赋值
+                     */
+                    bool AvMergeHasBeenSet() const;
 
                 private:
 
@@ -189,10 +207,16 @@ namespace TencentCloud
                     bool m_subscribeStreamUserIdsHasBeenSet;
 
                     /**
-                     * The format of recording files. 0 (default): HLS; 1: HLS + MP4 (recorded in HLS and converted to MP4). This parameter is invalid if recording files are saved to VOD.
+                     * The output format. 0 (default): HLS; 1: HLS + MP4 (recorded in HLS and converted to MP4). This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
                      */
                     uint64_t m_outputFormat;
                     bool m_outputFormatHasBeenSet;
+
+                    /**
+                     * Whether to merge the audio and video of a user in the single-stream recording mode. 0 (default): Do not mix the audio and video; 1: Mix the audio and video into one TS file. You don’t need to specify this parameter for mixed-stream recording, which merges audios and videos by default.
+                     */
+                    uint64_t m_avMerge;
+                    bool m_avMergeHasBeenSet;
 
                 };
             }

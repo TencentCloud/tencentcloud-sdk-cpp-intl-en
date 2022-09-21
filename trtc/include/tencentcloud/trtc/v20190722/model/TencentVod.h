@@ -176,6 +176,24 @@ The default value is `0`, which means others.
                      */
                     bool SourceContextHasBeenSet() const;
 
+                    /**
+                     * 获取The format of recording files saved to VOD. 0 (default): MP4; 1: HLS.
+                     * @return MediaType The format of recording files saved to VOD. 0 (default): MP4; 1: HLS.
+                     */
+                    uint64_t GetMediaType() const;
+
+                    /**
+                     * 设置The format of recording files saved to VOD. 0 (default): MP4; 1: HLS.
+                     * @param MediaType The format of recording files saved to VOD. 0 (default): MP4; 1: HLS.
+                     */
+                    void SetMediaType(const uint64_t& _mediaType);
+
+                    /**
+                     * 判断参数 MediaType 是否已赋值
+                     * @return MediaType 是否已赋值
+                     */
+                    bool MediaTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -220,6 +238,12 @@ The default value is `0`, which means others.
                      */
                     std::string m_sourceContext;
                     bool m_sourceContextHasBeenSet;
+
+                    /**
+                     * The format of recording files saved to VOD. 0 (default): MP4; 1: HLS.
+                     */
+                    uint64_t m_mediaType;
+                    bool m_mediaTypeHasBeenSet;
 
                 };
             }

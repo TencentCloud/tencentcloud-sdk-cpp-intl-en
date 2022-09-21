@@ -29,7 +29,8 @@ McuLayout::McuLayout() :
     m_zOrderHasBeenSet(false),
     m_renderModeHasBeenSet(false),
     m_backGroundColorHasBeenSet(false),
-    m_backgroundImageUrlHasBeenSet(false)
+    m_backgroundImageUrlHasBeenSet(false),
+    m_customCropHasBeenSet(false)
 {
 }
 
@@ -135,6 +136,23 @@ CoreInternalOutcome McuLayout::Deserialize(const rapidjson::Value &value)
         m_backgroundImageUrlHasBeenSet = true;
     }
 
+    if (value.HasMember("CustomCrop") && !value["CustomCrop"].IsNull())
+    {
+        if (!value["CustomCrop"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `McuLayout.CustomCrop` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_customCrop.Deserialize(value["CustomCrop"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_customCropHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -213,6 +231,15 @@ void McuLayout::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Alloc
         string key = "BackgroundImageUrl";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_backgroundImageUrl.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_customCropHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CustomCrop";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_customCrop.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -360,5 +387,21 @@ void McuLayout::SetBackgroundImageUrl(const string& _backgroundImageUrl)
 bool McuLayout::BackgroundImageUrlHasBeenSet() const
 {
     return m_backgroundImageUrlHasBeenSet;
+}
+
+McuCustomCrop McuLayout::GetCustomCrop() const
+{
+    return m_customCrop;
+}
+
+void McuLayout::SetCustomCrop(const McuCustomCrop& _customCrop)
+{
+    m_customCrop = _customCrop;
+    m_customCropHasBeenSet = true;
+}
+
+bool McuLayout::CustomCropHasBeenSet() const
+{
+    return m_customCropHasBeenSet;
 }
 

@@ -26,6 +26,7 @@ set(trtc_public_header_model
   include/tencentcloud/trtc/v20190722/model/McuLayoutParams.h
   include/tencentcloud/trtc/v20190722/model/DismissRoomByStrRoomIdRequest.h
   include/tencentcloud/trtc/v20190722/model/MixUserInfo.h
+  include/tencentcloud/trtc/v20190722/model/UpdatePublishCdnStreamRequest.h
   include/tencentcloud/trtc/v20190722/model/MixLayoutParams.h
   include/tencentcloud/trtc/v20190722/model/DismissRoomResponse.h
   include/tencentcloud/trtc/v20190722/model/MixLayout.h
@@ -41,7 +42,7 @@ set(trtc_public_header_model
   include/tencentcloud/trtc/v20190722/model/RecordParams.h
   include/tencentcloud/trtc/v20190722/model/McuPassThrough.h
   include/tencentcloud/trtc/v20190722/model/McuUserInfoParams.h
-  include/tencentcloud/trtc/v20190722/model/UpdatePublishCdnStreamRequest.h
+  include/tencentcloud/trtc/v20190722/model/McuCustomCrop.h
   include/tencentcloud/trtc/v20190722/model/VideoParams.h
   include/tencentcloud/trtc/v20190722/model/CreateCloudRecordingRequest.h
   include/tencentcloud/trtc/v20190722/model/DeleteCloudRecordingResponse.h
@@ -84,6 +85,7 @@ set(trtc_src
   src/v20190722/model/McuLayoutParams.cpp
   src/v20190722/model/DismissRoomByStrRoomIdRequest.cpp
   src/v20190722/model/MixUserInfo.cpp
+  src/v20190722/model/UpdatePublishCdnStreamRequest.cpp
   src/v20190722/model/MixLayoutParams.cpp
   src/v20190722/model/DismissRoomResponse.cpp
   src/v20190722/model/MixLayout.cpp
@@ -99,7 +101,7 @@ set(trtc_src
   src/v20190722/model/RecordParams.cpp
   src/v20190722/model/McuPassThrough.cpp
   src/v20190722/model/McuUserInfoParams.cpp
-  src/v20190722/model/UpdatePublishCdnStreamRequest.cpp
+  src/v20190722/model/McuCustomCrop.cpp
   src/v20190722/model/VideoParams.cpp
   src/v20190722/model/CreateCloudRecordingRequest.cpp
   src/v20190722/model/DeleteCloudRecordingResponse.cpp
