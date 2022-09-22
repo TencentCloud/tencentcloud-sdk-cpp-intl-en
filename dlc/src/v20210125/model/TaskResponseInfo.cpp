@@ -50,7 +50,9 @@ TaskResponseInfo::TaskResponseInfo() :
     m_sparkJobNameHasBeenSet(false),
     m_sparkJobIdHasBeenSet(false),
     m_sparkJobFileHasBeenSet(false),
-    m_uiUrlHasBeenSet(false)
+    m_uiUrlHasBeenSet(false),
+    m_totalTimeHasBeenSet(false),
+    m_cmdArgsHasBeenSet(false)
 {
 }
 
@@ -359,6 +361,26 @@ CoreInternalOutcome TaskResponseInfo::Deserialize(const rapidjson::Value &value)
         m_uiUrlHasBeenSet = true;
     }
 
+    if (value.HasMember("TotalTime") && !value["TotalTime"].IsNull())
+    {
+        if (!value["TotalTime"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `TaskResponseInfo.TotalTime` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_totalTime = value["TotalTime"].GetInt64();
+        m_totalTimeHasBeenSet = true;
+    }
+
+    if (value.HasMember("CmdArgs") && !value["CmdArgs"].IsNull())
+    {
+        if (!value["CmdArgs"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `TaskResponseInfo.CmdArgs` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_cmdArgs = string(value["CmdArgs"].GetString());
+        m_cmdArgsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -604,6 +626,22 @@ void TaskResponseInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document
         string key = "UiUrl";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_uiUrl.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_totalTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TotalTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_totalTime, allocator);
+    }
+
+    if (m_cmdArgsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CmdArgs";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cmdArgs.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -1087,5 +1125,37 @@ void TaskResponseInfo::SetUiUrl(const string& _uiUrl)
 bool TaskResponseInfo::UiUrlHasBeenSet() const
 {
     return m_uiUrlHasBeenSet;
+}
+
+int64_t TaskResponseInfo::GetTotalTime() const
+{
+    return m_totalTime;
+}
+
+void TaskResponseInfo::SetTotalTime(const int64_t& _totalTime)
+{
+    m_totalTime = _totalTime;
+    m_totalTimeHasBeenSet = true;
+}
+
+bool TaskResponseInfo::TotalTimeHasBeenSet() const
+{
+    return m_totalTimeHasBeenSet;
+}
+
+string TaskResponseInfo::GetCmdArgs() const
+{
+    return m_cmdArgs;
+}
+
+void TaskResponseInfo::SetCmdArgs(const string& _cmdArgs)
+{
+    m_cmdArgs = _cmdArgs;
+    m_cmdArgsHasBeenSet = true;
+}
+
+bool TaskResponseInfo::CmdArgsHasBeenSet() const
+{
+    return m_cmdArgsHasBeenSet;
 }
 

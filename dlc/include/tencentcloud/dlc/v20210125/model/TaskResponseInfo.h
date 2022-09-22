@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Task instance
+                * The task instance.
                 */
                 class TaskResponseInfo : public AbstractModel
                 {
@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Computing time in ms
-                     * @return UsedTime Computing time in ms
+                     * 获取The compute time in ms.
+                     * @return UsedTime The compute time in ms.
                      */
                     int64_t GetUsedTime() const;
 
                     /**
-                     * 设置Computing time in ms
-                     * @param UsedTime Computing time in ms
+                     * 设置The compute time in ms.
+                     * @param UsedTime The compute time in ms.
                      */
                     void SetUsedTime(const int64_t& _usedTime);
 
@@ -646,6 +646,50 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool UiUrlHasBeenSet() const;
 
+                    /**
+                     * 获取The task time in ms.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TotalTime The task time in ms.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetTotalTime() const;
+
+                    /**
+                     * 设置The task time in ms.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param TotalTime The task time in ms.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetTotalTime(const int64_t& _totalTime);
+
+                    /**
+                     * 判断参数 TotalTime 是否已赋值
+                     * @return TotalTime 是否已赋值
+                     */
+                    bool TotalTimeHasBeenSet() const;
+
+                    /**
+                     * 获取The program entry parameter for running a task under a Spark job.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CmdArgs The program entry parameter for running a task under a Spark job.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetCmdArgs() const;
+
+                    /**
+                     * 设置The program entry parameter for running a task under a Spark job.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param CmdArgs The program entry parameter for running a task under a Spark job.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetCmdArgs(const std::string& _cmdArgs);
+
+                    /**
+                     * 判断参数 CmdArgs 是否已赋值
+                     * @return CmdArgs 是否已赋值
+                     */
+                    bool CmdArgsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -667,7 +711,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_idHasBeenSet;
 
                     /**
-                     * Computing time in ms
+                     * The compute time in ms.
                      */
                     int64_t m_usedTime;
                     bool m_usedTimeHasBeenSet;
@@ -842,6 +886,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_uiUrl;
                     bool m_uiUrlHasBeenSet;
+
+                    /**
+                     * The task time in ms.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_totalTime;
+                    bool m_totalTimeHasBeenSet;
+
+                    /**
+                     * The program entry parameter for running a task under a Spark job.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_cmdArgs;
+                    bool m_cmdArgsHasBeenSet;
 
                 };
             }

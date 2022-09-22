@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total capacity of log backups in bytes.
-                     * @return BinlogBackupVolume Total capacity of log backups in bytes.
+                     * 获取Total capacity of log backups in bytes (including remote log backups)
+                     * @return BinlogBackupVolume Total capacity of log backups in bytes (including remote log backups)
                      */
                     int64_t GetBinlogBackupVolume() const;
 
@@ -56,8 +56,8 @@ namespace TencentCloud
                     bool BinlogBackupVolumeHasBeenSet() const;
 
                     /**
-                     * 获取Total number of log backups.
-                     * @return BinlogBackupCount Total number of log backups.
+                     * 获取Total number of log backups (include remote log backups)
+                     * @return BinlogBackupCount Total number of log backups (include remote log backups)
                      */
                     int64_t GetBinlogBackupCount() const;
 
@@ -67,19 +67,55 @@ namespace TencentCloud
                      */
                     bool BinlogBackupCountHasBeenSet() const;
 
+                    /**
+                     * 获取Capacity of remote log backups in bytes
+                     * @return RemoteBinlogVolume Capacity of remote log backups in bytes
+                     */
+                    int64_t GetRemoteBinlogVolume() const;
+
+                    /**
+                     * 判断参数 RemoteBinlogVolume 是否已赋值
+                     * @return RemoteBinlogVolume 是否已赋值
+                     */
+                    bool RemoteBinlogVolumeHasBeenSet() const;
+
+                    /**
+                     * 获取Number of remote backups
+                     * @return RemoteBinlogCount Number of remote backups
+                     */
+                    int64_t GetRemoteBinlogCount() const;
+
+                    /**
+                     * 判断参数 RemoteBinlogCount 是否已赋值
+                     * @return RemoteBinlogCount 是否已赋值
+                     */
+                    bool RemoteBinlogCountHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Total capacity of log backups in bytes.
+                     * Total capacity of log backups in bytes (including remote log backups)
                      */
                     int64_t m_binlogBackupVolume;
                     bool m_binlogBackupVolumeHasBeenSet;
 
                     /**
-                     * Total number of log backups.
+                     * Total number of log backups (include remote log backups)
                      */
                     int64_t m_binlogBackupCount;
                     bool m_binlogBackupCountHasBeenSet;
+
+                    /**
+                     * Capacity of remote log backups in bytes
+                     */
+                    int64_t m_remoteBinlogVolume;
+                    bool m_remoteBinlogVolumeHasBeenSet;
+
+                    /**
+                     * Number of remote backups
+                     */
+                    int64_t m_remoteBinlogCount;
+                    bool m_remoteBinlogCountHasBeenSet;
 
                 };
             }

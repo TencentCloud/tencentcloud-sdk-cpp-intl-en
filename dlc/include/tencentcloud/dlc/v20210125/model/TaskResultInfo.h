@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Task result information
+                * The task result information.
                 */
                 class TaskResultInfo : public AbstractModel
                 {
@@ -182,14 +182,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DataAmountHasBeenSet() const;
 
                     /**
-                     * 获取Task execution time in seconds
-                     * @return UsedTime Task execution time in seconds
+                     * 获取The compute time in ms.
+                     * @return UsedTime The compute time in ms.
                      */
                     int64_t GetUsedTime() const;
 
                     /**
-                     * 设置Task execution time in seconds
-                     * @param UsedTime Task execution time in seconds
+                     * 设置The compute time in ms.
+                     * @param UsedTime The compute time in ms.
                      */
                     void SetUsedTime(const int64_t& _usedTime);
 
@@ -387,6 +387,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool DisplayFormatHasBeenSet() const;
 
+                    /**
+                     * 获取The task time in ms.
+                     * @return TotalTime The task time in ms.
+                     */
+                    int64_t GetTotalTime() const;
+
+                    /**
+                     * 设置The task time in ms.
+                     * @param TotalTime The task time in ms.
+                     */
+                    void SetTotalTime(const int64_t& _totalTime);
+
+                    /**
+                     * 判断参数 TotalTime 是否已赋值
+                     * @return TotalTime 是否已赋值
+                     */
+                    bool TotalTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -434,7 +452,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_dataAmountHasBeenSet;
 
                     /**
-                     * Task execution time in seconds
+                     * The compute time in ms.
                      */
                     int64_t m_usedTime;
                     bool m_usedTimeHasBeenSet;
@@ -500,6 +518,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_displayFormat;
                     bool m_displayFormatHasBeenSet;
+
+                    /**
+                     * The task time in ms.
+                     */
+                    int64_t m_totalTime;
+                    bool m_totalTimeHasBeenSet;
 
                 };
             }

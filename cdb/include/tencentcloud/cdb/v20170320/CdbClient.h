@@ -85,6 +85,8 @@
 #include <tencentcloud/cdb/v20170320/model/DescribeBinlogsResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeCDBProxyRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeCDBProxyResponse.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeCdbZoneConfigRequest.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeCdbZoneConfigResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeCloneListRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeCloneListResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeDBImportRecordsRequest.h>
@@ -360,6 +362,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeCDBProxyResponse> DescribeCDBProxyOutcome;
                 typedef std::future<DescribeCDBProxyOutcome> DescribeCDBProxyOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeCDBProxyRequest&, DescribeCDBProxyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCDBProxyAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCdbZoneConfigResponse> DescribeCdbZoneConfigOutcome;
+                typedef std::future<DescribeCdbZoneConfigOutcome> DescribeCdbZoneConfigOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::DescribeCdbZoneConfigRequest&, DescribeCdbZoneConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCdbZoneConfigAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeCloneListResponse> DescribeCloneListOutcome;
                 typedef std::future<DescribeCloneListOutcome> DescribeCloneListOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeCloneListRequest&, DescribeCloneListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCloneListAsyncHandler;
@@ -905,6 +910,15 @@ This is an asynchronous API. You can also use the [DescribeDBInstances](https://
                 DescribeCDBProxyOutcomeCallable DescribeCDBProxyCallable(const Model::DescribeCDBProxyRequest& request);
 
                 /**
+                 *This API is used to query the purchasable specifications of TencentDB instances in a region.
+                 * @param req DescribeCdbZoneConfigRequest
+                 * @return DescribeCdbZoneConfigOutcome
+                 */
+                DescribeCdbZoneConfigOutcome DescribeCdbZoneConfig(const Model::DescribeCdbZoneConfigRequest &request);
+                void DescribeCdbZoneConfigAsync(const Model::DescribeCdbZoneConfigRequest& request, const DescribeCdbZoneConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCdbZoneConfigOutcomeCallable DescribeCdbZoneConfigCallable(const Model::DescribeCdbZoneConfigRequest& request);
+
+                /**
                  *This API is used to query the clone task list of an instance.
                  * @param req DescribeCloneListRequest
                  * @return DescribeCloneListOutcome
@@ -977,9 +991,9 @@ This is an asynchronous API. You can also use the [DescribeDBInstances](https://
                 DescribeDBInstancesOutcomeCallable DescribeDBInstancesCallable(const Model::DescribeDBInstancesRequest& request);
 
                 /**
-                 *This API (DescribeDBPrice) is used to query the prices of pay-as-you-go or monthly subscribed TencentDB instances by passing in information such as instance type, purchased duration, number of purchased instances, memory size, disk size, and AZ.
+                 *This API is used to query the purchase or renewal price of a pay-as-you-go or monthly subscribed TencentDB instance by passing in information such as instance type, purchase duration, number of instances to purchase, memory size, disk size, and AZ. For the price of instance renewal, you can pass in instance name to query.
 
-Note: To query prices in a specific region, please use the access point of the region. For more information on access points, see <a href="https://cloud.tencent.com/document/api/236/15832">Service Addresses</a>. For example, to query prices in Guangzhou, send a request to: cdb.ap-guangzhou.tencentcloudapi.com. Likewise, to query prices in Shanghai, send a request to: cdb.ap-shanghai.tencentcloudapi.com.
+Note: To query prices in a specific region, you need to use the access point of the region. For more information on access points, see <a href="https://www.tencentcloud.com/document/product/236/15832">Service Address</a>. For example, to query prices in Guangzhou, send a request to: cdb.ap-guangzhou.tencentcloudapi.com. Likewise, to query prices in Shanghai, send a request to: cdb.ap-shanghai.tencentcloudapi.com.
                  * @param req DescribeDBPriceRequest
                  * @return DescribeDBPriceOutcome
                  */

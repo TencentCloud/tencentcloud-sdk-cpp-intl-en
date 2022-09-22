@@ -23,14 +23,19 @@ using namespace TencentCloud::Cdb::V20170320::Model;
 using namespace std;
 
 DescribeDBPriceRequest::DescribeDBPriceRequest() :
+    m_periodHasBeenSet(false),
     m_zoneHasBeenSet(false),
     m_goodsNumHasBeenSet(false),
     m_memoryHasBeenSet(false),
     m_volumeHasBeenSet(false),
-    m_payTypeHasBeenSet(false),
-    m_periodHasBeenSet(false),
     m_instanceRoleHasBeenSet(false),
-    m_protectModeHasBeenSet(false)
+    m_payTypeHasBeenSet(false),
+    m_protectModeHasBeenSet(false),
+    m_deviceTypeHasBeenSet(false),
+    m_instanceNodesHasBeenSet(false),
+    m_cpuHasBeenSet(false),
+    m_instanceIdHasBeenSet(false),
+    m_ladderHasBeenSet(false)
 {
 }
 
@@ -40,6 +45,14 @@ string DescribeDBPriceRequest::ToJsonString() const
     d.SetObject();
     rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
+
+    if (m_periodHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Period";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_period, allocator);
+    }
 
     if (m_zoneHasBeenSet)
     {
@@ -73,28 +86,20 @@ string DescribeDBPriceRequest::ToJsonString() const
         d.AddMember(iKey, m_volume, allocator);
     }
 
-    if (m_payTypeHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "PayType";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_payType.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_periodHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Period";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, m_period, allocator);
-    }
-
     if (m_instanceRoleHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "InstanceRole";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_instanceRole.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_payTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PayType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_payType.c_str(), allocator).Move(), allocator);
     }
 
     if (m_protectModeHasBeenSet)
@@ -105,6 +110,46 @@ string DescribeDBPriceRequest::ToJsonString() const
         d.AddMember(iKey, m_protectMode, allocator);
     }
 
+    if (m_deviceTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DeviceType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_deviceType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_instanceNodesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceNodes";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_instanceNodes, allocator);
+    }
+
+    if (m_cpuHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Cpu";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_cpu, allocator);
+    }
+
+    if (m_instanceIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_ladderHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Ladder";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_ladder, allocator);
+    }
+
 
     rapidjson::StringBuffer buffer;
     rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
@@ -112,6 +157,22 @@ string DescribeDBPriceRequest::ToJsonString() const
     return buffer.GetString();
 }
 
+
+int64_t DescribeDBPriceRequest::GetPeriod() const
+{
+    return m_period;
+}
+
+void DescribeDBPriceRequest::SetPeriod(const int64_t& _period)
+{
+    m_period = _period;
+    m_periodHasBeenSet = true;
+}
+
+bool DescribeDBPriceRequest::PeriodHasBeenSet() const
+{
+    return m_periodHasBeenSet;
+}
 
 string DescribeDBPriceRequest::GetZone() const
 {
@@ -177,38 +238,6 @@ bool DescribeDBPriceRequest::VolumeHasBeenSet() const
     return m_volumeHasBeenSet;
 }
 
-string DescribeDBPriceRequest::GetPayType() const
-{
-    return m_payType;
-}
-
-void DescribeDBPriceRequest::SetPayType(const string& _payType)
-{
-    m_payType = _payType;
-    m_payTypeHasBeenSet = true;
-}
-
-bool DescribeDBPriceRequest::PayTypeHasBeenSet() const
-{
-    return m_payTypeHasBeenSet;
-}
-
-int64_t DescribeDBPriceRequest::GetPeriod() const
-{
-    return m_period;
-}
-
-void DescribeDBPriceRequest::SetPeriod(const int64_t& _period)
-{
-    m_period = _period;
-    m_periodHasBeenSet = true;
-}
-
-bool DescribeDBPriceRequest::PeriodHasBeenSet() const
-{
-    return m_periodHasBeenSet;
-}
-
 string DescribeDBPriceRequest::GetInstanceRole() const
 {
     return m_instanceRole;
@@ -225,6 +254,22 @@ bool DescribeDBPriceRequest::InstanceRoleHasBeenSet() const
     return m_instanceRoleHasBeenSet;
 }
 
+string DescribeDBPriceRequest::GetPayType() const
+{
+    return m_payType;
+}
+
+void DescribeDBPriceRequest::SetPayType(const string& _payType)
+{
+    m_payType = _payType;
+    m_payTypeHasBeenSet = true;
+}
+
+bool DescribeDBPriceRequest::PayTypeHasBeenSet() const
+{
+    return m_payTypeHasBeenSet;
+}
+
 int64_t DescribeDBPriceRequest::GetProtectMode() const
 {
     return m_protectMode;
@@ -239,6 +284,86 @@ void DescribeDBPriceRequest::SetProtectMode(const int64_t& _protectMode)
 bool DescribeDBPriceRequest::ProtectModeHasBeenSet() const
 {
     return m_protectModeHasBeenSet;
+}
+
+string DescribeDBPriceRequest::GetDeviceType() const
+{
+    return m_deviceType;
+}
+
+void DescribeDBPriceRequest::SetDeviceType(const string& _deviceType)
+{
+    m_deviceType = _deviceType;
+    m_deviceTypeHasBeenSet = true;
+}
+
+bool DescribeDBPriceRequest::DeviceTypeHasBeenSet() const
+{
+    return m_deviceTypeHasBeenSet;
+}
+
+int64_t DescribeDBPriceRequest::GetInstanceNodes() const
+{
+    return m_instanceNodes;
+}
+
+void DescribeDBPriceRequest::SetInstanceNodes(const int64_t& _instanceNodes)
+{
+    m_instanceNodes = _instanceNodes;
+    m_instanceNodesHasBeenSet = true;
+}
+
+bool DescribeDBPriceRequest::InstanceNodesHasBeenSet() const
+{
+    return m_instanceNodesHasBeenSet;
+}
+
+int64_t DescribeDBPriceRequest::GetCpu() const
+{
+    return m_cpu;
+}
+
+void DescribeDBPriceRequest::SetCpu(const int64_t& _cpu)
+{
+    m_cpu = _cpu;
+    m_cpuHasBeenSet = true;
+}
+
+bool DescribeDBPriceRequest::CpuHasBeenSet() const
+{
+    return m_cpuHasBeenSet;
+}
+
+string DescribeDBPriceRequest::GetInstanceId() const
+{
+    return m_instanceId;
+}
+
+void DescribeDBPriceRequest::SetInstanceId(const string& _instanceId)
+{
+    m_instanceId = _instanceId;
+    m_instanceIdHasBeenSet = true;
+}
+
+bool DescribeDBPriceRequest::InstanceIdHasBeenSet() const
+{
+    return m_instanceIdHasBeenSet;
+}
+
+uint64_t DescribeDBPriceRequest::GetLadder() const
+{
+    return m_ladder;
+}
+
+void DescribeDBPriceRequest::SetLadder(const uint64_t& _ladder)
+{
+    m_ladder = _ladder;
+    m_ladderHasBeenSet = true;
+}
+
+bool DescribeDBPriceRequest::LadderHasBeenSet() const
+{
+    return m_ladderHasBeenSet;
 }
 
 

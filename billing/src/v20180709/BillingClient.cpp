@@ -40,6 +40,49 @@ BillingClient::BillingClient(const Credential &credential, const string &region,
 }
 
 
+BillingClient::DescribeAccountBalanceOutcome BillingClient::DescribeAccountBalance(const DescribeAccountBalanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAccountBalance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAccountBalanceResponse rsp = DescribeAccountBalanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAccountBalanceOutcome(rsp);
+        else
+            return DescribeAccountBalanceOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAccountBalanceOutcome(outcome.GetError());
+    }
+}
+
+void BillingClient::DescribeAccountBalanceAsync(const DescribeAccountBalanceRequest& request, const DescribeAccountBalanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeAccountBalance(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+BillingClient::DescribeAccountBalanceOutcomeCallable BillingClient::DescribeAccountBalanceCallable(const DescribeAccountBalanceRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeAccountBalanceOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeAccountBalance(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 BillingClient::DescribeBillDetailOutcome BillingClient::DescribeBillDetail(const DescribeBillDetailRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeBillDetail");

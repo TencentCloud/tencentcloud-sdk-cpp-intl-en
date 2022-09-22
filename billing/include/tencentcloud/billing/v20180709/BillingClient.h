@@ -23,6 +23,8 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/billing/v20180709/model/DescribeAccountBalanceRequest.h>
+#include <tencentcloud/billing/v20180709/model/DescribeAccountBalanceResponse.h>
 #include <tencentcloud/billing/v20180709/model/DescribeBillDetailRequest.h>
 #include <tencentcloud/billing/v20180709/model/DescribeBillDetailResponse.h>
 #include <tencentcloud/billing/v20180709/model/DescribeBillResourceSummaryRequest.h>
@@ -55,6 +57,9 @@ namespace TencentCloud
                 BillingClient(const Credential &credential, const std::string &region);
                 BillingClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
+                typedef Outcome<Core::Error, Model::DescribeAccountBalanceResponse> DescribeAccountBalanceOutcome;
+                typedef std::future<DescribeAccountBalanceOutcome> DescribeAccountBalanceOutcomeCallable;
+                typedef std::function<void(const BillingClient*, const Model::DescribeAccountBalanceRequest&, DescribeAccountBalanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccountBalanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeBillDetailResponse> DescribeBillDetailOutcome;
                 typedef std::future<DescribeBillDetailOutcome> DescribeBillDetailOutcomeCallable;
                 typedef std::function<void(const BillingClient*, const Model::DescribeBillDetailRequest&, DescribeBillDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBillDetailAsyncHandler;
@@ -84,6 +89,15 @@ namespace TencentCloud
                 typedef std::function<void(const BillingClient*, const Model::DescribeVoucherUsageDetailsRequest&, DescribeVoucherUsageDetailsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVoucherUsageDetailsAsyncHandler;
 
 
+
+                /**
+                 *This API is used to check the Tencent Cloud account balance.
+                 * @param req DescribeAccountBalanceRequest
+                 * @return DescribeAccountBalanceOutcome
+                 */
+                DescribeAccountBalanceOutcome DescribeAccountBalance(const Model::DescribeAccountBalanceRequest &request);
+                void DescribeAccountBalanceAsync(const Model::DescribeAccountBalanceRequest& request, const DescribeAccountBalanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAccountBalanceOutcomeCallable DescribeAccountBalanceCallable(const Model::DescribeAccountBalanceRequest& request);
 
                 /**
                  *This API is used to query bill details.

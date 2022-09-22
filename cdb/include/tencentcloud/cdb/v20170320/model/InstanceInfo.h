@@ -862,6 +862,50 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool TagListHasBeenSet() const;
 
+                    /**
+                     * 获取Engine type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return EngineType Engine type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetEngineType() const;
+
+                    /**
+                     * 设置Engine type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param EngineType Engine type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetEngineType(const std::string& _engineType);
+
+                    /**
+                     * 判断参数 EngineType 是否已赋值
+                     * @return EngineType 是否已赋值
+                     */
+                    bool EngineTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Maximum delay threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MaxDelayTime Maximum delay threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetMaxDelayTime() const;
+
+                    /**
+                     * 设置Maximum delay threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param MaxDelayTime Maximum delay threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetMaxDelayTime(const int64_t& _maxDelayTime);
+
+                    /**
+                     * 判断参数 MaxDelayTime 是否已赋值
+                     * @return MaxDelayTime 是否已赋值
+                     */
+                    bool MaxDelayTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1130,6 +1174,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::vector<TagInfoItem> m_tagList;
                     bool m_tagListHasBeenSet;
+
+                    /**
+                     * Engine type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_engineType;
+                    bool m_engineTypeHasBeenSet;
+
+                    /**
+                     * Maximum delay threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_maxDelayTime;
+                    bool m_maxDelayTimeHasBeenSet;
 
                 };
             }

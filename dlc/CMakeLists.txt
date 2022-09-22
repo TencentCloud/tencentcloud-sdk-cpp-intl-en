@@ -36,6 +36,7 @@ set(dlc_public_header_model
   include/tencentcloud/dlc/v20210125/model/CreateSparkAppResponse.h
   include/tencentcloud/dlc/v20210125/model/TaskResultInfo.h
   include/tencentcloud/dlc/v20210125/model/DescribeSparkAppJobsResponse.h
+  include/tencentcloud/dlc/v20210125/model/TasksOverview.h
   include/tencentcloud/dlc/v20210125/model/DeleteSparkAppRequest.h
   include/tencentcloud/dlc/v20210125/model/DescribeSparkAppJobsRequest.h
   include/tencentcloud/dlc/v20210125/model/CreateTasksResponse.h
@@ -74,6 +75,7 @@ set(dlc_src
   src/v20210125/model/CreateSparkAppResponse.cpp
   src/v20210125/model/TaskResultInfo.cpp
   src/v20210125/model/DescribeSparkAppJobsResponse.cpp
+  src/v20210125/model/TasksOverview.cpp
   src/v20210125/model/DeleteSparkAppRequest.cpp
   src/v20210125/model/DescribeSparkAppJobsRequest.cpp
   src/v20210125/model/CreateTasksResponse.cpp

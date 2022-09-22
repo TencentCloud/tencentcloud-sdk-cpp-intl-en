@@ -115,6 +115,30 @@ namespace TencentCloud
                      */
                     bool ManualBackupCountHasBeenSet() const;
 
+                    /**
+                     * 获取Total capacity of remote backups in the current region
+                     * @return RemoteBackupVolume Total capacity of remote backups in the current region
+                     */
+                    int64_t GetRemoteBackupVolume() const;
+
+                    /**
+                     * 判断参数 RemoteBackupVolume 是否已赋值
+                     * @return RemoteBackupVolume 是否已赋值
+                     */
+                    bool RemoteBackupVolumeHasBeenSet() const;
+
+                    /**
+                     * 获取Total number of remote backups in the current region
+                     * @return RemoteBackupCount Total number of remote backups in the current region
+                     */
+                    int64_t GetRemoteBackupCount() const;
+
+                    /**
+                     * 判断参数 RemoteBackupCount 是否已赋值
+                     * @return RemoteBackupCount 是否已赋值
+                     */
+                    bool RemoteBackupCountHasBeenSet() const;
+
                 private:
 
                     /**
@@ -152,6 +176,18 @@ namespace TencentCloud
                      */
                     int64_t m_manualBackupCount;
                     bool m_manualBackupCountHasBeenSet;
+
+                    /**
+                     * Total capacity of remote backups in the current region
+                     */
+                    int64_t m_remoteBackupVolume;
+                    bool m_remoteBackupVolumeHasBeenSet;
+
+                    /**
+                     * Total number of remote backups in the current region
+                     */
+                    int64_t m_remoteBackupCount;
+                    bool m_remoteBackupCountHasBeenSet;
 
                 };
             }

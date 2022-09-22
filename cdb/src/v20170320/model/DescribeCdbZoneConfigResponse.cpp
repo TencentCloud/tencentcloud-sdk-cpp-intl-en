@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/cdb/v20170320/model/DescribeDBPriceResponse.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeCdbZoneConfigResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,14 +23,12 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cdb::V20170320::Model;
 using namespace std;
 
-DescribeDBPriceResponse::DescribeDBPriceResponse() :
-    m_priceHasBeenSet(false),
-    m_originalPriceHasBeenSet(false),
-    m_currencyHasBeenSet(false)
+DescribeCdbZoneConfigResponse::DescribeCdbZoneConfigResponse() :
+    m_dataResultHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome DescribeDBPriceResponse::Deserialize(const string &payload)
+CoreInternalOutcome DescribeCdbZoneConfigResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -64,68 +62,40 @@ CoreInternalOutcome DescribeDBPriceResponse::Deserialize(const string &payload)
     }
 
 
-    if (rsp.HasMember("Price") && !rsp["Price"].IsNull())
+    if (rsp.HasMember("DataResult") && !rsp["DataResult"].IsNull())
     {
-        if (!rsp["Price"].IsInt64())
+        if (!rsp["DataResult"].IsObject())
         {
-            return CoreInternalOutcome(Core::Error("response `Price` IsInt64=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `DataResult` is not object type").SetRequestId(requestId));
         }
-        m_price = rsp["Price"].GetInt64();
-        m_priceHasBeenSet = true;
-    }
 
-    if (rsp.HasMember("OriginalPrice") && !rsp["OriginalPrice"].IsNull())
-    {
-        if (!rsp["OriginalPrice"].IsInt64())
+        CoreInternalOutcome outcome = m_dataResult.Deserialize(rsp["DataResult"]);
+        if (!outcome.IsSuccess())
         {
-            return CoreInternalOutcome(Core::Error("response `OriginalPrice` IsInt64=false incorrectly").SetRequestId(requestId));
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
         }
-        m_originalPrice = rsp["OriginalPrice"].GetInt64();
-        m_originalPriceHasBeenSet = true;
-    }
 
-    if (rsp.HasMember("Currency") && !rsp["Currency"].IsNull())
-    {
-        if (!rsp["Currency"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `Currency` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_currency = string(rsp["Currency"].GetString());
-        m_currencyHasBeenSet = true;
+        m_dataResultHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string DescribeDBPriceResponse::ToJsonString() const
+string DescribeCdbZoneConfigResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_priceHasBeenSet)
+    if (m_dataResultHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Price";
+        string key = "DataResult";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_price, allocator);
-    }
-
-    if (m_originalPriceHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "OriginalPrice";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_originalPrice, allocator);
-    }
-
-    if (m_currencyHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Currency";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_currency.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_dataResult.ToJsonObject(value[key.c_str()], allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -140,34 +110,14 @@ string DescribeDBPriceResponse::ToJsonString() const
 }
 
 
-int64_t DescribeDBPriceResponse::GetPrice() const
+CdbZoneDataResult DescribeCdbZoneConfigResponse::GetDataResult() const
 {
-    return m_price;
+    return m_dataResult;
 }
 
-bool DescribeDBPriceResponse::PriceHasBeenSet() const
+bool DescribeCdbZoneConfigResponse::DataResultHasBeenSet() const
 {
-    return m_priceHasBeenSet;
-}
-
-int64_t DescribeDBPriceResponse::GetOriginalPrice() const
-{
-    return m_originalPrice;
-}
-
-bool DescribeDBPriceResponse::OriginalPriceHasBeenSet() const
-{
-    return m_originalPriceHasBeenSet;
-}
-
-string DescribeDBPriceResponse::GetCurrency() const
-{
-    return m_currency;
-}
-
-bool DescribeDBPriceResponse::CurrencyHasBeenSet() const
-{
-    return m_currencyHasBeenSet;
+    return m_dataResultHasBeenSet;
 }
 
 
