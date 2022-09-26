@@ -1018,6 +1018,94 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool ClientsHasBeenSet() const;
 
+                    /**
+                     * 获取The current system time.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CurrentTime The current system time.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetCurrentTime() const;
+
+                    /**
+                     * 设置The current system time.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param CurrentTime The current system time.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetCurrentTime(const std::string& _currentTime);
+
+                    /**
+                     * 判断参数 CurrentTime 是否已赋值
+                     * @return CurrentTime 是否已赋值
+                     */
+                    bool CurrentTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the hardware node is used in a federation. Valid values: `0` (no), `1` (yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IsFederation Whether the hardware node is used in a federation. Valid values: `0` (no), `1` (yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetIsFederation() const;
+
+                    /**
+                     * 设置Whether the hardware node is used in a federation. Valid values: `0` (no), `1` (yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param IsFederation Whether the hardware node is used in a federation. Valid values: `0` (no), `1` (yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetIsFederation(const int64_t& _isFederation);
+
+                    /**
+                     * 判断参数 IsFederation 是否已赋值
+                     * @return IsFederation 是否已赋值
+                     */
+                    bool IsFederationHasBeenSet() const;
+
+                    /**
+                     * 获取Device name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DeviceName Device name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetDeviceName() const;
+
+                    /**
+                     * 设置Device name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param DeviceName Device name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetDeviceName(const std::string& _deviceName);
+
+                    /**
+                     * 判断参数 DeviceName 是否已赋值
+                     * @return DeviceName 是否已赋值
+                     */
+                    bool DeviceNameHasBeenSet() const;
+
+                    /**
+                     * 获取Service
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ServiceClient Service
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetServiceClient() const;
+
+                    /**
+                     * 设置Service
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ServiceClient Service
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetServiceClient(const std::string& _serviceClient);
+
+                    /**
+                     * 判断参数 ServiceClient 是否已赋值
+                     * @return ServiceClient 是否已赋值
+                     */
+                    bool ServiceClientHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1327,6 +1415,34 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     std::string m_clients;
                     bool m_clientsHasBeenSet;
+
+                    /**
+                     * The current system time.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_currentTime;
+                    bool m_currentTimeHasBeenSet;
+
+                    /**
+                     * Whether the hardware node is used in a federation. Valid values: `0` (no), `1` (yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_isFederation;
+                    bool m_isFederationHasBeenSet;
+
+                    /**
+                     * Device name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_deviceName;
+                    bool m_deviceNameHasBeenSet;
+
+                    /**
+                     * Service
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_serviceClient;
+                    bool m_serviceClientHasBeenSet;
 
                 };
             }

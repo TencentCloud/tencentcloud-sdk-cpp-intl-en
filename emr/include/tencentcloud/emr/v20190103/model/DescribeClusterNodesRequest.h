@@ -183,6 +183,42 @@ Note: only the above values are supported for the time being. Entering other val
                      */
                     bool SearchFieldsHasBeenSet() const;
 
+                    /**
+                     * 获取None
+                     * @return OrderField None
+                     */
+                    std::string GetOrderField() const;
+
+                    /**
+                     * 设置None
+                     * @param OrderField None
+                     */
+                    void SetOrderField(const std::string& _orderField);
+
+                    /**
+                     * 判断参数 OrderField 是否已赋值
+                     * @return OrderField 是否已赋值
+                     */
+                    bool OrderFieldHasBeenSet() const;
+
+                    /**
+                     * 获取None
+                     * @return Asc None
+                     */
+                    int64_t GetAsc() const;
+
+                    /**
+                     * 设置None
+                     * @param Asc None
+                     */
+                    void SetAsc(const int64_t& _asc);
+
+                    /**
+                     * 判断参数 Asc 是否已赋值
+                     * @return Asc 是否已赋值
+                     */
+                    bool AscHasBeenSet() const;
+
                 private:
 
                     /**
@@ -228,6 +264,18 @@ Note: only the above values are supported for the time being. Entering other val
                      */
                     std::vector<SearchItem> m_searchFields;
                     bool m_searchFieldsHasBeenSet;
+
+                    /**
+                     * None
+                     */
+                    std::string m_orderField;
+                    bool m_orderFieldHasBeenSet;
+
+                    /**
+                     * None
+                     */
+                    int64_t m_asc;
+                    bool m_ascHasBeenSet;
 
                 };
             }

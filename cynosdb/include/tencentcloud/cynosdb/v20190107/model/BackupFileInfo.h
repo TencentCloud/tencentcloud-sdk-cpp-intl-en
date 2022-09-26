@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Snapshot file ID used for rollback
-                     * @return SnapshotId Snapshot file ID used for rollback
+                     * 获取Snapshot file ID, which is deprecated. You need to use `BackupId`.
+                     * @return SnapshotId Snapshot file ID, which is deprecated. You need to use `BackupId`.
                      */
                     uint64_t GetSnapshotId() const;
 
                     /**
-                     * 设置Snapshot file ID used for rollback
-                     * @param SnapshotId Snapshot file ID used for rollback
+                     * 设置Snapshot file ID, which is deprecated. You need to use `BackupId`.
+                     * @param SnapshotId Snapshot file ID, which is deprecated. You need to use `BackupId`.
                      */
                     void SetSnapshotId(const uint64_t& _snapshotId);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool SnapshotIdHasBeenSet() const;
 
                     /**
-                     * 获取Snapshot file name
-                     * @return FileName Snapshot file name
+                     * 获取Backup file name
+                     * @return FileName Backup file name
                      */
                     std::string GetFileName() const;
 
                     /**
-                     * 设置Snapshot file name
-                     * @param FileName Snapshot file name
+                     * 设置Backup file name
+                     * @param FileName Backup file name
                      */
                     void SetFileName(const std::string& _fileName);
 
@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool FileNameHasBeenSet() const;
 
                     /**
-                     * 获取Snapshot file size
-                     * @return FileSize Snapshot file size
+                     * 获取Backup file size
+                     * @return FileSize Backup file size
                      */
                     uint64_t GetFileSize() const;
 
                     /**
-                     * 设置Snapshot file size
-                     * @param FileSize Snapshot file size
+                     * 设置Backup file size
+                     * @param FileSize Backup file size
                      */
                     void SetFileSize(const uint64_t& _fileSize);
 
@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool FileSizeHasBeenSet() const;
 
                     /**
-                     * 获取Snapshot backup start time
-                     * @return StartTime Snapshot backup start time
+                     * 获取Backup start time
+                     * @return StartTime Backup start time
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Snapshot backup start time
-                     * @param StartTime Snapshot backup start time
+                     * 设置Backup start time
+                     * @param StartTime Backup start time
                      */
                     void SetStartTime(const std::string& _startTime);
 
@@ -119,14 +119,14 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Snapshot backup end time
-                     * @return FinishTime Snapshot backup end time
+                     * 获取Backup end time
+                     * @return FinishTime Backup end time
                      */
                     std::string GetFinishTime() const;
 
                     /**
-                     * 设置Snapshot backup end time
-                     * @param FinishTime Snapshot backup end time
+                     * 设置Backup end time
+                     * @param FinishTime Backup end time
                      */
                     void SetFinishTime(const std::string& _finishTime);
 
@@ -137,14 +137,14 @@ namespace TencentCloud
                     bool FinishTimeHasBeenSet() const;
 
                     /**
-                     * 获取Backup type. snapshot: snapshot backup; timepoint: time point backup
-                     * @return BackupType Backup type. snapshot: snapshot backup; timepoint: time point backup
+                     * 获取Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
+                     * @return BackupType Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
                      */
                     std::string GetBackupType() const;
 
                     /**
-                     * 设置Backup type. snapshot: snapshot backup; timepoint: time point backup
-                     * @param BackupType Backup type. snapshot: snapshot backup; timepoint: time point backup
+                     * 设置Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
+                     * @param BackupType Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
                      */
                     void SetBackupType(const std::string& _backupType);
 
@@ -208,40 +208,102 @@ namespace TencentCloud
                      */
                     bool SnapshotTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Backup ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return BackupId Backup ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetBackupId() const;
+
+                    /**
+                     * 设置Backup ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param BackupId Backup ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetBackupId(const int64_t& _backupId);
+
+                    /**
+                     * 判断参数 BackupId 是否已赋值
+                     * @return BackupId 是否已赋值
+                     */
+                    bool BackupIdHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return SnapShotType 
+                     */
+                    std::string GetSnapShotType() const;
+
+                    /**
+                     * 设置
+                     * @param SnapShotType 
+                     */
+                    void SetSnapShotType(const std::string& _snapShotType);
+
+                    /**
+                     * 判断参数 SnapShotType 是否已赋值
+                     * @return SnapShotType 是否已赋值
+                     */
+                    bool SnapShotTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Backup file alias
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return BackupName Backup file alias
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetBackupName() const;
+
+                    /**
+                     * 设置Backup file alias
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param BackupName Backup file alias
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetBackupName(const std::string& _backupName);
+
+                    /**
+                     * 判断参数 BackupName 是否已赋值
+                     * @return BackupName 是否已赋值
+                     */
+                    bool BackupNameHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Snapshot file ID used for rollback
+                     * Snapshot file ID, which is deprecated. You need to use `BackupId`.
                      */
                     uint64_t m_snapshotId;
                     bool m_snapshotIdHasBeenSet;
 
                     /**
-                     * Snapshot file name
+                     * Backup file name
                      */
                     std::string m_fileName;
                     bool m_fileNameHasBeenSet;
 
                     /**
-                     * Snapshot file size
+                     * Backup file size
                      */
                     uint64_t m_fileSize;
                     bool m_fileSizeHasBeenSet;
 
                     /**
-                     * Snapshot backup start time
+                     * Backup start time
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Snapshot backup end time
+                     * Backup end time
                      */
                     std::string m_finishTime;
                     bool m_finishTimeHasBeenSet;
 
                     /**
-                     * Backup type. snapshot: snapshot backup; timepoint: time point backup
+                     * Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
                      */
                     std::string m_backupType;
                     bool m_backupTypeHasBeenSet;
@@ -263,6 +325,26 @@ namespace TencentCloud
                      */
                     std::string m_snapshotTime;
                     bool m_snapshotTimeHasBeenSet;
+
+                    /**
+                     * Backup ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_backupId;
+                    bool m_backupIdHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_snapShotType;
+                    bool m_snapShotTypeHasBeenSet;
+
+                    /**
+                     * Backup file alias
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_backupName;
+                    bool m_backupNameHasBeenSet;
 
                 };
             }

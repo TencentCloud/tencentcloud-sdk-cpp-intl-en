@@ -63,7 +63,11 @@ DeployApplicationRequest::DeployApplicationRequest() :
     m_startupProbeHasBeenSet(false),
     m_osFlavourHasBeenSet(false),
     m_enablePrometheusConfHasBeenSet(false),
-    m_enableTracingHasBeenSet(false)
+    m_enableTracingHasBeenSet(false),
+    m_enableMetricsHasBeenSet(false),
+    m_tcrInstanceIdHasBeenSet(false),
+    m_repoServerHasBeenSet(false),
+    m_repoTypeHasBeenSet(false)
 {
 }
 
@@ -465,6 +469,38 @@ string DeployApplicationRequest::ToJsonString() const
         string key = "EnableTracing";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_enableTracing, allocator);
+    }
+
+    if (m_enableMetricsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EnableMetrics";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_enableMetrics, allocator);
+    }
+
+    if (m_tcrInstanceIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TcrInstanceId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_tcrInstanceId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_repoServerHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RepoServer";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_repoServer.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_repoTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RepoType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_repoType, allocator);
     }
 
 
@@ -1129,6 +1165,70 @@ void DeployApplicationRequest::SetEnableTracing(const int64_t& _enableTracing)
 bool DeployApplicationRequest::EnableTracingHasBeenSet() const
 {
     return m_enableTracingHasBeenSet;
+}
+
+int64_t DeployApplicationRequest::GetEnableMetrics() const
+{
+    return m_enableMetrics;
+}
+
+void DeployApplicationRequest::SetEnableMetrics(const int64_t& _enableMetrics)
+{
+    m_enableMetrics = _enableMetrics;
+    m_enableMetricsHasBeenSet = true;
+}
+
+bool DeployApplicationRequest::EnableMetricsHasBeenSet() const
+{
+    return m_enableMetricsHasBeenSet;
+}
+
+string DeployApplicationRequest::GetTcrInstanceId() const
+{
+    return m_tcrInstanceId;
+}
+
+void DeployApplicationRequest::SetTcrInstanceId(const string& _tcrInstanceId)
+{
+    m_tcrInstanceId = _tcrInstanceId;
+    m_tcrInstanceIdHasBeenSet = true;
+}
+
+bool DeployApplicationRequest::TcrInstanceIdHasBeenSet() const
+{
+    return m_tcrInstanceIdHasBeenSet;
+}
+
+string DeployApplicationRequest::GetRepoServer() const
+{
+    return m_repoServer;
+}
+
+void DeployApplicationRequest::SetRepoServer(const string& _repoServer)
+{
+    m_repoServer = _repoServer;
+    m_repoServerHasBeenSet = true;
+}
+
+bool DeployApplicationRequest::RepoServerHasBeenSet() const
+{
+    return m_repoServerHasBeenSet;
+}
+
+int64_t DeployApplicationRequest::GetRepoType() const
+{
+    return m_repoType;
+}
+
+void DeployApplicationRequest::SetRepoType(const int64_t& _repoType)
+{
+    m_repoType = _repoType;
+    m_repoTypeHasBeenSet = true;
+}
+
+bool DeployApplicationRequest::RepoTypeHasBeenSet() const
+{
+    return m_repoTypeHasBeenSet;
 }
 
 

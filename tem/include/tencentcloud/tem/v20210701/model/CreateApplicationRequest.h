@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tem/v20210701/model/UseDefaultRepoParameters.h>
 
 
 namespace TencentCloud
@@ -79,14 +80,14 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Whether to use the default image service. 1: yes; 0: no
-                     * @return UseDefaultImageService Whether to use the default image service. 1: yes; 0: no
+                     * 获取Whether to use the default image service. `1`: yes; `0`: no
+                     * @return UseDefaultImageService Whether to use the default image service. `1`: yes; `0`: no
                      */
                     int64_t GetUseDefaultImageService() const;
 
                     /**
-                     * 设置Whether to use the default image service. 1: yes; 0: no
-                     * @param UseDefaultImageService Whether to use the default image service. 1: yes; 0: no
+                     * 设置Whether to use the default image service. `1`: yes; `0`: no
+                     * @param UseDefaultImageService Whether to use the default image service. `1`: yes; `0`: no
                      */
                     void SetUseDefaultImageService(const int64_t& _useDefaultImageService);
 
@@ -97,14 +98,14 @@ namespace TencentCloud
                     bool UseDefaultImageServiceHasBeenSet() const;
 
                     /**
-                     * 获取Type of the bound repository. 0: Personal Edition; 1: Enterprise Edition
-                     * @return RepoType Type of the bound repository. 0: Personal Edition; 1: Enterprise Edition
+                     * 获取Type of the bound repository. `0`: TCR Personal; `1`: TCR Enterprise
+                     * @return RepoType Type of the bound repository. `0`: TCR Personal; `1`: TCR Enterprise
                      */
                     int64_t GetRepoType() const;
 
                     /**
-                     * 设置Type of the bound repository. 0: Personal Edition; 1: Enterprise Edition
-                     * @param RepoType Type of the bound repository. 0: Personal Edition; 1: Enterprise Edition
+                     * 设置Type of the bound repository. `0`: TCR Personal; `1`: TCR Enterprise
+                     * @param RepoType Type of the bound repository. `0`: TCR Personal; `1`: TCR Enterprise
                      */
                     void SetRepoType(const int64_t& _repoType);
 
@@ -115,14 +116,14 @@ namespace TencentCloud
                     bool RepoTypeHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID of Enterprise Edition image service
-                     * @return InstanceId Instance ID of Enterprise Edition image service
+                     * 获取TCR Enterprise instance ID
+                     * @return InstanceId TCR Enterprise instance ID
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID of Enterprise Edition image service
-                     * @param InstanceId Instance ID of Enterprise Edition image service
+                     * 设置TCR Enterprise instance ID
+                     * @param InstanceId TCR Enterprise instance ID
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
@@ -261,14 +262,14 @@ namespace TencentCloud
                     bool DeployModeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the call chain feature
-                     * @return EnableTracing Whether to enable the call chain feature
+                     * 获取Whether to enable APM tracing for the Java application. `1`: Enable, `0`: Disable
+                     * @return EnableTracing Whether to enable APM tracing for the Java application. `1`: Enable, `0`: Disable
                      */
                     int64_t GetEnableTracing() const;
 
                     /**
-                     * 设置Whether to enable the call chain feature
-                     * @param EnableTracing Whether to enable the call chain feature
+                     * 设置Whether to enable APM tracing for the Java application. `1`: Enable, `0`: Disable
+                     * @param EnableTracing Whether to enable APM tracing for the Java application. `1`: Enable, `0`: Disable
                      */
                     void SetEnableTracing(const int64_t& _enableTracing);
 
@@ -277,6 +278,24 @@ namespace TencentCloud
                      * @return EnableTracing 是否已赋值
                      */
                     bool EnableTracingHasBeenSet() const;
+
+                    /**
+                     * 获取Parameters of the default image service
+                     * @return UseDefaultImageServiceParameters Parameters of the default image service
+                     */
+                    UseDefaultRepoParameters GetUseDefaultImageServiceParameters() const;
+
+                    /**
+                     * 设置Parameters of the default image service
+                     * @param UseDefaultImageServiceParameters Parameters of the default image service
+                     */
+                    void SetUseDefaultImageServiceParameters(const UseDefaultRepoParameters& _useDefaultImageServiceParameters);
+
+                    /**
+                     * 判断参数 UseDefaultImageServiceParameters 是否已赋值
+                     * @return UseDefaultImageServiceParameters 是否已赋值
+                     */
+                    bool UseDefaultImageServiceParametersHasBeenSet() const;
 
                 private:
 
@@ -293,19 +312,19 @@ namespace TencentCloud
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Whether to use the default image service. 1: yes; 0: no
+                     * Whether to use the default image service. `1`: yes; `0`: no
                      */
                     int64_t m_useDefaultImageService;
                     bool m_useDefaultImageServiceHasBeenSet;
 
                     /**
-                     * Type of the bound repository. 0: Personal Edition; 1: Enterprise Edition
+                     * Type of the bound repository. `0`: TCR Personal; `1`: TCR Enterprise
                      */
                     int64_t m_repoType;
                     bool m_repoTypeHasBeenSet;
 
                     /**
-                     * Instance ID of Enterprise Edition image service
+                     * TCR Enterprise instance ID
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -352,10 +371,16 @@ namespace TencentCloud
                     bool m_deployModeHasBeenSet;
 
                     /**
-                     * Whether to enable the call chain feature
+                     * Whether to enable APM tracing for the Java application. `1`: Enable, `0`: Disable
                      */
                     int64_t m_enableTracing;
                     bool m_enableTracingHasBeenSet;
+
+                    /**
+                     * Parameters of the default image service
+                     */
+                    UseDefaultRepoParameters m_useDefaultImageServiceParameters;
+                    bool m_useDefaultImageServiceParametersHasBeenSet;
 
                 };
             }

@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_TEM_V20210701_MODEL_CREATEAPPLICATIONRESPONSE_H_
-#define TENCENTCLOUD_TEM_V20210701_MODEL_CREATEAPPLICATIONRESPONSE_H_
+#ifndef TENCENTCLOUD_TEM_V20210701_MODEL_DESTROYENVIRONMENTRESPONSE_H_
+#define TENCENTCLOUD_TEM_V20210701_MODEL_DESTROYENVIRONMENTRESPONSE_H_
 
 #include <string>
 #include <vector>
@@ -32,22 +32,22 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * CreateApplication response structure.
+                * DestroyEnvironment response structure.
                 */
-                class CreateApplicationResponse : public AbstractModel
+                class DestroyEnvironmentResponse : public AbstractModel
                 {
                 public:
-                    CreateApplicationResponse();
-                    ~CreateApplicationResponse() = default;
+                    DestroyEnvironmentResponse();
+                    ~DestroyEnvironmentResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取ID of the created application
-                     * @return Result ID of the created application
+                     * 获取Returned result.
+                     * @return Result Returned result.
                      */
-                    std::string GetResult() const;
+                    bool GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
@@ -58,9 +58,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the created application
+                     * Returned result.
                      */
-                    std::string m_result;
+                    bool m_result;
                     bool m_resultHasBeenSet;
 
                 };
@@ -69,4 +69,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_TEM_V20210701_MODEL_CREATEAPPLICATIONRESPONSE_H_
+#endif // !TENCENTCLOUD_TEM_V20210701_MODEL_DESTROYENVIRONMENTRESPONSE_H_

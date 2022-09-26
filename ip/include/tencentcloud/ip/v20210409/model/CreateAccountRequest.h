@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Account type of a new customer. Valid value: `business`.
-                     * @return AccountType Account type of a new customer. Valid value: `business`.
+                     * 获取Account type of a new customer. Valid values: `personal`, `company`.
+                     * @return AccountType Account type of a new customer. Valid values: `personal`, `company`.
                      */
                     std::string GetAccountType() const;
 
                     /**
-                     * 设置Account type of a new customer. Valid value: `business`.
-                     * @param AccountType Account type of a new customer. Valid value: `business`.
+                     * 设置Account type of a new customer. Valid values: `personal`, `company`.
+                     * @param AccountType Account type of a new customer. Valid values: `personal`, `company`.
                      */
                     void SetAccountType(const std::string& _accountType);
 
@@ -205,7 +205,7 @@ A global mobile number within 1-32 digits is allowed, such as 18888888888.
                 private:
 
                     /**
-                     * Account type of a new customer. Valid value: `business`.
+                     * Account type of a new customer. Valid values: `personal`, `company`.
                      */
                     std::string m_accountType;
                     bool m_accountTypeHasBeenSet;

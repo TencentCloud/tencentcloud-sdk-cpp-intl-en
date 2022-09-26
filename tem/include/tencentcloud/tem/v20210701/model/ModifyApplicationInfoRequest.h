@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool SourceChannelHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the call chain. Valid values: `0`: disable; `1`: enable
-                     * @return EnableTracing Whether to enable the call chain. Valid values: `0`: disable; `1`: enable
+                     * 获取(Disused) Whether to enable the call chain. 
+                     * @return EnableTracing (Disused) Whether to enable the call chain. 
                      */
                     uint64_t GetEnableTracing() const;
 
                     /**
-                     * 设置Whether to enable the call chain. Valid values: `0`: disable; `1`: enable
-                     * @param EnableTracing Whether to enable the call chain. Valid values: `0`: disable; `1`: enable
+                     * 设置(Disused) Whether to enable the call chain. 
+                     * @param EnableTracing (Disused) Whether to enable the call chain. 
                      */
                     void SetEnableTracing(const uint64_t& _enableTracing);
 
@@ -135,7 +135,7 @@ namespace TencentCloud
                     bool m_sourceChannelHasBeenSet;
 
                     /**
-                     * Whether to enable the call chain. Valid values: `0`: disable; `1`: enable
+                     * (Disused) Whether to enable the call chain. 
                      */
                     uint64_t m_enableTracing;
                     bool m_enableTracingHasBeenSet;

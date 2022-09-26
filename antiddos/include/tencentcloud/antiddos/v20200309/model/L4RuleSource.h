@@ -104,6 +104,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool PortHasBeenSet() const;
 
+                    /**
+                     * 获取Secondary origin server. `1`: secondary origin server; `0`: general origin server.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Backup Secondary origin server. `1`: secondary origin server; `0`: general origin server.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetBackup() const;
+
+                    /**
+                     * 设置Secondary origin server. `1`: secondary origin server; `0`: general origin server.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param Backup Secondary origin server. `1`: secondary origin server; `0`: general origin server.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetBackup(const uint64_t& _backup);
+
+                    /**
+                     * 判断参数 Backup 是否已赋值
+                     * @return Backup 是否已赋值
+                     */
+                    bool BackupHasBeenSet() const;
+
                 private:
 
                     /**
@@ -124,6 +146,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     uint64_t m_port;
                     bool m_portHasBeenSet;
+
+                    /**
+                     * Secondary origin server. `1`: secondary origin server; `0`: general origin server.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_backup;
+                    bool m_backupHasBeenSet;
 
                 };
             }

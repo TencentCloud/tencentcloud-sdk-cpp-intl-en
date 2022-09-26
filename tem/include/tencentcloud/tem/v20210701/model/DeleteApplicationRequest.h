@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Service ID
-                     * @return ApplicationId Service ID
+                     * 获取Application ID.
+                     * @return ApplicationId Application ID.
                      */
                     std::string GetApplicationId() const;
 
                     /**
-                     * 设置Service ID
-                     * @param ApplicationId Service ID
+                     * 设置Application ID.
+                     * @param ApplicationId Application ID.
                      */
                     void SetApplicationId(const std::string& _applicationId);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool EnvironmentIdHasBeenSet() const;
 
                     /**
-                     * 获取Retain as default
-                     * @return SourceChannel Retain as default
+                     * 获取Source channel. Please keep the default value.
+                     * @return SourceChannel Source channel. Please keep the default value.
                      */
                     int64_t GetSourceChannel() const;
 
                     /**
-                     * 设置Retain as default
-                     * @param SourceChannel Retain as default
+                     * 设置Source channel. Please keep the default value.
+                     * @param SourceChannel Source channel. Please keep the default value.
                      */
                     void SetSourceChannel(const int64_t& _sourceChannel);
 
@@ -117,7 +117,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Service ID
+                     * Application ID.
                      */
                     std::string m_applicationId;
                     bool m_applicationIdHasBeenSet;
@@ -129,7 +129,7 @@ namespace TencentCloud
                     bool m_environmentIdHasBeenSet;
 
                     /**
-                     * Retain as default
+                     * Source channel. Please keep the default value.
                      */
                     int64_t m_sourceChannel;
                     bool m_sourceChannelHasBeenSet;

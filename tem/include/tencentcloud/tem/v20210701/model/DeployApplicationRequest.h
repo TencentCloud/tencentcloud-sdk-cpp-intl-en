@@ -831,14 +831,18 @@ If `konajdk` is selected, the value can be:
                     bool EnablePrometheusConfHasBeenSet() const;
 
                     /**
-                     * 获取`1`: Enable APM collection; `0`: Disable APM collection
-                     * @return EnableTracing `1`: Enable APM collection; `0`: Disable APM collection
+                     * 获取`1`: Enable APM tracing (Skywalking)
+`0`: Disable APM tracing
+                     * @return EnableTracing `1`: Enable APM tracing (Skywalking)
+`0`: Disable APM tracing
                      */
                     int64_t GetEnableTracing() const;
 
                     /**
-                     * 设置`1`: Enable APM collection; `0`: Disable APM collection
-                     * @param EnableTracing `1`: Enable APM collection; `0`: Disable APM collection
+                     * 设置`1`: Enable APM tracing (Skywalking)
+`0`: Disable APM tracing
+                     * @param EnableTracing `1`: Enable APM tracing (Skywalking)
+`0`: Disable APM tracing
                      */
                     void SetEnableTracing(const int64_t& _enableTracing);
 
@@ -847,6 +851,78 @@ If `konajdk` is selected, the value can be:
                      * @return EnableTracing 是否已赋值
                      */
                     bool EnableTracingHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return EnableMetrics 
+                     */
+                    int64_t GetEnableMetrics() const;
+
+                    /**
+                     * 设置
+                     * @param EnableMetrics 
+                     */
+                    void SetEnableMetrics(const int64_t& _enableMetrics);
+
+                    /**
+                     * 判断参数 EnableMetrics 是否已赋值
+                     * @return EnableMetrics 是否已赋值
+                     */
+                    bool EnableMetricsHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return TcrInstanceId 
+                     */
+                    std::string GetTcrInstanceId() const;
+
+                    /**
+                     * 设置
+                     * @param TcrInstanceId 
+                     */
+                    void SetTcrInstanceId(const std::string& _tcrInstanceId);
+
+                    /**
+                     * 判断参数 TcrInstanceId 是否已赋值
+                     * @return TcrInstanceId 是否已赋值
+                     */
+                    bool TcrInstanceIdHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return RepoServer 
+                     */
+                    std::string GetRepoServer() const;
+
+                    /**
+                     * 设置
+                     * @param RepoServer 
+                     */
+                    void SetRepoServer(const std::string& _repoServer);
+
+                    /**
+                     * 判断参数 RepoServer 是否已赋值
+                     * @return RepoServer 是否已赋值
+                     */
+                    bool RepoServerHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return RepoType 
+                     */
+                    int64_t GetRepoType() const;
+
+                    /**
+                     * 设置
+                     * @param RepoType 
+                     */
+                    void SetRepoType(const int64_t& _repoType);
+
+                    /**
+                     * 判断参数 RepoType 是否已赋值
+                     * @return RepoType 是否已赋值
+                     */
+                    bool RepoTypeHasBeenSet() const;
 
                 private:
 
@@ -1105,10 +1181,35 @@ If `konajdk` is selected, the value can be:
                     bool m_enablePrometheusConfHasBeenSet;
 
                     /**
-                     * `1`: Enable APM collection; `0`: Disable APM collection
+                     * `1`: Enable APM tracing (Skywalking)
+`0`: Disable APM tracing
                      */
                     int64_t m_enableTracing;
                     bool m_enableTracingHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_enableMetrics;
+                    bool m_enableMetricsHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_tcrInstanceId;
+                    bool m_tcrInstanceIdHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_repoServer;
+                    bool m_repoServerHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_repoType;
+                    bool m_repoTypeHasBeenSet;
 
                 };
             }

@@ -549,14 +549,18 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool AnycastOutPackRelationHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceVersion 
+                     * 获取Edition of the instance
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return InstanceVersion Edition of the instance
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     uint64_t GetInstanceVersion() const;
 
                     /**
-                     * 设置
-                     * @param InstanceVersion 
+                     * 设置Edition of the instance
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param InstanceVersion Edition of the instance
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetInstanceVersion(const uint64_t& _instanceVersion);
 
@@ -725,7 +729,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_anycastOutPackRelationHasBeenSet;
 
                     /**
-                     * 
+                     * Edition of the instance
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     uint64_t m_instanceVersion;
                     bool m_instanceVersionHasBeenSet;

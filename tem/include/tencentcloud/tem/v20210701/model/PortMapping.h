@@ -100,6 +100,24 @@ namespace TencentCloud
                      */
                     bool ProtocolHasBeenSet() const;
 
+                    /**
+                     * 获取K8s service name
+                     * @return ServiceName K8s service name
+                     */
+                    std::string GetServiceName() const;
+
+                    /**
+                     * 设置K8s service name
+                     * @param ServiceName K8s service name
+                     */
+                    void SetServiceName(const std::string& _serviceName);
+
+                    /**
+                     * 判断参数 ServiceName 是否已赋值
+                     * @return ServiceName 是否已赋值
+                     */
+                    bool ServiceNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -119,6 +137,12 @@ namespace TencentCloud
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;
+
+                    /**
+                     * K8s service name
+                     */
+                    std::string m_serviceName;
+                    bool m_serviceNameHasBeenSet;
 
                 };
             }

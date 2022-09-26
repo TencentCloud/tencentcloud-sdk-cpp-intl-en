@@ -104,6 +104,7 @@ set(tem_public_header_model
   include/tencentcloud/tem/v20210701/model/LogOutputConf.h
   include/tencentcloud/tem/v20210701/model/DescribeIngressesResponse.h
   include/tencentcloud/tem/v20210701/model/DeleteIngressResponse.h
+  include/tencentcloud/tem/v20210701/model/DestroyEnvironmentRequest.h
   include/tencentcloud/tem/v20210701/model/TemNamespaceInfo.h
   include/tencentcloud/tem/v20210701/model/GenerateApplicationPackageDownloadUrlResponse.h
   include/tencentcloud/tem/v20210701/model/IngressRuleBackend.h
@@ -123,11 +124,13 @@ set(tem_public_header_model
   include/tencentcloud/tem/v20210701/model/IngressRulePath.h
   include/tencentcloud/tem/v20210701/model/CreateEnvironmentResponse.h
   include/tencentcloud/tem/v20210701/model/NamespacePage.h
-  include/tencentcloud/tem/v20210701/model/RestartApplicationRequest.h
+  include/tencentcloud/tem/v20210701/model/DestroyEnvironmentResponse.h
   include/tencentcloud/tem/v20210701/model/CreateApplicationResponse.h
   include/tencentcloud/tem/v20210701/model/HorizontalAutoscaler.h
   include/tencentcloud/tem/v20210701/model/StorageMountConf.h
+  include/tencentcloud/tem/v20210701/model/RestartApplicationRequest.h
   include/tencentcloud/tem/v20210701/model/PortMapping.h
+  include/tencentcloud/tem/v20210701/model/UseDefaultRepoParameters.h
   include/tencentcloud/tem/v20210701/model/DeployStrategyConf.h
   include/tencentcloud/tem/v20210701/model/StopApplicationRequest.h
   include/tencentcloud/tem/v20210701/model/DescribeIngressRequest.h
@@ -230,6 +233,7 @@ set(tem_src
   src/v20210701/model/LogOutputConf.cpp
   src/v20210701/model/DescribeIngressesResponse.cpp
   src/v20210701/model/DeleteIngressResponse.cpp
+  src/v20210701/model/DestroyEnvironmentRequest.cpp
   src/v20210701/model/TemNamespaceInfo.cpp
   src/v20210701/model/GenerateApplicationPackageDownloadUrlResponse.cpp
   src/v20210701/model/IngressRuleBackend.cpp
@@ -249,11 +253,13 @@ set(tem_src
   src/v20210701/model/IngressRulePath.cpp
   src/v20210701/model/CreateEnvironmentResponse.cpp
   src/v20210701/model/NamespacePage.cpp
-  src/v20210701/model/RestartApplicationRequest.cpp
+  src/v20210701/model/DestroyEnvironmentResponse.cpp
   src/v20210701/model/CreateApplicationResponse.cpp
   src/v20210701/model/HorizontalAutoscaler.cpp
   src/v20210701/model/StorageMountConf.cpp
+  src/v20210701/model/RestartApplicationRequest.cpp
   src/v20210701/model/PortMapping.cpp
+  src/v20210701/model/UseDefaultRepoParameters.cpp
   src/v20210701/model/DeployStrategyConf.cpp
   src/v20210701/model/StopApplicationRequest.cpp
   src/v20210701/model/DescribeIngressRequest.cpp

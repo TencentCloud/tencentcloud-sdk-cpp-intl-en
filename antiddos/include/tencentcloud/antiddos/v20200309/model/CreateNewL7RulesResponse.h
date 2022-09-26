@@ -14,54 +14,55 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_TEM_V20210701_MODEL_CREATEAPPLICATIONRESPONSE_H_
-#define TENCENTCLOUD_TEM_V20210701_MODEL_CREATEAPPLICATIONRESPONSE_H_
+#ifndef TENCENTCLOUD_ANTIDDOS_V20200309_MODEL_CREATENEWL7RULESRESPONSE_H_
+#define TENCENTCLOUD_ANTIDDOS_V20200309_MODEL_CREATENEWL7RULESRESPONSE_H_
 
 #include <string>
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/antiddos/v20200309/model/SuccessCode.h>
 
 
 namespace TencentCloud
 {
-    namespace Tem
+    namespace Antiddos
     {
-        namespace V20210701
+        namespace V20200309
         {
             namespace Model
             {
                 /**
-                * CreateApplication response structure.
+                * CreateNewL7Rules response structure.
                 */
-                class CreateApplicationResponse : public AbstractModel
+                class CreateNewL7RulesResponse : public AbstractModel
                 {
                 public:
-                    CreateApplicationResponse();
-                    ~CreateApplicationResponse() = default;
+                    CreateNewL7RulesResponse();
+                    ~CreateNewL7RulesResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取ID of the created application
-                     * @return Result ID of the created application
+                     * 获取Success code
+                     * @return Success Success code
                      */
-                    std::string GetResult() const;
+                    SuccessCode GetSuccess() const;
 
                     /**
-                     * 判断参数 Result 是否已赋值
-                     * @return Result 是否已赋值
+                     * 判断参数 Success 是否已赋值
+                     * @return Success 是否已赋值
                      */
-                    bool ResultHasBeenSet() const;
+                    bool SuccessHasBeenSet() const;
 
                 private:
 
                     /**
-                     * ID of the created application
+                     * Success code
                      */
-                    std::string m_result;
-                    bool m_resultHasBeenSet;
+                    SuccessCode m_success;
+                    bool m_successHasBeenSet;
 
                 };
             }
@@ -69,4 +70,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_TEM_V20210701_MODEL_CREATEAPPLICATIONRESPONSE_H_
+#endif // !TENCENTCLOUD_ANTIDDOS_V20200309_MODEL_CREATENEWL7RULESRESPONSE_H_
