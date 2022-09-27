@@ -141,6 +141,24 @@ You can also specify a custom KMS CMK created in the same region for encryption.
                      */
                     bool TagsHasBeenSet() const;
 
+                    /**
+                     * 获取Name of the SSH key pair, which only contains digits, letters and underscores and must start with a digit or letter. The maximum length is 25 characters.
+                     * @return SSHKeyName Name of the SSH key pair, which only contains digits, letters and underscores and must start with a digit or letter. The maximum length is 25 characters.
+                     */
+                    std::string GetSSHKeyName() const;
+
+                    /**
+                     * 设置Name of the SSH key pair, which only contains digits, letters and underscores and must start with a digit or letter. The maximum length is 25 characters.
+                     * @param SSHKeyName Name of the SSH key pair, which only contains digits, letters and underscores and must start with a digit or letter. The maximum length is 25 characters.
+                     */
+                    void SetSSHKeyName(const std::string& _sSHKeyName);
+
+                    /**
+                     * 判断参数 SSHKeyName 是否已赋值
+                     * @return SSHKeyName 是否已赋值
+                     */
+                    bool SSHKeyNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -174,6 +192,12 @@ You can also specify a custom KMS CMK created in the same region for encryption.
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * Name of the SSH key pair, which only contains digits, letters and underscores and must start with a digit or letter. The maximum length is 25 characters.
+                     */
+                    std::string m_sSHKeyName;
+                    bool m_sSHKeyNameHasBeenSet;
 
                 };
             }

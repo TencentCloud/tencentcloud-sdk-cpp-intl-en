@@ -57,8 +57,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of instance details.
-                     * @return InstanceSet List of instance details.
+                     * 获取List of instance details
+                     * @return InstanceSet List of instance details
                      */
                     std::vector<Instance> GetInstanceSet() const;
 
@@ -77,7 +77,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of instance details.
+                     * List of instance details
                      */
                     std::vector<Instance> m_instanceSet;
                     bool m_instanceSetHasBeenSet;

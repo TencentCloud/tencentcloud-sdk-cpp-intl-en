@@ -62,114 +62,122 @@ namespace TencentCloud
                     bool DiskIdsHasBeenSet() const;
 
                     /**
-                     * 获取Filter list.
+                     * 获取Filter list
 disk-id
 Filter by **cloud disk ID**.
 Type: String
-Required: no
+Required: No
 instance-id
 Filter by **instance ID**.
 Type: String
-Required: no
+Required: No
 disk-name
 Filter by **cloud disk name**.
 Type: String
-Required: no
+Required: No
 zone
 Filter by **availability zone**.
 Type: String
-Required: no
+Required: No
 disk-usage
 Filter by **cloud disk type**.
 Type: String
-Required: no
+Required: No
+Values: `SYSTEM_DISK` and `DATA_DISK`
 disk-state
 Filter by **cloud disk status**.
 Type: String
-Required: no
-Each request can contain up to 10 filters, each of which can have 5 values. You cannot specify both `DiskIds` and `Filters` at the same time.
-                     * @return Filters Filter list.
+Required: No
+Values: See `DiskState` in [Disk](https://intl.cloud.tencent.com/document/api/1207/47576?from_cn_redirect=1#Disk)
+Each request can contain up to 10 `Filters` and 100 `Filter.Values`. `DiskIds` and `Filters` cannot be specified at the same time.
+                     * @return Filters Filter list
 disk-id
 Filter by **cloud disk ID**.
 Type: String
-Required: no
+Required: No
 instance-id
 Filter by **instance ID**.
 Type: String
-Required: no
+Required: No
 disk-name
 Filter by **cloud disk name**.
 Type: String
-Required: no
+Required: No
 zone
 Filter by **availability zone**.
 Type: String
-Required: no
+Required: No
 disk-usage
 Filter by **cloud disk type**.
 Type: String
-Required: no
+Required: No
+Values: `SYSTEM_DISK` and `DATA_DISK`
 disk-state
 Filter by **cloud disk status**.
 Type: String
-Required: no
-Each request can contain up to 10 filters, each of which can have 5 values. You cannot specify both `DiskIds` and `Filters` at the same time.
+Required: No
+Values: See `DiskState` in [Disk](https://intl.cloud.tencent.com/document/api/1207/47576?from_cn_redirect=1#Disk)
+Each request can contain up to 10 `Filters` and 100 `Filter.Values`. `DiskIds` and `Filters` cannot be specified at the same time.
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter list.
+                     * 设置Filter list
 disk-id
 Filter by **cloud disk ID**.
 Type: String
-Required: no
+Required: No
 instance-id
 Filter by **instance ID**.
 Type: String
-Required: no
+Required: No
 disk-name
 Filter by **cloud disk name**.
 Type: String
-Required: no
+Required: No
 zone
 Filter by **availability zone**.
 Type: String
-Required: no
+Required: No
 disk-usage
 Filter by **cloud disk type**.
 Type: String
-Required: no
+Required: No
+Values: `SYSTEM_DISK` and `DATA_DISK`
 disk-state
 Filter by **cloud disk status**.
 Type: String
-Required: no
-Each request can contain up to 10 filters, each of which can have 5 values. You cannot specify both `DiskIds` and `Filters` at the same time.
-                     * @param Filters Filter list.
+Required: No
+Values: See `DiskState` in [Disk](https://intl.cloud.tencent.com/document/api/1207/47576?from_cn_redirect=1#Disk)
+Each request can contain up to 10 `Filters` and 100 `Filter.Values`. `DiskIds` and `Filters` cannot be specified at the same time.
+                     * @param Filters Filter list
 disk-id
 Filter by **cloud disk ID**.
 Type: String
-Required: no
+Required: No
 instance-id
 Filter by **instance ID**.
 Type: String
-Required: no
+Required: No
 disk-name
 Filter by **cloud disk name**.
 Type: String
-Required: no
+Required: No
 zone
 Filter by **availability zone**.
 Type: String
-Required: no
+Required: No
 disk-usage
 Filter by **cloud disk type**.
 Type: String
-Required: no
+Required: No
+Values: `SYSTEM_DISK` and `DATA_DISK`
 disk-state
 Filter by **cloud disk status**.
 Type: String
-Required: no
-Each request can contain up to 10 filters, each of which can have 5 values. You cannot specify both `DiskIds` and `Filters` at the same time.
+Required: No
+Values: See `DiskState` in [Disk](https://intl.cloud.tencent.com/document/api/1207/47576?from_cn_redirect=1#Disk)
+Each request can contain up to 10 `Filters` and 100 `Filter.Values`. `DiskIds` and `Filters` cannot be specified at the same time.
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
@@ -260,32 +268,34 @@ Each request can contain up to 10 filters, each of which can have 5 values. You 
                     bool m_diskIdsHasBeenSet;
 
                     /**
-                     * Filter list.
+                     * Filter list
 disk-id
 Filter by **cloud disk ID**.
 Type: String
-Required: no
+Required: No
 instance-id
 Filter by **instance ID**.
 Type: String
-Required: no
+Required: No
 disk-name
 Filter by **cloud disk name**.
 Type: String
-Required: no
+Required: No
 zone
 Filter by **availability zone**.
 Type: String
-Required: no
+Required: No
 disk-usage
 Filter by **cloud disk type**.
 Type: String
-Required: no
+Required: No
+Values: `SYSTEM_DISK` and `DATA_DISK`
 disk-state
 Filter by **cloud disk status**.
 Type: String
-Required: no
-Each request can contain up to 10 filters, each of which can have 5 values. You cannot specify both `DiskIds` and `Filters` at the same time.
+Required: No
+Values: See `DiskState` in [Disk](https://intl.cloud.tencent.com/document/api/1207/47576?from_cn_redirect=1#Disk)
+Each request can contain up to 10 `Filters` and 100 `Filter.Values`. `DiskIds` and `Filters` cannot be specified at the same time.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

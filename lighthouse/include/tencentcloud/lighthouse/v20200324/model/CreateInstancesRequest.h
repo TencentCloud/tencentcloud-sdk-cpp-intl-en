@@ -46,14 +46,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the Lighthouse package
-                     * @return BundleId ID of the Lighthouse package
+                     * 获取Bundle ID.
+                     * @return BundleId Bundle ID.
                      */
                     std::string GetBundleId() const;
 
                     /**
-                     * 设置ID of the Lighthouse package
-                     * @param BundleId ID of the Lighthouse package
+                     * 设置Bundle ID.
+                     * @param BundleId Bundle ID.
                      */
                     void SetBundleId(const std::string& _bundleId);
 
@@ -64,14 +64,14 @@ namespace TencentCloud
                     bool BundleIdHasBeenSet() const;
 
                     /**
-                     * 获取ID of the Lighthouse image
-                     * @return BlueprintId ID of the Lighthouse image
+                     * 获取Image ID
+                     * @return BlueprintId Image ID
                      */
                     std::string GetBlueprintId() const;
 
                     /**
-                     * 设置ID of the Lighthouse image
-                     * @param BlueprintId ID of the Lighthouse image
+                     * 设置Image ID
+                     * @param BlueprintId Image ID
                      */
                     void SetBlueprintId(const std::string& _blueprintId);
 
@@ -100,14 +100,14 @@ namespace TencentCloud
                     bool InstanceChargePrepaidHasBeenSet() const;
 
                     /**
-                     * 获取The display name of the Lighthouse instance
-                     * @return InstanceName The display name of the Lighthouse instance
+                     * 获取Instance display name.
+                     * @return InstanceName Instance display name.
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置The display name of the Lighthouse instance
-                     * @param InstanceName The display name of the Lighthouse instance
+                     * 设置Instance display name.
+                     * @param InstanceName Instance display name.
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
@@ -118,14 +118,14 @@ namespace TencentCloud
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Number of the Lighthouse instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
-                     * @return InstanceCount Number of the Lighthouse instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
+                     * 获取Number of the instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
+                     * @return InstanceCount Number of the instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
                      */
                     uint64_t GetInstanceCount() const;
 
                     /**
-                     * 设置Number of the Lighthouse instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
-                     * @param InstanceCount Number of the Lighthouse instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
+                     * 设置Number of the instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
+                     * @param InstanceCount Number of the instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
                      */
                     void SetInstanceCount(const uint64_t& _instanceCount);
 
@@ -241,16 +241,34 @@ If the dry run succeeds, the RequestId will be returned.
                      */
                     bool ContainersHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to use the vouchers automatically. It defaults to No.
+                     * @return AutoVoucher Whether to use the vouchers automatically. It defaults to No.
+                     */
+                    bool GetAutoVoucher() const;
+
+                    /**
+                     * 设置Whether to use the vouchers automatically. It defaults to No.
+                     * @param AutoVoucher Whether to use the vouchers automatically. It defaults to No.
+                     */
+                    void SetAutoVoucher(const bool& _autoVoucher);
+
+                    /**
+                     * 判断参数 AutoVoucher 是否已赋值
+                     * @return AutoVoucher 是否已赋值
+                     */
+                    bool AutoVoucherHasBeenSet() const;
+
                 private:
 
                     /**
-                     * ID of the Lighthouse package
+                     * Bundle ID.
                      */
                     std::string m_bundleId;
                     bool m_bundleIdHasBeenSet;
 
                     /**
-                     * ID of the Lighthouse image
+                     * Image ID
                      */
                     std::string m_blueprintId;
                     bool m_blueprintIdHasBeenSet;
@@ -262,13 +280,13 @@ If the dry run succeeds, the RequestId will be returned.
                     bool m_instanceChargePrepaidHasBeenSet;
 
                     /**
-                     * The display name of the Lighthouse instance
+                     * Instance display name.
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Number of the Lighthouse instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
+                     * Number of the instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
                      */
                     uint64_t m_instanceCount;
                     bool m_instanceCountHasBeenSet;
@@ -306,6 +324,12 @@ If the dry run succeeds, the RequestId will be returned.
                      */
                     std::vector<DockerContainerConfiguration> m_containers;
                     bool m_containersHasBeenSet;
+
+                    /**
+                     * Whether to use the vouchers automatically. It defaults to No.
+                     */
+                    bool m_autoVoucher;
+                    bool m_autoVoucherHasBeenSet;
 
                 };
             }

@@ -346,6 +346,64 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool ImageIdHasBeenSet() const;
 
+                    /**
+                     * 获取URL of official website of the open-source project
+                     * @return CommunityUrl URL of official website of the open-source project
+                     */
+                    std::string GetCommunityUrl() const;
+
+                    /**
+                     * 设置URL of official website of the open-source project
+                     * @param CommunityUrl URL of official website of the open-source project
+                     */
+                    void SetCommunityUrl(const std::string& _communityUrl);
+
+                    /**
+                     * 判断参数 CommunityUrl 是否已赋值
+                     * @return CommunityUrl 是否已赋值
+                     */
+                    bool CommunityUrlHasBeenSet() const;
+
+                    /**
+                     * 获取Guide documentation URL
+                     * @return GuideUrl Guide documentation URL
+                     */
+                    std::string GetGuideUrl() const;
+
+                    /**
+                     * 设置Guide documentation URL
+                     * @param GuideUrl Guide documentation URL
+                     */
+                    void SetGuideUrl(const std::string& _guideUrl);
+
+                    /**
+                     * 判断参数 GuideUrl 是否已赋值
+                     * @return GuideUrl 是否已赋值
+                     */
+                    bool GuideUrlHasBeenSet() const;
+
+                    /**
+                     * 获取Array of IDs of scenes associated with an image
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return SceneIdSet Array of IDs of scenes associated with an image
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> GetSceneIdSet() const;
+
+                    /**
+                     * 设置Array of IDs of scenes associated with an image
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param SceneIdSet Array of IDs of scenes associated with an image
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetSceneIdSet(const std::vector<std::string>& _sceneIdSet);
+
+                    /**
+                     * 判断参数 SceneIdSet 是否已赋值
+                     * @return SceneIdSet 是否已赋值
+                     */
+                    bool SceneIdSetHasBeenSet() const;
+
                 private:
 
                     /**
@@ -446,6 +504,25 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_imageId;
                     bool m_imageIdHasBeenSet;
+
+                    /**
+                     * URL of official website of the open-source project
+                     */
+                    std::string m_communityUrl;
+                    bool m_communityUrlHasBeenSet;
+
+                    /**
+                     * Guide documentation URL
+                     */
+                    std::string m_guideUrl;
+                    bool m_guideUrlHasBeenSet;
+
+                    /**
+                     * Array of IDs of scenes associated with an image
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_sceneIdSet;
+                    bool m_sceneIdSetHasBeenSet;
 
                 };
             }

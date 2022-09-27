@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_LIGHTHOUSE_V20200324_MODEL_DATADISKPRICE_H_
-#define TENCENTCLOUD_LIGHTHOUSE_V20200324_MODEL_DATADISKPRICE_H_
+#ifndef TENCENTCLOUD_LIGHTHOUSE_V20200324_MODEL_DETAILPRICE_H_
+#define TENCENTCLOUD_LIGHTHOUSE_V20200324_MODEL_DETAILPRICE_H_
 
 #include <string>
 #include <vector>
@@ -35,62 +35,70 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Data disk price
+                * Billable items
                 */
-                class DataDiskPrice : public AbstractModel
+                class DetailPrice : public AbstractModel
                 {
                 public:
-                    DataDiskPrice();
-                    ~DataDiskPrice() = default;
+                    DetailPrice();
+                    ~DetailPrice() = default;
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
                     /**
-                     * 获取Cloud disk ID.
-                     * @return DiskId Cloud disk ID.
+                     * 获取Values: 
+<li>"DiskSpace": Cloud disk space</li>
+<li>"DiskBackupQuota": Cloud disk backups</li>
+                     * @return PriceName Values: 
+<li>"DiskSpace": Cloud disk space</li>
+<li>"DiskBackupQuota": Cloud disk backups</li>
                      */
-                    std::string GetDiskId() const;
+                    std::string GetPriceName() const;
 
                     /**
-                     * 设置Cloud disk ID.
-                     * @param DiskId Cloud disk ID.
+                     * 设置Values: 
+<li>"DiskSpace": Cloud disk space</li>
+<li>"DiskBackupQuota": Cloud disk backups</li>
+                     * @param PriceName Values: 
+<li>"DiskSpace": Cloud disk space</li>
+<li>"DiskBackupQuota": Cloud disk backups</li>
                      */
-                    void SetDiskId(const std::string& _diskId);
+                    void SetPriceName(const std::string& _priceName);
 
                     /**
-                     * 判断参数 DiskId 是否已赋值
-                     * @return DiskId 是否已赋值
+                     * 判断参数 PriceName 是否已赋值
+                     * @return PriceName 是否已赋值
                      */
-                    bool DiskIdHasBeenSet() const;
+                    bool PriceNameHasBeenSet() const;
 
                     /**
-                     * 获取Cloud disk unit price.
-                     * @return OriginalDiskPrice Cloud disk unit price.
+                     * 获取Official unit price of the billable item
+                     * @return OriginUnitPrice Official unit price of the billable item
                      */
-                    double GetOriginalDiskPrice() const;
+                    double GetOriginUnitPrice() const;
 
                     /**
-                     * 设置Cloud disk unit price.
-                     * @param OriginalDiskPrice Cloud disk unit price.
+                     * 设置Official unit price of the billable item
+                     * @param OriginUnitPrice Official unit price of the billable item
                      */
-                    void SetOriginalDiskPrice(const double& _originalDiskPrice);
+                    void SetOriginUnitPrice(const double& _originUnitPrice);
 
                     /**
-                     * 判断参数 OriginalDiskPrice 是否已赋值
-                     * @return OriginalDiskPrice 是否已赋值
+                     * 判断参数 OriginUnitPrice 是否已赋值
+                     * @return OriginUnitPrice 是否已赋值
                      */
-                    bool OriginalDiskPriceHasBeenSet() const;
+                    bool OriginUnitPriceHasBeenSet() const;
 
                     /**
-                     * 获取Total price of cloud disk
-                     * @return OriginalPrice Total price of cloud disk
+                     * 获取Official total price of the billable item
+                     * @return OriginalPrice Official total price of the billable item
                      */
                     double GetOriginalPrice() const;
 
                     /**
-                     * 设置Total price of cloud disk
-                     * @param OriginalPrice Total price of cloud disk
+                     * 设置Official total price of the billable item
+                     * @param OriginalPrice Official total price of the billable item
                      */
                     void SetOriginalPrice(const double& _originalPrice);
 
@@ -101,14 +109,14 @@ namespace TencentCloud
                     bool OriginalPriceHasBeenSet() const;
 
                     /**
-                     * 获取Discount.
-                     * @return Discount Discount.
+                     * 获取Discount of the billable item
+                     * @return Discount Discount of the billable item
                      */
                     double GetDiscount() const;
 
                     /**
-                     * 设置Discount.
-                     * @param Discount Discount.
+                     * 设置Discount of the billable item
+                     * @param Discount Discount of the billable item
                      */
                     void SetDiscount(const double& _discount);
 
@@ -119,14 +127,14 @@ namespace TencentCloud
                     bool DiscountHasBeenSet() const;
 
                     /**
-                     * 获取Discounted total price.
-                     * @return DiscountPrice Discounted total price.
+                     * 获取Discounted total price of the billable item
+                     * @return DiscountPrice Discounted total price of the billable item
                      */
                     double GetDiscountPrice() const;
 
                     /**
-                     * 设置Discounted total price.
-                     * @param DiscountPrice Discounted total price.
+                     * 设置Discounted total price of the billable item
+                     * @param DiscountPrice Discounted total price of the billable item
                      */
                     void SetDiscountPrice(const double& _discountPrice);
 
@@ -139,31 +147,33 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cloud disk ID.
+                     * Values: 
+<li>"DiskSpace": Cloud disk space</li>
+<li>"DiskBackupQuota": Cloud disk backups</li>
                      */
-                    std::string m_diskId;
-                    bool m_diskIdHasBeenSet;
+                    std::string m_priceName;
+                    bool m_priceNameHasBeenSet;
 
                     /**
-                     * Cloud disk unit price.
+                     * Official unit price of the billable item
                      */
-                    double m_originalDiskPrice;
-                    bool m_originalDiskPriceHasBeenSet;
+                    double m_originUnitPrice;
+                    bool m_originUnitPriceHasBeenSet;
 
                     /**
-                     * Total price of cloud disk
+                     * Official total price of the billable item
                      */
                     double m_originalPrice;
                     bool m_originalPriceHasBeenSet;
 
                     /**
-                     * Discount.
+                     * Discount of the billable item
                      */
                     double m_discount;
                     bool m_discountHasBeenSet;
 
                     /**
-                     * Discounted total price.
+                     * Discounted total price of the billable item
                      */
                     double m_discountPrice;
                     bool m_discountPriceHasBeenSet;
@@ -174,4 +184,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_LIGHTHOUSE_V20200324_MODEL_DATADISKPRICE_H_
+#endif // !TENCENTCLOUD_LIGHTHOUSE_V20200324_MODEL_DETAILPRICE_H_

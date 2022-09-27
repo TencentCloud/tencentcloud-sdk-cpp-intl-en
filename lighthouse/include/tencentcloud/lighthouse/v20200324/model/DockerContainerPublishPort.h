@@ -84,17 +84,17 @@ namespace TencentCloud
 
                     /**
                      * 获取External IP. It defaults to 0.0.0.0.
-Note: This field may return `null`, indicating that no valid value was found.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Ip External IP. It defaults to 0.0.0.0.
-Note: This field may return `null`, indicating that no valid value was found.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetIp() const;
 
                     /**
                      * 设置External IP. It defaults to 0.0.0.0.
-Note: This field may return `null`, indicating that no valid value was found.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param Ip External IP. It defaults to 0.0.0.0.
-Note: This field may return `null`, indicating that no valid value was found.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetIp(const std::string& _ip);
 
@@ -106,17 +106,17 @@ Note: This field may return `null`, indicating that no valid value was found.
 
                     /**
                      * 获取The protocol defaults to `tcp`. Valid values: `tcp`, `udp` and `sctp`.
-Note: This field may return `null`, indicating that no valid value was found.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Protocol The protocol defaults to `tcp`. Valid values: `tcp`, `udp` and `sctp`.
-Note: This field may return `null`, indicating that no valid value was found.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetProtocol() const;
 
                     /**
                      * 设置The protocol defaults to `tcp`. Valid values: `tcp`, `udp` and `sctp`.
-Note: This field may return `null`, indicating that no valid value was found.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param Protocol The protocol defaults to `tcp`. Valid values: `tcp`, `udp` and `sctp`.
-Note: This field may return `null`, indicating that no valid value was found.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetProtocol(const std::string& _protocol);
 
@@ -142,14 +142,14 @@ Note: This field may return `null`, indicating that no valid value was found.
 
                     /**
                      * External IP. It defaults to 0.0.0.0.
-Note: This field may return `null`, indicating that no valid value was found.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_ip;
                     bool m_ipHasBeenSet;
 
                     /**
                      * The protocol defaults to `tcp`. Valid values: `tcp`, `udp` and `sctp`.
-Note: This field may return `null`, indicating that no valid value was found.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;

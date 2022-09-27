@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Container environment variables
+                * Container environment variable
                 */
                 class ContainerEnv : public AbstractModel
                 {

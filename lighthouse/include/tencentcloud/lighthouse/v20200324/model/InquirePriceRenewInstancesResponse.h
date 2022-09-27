@@ -59,9 +59,9 @@ namespace TencentCloud
 
                     /**
                      * 获取List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DataDiskPriceSet List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<DataDiskPrice> GetDataDiskPriceSet() const;
 
@@ -81,7 +81,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<DataDiskPrice> m_dataDiskPriceSet;
                     bool m_dataDiskPriceSetHasBeenSet;

@@ -46,7 +46,85 @@ namespace TencentCloud
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
+                    /**
+                     * 获取<li>`YES`: Random password. In this case, `Password` cannot be specified. </li>
+<li>`No`: Custom. `Password` must be specified. </li>
+                     * @return AutoGeneratePassword <li>`YES`: Random password. In this case, `Password` cannot be specified. </li>
+<li>`No`: Custom. `Password` must be specified. </li>
+                     */
+                    std::string GetAutoGeneratePassword() const;
+
+                    /**
+                     * 设置<li>`YES`: Random password. In this case, `Password` cannot be specified. </li>
+<li>`No`: Custom. `Password` must be specified. </li>
+                     * @param AutoGeneratePassword <li>`YES`: Random password. In this case, `Password` cannot be specified. </li>
+<li>`No`: Custom. `Password` must be specified. </li>
+                     */
+                    void SetAutoGeneratePassword(const std::string& _autoGeneratePassword);
+
+                    /**
+                     * 判断参数 AutoGeneratePassword 是否已赋值
+                     * @return AutoGeneratePassword 是否已赋值
+                     */
+                    bool AutoGeneratePasswordHasBeenSet() const;
+
+                    /**
+                     * 获取Instace login password.
+For Windows instances, the password must contain 12 to 30 characters of the following types. It cannot start with “/” and cannot include the username.
+<li>[a-z]</li>
+<li>[A-Z]</li>
+<li>[0-9]</li>
+<li>[()`~!@#$%^&*-+=_|{}[]:;' <>,.?/]</li>
+                     * @return Password Instace login password.
+For Windows instances, the password must contain 12 to 30 characters of the following types. It cannot start with “/” and cannot include the username.
+<li>[a-z]</li>
+<li>[A-Z]</li>
+<li>[0-9]</li>
+<li>[()`~!@#$%^&*-+=_|{}[]:;' <>,.?/]</li>
+                     */
+                    std::string GetPassword() const;
+
+                    /**
+                     * 设置Instace login password.
+For Windows instances, the password must contain 12 to 30 characters of the following types. It cannot start with “/” and cannot include the username.
+<li>[a-z]</li>
+<li>[A-Z]</li>
+<li>[0-9]</li>
+<li>[()`~!@#$%^&*-+=_|{}[]:;' <>,.?/]</li>
+                     * @param Password Instace login password.
+For Windows instances, the password must contain 12 to 30 characters of the following types. It cannot start with “/” and cannot include the username.
+<li>[a-z]</li>
+<li>[A-Z]</li>
+<li>[0-9]</li>
+<li>[()`~!@#$%^&*-+=_|{}[]:;' <>,.?/]</li>
+                     */
+                    void SetPassword(const std::string& _password);
+
+                    /**
+                     * 判断参数 Password 是否已赋值
+                     * @return Password 是否已赋值
+                     */
+                    bool PasswordHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * <li>`YES`: Random password. In this case, `Password` cannot be specified. </li>
+<li>`No`: Custom. `Password` must be specified. </li>
+                     */
+                    std::string m_autoGeneratePassword;
+                    bool m_autoGeneratePasswordHasBeenSet;
+
+                    /**
+                     * Instace login password.
+For Windows instances, the password must contain 12 to 30 characters of the following types. It cannot start with “/” and cannot include the username.
+<li>[a-z]</li>
+<li>[A-Z]</li>
+<li>[0-9]</li>
+<li>[()`~!@#$%^&*-+=_|{}[]:;' <>,.?/]</li>
+                     */
+                    std::string m_password;
+                    bool m_passwordHasBeenSet;
 
                 };
             }

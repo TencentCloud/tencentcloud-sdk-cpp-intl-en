@@ -62,31 +62,14 @@ namespace TencentCloud
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Filter list
-<li>instance-name</li>Filter by the instance name
+                     * 获取Filter list.
+<li>instance-name</li>Filter by **instance name**.
 Type: String
 Required: no
-<li>private-ip-address</li>Filter by the private IP of instance primary ENI
+<li>private-ip-address</li>Filter by **private IP of instance primary ENI**.
 Type: String
 Required: no
-<li>public-ip-address</li>Filter by the public IP of instance primary ENI
-Type: String
-Required: no
-<li>zone</li>Filter by the availability zone
-Type: String
-Required: no
-<li>instance-state</li>Filter by **instance status**.
-Type: String
-Required: no
-Each request can contain up to 10 filters, each of which can have 100 values. You cannot specify both `InstanceIds` and `Filters` at the same time.
-                     * @return Filters Filter list
-<li>instance-name</li>Filter by the instance name
-Type: String
-Required: no
-<li>private-ip-address</li>Filter by the private IP of instance primary ENI
-Type: String
-Required: no
-<li>public-ip-address</li>Filter by the public IP of instance primary ENI
+<li>public-ip-address</li>Filter by **public IP of instance primary ENI**.
 Type: String
 Required: no
 <li>zone</li>Filter by the availability zone
@@ -95,36 +78,36 @@ Required: no
 <li>instance-state</li>Filter by **instance status**.
 Type: String
 Required: no
-Each request can contain up to 10 filters, each of which can have 100 values. You cannot specify both `InstanceIds` and `Filters` at the same time.
+Each request can contain up to 10 `Filters` and 100 `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` at the same time.
+                     * @return Filters Filter list.
+<li>instance-name</li>Filter by **instance name**.
+Type: String
+Required: no
+<li>private-ip-address</li>Filter by **private IP of instance primary ENI**.
+Type: String
+Required: no
+<li>public-ip-address</li>Filter by **public IP of instance primary ENI**.
+Type: String
+Required: no
+<li>zone</li>Filter by the availability zone
+Type: String
+Required: no
+<li>instance-state</li>Filter by **instance status**.
+Type: String
+Required: no
+Each request can contain up to 10 `Filters` and 100 `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` at the same time.
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter list
-<li>instance-name</li>Filter by the instance name
+                     * 设置Filter list.
+<li>instance-name</li>Filter by **instance name**.
 Type: String
 Required: no
-<li>private-ip-address</li>Filter by the private IP of instance primary ENI
+<li>private-ip-address</li>Filter by **private IP of instance primary ENI**.
 Type: String
 Required: no
-<li>public-ip-address</li>Filter by the public IP of instance primary ENI
-Type: String
-Required: no
-<li>zone</li>Filter by the availability zone
-Type: String
-Required: no
-<li>instance-state</li>Filter by **instance status**.
-Type: String
-Required: no
-Each request can contain up to 10 filters, each of which can have 100 values. You cannot specify both `InstanceIds` and `Filters` at the same time.
-                     * @param Filters Filter list
-<li>instance-name</li>Filter by the instance name
-Type: String
-Required: no
-<li>private-ip-address</li>Filter by the private IP of instance primary ENI
-Type: String
-Required: no
-<li>public-ip-address</li>Filter by the public IP of instance primary ENI
+<li>public-ip-address</li>Filter by **public IP of instance primary ENI**.
 Type: String
 Required: no
 <li>zone</li>Filter by the availability zone
@@ -133,7 +116,24 @@ Required: no
 <li>instance-state</li>Filter by **instance status**.
 Type: String
 Required: no
-Each request can contain up to 10 filters, each of which can have 100 values. You cannot specify both `InstanceIds` and `Filters` at the same time.
+Each request can contain up to 10 `Filters` and 100 `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` at the same time.
+                     * @param Filters Filter list.
+<li>instance-name</li>Filter by **instance name**.
+Type: String
+Required: no
+<li>private-ip-address</li>Filter by **private IP of instance primary ENI**.
+Type: String
+Required: no
+<li>public-ip-address</li>Filter by **public IP of instance primary ENI**.
+Type: String
+Required: no
+<li>zone</li>Filter by the availability zone
+Type: String
+Required: no
+<li>instance-state</li>Filter by **instance status**.
+Type: String
+Required: no
+Each request can contain up to 10 `Filters` and 100 `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` at the same time.
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
@@ -188,14 +188,14 @@ Each request can contain up to 10 filters, each of which can have 100 values. Yo
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * Filter list
-<li>instance-name</li>Filter by the instance name
+                     * Filter list.
+<li>instance-name</li>Filter by **instance name**.
 Type: String
 Required: no
-<li>private-ip-address</li>Filter by the private IP of instance primary ENI
+<li>private-ip-address</li>Filter by **private IP of instance primary ENI**.
 Type: String
 Required: no
-<li>public-ip-address</li>Filter by the public IP of instance primary ENI
+<li>public-ip-address</li>Filter by **public IP of instance primary ENI**.
 Type: String
 Required: no
 <li>zone</li>Filter by the availability zone
@@ -204,7 +204,7 @@ Required: no
 <li>instance-state</li>Filter by **instance status**.
 Type: String
 Required: no
-Each request can contain up to 10 filters, each of which can have 100 values. You cannot specify both `InstanceIds` and `Filters` at the same time.
+Each request can contain up to 10 `Filters` and 100 `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` at the same time.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

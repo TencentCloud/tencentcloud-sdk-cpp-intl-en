@@ -209,14 +209,54 @@ namespace TencentCloud
                     bool RenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取Disk status
-                     * @return DiskState Disk status
+                     * 获取Disk status. Values: 
+<li>`PENDING`: Creating</li>
+<li>`UNATTACHED`: Not attached</li>
+<li>`ATTACHING`: Attaching</li>
+<li>`ATTACHED`: Attached</li>
+<li>`DETACHING`: Detaching</li>
+<li>`SHUTDOWN`: Isolated</li>
+<li>`CREATED_FAILED`: Failed to create</li>
+<li>`TERMINATING`: Terminating</li>
+<li>`DELETING`: Deleting</li>
+<li>`FREEZING`: Freezing</li>
+                     * @return DiskState Disk status. Values: 
+<li>`PENDING`: Creating</li>
+<li>`UNATTACHED`: Not attached</li>
+<li>`ATTACHING`: Attaching</li>
+<li>`ATTACHED`: Attached</li>
+<li>`DETACHING`: Detaching</li>
+<li>`SHUTDOWN`: Isolated</li>
+<li>`CREATED_FAILED`: Failed to create</li>
+<li>`TERMINATING`: Terminating</li>
+<li>`DELETING`: Deleting</li>
+<li>`FREEZING`: Freezing</li>
                      */
                     std::string GetDiskState() const;
 
                     /**
-                     * 设置Disk status
-                     * @param DiskState Disk status
+                     * 设置Disk status. Values: 
+<li>`PENDING`: Creating</li>
+<li>`UNATTACHED`: Not attached</li>
+<li>`ATTACHING`: Attaching</li>
+<li>`ATTACHED`: Attached</li>
+<li>`DETACHING`: Detaching</li>
+<li>`SHUTDOWN`: Isolated</li>
+<li>`CREATED_FAILED`: Failed to create</li>
+<li>`TERMINATING`: Terminating</li>
+<li>`DELETING`: Deleting</li>
+<li>`FREEZING`: Freezing</li>
+                     * @param DiskState Disk status. Values: 
+<li>`PENDING`: Creating</li>
+<li>`UNATTACHED`: Not attached</li>
+<li>`ATTACHING`: Attaching</li>
+<li>`ATTACHED`: Attached</li>
+<li>`DETACHING`: Detaching</li>
+<li>`SHUTDOWN`: Isolated</li>
+<li>`CREATED_FAILED`: Failed to create</li>
+<li>`TERMINATING`: Terminating</li>
+<li>`DELETING`: Deleting</li>
+<li>`FREEZING`: Freezing</li>
                      */
                     void SetDiskState(const std::string& _diskState);
 
@@ -317,14 +357,18 @@ namespace TencentCloud
                     bool LatestOperationRequestIdHasBeenSet() const;
 
                     /**
-                     * 获取Creation time
-                     * @return CreatedTime Creation time
+                     * 获取Creation time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
+                     * @return CreatedTime Creation time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
                      */
                     std::string GetCreatedTime() const;
 
                     /**
-                     * 设置Creation time
-                     * @param CreatedTime Creation time
+                     * 设置Creation time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
+                     * @param CreatedTime Creation time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
@@ -335,18 +379,22 @@ namespace TencentCloud
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
-                     * 获取Expiration date
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ExpiredTime Expiration date
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Expiration time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ExpiredTime Expiration time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetExpiredTime() const;
 
                     /**
-                     * 设置Expiration date
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ExpiredTime Expiration date
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Expiration time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ExpiredTime Expiration time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetExpiredTime(const std::string& _expiredTime);
 
@@ -357,18 +405,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ExpiredTimeHasBeenSet() const;
 
                     /**
-                     * 获取Isolation time
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return IsolatedTime Isolation time
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Isolation time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IsolatedTime Isolation time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetIsolatedTime() const;
 
                     /**
-                     * 设置Isolation time
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param IsolatedTime Isolation time
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Isolation time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param IsolatedTime Isolation time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetIsolatedTime(const std::string& _isolatedTime);
 
@@ -377,6 +429,42 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return IsolatedTime 是否已赋值
                      */
                     bool IsolatedTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Total disk backups
+                     * @return DiskBackupCount Total disk backups
+                     */
+                    int64_t GetDiskBackupCount() const;
+
+                    /**
+                     * 设置Total disk backups
+                     * @param DiskBackupCount Total disk backups
+                     */
+                    void SetDiskBackupCount(const int64_t& _diskBackupCount);
+
+                    /**
+                     * 判断参数 DiskBackupCount 是否已赋值
+                     * @return DiskBackupCount 是否已赋值
+                     */
+                    bool DiskBackupCountHasBeenSet() const;
+
+                    /**
+                     * 获取Disk backup quota
+                     * @return DiskBackupQuota Disk backup quota
+                     */
+                    int64_t GetDiskBackupQuota() const;
+
+                    /**
+                     * 设置Disk backup quota
+                     * @param DiskBackupQuota Disk backup quota
+                     */
+                    void SetDiskBackupQuota(const int64_t& _diskBackupQuota);
+
+                    /**
+                     * 判断参数 DiskBackupQuota 是否已赋值
+                     * @return DiskBackupQuota 是否已赋值
+                     */
+                    bool DiskBackupQuotaHasBeenSet() const;
 
                 private:
 
@@ -435,7 +523,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_renewFlagHasBeenSet;
 
                     /**
-                     * Disk status
+                     * Disk status. Values: 
+<li>`PENDING`: Creating</li>
+<li>`UNATTACHED`: Not attached</li>
+<li>`ATTACHING`: Attaching</li>
+<li>`ATTACHED`: Attached</li>
+<li>`DETACHING`: Detaching</li>
+<li>`SHUTDOWN`: Isolated</li>
+<li>`CREATED_FAILED`: Failed to create</li>
+<li>`TERMINATING`: Terminating</li>
+<li>`DELETING`: Deleting</li>
+<li>`FREEZING`: Freezing</li>
                      */
                     std::string m_diskState;
                     bool m_diskStateHasBeenSet;
@@ -471,24 +569,39 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_latestOperationRequestIdHasBeenSet;
 
                     /**
-                     * Creation time
+                     * Creation time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
                      */
                     std::string m_createdTime;
                     bool m_createdTimeHasBeenSet;
 
                     /**
-                     * Expiration date
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Expiration time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_expiredTime;
                     bool m_expiredTimeHasBeenSet;
 
                     /**
-                     * Isolation time
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Isolation time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_isolatedTime;
                     bool m_isolatedTimeHasBeenSet;
+
+                    /**
+                     * Total disk backups
+                     */
+                    int64_t m_diskBackupCount;
+                    bool m_diskBackupCountHasBeenSet;
+
+                    /**
+                     * Disk backup quota
+                     */
+                    int64_t m_diskBackupQuota;
+                    bool m_diskBackupQuotaHasBeenSet;
 
                 };
             }

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information of the block device where the OS is installed, namely, the system disk.
+                * Information on the block device where the operating system is installed, namely the system disk.
                 */
                 class SystemDisk : public AbstractModel
                 {

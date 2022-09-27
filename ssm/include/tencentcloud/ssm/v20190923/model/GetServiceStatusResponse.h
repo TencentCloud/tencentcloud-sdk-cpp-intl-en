@@ -68,10 +68,10 @@ namespace TencentCloud
                     bool InvalidTypeHasBeenSet() const;
 
                     /**
-                     * 获取`true`: allow SSM to manage Tencent Cloud API key secrets.
-`false`: forbid SSM to manage Tencent Cloud API key secrets.
-                     * @return AccessKeyEscrowEnabled `true`: allow SSM to manage Tencent Cloud API key secrets.
-`false`: forbid SSM to manage Tencent Cloud API key secrets.
+                     * 获取`true`: Allow SSM to manage Tencent Cloud API key secrets.
+`false`: Forbid SSM to manage Tencent Cloud API key secrets.
+                     * @return AccessKeyEscrowEnabled `true`: Allow SSM to manage Tencent Cloud API key secrets.
+`false`: Forbid SSM to manage Tencent Cloud API key secrets.
                      */
                     bool GetAccessKeyEscrowEnabled() const;
 
@@ -96,8 +96,8 @@ namespace TencentCloud
                     bool m_invalidTypeHasBeenSet;
 
                     /**
-                     * `true`: allow SSM to manage Tencent Cloud API key secrets.
-`false`: forbid SSM to manage Tencent Cloud API key secrets.
+                     * `true`: Allow SSM to manage Tencent Cloud API key secrets.
+`false`: Forbid SSM to manage Tencent Cloud API key secrets.
                      */
                     bool m_accessKeyEscrowEnabled;
                     bool m_accessKeyEscrowEnabledHasBeenSet;

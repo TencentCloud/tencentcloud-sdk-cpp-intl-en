@@ -115,6 +115,24 @@ namespace TencentCloud
                      */
                     bool DiskCountHasBeenSet() const;
 
+                    /**
+                     * 获取Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+                     * @return DiskBackupQuota Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+                     */
+                    int64_t GetDiskBackupQuota() const;
+
+                    /**
+                     * 设置Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+                     * @param DiskBackupQuota Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+                     */
+                    void SetDiskBackupQuota(const int64_t& _diskBackupQuota);
+
+                    /**
+                     * 判断参数 DiskBackupQuota 是否已赋值
+                     * @return DiskBackupQuota 是否已赋值
+                     */
+                    bool DiskBackupQuotaHasBeenSet() const;
+
                 private:
 
                     /**
@@ -140,6 +158,12 @@ namespace TencentCloud
                      */
                     int64_t m_diskCount;
                     bool m_diskCountHasBeenSet;
+
+                    /**
+                     * Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+                     */
+                    int64_t m_diskBackupQuota;
+                    bool m_diskBackupQuotaHasBeenSet;
 
                 };
             }

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Instance login configuration and information.
+                * Describes login settings of an instance.
                 */
                 class LoginSettings : public AbstractModel
                 {
