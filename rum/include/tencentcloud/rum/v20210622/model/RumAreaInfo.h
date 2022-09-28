@@ -118,6 +118,60 @@ namespace TencentCloud
                      */
                     bool AreaKeyHasBeenSet() const;
 
+                    /**
+                     * 获取Region ID.
+                     * @return AreaRegionID Region ID.
+                     */
+                    std::string GetAreaRegionID() const;
+
+                    /**
+                     * 设置Region ID.
+                     * @param AreaRegionID Region ID.
+                     */
+                    void SetAreaRegionID(const std::string& _areaRegionID);
+
+                    /**
+                     * 判断参数 AreaRegionID 是否已赋值
+                     * @return AreaRegionID 是否已赋值
+                     */
+                    bool AreaRegionIDHasBeenSet() const;
+
+                    /**
+                     * 获取Region code, such as “ap-xxx” (xxx is the region name).
+                     * @return AreaRegionCode Region code, such as “ap-xxx” (xxx is the region name).
+                     */
+                    std::string GetAreaRegionCode() const;
+
+                    /**
+                     * 设置Region code, such as “ap-xxx” (xxx is the region name).
+                     * @param AreaRegionCode Region code, such as “ap-xxx” (xxx is the region name).
+                     */
+                    void SetAreaRegionCode(const std::string& _areaRegionCode);
+
+                    /**
+                     * 判断参数 AreaRegionCode 是否已赋值
+                     * @return AreaRegionCode 是否已赋值
+                     */
+                    bool AreaRegionCodeHasBeenSet() const;
+
+                    /**
+                     * 获取Region abbreviation.
+                     * @return AreaAbbr Region abbreviation.
+                     */
+                    std::string GetAreaAbbr() const;
+
+                    /**
+                     * 设置Region abbreviation.
+                     * @param AreaAbbr Region abbreviation.
+                     */
+                    void SetAreaAbbr(const std::string& _areaAbbr);
+
+                    /**
+                     * 判断参数 AreaAbbr 是否已赋值
+                     * @return AreaAbbr 是否已赋值
+                     */
+                    bool AreaAbbrHasBeenSet() const;
+
                 private:
 
                     /**
@@ -143,6 +197,24 @@ namespace TencentCloud
                      */
                     std::string m_areaKey;
                     bool m_areaKeyHasBeenSet;
+
+                    /**
+                     * Region ID.
+                     */
+                    std::string m_areaRegionID;
+                    bool m_areaRegionIDHasBeenSet;
+
+                    /**
+                     * Region code, such as “ap-xxx” (xxx is the region name).
+                     */
+                    std::string m_areaRegionCode;
+                    bool m_areaRegionCodeHasBeenSet;
+
+                    /**
+                     * Region abbreviation.
+                     */
+                    std::string m_areaAbbr;
+                    bool m_areaAbbrHasBeenSet;
 
                 };
             }

@@ -25,9 +25,10 @@ set(iotcloud_public_header_model
   include/tencentcloud/iotcloud/v20210408/model/UpdateDevicesEnableStateResponse.h
   include/tencentcloud/iotcloud/v20210408/model/DescribePrivateCARequest.h
   include/tencentcloud/iotcloud/v20210408/model/DescribeProductCAResponse.h
-  include/tencentcloud/iotcloud/v20210408/model/SetProductsForbiddenStatusResponse.h
+  include/tencentcloud/iotcloud/v20210408/model/DeleteDeviceShadowResponse.h
   include/tencentcloud/iotcloud/v20210408/model/UpdatePrivateCAResponse.h
   include/tencentcloud/iotcloud/v20210408/model/DeletePrivateCAResponse.h
+  include/tencentcloud/iotcloud/v20210408/model/DeviceTag.h
   include/tencentcloud/iotcloud/v20210408/model/UpdatePrivateCARequest.h
   include/tencentcloud/iotcloud/v20210408/model/DescribePrivateCABindedProductsResponse.h
   include/tencentcloud/iotcloud/v20210408/model/DeleteDeviceRequest.h
@@ -36,13 +37,14 @@ set(iotcloud_public_header_model
   include/tencentcloud/iotcloud/v20210408/model/DescribeProductsRequest.h
   include/tencentcloud/iotcloud/v20210408/model/BindProductInfo.h
   include/tencentcloud/iotcloud/v20210408/model/DescribeDevicesResponse.h
-  include/tencentcloud/iotcloud/v20210408/model/DeviceTag.h
+  include/tencentcloud/iotcloud/v20210408/model/DeleteDeviceShadowRequest.h
   include/tencentcloud/iotcloud/v20210408/model/SetProductsForbiddenStatusRequest.h
   include/tencentcloud/iotcloud/v20210408/model/ProductInfo.h
   include/tencentcloud/iotcloud/v20210408/model/DescribeProductCARequest.h
   include/tencentcloud/iotcloud/v20210408/model/CreatePrivateCARequest.h
   include/tencentcloud/iotcloud/v20210408/model/DescribeProductResponse.h
   include/tencentcloud/iotcloud/v20210408/model/DescribeDeviceRequest.h
+  include/tencentcloud/iotcloud/v20210408/model/SetProductsForbiddenStatusResponse.h
   include/tencentcloud/iotcloud/v20210408/model/DeviceLabel.h
   include/tencentcloud/iotcloud/v20210408/model/UpdateProductDynamicRegisterRequest.h
   include/tencentcloud/iotcloud/v20210408/model/CertInfo.h
@@ -76,9 +78,10 @@ set(iotcloud_src
   src/v20210408/model/UpdateDevicesEnableStateResponse.cpp
   src/v20210408/model/DescribePrivateCARequest.cpp
   src/v20210408/model/DescribeProductCAResponse.cpp
-  src/v20210408/model/SetProductsForbiddenStatusResponse.cpp
+  src/v20210408/model/DeleteDeviceShadowResponse.cpp
   src/v20210408/model/UpdatePrivateCAResponse.cpp
   src/v20210408/model/DeletePrivateCAResponse.cpp
+  src/v20210408/model/DeviceTag.cpp
   src/v20210408/model/UpdatePrivateCARequest.cpp
   src/v20210408/model/DescribePrivateCABindedProductsResponse.cpp
   src/v20210408/model/DeleteDeviceRequest.cpp
@@ -87,13 +90,14 @@ set(iotcloud_src
   src/v20210408/model/DescribeProductsRequest.cpp
   src/v20210408/model/BindProductInfo.cpp
   src/v20210408/model/DescribeDevicesResponse.cpp
-  src/v20210408/model/DeviceTag.cpp
+  src/v20210408/model/DeleteDeviceShadowRequest.cpp
   src/v20210408/model/SetProductsForbiddenStatusRequest.cpp
   src/v20210408/model/ProductInfo.cpp
   src/v20210408/model/DescribeProductCARequest.cpp
   src/v20210408/model/CreatePrivateCARequest.cpp
   src/v20210408/model/DescribeProductResponse.cpp
   src/v20210408/model/DescribeDeviceRequest.cpp
+  src/v20210408/model/SetProductsForbiddenStatusResponse.cpp
   src/v20210408/model/DeviceLabel.cpp
   src/v20210408/model/UpdateProductDynamicRegisterRequest.cpp
   src/v20210408/model/CertInfo.cpp

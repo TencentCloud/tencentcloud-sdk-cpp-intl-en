@@ -115,6 +115,24 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
+                     * 获取See [CKafka Target](https://intl.cloud.tencent.com/document/product/1359/56084?from_cn_redirect=1)
+                     * @return EventPattern See [CKafka Target](https://intl.cloud.tencent.com/document/product/1359/56084?from_cn_redirect=1)
+                     */
+                    std::string GetEventPattern() const;
+
+                    /**
+                     * 设置See [CKafka Target](https://intl.cloud.tencent.com/document/product/1359/56084?from_cn_redirect=1)
+                     * @param EventPattern See [CKafka Target](https://intl.cloud.tencent.com/document/product/1359/56084?from_cn_redirect=1)
+                     */
+                    void SetEventPattern(const std::string& _eventPattern);
+
+                    /**
+                     * 判断参数 EventPattern 是否已赋值
+                     * @return EventPattern 是否已赋值
+                     */
+                    bool EventPatternHasBeenSet() const;
+
+                    /**
                      * 获取Event rule name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter
                      * @return RuleName Event rule name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter
                      */
@@ -157,6 +175,12 @@ namespace TencentCloud
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
+
+                    /**
+                     * See [CKafka Target](https://intl.cloud.tencent.com/document/product/1359/56084?from_cn_redirect=1)
+                     */
+                    std::string m_eventPattern;
+                    bool m_eventPatternHasBeenSet;
 
                     /**
                      * Event rule name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter

@@ -31,6 +31,8 @@
 #include <tencentcloud/iotcloud/v20210408/model/CreateProductResponse.h>
 #include <tencentcloud/iotcloud/v20210408/model/DeleteDeviceRequest.h>
 #include <tencentcloud/iotcloud/v20210408/model/DeleteDeviceResponse.h>
+#include <tencentcloud/iotcloud/v20210408/model/DeleteDeviceShadowRequest.h>
+#include <tencentcloud/iotcloud/v20210408/model/DeleteDeviceShadowResponse.h>
 #include <tencentcloud/iotcloud/v20210408/model/DeletePrivateCARequest.h>
 #include <tencentcloud/iotcloud/v20210408/model/DeletePrivateCAResponse.h>
 #include <tencentcloud/iotcloud/v20210408/model/DeleteProductRequest.h>
@@ -87,6 +89,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteDeviceResponse> DeleteDeviceOutcome;
                 typedef std::future<DeleteDeviceOutcome> DeleteDeviceOutcomeCallable;
                 typedef std::function<void(const IotcloudClient*, const Model::DeleteDeviceRequest&, DeleteDeviceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteDeviceAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteDeviceShadowResponse> DeleteDeviceShadowOutcome;
+                typedef std::future<DeleteDeviceShadowOutcome> DeleteDeviceShadowOutcomeCallable;
+                typedef std::function<void(const IotcloudClient*, const Model::DeleteDeviceShadowRequest&, DeleteDeviceShadowOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteDeviceShadowAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeletePrivateCAResponse> DeletePrivateCAOutcome;
                 typedef std::future<DeletePrivateCAOutcome> DeletePrivateCAOutcomeCallable;
                 typedef std::function<void(const IotcloudClient*, const Model::DeletePrivateCARequest&, DeletePrivateCAOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeletePrivateCAAsyncHandler;
@@ -170,6 +175,15 @@ namespace TencentCloud
                 DeleteDeviceOutcome DeleteDevice(const Model::DeleteDeviceRequest &request);
                 void DeleteDeviceAsync(const Model::DeleteDeviceRequest& request, const DeleteDeviceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteDeviceOutcomeCallable DeleteDeviceCallable(const Model::DeleteDeviceRequest& request);
+
+                /**
+                 *This API is used to delete a device shadow. 
+                 * @param req DeleteDeviceShadowRequest
+                 * @return DeleteDeviceShadowOutcome
+                 */
+                DeleteDeviceShadowOutcome DeleteDeviceShadow(const Model::DeleteDeviceShadowRequest &request);
+                void DeleteDeviceShadowAsync(const Model::DeleteDeviceShadowRequest& request, const DeleteDeviceShadowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteDeviceShadowOutcomeCallable DeleteDeviceShadowCallable(const Model::DeleteDeviceShadowRequest& request);
 
                 /**
                  *This API is used to delete a private CA certificate.
