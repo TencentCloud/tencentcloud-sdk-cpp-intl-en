@@ -34,7 +34,9 @@
 #include <tencentcloud/vod/v20180717/model/CreateImageSpriteTask2017.h>
 #include <tencentcloud/vod/v20180717/model/SnapshotByTimeOffsetTask2017.h>
 #include <tencentcloud/vod/v20180717/model/RemoveWatermarkTask.h>
+#include <tencentcloud/vod/v20180717/model/ExtractTraceWatermarkTask.h>
 #include <tencentcloud/vod/v20180717/model/ReviewAudioVideoTask.h>
+#include <tencentcloud/vod/v20180717/model/ReduceMediaBitrateTask.h>
 
 
 namespace TencentCloud
@@ -64,20 +66,24 @@ namespace TencentCloud
 <li>SplitMedia: Video splitting</li>
 <li>ComposeMedia: Media file production</li>
 <li>WechatPublish: WeChat publishing</li>
+<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
 <li>PullUpload: Pulling media files for upload</li>
 <li>FastClipMedia: Quick clipping</li>
 <li>RemoveWatermarkTask: Watermark removal</li>
 <li> ReviewAudioVideo: Moderation</li>
+<li> ReduceMediaBitrate: Bitrate reduction</li>
                      * @return TaskType The task type. Valid values:
 <li>Procedure: Video processing</li>
 <li>EditMedia: Video editing</li>
 <li>SplitMedia: Video splitting</li>
 <li>ComposeMedia: Media file production</li>
 <li>WechatPublish: WeChat publishing</li>
+<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
 <li>PullUpload: Pulling media files for upload</li>
 <li>FastClipMedia: Quick clipping</li>
 <li>RemoveWatermarkTask: Watermark removal</li>
 <li> ReviewAudioVideo: Moderation</li>
+<li> ReduceMediaBitrate: Bitrate reduction</li>
                      */
                     std::string GetTaskType() const;
 
@@ -324,6 +330,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RemoveWatermarkTaskHasBeenSet() const;
 
                     /**
+                     * 获取The information of a digital watermark extraction task. This parameter is valid only if `TaskType` is `ExtractTraceWatermark`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ExtractTraceWatermarkTask The information of a digital watermark extraction task. This parameter is valid only if `TaskType` is `ExtractTraceWatermark`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    ExtractTraceWatermarkTask GetExtractTraceWatermarkTask() const;
+
+                    /**
+                     * 判断参数 ExtractTraceWatermarkTask 是否已赋值
+                     * @return ExtractTraceWatermarkTask 是否已赋值
+                     */
+                    bool ExtractTraceWatermarkTaskHasBeenSet() const;
+
+                    /**
                      * 获取The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ReviewAudioVideoTask The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
@@ -337,6 +357,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ReviewAudioVideoTaskHasBeenSet() const;
 
+                    /**
+                     * 获取The information of a bitrate reduction task. This parameter is valid only if `TaskType` is `ReduceMediaBitrate`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ReduceMediaBitrateTask The information of a bitrate reduction task. This parameter is valid only if `TaskType` is `ReduceMediaBitrate`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    ReduceMediaBitrateTask GetReduceMediaBitrateTask() const;
+
+                    /**
+                     * 判断参数 ReduceMediaBitrateTask 是否已赋值
+                     * @return ReduceMediaBitrateTask 是否已赋值
+                     */
+                    bool ReduceMediaBitrateTaskHasBeenSet() const;
+
                 private:
 
                     /**
@@ -346,10 +380,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>SplitMedia: Video splitting</li>
 <li>ComposeMedia: Media file production</li>
 <li>WechatPublish: WeChat publishing</li>
+<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
 <li>PullUpload: Pulling media files for upload</li>
 <li>FastClipMedia: Quick clipping</li>
 <li>RemoveWatermarkTask: Watermark removal</li>
 <li> ReviewAudioVideo: Moderation</li>
+<li> ReduceMediaBitrate: Bitrate reduction</li>
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;
@@ -473,11 +509,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_removeWatermarkTaskHasBeenSet;
 
                     /**
+                     * The information of a digital watermark extraction task. This parameter is valid only if `TaskType` is `ExtractTraceWatermark`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    ExtractTraceWatermarkTask m_extractTraceWatermarkTask;
+                    bool m_extractTraceWatermarkTaskHasBeenSet;
+
+                    /**
                      * The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ReviewAudioVideoTask m_reviewAudioVideoTask;
                     bool m_reviewAudioVideoTaskHasBeenSet;
+
+                    /**
+                     * The information of a bitrate reduction task. This parameter is valid only if `TaskType` is `ReduceMediaBitrate`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    ReduceMediaBitrateTask m_reduceMediaBitrateTask;
+                    bool m_reduceMediaBitrateTaskHasBeenSet;
 
                 };
             }

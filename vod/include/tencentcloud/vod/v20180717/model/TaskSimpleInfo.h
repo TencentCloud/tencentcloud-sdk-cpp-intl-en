@@ -101,50 +101,54 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取Task type. Valid values:
-<li>Procedure: video processing task;</li>
-<li>EditMedia: video editing task</li>
-<li>WechatDistribute: release on WeChat task.</li>
-Task types compatible with v2017:
-<li>Transcode: transcoding task;</li>
-<li>SnapshotByTimeOffset: video screencapturing task</li>
-<li>Concat: video splicing task;</li>
-<li>Clip: video clipping task;</li>
-<li>ImageSprites: image sprite generating task.</li>
-                     * @return TaskType Task type. Valid values:
-<li>Procedure: video processing task;</li>
-<li>EditMedia: video editing task</li>
-<li>WechatDistribute: release on WeChat task.</li>
-Task types compatible with v2017:
-<li>Transcode: transcoding task;</li>
-<li>SnapshotByTimeOffset: video screencapturing task</li>
-<li>Concat: video splicing task;</li>
-<li>Clip: video clipping task;</li>
-<li>ImageSprites: image sprite generating task.</li>
+                     * 获取The task type. Valid values:
+<li>Procedure: Video processing</li>
+<li>EditMedia: Video editing</li>
+<li> ReduceMediaBitrate: Bitrate reduction</li>
+<li>WechatDistribute: Publishing to WeChat</li>
+Task types for v2017:
+<li>Transcode: Transcoding</li>
+<li>SnapshotByTimeOffset: Screencapturing</li>
+<li>Concat: Video splicing</li>
+<li>Clip: Video clipping</li>
+<li>ImageSprites: Image sprite generating</li>
+                     * @return TaskType The task type. Valid values:
+<li>Procedure: Video processing</li>
+<li>EditMedia: Video editing</li>
+<li> ReduceMediaBitrate: Bitrate reduction</li>
+<li>WechatDistribute: Publishing to WeChat</li>
+Task types for v2017:
+<li>Transcode: Transcoding</li>
+<li>SnapshotByTimeOffset: Screencapturing</li>
+<li>Concat: Video splicing</li>
+<li>Clip: Video clipping</li>
+<li>ImageSprites: Image sprite generating</li>
                      */
                     std::string GetTaskType() const;
 
                     /**
-                     * 设置Task type. Valid values:
-<li>Procedure: video processing task;</li>
-<li>EditMedia: video editing task</li>
-<li>WechatDistribute: release on WeChat task.</li>
-Task types compatible with v2017:
-<li>Transcode: transcoding task;</li>
-<li>SnapshotByTimeOffset: video screencapturing task</li>
-<li>Concat: video splicing task;</li>
-<li>Clip: video clipping task;</li>
-<li>ImageSprites: image sprite generating task.</li>
-                     * @param TaskType Task type. Valid values:
-<li>Procedure: video processing task;</li>
-<li>EditMedia: video editing task</li>
-<li>WechatDistribute: release on WeChat task.</li>
-Task types compatible with v2017:
-<li>Transcode: transcoding task;</li>
-<li>SnapshotByTimeOffset: video screencapturing task</li>
-<li>Concat: video splicing task;</li>
-<li>Clip: video clipping task;</li>
-<li>ImageSprites: image sprite generating task.</li>
+                     * 设置The task type. Valid values:
+<li>Procedure: Video processing</li>
+<li>EditMedia: Video editing</li>
+<li> ReduceMediaBitrate: Bitrate reduction</li>
+<li>WechatDistribute: Publishing to WeChat</li>
+Task types for v2017:
+<li>Transcode: Transcoding</li>
+<li>SnapshotByTimeOffset: Screencapturing</li>
+<li>Concat: Video splicing</li>
+<li>Clip: Video clipping</li>
+<li>ImageSprites: Image sprite generating</li>
+                     * @param TaskType The task type. Valid values:
+<li>Procedure: Video processing</li>
+<li>EditMedia: Video editing</li>
+<li> ReduceMediaBitrate: Bitrate reduction</li>
+<li>WechatDistribute: Publishing to WeChat</li>
+Task types for v2017:
+<li>Transcode: Transcoding</li>
+<li>SnapshotByTimeOffset: Screencapturing</li>
+<li>Concat: Video splicing</li>
+<li>Clip: Video clipping</li>
+<li>ImageSprites: Image sprite generating</li>
                      */
                     void SetTaskType(const std::string& _taskType);
 
@@ -265,16 +269,17 @@ Task types compatible with v2017:
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * Task type. Valid values:
-<li>Procedure: video processing task;</li>
-<li>EditMedia: video editing task</li>
-<li>WechatDistribute: release on WeChat task.</li>
-Task types compatible with v2017:
-<li>Transcode: transcoding task;</li>
-<li>SnapshotByTimeOffset: video screencapturing task</li>
-<li>Concat: video splicing task;</li>
-<li>Clip: video clipping task;</li>
-<li>ImageSprites: image sprite generating task.</li>
+                     * The task type. Valid values:
+<li>Procedure: Video processing</li>
+<li>EditMedia: Video editing</li>
+<li> ReduceMediaBitrate: Bitrate reduction</li>
+<li>WechatDistribute: Publishing to WeChat</li>
+Task types for v2017:
+<li>Transcode: Transcoding</li>
+<li>SnapshotByTimeOffset: Screencapturing</li>
+<li>Concat: Video splicing</li>
+<li>Clip: Video clipping</li>
+<li>ImageSprites: Image sprite generating</li>
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;

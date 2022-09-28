@@ -47,14 +47,40 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The watermark template ID.
-                     * @return Definition The watermark template ID.
+                     * 获取Whether to use digital watermarks. This parameter is required. Valid values:
+<li>ON</li>
+<li>OFF</li>
+                     * @return Switch Whether to use digital watermarks. This parameter is required. Valid values:
+<li>ON</li>
+<li>OFF</li>
+                     */
+                    std::string GetSwitch() const;
+
+                    /**
+                     * 设置Whether to use digital watermarks. This parameter is required. Valid values:
+<li>ON</li>
+<li>OFF</li>
+                     * @param Switch Whether to use digital watermarks. This parameter is required. Valid values:
+<li>ON</li>
+<li>OFF</li>
+                     */
+                    void SetSwitch(const std::string& _switch);
+
+                    /**
+                     * 判断参数 Switch 是否已赋值
+                     * @return Switch 是否已赋值
+                     */
+                    bool SwitchHasBeenSet() const;
+
+                    /**
+                     * 获取This parameter has been deprecated.
+                     * @return Definition This parameter has been deprecated.
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置The watermark template ID.
-                     * @param Definition The watermark template ID.
+                     * 设置This parameter has been deprecated.
+                     * @param Definition This parameter has been deprecated.
                      */
                     void SetDefinition(const uint64_t& _definition);
 
@@ -67,7 +93,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The watermark template ID.
+                     * Whether to use digital watermarks. This parameter is required. Valid values:
+<li>ON</li>
+<li>OFF</li>
+                     */
+                    std::string m_switch;
+                    bool m_switchHasBeenSet;
+
+                    /**
+                     * This parameter has been deprecated.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

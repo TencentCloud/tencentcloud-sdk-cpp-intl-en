@@ -40,7 +40,9 @@
 #include <tencentcloud/vod/v20180717/model/WechatMiniProgramPublishTask.h>
 #include <tencentcloud/vod/v20180717/model/RemoveWatermarkTask.h>
 #include <tencentcloud/vod/v20180717/model/RestoreMediaTask.h>
+#include <tencentcloud/vod/v20180717/model/ExtractTraceWatermarkTask.h>
 #include <tencentcloud/vod/v20180717/model/ReviewAudioVideoTask.h>
+#include <tencentcloud/vod/v20180717/model/ReduceMediaBitrateTask.h>
 
 
 namespace TencentCloud
@@ -91,8 +93,10 @@ namespace TencentCloud
 <li>SplitMediaComplete: Finished video splitting.</li>
 <li>WechatPublishComplete: Published to WeChat.</li>
 <li>ComposeMediaComplete: Finished producing the media file.</li>
+<li>WechatMiniProgramPublishComplete: Finished publishing on WeChat Mini Program</li>
 <li>FastClipMediaComplete: Finished quick clipping.</li>
-<li>ReviewAudioVideoComplete: Finished moderation</li>
+<li>ReviewAudioVideoComplete: Finished moderation.</li>
+<li>ExtractTraceWatermarkComplete: Finished digital watermark extraction.</li>
 <b>v2017 task types:</b>
 <li>TranscodeComplete: Finished video transcoding.</li>
 <li>ConcatComplete: Finished video splicing.</li>
@@ -108,8 +112,10 @@ namespace TencentCloud
 <li>SplitMediaComplete: Finished video splitting.</li>
 <li>WechatPublishComplete: Published to WeChat.</li>
 <li>ComposeMediaComplete: Finished producing the media file.</li>
+<li>WechatMiniProgramPublishComplete: Finished publishing on WeChat Mini Program</li>
 <li>FastClipMediaComplete: Finished quick clipping.</li>
-<li>ReviewAudioVideoComplete: Finished moderation</li>
+<li>ReviewAudioVideoComplete: Finished moderation.</li>
+<li>ExtractTraceWatermarkComplete: Finished digital watermark extraction.</li>
 <b>v2017 task types:</b>
 <li>TranscodeComplete: Finished video transcoding.</li>
 <li>ConcatComplete: Finished video splicing.</li>
@@ -129,8 +135,10 @@ namespace TencentCloud
 <li>SplitMediaComplete: Finished video splitting.</li>
 <li>WechatPublishComplete: Published to WeChat.</li>
 <li>ComposeMediaComplete: Finished producing the media file.</li>
+<li>WechatMiniProgramPublishComplete: Finished publishing on WeChat Mini Program</li>
 <li>FastClipMediaComplete: Finished quick clipping.</li>
-<li>ReviewAudioVideoComplete: Finished moderation</li>
+<li>ReviewAudioVideoComplete: Finished moderation.</li>
+<li>ExtractTraceWatermarkComplete: Finished digital watermark extraction.</li>
 <b>v2017 task types:</b>
 <li>TranscodeComplete: Finished video transcoding.</li>
 <li>ConcatComplete: Finished video splicing.</li>
@@ -146,8 +154,10 @@ namespace TencentCloud
 <li>SplitMediaComplete: Finished video splitting.</li>
 <li>WechatPublishComplete: Published to WeChat.</li>
 <li>ComposeMediaComplete: Finished producing the media file.</li>
+<li>WechatMiniProgramPublishComplete: Finished publishing on WeChat Mini Program</li>
 <li>FastClipMediaComplete: Finished quick clipping.</li>
-<li>ReviewAudioVideoComplete: Finished moderation</li>
+<li>ReviewAudioVideoComplete: Finished moderation.</li>
+<li>ExtractTraceWatermarkComplete: Finished digital watermark extraction.</li>
 <b>v2017 task types:</b>
 <li>TranscodeComplete: Finished video transcoding.</li>
 <li>ConcatComplete: Finished video splicing.</li>
@@ -516,6 +526,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool RestoreMediaCompleteEventHasBeenSet() const;
 
                     /**
+                     * 获取The callback for the completion of digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ExtractTraceWatermarkCompleteEvent The callback for the completion of digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    ExtractTraceWatermarkTask GetExtractTraceWatermarkCompleteEvent() const;
+
+                    /**
+                     * 设置The callback for the completion of digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ExtractTraceWatermarkCompleteEvent The callback for the completion of digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetExtractTraceWatermarkCompleteEvent(const ExtractTraceWatermarkTask& _extractTraceWatermarkCompleteEvent);
+
+                    /**
+                     * 判断参数 ExtractTraceWatermarkCompleteEvent 是否已赋值
+                     * @return ExtractTraceWatermarkCompleteEvent 是否已赋值
+                     */
+                    bool ExtractTraceWatermarkCompleteEventHasBeenSet() const;
+
+                    /**
                      * 获取The callback for the completion of the moderation task. This parameter is valid only if `EventType` is `ReviewAudioVideoComplete`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ReviewAudioVideoCompleteEvent The callback for the completion of the moderation task. This parameter is valid only if `EventType` is `ReviewAudioVideoComplete`.
@@ -537,6 +569,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ReviewAudioVideoCompleteEventHasBeenSet() const;
 
+                    /**
+                     * 获取The callback for the completion of bitrate reduction. This parameter is valid only if `EventType` is `ReduceMediaBitrateComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ReduceMediaBitrateCompleteEvent The callback for the completion of bitrate reduction. This parameter is valid only if `EventType` is `ReduceMediaBitrateComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    ReduceMediaBitrateTask GetReduceMediaBitrateCompleteEvent() const;
+
+                    /**
+                     * 设置The callback for the completion of bitrate reduction. This parameter is valid only if `EventType` is `ReduceMediaBitrateComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ReduceMediaBitrateCompleteEvent The callback for the completion of bitrate reduction. This parameter is valid only if `EventType` is `ReduceMediaBitrateComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetReduceMediaBitrateCompleteEvent(const ReduceMediaBitrateTask& _reduceMediaBitrateCompleteEvent);
+
+                    /**
+                     * 判断参数 ReduceMediaBitrateCompleteEvent 是否已赋值
+                     * @return ReduceMediaBitrateCompleteEvent 是否已赋值
+                     */
+                    bool ReduceMediaBitrateCompleteEventHasBeenSet() const;
+
                 private:
 
                     /**
@@ -555,8 +609,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>SplitMediaComplete: Finished video splitting.</li>
 <li>WechatPublishComplete: Published to WeChat.</li>
 <li>ComposeMediaComplete: Finished producing the media file.</li>
+<li>WechatMiniProgramPublishComplete: Finished publishing on WeChat Mini Program</li>
 <li>FastClipMediaComplete: Finished quick clipping.</li>
-<li>ReviewAudioVideoComplete: Finished moderation</li>
+<li>ReviewAudioVideoComplete: Finished moderation.</li>
+<li>ExtractTraceWatermarkComplete: Finished digital watermark extraction.</li>
 <b>v2017 task types:</b>
 <li>TranscodeComplete: Finished video transcoding.</li>
 <li>ConcatComplete: Finished video splicing.</li>
@@ -680,11 +736,25 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_restoreMediaCompleteEventHasBeenSet;
 
                     /**
+                     * The callback for the completion of digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    ExtractTraceWatermarkTask m_extractTraceWatermarkCompleteEvent;
+                    bool m_extractTraceWatermarkCompleteEventHasBeenSet;
+
+                    /**
                      * The callback for the completion of the moderation task. This parameter is valid only if `EventType` is `ReviewAudioVideoComplete`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ReviewAudioVideoTask m_reviewAudioVideoCompleteEvent;
                     bool m_reviewAudioVideoCompleteEventHasBeenSet;
+
+                    /**
+                     * The callback for the completion of bitrate reduction. This parameter is valid only if `EventType` is `ReduceMediaBitrateComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    ReduceMediaBitrateTask m_reduceMediaBitrateCompleteEvent;
+                    bool m_reduceMediaBitrateCompleteEventHasBeenSet;
 
                 };
             }
