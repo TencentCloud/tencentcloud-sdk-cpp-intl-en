@@ -632,6 +632,24 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
                      */
                     bool OperationDurationHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable the option for sending alerting messages over the public network.
+                     * @return KibanaAlteringPublicAccess Whether to enable the option for sending alerting messages over the public network.
+                     */
+                    std::string GetKibanaAlteringPublicAccess() const;
+
+                    /**
+                     * 设置Whether to enable the option for sending alerting messages over the public network.
+                     * @param KibanaAlteringPublicAccess Whether to enable the option for sending alerting messages over the public network.
+                     */
+                    void SetKibanaAlteringPublicAccess(const std::string& _kibanaAlteringPublicAccess);
+
+                    /**
+                     * 判断参数 KibanaAlteringPublicAccess 是否已赋值
+                     * @return KibanaAlteringPublicAccess 是否已赋值
+                     */
+                    bool KibanaAlteringPublicAccessHasBeenSet() const;
+
                 private:
 
                     /**
@@ -825,6 +843,12 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
                      */
                     OperationDurationUpdated m_operationDuration;
                     bool m_operationDurationHasBeenSet;
+
+                    /**
+                     * Whether to enable the option for sending alerting messages over the public network.
+                     */
+                    std::string m_kibanaAlteringPublicAccess;
+                    bool m_kibanaAlteringPublicAccessHasBeenSet;
 
                 };
             }

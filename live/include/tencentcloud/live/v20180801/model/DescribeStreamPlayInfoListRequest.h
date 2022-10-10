@@ -61,18 +61,18 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
-The start time and end time cannot be more than 24 hours apart and must be within the last 15 days.
-                     * @return EndTime End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
-The start time and end time cannot be more than 24 hours apart and must be within the last 15 days.
+                     * 获取The end time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
+The start time and end time cannot be more than 24 hours apart and must be within the past month.
+                     * @return EndTime The end time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
+The start time and end time cannot be more than 24 hours apart and must be within the past month.
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
-The start time and end time cannot be more than 24 hours apart and must be within the last 15 days.
-                     * @param EndTime End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
-The start time and end time cannot be more than 24 hours apart and must be within the last 15 days.
+                     * 设置The end time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
+The start time and end time cannot be more than 24 hours apart and must be within the past month.
+                     * @param EndTime The end time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
+The start time and end time cannot be more than 24 hours apart and must be within the past month.
                      */
                     void SetEndTime(const std::string& _endTime);
 
@@ -179,8 +179,8 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
-The start time and end time cannot be more than 24 hours apart and must be within the last 15 days.
+                     * The end time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
+The start time and end time cannot be more than 24 hours apart and must be within the past month.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;

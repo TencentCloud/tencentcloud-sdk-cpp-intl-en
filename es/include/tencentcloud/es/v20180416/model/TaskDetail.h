@@ -119,6 +119,28 @@ namespace TencentCloud
                      */
                     bool SubTasksHasBeenSet() const;
 
+                    /**
+                     * 获取The task time.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ElapsedTime The task time.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetElapsedTime() const;
+
+                    /**
+                     * 设置The task time.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ElapsedTime The task time.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetElapsedTime(const int64_t& _elapsedTime);
+
+                    /**
+                     * 判断参数 ElapsedTime 是否已赋值
+                     * @return ElapsedTime 是否已赋值
+                     */
+                    bool ElapsedTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -144,6 +166,13 @@ namespace TencentCloud
                      */
                     std::vector<SubTaskDetail> m_subTasks;
                     bool m_subTasksHasBeenSet;
+
+                    /**
+                     * The task time.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_elapsedTime;
+                    bool m_elapsedTimeHasBeenSet;
 
                 };
             }

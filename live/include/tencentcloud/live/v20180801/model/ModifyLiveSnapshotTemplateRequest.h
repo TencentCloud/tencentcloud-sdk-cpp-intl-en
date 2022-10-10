@@ -61,6 +61,76 @@ namespace TencentCloud
                     bool TemplateIdHasBeenSet() const;
 
                     /**
+                     * 获取The COS application ID.
+**Please note that this parameter is required now**.
+                     * @return CosAppId The COS application ID.
+**Please note that this parameter is required now**.
+                     */
+                    int64_t GetCosAppId() const;
+
+                    /**
+                     * 设置The COS application ID.
+**Please note that this parameter is required now**.
+                     * @param CosAppId The COS application ID.
+**Please note that this parameter is required now**.
+                     */
+                    void SetCosAppId(const int64_t& _cosAppId);
+
+                    /**
+                     * 判断参数 CosAppId 是否已赋值
+                     * @return CosAppId 是否已赋值
+                     */
+                    bool CosAppIdHasBeenSet() const;
+
+                    /**
+                     * 获取The COS bucket name.
+Note: Do not include the `-[appid]` part in the value of `CosBucket`.
+**Please note that this parameter is required now**.
+                     * @return CosBucket The COS bucket name.
+Note: Do not include the `-[appid]` part in the value of `CosBucket`.
+**Please note that this parameter is required now**.
+                     */
+                    std::string GetCosBucket() const;
+
+                    /**
+                     * 设置The COS bucket name.
+Note: Do not include the `-[appid]` part in the value of `CosBucket`.
+**Please note that this parameter is required now**.
+                     * @param CosBucket The COS bucket name.
+Note: Do not include the `-[appid]` part in the value of `CosBucket`.
+**Please note that this parameter is required now**.
+                     */
+                    void SetCosBucket(const std::string& _cosBucket);
+
+                    /**
+                     * 判断参数 CosBucket 是否已赋值
+                     * @return CosBucket 是否已赋值
+                     */
+                    bool CosBucketHasBeenSet() const;
+
+                    /**
+                     * 获取The COS region.
+**Please note that this parameter is required now**.
+                     * @return CosRegion The COS region.
+**Please note that this parameter is required now**.
+                     */
+                    std::string GetCosRegion() const;
+
+                    /**
+                     * 设置The COS region.
+**Please note that this parameter is required now**.
+                     * @param CosRegion The COS region.
+**Please note that this parameter is required now**.
+                     */
+                    void SetCosRegion(const std::string& _cosRegion);
+
+                    /**
+                     * 判断参数 CosRegion 是否已赋值
+                     * @return CosRegion 是否已赋值
+                     */
+                    bool CosRegionHasBeenSet() const;
+
+                    /**
                      * 获取Template name.
 Maximum length: 255 bytes.
                      * @return TemplateName Template name.
@@ -189,64 +259,6 @@ Value range: 5-300s.
                     bool PornFlagHasBeenSet() const;
 
                     /**
-                     * 获取COS application ID.
-                     * @return CosAppId COS application ID.
-                     */
-                    int64_t GetCosAppId() const;
-
-                    /**
-                     * 设置COS application ID.
-                     * @param CosAppId COS application ID.
-                     */
-                    void SetCosAppId(const int64_t& _cosAppId);
-
-                    /**
-                     * 判断参数 CosAppId 是否已赋值
-                     * @return CosAppId 是否已赋值
-                     */
-                    bool CosAppIdHasBeenSet() const;
-
-                    /**
-                     * 获取COS bucket name.
-Note: the value of `CosBucket` cannot contain `-[appid]`.
-                     * @return CosBucket COS bucket name.
-Note: the value of `CosBucket` cannot contain `-[appid]`.
-                     */
-                    std::string GetCosBucket() const;
-
-                    /**
-                     * 设置COS bucket name.
-Note: the value of `CosBucket` cannot contain `-[appid]`.
-                     * @param CosBucket COS bucket name.
-Note: the value of `CosBucket` cannot contain `-[appid]`.
-                     */
-                    void SetCosBucket(const std::string& _cosBucket);
-
-                    /**
-                     * 判断参数 CosBucket 是否已赋值
-                     * @return CosBucket 是否已赋值
-                     */
-                    bool CosBucketHasBeenSet() const;
-
-                    /**
-                     * 获取COS region.
-                     * @return CosRegion COS region.
-                     */
-                    std::string GetCosRegion() const;
-
-                    /**
-                     * 设置COS region.
-                     * @param CosRegion COS region.
-                     */
-                    void SetCosRegion(const std::string& _cosRegion);
-
-                    /**
-                     * 判断参数 CosRegion 是否已赋值
-                     * @return CosRegion 是否已赋值
-                     */
-                    bool CosRegionHasBeenSet() const;
-
-                    /**
                      * 获取COS bucket folder prefix.
                      * @return CosPrefix COS bucket folder prefix.
                      */
@@ -291,6 +303,28 @@ Note: the value of `CosBucket` cannot contain `-[appid]`.
                     bool m_templateIdHasBeenSet;
 
                     /**
+                     * The COS application ID.
+**Please note that this parameter is required now**.
+                     */
+                    int64_t m_cosAppId;
+                    bool m_cosAppIdHasBeenSet;
+
+                    /**
+                     * The COS bucket name.
+Note: Do not include the `-[appid]` part in the value of `CosBucket`.
+**Please note that this parameter is required now**.
+                     */
+                    std::string m_cosBucket;
+                    bool m_cosBucketHasBeenSet;
+
+                    /**
+                     * The COS region.
+**Please note that this parameter is required now**.
+                     */
+                    std::string m_cosRegion;
+                    bool m_cosRegionHasBeenSet;
+
+                    /**
                      * Template name.
 Maximum length: 255 bytes.
                      */
@@ -330,25 +364,6 @@ Value range: 5-300s.
                      */
                     int64_t m_pornFlag;
                     bool m_pornFlagHasBeenSet;
-
-                    /**
-                     * COS application ID.
-                     */
-                    int64_t m_cosAppId;
-                    bool m_cosAppIdHasBeenSet;
-
-                    /**
-                     * COS bucket name.
-Note: the value of `CosBucket` cannot contain `-[appid]`.
-                     */
-                    std::string m_cosBucket;
-                    bool m_cosBucketHasBeenSet;
-
-                    /**
-                     * COS region.
-                     */
-                    std::string m_cosRegion;
-                    bool m_cosRegionHasBeenSet;
 
                     /**
                      * COS bucket folder prefix.

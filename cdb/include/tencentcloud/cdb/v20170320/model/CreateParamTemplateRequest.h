@@ -151,6 +151,24 @@ namespace TencentCloud
                      */
                     bool TemplateTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Instance engine type. Valid values: `InnoDB` (default), `RocksDB`.
+                     * @return EngineType Instance engine type. Valid values: `InnoDB` (default), `RocksDB`.
+                     */
+                    std::string GetEngineType() const;
+
+                    /**
+                     * 设置Instance engine type. Valid values: `InnoDB` (default), `RocksDB`.
+                     * @param EngineType Instance engine type. Valid values: `InnoDB` (default), `RocksDB`.
+                     */
+                    void SetEngineType(const std::string& _engineType);
+
+                    /**
+                     * 判断参数 EngineType 是否已赋值
+                     * @return EngineType 是否已赋值
+                     */
+                    bool EngineTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -188,6 +206,12 @@ namespace TencentCloud
                      */
                     std::string m_templateType;
                     bool m_templateTypeHasBeenSet;
+
+                    /**
+                     * Instance engine type. Valid values: `InnoDB` (default), `RocksDB`.
+                     */
+                    std::string m_engineType;
+                    bool m_engineTypeHasBeenSet;
 
                 };
             }

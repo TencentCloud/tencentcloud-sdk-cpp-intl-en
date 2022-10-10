@@ -121,6 +121,8 @@
 #include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQNamespacesResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQTopicsRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQTopicsResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQVipInstancesRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribeRocketMQVipInstancesResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRolesRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRolesResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeSubscriptionsRequest.h>
@@ -332,6 +334,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeRocketMQTopicsResponse> DescribeRocketMQTopicsOutcome;
                 typedef std::future<DescribeRocketMQTopicsOutcome> DescribeRocketMQTopicsOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DescribeRocketMQTopicsRequest&, DescribeRocketMQTopicsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRocketMQTopicsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRocketMQVipInstancesResponse> DescribeRocketMQVipInstancesOutcome;
+                typedef std::future<DescribeRocketMQVipInstancesOutcome> DescribeRocketMQVipInstancesOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::DescribeRocketMQVipInstancesRequest&, DescribeRocketMQVipInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRocketMQVipInstancesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeRolesResponse> DescribeRolesOutcome;
                 typedef std::future<DescribeRolesOutcome> DescribeRolesOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DescribeRolesRequest&, DescribeRolesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRolesAsyncHandler;
@@ -852,6 +857,15 @@ namespace TencentCloud
                 DescribeRocketMQTopicsOutcomeCallable DescribeRocketMQTopicsCallable(const Model::DescribeRocketMQTopicsRequest& request);
 
                 /**
+                 *This API is used to query the list of the purchased TDMQ for RocketMQ exclusive instances.
+                 * @param req DescribeRocketMQVipInstancesRequest
+                 * @return DescribeRocketMQVipInstancesOutcome
+                 */
+                DescribeRocketMQVipInstancesOutcome DescribeRocketMQVipInstances(const Model::DescribeRocketMQVipInstancesRequest &request);
+                void DescribeRocketMQVipInstancesAsync(const Model::DescribeRocketMQVipInstancesRequest& request, const DescribeRocketMQVipInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRocketMQVipInstancesOutcomeCallable DescribeRocketMQVipInstancesCallable(const Model::DescribeRocketMQVipInstancesRequest& request);
+
+                /**
                  *This API is used to get the list of roles.
                  * @param req DescribeRolesRequest
                  * @return DescribeRolesOutcome
@@ -996,11 +1010,11 @@ namespace TencentCloud
                 PublishCmqMsgOutcomeCallable PublishCmqMsgCallable(const Model::PublishCmqMsgRequest& request);
 
                 /**
-                 *This API is used to receive messages sent to a specified topic. If this API is called when there are no messages in the topic, the `ReceiveTimeout` exception will be reported.
+                 *Currently, the `ReceiveMessage` API only supports partitioned topics. It is used to receive messages sent to a specified partitioned topic. If it is called when there are no messages in the partitioned topic, the `ReceiveTimeout` exception will be reported.
 
 Instructions on how to use `BatchReceivePolicy`:
 
-`BatchReceive` has the three parameters:
+`BatchReceive` has three parameters:
 
 ● `MaxNumMessages`: The maximum number of messages returned by `Receive` when `BatchReceive` is used.
 ● `MaxNumBytes`: The maximum size (in bytes) of the message returned by `Receive` when `BatchReceive` is used.

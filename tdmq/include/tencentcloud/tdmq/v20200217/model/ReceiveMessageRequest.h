@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool ReceiverQueueSizeHasBeenSet() const;
 
                     /**
-                     * 获取Default value: Latest. It is used to determine the position where the consumer initially receives messages. Valid values: Earliest, Latest.
-                     * @return SubInitialPosition Default value: Latest. It is used to determine the position where the consumer initially receives messages. Valid values: Earliest, Latest.
+                     * 获取A parameter used to determine the position where the consumer initially receives messages. Valid values: `Earliest` (default), `Latest`.
+                     * @return SubInitialPosition A parameter used to determine the position where the consumer initially receives messages. Valid values: `Earliest` (default), `Latest`.
                      */
                     std::string GetSubInitialPosition() const;
 
                     /**
-                     * 设置Default value: Latest. It is used to determine the position where the consumer initially receives messages. Valid values: Earliest, Latest.
-                     * @param SubInitialPosition Default value: Latest. It is used to determine the position where the consumer initially receives messages. Valid values: Earliest, Latest.
+                     * 设置A parameter used to determine the position where the consumer initially receives messages. Valid values: `Earliest` (default), `Latest`.
+                     * @param SubInitialPosition A parameter used to determine the position where the consumer initially receives messages. Valid values: `Earliest` (default), `Latest`.
                      */
                     void SetSubInitialPosition(const std::string& _subInitialPosition);
 
@@ -189,7 +189,7 @@ namespace TencentCloud
                     bool m_receiverQueueSizeHasBeenSet;
 
                     /**
-                     * Default value: Latest. It is used to determine the position where the consumer initially receives messages. Valid values: Earliest, Latest.
+                     * A parameter used to determine the position where the consumer initially receives messages. Valid values: `Earliest` (default), `Latest`.
                      */
                     std::string m_subInitialPosition;
                     bool m_subInitialPositionHasBeenSet;

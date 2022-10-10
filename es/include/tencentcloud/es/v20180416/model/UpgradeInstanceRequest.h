@@ -168,6 +168,24 @@ namespace TencentCloud
                      */
                     bool CosBackupHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to skip the check and perform a force restart in the rolling mode. Default value: `false`.
+                     * @return SkipCheckForceRestart Whether to skip the check and perform a force restart in the rolling mode. Default value: `false`.
+                     */
+                    bool GetSkipCheckForceRestart() const;
+
+                    /**
+                     * 设置Whether to skip the check and perform a force restart in the rolling mode. Default value: `false`.
+                     * @param SkipCheckForceRestart Whether to skip the check and perform a force restart in the rolling mode. Default value: `false`.
+                     */
+                    void SetSkipCheckForceRestart(const bool& _skipCheckForceRestart);
+
+                    /**
+                     * 判断参数 SkipCheckForceRestart 是否已赋值
+                     * @return SkipCheckForceRestart 是否已赋值
+                     */
+                    bool SkipCheckForceRestartHasBeenSet() const;
+
                 private:
 
                     /**
@@ -211,6 +229,12 @@ namespace TencentCloud
                      */
                     bool m_cosBackup;
                     bool m_cosBackupHasBeenSet;
+
+                    /**
+                     * Whether to skip the check and perform a force restart in the rolling mode. Default value: `false`.
+                     */
+                    bool m_skipCheckForceRestart;
+                    bool m_skipCheckForceRestartHasBeenSet;
 
                 };
             }

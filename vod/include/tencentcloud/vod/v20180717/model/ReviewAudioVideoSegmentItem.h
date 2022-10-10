@@ -258,13 +258,17 @@ Valid values when `Form` is `Voice` and `Label` is `Porn`:
 
                     /**
                      * 获取The pixel coordinates ([x1, y1, x2, y2]) of the top-left corner and bottom-right corner of the suspicious text. This parameter is valid only if `Form` is `OCR`.
+<font color=red>Note</font>: This parameter is not supported currently.
                      * @return AreaCoordSet The pixel coordinates ([x1, y1, x2, y2]) of the top-left corner and bottom-right corner of the suspicious text. This parameter is valid only if `Form` is `OCR`.
+<font color=red>Note</font>: This parameter is not supported currently.
                      */
                     std::vector<int64_t> GetAreaCoordSet() const;
 
                     /**
                      * 设置The pixel coordinates ([x1, y1, x2, y2]) of the top-left corner and bottom-right corner of the suspicious text. This parameter is valid only if `Form` is `OCR`.
+<font color=red>Note</font>: This parameter is not supported currently.
                      * @param AreaCoordSet The pixel coordinates ([x1, y1, x2, y2]) of the top-left corner and bottom-right corner of the suspicious text. This parameter is valid only if `Form` is `OCR`.
+<font color=red>Note</font>: This parameter is not supported currently.
                      */
                     void SetAreaCoordSet(const std::vector<int64_t>& _areaCoordSet);
 
@@ -377,6 +381,7 @@ Valid values when `Form` is `Voice` and `Label` is `Porn`:
 
                     /**
                      * The pixel coordinates ([x1, y1, x2, y2]) of the top-left corner and bottom-right corner of the suspicious text. This parameter is valid only if `Form` is `OCR`.
+<font color=red>Note</font>: This parameter is not supported currently.
                      */
                     std::vector<int64_t> m_areaCoordSet;
                     bool m_areaCoordSetHasBeenSet;

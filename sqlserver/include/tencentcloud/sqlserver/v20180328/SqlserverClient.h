@@ -25,12 +25,18 @@
 #include <tencentcloud/core/AsyncCallerContext.h>
 #include <tencentcloud/sqlserver/v20180328/model/CloneDBRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/CloneDBResponse.h>
+#include <tencentcloud/sqlserver/v20180328/model/CloseInterCommunicationRequest.h>
+#include <tencentcloud/sqlserver/v20180328/model/CloseInterCommunicationResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/CreateAccountRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/CreateAccountResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/CreateBackupRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/CreateBackupResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/CreateBackupMigrationRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/CreateBackupMigrationResponse.h>
+#include <tencentcloud/sqlserver/v20180328/model/CreateBusinessDBInstancesRequest.h>
+#include <tencentcloud/sqlserver/v20180328/model/CreateBusinessDBInstancesResponse.h>
+#include <tencentcloud/sqlserver/v20180328/model/CreateBusinessIntelligenceFileRequest.h>
+#include <tencentcloud/sqlserver/v20180328/model/CreateBusinessIntelligenceFileResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/CreateDBRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/CreateDBResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/CreateDBInstancesRequest.h>
@@ -43,6 +49,8 @@
 #include <tencentcloud/sqlserver/v20180328/model/DeleteAccountResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DeleteBackupMigrationRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/DeleteBackupMigrationResponse.h>
+#include <tencentcloud/sqlserver/v20180328/model/DeleteBusinessIntelligenceFileRequest.h>
+#include <tencentcloud/sqlserver/v20180328/model/DeleteBusinessIntelligenceFileResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DeleteDBRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/DeleteDBResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DeleteIncrementalMigrationRequest.h>
@@ -61,8 +69,12 @@
 #include <tencentcloud/sqlserver/v20180328/model/DescribeBackupUploadSizeResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeBackupsRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeBackupsResponse.h>
+#include <tencentcloud/sqlserver/v20180328/model/DescribeBusinessIntelligenceFileRequest.h>
+#include <tencentcloud/sqlserver/v20180328/model/DescribeBusinessIntelligenceFileResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeDBCharsetsRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeDBCharsetsResponse.h>
+#include <tencentcloud/sqlserver/v20180328/model/DescribeDBInstanceInterRequest.h>
+#include <tencentcloud/sqlserver/v20180328/model/DescribeDBInstanceInterResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeDBInstancesRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeDBInstancesResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/DescribeDBsRequest.h>
@@ -129,6 +141,8 @@
 #include <tencentcloud/sqlserver/v20180328/model/ModifyInstanceParamResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/ModifyMigrationRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/ModifyMigrationResponse.h>
+#include <tencentcloud/sqlserver/v20180328/model/OpenInterCommunicationRequest.h>
+#include <tencentcloud/sqlserver/v20180328/model/OpenInterCommunicationResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/RecycleDBInstanceRequest.h>
 #include <tencentcloud/sqlserver/v20180328/model/RecycleDBInstanceResponse.h>
 #include <tencentcloud/sqlserver/v20180328/model/ResetAccountPasswordRequest.h>
@@ -166,6 +180,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CloneDBResponse> CloneDBOutcome;
                 typedef std::future<CloneDBOutcome> CloneDBOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::CloneDBRequest&, CloneDBOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CloneDBAsyncHandler;
+                typedef Outcome<Core::Error, Model::CloseInterCommunicationResponse> CloseInterCommunicationOutcome;
+                typedef std::future<CloseInterCommunicationOutcome> CloseInterCommunicationOutcomeCallable;
+                typedef std::function<void(const SqlserverClient*, const Model::CloseInterCommunicationRequest&, CloseInterCommunicationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CloseInterCommunicationAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateAccountResponse> CreateAccountOutcome;
                 typedef std::future<CreateAccountOutcome> CreateAccountOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::CreateAccountRequest&, CreateAccountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAccountAsyncHandler;
@@ -175,6 +192,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateBackupMigrationResponse> CreateBackupMigrationOutcome;
                 typedef std::future<CreateBackupMigrationOutcome> CreateBackupMigrationOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::CreateBackupMigrationRequest&, CreateBackupMigrationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateBackupMigrationAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateBusinessDBInstancesResponse> CreateBusinessDBInstancesOutcome;
+                typedef std::future<CreateBusinessDBInstancesOutcome> CreateBusinessDBInstancesOutcomeCallable;
+                typedef std::function<void(const SqlserverClient*, const Model::CreateBusinessDBInstancesRequest&, CreateBusinessDBInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateBusinessDBInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateBusinessIntelligenceFileResponse> CreateBusinessIntelligenceFileOutcome;
+                typedef std::future<CreateBusinessIntelligenceFileOutcome> CreateBusinessIntelligenceFileOutcomeCallable;
+                typedef std::function<void(const SqlserverClient*, const Model::CreateBusinessIntelligenceFileRequest&, CreateBusinessIntelligenceFileOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateBusinessIntelligenceFileAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateDBResponse> CreateDBOutcome;
                 typedef std::future<CreateDBOutcome> CreateDBOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::CreateDBRequest&, CreateDBOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDBAsyncHandler;
@@ -193,6 +216,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteBackupMigrationResponse> DeleteBackupMigrationOutcome;
                 typedef std::future<DeleteBackupMigrationOutcome> DeleteBackupMigrationOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::DeleteBackupMigrationRequest&, DeleteBackupMigrationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteBackupMigrationAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteBusinessIntelligenceFileResponse> DeleteBusinessIntelligenceFileOutcome;
+                typedef std::future<DeleteBusinessIntelligenceFileOutcome> DeleteBusinessIntelligenceFileOutcomeCallable;
+                typedef std::function<void(const SqlserverClient*, const Model::DeleteBusinessIntelligenceFileRequest&, DeleteBusinessIntelligenceFileOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteBusinessIntelligenceFileAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteDBResponse> DeleteDBOutcome;
                 typedef std::future<DeleteDBOutcome> DeleteDBOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::DeleteDBRequest&, DeleteDBOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteDBAsyncHandler;
@@ -220,9 +246,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeBackupsResponse> DescribeBackupsOutcome;
                 typedef std::future<DescribeBackupsOutcome> DescribeBackupsOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::DescribeBackupsRequest&, DescribeBackupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBackupsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBusinessIntelligenceFileResponse> DescribeBusinessIntelligenceFileOutcome;
+                typedef std::future<DescribeBusinessIntelligenceFileOutcome> DescribeBusinessIntelligenceFileOutcomeCallable;
+                typedef std::function<void(const SqlserverClient*, const Model::DescribeBusinessIntelligenceFileRequest&, DescribeBusinessIntelligenceFileOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBusinessIntelligenceFileAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDBCharsetsResponse> DescribeDBCharsetsOutcome;
                 typedef std::future<DescribeDBCharsetsOutcome> DescribeDBCharsetsOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::DescribeDBCharsetsRequest&, DescribeDBCharsetsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBCharsetsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDBInstanceInterResponse> DescribeDBInstanceInterOutcome;
+                typedef std::future<DescribeDBInstanceInterOutcome> DescribeDBInstanceInterOutcomeCallable;
+                typedef std::function<void(const SqlserverClient*, const Model::DescribeDBInstanceInterRequest&, DescribeDBInstanceInterOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBInstanceInterAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDBInstancesResponse> DescribeDBInstancesOutcome;
                 typedef std::future<DescribeDBInstancesOutcome> DescribeDBInstancesOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::DescribeDBInstancesRequest&, DescribeDBInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBInstancesAsyncHandler;
@@ -322,6 +354,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyMigrationResponse> ModifyMigrationOutcome;
                 typedef std::future<ModifyMigrationOutcome> ModifyMigrationOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::ModifyMigrationRequest&, ModifyMigrationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyMigrationAsyncHandler;
+                typedef Outcome<Core::Error, Model::OpenInterCommunicationResponse> OpenInterCommunicationOutcome;
+                typedef std::future<OpenInterCommunicationOutcome> OpenInterCommunicationOutcomeCallable;
+                typedef std::function<void(const SqlserverClient*, const Model::OpenInterCommunicationRequest&, OpenInterCommunicationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> OpenInterCommunicationAsyncHandler;
                 typedef Outcome<Core::Error, Model::RecycleDBInstanceResponse> RecycleDBInstanceOutcome;
                 typedef std::future<RecycleDBInstanceOutcome> RecycleDBInstanceOutcomeCallable;
                 typedef std::function<void(const SqlserverClient*, const Model::RecycleDBInstanceRequest&, RecycleDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecycleDBInstanceAsyncHandler;
@@ -365,6 +400,15 @@ namespace TencentCloud
                 CloneDBOutcomeCallable CloneDBCallable(const Model::CloneDBRequest& request);
 
                 /**
+                 *This API is used to disable instance interconnection.
+                 * @param req CloseInterCommunicationRequest
+                 * @return CloseInterCommunicationOutcome
+                 */
+                CloseInterCommunicationOutcome CloseInterCommunication(const Model::CloseInterCommunicationRequest &request);
+                void CloseInterCommunicationAsync(const Model::CloseInterCommunicationRequest& request, const CloseInterCommunicationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CloseInterCommunicationOutcomeCallable CloseInterCommunicationCallable(const Model::CloseInterCommunicationRequest& request);
+
+                /**
                  *This API is used to create an instance account.
                  * @param req CreateAccountRequest
                  * @return CreateAccountOutcome
@@ -390,6 +434,24 @@ namespace TencentCloud
                 CreateBackupMigrationOutcome CreateBackupMigration(const Model::CreateBackupMigrationRequest &request);
                 void CreateBackupMigrationAsync(const Model::CreateBackupMigrationRequest& request, const CreateBackupMigrationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateBackupMigrationOutcomeCallable CreateBackupMigrationCallable(const Model::CreateBackupMigrationRequest& request);
+
+                /**
+                 *This API is used to create a business intelligence service instance.
+                 * @param req CreateBusinessDBInstancesRequest
+                 * @return CreateBusinessDBInstancesOutcome
+                 */
+                CreateBusinessDBInstancesOutcome CreateBusinessDBInstances(const Model::CreateBusinessDBInstancesRequest &request);
+                void CreateBusinessDBInstancesAsync(const Model::CreateBusinessDBInstancesRequest& request, const CreateBusinessDBInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateBusinessDBInstancesOutcomeCallable CreateBusinessDBInstancesCallable(const Model::CreateBusinessDBInstancesRequest& request);
+
+                /**
+                 *This API is used to add a business intelligence service file.
+                 * @param req CreateBusinessIntelligenceFileRequest
+                 * @return CreateBusinessIntelligenceFileOutcome
+                 */
+                CreateBusinessIntelligenceFileOutcome CreateBusinessIntelligenceFile(const Model::CreateBusinessIntelligenceFileRequest &request);
+                void CreateBusinessIntelligenceFileAsync(const Model::CreateBusinessIntelligenceFileRequest& request, const CreateBusinessIntelligenceFileAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateBusinessIntelligenceFileOutcomeCallable CreateBusinessIntelligenceFileCallable(const Model::CreateBusinessIntelligenceFileRequest& request);
 
                 /**
                  *This API is used to create a database.
@@ -444,6 +506,15 @@ namespace TencentCloud
                 DeleteBackupMigrationOutcome DeleteBackupMigration(const Model::DeleteBackupMigrationRequest &request);
                 void DeleteBackupMigrationAsync(const Model::DeleteBackupMigrationRequest& request, const DeleteBackupMigrationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteBackupMigrationOutcomeCallable DeleteBackupMigrationCallable(const Model::DeleteBackupMigrationRequest& request);
+
+                /**
+                 *This API is used to delete a business intelligence service file.
+                 * @param req DeleteBusinessIntelligenceFileRequest
+                 * @return DeleteBusinessIntelligenceFileOutcome
+                 */
+                DeleteBusinessIntelligenceFileOutcome DeleteBusinessIntelligenceFile(const Model::DeleteBusinessIntelligenceFileRequest &request);
+                void DeleteBusinessIntelligenceFileAsync(const Model::DeleteBusinessIntelligenceFileRequest& request, const DeleteBusinessIntelligenceFileAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteBusinessIntelligenceFileOutcomeCallable DeleteBusinessIntelligenceFileCallable(const Model::DeleteBusinessIntelligenceFileRequest& request);
 
                 /**
                  *This API is used to drop a database.
@@ -527,6 +598,15 @@ namespace TencentCloud
                 DescribeBackupsOutcomeCallable DescribeBackupsCallable(const Model::DescribeBackupsRequest& request);
 
                 /**
+                 *This API is used to query the files required by business intelligence service.
+                 * @param req DescribeBusinessIntelligenceFileRequest
+                 * @return DescribeBusinessIntelligenceFileOutcome
+                 */
+                DescribeBusinessIntelligenceFileOutcome DescribeBusinessIntelligenceFile(const Model::DescribeBusinessIntelligenceFileRequest &request);
+                void DescribeBusinessIntelligenceFileAsync(const Model::DescribeBusinessIntelligenceFileRequest& request, const DescribeBusinessIntelligenceFileAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBusinessIntelligenceFileOutcomeCallable DescribeBusinessIntelligenceFileCallable(const Model::DescribeBusinessIntelligenceFileRequest& request);
+
+                /**
                  *This API is used to query the database character sets supported by an instance.
                  * @param req DescribeDBCharsetsRequest
                  * @return DescribeDBCharsetsOutcome
@@ -534,6 +614,15 @@ namespace TencentCloud
                 DescribeDBCharsetsOutcome DescribeDBCharsets(const Model::DescribeDBCharsetsRequest &request);
                 void DescribeDBCharsetsAsync(const Model::DescribeDBCharsetsRequest& request, const DescribeDBCharsetsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeDBCharsetsOutcomeCallable DescribeDBCharsetsCallable(const Model::DescribeDBCharsetsRequest& request);
+
+                /**
+                 *This API is used to query the information of the interconnected instances.
+                 * @param req DescribeDBInstanceInterRequest
+                 * @return DescribeDBInstanceInterOutcome
+                 */
+                DescribeDBInstanceInterOutcome DescribeDBInstanceInter(const Model::DescribeDBInstanceInterRequest &request);
+                void DescribeDBInstanceInterAsync(const Model::DescribeDBInstanceInterRequest& request, const DescribeDBInstanceInterAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDBInstanceInterOutcomeCallable DescribeDBInstanceInterCallable(const Model::DescribeDBInstanceInterRequest& request);
 
                 /**
                  *This API is used to query the list of instances.
@@ -833,6 +922,15 @@ Before you modify a parameter, you can use the `DescribeInstanceParams` API to q
                 ModifyMigrationOutcome ModifyMigration(const Model::ModifyMigrationRequest &request);
                 void ModifyMigrationAsync(const Model::ModifyMigrationRequest& request, const ModifyMigrationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyMigrationOutcomeCallable ModifyMigrationCallable(const Model::ModifyMigrationRequest& request);
+
+                /**
+                 *This API is used to enable instance interconnection, which can interconnect business intelligence services.
+                 * @param req OpenInterCommunicationRequest
+                 * @return OpenInterCommunicationOutcome
+                 */
+                OpenInterCommunicationOutcome OpenInterCommunication(const Model::OpenInterCommunicationRequest &request);
+                void OpenInterCommunicationAsync(const Model::OpenInterCommunicationRequest& request, const OpenInterCommunicationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                OpenInterCommunicationOutcomeCallable OpenInterCommunicationCallable(const Model::OpenInterCommunicationRequest& request);
 
                 /**
                  *This API is used to return a deactivated SQL Server instance.

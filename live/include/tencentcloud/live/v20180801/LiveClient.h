@@ -29,6 +29,8 @@
 #include <tencentcloud/live/v20180801/model/AddLiveDomainResponse.h>
 #include <tencentcloud/live/v20180801/model/AddLiveWatermarkRequest.h>
 #include <tencentcloud/live/v20180801/model/AddLiveWatermarkResponse.h>
+#include <tencentcloud/live/v20180801/model/AuthenticateDomainOwnerRequest.h>
+#include <tencentcloud/live/v20180801/model/AuthenticateDomainOwnerResponse.h>
 #include <tencentcloud/live/v20180801/model/CancelCommonMixStreamRequest.h>
 #include <tencentcloud/live/v20180801/model/CancelCommonMixStreamResponse.h>
 #include <tencentcloud/live/v20180801/model/CreateCommonMixStreamRequest.h>
@@ -177,6 +179,8 @@
 #include <tencentcloud/live/v20180801/model/DescribeStreamPlayInfoListResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeTopClientIpSumInfoListRequest.h>
 #include <tencentcloud/live/v20180801/model/DescribeTopClientIpSumInfoListResponse.h>
+#include <tencentcloud/live/v20180801/model/DescribeTranscodeTaskNumRequest.h>
+#include <tencentcloud/live/v20180801/model/DescribeTranscodeTaskNumResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeUploadStreamNumsRequest.h>
 #include <tencentcloud/live/v20180801/model/DescribeUploadStreamNumsResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeVisitTopSumInfoListRequest.h>
@@ -242,6 +246,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::AddLiveWatermarkResponse> AddLiveWatermarkOutcome;
                 typedef std::future<AddLiveWatermarkOutcome> AddLiveWatermarkOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::AddLiveWatermarkRequest&, AddLiveWatermarkOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddLiveWatermarkAsyncHandler;
+                typedef Outcome<Core::Error, Model::AuthenticateDomainOwnerResponse> AuthenticateDomainOwnerOutcome;
+                typedef std::future<AuthenticateDomainOwnerOutcome> AuthenticateDomainOwnerOutcomeCallable;
+                typedef std::function<void(const LiveClient*, const Model::AuthenticateDomainOwnerRequest&, AuthenticateDomainOwnerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AuthenticateDomainOwnerAsyncHandler;
                 typedef Outcome<Core::Error, Model::CancelCommonMixStreamResponse> CancelCommonMixStreamOutcome;
                 typedef std::future<CancelCommonMixStreamOutcome> CancelCommonMixStreamOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::CancelCommonMixStreamRequest&, CancelCommonMixStreamOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CancelCommonMixStreamAsyncHandler;
@@ -464,6 +471,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeTopClientIpSumInfoListResponse> DescribeTopClientIpSumInfoListOutcome;
                 typedef std::future<DescribeTopClientIpSumInfoListOutcome> DescribeTopClientIpSumInfoListOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeTopClientIpSumInfoListRequest&, DescribeTopClientIpSumInfoListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTopClientIpSumInfoListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeTranscodeTaskNumResponse> DescribeTranscodeTaskNumOutcome;
+                typedef std::future<DescribeTranscodeTaskNumOutcome> DescribeTranscodeTaskNumOutcomeCallable;
+                typedef std::function<void(const LiveClient*, const Model::DescribeTranscodeTaskNumRequest&, DescribeTranscodeTaskNumOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTranscodeTaskNumAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeUploadStreamNumsResponse> DescribeUploadStreamNumsOutcome;
                 typedef std::future<DescribeUploadStreamNumsOutcome> DescribeUploadStreamNumsOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeUploadStreamNumsRequest&, DescribeUploadStreamNumsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUploadStreamNumsAsyncHandler;
@@ -559,6 +569,15 @@ After the number of watermarks exceeds the upper limit of 100, to add a new wate
                 AddLiveWatermarkOutcome AddLiveWatermark(const Model::AddLiveWatermarkRequest &request);
                 void AddLiveWatermarkAsync(const Model::AddLiveWatermarkRequest& request, const AddLiveWatermarkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 AddLiveWatermarkOutcomeCallable AddLiveWatermarkCallable(const Model::AddLiveWatermarkRequest& request);
+
+                /**
+                 *This API is used to verify the ownership of a domain.
+                 * @param req AuthenticateDomainOwnerRequest
+                 * @return AuthenticateDomainOwnerOutcome
+                 */
+                AuthenticateDomainOwnerOutcome AuthenticateDomainOwner(const Model::AuthenticateDomainOwnerRequest &request);
+                void AuthenticateDomainOwnerAsync(const Model::AuthenticateDomainOwnerRequest& request, const AuthenticateDomainOwnerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AuthenticateDomainOwnerOutcomeCallable AuthenticateDomainOwnerCallable(const Model::AuthenticateDomainOwnerRequest& request);
 
                 /**
                  *This API is used to cancel a stream mix. It can be used basically in the same way as `mix_streamv2.cancel_mix_stream`.
@@ -673,8 +692,8 @@ Note: only one screencapturing template can be associated with one domain name.
                 CreateLiveSnapshotRuleOutcomeCallable CreateLiveSnapshotRuleCallable(const Model::CreateLiveSnapshotRuleRequest& request);
 
                 /**
-                 *After a screencapturing template is created and a template ID is successfully returned, you need to call the [CreateLiveSnapshotRule](https://intl.cloud.tencent.com/document/product/267/32625?from_cn_redirect=1) API and bind the template ID to the stream.
-<br>Screencapturing-related document: [LVB Screencapturing](https://intl.cloud.tencent.com/document/product/267/32737?from_cn_redirect=1).
+                 *This API is used to create a screencapture template. After a template ID is returned, you need to call the [CreateLiveSnapshotRule](https://intl.cloud.tencent.com/document/product/267/32625?from_cn_redirect=1) API to bind the template ID to a stream. You can create up to 50 screencapture templates.
+<br>To learn more about the live screencapture feature, see [Live Screencapture](https://intl.cloud.tencent.com/document/product/267/32737?from_cn_redirect=1).
                  * @param req CreateLiveSnapshotTemplateRequest
                  * @return CreateLiveSnapshotTemplateOutcome
                  */
@@ -1199,10 +1218,10 @@ This API allows you to query the status of a stream in real time. Given external
                 DescribeLiveTranscodeTemplatesOutcomeCallable DescribeLiveTranscodeTemplatesCallable(const Model::DescribeLiveTranscodeTemplatesRequest& request);
 
                 /**
-                 *This API is used to query your total usage of the transcoding service in the last 30 days.
+                 *This API is used to query transcoding usage. You can use it to query data in the past three months.
 Notes:
 If the start time and end time are on the same day, the data returned will be on a 5-minute basis.
-If not or if the data of specified domains is queried, the data returned will be on an hourly basis.
+If the start time and end time are not on the same day or if the data of specified domains is queried, the data returned will be on an hourly basis.
                  * @param req DescribeLiveTranscodeTotalInfoRequest
                  * @return DescribeLiveTranscodeTotalInfoOutcome
                  */
@@ -1302,6 +1321,15 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
                 DescribeTopClientIpSumInfoListOutcome DescribeTopClientIpSumInfoList(const Model::DescribeTopClientIpSumInfoListRequest &request);
                 void DescribeTopClientIpSumInfoListAsync(const Model::DescribeTopClientIpSumInfoListRequest& request, const DescribeTopClientIpSumInfoListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeTopClientIpSumInfoListOutcomeCallable DescribeTopClientIpSumInfoListCallable(const Model::DescribeTopClientIpSumInfoListRequest& request);
+
+                /**
+                 *This API is used to query the number of transcoding tasks.
+                 * @param req DescribeTranscodeTaskNumRequest
+                 * @return DescribeTranscodeTaskNumOutcome
+                 */
+                DescribeTranscodeTaskNumOutcome DescribeTranscodeTaskNum(const Model::DescribeTranscodeTaskNumRequest &request);
+                void DescribeTranscodeTaskNumAsync(const Model::DescribeTranscodeTaskNumRequest& request, const DescribeTranscodeTaskNumAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeTranscodeTaskNumOutcomeCallable DescribeTranscodeTaskNumCallable(const Model::DescribeTranscodeTaskNumRequest& request);
 
                 /**
                  *This API is used to query the number of LVB upstream channels.

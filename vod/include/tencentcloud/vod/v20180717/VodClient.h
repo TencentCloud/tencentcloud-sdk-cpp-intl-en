@@ -245,6 +245,8 @@
 #include <tencentcloud/vod/v20180717/model/ResetProcedureTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/RestoreMediaRequest.h>
 #include <tencentcloud/vod/v20180717/model/RestoreMediaResponse.h>
+#include <tencentcloud/vod/v20180717/model/ReviewAudioVideoRequest.h>
+#include <tencentcloud/vod/v20180717/model/ReviewAudioVideoResponse.h>
 #include <tencentcloud/vod/v20180717/model/SearchMediaRequest.h>
 #include <tencentcloud/vod/v20180717/model/SearchMediaResponse.h>
 #include <tencentcloud/vod/v20180717/model/SetDrmKeyProviderInfoRequest.h>
@@ -598,6 +600,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::RestoreMediaResponse> RestoreMediaOutcome;
                 typedef std::future<RestoreMediaOutcome> RestoreMediaOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::RestoreMediaRequest&, RestoreMediaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RestoreMediaAsyncHandler;
+                typedef Outcome<Core::Error, Model::ReviewAudioVideoResponse> ReviewAudioVideoOutcome;
+                typedef std::future<ReviewAudioVideoOutcome> ReviewAudioVideoOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::ReviewAudioVideoRequest&, ReviewAudioVideoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ReviewAudioVideoAsyncHandler;
                 typedef Outcome<Core::Error, Model::SearchMediaResponse> SearchMediaOutcome;
                 typedef std::future<SearchMediaOutcome> SearchMediaOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::SearchMediaRequest&, SearchMediaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SearchMediaAsyncHandler;
@@ -1764,6 +1769,18 @@ There are two ways to create a task flow template:
                 RestoreMediaOutcome RestoreMedia(const Model::RestoreMediaRequest &request);
                 void RestoreMediaAsync(const Model::RestoreMediaRequest& request, const RestoreMediaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 RestoreMediaOutcomeCallable RestoreMediaCallable(const Model::RestoreMediaRequest& request);
+
+                /**
+                 *This API is used to start a moderation task on a file stored in VOD to detect non-compliant content in images, text, and speech.
+
+If event notifications are used, the event type is [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1).
+
+                 * @param req ReviewAudioVideoRequest
+                 * @return ReviewAudioVideoOutcome
+                 */
+                ReviewAudioVideoOutcome ReviewAudioVideo(const Model::ReviewAudioVideoRequest &request);
+                void ReviewAudioVideoAsync(const Model::ReviewAudioVideoRequest& request, const ReviewAudioVideoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ReviewAudioVideoOutcomeCallable ReviewAudioVideoCallable(const Model::ReviewAudioVideoRequest& request);
 
                 /**
                  *This API is used to search for media files by specific criteria. You can sort the results and specify the information to return.

@@ -180,6 +180,44 @@ Default value: 0.
                      */
                     bool IsMiniProgramLiveHasBeenSet() const;
 
+                    /**
+                     * 获取The domain verification type.
+Valid values (the value of this parameter must be the same as `VerifyType` of the `AuthenticateDomainOwner` API):
+dnsCheck: Check immediately whether the verification DNS record has been added successfully. If so, record this verification result.
+fileCheck: Check immediately whether the verification HTML file has been uploaded successfully. If so, record this verification result.
+dbCheck: Check whether the domain has already been verified.
+If you do not pass a value, `dbCheck` will be used.
+                     * @return VerifyOwnerType The domain verification type.
+Valid values (the value of this parameter must be the same as `VerifyType` of the `AuthenticateDomainOwner` API):
+dnsCheck: Check immediately whether the verification DNS record has been added successfully. If so, record this verification result.
+fileCheck: Check immediately whether the verification HTML file has been uploaded successfully. If so, record this verification result.
+dbCheck: Check whether the domain has already been verified.
+If you do not pass a value, `dbCheck` will be used.
+                     */
+                    std::string GetVerifyOwnerType() const;
+
+                    /**
+                     * 设置The domain verification type.
+Valid values (the value of this parameter must be the same as `VerifyType` of the `AuthenticateDomainOwner` API):
+dnsCheck: Check immediately whether the verification DNS record has been added successfully. If so, record this verification result.
+fileCheck: Check immediately whether the verification HTML file has been uploaded successfully. If so, record this verification result.
+dbCheck: Check whether the domain has already been verified.
+If you do not pass a value, `dbCheck` will be used.
+                     * @param VerifyOwnerType The domain verification type.
+Valid values (the value of this parameter must be the same as `VerifyType` of the `AuthenticateDomainOwner` API):
+dnsCheck: Check immediately whether the verification DNS record has been added successfully. If so, record this verification result.
+fileCheck: Check immediately whether the verification HTML file has been uploaded successfully. If so, record this verification result.
+dbCheck: Check whether the domain has already been verified.
+If you do not pass a value, `dbCheck` will be used.
+                     */
+                    void SetVerifyOwnerType(const std::string& _verifyOwnerType);
+
+                    /**
+                     * 判断参数 VerifyOwnerType 是否已赋值
+                     * @return VerifyOwnerType 是否已赋值
+                     */
+                    bool VerifyOwnerTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -223,6 +261,17 @@ Default value: 0.
                      */
                     int64_t m_isMiniProgramLive;
                     bool m_isMiniProgramLiveHasBeenSet;
+
+                    /**
+                     * The domain verification type.
+Valid values (the value of this parameter must be the same as `VerifyType` of the `AuthenticateDomainOwner` API):
+dnsCheck: Check immediately whether the verification DNS record has been added successfully. If so, record this verification result.
+fileCheck: Check immediately whether the verification HTML file has been uploaded successfully. If so, record this verification result.
+dbCheck: Check whether the domain has already been verified.
+If you do not pass a value, `dbCheck` will be used.
+                     */
+                    std::string m_verifyOwnerType;
+                    bool m_verifyOwnerTypeHasBeenSet;
 
                 };
             }

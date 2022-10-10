@@ -64,6 +64,24 @@ namespace TencentCloud
                      */
                     bool ContainerHasBeenSet() const;
 
+                    /**
+                     * 获取The editing mode. Valid values are `normal` and `fast`. The default is `normal`, which indicates precise editing.
+                     * @return Type The editing mode. Valid values are `normal` and `fast`. The default is `normal`, which indicates precise editing.
+                     */
+                    std::string GetType() const;
+
+                    /**
+                     * 设置The editing mode. Valid values are `normal` and `fast`. The default is `normal`, which indicates precise editing.
+                     * @param Type The editing mode. Valid values are `normal` and `fast`. The default is `normal`, which indicates precise editing.
+                     */
+                    void SetType(const std::string& _type);
+
+                    /**
+                     * 判断参数 Type 是否已赋值
+                     * @return Type 是否已赋值
+                     */
+                    bool TypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -71,6 +89,12 @@ namespace TencentCloud
                      */
                     std::string m_container;
                     bool m_containerHasBeenSet;
+
+                    /**
+                     * The editing mode. Valid values are `normal` and `fast`. The default is `normal`, which indicates precise editing.
+                     */
+                    std::string m_type;
+                    bool m_typeHasBeenSet;
 
                 };
             }

@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Disused. Please use `ErrCode` of each specific task.
-                     * @return ErrCode Disused. Please use `ErrCode` of each specific task.
+                     * 获取If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
+                     * @return ErrCode If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置Disused. Please use `ErrCode` of each specific task.
-                     * @param ErrCode Disused. Please use `ErrCode` of each specific task.
+                     * 设置If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
+                     * @param ErrCode If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
                      */
                     void SetErrCode(const int64_t& _errCode);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取Disused. Please use `Message` of each specific task.
-                     * @return Message Disused. Please use `Message` of each specific task.
+                     * 获取Except those for source errors, error messages vary with task type.
+                     * @return Message Except those for source errors, error messages vary with task type.
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置Disused. Please use `Message` of each specific task.
-                     * @param Message Disused. Please use `Message` of each specific task.
+                     * 设置Except those for source errors, error messages vary with task type.
+                     * @param Message Except those for source errors, error messages vary with task type.
                      */
                     void SetMessage(const std::string& _message);
 
@@ -265,13 +265,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Disused. Please use `ErrCode` of each specific task.
+                     * If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * Disused. Please use `Message` of each specific task.
+                     * Except those for source errors, error messages vary with task type.
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
