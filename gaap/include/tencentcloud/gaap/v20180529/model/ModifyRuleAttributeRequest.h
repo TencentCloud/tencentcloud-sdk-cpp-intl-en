@@ -80,26 +80,14 @@ namespace TencentCloud
                     bool RuleIdHasBeenSet() const;
 
                     /**
-                     * 获取Scheduling policy:
-rr: round robin;
-wrr: weighted round robin;
-lc: least connections.
-                     * @return Scheduler Scheduling policy:
-rr: round robin;
-wrr: weighted round robin;
-lc: least connections.
+                     * 获取The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
+                     * @return Scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
                      */
                     std::string GetScheduler() const;
 
                     /**
-                     * 设置Scheduling policy:
-rr: round robin;
-wrr: weighted round robin;
-lc: least connections.
-                     * @param Scheduler Scheduling policy:
-rr: round robin;
-wrr: weighted round robin;
-lc: least connections.
+                     * 设置The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
+                     * @param Scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
                      */
                     void SetScheduler(const std::string& _scheduler);
 
@@ -284,10 +272,7 @@ If `ForwardHost=default`, the domain name configured with the forwarding rule wi
                     bool m_ruleIdHasBeenSet;
 
                     /**
-                     * Scheduling policy:
-rr: round robin;
-wrr: weighted round robin;
-lc: least connections.
+                     * The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
                      */
                     std::string m_scheduler;
                     bool m_schedulerHasBeenSet;

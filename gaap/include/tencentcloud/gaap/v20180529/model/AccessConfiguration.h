@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool AccessRegionHasBeenSet() const;
 
                     /**
-                     * 获取Connection bandwidth upper limit in Mbps.
-                     * @return Bandwidth Connection bandwidth upper limit in Mbps.
+                     * 获取Connection bandwidth cap. Unit: Mbps.
+                     * @return Bandwidth Connection bandwidth cap. Unit: Mbps.
                      */
                     uint64_t GetBandwidth() const;
 
                     /**
-                     * 设置Connection bandwidth upper limit in Mbps.
-                     * @param Bandwidth Connection bandwidth upper limit in Mbps.
+                     * 设置Connection bandwidth cap. Unit: Mbps.
+                     * @param Bandwidth Connection bandwidth cap. Unit: Mbps.
                      */
                     void SetBandwidth(const uint64_t& _bandwidth);
 
@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool BandwidthHasBeenSet() const;
 
                     /**
-                     * 获取Concurrent connection upper limit in 10,000 connections, which indicates the allowed number of concurrently online connections.
-                     * @return Concurrent Concurrent connection upper limit in 10,000 connections, which indicates the allowed number of concurrently online connections.
+                     * 获取Connection concurrence cap, which indicates the maximum number of simultaneous online connections. Unit: 10,000 connections.
+                     * @return Concurrent Connection concurrence cap, which indicates the maximum number of simultaneous online connections. Unit: 10,000 connections.
                      */
                     uint64_t GetConcurrent() const;
 
                     /**
-                     * 设置Concurrent connection upper limit in 10,000 connections, which indicates the allowed number of concurrently online connections.
-                     * @param Concurrent Concurrent connection upper limit in 10,000 connections, which indicates the allowed number of concurrently online connections.
+                     * 设置Connection concurrence cap, which indicates the maximum number of simultaneous online connections. Unit: 10,000 connections.
+                     * @param Concurrent Connection concurrence cap, which indicates the maximum number of simultaneous online connections. Unit: 10,000 connections.
                      */
                     void SetConcurrent(const uint64_t& _concurrent);
 
@@ -127,13 +127,13 @@ namespace TencentCloud
                     bool m_accessRegionHasBeenSet;
 
                     /**
-                     * Connection bandwidth upper limit in Mbps.
+                     * Connection bandwidth cap. Unit: Mbps.
                      */
                     uint64_t m_bandwidth;
                     bool m_bandwidthHasBeenSet;
 
                     /**
-                     * Concurrent connection upper limit in 10,000 connections, which indicates the allowed number of concurrently online connections.
+                     * Connection concurrence cap, which indicates the maximum number of simultaneous online connections. Unit: 10,000 connections.
                      */
                     uint64_t m_concurrent;
                     bool m_concurrentHasBeenSet;

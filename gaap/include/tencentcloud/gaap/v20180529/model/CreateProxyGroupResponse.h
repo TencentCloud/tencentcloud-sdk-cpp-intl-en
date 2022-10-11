@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Connection Group ID
-                     * @return GroupId Connection Group ID
+                     * 获取ID of the connection group
+                     * @return GroupId ID of the connection group
                      */
                     std::string GetGroupId() const;
 
@@ -58,7 +58,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Connection Group ID
+                     * ID of the connection group
                      */
                     std::string m_groupId;
                     bool m_groupIdHasBeenSet;

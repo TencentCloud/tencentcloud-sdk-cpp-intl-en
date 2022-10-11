@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool PortsHasBeenSet() const;
 
                     /**
-                     * 获取Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
-                     * @return Scheduler Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
+                     * 获取The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
+                     * @return Scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
                      */
                     std::string GetScheduler() const;
 
                     /**
-                     * 设置Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
-                     * @param Scheduler Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
+                     * 设置The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
+                     * @param Scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
                      */
                     void SetScheduler(const std::string& _scheduler);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool SchedulerHasBeenSet() const;
 
                     /**
-                     * 获取Origin server type of listeners, which supports IP or DOMAIN type.
-                     * @return RealServerType Origin server type of listeners, which supports IP or DOMAIN type.
+                     * 获取The origin server type. Values: `IP` (IP address); `DOMAIN` (domain name).
+                     * @return RealServerType The origin server type. Values: `IP` (IP address); `DOMAIN` (domain name).
                      */
                     std::string GetRealServerType() const;
 
                     /**
-                     * 设置Origin server type of listeners, which supports IP or DOMAIN type.
-                     * @param RealServerType Origin server type of listeners, which supports IP or DOMAIN type.
+                     * 设置The origin server type. Values: `IP` (IP address); `DOMAIN` (domain name).
+                     * @param RealServerType The origin server type. Values: `IP` (IP address); `DOMAIN` (domain name).
                      */
                     void SetRealServerType(const std::string& _realServerType);
 
@@ -168,6 +168,204 @@ namespace TencentCloud
                      */
                     bool RealServerPortsHasBeenSet() const;
 
+                    /**
+                     * 获取Time interval of origin server health check (unit: seconds). Value range: [5, 300].
+                     * @return DelayLoop Time interval of origin server health check (unit: seconds). Value range: [5, 300].
+                     */
+                    uint64_t GetDelayLoop() const;
+
+                    /**
+                     * 设置Time interval of origin server health check (unit: seconds). Value range: [5, 300].
+                     * @param DelayLoop Time interval of origin server health check (unit: seconds). Value range: [5, 300].
+                     */
+                    void SetDelayLoop(const uint64_t& _delayLoop);
+
+                    /**
+                     * 判断参数 DelayLoop 是否已赋值
+                     * @return DelayLoop 是否已赋值
+                     */
+                    bool DelayLoopHasBeenSet() const;
+
+                    /**
+                     * 获取Response timeout of origin server health check (unit: seconds). Value range: [2, 60]. The timeout value shall be less than the time interval for health check DelayLoop.
+                     * @return ConnectTimeout Response timeout of origin server health check (unit: seconds). Value range: [2, 60]. The timeout value shall be less than the time interval for health check DelayLoop.
+                     */
+                    uint64_t GetConnectTimeout() const;
+
+                    /**
+                     * 设置Response timeout of origin server health check (unit: seconds). Value range: [2, 60]. The timeout value shall be less than the time interval for health check DelayLoop.
+                     * @param ConnectTimeout Response timeout of origin server health check (unit: seconds). Value range: [2, 60]. The timeout value shall be less than the time interval for health check DelayLoop.
+                     */
+                    void SetConnectTimeout(const uint64_t& _connectTimeout);
+
+                    /**
+                     * 判断参数 ConnectTimeout 是否已赋值
+                     * @return ConnectTimeout 是否已赋值
+                     */
+                    bool ConnectTimeoutHasBeenSet() const;
+
+                    /**
+                     * 获取Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+                     * @return HealthyThreshold Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+                     */
+                    uint64_t GetHealthyThreshold() const;
+
+                    /**
+                     * 设置Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+                     * @param HealthyThreshold Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+                     */
+                    void SetHealthyThreshold(const uint64_t& _healthyThreshold);
+
+                    /**
+                     * 判断参数 HealthyThreshold 是否已赋值
+                     * @return HealthyThreshold 是否已赋值
+                     */
+                    bool HealthyThresholdHasBeenSet() const;
+
+                    /**
+                     * 获取Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+                     * @return UnhealthyThreshold Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+                     */
+                    uint64_t GetUnhealthyThreshold() const;
+
+                    /**
+                     * 设置Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+                     * @param UnhealthyThreshold Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+                     */
+                    void SetUnhealthyThreshold(const uint64_t& _unhealthyThreshold);
+
+                    /**
+                     * 判断参数 UnhealthyThreshold 是否已赋值
+                     * @return UnhealthyThreshold 是否已赋值
+                     */
+                    bool UnhealthyThresholdHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
+                     * @return FailoverSwitch Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
+                     */
+                    int64_t GetFailoverSwitch() const;
+
+                    /**
+                     * 设置Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
+                     * @param FailoverSwitch Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
+                     */
+                    void SetFailoverSwitch(const int64_t& _failoverSwitch);
+
+                    /**
+                     * 判断参数 FailoverSwitch 是否已赋值
+                     * @return FailoverSwitch 是否已赋值
+                     */
+                    bool FailoverSwitchHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the health check is enabled for the origin server. Values: `1` (enabled); `0` (disabled).
+                     * @return HealthCheck Whether the health check is enabled for the origin server. Values: `1` (enabled); `0` (disabled).
+                     */
+                    uint64_t GetHealthCheck() const;
+
+                    /**
+                     * 设置Whether the health check is enabled for the origin server. Values: `1` (enabled); `0` (disabled).
+                     * @param HealthCheck Whether the health check is enabled for the origin server. Values: `1` (enabled); `0` (disabled).
+                     */
+                    void SetHealthCheck(const uint64_t& _healthCheck);
+
+                    /**
+                     * 判断参数 HealthCheck 是否已赋值
+                     * @return HealthCheck 是否已赋值
+                     */
+                    bool HealthCheckHasBeenSet() const;
+
+                    /**
+                     * 获取The health check type. Values: `PORT` (port); `PING` (ping).
+                     * @return CheckType The health check type. Values: `PORT` (port); `PING` (ping).
+                     */
+                    std::string GetCheckType() const;
+
+                    /**
+                     * 设置The health check type. Values: `PORT` (port); `PING` (ping).
+                     * @param CheckType The health check type. Values: `PORT` (port); `PING` (ping).
+                     */
+                    void SetCheckType(const std::string& _checkType);
+
+                    /**
+                     * 判断参数 CheckType 是否已赋值
+                     * @return CheckType 是否已赋值
+                     */
+                    bool CheckTypeHasBeenSet() const;
+
+                    /**
+                     * 获取The health probe port.
+                     * @return CheckPort The health probe port.
+                     */
+                    int64_t GetCheckPort() const;
+
+                    /**
+                     * 设置The health probe port.
+                     * @param CheckPort The health probe port.
+                     */
+                    void SetCheckPort(const int64_t& _checkPort);
+
+                    /**
+                     * 判断参数 CheckPort 是否已赋值
+                     * @return CheckPort 是否已赋值
+                     */
+                    bool CheckPortHasBeenSet() const;
+
+                    /**
+                     * 获取The UDP message type. Values: `TEXT` (text). This parameter is used only when `CheckType = PORT`.
+                     * @return ContextType The UDP message type. Values: `TEXT` (text). This parameter is used only when `CheckType = PORT`.
+                     */
+                    std::string GetContextType() const;
+
+                    /**
+                     * 设置The UDP message type. Values: `TEXT` (text). This parameter is used only when `CheckType = PORT`.
+                     * @param ContextType The UDP message type. Values: `TEXT` (text). This parameter is used only when `CheckType = PORT`.
+                     */
+                    void SetContextType(const std::string& _contextType);
+
+                    /**
+                     * 判断参数 ContextType 是否已赋值
+                     * @return ContextType 是否已赋值
+                     */
+                    bool ContextTypeHasBeenSet() const;
+
+                    /**
+                     * 获取The UDP message sent by the health probe port. This parameter is used only when `CheckType = PORT`.
+                     * @return SendContext The UDP message sent by the health probe port. This parameter is used only when `CheckType = PORT`.
+                     */
+                    std::string GetSendContext() const;
+
+                    /**
+                     * 设置The UDP message sent by the health probe port. This parameter is used only when `CheckType = PORT`.
+                     * @param SendContext The UDP message sent by the health probe port. This parameter is used only when `CheckType = PORT`.
+                     */
+                    void SetSendContext(const std::string& _sendContext);
+
+                    /**
+                     * 判断参数 SendContext 是否已赋值
+                     * @return SendContext 是否已赋值
+                     */
+                    bool SendContextHasBeenSet() const;
+
+                    /**
+                     * 获取The UDP message received by the health probe port. This parameter is used only when `CheckType = PORT`.
+                     * @return RecvContext The UDP message received by the health probe port. This parameter is used only when `CheckType = PORT`.
+                     */
+                    std::string GetRecvContext() const;
+
+                    /**
+                     * 设置The UDP message received by the health probe port. This parameter is used only when `CheckType = PORT`.
+                     * @param RecvContext The UDP message received by the health probe port. This parameter is used only when `CheckType = PORT`.
+                     */
+                    void SetRecvContext(const std::string& _recvContext);
+
+                    /**
+                     * 判断参数 RecvContext 是否已赋值
+                     * @return RecvContext 是否已赋值
+                     */
+                    bool RecvContextHasBeenSet() const;
+
                 private:
 
                     /**
@@ -183,13 +381,13 @@ namespace TencentCloud
                     bool m_portsHasBeenSet;
 
                     /**
-                     * Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
+                     * The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
                      */
                     std::string m_scheduler;
                     bool m_schedulerHasBeenSet;
 
                     /**
-                     * Origin server type of listeners, which supports IP or DOMAIN type.
+                     * The origin server type. Values: `IP` (IP address); `DOMAIN` (domain name).
                      */
                     std::string m_realServerType;
                     bool m_realServerTypeHasBeenSet;
@@ -211,6 +409,72 @@ namespace TencentCloud
                      */
                     std::vector<uint64_t> m_realServerPorts;
                     bool m_realServerPortsHasBeenSet;
+
+                    /**
+                     * Time interval of origin server health check (unit: seconds). Value range: [5, 300].
+                     */
+                    uint64_t m_delayLoop;
+                    bool m_delayLoopHasBeenSet;
+
+                    /**
+                     * Response timeout of origin server health check (unit: seconds). Value range: [2, 60]. The timeout value shall be less than the time interval for health check DelayLoop.
+                     */
+                    uint64_t m_connectTimeout;
+                    bool m_connectTimeoutHasBeenSet;
+
+                    /**
+                     * Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+                     */
+                    uint64_t m_healthyThreshold;
+                    bool m_healthyThresholdHasBeenSet;
+
+                    /**
+                     * Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+                     */
+                    uint64_t m_unhealthyThreshold;
+                    bool m_unhealthyThresholdHasBeenSet;
+
+                    /**
+                     * Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
+                     */
+                    int64_t m_failoverSwitch;
+                    bool m_failoverSwitchHasBeenSet;
+
+                    /**
+                     * Whether the health check is enabled for the origin server. Values: `1` (enabled); `0` (disabled).
+                     */
+                    uint64_t m_healthCheck;
+                    bool m_healthCheckHasBeenSet;
+
+                    /**
+                     * The health check type. Values: `PORT` (port); `PING` (ping).
+                     */
+                    std::string m_checkType;
+                    bool m_checkTypeHasBeenSet;
+
+                    /**
+                     * The health probe port.
+                     */
+                    int64_t m_checkPort;
+                    bool m_checkPortHasBeenSet;
+
+                    /**
+                     * The UDP message type. Values: `TEXT` (text). This parameter is used only when `CheckType = PORT`.
+                     */
+                    std::string m_contextType;
+                    bool m_contextTypeHasBeenSet;
+
+                    /**
+                     * The UDP message sent by the health probe port. This parameter is used only when `CheckType = PORT`.
+                     */
+                    std::string m_sendContext;
+                    bool m_sendContextHasBeenSet;
+
+                    /**
+                     * The UDP message received by the health probe port. This parameter is used only when `CheckType = PORT`.
+                     */
+                    std::string m_recvContext;
+                    bool m_recvContextHasBeenSet;
 
                 };
             }

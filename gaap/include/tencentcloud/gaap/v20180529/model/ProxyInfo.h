@@ -180,14 +180,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BandwidthHasBeenSet() const;
 
                     /**
-                     * 获取Concurrence. Unit: requests/second.
-                     * @return Concurrent Concurrence. Unit: requests/second.
+                     * 获取Concurrence. Unit: 10K requests/second.
+                     * @return Concurrent Concurrence. Unit: 10K requests/second.
                      */
                     int64_t GetConcurrent() const;
 
                     /**
-                     * 设置Concurrence. Unit: requests/second.
-                     * @param Concurrent Concurrence. Unit: requests/second.
+                     * 设置Concurrence. Unit: 10K requests/second.
+                     * @param Concurrent Concurrence. Unit: 10K requests/second.
                      */
                     void SetConcurrent(const int64_t& _concurrent);
 
@@ -797,6 +797,72 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool InBanBlacklistHasBeenSet() const;
 
+                    /**
+                     * 获取Feature bitmap. Valid values:
+`0`: Feature not supported
+`1`: Feature supported
+Each bit in the bitmap represents a feature:
+1st bit: Layer-4 acceleration;
+2nd bit: Layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: Dedicated BGP access;
+6th bit: Non-BGP access;
+7th bit: QoS acceleration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return FeatureBitmap Feature bitmap. Valid values:
+`0`: Feature not supported
+`1`: Feature supported
+Each bit in the bitmap represents a feature:
+1st bit: Layer-4 acceleration;
+2nd bit: Layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: Dedicated BGP access;
+6th bit: Non-BGP access;
+7th bit: QoS acceleration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    int64_t GetFeatureBitmap() const;
+
+                    /**
+                     * 设置Feature bitmap. Valid values:
+`0`: Feature not supported
+`1`: Feature supported
+Each bit in the bitmap represents a feature:
+1st bit: Layer-4 acceleration;
+2nd bit: Layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: Dedicated BGP access;
+6th bit: Non-BGP access;
+7th bit: QoS acceleration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param FeatureBitmap Feature bitmap. Valid values:
+`0`: Feature not supported
+`1`: Feature supported
+Each bit in the bitmap represents a feature:
+1st bit: Layer-4 acceleration;
+2nd bit: Layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: Dedicated BGP access;
+6th bit: Non-BGP access;
+7th bit: QoS acceleration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetFeatureBitmap(const int64_t& _featureBitmap);
+
+                    /**
+                     * 判断参数 FeatureBitmap 是否已赋值
+                     * @return FeatureBitmap 是否已赋值
+                     */
+                    bool FeatureBitmapHasBeenSet() const;
+
                 private:
 
                     /**
@@ -843,7 +909,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_bandwidthHasBeenSet;
 
                     /**
-                     * Concurrence. Unit: requests/second.
+                     * Concurrence. Unit: 10K requests/second.
                      */
                     int64_t m_concurrent;
                     bool m_concurrentHasBeenSet;
@@ -1036,6 +1102,24 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     int64_t m_inBanBlacklist;
                     bool m_inBanBlacklistHasBeenSet;
+
+                    /**
+                     * Feature bitmap. Valid values:
+`0`: Feature not supported
+`1`: Feature supported
+Each bit in the bitmap represents a feature:
+1st bit: Layer-4 acceleration;
+2nd bit: Layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: Dedicated BGP access;
+6th bit: Non-BGP access;
+7th bit: QoS acceleration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    int64_t m_featureBitmap;
+                    bool m_featureBitmapHasBeenSet;
 
                 };
             }

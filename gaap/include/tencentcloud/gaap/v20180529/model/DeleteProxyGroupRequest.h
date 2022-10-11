@@ -62,24 +62,24 @@ namespace TencentCloud
 
                     /**
                      * 获取Whether to enable forced deletion. Valid values:
-0: no;
-1: yes.
+`0`: No;
+`1`: Yes.
 Default value: 0. If there is a connection or listener/rule bound to an origin server in the connection group and `Force` is 0, the operation will return a failure.
                      * @return Force Whether to enable forced deletion. Valid values:
-0: no;
-1: yes.
+`0`: No;
+`1`: Yes.
 Default value: 0. If there is a connection or listener/rule bound to an origin server in the connection group and `Force` is 0, the operation will return a failure.
                      */
                     uint64_t GetForce() const;
 
                     /**
                      * 设置Whether to enable forced deletion. Valid values:
-0: no;
-1: yes.
+`0`: No;
+`1`: Yes.
 Default value: 0. If there is a connection or listener/rule bound to an origin server in the connection group and `Force` is 0, the operation will return a failure.
                      * @param Force Whether to enable forced deletion. Valid values:
-0: no;
-1: yes.
+`0`: No;
+`1`: Yes.
 Default value: 0. If there is a connection or listener/rule bound to an origin server in the connection group and `Force` is 0, the operation will return a failure.
                      */
                     void SetForce(const uint64_t& _force);
@@ -100,8 +100,8 @@ Default value: 0. If there is a connection or listener/rule bound to an origin s
 
                     /**
                      * Whether to enable forced deletion. Valid values:
-0: no;
-1: yes.
+`0`: No;
+`1`: Yes.
 Default value: 0. If there is a connection or listener/rule bound to an origin server in the connection group and `Force` is 0, the operation will return a failure.
                      */
                     uint64_t m_force;

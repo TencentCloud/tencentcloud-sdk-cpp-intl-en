@@ -99,14 +99,14 @@ namespace TencentCloud
                     bool RealServerRegionHasBeenSet() const;
 
                     /**
-                     * 获取Tag list
-                     * @return TagSet Tag list
+                     * 获取List of tags
+                     * @return TagSet List of tags
                      */
                     std::vector<TagPair> GetTagSet() const;
 
                     /**
-                     * 设置Tag list
-                     * @param TagSet Tag list
+                     * 设置List of tags
+                     * @param TagSet List of tags
                      */
                     void SetTagSet(const std::vector<TagPair>& _tagSet);
 
@@ -171,30 +171,14 @@ namespace TencentCloud
                     bool PackageTypeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether to enable HTTP3. Valid values:
-`0`: disable HTTP3;
-`1`: enable HTTP3.
-Note that if HTTP3 is enabled for a connection, TCP/UDP access will not be allowed.
-After the connection is created, you cannot change your HTTP3 setting.
-                     * @return Http3Supported Specifies whether to enable HTTP3. Valid values:
-`0`: disable HTTP3;
-`1`: enable HTTP3.
-Note that if HTTP3 is enabled for a connection, TCP/UDP access will not be allowed.
-After the connection is created, you cannot change your HTTP3 setting.
+                     * 获取(Disused) HTTP3.0 is supported by default when `IPAddressVersion` is `IPv4`.
+                     * @return Http3Supported (Disused) HTTP3.0 is supported by default when `IPAddressVersion` is `IPv4`.
                      */
                     int64_t GetHttp3Supported() const;
 
                     /**
-                     * 设置Specifies whether to enable HTTP3. Valid values:
-`0`: disable HTTP3;
-`1`: enable HTTP3.
-Note that if HTTP3 is enabled for a connection, TCP/UDP access will not be allowed.
-After the connection is created, you cannot change your HTTP3 setting.
-                     * @param Http3Supported Specifies whether to enable HTTP3. Valid values:
-`0`: disable HTTP3;
-`1`: enable HTTP3.
-Note that if HTTP3 is enabled for a connection, TCP/UDP access will not be allowed.
-After the connection is created, you cannot change your HTTP3 setting.
+                     * 设置(Disused) HTTP3.0 is supported by default when `IPAddressVersion` is `IPv4`.
+                     * @param Http3Supported (Disused) HTTP3.0 is supported by default when `IPAddressVersion` is `IPv4`.
                      */
                     void SetHttp3Supported(const int64_t& _http3Supported);
 
@@ -225,7 +209,7 @@ After the connection is created, you cannot change your HTTP3 setting.
                     bool m_realServerRegionHasBeenSet;
 
                     /**
-                     * Tag list
+                     * List of tags
                      */
                     std::vector<TagPair> m_tagSet;
                     bool m_tagSetHasBeenSet;
@@ -249,11 +233,7 @@ After the connection is created, you cannot change your HTTP3 setting.
                     bool m_packageTypeHasBeenSet;
 
                     /**
-                     * Specifies whether to enable HTTP3. Valid values:
-`0`: disable HTTP3;
-`1`: enable HTTP3.
-Note that if HTTP3 is enabled for a connection, TCP/UDP access will not be allowed.
-After the connection is created, you cannot change your HTTP3 setting.
+                     * (Disused) HTTP3.0 is supported by default when `IPAddressVersion` is `IPv4`.
                      */
                     int64_t m_http3Supported;
                     bool m_http3SupportedHasBeenSet;

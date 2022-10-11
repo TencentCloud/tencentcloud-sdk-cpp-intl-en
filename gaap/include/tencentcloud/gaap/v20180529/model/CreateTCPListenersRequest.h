@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool PortsHasBeenSet() const;
 
                     /**
-                     * 获取Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
-                     * @return Scheduler Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
+                     * 获取The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
+                     * @return Scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
                      */
                     std::string GetScheduler() const;
 
                     /**
-                     * 设置Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
-                     * @param Scheduler Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
+                     * 设置The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
+                     * @param Scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
                      */
                     void SetScheduler(const std::string& _scheduler);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool HealthCheckHasBeenSet() const;
 
                     /**
-                     * 获取The origin server type of listeners, supporting IP or DOMAIN type. The DOMAIN origin servers do not support the weighted round robin.
-                     * @return RealServerType The origin server type of listeners, supporting IP or DOMAIN type. The DOMAIN origin servers do not support the weighted round robin.
+                     * 获取The origin server type. Values: `IP` (IP address); `DOMAIN` (domain name).
+                     * @return RealServerType The origin server type. Values: `IP` (IP address); `DOMAIN` (domain name).
                      */
                     std::string GetRealServerType() const;
 
                     /**
-                     * 设置The origin server type of listeners, supporting IP or DOMAIN type. The DOMAIN origin servers do not support the weighted round robin.
-                     * @param RealServerType The origin server type of listeners, supporting IP or DOMAIN type. The DOMAIN origin servers do not support the weighted round robin.
+                     * 设置The origin server type. Values: `IP` (IP address); `DOMAIN` (domain name).
+                     * @param RealServerType The origin server type. Values: `IP` (IP address); `DOMAIN` (domain name).
                      */
                     void SetRealServerType(const std::string& _realServerType);
 
@@ -309,7 +309,7 @@ namespace TencentCloud
                     bool m_portsHasBeenSet;
 
                     /**
-                     * Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
+                     * The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
                      */
                     std::string m_scheduler;
                     bool m_schedulerHasBeenSet;
@@ -321,7 +321,7 @@ namespace TencentCloud
                     bool m_healthCheckHasBeenSet;
 
                     /**
-                     * The origin server type of listeners, supporting IP or DOMAIN type. The DOMAIN origin servers do not support the weighted round robin.
+                     * The origin server type. Values: `IP` (IP address); `DOMAIN` (domain name).
                      */
                     std::string m_realServerType;
                     bool m_realServerTypeHasBeenSet;

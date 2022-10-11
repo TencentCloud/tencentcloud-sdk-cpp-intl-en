@@ -174,6 +174,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool DownIPListHasBeenSet() const;
 
+                    /**
+                     * 获取Role of the origin server. Values: `master` (primary origin server); `slave` (secondary origin server). This parameter only takes effect when origin failover is enabled for the listener.
+                     * @return RealServerFailoverRole Role of the origin server. Values: `master` (primary origin server); `slave` (secondary origin server). This parameter only takes effect when origin failover is enabled for the listener.
+                     */
+                    std::string GetRealServerFailoverRole() const;
+
+                    /**
+                     * 设置Role of the origin server. Values: `master` (primary origin server); `slave` (secondary origin server). This parameter only takes effect when origin failover is enabled for the listener.
+                     * @param RealServerFailoverRole Role of the origin server. Values: `master` (primary origin server); `slave` (secondary origin server). This parameter only takes effect when origin failover is enabled for the listener.
+                     */
+                    void SetRealServerFailoverRole(const std::string& _realServerFailoverRole);
+
+                    /**
+                     * 判断参数 RealServerFailoverRole 是否已赋值
+                     * @return RealServerFailoverRole 是否已赋值
+                     */
+                    bool RealServerFailoverRoleHasBeenSet() const;
+
                 private:
 
                     /**
@@ -216,6 +234,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<std::string> m_downIPList;
                     bool m_downIPListHasBeenSet;
+
+                    /**
+                     * Role of the origin server. Values: `master` (primary origin server); `slave` (secondary origin server). This parameter only takes effect when origin failover is enabled for the listener.
+                     */
+                    std::string m_realServerFailoverRole;
+                    bool m_realServerFailoverRoleHasBeenSet;
 
                 };
             }

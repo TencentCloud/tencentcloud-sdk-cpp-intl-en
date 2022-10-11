@@ -139,14 +139,14 @@ namespace TencentCloud
                     bool RealServerTypeHasBeenSet() const;
 
                     /**
-                     * 获取Forwarding policy of the origin server
-                     * @return Scheduler Forwarding policy of the origin server
+                     * 获取The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
+                     * @return Scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
                      */
                     std::string GetScheduler() const;
 
                     /**
-                     * 设置Forwarding policy of the origin server
-                     * @param Scheduler Forwarding policy of the origin server
+                     * 设置The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
+                     * @param Scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
                      */
                     void SetScheduler(const std::string& _scheduler);
 
@@ -383,7 +383,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_realServerTypeHasBeenSet;
 
                     /**
-                     * Forwarding policy of the origin server
+                     * The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
                      */
                     std::string m_scheduler;
                     bool m_schedulerHasBeenSet;

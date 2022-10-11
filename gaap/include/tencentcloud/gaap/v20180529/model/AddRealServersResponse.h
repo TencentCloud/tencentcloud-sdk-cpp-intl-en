@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Origin server information list
-                     * @return RealServerSet Origin server information list
+                     * 获取An information list of origin server
+                     * @return RealServerSet An information list of origin server
                      */
                     std::vector<NewRealServer> GetRealServerSet() const;
 
@@ -59,7 +59,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Origin server information list
+                     * An information list of origin server
                      */
                     std::vector<NewRealServer> m_realServerSet;
                     bool m_realServerSetHasBeenSet;

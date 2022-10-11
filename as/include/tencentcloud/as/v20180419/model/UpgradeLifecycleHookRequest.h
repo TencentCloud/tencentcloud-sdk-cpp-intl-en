@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/as/v20180419/model/NotificationTarget.h>
+#include <tencentcloud/as/v20180419/model/LifecycleCommand.h>
 
 
 namespace TencentCloud
@@ -134,14 +135,14 @@ namespace TencentCloud
                     bool HeartbeatTimeoutHasBeenSet() const;
 
                     /**
-                     * 获取Additional information of a notification that Auto Scaling sends to targets. This parameter is left empty by default.
-                     * @return NotificationMetadata Additional information of a notification that Auto Scaling sends to targets. This parameter is left empty by default.
+                     * 获取Additional information of a notification that Auto Scaling sends to targets. This parameter is set when you configure a notification (default value: "").
+                     * @return NotificationMetadata Additional information of a notification that Auto Scaling sends to targets. This parameter is set when you configure a notification (default value: "").
                      */
                     std::string GetNotificationMetadata() const;
 
                     /**
-                     * 设置Additional information of a notification that Auto Scaling sends to targets. This parameter is left empty by default.
-                     * @param NotificationMetadata Additional information of a notification that Auto Scaling sends to targets. This parameter is left empty by default.
+                     * 设置Additional information of a notification that Auto Scaling sends to targets. This parameter is set when you configure a notification (default value: "").
+                     * @param NotificationMetadata Additional information of a notification that Auto Scaling sends to targets. This parameter is set when you configure a notification (default value: "").
                      */
                     void SetNotificationMetadata(const std::string& _notificationMetadata);
 
@@ -152,14 +153,14 @@ namespace TencentCloud
                     bool NotificationMetadataHasBeenSet() const;
 
                     /**
-                     * 获取Notification target
-                     * @return NotificationTarget Notification target
+                     * 获取Notification result. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
+                     * @return NotificationTarget Notification result. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
                      */
                     NotificationTarget GetNotificationTarget() const;
 
                     /**
-                     * 设置Notification target
-                     * @param NotificationTarget Notification target
+                     * 设置Notification result. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
+                     * @param NotificationTarget Notification result. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
                      */
                     void SetNotificationTarget(const NotificationTarget& _notificationTarget);
 
@@ -186,6 +187,24 @@ namespace TencentCloud
                      * @return LifecycleTransitionType 是否已赋值
                      */
                     bool LifecycleTransitionTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Remote command execution object. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
+                     * @return LifecycleCommand Remote command execution object. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
+                     */
+                    LifecycleCommand GetLifecycleCommand() const;
+
+                    /**
+                     * 设置Remote command execution object. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
+                     * @param LifecycleCommand Remote command execution object. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
+                     */
+                    void SetLifecycleCommand(const LifecycleCommand& _lifecycleCommand);
+
+                    /**
+                     * 判断参数 LifecycleCommand 是否已赋值
+                     * @return LifecycleCommand 是否已赋值
+                     */
+                    bool LifecycleCommandHasBeenSet() const;
 
                 private:
 
@@ -220,13 +239,13 @@ namespace TencentCloud
                     bool m_heartbeatTimeoutHasBeenSet;
 
                     /**
-                     * Additional information of a notification that Auto Scaling sends to targets. This parameter is left empty by default.
+                     * Additional information of a notification that Auto Scaling sends to targets. This parameter is set when you configure a notification (default value: "").
                      */
                     std::string m_notificationMetadata;
                     bool m_notificationMetadataHasBeenSet;
 
                     /**
-                     * Notification target
+                     * Notification result. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
                      */
                     NotificationTarget m_notificationTarget;
                     bool m_notificationTargetHasBeenSet;
@@ -236,6 +255,12 @@ namespace TencentCloud
                      */
                     std::string m_lifecycleTransitionType;
                     bool m_lifecycleTransitionTypeHasBeenSet;
+
+                    /**
+                     * Remote command execution object. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
+                     */
+                    LifecycleCommand m_lifecycleCommand;
+                    bool m_lifecycleCommandHasBeenSet;
 
                 };
             }

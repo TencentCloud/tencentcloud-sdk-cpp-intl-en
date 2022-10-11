@@ -116,14 +116,14 @@ namespace TencentCloud
                     bool RealServerTypeHasBeenSet() const;
 
                     /**
-                     * 获取Forwarding rules of origin server, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
-                     * @return Scheduler Forwarding rules of origin server, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
+                     * 获取The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
+                     * @return Scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
                      */
                     std::string GetScheduler() const;
 
                     /**
-                     * 设置Forwarding rules of origin server, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
-                     * @param Scheduler Forwarding rules of origin server, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
+                     * 设置The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
+                     * @param Scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
                      */
                     void SetScheduler(const std::string& _scheduler);
 
@@ -290,7 +290,7 @@ If this field is not passed in, it indicates that the ForwardProtocol of the cor
                     bool m_realServerTypeHasBeenSet;
 
                     /**
-                     * Forwarding rules of origin server, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
+                     * The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
                      */
                     std::string m_scheduler;
                     bool m_schedulerHasBeenSet;

@@ -595,7 +595,7 @@ This API only supports connections of version 3.0.
                 CreateHTTPSListenerOutcomeCallable CreateHTTPSListenerCallable(const Model::CreateHTTPSListenerRequest& request);
 
                 /**
-                 *This API (CreateProxy) is used to create an acceleration connection with specified configuration.
+                 *This API is used to create/replicate an acceleration connection with the specified configuration. To replicate a connection, the basic configuration parameters need to be set for the new connection, and `ClonedProxyId` is needed to identify the replicated connection.
                  * @param req CreateProxyRequest
                  * @return CreateProxyOutcome
                  */

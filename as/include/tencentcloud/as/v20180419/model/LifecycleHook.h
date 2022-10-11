@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/as/v20180419/model/NotificationTarget.h>
+#include <tencentcloud/as/v20180419/model/LifecycleCommand.h>
 
 
 namespace TencentCloud
@@ -227,6 +228,28 @@ namespace TencentCloud
                      */
                     bool LifecycleTransitionTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Remote command execution object.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return LifecycleCommand Remote command execution object.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    LifecycleCommand GetLifecycleCommand() const;
+
+                    /**
+                     * 设置Remote command execution object.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param LifecycleCommand Remote command execution object.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetLifecycleCommand(const LifecycleCommand& _lifecycleCommand);
+
+                    /**
+                     * 判断参数 LifecycleCommand 是否已赋值
+                     * @return LifecycleCommand 是否已赋值
+                     */
+                    bool LifecycleCommandHasBeenSet() const;
+
                 private:
 
                     /**
@@ -288,6 +311,13 @@ namespace TencentCloud
                      */
                     std::string m_lifecycleTransitionType;
                     bool m_lifecycleTransitionTypeHasBeenSet;
+
+                    /**
+                     * Remote command execution object.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    LifecycleCommand m_lifecycleCommand;
+                    bool m_lifecycleCommandHasBeenSet;
 
                 };
             }

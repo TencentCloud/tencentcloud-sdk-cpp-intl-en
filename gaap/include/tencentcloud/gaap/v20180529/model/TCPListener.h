@@ -198,26 +198,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ListenerStatusHasBeenSet() const;
 
                     /**
-                     * 获取Origin server access policy of listeners:
-`rr`: Round robin
-`wrr`: Weighted round robin
-`lc`: Least connection
-                     * @return Scheduler Origin server access policy of listeners:
-`rr`: Round robin
-`wrr`: Weighted round robin
-`lc`: Least connection
+                     * 获取The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
+                     * @return Scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
                      */
                     std::string GetScheduler() const;
 
                     /**
-                     * 设置Origin server access policy of listeners:
-`rr`: Round robin
-`wrr`: Weighted round robin
-`lc`: Least connection
-                     * @param Scheduler Origin server access policy of listeners:
-`rr`: Round robin
-`wrr`: Weighted round robin
-`lc`: Least connection
+                     * 设置The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
+                     * @param Scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
                      */
                     void SetScheduler(const std::string& _scheduler);
 
@@ -516,10 +504,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_listenerStatusHasBeenSet;
 
                     /**
-                     * Origin server access policy of listeners:
-`rr`: Round robin
-`wrr`: Weighted round robin
-`lc`: Least connection
+                     * The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
                      */
                     std::string m_scheduler;
                     bool m_schedulerHasBeenSet;

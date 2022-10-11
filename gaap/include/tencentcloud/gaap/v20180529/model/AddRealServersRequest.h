@@ -80,14 +80,14 @@ namespace TencentCloud
                     bool RealServerIPHasBeenSet() const;
 
                     /**
-                     * 获取Origin server name
-                     * @return RealServerName Origin server name
+                     * 获取Name of the origin server
+                     * @return RealServerName Name of the origin server
                      */
                     std::string GetRealServerName() const;
 
                     /**
-                     * 设置Origin server name
-                     * @param RealServerName Origin server name
+                     * 设置Name of the origin server
+                     * @param RealServerName Name of the origin server
                      */
                     void SetRealServerName(const std::string& _realServerName);
 
@@ -98,14 +98,14 @@ namespace TencentCloud
                     bool RealServerNameHasBeenSet() const;
 
                     /**
-                     * 获取Tag list
-                     * @return TagSet Tag list
+                     * 获取List of tags
+                     * @return TagSet List of tags
                      */
                     std::vector<TagPair> GetTagSet() const;
 
                     /**
-                     * 设置Tag list
-                     * @param TagSet Tag list
+                     * 设置List of tags
+                     * @param TagSet List of tags
                      */
                     void SetTagSet(const std::vector<TagPair>& _tagSet);
 
@@ -130,13 +130,13 @@ namespace TencentCloud
                     bool m_realServerIPHasBeenSet;
 
                     /**
-                     * Origin server name
+                     * Name of the origin server
                      */
                     std::string m_realServerName;
                     bool m_realServerNameHasBeenSet;
 
                     /**
-                     * Tag list
+                     * List of tags
                      */
                     std::vector<TagPair> m_tagSet;
                     bool m_tagSetHasBeenSet;
