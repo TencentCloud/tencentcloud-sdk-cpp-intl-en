@@ -311,6 +311,92 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool JsonStandardHasBeenSet() const;
 
+                    /**
+                     * 获取Syslog protocol. Valid values: `tcp`, `udp`.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Protocol Syslog protocol. Valid values: `tcp`, `udp`.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetProtocol() const;
+
+                    /**
+                     * 设置Syslog protocol. Valid values: `tcp`, `udp`.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Protocol Syslog protocol. Valid values: `tcp`, `udp`.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetProtocol(const std::string& _protocol);
+
+                    /**
+                     * 判断参数 Protocol 是否已赋值
+                     * @return Protocol 是否已赋值
+                     */
+                    bool ProtocolHasBeenSet() const;
+
+                    /**
+                     * 获取Listening address and port specified by the syslog collection. Format: [ip]:[port]. Example: 127.0.0.1:9000.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Address Listening address and port specified by the syslog collection. Format: [ip]:[port]. Example: 127.0.0.1:9000.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetAddress() const;
+
+                    /**
+                     * 设置Listening address and port specified by the syslog collection. Format: [ip]:[port]. Example: 127.0.0.1:9000.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Address Listening address and port specified by the syslog collection. Format: [ip]:[port]. Example: 127.0.0.1:9000.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetAddress(const std::string& _address);
+
+                    /**
+                     * 判断参数 Address 是否已赋值
+                     * @return Address 是否已赋值
+                     */
+                    bool AddressHasBeenSet() const;
+
+                    /**
+                     * 获取`rfc3164`: Resolve logs by using the RFC3164 protocol during the syslog collection.
+`rfc5424`: Resolve logs by using the RFC5424 protocol during the syslog collection.
+`auto`: Automatically match either the RFC3164 or RFC5424 protocol.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ParseProtocol `rfc3164`: Resolve logs by using the RFC3164 protocol during the syslog collection.
+`rfc5424`: Resolve logs by using the RFC5424 protocol during the syslog collection.
+`auto`: Automatically match either the RFC3164 or RFC5424 protocol.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetParseProtocol() const;
+
+                    /**
+                     * 设置`rfc3164`: Resolve logs by using the RFC3164 protocol during the syslog collection.
+`rfc5424`: Resolve logs by using the RFC5424 protocol during the syslog collection.
+`auto`: Automatically match either the RFC3164 or RFC5424 protocol.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ParseProtocol `rfc3164`: Resolve logs by using the RFC3164 protocol during the syslog collection.
+`rfc5424`: Resolve logs by using the RFC5424 protocol during the syslog collection.
+`auto`: Automatically match either the RFC3164 or RFC5424 protocol.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetParseProtocol(const std::string& _parseProtocol);
+
+                    /**
+                     * 判断参数 ParseProtocol 是否已赋值
+                     * @return ParseProtocol 是否已赋值
+                     */
+                    bool ParseProtocolHasBeenSet() const;
+
                 private:
 
                     /**
@@ -396,6 +482,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_jsonStandard;
                     bool m_jsonStandardHasBeenSet;
+
+                    /**
+                     * Syslog protocol. Valid values: `tcp`, `udp`.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_protocol;
+                    bool m_protocolHasBeenSet;
+
+                    /**
+                     * Listening address and port specified by the syslog collection. Format: [ip]:[port]. Example: 127.0.0.1:9000.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_address;
+                    bool m_addressHasBeenSet;
+
+                    /**
+                     * `rfc3164`: Resolve logs by using the RFC3164 protocol during the syslog collection.
+`rfc5424`: Resolve logs by using the RFC5424 protocol during the syslog collection.
+`auto`: Automatically match either the RFC3164 or RFC5424 protocol.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_parseProtocol;
+                    bool m_parseProtocolHasBeenSet;
 
                 };
             }

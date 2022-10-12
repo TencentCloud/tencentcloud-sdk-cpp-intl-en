@@ -42,6 +42,7 @@ set(clb_public_header_model
   include/tencentcloud/clb/v20180317/model/DescribeRewriteRequest.h
   include/tencentcloud/clb/v20180317/model/ModifyLoadBalancerAttributesResponse.h
   include/tencentcloud/clb/v20180317/model/DescribeTargetGroupInstancesRequest.h
+  include/tencentcloud/clb/v20180317/model/DescribeIdleLoadBalancersResponse.h
   include/tencentcloud/clb/v20180317/model/AssociateTargetGroupsRequest.h
   include/tencentcloud/clb/v20180317/model/ClassicalTarget.h
   include/tencentcloud/clb/v20180317/model/ListenerItem.h
@@ -56,6 +57,8 @@ set(clb_public_header_model
   include/tencentcloud/clb/v20180317/model/CreateRuleResponse.h
   include/tencentcloud/clb/v20180317/model/CrossTargets.h
   include/tencentcloud/clb/v20180317/model/RuleHealth.h
+  include/tencentcloud/clb/v20180317/model/ModifyDomainRequest.h
+  include/tencentcloud/clb/v20180317/model/IdleLoadBalancer.h
   include/tencentcloud/clb/v20180317/model/RegisterTargetGroupInstancesResponse.h
   include/tencentcloud/clb/v20180317/model/ClassicalTargetInfo.h
   include/tencentcloud/clb/v20180317/model/DescribeTargetsRequest.h
@@ -111,7 +114,7 @@ set(clb_public_header_model
   include/tencentcloud/clb/v20180317/model/ModifyBlockIPListResponse.h
   include/tencentcloud/clb/v20180317/model/ExclusiveCluster.h
   include/tencentcloud/clb/v20180317/model/DescribeClassicalLBHealthStatusRequest.h
-  include/tencentcloud/clb/v20180317/model/ModifyDomainRequest.h
+  include/tencentcloud/clb/v20180317/model/DescribeListenersRequest.h
   include/tencentcloud/clb/v20180317/model/CreateClsLogSetResponse.h
   include/tencentcloud/clb/v20180317/model/DescribeCrossTargetsRequest.h
   include/tencentcloud/clb/v20180317/model/LBChargePrepaid.h
@@ -192,7 +195,7 @@ set(clb_public_header_model
   include/tencentcloud/clb/v20180317/model/SetLoadBalancerClsLogRequest.h
   include/tencentcloud/clb/v20180317/model/LBItem.h
   include/tencentcloud/clb/v20180317/model/DeleteLoadBalancerListenersResponse.h
-  include/tencentcloud/clb/v20180317/model/DescribeListenersRequest.h
+  include/tencentcloud/clb/v20180317/model/DescribeIdleLoadBalancersRequest.h
   include/tencentcloud/clb/v20180317/model/DeleteLoadBalancerSnatIpsRequest.h
   include/tencentcloud/clb/v20180317/model/SetLoadBalancerSecurityGroupsRequest.h
   include/tencentcloud/clb/v20180317/model/DescribeClassicalLBTargetsResponse.h
@@ -240,6 +243,7 @@ set(clb_src
   src/v20180317/model/DescribeRewriteRequest.cpp
   src/v20180317/model/ModifyLoadBalancerAttributesResponse.cpp
   src/v20180317/model/DescribeTargetGroupInstancesRequest.cpp
+  src/v20180317/model/DescribeIdleLoadBalancersResponse.cpp
   src/v20180317/model/AssociateTargetGroupsRequest.cpp
   src/v20180317/model/ClassicalTarget.cpp
   src/v20180317/model/ListenerItem.cpp
@@ -254,6 +258,8 @@ set(clb_src
   src/v20180317/model/CreateRuleResponse.cpp
   src/v20180317/model/CrossTargets.cpp
   src/v20180317/model/RuleHealth.cpp
+  src/v20180317/model/ModifyDomainRequest.cpp
+  src/v20180317/model/IdleLoadBalancer.cpp
   src/v20180317/model/RegisterTargetGroupInstancesResponse.cpp
   src/v20180317/model/ClassicalTargetInfo.cpp
   src/v20180317/model/DescribeTargetsRequest.cpp
@@ -309,7 +315,7 @@ set(clb_src
   src/v20180317/model/ModifyBlockIPListResponse.cpp
   src/v20180317/model/ExclusiveCluster.cpp
   src/v20180317/model/DescribeClassicalLBHealthStatusRequest.cpp
-  src/v20180317/model/ModifyDomainRequest.cpp
+  src/v20180317/model/DescribeListenersRequest.cpp
   src/v20180317/model/CreateClsLogSetResponse.cpp
   src/v20180317/model/DescribeCrossTargetsRequest.cpp
   src/v20180317/model/LBChargePrepaid.cpp
@@ -390,7 +396,7 @@ set(clb_src
   src/v20180317/model/SetLoadBalancerClsLogRequest.cpp
   src/v20180317/model/LBItem.cpp
   src/v20180317/model/DeleteLoadBalancerListenersResponse.cpp
-  src/v20180317/model/DescribeListenersRequest.cpp
+  src/v20180317/model/DescribeIdleLoadBalancersRequest.cpp
   src/v20180317/model/DeleteLoadBalancerSnatIpsRequest.cpp
   src/v20180317/model/SetLoadBalancerSecurityGroupsRequest.cpp
   src/v20180317/model/DescribeClassicalLBTargetsResponse.cpp

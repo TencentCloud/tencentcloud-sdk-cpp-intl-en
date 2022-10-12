@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool LocationIdsHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the target domain name. Only one domain name is allowed. This field is invalid when `LocationIds` is specified.
-                     * @return Domain Specifies the target domain name. Only one domain name is allowed. This field is invalid when `LocationIds` is specified.
+                     * 获取The domain name associated with the forwarding rule to delete. If the rule is associated with multiple domain names, specify any one of them.
+                     * @return Domain The domain name associated with the forwarding rule to delete. If the rule is associated with multiple domain names, specify any one of them.
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置Specifies the target domain name. Only one domain name is allowed. This field is invalid when `LocationIds` is specified.
-                     * @param Domain Specifies the target domain name. Only one domain name is allowed. This field is invalid when `LocationIds` is specified.
+                     * 设置The domain name associated with the forwarding rule to delete. If the rule is associated with multiple domain names, specify any one of them.
+                     * @param Domain The domain name associated with the forwarding rule to delete. If the rule is associated with multiple domain names, specify any one of them.
                      */
                     void SetDomain(const std::string& _domain);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
-                     * @return Url Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
+                     * 获取The forwarding path of the forwarding rule to delete.
+                     * @return Url The forwarding path of the forwarding rule to delete.
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
-                     * @param Url Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
+                     * 设置The forwarding path of the forwarding rule to delete.
+                     * @param Url The forwarding path of the forwarding rule to delete.
                      */
                     void SetUrl(const std::string& _url);
 
@@ -171,13 +171,13 @@ namespace TencentCloud
                     bool m_locationIdsHasBeenSet;
 
                     /**
-                     * Specifies the target domain name. Only one domain name is allowed. This field is invalid when `LocationIds` is specified.
+                     * The domain name associated with the forwarding rule to delete. If the rule is associated with multiple domain names, specify any one of them.
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
 
                     /**
-                     * Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
+                     * The forwarding path of the forwarding rule to delete.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;

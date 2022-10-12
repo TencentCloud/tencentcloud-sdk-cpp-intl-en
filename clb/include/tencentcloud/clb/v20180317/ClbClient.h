@@ -89,6 +89,8 @@
 #include <tencentcloud/clb/v20180317/model/DescribeCustomizedConfigAssociateListResponse.h>
 #include <tencentcloud/clb/v20180317/model/DescribeCustomizedConfigListRequest.h>
 #include <tencentcloud/clb/v20180317/model/DescribeCustomizedConfigListResponse.h>
+#include <tencentcloud/clb/v20180317/model/DescribeIdleLoadBalancersRequest.h>
+#include <tencentcloud/clb/v20180317/model/DescribeIdleLoadBalancersResponse.h>
 #include <tencentcloud/clb/v20180317/model/DescribeLBListenersRequest.h>
 #include <tencentcloud/clb/v20180317/model/DescribeLBListenersResponse.h>
 #include <tencentcloud/clb/v20180317/model/DescribeListenersRequest.h>
@@ -276,6 +278,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeCustomizedConfigListResponse> DescribeCustomizedConfigListOutcome;
                 typedef std::future<DescribeCustomizedConfigListOutcome> DescribeCustomizedConfigListOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::DescribeCustomizedConfigListRequest&, DescribeCustomizedConfigListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCustomizedConfigListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeIdleLoadBalancersResponse> DescribeIdleLoadBalancersOutcome;
+                typedef std::future<DescribeIdleLoadBalancersOutcome> DescribeIdleLoadBalancersOutcomeCallable;
+                typedef std::function<void(const ClbClient*, const Model::DescribeIdleLoadBalancersRequest&, DescribeIdleLoadBalancersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeIdleLoadBalancersAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeLBListenersResponse> DescribeLBListenersOutcome;
                 typedef std::future<DescribeLBListenersOutcome> DescribeLBListenersOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::DescribeLBListenersRequest&, DescribeLBListenersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLBListenersAsyncHandler;
@@ -712,6 +717,15 @@ This is an async API. After it is returned successfully, you can call the Descri
                 DescribeCustomizedConfigListOutcome DescribeCustomizedConfigList(const Model::DescribeCustomizedConfigListRequest &request);
                 void DescribeCustomizedConfigListAsync(const Model::DescribeCustomizedConfigListRequest& request, const DescribeCustomizedConfigListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeCustomizedConfigListOutcomeCallable DescribeCustomizedConfigListCallable(const Model::DescribeCustomizedConfigListRequest& request);
+
+                /**
+                 *Idle CLB instances are pay-as-you-go load balancers that, within seven days after the creation, do not have rules configured or the configured rules are not associated with any servers. 
+                 * @param req DescribeIdleLoadBalancersRequest
+                 * @return DescribeIdleLoadBalancersOutcome
+                 */
+                DescribeIdleLoadBalancersOutcome DescribeIdleLoadBalancers(const Model::DescribeIdleLoadBalancersRequest &request);
+                void DescribeIdleLoadBalancersAsync(const Model::DescribeIdleLoadBalancersRequest& request, const DescribeIdleLoadBalancersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeIdleLoadBalancersOutcomeCallable DescribeIdleLoadBalancersCallable(const Model::DescribeIdleLoadBalancersRequest& request);
 
                 /**
                  *This API is used to query CLB instances bound to the CVM or ENI.
