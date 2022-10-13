@@ -115,6 +115,42 @@ namespace TencentCloud
                      */
                     bool WaitSwitchHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to sync the parameters to read-only instance of the source instance. Valid values: `true` (not sync), `false` (sync). Default value: `false`.
+                     * @return NotSyncRo Whether to sync the parameters to read-only instance of the source instance. Valid values: `true` (not sync), `false` (sync). Default value: `false`.
+                     */
+                    bool GetNotSyncRo() const;
+
+                    /**
+                     * 设置Whether to sync the parameters to read-only instance of the source instance. Valid values: `true` (not sync), `false` (sync). Default value: `false`.
+                     * @param NotSyncRo Whether to sync the parameters to read-only instance of the source instance. Valid values: `true` (not sync), `false` (sync). Default value: `false`.
+                     */
+                    void SetNotSyncRo(const bool& _notSyncRo);
+
+                    /**
+                     * 判断参数 NotSyncRo 是否已赋值
+                     * @return NotSyncRo 是否已赋值
+                     */
+                    bool NotSyncRoHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to sync the parameters to disaster recovery instance of the source instance. Valid values: `true` (not sync), `false` (sync). Default value: `false`.
+                     * @return NotSyncDr Whether to sync the parameters to disaster recovery instance of the source instance. Valid values: `true` (not sync), `false` (sync). Default value: `false`.
+                     */
+                    bool GetNotSyncDr() const;
+
+                    /**
+                     * 设置Whether to sync the parameters to disaster recovery instance of the source instance. Valid values: `true` (not sync), `false` (sync). Default value: `false`.
+                     * @param NotSyncDr Whether to sync the parameters to disaster recovery instance of the source instance. Valid values: `true` (not sync), `false` (sync). Default value: `false`.
+                     */
+                    void SetNotSyncDr(const bool& _notSyncDr);
+
+                    /**
+                     * 判断参数 NotSyncDr 是否已赋值
+                     * @return NotSyncDr 是否已赋值
+                     */
+                    bool NotSyncDrHasBeenSet() const;
+
                 private:
 
                     /**
@@ -140,6 +176,18 @@ namespace TencentCloud
                      */
                     int64_t m_waitSwitch;
                     bool m_waitSwitchHasBeenSet;
+
+                    /**
+                     * Whether to sync the parameters to read-only instance of the source instance. Valid values: `true` (not sync), `false` (sync). Default value: `false`.
+                     */
+                    bool m_notSyncRo;
+                    bool m_notSyncRoHasBeenSet;
+
+                    /**
+                     * Whether to sync the parameters to disaster recovery instance of the source instance. Valid values: `true` (not sync), `false` (sync). Default value: `false`.
+                     */
+                    bool m_notSyncDr;
+                    bool m_notSyncDrHasBeenSet;
 
                 };
             }
