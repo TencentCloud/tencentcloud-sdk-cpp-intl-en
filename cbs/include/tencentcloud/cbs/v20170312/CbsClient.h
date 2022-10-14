@@ -23,6 +23,8 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/cbs/v20170312/model/ApplyDiskBackupRequest.h>
+#include <tencentcloud/cbs/v20170312/model/ApplyDiskBackupResponse.h>
 #include <tencentcloud/cbs/v20170312/model/ApplySnapshotRequest.h>
 #include <tencentcloud/cbs/v20170312/model/ApplySnapshotResponse.h>
 #include <tencentcloud/cbs/v20170312/model/AttachDisksRequest.h>
@@ -39,12 +41,16 @@
 #include <tencentcloud/cbs/v20170312/model/CreateSnapshotResponse.h>
 #include <tencentcloud/cbs/v20170312/model/DeleteAutoSnapshotPoliciesRequest.h>
 #include <tencentcloud/cbs/v20170312/model/DeleteAutoSnapshotPoliciesResponse.h>
+#include <tencentcloud/cbs/v20170312/model/DeleteDiskBackupsRequest.h>
+#include <tencentcloud/cbs/v20170312/model/DeleteDiskBackupsResponse.h>
 #include <tencentcloud/cbs/v20170312/model/DeleteSnapshotsRequest.h>
 #include <tencentcloud/cbs/v20170312/model/DeleteSnapshotsResponse.h>
 #include <tencentcloud/cbs/v20170312/model/DescribeAutoSnapshotPoliciesRequest.h>
 #include <tencentcloud/cbs/v20170312/model/DescribeAutoSnapshotPoliciesResponse.h>
 #include <tencentcloud/cbs/v20170312/model/DescribeDiskAssociatedAutoSnapshotPolicyRequest.h>
 #include <tencentcloud/cbs/v20170312/model/DescribeDiskAssociatedAutoSnapshotPolicyResponse.h>
+#include <tencentcloud/cbs/v20170312/model/DescribeDiskBackupsRequest.h>
+#include <tencentcloud/cbs/v20170312/model/DescribeDiskBackupsResponse.h>
 #include <tencentcloud/cbs/v20170312/model/DescribeDiskConfigQuotaRequest.h>
 #include <tencentcloud/cbs/v20170312/model/DescribeDiskConfigQuotaResponse.h>
 #include <tencentcloud/cbs/v20170312/model/DescribeDiskOperationLogsRequest.h>
@@ -65,6 +71,8 @@
 #include <tencentcloud/cbs/v20170312/model/GetSnapOverviewResponse.h>
 #include <tencentcloud/cbs/v20170312/model/InitializeDisksRequest.h>
 #include <tencentcloud/cbs/v20170312/model/InitializeDisksResponse.h>
+#include <tencentcloud/cbs/v20170312/model/InquirePriceModifyDiskBackupQuotaRequest.h>
+#include <tencentcloud/cbs/v20170312/model/InquirePriceModifyDiskBackupQuotaResponse.h>
 #include <tencentcloud/cbs/v20170312/model/InquirePriceModifyDiskExtraPerformanceRequest.h>
 #include <tencentcloud/cbs/v20170312/model/InquirePriceModifyDiskExtraPerformanceResponse.h>
 #include <tencentcloud/cbs/v20170312/model/InquiryPriceCreateDisksRequest.h>
@@ -75,6 +83,8 @@
 #include <tencentcloud/cbs/v20170312/model/ModifyAutoSnapshotPolicyAttributeResponse.h>
 #include <tencentcloud/cbs/v20170312/model/ModifyDiskAttributesRequest.h>
 #include <tencentcloud/cbs/v20170312/model/ModifyDiskAttributesResponse.h>
+#include <tencentcloud/cbs/v20170312/model/ModifyDiskBackupQuotaRequest.h>
+#include <tencentcloud/cbs/v20170312/model/ModifyDiskBackupQuotaResponse.h>
 #include <tencentcloud/cbs/v20170312/model/ModifyDiskExtraPerformanceRequest.h>
 #include <tencentcloud/cbs/v20170312/model/ModifyDiskExtraPerformanceResponse.h>
 #include <tencentcloud/cbs/v20170312/model/ModifySnapshotAttributeRequest.h>
@@ -101,6 +111,9 @@ namespace TencentCloud
                 CbsClient(const Credential &credential, const std::string &region);
                 CbsClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
+                typedef Outcome<Core::Error, Model::ApplyDiskBackupResponse> ApplyDiskBackupOutcome;
+                typedef std::future<ApplyDiskBackupOutcome> ApplyDiskBackupOutcomeCallable;
+                typedef std::function<void(const CbsClient*, const Model::ApplyDiskBackupRequest&, ApplyDiskBackupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ApplyDiskBackupAsyncHandler;
                 typedef Outcome<Core::Error, Model::ApplySnapshotResponse> ApplySnapshotOutcome;
                 typedef std::future<ApplySnapshotOutcome> ApplySnapshotOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::ApplySnapshotRequest&, ApplySnapshotOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ApplySnapshotAsyncHandler;
@@ -125,6 +138,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteAutoSnapshotPoliciesResponse> DeleteAutoSnapshotPoliciesOutcome;
                 typedef std::future<DeleteAutoSnapshotPoliciesOutcome> DeleteAutoSnapshotPoliciesOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::DeleteAutoSnapshotPoliciesRequest&, DeleteAutoSnapshotPoliciesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAutoSnapshotPoliciesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteDiskBackupsResponse> DeleteDiskBackupsOutcome;
+                typedef std::future<DeleteDiskBackupsOutcome> DeleteDiskBackupsOutcomeCallable;
+                typedef std::function<void(const CbsClient*, const Model::DeleteDiskBackupsRequest&, DeleteDiskBackupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteDiskBackupsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteSnapshotsResponse> DeleteSnapshotsOutcome;
                 typedef std::future<DeleteSnapshotsOutcome> DeleteSnapshotsOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::DeleteSnapshotsRequest&, DeleteSnapshotsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteSnapshotsAsyncHandler;
@@ -134,6 +150,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeDiskAssociatedAutoSnapshotPolicyResponse> DescribeDiskAssociatedAutoSnapshotPolicyOutcome;
                 typedef std::future<DescribeDiskAssociatedAutoSnapshotPolicyOutcome> DescribeDiskAssociatedAutoSnapshotPolicyOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::DescribeDiskAssociatedAutoSnapshotPolicyRequest&, DescribeDiskAssociatedAutoSnapshotPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDiskAssociatedAutoSnapshotPolicyAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDiskBackupsResponse> DescribeDiskBackupsOutcome;
+                typedef std::future<DescribeDiskBackupsOutcome> DescribeDiskBackupsOutcomeCallable;
+                typedef std::function<void(const CbsClient*, const Model::DescribeDiskBackupsRequest&, DescribeDiskBackupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDiskBackupsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDiskConfigQuotaResponse> DescribeDiskConfigQuotaOutcome;
                 typedef std::future<DescribeDiskConfigQuotaOutcome> DescribeDiskConfigQuotaOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::DescribeDiskConfigQuotaRequest&, DescribeDiskConfigQuotaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDiskConfigQuotaAsyncHandler;
@@ -164,6 +183,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::InitializeDisksResponse> InitializeDisksOutcome;
                 typedef std::future<InitializeDisksOutcome> InitializeDisksOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::InitializeDisksRequest&, InitializeDisksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InitializeDisksAsyncHandler;
+                typedef Outcome<Core::Error, Model::InquirePriceModifyDiskBackupQuotaResponse> InquirePriceModifyDiskBackupQuotaOutcome;
+                typedef std::future<InquirePriceModifyDiskBackupQuotaOutcome> InquirePriceModifyDiskBackupQuotaOutcomeCallable;
+                typedef std::function<void(const CbsClient*, const Model::InquirePriceModifyDiskBackupQuotaRequest&, InquirePriceModifyDiskBackupQuotaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquirePriceModifyDiskBackupQuotaAsyncHandler;
                 typedef Outcome<Core::Error, Model::InquirePriceModifyDiskExtraPerformanceResponse> InquirePriceModifyDiskExtraPerformanceOutcome;
                 typedef std::future<InquirePriceModifyDiskExtraPerformanceOutcome> InquirePriceModifyDiskExtraPerformanceOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::InquirePriceModifyDiskExtraPerformanceRequest&, InquirePriceModifyDiskExtraPerformanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquirePriceModifyDiskExtraPerformanceAsyncHandler;
@@ -179,6 +201,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyDiskAttributesResponse> ModifyDiskAttributesOutcome;
                 typedef std::future<ModifyDiskAttributesOutcome> ModifyDiskAttributesOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::ModifyDiskAttributesRequest&, ModifyDiskAttributesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDiskAttributesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyDiskBackupQuotaResponse> ModifyDiskBackupQuotaOutcome;
+                typedef std::future<ModifyDiskBackupQuotaOutcome> ModifyDiskBackupQuotaOutcomeCallable;
+                typedef std::function<void(const CbsClient*, const Model::ModifyDiskBackupQuotaRequest&, ModifyDiskBackupQuotaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDiskBackupQuotaAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyDiskExtraPerformanceResponse> ModifyDiskExtraPerformanceOutcome;
                 typedef std::future<ModifyDiskExtraPerformanceOutcome> ModifyDiskExtraPerformanceOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::ModifyDiskExtraPerformanceRequest&, ModifyDiskExtraPerformanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDiskExtraPerformanceAsyncHandler;
@@ -199,6 +224,19 @@ namespace TencentCloud
                 typedef std::function<void(const CbsClient*, const Model::UnbindAutoSnapshotPolicyRequest&, UnbindAutoSnapshotPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UnbindAutoSnapshotPolicyAsyncHandler;
 
 
+
+                /**
+                 *This API is used to roll back a backup point to the original cloud disk.
+
+* Only rollback to the original cloud disk is supported. For a data disk backup point, if you want to copy the backup point data to another cloud disk, use the `CreateSnapshot` API to convert the backup point into a snapshot, use the `CreateDisks` API to create an elastic cloud disk, and then copy the snapshot data to it.
+* Only backup points in `NORMAL` status can be rolled back. To query the status of a backup point, call the `DescribeDiskBackups` API and see the `BackupState` field in the response.
+* For an elastic cloud disk, it must be in unattached status. To query the status of the cloud disk, call the `DescribeDisks` API and see the `Attached` field in the response. For a non-elastic cloud disk purchased together with an instance, the instance must be in shutdown status, which can be queried through the `DescribeInstancesStatus` API.
+                 * @param req ApplyDiskBackupRequest
+                 * @return ApplyDiskBackupOutcome
+                 */
+                ApplyDiskBackupOutcome ApplyDiskBackup(const Model::ApplyDiskBackupRequest &request);
+                void ApplyDiskBackupAsync(const Model::ApplyDiskBackupRequest& request, const ApplyDiskBackupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ApplyDiskBackupOutcomeCallable ApplyDiskBackupCallable(const Model::ApplyDiskBackupRequest& request);
 
                 /**
                  *This API (ApplySnapshot) is used to roll back a snapshot to the original cloud disk.
@@ -262,10 +300,10 @@ namespace TencentCloud
                 CreateAutoSnapshotPolicyOutcomeCallable CreateAutoSnapshotPolicyCallable(const Model::CreateAutoSnapshotPolicyRequest& request);
 
                 /**
-                 *This API is used to create one or more cloud disks.
+                 *This API is used to create cloud disks.
 
 * This API supports creating a cloud disk with a data disk snapshot so that the snapshot data can be copied to the purchased cloud disk.
-* This API is an async API. A cloud disk ID list will be returned when a request is made successfully, but it does not mean that the creation has been completed. You can call the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API to query cloud disks by `DiskId`. If a new cloud disk can be found and its state is 'UNATTACHED' or 'ATTACHED', it means that the cloud disk has been created successfully.
+* This API is async. A cloud disk ID list will be returned when a request is made successfully, but it does not mean that the creation has been completed. You can call the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API to query cloud disks by `DiskId`. If a new cloud disk can be found and its status is `UNATTACHED` or `ATTACHED`, the cloud disk has been created successfully.
                  * @param req CreateDisksRequest
                  * @return CreateDisksOutcome
                  */
@@ -274,10 +312,11 @@ namespace TencentCloud
                 CreateDisksOutcomeCallable CreateDisksCallable(const Model::CreateDisksRequest& request);
 
                 /**
-                 *This API (CreateSnapshot) is used to create a snapshot of a specified cloud disk.
+                 *This API is used to create a snapshot for the specified cloud disk.
 
-* Snapshots can only be created for cloud disks with the snapshot capability. To check whether a cloud disk has the snapshot capability, see the SnapshotAbility field returned by the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
-* For the number of snapshots that can be created, please see [Product Usage Restriction](https://intl.cloud.tencent.com/doc/product/362/5145?from_cn_redirect=1).
+* You can only create snapshots for cloud disks with the snapshot capability. To check whether a cloud disk is snapshot-enabled, call the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API and see the `SnapshotAbility` field in the response.
+* For the maximum number of snapshots that can be created, see [Use Limits](https://intl.cloud.tencent.com/doc/product/362/5145?from_cn_redirect=1).
+* Currently, you can convert backup points into general snapshots. After the conversion, snapshot usage fees may be charged, backup points will not be retained, and the occupied backup point quota will be released.
                  * @param req CreateSnapshotRequest
                  * @return CreateSnapshotOutcome
                  */
@@ -295,6 +334,15 @@ namespace TencentCloud
                 DeleteAutoSnapshotPoliciesOutcome DeleteAutoSnapshotPolicies(const Model::DeleteAutoSnapshotPoliciesRequest &request);
                 void DeleteAutoSnapshotPoliciesAsync(const Model::DeleteAutoSnapshotPoliciesRequest& request, const DeleteAutoSnapshotPoliciesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteAutoSnapshotPoliciesOutcomeCallable DeleteAutoSnapshotPoliciesCallable(const Model::DeleteAutoSnapshotPoliciesRequest& request);
+
+                /**
+                 *This API is used to delete the backup points of the specified cloud disk in batches.
+                 * @param req DeleteDiskBackupsRequest
+                 * @return DeleteDiskBackupsOutcome
+                 */
+                DeleteDiskBackupsOutcome DeleteDiskBackups(const Model::DeleteDiskBackupsRequest &request);
+                void DeleteDiskBackupsAsync(const Model::DeleteDiskBackupsRequest& request, const DeleteDiskBackupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteDiskBackupsOutcomeCallable DeleteDiskBackupsCallable(const Model::DeleteDiskBackupsRequest& request);
 
                 /**
                  *This API is used to delete snapshots.
@@ -329,6 +377,18 @@ namespace TencentCloud
                 DescribeDiskAssociatedAutoSnapshotPolicyOutcome DescribeDiskAssociatedAutoSnapshotPolicy(const Model::DescribeDiskAssociatedAutoSnapshotPolicyRequest &request);
                 void DescribeDiskAssociatedAutoSnapshotPolicyAsync(const Model::DescribeDiskAssociatedAutoSnapshotPolicyRequest& request, const DescribeDiskAssociatedAutoSnapshotPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeDiskAssociatedAutoSnapshotPolicyOutcomeCallable DescribeDiskAssociatedAutoSnapshotPolicyCallable(const Model::DescribeDiskAssociatedAutoSnapshotPolicyRequest& request);
+
+                /**
+                 *This API is used to query the details of backup points.
+
+You can filter results by backup point ID. You can also look for certain backup points by specifying the ID or type of the cloud disk for which the backup points are created. The relationship between different filters is logical `AND`. For more information on filters, see `Filter`.
+If the parameter is empty, a certain number (as specified by `Limit` and 20 by default) of backup points will be returned.
+                 * @param req DescribeDiskBackupsRequest
+                 * @return DescribeDiskBackupsOutcome
+                 */
+                DescribeDiskBackupsOutcome DescribeDiskBackups(const Model::DescribeDiskBackupsRequest &request);
+                void DescribeDiskBackupsAsync(const Model::DescribeDiskBackupsRequest& request, const DescribeDiskBackupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDiskBackupsOutcomeCallable DescribeDiskBackupsCallable(const Model::DescribeDiskBackupsRequest& request);
 
                 /**
                  *This API (DescribeDiskConfigQuota) is used to query the cloud disk quota.
@@ -442,6 +502,15 @@ You can filter according to the snapshot ID. The snapshot ID format is as follow
                 InitializeDisksOutcomeCallable InitializeDisksCallable(const Model::InitializeDisksRequest& request);
 
                 /**
+                 *This API is used to query the price of a cloud disk after its backup point quota is modified.
+                 * @param req InquirePriceModifyDiskBackupQuotaRequest
+                 * @return InquirePriceModifyDiskBackupQuotaOutcome
+                 */
+                InquirePriceModifyDiskBackupQuotaOutcome InquirePriceModifyDiskBackupQuota(const Model::InquirePriceModifyDiskBackupQuotaRequest &request);
+                void InquirePriceModifyDiskBackupQuotaAsync(const Model::InquirePriceModifyDiskBackupQuotaRequest& request, const InquirePriceModifyDiskBackupQuotaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                InquirePriceModifyDiskBackupQuotaOutcomeCallable InquirePriceModifyDiskBackupQuotaCallable(const Model::InquirePriceModifyDiskBackupQuotaRequest& request);
+
+                /**
                  *This API is used to query the price for adjusting the cloud disk’s extra performance.
                  * @param req InquirePriceModifyDiskExtraPerformanceRequest
                  * @return InquirePriceModifyDiskExtraPerformanceOutcome
@@ -451,9 +520,9 @@ You can filter according to the snapshot ID. The snapshot ID format is as follow
                 InquirePriceModifyDiskExtraPerformanceOutcomeCallable InquirePriceModifyDiskExtraPerformanceCallable(const Model::InquirePriceModifyDiskExtraPerformanceRequest& request);
 
                 /**
-                 *This API (InquiryPriceCreateDisks) is used to inquire the price for cloud disk creation.
+                 *This API is used to query the price of creating cloud disks.
 
-* It supports inquiring the price for the creation of multiple cloud disks. The total price for the creation is returned.
+* You can query the price of creating multiple cloud disks in a single request. In this case, the price returned will be the total price.
                  * @param req InquiryPriceCreateDisksRequest
                  * @return InquiryPriceCreateDisksOutcome
                  */
@@ -492,6 +561,15 @@ You can filter according to the snapshot ID. The snapshot ID format is as follow
                 ModifyDiskAttributesOutcome ModifyDiskAttributes(const Model::ModifyDiskAttributesRequest &request);
                 void ModifyDiskAttributesAsync(const Model::ModifyDiskAttributesRequest& request, const ModifyDiskAttributesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyDiskAttributesOutcomeCallable ModifyDiskAttributesCallable(const Model::ModifyDiskAttributesRequest& request);
+
+                /**
+                 *This API is used to modify the cloud disk backup point quota.
+                 * @param req ModifyDiskBackupQuotaRequest
+                 * @return ModifyDiskBackupQuotaOutcome
+                 */
+                ModifyDiskBackupQuotaOutcome ModifyDiskBackupQuota(const Model::ModifyDiskBackupQuotaRequest &request);
+                void ModifyDiskBackupQuotaAsync(const Model::ModifyDiskBackupQuotaRequest& request, const ModifyDiskBackupQuotaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyDiskBackupQuotaOutcomeCallable ModifyDiskBackupQuotaCallable(const Model::ModifyDiskBackupQuotaRequest& request);
 
                 /**
                  *This API is used to adjust the cloud disk’s extra performance.

@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Start time
-                     * @return BeginTime Start time
+                     * 获取The start time
+                     * @return BeginTime The start time
                      */
                     std::string GetBeginTime() const;
 
                     /**
-                     * 设置Start time
-                     * @param BeginTime Start time
+                     * 设置The start time
+                     * @param BeginTime The start time
                      */
                     void SetBeginTime(const std::string& _beginTime);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool BeginTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time
-                     * @return EndTime End time
+                     * 获取The end time
+                     * @return EndTime The end time
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time
-                     * @param EndTime End time
+                     * 设置The end time
+                     * @param EndTime The end time
                      */
                     void SetEndTime(const std::string& _endTime);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Slow log threshold in microseconds
-                     * @return MinQueryTime Slow log threshold in microseconds
+                     * 获取The average execution time threshold of slow query in microseconds
+                     * @return MinQueryTime The average execution time threshold of slow query in microseconds
                      */
                     int64_t GetMinQueryTime() const;
 
                     /**
-                     * 设置Slow log threshold in microseconds
-                     * @param MinQueryTime Slow log threshold in microseconds
+                     * 设置The average execution time threshold of slow query in microseconds
+                     * @param MinQueryTime The average execution time threshold of slow query in microseconds
                      */
                     void SetMinQueryTime(const int64_t& _minQueryTime);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool MinQueryTimeHasBeenSet() const;
 
                     /**
-                     * 获取Number of entries per page
-                     * @return Limit Number of entries per page
+                     * 获取Number of slow queries displayed per page. Default value: `20`.
+                     * @return Limit Number of slow queries displayed per page. Default value: `20`.
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of entries per page
-                     * @param Limit Number of entries per page
+                     * 设置Number of slow queries displayed per page. Default value: `20`.
+                     * @param Limit Number of slow queries displayed per page. Default value: `20`.
                      */
                     void SetLimit(const int64_t& _limit);
 
@@ -133,14 +133,14 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset, which is an integral multiple of `Limit`
-                     * @return Offset Offset, which is an integral multiple of `Limit`
+                     * 获取Slow query offset, which is an integral multiple of `Limit`.
+                     * @return Offset Slow query offset, which is an integral multiple of `Limit`.
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset, which is an integral multiple of `Limit`
-                     * @param Offset Offset, which is an integral multiple of `Limit`
+                     * 设置Slow query offset, which is an integral multiple of `Limit`.
+                     * @param Offset Slow query offset, which is an integral multiple of `Limit`.
                      */
                     void SetOffset(const int64_t& _offset);
 
@@ -149,6 +149,24 @@ namespace TencentCloud
                      * @return Offset 是否已赋值
                      */
                     bool OffsetHasBeenSet() const;
+
+                    /**
+                     * 获取Node role. <ul><li>`Master`: Master node</li><li>`Slave`: Replica node</li></ul>
+                     * @return Role Node role. <ul><li>`Master`: Master node</li><li>`Slave`: Replica node</li></ul>
+                     */
+                    std::string GetRole() const;
+
+                    /**
+                     * 设置Node role. <ul><li>`Master`: Master node</li><li>`Slave`: Replica node</li></ul>
+                     * @param Role Node role. <ul><li>`Master`: Master node</li><li>`Slave`: Replica node</li></ul>
+                     */
+                    void SetRole(const std::string& _role);
+
+                    /**
+                     * 判断参数 Role 是否已赋值
+                     * @return Role 是否已赋值
+                     */
+                    bool RoleHasBeenSet() const;
 
                 private:
 
@@ -159,34 +177,40 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Start time
+                     * The start time
                      */
                     std::string m_beginTime;
                     bool m_beginTimeHasBeenSet;
 
                     /**
-                     * End time
+                     * The end time
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Slow log threshold in microseconds
+                     * The average execution time threshold of slow query in microseconds
                      */
                     int64_t m_minQueryTime;
                     bool m_minQueryTimeHasBeenSet;
 
                     /**
-                     * Number of entries per page
+                     * Number of slow queries displayed per page. Default value: `20`.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset, which is an integral multiple of `Limit`
+                     * Slow query offset, which is an integral multiple of `Limit`.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
+
+                    /**
+                     * Node role. <ul><li>`Master`: Master node</li><li>`Slave`: Replica node</li></ul>
+                     */
+                    std::string m_role;
+                    bool m_roleHasBeenSet;
 
                 };
             }

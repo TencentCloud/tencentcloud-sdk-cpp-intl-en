@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Sets a parameter name
-                     * @return Key Sets a parameter name
+                     * 获取Parameter name, such as “timeout”. For supported custom parameters, see <a href="https://www.tencentcloud.com/document/product/239/39796">Setting Instance Parameters</a>
+                     * @return Key Parameter name, such as “timeout”. For supported custom parameters, see <a href="https://www.tencentcloud.com/document/product/239/39796">Setting Instance Parameters</a>
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置Sets a parameter name
-                     * @param Key Sets a parameter name
+                     * 设置Parameter name, such as “timeout”. For supported custom parameters, see <a href="https://www.tencentcloud.com/document/product/239/39796">Setting Instance Parameters</a>
+                     * @param Key Parameter name, such as “timeout”. For supported custom parameters, see <a href="https://www.tencentcloud.com/document/product/239/39796">Setting Instance Parameters</a>
                      */
                     void SetKey(const std::string& _key);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool KeyHasBeenSet() const;
 
                     /**
-                     * 获取Sets a parameter value
-                     * @return Value Sets a parameter value
+                     * 获取Current parameter value. For example, if you set the current value of “timeout” to 120 (in seconds), the client connections that remain idle longer than 120 seconds will be closed. For more information on parameter values, see <a href="https://www.tencentcloud.com/document/product/239/39796">Setting Instance Parameters</a>
+                     * @return Value Current parameter value. For example, if you set the current value of “timeout” to 120 (in seconds), the client connections that remain idle longer than 120 seconds will be closed. For more information on parameter values, see <a href="https://www.tencentcloud.com/document/product/239/39796">Setting Instance Parameters</a>
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置Sets a parameter value
-                     * @param Value Sets a parameter value
+                     * 设置Current parameter value. For example, if you set the current value of “timeout” to 120 (in seconds), the client connections that remain idle longer than 120 seconds will be closed. For more information on parameter values, see <a href="https://www.tencentcloud.com/document/product/239/39796">Setting Instance Parameters</a>
+                     * @param Value Current parameter value. For example, if you set the current value of “timeout” to 120 (in seconds), the client connections that remain idle longer than 120 seconds will be closed. For more information on parameter values, see <a href="https://www.tencentcloud.com/document/product/239/39796">Setting Instance Parameters</a>
                      */
                     void SetValue(const std::string& _value);
 
@@ -85,13 +85,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Sets a parameter name
+                     * Parameter name, such as “timeout”. For supported custom parameters, see <a href="https://www.tencentcloud.com/document/product/239/39796">Setting Instance Parameters</a>
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;
 
                     /**
-                     * Sets a parameter value
+                     * Current parameter value. For example, if you set the current value of “timeout” to 120 (in seconds), the client connections that remain idle longer than 120 seconds will be closed. For more information on parameter values, see <a href="https://www.tencentcloud.com/document/product/239/39796">Setting Instance Parameters</a>
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;

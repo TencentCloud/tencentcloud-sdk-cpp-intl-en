@@ -832,7 +832,7 @@ namespace TencentCloud
                 DescribeReplicationGroupOutcomeCallable DescribeReplicationGroupCallable(const Model::DescribeReplicationGroupRequest& request);
 
                 /**
-                 *This API is used to query the slow log.
+                 *This API is used to query the records of slow query.
                  * @param req DescribeSlowLogRequest
                  * @return DescribeSlowLogOutcome
                  */
@@ -994,7 +994,7 @@ namespace TencentCloud
                 ModifyInstanceAccountOutcomeCallable ModifyInstanceAccountCallable(const Model::ModifyInstanceAccountRequest& request);
 
                 /**
-                 *This API is used to modify instance parameters.
+                 *This API is used to modify the parameters of TencentDB for Redis instances
                  * @param req ModifyInstanceParamsRequest
                  * @return ModifyInstanceParamsOutcome
                  */

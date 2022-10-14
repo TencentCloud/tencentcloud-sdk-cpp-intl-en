@@ -14,13 +14,14 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_CBS_V20170312_MODEL_CREATEDISKSRESPONSE_H_
-#define TENCENTCLOUD_CBS_V20170312_MODEL_CREATEDISKSRESPONSE_H_
+#ifndef TENCENTCLOUD_CBS_V20170312_MODEL_INQUIREPRICEMODIFYDISKBACKUPQUOTARESPONSE_H_
+#define TENCENTCLOUD_CBS_V20170312_MODEL_INQUIREPRICEMODIFYDISKBACKUPQUOTARESPONSE_H_
 
 #include <string>
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cbs/v20170312/model/Price.h>
 
 
 namespace TencentCloud
@@ -32,36 +33,36 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * CreateDisks response structure.
+                * InquirePriceModifyDiskBackupQuota response structure.
                 */
-                class CreateDisksResponse : public AbstractModel
+                class InquirePriceModifyDiskBackupQuotaResponse : public AbstractModel
                 {
                 public:
-                    CreateDisksResponse();
-                    ~CreateDisksResponse() = default;
+                    InquirePriceModifyDiskBackupQuotaResponse();
+                    ~InquirePriceModifyDiskBackupQuotaResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取List of IDs of the created cloud disks.
-                     * @return DiskIdSet List of IDs of the created cloud disks.
+                     * 获取Price of the cloud disk after its backup point quota is modified.
+                     * @return DiskPrice Price of the cloud disk after its backup point quota is modified.
                      */
-                    std::vector<std::string> GetDiskIdSet() const;
+                    Price GetDiskPrice() const;
 
                     /**
-                     * 判断参数 DiskIdSet 是否已赋值
-                     * @return DiskIdSet 是否已赋值
+                     * 判断参数 DiskPrice 是否已赋值
+                     * @return DiskPrice 是否已赋值
                      */
-                    bool DiskIdSetHasBeenSet() const;
+                    bool DiskPriceHasBeenSet() const;
 
                 private:
 
                     /**
-                     * List of IDs of the created cloud disks.
+                     * Price of the cloud disk after its backup point quota is modified.
                      */
-                    std::vector<std::string> m_diskIdSet;
-                    bool m_diskIdSetHasBeenSet;
+                    Price m_diskPrice;
+                    bool m_diskPriceHasBeenSet;
 
                 };
             }
@@ -69,4 +70,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_CBS_V20170312_MODEL_CREATEDISKSRESPONSE_H_
+#endif // !TENCENTCLOUD_CBS_V20170312_MODEL_INQUIREPRICEMODIFYDISKBACKUPQUOTARESPONSE_H_

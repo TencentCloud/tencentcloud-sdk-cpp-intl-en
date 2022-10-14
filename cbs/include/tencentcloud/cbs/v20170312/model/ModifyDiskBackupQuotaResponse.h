@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_CBS_V20170312_MODEL_CREATEDISKSRESPONSE_H_
-#define TENCENTCLOUD_CBS_V20170312_MODEL_CREATEDISKSRESPONSE_H_
+#ifndef TENCENTCLOUD_CBS_V20170312_MODEL_MODIFYDISKBACKUPQUOTARESPONSE_H_
+#define TENCENTCLOUD_CBS_V20170312_MODEL_MODIFYDISKBACKUPQUOTARESPONSE_H_
 
 #include <string>
 #include <vector>
@@ -32,36 +32,18 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * CreateDisks response structure.
+                * ModifyDiskBackupQuota response structure.
                 */
-                class CreateDisksResponse : public AbstractModel
+                class ModifyDiskBackupQuotaResponse : public AbstractModel
                 {
                 public:
-                    CreateDisksResponse();
-                    ~CreateDisksResponse() = default;
+                    ModifyDiskBackupQuotaResponse();
+                    ~ModifyDiskBackupQuotaResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
-                    /**
-                     * 获取List of IDs of the created cloud disks.
-                     * @return DiskIdSet List of IDs of the created cloud disks.
-                     */
-                    std::vector<std::string> GetDiskIdSet() const;
-
-                    /**
-                     * 判断参数 DiskIdSet 是否已赋值
-                     * @return DiskIdSet 是否已赋值
-                     */
-                    bool DiskIdSetHasBeenSet() const;
-
                 private:
-
-                    /**
-                     * List of IDs of the created cloud disks.
-                     */
-                    std::vector<std::string> m_diskIdSet;
-                    bool m_diskIdSetHasBeenSet;
 
                 };
             }
@@ -69,4 +51,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_CBS_V20170312_MODEL_CREATEDISKSRESPONSE_H_
+#endif // !TENCENTCLOUD_CBS_V20170312_MODEL_MODIFYDISKBACKUPQUOTARESPONSE_H_

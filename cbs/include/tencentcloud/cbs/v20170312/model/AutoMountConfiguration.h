@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Describes how a newly purchased cloud disk is initialized and mounted to a CVM
+                * Describes how a newly purchased cloud disk is initialized and attached to a CVM instance.
                 */
                 class AutoMountConfiguration : public AbstractModel
                 {
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Path to the mount point in the CVM
-                     * @return MountPoint Path to the mount point in the CVM
+                     * 获取Mount point in the instance.
+                     * @return MountPoint Mount point in the instance.
                      */
                     std::vector<std::string> GetMountPoint() const;
 
                     /**
-                     * 设置Path to the mount point in the CVM
-                     * @param MountPoint Path to the mount point in the CVM
+                     * 设置Mount point in the instance.
+                     * @param MountPoint Mount point in the instance.
                      */
                     void SetMountPoint(const std::vector<std::string>& _mountPoint);
 
@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool MountPointHasBeenSet() const;
 
                     /**
-                     * 获取File system type. Supported: ext4 and xfs.
-                     * @return FileSystemType File system type. Supported: ext4 and xfs.
+                     * 获取File system type. Valid values: `ext4`, `xfs`.
+                     * @return FileSystemType File system type. Valid values: `ext4`, `xfs`.
                      */
                     std::string GetFileSystemType() const;
 
                     /**
-                     * 设置File system type. Supported: ext4 and xfs.
-                     * @param FileSystemType File system type. Supported: ext4 and xfs.
+                     * 设置File system type. Valid values: `ext4`, `xfs`.
+                     * @param FileSystemType File system type. Valid values: `ext4`, `xfs`.
                      */
                     void SetFileSystemType(const std::string& _fileSystemType);
 
@@ -109,13 +109,13 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Path to the mount point in the CVM
+                     * Mount point in the instance.
                      */
                     std::vector<std::string> m_mountPoint;
                     bool m_mountPointHasBeenSet;
 
                     /**
-                     * File system type. Supported: ext4 and xfs.
+                     * File system type. Valid values: `ext4`, `xfs`.
                      */
                     std::string m_fileSystemType;
                     bool m_fileSystemTypeHasBeenSet;

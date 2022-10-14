@@ -14,41 +14,41 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_REDIS_V20180412_MODEL_DESCRIBESLOWLOGRESPONSE_H_
-#define TENCENTCLOUD_REDIS_V20180412_MODEL_DESCRIBESLOWLOGRESPONSE_H_
+#ifndef TENCENTCLOUD_CBS_V20170312_MODEL_DESCRIBEDISKBACKUPSRESPONSE_H_
+#define TENCENTCLOUD_CBS_V20170312_MODEL_DESCRIBEDISKBACKUPSRESPONSE_H_
 
 #include <string>
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/redis/v20180412/model/InstanceSlowlogDetail.h>
+#include <tencentcloud/cbs/v20170312/model/DiskBackup.h>
 
 
 namespace TencentCloud
 {
-    namespace Redis
+    namespace Cbs
     {
-        namespace V20180412
+        namespace V20170312
         {
             namespace Model
             {
                 /**
-                * DescribeSlowLog response structure.
+                * DescribeDiskBackups response structure.
                 */
-                class DescribeSlowLogResponse : public AbstractModel
+                class DescribeDiskBackupsResponse : public AbstractModel
                 {
                 public:
-                    DescribeSlowLogResponse();
-                    ~DescribeSlowLogResponse() = default;
+                    DescribeDiskBackupsResponse();
+                    ~DescribeDiskBackupsResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Total number of slow queries
-                     * @return TotalCount Total number of slow queries
+                     * 获取Number of eligible cloud disk backup points.
+                     * @return TotalCount Number of eligible cloud disk backup points.
                      */
-                    int64_t GetTotalCount() const;
+                    uint64_t GetTotalCount() const;
 
                     /**
                      * 判断参数 TotalCount 是否已赋值
@@ -57,30 +57,30 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Slow query details
-                     * @return InstanceSlowlogDetail Slow query details
+                     * 获取List of details of cloud disk backup points.
+                     * @return DiskBackupSet List of details of cloud disk backup points.
                      */
-                    std::vector<InstanceSlowlogDetail> GetInstanceSlowlogDetail() const;
+                    std::vector<DiskBackup> GetDiskBackupSet() const;
 
                     /**
-                     * 判断参数 InstanceSlowlogDetail 是否已赋值
-                     * @return InstanceSlowlogDetail 是否已赋值
+                     * 判断参数 DiskBackupSet 是否已赋值
+                     * @return DiskBackupSet 是否已赋值
                      */
-                    bool InstanceSlowlogDetailHasBeenSet() const;
+                    bool DiskBackupSetHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Total number of slow queries
+                     * Number of eligible cloud disk backup points.
                      */
-                    int64_t m_totalCount;
+                    uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Slow query details
+                     * List of details of cloud disk backup points.
                      */
-                    std::vector<InstanceSlowlogDetail> m_instanceSlowlogDetail;
-                    bool m_instanceSlowlogDetailHasBeenSet;
+                    std::vector<DiskBackup> m_diskBackupSet;
+                    bool m_diskBackupSetHasBeenSet;
 
                 };
             }
@@ -88,4 +88,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_REDIS_V20180412_MODEL_DESCRIBESLOWLOGRESPONSE_H_
+#endif // !TENCENTCLOUD_CBS_V20170312_MODEL_DESCRIBEDISKBACKUPSRESPONSE_H_

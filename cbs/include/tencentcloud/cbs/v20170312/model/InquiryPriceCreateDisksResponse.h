@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Describes the price of purchasing new cloud disk.
-                     * @return DiskPrice Describes the price of purchasing new cloud disk.
+                     * 获取Describes the price of newly purchased cloud disks.
+                     * @return DiskPrice Describes the price of newly purchased cloud disks.
                      */
                     Price GetDiskPrice() const;
 
@@ -59,7 +59,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Describes the price of purchasing new cloud disk.
+                     * Describes the price of newly purchased cloud disks.
                      */
                     Price m_diskPrice;
                     bool m_diskPriceHasBeenSet;

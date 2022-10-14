@@ -44,14 +44,32 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD.
-                     * @return DiskType Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD.
+                     * 获取Cloud disk billing mode. <br><li>POSTPAID_BY_HOUR: Hourly pay-as-you-go.
+                     * @return DiskChargeType Cloud disk billing mode. <br><li>POSTPAID_BY_HOUR: Hourly pay-as-you-go.
+                     */
+                    std::string GetDiskChargeType() const;
+
+                    /**
+                     * 设置Cloud disk billing mode. <br><li>POSTPAID_BY_HOUR: Hourly pay-as-you-go.
+                     * @param DiskChargeType Cloud disk billing mode. <br><li>POSTPAID_BY_HOUR: Hourly pay-as-you-go.
+                     */
+                    void SetDiskChargeType(const std::string& _diskChargeType);
+
+                    /**
+                     * 判断参数 DiskChargeType 是否已赋值
+                     * @return DiskChargeType 是否已赋值
+                     */
+                    bool DiskChargeTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD Cloud Storage<br><li>CLOUD_PREMIUM: Premium Cloud Disk<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: ulTra SSD.
+                     * @return DiskType Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD Cloud Storage<br><li>CLOUD_PREMIUM: Premium Cloud Disk<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: ulTra SSD.
                      */
                     std::string GetDiskType() const;
 
                     /**
-                     * 设置Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD.
-                     * @param DiskType Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD.
+                     * 设置Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD Cloud Storage<br><li>CLOUD_PREMIUM: Premium Cloud Disk<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: ulTra SSD.
+                     * @param DiskType Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD Cloud Storage<br><li>CLOUD_PREMIUM: Premium Cloud Disk<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: ulTra SSD.
                      */
                     void SetDiskType(const std::string& _diskType);
 
@@ -62,14 +80,14 @@ namespace TencentCloud
                     bool DiskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Cloud disk size (in GB). For the value range of the cloud disk sizes, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
-                     * @return DiskSize Cloud disk size (in GB). For the value range of the cloud disk sizes, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
+                     * 获取Cloud disk size in GB. For the value range, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
+                     * @return DiskSize Cloud disk size in GB. For the value range, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
                      */
                     uint64_t GetDiskSize() const;
 
                     /**
-                     * 设置Cloud disk size (in GB). For the value range of the cloud disk sizes, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
-                     * @param DiskSize Cloud disk size (in GB). For the value range of the cloud disk sizes, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
+                     * 设置Cloud disk size in GB. For the value range, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
+                     * @param DiskSize Cloud disk size in GB. For the value range, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
                      */
                     void SetDiskSize(const uint64_t& _diskSize);
 
@@ -80,22 +98,58 @@ namespace TencentCloud
                     bool DiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取Cloud disk billing method. <br><li>POSTPAID_BY_HOUR: Pay-as-you-go on an hourly basis
-                     * @return DiskChargeType Cloud disk billing method. <br><li>POSTPAID_BY_HOUR: Pay-as-you-go on an hourly basis
+                     * 获取ID of the project to which the cloud disk belongs.
+                     * @return ProjectId ID of the project to which the cloud disk belongs.
                      */
-                    std::string GetDiskChargeType() const;
+                    uint64_t GetProjectId() const;
 
                     /**
-                     * 设置Cloud disk billing method. <br><li>POSTPAID_BY_HOUR: Pay-as-you-go on an hourly basis
-                     * @param DiskChargeType Cloud disk billing method. <br><li>POSTPAID_BY_HOUR: Pay-as-you-go on an hourly basis
+                     * 设置ID of the project to which the cloud disk belongs.
+                     * @param ProjectId ID of the project to which the cloud disk belongs.
                      */
-                    void SetDiskChargeType(const std::string& _diskChargeType);
+                    void SetProjectId(const uint64_t& _projectId);
 
                     /**
-                     * 判断参数 DiskChargeType 是否已赋值
-                     * @return DiskChargeType 是否已赋值
+                     * 判断参数 ProjectId 是否已赋值
+                     * @return ProjectId 是否已赋值
                      */
-                    bool DiskChargeTypeHasBeenSet() const;
+                    bool ProjectIdHasBeenSet() const;
+
+                    /**
+                     * 获取Number of cloud disks to be purchased. If it is not specified, `1` will be used by default.
+                     * @return DiskCount Number of cloud disks to be purchased. If it is not specified, `1` will be used by default.
+                     */
+                    uint64_t GetDiskCount() const;
+
+                    /**
+                     * 设置Number of cloud disks to be purchased. If it is not specified, `1` will be used by default.
+                     * @param DiskCount Number of cloud disks to be purchased. If it is not specified, `1` will be used by default.
+                     */
+                    void SetDiskCount(const uint64_t& _diskCount);
+
+                    /**
+                     * 判断参数 DiskCount 是否已赋值
+                     * @return DiskCount 是否已赋值
+                     */
+                    bool DiskCountHasBeenSet() const;
+
+                    /**
+                     * 获取Extra performance in MB/s purchased for a cloud disk.<br>This parameter is only valid for Enhanced SSD (CLOUD_HSSD) and ulTra SSD (CLOUD_TSSD).
+                     * @return ThroughputPerformance Extra performance in MB/s purchased for a cloud disk.<br>This parameter is only valid for Enhanced SSD (CLOUD_HSSD) and ulTra SSD (CLOUD_TSSD).
+                     */
+                    uint64_t GetThroughputPerformance() const;
+
+                    /**
+                     * 设置Extra performance in MB/s purchased for a cloud disk.<br>This parameter is only valid for Enhanced SSD (CLOUD_HSSD) and ulTra SSD (CLOUD_TSSD).
+                     * @param ThroughputPerformance Extra performance in MB/s purchased for a cloud disk.<br>This parameter is only valid for Enhanced SSD (CLOUD_HSSD) and ulTra SSD (CLOUD_TSSD).
+                     */
+                    void SetThroughputPerformance(const uint64_t& _throughputPerformance);
+
+                    /**
+                     * 判断参数 ThroughputPerformance 是否已赋值
+                     * @return ThroughputPerformance 是否已赋值
+                     */
+                    bool ThroughputPerformanceHasBeenSet() const;
 
                     /**
                      * 获取Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk.
@@ -116,78 +170,60 @@ namespace TencentCloud
                     bool DiskChargePrepaidHasBeenSet() const;
 
                     /**
-                     * 获取Quantity of cloud disks purchased. If left empty, default is 1.
-                     * @return DiskCount Quantity of cloud disks purchased. If left empty, default is 1.
+                     * 获取Specifies the cloud disk backup point quota.
+                     * @return DiskBackupQuota Specifies the cloud disk backup point quota.
                      */
-                    uint64_t GetDiskCount() const;
+                    uint64_t GetDiskBackupQuota() const;
 
                     /**
-                     * 设置Quantity of cloud disks purchased. If left empty, default is 1.
-                     * @param DiskCount Quantity of cloud disks purchased. If left empty, default is 1.
+                     * 设置Specifies the cloud disk backup point quota.
+                     * @param DiskBackupQuota Specifies the cloud disk backup point quota.
                      */
-                    void SetDiskCount(const uint64_t& _diskCount);
+                    void SetDiskBackupQuota(const uint64_t& _diskBackupQuota);
 
                     /**
-                     * 判断参数 DiskCount 是否已赋值
-                     * @return DiskCount 是否已赋值
+                     * 判断参数 DiskBackupQuota 是否已赋值
+                     * @return DiskBackupQuota 是否已赋值
                      */
-                    bool DiskCountHasBeenSet() const;
-
-                    /**
-                     * 获取ID of project the cloud disk belongs to.
-                     * @return ProjectId ID of project the cloud disk belongs to.
-                     */
-                    uint64_t GetProjectId() const;
-
-                    /**
-                     * 设置ID of project the cloud disk belongs to.
-                     * @param ProjectId ID of project the cloud disk belongs to.
-                     */
-                    void SetProjectId(const uint64_t& _projectId);
-
-                    /**
-                     * 判断参数 ProjectId 是否已赋值
-                     * @return ProjectId 是否已赋值
-                     */
-                    bool ProjectIdHasBeenSet() const;
-
-                    /**
-                     * 获取Extra performance (in MB/sec) purchased for a cloud disk.<br>This parameter is only valid for Enhanced SSD (CLOUD_HSSD) and Tremendous SSD (CLOUD_TSSD).
-                     * @return ThroughputPerformance Extra performance (in MB/sec) purchased for a cloud disk.<br>This parameter is only valid for Enhanced SSD (CLOUD_HSSD) and Tremendous SSD (CLOUD_TSSD).
-                     */
-                    uint64_t GetThroughputPerformance() const;
-
-                    /**
-                     * 设置Extra performance (in MB/sec) purchased for a cloud disk.<br>This parameter is only valid for Enhanced SSD (CLOUD_HSSD) and Tremendous SSD (CLOUD_TSSD).
-                     * @param ThroughputPerformance Extra performance (in MB/sec) purchased for a cloud disk.<br>This parameter is only valid for Enhanced SSD (CLOUD_HSSD) and Tremendous SSD (CLOUD_TSSD).
-                     */
-                    void SetThroughputPerformance(const uint64_t& _throughputPerformance);
-
-                    /**
-                     * 判断参数 ThroughputPerformance 是否已赋值
-                     * @return ThroughputPerformance 是否已赋值
-                     */
-                    bool ThroughputPerformanceHasBeenSet() const;
+                    bool DiskBackupQuotaHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD.
+                     * Cloud disk billing mode. <br><li>POSTPAID_BY_HOUR: Hourly pay-as-you-go.
+                     */
+                    std::string m_diskChargeType;
+                    bool m_diskChargeTypeHasBeenSet;
+
+                    /**
+                     * Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD Cloud Storage<br><li>CLOUD_PREMIUM: Premium Cloud Disk<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: ulTra SSD.
                      */
                     std::string m_diskType;
                     bool m_diskTypeHasBeenSet;
 
                     /**
-                     * Cloud disk size (in GB). For the value range of the cloud disk sizes, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
+                     * Cloud disk size in GB. For the value range, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
                      */
                     uint64_t m_diskSize;
                     bool m_diskSizeHasBeenSet;
 
                     /**
-                     * Cloud disk billing method. <br><li>POSTPAID_BY_HOUR: Pay-as-you-go on an hourly basis
+                     * ID of the project to which the cloud disk belongs.
                      */
-                    std::string m_diskChargeType;
-                    bool m_diskChargeTypeHasBeenSet;
+                    uint64_t m_projectId;
+                    bool m_projectIdHasBeenSet;
+
+                    /**
+                     * Number of cloud disks to be purchased. If it is not specified, `1` will be used by default.
+                     */
+                    uint64_t m_diskCount;
+                    bool m_diskCountHasBeenSet;
+
+                    /**
+                     * Extra performance in MB/s purchased for a cloud disk.<br>This parameter is only valid for Enhanced SSD (CLOUD_HSSD) and ulTra SSD (CLOUD_TSSD).
+                     */
+                    uint64_t m_throughputPerformance;
+                    bool m_throughputPerformanceHasBeenSet;
 
                     /**
                      * Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk.
@@ -196,22 +232,10 @@ namespace TencentCloud
                     bool m_diskChargePrepaidHasBeenSet;
 
                     /**
-                     * Quantity of cloud disks purchased. If left empty, default is 1.
+                     * Specifies the cloud disk backup point quota.
                      */
-                    uint64_t m_diskCount;
-                    bool m_diskCountHasBeenSet;
-
-                    /**
-                     * ID of project the cloud disk belongs to.
-                     */
-                    uint64_t m_projectId;
-                    bool m_projectIdHasBeenSet;
-
-                    /**
-                     * Extra performance (in MB/sec) purchased for a cloud disk.<br>This parameter is only valid for Enhanced SSD (CLOUD_HSSD) and Tremendous SSD (CLOUD_TSSD).
-                     */
-                    uint64_t m_throughputPerformance;
-                    bool m_throughputPerformanceHasBeenSet;
+                    uint64_t m_diskBackupQuota;
+                    bool m_diskBackupQuotaHasBeenSet;
 
                 };
             }
