@@ -156,6 +156,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool FpsHasBeenSet() const;
 
+                    /**
+                     * 获取The codec tag. This parameter is valid only if `Codec` is `hevc`.
+                     * @return CodecTag The codec tag. This parameter is valid only if `Codec` is `hevc`.
+                     */
+                    std::string GetCodecTag() const;
+
+                    /**
+                     * 设置The codec tag. This parameter is valid only if `Codec` is `hevc`.
+                     * @param CodecTag The codec tag. This parameter is valid only if `Codec` is `hevc`.
+                     */
+                    void SetCodecTag(const std::string& _codecTag);
+
+                    /**
+                     * 判断参数 CodecTag 是否已赋值
+                     * @return CodecTag 是否已赋值
+                     */
+                    bool CodecTagHasBeenSet() const;
+
                 private:
 
                     /**
@@ -192,6 +210,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_fps;
                     bool m_fpsHasBeenSet;
+
+                    /**
+                     * The codec tag. This parameter is valid only if `Codec` is `hevc`.
+                     */
+                    std::string m_codecTag;
+                    bool m_codecTagHasBeenSet;
 
                 };
             }

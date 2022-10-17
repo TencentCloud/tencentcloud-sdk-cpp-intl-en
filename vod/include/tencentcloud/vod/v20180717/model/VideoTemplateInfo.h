@@ -374,6 +374,36 @@ Default value: OFF.
                      */
                     bool PreserveHDRSwitchHasBeenSet() const;
 
+                    /**
+                     * 获取The codec tag. This parameter is valid only if the H.265 codec is used. Valid values:
+<li>hvc1</li>
+<li>hev1</li>
+Default value: hvc1.
+                     * @return CodecTag The codec tag. This parameter is valid only if the H.265 codec is used. Valid values:
+<li>hvc1</li>
+<li>hev1</li>
+Default value: hvc1.
+                     */
+                    std::string GetCodecTag() const;
+
+                    /**
+                     * 设置The codec tag. This parameter is valid only if the H.265 codec is used. Valid values:
+<li>hvc1</li>
+<li>hev1</li>
+Default value: hvc1.
+                     * @param CodecTag The codec tag. This parameter is valid only if the H.265 codec is used. Valid values:
+<li>hvc1</li>
+<li>hev1</li>
+Default value: hvc1.
+                     */
+                    void SetCodecTag(const std::string& _codecTag);
+
+                    /**
+                     * 判断参数 CodecTag 是否已赋值
+                     * @return CodecTag 是否已赋值
+                     */
+                    bool CodecTagHasBeenSet() const;
+
                 private:
 
                     /**
@@ -472,6 +502,15 @@ Default value: OFF.
                      */
                     std::string m_preserveHDRSwitch;
                     bool m_preserveHDRSwitchHasBeenSet;
+
+                    /**
+                     * The codec tag. This parameter is valid only if the H.265 codec is used. Valid values:
+<li>hvc1</li>
+<li>hev1</li>
+Default value: hvc1.
+                     */
+                    std::string m_codecTag;
+                    bool m_codecTagHasBeenSet;
 
                 };
             }
