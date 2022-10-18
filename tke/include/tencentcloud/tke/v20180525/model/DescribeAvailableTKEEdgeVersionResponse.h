@@ -55,6 +55,34 @@ namespace TencentCloud
                      */
                     bool VersionsHasBeenSet() const;
 
+                    /**
+                     * 获取Latest version of the edge cluster
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return EdgeVersionLatest Latest version of the edge cluster
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetEdgeVersionLatest() const;
+
+                    /**
+                     * 判断参数 EdgeVersionLatest 是否已赋值
+                     * @return EdgeVersionLatest 是否已赋值
+                     */
+                    bool EdgeVersionLatestHasBeenSet() const;
+
+                    /**
+                     * 获取Current version of the edge cluster
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return EdgeVersionCurrent Current version of the edge cluster
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetEdgeVersionCurrent() const;
+
+                    /**
+                     * 判断参数 EdgeVersionCurrent 是否已赋值
+                     * @return EdgeVersionCurrent 是否已赋值
+                     */
+                    bool EdgeVersionCurrentHasBeenSet() const;
+
                 private:
 
                     /**
@@ -62,6 +90,20 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_versions;
                     bool m_versionsHasBeenSet;
+
+                    /**
+                     * Latest version of the edge cluster
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_edgeVersionLatest;
+                    bool m_edgeVersionLatestHasBeenSet;
+
+                    /**
+                     * Current version of the edge cluster
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_edgeVersionCurrent;
+                    bool m_edgeVersionCurrentHasBeenSet;
 
                 };
             }

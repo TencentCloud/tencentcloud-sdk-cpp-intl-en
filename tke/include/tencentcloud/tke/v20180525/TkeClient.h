@@ -559,7 +559,7 @@ namespace TencentCloud
                 CreateClusterOutcomeCallable CreateClusterCallable(const Model::CreateClusterRequest& request);
 
                 /**
-                 *Create a cluster access port (intranet / extranet access is enabled for independent clusters, and intranet access is supported for managed clusters)
+                 *This API is used to create a cluster access endpoint.
                  * @param req CreateClusterEndpointRequest
                  * @return CreateClusterEndpointOutcome
                  */
@@ -676,7 +676,7 @@ namespace TencentCloud
                 DeleteClusterAsGroupsOutcomeCallable DeleteClusterAsGroupsCallable(const Model::DeleteClusterAsGroupsRequest& request);
 
                 /**
-                 *Delete the cluster access port (intranet / extranet access is enabled for independent clusters, and intranet access is supported for managed clusters)
+                 *This API is used to delete a cluster access endpoint.
                  * @param req DeleteClusterEndpointRequest
                  * @return DeleteClusterEndpointOutcome
                  */
@@ -784,7 +784,7 @@ namespace TencentCloud
                 DescribeAvailableClusterVersionOutcomeCallable DescribeAvailableClusterVersionCallable(const Model::DescribeAvailableClusterVersionRequest& request);
 
                 /**
-                 *This API is used to query the K8s versions supported by TKE Edge.
+                 *This API is used to check the edge component versions and K8s versions supported by TKE Edge.
                  * @param req DescribeAvailableTKEEdgeVersionRequest
                  * @return DescribeAvailableTKEEdgeVersionOutcome
                  */

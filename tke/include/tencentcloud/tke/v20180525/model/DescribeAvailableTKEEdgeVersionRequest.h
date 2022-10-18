@@ -42,7 +42,31 @@ namespace TencentCloud
                     std::string ToJsonString() const;
 
 
+                    /**
+                     * 获取You can enter the `ClusterId` to query the current and latest versions of all cluster components.
+                     * @return ClusterId You can enter the `ClusterId` to query the current and latest versions of all cluster components.
+                     */
+                    std::string GetClusterId() const;
+
+                    /**
+                     * 设置You can enter the `ClusterId` to query the current and latest versions of all cluster components.
+                     * @param ClusterId You can enter the `ClusterId` to query the current and latest versions of all cluster components.
+                     */
+                    void SetClusterId(const std::string& _clusterId);
+
+                    /**
+                     * 判断参数 ClusterId 是否已赋值
+                     * @return ClusterId 是否已赋值
+                     */
+                    bool ClusterIdHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * You can enter the `ClusterId` to query the current and latest versions of all cluster components.
+                     */
+                    std::string m_clusterId;
+                    bool m_clusterIdHasBeenSet;
 
                 };
             }

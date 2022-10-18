@@ -24,7 +24,9 @@ set(gme_public_header_model
   include/tencentcloud/gme/v20180711/model/ModifyAppStatusRequest.h
   include/tencentcloud/gme/v20180711/model/DescribeScanResultListResponse.h
   include/tencentcloud/gme/v20180711/model/DescribeApplicationDataRequest.h
+  include/tencentcloud/gme/v20180711/model/Task.h
   include/tencentcloud/gme/v20180711/model/VoiceMessageStatisticsItem.h
+  include/tencentcloud/gme/v20180711/model/DeleteRoomMemberRequest.h
   include/tencentcloud/gme/v20180711/model/DescribeScanResultListRequest.h
   include/tencentcloud/gme/v20180711/model/RealTimeSpeechStatisticsItem.h
   include/tencentcloud/gme/v20180711/model/Tag.h
@@ -33,9 +35,10 @@ set(gme_public_header_model
   include/tencentcloud/gme/v20180711/model/ModifyAppStatusResp.h
   include/tencentcloud/gme/v20180711/model/DescribeAppStatisticsResponse.h
   include/tencentcloud/gme/v20180711/model/DescribeApplicationDataResponse.h
-  include/tencentcloud/gme/v20180711/model/Task.h
+  include/tencentcloud/gme/v20180711/model/DeleteRoomMemberResponse.h
   include/tencentcloud/gme/v20180711/model/VoiceFilterStatisticsItem.h
   include/tencentcloud/gme/v20180711/model/CreateAppResp.h
+  include/tencentcloud/gme/v20180711/model/DeleteResult.h
   include/tencentcloud/gme/v20180711/model/DescribeScanResult.h
   include/tencentcloud/gme/v20180711/model/ScanDetail.h
   include/tencentcloud/gme/v20180711/model/CreateAppRequest.h
@@ -58,7 +61,9 @@ set(gme_src
   src/v20180711/model/ModifyAppStatusRequest.cpp
   src/v20180711/model/DescribeScanResultListResponse.cpp
   src/v20180711/model/DescribeApplicationDataRequest.cpp
+  src/v20180711/model/Task.cpp
   src/v20180711/model/VoiceMessageStatisticsItem.cpp
+  src/v20180711/model/DeleteRoomMemberRequest.cpp
   src/v20180711/model/DescribeScanResultListRequest.cpp
   src/v20180711/model/RealTimeSpeechStatisticsItem.cpp
   src/v20180711/model/Tag.cpp
@@ -67,9 +72,10 @@ set(gme_src
   src/v20180711/model/ModifyAppStatusResp.cpp
   src/v20180711/model/DescribeAppStatisticsResponse.cpp
   src/v20180711/model/DescribeApplicationDataResponse.cpp
-  src/v20180711/model/Task.cpp
+  src/v20180711/model/DeleteRoomMemberResponse.cpp
   src/v20180711/model/VoiceFilterStatisticsItem.cpp
   src/v20180711/model/CreateAppResp.cpp
+  src/v20180711/model/DeleteResult.cpp
   src/v20180711/model/DescribeScanResult.cpp
   src/v20180711/model/ScanDetail.cpp
   src/v20180711/model/CreateAppRequest.cpp

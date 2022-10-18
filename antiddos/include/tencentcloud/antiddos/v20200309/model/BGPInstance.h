@@ -371,6 +371,24 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool IpCountNewFlagHasBeenSet() const;
 
+                    /**
+                     * 获取The version of attack defense package
+                     * @return VitalityVersion The version of attack defense package
+                     */
+                    uint64_t GetVitalityVersion() const;
+
+                    /**
+                     * 设置The version of attack defense package
+                     * @param VitalityVersion The version of attack defense package
+                     */
+                    void SetVitalityVersion(const uint64_t& _vitalityVersion);
+
+                    /**
+                     * 判断参数 VitalityVersion 是否已赋值
+                     * @return VitalityVersion 是否已赋值
+                     */
+                    bool VitalityVersionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -474,6 +492,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     uint64_t m_ipCountNewFlag;
                     bool m_ipCountNewFlagHasBeenSet;
+
+                    /**
+                     * The version of attack defense package
+                     */
+                    uint64_t m_vitalityVersion;
+                    bool m_vitalityVersionHasBeenSet;
 
                 };
             }

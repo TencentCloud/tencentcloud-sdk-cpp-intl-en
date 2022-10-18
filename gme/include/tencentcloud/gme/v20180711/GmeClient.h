@@ -25,6 +25,8 @@
 #include <tencentcloud/core/AsyncCallerContext.h>
 #include <tencentcloud/gme/v20180711/model/CreateAppRequest.h>
 #include <tencentcloud/gme/v20180711/model/CreateAppResponse.h>
+#include <tencentcloud/gme/v20180711/model/DeleteRoomMemberRequest.h>
+#include <tencentcloud/gme/v20180711/model/DeleteRoomMemberResponse.h>
 #include <tencentcloud/gme/v20180711/model/DescribeAppStatisticsRequest.h>
 #include <tencentcloud/gme/v20180711/model/DescribeAppStatisticsResponse.h>
 #include <tencentcloud/gme/v20180711/model/DescribeApplicationDataRequest.h>
@@ -52,6 +54,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateAppResponse> CreateAppOutcome;
                 typedef std::future<CreateAppOutcome> CreateAppOutcomeCallable;
                 typedef std::function<void(const GmeClient*, const Model::CreateAppRequest&, CreateAppOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAppAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteRoomMemberResponse> DeleteRoomMemberOutcome;
+                typedef std::future<DeleteRoomMemberOutcome> DeleteRoomMemberOutcomeCallable;
+                typedef std::function<void(const GmeClient*, const Model::DeleteRoomMemberRequest&, DeleteRoomMemberOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRoomMemberAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAppStatisticsResponse> DescribeAppStatisticsOutcome;
                 typedef std::future<DescribeAppStatisticsOutcome> DescribeAppStatisticsOutcomeCallable;
                 typedef std::function<void(const GmeClient*, const Model::DescribeAppStatisticsRequest&, DescribeAppStatisticsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAppStatisticsAsyncHandler;
@@ -78,6 +83,15 @@ namespace TencentCloud
                 CreateAppOutcome CreateApp(const Model::CreateAppRequest &request);
                 void CreateAppAsync(const Model::CreateAppRequest& request, const CreateAppAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateAppOutcomeCallable CreateAppCallable(const Model::CreateAppRequest& request);
+
+                /**
+                 *This API is used to delete a room or remove members from the room.
+                 * @param req DeleteRoomMemberRequest
+                 * @return DeleteRoomMemberOutcome
+                 */
+                DeleteRoomMemberOutcome DeleteRoomMember(const Model::DeleteRoomMemberRequest &request);
+                void DeleteRoomMemberAsync(const Model::DeleteRoomMemberRequest& request, const DeleteRoomMemberAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteRoomMemberOutcomeCallable DeleteRoomMemberCallable(const Model::DeleteRoomMemberRequest& request);
 
                 /**
                  *This API is used to get the usage statistics of a GME application, including those of voice chat, voice messaging and speech-to-text, phrase analysis, etc. The maximum query period is the past 30 days.

@@ -139,6 +139,8 @@
 #include <tencentcloud/antiddos/v20200309/model/DescribeListWaterPrintConfigResponse.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeNewL7RulesRequest.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeNewL7RulesResponse.h>
+#include <tencentcloud/antiddos/v20200309/model/DescribeNewL7RulesErrHealthRequest.h>
+#include <tencentcloud/antiddos/v20200309/model/DescribeNewL7RulesErrHealthResponse.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeOverviewDDoSEventListRequest.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeOverviewDDoSEventListResponse.h>
 #include <tencentcloud/antiddos/v20200309/model/DisassociateDDoSEipAddressRequest.h>
@@ -347,6 +349,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeNewL7RulesResponse> DescribeNewL7RulesOutcome;
                 typedef std::future<DescribeNewL7RulesOutcome> DescribeNewL7RulesOutcomeCallable;
                 typedef std::function<void(const AntiddosClient*, const Model::DescribeNewL7RulesRequest&, DescribeNewL7RulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeNewL7RulesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeNewL7RulesErrHealthResponse> DescribeNewL7RulesErrHealthOutcome;
+                typedef std::future<DescribeNewL7RulesErrHealthOutcome> DescribeNewL7RulesErrHealthOutcomeCallable;
+                typedef std::function<void(const AntiddosClient*, const Model::DescribeNewL7RulesErrHealthRequest&, DescribeNewL7RulesErrHealthOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeNewL7RulesErrHealthAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeOverviewDDoSEventListResponse> DescribeOverviewDDoSEventListOutcome;
                 typedef std::future<DescribeOverviewDDoSEventListOutcome> DescribeOverviewDDoSEventListOutcomeCallable;
                 typedef std::function<void(const AntiddosClient*, const Model::DescribeOverviewDDoSEventListRequest&, DescribeOverviewDDoSEventListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOverviewDDoSEventListAsyncHandler;
@@ -903,6 +908,15 @@ namespace TencentCloud
                 DescribeNewL7RulesOutcome DescribeNewL7Rules(const Model::DescribeNewL7RulesRequest &request);
                 void DescribeNewL7RulesAsync(const Model::DescribeNewL7RulesRequest& request, const DescribeNewL7RulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeNewL7RulesOutcomeCallable DescribeNewL7RulesCallable(const Model::DescribeNewL7RulesRequest& request);
+
+                /**
+                 *This API is used to getting the exception results of the health check on layer-7 forwarding rules.
+                 * @param req DescribeNewL7RulesErrHealthRequest
+                 * @return DescribeNewL7RulesErrHealthOutcome
+                 */
+                DescribeNewL7RulesErrHealthOutcome DescribeNewL7RulesErrHealth(const Model::DescribeNewL7RulesErrHealthRequest &request);
+                void DescribeNewL7RulesErrHealthAsync(const Model::DescribeNewL7RulesErrHealthRequest& request, const DescribeNewL7RulesErrHealthAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeNewL7RulesErrHealthOutcomeCallable DescribeNewL7RulesErrHealthCallable(const Model::DescribeNewL7RulesErrHealthRequest& request);
 
                 /**
                  *This API is used to obtain the list of DDoS attacks.

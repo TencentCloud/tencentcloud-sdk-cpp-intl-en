@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取The security group in use. Required only for public network access.
-                     * @return SecurityGroup The security group in use. Required only for public network access.
+                     * 获取The security group in use, which must be passed in when public access is enabled.
+                     * @return SecurityGroup The security group in use, which must be passed in when public access is enabled.
                      */
                     std::string GetSecurityGroup() const;
 
                     /**
-                     * 设置The security group in use. Required only for public network access.
-                     * @param SecurityGroup The security group in use. Required only for public network access.
+                     * 设置The security group in use, which must be passed in when public access is enabled.
+                     * @param SecurityGroup The security group in use, which must be passed in when public access is enabled.
                      */
                     void SetSecurityGroup(const std::string& _securityGroup);
 
@@ -177,7 +177,7 @@ namespace TencentCloud
                     bool m_domainHasBeenSet;
 
                     /**
-                     * The security group in use. Required only for public network access.
+                     * The security group in use, which must be passed in when public access is enabled.
                      */
                     std::string m_securityGroup;
                     bool m_securityGroupHasBeenSet;

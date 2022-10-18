@@ -14,23 +14,22 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/tke/v20180525/model/DescribeAvailableTKEEdgeVersionResponse.h>
+#include <tencentcloud/antiddos/v20200309/model/DescribeNewL7RulesErrHealthResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using TencentCloud::CoreInternalOutcome;
-using namespace TencentCloud::Tke::V20180525::Model;
+using namespace TencentCloud::Antiddos::V20200309::Model;
 using namespace std;
 
-DescribeAvailableTKEEdgeVersionResponse::DescribeAvailableTKEEdgeVersionResponse() :
-    m_versionsHasBeenSet(false),
-    m_edgeVersionLatestHasBeenSet(false),
-    m_edgeVersionCurrentHasBeenSet(false)
+DescribeNewL7RulesErrHealthResponse::DescribeNewL7RulesErrHealthResponse() :
+    m_errHealthsHasBeenSet(false),
+    m_totalHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome DescribeAvailableTKEEdgeVersionResponse::Deserialize(const string &payload)
+CoreInternalOutcome DescribeNewL7RulesErrHealthResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -64,76 +63,67 @@ CoreInternalOutcome DescribeAvailableTKEEdgeVersionResponse::Deserialize(const s
     }
 
 
-    if (rsp.HasMember("Versions") && !rsp["Versions"].IsNull())
+    if (rsp.HasMember("ErrHealths") && !rsp["ErrHealths"].IsNull())
     {
-        if (!rsp["Versions"].IsArray())
-            return CoreInternalOutcome(Core::Error("response `Versions` is not array type"));
+        if (!rsp["ErrHealths"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `ErrHealths` is not array type"));
 
-        const rapidjson::Value &tmpValue = rsp["Versions"];
+        const rapidjson::Value &tmpValue = rsp["ErrHealths"];
         for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
-            m_versions.push_back((*itr).GetString());
+            KeyValue item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_errHealths.push_back(item);
         }
-        m_versionsHasBeenSet = true;
+        m_errHealthsHasBeenSet = true;
     }
 
-    if (rsp.HasMember("EdgeVersionLatest") && !rsp["EdgeVersionLatest"].IsNull())
+    if (rsp.HasMember("Total") && !rsp["Total"].IsNull())
     {
-        if (!rsp["EdgeVersionLatest"].IsString())
+        if (!rsp["Total"].IsUint64())
         {
-            return CoreInternalOutcome(Core::Error("response `EdgeVersionLatest` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Total` IsUint64=false incorrectly").SetRequestId(requestId));
         }
-        m_edgeVersionLatest = string(rsp["EdgeVersionLatest"].GetString());
-        m_edgeVersionLatestHasBeenSet = true;
-    }
-
-    if (rsp.HasMember("EdgeVersionCurrent") && !rsp["EdgeVersionCurrent"].IsNull())
-    {
-        if (!rsp["EdgeVersionCurrent"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `EdgeVersionCurrent` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_edgeVersionCurrent = string(rsp["EdgeVersionCurrent"].GetString());
-        m_edgeVersionCurrentHasBeenSet = true;
+        m_total = rsp["Total"].GetUint64();
+        m_totalHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string DescribeAvailableTKEEdgeVersionResponse::ToJsonString() const
+string DescribeNewL7RulesErrHealthResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_versionsHasBeenSet)
+    if (m_errHealthsHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Versions";
+        string key = "ErrHealths";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
-        for (auto itr = m_versions.begin(); itr != m_versions.end(); ++itr)
+        int i=0;
+        for (auto itr = m_errHealths.begin(); itr != m_errHealths.end(); ++itr, ++i)
         {
-            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
-    if (m_edgeVersionLatestHasBeenSet)
+    if (m_totalHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "EdgeVersionLatest";
+        string key = "Total";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_edgeVersionLatest.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_edgeVersionCurrentHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "EdgeVersionCurrent";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_edgeVersionCurrent.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, m_total, allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -148,34 +138,24 @@ string DescribeAvailableTKEEdgeVersionResponse::ToJsonString() const
 }
 
 
-vector<string> DescribeAvailableTKEEdgeVersionResponse::GetVersions() const
+vector<KeyValue> DescribeNewL7RulesErrHealthResponse::GetErrHealths() const
 {
-    return m_versions;
+    return m_errHealths;
 }
 
-bool DescribeAvailableTKEEdgeVersionResponse::VersionsHasBeenSet() const
+bool DescribeNewL7RulesErrHealthResponse::ErrHealthsHasBeenSet() const
 {
-    return m_versionsHasBeenSet;
+    return m_errHealthsHasBeenSet;
 }
 
-string DescribeAvailableTKEEdgeVersionResponse::GetEdgeVersionLatest() const
+uint64_t DescribeNewL7RulesErrHealthResponse::GetTotal() const
 {
-    return m_edgeVersionLatest;
+    return m_total;
 }
 
-bool DescribeAvailableTKEEdgeVersionResponse::EdgeVersionLatestHasBeenSet() const
+bool DescribeNewL7RulesErrHealthResponse::TotalHasBeenSet() const
 {
-    return m_edgeVersionLatestHasBeenSet;
-}
-
-string DescribeAvailableTKEEdgeVersionResponse::GetEdgeVersionCurrent() const
-{
-    return m_edgeVersionCurrent;
-}
-
-bool DescribeAvailableTKEEdgeVersionResponse::EdgeVersionCurrentHasBeenSet() const
-{
-    return m_edgeVersionCurrentHasBeenSet;
+    return m_totalHasBeenSet;
 }
 
 

@@ -260,6 +260,42 @@ namespace TencentCloud
                      */
                     bool ChargeTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Edge cluster version. It is the set of versions of all cluster components.
+                     * @return EdgeVersion Edge cluster version. It is the set of versions of all cluster components.
+                     */
+                    std::string GetEdgeVersion() const;
+
+                    /**
+                     * 设置Edge cluster version. It is the set of versions of all cluster components.
+                     * @param EdgeVersion Edge cluster version. It is the set of versions of all cluster components.
+                     */
+                    void SetEdgeVersion(const std::string& _edgeVersion);
+
+                    /**
+                     * 判断参数 EdgeVersion 是否已赋值
+                     * @return EdgeVersion 是否已赋值
+                     */
+                    bool EdgeVersionHasBeenSet() const;
+
+                    /**
+                     * 获取Prefix of the image registry of an edge component
+                     * @return RegistryPrefix Prefix of the image registry of an edge component
+                     */
+                    std::string GetRegistryPrefix() const;
+
+                    /**
+                     * 设置Prefix of the image registry of an edge component
+                     * @param RegistryPrefix Prefix of the image registry of an edge component
+                     */
+                    void SetRegistryPrefix(const std::string& _registryPrefix);
+
+                    /**
+                     * 判断参数 RegistryPrefix 是否已赋值
+                     * @return RegistryPrefix 是否已赋值
+                     */
+                    bool RegistryPrefixHasBeenSet() const;
+
                 private:
 
                     /**
@@ -333,6 +369,18 @@ namespace TencentCloud
                      */
                     std::string m_chargeType;
                     bool m_chargeTypeHasBeenSet;
+
+                    /**
+                     * Edge cluster version. It is the set of versions of all cluster components.
+                     */
+                    std::string m_edgeVersion;
+                    bool m_edgeVersionHasBeenSet;
+
+                    /**
+                     * Prefix of the image registry of an edge component
+                     */
+                    std::string m_registryPrefix;
+                    bool m_registryPrefixHasBeenSet;
 
                 };
             }
