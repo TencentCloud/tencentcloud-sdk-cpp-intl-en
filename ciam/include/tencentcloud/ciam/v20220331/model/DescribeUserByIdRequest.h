@@ -79,14 +79,26 @@ namespace TencentCloud
                     bool UserIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Original 
+                     * 获取Whether the content is passed through
+
+<li> **false** </li>Default. The returned information is desensitized.
+<li> **true** </li>Return the original content.
+                     * @return Original Whether the content is passed through
+
+<li> **false** </li>Default. The returned information is desensitized.
+<li> **true** </li>Return the original content.
                      */
                     bool GetOriginal() const;
 
                     /**
-                     * 设置
-                     * @param Original 
+                     * 设置Whether the content is passed through
+
+<li> **false** </li>Default. The returned information is desensitized.
+<li> **true** </li>Return the original content.
+                     * @param Original Whether the content is passed through
+
+<li> **false** </li>Default. The returned information is desensitized.
+<li> **true** </li>Return the original content.
                      */
                     void SetOriginal(const bool& _original);
 
@@ -111,7 +123,10 @@ namespace TencentCloud
                     bool m_userIdHasBeenSet;
 
                     /**
-                     * 
+                     * Whether the content is passed through
+
+<li> **false** </li>Default. The returned information is desensitized.
+<li> **true** </li>Return the original content.
                      */
                     bool m_original;
                     bool m_originalHasBeenSet;

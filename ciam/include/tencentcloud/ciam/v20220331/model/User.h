@@ -823,6 +823,116 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool LockTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Index field 1
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return IndexedAttribute1 Index field 1
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetIndexedAttribute1() const;
+
+                    /**
+                     * 设置Index field 1
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param IndexedAttribute1 Index field 1
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetIndexedAttribute1(const std::string& _indexedAttribute1);
+
+                    /**
+                     * 判断参数 IndexedAttribute1 是否已赋值
+                     * @return IndexedAttribute1 是否已赋值
+                     */
+                    bool IndexedAttribute1HasBeenSet() const;
+
+                    /**
+                     * 获取Index field 2
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return IndexedAttribute2 Index field 2
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetIndexedAttribute2() const;
+
+                    /**
+                     * 设置Index field 2
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param IndexedAttribute2 Index field 2
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetIndexedAttribute2(const std::string& _indexedAttribute2);
+
+                    /**
+                     * 判断参数 IndexedAttribute2 是否已赋值
+                     * @return IndexedAttribute2 是否已赋值
+                     */
+                    bool IndexedAttribute2HasBeenSet() const;
+
+                    /**
+                     * 获取Index field 3
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return IndexedAttribute3 Index field 3
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetIndexedAttribute3() const;
+
+                    /**
+                     * 设置Index field 3
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param IndexedAttribute3 Index field 3
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetIndexedAttribute3(const std::string& _indexedAttribute3);
+
+                    /**
+                     * 判断参数 IndexedAttribute3 是否已赋值
+                     * @return IndexedAttribute3 是否已赋值
+                     */
+                    bool IndexedAttribute3HasBeenSet() const;
+
+                    /**
+                     * 获取Index field 4
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return IndexedAttribute4 Index field 4
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetIndexedAttribute4() const;
+
+                    /**
+                     * 设置Index field 4
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param IndexedAttribute4 Index field 4
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetIndexedAttribute4(const std::string& _indexedAttribute4);
+
+                    /**
+                     * 判断参数 IndexedAttribute4 是否已赋值
+                     * @return IndexedAttribute4 是否已赋值
+                     */
+                    bool IndexedAttribute4HasBeenSet() const;
+
+                    /**
+                     * 获取Index field 5
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return IndexedAttribute5 Index field 5
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetIndexedAttribute5() const;
+
+                    /**
+                     * 设置Index field 5
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param IndexedAttribute5 Index field 5
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetIndexedAttribute5(const std::string& _indexedAttribute5);
+
+                    /**
+                     * 判断参数 IndexedAttribute5 是否已赋值
+                     * @return IndexedAttribute5 是否已赋值
+                     */
+                    bool IndexedAttribute5HasBeenSet() const;
+
                 private:
 
                     /**
@@ -1072,6 +1182,41 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_lockTime;
                     bool m_lockTimeHasBeenSet;
+
+                    /**
+                     * Index field 1
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_indexedAttribute1;
+                    bool m_indexedAttribute1HasBeenSet;
+
+                    /**
+                     * Index field 2
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_indexedAttribute2;
+                    bool m_indexedAttribute2HasBeenSet;
+
+                    /**
+                     * Index field 3
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_indexedAttribute3;
+                    bool m_indexedAttribute3HasBeenSet;
+
+                    /**
+                     * Index field 4
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_indexedAttribute4;
+                    bool m_indexedAttribute4HasBeenSet;
+
+                    /**
+                     * Index field 5
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_indexedAttribute5;
+                    bool m_indexedAttribute5HasBeenSet;
 
                 };
             }

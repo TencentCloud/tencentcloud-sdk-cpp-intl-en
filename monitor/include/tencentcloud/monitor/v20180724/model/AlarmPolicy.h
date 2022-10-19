@@ -30,6 +30,7 @@
 #include <tencentcloud/monitor/v20180724/model/AlarmPolicyTriggerTask.h>
 #include <tencentcloud/monitor/v20180724/model/ConditionsTemp.h>
 #include <tencentcloud/monitor/v20180724/model/TagInstance.h>
+#include <tencentcloud/monitor/v20180724/model/Tag.h>
 
 
 namespace TencentCloud
@@ -790,6 +791,50 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool AdvancedMetricNumberHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the policy is associated with all objects
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IsBindAll Whether the policy is associated with all objects
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetIsBindAll() const;
+
+                    /**
+                     * 设置Whether the policy is associated with all objects
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param IsBindAll Whether the policy is associated with all objects
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetIsBindAll(const int64_t& _isBindAll);
+
+                    /**
+                     * 判断参数 IsBindAll 是否已赋值
+                     * @return IsBindAll 是否已赋值
+                     */
+                    bool IsBindAllHasBeenSet() const;
+
+                    /**
+                     * 获取Policy tag
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Tags Policy tag
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 设置Policy tag
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Tags Policy tag
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1025,6 +1070,20 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     int64_t m_advancedMetricNumber;
                     bool m_advancedMetricNumberHasBeenSet;
+
+                    /**
+                     * Whether the policy is associated with all objects
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_isBindAll;
+                    bool m_isBindAllHasBeenSet;
+
+                    /**
+                     * Policy tag
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
 
                 };
             }

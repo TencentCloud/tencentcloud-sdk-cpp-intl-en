@@ -168,6 +168,24 @@ namespace TencentCloud
                      */
                     bool UpdateTimeOrderHasBeenSet() const;
 
+                    /**
+                     * 获取Sorting order based on the number of associated policies. Valid values: `asc` (ascending order), `desc` (descending order).
+                     * @return PolicyCountOrder Sorting order based on the number of associated policies. Valid values: `asc` (ascending order), `desc` (descending order).
+                     */
+                    std::string GetPolicyCountOrder() const;
+
+                    /**
+                     * 设置Sorting order based on the number of associated policies. Valid values: `asc` (ascending order), `desc` (descending order).
+                     * @param PolicyCountOrder Sorting order based on the number of associated policies. Valid values: `asc` (ascending order), `desc` (descending order).
+                     */
+                    void SetPolicyCountOrder(const std::string& _policyCountOrder);
+
+                    /**
+                     * 判断参数 PolicyCountOrder 是否已赋值
+                     * @return PolicyCountOrder 是否已赋值
+                     */
+                    bool PolicyCountOrderHasBeenSet() const;
+
                 private:
 
                     /**
@@ -211,6 +229,12 @@ namespace TencentCloud
                      */
                     std::string m_updateTimeOrder;
                     bool m_updateTimeOrderHasBeenSet;
+
+                    /**
+                     * Sorting order based on the number of associated policies. Valid values: `asc` (ascending order), `desc` (descending order).
+                     */
+                    std::string m_policyCountOrder;
+                    bool m_policyCountOrderHasBeenSet;
 
                 };
             }

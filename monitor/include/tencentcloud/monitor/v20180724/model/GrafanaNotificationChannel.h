@@ -136,6 +136,90 @@ namespace TencentCloud
                      */
                     bool UpdatedAtHasBeenSet() const;
 
+                    /**
+                     * 获取Default valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+                     * @return OrgId Default valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+                     */
+                    std::string GetOrgId() const;
+
+                    /**
+                     * 设置Default valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+                     * @param OrgId Default valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+                     */
+                    void SetOrgId(const std::string& _orgId);
+
+                    /**
+                     * 判断参数 OrgId 是否已赋值
+                     * @return OrgId 是否已赋值
+                     */
+                    bool OrgIdHasBeenSet() const;
+
+                    /**
+                     * 获取Extra valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ExtraOrgIds Extra valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> GetExtraOrgIds() const;
+
+                    /**
+                     * 设置Extra valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ExtraOrgIds Extra valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetExtraOrgIds(const std::vector<std::string>& _extraOrgIds);
+
+                    /**
+                     * 判断参数 ExtraOrgIds 是否已赋值
+                     * @return ExtraOrgIds 是否已赋值
+                     */
+                    bool ExtraOrgIdsHasBeenSet() const;
+
+                    /**
+                     * 获取Valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return OrgIds Valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetOrgIds() const;
+
+                    /**
+                     * 设置Valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param OrgIds Valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetOrgIds(const std::string& _orgIds);
+
+                    /**
+                     * 判断参数 OrgIds 是否已赋值
+                     * @return OrgIds 是否已赋值
+                     */
+                    bool OrgIdsHasBeenSet() const;
+
+                    /**
+                     * 获取All valid organizations in an alert channel
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return OrganizationIds All valid organizations in an alert channel
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetOrganizationIds() const;
+
+                    /**
+                     * 设置All valid organizations in an alert channel
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param OrganizationIds All valid organizations in an alert channel
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetOrganizationIds(const std::string& _organizationIds);
+
+                    /**
+                     * 判断参数 OrganizationIds 是否已赋值
+                     * @return OrganizationIds 是否已赋值
+                     */
+                    bool OrganizationIdsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -167,6 +251,33 @@ namespace TencentCloud
                      */
                     std::string m_updatedAt;
                     bool m_updatedAtHasBeenSet;
+
+                    /**
+                     * Default valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+                     */
+                    std::string m_orgId;
+                    bool m_orgIdHasBeenSet;
+
+                    /**
+                     * Extra valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_extraOrgIds;
+                    bool m_extraOrgIdsHasBeenSet;
+
+                    /**
+                     * Valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_orgIds;
+                    bool m_orgIdsHasBeenSet;
+
+                    /**
+                     * All valid organizations in an alert channel
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_organizationIds;
+                    bool m_organizationIdsHasBeenSet;
 
                 };
             }

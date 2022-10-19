@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool ReceiversHasBeenSet() const;
 
                     /**
-                     * 获取Array of extra organization IDs
-                     * @return ExtraOrgIds Array of extra organization IDs
+                     * 获取This parameter has been deprecated. Please use `OrganizationIds` instead.
+                     * @return ExtraOrgIds This parameter has been deprecated. Please use `OrganizationIds` instead.
                      */
                     std::vector<std::string> GetExtraOrgIds() const;
 
                     /**
-                     * 设置Array of extra organization IDs
-                     * @param ExtraOrgIds Array of extra organization IDs
+                     * 设置This parameter has been deprecated. Please use `OrganizationIds` instead.
+                     * @param ExtraOrgIds This parameter has been deprecated. Please use `OrganizationIds` instead.
                      */
                     void SetExtraOrgIds(const std::vector<std::string>& _extraOrgIds);
 
@@ -133,14 +133,14 @@ namespace TencentCloud
                     bool ExtraOrgIdsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OrganizationIds 
+                     * 获取Array of valid organization IDs
+                     * @return OrganizationIds Array of valid organization IDs
                      */
                     std::vector<std::string> GetOrganizationIds() const;
 
                     /**
-                     * 设置
-                     * @param OrganizationIds 
+                     * 设置Array of valid organization IDs
+                     * @param OrganizationIds Array of valid organization IDs
                      */
                     void SetOrganizationIds(const std::vector<std::string>& _organizationIds);
 
@@ -177,13 +177,13 @@ namespace TencentCloud
                     bool m_receiversHasBeenSet;
 
                     /**
-                     * Array of extra organization IDs
+                     * This parameter has been deprecated. Please use `OrganizationIds` instead.
                      */
                     std::vector<std::string> m_extraOrgIds;
                     bool m_extraOrgIdsHasBeenSet;
 
                     /**
-                     * 
+                     * Array of valid organization IDs
                      */
                     std::vector<std::string> m_organizationIds;
                     bool m_organizationIdsHasBeenSet;

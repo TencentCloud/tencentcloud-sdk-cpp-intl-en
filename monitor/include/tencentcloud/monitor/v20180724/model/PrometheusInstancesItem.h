@@ -770,6 +770,50 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool GrafanaInstanceIdHasBeenSet() const;
 
+                    /**
+                     * 获取The alert rule limit
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AlertRuleLimit The alert rule limit
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetAlertRuleLimit() const;
+
+                    /**
+                     * 设置The alert rule limit
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param AlertRuleLimit The alert rule limit
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetAlertRuleLimit(const int64_t& _alertRuleLimit);
+
+                    /**
+                     * 判断参数 AlertRuleLimit 是否已赋值
+                     * @return AlertRuleLimit 是否已赋值
+                     */
+                    bool AlertRuleLimitHasBeenSet() const;
+
+                    /**
+                     * 获取The recording rule limit
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RecordingRuleLimit The recording rule limit
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetRecordingRuleLimit() const;
+
+                    /**
+                     * 设置The recording rule limit
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param RecordingRuleLimit The recording rule limit
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetRecordingRuleLimit(const int64_t& _recordingRuleLimit);
+
+                    /**
+                     * 判断参数 RecordingRuleLimit 是否已赋值
+                     * @return RecordingRuleLimit 是否已赋值
+                     */
+                    bool RecordingRuleLimitHasBeenSet() const;
+
                 private:
 
                     /**
@@ -992,6 +1036,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_grafanaInstanceId;
                     bool m_grafanaInstanceIdHasBeenSet;
+
+                    /**
+                     * The alert rule limit
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_alertRuleLimit;
+                    bool m_alertRuleLimitHasBeenSet;
+
+                    /**
+                     * The recording rule limit
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_recordingRuleLimit;
+                    bool m_recordingRuleLimitHasBeenSet;
 
                 };
             }

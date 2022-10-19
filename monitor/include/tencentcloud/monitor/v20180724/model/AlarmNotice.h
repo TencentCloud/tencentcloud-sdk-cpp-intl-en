@@ -27,6 +27,7 @@
 #include <tencentcloud/monitor/v20180724/model/UserNotice.h>
 #include <tencentcloud/monitor/v20180724/model/URLNotice.h>
 #include <tencentcloud/monitor/v20180724/model/CLSNotice.h>
+#include <tencentcloud/monitor/v20180724/model/Tag.h>
 
 
 namespace TencentCloud
@@ -313,6 +314,28 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool CLSNoticesHasBeenSet() const;
 
+                    /**
+                     * 获取Tags bound to a notification template
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Tags Tags bound to a notification template
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 设置Tags bound to a notification template
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Tags Tags bound to a notification template
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -398,6 +421,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     std::vector<CLSNotice> m_cLSNotices;
                     bool m_cLSNoticesHasBeenSet;
+
+                    /**
+                     * Tags bound to a notification template
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
 
                 };
             }

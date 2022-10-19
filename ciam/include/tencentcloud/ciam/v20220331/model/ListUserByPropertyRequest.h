@@ -109,14 +109,14 @@ namespace TencentCloud
                     bool PropertyValueHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Original 
+                     * 获取Whether the content is passed through
+                     * @return Original Whether the content is passed through
                      */
                     bool GetOriginal() const;
 
                     /**
-                     * 设置
-                     * @param Original 
+                     * 设置Whether the content is passed through
+                     * @param Original Whether the content is passed through
                      */
                     void SetOriginal(const bool& _original);
 
@@ -150,7 +150,7 @@ namespace TencentCloud
                     bool m_propertyValueHasBeenSet;
 
                     /**
-                     * 
+                     * Whether the content is passed through
                      */
                     bool m_original;
                     bool m_originalHasBeenSet;

@@ -113,6 +113,8 @@
 #include <tencentcloud/monitor/v20180724/model/DescribeDNSConfigResponse.h>
 #include <tencentcloud/monitor/v20180724/model/DescribeExporterIntegrationsRequest.h>
 #include <tencentcloud/monitor/v20180724/model/DescribeExporterIntegrationsResponse.h>
+#include <tencentcloud/monitor/v20180724/model/DescribeGrafanaChannelsRequest.h>
+#include <tencentcloud/monitor/v20180724/model/DescribeGrafanaChannelsResponse.h>
 #include <tencentcloud/monitor/v20180724/model/DescribeGrafanaConfigRequest.h>
 #include <tencentcloud/monitor/v20180724/model/DescribeGrafanaConfigResponse.h>
 #include <tencentcloud/monitor/v20180724/model/DescribeGrafanaEnvironmentsRequest.h>
@@ -384,6 +386,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeExporterIntegrationsResponse> DescribeExporterIntegrationsOutcome;
                 typedef std::future<DescribeExporterIntegrationsOutcome> DescribeExporterIntegrationsOutcomeCallable;
                 typedef std::function<void(const MonitorClient*, const Model::DescribeExporterIntegrationsRequest&, DescribeExporterIntegrationsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeExporterIntegrationsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeGrafanaChannelsResponse> DescribeGrafanaChannelsOutcome;
+                typedef std::future<DescribeGrafanaChannelsOutcome> DescribeGrafanaChannelsOutcomeCallable;
+                typedef std::function<void(const MonitorClient*, const Model::DescribeGrafanaChannelsRequest&, DescribeGrafanaChannelsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeGrafanaChannelsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeGrafanaConfigResponse> DescribeGrafanaConfigOutcome;
                 typedef std::future<DescribeGrafanaConfigOutcome> DescribeGrafanaConfigOutcomeCallable;
                 typedef std::function<void(const MonitorClient*, const Model::DescribeGrafanaConfigRequest&, DescribeGrafanaConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeGrafanaConfigAsyncHandler;
@@ -982,6 +987,15 @@ Note: **If you use a sub-account, you can only query the alarm records of author
                 DescribeExporterIntegrationsOutcomeCallable DescribeExporterIntegrationsCallable(const Model::DescribeExporterIntegrationsRequest& request);
 
                 /**
+                 *This API is used to list all Grafana alert channels.
+                 * @param req DescribeGrafanaChannelsRequest
+                 * @return DescribeGrafanaChannelsOutcome
+                 */
+                DescribeGrafanaChannelsOutcome DescribeGrafanaChannels(const Model::DescribeGrafanaChannelsRequest &request);
+                void DescribeGrafanaChannelsAsync(const Model::DescribeGrafanaChannelsRequest& request, const DescribeGrafanaChannelsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeGrafanaChannelsOutcomeCallable DescribeGrafanaChannelsCallable(const Model::DescribeGrafanaChannelsRequest& request);
+
+                /**
                  *This API is used to list Grafana settings, i.e., the `grafana.ini` file content.
                  * @param req DescribeGrafanaConfigRequest
                  * @return DescribeGrafanaConfigOutcome
@@ -1195,10 +1209,13 @@ Note: **If you use a sub-account, you can only query the alarm records of author
                 EnableSSOCamCheckOutcomeCallable EnableSSOCamCheckCallable(const Model::EnableSSOCamCheckRequest& request);
 
                 /**
-                 *This API is used to get the monitoring data of Tencent Cloud services except TKE. To pull TKE’s monitoring data, please use the API [DescribeStatisticData](https://intl.cloud.tencent.com/document/product/248/51845?from_cn_redirect=1).
+                 *This API is used to get the monitoring data of Tencent Cloud services except TKE. To pull TKE’s monitoring data, use the [DescribeStatisticData](https://www.tencentcloud.com/document/product/248/39481) API.
 You can get the monitoring data of a Tencent Cloud service by passing in its namespace, object dimension description, and monitoring metrics.
 API call rate limit: 20 calls/second (1,200 calls/minute). A single request can get the data of up to 10 instances for up to 1,440 data points.
 If you need to call a large number of APIs to pull metrics or objects at a time, some APIs may fail to be called due to the rate limit. We suggest you evenly arrange API calls at a time granularity.
+
+>?
+>- Cloud Monitor has started billing the `GetMonitorData` API on September 1, 2022. Each root account has a free tier of one million call requests a month. If you want to call this API after the free tier is exceeded, you need to enable [pay-as-you-go billing for API requests](https://buy.cloud.tencent.com/APIRequestBuy). For billing rules, see [API billing documentation](https://intl.cloud.tencent.com/document/product/248/77914?from_cn_redirect=1).
                  * @param req GetMonitorDataRequest
                  * @return GetMonitorDataOutcome
                  */

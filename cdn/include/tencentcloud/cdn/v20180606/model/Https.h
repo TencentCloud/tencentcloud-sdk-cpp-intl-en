@@ -80,30 +80,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取HTTP2 configuration switch
+                     * 获取Whether to enable HTTP2
 `on`: Enable
 `off`: Disable
-Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return Http2 HTTP2 configuration switch
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return Http2 Whether to enable HTTP2
 `on`: Enable
 `off`: Disable
-Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetHttp2() const;
 
                     /**
-                     * 设置HTTP2 configuration switch
+                     * 设置Whether to enable HTTP2
 `on`: Enable
 `off`: Disable
-Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Http2 HTTP2 configuration switch
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param Http2 Whether to enable HTTP2
 `on`: Enable
 `off`: Disable
-Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetHttp2(const std::string& _http2);
 
@@ -353,11 +349,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_switchHasBeenSet;
 
                     /**
-                     * HTTP2 configuration switch
+                     * Whether to enable HTTP2
 `on`: Enable
 `off`: Disable
-Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_http2;
                     bool m_http2HasBeenSet;

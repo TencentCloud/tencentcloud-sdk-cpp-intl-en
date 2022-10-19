@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/monitor/v20180724/model/AlarmPolicyFilter.h>
+#include <tencentcloud/monitor/v20180724/model/AlarmHierarchicalValue.h>
 
 
 namespace TencentCloud
@@ -427,6 +428,68 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool ProductIdHasBeenSet() const;
 
+                    /**
+                     * 获取Maximum value
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ValueMax Maximum value
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    double GetValueMax() const;
+
+                    /**
+                     * 设置Maximum value
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ValueMax Maximum value
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetValueMax(const double& _valueMax);
+
+                    /**
+                     * 判断参数 ValueMax 是否已赋值
+                     * @return ValueMax 是否已赋值
+                     */
+                    bool ValueMaxHasBeenSet() const;
+
+                    /**
+                     * 获取Minimum value
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ValueMin Minimum value
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    double GetValueMin() const;
+
+                    /**
+                     * 设置Minimum value
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ValueMin Minimum value
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetValueMin(const double& _valueMin);
+
+                    /**
+                     * 判断参数 ValueMin 是否已赋值
+                     * @return ValueMin 是否已赋值
+                     */
+                    bool ValueMinHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return HierarchicalValue 
+                     */
+                    AlarmHierarchicalValue GetHierarchicalValue() const;
+
+                    /**
+                     * 设置
+                     * @param HierarchicalValue 
+                     */
+                    void SetHierarchicalValue(const AlarmHierarchicalValue& _hierarchicalValue);
+
+                    /**
+                     * 判断参数 HierarchicalValue 是否已赋值
+                     * @return HierarchicalValue 是否已赋值
+                     */
+                    bool HierarchicalValueHasBeenSet() const;
+
                 private:
 
                     /**
@@ -544,6 +607,26 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_productId;
                     bool m_productIdHasBeenSet;
+
+                    /**
+                     * Maximum value
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    double m_valueMax;
+                    bool m_valueMaxHasBeenSet;
+
+                    /**
+                     * Minimum value
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    double m_valueMin;
+                    bool m_valueMinHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    AlarmHierarchicalValue m_hierarchicalValue;
+                    bool m_hierarchicalValueHasBeenSet;
 
                 };
             }

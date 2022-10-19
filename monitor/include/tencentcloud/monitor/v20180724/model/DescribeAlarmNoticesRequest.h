@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/monitor/v20180724/model/Tag.h>
 
 
 namespace TencentCloud
@@ -222,6 +223,24 @@ namespace TencentCloud
                      */
                     bool NoticeIdsHasBeenSet() const;
 
+                    /**
+                     * 获取Filter templates by tag
+                     * @return Tags Filter templates by tag
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 设置Filter templates by tag
+                     * @param Tags Filter templates by tag
+                     */
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -283,6 +302,12 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_noticeIds;
                     bool m_noticeIdsHasBeenSet;
+
+                    /**
+                     * Filter templates by tag
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
 
                 };
             }

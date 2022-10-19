@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * HTTP request header
                 */
                 class HTTPHeader : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Name 
+                     * 获取Request header name
+                     * @return Name Request header name
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置
-                     * @param Name 
+                     * 设置Request header name
+                     * @param Name Request header name
                      */
                     void SetName(const std::string& _name);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Value 
+                     * 获取Request header value
+                     * @return Value Request header value
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置
-                     * @param Value 
+                     * 设置Request header value
+                     * @param Value Request header value
                      */
                     void SetValue(const std::string& _value);
 
@@ -85,13 +85,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Request header name
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * 
+                     * Request header value
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;

@@ -60,6 +60,24 @@ namespace TencentCloud
                      */
                     bool InstanceIdHasBeenSet() const;
 
+                    /**
+                     * 获取Filter by plugin ID
+                     * @return PluginId Filter by plugin ID
+                     */
+                    std::string GetPluginId() const;
+
+                    /**
+                     * 设置Filter by plugin ID
+                     * @param PluginId Filter by plugin ID
+                     */
+                    void SetPluginId(const std::string& _pluginId);
+
+                    /**
+                     * 判断参数 PluginId 是否已赋值
+                     * @return PluginId 是否已赋值
+                     */
+                    bool PluginIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -67,6 +85,12 @@ namespace TencentCloud
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
+
+                    /**
+                     * Filter by plugin ID
+                     */
+                    std::string m_pluginId;
+                    bool m_pluginIdHasBeenSet;
 
                 };
             }

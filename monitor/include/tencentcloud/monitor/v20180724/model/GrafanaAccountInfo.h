@@ -119,6 +119,46 @@ namespace TencentCloud
                      */
                     bool CreateAtHasBeenSet() const;
 
+                    /**
+                     * 获取Instance ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return InstanceId Instance ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetInstanceId() const;
+
+                    /**
+                     * 设置Instance ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param InstanceId Instance ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetInstanceId(const std::string& _instanceId);
+
+                    /**
+                     * 判断参数 InstanceId 是否已赋值
+                     * @return InstanceId 是否已赋值
+                     */
+                    bool InstanceIdHasBeenSet() const;
+
+                    /**
+                     * 获取User’s root account UIN
+                     * @return Uin User’s root account UIN
+                     */
+                    std::string GetUin() const;
+
+                    /**
+                     * 设置User’s root account UIN
+                     * @param Uin User’s root account UIN
+                     */
+                    void SetUin(const std::string& _uin);
+
+                    /**
+                     * 判断参数 Uin 是否已赋值
+                     * @return Uin 是否已赋值
+                     */
+                    bool UinHasBeenSet() const;
+
                 private:
 
                     /**
@@ -144,6 +184,19 @@ namespace TencentCloud
                      */
                     std::string m_createAt;
                     bool m_createAtHasBeenSet;
+
+                    /**
+                     * Instance ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_instanceId;
+                    bool m_instanceIdHasBeenSet;
+
+                    /**
+                     * User’s root account UIN
+                     */
+                    std::string m_uin;
+                    bool m_uinHasBeenSet;
 
                 };
             }

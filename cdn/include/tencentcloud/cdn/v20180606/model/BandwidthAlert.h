@@ -97,11 +97,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 获取Action taken when threshold is reached
-`RESOLVE_DNS_TO_ORIGIN`: Requests will be forwarded to the origin server. This is only supported for domain names of external origin.
 `RETURN_404`: A 404 error will be returned for all requests.
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return CounterMeasure Action taken when threshold is reached
-`RESOLVE_DNS_TO_ORIGIN`: Requests will be forwarded to the origin server. This is only supported for domain names of external origin.
 `RETURN_404`: A 404 error will be returned for all requests.
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
@@ -109,11 +107,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 设置Action taken when threshold is reached
-`RESOLVE_DNS_TO_ORIGIN`: Requests will be forwarded to the origin server. This is only supported for domain names of external origin.
 `RETURN_404`: A 404 error will be returned for all requests.
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @param CounterMeasure Action taken when threshold is reached
-`RESOLVE_DNS_TO_ORIGIN`: Requests will be forwarded to the origin server. This is only supported for domain names of external origin.
 `RETURN_404`: A 404 error will be returned for all requests.
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
@@ -292,7 +288,6 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * Action taken when threshold is reached
-`RESOLVE_DNS_TO_ORIGIN`: Requests will be forwarded to the origin server. This is only supported for domain names of external origin.
 `RETURN_404`: A 404 error will be returned for all requests.
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      */

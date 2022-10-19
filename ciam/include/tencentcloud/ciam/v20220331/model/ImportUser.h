@@ -522,6 +522,96 @@ If `IdentityVerificationMethod` is `nameIdCardAndPhone`, `Name`, `PhoneNumber`, 
                      */
                     bool PasswordEncryptTypeEnumHasBeenSet() const;
 
+                    /**
+                     * 获取Index field 1
+                     * @return IndexedAttribute1 Index field 1
+                     */
+                    std::string GetIndexedAttribute1() const;
+
+                    /**
+                     * 设置Index field 1
+                     * @param IndexedAttribute1 Index field 1
+                     */
+                    void SetIndexedAttribute1(const std::string& _indexedAttribute1);
+
+                    /**
+                     * 判断参数 IndexedAttribute1 是否已赋值
+                     * @return IndexedAttribute1 是否已赋值
+                     */
+                    bool IndexedAttribute1HasBeenSet() const;
+
+                    /**
+                     * 获取Index field 2
+                     * @return IndexedAttribute2 Index field 2
+                     */
+                    std::string GetIndexedAttribute2() const;
+
+                    /**
+                     * 设置Index field 2
+                     * @param IndexedAttribute2 Index field 2
+                     */
+                    void SetIndexedAttribute2(const std::string& _indexedAttribute2);
+
+                    /**
+                     * 判断参数 IndexedAttribute2 是否已赋值
+                     * @return IndexedAttribute2 是否已赋值
+                     */
+                    bool IndexedAttribute2HasBeenSet() const;
+
+                    /**
+                     * 获取Index field 3
+                     * @return IndexedAttribute3 Index field 3
+                     */
+                    std::string GetIndexedAttribute3() const;
+
+                    /**
+                     * 设置Index field 3
+                     * @param IndexedAttribute3 Index field 3
+                     */
+                    void SetIndexedAttribute3(const std::string& _indexedAttribute3);
+
+                    /**
+                     * 判断参数 IndexedAttribute3 是否已赋值
+                     * @return IndexedAttribute3 是否已赋值
+                     */
+                    bool IndexedAttribute3HasBeenSet() const;
+
+                    /**
+                     * 获取Index field 4
+                     * @return IndexedAttribute4 Index field 4
+                     */
+                    std::string GetIndexedAttribute4() const;
+
+                    /**
+                     * 设置Index field 4
+                     * @param IndexedAttribute4 Index field 4
+                     */
+                    void SetIndexedAttribute4(const std::string& _indexedAttribute4);
+
+                    /**
+                     * 判断参数 IndexedAttribute4 是否已赋值
+                     * @return IndexedAttribute4 是否已赋值
+                     */
+                    bool IndexedAttribute4HasBeenSet() const;
+
+                    /**
+                     * 获取Index field 5
+                     * @return IndexedAttribute5 Index field 5
+                     */
+                    std::string GetIndexedAttribute5() const;
+
+                    /**
+                     * 设置Index field 5
+                     * @param IndexedAttribute5 Index field 5
+                     */
+                    void SetIndexedAttribute5(const std::string& _indexedAttribute5);
+
+                    /**
+                     * 判断参数 IndexedAttribute5 是否已赋值
+                     * @return IndexedAttribute5 是否已赋值
+                     */
+                    bool IndexedAttribute5HasBeenSet() const;
+
                 private:
 
                     /**
@@ -679,6 +769,36 @@ If `IdentityVerificationMethod` is `nameIdCardAndPhone`, `Name`, `PhoneNumber`, 
                      */
                     std::string m_passwordEncryptTypeEnum;
                     bool m_passwordEncryptTypeEnumHasBeenSet;
+
+                    /**
+                     * Index field 1
+                     */
+                    std::string m_indexedAttribute1;
+                    bool m_indexedAttribute1HasBeenSet;
+
+                    /**
+                     * Index field 2
+                     */
+                    std::string m_indexedAttribute2;
+                    bool m_indexedAttribute2HasBeenSet;
+
+                    /**
+                     * Index field 3
+                     */
+                    std::string m_indexedAttribute3;
+                    bool m_indexedAttribute3HasBeenSet;
+
+                    /**
+                     * Index field 4
+                     */
+                    std::string m_indexedAttribute4;
+                    bool m_indexedAttribute4HasBeenSet;
+
+                    /**
+                     * Index field 5
+                     */
+                    std::string m_indexedAttribute5;
+                    bool m_indexedAttribute5HasBeenSet;
 
                 };
             }

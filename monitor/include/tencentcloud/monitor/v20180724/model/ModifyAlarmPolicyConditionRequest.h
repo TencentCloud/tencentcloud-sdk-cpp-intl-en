@@ -24,6 +24,7 @@
 #include <tencentcloud/monitor/v20180724/model/AlarmPolicyCondition.h>
 #include <tencentcloud/monitor/v20180724/model/AlarmPolicyEventCondition.h>
 #include <tencentcloud/monitor/v20180724/model/AlarmPolicyFilter.h>
+#include <tencentcloud/monitor/v20180724/model/LogAlarmReq.h>
 
 
 namespace TencentCloud
@@ -171,6 +172,24 @@ namespace TencentCloud
                      */
                     bool GroupByHasBeenSet() const;
 
+                    /**
+                     * 获取Log alarm creation request parameters
+                     * @return LogAlarmReqInfo Log alarm creation request parameters
+                     */
+                    LogAlarmReq GetLogAlarmReqInfo() const;
+
+                    /**
+                     * 设置Log alarm creation request parameters
+                     * @param LogAlarmReqInfo Log alarm creation request parameters
+                     */
+                    void SetLogAlarmReqInfo(const LogAlarmReq& _logAlarmReqInfo);
+
+                    /**
+                     * 判断参数 LogAlarmReqInfo 是否已赋值
+                     * @return LogAlarmReqInfo 是否已赋值
+                     */
+                    bool LogAlarmReqInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -214,6 +233,12 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_groupBy;
                     bool m_groupByHasBeenSet;
+
+                    /**
+                     * Log alarm creation request parameters
+                     */
+                    LogAlarmReq m_logAlarmReqInfo;
+                    bool m_logAlarmReqInfoHasBeenSet;
 
                 };
             }

@@ -127,18 +127,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool CalcValueHasBeenSet() const;
 
                     /**
-                     * 获取Duration.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return ContinueTime Duration.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Duration in seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ContinueTime Duration in seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetContinueTime() const;
 
                     /**
-                     * 设置Duration.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param ContinueTime Duration.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Duration in seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ContinueTime Duration in seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetContinueTime(const std::string& _continueTime);
 
@@ -238,6 +238,64 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool UnitHasBeenSet() const;
 
+                    /**
+                     * 获取Whether it is an advanced metric. Valid values: `0` (no), `1` (yes).
+                     * @return IsAdvanced Whether it is an advanced metric. Valid values: `0` (no), `1` (yes).
+                     */
+                    int64_t GetIsAdvanced() const;
+
+                    /**
+                     * 设置Whether it is an advanced metric. Valid values: `0` (no), `1` (yes).
+                     * @param IsAdvanced Whether it is an advanced metric. Valid values: `0` (no), `1` (yes).
+                     */
+                    void SetIsAdvanced(const int64_t& _isAdvanced);
+
+                    /**
+                     * 判断参数 IsAdvanced 是否已赋值
+                     * @return IsAdvanced 是否已赋值
+                     */
+                    bool IsAdvancedHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the advance metric feature is enabled. Valid values: `0` (no), `1` (yes).
+                     * @return IsOpen Whether the advance metric feature is enabled. Valid values: `0` (no), `1` (yes).
+                     */
+                    int64_t GetIsOpen() const;
+
+                    /**
+                     * 设置Whether the advance metric feature is enabled. Valid values: `0` (no), `1` (yes).
+                     * @param IsOpen Whether the advance metric feature is enabled. Valid values: `0` (no), `1` (yes).
+                     */
+                    void SetIsOpen(const int64_t& _isOpen);
+
+                    /**
+                     * 判断参数 IsOpen 是否已赋值
+                     * @return IsOpen 是否已赋值
+                     */
+                    bool IsOpenHasBeenSet() const;
+
+                    /**
+                     * 获取Product ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ProductId Product ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetProductId() const;
+
+                    /**
+                     * 设置Product ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ProductId Product ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetProductId(const std::string& _productId);
+
+                    /**
+                     * 判断参数 ProductId 是否已赋值
+                     * @return ProductId 是否已赋值
+                     */
+                    bool ProductIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -267,8 +325,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_calcValueHasBeenSet;
 
                     /**
-                     * Duration.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Duration in seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_continueTime;
                     bool m_continueTimeHasBeenSet;
@@ -302,6 +360,25 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_unit;
                     bool m_unitHasBeenSet;
+
+                    /**
+                     * Whether it is an advanced metric. Valid values: `0` (no), `1` (yes).
+                     */
+                    int64_t m_isAdvanced;
+                    bool m_isAdvancedHasBeenSet;
+
+                    /**
+                     * Whether the advance metric feature is enabled. Valid values: `0` (no), `1` (yes).
+                     */
+                    int64_t m_isOpen;
+                    bool m_isOpenHasBeenSet;
+
+                    /**
+                     * Product ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_productId;
+                    bool m_productIdHasBeenSet;
 
                 };
             }

@@ -34,7 +34,10 @@ AlarmPolicyRule::AlarmPolicyRule() :
     m_ruleTypeHasBeenSet(false),
     m_isAdvancedHasBeenSet(false),
     m_isOpenHasBeenSet(false),
-    m_productIdHasBeenSet(false)
+    m_productIdHasBeenSet(false),
+    m_valueMaxHasBeenSet(false),
+    m_valueMinHasBeenSet(false),
+    m_hierarchicalValueHasBeenSet(false)
 {
 }
 
@@ -190,6 +193,43 @@ CoreInternalOutcome AlarmPolicyRule::Deserialize(const rapidjson::Value &value)
         m_productIdHasBeenSet = true;
     }
 
+    if (value.HasMember("ValueMax") && !value["ValueMax"].IsNull())
+    {
+        if (!value["ValueMax"].IsLosslessDouble())
+        {
+            return CoreInternalOutcome(Core::Error("response `AlarmPolicyRule.ValueMax` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
+        }
+        m_valueMax = value["ValueMax"].GetDouble();
+        m_valueMaxHasBeenSet = true;
+    }
+
+    if (value.HasMember("ValueMin") && !value["ValueMin"].IsNull())
+    {
+        if (!value["ValueMin"].IsLosslessDouble())
+        {
+            return CoreInternalOutcome(Core::Error("response `AlarmPolicyRule.ValueMin` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
+        }
+        m_valueMin = value["ValueMin"].GetDouble();
+        m_valueMinHasBeenSet = true;
+    }
+
+    if (value.HasMember("HierarchicalValue") && !value["HierarchicalValue"].IsNull())
+    {
+        if (!value["HierarchicalValue"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `AlarmPolicyRule.HierarchicalValue` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_hierarchicalValue.Deserialize(value["HierarchicalValue"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_hierarchicalValueHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -308,6 +348,31 @@ void AlarmPolicyRule::ToJsonObject(rapidjson::Value &value, rapidjson::Document:
         string key = "ProductId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_productId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_valueMaxHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ValueMax";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_valueMax, allocator);
+    }
+
+    if (m_valueMinHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ValueMin";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_valueMin, allocator);
+    }
+
+    if (m_hierarchicalValueHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HierarchicalValue";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_hierarchicalValue.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -535,5 +600,53 @@ void AlarmPolicyRule::SetProductId(const string& _productId)
 bool AlarmPolicyRule::ProductIdHasBeenSet() const
 {
     return m_productIdHasBeenSet;
+}
+
+double AlarmPolicyRule::GetValueMax() const
+{
+    return m_valueMax;
+}
+
+void AlarmPolicyRule::SetValueMax(const double& _valueMax)
+{
+    m_valueMax = _valueMax;
+    m_valueMaxHasBeenSet = true;
+}
+
+bool AlarmPolicyRule::ValueMaxHasBeenSet() const
+{
+    return m_valueMaxHasBeenSet;
+}
+
+double AlarmPolicyRule::GetValueMin() const
+{
+    return m_valueMin;
+}
+
+void AlarmPolicyRule::SetValueMin(const double& _valueMin)
+{
+    m_valueMin = _valueMin;
+    m_valueMinHasBeenSet = true;
+}
+
+bool AlarmPolicyRule::ValueMinHasBeenSet() const
+{
+    return m_valueMinHasBeenSet;
+}
+
+AlarmHierarchicalValue AlarmPolicyRule::GetHierarchicalValue() const
+{
+    return m_hierarchicalValue;
+}
+
+void AlarmPolicyRule::SetHierarchicalValue(const AlarmHierarchicalValue& _hierarchicalValue)
+{
+    m_hierarchicalValue = _hierarchicalValue;
+    m_hierarchicalValueHasBeenSet = true;
+}
+
+bool AlarmPolicyRule::HierarchicalValueHasBeenSet() const
+{
+    return m_hierarchicalValueHasBeenSet;
 }
 

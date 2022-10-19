@@ -200,14 +200,14 @@ This feature is in beta test.
                     bool DisableRangeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Headers 
+                     * 获取Custom HTTP request headers (Up to 20). `Name`: Up to 128 characters. `Value`: Up to 1024 characters.
+                     * @return Headers Custom HTTP request headers (Up to 20). `Name`: Up to 128 characters. `Value`: Up to 1024 characters.
                      */
                     std::vector<HTTPHeader> GetHeaders() const;
 
                     /**
-                     * 设置
-                     * @param Headers 
+                     * 设置Custom HTTP request headers (Up to 20). `Name`: Up to 128 characters. `Value`: Up to 1024 characters.
+                     * @param Headers Custom HTTP request headers (Up to 20). `Name`: Up to 128 characters. `Value`: Up to 1024 characters.
                      */
                     void SetHeaders(const std::vector<HTTPHeader>& _headers);
 
@@ -286,7 +286,7 @@ This feature is in beta test.
                     bool m_disableRangeHasBeenSet;
 
                     /**
-                     * 
+                     * Custom HTTP request headers (Up to 20). `Name`: Up to 128 characters. `Value`: Up to 1024 characters.
                      */
                     std::vector<HTTPHeader> m_headers;
                     bool m_headersHasBeenSet;

@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool RuleStateHasBeenSet() const;
 
                     /**
-                     * 获取Rule name
-                     * @return Name Rule name
+                     * 获取Group name
+                     * @return Name Group name
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Rule name
-                     * @param Name Rule name
+                     * 设置Group name
+                     * @param Name Group name
                      */
                     void SetName(const std::string& _name);
 
@@ -172,6 +172,28 @@ namespace TencentCloud
                      */
                     bool UpdatedAtHasBeenSet() const;
 
+                    /**
+                     * 获取Rule name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RuleName Rule name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetRuleName() const;
+
+                    /**
+                     * 设置Rule name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param RuleName Rule name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetRuleName(const std::string& _ruleName);
+
+                    /**
+                     * 判断参数 RuleName 是否已赋值
+                     * @return RuleName 是否已赋值
+                     */
+                    bool RuleNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -187,7 +209,7 @@ namespace TencentCloud
                     bool m_ruleStateHasBeenSet;
 
                     /**
-                     * Rule name
+                     * Group name
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
@@ -215,6 +237,13 @@ namespace TencentCloud
                      */
                     std::string m_updatedAt;
                     bool m_updatedAtHasBeenSet;
+
+                    /**
+                     * Rule name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_ruleName;
+                    bool m_ruleNameHasBeenSet;
 
                 };
             }

@@ -44,8 +44,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ChannelId 
+                     * 获取Channel ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ChannelId Channel ID.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetChannelId() const;
 
@@ -58,7 +60,8 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Channel ID.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_channelId;
                     bool m_channelIdHasBeenSet;

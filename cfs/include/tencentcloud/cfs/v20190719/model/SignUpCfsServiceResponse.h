@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Current status of the CFS service for this user. Valid values: none (not activated), creating (activating), created (activated)
-                     * @return CfsServiceStatus Current status of the CFS service for this user. Valid values: none (not activated), creating (activating), created (activated)
+                     * 获取Current status of the CFS service for this user. Valid values: `creating` (activating); `created` (activated)
+                     * @return CfsServiceStatus Current status of the CFS service for this user. Valid values: `creating` (activating); `created` (activated)
                      */
                     std::string GetCfsServiceStatus() const;
 
@@ -58,7 +58,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Current status of the CFS service for this user. Valid values: none (not activated), creating (activating), created (activated)
+                     * Current status of the CFS service for this user. Valid values: `creating` (activating); `created` (activated)
                      */
                     std::string m_cfsServiceStatus;
                     bool m_cfsServiceStatusHasBeenSet;

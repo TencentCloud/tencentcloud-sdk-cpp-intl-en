@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/monitor/v20180724/model/AlarmPolicyTriggerTask.h>
+#include <tencentcloud/monitor/v20180724/model/Tag.h>
 
 
 namespace TencentCloud
@@ -457,6 +458,60 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
                      */
                     bool OneClickPolicyTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the returned result filters policies associated with all objects. Valid values: `1` (Yes), `0` (No).
+                     * @return NotBindAll Whether the returned result filters policies associated with all objects. Valid values: `1` (Yes), `0` (No).
+                     */
+                    int64_t GetNotBindAll() const;
+
+                    /**
+                     * 设置Whether the returned result filters policies associated with all objects. Valid values: `1` (Yes), `0` (No).
+                     * @param NotBindAll Whether the returned result filters policies associated with all objects. Valid values: `1` (Yes), `0` (No).
+                     */
+                    void SetNotBindAll(const int64_t& _notBindAll);
+
+                    /**
+                     * 判断参数 NotBindAll 是否已赋值
+                     * @return NotBindAll 是否已赋值
+                     */
+                    bool NotBindAllHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the returned result filters policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
+                     * @return NotInstanceGroup Whether the returned result filters policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
+                     */
+                    int64_t GetNotInstanceGroup() const;
+
+                    /**
+                     * 设置Whether the returned result filters policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
+                     * @param NotInstanceGroup Whether the returned result filters policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
+                     */
+                    void SetNotInstanceGroup(const int64_t& _notInstanceGroup);
+
+                    /**
+                     * 判断参数 NotInstanceGroup 是否已赋值
+                     * @return NotInstanceGroup 是否已赋值
+                     */
+                    bool NotInstanceGroupHasBeenSet() const;
+
+                    /**
+                     * 获取Filter policies by tag
+                     * @return Tags Filter policies by tag
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 设置Filter policies by tag
+                     * @param Tags Filter policies by tag
+                     */
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -593,6 +648,24 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
                      */
                     std::vector<std::string> m_oneClickPolicyType;
                     bool m_oneClickPolicyTypeHasBeenSet;
+
+                    /**
+                     * Whether the returned result filters policies associated with all objects. Valid values: `1` (Yes), `0` (No).
+                     */
+                    int64_t m_notBindAll;
+                    bool m_notBindAllHasBeenSet;
+
+                    /**
+                     * Whether the returned result filters policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
+                     */
+                    int64_t m_notInstanceGroup;
+                    bool m_notInstanceGroupHasBeenSet;
+
+                    /**
+                     * Filter policies by tag
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
 
                 };
             }

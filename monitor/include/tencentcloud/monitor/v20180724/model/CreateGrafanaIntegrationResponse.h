@@ -44,8 +44,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return IntegrationId 
+                     * 获取Integration ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IntegrationId Integration ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetIntegrationId() const;
 
@@ -58,7 +60,8 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Integration ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_integrationId;
                     bool m_integrationIdHasBeenSet;

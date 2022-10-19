@@ -44,8 +44,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return PluginIds 
+                     * 获取ID of the installed plugin
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return PluginIds ID of the installed plugin
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> GetPluginIds() const;
 
@@ -58,7 +60,8 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * ID of the installed plugin
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_pluginIds;
                     bool m_pluginIdsHasBeenSet;

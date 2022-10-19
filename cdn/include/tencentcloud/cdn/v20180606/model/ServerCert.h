@@ -38,7 +38,6 @@ namespace TencentCloud
                 * HTTPS acceleration server certificate configuration:
 + Supports deployment with certificates that are being hosted by the SSL Certificate Services
 + Supports uploading certificates of PEM format for deployment
-Note: when uploading certificates of PEM format, the Base64 encoding is required.
                 */
                 class ServerCert : public AbstractModel
                 {
