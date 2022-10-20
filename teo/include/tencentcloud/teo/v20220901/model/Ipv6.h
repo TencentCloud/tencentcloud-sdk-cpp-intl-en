@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * IPv6 access configuration
+                * The IPv6 access configuration.
                 */
                 class Ipv6 : public AbstractModel
                 {

@@ -36,8 +36,8 @@ namespace TencentCloud
             {
                 /**
                 * Key-value pair filters for conditional filtering queries and fuzzy queries, such as filtering ID, name, and status.
-If there are multiple filters, they’re combined with `AND`.
-Values of the same Filter are combined with `OR`.
+If more than one filter exists, the logical relationship between these filters is `AND`.
+If one filter has multiple values, the logical relationship between these values is `OR`.
                 */
                 class AdvancedFilter : public AbstractModel
                 {
@@ -49,14 +49,14 @@ Values of the same Filter are combined with `OR`.
 
 
                     /**
-                     * 获取The name of the field to filter.
-                     * @return Name The name of the field to filter.
+                     * 获取Field to be filtered.
+                     * @return Name Field to be filtered.
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置The name of the field to filter.
-                     * @param Name The name of the field to filter.
+                     * 设置Field to be filtered.
+                     * @param Name Field to be filtered.
                      */
                     void SetName(const std::string& _name);
 
@@ -67,14 +67,14 @@ Values of the same Filter are combined with `OR`.
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Values of the filtered field.
-                     * @return Values Values of the filtered field.
+                     * 获取Value of the filtered field.
+                     * @return Values Value of the filtered field.
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
-                     * 设置Values of the filtered field.
-                     * @param Values Values of the filtered field.
+                     * 设置Value of the filtered field.
+                     * @param Values Value of the filtered field.
                      */
                     void SetValues(const std::vector<std::string>& _values);
 
@@ -105,13 +105,13 @@ Values of the same Filter are combined with `OR`.
                 private:
 
                     /**
-                     * The name of the field to filter.
+                     * Field to be filtered.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Values of the filtered field.
+                     * Value of the filtered field.
                      */
                     std::vector<std::string> m_values;
                     bool m_valuesHasBeenSet;

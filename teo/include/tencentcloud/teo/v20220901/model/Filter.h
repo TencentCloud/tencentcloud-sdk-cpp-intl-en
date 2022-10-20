@@ -36,8 +36,8 @@ namespace TencentCloud
             {
                 /**
                 * Key-value pair filters for conditional filtering queries, such as filtering ID, name, and status.
-If there are multiple filters, they’re combined with `AND`.
-Values of the same Filter are combined with `OR`.
+If more than one filter exists, the logical relationship between these filters is `AND`.
+If multiple values exist in one filter, the logical relationship between these values under the same filter is `OR`.
                 */
                 class Filter : public AbstractModel
                 {
@@ -49,14 +49,14 @@ Values of the same Filter are combined with `OR`.
 
 
                     /**
-                     * 获取The name of the field to filter.
-                     * @return Name The name of the field to filter.
+                     * 获取Fields to be filtered.
+                     * @return Name Fields to be filtered.
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置The name of the field to filter.
-                     * @param Name The name of the field to filter.
+                     * 设置Fields to be filtered.
+                     * @param Name Fields to be filtered.
                      */
                     void SetName(const std::string& _name);
 
@@ -87,7 +87,7 @@ Values of the same Filter are combined with `OR`.
                 private:
 
                     /**
-                     * The name of the field to filter.
+                     * Fields to be filtered.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

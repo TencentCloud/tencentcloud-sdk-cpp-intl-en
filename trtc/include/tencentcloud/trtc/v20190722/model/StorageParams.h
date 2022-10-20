@@ -49,14 +49,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The third-party cloud storage information (not supported currently).
-                     * @return CloudStorage The third-party cloud storage information (not supported currently).
+                     * 获取The account information for third-party cloud storage. This parameter is not available currently. Please use `CloudVod` instead to save files to Tencent Cloud VOD.
+                     * @return CloudStorage The account information for third-party cloud storage. This parameter is not available currently. Please use `CloudVod` instead to save files to Tencent Cloud VOD.
                      */
                     CloudStorage GetCloudStorage() const;
 
                     /**
-                     * 设置The third-party cloud storage information (not supported currently).
-                     * @param CloudStorage The third-party cloud storage information (not supported currently).
+                     * 设置The account information for third-party cloud storage. This parameter is not available currently. Please use `CloudVod` instead to save files to Tencent Cloud VOD.
+                     * @param CloudStorage The account information for third-party cloud storage. This parameter is not available currently. Please use `CloudVod` instead to save files to Tencent Cloud VOD.
                      */
                     void SetCloudStorage(const CloudStorage& _cloudStorage);
 
@@ -67,14 +67,14 @@ namespace TencentCloud
                     bool CloudStorageHasBeenSet() const;
 
                     /**
-                     * 获取The VOD information.
-                     * @return CloudVod The VOD information.
+                     * 获取The account information for saving files to Tencent Cloud VOD. This parameter is required. Currently, you can only save files to Tencent Cloud VOD.
+                     * @return CloudVod The account information for saving files to Tencent Cloud VOD. This parameter is required. Currently, you can only save files to Tencent Cloud VOD.
                      */
                     CloudVod GetCloudVod() const;
 
                     /**
-                     * 设置The VOD information.
-                     * @param CloudVod The VOD information.
+                     * 设置The account information for saving files to Tencent Cloud VOD. This parameter is required. Currently, you can only save files to Tencent Cloud VOD.
+                     * @param CloudVod The account information for saving files to Tencent Cloud VOD. This parameter is required. Currently, you can only save files to Tencent Cloud VOD.
                      */
                     void SetCloudVod(const CloudVod& _cloudVod);
 
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The third-party cloud storage information (not supported currently).
+                     * The account information for third-party cloud storage. This parameter is not available currently. Please use `CloudVod` instead to save files to Tencent Cloud VOD.
                      */
                     CloudStorage m_cloudStorage;
                     bool m_cloudStorageHasBeenSet;
 
                     /**
-                     * The VOD information.
+                     * The account information for saving files to Tencent Cloud VOD. This parameter is required. Currently, you can only save files to Tencent Cloud VOD.
                      */
                     CloudVod m_cloudVod;
                     bool m_cloudVodHasBeenSet;
