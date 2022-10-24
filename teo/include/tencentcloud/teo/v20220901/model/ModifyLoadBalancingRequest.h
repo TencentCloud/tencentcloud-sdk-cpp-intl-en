@@ -143,17 +143,17 @@ namespace TencentCloud
 
                     /**
                      * 获取When `Type=dns_only`, it indicates the amount of time that DNS records remain in the cache of a DNS server.
-Value range: 60-86400 (in seconds). If it’s not specified, the default value 600 will be used.
+Value range: 60-86400 (in seconds). If it's not specified, the default value 600 will be used.
                      * @return TTL When `Type=dns_only`, it indicates the amount of time that DNS records remain in the cache of a DNS server.
-Value range: 60-86400 (in seconds). If it’s not specified, the default value 600 will be used.
+Value range: 60-86400 (in seconds). If it's not specified, the default value 600 will be used.
                      */
                     uint64_t GetTTL() const;
 
                     /**
                      * 设置When `Type=dns_only`, it indicates the amount of time that DNS records remain in the cache of a DNS server.
-Value range: 60-86400 (in seconds). If it’s not specified, the default value 600 will be used.
+Value range: 60-86400 (in seconds). If it's not specified, the default value 600 will be used.
                      * @param TTL When `Type=dns_only`, it indicates the amount of time that DNS records remain in the cache of a DNS server.
-Value range: 60-86400 (in seconds). If it’s not specified, the default value 600 will be used.
+Value range: 60-86400 (in seconds). If it's not specified, the default value 600 will be used.
                      */
                     void SetTTL(const uint64_t& _tTL);
 
@@ -235,7 +235,7 @@ Value range: 60-86400 (in seconds). If it’s not specified, the default value 6
 
                     /**
                      * When `Type=dns_only`, it indicates the amount of time that DNS records remain in the cache of a DNS server.
-Value range: 60-86400 (in seconds). If it’s not specified, the default value 600 will be used.
+Value range: 60-86400 (in seconds). If it's not specified, the default value 600 will be used.
                      */
                     uint64_t m_tTL;
                     bool m_tTLHasBeenSet;

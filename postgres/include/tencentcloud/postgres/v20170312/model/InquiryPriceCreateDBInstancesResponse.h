@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Original price in 0.01 CNY.
-                     * @return OriginalPrice Original price in 0.01 CNY.
+                     * 获取Published price in US Cent
+                     * @return OriginalPrice Published price in US Cent
                      */
                     uint64_t GetOriginalPrice() const;
 
@@ -56,8 +56,8 @@ namespace TencentCloud
                     bool OriginalPriceHasBeenSet() const;
 
                     /**
-                     * 获取Discounted price in 0.01 CNY.
-                     * @return Price Discounted price in 0.01 CNY.
+                     * 获取Discounted total amount in US Cent
+                     * @return Price Discounted total amount in US Cent
                      */
                     uint64_t GetPrice() const;
 
@@ -68,8 +68,8 @@ namespace TencentCloud
                     bool PriceHasBeenSet() const;
 
                     /**
-                     * 获取Currency, such as USD for US dollar.
-                     * @return Currency Currency, such as USD for US dollar.
+                     * 获取Currency, such as USD.
+                     * @return Currency Currency, such as USD.
                      */
                     std::string GetCurrency() const;
 
@@ -82,19 +82,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Original price in 0.01 CNY.
+                     * Published price in US Cent
                      */
                     uint64_t m_originalPrice;
                     bool m_originalPriceHasBeenSet;
 
                     /**
-                     * Discounted price in 0.01 CNY.
+                     * Discounted total amount in US Cent
                      */
                     uint64_t m_price;
                     bool m_priceHasBeenSet;
 
                     /**
-                     * Currency, such as USD for US dollar.
+                     * Currency, such as USD.
                      */
                     std::string m_currency;
                     bool m_currencyHasBeenSet;

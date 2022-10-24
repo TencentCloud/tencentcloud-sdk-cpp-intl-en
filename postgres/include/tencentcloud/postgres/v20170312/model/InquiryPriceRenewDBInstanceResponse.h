@@ -68,8 +68,8 @@ namespace TencentCloud
                     bool PriceHasBeenSet() const;
 
                     /**
-                     * 获取Currency, such as USD for US dollar.
-                     * @return Currency Currency, such as USD for US dollar.
+                     * 获取Currency, such as USD.
+                     * @return Currency Currency, such as USD.
                      */
                     std::string GetCurrency() const;
 
@@ -94,7 +94,7 @@ namespace TencentCloud
                     bool m_priceHasBeenSet;
 
                     /**
-                     * Currency, such as USD for US dollar.
+                     * Currency, such as USD.
                      */
                     std::string m_currency;
                     bool m_currencyHasBeenSet;

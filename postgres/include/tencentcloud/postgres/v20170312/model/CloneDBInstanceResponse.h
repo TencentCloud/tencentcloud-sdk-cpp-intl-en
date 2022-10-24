@@ -71,6 +71,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool BillIdHasBeenSet() const;
 
+                    /**
+                     * 获取ID of the cloned instance, which will be returned only when the instance is pay-as-you-go.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DBInstanceId ID of the cloned instance, which will be returned only when the instance is pay-as-you-go.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetDBInstanceId() const;
+
+                    /**
+                     * 判断参数 DBInstanceId 是否已赋值
+                     * @return DBInstanceId 是否已赋值
+                     */
+                    bool DBInstanceIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -86,6 +100,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_billId;
                     bool m_billIdHasBeenSet;
+
+                    /**
+                     * ID of the cloned instance, which will be returned only when the instance is pay-as-you-go.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_dBInstanceId;
+                    bool m_dBInstanceIdHasBeenSet;
 
                 };
             }

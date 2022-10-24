@@ -56,8 +56,8 @@ namespace TencentCloud
                     bool OriginalPriceHasBeenSet() const;
 
                     /**
-                     * 获取Actual amount payable
-                     * @return Price Actual amount payable
+                     * 获取Discounted total amount
+                     * @return Price Discounted total amount
                      */
                     int64_t GetPrice() const;
 
@@ -68,8 +68,8 @@ namespace TencentCloud
                     bool PriceHasBeenSet() const;
 
                     /**
-                     * 获取Currency, such as USD for US dollar.
-                     * @return Currency Currency, such as USD for US dollar.
+                     * 获取Currency, such as USD.
+                     * @return Currency Currency, such as USD.
                      */
                     std::string GetCurrency() const;
 
@@ -88,13 +88,13 @@ namespace TencentCloud
                     bool m_originalPriceHasBeenSet;
 
                     /**
-                     * Actual amount payable
+                     * Discounted total amount
                      */
                     int64_t m_price;
                     bool m_priceHasBeenSet;
 
                     /**
-                     * Currency, such as USD for US dollar.
+                     * Currency, such as USD.
                      */
                     std::string m_currency;
                     bool m_currencyHasBeenSet;

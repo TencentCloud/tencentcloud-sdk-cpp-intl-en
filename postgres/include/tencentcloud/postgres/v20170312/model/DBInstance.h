@@ -756,6 +756,46 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool IsSupportTDEHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return DBEngine 
+                     */
+                    std::string GetDBEngine() const;
+
+                    /**
+                     * 设置
+                     * @param DBEngine 
+                     */
+                    void SetDBEngine(const std::string& _dBEngine);
+
+                    /**
+                     * 判断参数 DBEngine 是否已赋值
+                     * @return DBEngine 是否已赋值
+                     */
+                    bool DBEngineHasBeenSet() const;
+
+                    /**
+                     * 获取Configuration information of database engine
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DBEngineConfig Configuration information of database engine
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetDBEngineConfig() const;
+
+                    /**
+                     * 设置Configuration information of database engine
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param DBEngineConfig Configuration information of database engine
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetDBEngineConfig(const std::string& _dBEngineConfig);
+
+                    /**
+                     * 判断参数 DBEngineConfig 是否已赋值
+                     * @return DBEngineConfig 是否已赋值
+                     */
+                    bool DBEngineConfigHasBeenSet() const;
+
                 private:
 
                     /**
@@ -989,6 +1029,19 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     int64_t m_isSupportTDE;
                     bool m_isSupportTDEHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_dBEngine;
+                    bool m_dBEngineHasBeenSet;
+
+                    /**
+                     * Configuration information of database engine
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_dBEngineConfig;
+                    bool m_dBEngineConfigHasBeenSet;
 
                 };
             }

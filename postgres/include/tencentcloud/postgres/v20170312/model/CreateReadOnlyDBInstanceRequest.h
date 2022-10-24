@@ -62,24 +62,6 @@ namespace TencentCloud
                     bool SpecCodeHasBeenSet() const;
 
                     /**
-                     * 获取PostgreSQL kernel version, which must be the same as that of the primary instance
-                     * @return DBVersion PostgreSQL kernel version, which must be the same as that of the primary instance
-                     */
-                    std::string GetDBVersion() const;
-
-                    /**
-                     * 设置PostgreSQL kernel version, which must be the same as that of the primary instance
-                     * @param DBVersion PostgreSQL kernel version, which must be the same as that of the primary instance
-                     */
-                    void SetDBVersion(const std::string& _dBVersion);
-
-                    /**
-                     * 判断参数 DBVersion 是否已赋值
-                     * @return DBVersion 是否已赋值
-                     */
-                    bool DBVersionHasBeenSet() const;
-
-                    /**
                      * 获取Instance storage capacity in GB
                      * @return Storage Instance storage capacity in GB
                      */
@@ -188,14 +170,32 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go).
-                     * @return InstanceChargeType Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go).
+                     * 获取(Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
+                     * @return DBVersion (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
+                     */
+                    std::string GetDBVersion() const;
+
+                    /**
+                     * 设置(Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
+                     * @param DBVersion (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
+                     */
+                    void SetDBVersion(const std::string& _dBVersion);
+
+                    /**
+                     * 判断参数 DBVersion 是否已赋值
+                     * @return DBVersion 是否已赋值
+                     */
+                    bool DBVersionHasBeenSet() const;
+
+                    /**
+                     * 获取Instance billing mode. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go). If the source instance is pay-as-you-go, so is the read-only instance.
+                     * @return InstanceChargeType Instance billing mode. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go). If the source instance is pay-as-you-go, so is the read-only instance.
                      */
                     std::string GetInstanceChargeType() const;
 
                     /**
-                     * 设置Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go).
-                     * @param InstanceChargeType Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go).
+                     * 设置Instance billing mode. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go). If the source instance is pay-as-you-go, so is the read-only instance.
+                     * @param InstanceChargeType Instance billing mode. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go). If the source instance is pay-as-you-go, so is the read-only instance.
                      */
                     void SetInstanceChargeType(const std::string& _instanceChargeType);
 
@@ -412,12 +412,6 @@ namespace TencentCloud
                     bool m_specCodeHasBeenSet;
 
                     /**
-                     * PostgreSQL kernel version, which must be the same as that of the primary instance
-                     */
-                    std::string m_dBVersion;
-                    bool m_dBVersionHasBeenSet;
-
-                    /**
                      * Instance storage capacity in GB
                      */
                     uint64_t m_storage;
@@ -454,7 +448,13 @@ namespace TencentCloud
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go).
+                     * (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
+                     */
+                    std::string m_dBVersion;
+                    bool m_dBVersionHasBeenSet;
+
+                    /**
+                     * Instance billing mode. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go). If the source instance is pay-as-you-go, so is the read-only instance.
                      */
                     std::string m_instanceChargeType;
                     bool m_instanceChargeTypeHasBeenSet;

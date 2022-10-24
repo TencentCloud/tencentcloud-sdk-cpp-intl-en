@@ -191,14 +191,14 @@ namespace TencentCloud
                     bool QpsHasBeenSet() const;
 
                     /**
-                     * 获取Billing ID for this specification
-                     * @return Pid Billing ID for this specification
+                     * 获取(Disused)
+                     * @return Pid (Disused)
                      */
                     uint64_t GetPid() const;
 
                     /**
-                     * 设置Billing ID for this specification
-                     * @param Pid Billing ID for this specification
+                     * 设置(Disused)
+                     * @param Pid (Disused)
                      */
                     void SetPid(const uint64_t& _pid);
 
@@ -343,7 +343,7 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_qpsHasBeenSet;
 
                     /**
-                     * Billing ID for this specification
+                     * (Disused)
                      */
                     uint64_t m_pid;
                     bool m_pidHasBeenSet;

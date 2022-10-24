@@ -133,14 +133,14 @@ namespace TencentCloud
                     bool PeriodHasBeenSet() const;
 
                     /**
-                     * 获取Billing ID, which can be obtained through the `Pid` field in the returned value of the `DescribeProductConfig` API.
-                     * @return Pid Billing ID, which can be obtained through the `Pid` field in the returned value of the `DescribeProductConfig` API.
+                     * 获取[Disused] Billing ID, which can be obtained through the `Pid` field in the returned value of the `DescribeProductConfig` API.
+                     * @return Pid [Disused] Billing ID, which can be obtained through the `Pid` field in the returned value of the `DescribeProductConfig` API.
                      */
                     uint64_t GetPid() const;
 
                     /**
-                     * 设置Billing ID, which can be obtained through the `Pid` field in the returned value of the `DescribeProductConfig` API.
-                     * @param Pid Billing ID, which can be obtained through the `Pid` field in the returned value of the `DescribeProductConfig` API.
+                     * 设置[Disused] Billing ID, which can be obtained through the `Pid` field in the returned value of the `DescribeProductConfig` API.
+                     * @param Pid [Disused] Billing ID, which can be obtained through the `Pid` field in the returned value of the `DescribeProductConfig` API.
                      */
                     void SetPid(const uint64_t& _pid);
 
@@ -167,6 +167,50 @@ namespace TencentCloud
                      * @return InstanceChargeType 是否已赋值
                      */
                     bool InstanceChargeTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Instance type. Default value: `primary`. Valid values:
+`primary` (dual-server high-availability, one-primary-one-standby)
+`readonly` (read-only instance)
+                     * @return InstanceType Instance type. Default value: `primary`. Valid values:
+`primary` (dual-server high-availability, one-primary-one-standby)
+`readonly` (read-only instance)
+                     */
+                    std::string GetInstanceType() const;
+
+                    /**
+                     * 设置Instance type. Default value: `primary`. Valid values:
+`primary` (dual-server high-availability, one-primary-one-standby)
+`readonly` (read-only instance)
+                     * @param InstanceType Instance type. Default value: `primary`. Valid values:
+`primary` (dual-server high-availability, one-primary-one-standby)
+`readonly` (read-only instance)
+                     */
+                    void SetInstanceType(const std::string& _instanceType);
+
+                    /**
+                     * 判断参数 InstanceType 是否已赋值
+                     * @return InstanceType 是否已赋值
+                     */
+                    bool InstanceTypeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return DBEngine 
+                     */
+                    std::string GetDBEngine() const;
+
+                    /**
+                     * 设置
+                     * @param DBEngine 
+                     */
+                    void SetDBEngine(const std::string& _dBEngine);
+
+                    /**
+                     * 判断参数 DBEngine 是否已赋值
+                     * @return DBEngine 是否已赋值
+                     */
+                    bool DBEngineHasBeenSet() const;
 
                 private:
 
@@ -201,7 +245,7 @@ namespace TencentCloud
                     bool m_periodHasBeenSet;
 
                     /**
-                     * Billing ID, which can be obtained through the `Pid` field in the returned value of the `DescribeProductConfig` API.
+                     * [Disused] Billing ID, which can be obtained through the `Pid` field in the returned value of the `DescribeProductConfig` API.
                      */
                     uint64_t m_pid;
                     bool m_pidHasBeenSet;
@@ -211,6 +255,20 @@ namespace TencentCloud
                      */
                     std::string m_instanceChargeType;
                     bool m_instanceChargeTypeHasBeenSet;
+
+                    /**
+                     * Instance type. Default value: `primary`. Valid values:
+`primary` (dual-server high-availability, one-primary-one-standby)
+`readonly` (read-only instance)
+                     */
+                    std::string m_instanceType;
+                    bool m_instanceTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_dBEngine;
+                    bool m_dBEngineHasBeenSet;
 
                 };
             }

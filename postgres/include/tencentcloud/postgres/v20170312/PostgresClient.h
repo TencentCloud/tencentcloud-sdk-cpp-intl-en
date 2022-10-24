@@ -689,7 +689,7 @@ namespace TencentCloud
                 DescribeZonesOutcomeCallable DescribeZonesCallable(const Model::DescribeZonesRequest& request);
 
                 /**
-                 *This API is used to eliminate an isolated instance by specifying the `DBInstanceId` parameter. The data of an eliminated instance will be deleted and cannot be recovered.
+                 *This API is used to terminate an isolated instance by specifying the `DBInstanceId` parameter. The data of an terminated instance will be deleted and cannot be recovered.
                  * @param req DestroyDBInstanceRequest
                  * @return DestroyDBInstanceOutcome
                  */
@@ -734,7 +734,7 @@ namespace TencentCloud
                 InquiryPriceRenewDBInstanceOutcomeCallable InquiryPriceRenewDBInstanceCallable(const Model::InquiryPriceRenewDBInstanceRequest& request);
 
                 /**
-                 *This API is used to query the upgrade price of an instance.
+                 *This API is used to query the fees of upgrading a specified database instance. Only pay-as-you-go instance is supported.
                  * @param req InquiryPriceUpgradeDBInstanceRequest
                  * @return InquiryPriceUpgradeDBInstanceOutcome
                  */
