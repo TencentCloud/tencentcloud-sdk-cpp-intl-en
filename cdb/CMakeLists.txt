@@ -108,6 +108,7 @@ set(cdb_public_header_model
   include/tencentcloud/cdb/v20170320/model/DescribeRollbackTaskDetailResponse.h
   include/tencentcloud/cdb/v20170320/model/CreateParamTemplateRequest.h
   include/tencentcloud/cdb/v20170320/model/CreateDBInstanceHourRequest.h
+  include/tencentcloud/cdb/v20170320/model/RemoteBackupInfo.h
   include/tencentcloud/cdb/v20170320/model/RWInstanceInfo.h
   include/tencentcloud/cdb/v20170320/model/DescribeSlowLogsResponse.h
   include/tencentcloud/cdb/v20170320/model/RollbackInstancesInfo.h
@@ -428,6 +429,7 @@ set(cdb_src
   src/v20170320/model/DescribeRollbackTaskDetailResponse.cpp
   src/v20170320/model/CreateParamTemplateRequest.cpp
   src/v20170320/model/CreateDBInstanceHourRequest.cpp
+  src/v20170320/model/RemoteBackupInfo.cpp
   src/v20170320/model/RWInstanceInfo.cpp
   src/v20170320/model/DescribeSlowLogsResponse.cpp
   src/v20170320/model/RollbackInstancesInfo.cpp

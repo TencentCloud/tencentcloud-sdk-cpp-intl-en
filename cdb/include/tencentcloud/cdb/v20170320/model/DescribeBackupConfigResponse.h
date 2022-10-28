@@ -176,6 +176,54 @@ namespace TencentCloud
                      */
                     bool StartBackupPeriodSaveDateHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable the archive backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+                     * @return EnableBackupArchive Whether to enable the archive backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+                     */
+                    std::string GetEnableBackupArchive() const;
+
+                    /**
+                     * 判断参数 EnableBackupArchive 是否已赋值
+                     * @return EnableBackupArchive 是否已赋值
+                     */
+                    bool EnableBackupArchiveHasBeenSet() const;
+
+                    /**
+                     * 获取The period (in days) of how long a data backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
+                     * @return BackupArchiveDays The period (in days) of how long a data backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
+                     */
+                    int64_t GetBackupArchiveDays() const;
+
+                    /**
+                     * 判断参数 BackupArchiveDays 是否已赋值
+                     * @return BackupArchiveDays 是否已赋值
+                     */
+                    bool BackupArchiveDaysHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable the archive backup of logs. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+                     * @return EnableBinlogArchive Whether to enable the archive backup of logs. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+                     */
+                    std::string GetEnableBinlogArchive() const;
+
+                    /**
+                     * 判断参数 EnableBinlogArchive 是否已赋值
+                     * @return EnableBinlogArchive 是否已赋值
+                     */
+                    bool EnableBinlogArchiveHasBeenSet() const;
+
+                    /**
+                     * 获取The period (in days) of how long a log backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
+                     * @return BinlogArchiveDays The period (in days) of how long a log backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
+                     */
+                    int64_t GetBinlogArchiveDays() const;
+
+                    /**
+                     * 判断参数 BinlogArchiveDays 是否已赋值
+                     * @return BinlogArchiveDays 是否已赋值
+                     */
+                    bool BinlogArchiveDaysHasBeenSet() const;
+
                 private:
 
                     /**
@@ -243,6 +291,30 @@ namespace TencentCloud
                      */
                     std::string m_startBackupPeriodSaveDate;
                     bool m_startBackupPeriodSaveDateHasBeenSet;
+
+                    /**
+                     * Whether to enable the archive backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+                     */
+                    std::string m_enableBackupArchive;
+                    bool m_enableBackupArchiveHasBeenSet;
+
+                    /**
+                     * The period (in days) of how long a data backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
+                     */
+                    int64_t m_backupArchiveDays;
+                    bool m_backupArchiveDaysHasBeenSet;
+
+                    /**
+                     * Whether to enable the archive backup of logs. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+                     */
+                    std::string m_enableBinlogArchive;
+                    bool m_enableBinlogArchiveHasBeenSet;
+
+                    /**
+                     * The period (in days) of how long a log backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
+                     */
+                    int64_t m_binlogArchiveDays;
+                    bool m_binlogArchiveDaysHasBeenSet;
 
                 };
             }

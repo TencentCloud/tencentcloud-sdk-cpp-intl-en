@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cdb/v20170320/model/RemoteBackupInfo.h>
 
 
 namespace TencentCloud
@@ -190,6 +191,96 @@ namespace TencentCloud
                      */
                     bool BinlogFinishTimeHasBeenSet() const;
 
+                    /**
+                     * 获取The region where the binlog file resides
+                     * @return Region The region where the binlog file resides
+                     */
+                    std::string GetRegion() const;
+
+                    /**
+                     * 设置The region where the binlog file resides
+                     * @param Region The region where the binlog file resides
+                     */
+                    void SetRegion(const std::string& _region);
+
+                    /**
+                     * 判断参数 Region 是否已赋值
+                     * @return Region 是否已赋值
+                     */
+                    bool RegionHasBeenSet() const;
+
+                    /**
+                     * 获取Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
+                     * @return Status Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
+                     */
+                    std::string GetStatus() const;
+
+                    /**
+                     * 设置Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
+                     * @param Status Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
+                     */
+                    void SetStatus(const std::string& _status);
+
+                    /**
+                     * 判断参数 Status 是否已赋值
+                     * @return Status 是否已赋值
+                     */
+                    bool StatusHasBeenSet() const;
+
+                    /**
+                     * 获取The detailed information of remote binlog backups
+                     * @return RemoteInfo The detailed information of remote binlog backups
+                     */
+                    std::vector<RemoteBackupInfo> GetRemoteInfo() const;
+
+                    /**
+                     * 设置The detailed information of remote binlog backups
+                     * @param RemoteInfo The detailed information of remote binlog backups
+                     */
+                    void SetRemoteInfo(const std::vector<RemoteBackupInfo>& _remoteInfo);
+
+                    /**
+                     * 判断参数 RemoteInfo 是否已赋值
+                     * @return RemoteInfo 是否已赋值
+                     */
+                    bool RemoteInfoHasBeenSet() const;
+
+                    /**
+                     * 获取Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
+                     * @return CosStorageType Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
+                     */
+                    int64_t GetCosStorageType() const;
+
+                    /**
+                     * 设置Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
+                     * @param CosStorageType Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
+                     */
+                    void SetCosStorageType(const int64_t& _cosStorageType);
+
+                    /**
+                     * 判断参数 CosStorageType 是否已赋值
+                     * @return CosStorageType 是否已赋值
+                     */
+                    bool CosStorageTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+                     * @return InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+                     */
+                    std::string GetInstanceId() const;
+
+                    /**
+                     * 设置Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+                     * @param InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+                     */
+                    void SetInstanceId(const std::string& _instanceId);
+
+                    /**
+                     * 判断参数 InstanceId 是否已赋值
+                     * @return InstanceId 是否已赋值
+                     */
+                    bool InstanceIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -239,6 +330,36 @@ namespace TencentCloud
                      */
                     std::string m_binlogFinishTime;
                     bool m_binlogFinishTimeHasBeenSet;
+
+                    /**
+                     * The region where the binlog file resides
+                     */
+                    std::string m_region;
+                    bool m_regionHasBeenSet;
+
+                    /**
+                     * Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
+                     */
+                    std::string m_status;
+                    bool m_statusHasBeenSet;
+
+                    /**
+                     * The detailed information of remote binlog backups
+                     */
+                    std::vector<RemoteBackupInfo> m_remoteInfo;
+                    bool m_remoteInfoHasBeenSet;
+
+                    /**
+                     * Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
+                     */
+                    int64_t m_cosStorageType;
+                    bool m_cosStorageTypeHasBeenSet;
+
+                    /**
+                     * Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+                     */
+                    std::string m_instanceId;
+                    bool m_instanceIdHasBeenSet;
 
                 };
             }

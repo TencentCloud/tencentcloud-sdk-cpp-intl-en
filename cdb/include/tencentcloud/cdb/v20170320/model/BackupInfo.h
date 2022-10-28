@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cdb/v20170320/model/RemoteBackupInfo.h>
 
 
 namespace TencentCloud
@@ -316,6 +317,78 @@ namespace TencentCloud
                      */
                     bool SaveModeHasBeenSet() const;
 
+                    /**
+                     * 获取The region where local backup resides
+                     * @return Region The region where local backup resides
+                     */
+                    std::string GetRegion() const;
+
+                    /**
+                     * 设置The region where local backup resides
+                     * @param Region The region where local backup resides
+                     */
+                    void SetRegion(const std::string& _region);
+
+                    /**
+                     * 判断参数 Region 是否已赋值
+                     * @return Region 是否已赋值
+                     */
+                    bool RegionHasBeenSet() const;
+
+                    /**
+                     * 获取Detailed information of remote backups
+                     * @return RemoteInfo Detailed information of remote backups
+                     */
+                    std::vector<RemoteBackupInfo> GetRemoteInfo() const;
+
+                    /**
+                     * 设置Detailed information of remote backups
+                     * @param RemoteInfo Detailed information of remote backups
+                     */
+                    void SetRemoteInfo(const std::vector<RemoteBackupInfo>& _remoteInfo);
+
+                    /**
+                     * 判断参数 RemoteInfo 是否已赋值
+                     * @return RemoteInfo 是否已赋值
+                     */
+                    bool RemoteInfoHasBeenSet() const;
+
+                    /**
+                     * 获取Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
+                     * @return CosStorageType Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
+                     */
+                    int64_t GetCosStorageType() const;
+
+                    /**
+                     * 设置Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
+                     * @param CosStorageType Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
+                     */
+                    void SetCosStorageType(const int64_t& _cosStorageType);
+
+                    /**
+                     * 判断参数 CosStorageType 是否已赋值
+                     * @return CosStorageType 是否已赋值
+                     */
+                    bool CosStorageTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+                     * @return InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+                     */
+                    std::string GetInstanceId() const;
+
+                    /**
+                     * 设置Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+                     * @param InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+                     */
+                    void SetInstanceId(const std::string& _instanceId);
+
+                    /**
+                     * 判断参数 InstanceId 是否已赋值
+                     * @return InstanceId 是否已赋值
+                     */
+                    bool InstanceIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -407,6 +480,30 @@ namespace TencentCloud
                      */
                     std::string m_saveMode;
                     bool m_saveModeHasBeenSet;
+
+                    /**
+                     * The region where local backup resides
+                     */
+                    std::string m_region;
+                    bool m_regionHasBeenSet;
+
+                    /**
+                     * Detailed information of remote backups
+                     */
+                    std::vector<RemoteBackupInfo> m_remoteInfo;
+                    bool m_remoteInfoHasBeenSet;
+
+                    /**
+                     * Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
+                     */
+                    int64_t m_cosStorageType;
+                    bool m_cosStorageTypeHasBeenSet;
+
+                    /**
+                     * Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+                     */
+                    std::string m_instanceId;
+                    bool m_instanceIdHasBeenSet;
 
                 };
             }
