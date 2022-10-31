@@ -742,6 +742,24 @@ Note: this field may return null, indicating that no valid value was found.
                      */
                     bool LicenseTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`.
+                     * @return DisableApiTermination Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`.
+                     */
+                    bool GetDisableApiTermination() const;
+
+                    /**
+                     * 设置Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`.
+                     * @param DisableApiTermination Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`.
+                     */
+                    void SetDisableApiTermination(const bool& _disableApiTermination);
+
+                    /**
+                     * 判断参数 DisableApiTermination 是否已赋值
+                     * @return DisableApiTermination 是否已赋值
+                     */
+                    bool DisableApiTerminationHasBeenSet() const;
+
                 private:
 
                     /**
@@ -969,6 +987,12 @@ Note: this field may return null, indicating that no valid value was found.
                      */
                     std::string m_licenseType;
                     bool m_licenseTypeHasBeenSet;
+
+                    /**
+                     * Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`.
+                     */
+                    bool m_disableApiTermination;
+                    bool m_disableApiTerminationHasBeenSet;
 
                 };
             }

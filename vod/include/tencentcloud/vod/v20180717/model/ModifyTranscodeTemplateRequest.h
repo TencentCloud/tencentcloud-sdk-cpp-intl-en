@@ -241,6 +241,32 @@ namespace TencentCloud
                      */
                     bool TEHDConfigHasBeenSet() const;
 
+                    /**
+                     * 获取The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
+                     * @return SegmentType The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
+                     */
+                    std::string GetSegmentType() const;
+
+                    /**
+                     * 设置The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
+                     * @param SegmentType The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
+                     */
+                    void SetSegmentType(const std::string& _segmentType);
+
+                    /**
+                     * 判断参数 SegmentType 是否已赋值
+                     * @return SegmentType 是否已赋值
+                     */
+                    bool SegmentTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -306,6 +332,14 @@ namespace TencentCloud
                      */
                     TEHDConfigForUpdate m_tEHDConfig;
                     bool m_tEHDConfigHasBeenSet;
+
+                    /**
+                     * The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
+                     */
+                    std::string m_segmentType;
+                    bool m_segmentTypeHasBeenSet;
 
                 };
             }

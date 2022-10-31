@@ -335,6 +335,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool UpdateTimeHasBeenSet() const;
 
+                    /**
+                     * 获取The segment type. This parameter is valid only if `Container` is `hls`
+                     * @return SegmentType The segment type. This parameter is valid only if `Container` is `hls`
+                     */
+                    std::string GetSegmentType() const;
+
+                    /**
+                     * 设置The segment type. This parameter is valid only if `Container` is `hls`
+                     * @param SegmentType The segment type. This parameter is valid only if `Container` is `hls`
+                     */
+                    void SetSegmentType(const std::string& _segmentType);
+
+                    /**
+                     * 判断参数 SegmentType 是否已赋值
+                     * @return SegmentType 是否已赋值
+                     */
+                    bool SegmentTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -427,6 +445,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
+
+                    /**
+                     * The segment type. This parameter is valid only if `Container` is `hls`
+                     */
+                    std::string m_segmentType;
+                    bool m_segmentTypeHasBeenSet;
 
                 };
             }

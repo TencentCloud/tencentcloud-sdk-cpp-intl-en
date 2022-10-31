@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Details about a CDH instance
+                * CDH instance details
                 */
                 class HostItem : public AbstractModel
                 {
@@ -49,14 +49,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Location of the CDH instance. You can use this parameter to specify the attributes of the instance, such as its availability zone and project.
-                     * @return Placement Location of the CDH instance. You can use this parameter to specify the attributes of the instance, such as its availability zone and project.
+                     * 获取CDH instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+                     * @return Placement CDH instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
                      */
                     Placement GetPlacement() const;
 
                     /**
-                     * 设置Location of the CDH instance. You can use this parameter to specify the attributes of the instance, such as its availability zone and project.
-                     * @param Placement Location of the CDH instance. You can use this parameter to specify the attributes of the instance, such as its availability zone and project.
+                     * 设置CDH instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+                     * @param Placement CDH instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
                      */
                     void SetPlacement(const Placement& _placement);
 
@@ -121,14 +121,14 @@ namespace TencentCloud
                     bool HostNameHasBeenSet() const;
 
                     /**
-                     * 获取Billing method of the CDH instance
-                     * @return HostChargeType Billing method of the CDH instance
+                     * 获取CDH instance billing mode
+                     * @return HostChargeType CDH instance billing mode
                      */
                     std::string GetHostChargeType() const;
 
                     /**
-                     * 设置Billing method of the CDH instance
-                     * @param HostChargeType Billing method of the CDH instance
+                     * 设置CDH instance billing mode
+                     * @param HostChargeType CDH instance billing mode
                      */
                     void SetHostChargeType(const std::string& _hostChargeType);
 
@@ -139,14 +139,14 @@ namespace TencentCloud
                     bool HostChargeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Auto renewal flag of the CDH instance
-                     * @return RenewFlag Auto renewal flag of the CDH instance
+                     * 获取CDH instance renewal flag
+                     * @return RenewFlag CDH instance renewal flag
                      */
                     std::string GetRenewFlag() const;
 
                     /**
-                     * 设置Auto renewal flag of the CDH instance
-                     * @param RenewFlag Auto renewal flag of the CDH instance
+                     * 设置CDH instance renewal flag
+                     * @param RenewFlag CDH instance renewal flag
                      */
                     void SetRenewFlag(const std::string& _renewFlag);
 
@@ -157,14 +157,14 @@ namespace TencentCloud
                     bool RenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取Creation time of the CDH instance
-                     * @return CreatedTime Creation time of the CDH instance
+                     * 获取CDH instance creation time
+                     * @return CreatedTime CDH instance creation time
                      */
                     std::string GetCreatedTime() const;
 
                     /**
-                     * 设置Creation time of the CDH instance
-                     * @param CreatedTime Creation time of the CDH instance
+                     * 设置CDH instance creation time
+                     * @param CreatedTime CDH instance creation time
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
@@ -175,14 +175,14 @@ namespace TencentCloud
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time of the CDH instance
-                     * @return ExpiredTime Expiration time of the CDH instance
+                     * 获取CDH instance expiry time
+                     * @return ExpiredTime CDH instance expiry time
                      */
                     std::string GetExpiredTime() const;
 
                     /**
-                     * 设置Expiration time of the CDH instance
-                     * @param ExpiredTime Expiration time of the CDH instance
+                     * 设置CDH instance expiry time
+                     * @param ExpiredTime CDH instance expiry time
                      */
                     void SetExpiredTime(const std::string& _expiredTime);
 
@@ -193,14 +193,14 @@ namespace TencentCloud
                     bool ExpiredTimeHasBeenSet() const;
 
                     /**
-                     * 获取List of IDs of CVM instances created on the CDH
-                     * @return InstanceIds List of IDs of CVM instances created on the CDH
+                     * 获取List of IDs of CVMs created on a CDH instance
+                     * @return InstanceIds List of IDs of CVMs created on a CDH instance
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置List of IDs of CVM instances created on the CDH
-                     * @param InstanceIds List of IDs of CVM instances created on the CDH
+                     * 设置List of IDs of CVMs created on a CDH instance
+                     * @param InstanceIds List of IDs of CVMs created on a CDH instance
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
@@ -211,14 +211,14 @@ namespace TencentCloud
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取CDH instance state
-                     * @return HostState CDH instance state
+                     * 获取CDH instance status
+                     * @return HostState CDH instance status
                      */
                     std::string GetHostState() const;
 
                     /**
-                     * 设置CDH instance state
-                     * @param HostState CDH instance state
+                     * 设置CDH instance status
+                     * @param HostState CDH instance status
                      */
                     void SetHostState(const std::string& _hostState);
 
@@ -247,14 +247,14 @@ namespace TencentCloud
                     bool HostIpHasBeenSet() const;
 
                     /**
-                     * 获取Resource information of the CDH instance
-                     * @return HostResource Resource information of the CDH instance
+                     * 获取CDH instance resource information
+                     * @return HostResource CDH instance resource information
                      */
                     HostResource GetHostResource() const;
 
                     /**
-                     * 设置Resource information of the CDH instance
-                     * @param HostResource Resource information of the CDH instance
+                     * 设置CDH instance resource information
+                     * @param HostResource CDH instance resource information
                      */
                     void SetHostResource(const HostResource& _hostResource);
 
@@ -289,7 +289,7 @@ Note: This field may return null, indicating that no valid value is found.
                 private:
 
                     /**
-                     * Location of the CDH instance. You can use this parameter to specify the attributes of the instance, such as its availability zone and project.
+                     * CDH instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
                      */
                     Placement m_placement;
                     bool m_placementHasBeenSet;
@@ -313,37 +313,37 @@ Note: This field may return null, indicating that no valid value is found.
                     bool m_hostNameHasBeenSet;
 
                     /**
-                     * Billing method of the CDH instance
+                     * CDH instance billing mode
                      */
                     std::string m_hostChargeType;
                     bool m_hostChargeTypeHasBeenSet;
 
                     /**
-                     * Auto renewal flag of the CDH instance
+                     * CDH instance renewal flag
                      */
                     std::string m_renewFlag;
                     bool m_renewFlagHasBeenSet;
 
                     /**
-                     * Creation time of the CDH instance
+                     * CDH instance creation time
                      */
                     std::string m_createdTime;
                     bool m_createdTimeHasBeenSet;
 
                     /**
-                     * Expiration time of the CDH instance
+                     * CDH instance expiry time
                      */
                     std::string m_expiredTime;
                     bool m_expiredTimeHasBeenSet;
 
                     /**
-                     * List of IDs of CVM instances created on the CDH
+                     * List of IDs of CVMs created on a CDH instance
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * CDH instance state
+                     * CDH instance status
                      */
                     std::string m_hostState;
                     bool m_hostStateHasBeenSet;
@@ -355,7 +355,7 @@ Note: This field may return null, indicating that no valid value is found.
                     bool m_hostIpHasBeenSet;
 
                     /**
-                     * Resource information of the CDH instance
+                     * CDH instance resource information
                      */
                     HostResource m_hostResource;
                     bool m_hostResourceHasBeenSet;

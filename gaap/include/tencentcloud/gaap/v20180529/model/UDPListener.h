@@ -533,6 +533,50 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool RecvContextHasBeenSet() const;
 
+                    /**
+                     * 获取Connection ID of the listener. A null value is returned if the listener is associated with the connection group.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return ProxyId Connection ID of the listener. A null value is returned if the listener is associated with the connection group.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetProxyId() const;
+
+                    /**
+                     * 设置Connection ID of the listener. A null value is returned if the listener is associated with the connection group.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param ProxyId Connection ID of the listener. A null value is returned if the listener is associated with the connection group.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetProxyId(const std::string& _proxyId);
+
+                    /**
+                     * 判断参数 ProxyId 是否已赋值
+                     * @return ProxyId 是否已赋值
+                     */
+                    bool ProxyIdHasBeenSet() const;
+
+                    /**
+                     * 获取Connection group ID of the listener. A null value is returned if the listener is associated with a specific connection.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return GroupId Connection group ID of the listener. A null value is returned if the listener is associated with a specific connection.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetGroupId() const;
+
+                    /**
+                     * 设置Connection group ID of the listener. A null value is returned if the listener is associated with a specific connection.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param GroupId Connection group ID of the listener. A null value is returned if the listener is associated with a specific connection.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetGroupId(const std::string& _groupId);
+
+                    /**
+                     * 判断参数 GroupId 是否已赋值
+                     * @return GroupId 是否已赋值
+                     */
+                    bool GroupIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -690,6 +734,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_recvContext;
                     bool m_recvContextHasBeenSet;
+
+                    /**
+                     * Connection ID of the listener. A null value is returned if the listener is associated with the connection group.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_proxyId;
+                    bool m_proxyIdHasBeenSet;
+
+                    /**
+                     * Connection group ID of the listener. A null value is returned if the listener is associated with a specific connection.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_groupId;
+                    bool m_groupIdHasBeenSet;
 
                 };
             }

@@ -73,30 +73,34 @@ namespace TencentCloud
                     bool TimeHasBeenSet() const;
 
                     /**
-                     * 获取Data size.
+                     * 获取The data size.
 <li>Storage capacity in bytes.</li>
 <li>Transcoding duration in seconds.</li>
 <li>Traffic in bytes.</li>
 <li>Bandwidth in bps.</li>
-                     * @return Value Data size.
+<li>Live stream clip duration in seconds.</li>
+                     * @return Value The data size.
 <li>Storage capacity in bytes.</li>
 <li>Transcoding duration in seconds.</li>
 <li>Traffic in bytes.</li>
 <li>Bandwidth in bps.</li>
+<li>Live stream clip duration in seconds.</li>
                      */
                     int64_t GetValue() const;
 
                     /**
-                     * 设置Data size.
+                     * 设置The data size.
 <li>Storage capacity in bytes.</li>
 <li>Transcoding duration in seconds.</li>
 <li>Traffic in bytes.</li>
 <li>Bandwidth in bps.</li>
-                     * @param Value Data size.
+<li>Live stream clip duration in seconds.</li>
+                     * @param Value The data size.
 <li>Storage capacity in bytes.</li>
 <li>Transcoding duration in seconds.</li>
 <li>Traffic in bytes.</li>
 <li>Bandwidth in bps.</li>
+<li>Live stream clip duration in seconds.</li>
                      */
                     void SetValue(const int64_t& _value);
 
@@ -117,11 +121,12 @@ namespace TencentCloud
                     bool m_timeHasBeenSet;
 
                     /**
-                     * Data size.
+                     * The data size.
 <li>Storage capacity in bytes.</li>
 <li>Transcoding duration in seconds.</li>
 <li>Traffic in bytes.</li>
 <li>Bandwidth in bps.</li>
+<li>Live stream clip duration in seconds.</li>
                      */
                     int64_t m_value;
                     bool m_valueHasBeenSet;

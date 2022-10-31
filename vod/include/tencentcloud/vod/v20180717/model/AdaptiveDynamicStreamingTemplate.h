@@ -319,6 +319,24 @@ The default is `VOD`.
                      */
                     bool UpdateTimeHasBeenSet() const;
 
+                    /**
+                     * 获取The segment type. This parameter is valid only if `Format` is `HLS`.
+                     * @return SegmentType The segment type. This parameter is valid only if `Format` is `HLS`.
+                     */
+                    std::string GetSegmentType() const;
+
+                    /**
+                     * 设置The segment type. This parameter is valid only if `Format` is `HLS`.
+                     * @param SegmentType The segment type. This parameter is valid only if `Format` is `HLS`.
+                     */
+                    void SetSegmentType(const std::string& _segmentType);
+
+                    /**
+                     * 判断参数 SegmentType 是否已赋值
+                     * @return SegmentType 是否已赋值
+                     */
+                    bool SegmentTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -406,6 +424,12 @@ The default is `VOD`.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
+
+                    /**
+                     * The segment type. This parameter is valid only if `Format` is `HLS`.
+                     */
+                    std::string m_segmentType;
+                    bool m_segmentTypeHasBeenSet;
 
                 };
             }

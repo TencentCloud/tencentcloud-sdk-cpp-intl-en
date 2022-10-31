@@ -269,6 +269,36 @@ Default value: no.
                      */
                     bool CommentHasBeenSet() const;
 
+                    /**
+                     * 获取The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
+Default: ts
+                     * @return SegmentType The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
+Default: ts
+                     */
+                    std::string GetSegmentType() const;
+
+                    /**
+                     * 设置The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
+Default: ts
+                     * @param SegmentType The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
+Default: ts
+                     */
+                    void SetSegmentType(const std::string& _segmentType);
+
+                    /**
+                     * 判断参数 SegmentType 是否已赋值
+                     * @return SegmentType 是否已赋值
+                     */
+                    bool SegmentTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -340,6 +370,15 @@ Default value: no.
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
+
+                    /**
+                     * The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
+Default: ts
+                     */
+                    std::string m_segmentType;
+                    bool m_segmentTypeHasBeenSet;
 
                 };
             }

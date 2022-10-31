@@ -797,7 +797,8 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
                 CreateSubAppIdOutcomeCallable CreateSubAppIdCallable(const Model::CreateSubAppIdRequest& request);
 
                 /**
-                 *This API is used to create a player configuration. Up to 100 configurations can be created.
+                 *We have <font color='red'>stopped updating</font> this API. Currently, you no longer need a player configuration to use player signatures. For details, see [Player Signature](https://intl.cloud.tencent.com/document/product/266/45554?from_cn_redirect=1).
+This API is used to create a player configuration. Up to 100 configurations can be created.
                  * @param req CreateSuperPlayerConfigRequest
                  * @return CreateSuperPlayerConfigOutcome
                  */
@@ -956,7 +957,8 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DeleteSnapshotByTimeOffsetTemplateOutcomeCallable DeleteSnapshotByTimeOffsetTemplateCallable(const Model::DeleteSnapshotByTimeOffsetTemplateRequest& request);
 
                 /**
-                 *This API is used to delete a player configuration.  
+                 *We have <font color='red'>stopped updating</font> this API. Currently, you no longer need a player configuration to use player signatures. For details, see [Player Signature](https://intl.cloud.tencent.com/document/product/266/45554?from_cn_redirect=1).
+This API is used to delete a player configuration.  
 *Note: Preset player configurations cannot be deleted.*
                  * @param req DeleteSuperPlayerConfigRequest
                  * @return DeleteSuperPlayerConfigOutcome
@@ -1301,7 +1303,8 @@ This API returns the video content duration for intelligent recognition in secon
                 DescribeSubAppIdsOutcomeCallable DescribeSubAppIdsCallable(const Model::DescribeSubAppIdsRequest& request);
 
                 /**
-                 *This API is used to query player configurations. It supports pagination.
+                 *We have <font color='red'>stopped updating</font> this API. Currently, you no longer need a player configuration to use player signatures. For details, see [Player Signature](https://intl.cloud.tencent.com/document/product/266/45554?from_cn_redirect=1).
+This API is used to query player configurations. It supports pagination.
                  * @param req DescribeSuperPlayerConfigsRequest
                  * @return DescribeSuperPlayerConfigsOutcome
                  */
@@ -1584,7 +1587,8 @@ If the current storage class is DEEP ARCHIVE, it can be changed to the following
                 ModifySubAppIdStatusOutcomeCallable ModifySubAppIdStatusCallable(const Model::ModifySubAppIdStatusRequest& request);
 
                 /**
-                 *This API is used to modify a player configuration.
+                 *We have <font color='red'>stopped updating</font> this API. Currently, you no longer need a player configuration to use player signatures. For details, see [Player Signature](https://intl.cloud.tencent.com/document/product/266/45554?from_cn_redirect=1).
+This API is used to modify a player configuration.
                  * @param req ModifySuperPlayerConfigRequest
                  * @return ModifySuperPlayerConfigOutcome
                  */
