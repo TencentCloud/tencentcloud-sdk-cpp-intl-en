@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
-                     * @return Product Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
+                     * 获取Database engine name, which is `redis` for this API.
+                     * @return Product Database engine name, which is `redis` for this API.
                      */
                     std::string GetProduct() const;
 
                     /**
-                     * 设置Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
-                     * @param Product Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
+                     * 设置Database engine name, which is `redis` for this API.
+                     * @param Product Database engine name, which is `redis` for this API.
                      */
                     void SetProduct(const std::string& _product);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool ProductHasBeenSet() const;
 
                     /**
-                     * 获取Security group ID.
-                     * @return SecurityGroupId Security group ID.
+                     * 获取Security group ID
+                     * @return SecurityGroupId Security group ID
                      */
                     std::string GetSecurityGroupId() const;
 
                     /**
-                     * 设置Security group ID.
-                     * @param SecurityGroupId Security group ID.
+                     * 设置Security group ID
+                     * @param SecurityGroupId Security group ID
                      */
                     void SetSecurityGroupId(const std::string& _securityGroupId);
 
@@ -99,13 +99,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
+                     * Database engine name, which is `redis` for this API.
                      */
                     std::string m_product;
                     bool m_productHasBeenSet;
 
                     /**
-                     * Security group ID.
+                     * Security group ID
                      */
                     std::string m_securityGroupId;
                     bool m_securityGroupIdHasBeenSet;

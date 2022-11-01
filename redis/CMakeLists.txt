@@ -112,6 +112,7 @@ set(redis_public_header_model
   include/tencentcloud/redis/v20180412/model/InstanceTextParam.h
   include/tencentcloud/redis/v20180412/model/ParamTemplateInfo.h
   include/tencentcloud/redis/v20180412/model/DescribeInstanceMonitorTopNCmdTookResponse.h
+  include/tencentcloud/redis/v20180412/model/CloseSSLRequest.h
   include/tencentcloud/redis/v20180412/model/DescribeInstanceMonitorBigKeySizeDistRequest.h
   include/tencentcloud/redis/v20180412/model/DescribeInstanceAccountRequest.h
   include/tencentcloud/redis/v20180412/model/SwitchProxyRequest.h
@@ -151,6 +152,7 @@ set(redis_public_header_model
   include/tencentcloud/redis/v20180412/model/StartupInstanceResponse.h
   include/tencentcloud/redis/v20180412/model/DescribeInstanceDTSInstanceInfo.h
   include/tencentcloud/redis/v20180412/model/TradeDealDetail.h
+  include/tencentcloud/redis/v20180412/model/ResourceTag.h
   include/tencentcloud/redis/v20180412/model/AssociateSecurityGroupsResponse.h
   include/tencentcloud/redis/v20180412/model/ReplicaGroup.h
   include/tencentcloud/redis/v20180412/model/DescribeTaskInfoResponse.h
@@ -176,7 +178,7 @@ set(redis_public_header_model
   include/tencentcloud/redis/v20180412/model/ModfiyInstancePasswordResponse.h
   include/tencentcloud/redis/v20180412/model/InstanceSet.h
   include/tencentcloud/redis/v20180412/model/ReleaseWanAddressRequest.h
-  include/tencentcloud/redis/v20180412/model/ResourceTag.h
+  include/tencentcloud/redis/v20180412/model/CloseSSLResponse.h
   include/tencentcloud/redis/v20180412/model/ModifyMaintenanceWindowResponse.h
   include/tencentcloud/redis/v20180412/model/DescribeInstanceMonitorBigKeyTypeDistRequest.h
   include/tencentcloud/redis/v20180412/model/DescribeInstanceMonitorTopNCmdTookRequest.h
@@ -185,6 +187,7 @@ set(redis_public_header_model
   include/tencentcloud/redis/v20180412/model/InquiryPriceCreateInstanceRequest.h
   include/tencentcloud/redis/v20180412/model/UpgradeSmallVersionResponse.h
   include/tencentcloud/redis/v20180412/model/ModifyInstanceParamsRequest.h
+  include/tencentcloud/redis/v20180412/model/OpenSSLRequest.h
   include/tencentcloud/redis/v20180412/model/BackupDownloadInfo.h
   include/tencentcloud/redis/v20180412/model/BigKeyTypeInfo.h
   include/tencentcloud/redis/v20180412/model/DescribeInstanceNodeInfoRequest.h
@@ -212,6 +215,7 @@ set(redis_public_header_model
   include/tencentcloud/redis/v20180412/model/DeleteInstanceAccountResponse.h
   include/tencentcloud/redis/v20180412/model/DescribeInstanceMonitorSIPRequest.h
   include/tencentcloud/redis/v20180412/model/InstanceClusterShard.h
+  include/tencentcloud/redis/v20180412/model/OpenSSLResponse.h
   include/tencentcloud/redis/v20180412/model/TendisSlowLogDetail.h
   include/tencentcloud/redis/v20180412/model/ChangeInstanceRoleResponse.h
   include/tencentcloud/redis/v20180412/model/UpgradeProxyVersionRequest.h
@@ -322,6 +326,7 @@ set(redis_src
   src/v20180412/model/InstanceTextParam.cpp
   src/v20180412/model/ParamTemplateInfo.cpp
   src/v20180412/model/DescribeInstanceMonitorTopNCmdTookResponse.cpp
+  src/v20180412/model/CloseSSLRequest.cpp
   src/v20180412/model/DescribeInstanceMonitorBigKeySizeDistRequest.cpp
   src/v20180412/model/DescribeInstanceAccountRequest.cpp
   src/v20180412/model/SwitchProxyRequest.cpp
@@ -361,6 +366,7 @@ set(redis_src
   src/v20180412/model/StartupInstanceResponse.cpp
   src/v20180412/model/DescribeInstanceDTSInstanceInfo.cpp
   src/v20180412/model/TradeDealDetail.cpp
+  src/v20180412/model/ResourceTag.cpp
   src/v20180412/model/AssociateSecurityGroupsResponse.cpp
   src/v20180412/model/ReplicaGroup.cpp
   src/v20180412/model/DescribeTaskInfoResponse.cpp
@@ -386,7 +392,7 @@ set(redis_src
   src/v20180412/model/ModfiyInstancePasswordResponse.cpp
   src/v20180412/model/InstanceSet.cpp
   src/v20180412/model/ReleaseWanAddressRequest.cpp
-  src/v20180412/model/ResourceTag.cpp
+  src/v20180412/model/CloseSSLResponse.cpp
   src/v20180412/model/ModifyMaintenanceWindowResponse.cpp
   src/v20180412/model/DescribeInstanceMonitorBigKeyTypeDistRequest.cpp
   src/v20180412/model/DescribeInstanceMonitorTopNCmdTookRequest.cpp
@@ -395,6 +401,7 @@ set(redis_src
   src/v20180412/model/InquiryPriceCreateInstanceRequest.cpp
   src/v20180412/model/UpgradeSmallVersionResponse.cpp
   src/v20180412/model/ModifyInstanceParamsRequest.cpp
+  src/v20180412/model/OpenSSLRequest.cpp
   src/v20180412/model/BackupDownloadInfo.cpp
   src/v20180412/model/BigKeyTypeInfo.cpp
   src/v20180412/model/DescribeInstanceNodeInfoRequest.cpp
@@ -422,6 +429,7 @@ set(redis_src
   src/v20180412/model/DeleteInstanceAccountResponse.cpp
   src/v20180412/model/DescribeInstanceMonitorSIPRequest.cpp
   src/v20180412/model/InstanceClusterShard.cpp
+  src/v20180412/model/OpenSSLResponse.cpp
   src/v20180412/model/TendisSlowLogDetail.cpp
   src/v20180412/model/ChangeInstanceRoleResponse.cpp
   src/v20180412/model/UpgradeProxyVersionRequest.cpp

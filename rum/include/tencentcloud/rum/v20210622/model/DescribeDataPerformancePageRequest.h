@@ -438,6 +438,24 @@ namespace TencentCloud
                      */
                     bool EnvHasBeenSet() const;
 
+                    /**
+                     * 获取Network status
+                     * @return NetStatus Network status
+                     */
+                    std::string GetNetStatus() const;
+
+                    /**
+                     * 设置Network status
+                     * @param NetStatus Network status
+                     */
+                    void SetNetStatus(const std::string& _netStatus);
+
+                    /**
+                     * 判断参数 NetStatus 是否已赋值
+                     * @return NetStatus 是否已赋值
+                     */
+                    bool NetStatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -571,6 +589,12 @@ namespace TencentCloud
                      */
                     std::string m_env;
                     bool m_envHasBeenSet;
+
+                    /**
+                     * Network status
+                     */
+                    std::string m_netStatus;
+                    bool m_netStatusHasBeenSet;
 
                 };
             }

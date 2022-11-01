@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
-                     * @return Product Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
+                     * 获取Database engine name, which is `redis` for this API.
+                     * @return Product Database engine name, which is `redis` for this API.
                      */
                     std::string GetProduct() const;
 
                     /**
-                     * 设置Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
-                     * @param Product Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
+                     * 设置Database engine name, which is `redis` for this API.
+                     * @param Product Database engine name, which is `redis` for this API.
                      */
                     void SetProduct(const std::string& _product);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool ProductHasBeenSet() const;
 
                     /**
-                     * 获取ID list of the security groups to be modified, which is an array of one or more security group IDs.
-                     * @return SecurityGroupIds ID list of the security groups to be modified, which is an array of one or more security group IDs.
+                     * 获取List of IDs of security groups to be modified, which is an array of one or more security group IDs.
+                     * @return SecurityGroupIds List of IDs of security groups to be modified, which is an array of one or more security group IDs.
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
-                     * 设置ID list of the security groups to be modified, which is an array of one or more security group IDs.
-                     * @param SecurityGroupIds ID list of the security groups to be modified, which is an array of one or more security group IDs.
+                     * 设置List of IDs of security groups to be modified, which is an array of one or more security group IDs.
+                     * @param SecurityGroupIds List of IDs of security groups to be modified, which is an array of one or more security group IDs.
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
 
@@ -99,13 +99,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
+                     * Database engine name, which is `redis` for this API.
                      */
                     std::string m_product;
                     bool m_productHasBeenSet;
 
                     /**
-                     * ID list of the security groups to be modified, which is an array of one or more security group IDs.
+                     * List of IDs of security groups to be modified, which is an array of one or more security group IDs.
                      */
                     std::vector<std::string> m_securityGroupIds;
                     bool m_securityGroupIdsHasBeenSet;

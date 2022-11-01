@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Sorting order. Valid values: desc, asc
-                     * @return Sort Sorting order. Valid values: desc, asc
+                     * 获取Sorting order (required). Valid values: `desc`, `asc`.
+                     * @return Sort Sorting order (required). Valid values: `desc`, `asc`.
                      */
                     std::string GetSort() const;
 
                     /**
-                     * 设置Sorting order. Valid values: desc, asc
-                     * @param Sort Sorting order. Valid values: desc, asc
+                     * 设置Sorting order (required). Valid values: `desc`, `asc`.
+                     * @param Sort Sorting order (required). Valid values: `desc`, `asc`.
                      */
                     void SetSort(const std::string& _sort);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool SortHasBeenSet() const;
 
                     /**
-                     * 获取searchlog  histogram
-                     * @return ActionType searchlog  histogram
+                     * 获取This parameter is required. Valid values: `searchlog`, `histogram`.
+                     * @return ActionType This parameter is required. Valid values: `searchlog`, `histogram`.
                      */
                     std::string GetActionType() const;
 
                     /**
-                     * 设置searchlog  histogram
-                     * @param ActionType searchlog  histogram
+                     * 设置This parameter is required. Valid values: `searchlog`, `histogram`.
+                     * @param ActionType This parameter is required. Valid values: `searchlog`, `histogram`.
                      */
                     void SetActionType(const std::string& _actionType);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool ActionTypeHasBeenSet() const;
 
                     /**
-                     * 获取Project ID
-                     * @return ID Project ID
+                     * 获取Project ID (required)
+                     * @return ID Project ID (required)
                      */
                     int64_t GetID() const;
 
                     /**
-                     * 设置Project ID
-                     * @param ID Project ID
+                     * 设置Project ID (required)
+                     * @param ID Project ID (required)
                      */
                     void SetID(const int64_t& _iD);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool IDHasBeenSet() const;
 
                     /**
-                     * 获取Start time
-                     * @return StartTime Start time
+                     * 获取Start time (required)
+                     * @return StartTime Start time (required)
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Start time
-                     * @param StartTime Start time
+                     * 设置Start time (required)
+                     * @param StartTime Start time (required)
                      */
                     void SetStartTime(const std::string& _startTime);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Number of raw logs returned in a single query. Maximum value: 100
-                     * @return Limit Number of raw logs returned in a single query. Maximum value: 100
+                     * 获取The number of raw logs returned for a single query. This parameter is required. Maximum value: 100.
+                     * @return Limit The number of raw logs returned for a single query. This parameter is required. Maximum value: 100.
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of raw logs returned in a single query. Maximum value: 100
-                     * @param Limit Number of raw logs returned in a single query. Maximum value: 100
+                     * 设置The number of raw logs returned for a single query. This parameter is required. Maximum value: 100.
+                     * @param Limit The number of raw logs returned for a single query. This parameter is required. Maximum value: 100.
                      */
                     void SetLimit(const int64_t& _limit);
 
@@ -151,14 +151,14 @@ namespace TencentCloud
                     bool ContextHasBeenSet() const;
 
                     /**
-                     * 获取Query statement, which can contain up to 4,096 characters.
-                     * @return Query Query statement, which can contain up to 4,096 characters.
+                     * 获取Query statement, which is required and can contain up to 4,096 characters.
+                     * @return Query Query statement, which is required and can contain up to 4,096 characters.
                      */
                     std::string GetQuery() const;
 
                     /**
-                     * 设置Query statement, which can contain up to 4,096 characters.
-                     * @param Query Query statement, which can contain up to 4,096 characters.
+                     * 设置Query statement, which is required and can contain up to 4,096 characters.
+                     * @param Query Query statement, which is required and can contain up to 4,096 characters.
                      */
                     void SetQuery(const std::string& _query);
 
@@ -169,14 +169,14 @@ namespace TencentCloud
                     bool QueryHasBeenSet() const;
 
                     /**
-                     * 获取End time
-                     * @return EndTime End time
+                     * 获取End time (required)
+                     * @return EndTime End time (required)
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time
-                     * @param EndTime End time
+                     * 设置End time (required)
+                     * @param EndTime End time (required)
                      */
                     void SetEndTime(const std::string& _endTime);
 
@@ -189,31 +189,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Sorting order. Valid values: desc, asc
+                     * Sorting order (required). Valid values: `desc`, `asc`.
                      */
                     std::string m_sort;
                     bool m_sortHasBeenSet;
 
                     /**
-                     * searchlog  histogram
+                     * This parameter is required. Valid values: `searchlog`, `histogram`.
                      */
                     std::string m_actionType;
                     bool m_actionTypeHasBeenSet;
 
                     /**
-                     * Project ID
+                     * Project ID (required)
                      */
                     int64_t m_iD;
                     bool m_iDHasBeenSet;
 
                     /**
-                     * Start time
+                     * Start time (required)
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Number of raw logs returned in a single query. Maximum value: 100
+                     * The number of raw logs returned for a single query. This parameter is required. Maximum value: 100.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
@@ -225,13 +225,13 @@ namespace TencentCloud
                     bool m_contextHasBeenSet;
 
                     /**
-                     * Query statement, which can contain up to 4,096 characters.
+                     * Query statement, which is required and can contain up to 4,096 characters.
                      */
                     std::string m_query;
                     bool m_queryHasBeenSet;
 
                     /**
-                     * End time
+                     * End time (required)
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;

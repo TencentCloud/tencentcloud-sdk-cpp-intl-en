@@ -61,14 +61,18 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to upgrade the proxy and Redis kernel. After the upgrade, the "Read Local Nodes Only" feature can be supported.
-                     * @return UpgradeProxyAndRedisServer Whether to upgrade the proxy and Redis kernel. After the upgrade, the "Read Local Nodes Only" feature can be supported.
+                     * 获取Whether to support “Reading Local Nodes Only” feature after upgrading to multi-AZ deployment.
+ul><li>`true`: The “Read Local Nodes Only” feature is supported. During the upgrade, you need to upgrade the proxy version and Redis kernel minor version simultaneously, which will involve data migration and may take hours to complete. </li><li>`false`: The “Read Local Nodes Only” feature is not supported. Upgrading to multi-AZ deployment will involve metadata migration only without affecting the service, which generally take less than three minutes to complete.</li></ul>
+                     * @return UpgradeProxyAndRedisServer Whether to support “Reading Local Nodes Only” feature after upgrading to multi-AZ deployment.
+ul><li>`true`: The “Read Local Nodes Only” feature is supported. During the upgrade, you need to upgrade the proxy version and Redis kernel minor version simultaneously, which will involve data migration and may take hours to complete. </li><li>`false`: The “Read Local Nodes Only” feature is not supported. Upgrading to multi-AZ deployment will involve metadata migration only without affecting the service, which generally take less than three minutes to complete.</li></ul>
                      */
                     bool GetUpgradeProxyAndRedisServer() const;
 
                     /**
-                     * 设置Whether to upgrade the proxy and Redis kernel. After the upgrade, the "Read Local Nodes Only" feature can be supported.
-                     * @param UpgradeProxyAndRedisServer Whether to upgrade the proxy and Redis kernel. After the upgrade, the "Read Local Nodes Only" feature can be supported.
+                     * 设置Whether to support “Reading Local Nodes Only” feature after upgrading to multi-AZ deployment.
+ul><li>`true`: The “Read Local Nodes Only” feature is supported. During the upgrade, you need to upgrade the proxy version and Redis kernel minor version simultaneously, which will involve data migration and may take hours to complete. </li><li>`false`: The “Read Local Nodes Only” feature is not supported. Upgrading to multi-AZ deployment will involve metadata migration only without affecting the service, which generally take less than three minutes to complete.</li></ul>
+                     * @param UpgradeProxyAndRedisServer Whether to support “Reading Local Nodes Only” feature after upgrading to multi-AZ deployment.
+ul><li>`true`: The “Read Local Nodes Only” feature is supported. During the upgrade, you need to upgrade the proxy version and Redis kernel minor version simultaneously, which will involve data migration and may take hours to complete. </li><li>`false`: The “Read Local Nodes Only” feature is not supported. Upgrading to multi-AZ deployment will involve metadata migration only without affecting the service, which generally take less than three minutes to complete.</li></ul>
                      */
                     void SetUpgradeProxyAndRedisServer(const bool& _upgradeProxyAndRedisServer);
 
@@ -87,7 +91,8 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Whether to upgrade the proxy and Redis kernel. After the upgrade, the "Read Local Nodes Only" feature can be supported.
+                     * Whether to support “Reading Local Nodes Only” feature after upgrading to multi-AZ deployment.
+ul><li>`true`: The “Read Local Nodes Only” feature is supported. During the upgrade, you need to upgrade the proxy version and Redis kernel minor version simultaneously, which will involve data migration and may take hours to complete. </li><li>`false`: The “Read Local Nodes Only” feature is not supported. Upgrading to multi-AZ deployment will involve metadata migration only without affecting the service, which generally take less than three minutes to complete.</li></ul>
                      */
                     bool m_upgradeProxyAndRedisServer;
                     bool m_upgradeProxyAndRedisServerHasBeenSet;

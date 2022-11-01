@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb.
-                     * @return Product Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb.
+                     * 获取Database engine name, which is `redis` for this API.
+                     * @return Product Database engine name, which is `redis` for this API.
                      */
                     std::string GetProduct() const;
 
                     /**
-                     * 设置Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb.
-                     * @param Product Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb.
+                     * 设置Database engine name, which is `redis` for this API.
+                     * @param Product Database engine name, which is `redis` for this API.
                      */
                     void SetProduct(const std::string& _product);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool ProductHasBeenSet() const;
 
                     /**
-                     * 获取Project ID.
-                     * @return ProjectId Project ID.
+                     * 获取Project ID
+                     * @return ProjectId Project ID
                      */
                     uint64_t GetProjectId() const;
 
                     /**
-                     * 设置Project ID.
-                     * @param ProjectId Project ID.
+                     * 设置Project ID
+                     * @param ProjectId Project ID
                      */
                     void SetProjectId(const uint64_t& _projectId);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Offset.
-                     * @return Offset Offset.
+                     * 获取Offset, which is an integral multiple of `Limit`.
+                     * @return Offset Offset, which is an integral multiple of `Limit`.
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset.
-                     * @param Offset Offset.
+                     * 设置Offset, which is an integral multiple of `Limit`.
+                     * @param Offset Offset, which is an integral multiple of `Limit`.
                      */
                     void SetOffset(const uint64_t& _offset);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of results to be pulled. Default value: 20
-                     * @return Limit Number of results to be pulled. Default value: 20
+                     * 获取The number of security groups to be pulled. Default value: `20`.
+                     * @return Limit The number of security groups to be pulled. Default value: `20`.
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of results to be pulled. Default value: 20
-                     * @param Limit Number of results to be pulled. Default value: 20
+                     * 设置The number of security groups to be pulled. Default value: `20`.
+                     * @param Limit The number of security groups to be pulled. Default value: `20`.
                      */
                     void SetLimit(const uint64_t& _limit);
 
@@ -135,25 +135,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb.
+                     * Database engine name, which is `redis` for this API.
                      */
                     std::string m_product;
                     bool m_productHasBeenSet;
 
                     /**
-                     * Project ID.
+                     * Project ID
                      */
                     uint64_t m_projectId;
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Offset.
+                     * Offset, which is an integral multiple of `Limit`.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of results to be pulled. Default value: 20
+                     * The number of security groups to be pulled. Default value: `20`.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;

@@ -476,7 +476,7 @@ Default API request rate limit: 20 requests/sec.
                 DescribeDataEventUrlOutcomeCallable DescribeDataEventUrlCallable(const Model::DescribeDataEventUrlRequest& request);
 
                 /**
-                 *This API is used to get the DescribeDataFetchProject information.
+                 *This API is used to get the `DescribeDataFetchProject` information and has been deprecated. Use `DescribeDataFetchUrl` instead.
                  * @param req DescribeDataFetchProjectRequest
                  * @return DescribeDataFetchProjectOutcome
                  */

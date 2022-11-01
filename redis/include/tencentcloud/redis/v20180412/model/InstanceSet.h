@@ -86,14 +86,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取User `Appid`
-                     * @return Appid User `Appid`
+                     * 获取User's Appid
+                     * @return Appid User's Appid
                      */
                     int64_t GetAppid() const;
 
                     /**
-                     * 设置User `Appid`
-                     * @param Appid User `Appid`
+                     * 设置User's Appid
+                     * @param Appid User's Appid
                      */
                     void SetAppid(const int64_t& _appid);
 
@@ -122,14 +122,14 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan
-                     * @return RegionId Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan
+                     * 获取Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan.
+                     * @return RegionId Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan.
                      */
                     int64_t GetRegionId() const;
 
                     /**
-                     * 设置Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan
-                     * @param RegionId Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan
+                     * 设置Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan.
+                     * @param RegionId Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan.
                      */
                     void SetRegionId(const int64_t& _regionId);
 
@@ -158,14 +158,14 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID, such as 75101
-                     * @return VpcId VPC ID, such as 75101
+                     * 获取VPC ID, such as 75101.
+                     * @return VpcId VPC ID, such as 75101.
                      */
                     int64_t GetVpcId() const;
 
                     /**
-                     * 设置VPC ID, such as 75101
-                     * @param VpcId VPC ID, such as 75101
+                     * 设置VPC ID, such as 75101.
+                     * @param VpcId VPC ID, such as 75101.
                      */
                     void SetVpcId(const int64_t& _vpcId);
 
@@ -176,14 +176,14 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取VPC subnet ID, such as 46315
-                     * @return SubnetId VPC subnet ID, such as 46315
+                     * 获取VPC subnet ID, such as 46315.
+                     * @return SubnetId VPC subnet ID, such as 46315.
                      */
                     int64_t GetSubnetId() const;
 
                     /**
-                     * 设置VPC subnet ID, such as 46315
-                     * @param SubnetId VPC subnet ID, such as 46315
+                     * 设置VPC subnet ID, such as 46315.
+                     * @param SubnetId VPC subnet ID, such as 46315.
                      */
                     void SetSubnetId(const int64_t& _subnetId);
 
@@ -194,14 +194,14 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Current instance status. 0: to be initialized; 1: instance in process; 2: instance running; -2: instance isolated; -3: instance to be deleted
-                     * @return Status Current instance status. 0: to be initialized; 1: instance in process; 2: instance running; -2: instance isolated; -3: instance to be deleted
+                     * 获取Current instance status. <ul><li>`0`: To be initialized. </li><li>`1`: In the process. </li><li>`2`: Running. </li><li>`-2`: Isolated. </li><li>`-3`: To be deleted. </li></ul>
+                     * @return Status Current instance status. <ul><li>`0`: To be initialized. </li><li>`1`: In the process. </li><li>`2`: Running. </li><li>`-2`: Isolated. </li><li>`-3`: To be deleted. </li></ul>
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Current instance status. 0: to be initialized; 1: instance in process; 2: instance running; -2: instance isolated; -3: instance to be deleted
-                     * @param Status Current instance status. 0: to be initialized; 1: instance in process; 2: instance running; -2: instance isolated; -3: instance to be deleted
+                     * 设置Current instance status. <ul><li>`0`: To be initialized. </li><li>`1`: In the process. </li><li>`2`: Running. </li><li>`-2`: Isolated. </li><li>`-3`: To be deleted. </li></ul>
+                     * @param Status Current instance status. <ul><li>`0`: To be initialized. </li><li>`1`: In the process. </li><li>`2`: Running. </li><li>`-2`: Isolated. </li><li>`-3`: To be deleted. </li></ul>
                      */
                     void SetStatus(const int64_t& _status);
 
@@ -230,14 +230,14 @@ namespace TencentCloud
                     bool WanIpHasBeenSet() const;
 
                     /**
-                     * 获取Port number of the instance
-                     * @return Port Port number of the instance
+                     * 获取Port number of an instance
+                     * @return Port Port number of an instance
                      */
                     int64_t GetPort() const;
 
                     /**
-                     * 设置Port number of the instance
-                     * @param Port Port number of the instance
+                     * 设置Port number of an instance
+                     * @param Port Port number of an instance
                      */
                     void SetPort(const int64_t& _port);
 
@@ -302,14 +302,14 @@ namespace TencentCloud
                     bool SizeUsedHasBeenSet() const;
 
                     /**
-                     * 获取Instance type. Valid values: `1` (Redis 2.8 Memory Edition in cluster architecture), `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture)
-                     * @return Type Instance type. Valid values: `1` (Redis 2.8 Memory Edition in cluster architecture), `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture)
+                     * 获取Instance type. <ul><li>`1`: Redis 2.8 memory edition in cluster architecture. </li><li>`2`: Redis 2.8 memory edition in standard architecture. </li><li>`3`: CKV 3.2 memory edition in standard architecture. </li><li>`4`: CKV 3.2 memory edition in cluster architecture. </li><li>`5`: Redis 2.8 memory edition in standalone architecture. </li></li><li>`6`: Redis 4.0 memory edition in standard architecture. </li></li><li>`7`: Redis 4.0 memory edition in cluster architecture. </li></li><li>`8`: Redis 5.0 memory edition in standard architecture. </li></li><li>`9`: Redis 5.0 memory edition in cluster architecture. </li></ul>
+                     * @return Type Instance type. <ul><li>`1`: Redis 2.8 memory edition in cluster architecture. </li><li>`2`: Redis 2.8 memory edition in standard architecture. </li><li>`3`: CKV 3.2 memory edition in standard architecture. </li><li>`4`: CKV 3.2 memory edition in cluster architecture. </li><li>`5`: Redis 2.8 memory edition in standalone architecture. </li></li><li>`6`: Redis 4.0 memory edition in standard architecture. </li></li><li>`7`: Redis 4.0 memory edition in cluster architecture. </li></li><li>`8`: Redis 5.0 memory edition in standard architecture. </li></li><li>`9`: Redis 5.0 memory edition in cluster architecture. </li></ul>
                      */
                     int64_t GetType() const;
 
                     /**
-                     * 设置Instance type. Valid values: `1` (Redis 2.8 Memory Edition in cluster architecture), `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture)
-                     * @param Type Instance type. Valid values: `1` (Redis 2.8 Memory Edition in cluster architecture), `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture)
+                     * 设置Instance type. <ul><li>`1`: Redis 2.8 memory edition in cluster architecture. </li><li>`2`: Redis 2.8 memory edition in standard architecture. </li><li>`3`: CKV 3.2 memory edition in standard architecture. </li><li>`4`: CKV 3.2 memory edition in cluster architecture. </li><li>`5`: Redis 2.8 memory edition in standalone architecture. </li></li><li>`6`: Redis 4.0 memory edition in standard architecture. </li></li><li>`7`: Redis 4.0 memory edition in cluster architecture. </li></li><li>`8`: Redis 5.0 memory edition in standard architecture. </li></li><li>`9`: Redis 5.0 memory edition in cluster architecture. </li></ul>
+                     * @param Type Instance type. <ul><li>`1`: Redis 2.8 memory edition in cluster architecture. </li><li>`2`: Redis 2.8 memory edition in standard architecture. </li><li>`3`: CKV 3.2 memory edition in standard architecture. </li><li>`4`: CKV 3.2 memory edition in cluster architecture. </li><li>`5`: Redis 2.8 memory edition in standalone architecture. </li></li><li>`6`: Redis 4.0 memory edition in standard architecture. </li></li><li>`7`: Redis 4.0 memory edition in cluster architecture. </li></li><li>`8`: Redis 5.0 memory edition in standard architecture. </li></li><li>`9`: Redis 5.0 memory edition in cluster architecture. </li></ul>
                      */
                     void SetType(const int64_t& _type);
 
@@ -320,14 +320,14 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to set the auto-renewal flag for the instance. 1: yes; 0: no
-                     * @return AutoRenewFlag Whether to set the auto-renewal flag for the instance. 1: yes; 0: no
+                     * 获取Whether to set the auto-renewal flag for an instance. <ul><li>`1`: Auto-renewal set. </li><li>`0`: Auto-renewal not set.</li></ul>
+                     * @return AutoRenewFlag Whether to set the auto-renewal flag for an instance. <ul><li>`1`: Auto-renewal set. </li><li>`0`: Auto-renewal not set.</li></ul>
                      */
                     int64_t GetAutoRenewFlag() const;
 
                     /**
-                     * 设置Whether to set the auto-renewal flag for the instance. 1: yes; 0: no
-                     * @param AutoRenewFlag Whether to set the auto-renewal flag for the instance. 1: yes; 0: no
+                     * 设置Whether to set the auto-renewal flag for an instance. <ul><li>`1`: Auto-renewal set. </li><li>`0`: Auto-renewal not set.</li></ul>
+                     * @param AutoRenewFlag Whether to set the auto-renewal flag for an instance. <ul><li>`1`: Auto-renewal set. </li><li>`0`: Auto-renewal not set.</li></ul>
                      */
                     void SetAutoRenewFlag(const int64_t& _autoRenewFlag);
 
@@ -356,14 +356,14 @@ namespace TencentCloud
                     bool DeadlineTimeHasBeenSet() const;
 
                     /**
-                     * 获取Engine: Redis Community Edition, Tencent Cloud CKV
-                     * @return Engine Engine: Redis Community Edition, Tencent Cloud CKV
+                     * 获取Engine: Redis community edition, Tencent Cloud CKV
+                     * @return Engine Engine: Redis community edition, Tencent Cloud CKV
                      */
                     std::string GetEngine() const;
 
                     /**
-                     * 设置Engine: Redis Community Edition, Tencent Cloud CKV
-                     * @param Engine Engine: Redis Community Edition, Tencent Cloud CKV
+                     * 设置Engine: Redis community edition, Tencent Cloud CKV
+                     * @param Engine Engine: Redis community edition, Tencent Cloud CKV
                      */
                     void SetEngine(const std::string& _engine);
 
@@ -374,14 +374,14 @@ namespace TencentCloud
                     bool EngineHasBeenSet() const;
 
                     /**
-                     * 获取Instance type. Valid values: standalone (Standard Edition); cluster (Cluster Edition)
-                     * @return ProductType Instance type. Valid values: standalone (Standard Edition); cluster (Cluster Edition)
+                     * 获取Product type. <ul><li>`standalone`: Standard edition. </li><li>`cluster`: Cluster edition. </li></ul>
+                     * @return ProductType Product type. <ul><li>`standalone`: Standard edition. </li><li>`cluster`: Cluster edition. </li></ul>
                      */
                     std::string GetProductType() const;
 
                     /**
-                     * 设置Instance type. Valid values: standalone (Standard Edition); cluster (Cluster Edition)
-                     * @param ProductType Instance type. Valid values: standalone (Standard Edition); cluster (Cluster Edition)
+                     * 设置Product type. <ul><li>`standalone`: Standard edition. </li><li>`cluster`: Cluster edition. </li></ul>
+                     * @param ProductType Product type. <ul><li>`standalone`: Standard edition. </li><li>`cluster`: Cluster edition. </li></ul>
                      */
                     void SetProductType(const std::string& _productType);
 
@@ -392,14 +392,14 @@ namespace TencentCloud
                     bool ProductTypeHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID, such as vpc-fk33jsf43kgv
-                     * @return UniqVpcId VPC ID, such as vpc-fk33jsf43kgv
+                     * 获取VPC ID, such as vpc-fk33jsf43kgv.
+                     * @return UniqVpcId VPC ID, such as vpc-fk33jsf43kgv.
                      */
                     std::string GetUniqVpcId() const;
 
                     /**
-                     * 设置VPC ID, such as vpc-fk33jsf43kgv
-                     * @param UniqVpcId VPC ID, such as vpc-fk33jsf43kgv
+                     * 设置VPC ID, such as vpc-fk33jsf43kgv.
+                     * @param UniqVpcId VPC ID, such as vpc-fk33jsf43kgv.
                      */
                     void SetUniqVpcId(const std::string& _uniqVpcId);
 
@@ -410,14 +410,14 @@ namespace TencentCloud
                     bool UniqVpcIdHasBeenSet() const;
 
                     /**
-                     * 获取VPC subnet ID, such as subnet-fd3j6l35mm0
-                     * @return UniqSubnetId VPC subnet ID, such as subnet-fd3j6l35mm0
+                     * 获取VPC subnet ID, such as subnet-fd3j6l35mm0.
+                     * @return UniqSubnetId VPC subnet ID, such as subnet-fd3j6l35mm0.
                      */
                     std::string GetUniqSubnetId() const;
 
                     /**
-                     * 设置VPC subnet ID, such as subnet-fd3j6l35mm0
-                     * @param UniqSubnetId VPC subnet ID, such as subnet-fd3j6l35mm0
+                     * 设置VPC subnet ID, such as subnet-fd3j6l35mm0.
+                     * @param UniqSubnetId VPC subnet ID, such as subnet-fd3j6l35mm0.
                      */
                     void SetUniqSubnetId(const std::string& _uniqSubnetId);
 
@@ -428,14 +428,14 @@ namespace TencentCloud
                     bool UniqSubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode. 0: pay-as-you-go; 1: monthly subscription
-                     * @return BillingMode Billing mode. 0: pay-as-you-go; 1: monthly subscription
+                     * 获取Billing mode. Only pay-as-you-go billing is supported.
+                     * @return BillingMode Billing mode. Only pay-as-you-go billing is supported.
                      */
                     int64_t GetBillingMode() const;
 
                     /**
-                     * 设置Billing mode. 0: pay-as-you-go; 1: monthly subscription
-                     * @param BillingMode Billing mode. 0: pay-as-you-go; 1: monthly subscription
+                     * 设置Billing mode. Only pay-as-you-go billing is supported.
+                     * @param BillingMode Billing mode. Only pay-as-you-go billing is supported.
                      */
                     void SetBillingMode(const int64_t& _billingMode);
 
@@ -446,14 +446,14 @@ namespace TencentCloud
                     bool BillingModeHasBeenSet() const;
 
                     /**
-                     * 获取Description of the instance status, such as "instance running"
-                     * @return InstanceTitle Description of the instance status, such as "instance running"
+                     * 获取Description of an instance status, such as "Running".
+                     * @return InstanceTitle Description of an instance status, such as "Running".
                      */
                     std::string GetInstanceTitle() const;
 
                     /**
-                     * 设置Description of the instance status, such as "instance running"
-                     * @param InstanceTitle Description of the instance status, such as "instance running"
+                     * 设置Description of an instance status, such as "Running".
+                     * @param InstanceTitle Description of an instance status, such as "Running".
                      */
                     void SetInstanceTitle(const std::string& _instanceTitle);
 
@@ -464,14 +464,14 @@ namespace TencentCloud
                     bool InstanceTitleHasBeenSet() const;
 
                     /**
-                     * 获取Planned elimination time
-                     * @return OfflineTime Planned elimination time
+                     * 获取Scheduled deactivation time
+                     * @return OfflineTime Scheduled deactivation time
                      */
                     std::string GetOfflineTime() const;
 
                     /**
-                     * 设置Planned elimination time
-                     * @param OfflineTime Planned elimination time
+                     * 设置Scheduled deactivation time
+                     * @param OfflineTime Scheduled deactivation time
                      */
                     void SetOfflineTime(const std::string& _offlineTime);
 
@@ -482,14 +482,14 @@ namespace TencentCloud
                     bool OfflineTimeHasBeenSet() const;
 
                     /**
-                     * 获取Sub-status returned for the instance in process
-                     * @return SubStatus Sub-status returned for the instance in process
+                     * 获取Sub-status returned for an instance in process
+                     * @return SubStatus Sub-status returned for an instance in process
                      */
                     int64_t GetSubStatus() const;
 
                     /**
-                     * 设置Sub-status returned for the instance in process
-                     * @param SubStatus Sub-status returned for the instance in process
+                     * 设置Sub-status returned for an instance in process
+                     * @param SubStatus Sub-status returned for an instance in process
                      */
                     void SetSubStatus(const int64_t& _subStatus);
 
@@ -626,14 +626,14 @@ namespace TencentCloud
                     bool CloseTimeHasBeenSet() const;
 
                     /**
-                     * 获取Read weight of the replica node
-                     * @return SlaveReadWeight Read weight of the replica node
+                     * 获取Read weight of a replica node
+                     * @return SlaveReadWeight Read weight of a replica node
                      */
                     int64_t GetSlaveReadWeight() const;
 
                     /**
-                     * 设置Read weight of the replica node
-                     * @param SlaveReadWeight Read weight of the replica node
+                     * 设置Read weight of a replica node
+                     * @param SlaveReadWeight Read weight of a replica node
                      */
                     void SetSlaveReadWeight(const int64_t& _slaveReadWeight);
 
@@ -645,17 +645,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Instance tag information
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return InstanceTags Instance tag information
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::vector<InstanceTagInfo> GetInstanceTags() const;
 
                     /**
                      * 设置Instance tag information
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @param InstanceTags Instance tag information
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     void SetInstanceTags(const std::vector<InstanceTagInfo>& _instanceTags);
 
@@ -667,17 +667,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Project name
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return ProjectName Project name
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string GetProjectName() const;
 
                     /**
                      * 设置Project name
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @param ProjectName Project name
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     void SetProjectName(const std::string& _projectName);
 
@@ -688,18 +688,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProjectNameHasBeenSet() const;
 
                     /**
-                     * 获取Whether the instance is password-free. true: yes; false: no.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NoAuth Whether the instance is password-free. true: yes; false: no.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether an instance is password-free. <ul><li>`true`: Yes. </li><li>`false`: No. </li></ul>
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return NoAuth Whether an instance is password-free. <ul><li>`true`: Yes. </li><li>`false`: No. </li></ul>
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     bool GetNoAuth() const;
 
                     /**
-                     * 设置Whether the instance is password-free. true: yes; false: no.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param NoAuth Whether the instance is password-free. true: yes; false: no.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether an instance is password-free. <ul><li>`true`: Yes. </li><li>`false`: No. </li></ul>
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param NoAuth Whether an instance is password-free. <ul><li>`true`: Yes. </li><li>`false`: No. </li></ul>
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     void SetNoAuth(const bool& _noAuth);
 
@@ -711,17 +711,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Number of client connections
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return ClientLimit Number of client connections
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     int64_t GetClientLimit() const;
 
                     /**
                      * 设置Number of client connections
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @param ClientLimit Number of client connections
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     void SetClientLimit(const int64_t& _clientLimit);
 
@@ -733,17 +733,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取DTS status (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return DtsStatus DTS status (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     int64_t GetDtsStatus() const;
 
                     /**
                      * 设置DTS status (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @param DtsStatus DTS status (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     void SetDtsStatus(const int64_t& _dtsStatus);
 
@@ -754,18 +754,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DtsStatusHasBeenSet() const;
 
                     /**
-                     * 获取Shard bandwidth cap in MB
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NetLimit Shard bandwidth cap in MB
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Upper shard bandwidth limit in MB
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return NetLimit Upper shard bandwidth limit in MB
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     int64_t GetNetLimit() const;
 
                     /**
-                     * 设置Shard bandwidth cap in MB
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param NetLimit Shard bandwidth cap in MB
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Upper shard bandwidth limit in MB
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param NetLimit Upper shard bandwidth limit in MB
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     void SetNetLimit(const int64_t& _netLimit);
 
@@ -777,17 +777,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Password-free instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return PasswordFree Password-free instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     int64_t GetPasswordFree() const;
 
                     /**
                      * 设置Password-free instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @param PasswordFree Password-free instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     void SetPasswordFree(const int64_t& _passwordFree);
 
@@ -798,18 +798,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PasswordFreeHasBeenSet() const;
 
                     /**
+                     * 获取Internal parameter, which can be ignored.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return Vip6 Internal parameter, which can be ignored.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string GetVip6() const;
+
+                    /**
+                     * 设置Internal parameter, which can be ignored.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param Vip6 Internal parameter, which can be ignored.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    void SetVip6(const std::string& _vip6);
+
+                    /**
+                     * 判断参数 Vip6 是否已赋值
+                     * @return Vip6 是否已赋值
+                     */
+                    bool Vip6HasBeenSet() const;
+
+                    /**
                      * 获取Read-only instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return ReadOnly Read-only instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     int64_t GetReadOnly() const;
 
                     /**
                      * 设置Read-only instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @param ReadOnly Read-only instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     void SetReadOnly(const int64_t& _readOnly);
 
@@ -821,39 +843,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Vip6 Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     */
-                    std::string GetVip6() const;
-
-                    /**
-                     * 设置Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Vip6 Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     */
-                    void SetVip6(const std::string& _vip6);
-
-                    /**
-                     * 判断参数 Vip6 是否已赋值
-                     * @return Vip6 是否已赋值
-                     */
-                    bool Vip6HasBeenSet() const;
-
-                    /**
-                     * 获取Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return RemainBandwidthDuration Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string GetRemainBandwidthDuration() const;
 
                     /**
                      * 设置Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @param RemainBandwidthDuration Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     void SetRemainBandwidthDuration(const std::string& _remainBandwidthDuration);
 
@@ -864,18 +864,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RemainBandwidthDurationHasBeenSet() const;
 
                     /**
-                     * 获取Disk size of the Tendis instance
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DiskSize Disk size of the Tendis instance
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取This parameter can be ignored for Redis instance.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return DiskSize This parameter can be ignored for Redis instance.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     int64_t GetDiskSize() const;
 
                     /**
-                     * 设置Disk size of the Tendis instance
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DiskSize Disk size of the Tendis instance
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置This parameter can be ignored for Redis instance.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param DiskSize This parameter can be ignored for Redis instance.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     void SetDiskSize(const int64_t& _diskSize);
 
@@ -886,18 +886,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取Monitoring version. Valid values: 1m (monitoring at 1-minute granularity); 5s (monitoring at 5-second granularity)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MonitorVersion Monitoring version. Valid values: 1m (monitoring at 1-minute granularity); 5s (monitoring at 5-second granularity)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity). </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return MonitorVersion Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity). </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string GetMonitorVersion() const;
 
                     /**
-                     * 设置Monitoring version. Valid values: 1m (monitoring at 1-minute granularity); 5s (monitoring at 5-second granularity)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MonitorVersion Monitoring version. Valid values: 1m (monitoring at 1-minute granularity); 5s (monitoring at 5-second granularity)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity). </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param MonitorVersion Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity). </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     void SetMonitorVersion(const std::string& _monitorVersion);
 
@@ -908,18 +908,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MonitorVersionHasBeenSet() const;
 
                     /**
-                     * 获取Minimum value for the range of maximum connections to the client
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ClientLimitMin Minimum value for the range of maximum connections to the client
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The minimum number of max client connections
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return ClientLimitMin The minimum number of max client connections
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     int64_t GetClientLimitMin() const;
 
                     /**
-                     * 设置Minimum value for the range of maximum connections to the client
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ClientLimitMin Minimum value for the range of maximum connections to the client
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The minimum number of max client connections
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param ClientLimitMin The minimum number of max client connections
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     void SetClientLimitMin(const int64_t& _clientLimitMin);
 
@@ -930,18 +930,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ClientLimitMinHasBeenSet() const;
 
                     /**
-                     * 获取Maximum value for the range of maximum connections to the client
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ClientLimitMax Maximum value for the range of maximum connections to the client
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The maximum number of max client connections
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return ClientLimitMax The maximum number of max client connections
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     int64_t GetClientLimitMax() const;
 
                     /**
-                     * 设置Maximum value for the range of maximum connections to the client
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ClientLimitMax Maximum value for the range of maximum connections to the client
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The maximum number of max client connections
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param ClientLimitMax The maximum number of max client connections
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     void SetClientLimitMax(const int64_t& _clientLimitMax);
 
@@ -953,17 +953,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Instance node details
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @return NodeSet Instance node details
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::vector<RedisNodeInfo> GetNodeSet() const;
 
                     /**
                      * 设置Instance node details
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      * @param NodeSet Instance node details
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     void SetNodeSet(const std::vector<RedisNodeInfo>& _nodeSet);
 
@@ -974,18 +974,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NodeSetHasBeenSet() const;
 
                     /**
-                     * 获取Instance region, such as ap-guangzhou
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Region Instance region, such as ap-guangzhou
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Information of the region where the instance is deployed, such as `ap-guangzhou`.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return Region Information of the region where the instance is deployed, such as `ap-guangzhou`.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Instance region, such as ap-guangzhou
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Region Instance region, such as ap-guangzhou
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Information of the region where the instance is deployed, such as `ap-guangzhou`.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param Region Information of the region where the instance is deployed, such as `ap-guangzhou`.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     void SetRegion(const std::string& _region);
 
@@ -994,6 +994,138 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return Region 是否已赋值
                      */
                     bool RegionHasBeenSet() const;
+
+                    /**
+                     * 获取Public IP
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return WanAddress Public IP
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string GetWanAddress() const;
+
+                    /**
+                     * 设置Public IP
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param WanAddress Public IP
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    void SetWanAddress(const std::string& _wanAddress);
+
+                    /**
+                     * 判断参数 WanAddress 是否已赋值
+                     * @return WanAddress 是否已赋值
+                     */
+                    bool WanAddressHasBeenSet() const;
+
+                    /**
+                     * 获取Polaris service address
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return PolarisServer Polaris service address
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string GetPolarisServer() const;
+
+                    /**
+                     * 设置Polaris service address
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param PolarisServer Polaris service address
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    void SetPolarisServer(const std::string& _polarisServer);
+
+                    /**
+                     * 判断参数 PolarisServer 是否已赋值
+                     * @return PolarisServer 是否已赋值
+                     */
+                    bool PolarisServerHasBeenSet() const;
+
+                    /**
+                     * 获取The current proxy version of an instance
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return CurrentProxyVersion The current proxy version of an instance
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string GetCurrentProxyVersion() const;
+
+                    /**
+                     * 设置The current proxy version of an instance
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param CurrentProxyVersion The current proxy version of an instance
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    void SetCurrentProxyVersion(const std::string& _currentProxyVersion);
+
+                    /**
+                     * 判断参数 CurrentProxyVersion 是否已赋值
+                     * @return CurrentProxyVersion 是否已赋值
+                     */
+                    bool CurrentProxyVersionHasBeenSet() const;
+
+                    /**
+                     * 获取The current cache minor version of an instance
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return CurrentRedisVersion The current cache minor version of an instance
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string GetCurrentRedisVersion() const;
+
+                    /**
+                     * 设置The current cache minor version of an instance
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param CurrentRedisVersion The current cache minor version of an instance
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    void SetCurrentRedisVersion(const std::string& _currentRedisVersion);
+
+                    /**
+                     * 判断参数 CurrentRedisVersion 是否已赋值
+                     * @return CurrentRedisVersion 是否已赋值
+                     */
+                    bool CurrentRedisVersionHasBeenSet() const;
+
+                    /**
+                     * 获取Proxy version, which can be upgraded for the instance
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return UpgradeProxyVersion Proxy version, which can be upgraded for the instance
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string GetUpgradeProxyVersion() const;
+
+                    /**
+                     * 设置Proxy version, which can be upgraded for the instance
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param UpgradeProxyVersion Proxy version, which can be upgraded for the instance
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    void SetUpgradeProxyVersion(const std::string& _upgradeProxyVersion);
+
+                    /**
+                     * 判断参数 UpgradeProxyVersion 是否已赋值
+                     * @return UpgradeProxyVersion 是否已赋值
+                     */
+                    bool UpgradeProxyVersionHasBeenSet() const;
+
+                    /**
+                     * 获取Cache minor version, which can be upgraded for the instance
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return UpgradeRedisVersion Cache minor version, which can be upgraded for the instance
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string GetUpgradeRedisVersion() const;
+
+                    /**
+                     * 设置Cache minor version, which can be upgraded for the instance
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param UpgradeRedisVersion Cache minor version, which can be upgraded for the instance
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    void SetUpgradeRedisVersion(const std::string& _upgradeRedisVersion);
+
+                    /**
+                     * 判断参数 UpgradeRedisVersion 是否已赋值
+                     * @return UpgradeRedisVersion 是否已赋值
+                     */
+                    bool UpgradeRedisVersionHasBeenSet() const;
 
                 private:
 
@@ -1010,7 +1142,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * User `Appid`
+                     * User's Appid
                      */
                     int64_t m_appid;
                     bool m_appidHasBeenSet;
@@ -1022,7 +1154,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan
+                     * Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan.
                      */
                     int64_t m_regionId;
                     bool m_regionIdHasBeenSet;
@@ -1034,19 +1166,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * VPC ID, such as 75101
+                     * VPC ID, such as 75101.
                      */
                     int64_t m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * VPC subnet ID, such as 46315
+                     * VPC subnet ID, such as 46315.
                      */
                     int64_t m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * Current instance status. 0: to be initialized; 1: instance in process; 2: instance running; -2: instance isolated; -3: instance to be deleted
+                     * Current instance status. <ul><li>`0`: To be initialized. </li><li>`1`: In the process. </li><li>`2`: Running. </li><li>`-2`: Isolated. </li><li>`-3`: To be deleted. </li></ul>
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
@@ -1058,7 +1190,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_wanIpHasBeenSet;
 
                     /**
-                     * Port number of the instance
+                     * Port number of an instance
                      */
                     int64_t m_port;
                     bool m_portHasBeenSet;
@@ -1082,13 +1214,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_sizeUsedHasBeenSet;
 
                     /**
-                     * Instance type. Valid values: `1` (Redis 2.8 Memory Edition in cluster architecture), `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture)
+                     * Instance type. <ul><li>`1`: Redis 2.8 memory edition in cluster architecture. </li><li>`2`: Redis 2.8 memory edition in standard architecture. </li><li>`3`: CKV 3.2 memory edition in standard architecture. </li><li>`4`: CKV 3.2 memory edition in cluster architecture. </li><li>`5`: Redis 2.8 memory edition in standalone architecture. </li></li><li>`6`: Redis 4.0 memory edition in standard architecture. </li></li><li>`7`: Redis 4.0 memory edition in cluster architecture. </li></li><li>`8`: Redis 5.0 memory edition in standard architecture. </li></li><li>`9`: Redis 5.0 memory edition in cluster architecture. </li></ul>
                      */
                     int64_t m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Whether to set the auto-renewal flag for the instance. 1: yes; 0: no
+                     * Whether to set the auto-renewal flag for an instance. <ul><li>`1`: Auto-renewal set. </li><li>`0`: Auto-renewal not set.</li></ul>
                      */
                     int64_t m_autoRenewFlag;
                     bool m_autoRenewFlagHasBeenSet;
@@ -1100,49 +1232,49 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_deadlineTimeHasBeenSet;
 
                     /**
-                     * Engine: Redis Community Edition, Tencent Cloud CKV
+                     * Engine: Redis community edition, Tencent Cloud CKV
                      */
                     std::string m_engine;
                     bool m_engineHasBeenSet;
 
                     /**
-                     * Instance type. Valid values: standalone (Standard Edition); cluster (Cluster Edition)
+                     * Product type. <ul><li>`standalone`: Standard edition. </li><li>`cluster`: Cluster edition. </li></ul>
                      */
                     std::string m_productType;
                     bool m_productTypeHasBeenSet;
 
                     /**
-                     * VPC ID, such as vpc-fk33jsf43kgv
+                     * VPC ID, such as vpc-fk33jsf43kgv.
                      */
                     std::string m_uniqVpcId;
                     bool m_uniqVpcIdHasBeenSet;
 
                     /**
-                     * VPC subnet ID, such as subnet-fd3j6l35mm0
+                     * VPC subnet ID, such as subnet-fd3j6l35mm0.
                      */
                     std::string m_uniqSubnetId;
                     bool m_uniqSubnetIdHasBeenSet;
 
                     /**
-                     * Billing mode. 0: pay-as-you-go; 1: monthly subscription
+                     * Billing mode. Only pay-as-you-go billing is supported.
                      */
                     int64_t m_billingMode;
                     bool m_billingModeHasBeenSet;
 
                     /**
-                     * Description of the instance status, such as "instance running"
+                     * Description of an instance status, such as "Running".
                      */
                     std::string m_instanceTitle;
                     bool m_instanceTitleHasBeenSet;
 
                     /**
-                     * Planned elimination time
+                     * Scheduled deactivation time
                      */
                     std::string m_offlineTime;
                     bool m_offlineTimeHasBeenSet;
 
                     /**
-                     * Sub-status returned for the instance in process
+                     * Sub-status returned for an instance in process
                      */
                     int64_t m_subStatus;
                     bool m_subStatusHasBeenSet;
@@ -1190,122 +1322,164 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_closeTimeHasBeenSet;
 
                     /**
-                     * Read weight of the replica node
+                     * Read weight of a replica node
                      */
                     int64_t m_slaveReadWeight;
                     bool m_slaveReadWeightHasBeenSet;
 
                     /**
                      * Instance tag information
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::vector<InstanceTagInfo> m_instanceTags;
                     bool m_instanceTagsHasBeenSet;
 
                     /**
                      * Project name
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_projectName;
                     bool m_projectNameHasBeenSet;
 
                     /**
-                     * Whether the instance is password-free. true: yes; false: no.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether an instance is password-free. <ul><li>`true`: Yes. </li><li>`false`: No. </li></ul>
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     bool m_noAuth;
                     bool m_noAuthHasBeenSet;
 
                     /**
                      * Number of client connections
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     int64_t m_clientLimit;
                     bool m_clientLimitHasBeenSet;
 
                     /**
                      * DTS status (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     int64_t m_dtsStatus;
                     bool m_dtsStatusHasBeenSet;
 
                     /**
-                     * Shard bandwidth cap in MB
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Upper shard bandwidth limit in MB
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     int64_t m_netLimit;
                     bool m_netLimitHasBeenSet;
 
                     /**
                      * Password-free instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     int64_t m_passwordFree;
                     bool m_passwordFreeHasBeenSet;
 
                     /**
+                     * Internal parameter, which can be ignored.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string m_vip6;
+                    bool m_vip6HasBeenSet;
+
+                    /**
                      * Read-only instance flag (internal parameter, which can be ignored)
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     int64_t m_readOnly;
                     bool m_readOnlyHasBeenSet;
 
                     /**
                      * Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     */
-                    std::string m_vip6;
-                    bool m_vip6HasBeenSet;
-
-                    /**
-                     * Internal parameter, which can be ignored.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_remainBandwidthDuration;
                     bool m_remainBandwidthDurationHasBeenSet;
 
                     /**
-                     * Disk size of the Tendis instance
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * This parameter can be ignored for Redis instance.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     int64_t m_diskSize;
                     bool m_diskSizeHasBeenSet;
 
                     /**
-                     * Monitoring version. Valid values: 1m (monitoring at 1-minute granularity); 5s (monitoring at 5-second granularity)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity). </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_monitorVersion;
                     bool m_monitorVersionHasBeenSet;
 
                     /**
-                     * Minimum value for the range of maximum connections to the client
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The minimum number of max client connections
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     int64_t m_clientLimitMin;
                     bool m_clientLimitMinHasBeenSet;
 
                     /**
-                     * Maximum value for the range of maximum connections to the client
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The maximum number of max client connections
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     int64_t m_clientLimitMax;
                     bool m_clientLimitMaxHasBeenSet;
 
                     /**
                      * Instance node details
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::vector<RedisNodeInfo> m_nodeSet;
                     bool m_nodeSetHasBeenSet;
 
                     /**
-                     * Instance region, such as ap-guangzhou
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Information of the region where the instance is deployed, such as `ap-guangzhou`.
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
+
+                    /**
+                     * Public IP
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string m_wanAddress;
+                    bool m_wanAddressHasBeenSet;
+
+                    /**
+                     * Polaris service address
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string m_polarisServer;
+                    bool m_polarisServerHasBeenSet;
+
+                    /**
+                     * The current proxy version of an instance
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string m_currentProxyVersion;
+                    bool m_currentProxyVersionHasBeenSet;
+
+                    /**
+                     * The current cache minor version of an instance
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string m_currentRedisVersion;
+                    bool m_currentRedisVersionHasBeenSet;
+
+                    /**
+                     * Proxy version, which can be upgraded for the instance
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string m_upgradeProxyVersion;
+                    bool m_upgradeProxyVersionHasBeenSet;
+
+                    /**
+                     * Cache minor version, which can be upgraded for the instance
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string m_upgradeRedisVersion;
+                    bool m_upgradeRedisVersionHasBeenSet;
 
                 };
             }
