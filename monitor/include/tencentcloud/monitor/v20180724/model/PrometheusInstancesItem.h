@@ -814,6 +814,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool RecordingRuleLimitHasBeenSet() const;
 
+                    /**
+                     * 获取Migration status. 0: Not migrating; 1: Migrating from source instance; 2: Migrating to target instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MigrationType Migration status. 0: Not migrating; 1: Migrating from source instance; 2: Migrating to target instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetMigrationType() const;
+
+                    /**
+                     * 设置Migration status. 0: Not migrating; 1: Migrating from source instance; 2: Migrating to target instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param MigrationType Migration status. 0: Not migrating; 1: Migrating from source instance; 2: Migrating to target instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetMigrationType(const int64_t& _migrationType);
+
+                    /**
+                     * 判断参数 MigrationType 是否已赋值
+                     * @return MigrationType 是否已赋值
+                     */
+                    bool MigrationTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1050,6 +1072,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_recordingRuleLimit;
                     bool m_recordingRuleLimitHasBeenSet;
+
+                    /**
+                     * Migration status. 0: Not migrating; 1: Migrating from source instance; 2: Migrating to target instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_migrationType;
+                    bool m_migrationTypeHasBeenSet;
 
                 };
             }
