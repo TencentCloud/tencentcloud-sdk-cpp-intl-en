@@ -655,6 +655,24 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
                      */
                     bool EnableHybridStorageHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable enhanced SSD
+                     * @return DiskEnhance Whether to enable enhanced SSD
+                     */
+                    uint64_t GetDiskEnhance() const;
+
+                    /**
+                     * 设置Whether to enable enhanced SSD
+                     * @param DiskEnhance Whether to enable enhanced SSD
+                     */
+                    void SetDiskEnhance(const uint64_t& _diskEnhance);
+
+                    /**
+                     * 判断参数 DiskEnhance 是否已赋值
+                     * @return DiskEnhance 是否已赋值
+                     */
+                    bool DiskEnhanceHasBeenSet() const;
+
                 private:
 
                     /**
@@ -856,6 +874,12 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
                      */
                     bool m_enableHybridStorage;
                     bool m_enableHybridStorageHasBeenSet;
+
+                    /**
+                     * Whether to enable enhanced SSD
+                     */
+                    uint64_t m_diskEnhance;
+                    bool m_diskEnhanceHasBeenSet;
 
                 };
             }

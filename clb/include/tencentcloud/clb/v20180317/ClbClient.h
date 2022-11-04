@@ -107,6 +107,8 @@
 #include <tencentcloud/clb/v20180317/model/DescribeLoadBalancersDetailResponse.h>
 #include <tencentcloud/clb/v20180317/model/DescribeQuotaRequest.h>
 #include <tencentcloud/clb/v20180317/model/DescribeQuotaResponse.h>
+#include <tencentcloud/clb/v20180317/model/DescribeResourcesRequest.h>
+#include <tencentcloud/clb/v20180317/model/DescribeResourcesResponse.h>
 #include <tencentcloud/clb/v20180317/model/DescribeRewriteRequest.h>
 #include <tencentcloud/clb/v20180317/model/DescribeRewriteResponse.h>
 #include <tencentcloud/clb/v20180317/model/DescribeTargetGroupInstancesRequest.h>
@@ -159,6 +161,8 @@
 #include <tencentcloud/clb/v20180317/model/RegisterTargetsWithClassicalLBResponse.h>
 #include <tencentcloud/clb/v20180317/model/ReplaceCertForLoadBalancersRequest.h>
 #include <tencentcloud/clb/v20180317/model/ReplaceCertForLoadBalancersResponse.h>
+#include <tencentcloud/clb/v20180317/model/SetCustomizedConfigForLoadBalancerRequest.h>
+#include <tencentcloud/clb/v20180317/model/SetCustomizedConfigForLoadBalancerResponse.h>
 #include <tencentcloud/clb/v20180317/model/SetLoadBalancerClsLogRequest.h>
 #include <tencentcloud/clb/v20180317/model/SetLoadBalancerClsLogResponse.h>
 #include <tencentcloud/clb/v20180317/model/SetLoadBalancerSecurityGroupsRequest.h>
@@ -305,6 +309,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeQuotaResponse> DescribeQuotaOutcome;
                 typedef std::future<DescribeQuotaOutcome> DescribeQuotaOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::DescribeQuotaRequest&, DescribeQuotaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeQuotaAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeResourcesResponse> DescribeResourcesOutcome;
+                typedef std::future<DescribeResourcesOutcome> DescribeResourcesOutcomeCallable;
+                typedef std::function<void(const ClbClient*, const Model::DescribeResourcesRequest&, DescribeResourcesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeResourcesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeRewriteResponse> DescribeRewriteOutcome;
                 typedef std::future<DescribeRewriteOutcome> DescribeRewriteOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::DescribeRewriteRequest&, DescribeRewriteOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRewriteAsyncHandler;
@@ -383,6 +390,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ReplaceCertForLoadBalancersResponse> ReplaceCertForLoadBalancersOutcome;
                 typedef std::future<ReplaceCertForLoadBalancersOutcome> ReplaceCertForLoadBalancersOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::ReplaceCertForLoadBalancersRequest&, ReplaceCertForLoadBalancersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ReplaceCertForLoadBalancersAsyncHandler;
+                typedef Outcome<Core::Error, Model::SetCustomizedConfigForLoadBalancerResponse> SetCustomizedConfigForLoadBalancerOutcome;
+                typedef std::future<SetCustomizedConfigForLoadBalancerOutcome> SetCustomizedConfigForLoadBalancerOutcomeCallable;
+                typedef std::function<void(const ClbClient*, const Model::SetCustomizedConfigForLoadBalancerRequest&, SetCustomizedConfigForLoadBalancerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SetCustomizedConfigForLoadBalancerAsyncHandler;
                 typedef Outcome<Core::Error, Model::SetLoadBalancerClsLogResponse> SetLoadBalancerClsLogOutcome;
                 typedef std::future<SetLoadBalancerClsLogOutcome> SetLoadBalancerClsLogOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::SetLoadBalancerClsLogRequest&, SetLoadBalancerClsLogOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SetLoadBalancerClsLogAsyncHandler;
@@ -801,6 +811,15 @@ This is an async API. After it is returned successfully, you can call the Descri
                 DescribeQuotaOutcomeCallable DescribeQuotaCallable(const Model::DescribeQuotaRequest& request);
 
                 /**
+                 *This API is used to query the list of AZs and resources supported for the user in the current region.
+                 * @param req DescribeResourcesRequest
+                 * @return DescribeResourcesOutcome
+                 */
+                DescribeResourcesOutcome DescribeResources(const Model::DescribeResourcesRequest &request);
+                void DescribeResourcesAsync(const Model::DescribeResourcesRequest& request, const DescribeResourcesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeResourcesOutcomeCallable DescribeResourcesCallable(const Model::DescribeResourcesRequest& request);
+
+                /**
                  *This API (DescribeRewrite) is used to query the redirection relationship between the forwarding rules of a CLB instance by instance ID. If no listener ID or forwarding rule ID is specified, all redirection relationships in the instance will be returned.
                  * @param req DescribeRewriteRequest
                  * @return DescribeRewriteOutcome
@@ -1050,6 +1069,15 @@ Note: This API can only be called in the Guangzhou region; for other regions, an
                 ReplaceCertForLoadBalancersOutcome ReplaceCertForLoadBalancers(const Model::ReplaceCertForLoadBalancersRequest &request);
                 void ReplaceCertForLoadBalancersAsync(const Model::ReplaceCertForLoadBalancersRequest& request, const ReplaceCertForLoadBalancersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ReplaceCertForLoadBalancersOutcomeCallable ReplaceCertForLoadBalancersCallable(const Model::ReplaceCertForLoadBalancersRequest& request);
+
+                /**
+                 *This API is used to create or manage a user-defined CLB configuration template.
+                 * @param req SetCustomizedConfigForLoadBalancerRequest
+                 * @return SetCustomizedConfigForLoadBalancerOutcome
+                 */
+                SetCustomizedConfigForLoadBalancerOutcome SetCustomizedConfigForLoadBalancer(const Model::SetCustomizedConfigForLoadBalancerRequest &request);
+                void SetCustomizedConfigForLoadBalancerAsync(const Model::SetCustomizedConfigForLoadBalancerRequest& request, const SetCustomizedConfigForLoadBalancerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SetCustomizedConfigForLoadBalancerOutcomeCallable SetCustomizedConfigForLoadBalancerCallable(const Model::SetCustomizedConfigForLoadBalancerRequest& request);
 
                 /**
                  *This API is used to add, delete, and update the CLS topic of a CLB instance.

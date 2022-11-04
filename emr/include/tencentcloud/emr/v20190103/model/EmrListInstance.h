@@ -601,6 +601,28 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool IsMultiZoneClusterHasBeenSet() const;
 
+                    /**
+                     * 获取Whether it is a manually deployed cluster
+Note: This field may return null, indicating that no valid value can be obtained. 
+                     * @return IsHandsCluster Whether it is a manually deployed cluster
+Note: This field may return null, indicating that no valid value can be obtained. 
+                     */
+                    bool GetIsHandsCluster() const;
+
+                    /**
+                     * 设置Whether it is a manually deployed cluster
+Note: This field may return null, indicating that no valid value can be obtained. 
+                     * @param IsHandsCluster Whether it is a manually deployed cluster
+Note: This field may return null, indicating that no valid value can be obtained. 
+                     */
+                    void SetIsHandsCluster(const bool& _isHandsCluster);
+
+                    /**
+                     * 判断参数 IsHandsCluster 是否已赋值
+                     * @return IsHandsCluster 是否已赋值
+                     */
+                    bool IsHandsClusterHasBeenSet() const;
+
                 private:
 
                     /**
@@ -781,6 +803,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool m_isMultiZoneCluster;
                     bool m_isMultiZoneClusterHasBeenSet;
+
+                    /**
+                     * Whether it is a manually deployed cluster
+Note: This field may return null, indicating that no valid value can be obtained. 
+                     */
+                    bool m_isHandsCluster;
+                    bool m_isHandsClusterHasBeenSet;
 
                 };
             }

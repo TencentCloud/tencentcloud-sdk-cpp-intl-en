@@ -28,6 +28,7 @@ set(trtc_public_header_model
   include/tencentcloud/trtc/v20190722/model/MixUserInfo.h
   include/tencentcloud/trtc/v20190722/model/UpdatePublishCdnStreamRequest.h
   include/tencentcloud/trtc/v20190722/model/MixLayoutParams.h
+  include/tencentcloud/trtc/v20190722/model/McuFeedBackRoomParams.h
   include/tencentcloud/trtc/v20190722/model/DismissRoomResponse.h
   include/tencentcloud/trtc/v20190722/model/MixLayout.h
   include/tencentcloud/trtc/v20190722/model/McuVideoParams.h
@@ -87,6 +88,7 @@ set(trtc_src
   src/v20190722/model/MixUserInfo.cpp
   src/v20190722/model/UpdatePublishCdnStreamRequest.cpp
   src/v20190722/model/MixLayoutParams.cpp
+  src/v20190722/model/McuFeedBackRoomParams.cpp
   src/v20190722/model/DismissRoomResponse.cpp
   src/v20190722/model/MixLayout.cpp
   src/v20190722/model/McuVideoParams.cpp

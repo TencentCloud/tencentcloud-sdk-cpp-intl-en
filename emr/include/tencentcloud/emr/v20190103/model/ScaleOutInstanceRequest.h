@@ -528,6 +528,24 @@ When `HardwareResourceType` is `pod`, this parameter does not take effect.
                      */
                     bool ScaleOutServiceConfAssignHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable auto-renewal. Valid values: `0` (no), `1` (yes).
+                     * @return AutoRenew Whether to enable auto-renewal. Valid values: `0` (no), `1` (yes).
+                     */
+                    int64_t GetAutoRenew() const;
+
+                    /**
+                     * 设置Whether to enable auto-renewal. Valid values: `0` (no), `1` (yes).
+                     * @param AutoRenew Whether to enable auto-renewal. Valid values: `0` (no), `1` (yes).
+                     */
+                    void SetAutoRenew(const int64_t& _autoRenew);
+
+                    /**
+                     * 判断参数 AutoRenew 是否已赋值
+                     * @return AutoRenew 是否已赋值
+                     */
+                    bool AutoRenewHasBeenSet() const;
+
                 private:
 
                     /**
@@ -687,6 +705,12 @@ When `HardwareResourceType` is `pod`, this parameter does not take effect.
                      */
                     std::string m_scaleOutServiceConfAssign;
                     bool m_scaleOutServiceConfAssignHasBeenSet;
+
+                    /**
+                     * Whether to enable auto-renewal. Valid values: `0` (no), `1` (yes).
+                     */
+                    int64_t m_autoRenew;
+                    bool m_autoRenewHasBeenSet;
 
                 };
             }

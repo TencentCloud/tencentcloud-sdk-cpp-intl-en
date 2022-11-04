@@ -26,6 +26,7 @@
 #include <tencentcloud/trtc/v20190722/model/SingleSubscribeParams.h>
 #include <tencentcloud/trtc/v20190722/model/McuPublishCdnParam.h>
 #include <tencentcloud/trtc/v20190722/model/McuSeiParams.h>
+#include <tencentcloud/trtc/v20190722/model/McuFeedBackRoomParams.h>
 
 
 namespace TencentCloud
@@ -209,6 +210,24 @@ namespace TencentCloud
                      */
                     bool SeiParamsHasBeenSet() const;
 
+                    /**
+                     * 获取The information of the room to which streams are relayed.
+                     * @return FeedBackRoomParams The information of the room to which streams are relayed.
+                     */
+                    std::vector<McuFeedBackRoomParams> GetFeedBackRoomParams() const;
+
+                    /**
+                     * 设置The information of the room to which streams are relayed.
+                     * @param FeedBackRoomParams The information of the room to which streams are relayed.
+                     */
+                    void SetFeedBackRoomParams(const std::vector<McuFeedBackRoomParams>& _feedBackRoomParams);
+
+                    /**
+                     * 判断参数 FeedBackRoomParams 是否已赋值
+                     * @return FeedBackRoomParams 是否已赋值
+                     */
+                    bool FeedBackRoomParamsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -264,6 +283,12 @@ namespace TencentCloud
                      */
                     McuSeiParams m_seiParams;
                     bool m_seiParamsHasBeenSet;
+
+                    /**
+                     * The information of the room to which streams are relayed.
+                     */
+                    std::vector<McuFeedBackRoomParams> m_feedBackRoomParams;
+                    bool m_feedBackRoomParamsHasBeenSet;
 
                 };
             }

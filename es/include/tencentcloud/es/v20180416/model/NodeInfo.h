@@ -251,6 +251,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool MemSizeHasBeenSet() const;
 
+                    /**
+                     * 获取/
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DiskEnhance /
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetDiskEnhance() const;
+
+                    /**
+                     * 设置/
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param DiskEnhance /
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetDiskEnhance(const int64_t& _diskEnhance);
+
+                    /**
+                     * 判断参数 DiskEnhance 是否已赋值
+                     * @return DiskEnhance 是否已赋值
+                     */
+                    bool DiskEnhanceHasBeenSet() const;
+
                 private:
 
                     /**
@@ -318,6 +340,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_memSize;
                     bool m_memSizeHasBeenSet;
+
+                    /**
+                     * /
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_diskEnhance;
+                    bool m_diskEnhanceHasBeenSet;
 
                 };
             }

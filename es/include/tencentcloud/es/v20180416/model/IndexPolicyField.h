@@ -178,6 +178,28 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool FrozenMinAgeHasBeenSet() const;
 
+                    /**
+                     * 获取/
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return ColdAction /
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string GetColdAction() const;
+
+                    /**
+                     * 设置/
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param ColdAction /
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    void SetColdAction(const std::string& _coldAction);
+
+                    /**
+                     * 判断参数 ColdAction 是否已赋值
+                     * @return ColdAction 是否已赋值
+                     */
+                    bool ColdActionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -221,6 +243,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     std::string m_frozenMinAge;
                     bool m_frozenMinAgeHasBeenSet;
+
+                    /**
+                     * /
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string m_coldAction;
+                    bool m_coldActionHasBeenSet;
 
                 };
             }

@@ -1041,17 +1041,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CurrentTimeHasBeenSet() const;
 
                     /**
-                     * 获取Whether the hardware node is used in a federation. Valid values: `0` (no), `1` (yes).
+                     * 获取Whether it is used in a federation. Valid values: `0` (no), `1` (yes).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsFederation Whether the hardware node is used in a federation. Valid values: `0` (no), `1` (yes).
+                     * @return IsFederation Whether it is used in a federation. Valid values: `0` (no), `1` (yes).
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetIsFederation() const;
 
                     /**
-                     * 设置Whether the hardware node is used in a federation. Valid values: `0` (no), `1` (yes).
+                     * 设置Whether it is used in a federation. Valid values: `0` (no), `1` (yes).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IsFederation Whether the hardware node is used in a federation. Valid values: `0` (no), `1` (yes).
+                     * @param IsFederation Whether it is used in a federation. Valid values: `0` (no), `1` (yes).
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetIsFederation(const int64_t& _isFederation);
@@ -1424,7 +1424,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_currentTimeHasBeenSet;
 
                     /**
-                     * Whether the hardware node is used in a federation. Valid values: `0` (no), `1` (yes).
+                     * Whether it is used in a federation. Valid values: `0` (no), `1` (yes).
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_isFederation;

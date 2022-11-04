@@ -31,7 +31,8 @@ UpdatePublishCdnStreamRequest::UpdatePublishCdnStreamRequest() :
     m_videoParamsHasBeenSet(false),
     m_singleSubscribeParamsHasBeenSet(false),
     m_publishCdnParamsHasBeenSet(false),
-    m_seiParamsHasBeenSet(false)
+    m_seiParamsHasBeenSet(false),
+    m_feedBackRoomParamsHasBeenSet(false)
 {
 }
 
@@ -123,6 +124,21 @@ string UpdatePublishCdnStreamRequest::ToJsonString() const
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_seiParams.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_feedBackRoomParamsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FeedBackRoomParams";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_feedBackRoomParams.begin(); itr != m_feedBackRoomParams.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
     }
 
 
@@ -275,6 +291,22 @@ void UpdatePublishCdnStreamRequest::SetSeiParams(const McuSeiParams& _seiParams)
 bool UpdatePublishCdnStreamRequest::SeiParamsHasBeenSet() const
 {
     return m_seiParamsHasBeenSet;
+}
+
+vector<McuFeedBackRoomParams> UpdatePublishCdnStreamRequest::GetFeedBackRoomParams() const
+{
+    return m_feedBackRoomParams;
+}
+
+void UpdatePublishCdnStreamRequest::SetFeedBackRoomParams(const vector<McuFeedBackRoomParams>& _feedBackRoomParams)
+{
+    m_feedBackRoomParams = _feedBackRoomParams;
+    m_feedBackRoomParamsHasBeenSet = true;
+}
+
+bool UpdatePublishCdnStreamRequest::FeedBackRoomParamsHasBeenSet() const
+{
+    return m_feedBackRoomParamsHasBeenSet;
 }
 
 

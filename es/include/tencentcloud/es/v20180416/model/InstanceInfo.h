@@ -203,14 +203,14 @@ namespace TencentCloud
                     bool SubnetUidHasBeenSet() const;
 
                     /**
-                     * 获取Instance status. 0: processing; 1: normal; -1: stopped; -2: terminating; -3: terminated
-                     * @return Status Instance status. 0: processing; 1: normal; -1: stopped; -2: terminating; -3: terminated
+                     * 获取Instance status. `0`: Processing; `1`: Normal; `-1`: `Stopped`; `-2`: Being terminated; `-3`: Terminated; `2`: Initializing during the cluster creation.
+                     * @return Status Instance status. `0`: Processing; `1`: Normal; `-1`: `Stopped`; `-2`: Being terminated; `-3`: Terminated; `2`: Initializing during the cluster creation.
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Instance status. 0: processing; 1: normal; -1: stopped; -2: terminating; -3: terminated
-                     * @param Status Instance status. 0: processing; 1: normal; -1: stopped; -2: terminating; -3: terminated
+                     * 设置Instance status. `0`: Processing; `1`: Normal; `-1`: `Stopped`; `-2`: Being terminated; `-3`: Terminated; `2`: Initializing during the cluster creation.
+                     * @param Status Instance status. `0`: Processing; `1`: Normal; `-1`: `Stopped`; `-2`: Being terminated; `-3`: Terminated; `2`: Initializing during the cluster creation.
                      */
                     void SetStatus(const int64_t& _status);
 
@@ -1652,6 +1652,50 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool EnableHybridStorageHasBeenSet() const;
 
+                    /**
+                     * 获取The process progress
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ProcessPercent The process progress
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    double GetProcessPercent() const;
+
+                    /**
+                     * 设置The process progress
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ProcessPercent The process progress
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetProcessPercent(const double& _processPercent);
+
+                    /**
+                     * 判断参数 ProcessPercent 是否已赋值
+                     * @return ProcessPercent 是否已赋值
+                     */
+                    bool ProcessPercentHasBeenSet() const;
+
+                    /**
+                     * 获取The alerting policy of Kibana over the public network. <li>`OPEN`: Enable the policy;</li><li>`CLOSE`: Disable the policy.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return KibanaAlteringPublicAccess The alerting policy of Kibana over the public network. <li>`OPEN`: Enable the policy;</li><li>`CLOSE`: Disable the policy.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetKibanaAlteringPublicAccess() const;
+
+                    /**
+                     * 设置The alerting policy of Kibana over the public network. <li>`OPEN`: Enable the policy;</li><li>`CLOSE`: Disable the policy.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param KibanaAlteringPublicAccess The alerting policy of Kibana over the public network. <li>`OPEN`: Enable the policy;</li><li>`CLOSE`: Disable the policy.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetKibanaAlteringPublicAccess(const std::string& _kibanaAlteringPublicAccess);
+
+                    /**
+                     * 判断参数 KibanaAlteringPublicAccess 是否已赋值
+                     * @return KibanaAlteringPublicAccess 是否已赋值
+                     */
+                    bool KibanaAlteringPublicAccessHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1703,7 +1747,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_subnetUidHasBeenSet;
 
                     /**
-                     * Instance status. 0: processing; 1: normal; -1: stopped; -2: terminating; -3: terminated
+                     * Instance status. `0`: Processing; `1`: Normal; `-1`: `Stopped`; `-2`: Being terminated; `-3`: Terminated; `2`: Initializing during the cluster creation.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
@@ -2170,6 +2214,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool m_enableHybridStorage;
                     bool m_enableHybridStorageHasBeenSet;
+
+                    /**
+                     * The process progress
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    double m_processPercent;
+                    bool m_processPercentHasBeenSet;
+
+                    /**
+                     * The alerting policy of Kibana over the public network. <li>`OPEN`: Enable the policy;</li><li>`CLOSE`: Disable the policy.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_kibanaAlteringPublicAccess;
+                    bool m_kibanaAlteringPublicAccessHasBeenSet;
 
                 };
             }

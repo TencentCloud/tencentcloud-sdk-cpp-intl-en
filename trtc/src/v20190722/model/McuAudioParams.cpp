@@ -22,7 +22,8 @@ using namespace std;
 
 McuAudioParams::McuAudioParams() :
     m_audioEncodeHasBeenSet(false),
-    m_subscribeAudioListHasBeenSet(false)
+    m_subscribeAudioListHasBeenSet(false),
+    m_unSubscribeAudioListHasBeenSet(false)
 {
 }
 
@@ -68,6 +69,26 @@ CoreInternalOutcome McuAudioParams::Deserialize(const rapidjson::Value &value)
         m_subscribeAudioListHasBeenSet = true;
     }
 
+    if (value.HasMember("UnSubscribeAudioList") && !value["UnSubscribeAudioList"].IsNull())
+    {
+        if (!value["UnSubscribeAudioList"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `McuAudioParams.UnSubscribeAudioList` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["UnSubscribeAudioList"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            McuUserInfoParams item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_unSubscribeAudioList.push_back(item);
+        }
+        m_unSubscribeAudioListHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -93,6 +114,21 @@ void McuAudioParams::ToJsonObject(rapidjson::Value &value, rapidjson::Document::
 
         int i=0;
         for (auto itr = m_subscribeAudioList.begin(); itr != m_subscribeAudioList.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_unSubscribeAudioListHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UnSubscribeAudioList";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_unSubscribeAudioList.begin(); itr != m_unSubscribeAudioList.end(); ++itr, ++i)
         {
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
@@ -132,5 +168,21 @@ void McuAudioParams::SetSubscribeAudioList(const vector<McuUserInfoParams>& _sub
 bool McuAudioParams::SubscribeAudioListHasBeenSet() const
 {
     return m_subscribeAudioListHasBeenSet;
+}
+
+vector<McuUserInfoParams> McuAudioParams::GetUnSubscribeAudioList() const
+{
+    return m_unSubscribeAudioList;
+}
+
+void McuAudioParams::SetUnSubscribeAudioList(const vector<McuUserInfoParams>& _unSubscribeAudioList)
+{
+    m_unSubscribeAudioList = _unSubscribeAudioList;
+    m_unSubscribeAudioListHasBeenSet = true;
+}
+
+bool McuAudioParams::UnSubscribeAudioListHasBeenSet() const
+{
+    return m_unSubscribeAudioListHasBeenSet;
 }
 

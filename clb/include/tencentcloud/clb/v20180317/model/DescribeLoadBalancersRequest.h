@@ -44,14 +44,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取CLB instance ID
-                     * @return LoadBalancerIds CLB instance ID
+                     * 获取CLB instance IDs. There can be up to 20 IDs.
+                     * @return LoadBalancerIds CLB instance IDs. There can be up to 20 IDs.
                      */
                     std::vector<std::string> GetLoadBalancerIds() const;
 
                     /**
-                     * 设置CLB instance ID
-                     * @param LoadBalancerIds CLB instance ID
+                     * 设置CLB instance IDs. There can be up to 20 IDs.
+                     * @param LoadBalancerIds CLB instance IDs. There can be up to 20 IDs.
                      */
                     void SetLoadBalancerIds(const std::vector<std::string>& _loadBalancerIds);
 
@@ -400,7 +400,7 @@ Basic network does not support queries by VpcId.
                 private:
 
                     /**
-                     * CLB instance ID
+                     * CLB instance IDs. There can be up to 20 IDs.
                      */
                     std::vector<std::string> m_loadBalancerIds;
                     bool m_loadBalancerIdsHasBeenSet;

@@ -101,6 +101,28 @@ namespace TencentCloud
                      */
                     bool DataSetHasBeenSet() const;
 
+                    /**
+                     * 获取The total number of requests within the query scope.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return MetricCount The total number of requests within the query scope.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    int64_t GetMetricCount() const;
+
+                    /**
+                     * 设置The total number of requests within the query scope.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param MetricCount The total number of requests within the query scope.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    void SetMetricCount(const int64_t& _metricCount);
+
+                    /**
+                     * 判断参数 MetricCount 是否已赋值
+                     * @return MetricCount 是否已赋值
+                     */
+                    bool MetricCountHasBeenSet() const;
+
                 private:
 
                     /**
@@ -120,6 +142,13 @@ namespace TencentCloud
                      */
                     std::vector<DatePoint> m_dataSet;
                     bool m_dataSetHasBeenSet;
+
+                    /**
+                     * The total number of requests within the query scope.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    int64_t m_metricCount;
+                    bool m_metricCountHasBeenSet;
 
                 };
             }
