@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * The configuration of alarm level threshold
                 */
                 class AlarmHierarchicalValue : public AbstractModel
                 {
@@ -47,14 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Remind 
+                     * 获取Threshold for the `Remind` level
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Remind Threshold for the `Remind` level
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetRemind() const;
 
                     /**
-                     * 设置
-                     * @param Remind 
+                     * 设置Threshold for the `Remind` level
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Remind Threshold for the `Remind` level
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetRemind(const std::string& _remind);
 
@@ -65,14 +69,18 @@ namespace TencentCloud
                     bool RemindHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Warn 
+                     * 获取Threshold for the `Warn` level
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Warn Threshold for the `Warn` level
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetWarn() const;
 
                     /**
-                     * 设置
-                     * @param Warn 
+                     * 设置Threshold for the `Warn` level
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Warn Threshold for the `Warn` level
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetWarn(const std::string& _warn);
 
@@ -83,14 +91,18 @@ namespace TencentCloud
                     bool WarnHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Serious 
+                     * 获取Threshold for the `Serious` level
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Serious Threshold for the `Serious` level
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetSerious() const;
 
                     /**
-                     * 设置
-                     * @param Serious 
+                     * 设置Threshold for the `Serious` level
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Serious Threshold for the `Serious` level
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetSerious(const std::string& _serious);
 
@@ -103,19 +115,22 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Threshold for the `Remind` level
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_remind;
                     bool m_remindHasBeenSet;
 
                     /**
-                     * 
+                     * Threshold for the `Warn` level
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_warn;
                     bool m_warnHasBeenSet;
 
                     /**
-                     * 
+                     * Threshold for the `Serious` level
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_serious;
                     bool m_seriousHasBeenSet;

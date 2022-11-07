@@ -473,14 +473,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ValueMinHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HierarchicalValue 
+                     * 获取The configuration of alarm level threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return HierarchicalValue The configuration of alarm level threshold
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     AlarmHierarchicalValue GetHierarchicalValue() const;
 
                     /**
-                     * 设置
-                     * @param HierarchicalValue 
+                     * 设置The configuration of alarm level threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param HierarchicalValue The configuration of alarm level threshold
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetHierarchicalValue(const AlarmHierarchicalValue& _hierarchicalValue);
 
@@ -623,7 +627,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_valueMinHasBeenSet;
 
                     /**
-                     * 
+                     * The configuration of alarm level threshold
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     AlarmHierarchicalValue m_hierarchicalValue;
                     bool m_hierarchicalValueHasBeenSet;

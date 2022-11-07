@@ -27,6 +27,7 @@
 #include <tencentcloud/monitor/v20180724/model/AlarmPolicyFilter.h>
 #include <tencentcloud/monitor/v20180724/model/Tag.h>
 #include <tencentcloud/monitor/v20180724/model/LogAlarmReq.h>
+#include <tencentcloud/monitor/v20180724/model/AlarmHierarchicalNotice.h>
 
 
 namespace TencentCloud
@@ -336,6 +337,42 @@ namespace TencentCloud
                      */
                     bool LogAlarmReqInfoHasBeenSet() const;
 
+                    /**
+                     * 获取Notification rules for different alarm levels
+                     * @return HierarchicalNotices Notification rules for different alarm levels
+                     */
+                    std::vector<AlarmHierarchicalNotice> GetHierarchicalNotices() const;
+
+                    /**
+                     * 设置Notification rules for different alarm levels
+                     * @param HierarchicalNotices Notification rules for different alarm levels
+                     */
+                    void SetHierarchicalNotices(const std::vector<AlarmHierarchicalNotice>& _hierarchicalNotices);
+
+                    /**
+                     * 判断参数 HierarchicalNotices 是否已赋值
+                     * @return HierarchicalNotices 是否已赋值
+                     */
+                    bool HierarchicalNoticesHasBeenSet() const;
+
+                    /**
+                     * 获取A dedicated field for migration policies. 0: Implement authentication logic; 1: Skip authentication logic.
+                     * @return MigrateFlag A dedicated field for migration policies. 0: Implement authentication logic; 1: Skip authentication logic.
+                     */
+                    int64_t GetMigrateFlag() const;
+
+                    /**
+                     * 设置A dedicated field for migration policies. 0: Implement authentication logic; 1: Skip authentication logic.
+                     * @param MigrateFlag A dedicated field for migration policies. 0: Implement authentication logic; 1: Skip authentication logic.
+                     */
+                    void SetMigrateFlag(const int64_t& _migrateFlag);
+
+                    /**
+                     * 判断参数 MigrateFlag 是否已赋值
+                     * @return MigrateFlag 是否已赋值
+                     */
+                    bool MigrateFlagHasBeenSet() const;
+
                 private:
 
                     /**
@@ -433,6 +470,18 @@ namespace TencentCloud
                      */
                     LogAlarmReq m_logAlarmReqInfo;
                     bool m_logAlarmReqInfoHasBeenSet;
+
+                    /**
+                     * Notification rules for different alarm levels
+                     */
+                    std::vector<AlarmHierarchicalNotice> m_hierarchicalNotices;
+                    bool m_hierarchicalNoticesHasBeenSet;
+
+                    /**
+                     * A dedicated field for migration policies. 0: Implement authentication logic; 1: Skip authentication logic.
+                     */
+                    int64_t m_migrateFlag;
+                    bool m_migrateFlagHasBeenSet;
 
                 };
             }
