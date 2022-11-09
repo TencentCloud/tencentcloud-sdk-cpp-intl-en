@@ -3523,6 +3523,49 @@ LiveClient::DescribeVisitTopSumInfoListOutcomeCallable LiveClient::DescribeVisit
     return task->get_future();
 }
 
+LiveClient::DropLiveStreamOutcome LiveClient::DropLiveStream(const DropLiveStreamRequest &request)
+{
+    auto outcome = MakeRequest(request, "DropLiveStream");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DropLiveStreamResponse rsp = DropLiveStreamResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DropLiveStreamOutcome(rsp);
+        else
+            return DropLiveStreamOutcome(o.GetError());
+    }
+    else
+    {
+        return DropLiveStreamOutcome(outcome.GetError());
+    }
+}
+
+void LiveClient::DropLiveStreamAsync(const DropLiveStreamRequest& request, const DropLiveStreamAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DropLiveStream(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+LiveClient::DropLiveStreamOutcomeCallable LiveClient::DropLiveStreamCallable(const DropLiveStreamRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DropLiveStreamOutcome()>>(
+        [this, request]()
+        {
+            return this->DropLiveStream(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 LiveClient::EnableLiveDomainOutcome LiveClient::EnableLiveDomain(const EnableLiveDomainRequest &request)
 {
     auto outcome = MakeRequest(request, "EnableLiveDomain");

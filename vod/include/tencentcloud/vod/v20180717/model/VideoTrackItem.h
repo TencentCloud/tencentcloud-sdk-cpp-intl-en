@@ -24,8 +24,8 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/vod/v20180717/model/ImageTransform.h>
 #include <tencentcloud/vod/v20180717/model/AudioTransform.h>
+#include <tencentcloud/vod/v20180717/model/ImageTransform.h>
 
 
 namespace TencentCloud
@@ -113,6 +113,32 @@ Note: when a download URL of other media files is used as the material source an
                      * @return Duration 是否已赋值
                      */
                     bool DurationHasBeenSet() const;
+
+                    /**
+                     * 获取The target video duration, in seconds.
+<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
+<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final video duration the same as the value of `TargetDuration`.</li>
+                     * @return TargetDuration The target video duration, in seconds.
+<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
+<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final video duration the same as the value of `TargetDuration`.</li>
+                     */
+                    double GetTargetDuration() const;
+
+                    /**
+                     * 设置The target video duration, in seconds.
+<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
+<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final video duration the same as the value of `TargetDuration`.</li>
+                     * @param TargetDuration The target video duration, in seconds.
+<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
+<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final video duration the same as the value of `TargetDuration`.</li>
+                     */
+                    void SetTargetDuration(const double& _targetDuration);
+
+                    /**
+                     * 判断参数 TargetDuration 是否已赋值
+                     * @return TargetDuration 是否已赋值
+                     */
+                    bool TargetDurationHasBeenSet() const;
 
                     /**
                      * 获取Video origin position. Valid values:
@@ -277,28 +303,6 @@ Default value: 0 px.
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取Operation on video image such as image rotation.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ImageOperations Operation on video image such as image rotation.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     */
-                    std::vector<ImageTransform> GetImageOperations() const;
-
-                    /**
-                     * 设置Operation on video image such as image rotation.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ImageOperations Operation on video image such as image rotation.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     */
-                    void SetImageOperations(const std::vector<ImageTransform>& _imageOperations);
-
-                    /**
-                     * 判断参数 ImageOperations 是否已赋值
-                     * @return ImageOperations 是否已赋值
-                     */
-                    bool ImageOperationsHasBeenSet() const;
-
-                    /**
                      * 获取Operation on audio such as muting.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AudioOperations Operation on audio such as muting.
@@ -319,6 +323,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      * @return AudioOperations 是否已赋值
                      */
                     bool AudioOperationsHasBeenSet() const;
+
+                    /**
+                     * 获取Operation on video image such as image rotation.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @return ImageOperations Operation on video image such as image rotation.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<ImageTransform> GetImageOperations() const;
+
+                    /**
+                     * 设置Operation on video image such as image rotation.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     * @param ImageOperations Operation on video image such as image rotation.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetImageOperations(const std::vector<ImageTransform>& _imageOperations);
+
+                    /**
+                     * 判断参数 ImageOperations 是否已赋值
+                     * @return ImageOperations 是否已赋值
+                     */
+                    bool ImageOperationsHasBeenSet() const;
 
                 private:
 
@@ -342,6 +368,14 @@ Note: when a download URL of other media files is used as the material source an
                      */
                     double m_duration;
                     bool m_durationHasBeenSet;
+
+                    /**
+                     * The target video duration, in seconds.
+<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
+<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final video duration the same as the value of `TargetDuration`.</li>
+                     */
+                    double m_targetDuration;
+                    bool m_targetDurationHasBeenSet;
 
                     /**
                      * Video origin position. Valid values:
@@ -392,18 +426,18 @@ Default value: 0 px.
                     bool m_heightHasBeenSet;
 
                     /**
-                     * Operation on video image such as image rotation.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     */
-                    std::vector<ImageTransform> m_imageOperations;
-                    bool m_imageOperationsHasBeenSet;
-
-                    /**
                      * Operation on audio such as muting.
 Note: this field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<AudioTransform> m_audioOperations;
                     bool m_audioOperationsHasBeenSet;
+
+                    /**
+                     * Operation on video image such as image rotation.
+Note: this field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<ImageTransform> m_imageOperations;
+                    bool m_imageOperationsHasBeenSet;
 
                 };
             }

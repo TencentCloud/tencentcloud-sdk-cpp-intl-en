@@ -114,6 +114,32 @@ Note: when a download URL of other media files is used as the material source an
                     bool DurationHasBeenSet() const;
 
                     /**
+                     * 获取The target audio duration, in seconds.
+<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
+<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final audio duration the same as the value of `TargetDuration`.</li>
+                     * @return TargetDuration The target audio duration, in seconds.
+<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
+<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final audio duration the same as the value of `TargetDuration`.</li>
+                     */
+                    double GetTargetDuration() const;
+
+                    /**
+                     * 设置The target audio duration, in seconds.
+<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
+<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final audio duration the same as the value of `TargetDuration`.</li>
+                     * @param TargetDuration The target audio duration, in seconds.
+<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
+<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final audio duration the same as the value of `TargetDuration`.</li>
+                     */
+                    void SetTargetDuration(const double& _targetDuration);
+
+                    /**
+                     * 判断参数 TargetDuration 是否已赋值
+                     * @return TargetDuration 是否已赋值
+                     */
+                    bool TargetDurationHasBeenSet() const;
+
+                    /**
                      * 获取Operation on audio segment, such as volume adjustment.
 Note: this field may return null, indicating that no valid values can be obtained.
                      * @return AudioOperations Operation on audio segment, such as volume adjustment.
@@ -157,6 +183,14 @@ Note: when a download URL of other media files is used as the material source an
                      */
                     double m_duration;
                     bool m_durationHasBeenSet;
+
+                    /**
+                     * The target audio duration, in seconds.
+<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
+<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final audio duration the same as the value of `TargetDuration`.</li>
+                     */
+                    double m_targetDuration;
+                    bool m_targetDurationHasBeenSet;
 
                     /**
                      * Operation on audio segment, such as volume adjustment.

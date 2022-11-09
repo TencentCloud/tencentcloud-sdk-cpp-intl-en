@@ -185,6 +185,8 @@
 #include <tencentcloud/live/v20180801/model/DescribeUploadStreamNumsResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeVisitTopSumInfoListRequest.h>
 #include <tencentcloud/live/v20180801/model/DescribeVisitTopSumInfoListResponse.h>
+#include <tencentcloud/live/v20180801/model/DropLiveStreamRequest.h>
+#include <tencentcloud/live/v20180801/model/DropLiveStreamResponse.h>
 #include <tencentcloud/live/v20180801/model/EnableLiveDomainRequest.h>
 #include <tencentcloud/live/v20180801/model/EnableLiveDomainResponse.h>
 #include <tencentcloud/live/v20180801/model/ForbidLiveDomainRequest.h>
@@ -480,6 +482,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeVisitTopSumInfoListResponse> DescribeVisitTopSumInfoListOutcome;
                 typedef std::future<DescribeVisitTopSumInfoListOutcome> DescribeVisitTopSumInfoListOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeVisitTopSumInfoListRequest&, DescribeVisitTopSumInfoListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVisitTopSumInfoListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DropLiveStreamResponse> DropLiveStreamOutcome;
+                typedef std::future<DropLiveStreamOutcome> DropLiveStreamOutcomeCallable;
+                typedef std::function<void(const LiveClient*, const Model::DropLiveStreamRequest&, DropLiveStreamOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DropLiveStreamAsyncHandler;
                 typedef Outcome<Core::Error, Model::EnableLiveDomainResponse> EnableLiveDomainOutcome;
                 typedef std::future<EnableLiveDomainOutcome> EnableLiveDomainOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::EnableLiveDomainRequest&, EnableLiveDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EnableLiveDomainAsyncHandler;
@@ -1348,6 +1353,16 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
                 DescribeVisitTopSumInfoListOutcome DescribeVisitTopSumInfoList(const Model::DescribeVisitTopSumInfoListRequest &request);
                 void DescribeVisitTopSumInfoListAsync(const Model::DescribeVisitTopSumInfoListRequest& request, const DescribeVisitTopSumInfoListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeVisitTopSumInfoListOutcomeCallable DescribeVisitTopSumInfoListCallable(const Model::DescribeVisitTopSumInfoListRequest& request);
+
+                /**
+                 *This API is used to pause a live stream. The stream can be resumed if it is paused.
+Note: If you call this API to pause an inactive stream, the request will be considered successful.
+                 * @param req DropLiveStreamRequest
+                 * @return DropLiveStreamOutcome
+                 */
+                DropLiveStreamOutcome DropLiveStream(const Model::DropLiveStreamRequest &request);
+                void DropLiveStreamAsync(const Model::DropLiveStreamRequest& request, const DropLiveStreamAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DropLiveStreamOutcomeCallable DropLiveStreamCallable(const Model::DropLiveStreamRequest& request);
 
                 /**
                  *This API is used to enable a disabled LVB domain name.

@@ -35,6 +35,8 @@
 #include <tencentcloud/cynosdb/v20190107/model/CreateBackupResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/CreateClustersRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/CreateClustersResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/DeleteBackupRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/DeleteBackupResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeAccountsRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeAccountsResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeBackupConfigRequest.h>
@@ -153,6 +155,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateClustersResponse> CreateClustersOutcome;
                 typedef std::future<CreateClustersOutcome> CreateClustersOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::CreateClustersRequest&, CreateClustersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateClustersAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteBackupResponse> DeleteBackupOutcome;
+                typedef std::future<DeleteBackupOutcome> DeleteBackupOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::DeleteBackupRequest&, DeleteBackupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteBackupAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAccountsResponse> DescribeAccountsOutcome;
                 typedef std::future<DescribeAccountsOutcome> DescribeAccountsOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::DescribeAccountsRequest&, DescribeAccountsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccountsAsyncHandler;
@@ -338,6 +343,15 @@ namespace TencentCloud
                 CreateClustersOutcome CreateClusters(const Model::CreateClustersRequest &request);
                 void CreateClustersAsync(const Model::CreateClustersRequest& request, const CreateClustersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateClustersOutcomeCallable CreateClustersCallable(const Model::CreateClustersRequest& request);
+
+                /**
+                 *This API is used to delete the manual backup for a cluster. It cannot be used to delete the automatic backup.
+                 * @param req DeleteBackupRequest
+                 * @return DeleteBackupOutcome
+                 */
+                DeleteBackupOutcome DeleteBackup(const Model::DeleteBackupRequest &request);
+                void DeleteBackupAsync(const Model::DeleteBackupRequest& request, const DeleteBackupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteBackupOutcomeCallable DeleteBackupCallable(const Model::DeleteBackupRequest& request);
 
                 /**
                  *This API is used to query database management accounts.

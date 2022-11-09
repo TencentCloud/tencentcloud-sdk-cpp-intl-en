@@ -289,28 +289,6 @@ namespace TencentCloud
                     bool StreamIdsHasBeenSet() const;
 
                     /**
-                     * 获取Unique ID of LVB recording file. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
-                     * @return Vids Unique ID of LVB recording file. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
-                     */
-                    std::vector<std::string> GetVids() const;
-
-                    /**
-                     * 设置Unique ID of LVB recording file. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
-                     * @param Vids Unique ID of LVB recording file. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
-                     */
-                    void SetVids(const std::vector<std::string>& _vids);
-
-                    /**
-                     * 判断参数 Vids 是否已赋值
-                     * @return Vids 是否已赋值
-                     */
-                    bool VidsHasBeenSet() const;
-
-                    /**
                      * 获取Matches files created within the time period.
 <li>Includes specified start and end points in time.</li>
                      * @return CreateTime Matches files created within the time period.
@@ -657,28 +635,6 @@ The live stream code.
                     bool StreamIdHasBeenSet() const;
 
                     /**
-                     * 获取(This is not recommended. `Vids` should be used instead)
-Unique ID of LVB recording file.
-                     * @return Vid (This is not recommended. `Vids` should be used instead)
-Unique ID of LVB recording file.
-                     */
-                    std::string GetVid() const;
-
-                    /**
-                     * 设置(This is not recommended. `Vids` should be used instead)
-Unique ID of LVB recording file.
-                     * @param Vid (This is not recommended. `Vids` should be used instead)
-Unique ID of LVB recording file.
-                     */
-                    void SetVid(const std::string& _vid);
-
-                    /**
-                     * 判断参数 Vid 是否已赋值
-                     * @return Vid 是否已赋值
-                     */
-                    bool VidHasBeenSet() const;
-
-                    /**
                      * 获取(This is not recommended. `CreateTime` should be used instead)
 Start time in the creation time range.
 <li>After or at the start time.</li>
@@ -745,6 +701,42 @@ End time in the creation time range.
                      * @return EndTime 是否已赋值
                      */
                     bool EndTimeHasBeenSet() const;
+
+                    /**
+                     * 获取This parameter is invalid now.
+                     * @return Vids This parameter is invalid now.
+                     */
+                    std::vector<std::string> GetVids() const;
+
+                    /**
+                     * 设置This parameter is invalid now.
+                     * @param Vids This parameter is invalid now.
+                     */
+                    void SetVids(const std::vector<std::string>& _vids);
+
+                    /**
+                     * 判断参数 Vids 是否已赋值
+                     * @return Vids 是否已赋值
+                     */
+                    bool VidsHasBeenSet() const;
+
+                    /**
+                     * 获取This parameter is invalid now.
+                     * @return Vid This parameter is invalid now.
+                     */
+                    std::string GetVid() const;
+
+                    /**
+                     * 设置This parameter is invalid now.
+                     * @param Vid This parameter is invalid now.
+                     */
+                    void SetVid(const std::string& _vid);
+
+                    /**
+                     * 判断参数 Vid 是否已赋值
+                     * @return Vid 是否已赋值
+                     */
+                    bool VidHasBeenSet() const;
 
                 private:
 
@@ -823,13 +815,6 @@ End time in the creation time range.
                      */
                     std::vector<std::string> m_streamIds;
                     bool m_streamIdsHasBeenSet;
-
-                    /**
-                     * Unique ID of LVB recording file. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
-                     */
-                    std::vector<std::string> m_vids;
-                    bool m_vidsHasBeenSet;
 
                     /**
                      * Matches files created within the time period.
@@ -938,13 +923,6 @@ The live stream code.
                     bool m_streamIdHasBeenSet;
 
                     /**
-                     * (This is not recommended. `Vids` should be used instead)
-Unique ID of LVB recording file.
-                     */
-                    std::string m_vid;
-                    bool m_vidHasBeenSet;
-
-                    /**
                      * (This is not recommended. `CreateTime` should be used instead)
 Start time in the creation time range.
 <li>After or at the start time.</li>
@@ -963,6 +941,18 @@ End time in the creation time range.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
+
+                    /**
+                     * This parameter is invalid now.
+                     */
+                    std::vector<std::string> m_vids;
+                    bool m_vidsHasBeenSet;
+
+                    /**
+                     * This parameter is invalid now.
+                     */
+                    std::string m_vid;
+                    bool m_vidHasBeenSet;
 
                 };
             }

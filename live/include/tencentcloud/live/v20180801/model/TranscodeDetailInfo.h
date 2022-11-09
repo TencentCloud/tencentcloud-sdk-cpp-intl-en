@@ -179,14 +179,14 @@ topspeed_H265: top speed codec - H265.
                     bool BitrateHasBeenSet() const;
 
                     /**
-                     * 获取Type. Valid values: Transcode, MixStream, WaterMark.
-                     * @return Type Type. Valid values: Transcode, MixStream, WaterMark.
+                     * 获取The task type. Valid values: Transcode, MixStream, WaterMark, Webrtc.
+                     * @return Type The task type. Valid values: Transcode, MixStream, WaterMark, Webrtc.
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Type. Valid values: Transcode, MixStream, WaterMark.
-                     * @param Type Type. Valid values: Transcode, MixStream, WaterMark.
+                     * 设置The task type. Valid values: Transcode, MixStream, WaterMark, Webrtc.
+                     * @param Type The task type. Valid values: Transcode, MixStream, WaterMark, Webrtc.
                      */
                     void SetType(const std::string& _type);
 
@@ -231,6 +231,32 @@ topspeed_H265: top speed codec - H265.
                      * @return Resolution 是否已赋值
                      */
                     bool ResolutionHasBeenSet() const;
+
+                    /**
+                     * 获取The region. Valid values:
+`Mainland`: Inside the Chinese mainland.
+`Overseas`: Outside the Chinese mainland.
+                     * @return MainlandOrOversea The region. Valid values:
+`Mainland`: Inside the Chinese mainland.
+`Overseas`: Outside the Chinese mainland.
+                     */
+                    std::string GetMainlandOrOversea() const;
+
+                    /**
+                     * 设置The region. Valid values:
+`Mainland`: Inside the Chinese mainland.
+`Overseas`: Outside the Chinese mainland.
+                     * @param MainlandOrOversea The region. Valid values:
+`Mainland`: Inside the Chinese mainland.
+`Overseas`: Outside the Chinese mainland.
+                     */
+                    void SetMainlandOrOversea(const std::string& _mainlandOrOversea);
+
+                    /**
+                     * 判断参数 MainlandOrOversea 是否已赋值
+                     * @return MainlandOrOversea 是否已赋值
+                     */
+                    bool MainlandOrOverseaHasBeenSet() const;
 
                 private:
 
@@ -277,7 +303,7 @@ topspeed_H265: top speed codec - H265.
                     bool m_bitrateHasBeenSet;
 
                     /**
-                     * Type. Valid values: Transcode, MixStream, WaterMark.
+                     * The task type. Valid values: Transcode, MixStream, WaterMark, Webrtc.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -293,6 +319,14 @@ topspeed_H265: top speed codec - H265.
                      */
                     std::string m_resolution;
                     bool m_resolutionHasBeenSet;
+
+                    /**
+                     * The region. Valid values:
+`Mainland`: Inside the Chinese mainland.
+`Overseas`: Outside the Chinese mainland.
+                     */
+                    std::string m_mainlandOrOversea;
+                    bool m_mainlandOrOverseaHasBeenSet;
 
                 };
             }

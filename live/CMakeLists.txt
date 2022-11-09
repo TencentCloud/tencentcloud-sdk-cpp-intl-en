@@ -118,6 +118,7 @@ set(live_public_header_model
   include/tencentcloud/live/v20180801/model/ModifyLivePlayAuthKeyResponse.h
   include/tencentcloud/live/v20180801/model/CreateLiveCallbackTemplateRequest.h
   include/tencentcloud/live/v20180801/model/DescribeTopClientIpSumInfoListResponse.h
+  include/tencentcloud/live/v20180801/model/DropLiveStreamResponse.h
   include/tencentcloud/live/v20180801/model/DescribeLiveStreamStateResponse.h
   include/tencentcloud/live/v20180801/model/StopLiveRecordRequest.h
   include/tencentcloud/live/v20180801/model/DeleteLiveWatermarkRuleRequest.h
@@ -126,6 +127,7 @@ set(live_public_header_model
   include/tencentcloud/live/v20180801/model/DescribeLiveWatermarksRequest.h
   include/tencentcloud/live/v20180801/model/CreateLiveTranscodeRuleRequest.h
   include/tencentcloud/live/v20180801/model/DescribeLiveWatermarkRulesRequest.h
+  include/tencentcloud/live/v20180801/model/DropLiveStreamRequest.h
   include/tencentcloud/live/v20180801/model/PullPushWatermarkInfo.h
   include/tencentcloud/live/v20180801/model/DescribeProvinceIspPlayInfoListResponse.h
   include/tencentcloud/live/v20180801/model/CreateCommonMixStreamRequest.h
@@ -376,6 +378,7 @@ set(live_src
   src/v20180801/model/ModifyLivePlayAuthKeyResponse.cpp
   src/v20180801/model/CreateLiveCallbackTemplateRequest.cpp
   src/v20180801/model/DescribeTopClientIpSumInfoListResponse.cpp
+  src/v20180801/model/DropLiveStreamResponse.cpp
   src/v20180801/model/DescribeLiveStreamStateResponse.cpp
   src/v20180801/model/StopLiveRecordRequest.cpp
   src/v20180801/model/DeleteLiveWatermarkRuleRequest.cpp
@@ -384,6 +387,7 @@ set(live_src
   src/v20180801/model/DescribeLiveWatermarksRequest.cpp
   src/v20180801/model/CreateLiveTranscodeRuleRequest.cpp
   src/v20180801/model/DescribeLiveWatermarkRulesRequest.cpp
+  src/v20180801/model/DropLiveStreamRequest.cpp
   src/v20180801/model/PullPushWatermarkInfo.cpp
   src/v20180801/model/DescribeProvinceIspPlayInfoListResponse.cpp
   src/v20180801/model/CreateCommonMixStreamRequest.cpp

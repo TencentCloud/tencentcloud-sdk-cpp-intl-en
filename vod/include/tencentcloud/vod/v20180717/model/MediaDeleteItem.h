@@ -48,26 +48,30 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Type of files to delete. If this parameter is left empty, it will be invalid. Valid values:
-<li>`OriginalFiles`: original files. You cannot initiate transcoding, publishing on WeChat, or other video processing operations after deleting the original files.</li>
-<li>`TranscodeFiles`: transcoded files</li>
-<li>`WechatPublishFiles`: files for publishing on WeChat</li>
-                     * @return Type Type of files to delete. If this parameter is left empty, it will be invalid. Valid values:
-<li>`OriginalFiles`: original files. You cannot initiate transcoding, publishing on WeChat, or other video processing operations after deleting the original files.</li>
-<li>`TranscodeFiles`: transcoded files</li>
-<li>`WechatPublishFiles`: files for publishing on WeChat</li>
+                     * 获取The type of files to delete. If this parameter is left empty, it will be invalid. Valid values:
+<li>`OriginalFiles`: The original file. After deleting an original file, you can no longer perform operations such as transcoding or WeChat publishing on the file ID.</li>
+<li>`TranscodeFiles`: Transcoding outputs</li>
+<li>`AdaptiveDynamicStreamingFiles`: Adaptive bitrate outputs</li>
+<li>`WechatPublishFiles`: The file for WeChat publishing</li>
+                     * @return Type The type of files to delete. If this parameter is left empty, it will be invalid. Valid values:
+<li>`OriginalFiles`: The original file. After deleting an original file, you can no longer perform operations such as transcoding or WeChat publishing on the file ID.</li>
+<li>`TranscodeFiles`: Transcoding outputs</li>
+<li>`AdaptiveDynamicStreamingFiles`: Adaptive bitrate outputs</li>
+<li>`WechatPublishFiles`: The file for WeChat publishing</li>
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Type of files to delete. If this parameter is left empty, it will be invalid. Valid values:
-<li>`OriginalFiles`: original files. You cannot initiate transcoding, publishing on WeChat, or other video processing operations after deleting the original files.</li>
-<li>`TranscodeFiles`: transcoded files</li>
-<li>`WechatPublishFiles`: files for publishing on WeChat</li>
-                     * @param Type Type of files to delete. If this parameter is left empty, it will be invalid. Valid values:
-<li>`OriginalFiles`: original files. You cannot initiate transcoding, publishing on WeChat, or other video processing operations after deleting the original files.</li>
-<li>`TranscodeFiles`: transcoded files</li>
-<li>`WechatPublishFiles`: files for publishing on WeChat</li>
+                     * 设置The type of files to delete. If this parameter is left empty, it will be invalid. Valid values:
+<li>`OriginalFiles`: The original file. After deleting an original file, you can no longer perform operations such as transcoding or WeChat publishing on the file ID.</li>
+<li>`TranscodeFiles`: Transcoding outputs</li>
+<li>`AdaptiveDynamicStreamingFiles`: Adaptive bitrate outputs</li>
+<li>`WechatPublishFiles`: The file for WeChat publishing</li>
+                     * @param Type The type of files to delete. If this parameter is left empty, it will be invalid. Valid values:
+<li>`OriginalFiles`: The original file. After deleting an original file, you can no longer perform operations such as transcoding or WeChat publishing on the file ID.</li>
+<li>`TranscodeFiles`: Transcoding outputs</li>
+<li>`AdaptiveDynamicStreamingFiles`: Adaptive bitrate outputs</li>
+<li>`WechatPublishFiles`: The file for WeChat publishing</li>
                      */
                     void SetType(const std::string& _type);
 
@@ -102,10 +106,11 @@ Default value: 0, which indicates to delete all videos of the type specified by 
                 private:
 
                     /**
-                     * Type of files to delete. If this parameter is left empty, it will be invalid. Valid values:
-<li>`OriginalFiles`: original files. You cannot initiate transcoding, publishing on WeChat, or other video processing operations after deleting the original files.</li>
-<li>`TranscodeFiles`: transcoded files</li>
-<li>`WechatPublishFiles`: files for publishing on WeChat</li>
+                     * The type of files to delete. If this parameter is left empty, it will be invalid. Valid values:
+<li>`OriginalFiles`: The original file. After deleting an original file, you can no longer perform operations such as transcoding or WeChat publishing on the file ID.</li>
+<li>`TranscodeFiles`: Transcoding outputs</li>
+<li>`AdaptiveDynamicStreamingFiles`: Adaptive bitrate outputs</li>
+<li>`WechatPublishFiles`: The file for WeChat publishing</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

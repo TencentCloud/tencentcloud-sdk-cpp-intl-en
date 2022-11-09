@@ -118,6 +118,24 @@ namespace TencentCloud
                      */
                     bool NameHasBeenSet() const;
 
+                    /**
+                     * 获取Operator
+                     * @return Operator Operator
+                     */
+                    std::string GetOperator() const;
+
+                    /**
+                     * 设置Operator
+                     * @param Operator Operator
+                     */
+                    void SetOperator(const std::string& _operator);
+
+                    /**
+                     * 判断参数 Operator 是否已赋值
+                     * @return Operator 是否已赋值
+                     */
+                    bool OperatorHasBeenSet() const;
+
                 private:
 
                     /**
@@ -143,6 +161,12 @@ namespace TencentCloud
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
+
+                    /**
+                     * Operator
+                     */
+                    std::string m_operator;
+                    bool m_operatorHasBeenSet;
 
                 };
             }
