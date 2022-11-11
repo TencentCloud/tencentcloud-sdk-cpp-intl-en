@@ -384,6 +384,92 @@ TrtcClient::RemoveUserByStrRoomIdOutcomeCallable TrtcClient::RemoveUserByStrRoom
     return task->get_future();
 }
 
+TrtcClient::SetUserBlockedOutcome TrtcClient::SetUserBlocked(const SetUserBlockedRequest &request)
+{
+    auto outcome = MakeRequest(request, "SetUserBlocked");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        SetUserBlockedResponse rsp = SetUserBlockedResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return SetUserBlockedOutcome(rsp);
+        else
+            return SetUserBlockedOutcome(o.GetError());
+    }
+    else
+    {
+        return SetUserBlockedOutcome(outcome.GetError());
+    }
+}
+
+void TrtcClient::SetUserBlockedAsync(const SetUserBlockedRequest& request, const SetUserBlockedAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->SetUserBlocked(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TrtcClient::SetUserBlockedOutcomeCallable TrtcClient::SetUserBlockedCallable(const SetUserBlockedRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<SetUserBlockedOutcome()>>(
+        [this, request]()
+        {
+            return this->SetUserBlocked(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TrtcClient::SetUserBlockedByStrRoomIdOutcome TrtcClient::SetUserBlockedByStrRoomId(const SetUserBlockedByStrRoomIdRequest &request)
+{
+    auto outcome = MakeRequest(request, "SetUserBlockedByStrRoomId");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        SetUserBlockedByStrRoomIdResponse rsp = SetUserBlockedByStrRoomIdResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return SetUserBlockedByStrRoomIdOutcome(rsp);
+        else
+            return SetUserBlockedByStrRoomIdOutcome(o.GetError());
+    }
+    else
+    {
+        return SetUserBlockedByStrRoomIdOutcome(outcome.GetError());
+    }
+}
+
+void TrtcClient::SetUserBlockedByStrRoomIdAsync(const SetUserBlockedByStrRoomIdRequest& request, const SetUserBlockedByStrRoomIdAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->SetUserBlockedByStrRoomId(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TrtcClient::SetUserBlockedByStrRoomIdOutcomeCallable TrtcClient::SetUserBlockedByStrRoomIdCallable(const SetUserBlockedByStrRoomIdRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<SetUserBlockedByStrRoomIdOutcome()>>(
+        [this, request]()
+        {
+            return this->SetUserBlockedByStrRoomId(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TrtcClient::StartPublishCdnStreamOutcome TrtcClient::StartPublishCdnStream(const StartPublishCdnStreamRequest &request)
 {
     auto outcome = MakeRequest(request, "StartPublishCdnStream");

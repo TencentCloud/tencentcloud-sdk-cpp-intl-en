@@ -35,6 +35,8 @@
 #include <tencentcloud/dnspod/v20210323/model/DescribeDomainResponse.h>
 #include <tencentcloud/dnspod/v20210323/model/DescribeRecordRequest.h>
 #include <tencentcloud/dnspod/v20210323/model/DescribeRecordResponse.h>
+#include <tencentcloud/dnspod/v20210323/model/DescribeRecordListRequest.h>
+#include <tencentcloud/dnspod/v20210323/model/DescribeRecordListResponse.h>
 #include <tencentcloud/dnspod/v20210323/model/ModifyDomainRemarkRequest.h>
 #include <tencentcloud/dnspod/v20210323/model/ModifyDomainRemarkResponse.h>
 #include <tencentcloud/dnspod/v20210323/model/ModifyDomainStatusRequest.h>
@@ -73,6 +75,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeRecordResponse> DescribeRecordOutcome;
                 typedef std::future<DescribeRecordOutcome> DescribeRecordOutcomeCallable;
                 typedef std::function<void(const DnspodClient*, const Model::DescribeRecordRequest&, DescribeRecordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRecordAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRecordListResponse> DescribeRecordListOutcome;
+                typedef std::future<DescribeRecordListOutcome> DescribeRecordListOutcomeCallable;
+                typedef std::function<void(const DnspodClient*, const Model::DescribeRecordListRequest&, DescribeRecordListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRecordListAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyDomainRemarkResponse> ModifyDomainRemarkOutcome;
                 typedef std::future<ModifyDomainRemarkOutcome> ModifyDomainRemarkOutcomeCallable;
                 typedef std::function<void(const DnspodClient*, const Model::ModifyDomainRemarkRequest&, ModifyDomainRemarkOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDomainRemarkAsyncHandler;
@@ -141,6 +146,15 @@ namespace TencentCloud
                 DescribeRecordOutcome DescribeRecord(const Model::DescribeRecordRequest &request);
                 void DescribeRecordAsync(const Model::DescribeRecordRequest& request, const DescribeRecordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeRecordOutcomeCallable DescribeRecordCallable(const Model::DescribeRecordRequest& request);
+
+                /**
+                 *This API is used to get DNS records of a domain.
+                 * @param req DescribeRecordListRequest
+                 * @return DescribeRecordListOutcome
+                 */
+                DescribeRecordListOutcome DescribeRecordList(const Model::DescribeRecordListRequest &request);
+                void DescribeRecordListAsync(const Model::DescribeRecordListRequest& request, const DescribeRecordListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRecordListOutcomeCallable DescribeRecordListCallable(const Model::DescribeRecordListRequest& request);
 
                 /**
                  *This API is used to set the remarks of a domain.

@@ -20,6 +20,7 @@ set(trtc_public_header
 
 set(trtc_public_header_model
   include/tencentcloud/trtc/v20190722/model/CloudStorage.h
+  include/tencentcloud/trtc/v20190722/model/SetUserBlockedRequest.h
   include/tencentcloud/trtc/v20190722/model/StorageFile.h
   include/tencentcloud/trtc/v20190722/model/WaterMark.h
   include/tencentcloud/trtc/v20190722/model/DescribeCloudRecordingResponse.h
@@ -36,6 +37,7 @@ set(trtc_public_header_model
   include/tencentcloud/trtc/v20190722/model/RemoveUserRequest.h
   include/tencentcloud/trtc/v20190722/model/StorageParams.h
   include/tencentcloud/trtc/v20190722/model/MaxVideoUser.h
+  include/tencentcloud/trtc/v20190722/model/SetUserBlockedResponse.h
   include/tencentcloud/trtc/v20190722/model/RemoveUserByStrRoomIdResponse.h
   include/tencentcloud/trtc/v20190722/model/McuLayoutVolume.h
   include/tencentcloud/trtc/v20190722/model/DescribeCloudRecordingRequest.h
@@ -51,6 +53,7 @@ set(trtc_public_header_model
   include/tencentcloud/trtc/v20190722/model/MixTranscodeParams.h
   include/tencentcloud/trtc/v20190722/model/StopPublishCdnStreamResponse.h
   include/tencentcloud/trtc/v20190722/model/RemoveUserByStrRoomIdRequest.h
+  include/tencentcloud/trtc/v20190722/model/SetUserBlockedByStrRoomIdResponse.h
   include/tencentcloud/trtc/v20190722/model/StopPublishCdnStreamRequest.h
   include/tencentcloud/trtc/v20190722/model/SubscribeStreamUserIds.h
   include/tencentcloud/trtc/v20190722/model/AgentParams.h
@@ -67,6 +70,7 @@ set(trtc_public_header_model
   include/tencentcloud/trtc/v20190722/model/McuSeiParams.h
   include/tencentcloud/trtc/v20190722/model/McuAudioParams.h
   include/tencentcloud/trtc/v20190722/model/McuPublishCdnParam.h
+  include/tencentcloud/trtc/v20190722/model/SetUserBlockedByStrRoomIdRequest.h
   include/tencentcloud/trtc/v20190722/model/AudioParams.h
   include/tencentcloud/trtc/v20190722/model/McuWaterMarkImage.h
   include/tencentcloud/trtc/v20190722/model/StartPublishCdnStreamResponse.h
@@ -80,6 +84,7 @@ set(trtc_public_header_model
 set(trtc_src
   src/v20190722/TrtcClient.cpp
   src/v20190722/model/CloudStorage.cpp
+  src/v20190722/model/SetUserBlockedRequest.cpp
   src/v20190722/model/StorageFile.cpp
   src/v20190722/model/WaterMark.cpp
   src/v20190722/model/DescribeCloudRecordingResponse.cpp
@@ -96,6 +101,7 @@ set(trtc_src
   src/v20190722/model/RemoveUserRequest.cpp
   src/v20190722/model/StorageParams.cpp
   src/v20190722/model/MaxVideoUser.cpp
+  src/v20190722/model/SetUserBlockedResponse.cpp
   src/v20190722/model/RemoveUserByStrRoomIdResponse.cpp
   src/v20190722/model/McuLayoutVolume.cpp
   src/v20190722/model/DescribeCloudRecordingRequest.cpp
@@ -111,6 +117,7 @@ set(trtc_src
   src/v20190722/model/MixTranscodeParams.cpp
   src/v20190722/model/StopPublishCdnStreamResponse.cpp
   src/v20190722/model/RemoveUserByStrRoomIdRequest.cpp
+  src/v20190722/model/SetUserBlockedByStrRoomIdResponse.cpp
   src/v20190722/model/StopPublishCdnStreamRequest.cpp
   src/v20190722/model/SubscribeStreamUserIds.cpp
   src/v20190722/model/AgentParams.cpp
@@ -127,6 +134,7 @@ set(trtc_src
   src/v20190722/model/McuSeiParams.cpp
   src/v20190722/model/McuAudioParams.cpp
   src/v20190722/model/McuPublishCdnParam.cpp
+  src/v20190722/model/SetUserBlockedByStrRoomIdRequest.cpp
   src/v20190722/model/AudioParams.cpp
   src/v20190722/model/McuWaterMarkImage.cpp
   src/v20190722/model/StartPublishCdnStreamResponse.cpp

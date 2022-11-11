@@ -39,6 +39,10 @@
 #include <tencentcloud/trtc/v20190722/model/RemoveUserResponse.h>
 #include <tencentcloud/trtc/v20190722/model/RemoveUserByStrRoomIdRequest.h>
 #include <tencentcloud/trtc/v20190722/model/RemoveUserByStrRoomIdResponse.h>
+#include <tencentcloud/trtc/v20190722/model/SetUserBlockedRequest.h>
+#include <tencentcloud/trtc/v20190722/model/SetUserBlockedResponse.h>
+#include <tencentcloud/trtc/v20190722/model/SetUserBlockedByStrRoomIdRequest.h>
+#include <tencentcloud/trtc/v20190722/model/SetUserBlockedByStrRoomIdResponse.h>
 #include <tencentcloud/trtc/v20190722/model/StartPublishCdnStreamRequest.h>
 #include <tencentcloud/trtc/v20190722/model/StartPublishCdnStreamResponse.h>
 #include <tencentcloud/trtc/v20190722/model/StopPublishCdnStreamRequest.h>
@@ -83,6 +87,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::RemoveUserByStrRoomIdResponse> RemoveUserByStrRoomIdOutcome;
                 typedef std::future<RemoveUserByStrRoomIdOutcome> RemoveUserByStrRoomIdOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::RemoveUserByStrRoomIdRequest&, RemoveUserByStrRoomIdOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RemoveUserByStrRoomIdAsyncHandler;
+                typedef Outcome<Core::Error, Model::SetUserBlockedResponse> SetUserBlockedOutcome;
+                typedef std::future<SetUserBlockedOutcome> SetUserBlockedOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::SetUserBlockedRequest&, SetUserBlockedOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SetUserBlockedAsyncHandler;
+                typedef Outcome<Core::Error, Model::SetUserBlockedByStrRoomIdResponse> SetUserBlockedByStrRoomIdOutcome;
+                typedef std::future<SetUserBlockedByStrRoomIdOutcome> SetUserBlockedByStrRoomIdOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::SetUserBlockedByStrRoomIdRequest&, SetUserBlockedByStrRoomIdOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SetUserBlockedByStrRoomIdAsyncHandler;
                 typedef Outcome<Core::Error, Model::StartPublishCdnStreamResponse> StartPublishCdnStreamOutcome;
                 typedef std::future<StartPublishCdnStreamOutcome> StartPublishCdnStreamOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::StartPublishCdnStreamRequest&, StartPublishCdnStreamOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StartPublishCdnStreamAsyncHandler;
@@ -178,6 +188,24 @@ If a recording file is being uploaded to VOD, the response parameter `StorageFil
                 RemoveUserByStrRoomIdOutcome RemoveUserByStrRoomId(const Model::RemoveUserByStrRoomIdRequest &request);
                 void RemoveUserByStrRoomIdAsync(const Model::RemoveUserByStrRoomIdRequest& request, const RemoveUserByStrRoomIdAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 RemoveUserByStrRoomIdOutcomeCallable RemoveUserByStrRoomIdCallable(const Model::RemoveUserByStrRoomIdRequest& request);
+
+                /**
+                 *This API is used to disable or enable the audio and video of a user. It can be used by an anchor, room owner, or admin to block or unblock a user. It supports platforms including Android, iOS, Windows, macOS, web, and WeChat Mini Program. Use this API if the room ID is a number.
+                 * @param req SetUserBlockedRequest
+                 * @return SetUserBlockedOutcome
+                 */
+                SetUserBlockedOutcome SetUserBlocked(const Model::SetUserBlockedRequest &request);
+                void SetUserBlockedAsync(const Model::SetUserBlockedRequest& request, const SetUserBlockedAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SetUserBlockedOutcomeCallable SetUserBlockedCallable(const Model::SetUserBlockedRequest& request);
+
+                /**
+                 *This API allows an anchor, room owner, admin to mute/unmute a user. It can be used on platforms including Android, iOS, Windows, macOS, web, and WeChat Mini Program. Use this API when the room ID is a string.
+                 * @param req SetUserBlockedByStrRoomIdRequest
+                 * @return SetUserBlockedByStrRoomIdOutcome
+                 */
+                SetUserBlockedByStrRoomIdOutcome SetUserBlockedByStrRoomId(const Model::SetUserBlockedByStrRoomIdRequest &request);
+                void SetUserBlockedByStrRoomIdAsync(const Model::SetUserBlockedByStrRoomIdRequest& request, const SetUserBlockedByStrRoomIdAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SetUserBlockedByStrRoomIdOutcomeCallable SetUserBlockedByStrRoomIdCallable(const Model::SetUserBlockedByStrRoomIdRequest& request);
 
                 /**
                  *This API is used to mix streams and relay the mixed stream to CDNs. You can use this API to do the following:

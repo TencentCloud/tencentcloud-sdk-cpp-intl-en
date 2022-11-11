@@ -19,51 +19,59 @@ set(dnspod_public_header
   )
 
 set(dnspod_public_header_model
-  include/tencentcloud/dnspod/v20210323/model/ModifyDomainStatusResponse.h
   include/tencentcloud/dnspod/v20210323/model/CreateRecordRequest.h
   include/tencentcloud/dnspod/v20210323/model/DeleteDomainRequest.h
-  include/tencentcloud/dnspod/v20210323/model/ModifyDomainRemarkResponse.h
-  include/tencentcloud/dnspod/v20210323/model/DescribeRecordResponse.h
+  include/tencentcloud/dnspod/v20210323/model/RecordListItem.h
+  include/tencentcloud/dnspod/v20210323/model/DescribeRecordListResponse.h
   include/tencentcloud/dnspod/v20210323/model/CreateDomainRequest.h
-  include/tencentcloud/dnspod/v20210323/model/ModifyRecordResponse.h
-  include/tencentcloud/dnspod/v20210323/model/CreateRecordResponse.h
-  include/tencentcloud/dnspod/v20210323/model/DeleteRecordResponse.h
   include/tencentcloud/dnspod/v20210323/model/DomainCreateInfo.h
-  include/tencentcloud/dnspod/v20210323/model/RecordInfo.h
   include/tencentcloud/dnspod/v20210323/model/ModifyDomainStatusRequest.h
-  include/tencentcloud/dnspod/v20210323/model/DeleteDomainResponse.h
-  include/tencentcloud/dnspod/v20210323/model/CreateDomainResponse.h
-  include/tencentcloud/dnspod/v20210323/model/DescribeDomainRequest.h
+  include/tencentcloud/dnspod/v20210323/model/ModifyDomainStatusResponse.h
   include/tencentcloud/dnspod/v20210323/model/ModifyDomainRemarkRequest.h
   include/tencentcloud/dnspod/v20210323/model/DescribeRecordRequest.h
   include/tencentcloud/dnspod/v20210323/model/DescribeDomainResponse.h
   include/tencentcloud/dnspod/v20210323/model/DomainInfo.h
   include/tencentcloud/dnspod/v20210323/model/DeleteRecordRequest.h
+  include/tencentcloud/dnspod/v20210323/model/DescribeRecordListRequest.h
+  include/tencentcloud/dnspod/v20210323/model/DescribeDomainRequest.h
+  include/tencentcloud/dnspod/v20210323/model/CreateRecordResponse.h
+  include/tencentcloud/dnspod/v20210323/model/DescribeRecordResponse.h
+  include/tencentcloud/dnspod/v20210323/model/RecordInfo.h
+  include/tencentcloud/dnspod/v20210323/model/ModifyRecordResponse.h
+  include/tencentcloud/dnspod/v20210323/model/ModifyDomainRemarkResponse.h
+  include/tencentcloud/dnspod/v20210323/model/DeleteRecordResponse.h
+  include/tencentcloud/dnspod/v20210323/model/DeleteDomainResponse.h
+  include/tencentcloud/dnspod/v20210323/model/CreateDomainResponse.h
+  include/tencentcloud/dnspod/v20210323/model/RecordCountInfo.h
   include/tencentcloud/dnspod/v20210323/model/ModifyRecordRequest.h
   )
 
 set(dnspod_src
   src/v20210323/DnspodClient.cpp
-  src/v20210323/model/ModifyDomainStatusResponse.cpp
   src/v20210323/model/CreateRecordRequest.cpp
   src/v20210323/model/DeleteDomainRequest.cpp
-  src/v20210323/model/ModifyDomainRemarkResponse.cpp
-  src/v20210323/model/DescribeRecordResponse.cpp
+  src/v20210323/model/RecordListItem.cpp
+  src/v20210323/model/DescribeRecordListResponse.cpp
   src/v20210323/model/CreateDomainRequest.cpp
-  src/v20210323/model/ModifyRecordResponse.cpp
-  src/v20210323/model/CreateRecordResponse.cpp
-  src/v20210323/model/DeleteRecordResponse.cpp
   src/v20210323/model/DomainCreateInfo.cpp
-  src/v20210323/model/RecordInfo.cpp
   src/v20210323/model/ModifyDomainStatusRequest.cpp
-  src/v20210323/model/DeleteDomainResponse.cpp
-  src/v20210323/model/CreateDomainResponse.cpp
-  src/v20210323/model/DescribeDomainRequest.cpp
+  src/v20210323/model/ModifyDomainStatusResponse.cpp
   src/v20210323/model/ModifyDomainRemarkRequest.cpp
   src/v20210323/model/DescribeRecordRequest.cpp
   src/v20210323/model/DescribeDomainResponse.cpp
   src/v20210323/model/DomainInfo.cpp
   src/v20210323/model/DeleteRecordRequest.cpp
+  src/v20210323/model/DescribeRecordListRequest.cpp
+  src/v20210323/model/DescribeDomainRequest.cpp
+  src/v20210323/model/CreateRecordResponse.cpp
+  src/v20210323/model/DescribeRecordResponse.cpp
+  src/v20210323/model/RecordInfo.cpp
+  src/v20210323/model/ModifyRecordResponse.cpp
+  src/v20210323/model/ModifyDomainRemarkResponse.cpp
+  src/v20210323/model/DeleteRecordResponse.cpp
+  src/v20210323/model/DeleteDomainResponse.cpp
+  src/v20210323/model/CreateDomainResponse.cpp
+  src/v20210323/model/RecordCountInfo.cpp
   src/v20210323/model/ModifyRecordRequest.cpp
   )
 

@@ -67,14 +67,14 @@ namespace TencentCloud
                     bool MixLayoutModeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to display users who publish only audio. 0: Yes; 1: No. This parameter is valid only if dynamic layouts are used. If you do not pass this parameter, 0 will be used.
-                     * @return PureAudioHoldPlaceMode Whether to display users who publish only audio. 0: Yes; 1: No. This parameter is valid only if dynamic layouts are used. If you do not pass this parameter, 0 will be used.
+                     * 获取Whether to display users who publish only audio. 0: No; 1: Yes. This parameter is valid only if a dynamic layout is used. If you do not pass this parameter, 0 will be used.
+                     * @return PureAudioHoldPlaceMode Whether to display users who publish only audio. 0: No; 1: Yes. This parameter is valid only if a dynamic layout is used. If you do not pass this parameter, 0 will be used.
                      */
                     uint64_t GetPureAudioHoldPlaceMode() const;
 
                     /**
-                     * 设置Whether to display users who publish only audio. 0: Yes; 1: No. This parameter is valid only if dynamic layouts are used. If you do not pass this parameter, 0 will be used.
-                     * @param PureAudioHoldPlaceMode Whether to display users who publish only audio. 0: Yes; 1: No. This parameter is valid only if dynamic layouts are used. If you do not pass this parameter, 0 will be used.
+                     * 设置Whether to display users who publish only audio. 0: No; 1: Yes. This parameter is valid only if a dynamic layout is used. If you do not pass this parameter, 0 will be used.
+                     * @param PureAudioHoldPlaceMode Whether to display users who publish only audio. 0: No; 1: Yes. This parameter is valid only if a dynamic layout is used. If you do not pass this parameter, 0 will be used.
                      */
                     void SetPureAudioHoldPlaceMode(const uint64_t& _pureAudioHoldPlaceMode);
 
@@ -129,7 +129,7 @@ namespace TencentCloud
                     bool m_mixLayoutModeHasBeenSet;
 
                     /**
-                     * Whether to display users who publish only audio. 0: Yes; 1: No. This parameter is valid only if dynamic layouts are used. If you do not pass this parameter, 0 will be used.
+                     * Whether to display users who publish only audio. 0: No; 1: Yes. This parameter is valid only if a dynamic layout is used. If you do not pass this parameter, 0 will be used.
                      */
                     uint64_t m_pureAudioHoldPlaceMode;
                     bool m_pureAudioHoldPlaceModeHasBeenSet;
