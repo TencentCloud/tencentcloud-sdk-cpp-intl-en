@@ -21,10 +21,13 @@ set(mariadb_public_header
 set(mariadb_public_header_model
   include/tencentcloud/mariadb/v20170312/model/DescribeAccountPrivilegesResponse.h
   include/tencentcloud/mariadb/v20170312/model/DescribeDatabasesRequest.h
-  include/tencentcloud/mariadb/v20170312/model/CreateAccountResponse.h
+  include/tencentcloud/mariadb/v20170312/model/ParamDesc.h
   include/tencentcloud/mariadb/v20170312/model/DescribeDBParametersRequest.h
   include/tencentcloud/mariadb/v20170312/model/DescribeAccountsRequest.h
+  include/tencentcloud/mariadb/v20170312/model/ModifyInstanceNetworkResponse.h
+  include/tencentcloud/mariadb/v20170312/model/ModifyInstanceVportResponse.h
   include/tencentcloud/mariadb/v20170312/model/DestroyHourDBInstanceRequest.h
+  include/tencentcloud/mariadb/v20170312/model/ModifyInstanceVipResponse.h
   include/tencentcloud/mariadb/v20170312/model/AssociateSecurityGroupsRequest.h
   include/tencentcloud/mariadb/v20170312/model/DescribeDBSecurityGroupsResponse.h
   include/tencentcloud/mariadb/v20170312/model/CancelDcnJobResponse.h
@@ -80,6 +83,7 @@ set(mariadb_public_header_model
   include/tencentcloud/mariadb/v20170312/model/Database.h
   include/tencentcloud/mariadb/v20170312/model/GrantAccountPrivilegesResponse.h
   include/tencentcloud/mariadb/v20170312/model/CancelDcnJobRequest.h
+  include/tencentcloud/mariadb/v20170312/model/ModifyInstanceVipRequest.h
   include/tencentcloud/mariadb/v20170312/model/DatabasePrivilege.h
   include/tencentcloud/mariadb/v20170312/model/CloseDBExtranetAccessResponse.h
   include/tencentcloud/mariadb/v20170312/model/FunctionPrivilege.h
@@ -97,7 +101,9 @@ set(mariadb_public_header_model
   include/tencentcloud/mariadb/v20170312/model/ModifyDBSyncModeRequest.h
   include/tencentcloud/mariadb/v20170312/model/DescribeInstanceNodeInfoRequest.h
   include/tencentcloud/mariadb/v20170312/model/CloneAccountRequest.h
-  include/tencentcloud/mariadb/v20170312/model/ParamDesc.h
+  include/tencentcloud/mariadb/v20170312/model/CreateAccountResponse.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeLogFileRetentionPeriodResponse.h
+  include/tencentcloud/mariadb/v20170312/model/ModifyInstanceNetworkRequest.h
   include/tencentcloud/mariadb/v20170312/model/DescribeDBInstancesResponse.h
   include/tencentcloud/mariadb/v20170312/model/ConstraintRange.h
   include/tencentcloud/mariadb/v20170312/model/LogFileInfo.h
@@ -109,11 +115,13 @@ set(mariadb_public_header_model
   include/tencentcloud/mariadb/v20170312/model/DescribeAccountPrivilegesRequest.h
   include/tencentcloud/mariadb/v20170312/model/DescribeAccountsResponse.h
   include/tencentcloud/mariadb/v20170312/model/DescribeDBSlowLogsResponse.h
+  include/tencentcloud/mariadb/v20170312/model/DescribeLogFileRetentionPeriodRequest.h
   include/tencentcloud/mariadb/v20170312/model/ModifyDBInstancesProjectRequest.h
   include/tencentcloud/mariadb/v20170312/model/DestroyDBInstanceResponse.h
   include/tencentcloud/mariadb/v20170312/model/ModifyDBSyncModeResponse.h
   include/tencentcloud/mariadb/v20170312/model/DescribeInstanceNodeInfoResponse.h
   include/tencentcloud/mariadb/v20170312/model/DisassociateSecurityGroupsResponse.h
+  include/tencentcloud/mariadb/v20170312/model/ModifyInstanceVportRequest.h
   include/tencentcloud/mariadb/v20170312/model/DeleteAccountResponse.h
   )
 
@@ -121,10 +129,13 @@ set(mariadb_src
   src/v20170312/MariadbClient.cpp
   src/v20170312/model/DescribeAccountPrivilegesResponse.cpp
   src/v20170312/model/DescribeDatabasesRequest.cpp
-  src/v20170312/model/CreateAccountResponse.cpp
+  src/v20170312/model/ParamDesc.cpp
   src/v20170312/model/DescribeDBParametersRequest.cpp
   src/v20170312/model/DescribeAccountsRequest.cpp
+  src/v20170312/model/ModifyInstanceNetworkResponse.cpp
+  src/v20170312/model/ModifyInstanceVportResponse.cpp
   src/v20170312/model/DestroyHourDBInstanceRequest.cpp
+  src/v20170312/model/ModifyInstanceVipResponse.cpp
   src/v20170312/model/AssociateSecurityGroupsRequest.cpp
   src/v20170312/model/DescribeDBSecurityGroupsResponse.cpp
   src/v20170312/model/CancelDcnJobResponse.cpp
@@ -180,6 +191,7 @@ set(mariadb_src
   src/v20170312/model/Database.cpp
   src/v20170312/model/GrantAccountPrivilegesResponse.cpp
   src/v20170312/model/CancelDcnJobRequest.cpp
+  src/v20170312/model/ModifyInstanceVipRequest.cpp
   src/v20170312/model/DatabasePrivilege.cpp
   src/v20170312/model/CloseDBExtranetAccessResponse.cpp
   src/v20170312/model/FunctionPrivilege.cpp
@@ -197,7 +209,9 @@ set(mariadb_src
   src/v20170312/model/ModifyDBSyncModeRequest.cpp
   src/v20170312/model/DescribeInstanceNodeInfoRequest.cpp
   src/v20170312/model/CloneAccountRequest.cpp
-  src/v20170312/model/ParamDesc.cpp
+  src/v20170312/model/CreateAccountResponse.cpp
+  src/v20170312/model/DescribeLogFileRetentionPeriodResponse.cpp
+  src/v20170312/model/ModifyInstanceNetworkRequest.cpp
   src/v20170312/model/DescribeDBInstancesResponse.cpp
   src/v20170312/model/ConstraintRange.cpp
   src/v20170312/model/LogFileInfo.cpp
@@ -209,11 +223,13 @@ set(mariadb_src
   src/v20170312/model/DescribeAccountPrivilegesRequest.cpp
   src/v20170312/model/DescribeAccountsResponse.cpp
   src/v20170312/model/DescribeDBSlowLogsResponse.cpp
+  src/v20170312/model/DescribeLogFileRetentionPeriodRequest.cpp
   src/v20170312/model/ModifyDBInstancesProjectRequest.cpp
   src/v20170312/model/DestroyDBInstanceResponse.cpp
   src/v20170312/model/ModifyDBSyncModeResponse.cpp
   src/v20170312/model/DescribeInstanceNodeInfoResponse.cpp
   src/v20170312/model/DisassociateSecurityGroupsResponse.cpp
+  src/v20170312/model/ModifyInstanceVportRequest.cpp
   src/v20170312/model/DeleteAccountResponse.cpp
   )
 

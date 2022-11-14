@@ -65,6 +65,8 @@
 #include <tencentcloud/mariadb/v20170312/model/DescribeFileDownloadUrlResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeInstanceNodeInfoRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeInstanceNodeInfoResponse.h>
+#include <tencentcloud/mariadb/v20170312/model/DescribeLogFileRetentionPeriodRequest.h>
+#include <tencentcloud/mariadb/v20170312/model/DescribeLogFileRetentionPeriodResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeOrdersRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeOrdersResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeProjectSecurityGroupsRequest.h>
@@ -87,6 +89,12 @@
 #include <tencentcloud/mariadb/v20170312/model/ModifyDBParametersResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/ModifyDBSyncModeRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/ModifyDBSyncModeResponse.h>
+#include <tencentcloud/mariadb/v20170312/model/ModifyInstanceNetworkRequest.h>
+#include <tencentcloud/mariadb/v20170312/model/ModifyInstanceNetworkResponse.h>
+#include <tencentcloud/mariadb/v20170312/model/ModifyInstanceVipRequest.h>
+#include <tencentcloud/mariadb/v20170312/model/ModifyInstanceVipResponse.h>
+#include <tencentcloud/mariadb/v20170312/model/ModifyInstanceVportRequest.h>
+#include <tencentcloud/mariadb/v20170312/model/ModifyInstanceVportResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/ModifySyncTaskAttributeRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/ModifySyncTaskAttributeResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/ResetAccountPasswordRequest.h>
@@ -168,6 +176,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeInstanceNodeInfoResponse> DescribeInstanceNodeInfoOutcome;
                 typedef std::future<DescribeInstanceNodeInfoOutcome> DescribeInstanceNodeInfoOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::DescribeInstanceNodeInfoRequest&, DescribeInstanceNodeInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstanceNodeInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeLogFileRetentionPeriodResponse> DescribeLogFileRetentionPeriodOutcome;
+                typedef std::future<DescribeLogFileRetentionPeriodOutcome> DescribeLogFileRetentionPeriodOutcomeCallable;
+                typedef std::function<void(const MariadbClient*, const Model::DescribeLogFileRetentionPeriodRequest&, DescribeLogFileRetentionPeriodOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLogFileRetentionPeriodAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeOrdersResponse> DescribeOrdersOutcome;
                 typedef std::future<DescribeOrdersOutcome> DescribeOrdersOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::DescribeOrdersRequest&, DescribeOrdersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOrdersAsyncHandler;
@@ -201,6 +212,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyDBSyncModeResponse> ModifyDBSyncModeOutcome;
                 typedef std::future<ModifyDBSyncModeOutcome> ModifyDBSyncModeOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::ModifyDBSyncModeRequest&, ModifyDBSyncModeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBSyncModeAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyInstanceNetworkResponse> ModifyInstanceNetworkOutcome;
+                typedef std::future<ModifyInstanceNetworkOutcome> ModifyInstanceNetworkOutcomeCallable;
+                typedef std::function<void(const MariadbClient*, const Model::ModifyInstanceNetworkRequest&, ModifyInstanceNetworkOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstanceNetworkAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyInstanceVipResponse> ModifyInstanceVipOutcome;
+                typedef std::future<ModifyInstanceVipOutcome> ModifyInstanceVipOutcomeCallable;
+                typedef std::function<void(const MariadbClient*, const Model::ModifyInstanceVipRequest&, ModifyInstanceVipOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstanceVipAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyInstanceVportResponse> ModifyInstanceVportOutcome;
+                typedef std::future<ModifyInstanceVportOutcome> ModifyInstanceVportOutcomeCallable;
+                typedef std::function<void(const MariadbClient*, const Model::ModifyInstanceVportRequest&, ModifyInstanceVportOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstanceVportAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifySyncTaskAttributeResponse> ModifySyncTaskAttributeOutcome;
                 typedef std::future<ModifySyncTaskAttributeOutcome> ModifySyncTaskAttributeOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::ModifySyncTaskAttributeRequest&, ModifySyncTaskAttributeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifySyncTaskAttributeAsyncHandler;
@@ -403,6 +423,15 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
                 DescribeInstanceNodeInfoOutcomeCallable DescribeInstanceNodeInfoCallable(const Model::DescribeInstanceNodeInfoRequest& request);
 
                 /**
+                 *This API is used to view the configured number of days for retention of database backup logs.
+                 * @param req DescribeLogFileRetentionPeriodRequest
+                 * @return DescribeLogFileRetentionPeriodOutcome
+                 */
+                DescribeLogFileRetentionPeriodOutcome DescribeLogFileRetentionPeriod(const Model::DescribeLogFileRetentionPeriodRequest &request);
+                void DescribeLogFileRetentionPeriodAsync(const Model::DescribeLogFileRetentionPeriodRequest& request, const DescribeLogFileRetentionPeriodAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeLogFileRetentionPeriodOutcomeCallable DescribeLogFileRetentionPeriodCallable(const Model::DescribeLogFileRetentionPeriodRequest& request);
+
+                /**
                  *This API is used to query TencentDB order information. You can pass in an order ID to query the TencentDB instance associated with the order and the corresponding task process ID.
                  * @param req DescribeOrdersRequest
                  * @return DescribeOrdersOutcome
@@ -507,6 +536,33 @@ Note: accounts with the same username but different hosts are different accounts
                 ModifyDBSyncModeOutcome ModifyDBSyncMode(const Model::ModifyDBSyncModeRequest &request);
                 void ModifyDBSyncModeAsync(const Model::ModifyDBSyncModeRequest& request, const ModifyDBSyncModeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyDBSyncModeOutcomeCallable ModifyDBSyncModeCallable(const Model::ModifyDBSyncModeRequest& request);
+
+                /**
+                 *This API is used to modify instance network.
+                 * @param req ModifyInstanceNetworkRequest
+                 * @return ModifyInstanceNetworkOutcome
+                 */
+                ModifyInstanceNetworkOutcome ModifyInstanceNetwork(const Model::ModifyInstanceNetworkRequest &request);
+                void ModifyInstanceNetworkAsync(const Model::ModifyInstanceNetworkRequest& request, const ModifyInstanceNetworkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyInstanceNetworkOutcomeCallable ModifyInstanceNetworkCallable(const Model::ModifyInstanceNetworkRequest& request);
+
+                /**
+                 *This API is used to modify instance VIP.
+                 * @param req ModifyInstanceVipRequest
+                 * @return ModifyInstanceVipOutcome
+                 */
+                ModifyInstanceVipOutcome ModifyInstanceVip(const Model::ModifyInstanceVipRequest &request);
+                void ModifyInstanceVipAsync(const Model::ModifyInstanceVipRequest& request, const ModifyInstanceVipAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyInstanceVipOutcomeCallable ModifyInstanceVipCallable(const Model::ModifyInstanceVipRequest& request);
+
+                /**
+                 *This API is used to modify instance Vport.
+                 * @param req ModifyInstanceVportRequest
+                 * @return ModifyInstanceVportOutcome
+                 */
+                ModifyInstanceVportOutcome ModifyInstanceVport(const Model::ModifyInstanceVportRequest &request);
+                void ModifyInstanceVportAsync(const Model::ModifyInstanceVportRequest& request, const ModifyInstanceVportAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyInstanceVportOutcomeCallable ModifyInstanceVportCallable(const Model::ModifyInstanceVportRequest& request);
 
                 /**
                  *This API is used to modify sync task attributes (currently, only the task name can be modified).
