@@ -126,14 +126,14 @@ Sender <email address>
                     bool ReplyToAddressesHasBeenSet() const;
 
                     /**
-                     * 获取Template when sending emails using a template.
-                     * @return Template Template when sending emails using a template.
+                     * 获取Template parameters for template-based sending. As `Simple` has been disused, `Template` is required.
+                     * @return Template Template parameters for template-based sending. As `Simple` has been disused, `Template` is required.
                      */
                     Template GetTemplate() const;
 
                     /**
-                     * 设置Template when sending emails using a template.
-                     * @param Template Template when sending emails using a template.
+                     * 设置Template parameters for template-based sending. As `Simple` has been disused, `Template` is required.
+                     * @param Template Template parameters for template-based sending. As `Simple` has been disused, `Template` is required.
                      */
                     void SetTemplate(const Template& _template);
 
@@ -162,14 +162,14 @@ Sender <email address>
                     bool SimpleHasBeenSet() const;
 
                     /**
-                     * 获取Email attachments
-                     * @return Attachments Email attachments
+                     * 获取Parameters for the attachments to be sent. The TencentCloud API supports a request packet of up to 8 MB in size, and the size of the attachment content will increase by 1.5 times after Base64 encoding. Therefore, you need to keep the total size of all attachments below 4 MB. If the entire request exceeds 8 MB, the API will return an error.
+                     * @return Attachments Parameters for the attachments to be sent. The TencentCloud API supports a request packet of up to 8 MB in size, and the size of the attachment content will increase by 1.5 times after Base64 encoding. Therefore, you need to keep the total size of all attachments below 4 MB. If the entire request exceeds 8 MB, the API will return an error.
                      */
                     std::vector<Attachment> GetAttachments() const;
 
                     /**
-                     * 设置Email attachments
-                     * @param Attachments Email attachments
+                     * 设置Parameters for the attachments to be sent. The TencentCloud API supports a request packet of up to 8 MB in size, and the size of the attachment content will increase by 1.5 times after Base64 encoding. Therefore, you need to keep the total size of all attachments below 4 MB. If the entire request exceeds 8 MB, the API will return an error.
+                     * @param Attachments Parameters for the attachments to be sent. The TencentCloud API supports a request packet of up to 8 MB in size, and the size of the attachment content will increase by 1.5 times after Base64 encoding. Therefore, you need to keep the total size of all attachments below 4 MB. If the entire request exceeds 8 MB, the API will return an error.
                      */
                     void SetAttachments(const std::vector<Attachment>& _attachments);
 
@@ -244,7 +244,7 @@ Sender <email address>
                     bool m_replyToAddressesHasBeenSet;
 
                     /**
-                     * Template when sending emails using a template.
+                     * Template parameters for template-based sending. As `Simple` has been disused, `Template` is required.
                      */
                     Template m_template;
                     bool m_templateHasBeenSet;
@@ -256,7 +256,7 @@ Sender <email address>
                     bool m_simpleHasBeenSet;
 
                     /**
-                     * Email attachments
+                     * Parameters for the attachments to be sent. The TencentCloud API supports a request packet of up to 8 MB in size, and the size of the attachment content will increase by 1.5 times after Base64 encoding. Therefore, you need to keep the total size of all attachments below 4 MB. If the entire request exceeds 8 MB, the API will return an error.
                      */
                     std::vector<Attachment> m_attachments;
                     bool m_attachmentsHasBeenSet;

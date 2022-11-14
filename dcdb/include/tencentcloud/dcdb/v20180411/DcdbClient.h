@@ -101,6 +101,12 @@
 #include <tencentcloud/dcdb/v20180411/model/ModifyDBParametersResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/ModifyDBSyncModeRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/ModifyDBSyncModeResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/ModifyInstanceNetworkRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/ModifyInstanceNetworkResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/ModifyInstanceVipRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/ModifyInstanceVipResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/ModifyInstanceVportRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/ModifyInstanceVportResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/ResetAccountPasswordRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/ResetAccountPasswordResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/SwitchDBInstanceHARequest.h>
@@ -236,6 +242,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyDBSyncModeResponse> ModifyDBSyncModeOutcome;
                 typedef std::future<ModifyDBSyncModeOutcome> ModifyDBSyncModeOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::ModifyDBSyncModeRequest&, ModifyDBSyncModeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBSyncModeAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyInstanceNetworkResponse> ModifyInstanceNetworkOutcome;
+                typedef std::future<ModifyInstanceNetworkOutcome> ModifyInstanceNetworkOutcomeCallable;
+                typedef std::function<void(const DcdbClient*, const Model::ModifyInstanceNetworkRequest&, ModifyInstanceNetworkOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstanceNetworkAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyInstanceVipResponse> ModifyInstanceVipOutcome;
+                typedef std::future<ModifyInstanceVipOutcome> ModifyInstanceVipOutcomeCallable;
+                typedef std::function<void(const DcdbClient*, const Model::ModifyInstanceVipRequest&, ModifyInstanceVipOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstanceVipAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyInstanceVportResponse> ModifyInstanceVportOutcome;
+                typedef std::future<ModifyInstanceVportOutcome> ModifyInstanceVportOutcomeCallable;
+                typedef std::function<void(const DcdbClient*, const Model::ModifyInstanceVportRequest&, ModifyInstanceVportOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstanceVportAsyncHandler;
                 typedef Outcome<Core::Error, Model::ResetAccountPasswordResponse> ResetAccountPasswordOutcome;
                 typedef std::future<ResetAccountPasswordOutcome> ResetAccountPasswordOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::ResetAccountPasswordRequest&, ResetAccountPasswordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetAccountPasswordAsyncHandler;
@@ -600,6 +615,33 @@ Note: accounts with the same username but different hosts are different accounts
                 ModifyDBSyncModeOutcome ModifyDBSyncMode(const Model::ModifyDBSyncModeRequest &request);
                 void ModifyDBSyncModeAsync(const Model::ModifyDBSyncModeRequest& request, const ModifyDBSyncModeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyDBSyncModeOutcomeCallable ModifyDBSyncModeCallable(const Model::ModifyDBSyncModeRequest& request);
+
+                /**
+                 *This API is used to modify instance network.
+                 * @param req ModifyInstanceNetworkRequest
+                 * @return ModifyInstanceNetworkOutcome
+                 */
+                ModifyInstanceNetworkOutcome ModifyInstanceNetwork(const Model::ModifyInstanceNetworkRequest &request);
+                void ModifyInstanceNetworkAsync(const Model::ModifyInstanceNetworkRequest& request, const ModifyInstanceNetworkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyInstanceNetworkOutcomeCallable ModifyInstanceNetworkCallable(const Model::ModifyInstanceNetworkRequest& request);
+
+                /**
+                 *This API is used to modify instance VIP.
+                 * @param req ModifyInstanceVipRequest
+                 * @return ModifyInstanceVipOutcome
+                 */
+                ModifyInstanceVipOutcome ModifyInstanceVip(const Model::ModifyInstanceVipRequest &request);
+                void ModifyInstanceVipAsync(const Model::ModifyInstanceVipRequest& request, const ModifyInstanceVipAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyInstanceVipOutcomeCallable ModifyInstanceVipCallable(const Model::ModifyInstanceVipRequest& request);
+
+                /**
+                 *This API is used to modify instance Vport.
+                 * @param req ModifyInstanceVportRequest
+                 * @return ModifyInstanceVportOutcome
+                 */
+                ModifyInstanceVportOutcome ModifyInstanceVport(const Model::ModifyInstanceVportRequest &request);
+                void ModifyInstanceVportAsync(const Model::ModifyInstanceVportRequest& request, const ModifyInstanceVportAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyInstanceVportOutcomeCallable ModifyInstanceVportCallable(const Model::ModifyInstanceVportRequest& request);
 
                 /**
                  *This API is used to reset the password of a TencentDB account.

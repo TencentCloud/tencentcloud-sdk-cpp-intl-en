@@ -82,6 +82,24 @@ namespace TencentCloud
                      */
                     bool IntervalTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies whether to end the cycle. This parameter is used to update the task. Valid values: 0: No; 1: Yes.
+                     * @return TermCycle Specifies whether to end the cycle. This parameter is used to update the task. Valid values: 0: No; 1: Yes.
+                     */
+                    uint64_t GetTermCycle() const;
+
+                    /**
+                     * 设置Specifies whether to end the cycle. This parameter is used to update the task. Valid values: 0: No; 1: Yes.
+                     * @param TermCycle Specifies whether to end the cycle. This parameter is used to update the task. Valid values: 0: No; 1: Yes.
+                     */
+                    void SetTermCycle(const uint64_t& _termCycle);
+
+                    /**
+                     * 判断参数 TermCycle 是否已赋值
+                     * @return TermCycle 是否已赋值
+                     */
+                    bool TermCycleHasBeenSet() const;
+
                 private:
 
                     /**
@@ -95,6 +113,12 @@ namespace TencentCloud
                      */
                     uint64_t m_intervalTime;
                     bool m_intervalTimeHasBeenSet;
+
+                    /**
+                     * Specifies whether to end the cycle. This parameter is used to update the task. Valid values: 0: No; 1: Yes.
+                     */
+                    uint64_t m_termCycle;
+                    bool m_termCycleHasBeenSet;
 
                 };
             }

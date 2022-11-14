@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool TopicNameHasBeenSet() const;
 
                     /**
-                     * 获取Subscriber name, which can contain up to 150 letters, digits, hyphens, and underscores.
-                     * @return SubscriptionName Subscriber name, which can contain up to 150 letters, digits, hyphens, and underscores.
+                     * 获取Subscriber name, which can contain up to 128 characters.
+                     * @return SubscriptionName Subscriber name, which can contain up to 128 characters.
                      */
                     std::string GetSubscriptionName() const;
 
                     /**
-                     * 设置Subscriber name, which can contain up to 150 letters, digits, hyphens, and underscores.
-                     * @param SubscriptionName Subscriber name, which can contain up to 150 letters, digits, hyphens, and underscores.
+                     * 设置Subscriber name, which can contain up to 128 characters.
+                     * @param SubscriptionName Subscriber name, which can contain up to 128 characters.
                      */
                     void SetSubscriptionName(const std::string& _subscriptionName);
 
@@ -201,7 +201,7 @@ namespace TencentCloud
                     bool m_topicNameHasBeenSet;
 
                     /**
-                     * Subscriber name, which can contain up to 150 letters, digits, hyphens, and underscores.
+                     * Subscriber name, which can contain up to 128 characters.
                      */
                     std::string m_subscriptionName;
                     bool m_subscriptionNameHasBeenSet;

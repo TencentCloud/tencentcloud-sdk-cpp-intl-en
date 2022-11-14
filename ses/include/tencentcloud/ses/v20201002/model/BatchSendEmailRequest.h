@@ -48,22 +48,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format:
-Sender <email address>, for example:
-Tencent Cloud team <noreply@mail.qcloud.com>
-                     * @return FromEmailAddress Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format:
-Sender <email address>, for example:
-Tencent Cloud team <noreply@mail.qcloud.com>
+                     * 获取Sender address. Enter a sender address such as `noreply@mail.qcloud.com`. To display the sender name, enter the address in the following format:
+sender &lt;email address&gt;. For example:
+Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
+                     * @return FromEmailAddress Sender address. Enter a sender address such as `noreply@mail.qcloud.com`. To display the sender name, enter the address in the following format:
+sender &lt;email address&gt;. For example:
+Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
                      */
                     std::string GetFromEmailAddress() const;
 
                     /**
-                     * 设置Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format:
-Sender <email address>, for example:
-Tencent Cloud team <noreply@mail.qcloud.com>
-                     * @param FromEmailAddress Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format:
-Sender <email address>, for example:
-Tencent Cloud team <noreply@mail.qcloud.com>
+                     * 设置Sender address. Enter a sender address such as `noreply@mail.qcloud.com`. To display the sender name, enter the address in the following format:
+sender &lt;email address&gt;. For example:
+Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
+                     * @param FromEmailAddress Sender address. Enter a sender address such as `noreply@mail.qcloud.com`. To display the sender name, enter the address in the following format:
+sender &lt;email address&gt;. For example:
+Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
                      */
                     void SetFromEmailAddress(const std::string& _fromEmailAddress);
 
@@ -274,9 +274,9 @@ Tencent Cloud team <noreply@mail.qcloud.com>
                 private:
 
                     /**
-                     * Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format:
-Sender <email address>, for example:
-Tencent Cloud team <noreply@mail.qcloud.com>
+                     * Sender address. Enter a sender address such as `noreply@mail.qcloud.com`. To display the sender name, enter the address in the following format:
+sender &lt;email address&gt;. For example:
+Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
                      */
                     std::string m_fromEmailAddress;
                     bool m_fromEmailAddressHasBeenSet;
