@@ -68,6 +68,18 @@ namespace TencentCloud
                      */
                     bool TemplateStatusHasBeenSet() const;
 
+                    /**
+                     * 获取Template name
+                     * @return TemplateName Template name
+                     */
+                    std::string GetTemplateName() const;
+
+                    /**
+                     * 判断参数 TemplateName 是否已赋值
+                     * @return TemplateName 是否已赋值
+                     */
+                    bool TemplateNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -81,6 +93,12 @@ namespace TencentCloud
                      */
                     uint64_t m_templateStatus;
                     bool m_templateStatusHasBeenSet;
+
+                    /**
+                     * Template name
+                     */
+                    std::string m_templateName;
+                    bool m_templateNameHasBeenSet;
 
                 };
             }

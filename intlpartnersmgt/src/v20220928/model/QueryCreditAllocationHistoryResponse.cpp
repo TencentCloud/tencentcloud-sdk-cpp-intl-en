@@ -14,23 +14,22 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/ses/v20201002/model/GetEmailTemplateResponse.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/QueryCreditAllocationHistoryResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using TencentCloud::CoreInternalOutcome;
-using namespace TencentCloud::Ses::V20201002::Model;
+using namespace TencentCloud::Intlpartnersmgt::V20220928::Model;
 using namespace std;
 
-GetEmailTemplateResponse::GetEmailTemplateResponse() :
-    m_templateContentHasBeenSet(false),
-    m_templateStatusHasBeenSet(false),
-    m_templateNameHasBeenSet(false)
+QueryCreditAllocationHistoryResponse::QueryCreditAllocationHistoryResponse() :
+    m_totalHasBeenSet(false),
+    m_historyHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome GetEmailTemplateResponse::Deserialize(const string &payload)
+CoreInternalOutcome QueryCreditAllocationHistoryResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -64,76 +63,67 @@ CoreInternalOutcome GetEmailTemplateResponse::Deserialize(const string &payload)
     }
 
 
-    if (rsp.HasMember("TemplateContent") && !rsp["TemplateContent"].IsNull())
+    if (rsp.HasMember("Total") && !rsp["Total"].IsNull())
     {
-        if (!rsp["TemplateContent"].IsObject())
+        if (!rsp["Total"].IsUint64())
         {
-            return CoreInternalOutcome(Core::Error("response `TemplateContent` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Total` IsUint64=false incorrectly").SetRequestId(requestId));
         }
-
-        CoreInternalOutcome outcome = m_templateContent.Deserialize(rsp["TemplateContent"]);
-        if (!outcome.IsSuccess())
-        {
-            outcome.GetError().SetRequestId(requestId);
-            return outcome;
-        }
-
-        m_templateContentHasBeenSet = true;
+        m_total = rsp["Total"].GetUint64();
+        m_totalHasBeenSet = true;
     }
 
-    if (rsp.HasMember("TemplateStatus") && !rsp["TemplateStatus"].IsNull())
+    if (rsp.HasMember("History") && !rsp["History"].IsNull())
     {
-        if (!rsp["TemplateStatus"].IsUint64())
-        {
-            return CoreInternalOutcome(Core::Error("response `TemplateStatus` IsUint64=false incorrectly").SetRequestId(requestId));
-        }
-        m_templateStatus = rsp["TemplateStatus"].GetUint64();
-        m_templateStatusHasBeenSet = true;
-    }
+        if (!rsp["History"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `History` is not array type"));
 
-    if (rsp.HasMember("TemplateName") && !rsp["TemplateName"].IsNull())
-    {
-        if (!rsp["TemplateName"].IsString())
+        const rapidjson::Value &tmpValue = rsp["History"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
-            return CoreInternalOutcome(Core::Error("response `TemplateName` IsString=false incorrectly").SetRequestId(requestId));
+            QueryCreditAllocationHistoryData item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_history.push_back(item);
         }
-        m_templateName = string(rsp["TemplateName"].GetString());
-        m_templateNameHasBeenSet = true;
+        m_historyHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string GetEmailTemplateResponse::ToJsonString() const
+string QueryCreditAllocationHistoryResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_templateContentHasBeenSet)
+    if (m_totalHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "TemplateContent";
+        string key = "Total";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
-        m_templateContent.ToJsonObject(value[key.c_str()], allocator);
+        value.AddMember(iKey, m_total, allocator);
     }
 
-    if (m_templateStatusHasBeenSet)
+    if (m_historyHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "TemplateStatus";
+        string key = "History";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_templateStatus, allocator);
-    }
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
-    if (m_templateNameHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "TemplateName";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_templateName.c_str(), allocator).Move(), allocator);
+        int i=0;
+        for (auto itr = m_history.begin(); itr != m_history.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -148,34 +138,24 @@ string GetEmailTemplateResponse::ToJsonString() const
 }
 
 
-TemplateContent GetEmailTemplateResponse::GetTemplateContent() const
+uint64_t QueryCreditAllocationHistoryResponse::GetTotal() const
 {
-    return m_templateContent;
+    return m_total;
 }
 
-bool GetEmailTemplateResponse::TemplateContentHasBeenSet() const
+bool QueryCreditAllocationHistoryResponse::TotalHasBeenSet() const
 {
-    return m_templateContentHasBeenSet;
+    return m_totalHasBeenSet;
 }
 
-uint64_t GetEmailTemplateResponse::GetTemplateStatus() const
+vector<QueryCreditAllocationHistoryData> QueryCreditAllocationHistoryResponse::GetHistory() const
 {
-    return m_templateStatus;
+    return m_history;
 }
 
-bool GetEmailTemplateResponse::TemplateStatusHasBeenSet() const
+bool QueryCreditAllocationHistoryResponse::HistoryHasBeenSet() const
 {
-    return m_templateStatusHasBeenSet;
-}
-
-string GetEmailTemplateResponse::GetTemplateName() const
-{
-    return m_templateName;
-}
-
-bool GetEmailTemplateResponse::TemplateNameHasBeenSet() const
-{
-    return m_templateNameHasBeenSet;
+    return m_historyHasBeenSet;
 }
 
 
