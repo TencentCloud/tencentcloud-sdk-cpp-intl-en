@@ -15,11 +15,37 @@
 #
 
 set(dbbrain_public_header
-  include/tencentcloud/dbbrain/v20191016/DbbrainClient.h
   include/tencentcloud/dbbrain/v20210527/DbbrainClient.h
+  include/tencentcloud/dbbrain/v20191016/DbbrainClient.h
   )
 
 set(dbbrain_public_header_model
+  include/tencentcloud/dbbrain/v20210527/model/DescribeRedisTopKeyPrefixListRequest.h
+  include/tencentcloud/dbbrain/v20210527/model/DescribeSlowLogUserHostStatsRequest.h
+  include/tencentcloud/dbbrain/v20210527/model/DescribeTopSpaceSchemasResponse.h
+  include/tencentcloud/dbbrain/v20210527/model/CreateProxySessionKillTaskResponse.h
+  include/tencentcloud/dbbrain/v20210527/model/MySqlProcess.h
+  include/tencentcloud/dbbrain/v20210527/model/DescribeRedisTopKeyPrefixListResponse.h
+  include/tencentcloud/dbbrain/v20210527/model/SchemaSpaceData.h
+  include/tencentcloud/dbbrain/v20210527/model/InstanceConfs.h
+  include/tencentcloud/dbbrain/v20210527/model/DescribeDiagDBInstancesRequest.h
+  include/tencentcloud/dbbrain/v20210527/model/DescribeUserSqlAdviceResponse.h
+  include/tencentcloud/dbbrain/v20210527/model/InstanceInfo.h
+  include/tencentcloud/dbbrain/v20210527/model/DescribeSlowLogUserHostStatsResponse.h
+  include/tencentcloud/dbbrain/v20210527/model/DescribeDBDiagEventsRequest.h
+  include/tencentcloud/dbbrain/v20210527/model/DiagHistoryEventItem.h
+  include/tencentcloud/dbbrain/v20210527/model/SlowLogHost.h
+  include/tencentcloud/dbbrain/v20210527/model/RedisPreKeySpaceData.h
+  include/tencentcloud/dbbrain/v20210527/model/DescribeDBDiagEventsResponse.h
+  include/tencentcloud/dbbrain/v20210527/model/DescribeTopSpaceSchemasRequest.h
+  include/tencentcloud/dbbrain/v20210527/model/DescribeProxySessionKillTasksRequest.h
+  include/tencentcloud/dbbrain/v20210527/model/DescribeMySqlProcessListResponse.h
+  include/tencentcloud/dbbrain/v20210527/model/DescribeDiagDBInstancesResponse.h
+  include/tencentcloud/dbbrain/v20210527/model/DescribeUserSqlAdviceRequest.h
+  include/tencentcloud/dbbrain/v20210527/model/CreateProxySessionKillTaskRequest.h
+  include/tencentcloud/dbbrain/v20210527/model/DescribeMySqlProcessListRequest.h
+  include/tencentcloud/dbbrain/v20210527/model/TaskInfo.h
+  include/tencentcloud/dbbrain/v20210527/model/DescribeProxySessionKillTasksResponse.h
   include/tencentcloud/dbbrain/v20191016/model/SchemaSpaceTimeSeries.h
   include/tencentcloud/dbbrain/v20191016/model/DescribeSlowLogUserHostStatsRequest.h
   include/tencentcloud/dbbrain/v20191016/model/DescribeSlowLogTimeSeriesStatsRequest.h
@@ -94,37 +120,37 @@ set(dbbrain_public_header_model
   include/tencentcloud/dbbrain/v20191016/model/UserProfile.h
   include/tencentcloud/dbbrain/v20191016/model/SchemaSpaceData.h
   include/tencentcloud/dbbrain/v20191016/model/DescribeTopSpaceTablesResponse.h
-  include/tencentcloud/dbbrain/v20210527/model/DescribeRedisTopKeyPrefixListRequest.h
-  include/tencentcloud/dbbrain/v20210527/model/DescribeSlowLogUserHostStatsRequest.h
-  include/tencentcloud/dbbrain/v20210527/model/DescribeTopSpaceSchemasResponse.h
-  include/tencentcloud/dbbrain/v20210527/model/CreateProxySessionKillTaskResponse.h
-  include/tencentcloud/dbbrain/v20210527/model/MySqlProcess.h
-  include/tencentcloud/dbbrain/v20210527/model/DescribeRedisTopKeyPrefixListResponse.h
-  include/tencentcloud/dbbrain/v20210527/model/SchemaSpaceData.h
-  include/tencentcloud/dbbrain/v20210527/model/InstanceConfs.h
-  include/tencentcloud/dbbrain/v20210527/model/DescribeDiagDBInstancesRequest.h
-  include/tencentcloud/dbbrain/v20210527/model/DescribeUserSqlAdviceResponse.h
-  include/tencentcloud/dbbrain/v20210527/model/InstanceInfo.h
-  include/tencentcloud/dbbrain/v20210527/model/DescribeSlowLogUserHostStatsResponse.h
-  include/tencentcloud/dbbrain/v20210527/model/DescribeDBDiagEventsRequest.h
-  include/tencentcloud/dbbrain/v20210527/model/DiagHistoryEventItem.h
-  include/tencentcloud/dbbrain/v20210527/model/SlowLogHost.h
-  include/tencentcloud/dbbrain/v20210527/model/RedisPreKeySpaceData.h
-  include/tencentcloud/dbbrain/v20210527/model/DescribeDBDiagEventsResponse.h
-  include/tencentcloud/dbbrain/v20210527/model/DescribeTopSpaceSchemasRequest.h
-  include/tencentcloud/dbbrain/v20210527/model/DescribeProxySessionKillTasksRequest.h
-  include/tencentcloud/dbbrain/v20210527/model/DescribeMySqlProcessListResponse.h
-  include/tencentcloud/dbbrain/v20210527/model/DescribeDiagDBInstancesResponse.h
-  include/tencentcloud/dbbrain/v20210527/model/DescribeUserSqlAdviceRequest.h
-  include/tencentcloud/dbbrain/v20210527/model/CreateProxySessionKillTaskRequest.h
-  include/tencentcloud/dbbrain/v20210527/model/DescribeMySqlProcessListRequest.h
-  include/tencentcloud/dbbrain/v20210527/model/TaskInfo.h
-  include/tencentcloud/dbbrain/v20210527/model/DescribeProxySessionKillTasksResponse.h
   )
 
 set(dbbrain_src
-  src/v20191016/DbbrainClient.cpp
   src/v20210527/DbbrainClient.cpp
+  src/v20191016/DbbrainClient.cpp
+  src/v20210527/model/DescribeRedisTopKeyPrefixListRequest.cpp
+  src/v20210527/model/DescribeSlowLogUserHostStatsRequest.cpp
+  src/v20210527/model/DescribeTopSpaceSchemasResponse.cpp
+  src/v20210527/model/CreateProxySessionKillTaskResponse.cpp
+  src/v20210527/model/MySqlProcess.cpp
+  src/v20210527/model/DescribeRedisTopKeyPrefixListResponse.cpp
+  src/v20210527/model/SchemaSpaceData.cpp
+  src/v20210527/model/InstanceConfs.cpp
+  src/v20210527/model/DescribeDiagDBInstancesRequest.cpp
+  src/v20210527/model/DescribeUserSqlAdviceResponse.cpp
+  src/v20210527/model/InstanceInfo.cpp
+  src/v20210527/model/DescribeSlowLogUserHostStatsResponse.cpp
+  src/v20210527/model/DescribeDBDiagEventsRequest.cpp
+  src/v20210527/model/DiagHistoryEventItem.cpp
+  src/v20210527/model/SlowLogHost.cpp
+  src/v20210527/model/RedisPreKeySpaceData.cpp
+  src/v20210527/model/DescribeDBDiagEventsResponse.cpp
+  src/v20210527/model/DescribeTopSpaceSchemasRequest.cpp
+  src/v20210527/model/DescribeProxySessionKillTasksRequest.cpp
+  src/v20210527/model/DescribeMySqlProcessListResponse.cpp
+  src/v20210527/model/DescribeDiagDBInstancesResponse.cpp
+  src/v20210527/model/DescribeUserSqlAdviceRequest.cpp
+  src/v20210527/model/CreateProxySessionKillTaskRequest.cpp
+  src/v20210527/model/DescribeMySqlProcessListRequest.cpp
+  src/v20210527/model/TaskInfo.cpp
+  src/v20210527/model/DescribeProxySessionKillTasksResponse.cpp
   src/v20191016/model/SchemaSpaceTimeSeries.cpp
   src/v20191016/model/DescribeSlowLogUserHostStatsRequest.cpp
   src/v20191016/model/DescribeSlowLogTimeSeriesStatsRequest.cpp
@@ -199,32 +225,6 @@ set(dbbrain_src
   src/v20191016/model/UserProfile.cpp
   src/v20191016/model/SchemaSpaceData.cpp
   src/v20191016/model/DescribeTopSpaceTablesResponse.cpp
-  src/v20210527/model/DescribeRedisTopKeyPrefixListRequest.cpp
-  src/v20210527/model/DescribeSlowLogUserHostStatsRequest.cpp
-  src/v20210527/model/DescribeTopSpaceSchemasResponse.cpp
-  src/v20210527/model/CreateProxySessionKillTaskResponse.cpp
-  src/v20210527/model/MySqlProcess.cpp
-  src/v20210527/model/DescribeRedisTopKeyPrefixListResponse.cpp
-  src/v20210527/model/SchemaSpaceData.cpp
-  src/v20210527/model/InstanceConfs.cpp
-  src/v20210527/model/DescribeDiagDBInstancesRequest.cpp
-  src/v20210527/model/DescribeUserSqlAdviceResponse.cpp
-  src/v20210527/model/InstanceInfo.cpp
-  src/v20210527/model/DescribeSlowLogUserHostStatsResponse.cpp
-  src/v20210527/model/DescribeDBDiagEventsRequest.cpp
-  src/v20210527/model/DiagHistoryEventItem.cpp
-  src/v20210527/model/SlowLogHost.cpp
-  src/v20210527/model/RedisPreKeySpaceData.cpp
-  src/v20210527/model/DescribeDBDiagEventsResponse.cpp
-  src/v20210527/model/DescribeTopSpaceSchemasRequest.cpp
-  src/v20210527/model/DescribeProxySessionKillTasksRequest.cpp
-  src/v20210527/model/DescribeMySqlProcessListResponse.cpp
-  src/v20210527/model/DescribeDiagDBInstancesResponse.cpp
-  src/v20210527/model/DescribeUserSqlAdviceRequest.cpp
-  src/v20210527/model/CreateProxySessionKillTaskRequest.cpp
-  src/v20210527/model/DescribeMySqlProcessListRequest.cpp
-  src/v20210527/model/TaskInfo.cpp
-  src/v20210527/model/DescribeProxySessionKillTasksResponse.cpp
   )
 
 set(dbbrain_include
@@ -253,9 +253,9 @@ target_link_libraries(dbbrain
   core)
 
 #install(FILES ${dbbrain_public_header}
-#  DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/tencentcloud/dbbrain/v20210527)
+#  DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/tencentcloud/dbbrain/v20191016)
 #install(FILES ${dbbrain_public_header_model}
-#  DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/tencentcloud/dbbrain/v20210527/model)
+#  DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/tencentcloud/dbbrain/v20191016/model)
 install(DIRECTORY ${dbbrain_include}
   DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/tencentcloud)
 

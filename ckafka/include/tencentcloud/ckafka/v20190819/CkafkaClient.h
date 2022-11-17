@@ -43,6 +43,8 @@
 #include <tencentcloud/ckafka/v20190819/model/CreateUserResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DeleteAclRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/DeleteAclResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/DeleteInstancePreRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/DeleteInstancePreResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DeleteRouteRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/DeleteRouteResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DeleteRouteTriggerTimeRequest.h>
@@ -149,6 +151,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteAclResponse> DeleteAclOutcome;
                 typedef std::future<DeleteAclOutcome> DeleteAclOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DeleteAclRequest&, DeleteAclOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAclAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteInstancePreResponse> DeleteInstancePreOutcome;
+                typedef std::future<DeleteInstancePreOutcome> DeleteInstancePreOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::DeleteInstancePreRequest&, DeleteInstancePreOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteInstancePreAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteRouteResponse> DeleteRouteOutcome;
                 typedef std::future<DeleteRouteOutcome> DeleteRouteOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DeleteRouteRequest&, DeleteRouteOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRouteAsyncHandler;
@@ -334,6 +339,15 @@ namespace TencentCloud
                 DeleteAclOutcome DeleteAcl(const Model::DeleteAclRequest &request);
                 void DeleteAclAsync(const Model::DeleteAclRequest& request, const DeleteAclAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteAclOutcomeCallable DeleteAclCallable(const Model::DeleteAclRequest& request);
+
+                /**
+                 *This API is used to delete a monthly subscribed (prepaid) instance.
+                 * @param req DeleteInstancePreRequest
+                 * @return DeleteInstancePreOutcome
+                 */
+                DeleteInstancePreOutcome DeleteInstancePre(const Model::DeleteInstancePreRequest &request);
+                void DeleteInstancePreAsync(const Model::DeleteInstancePreRequest& request, const DeleteInstancePreAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteInstancePreOutcomeCallable DeleteInstancePreCallable(const Model::DeleteInstancePreRequest& request);
 
                 /**
                  *This API is used to delete a route.

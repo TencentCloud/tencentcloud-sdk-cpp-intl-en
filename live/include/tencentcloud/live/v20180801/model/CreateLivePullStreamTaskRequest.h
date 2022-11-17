@@ -47,9 +47,11 @@ namespace TencentCloud
                      * 获取The source type. Valid values:
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
+PullPicPushLive: Images
                      * @return SourceType The source type. Valid values:
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
+PullPicPushLive: Images
                      */
                     std::string GetSourceType() const;
 
@@ -57,9 +59,11 @@ PullVodPushLive: Video files
                      * 设置The source type. Valid values:
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
+PullPicPushLive: Images
                      * @param SourceType The source type. Valid values:
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
+PullPicPushLive: Images
                      */
                     void SetSourceType(const std::string& _sourceType);
 
@@ -645,12 +649,43 @@ Notes:
                      */
                     bool WatermarkListHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to use local mode when the source type is video files. The default is `0`.
+0: Do not use local mode
+1: Use local mode
+Note: If you enable local mode, MP4 files will be downloaded to local storage, and the local files will be used for push. This ensures more reliable push. Pushing a local file will incur additional fees.
+                     * @return VodLocalMode Whether to use local mode when the source type is video files. The default is `0`.
+0: Do not use local mode
+1: Use local mode
+Note: If you enable local mode, MP4 files will be downloaded to local storage, and the local files will be used for push. This ensures more reliable push. Pushing a local file will incur additional fees.
+                     */
+                    int64_t GetVodLocalMode() const;
+
+                    /**
+                     * 设置Whether to use local mode when the source type is video files. The default is `0`.
+0: Do not use local mode
+1: Use local mode
+Note: If you enable local mode, MP4 files will be downloaded to local storage, and the local files will be used for push. This ensures more reliable push. Pushing a local file will incur additional fees.
+                     * @param VodLocalMode Whether to use local mode when the source type is video files. The default is `0`.
+0: Do not use local mode
+1: Use local mode
+Note: If you enable local mode, MP4 files will be downloaded to local storage, and the local files will be used for push. This ensures more reliable push. Pushing a local file will incur additional fees.
+                     */
+                    void SetVodLocalMode(const int64_t& _vodLocalMode);
+
+                    /**
+                     * 判断参数 VodLocalMode 是否已赋值
+                     * @return VodLocalMode 是否已赋值
+                     */
+                    bool VodLocalModeHasBeenSet() const;
+
                 private:
 
                     /**
                      * The source type. Valid values:
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
+PullPicPushLive: Images
                      */
                     std::string m_sourceType;
                     bool m_sourceTypeHasBeenSet;
@@ -825,6 +860,15 @@ Notes:
                      */
                     std::vector<PullPushWatermarkInfo> m_watermarkList;
                     bool m_watermarkListHasBeenSet;
+
+                    /**
+                     * Whether to use local mode when the source type is video files. The default is `0`.
+0: Do not use local mode
+1: Use local mode
+Note: If you enable local mode, MP4 files will be downloaded to local storage, and the local files will be used for push. This ensures more reliable push. Pushing a local file will incur additional fees.
+                     */
+                    int64_t m_vodLocalMode;
+                    bool m_vodLocalModeHasBeenSet;
 
                 };
             }

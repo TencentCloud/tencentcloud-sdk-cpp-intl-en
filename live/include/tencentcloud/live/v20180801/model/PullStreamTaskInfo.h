@@ -70,9 +70,11 @@ namespace TencentCloud
                      * 获取The source type. Valid values:
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
+PullPicPushLive: Images
                      * @return SourceType The source type. Valid values:
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
+PullPicPushLive: Images
                      */
                     std::string GetSourceType() const;
 
@@ -80,9 +82,11 @@ PullVodPushLive: Video files
                      * 设置The source type. Valid values:
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
+PullPicPushLive: Images
                      * @param SourceType The source type. Valid values:
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
+PullPicPushLive: Images
                      */
                     void SetSourceType(const std::string& _sourceType);
 
@@ -720,6 +724,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool WatermarkListHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to use local mode when the source type is video files. The default is `0`.
+0: Do not use local mode
+1: Use local mode
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return VodLocalMode Whether to use local mode when the source type is video files. The default is `0`.
+0: Do not use local mode
+1: Use local mode
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetVodLocalMode() const;
+
+                    /**
+                     * 设置Whether to use local mode when the source type is video files. The default is `0`.
+0: Do not use local mode
+1: Use local mode
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param VodLocalMode Whether to use local mode when the source type is video files. The default is `0`.
+0: Do not use local mode
+1: Use local mode
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetVodLocalMode(const int64_t& _vodLocalMode);
+
+                    /**
+                     * 判断参数 VodLocalMode 是否已赋值
+                     * @return VodLocalMode 是否已赋值
+                     */
+                    bool VodLocalModeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -732,6 +766,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * The source type. Valid values:
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
+PullPicPushLive: Images
                      */
                     std::string m_sourceType;
                     bool m_sourceTypeHasBeenSet;
@@ -928,6 +963,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<PullPushWatermarkInfo> m_watermarkList;
                     bool m_watermarkListHasBeenSet;
+
+                    /**
+                     * Whether to use local mode when the source type is video files. The default is `0`.
+0: Do not use local mode
+1: Use local mode
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_vodLocalMode;
+                    bool m_vodLocalModeHasBeenSet;
 
                 };
             }

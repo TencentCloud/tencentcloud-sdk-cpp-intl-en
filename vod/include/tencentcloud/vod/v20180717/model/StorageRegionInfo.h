@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Storage region.
-                     * @return Region Storage region.
+                     * 获取The storage region.
+                     * @return Region The storage region.
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Storage region.
-                     * @param Region Storage region.
+                     * 设置The storage region.
+                     * @param Region The storage region.
                      */
                     void SetRegion(const std::string& _region);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Description of the storage region.
-                     * @return Description Description of the storage region.
+                     * 获取The description of the storage region.
+                     * @return Description The description of the storage region.
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Description of the storage region.
-                     * @param Description Description of the storage region.
+                     * 设置The description of the storage region.
+                     * @param Description The description of the storage region.
                      */
                     void SetDescription(const std::string& _description);
 
@@ -126,16 +126,42 @@ namespace TencentCloud
                      */
                     bool IsDefaultHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the storage region is inside or outside the Chinese mainland. Valid values:
+<li>Chinese Mainland</li>
+<li>Outside Chinese Mainland</li>
+                     * @return Area Whether the storage region is inside or outside the Chinese mainland. Valid values:
+<li>Chinese Mainland</li>
+<li>Outside Chinese Mainland</li>
+                     */
+                    std::string GetArea() const;
+
+                    /**
+                     * 设置Whether the storage region is inside or outside the Chinese mainland. Valid values:
+<li>Chinese Mainland</li>
+<li>Outside Chinese Mainland</li>
+                     * @param Area Whether the storage region is inside or outside the Chinese mainland. Valid values:
+<li>Chinese Mainland</li>
+<li>Outside Chinese Mainland</li>
+                     */
+                    void SetArea(const std::string& _area);
+
+                    /**
+                     * 判断参数 Area 是否已赋值
+                     * @return Area 是否已赋值
+                     */
+                    bool AreaHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Storage region.
+                     * The storage region.
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Description of the storage region.
+                     * The description of the storage region.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
@@ -153,6 +179,14 @@ namespace TencentCloud
                      */
                     bool m_isDefault;
                     bool m_isDefaultHasBeenSet;
+
+                    /**
+                     * Whether the storage region is inside or outside the Chinese mainland. Valid values:
+<li>Chinese Mainland</li>
+<li>Outside Chinese Mainland</li>
+                     */
+                    std::string m_area;
+                    bool m_areaHasBeenSet;
 
                 };
             }

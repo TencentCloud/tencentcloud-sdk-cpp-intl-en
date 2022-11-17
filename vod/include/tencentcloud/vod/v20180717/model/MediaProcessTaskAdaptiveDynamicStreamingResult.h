@@ -121,6 +121,24 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
+                     * 获取The progress of the adaptive bitrate task. Value range: 0-100.
+                     * @return Progress The progress of the adaptive bitrate task. Value range: 0-100.
+                     */
+                    int64_t GetProgress() const;
+
+                    /**
+                     * 设置The progress of the adaptive bitrate task. Value range: 0-100.
+                     * @param Progress The progress of the adaptive bitrate task. Value range: 0-100.
+                     */
+                    void SetProgress(const int64_t& _progress);
+
+                    /**
+                     * 判断参数 Progress 是否已赋值
+                     * @return Progress 是否已赋值
+                     */
+                    bool ProgressHasBeenSet() const;
+
+                    /**
                      * 获取Input of adaptive bitrate streaming task.
                      * @return Input Input of adaptive bitrate streaming task.
                      */
@@ -181,6 +199,12 @@ namespace TencentCloud
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
+
+                    /**
+                     * The progress of the adaptive bitrate task. Value range: 0-100.
+                     */
+                    int64_t m_progress;
+                    bool m_progressHasBeenSet;
 
                     /**
                      * Input of adaptive bitrate streaming task.

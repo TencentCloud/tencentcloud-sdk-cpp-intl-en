@@ -399,15 +399,17 @@ PullLivePushLive: Live streaming
 PullVodPushLive: Video files
 Notes:
 1. Backup sources are supported only if the primary source type is live streaming.
-2. When pull from the primary source is interrupted, the system will pull from the backup source.
-3. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is.
+2. Leaving this parameter empty will reset the backup source.
+3. When pull from the primary source is interrupted, the system will pull from the backup source.
+4. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is.
                      * @return BackupSourceType The backup source type.
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
 Notes:
 1. Backup sources are supported only if the primary source type is live streaming.
-2. When pull from the primary source is interrupted, the system will pull from the backup source.
-3. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is.
+2. Leaving this parameter empty will reset the backup source.
+3. When pull from the primary source is interrupted, the system will pull from the backup source.
+4. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is.
                      */
                     std::string GetBackupSourceType() const;
 
@@ -417,15 +419,17 @@ PullLivePushLive: Live streaming
 PullVodPushLive: Video files
 Notes:
 1. Backup sources are supported only if the primary source type is live streaming.
-2. When pull from the primary source is interrupted, the system will pull from the backup source.
-3. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is.
+2. Leaving this parameter empty will reset the backup source.
+3. When pull from the primary source is interrupted, the system will pull from the backup source.
+4. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is.
                      * @param BackupSourceType The backup source type.
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
 Notes:
 1. Backup sources are supported only if the primary source type is live streaming.
-2. When pull from the primary source is interrupted, the system will pull from the backup source.
-3. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is.
+2. Leaving this parameter empty will reset the backup source.
+3. When pull from the primary source is interrupted, the system will pull from the backup source.
+4. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is.
                      */
                     void SetBackupSourceType(const std::string& _backupSourceType);
 
@@ -506,6 +510,36 @@ Notes:
                      * @return WatermarkList 是否已赋值
                      */
                     bool WatermarkListHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to use local mode when the source type is video files. The default is `0`.
+0: Do not use local mode
+1: Use local mode
+Note: If you enable local mode, MP4 files will be downloaded to local storage, and the local files will be used for push. This ensures more reliable push. Pushing a local file will incur additional fees.
+                     * @return VodLocalMode Whether to use local mode when the source type is video files. The default is `0`.
+0: Do not use local mode
+1: Use local mode
+Note: If you enable local mode, MP4 files will be downloaded to local storage, and the local files will be used for push. This ensures more reliable push. Pushing a local file will incur additional fees.
+                     */
+                    int64_t GetVodLocalMode() const;
+
+                    /**
+                     * 设置Whether to use local mode when the source type is video files. The default is `0`.
+0: Do not use local mode
+1: Use local mode
+Note: If you enable local mode, MP4 files will be downloaded to local storage, and the local files will be used for push. This ensures more reliable push. Pushing a local file will incur additional fees.
+                     * @param VodLocalMode Whether to use local mode when the source type is video files. The default is `0`.
+0: Do not use local mode
+1: Use local mode
+Note: If you enable local mode, MP4 files will be downloaded to local storage, and the local files will be used for push. This ensures more reliable push. Pushing a local file will incur additional fees.
+                     */
+                    void SetVodLocalMode(const int64_t& _vodLocalMode);
+
+                    /**
+                     * 判断参数 VodLocalMode 是否已赋值
+                     * @return VodLocalMode 是否已赋值
+                     */
+                    bool VodLocalModeHasBeenSet() const;
 
                 private:
 
@@ -622,8 +656,9 @@ PullLivePushLive: Live streaming
 PullVodPushLive: Video files
 Notes:
 1. Backup sources are supported only if the primary source type is live streaming.
-2. When pull from the primary source is interrupted, the system will pull from the backup source.
-3. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is.
+2. Leaving this parameter empty will reset the backup source.
+3. When pull from the primary source is interrupted, the system will pull from the backup source.
+4. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is.
                      */
                     std::string m_backupSourceType;
                     bool m_backupSourceTypeHasBeenSet;
@@ -648,6 +683,15 @@ Notes:
                      */
                     std::vector<PullPushWatermarkInfo> m_watermarkList;
                     bool m_watermarkListHasBeenSet;
+
+                    /**
+                     * Whether to use local mode when the source type is video files. The default is `0`.
+0: Do not use local mode
+1: Use local mode
+Note: If you enable local mode, MP4 files will be downloaded to local storage, and the local files will be used for push. This ensures more reliable push. Pushing a local file will incur additional fees.
+                     */
+                    int64_t m_vodLocalMode;
+                    bool m_vodLocalModeHasBeenSet;
 
                 };
             }
