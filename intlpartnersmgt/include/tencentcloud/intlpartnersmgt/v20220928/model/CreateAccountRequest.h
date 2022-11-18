@@ -149,14 +149,14 @@ A global mobile number within 1-32 digits is allowed, such as 18888888888.
                     bool PhoneNumHasBeenSet() const;
 
                     /**
-                     * 获取Customer’s country/region code, which can be obtained via the `GetCountryCodes` API, such as “852”.
-                     * @return CountryCode Customer’s country/region code, which can be obtained via the `GetCountryCodes` API, such as “852”.
+                     * 获取Customer's country/region code, which can be obtained via the `GetCountryCodes` API, such as "852".
+                     * @return CountryCode Customer's country/region code, which can be obtained via the `GetCountryCodes` API, such as "852".
                      */
                     std::string GetCountryCode() const;
 
                     /**
-                     * 设置Customer’s country/region code, which can be obtained via the `GetCountryCodes` API, such as “852”.
-                     * @param CountryCode Customer’s country/region code, which can be obtained via the `GetCountryCodes` API, such as “852”.
+                     * 设置Customer's country/region code, which can be obtained via the `GetCountryCodes` API, such as "852".
+                     * @param CountryCode Customer's country/region code, which can be obtained via the `GetCountryCodes` API, such as "852".
                      */
                     void SetCountryCode(const std::string& _countryCode);
 
@@ -167,14 +167,14 @@ A global mobile number within 1-32 digits is allowed, such as 18888888888.
                     bool CountryCodeHasBeenSet() const;
 
                     /**
-                     * 获取Customer’s ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
-                     * @return Area Customer’s ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
+                     * 获取Customer's ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
+                     * @return Area Customer's ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置Customer’s ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
-                     * @param Area Customer’s ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
+                     * 设置Customer's ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
+                     * @param Area Customer's ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
                      */
                     void SetArea(const std::string& _area);
 
@@ -239,13 +239,13 @@ A global mobile number within 1-32 digits is allowed, such as 18888888888.
                     bool m_phoneNumHasBeenSet;
 
                     /**
-                     * Customer’s country/region code, which can be obtained via the `GetCountryCodes` API, such as “852”.
+                     * Customer's country/region code, which can be obtained via the `GetCountryCodes` API, such as "852".
                      */
                     std::string m_countryCode;
                     bool m_countryCodeHasBeenSet;
 
                     /**
-                     * Customer’s ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
+                     * Customer's ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;

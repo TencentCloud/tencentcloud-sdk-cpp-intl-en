@@ -38,7 +38,9 @@ set(mariadb_public_header_model
   include/tencentcloud/mariadb/v20170312/model/DescribeDBSlowLogsRequest.h
   include/tencentcloud/mariadb/v20170312/model/CreateAccountRequest.h
   include/tencentcloud/mariadb/v20170312/model/DescribeDBParametersResponse.h
+  include/tencentcloud/mariadb/v20170312/model/IsolateDBInstanceResponse.h
   include/tencentcloud/mariadb/v20170312/model/CloneAccountResponse.h
+  include/tencentcloud/mariadb/v20170312/model/IsolateDedicatedDBInstanceRequest.h
   include/tencentcloud/mariadb/v20170312/model/ModifyAccountDescriptionResponse.h
   include/tencentcloud/mariadb/v20170312/model/ParamConstraint.h
   include/tencentcloud/mariadb/v20170312/model/ModifyDBInstancesProjectResponse.h
@@ -71,6 +73,7 @@ set(mariadb_public_header_model
   include/tencentcloud/mariadb/v20170312/model/CopyAccountPrivilegesRequest.h
   include/tencentcloud/mariadb/v20170312/model/SecurityGroup.h
   include/tencentcloud/mariadb/v20170312/model/DescribeDatabaseTableRequest.h
+  include/tencentcloud/mariadb/v20170312/model/TerminateDedicatedDBInstanceRequest.h
   include/tencentcloud/mariadb/v20170312/model/DescribeDatabaseObjectsResponse.h
   include/tencentcloud/mariadb/v20170312/model/DescribeDcnDetailResponse.h
   include/tencentcloud/mariadb/v20170312/model/TableColumn.h
@@ -96,13 +99,16 @@ set(mariadb_public_header_model
   include/tencentcloud/mariadb/v20170312/model/CloseDBExtranetAccessRequest.h
   include/tencentcloud/mariadb/v20170312/model/ResourceTag.h
   include/tencentcloud/mariadb/v20170312/model/DeleteAccountRequest.h
+  include/tencentcloud/mariadb/v20170312/model/IsolateDBInstanceRequest.h
   include/tencentcloud/mariadb/v20170312/model/ModifyAccountPrivilegesRequest.h
   include/tencentcloud/mariadb/v20170312/model/DatabaseProcedure.h
   include/tencentcloud/mariadb/v20170312/model/ModifyDBSyncModeRequest.h
   include/tencentcloud/mariadb/v20170312/model/DescribeInstanceNodeInfoRequest.h
   include/tencentcloud/mariadb/v20170312/model/CloneAccountRequest.h
   include/tencentcloud/mariadb/v20170312/model/CreateAccountResponse.h
+  include/tencentcloud/mariadb/v20170312/model/IsolateDedicatedDBInstanceResponse.h
   include/tencentcloud/mariadb/v20170312/model/DescribeLogFileRetentionPeriodResponse.h
+  include/tencentcloud/mariadb/v20170312/model/TerminateDedicatedDBInstanceResponse.h
   include/tencentcloud/mariadb/v20170312/model/ModifyInstanceNetworkRequest.h
   include/tencentcloud/mariadb/v20170312/model/DescribeDBInstancesResponse.h
   include/tencentcloud/mariadb/v20170312/model/ConstraintRange.h
@@ -146,7 +152,9 @@ set(mariadb_src
   src/v20170312/model/DescribeDBSlowLogsRequest.cpp
   src/v20170312/model/CreateAccountRequest.cpp
   src/v20170312/model/DescribeDBParametersResponse.cpp
+  src/v20170312/model/IsolateDBInstanceResponse.cpp
   src/v20170312/model/CloneAccountResponse.cpp
+  src/v20170312/model/IsolateDedicatedDBInstanceRequest.cpp
   src/v20170312/model/ModifyAccountDescriptionResponse.cpp
   src/v20170312/model/ParamConstraint.cpp
   src/v20170312/model/ModifyDBInstancesProjectResponse.cpp
@@ -179,6 +187,7 @@ set(mariadb_src
   src/v20170312/model/CopyAccountPrivilegesRequest.cpp
   src/v20170312/model/SecurityGroup.cpp
   src/v20170312/model/DescribeDatabaseTableRequest.cpp
+  src/v20170312/model/TerminateDedicatedDBInstanceRequest.cpp
   src/v20170312/model/DescribeDatabaseObjectsResponse.cpp
   src/v20170312/model/DescribeDcnDetailResponse.cpp
   src/v20170312/model/TableColumn.cpp
@@ -204,13 +213,16 @@ set(mariadb_src
   src/v20170312/model/CloseDBExtranetAccessRequest.cpp
   src/v20170312/model/ResourceTag.cpp
   src/v20170312/model/DeleteAccountRequest.cpp
+  src/v20170312/model/IsolateDBInstanceRequest.cpp
   src/v20170312/model/ModifyAccountPrivilegesRequest.cpp
   src/v20170312/model/DatabaseProcedure.cpp
   src/v20170312/model/ModifyDBSyncModeRequest.cpp
   src/v20170312/model/DescribeInstanceNodeInfoRequest.cpp
   src/v20170312/model/CloneAccountRequest.cpp
   src/v20170312/model/CreateAccountResponse.cpp
+  src/v20170312/model/IsolateDedicatedDBInstanceResponse.cpp
   src/v20170312/model/DescribeLogFileRetentionPeriodResponse.cpp
+  src/v20170312/model/TerminateDedicatedDBInstanceResponse.cpp
   src/v20170312/model/ModifyInstanceNetworkRequest.cpp
   src/v20170312/model/DescribeDBInstancesResponse.cpp
   src/v20170312/model/ConstraintRange.cpp

@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_MARIADB_V20170312_MODEL_DESCRIBELOGFILERETENTIONPERIODRESPONSE_H_
-#define TENCENTCLOUD_MARIADB_V20170312_MODEL_DESCRIBELOGFILERETENTIONPERIODRESPONSE_H_
+#ifndef TENCENTCLOUD_MARIADB_V20170312_MODEL_ISOLATEDEDICATEDDBINSTANCEREQUEST_H_
+#define TENCENTCLOUD_MARIADB_V20170312_MODEL_ISOLATEDEDICATEDDBINSTANCEREQUEST_H_
 
 #include <string>
 #include <vector>
@@ -32,14 +32,13 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * DescribeLogFileRetentionPeriod response structure.
+                * IsolateDedicatedDBInstance request structure.
                 */
-                class DescribeLogFileRetentionPeriodResponse : public AbstractModel
+                class IsolateDedicatedDBInstanceRequest : public AbstractModel
                 {
                 public:
-                    DescribeLogFileRetentionPeriodResponse();
-                    ~DescribeLogFileRetentionPeriodResponse() = default;
-                    CoreInternalOutcome Deserialize(const std::string &payload);
+                    IsolateDedicatedDBInstanceRequest();
+                    ~IsolateDedicatedDBInstanceRequest() = default;
                     std::string ToJsonString() const;
 
 
@@ -50,22 +49,16 @@ namespace TencentCloud
                     std::string GetInstanceId() const;
 
                     /**
+                     * 设置Instance ID in the format of `tdsql-ow728lmc`
+                     * @param InstanceId Instance ID in the format of `tdsql-ow728lmc`
+                     */
+                    void SetInstanceId(const std::string& _instanceId);
+
+                    /**
                      * 判断参数 InstanceId 是否已赋值
                      * @return InstanceId 是否已赋值
                      */
                     bool InstanceIdHasBeenSet() const;
-
-                    /**
-                     * 获取Backup log retention days
-                     * @return Days Backup log retention days
-                     */
-                    uint64_t GetDays() const;
-
-                    /**
-                     * 判断参数 Days 是否已赋值
-                     * @return Days 是否已赋值
-                     */
-                    bool DaysHasBeenSet() const;
 
                 private:
 
@@ -75,16 +68,10 @@ namespace TencentCloud
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
-                    /**
-                     * Backup log retention days
-                     */
-                    uint64_t m_days;
-                    bool m_daysHasBeenSet;
-
                 };
             }
         }
     }
 }
 
-#endif // !TENCENTCLOUD_MARIADB_V20170312_MODEL_DESCRIBELOGFILERETENTIONPERIODRESPONSE_H_
+#endif // !TENCENTCLOUD_MARIADB_V20170312_MODEL_ISOLATEDEDICATEDDBINSTANCEREQUEST_H_

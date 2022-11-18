@@ -1244,6 +1244,92 @@ MariadbClient::GrantAccountPrivilegesOutcomeCallable MariadbClient::GrantAccount
     return task->get_future();
 }
 
+MariadbClient::IsolateDBInstanceOutcome MariadbClient::IsolateDBInstance(const IsolateDBInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "IsolateDBInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        IsolateDBInstanceResponse rsp = IsolateDBInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return IsolateDBInstanceOutcome(rsp);
+        else
+            return IsolateDBInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return IsolateDBInstanceOutcome(outcome.GetError());
+    }
+}
+
+void MariadbClient::IsolateDBInstanceAsync(const IsolateDBInstanceRequest& request, const IsolateDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->IsolateDBInstance(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MariadbClient::IsolateDBInstanceOutcomeCallable MariadbClient::IsolateDBInstanceCallable(const IsolateDBInstanceRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<IsolateDBInstanceOutcome()>>(
+        [this, request]()
+        {
+            return this->IsolateDBInstance(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MariadbClient::IsolateDedicatedDBInstanceOutcome MariadbClient::IsolateDedicatedDBInstance(const IsolateDedicatedDBInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "IsolateDedicatedDBInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        IsolateDedicatedDBInstanceResponse rsp = IsolateDedicatedDBInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return IsolateDedicatedDBInstanceOutcome(rsp);
+        else
+            return IsolateDedicatedDBInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return IsolateDedicatedDBInstanceOutcome(outcome.GetError());
+    }
+}
+
+void MariadbClient::IsolateDedicatedDBInstanceAsync(const IsolateDedicatedDBInstanceRequest& request, const IsolateDedicatedDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->IsolateDedicatedDBInstance(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MariadbClient::IsolateDedicatedDBInstanceOutcomeCallable MariadbClient::IsolateDedicatedDBInstanceCallable(const IsolateDedicatedDBInstanceRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<IsolateDedicatedDBInstanceOutcome()>>(
+        [this, request]()
+        {
+            return this->IsolateDedicatedDBInstance(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 MariadbClient::ModifyAccountDescriptionOutcome MariadbClient::ModifyAccountDescription(const ModifyAccountDescriptionRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyAccountDescription");
@@ -1667,6 +1753,49 @@ MariadbClient::ResetAccountPasswordOutcomeCallable MariadbClient::ResetAccountPa
         [this, request]()
         {
             return this->ResetAccountPassword(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MariadbClient::TerminateDedicatedDBInstanceOutcome MariadbClient::TerminateDedicatedDBInstance(const TerminateDedicatedDBInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "TerminateDedicatedDBInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        TerminateDedicatedDBInstanceResponse rsp = TerminateDedicatedDBInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return TerminateDedicatedDBInstanceOutcome(rsp);
+        else
+            return TerminateDedicatedDBInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return TerminateDedicatedDBInstanceOutcome(outcome.GetError());
+    }
+}
+
+void MariadbClient::TerminateDedicatedDBInstanceAsync(const TerminateDedicatedDBInstanceRequest& request, const TerminateDedicatedDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->TerminateDedicatedDBInstance(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MariadbClient::TerminateDedicatedDBInstanceOutcomeCallable MariadbClient::TerminateDedicatedDBInstanceCallable(const TerminateDedicatedDBInstanceRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<TerminateDedicatedDBInstanceOutcome()>>(
+        [this, request]()
+        {
+            return this->TerminateDedicatedDBInstance(request);
         }
     );
 

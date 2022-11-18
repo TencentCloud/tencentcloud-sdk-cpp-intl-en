@@ -134,7 +134,7 @@ Notes:<br>
                 QueryCreditByUinListOutcomeCallable QueryCreditByUinListCallable(const Model::QueryCreditByUinListRequest& request);
 
                 /**
-                 *This API is used for a partner to query a customer's credit and basic information.
+                 *This API is used for a partner to the credits and basic information of cutomers.
                  * @param req QueryCustomersCreditRequest
                  * @return QueryCustomersCreditOutcome
                  */
@@ -143,7 +143,7 @@ Notes:<br>
                 QueryCustomersCreditOutcomeCallable QueryCustomersCreditCallable(const Model::QueryCustomersCreditRequest& request);
 
                 /**
-                 *This API is used to query a customer’s credit.
+                 *This API is used to query the credits of direct customers.
                  * @param req QueryDirectCustomersCreditRequest
                  * @return QueryDirectCustomersCreditOutcome
                  */

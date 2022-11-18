@@ -42,6 +42,7 @@ set(dcdb_public_header_model
   include/tencentcloud/dcdb/v20180411/model/ModifyDBInstanceNameResponse.h
   include/tencentcloud/dcdb/v20180411/model/DescribeFlowResponse.h
   include/tencentcloud/dcdb/v20180411/model/CloneAccountResponse.h
+  include/tencentcloud/dcdb/v20180411/model/IsolateDedicatedDBInstanceRequest.h
   include/tencentcloud/dcdb/v20180411/model/ModifyAccountDescriptionResponse.h
   include/tencentcloud/dcdb/v20180411/model/DestroyDCDBInstanceRequest.h
   include/tencentcloud/dcdb/v20180411/model/BriefNodeInfo.h
@@ -80,6 +81,7 @@ set(dcdb_public_header_model
   include/tencentcloud/dcdb/v20180411/model/SecurityGroup.h
   include/tencentcloud/dcdb/v20180411/model/DescribeDatabaseTableRequest.h
   include/tencentcloud/dcdb/v20180411/model/DescribeDCDBInstanceNodeInfoResponse.h
+  include/tencentcloud/dcdb/v20180411/model/TerminateDedicatedDBInstanceRequest.h
   include/tencentcloud/dcdb/v20180411/model/DescribeDatabaseObjectsResponse.h
   include/tencentcloud/dcdb/v20180411/model/ModifyDBInstanceNameRequest.h
   include/tencentcloud/dcdb/v20180411/model/DescribeDcnDetailResponse.h
@@ -112,6 +114,8 @@ set(dcdb_public_header_model
   include/tencentcloud/dcdb/v20180411/model/DatabaseProcedure.h
   include/tencentcloud/dcdb/v20180411/model/ModifyDBSyncModeRequest.h
   include/tencentcloud/dcdb/v20180411/model/CreateAccountResponse.h
+  include/tencentcloud/dcdb/v20180411/model/IsolateDedicatedDBInstanceResponse.h
+  include/tencentcloud/dcdb/v20180411/model/TerminateDedicatedDBInstanceResponse.h
   include/tencentcloud/dcdb/v20180411/model/ModifyInstanceNetworkRequest.h
   include/tencentcloud/dcdb/v20180411/model/IsolateHourDCDBInstanceRequest.h
   include/tencentcloud/dcdb/v20180411/model/ConstraintRange.h
@@ -157,6 +161,7 @@ set(dcdb_src
   src/v20180411/model/ModifyDBInstanceNameResponse.cpp
   src/v20180411/model/DescribeFlowResponse.cpp
   src/v20180411/model/CloneAccountResponse.cpp
+  src/v20180411/model/IsolateDedicatedDBInstanceRequest.cpp
   src/v20180411/model/ModifyAccountDescriptionResponse.cpp
   src/v20180411/model/DestroyDCDBInstanceRequest.cpp
   src/v20180411/model/BriefNodeInfo.cpp
@@ -195,6 +200,7 @@ set(dcdb_src
   src/v20180411/model/SecurityGroup.cpp
   src/v20180411/model/DescribeDatabaseTableRequest.cpp
   src/v20180411/model/DescribeDCDBInstanceNodeInfoResponse.cpp
+  src/v20180411/model/TerminateDedicatedDBInstanceRequest.cpp
   src/v20180411/model/DescribeDatabaseObjectsResponse.cpp
   src/v20180411/model/ModifyDBInstanceNameRequest.cpp
   src/v20180411/model/DescribeDcnDetailResponse.cpp
@@ -227,6 +233,8 @@ set(dcdb_src
   src/v20180411/model/DatabaseProcedure.cpp
   src/v20180411/model/ModifyDBSyncModeRequest.cpp
   src/v20180411/model/CreateAccountResponse.cpp
+  src/v20180411/model/IsolateDedicatedDBInstanceResponse.cpp
+  src/v20180411/model/TerminateDedicatedDBInstanceResponse.cpp
   src/v20180411/model/ModifyInstanceNetworkRequest.cpp
   src/v20180411/model/IsolateHourDCDBInstanceRequest.cpp
   src/v20180411/model/ConstraintRange.cpp

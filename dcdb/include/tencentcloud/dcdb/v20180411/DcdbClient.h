@@ -87,6 +87,8 @@
 #include <tencentcloud/dcdb/v20180411/model/GrantAccountPrivilegesResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/InitDCDBInstancesRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/InitDCDBInstancesResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/IsolateDedicatedDBInstanceRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/IsolateDedicatedDBInstanceResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/IsolateHourDCDBInstanceRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/IsolateHourDCDBInstanceResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/ModifyAccountDescriptionRequest.h>
@@ -111,6 +113,8 @@
 #include <tencentcloud/dcdb/v20180411/model/ResetAccountPasswordResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/SwitchDBInstanceHARequest.h>
 #include <tencentcloud/dcdb/v20180411/model/SwitchDBInstanceHAResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/TerminateDedicatedDBInstanceRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/TerminateDedicatedDBInstanceResponse.h>
 
 
 namespace TencentCloud
@@ -221,6 +225,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::InitDCDBInstancesResponse> InitDCDBInstancesOutcome;
                 typedef std::future<InitDCDBInstancesOutcome> InitDCDBInstancesOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::InitDCDBInstancesRequest&, InitDCDBInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InitDCDBInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::IsolateDedicatedDBInstanceResponse> IsolateDedicatedDBInstanceOutcome;
+                typedef std::future<IsolateDedicatedDBInstanceOutcome> IsolateDedicatedDBInstanceOutcomeCallable;
+                typedef std::function<void(const DcdbClient*, const Model::IsolateDedicatedDBInstanceRequest&, IsolateDedicatedDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> IsolateDedicatedDBInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::IsolateHourDCDBInstanceResponse> IsolateHourDCDBInstanceOutcome;
                 typedef std::future<IsolateHourDCDBInstanceOutcome> IsolateHourDCDBInstanceOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::IsolateHourDCDBInstanceRequest&, IsolateHourDCDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> IsolateHourDCDBInstanceAsyncHandler;
@@ -257,6 +264,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::SwitchDBInstanceHAResponse> SwitchDBInstanceHAOutcome;
                 typedef std::future<SwitchDBInstanceHAOutcome> SwitchDBInstanceHAOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::SwitchDBInstanceHARequest&, SwitchDBInstanceHAOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SwitchDBInstanceHAAsyncHandler;
+                typedef Outcome<Core::Error, Model::TerminateDedicatedDBInstanceResponse> TerminateDedicatedDBInstanceOutcome;
+                typedef std::future<TerminateDedicatedDBInstanceOutcome> TerminateDedicatedDBInstanceOutcomeCallable;
+                typedef std::function<void(const DcdbClient*, const Model::TerminateDedicatedDBInstanceRequest&, TerminateDedicatedDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TerminateDedicatedDBInstanceAsyncHandler;
 
 
 
@@ -553,6 +563,15 @@ Note: accounts with the same username but different hosts are different accounts
                 InitDCDBInstancesOutcomeCallable InitDCDBInstancesCallable(const Model::InitDCDBInstancesRequest& request);
 
                 /**
+                 *This API is used to isolate a dedicated TencentDB instance.
+                 * @param req IsolateDedicatedDBInstanceRequest
+                 * @return IsolateDedicatedDBInstanceOutcome
+                 */
+                IsolateDedicatedDBInstanceOutcome IsolateDedicatedDBInstance(const Model::IsolateDedicatedDBInstanceRequest &request);
+                void IsolateDedicatedDBInstanceAsync(const Model::IsolateDedicatedDBInstanceRequest& request, const IsolateDedicatedDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                IsolateDedicatedDBInstanceOutcomeCallable IsolateDedicatedDBInstanceCallable(const Model::IsolateDedicatedDBInstanceRequest& request);
+
+                /**
                  *This API is used to isolate pay-as-you-go TDSQL for MySQL instances.
                  * @param req IsolateHourDCDBInstanceRequest
                  * @return IsolateHourDCDBInstanceOutcome
@@ -661,6 +680,15 @@ Note: accounts with the same username but different hosts are different accounts
                 SwitchDBInstanceHAOutcome SwitchDBInstanceHA(const Model::SwitchDBInstanceHARequest &request);
                 void SwitchDBInstanceHAAsync(const Model::SwitchDBInstanceHARequest& request, const SwitchDBInstanceHAAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 SwitchDBInstanceHAOutcomeCallable SwitchDBInstanceHACallable(const Model::SwitchDBInstanceHARequest& request);
+
+                /**
+                 *This API is used to terminate the isolated dedicated TDSQL instance.
+                 * @param req TerminateDedicatedDBInstanceRequest
+                 * @return TerminateDedicatedDBInstanceOutcome
+                 */
+                TerminateDedicatedDBInstanceOutcome TerminateDedicatedDBInstance(const Model::TerminateDedicatedDBInstanceRequest &request);
+                void TerminateDedicatedDBInstanceAsync(const Model::TerminateDedicatedDBInstanceRequest& request, const TerminateDedicatedDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                TerminateDedicatedDBInstanceOutcomeCallable TerminateDedicatedDBInstanceCallable(const Model::TerminateDedicatedDBInstanceRequest& request);
 
             };
         }

@@ -128,13 +128,13 @@ namespace TencentCloud
                     bool NationalityHasBeenSet() const;
 
                     /**
-                     * 获取Alarm code
--9103 Alarm for spoofed card
--9102 Alarm for photocopied card
+                     * 获取Alarm codes
+-9103 Alarm for spoofed document
+-9102 Alarm for photocopied document (including black & white and color ones)
 -9106 Alarm for covered card
-                     * @return Warn Alarm code
--9103 Alarm for spoofed card
--9102 Alarm for photocopied card
+                     * @return Warn Alarm codes
+-9103 Alarm for spoofed document
+-9102 Alarm for photocopied document (including black & white and color ones)
 -9106 Alarm for covered card
                      */
                     std::vector<int64_t> GetWarn() const;
@@ -254,9 +254,9 @@ namespace TencentCloud
                     bool m_nationalityHasBeenSet;
 
                     /**
-                     * Alarm code
--9103 Alarm for spoofed card
--9102 Alarm for photocopied card
+                     * Alarm codes
+-9103 Alarm for spoofed document
+-9102 Alarm for photocopied document (including black & white and color ones)
 -9106 Alarm for covered card
                      */
                     std::vector<int64_t> m_warn;

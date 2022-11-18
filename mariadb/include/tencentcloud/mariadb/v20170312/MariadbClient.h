@@ -79,6 +79,10 @@
 #include <tencentcloud/mariadb/v20170312/model/DisassociateSecurityGroupsResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/GrantAccountPrivilegesRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/GrantAccountPrivilegesResponse.h>
+#include <tencentcloud/mariadb/v20170312/model/IsolateDBInstanceRequest.h>
+#include <tencentcloud/mariadb/v20170312/model/IsolateDBInstanceResponse.h>
+#include <tencentcloud/mariadb/v20170312/model/IsolateDedicatedDBInstanceRequest.h>
+#include <tencentcloud/mariadb/v20170312/model/IsolateDedicatedDBInstanceResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/ModifyAccountDescriptionRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/ModifyAccountDescriptionResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/ModifyAccountPrivilegesRequest.h>
@@ -99,6 +103,8 @@
 #include <tencentcloud/mariadb/v20170312/model/ModifySyncTaskAttributeResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/ResetAccountPasswordRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/ResetAccountPasswordResponse.h>
+#include <tencentcloud/mariadb/v20170312/model/TerminateDedicatedDBInstanceRequest.h>
+#include <tencentcloud/mariadb/v20170312/model/TerminateDedicatedDBInstanceResponse.h>
 
 
 namespace TencentCloud
@@ -197,6 +203,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::GrantAccountPrivilegesResponse> GrantAccountPrivilegesOutcome;
                 typedef std::future<GrantAccountPrivilegesOutcome> GrantAccountPrivilegesOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::GrantAccountPrivilegesRequest&, GrantAccountPrivilegesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GrantAccountPrivilegesAsyncHandler;
+                typedef Outcome<Core::Error, Model::IsolateDBInstanceResponse> IsolateDBInstanceOutcome;
+                typedef std::future<IsolateDBInstanceOutcome> IsolateDBInstanceOutcomeCallable;
+                typedef std::function<void(const MariadbClient*, const Model::IsolateDBInstanceRequest&, IsolateDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> IsolateDBInstanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::IsolateDedicatedDBInstanceResponse> IsolateDedicatedDBInstanceOutcome;
+                typedef std::future<IsolateDedicatedDBInstanceOutcome> IsolateDedicatedDBInstanceOutcomeCallable;
+                typedef std::function<void(const MariadbClient*, const Model::IsolateDedicatedDBInstanceRequest&, IsolateDedicatedDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> IsolateDedicatedDBInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyAccountDescriptionResponse> ModifyAccountDescriptionOutcome;
                 typedef std::future<ModifyAccountDescriptionOutcome> ModifyAccountDescriptionOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::ModifyAccountDescriptionRequest&, ModifyAccountDescriptionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAccountDescriptionAsyncHandler;
@@ -227,6 +239,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ResetAccountPasswordResponse> ResetAccountPasswordOutcome;
                 typedef std::future<ResetAccountPasswordOutcome> ResetAccountPasswordOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::ResetAccountPasswordRequest&, ResetAccountPasswordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetAccountPasswordAsyncHandler;
+                typedef Outcome<Core::Error, Model::TerminateDedicatedDBInstanceResponse> TerminateDedicatedDBInstanceOutcome;
+                typedef std::future<TerminateDedicatedDBInstanceOutcome> TerminateDedicatedDBInstanceOutcomeCallable;
+                typedef std::function<void(const MariadbClient*, const Model::TerminateDedicatedDBInstanceRequest&, TerminateDedicatedDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TerminateDedicatedDBInstanceAsyncHandler;
 
 
 
@@ -423,7 +438,7 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
                 DescribeInstanceNodeInfoOutcomeCallable DescribeInstanceNodeInfoCallable(const Model::DescribeInstanceNodeInfoRequest& request);
 
                 /**
-                 *This API is used to view the configured number of days for retention of database backup logs.
+                 *This API is used to view the backup log retention days.
                  * @param req DescribeLogFileRetentionPeriodRequest
                  * @return DescribeLogFileRetentionPeriodOutcome
                  */
@@ -485,6 +500,24 @@ Note: accounts with the same username but different hosts are different accounts
                 GrantAccountPrivilegesOutcome GrantAccountPrivileges(const Model::GrantAccountPrivilegesRequest &request);
                 void GrantAccountPrivilegesAsync(const Model::GrantAccountPrivilegesRequest& request, const GrantAccountPrivilegesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 GrantAccountPrivilegesOutcomeCallable GrantAccountPrivilegesCallable(const Model::GrantAccountPrivilegesRequest& request);
+
+                /**
+                 *This API is used to isolate a monthly subscribed TencentDB instance, which will no longer be accessible via IP and port. The isolated instance can be started up in the recycle bin. If it is isolated due to overdue payments, top up your account as soon as possible.
+                 * @param req IsolateDBInstanceRequest
+                 * @return IsolateDBInstanceOutcome
+                 */
+                IsolateDBInstanceOutcome IsolateDBInstance(const Model::IsolateDBInstanceRequest &request);
+                void IsolateDBInstanceAsync(const Model::IsolateDBInstanceRequest& request, const IsolateDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                IsolateDBInstanceOutcomeCallable IsolateDBInstanceCallable(const Model::IsolateDBInstanceRequest& request);
+
+                /**
+                 *This API is used to isolate a dedicated TencentDB instance.
+                 * @param req IsolateDedicatedDBInstanceRequest
+                 * @return IsolateDedicatedDBInstanceOutcome
+                 */
+                IsolateDedicatedDBInstanceOutcome IsolateDedicatedDBInstance(const Model::IsolateDedicatedDBInstanceRequest &request);
+                void IsolateDedicatedDBInstanceAsync(const Model::IsolateDedicatedDBInstanceRequest& request, const IsolateDedicatedDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                IsolateDedicatedDBInstanceOutcomeCallable IsolateDedicatedDBInstanceCallable(const Model::IsolateDedicatedDBInstanceRequest& request);
 
                 /**
                  *This API is used to modify the remarks of a TencentDB account.
@@ -582,6 +615,15 @@ Note: accounts with the same username but different hosts are different accounts
                 ResetAccountPasswordOutcome ResetAccountPassword(const Model::ResetAccountPasswordRequest &request);
                 void ResetAccountPasswordAsync(const Model::ResetAccountPasswordRequest& request, const ResetAccountPasswordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ResetAccountPasswordOutcomeCallable ResetAccountPasswordCallable(const Model::ResetAccountPasswordRequest& request);
+
+                /**
+                 *This API is used to terminate the isolated dedicated TencentDB instance.
+                 * @param req TerminateDedicatedDBInstanceRequest
+                 * @return TerminateDedicatedDBInstanceOutcome
+                 */
+                TerminateDedicatedDBInstanceOutcome TerminateDedicatedDBInstance(const Model::TerminateDedicatedDBInstanceRequest &request);
+                void TerminateDedicatedDBInstanceAsync(const Model::TerminateDedicatedDBInstanceRequest& request, const TerminateDedicatedDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                TerminateDedicatedDBInstanceOutcomeCallable TerminateDedicatedDBInstanceCallable(const Model::TerminateDedicatedDBInstanceRequest& request);
 
             };
         }

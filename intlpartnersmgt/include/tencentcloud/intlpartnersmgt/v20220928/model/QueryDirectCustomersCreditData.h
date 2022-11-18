@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * A customer’s credit information
+                * The credit information of direct customers
                 */
                 class QueryDirectCustomersCreditData : public AbstractModel
                 {

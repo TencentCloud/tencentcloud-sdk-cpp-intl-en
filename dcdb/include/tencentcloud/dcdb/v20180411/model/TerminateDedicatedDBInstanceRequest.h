@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_MARIADB_V20170312_MODEL_DESCRIBELOGFILERETENTIONPERIODREQUEST_H_
-#define TENCENTCLOUD_MARIADB_V20170312_MODEL_DESCRIBELOGFILERETENTIONPERIODREQUEST_H_
+#ifndef TENCENTCLOUD_DCDB_V20180411_MODEL_TERMINATEDEDICATEDDBINSTANCEREQUEST_H_
+#define TENCENTCLOUD_DCDB_V20180411_MODEL_TERMINATEDEDICATEDDBINSTANCEREQUEST_H_
 
 #include <string>
 #include <vector>
@@ -25,32 +25,32 @@
 
 namespace TencentCloud
 {
-    namespace Mariadb
+    namespace Dcdb
     {
-        namespace V20170312
+        namespace V20180411
         {
             namespace Model
             {
                 /**
-                * DescribeLogFileRetentionPeriod request structure.
+                * TerminateDedicatedDBInstance request structure.
                 */
-                class DescribeLogFileRetentionPeriodRequest : public AbstractModel
+                class TerminateDedicatedDBInstanceRequest : public AbstractModel
                 {
                 public:
-                    DescribeLogFileRetentionPeriodRequest();
-                    ~DescribeLogFileRetentionPeriodRequest() = default;
+                    TerminateDedicatedDBInstanceRequest();
+                    ~TerminateDedicatedDBInstanceRequest() = default;
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Instance ID in the format of `tdsql-ow728lmc`
-                     * @return InstanceId Instance ID in the format of `tdsql-ow728lmc`
+                     * 获取Instance ID in the format of `dcdbt-ow728lmc`
+                     * @return InstanceId Instance ID in the format of `dcdbt-ow728lmc`
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID in the format of `tdsql-ow728lmc`
-                     * @param InstanceId Instance ID in the format of `tdsql-ow728lmc`
+                     * 设置Instance ID in the format of `dcdbt-ow728lmc`
+                     * @param InstanceId Instance ID in the format of `dcdbt-ow728lmc`
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
@@ -63,7 +63,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID in the format of `tdsql-ow728lmc`
+                     * Instance ID in the format of `dcdbt-ow728lmc`
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -74,4 +74,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_MARIADB_V20170312_MODEL_DESCRIBELOGFILERETENTIONPERIODREQUEST_H_
+#endif // !TENCENTCLOUD_DCDB_V20180411_MODEL_TERMINATEDEDICATEDDBINSTANCEREQUEST_H_

@@ -14,55 +14,54 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_INTLPARTNERSMGT_V20220928_MODEL_QUERYDIRECTCUSTOMERSCREDITRESPONSE_H_
-#define TENCENTCLOUD_INTLPARTNERSMGT_V20220928_MODEL_QUERYDIRECTCUSTOMERSCREDITRESPONSE_H_
+#ifndef TENCENTCLOUD_MARIADB_V20170312_MODEL_TERMINATEDEDICATEDDBINSTANCERESPONSE_H_
+#define TENCENTCLOUD_MARIADB_V20170312_MODEL_TERMINATEDEDICATEDDBINSTANCERESPONSE_H_
 
 #include <string>
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/intlpartnersmgt/v20220928/model/QueryDirectCustomersCreditData.h>
 
 
 namespace TencentCloud
 {
-    namespace Intlpartnersmgt
+    namespace Mariadb
     {
-        namespace V20220928
+        namespace V20170312
         {
             namespace Model
             {
                 /**
-                * QueryDirectCustomersCredit response structure.
+                * TerminateDedicatedDBInstance response structure.
                 */
-                class QueryDirectCustomersCreditResponse : public AbstractModel
+                class TerminateDedicatedDBInstanceResponse : public AbstractModel
                 {
                 public:
-                    QueryDirectCustomersCreditResponse();
-                    ~QueryDirectCustomersCreditResponse() = default;
+                    TerminateDedicatedDBInstanceResponse();
+                    ~TerminateDedicatedDBInstanceResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Direct customer information list
-                     * @return Data Direct customer information list
+                     * 获取Async task ID
+                     * @return FlowId Async task ID
                      */
-                    std::vector<QueryDirectCustomersCreditData> GetData() const;
+                    int64_t GetFlowId() const;
 
                     /**
-                     * 判断参数 Data 是否已赋值
-                     * @return Data 是否已赋值
+                     * 判断参数 FlowId 是否已赋值
+                     * @return FlowId 是否已赋值
                      */
-                    bool DataHasBeenSet() const;
+                    bool FlowIdHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Direct customer information list
+                     * Async task ID
                      */
-                    std::vector<QueryDirectCustomersCreditData> m_data;
-                    bool m_dataHasBeenSet;
+                    int64_t m_flowId;
+                    bool m_flowIdHasBeenSet;
 
                 };
             }
@@ -70,4 +69,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_INTLPARTNERSMGT_V20220928_MODEL_QUERYDIRECTCUSTOMERSCREDITRESPONSE_H_
+#endif // !TENCENTCLOUD_MARIADB_V20170312_MODEL_TERMINATEDEDICATEDDBINSTANCERESPONSE_H_
