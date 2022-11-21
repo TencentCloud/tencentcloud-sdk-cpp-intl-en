@@ -145,14 +145,14 @@ Default value: open.
                     bool ResolutionAdaptiveHasBeenSet() const;
 
                     /**
-                     * 获取Image format. Valid values: jpg, png.
-                     * @return Format Image format. Valid values: jpg, png.
+                     * 获取The image format. Valid values: jpg, png, webp.
+                     * @return Format The image format. Valid values: jpg, png, webp.
                      */
                     std::string GetFormat() const;
 
                     /**
-                     * 设置Image format. Valid values: jpg, png.
-                     * @param Format Image format. Valid values: jpg, png.
+                     * 设置The image format. Valid values: jpg, png, webp.
+                     * @param Format The image format. Valid values: jpg, png, webp.
                      */
                     void SetFormat(const std::string& _format);
 
@@ -254,7 +254,7 @@ Default value: open.
                     bool m_resolutionAdaptiveHasBeenSet;
 
                     /**
-                     * Image format. Valid values: jpg, png.
+                     * The image format. Valid values: jpg, png, webp.
                      */
                     std::string m_format;
                     bool m_formatHasBeenSet;

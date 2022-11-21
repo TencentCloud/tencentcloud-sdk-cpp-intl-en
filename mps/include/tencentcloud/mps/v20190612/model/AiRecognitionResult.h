@@ -29,6 +29,7 @@
 #include <tencentcloud/mps/v20190612/model/AiRecognitionTaskAsrFullTextResult.h>
 #include <tencentcloud/mps/v20190612/model/AiRecognitionTaskOcrWordsResult.h>
 #include <tencentcloud/mps/v20190612/model/AiRecognitionTaskOcrFullTextResult.h>
+#include <tencentcloud/mps/v20190612/model/AiRecognitionTaskTransTextResult.h>
 
 
 namespace TencentCloud
@@ -52,42 +53,38 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task type. Valid values:
-<li>FaceRecognition: Face recognition,</li>
-<li>AsrWordsRecognition: Speech keyword recognition,</li>
-<li>OcrWordsRecognition: Text keyword recognition,</li>
-<li>AsrFullTextRecognition: Full speech recognition,</li>
-<li>OcrFullTextRecognition: Full text recognition,</li>
-<li>HeadTailRecognition: Video opening and ending credits recognition,</li>
-<li>ObjectRecognition: Object recognition.</li>
-                     * @return Type Task type. Valid values:
-<li>FaceRecognition: Face recognition,</li>
-<li>AsrWordsRecognition: Speech keyword recognition,</li>
-<li>OcrWordsRecognition: Text keyword recognition,</li>
-<li>AsrFullTextRecognition: Full speech recognition,</li>
-<li>OcrFullTextRecognition: Full text recognition,</li>
-<li>HeadTailRecognition: Video opening and ending credits recognition,</li>
-<li>ObjectRecognition: Object recognition.</li>
+                     * 获取The task type. Valid values:
+<li>FaceRecognition: Face recognition</li>
+<li>AsrWordsRecognition: Speech keyword recognition</li>
+<li>OcrWordsRecognition: Text keyword recognition</li>
+<li>AsrFullTextRecognition: Full speech recognition</li>
+<li>OcrFullTextRecognition: Full text recognition</li>
+<li>TransTextRecognition: Speech translation</li>
+                     * @return Type The task type. Valid values:
+<li>FaceRecognition: Face recognition</li>
+<li>AsrWordsRecognition: Speech keyword recognition</li>
+<li>OcrWordsRecognition: Text keyword recognition</li>
+<li>AsrFullTextRecognition: Full speech recognition</li>
+<li>OcrFullTextRecognition: Full text recognition</li>
+<li>TransTextRecognition: Speech translation</li>
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Task type. Valid values:
-<li>FaceRecognition: Face recognition,</li>
-<li>AsrWordsRecognition: Speech keyword recognition,</li>
-<li>OcrWordsRecognition: Text keyword recognition,</li>
-<li>AsrFullTextRecognition: Full speech recognition,</li>
-<li>OcrFullTextRecognition: Full text recognition,</li>
-<li>HeadTailRecognition: Video opening and ending credits recognition,</li>
-<li>ObjectRecognition: Object recognition.</li>
-                     * @param Type Task type. Valid values:
-<li>FaceRecognition: Face recognition,</li>
-<li>AsrWordsRecognition: Speech keyword recognition,</li>
-<li>OcrWordsRecognition: Text keyword recognition,</li>
-<li>AsrFullTextRecognition: Full speech recognition,</li>
-<li>OcrFullTextRecognition: Full text recognition,</li>
-<li>HeadTailRecognition: Video opening and ending credits recognition,</li>
-<li>ObjectRecognition: Object recognition.</li>
+                     * 设置The task type. Valid values:
+<li>FaceRecognition: Face recognition</li>
+<li>AsrWordsRecognition: Speech keyword recognition</li>
+<li>OcrWordsRecognition: Text keyword recognition</li>
+<li>AsrFullTextRecognition: Full speech recognition</li>
+<li>OcrFullTextRecognition: Full text recognition</li>
+<li>TransTextRecognition: Speech translation</li>
+                     * @param Type The task type. Valid values:
+<li>FaceRecognition: Face recognition</li>
+<li>AsrWordsRecognition: Speech keyword recognition</li>
+<li>OcrWordsRecognition: Text keyword recognition</li>
+<li>AsrFullTextRecognition: Full speech recognition</li>
+<li>OcrFullTextRecognition: Full text recognition</li>
+<li>TransTextRecognition: Speech translation</li>
                      */
                     void SetType(const std::string& _type);
 
@@ -227,17 +224,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool OcrFullTextTaskHasBeenSet() const;
 
+                    /**
+                     * 获取The translation result. This parameter is valid only if `Type` is
+ `TransTextRecognition`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TransTextTask The translation result. This parameter is valid only if `Type` is
+ `TransTextRecognition`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    AiRecognitionTaskTransTextResult GetTransTextTask() const;
+
+                    /**
+                     * 设置The translation result. This parameter is valid only if `Type` is
+ `TransTextRecognition`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param TransTextTask The translation result. This parameter is valid only if `Type` is
+ `TransTextRecognition`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetTransTextTask(const AiRecognitionTaskTransTextResult& _transTextTask);
+
+                    /**
+                     * 判断参数 TransTextTask 是否已赋值
+                     * @return TransTextTask 是否已赋值
+                     */
+                    bool TransTextTaskHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Task type. Valid values:
-<li>FaceRecognition: Face recognition,</li>
-<li>AsrWordsRecognition: Speech keyword recognition,</li>
-<li>OcrWordsRecognition: Text keyword recognition,</li>
-<li>AsrFullTextRecognition: Full speech recognition,</li>
-<li>OcrFullTextRecognition: Full text recognition,</li>
-<li>HeadTailRecognition: Video opening and ending credits recognition,</li>
-<li>ObjectRecognition: Object recognition.</li>
+                     * The task type. Valid values:
+<li>FaceRecognition: Face recognition</li>
+<li>AsrWordsRecognition: Speech keyword recognition</li>
+<li>OcrWordsRecognition: Text keyword recognition</li>
+<li>AsrFullTextRecognition: Full speech recognition</li>
+<li>OcrFullTextRecognition: Full text recognition</li>
+<li>TransTextRecognition: Speech translation</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -281,6 +303,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     AiRecognitionTaskOcrFullTextResult m_ocrFullTextTask;
                     bool m_ocrFullTextTaskHasBeenSet;
+
+                    /**
+                     * The translation result. This parameter is valid only if `Type` is
+ `TransTextRecognition`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    AiRecognitionTaskTransTextResult m_transTextTask;
+                    bool m_transTextTaskHasBeenSet;
 
                 };
             }

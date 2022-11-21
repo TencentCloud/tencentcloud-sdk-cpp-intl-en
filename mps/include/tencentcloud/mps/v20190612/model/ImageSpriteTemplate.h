@@ -330,6 +330,24 @@ Default value: black.
                      */
                     bool CommentHasBeenSet() const;
 
+                    /**
+                     * 获取The image format.
+                     * @return Format The image format.
+                     */
+                    std::string GetFormat() const;
+
+                    /**
+                     * 设置The image format.
+                     * @param Format The image format.
+                     */
+                    void SetFormat(const std::string& _format);
+
+                    /**
+                     * 判断参数 Format 是否已赋值
+                     * @return Format 是否已赋值
+                     */
+                    bool FormatHasBeenSet() const;
+
                 private:
 
                     /**
@@ -423,6 +441,12 @@ Default value: black.
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
+
+                    /**
+                     * The image format.
+                     */
+                    std::string m_format;
+                    bool m_formatHasBeenSet;
 
                 };
             }

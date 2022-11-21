@@ -65,9 +65,9 @@ namespace TencentCloud
                     bool EventTypeHasBeenSet() const;
 
                     /**
-                     * 获取Information of a video processing task. This field has a value only when `TaskType` is `WorkflowTask`.
+                     * 获取The information of a video processing task. Information will be returned only if `EventType` is `WorkflowTask`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return WorkflowTaskEvent Information of a video processing task. This field has a value only when `TaskType` is `WorkflowTask`.
+                     * @return WorkflowTaskEvent The information of a video processing task. Information will be returned only if `EventType` is `WorkflowTask`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     WorkflowTask GetWorkflowTaskEvent() const;
@@ -79,8 +79,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool WorkflowTaskEventHasBeenSet() const;
 
                     /**
-                     * 获取Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
-                     * @return EditMediaTaskEvent Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
+                     * 获取The information of a video editing task. Information will be returned only if `EventType` is `EditMediaTask`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return EditMediaTaskEvent The information of a video editing task. Information will be returned only if `EventType` is `EditMediaTask`.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     EditMediaTask GetEditMediaTaskEvent() const;
 
@@ -115,9 +117,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取The information of a scheme. This parameter is valid only if `TaskType` is `ScheduleTask`.
+                     * 获取The information of a scheme. Information will be returned only if `EventType` is `ScheduleTask`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ScheduleTaskEvent The information of a scheme. This parameter is valid only if `TaskType` is `ScheduleTask`.
+                     * @return ScheduleTaskEvent The information of a scheme. Information will be returned only if `EventType` is `ScheduleTask`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ScheduleTask GetScheduleTaskEvent() const;
@@ -140,14 +142,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_eventTypeHasBeenSet;
 
                     /**
-                     * Information of a video processing task. This field has a value only when `TaskType` is `WorkflowTask`.
+                     * The information of a video processing task. Information will be returned only if `EventType` is `WorkflowTask`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     WorkflowTask m_workflowTaskEvent;
                     bool m_workflowTaskEventHasBeenSet;
 
                     /**
-                     * Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
+                     * The information of a video editing task. Information will be returned only if `EventType` is `EditMediaTask`.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     EditMediaTask m_editMediaTaskEvent;
                     bool m_editMediaTaskEventHasBeenSet;
@@ -165,7 +168,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_sessionContextHasBeenSet;
 
                     /**
-                     * The information of a scheme. This parameter is valid only if `TaskType` is `ScheduleTask`.
+                     * The information of a scheme. Information will be returned only if `EventType` is `ScheduleTask`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ScheduleTask m_scheduleTaskEvent;

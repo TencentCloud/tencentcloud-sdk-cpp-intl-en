@@ -385,6 +385,28 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool StatusHasBeenSet() const;
 
+                    /**
+                     * 获取Valid values: `0` (Pulsar), `1` (RocketMQ).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return BrokerType Valid values: `0` (Pulsar), `1` (RocketMQ).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetBrokerType() const;
+
+                    /**
+                     * 设置Valid values: `0` (Pulsar), `1` (RocketMQ).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param BrokerType Valid values: `0` (Pulsar), `1` (RocketMQ).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetBrokerType(const int64_t& _brokerType);
+
+                    /**
+                     * 判断参数 BrokerType 是否已赋值
+                     * @return BrokerType 是否已赋值
+                     */
+                    bool BrokerTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -493,6 +515,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
+
+                    /**
+                     * Valid values: `0` (Pulsar), `1` (RocketMQ).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_brokerType;
+                    bool m_brokerTypeHasBeenSet;
 
                 };
             }

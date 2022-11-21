@@ -210,6 +210,24 @@ When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound chan
                      */
                     bool AudioChannelHasBeenSet() const;
 
+                    /**
+                     * 获取The audio tracks to retain. All audio tracks are retained by default.
+                     * @return StreamSelects The audio tracks to retain. All audio tracks are retained by default.
+                     */
+                    std::vector<int64_t> GetStreamSelects() const;
+
+                    /**
+                     * 设置The audio tracks to retain. All audio tracks are retained by default.
+                     * @param StreamSelects The audio tracks to retain. All audio tracks are retained by default.
+                     */
+                    void SetStreamSelects(const std::vector<int64_t>& _streamSelects);
+
+                    /**
+                     * 判断参数 StreamSelects 是否已赋值
+                     * @return StreamSelects 是否已赋值
+                     */
+                    bool StreamSelectsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -258,6 +276,12 @@ When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound chan
                      */
                     int64_t m_audioChannel;
                     bool m_audioChannelHasBeenSet;
+
+                    /**
+                     * The audio tracks to retain. All audio tracks are retained by default.
+                     */
+                    std::vector<int64_t> m_streamSelects;
+                    bool m_streamSelectsHasBeenSet;
 
                 };
             }
