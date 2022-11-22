@@ -60,6 +60,24 @@ namespace TencentCloud
                      */
                     bool ProxyGroupIdHasBeenSet() const;
 
+                    /**
+                     * 获取Address ID of the proxy group
+                     * @return ProxyAddressId Address ID of the proxy group
+                     */
+                    std::string GetProxyAddressId() const;
+
+                    /**
+                     * 设置Address ID of the proxy group
+                     * @param ProxyAddressId Address ID of the proxy group
+                     */
+                    void SetProxyAddressId(const std::string& _proxyAddressId);
+
+                    /**
+                     * 判断参数 ProxyAddressId 是否已赋值
+                     * @return ProxyAddressId 是否已赋值
+                     */
+                    bool ProxyAddressIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -67,6 +85,12 @@ namespace TencentCloud
                      */
                     std::string m_proxyGroupId;
                     bool m_proxyGroupIdHasBeenSet;
+
+                    /**
+                     * Address ID of the proxy group
+                     */
+                    std::string m_proxyAddressId;
+                    bool m_proxyAddressIdHasBeenSet;
 
                 };
             }
