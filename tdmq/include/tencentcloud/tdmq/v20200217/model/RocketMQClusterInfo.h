@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tdmq/v20200217/model/VpcConfig.h>
 
 
 namespace TencentCloud
@@ -198,6 +199,50 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool SupportNamespaceEndpointHasBeenSet() const;
 
+                    /**
+                     * 获取VPC Information
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Vpcs VPC Information
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<VpcConfig> GetVpcs() const;
+
+                    /**
+                     * 设置VPC Information
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Vpcs VPC Information
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetVpcs(const std::vector<VpcConfig>& _vpcs);
+
+                    /**
+                     * 判断参数 Vpcs 是否已赋值
+                     * @return Vpcs 是否已赋值
+                     */
+                    bool VpcsHasBeenSet() const;
+
+                    /**
+                     * 获取Whether it is an exclusive instance
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IsVip Whether it is an exclusive instance
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool GetIsVip() const;
+
+                    /**
+                     * 设置Whether it is an exclusive instance
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param IsVip Whether it is an exclusive instance
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetIsVip(const bool& _isVip);
+
+                    /**
+                     * 判断参数 IsVip 是否已赋值
+                     * @return IsVip 是否已赋值
+                     */
+                    bool IsVipHasBeenSet() const;
+
                 private:
 
                     /**
@@ -249,6 +294,20 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool m_supportNamespaceEndpoint;
                     bool m_supportNamespaceEndpointHasBeenSet;
+
+                    /**
+                     * VPC Information
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<VpcConfig> m_vpcs;
+                    bool m_vpcsHasBeenSet;
+
+                    /**
+                     * Whether it is an exclusive instance
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool m_isVip;
+                    bool m_isVipHasBeenSet;
 
                 };
             }

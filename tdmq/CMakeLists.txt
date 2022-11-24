@@ -201,6 +201,7 @@ set(tdmq_public_header_model
   include/tencentcloud/tdmq/v20200217/model/DeleteCmqSubscribeResponse.h
   include/tencentcloud/tdmq/v20200217/model/DescribePublisherSummaryRequest.h
   include/tencentcloud/tdmq/v20200217/model/DeleteSubscriptionsRequest.h
+  include/tencentcloud/tdmq/v20200217/model/VpcConfig.h
   include/tencentcloud/tdmq/v20200217/model/ModifyRocketMQGroupResponse.h
   include/tencentcloud/tdmq/v20200217/model/DescribeRocketMQVipInstancesResponse.h
   include/tencentcloud/tdmq/v20200217/model/DescribeRabbitMQVipInstancesRequest.h
@@ -394,6 +395,7 @@ set(tdmq_src
   src/v20200217/model/DeleteCmqSubscribeResponse.cpp
   src/v20200217/model/DescribePublisherSummaryRequest.cpp
   src/v20200217/model/DeleteSubscriptionsRequest.cpp
+  src/v20200217/model/VpcConfig.cpp
   src/v20200217/model/ModifyRocketMQGroupResponse.cpp
   src/v20200217/model/DescribeRocketMQVipInstancesResponse.cpp
   src/v20200217/model/DescribeRabbitMQVipInstancesRequest.cpp

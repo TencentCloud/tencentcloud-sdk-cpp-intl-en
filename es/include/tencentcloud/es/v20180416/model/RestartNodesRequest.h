@@ -96,6 +96,42 @@ namespace TencentCloud
                      */
                     bool ForceRestartHasBeenSet() const;
 
+                    /**
+                     * 获取The restart mode. Valid values: `in-place` (default), `blue-green`.
+                     * @return RestartMode The restart mode. Valid values: `in-place` (default), `blue-green`.
+                     */
+                    std::string GetRestartMode() const;
+
+                    /**
+                     * 设置The restart mode. Valid values: `in-place` (default), `blue-green`.
+                     * @param RestartMode The restart mode. Valid values: `in-place` (default), `blue-green`.
+                     */
+                    void SetRestartMode(const std::string& _restartMode);
+
+                    /**
+                     * 判断参数 RestartMode 是否已赋值
+                     * @return RestartMode 是否已赋值
+                     */
+                    bool RestartModeHasBeenSet() const;
+
+                    /**
+                     * 获取The node status, applicable in the blue/green mode. The blue/green restart is risky if the node is offline.
+                     * @return IsOffline The node status, applicable in the blue/green mode. The blue/green restart is risky if the node is offline.
+                     */
+                    bool GetIsOffline() const;
+
+                    /**
+                     * 设置The node status, applicable in the blue/green mode. The blue/green restart is risky if the node is offline.
+                     * @param IsOffline The node status, applicable in the blue/green mode. The blue/green restart is risky if the node is offline.
+                     */
+                    void SetIsOffline(const bool& _isOffline);
+
+                    /**
+                     * 判断参数 IsOffline 是否已赋值
+                     * @return IsOffline 是否已赋值
+                     */
+                    bool IsOfflineHasBeenSet() const;
+
                 private:
 
                     /**
@@ -115,6 +151,18 @@ namespace TencentCloud
                      */
                     bool m_forceRestart;
                     bool m_forceRestartHasBeenSet;
+
+                    /**
+                     * The restart mode. Valid values: `in-place` (default), `blue-green`.
+                     */
+                    std::string m_restartMode;
+                    bool m_restartModeHasBeenSet;
+
+                    /**
+                     * The node status, applicable in the blue/green mode. The blue/green restart is risky if the node is offline.
+                     */
+                    bool m_isOffline;
+                    bool m_isOfflineHasBeenSet;
 
                 };
             }
