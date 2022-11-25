@@ -117,6 +117,8 @@
 #include <tencentcloud/apigateway/v20180808/model/DescribePluginResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/DescribePluginApisRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/DescribePluginApisResponse.h>
+#include <tencentcloud/apigateway/v20180808/model/DescribePluginsByApiRequest.h>
+#include <tencentcloud/apigateway/v20180808/model/DescribePluginsByApiResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/DescribeServiceRequest.h>
 #include <tencentcloud/apigateway/v20180808/model/DescribeServiceResponse.h>
 #include <tencentcloud/apigateway/v20180808/model/DescribeServiceEnvironmentListRequest.h>
@@ -360,6 +362,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribePluginApisResponse> DescribePluginApisOutcome;
                 typedef std::future<DescribePluginApisOutcome> DescribePluginApisOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::DescribePluginApisRequest&, DescribePluginApisOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePluginApisAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribePluginsByApiResponse> DescribePluginsByApiOutcome;
+                typedef std::future<DescribePluginsByApiOutcome> DescribePluginsByApiOutcomeCallable;
+                typedef std::function<void(const ApigatewayClient*, const Model::DescribePluginsByApiRequest&, DescribePluginsByApiOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePluginsByApiAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeServiceResponse> DescribeServiceOutcome;
                 typedef std::future<DescribeServiceOutcome> DescribeServiceOutcomeCallable;
                 typedef std::function<void(const ApigatewayClient*, const Model::DescribeServiceRequest&, DescribeServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeServiceAsyncHandler;
@@ -929,6 +934,15 @@ To make authentication and throttling for a service take effect, you need to bin
                 DescribePluginApisOutcome DescribePluginApis(const Model::DescribePluginApisRequest &request);
                 void DescribePluginApisAsync(const Model::DescribePluginApisRequest& request, const DescribePluginApisAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribePluginApisOutcomeCallable DescribePluginApisCallable(const Model::DescribePluginApisRequest& request);
+
+                /**
+                 *This API is used to query all plug-ins bound with the API.
+                 * @param req DescribePluginsByApiRequest
+                 * @return DescribePluginsByApiOutcome
+                 */
+                DescribePluginsByApiOutcome DescribePluginsByApi(const Model::DescribePluginsByApiRequest &request);
+                void DescribePluginsByApiAsync(const Model::DescribePluginsByApiRequest& request, const DescribePluginsByApiAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribePluginsByApiOutcomeCallable DescribePluginsByApiCallable(const Model::DescribePluginsByApiRequest& request);
 
                 /**
                  *This API is used to query the details of a service, such as its description, domain name, protocol, creation time, and releases.
