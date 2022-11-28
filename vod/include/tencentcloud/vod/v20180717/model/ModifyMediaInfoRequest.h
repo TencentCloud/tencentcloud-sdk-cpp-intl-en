@@ -229,14 +229,14 @@ In the same request, `ClearKeyFrameDescs` and `AddKeyFrameDescs` cannot be prese
                     bool ClearKeyFrameDescsHasBeenSet() const;
 
                     /**
-                     * 获取Set of tags to be added. Up to 16 tags can be added to one media file, and one tag can contain up to 16 characters. In the same request, the parameters of `AddTags` must be different from those of `DeleteTags`.
-                     * @return AddTags Set of tags to be added. Up to 16 tags can be added to one media file, and one tag can contain up to 16 characters. In the same request, the parameters of `AddTags` must be different from those of `DeleteTags`.
+                     * 获取The tags to add. Each file can have up to 16 tags. A tag can contain at most 32 characters. You cannot include the same tag in `AddTags` and `DeleteTags` at the same time.
+                     * @return AddTags The tags to add. Each file can have up to 16 tags. A tag can contain at most 32 characters. You cannot include the same tag in `AddTags` and `DeleteTags` at the same time.
                      */
                     std::vector<std::string> GetAddTags() const;
 
                     /**
-                     * 设置Set of tags to be added. Up to 16 tags can be added to one media file, and one tag can contain up to 16 characters. In the same request, the parameters of `AddTags` must be different from those of `DeleteTags`.
-                     * @param AddTags Set of tags to be added. Up to 16 tags can be added to one media file, and one tag can contain up to 16 characters. In the same request, the parameters of `AddTags` must be different from those of `DeleteTags`.
+                     * 设置The tags to add. Each file can have up to 16 tags. A tag can contain at most 32 characters. You cannot include the same tag in `AddTags` and `DeleteTags` at the same time.
+                     * @param AddTags The tags to add. Each file can have up to 16 tags. A tag can contain at most 32 characters. You cannot include the same tag in `AddTags` and `DeleteTags` at the same time.
                      */
                     void SetAddTags(const std::vector<std::string>& _addTags);
 
@@ -408,7 +408,7 @@ In the same request, `ClearKeyFrameDescs` and `AddKeyFrameDescs` cannot be prese
                     bool m_clearKeyFrameDescsHasBeenSet;
 
                     /**
-                     * Set of tags to be added. Up to 16 tags can be added to one media file, and one tag can contain up to 16 characters. In the same request, the parameters of `AddTags` must be different from those of `DeleteTags`.
+                     * The tags to add. Each file can have up to 16 tags. A tag can contain at most 32 characters. You cannot include the same tag in `AddTags` and `DeleteTags` at the same time.
                      */
                     std::vector<std::string> m_addTags;
                     bool m_addTagsHasBeenSet;

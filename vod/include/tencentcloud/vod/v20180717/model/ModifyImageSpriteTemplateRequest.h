@@ -298,6 +298,36 @@ Default value: black.
                      */
                     bool CommentHasBeenSet() const;
 
+                    /**
+                     * 获取The image format. Valid values:
+<li> jpg</li>
+<li> png</li>
+<li> webp</li>
+                     * @return Format The image format. Valid values:
+<li> jpg</li>
+<li> png</li>
+<li> webp</li>
+                     */
+                    std::string GetFormat() const;
+
+                    /**
+                     * 设置The image format. Valid values:
+<li> jpg</li>
+<li> png</li>
+<li> webp</li>
+                     * @param Format The image format. Valid values:
+<li> jpg</li>
+<li> png</li>
+<li> webp</li>
+                     */
+                    void SetFormat(const std::string& _format);
+
+                    /**
+                     * 判断参数 Format 是否已赋值
+                     * @return Format 是否已赋值
+                     */
+                    bool FormatHasBeenSet() const;
+
                 private:
 
                     /**
@@ -381,6 +411,15 @@ Default value: black.
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
+
+                    /**
+                     * The image format. Valid values:
+<li> jpg</li>
+<li> png</li>
+<li> webp</li>
+                     */
+                    std::string m_format;
+                    bool m_formatHasBeenSet;
 
                 };
             }

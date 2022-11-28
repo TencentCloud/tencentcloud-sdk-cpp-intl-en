@@ -101,14 +101,14 @@ For more information about supported extensions, see [Media types](https://intl.
                     bool MediaNameHasBeenSet() const;
 
                     /**
-                     * 获取URL of video cover to be pulled. Only gif, jpeg, and png formats are supported.
-                     * @return CoverUrl URL of video cover to be pulled. Only gif, jpeg, and png formats are supported.
+                     * 获取The URL of the video to pull. Supported formats include GIF, JPEG (JPG), and PNG.
+                     * @return CoverUrl The URL of the video to pull. Supported formats include GIF, JPEG (JPG), and PNG.
                      */
                     std::string GetCoverUrl() const;
 
                     /**
-                     * 设置URL of video cover to be pulled. Only gif, jpeg, and png formats are supported.
-                     * @param CoverUrl URL of video cover to be pulled. Only gif, jpeg, and png formats are supported.
+                     * 设置The URL of the video to pull. Supported formats include GIF, JPEG (JPG), and PNG.
+                     * @param CoverUrl The URL of the video to pull. Supported formats include GIF, JPEG (JPG), and PNG.
                      */
                     void SetCoverUrl(const std::string& _coverUrl);
 
@@ -292,7 +292,7 @@ For more information about supported extensions, see [Media types](https://intl.
                     bool m_mediaNameHasBeenSet;
 
                     /**
-                     * URL of video cover to be pulled. Only gif, jpeg, and png formats are supported.
+                     * The URL of the video to pull. Supported formats include GIF, JPEG (JPG), and PNG.
                      */
                     std::string m_coverUrl;
                     bool m_coverUrlHasBeenSet;

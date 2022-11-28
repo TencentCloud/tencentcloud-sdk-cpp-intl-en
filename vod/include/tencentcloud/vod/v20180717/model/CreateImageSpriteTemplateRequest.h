@@ -320,6 +320,40 @@ Default value: open.
                      */
                     bool ResolutionAdaptiveHasBeenSet() const;
 
+                    /**
+                     * 获取The image format. Valid values:
+<li> jpg</li>
+<li> png</li>
+<li> webp</li>
+Default: jpg
+                     * @return Format The image format. Valid values:
+<li> jpg</li>
+<li> png</li>
+<li> webp</li>
+Default: jpg
+                     */
+                    std::string GetFormat() const;
+
+                    /**
+                     * 设置The image format. Valid values:
+<li> jpg</li>
+<li> png</li>
+<li> webp</li>
+Default: jpg
+                     * @param Format The image format. Valid values:
+<li> jpg</li>
+<li> png</li>
+<li> webp</li>
+Default: jpg
+                     */
+                    void SetFormat(const std::string& _format);
+
+                    /**
+                     * 判断参数 Format 是否已赋值
+                     * @return Format 是否已赋值
+                     */
+                    bool FormatHasBeenSet() const;
+
                 private:
 
                     /**
@@ -407,6 +441,16 @@ Default value: open.
                      */
                     std::string m_resolutionAdaptive;
                     bool m_resolutionAdaptiveHasBeenSet;
+
+                    /**
+                     * The image format. Valid values:
+<li> jpg</li>
+<li> png</li>
+<li> webp</li>
+Default: jpg
+                     */
+                    std::string m_format;
+                    bool m_formatHasBeenSet;
 
                 };
             }
