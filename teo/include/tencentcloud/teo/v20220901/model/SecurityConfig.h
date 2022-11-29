@@ -32,6 +32,7 @@
 #include <tencentcloud/teo/v20220901/model/IpTableConfig.h>
 #include <tencentcloud/teo/v20220901/model/ExceptConfig.h>
 #include <tencentcloud/teo/v20220901/model/DropPageConfig.h>
+#include <tencentcloud/teo/v20220901/model/TemplateConfig.h>
 
 
 namespace TencentCloud
@@ -230,6 +231,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool DropPageConfigHasBeenSet() const;
 
+                    /**
+                     * 获取Security template settings
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return TemplateConfig Security template settings
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    TemplateConfig GetTemplateConfig() const;
+
+                    /**
+                     * 设置Security template settings
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param TemplateConfig Security template settings
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetTemplateConfig(const TemplateConfig& _templateConfig);
+
+                    /**
+                     * 判断参数 TemplateConfig 是否已赋值
+                     * @return TemplateConfig 是否已赋值
+                     */
+                    bool TemplateConfigHasBeenSet() const;
+
                 private:
 
                     /**
@@ -287,6 +310,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     DropPageConfig m_dropPageConfig;
                     bool m_dropPageConfigHasBeenSet;
+
+                    /**
+                     * Security template settings
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    TemplateConfig m_templateConfig;
+                    bool m_templateConfigHasBeenSet;
 
                 };
             }

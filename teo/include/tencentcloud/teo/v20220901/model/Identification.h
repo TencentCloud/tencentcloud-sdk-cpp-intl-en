@@ -93,14 +93,14 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取The site ownership information.
-                     * @return Ascription The site ownership information.
+                     * 获取Details of the DNS record.
+                     * @return Ascription Details of the DNS record.
                      */
                     AscriptionInfo GetAscription() const;
 
                     /**
-                     * 设置The site ownership information.
-                     * @param Ascription The site ownership information.
+                     * 设置Details of the DNS record.
+                     * @param Ascription Details of the DNS record.
                      */
                     void SetAscription(const AscriptionInfo& _ascription);
 
@@ -133,14 +133,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OriginalNameServersHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileAscription 
+                     * 获取Details of the verification file.
+                     * @return FileAscription Details of the verification file.
                      */
                     FileAscriptionInfo GetFileAscription() const;
 
                     /**
-                     * 设置
-                     * @param FileAscription 
+                     * 设置Details of the verification file.
+                     * @param FileAscription Details of the verification file.
                      */
                     void SetFileAscription(const FileAscriptionInfo& _fileAscription);
 
@@ -167,7 +167,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_statusHasBeenSet;
 
                     /**
-                     * The site ownership information.
+                     * Details of the DNS record.
                      */
                     AscriptionInfo m_ascription;
                     bool m_ascriptionHasBeenSet;
@@ -180,7 +180,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_originalNameServersHasBeenSet;
 
                     /**
-                     * 
+                     * Details of the verification file.
                      */
                     FileAscriptionInfo m_fileAscription;
                     bool m_fileAscriptionHasBeenSet;

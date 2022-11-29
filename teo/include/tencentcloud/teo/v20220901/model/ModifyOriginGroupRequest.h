@@ -176,14 +176,18 @@ namespace TencentCloud
                     bool OriginRecordsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HostHeader 
+                     * 获取The origin domain. This field can be specified only when `OriginType=self`.
+If it is left empty, the existing configuration is used.
+                     * @return HostHeader The origin domain. This field can be specified only when `OriginType=self`.
+If it is left empty, the existing configuration is used.
                      */
                     std::string GetHostHeader() const;
 
                     /**
-                     * 设置
-                     * @param HostHeader 
+                     * 设置The origin domain. This field can be specified only when `OriginType=self`.
+If it is left empty, the existing configuration is used.
+                     * @param HostHeader The origin domain. This field can be specified only when `OriginType=self`.
+If it is left empty, the existing configuration is used.
                      */
                     void SetHostHeader(const std::string& _hostHeader);
 
@@ -238,7 +242,8 @@ namespace TencentCloud
                     bool m_originRecordsHasBeenSet;
 
                     /**
-                     * 
+                     * The origin domain. This field can be specified only when `OriginType=self`.
+If it is left empty, the existing configuration is used.
                      */
                     std::string m_hostHeader;
                     bool m_hostHeaderHasBeenSet;

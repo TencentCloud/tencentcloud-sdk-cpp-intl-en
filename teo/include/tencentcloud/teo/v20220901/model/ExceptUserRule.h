@@ -50,17 +50,13 @@ namespace TencentCloud
 
                     /**
                      * 获取The rule name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RuleName The rule name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetRuleName() const;
 
                     /**
                      * 设置The rule name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param RuleName The rule name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetRuleName(const std::string& _ruleName);
 
@@ -72,17 +68,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取The rule action. It only supports the value `skip`, which indicates skipping all managed rules.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Action The rule action. It only supports the value `skip`, which indicates skipping all managed rules.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetAction() const;
 
                     /**
                      * 设置The rule action. It only supports the value `skip`, which indicates skipping all managed rules.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param Action The rule action. It only supports the value `skip`, which indicates skipping all managed rules.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetAction(const std::string& _action);
 
@@ -96,11 +88,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 获取The rule status. Values:
 <li>`on`: Enabled</li>
 <li>`off`: Disabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RuleStatus The rule status. Values:
 <li>`on`: Enabled</li>
 <li>`off`: Disabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetRuleStatus() const;
 
@@ -108,11 +98,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置The rule status. Values:
 <li>`on`: Enabled</li>
 <li>`off`: Disabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param RuleStatus The rule status. Values:
 <li>`on`: Enabled</li>
 <li>`off`: Disabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetRuleStatus(const std::string& _ruleStatus);
 
@@ -123,18 +111,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RuleStatusHasBeenSet() const;
 
                     /**
-                     * 获取The rule ID, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RuleID The rule ID, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The rule ID, which is automatically created and only used as an output parameter.
+                     * @return RuleID The rule ID, which is automatically created and only used as an output parameter.
                      */
                     int64_t GetRuleID() const;
 
                     /**
-                     * 设置The rule ID, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RuleID The rule ID, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The rule ID, which is automatically created and only used as an output parameter.
+                     * @param RuleID The rule ID, which is automatically created and only used as an output parameter.
                      */
                     void SetRuleID(const int64_t& _ruleID);
 
@@ -145,18 +129,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RuleIDHasBeenSet() const;
 
                     /**
-                     * 获取The update time, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UpdateTime The update time, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The update time. If it is null, the current date and time is recorded.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return UpdateTime The update time. If it is null, the current date and time is recorded.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置The update time, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param UpdateTime The update time, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The update time. If it is null, the current date and time is recorded.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param UpdateTime The update time. If it is null, the current date and time is recorded.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
@@ -211,18 +195,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ExceptUserRuleScopeHasBeenSet() const;
 
                     /**
-                     * 获取The rule priority. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RulePriority The rule priority. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The rule priority. Value range: 0-100. If it is null, it defaults to 0.
+                     * @return RulePriority The rule priority. Value range: 0-100. If it is null, it defaults to 0.
                      */
                     int64_t GetRulePriority() const;
 
                     /**
-                     * 设置The rule priority. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RulePriority The rule priority. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The rule priority. Value range: 0-100. If it is null, it defaults to 0.
+                     * @param RulePriority The rule priority. Value range: 0-100. If it is null, it defaults to 0.
                      */
                     void SetRulePriority(const int64_t& _rulePriority);
 
@@ -236,14 +216,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * The rule name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_ruleName;
                     bool m_ruleNameHasBeenSet;
 
                     /**
                      * The rule action. It only supports the value `skip`, which indicates skipping all managed rules.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
@@ -252,21 +230,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * The rule status. Values:
 <li>`on`: Enabled</li>
 <li>`off`: Disabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_ruleStatus;
                     bool m_ruleStatusHasBeenSet;
 
                     /**
-                     * The rule ID, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The rule ID, which is automatically created and only used as an output parameter.
                      */
                     int64_t m_ruleID;
                     bool m_ruleIDHasBeenSet;
 
                     /**
-                     * The update time, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The update time. If it is null, the current date and time is recorded.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
@@ -286,8 +262,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_exceptUserRuleScopeHasBeenSet;
 
                     /**
-                     * The rule priority. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The rule priority. Value range: 0-100. If it is null, it defaults to 0.
                      */
                     int64_t m_rulePriority;
                     bool m_rulePriorityHasBeenSet;

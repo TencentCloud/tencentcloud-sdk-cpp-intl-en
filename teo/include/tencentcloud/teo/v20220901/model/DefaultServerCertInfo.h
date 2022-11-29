@@ -214,25 +214,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Deployment status. Values:
-<li>`processing`: Deployment in progress;</li>
-<li>`deployed`: Deployed.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`processing`: Deployment in progress</li>
+<li>`deployed`: Deployed</li>
+<li>`failed`: Deployment failed</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Status Deployment status. Values:
-<li>`processing`: Deployment in progress;</li>
-<li>`deployed`: Deployed.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`processing`: Deployment in progress</li>
+<li>`deployed`: Deployed</li>
+<li>`failed`: Deployment failed</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetStatus() const;
 
                     /**
                      * 设置Deployment status. Values:
-<li>`processing`: Deployment in progress;</li>
-<li>`deployed`: Deployed.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`processing`: Deployment in progress</li>
+<li>`deployed`: Deployed</li>
+<li>`failed`: Deployment failed</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param Status Deployment status. Values:
-<li>`processing`: Deployment in progress;</li>
-<li>`deployed`: Deployed.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`processing`: Deployment in progress</li>
+<li>`deployed`: Deployed</li>
+<li>`failed`: Deployment failed</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetStatus(const std::string& _status);
 
@@ -265,14 +269,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SignAlgo 
+                     * 获取Certificate algorithm.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return SignAlgo Certificate algorithm.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetSignAlgo() const;
 
                     /**
-                     * 设置
-                     * @param SignAlgo 
+                     * 设置Certificate algorithm.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param SignAlgo Certificate algorithm.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetSignAlgo(const std::string& _signAlgo);
 
@@ -338,9 +346,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Deployment status. Values:
-<li>`processing`: Deployment in progress;</li>
-<li>`deployed`: Deployed.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`processing`: Deployment in progress</li>
+<li>`deployed`: Deployed</li>
+<li>`failed`: Deployment failed</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
@@ -353,7 +362,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_messageHasBeenSet;
 
                     /**
-                     * 
+                     * Certificate algorithm.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_signAlgo;
                     bool m_signAlgoHasBeenSet;

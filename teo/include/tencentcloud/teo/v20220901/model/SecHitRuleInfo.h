@@ -200,6 +200,44 @@ namespace TencentCloud
                      */
                     bool DomainHasBeenSet() const;
 
+                    /**
+                     * 获取The bot tag. Values:
+<li>`evil_bot`: Malicious bot</li>
+<li>`suspect_bot`: Suspected bot</li>
+<li>`good_bot`: Good bot</li>
+<li>`normal`: Normal request</li>
+<li>`none`: Uncategorized</li>
+                     * @return BotLabel The bot tag. Values:
+<li>`evil_bot`: Malicious bot</li>
+<li>`suspect_bot`: Suspected bot</li>
+<li>`good_bot`: Good bot</li>
+<li>`normal`: Normal request</li>
+<li>`none`: Uncategorized</li>
+                     */
+                    std::string GetBotLabel() const;
+
+                    /**
+                     * 设置The bot tag. Values:
+<li>`evil_bot`: Malicious bot</li>
+<li>`suspect_bot`: Suspected bot</li>
+<li>`good_bot`: Good bot</li>
+<li>`normal`: Normal request</li>
+<li>`none`: Uncategorized</li>
+                     * @param BotLabel The bot tag. Values:
+<li>`evil_bot`: Malicious bot</li>
+<li>`suspect_bot`: Suspected bot</li>
+<li>`good_bot`: Good bot</li>
+<li>`normal`: Normal request</li>
+<li>`none`: Uncategorized</li>
+                     */
+                    void SetBotLabel(const std::string& _botLabel);
+
+                    /**
+                     * 判断参数 BotLabel 是否已赋值
+                     * @return BotLabel 是否已赋值
+                     */
+                    bool BotLabelHasBeenSet() const;
+
                 private:
 
                     /**
@@ -250,6 +288,17 @@ namespace TencentCloud
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
+
+                    /**
+                     * The bot tag. Values:
+<li>`evil_bot`: Malicious bot</li>
+<li>`suspect_bot`: Suspected bot</li>
+<li>`good_bot`: Good bot</li>
+<li>`normal`: Normal request</li>
+<li>`none`: Uncategorized</li>
+                     */
+                    std::string m_botLabel;
+                    bool m_botLabelHasBeenSet;
 
                 };
             }

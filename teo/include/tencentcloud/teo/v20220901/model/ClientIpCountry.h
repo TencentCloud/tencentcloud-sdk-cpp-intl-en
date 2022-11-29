@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Location information of the client IP carried in origin-pull. It is formatted as a two-letter ISO-3166-1 country/region code.
                 */
                 class ClientIpCountry : public AbstractModel
                 {
@@ -47,14 +47,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Whether to enable configuration. Values:
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+                     * @return Switch Whether to enable configuration. Values:
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param Switch 
+                     * 设置Whether to enable configuration. Values:
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+                     * @param Switch Whether to enable configuration. Values:
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
                      */
                     void SetSwitch(const std::string& _switch);
 
@@ -65,14 +73,18 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HeaderName 
+                     * 获取Header name of ClientIpCountry. This field is valid only when `Switch=on`.
+If it is left empty, the default value `EO-Client-IPCountry` will be used.
+                     * @return HeaderName Header name of ClientIpCountry. This field is valid only when `Switch=on`.
+If it is left empty, the default value `EO-Client-IPCountry` will be used.
                      */
                     std::string GetHeaderName() const;
 
                     /**
-                     * 设置
-                     * @param HeaderName 
+                     * 设置Header name of ClientIpCountry. This field is valid only when `Switch=on`.
+If it is left empty, the default value `EO-Client-IPCountry` will be used.
+                     * @param HeaderName Header name of ClientIpCountry. This field is valid only when `Switch=on`.
+If it is left empty, the default value `EO-Client-IPCountry` will be used.
                      */
                     void SetHeaderName(const std::string& _headerName);
 
@@ -85,13 +97,16 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Whether to enable configuration. Values:
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Header name of ClientIpCountry. This field is valid only when `Switch=on`.
+If it is left empty, the default value `EO-Client-IPCountry` will be used.
                      */
                     std::string m_headerName;
                     bool m_headerNameHasBeenSet;

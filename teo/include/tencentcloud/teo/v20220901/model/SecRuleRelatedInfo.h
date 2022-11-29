@@ -202,6 +202,28 @@ namespace TencentCloud
                      */
                     bool RuleTypeNameHasBeenSet() const;
 
+                    /**
+                     * 获取The attack content.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AttackContent The attack content.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetAttackContent() const;
+
+                    /**
+                     * 设置The attack content.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param AttackContent The attack content.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetAttackContent(const std::string& _attackContent);
+
+                    /**
+                     * 判断参数 AttackContent 是否已赋值
+                     * @return AttackContent 是否已赋值
+                     */
+                    bool AttackContentHasBeenSet() const;
+
                 private:
 
                     /**
@@ -251,6 +273,13 @@ namespace TencentCloud
                      */
                     std::string m_ruleTypeName;
                     bool m_ruleTypeNameHasBeenSet;
+
+                    /**
+                     * The attack content.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_attackContent;
+                    bool m_attackContentHasBeenSet;
 
                 };
             }

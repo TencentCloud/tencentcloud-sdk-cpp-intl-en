@@ -66,45 +66,45 @@ namespace TencentCloud
 
                     /**
                      * 获取The conditional operator. Values:
-<li>`equals`: Equal to;</li>
-<li>`notEquals`: Not equal to;</li>
-<li>`include`: Contain;</li>
-<li>`notInclude`: Not contain;</li>
-<li>`startWith`: Start with;</li>
-<li>`notStartWith`: Not start with;</li>
-<li>`endWith`: End with;</li>
-<li>`notEndWith`: Not end with.</li>
+<li>`equals`: Equals</li>
+<li>`notEquals`: Does not equal</li>
+<li>`include`: Contains</li>
+<li>`notInclude`: Does not contain</li>
+<li>`startWith`: Starts with</li>
+<li>`notStartWith`: Does not start with</li>
+<li>`endWith`: Ends with</li>
+<li>`notEndWith`: Does not end with</li>
                      * @return Operator The conditional operator. Values:
-<li>`equals`: Equal to;</li>
-<li>`notEquals`: Not equal to;</li>
-<li>`include`: Contain;</li>
-<li>`notInclude`: Not contain;</li>
-<li>`startWith`: Start with;</li>
-<li>`notStartWith`: Not start with;</li>
-<li>`endWith`: End with;</li>
-<li>`notEndWith`: Not end with.</li>
+<li>`equals`: Equals</li>
+<li>`notEquals`: Does not equal</li>
+<li>`include`: Contains</li>
+<li>`notInclude`: Does not contain</li>
+<li>`startWith`: Starts with</li>
+<li>`notStartWith`: Does not start with</li>
+<li>`endWith`: Ends with</li>
+<li>`notEndWith`: Does not end with</li>
                      */
                     std::string GetOperator() const;
 
                     /**
                      * 设置The conditional operator. Values:
-<li>`equals`: Equal to;</li>
-<li>`notEquals`: Not equal to;</li>
-<li>`include`: Contain;</li>
-<li>`notInclude`: Not contain;</li>
-<li>`startWith`: Start with;</li>
-<li>`notStartWith`: Not start with;</li>
-<li>`endWith`: End with;</li>
-<li>`notEndWith`: Not end with.</li>
+<li>`equals`: Equals</li>
+<li>`notEquals`: Does not equal</li>
+<li>`include`: Contains</li>
+<li>`notInclude`: Does not contain</li>
+<li>`startWith`: Starts with</li>
+<li>`notStartWith`: Does not start with</li>
+<li>`endWith`: Ends with</li>
+<li>`notEndWith`: Does not end with</li>
                      * @param Operator The conditional operator. Values:
-<li>`equals`: Equal to;</li>
-<li>`notEquals`: Not equal to;</li>
-<li>`include`: Contain;</li>
-<li>`notInclude`: Not contain;</li>
-<li>`startWith`: Start with;</li>
-<li>`notStartWith`: Not start with;</li>
-<li>`endWith`: End with;</li>
-<li>`notEndWith`: Not end with.</li>
+<li>`equals`: Equals</li>
+<li>`notEquals`: Does not equal</li>
+<li>`include`: Contains</li>
+<li>`notInclude`: Does not contain</li>
+<li>`startWith`: Starts with</li>
+<li>`notStartWith`: Does not start with</li>
+<li>`endWith`: Ends with</li>
+<li>`notEndWith`: Does not end with</li>
                      */
                     void SetOperator(const std::string& _operator);
 
@@ -142,14 +142,14 @@ namespace TencentCloud
 
                     /**
                      * The conditional operator. Values:
-<li>`equals`: Equal to;</li>
-<li>`notEquals`: Not equal to;</li>
-<li>`include`: Contain;</li>
-<li>`notInclude`: Not contain;</li>
-<li>`startWith`: Start with;</li>
-<li>`notStartWith`: Not start with;</li>
-<li>`endWith`: End with;</li>
-<li>`notEndWith`: Not end with.</li>
+<li>`equals`: Equals</li>
+<li>`notEquals`: Does not equal</li>
+<li>`include`: Contains</li>
+<li>`notInclude`: Does not contain</li>
+<li>`startWith`: Starts with</li>
+<li>`notStartWith`: Does not start with</li>
+<li>`endWith`: Ends with</li>
+<li>`notEndWith`: Does not end with</li>
                      */
                     std::string m_operator;
                     bool m_operatorHasBeenSet;

@@ -123,6 +123,50 @@ namespace TencentCloud
                      */
                     bool TagsHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to allow duplicate sites. Values:
+<li>`true`: Duplicate sites are allowed.</li>
+<li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used.
+                     * @return AllowDuplicates Whether to allow duplicate sites. Values:
+<li>`true`: Duplicate sites are allowed.</li>
+<li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used.
+                     */
+                    bool GetAllowDuplicates() const;
+
+                    /**
+                     * 设置Whether to allow duplicate sites. Values:
+<li>`true`: Duplicate sites are allowed.</li>
+<li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used.
+                     * @param AllowDuplicates Whether to allow duplicate sites. Values:
+<li>`true`: Duplicate sites are allowed.</li>
+<li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used.
+                     */
+                    void SetAllowDuplicates(const bool& _allowDuplicates);
+
+                    /**
+                     * 判断参数 AllowDuplicates 是否已赋值
+                     * @return AllowDuplicates 是否已赋值
+                     */
+                    bool AllowDuplicatesHasBeenSet() const;
+
+                    /**
+                     * 获取The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+                     * @return AliasZoneName The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+                     */
+                    std::string GetAliasZoneName() const;
+
+                    /**
+                     * 设置The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+                     * @param AliasZoneName The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+                     */
+                    void SetAliasZoneName(const std::string& _aliasZoneName);
+
+                    /**
+                     * 判断参数 AliasZoneName 是否已赋值
+                     * @return AliasZoneName 是否已赋值
+                     */
+                    bool AliasZoneNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -150,6 +194,20 @@ namespace TencentCloud
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * Whether to allow duplicate sites. Values:
+<li>`true`: Duplicate sites are allowed.</li>
+<li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used.
+                     */
+                    bool m_allowDuplicates;
+                    bool m_allowDuplicatesHasBeenSet;
+
+                    /**
+                     * The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+                     */
+                    std::string m_aliasZoneName;
+                    bool m_aliasZoneNameHasBeenSet;
 
                 };
             }

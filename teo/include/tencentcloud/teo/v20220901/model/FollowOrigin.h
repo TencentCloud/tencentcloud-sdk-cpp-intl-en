@@ -72,6 +72,50 @@ namespace TencentCloud
                      */
                     bool SwitchHasBeenSet() const;
 
+                    /**
+                     * 获取Sets the default cache time when the origin server does not return the Cache-Control header.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return DefaultCacheTime Sets the default cache time when the origin server does not return the Cache-Control header.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    int64_t GetDefaultCacheTime() const;
+
+                    /**
+                     * 设置Sets the default cache time when the origin server does not return the Cache-Control header.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param DefaultCacheTime Sets the default cache time when the origin server does not return the Cache-Control header.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetDefaultCacheTime(const int64_t& _defaultCacheTime);
+
+                    /**
+                     * 判断参数 DefaultCacheTime 是否已赋值
+                     * @return DefaultCacheTime 是否已赋值
+                     */
+                    bool DefaultCacheTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies whether to enable cache when the origin server does not return the Cache-Control header.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return DefaultCache Specifies whether to enable cache when the origin server does not return the Cache-Control header.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetDefaultCache() const;
+
+                    /**
+                     * 设置Specifies whether to enable cache when the origin server does not return the Cache-Control header.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param DefaultCache Specifies whether to enable cache when the origin server does not return the Cache-Control header.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetDefaultCache(const std::string& _defaultCache);
+
+                    /**
+                     * 判断参数 DefaultCache 是否已赋值
+                     * @return DefaultCache 是否已赋值
+                     */
+                    bool DefaultCacheHasBeenSet() const;
+
                 private:
 
                     /**
@@ -81,6 +125,20 @@ namespace TencentCloud
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
+
+                    /**
+                     * Sets the default cache time when the origin server does not return the Cache-Control header.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    int64_t m_defaultCacheTime;
+                    bool m_defaultCacheTimeHasBeenSet;
+
+                    /**
+                     * Specifies whether to enable cache when the origin server does not return the Cache-Control header.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_defaultCache;
+                    bool m_defaultCacheHasBeenSet;
 
                 };
             }

@@ -61,30 +61,34 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Purging mode. Values:
-<li>`purge_url`: Purge URLs;</li>
-<li>`purge_prefix`: Purge prefixes;</li>
-<li>`purge_host`: Purge hostnames;</li>
-<li>`purge_all`: Purge all caches.</li>
-                     * @return Type Purging mode. Values:
-<li>`purge_url`: Purge URLs;</li>
-<li>`purge_prefix`: Purge prefixes;</li>
-<li>`purge_host`: Purge hostnames;</li>
-<li>`purge_all`: Purge all caches.</li>
+                     * 获取Mode of cache purging. Values:
+<li>`purge_url`: Purge by URL</li>
+<li>`purge_prefix`: Purge by prefix</li>
+<li>`purge_host`: Purge by hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by cache tag</li>
+                     * @return Type Mode of cache purging. Values:
+<li>`purge_url`: Purge by URL</li>
+<li>`purge_prefix`: Purge by prefix</li>
+<li>`purge_host`: Purge by hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by cache tag</li>
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Purging mode. Values:
-<li>`purge_url`: Purge URLs;</li>
-<li>`purge_prefix`: Purge prefixes;</li>
-<li>`purge_host`: Purge hostnames;</li>
-<li>`purge_all`: Purge all caches.</li>
-                     * @param Type Purging mode. Values:
-<li>`purge_url`: Purge URLs;</li>
-<li>`purge_prefix`: Purge prefixes;</li>
-<li>`purge_host`: Purge hostnames;</li>
-<li>`purge_all`: Purge all caches.</li>
+                     * 设置Mode of cache purging. Values:
+<li>`purge_url`: Purge by URL</li>
+<li>`purge_prefix`: Purge by prefix</li>
+<li>`purge_host`: Purge by hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by cache tag</li>
+                     * @param Type Mode of cache purging. Values:
+<li>`purge_url`: Purge by URL</li>
+<li>`purge_prefix`: Purge by prefix</li>
+<li>`purge_host`: Purge by hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by cache tag</li>
                      */
                     void SetType(const std::string& _type);
 
@@ -97,44 +101,52 @@ namespace TencentCloud
                     /**
                      * 获取Target resource to be purged, which depends on the `Type` field.
 1. When `Type = purge_host`:
-Hostnames are purged, such as www.example.com and foo.bar.example.com.
+Enter the hostname, such as www.example.com and foo.bar.example.com.
 2. When `Type = purge_prefix`:
-Prefixes are purged, such as http://www.example.com/example.
+Enter the prefix, such as http://www.example.com/example.
 3. When `Type = purge_url`:
-URLs are purged, such as https://www.example.com/example.jpg.
-4. When `Type = purge_all`: All types of resources are purged.
-`Targets` is not a required field.
+Enter the URL, such as https://www.example.com/example.jpg.
+4. When `Type = purge_all`:
+This field can be left empty.
+5. When `Type = purge_cache_tag`:
+Enter the cache tag, such as tag1.
                      * @return Targets Target resource to be purged, which depends on the `Type` field.
 1. When `Type = purge_host`:
-Hostnames are purged, such as www.example.com and foo.bar.example.com.
+Enter the hostname, such as www.example.com and foo.bar.example.com.
 2. When `Type = purge_prefix`:
-Prefixes are purged, such as http://www.example.com/example.
+Enter the prefix, such as http://www.example.com/example.
 3. When `Type = purge_url`:
-URLs are purged, such as https://www.example.com/example.jpg.
-4. When `Type = purge_all`: All types of resources are purged.
-`Targets` is not a required field.
+Enter the URL, such as https://www.example.com/example.jpg.
+4. When `Type = purge_all`:
+This field can be left empty.
+5. When `Type = purge_cache_tag`:
+Enter the cache tag, such as tag1.
                      */
                     std::vector<std::string> GetTargets() const;
 
                     /**
                      * 设置Target resource to be purged, which depends on the `Type` field.
 1. When `Type = purge_host`:
-Hostnames are purged, such as www.example.com and foo.bar.example.com.
+Enter the hostname, such as www.example.com and foo.bar.example.com.
 2. When `Type = purge_prefix`:
-Prefixes are purged, such as http://www.example.com/example.
+Enter the prefix, such as http://www.example.com/example.
 3. When `Type = purge_url`:
-URLs are purged, such as https://www.example.com/example.jpg.
-4. When `Type = purge_all`: All types of resources are purged.
-`Targets` is not a required field.
+Enter the URL, such as https://www.example.com/example.jpg.
+4. When `Type = purge_all`:
+This field can be left empty.
+5. When `Type = purge_cache_tag`:
+Enter the cache tag, such as tag1.
                      * @param Targets Target resource to be purged, which depends on the `Type` field.
 1. When `Type = purge_host`:
-Hostnames are purged, such as www.example.com and foo.bar.example.com.
+Enter the hostname, such as www.example.com and foo.bar.example.com.
 2. When `Type = purge_prefix`:
-Prefixes are purged, such as http://www.example.com/example.
+Enter the prefix, such as http://www.example.com/example.
 3. When `Type = purge_url`:
-URLs are purged, such as https://www.example.com/example.jpg.
-4. When `Type = purge_all`: All types of resources are purged.
-`Targets` is not a required field.
+Enter the URL, such as https://www.example.com/example.jpg.
+4. When `Type = purge_all`:
+This field can be left empty.
+5. When `Type = purge_cache_tag`:
+Enter the cache tag, such as tag1.
                      */
                     void SetTargets(const std::vector<std::string>& _targets);
 
@@ -175,11 +187,12 @@ Note that if it’s enabled, the purging is based on the converted URLs.
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Purging mode. Values:
-<li>`purge_url`: Purge URLs;</li>
-<li>`purge_prefix`: Purge prefixes;</li>
-<li>`purge_host`: Purge hostnames;</li>
-<li>`purge_all`: Purge all caches.</li>
+                     * Mode of cache purging. Values:
+<li>`purge_url`: Purge by URL</li>
+<li>`purge_prefix`: Purge by prefix</li>
+<li>`purge_host`: Purge by hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by cache tag</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -187,13 +200,15 @@ Note that if it’s enabled, the purging is based on the converted URLs.
                     /**
                      * Target resource to be purged, which depends on the `Type` field.
 1. When `Type = purge_host`:
-Hostnames are purged, such as www.example.com and foo.bar.example.com.
+Enter the hostname, such as www.example.com and foo.bar.example.com.
 2. When `Type = purge_prefix`:
-Prefixes are purged, such as http://www.example.com/example.
+Enter the prefix, such as http://www.example.com/example.
 3. When `Type = purge_url`:
-URLs are purged, such as https://www.example.com/example.jpg.
-4. When `Type = purge_all`: All types of resources are purged.
-`Targets` is not a required field.
+Enter the URL, such as https://www.example.com/example.jpg.
+4. When `Type = purge_all`:
+This field can be left empty.
+5. When `Type = purge_cache_tag`:
+Enter the cache tag, such as tag1.
                      */
                     std::vector<std::string> m_targets;
                     bool m_targetsHasBeenSet;

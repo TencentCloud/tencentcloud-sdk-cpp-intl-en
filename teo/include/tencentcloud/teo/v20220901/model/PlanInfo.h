@@ -129,46 +129,62 @@ namespace TencentCloud
                     bool FrequencyHasBeenSet() const;
 
                     /**
-                     * 获取Plan option. Values:
-<li>`sta`: Standard plan that supports content delivery network outside Chinese mainland;</li>
-<li>`sta_with_bot`: Standard plan that supports content delivery network outside Chinese mainland and bot management;</li>
-<li>`sta_cm`: Standard plan that supports content delivery network inside Chinese mainland;</li>
-<li>`sta_cm_with_bot`: Standard plan that supports content delivery network inside Chinese mainland and bot management;</li>
-<li>`ent`: Enterprise plan that supports content delivery network outside Chinese mainland;</li>
-<li>`ent_with_bot`: Enterprise plan that supports content delivery network outside Chinese mainland and bot management;</li>
-<li>`ent_cm`: Enterprise plan that supports content delivery network inside Chinese mainland;</li>
-<li>`ent_cm_with_bot`: Enterprise plan that supports content delivery network inside Chinese mainland and bot management.</li>
-                     * @return PlanType Plan option. Values:
-<li>`sta`: Standard plan that supports content delivery network outside Chinese mainland;</li>
-<li>`sta_with_bot`: Standard plan that supports content delivery network outside Chinese mainland and bot management;</li>
-<li>`sta_cm`: Standard plan that supports content delivery network inside Chinese mainland;</li>
-<li>`sta_cm_with_bot`: Standard plan that supports content delivery network inside Chinese mainland and bot management;</li>
-<li>`ent`: Enterprise plan that supports content delivery network outside Chinese mainland;</li>
-<li>`ent_with_bot`: Enterprise plan that supports content delivery network outside Chinese mainland and bot management;</li>
-<li>`ent_cm`: Enterprise plan that supports content delivery network inside Chinese mainland;</li>
-<li>`ent_cm_with_bot`: Enterprise plan that supports content delivery network inside Chinese mainland and bot management.</li>
+                     * 获取The plan option. Values:
+<li>`sta`: Standard plan that supports content delivery network outside the Chinese mainland.</li>
+<li>`sta_with_bot`: Standard plan that supports content delivery network outside the Chinese mainland and bot management.</li>
+<li>`sta_cm`: Standard plan that supports content delivery network inside the Chinese mainland.</li>
+<li>`sta_cm_with_bot`: Standard plan that supports content delivery network inside the Chinese mainland and bot management.</li>
+<li>`sta`: Standard plan that supports content delivery network over the globe.</li>
+<li>`sta_global_with_bot`: Standard plan that supports content delivery network over the globe and bot management.</li>
+<li>`ent`: Enterprise plan that supports content delivery network outside the Chinese mainland.</li>
+<li>`ent_with_bot`: Enterprise plan that supports content delivery network outside the Chinese mainland and bot management.</li>
+<li>`ent_cm`: Enterprise plan that supports content delivery network inside the Chinese mainland.</li>
+<li>`ent_cm_with_bot`: Enterprise plan that supports content delivery network inside the Chinese mainland and bot management.</li>
+<li>`ent_global`: Enterprise plan that supports content delivery network over the globe.</li>
+<li>`ent_global_with_bot`: Enterprise plan that supports content delivery network over the globe and bot management.</li>
+                     * @return PlanType The plan option. Values:
+<li>`sta`: Standard plan that supports content delivery network outside the Chinese mainland.</li>
+<li>`sta_with_bot`: Standard plan that supports content delivery network outside the Chinese mainland and bot management.</li>
+<li>`sta_cm`: Standard plan that supports content delivery network inside the Chinese mainland.</li>
+<li>`sta_cm_with_bot`: Standard plan that supports content delivery network inside the Chinese mainland and bot management.</li>
+<li>`sta`: Standard plan that supports content delivery network over the globe.</li>
+<li>`sta_global_with_bot`: Standard plan that supports content delivery network over the globe and bot management.</li>
+<li>`ent`: Enterprise plan that supports content delivery network outside the Chinese mainland.</li>
+<li>`ent_with_bot`: Enterprise plan that supports content delivery network outside the Chinese mainland and bot management.</li>
+<li>`ent_cm`: Enterprise plan that supports content delivery network inside the Chinese mainland.</li>
+<li>`ent_cm_with_bot`: Enterprise plan that supports content delivery network inside the Chinese mainland and bot management.</li>
+<li>`ent_global`: Enterprise plan that supports content delivery network over the globe.</li>
+<li>`ent_global_with_bot`: Enterprise plan that supports content delivery network over the globe and bot management.</li>
                      */
                     std::string GetPlanType() const;
 
                     /**
-                     * 设置Plan option. Values:
-<li>`sta`: Standard plan that supports content delivery network outside Chinese mainland;</li>
-<li>`sta_with_bot`: Standard plan that supports content delivery network outside Chinese mainland and bot management;</li>
-<li>`sta_cm`: Standard plan that supports content delivery network inside Chinese mainland;</li>
-<li>`sta_cm_with_bot`: Standard plan that supports content delivery network inside Chinese mainland and bot management;</li>
-<li>`ent`: Enterprise plan that supports content delivery network outside Chinese mainland;</li>
-<li>`ent_with_bot`: Enterprise plan that supports content delivery network outside Chinese mainland and bot management;</li>
-<li>`ent_cm`: Enterprise plan that supports content delivery network inside Chinese mainland;</li>
-<li>`ent_cm_with_bot`: Enterprise plan that supports content delivery network inside Chinese mainland and bot management.</li>
-                     * @param PlanType Plan option. Values:
-<li>`sta`: Standard plan that supports content delivery network outside Chinese mainland;</li>
-<li>`sta_with_bot`: Standard plan that supports content delivery network outside Chinese mainland and bot management;</li>
-<li>`sta_cm`: Standard plan that supports content delivery network inside Chinese mainland;</li>
-<li>`sta_cm_with_bot`: Standard plan that supports content delivery network inside Chinese mainland and bot management;</li>
-<li>`ent`: Enterprise plan that supports content delivery network outside Chinese mainland;</li>
-<li>`ent_with_bot`: Enterprise plan that supports content delivery network outside Chinese mainland and bot management;</li>
-<li>`ent_cm`: Enterprise plan that supports content delivery network inside Chinese mainland;</li>
-<li>`ent_cm_with_bot`: Enterprise plan that supports content delivery network inside Chinese mainland and bot management.</li>
+                     * 设置The plan option. Values:
+<li>`sta`: Standard plan that supports content delivery network outside the Chinese mainland.</li>
+<li>`sta_with_bot`: Standard plan that supports content delivery network outside the Chinese mainland and bot management.</li>
+<li>`sta_cm`: Standard plan that supports content delivery network inside the Chinese mainland.</li>
+<li>`sta_cm_with_bot`: Standard plan that supports content delivery network inside the Chinese mainland and bot management.</li>
+<li>`sta`: Standard plan that supports content delivery network over the globe.</li>
+<li>`sta_global_with_bot`: Standard plan that supports content delivery network over the globe and bot management.</li>
+<li>`ent`: Enterprise plan that supports content delivery network outside the Chinese mainland.</li>
+<li>`ent_with_bot`: Enterprise plan that supports content delivery network outside the Chinese mainland and bot management.</li>
+<li>`ent_cm`: Enterprise plan that supports content delivery network inside the Chinese mainland.</li>
+<li>`ent_cm_with_bot`: Enterprise plan that supports content delivery network inside the Chinese mainland and bot management.</li>
+<li>`ent_global`: Enterprise plan that supports content delivery network over the globe.</li>
+<li>`ent_global_with_bot`: Enterprise plan that supports content delivery network over the globe and bot management.</li>
+                     * @param PlanType The plan option. Values:
+<li>`sta`: Standard plan that supports content delivery network outside the Chinese mainland.</li>
+<li>`sta_with_bot`: Standard plan that supports content delivery network outside the Chinese mainland and bot management.</li>
+<li>`sta_cm`: Standard plan that supports content delivery network inside the Chinese mainland.</li>
+<li>`sta_cm_with_bot`: Standard plan that supports content delivery network inside the Chinese mainland and bot management.</li>
+<li>`sta`: Standard plan that supports content delivery network over the globe.</li>
+<li>`sta_global_with_bot`: Standard plan that supports content delivery network over the globe and bot management.</li>
+<li>`ent`: Enterprise plan that supports content delivery network outside the Chinese mainland.</li>
+<li>`ent_with_bot`: Enterprise plan that supports content delivery network outside the Chinese mainland and bot management.</li>
+<li>`ent_cm`: Enterprise plan that supports content delivery network inside the Chinese mainland.</li>
+<li>`ent_cm_with_bot`: Enterprise plan that supports content delivery network inside the Chinese mainland and bot management.</li>
+<li>`ent_global`: Enterprise plan that supports content delivery network over the globe.</li>
+<li>`ent_global_with_bot`: Enterprise plan that supports content delivery network over the globe and bot management.</li>
                      */
                     void SetPlanType(const std::string& _planType);
 
@@ -233,22 +249,26 @@ namespace TencentCloud
                     bool SiteNumberHasBeenSet() const;
 
                     /**
-                     * 获取Acceleration region. Values:
-<li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (Chinese mainland not included).</li>
-                     * @return Area Acceleration region. Values:
-<li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (Chinese mainland not included).</li>
+                     * 获取The acceleration region. Values:
+<li>`mainland`: Chinese mainland</li>
+<li>`overseas`: Global (Chinese mainland not included)</li>
+<li>`global`: Global (Chinese mainland included)</li>
+                     * @return Area The acceleration region. Values:
+<li>`mainland`: Chinese mainland</li>
+<li>`overseas`: Global (Chinese mainland not included)</li>
+<li>`global`: Global (Chinese mainland included)</li>
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置Acceleration region. Values:
-<li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (Chinese mainland not included).</li>
-                     * @param Area Acceleration region. Values:
-<li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (Chinese mainland not included).</li>
+                     * 设置The acceleration region. Values:
+<li>`mainland`: Chinese mainland</li>
+<li>`overseas`: Global (Chinese mainland not included)</li>
+<li>`global`: Global (Chinese mainland included)</li>
+                     * @param Area The acceleration region. Values:
+<li>`mainland`: Chinese mainland</li>
+<li>`overseas`: Global (Chinese mainland not included)</li>
+<li>`global`: Global (Chinese mainland included)</li>
                      */
                     void SetArea(const std::string& _area);
 
@@ -286,15 +306,19 @@ namespace TencentCloud
                     bool m_frequencyHasBeenSet;
 
                     /**
-                     * Plan option. Values:
-<li>`sta`: Standard plan that supports content delivery network outside Chinese mainland;</li>
-<li>`sta_with_bot`: Standard plan that supports content delivery network outside Chinese mainland and bot management;</li>
-<li>`sta_cm`: Standard plan that supports content delivery network inside Chinese mainland;</li>
-<li>`sta_cm_with_bot`: Standard plan that supports content delivery network inside Chinese mainland and bot management;</li>
-<li>`ent`: Enterprise plan that supports content delivery network outside Chinese mainland;</li>
-<li>`ent_with_bot`: Enterprise plan that supports content delivery network outside Chinese mainland and bot management;</li>
-<li>`ent_cm`: Enterprise plan that supports content delivery network inside Chinese mainland;</li>
-<li>`ent_cm_with_bot`: Enterprise plan that supports content delivery network inside Chinese mainland and bot management.</li>
+                     * The plan option. Values:
+<li>`sta`: Standard plan that supports content delivery network outside the Chinese mainland.</li>
+<li>`sta_with_bot`: Standard plan that supports content delivery network outside the Chinese mainland and bot management.</li>
+<li>`sta_cm`: Standard plan that supports content delivery network inside the Chinese mainland.</li>
+<li>`sta_cm_with_bot`: Standard plan that supports content delivery network inside the Chinese mainland and bot management.</li>
+<li>`sta`: Standard plan that supports content delivery network over the globe.</li>
+<li>`sta_global_with_bot`: Standard plan that supports content delivery network over the globe and bot management.</li>
+<li>`ent`: Enterprise plan that supports content delivery network outside the Chinese mainland.</li>
+<li>`ent_with_bot`: Enterprise plan that supports content delivery network outside the Chinese mainland and bot management.</li>
+<li>`ent_cm`: Enterprise plan that supports content delivery network inside the Chinese mainland.</li>
+<li>`ent_cm_with_bot`: Enterprise plan that supports content delivery network inside the Chinese mainland and bot management.</li>
+<li>`ent_global`: Enterprise plan that supports content delivery network over the globe.</li>
+<li>`ent_global_with_bot`: Enterprise plan that supports content delivery network over the globe and bot management.</li>
                      */
                     std::string m_planType;
                     bool m_planTypeHasBeenSet;
@@ -318,9 +342,10 @@ namespace TencentCloud
                     bool m_siteNumberHasBeenSet;
 
                     /**
-                     * Acceleration region. Values:
-<li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (Chinese mainland not included).</li>
+                     * The acceleration region. Values:
+<li>`mainland`: Chinese mainland</li>
+<li>`overseas`: Global (Chinese mainland not included)</li>
+<li>`global`: Global (Chinese mainland included)</li>
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;

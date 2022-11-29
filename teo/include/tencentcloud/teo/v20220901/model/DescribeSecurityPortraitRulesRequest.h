@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The site ID.
-                     * @return ZoneId The site ID.
+                     * 获取The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
+                     * @return ZoneId The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
                      */
                     std::string GetZoneId() const;
 
                     /**
-                     * 设置The site ID.
-                     * @param ZoneId The site ID.
+                     * 设置The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
+                     * @param ZoneId The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
                      */
                     void SetZoneId(const std::string& _zoneId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Subdomain name/Application name
-                     * @return Entity Subdomain name/Application name
+                     * 获取The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId".
+                     * @return Entity The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId".
                      */
                     std::string GetEntity() const;
 
                     /**
-                     * 设置Subdomain name/Application name
-                     * @param Entity Subdomain name/Application name
+                     * 设置The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId".
+                     * @param Entity The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId".
                      */
                     void SetEntity(const std::string& _entity);
 
@@ -78,19 +78,43 @@ namespace TencentCloud
                      */
                     bool EntityHasBeenSet() const;
 
+                    /**
+                     * 获取The template ID. You must specify either this field or "ZoneId+Entity". 
+                     * @return TemplateId The template ID. You must specify either this field or "ZoneId+Entity". 
+                     */
+                    std::string GetTemplateId() const;
+
+                    /**
+                     * 设置The template ID. You must specify either this field or "ZoneId+Entity". 
+                     * @param TemplateId The template ID. You must specify either this field or "ZoneId+Entity". 
+                     */
+                    void SetTemplateId(const std::string& _templateId);
+
+                    /**
+                     * 判断参数 TemplateId 是否已赋值
+                     * @return TemplateId 是否已赋值
+                     */
+                    bool TemplateIdHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The site ID.
+                     * The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
                      */
                     std::string m_zoneId;
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Subdomain name/Application name
+                     * The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId".
                      */
                     std::string m_entity;
                     bool m_entityHasBeenSet;
+
+                    /**
+                     * The template ID. You must specify either this field or "ZoneId+Entity". 
+                     */
+                    std::string m_templateId;
+                    bool m_templateIdHasBeenSet;
 
                 };
             }

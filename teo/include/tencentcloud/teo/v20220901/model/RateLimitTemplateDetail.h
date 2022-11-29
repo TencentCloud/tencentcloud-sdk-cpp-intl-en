@@ -54,7 +54,7 @@ namespace TencentCloud
 <li>`normal`: Moderate</li>
 <li>`strict`: Strict</li>
 <li>`close`: Off</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Mode The mode. Values:
 <li>`sup_loose`: Super loose</li>
 <li>`loose`: Loose</li>
@@ -62,7 +62,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`normal`: Moderate</li>
 <li>`strict`: Strict</li>
 <li>`close`: Off</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetMode() const;
 
@@ -74,7 +74,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`normal`: Moderate</li>
 <li>`strict`: Strict</li>
 <li>`close`: Off</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param Mode The mode. Values:
 <li>`sup_loose`: Super loose</li>
 <li>`loose`: Loose</li>
@@ -82,7 +82,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`normal`: Moderate</li>
 <li>`strict`: Strict</li>
 <li>`close`: Off</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetMode(const std::string& _mode);
 
@@ -111,18 +111,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IDHasBeenSet() const;
 
                     /**
-                     * 获取The action, which will be triggered when the specified threshold reaches.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Action The action, which will be triggered when the specified threshold reaches.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The action. Values:
+<li>`alg`: JavaScript challenge</li>
+<li>`monitor`: Observe</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return Action The action. Values:
+<li>`alg`: JavaScript challenge</li>
+<li>`monitor`: Observe</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置The action, which will be triggered when the specified threshold reaches.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Action The action, which will be triggered when the specified threshold reaches.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The action. Values:
+<li>`alg`: JavaScript challenge</li>
+<li>`monitor`: Observe</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param Action The action. Values:
+<li>`alg`: JavaScript challenge</li>
+<li>`monitor`: Observe</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetAction(const std::string& _action);
 
@@ -133,18 +141,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取The amount of time taken to perform the action. Value range: 0-172800 seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PunishTime The amount of time taken to perform the action. Value range: 0-172800 seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The blocking duration, in seconds. Value range: 0-172800.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return PunishTime The blocking duration, in seconds. Value range: 0-172800.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     int64_t GetPunishTime() const;
 
                     /**
-                     * 设置The amount of time taken to perform the action. Value range: 0-172800 seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param PunishTime The amount of time taken to perform the action. Value range: 0-172800 seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The blocking duration, in seconds. Value range: 0-172800.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param PunishTime The blocking duration, in seconds. Value range: 0-172800.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetPunishTime(const int64_t& _punishTime);
 
@@ -200,7 +208,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`normal`: Moderate</li>
 <li>`strict`: Strict</li>
 <li>`close`: Off</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_mode;
                     bool m_modeHasBeenSet;
@@ -212,15 +220,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_iDHasBeenSet;
 
                     /**
-                     * The action, which will be triggered when the specified threshold reaches.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The action. Values:
+<li>`alg`: JavaScript challenge</li>
+<li>`monitor`: Observe</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
 
                     /**
-                     * The amount of time taken to perform the action. Value range: 0-172800 seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The blocking duration, in seconds. Value range: 0-172800.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     int64_t m_punishTime;
                     bool m_punishTimeHasBeenSet;

@@ -201,22 +201,22 @@ namespace TencentCloud
                     bool PausedHasBeenSet() const;
 
                     /**
-                     * 获取Whether CNAME flattening is enabled. Valid values:
-<li>`enabled`: Enabled.</li>
-<li>`disabled`: Disabled.</li>
-                     * @return CnameSpeedUp Whether CNAME flattening is enabled. Valid values:
-<li>`enabled`: Enabled.</li>
-<li>`disabled`: Disabled.</li>
+                     * 获取Whether CNAME acceleration is enabled. Values:
+<li>`enabled`: Enabled</li>
+<li>`disabled`: Disabled</li>
+                     * @return CnameSpeedUp Whether CNAME acceleration is enabled. Values:
+<li>`enabled`: Enabled</li>
+<li>`disabled`: Disabled</li>
                      */
                     std::string GetCnameSpeedUp() const;
 
                     /**
-                     * 设置Whether CNAME flattening is enabled. Valid values:
-<li>`enabled`: Enabled.</li>
-<li>`disabled`: Disabled.</li>
-                     * @param CnameSpeedUp Whether CNAME flattening is enabled. Valid values:
-<li>`enabled`: Enabled.</li>
-<li>`disabled`: Disabled.</li>
+                     * 设置Whether CNAME acceleration is enabled. Values:
+<li>`enabled`: Enabled</li>
+<li>`disabled`: Disabled</li>
+                     * @param CnameSpeedUp Whether CNAME acceleration is enabled. Values:
+<li>`enabled`: Enabled</li>
+<li>`disabled`: Disabled</li>
                      */
                     void SetCnameSpeedUp(const std::string& _cnameSpeedUp);
 
@@ -398,6 +398,58 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool VanityNameServersIpsHasBeenSet() const;
 
+                    /**
+                     * 获取Status of the proxy. Values:
+<li>`active`: Enabled</li>
+<li>`inactive`: Not activated</li>
+<li>`paused`: Disabled</li>
+                     * @return ActiveStatus Status of the proxy. Values:
+<li>`active`: Enabled</li>
+<li>`inactive`: Not activated</li>
+<li>`paused`: Disabled</li>
+                     */
+                    std::string GetActiveStatus() const;
+
+                    /**
+                     * 设置Status of the proxy. Values:
+<li>`active`: Enabled</li>
+<li>`inactive`: Not activated</li>
+<li>`paused`: Disabled</li>
+                     * @param ActiveStatus Status of the proxy. Values:
+<li>`active`: Enabled</li>
+<li>`inactive`: Not activated</li>
+<li>`paused`: Disabled</li>
+                     */
+                    void SetActiveStatus(const std::string& _activeStatus);
+
+                    /**
+                     * 判断参数 ActiveStatus 是否已赋值
+                     * @return ActiveStatus 是否已赋值
+                     */
+                    bool ActiveStatusHasBeenSet() const;
+
+                    /**
+                     * 获取The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AliasZoneName The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetAliasZoneName() const;
+
+                    /**
+                     * 设置The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param AliasZoneName The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetAliasZoneName(const std::string& _aliasZoneName);
+
+                    /**
+                     * 判断参数 AliasZoneName 是否已赋值
+                     * @return AliasZoneName 是否已赋值
+                     */
+                    bool AliasZoneNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -449,9 +501,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_pausedHasBeenSet;
 
                     /**
-                     * Whether CNAME flattening is enabled. Valid values:
-<li>`enabled`: Enabled.</li>
-<li>`disabled`: Disabled.</li>
+                     * Whether CNAME acceleration is enabled. Values:
+<li>`enabled`: Enabled</li>
+<li>`disabled`: Disabled</li>
                      */
                     std::string m_cnameSpeedUp;
                     bool m_cnameSpeedUpHasBeenSet;
@@ -510,6 +562,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<VanityNameServersIps> m_vanityNameServersIps;
                     bool m_vanityNameServersIpsHasBeenSet;
+
+                    /**
+                     * Status of the proxy. Values:
+<li>`active`: Enabled</li>
+<li>`inactive`: Not activated</li>
+<li>`paused`: Disabled</li>
+                     */
+                    std::string m_activeStatus;
+                    bool m_activeStatusHasBeenSet;
+
+                    /**
+                     * The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_aliasZoneName;
+                    bool m_aliasZoneNameHasBeenSet;
 
                 };
             }

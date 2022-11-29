@@ -430,14 +430,18 @@ The original configuration will apply if this field is not specified.
                     bool Ipv6HasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ClientIpCountry 
+                     * 获取Whether to carry the location information of the client IP during origin-pull.
+The original configuration will apply if this field is not specified.
+                     * @return ClientIpCountry Whether to carry the location information of the client IP during origin-pull.
+The original configuration will apply if this field is not specified.
                      */
                     ClientIpCountry GetClientIpCountry() const;
 
                     /**
-                     * 设置
-                     * @param ClientIpCountry 
+                     * 设置Whether to carry the location information of the client IP during origin-pull.
+The original configuration will apply if this field is not specified.
+                     * @param ClientIpCountry Whether to carry the location information of the client IP during origin-pull.
+The original configuration will apply if this field is not specified.
                      */
                     void SetClientIpCountry(const ClientIpCountry& _clientIpCountry);
 
@@ -568,7 +572,8 @@ The original configuration will apply if this field is not specified.
                     bool m_ipv6HasBeenSet;
 
                     /**
-                     * 
+                     * Whether to carry the location information of the client IP during origin-pull.
+The original configuration will apply if this field is not specified.
                      */
                     ClientIpCountry m_clientIpCountry;
                     bool m_clientIpCountryHasBeenSet;

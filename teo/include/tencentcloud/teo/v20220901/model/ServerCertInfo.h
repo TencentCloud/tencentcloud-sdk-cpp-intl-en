@@ -92,29 +92,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Type of the certificate. Values:
-<li>`default`: Default certificate;</lil>
-<li>`upload`: Custom certificate;</li>
-<li>`managed`: Tencent Cloud-managed certificate.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`default`: Default certificate</lil>
+<li>`upload`: Specified certificate</li>
+<li>`managed`: Tencent Cloud-managed certificate</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return Type Type of the certificate. Values:
-<li>`default`: Default certificate;</lil>
-<li>`upload`: Custom certificate;</li>
-<li>`managed`: Tencent Cloud-managed certificate.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`default`: Default certificate</lil>
+<li>`upload`: Specified certificate</li>
+<li>`managed`: Tencent Cloud-managed certificate</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置Type of the certificate. Values:
-<li>`default`: Default certificate;</lil>
-<li>`upload`: Custom certificate;</li>
-<li>`managed`: Tencent Cloud-managed certificate.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`default`: Default certificate</lil>
+<li>`upload`: Specified certificate</li>
+<li>`managed`: Tencent Cloud-managed certificate</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param Type Type of the certificate. Values:
-<li>`default`: Default certificate;</lil>
-<li>`upload`: Custom certificate;</li>
-<li>`managed`: Tencent Cloud-managed certificate.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`default`: Default certificate</lil>
+<li>`upload`: Specified certificate</li>
+<li>`managed`: Tencent Cloud-managed certificate</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetType(const std::string& _type);
 
@@ -190,6 +190,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool SignAlgoHasBeenSet() const;
 
+                    /**
+                     * 获取Domain name of the certificate.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return CommonName Domain name of the certificate.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetCommonName() const;
+
+                    /**
+                     * 设置Domain name of the certificate.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param CommonName Domain name of the certificate.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetCommonName(const std::string& _commonName);
+
+                    /**
+                     * 判断参数 CommonName 是否已赋值
+                     * @return CommonName 是否已赋值
+                     */
+                    bool CommonNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -208,10 +230,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Type of the certificate. Values:
-<li>`default`: Default certificate;</lil>
-<li>`upload`: Custom certificate;</li>
-<li>`managed`: Tencent Cloud-managed certificate.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`default`: Default certificate</lil>
+<li>`upload`: Specified certificate</li>
+<li>`managed`: Tencent Cloud-managed certificate</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -236,6 +258,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_signAlgo;
                     bool m_signAlgoHasBeenSet;
+
+                    /**
+                     * Domain name of the certificate.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_commonName;
+                    bool m_commonNameHasBeenSet;
 
                 };
             }

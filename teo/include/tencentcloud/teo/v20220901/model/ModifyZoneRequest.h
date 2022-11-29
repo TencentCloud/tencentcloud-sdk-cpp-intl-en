@@ -105,6 +105,24 @@ namespace TencentCloud
                      */
                     bool VanityNameServersHasBeenSet() const;
 
+                    /**
+                     * 获取The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+                     * @return AliasZoneName The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+                     */
+                    std::string GetAliasZoneName() const;
+
+                    /**
+                     * 设置The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+                     * @param AliasZoneName The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+                     */
+                    void SetAliasZoneName(const std::string& _aliasZoneName);
+
+                    /**
+                     * 判断参数 AliasZoneName 是否已赋值
+                     * @return AliasZoneName 是否已赋值
+                     */
+                    bool AliasZoneNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -126,6 +144,12 @@ namespace TencentCloud
                      */
                     VanityNameServers m_vanityNameServers;
                     bool m_vanityNameServersHasBeenSet;
+
+                    /**
+                     * The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+                     */
+                    std::string m_aliasZoneName;
+                    bool m_aliasZoneNameHasBeenSet;
 
                 };
             }

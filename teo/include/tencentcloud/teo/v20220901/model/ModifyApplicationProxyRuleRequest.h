@@ -123,22 +123,22 @@ namespace TencentCloud
                     bool OriginTypeHasBeenSet() const;
 
                     /**
-                     * 获取The port, which can be specified in the following formats:
-Single port, such as 80.
-Port range, such as 81-90. The original configuration will apply if this field is not specified.
-                     * @return Port The port, which can be specified in the following formats:
-Single port, such as 80.
-Port range, such as 81-90. The original configuration will apply if this field is not specified.
+                     * 获取The access port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-90</li>
+                     * @return Port The access port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-90</li>
                      */
                     std::vector<std::string> GetPort() const;
 
                     /**
-                     * 设置The port, which can be specified in the following formats:
-Single port, such as 80.
-Port range, such as 81-90. The original configuration will apply if this field is not specified.
-                     * @param Port The port, which can be specified in the following formats:
-Single port, such as 80.
-Port range, such as 81-90. The original configuration will apply if this field is not specified.
+                     * 设置The access port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-90</li>
+                     * @param Port The access port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-90</li>
                      */
                     void SetPort(const std::vector<std::string>& _port);
 
@@ -176,36 +176,28 @@ Port range, such as 81-90. The original configuration will apply if this field i
 
                     /**
                      * 获取Origin server information:
-When `OriginType=custom`, it indicates one or more origin servers. Example:
-OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"];
-When `OriginType=origins`, it indicates an origin group ID. Example:
-OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]
+<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
+<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+
 The original configuration will apply if this field is not specified.
                      * @return OriginValue Origin server information:
-When `OriginType=custom`, it indicates one or more origin servers. Example:
-OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"];
-When `OriginType=origins`, it indicates an origin group ID. Example:
-OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]
+<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
+<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+
 The original configuration will apply if this field is not specified.
                      */
                     std::vector<std::string> GetOriginValue() const;
 
                     /**
                      * 设置Origin server information:
-When `OriginType=custom`, it indicates one or more origin servers. Example:
-OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"];
-When `OriginType=origins`, it indicates an origin group ID. Example:
-OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]
+<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
+<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+
 The original configuration will apply if this field is not specified.
                      * @param OriginValue Origin server information:
-When `OriginType=custom`, it indicates one or more origin servers. Example:
-OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"];
-When `OriginType=origins`, it indicates an origin group ID. Example:
-OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]
+<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
+<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+
 The original configuration will apply if this field is not specified.
                      */
                     void SetOriginValue(const std::vector<std::string>& _originValue);
@@ -253,20 +245,20 @@ The original configuration will apply if this field is not specified.
                     /**
                      * 获取Whether to enable session persistence. Values:
 <li>`true`: Enable</li>
-<li>`false`: Disable</li>The original configuration will apply if this field is not specified.
+<li>`false`: Disable</li>If it is left empty, the default value `false` is used.
                      * @return SessionPersist Whether to enable session persistence. Values:
 <li>`true`: Enable</li>
-<li>`false`: Disable</li>The original configuration will apply if this field is not specified.
+<li>`false`: Disable</li>If it is left empty, the default value `false` is used.
                      */
                     bool GetSessionPersist() const;
 
                     /**
                      * 设置Whether to enable session persistence. Values:
 <li>`true`: Enable</li>
-<li>`false`: Disable</li>The original configuration will apply if this field is not specified.
+<li>`false`: Disable</li>If it is left empty, the default value `false` is used.
                      * @param SessionPersist Whether to enable session persistence. Values:
 <li>`true`: Enable</li>
-<li>`false`: Disable</li>The original configuration will apply if this field is not specified.
+<li>`false`: Disable</li>If it is left empty, the default value `false` is used.
                      */
                     void SetSessionPersist(const bool& _sessionPersist);
 
@@ -275,6 +267,32 @@ The original configuration will apply if this field is not specified.
                      * @return SessionPersist 是否已赋值
                      */
                     bool SessionPersistHasBeenSet() const;
+
+                    /**
+                     * 获取The origin port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-82</li>
+                     * @return OriginPort The origin port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-82</li>
+                     */
+                    std::string GetOriginPort() const;
+
+                    /**
+                     * 设置The origin port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-82</li>
+                     * @param OriginPort The origin port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-82</li>
+                     */
+                    void SetOriginPort(const std::string& _originPort);
+
+                    /**
+                     * 判断参数 OriginPort 是否已赋值
+                     * @return OriginPort 是否已赋值
+                     */
+                    bool OriginPortHasBeenSet() const;
 
                 private:
 
@@ -305,9 +323,9 @@ The original configuration will apply if this field is not specified.
                     bool m_originTypeHasBeenSet;
 
                     /**
-                     * The port, which can be specified in the following formats:
-Single port, such as 80.
-Port range, such as 81-90. The original configuration will apply if this field is not specified.
+                     * The access port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-90</li>
                      */
                     std::vector<std::string> m_port;
                     bool m_portHasBeenSet;
@@ -322,11 +340,9 @@ Port range, such as 81-90. The original configuration will apply if this field i
 
                     /**
                      * Origin server information:
-When `OriginType=custom`, it indicates one or more origin servers. Example:
-OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"];
-When `OriginType=origins`, it indicates an origin group ID. Example:
-OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]
+<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
+<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+
 The original configuration will apply if this field is not specified.
                      */
                     std::vector<std::string> m_originValue;
@@ -345,10 +361,18 @@ The original configuration will apply if this field is not specified.
                     /**
                      * Whether to enable session persistence. Values:
 <li>`true`: Enable</li>
-<li>`false`: Disable</li>The original configuration will apply if this field is not specified.
+<li>`false`: Disable</li>If it is left empty, the default value `false` is used.
                      */
                     bool m_sessionPersist;
                     bool m_sessionPersistHasBeenSet;
+
+                    /**
+                     * The origin port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-82</li>
+                     */
+                    std::string m_originPort;
+                    bool m_originPortHasBeenSet;
 
                 };
             }

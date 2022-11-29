@@ -94,13 +94,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 获取Origin-pull protocol configuration. Values:
 <li>`http`: Force HTTP for origin-pull.</li>
 <li>`follow`: Follow protocol.</li>
-<li>`https`: Force HTTPS for origin-pull. This only supports port 443 on the origin server.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`https`: Force HTTPS for origin-pull.</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return OriginPullProtocol Origin-pull protocol configuration. Values:
 <li>`http`: Force HTTP for origin-pull.</li>
 <li>`follow`: Follow protocol.</li>
-<li>`https`: Force HTTPS for origin-pull. This only supports port 443 on the origin server.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`https`: Force HTTPS for origin-pull.</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetOriginPullProtocol() const;
 
@@ -108,13 +108,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置Origin-pull protocol configuration. Values:
 <li>`http`: Force HTTP for origin-pull.</li>
 <li>`follow`: Follow protocol.</li>
-<li>`https`: Force HTTPS for origin-pull. This only supports port 443 on the origin server.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`https`: Force HTTPS for origin-pull.</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param OriginPullProtocol Origin-pull protocol configuration. Values:
 <li>`http`: Force HTTP for origin-pull.</li>
 <li>`follow`: Follow protocol.</li>
-<li>`https`: Force HTTPS for origin-pull. This only supports port 443 on the origin server.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`https`: Force HTTPS for origin-pull.</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetOriginPullProtocol(const std::string& _originPullProtocol);
 
@@ -125,18 +125,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OriginPullProtocolHasBeenSet() const;
 
                     /**
-                     * 获取When OriginType is COS, you can specify if access to private buckets is allowed.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CosPrivateAccess When OriginType is COS, you can specify if access to private buckets is allowed.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether to allow private access to buckets when `OriginType=cos`. Values:
+<li>`on`: Allow private access.</li>
+<li>`off`: Allow public access.</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return CosPrivateAccess Whether to allow private access to buckets when `OriginType=cos`. Values:
+<li>`on`: Allow private access.</li>
+<li>`off`: Allow public access.</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetCosPrivateAccess() const;
 
                     /**
-                     * 设置When OriginType is COS, you can specify if access to private buckets is allowed.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param CosPrivateAccess When OriginType is COS, you can specify if access to private buckets is allowed.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether to allow private access to buckets when `OriginType=cos`. Values:
+<li>`on`: Allow private access.</li>
+<li>`off`: Allow public access.</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param CosPrivateAccess Whether to allow private access to buckets when `OriginType=cos`. Values:
+<li>`on`: Allow private access.</li>
+<li>`off`: Allow public access.</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetCosPrivateAccess(const std::string& _cosPrivateAccess);
 
@@ -166,15 +174,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * Origin-pull protocol configuration. Values:
 <li>`http`: Force HTTP for origin-pull.</li>
 <li>`follow`: Follow protocol.</li>
-<li>`https`: Force HTTPS for origin-pull. This only supports port 443 on the origin server.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`https`: Force HTTPS for origin-pull.</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_originPullProtocol;
                     bool m_originPullProtocolHasBeenSet;
 
                     /**
-                     * When OriginType is COS, you can specify if access to private buckets is allowed.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether to allow private access to buckets when `OriginType=cos`. Values:
+<li>`on`: Allow private access.</li>
+<li>`off`: Allow public access.</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_cosPrivateAccess;
                     bool m_cosPrivateAccessHasBeenSet;

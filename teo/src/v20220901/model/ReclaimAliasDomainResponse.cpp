@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/teo/v20220901/model/DescribeBillingDataResponse.h>
+#include <tencentcloud/teo/v20220901/model/ReclaimAliasDomainResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,13 +23,11 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Teo::V20220901::Model;
 using namespace std;
 
-DescribeBillingDataResponse::DescribeBillingDataResponse() :
-    m_dataHasBeenSet(false),
-    m_intervalHasBeenSet(false)
+ReclaimAliasDomainResponse::ReclaimAliasDomainResponse()
 {
 }
 
-CoreInternalOutcome DescribeBillingDataResponse::Deserialize(const string &payload)
+CoreInternalOutcome ReclaimAliasDomainResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -63,68 +61,15 @@ CoreInternalOutcome DescribeBillingDataResponse::Deserialize(const string &paylo
     }
 
 
-    if (rsp.HasMember("Data") && !rsp["Data"].IsNull())
-    {
-        if (!rsp["Data"].IsArray())
-            return CoreInternalOutcome(Core::Error("response `Data` is not array type"));
-
-        const rapidjson::Value &tmpValue = rsp["Data"];
-        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
-        {
-            DnsData item;
-            CoreInternalOutcome outcome = item.Deserialize(*itr);
-            if (!outcome.IsSuccess())
-            {
-                outcome.GetError().SetRequestId(requestId);
-                return outcome;
-            }
-            m_data.push_back(item);
-        }
-        m_dataHasBeenSet = true;
-    }
-
-    if (rsp.HasMember("Interval") && !rsp["Interval"].IsNull())
-    {
-        if (!rsp["Interval"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `Interval` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_interval = string(rsp["Interval"].GetString());
-        m_intervalHasBeenSet = true;
-    }
-
 
     return CoreInternalOutcome(true);
 }
 
-string DescribeBillingDataResponse::ToJsonString() const
+string ReclaimAliasDomainResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
-
-    if (m_dataHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Data";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
-
-        int i=0;
-        for (auto itr = m_data.begin(); itr != m_data.end(); ++itr, ++i)
-        {
-            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
-            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
-        }
-    }
-
-    if (m_intervalHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Interval";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_interval.c_str(), allocator).Move(), allocator);
-    }
 
     rapidjson::Value iKey(rapidjson::kStringType);
     string key = "RequestId";
@@ -137,25 +82,5 @@ string DescribeBillingDataResponse::ToJsonString() const
     return buffer.GetString();
 }
 
-
-vector<DnsData> DescribeBillingDataResponse::GetData() const
-{
-    return m_data;
-}
-
-bool DescribeBillingDataResponse::DataHasBeenSet() const
-{
-    return m_dataHasBeenSet;
-}
-
-string DescribeBillingDataResponse::GetInterval() const
-{
-    return m_interval;
-}
-
-bool DescribeBillingDataResponse::IntervalHasBeenSet() const
-{
-    return m_intervalHasBeenSet;
-}
 
 

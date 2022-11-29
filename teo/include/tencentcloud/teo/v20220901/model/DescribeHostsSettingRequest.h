@@ -99,17 +99,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`host`:<br>   Filter by <strong>domain name </strong><br>   Type: String<br>   Required: No
+<li>`host`:<br>   Filter by <strong>domain name </strong><br>   Type: String<br>   Required: No</li>
                      * @return Filters Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`host`:<br>   Filter by <strong>domain name </strong><br>   Type: String<br>   Required: No
+<li>`host`:<br>   Filter by <strong>domain name </strong><br>   Type: String<br>   Required: No</li>
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
                      * 设置Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`host`:<br>   Filter by <strong>domain name </strong><br>   Type: String<br>   Required: No
+<li>`host`:<br>   Filter by <strong>domain name </strong><br>   Type: String<br>   Required: No</li>
                      * @param Filters Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`host`:<br>   Filter by <strong>domain name </strong><br>   Type: String<br>   Required: No
+<li>`host`:<br>   Filter by <strong>domain name </strong><br>   Type: String<br>   Required: No</li>
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
@@ -141,7 +141,7 @@ namespace TencentCloud
 
                     /**
                      * Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`host`:<br>   Filter by <strong>domain name </strong><br>   Type: String<br>   Required: No
+<li>`host`:<br>   Filter by <strong>domain name </strong><br>   Type: String<br>   Required: No</li>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

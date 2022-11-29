@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Advanced origin-pull configuration
                 */
                 class AdvancedOriginGroup : public AbstractModel
                 {
@@ -48,14 +48,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return OriginGroupConditions 
+                     * 获取Matching condition. The "Target" field must be unique.
+                     * @return OriginGroupConditions Matching condition. The "Target" field must be unique.
                      */
                     std::vector<OriginGroupCondition> GetOriginGroupConditions() const;
 
                     /**
-                     * 设置
-                     * @param OriginGroupConditions 
+                     * 设置Matching condition. The "Target" field must be unique.
+                     * @param OriginGroupConditions Matching condition. The "Target" field must be unique.
                      */
                     void SetOriginGroupConditions(const std::vector<OriginGroupCondition>& _originGroupConditions);
 
@@ -66,14 +66,14 @@ namespace TencentCloud
                     bool OriginGroupConditionsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OriginGroupId 
+                     * 获取ID of the primary origin server.
+                     * @return OriginGroupId ID of the primary origin server.
                      */
                     std::string GetOriginGroupId() const;
 
                     /**
-                     * 设置
-                     * @param OriginGroupId 
+                     * 设置ID of the primary origin server.
+                     * @param OriginGroupId ID of the primary origin server.
                      */
                     void SetOriginGroupId(const std::string& _originGroupId);
 
@@ -84,14 +84,14 @@ namespace TencentCloud
                     bool OriginGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BackupOriginGroupId 
+                     * 获取ID of the secondary origin server.
+                     * @return BackupOriginGroupId ID of the secondary origin server.
                      */
                     std::string GetBackupOriginGroupId() const;
 
                     /**
-                     * 设置
-                     * @param BackupOriginGroupId 
+                     * 设置ID of the secondary origin server.
+                     * @param BackupOriginGroupId ID of the secondary origin server.
                      */
                     void SetBackupOriginGroupId(const std::string& _backupOriginGroupId);
 
@@ -104,19 +104,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Matching condition. The "Target" field must be unique.
                      */
                     std::vector<OriginGroupCondition> m_originGroupConditions;
                     bool m_originGroupConditionsHasBeenSet;
 
                     /**
-                     * 
+                     * ID of the primary origin server.
                      */
                     std::string m_originGroupId;
                     bool m_originGroupIdHasBeenSet;
 
                     /**
-                     * 
+                     * ID of the secondary origin server.
                      */
                     std::string m_backupOriginGroupId;
                     bool m_backupOriginGroupIdHasBeenSet;

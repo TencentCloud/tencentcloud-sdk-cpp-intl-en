@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Module settings of the exception rule
                 */
                 class PartialModule : public AbstractModel
                 {
@@ -47,14 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Module 
+                     * 获取The module. Values:
+<li>`waf`: Managed rules</li>
+                     * @return Module The module. Values:
+<li>`waf`: Managed rules</li>
                      */
                     std::string GetModule() const;
 
                     /**
-                     * 设置
-                     * @param Module 
+                     * 设置The module. Values:
+<li>`waf`: Managed rules</li>
+                     * @param Module The module. Values:
+<li>`waf`: Managed rules</li>
                      */
                     void SetModule(const std::string& _module);
 
@@ -65,14 +69,18 @@ namespace TencentCloud
                     bool ModuleHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Include 
+                     * 获取List of managed rule IDs to be skipped.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return Include List of managed rule IDs to be skipped.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<int64_t> GetInclude() const;
 
                     /**
-                     * 设置
-                     * @param Include 
+                     * 设置List of managed rule IDs to be skipped.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param Include List of managed rule IDs to be skipped.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetInclude(const std::vector<int64_t>& _include);
 
@@ -85,13 +93,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * The module. Values:
+<li>`waf`: Managed rules</li>
                      */
                     std::string m_module;
                     bool m_moduleHasBeenSet;
 
                     /**
-                     * 
+                     * List of managed rule IDs to be skipped.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<int64_t> m_include;
                     bool m_includeHasBeenSet;

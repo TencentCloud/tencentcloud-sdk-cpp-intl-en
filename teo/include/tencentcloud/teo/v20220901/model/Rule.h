@@ -24,8 +24,9 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/teo/v20220901/model/RuleAndConditions.h>
 #include <tencentcloud/teo/v20220901/model/Action.h>
+#include <tencentcloud/teo/v20220901/model/RuleAndConditions.h>
+#include <tencentcloud/teo/v20220901/model/SubRuleItem.h>
 
 
 namespace TencentCloud
@@ -47,6 +48,24 @@ namespace TencentCloud
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
+
+                    /**
+                     * 获取Feature to be executed.
+                     * @return Actions Feature to be executed.
+                     */
+                    std::vector<Action> GetActions() const;
+
+                    /**
+                     * 设置Feature to be executed.
+                     * @param Actions Feature to be executed.
+                     */
+                    void SetActions(const std::vector<Action>& _actions);
+
+                    /**
+                     * 判断参数 Actions 是否已赋值
+                     * @return Actions 是否已赋值
+                     */
+                    bool ActionsHasBeenSet() const;
 
                     /**
                      * 获取Feature execution conditions.
@@ -71,24 +90,30 @@ Note: If any condition in the array is met, the feature will run.
                     bool ConditionsHasBeenSet() const;
 
                     /**
-                     * 获取Feature to be executed.
-                     * @return Actions Feature to be executed.
+                     * 获取The nested rule.
+                     * @return SubRules The nested rule.
                      */
-                    std::vector<Action> GetActions() const;
+                    std::vector<SubRuleItem> GetSubRules() const;
 
                     /**
-                     * 设置Feature to be executed.
-                     * @param Actions Feature to be executed.
+                     * 设置The nested rule.
+                     * @param SubRules The nested rule.
                      */
-                    void SetActions(const std::vector<Action>& _actions);
+                    void SetSubRules(const std::vector<SubRuleItem>& _subRules);
 
                     /**
-                     * 判断参数 Actions 是否已赋值
-                     * @return Actions 是否已赋值
+                     * 判断参数 SubRules 是否已赋值
+                     * @return SubRules 是否已赋值
                      */
-                    bool ActionsHasBeenSet() const;
+                    bool SubRulesHasBeenSet() const;
 
                 private:
+
+                    /**
+                     * Feature to be executed.
+                     */
+                    std::vector<Action> m_actions;
+                    bool m_actionsHasBeenSet;
 
                     /**
                      * Feature execution conditions.
@@ -98,10 +123,10 @@ Note: If any condition in the array is met, the feature will run.
                     bool m_conditionsHasBeenSet;
 
                     /**
-                     * Feature to be executed.
+                     * The nested rule.
                      */
-                    std::vector<Action> m_actions;
-                    bool m_actionsHasBeenSet;
+                    std::vector<SubRuleItem> m_subRules;
+                    bool m_subRulesHasBeenSet;
 
                 };
             }

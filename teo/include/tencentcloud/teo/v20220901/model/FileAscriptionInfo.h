@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Verification file, used to verify site ownership
                 */
                 class FileAscriptionInfo : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return IdentifyPath 
+                     * 获取Directory of the verification file.
+                     * @return IdentifyPath Directory of the verification file.
                      */
                     std::string GetIdentifyPath() const;
 
                     /**
-                     * 设置
-                     * @param IdentifyPath 
+                     * 设置Directory of the verification file.
+                     * @param IdentifyPath Directory of the verification file.
                      */
                     void SetIdentifyPath(const std::string& _identifyPath);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool IdentifyPathHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IdentifyContent 
+                     * 获取Content of the verification file.
+                     * @return IdentifyContent Content of the verification file.
                      */
                     std::string GetIdentifyContent() const;
 
                     /**
-                     * 设置
-                     * @param IdentifyContent 
+                     * 设置Content of the verification file.
+                     * @param IdentifyContent Content of the verification file.
                      */
                     void SetIdentifyContent(const std::string& _identifyContent);
 
@@ -85,13 +85,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Directory of the verification file.
                      */
                     std::string m_identifyPath;
                     bool m_identifyPathHasBeenSet;
 
                     /**
-                     * 
+                     * Content of the verification file.
                      */
                     std::string m_identifyContent;
                     bool m_identifyContentHasBeenSet;

@@ -460,14 +460,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HttpsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ClientIpCountry 
+                     * 获取Whether to carry the location information of the client IP during origin-pull.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return ClientIpCountry Whether to carry the location information of the client IP during origin-pull.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     ClientIpCountry GetClientIpCountry() const;
 
                     /**
-                     * 设置
-                     * @param ClientIpCountry 
+                     * 设置Whether to carry the location information of the client IP during origin-pull.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param ClientIpCountry Whether to carry the location information of the client IP during origin-pull.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetClientIpCountry(const ClientIpCountry& _clientIpCountry);
 
@@ -606,7 +610,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_httpsHasBeenSet;
 
                     /**
-                     * 
+                     * Whether to carry the location information of the client IP during origin-pull.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     ClientIpCountry m_clientIpCountry;
                     bool m_clientIpCountryHasBeenSet;

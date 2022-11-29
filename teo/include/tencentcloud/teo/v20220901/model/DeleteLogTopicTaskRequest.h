@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool TopicIdHasBeenSet() const;
 
                     /**
-                     * 获取Region of the logset.
-                     * @return LogSetRegion Region of the logset.
+                     * 获取Region of the logset to be shipped. This field is only required when you configure CLS shipping tasks.
+                     * @return LogSetRegion Region of the logset to be shipped. This field is only required when you configure CLS shipping tasks.
                      */
                     std::string GetLogSetRegion() const;
 
                     /**
-                     * 设置Region of the logset.
-                     * @param LogSetRegion Region of the logset.
+                     * 设置Region of the logset to be shipped. This field is only required when you configure CLS shipping tasks.
+                     * @param LogSetRegion Region of the logset to be shipped. This field is only required when you configure CLS shipping tasks.
                      */
                     void SetLogSetRegion(const std::string& _logSetRegion);
 
@@ -87,7 +87,7 @@ namespace TencentCloud
                     bool m_topicIdHasBeenSet;
 
                     /**
-                     * Region of the logset.
+                     * Region of the logset to be shipped. This field is only required when you configure CLS shipping tasks.
                      */
                     std::string m_logSetRegion;
                     bool m_logSetRegionHasBeenSet;

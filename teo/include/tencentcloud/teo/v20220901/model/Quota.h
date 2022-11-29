@@ -101,30 +101,34 @@ namespace TencentCloud
                     bool DailyAvailableHasBeenSet() const;
 
                     /**
-                     * 获取Quota type. Values:
-<li>`purge_prefix`: Purge prefixes;</li>
-<li>`purge_url`: Purge URLs;</li>
-<li>`purge_host`: Purge hostnames;</li>
-<li>`purge_all`: Purge all caches.</li>
-                     * @return Type Quota type. Values:
-<li>`purge_prefix`: Purge prefixes;</li>
-<li>`purge_url`: Purge URLs;</li>
-<li>`purge_host`: Purge hostnames;</li>
-<li>`purge_all`: Purge all caches.</li>
+                     * 获取Type of cache purging/pre-warming. Values:
+<li>`purge_prefix`: Purge by prefix</li>
+<li>`purge_url`: Purge by URL</li>
+<li>`purge_host`: Purge by hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by cache tag</li><li>`prefetch_url`: Pre-warm by URL</li>
+                     * @return Type Type of cache purging/pre-warming. Values:
+<li>`purge_prefix`: Purge by prefix</li>
+<li>`purge_url`: Purge by URL</li>
+<li>`purge_host`: Purge by hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by cache tag</li><li>`prefetch_url`: Pre-warm by URL</li>
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Quota type. Values:
-<li>`purge_prefix`: Purge prefixes;</li>
-<li>`purge_url`: Purge URLs;</li>
-<li>`purge_host`: Purge hostnames;</li>
-<li>`purge_all`: Purge all caches.</li>
-                     * @param Type Quota type. Values:
-<li>`purge_prefix`: Purge prefixes;</li>
-<li>`purge_url`: Purge URLs;</li>
-<li>`purge_host`: Purge hostnames;</li>
-<li>`purge_all`: Purge all caches.</li>
+                     * 设置Type of cache purging/pre-warming. Values:
+<li>`purge_prefix`: Purge by prefix</li>
+<li>`purge_url`: Purge by URL</li>
+<li>`purge_host`: Purge by hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by cache tag</li><li>`prefetch_url`: Pre-warm by URL</li>
+                     * @param Type Type of cache purging/pre-warming. Values:
+<li>`purge_prefix`: Purge by prefix</li>
+<li>`purge_url`: Purge by URL</li>
+<li>`purge_host`: Purge by hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by cache tag</li><li>`prefetch_url`: Pre-warm by URL</li>
                      */
                     void SetType(const std::string& _type);
 
@@ -155,11 +159,12 @@ namespace TencentCloud
                     bool m_dailyAvailableHasBeenSet;
 
                     /**
-                     * Quota type. Values:
-<li>`purge_prefix`: Purge prefixes;</li>
-<li>`purge_url`: Purge URLs;</li>
-<li>`purge_host`: Purge hostnames;</li>
-<li>`purge_all`: Purge all caches.</li>
+                     * Type of cache purging/pre-warming. Values:
+<li>`purge_prefix`: Purge by prefix</li>
+<li>`purge_url`: Purge by URL</li>
+<li>`purge_host`: Purge by hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by cache tag</li><li>`prefetch_url`: Pre-warm by URL</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

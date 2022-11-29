@@ -90,14 +90,22 @@ namespace TencentCloud
                     bool ModeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Action 
+                     * 获取The action. Values:
+<li>`alg`: JavaScript challenge</li>
+<li>`monitor`: Observe</li>If it is left empty, the default value `alg` is used.
+                     * @return Action The action. Values:
+<li>`alg`: JavaScript challenge</li>
+<li>`monitor`: Observe</li>If it is left empty, the default value `alg` is used.
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置
-                     * @param Action 
+                     * 设置The action. Values:
+<li>`alg`: JavaScript challenge</li>
+<li>`monitor`: Observe</li>If it is left empty, the default value `alg` is used.
+                     * @param Action The action. Values:
+<li>`alg`: JavaScript challenge</li>
+<li>`monitor`: Observe</li>If it is left empty, the default value `alg` is used.
                      */
                     void SetAction(const std::string& _action);
 
@@ -140,7 +148,9 @@ namespace TencentCloud
                     bool m_modeHasBeenSet;
 
                     /**
-                     * 
+                     * The action. Values:
+<li>`alg`: JavaScript challenge</li>
+<li>`monitor`: Observe</li>If it is left empty, the default value `alg` is used.
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;

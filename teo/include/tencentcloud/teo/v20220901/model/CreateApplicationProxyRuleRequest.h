@@ -105,22 +105,22 @@ namespace TencentCloud
                     bool ProtoHasBeenSet() const;
 
                     /**
-                     * 获取The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li>
-                     * @return Port The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li>
+                     * 获取The access port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-90</li>
+                     * @return Port The access port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-90</li>
                      */
                     std::vector<std::string> GetPort() const;
 
                     /**
-                     * 设置The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li>
-                     * @param Port The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li>
+                     * 设置The access port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-90</li>
+                     * @param Port The access port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-90</li>
                      */
                     void SetPort(const std::vector<std::string>& _port);
 
@@ -132,21 +132,21 @@ namespace TencentCloud
 
                     /**
                      * 获取The origin type. Values:
-`custom`: Origin server, which is formatted as "IP:Port" or "Domain name:Port"
-`origins`: Origin group
+<li>`custom`: Specified origins</li>
+<li>`origins`: Origin group</li>
                      * @return OriginType The origin type. Values:
-`custom`: Origin server, which is formatted as "IP:Port" or "Domain name:Port"
-`origins`: Origin group
+<li>`custom`: Specified origins</li>
+<li>`origins`: Origin group</li>
                      */
                     std::string GetOriginType() const;
 
                     /**
                      * 设置The origin type. Values:
-`custom`: Origin server, which is formatted as "IP:Port" or "Domain name:Port"
-`origins`: Origin group
+<li>`custom`: Specified origins</li>
+<li>`origins`: Origin group</li>
                      * @param OriginType The origin type. Values:
-`custom`: Origin server, which is formatted as "IP:Port" or "Domain name:Port"
-`origins`: Origin group
+<li>`custom`: Specified origins</li>
+<li>`origins`: Origin group</li>
                      */
                     void SetOriginType(const std::string& _originType);
 
@@ -158,33 +158,21 @@ namespace TencentCloud
 
                     /**
                      * 获取Origin server information:
-When `OriginType=custom`, it indicates one or more origin servers. Example:
-OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"];
-When `OriginType=origins`, it indicates an origin group ID. Example:
-OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
+<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
+<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
                      * @return OriginValue Origin server information:
-When `OriginType=custom`, it indicates one or more origin servers. Example:
-OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"];
-When `OriginType=origins`, it indicates an origin group ID. Example:
-OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
+<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
+<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
                      */
                     std::vector<std::string> GetOriginValue() const;
 
                     /**
                      * 设置Origin server information:
-When `OriginType=custom`, it indicates one or more origin servers. Example:
-OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"];
-When `OriginType=origins`, it indicates an origin group ID. Example:
-OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
+<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
+<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
                      * @param OriginValue Origin server information:
-When `OriginType=custom`, it indicates one or more origin servers. Example:
-OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"];
-When `OriginType=origins`, it indicates an origin group ID. Example:
-OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
+<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
+<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
                      */
                     void SetOriginValue(const std::vector<std::string>& _originValue);
 
@@ -254,6 +242,32 @@ OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
                      */
                     bool SessionPersistHasBeenSet() const;
 
+                    /**
+                     * 获取The origin port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-82</li>
+                     * @return OriginPort The origin port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-82</li>
+                     */
+                    std::string GetOriginPort() const;
+
+                    /**
+                     * 设置The origin port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-82</li>
+                     * @param OriginPort The origin port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-82</li>
+                     */
+                    void SetOriginPort(const std::string& _originPort);
+
+                    /**
+                     * 判断参数 OriginPort 是否已赋值
+                     * @return OriginPort 是否已赋值
+                     */
+                    bool OriginPortHasBeenSet() const;
+
                 private:
 
                     /**
@@ -277,28 +291,25 @@ OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
                     bool m_protoHasBeenSet;
 
                     /**
-                     * The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li>
+                     * The access port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-90</li>
                      */
                     std::vector<std::string> m_port;
                     bool m_portHasBeenSet;
 
                     /**
                      * The origin type. Values:
-`custom`: Origin server, which is formatted as "IP:Port" or "Domain name:Port"
-`origins`: Origin group
+<li>`custom`: Specified origins</li>
+<li>`origins`: Origin group</li>
                      */
                     std::string m_originType;
                     bool m_originTypeHasBeenSet;
 
                     /**
                      * Origin server information:
-When `OriginType=custom`, it indicates one or more origin servers. Example:
-OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"];
-When `OriginType=origins`, it indicates an origin group ID. Example:
-OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
+<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
+<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
                      */
                     std::vector<std::string> m_originValue;
                     bool m_originValueHasBeenSet;
@@ -320,6 +331,14 @@ OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
                      */
                     bool m_sessionPersist;
                     bool m_sessionPersistHasBeenSet;
+
+                    /**
+                     * The origin port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-82</li>
+                     */
+                    std::string m_originPort;
+                    bool m_originPortHasBeenSet;
 
                 };
             }

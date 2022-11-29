@@ -97,6 +97,32 @@ namespace TencentCloud
                      */
                     bool ServerCertInfoHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the certificate is managed by EdgeOne. Values:
+<li>`apply`: Managed by EdgeOne</li>
+<li>`none`: Not managed by EdgeOne</li>If it is left empty, the default value `apply` is used.
+                     * @return ApplyType Whether the certificate is managed by EdgeOne. Values:
+<li>`apply`: Managed by EdgeOne</li>
+<li>`none`: Not managed by EdgeOne</li>If it is left empty, the default value `apply` is used.
+                     */
+                    std::string GetApplyType() const;
+
+                    /**
+                     * 设置Whether the certificate is managed by EdgeOne. Values:
+<li>`apply`: Managed by EdgeOne</li>
+<li>`none`: Not managed by EdgeOne</li>If it is left empty, the default value `apply` is used.
+                     * @param ApplyType Whether the certificate is managed by EdgeOne. Values:
+<li>`apply`: Managed by EdgeOne</li>
+<li>`none`: Not managed by EdgeOne</li>If it is left empty, the default value `apply` is used.
+                     */
+                    void SetApplyType(const std::string& _applyType);
+
+                    /**
+                     * 判断参数 ApplyType 是否已赋值
+                     * @return ApplyType 是否已赋值
+                     */
+                    bool ApplyTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -116,6 +142,14 @@ namespace TencentCloud
                      */
                     std::vector<ServerCertInfo> m_serverCertInfo;
                     bool m_serverCertInfoHasBeenSet;
+
+                    /**
+                     * Whether the certificate is managed by EdgeOne. Values:
+<li>`apply`: Managed by EdgeOne</li>
+<li>`none`: Not managed by EdgeOne</li>If it is left empty, the default value `apply` is used.
+                     */
+                    std::string m_applyType;
+                    bool m_applyTypeHasBeenSet;
 
                 };
             }

@@ -51,109 +51,113 @@ namespace TencentCloud
 
                     /**
                      * 获取Common feature operation. Features of this type include:
-<li>`AccessUrlRedirect`: Access URL rewrite.</li>
-<li>`UpstreamUrlRedirect`: Origin-pull URL rewrite.</li>
-<li>`QUIC`: QUIC.</li>
-<li>`WebSocket`: WebSocket.</li>
-<li>`VideoSeek`: Video dragging.</li>
-<li>`Authentication`: Token authentication.</li>
-<li>`CacheKey`: Custom cache key.</li>
-<li>`Cache`: Node cache TTL.</li>
-<li>`MaxAge`: Browser cache TTL.</li>
-<li>`OfflineCache`: Offline cache.</li>
-<li>`SmartRouting`: Smart acceleration.</li>
-<li>`RangeOriginPull`: Range GETs.</li>
-<li>`UpstreamHttp2`: HTTP/2 forwarding.</li>
-<li>`HostHeader`: Host header rewrite.</li>
-<li>`ForceRedirect`: Force HTTPS.</li>
-<li>`OriginPullProtocol`: Origin-pull HTTPS.</li>
-<li>`CachePrefresh`: Cache prefresh.</li>
-<li>`Compression`: Smart compression.</li>
-<li>`Hsts`.</li>
-<li>`ClientIpHeader`.</li>
-<li>`TlsVersion`.</li>
-<li>`OcspStapling`.</li>
-<li>`Http2`: HTTP/2 access.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`AccessUrlRedirect`: Access URL rewrite</li>
+<li>`UpstreamUrlRedirect`: Origin-pull URL rewrite</li>
+<li>`QUIC`: QUIC</li>
+<li>`WebSocket`: WebSocket</li>
+<li>`VideoSeek`: Video dragging</li>
+<li>`Authentication`: Token authentication</li>
+<li>`CacheKey`: Custom cache key</li>
+<li>`Cache`: Node cache TTL</li>
+<li>`MaxAge`: Browser cache TTL</li>
+<li>`OfflineCache`: Offline cache</li>
+<li>`SmartRouting`: Smart acceleration</li>
+<li>`RangeOriginPull`: Range GETs</li>
+<li>`UpstreamHttp2`: HTTP/2 forwarding</li>
+<li>`HostHeader`: Host header rewrite</li>
+<li>`ForceRedirect`: Force HTTPS</li>
+<li>`OriginPullProtocol`: Origin-pull HTTPS</li>
+<li>`CachePrefresh`: Cache prefresh</li>
+<li>`Compression`: Smart compression</li>
+<li>`Hsts`</li>
+<li>`ClientIpHeader`</li>
+<li>`TlsVersion`</li>
+<li>`OcspStapling`</li>
+<li>`Http2`: HTTP/2 access</li>
+<li>`UpstreamFollowRedirect: Follow origin redirect</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @return NormalAction Common feature operation. Features of this type include:
-<li>`AccessUrlRedirect`: Access URL rewrite.</li>
-<li>`UpstreamUrlRedirect`: Origin-pull URL rewrite.</li>
-<li>`QUIC`: QUIC.</li>
-<li>`WebSocket`: WebSocket.</li>
-<li>`VideoSeek`: Video dragging.</li>
-<li>`Authentication`: Token authentication.</li>
-<li>`CacheKey`: Custom cache key.</li>
-<li>`Cache`: Node cache TTL.</li>
-<li>`MaxAge`: Browser cache TTL.</li>
-<li>`OfflineCache`: Offline cache.</li>
-<li>`SmartRouting`: Smart acceleration.</li>
-<li>`RangeOriginPull`: Range GETs.</li>
-<li>`UpstreamHttp2`: HTTP/2 forwarding.</li>
-<li>`HostHeader`: Host header rewrite.</li>
-<li>`ForceRedirect`: Force HTTPS.</li>
-<li>`OriginPullProtocol`: Origin-pull HTTPS.</li>
-<li>`CachePrefresh`: Cache prefresh.</li>
-<li>`Compression`: Smart compression.</li>
-<li>`Hsts`.</li>
-<li>`ClientIpHeader`.</li>
-<li>`TlsVersion`.</li>
-<li>`OcspStapling`.</li>
-<li>`Http2`: HTTP/2 access.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`AccessUrlRedirect`: Access URL rewrite</li>
+<li>`UpstreamUrlRedirect`: Origin-pull URL rewrite</li>
+<li>`QUIC`: QUIC</li>
+<li>`WebSocket`: WebSocket</li>
+<li>`VideoSeek`: Video dragging</li>
+<li>`Authentication`: Token authentication</li>
+<li>`CacheKey`: Custom cache key</li>
+<li>`Cache`: Node cache TTL</li>
+<li>`MaxAge`: Browser cache TTL</li>
+<li>`OfflineCache`: Offline cache</li>
+<li>`SmartRouting`: Smart acceleration</li>
+<li>`RangeOriginPull`: Range GETs</li>
+<li>`UpstreamHttp2`: HTTP/2 forwarding</li>
+<li>`HostHeader`: Host header rewrite</li>
+<li>`ForceRedirect`: Force HTTPS</li>
+<li>`OriginPullProtocol`: Origin-pull HTTPS</li>
+<li>`CachePrefresh`: Cache prefresh</li>
+<li>`Compression`: Smart compression</li>
+<li>`Hsts`</li>
+<li>`ClientIpHeader`</li>
+<li>`TlsVersion`</li>
+<li>`OcspStapling`</li>
+<li>`Http2`: HTTP/2 access</li>
+<li>`UpstreamFollowRedirect: Follow origin redirect</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     NormalAction GetNormalAction() const;
 
                     /**
                      * 设置Common feature operation. Features of this type include:
-<li>`AccessUrlRedirect`: Access URL rewrite.</li>
-<li>`UpstreamUrlRedirect`: Origin-pull URL rewrite.</li>
-<li>`QUIC`: QUIC.</li>
-<li>`WebSocket`: WebSocket.</li>
-<li>`VideoSeek`: Video dragging.</li>
-<li>`Authentication`: Token authentication.</li>
-<li>`CacheKey`: Custom cache key.</li>
-<li>`Cache`: Node cache TTL.</li>
-<li>`MaxAge`: Browser cache TTL.</li>
-<li>`OfflineCache`: Offline cache.</li>
-<li>`SmartRouting`: Smart acceleration.</li>
-<li>`RangeOriginPull`: Range GETs.</li>
-<li>`UpstreamHttp2`: HTTP/2 forwarding.</li>
-<li>`HostHeader`: Host header rewrite.</li>
-<li>`ForceRedirect`: Force HTTPS.</li>
-<li>`OriginPullProtocol`: Origin-pull HTTPS.</li>
-<li>`CachePrefresh`: Cache prefresh.</li>
-<li>`Compression`: Smart compression.</li>
-<li>`Hsts`.</li>
-<li>`ClientIpHeader`.</li>
-<li>`TlsVersion`.</li>
-<li>`OcspStapling`.</li>
-<li>`Http2`: HTTP/2 access.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`AccessUrlRedirect`: Access URL rewrite</li>
+<li>`UpstreamUrlRedirect`: Origin-pull URL rewrite</li>
+<li>`QUIC`: QUIC</li>
+<li>`WebSocket`: WebSocket</li>
+<li>`VideoSeek`: Video dragging</li>
+<li>`Authentication`: Token authentication</li>
+<li>`CacheKey`: Custom cache key</li>
+<li>`Cache`: Node cache TTL</li>
+<li>`MaxAge`: Browser cache TTL</li>
+<li>`OfflineCache`: Offline cache</li>
+<li>`SmartRouting`: Smart acceleration</li>
+<li>`RangeOriginPull`: Range GETs</li>
+<li>`UpstreamHttp2`: HTTP/2 forwarding</li>
+<li>`HostHeader`: Host header rewrite</li>
+<li>`ForceRedirect`: Force HTTPS</li>
+<li>`OriginPullProtocol`: Origin-pull HTTPS</li>
+<li>`CachePrefresh`: Cache prefresh</li>
+<li>`Compression`: Smart compression</li>
+<li>`Hsts`</li>
+<li>`ClientIpHeader`</li>
+<li>`TlsVersion`</li>
+<li>`OcspStapling`</li>
+<li>`Http2`: HTTP/2 access</li>
+<li>`UpstreamFollowRedirect: Follow origin redirect</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      * @param NormalAction Common feature operation. Features of this type include:
-<li>`AccessUrlRedirect`: Access URL rewrite.</li>
-<li>`UpstreamUrlRedirect`: Origin-pull URL rewrite.</li>
-<li>`QUIC`: QUIC.</li>
-<li>`WebSocket`: WebSocket.</li>
-<li>`VideoSeek`: Video dragging.</li>
-<li>`Authentication`: Token authentication.</li>
-<li>`CacheKey`: Custom cache key.</li>
-<li>`Cache`: Node cache TTL.</li>
-<li>`MaxAge`: Browser cache TTL.</li>
-<li>`OfflineCache`: Offline cache.</li>
-<li>`SmartRouting`: Smart acceleration.</li>
-<li>`RangeOriginPull`: Range GETs.</li>
-<li>`UpstreamHttp2`: HTTP/2 forwarding.</li>
-<li>`HostHeader`: Host header rewrite.</li>
-<li>`ForceRedirect`: Force HTTPS.</li>
-<li>`OriginPullProtocol`: Origin-pull HTTPS.</li>
-<li>`CachePrefresh`: Cache prefresh.</li>
-<li>`Compression`: Smart compression.</li>
-<li>`Hsts`.</li>
-<li>`ClientIpHeader`.</li>
-<li>`TlsVersion`.</li>
-<li>`OcspStapling`.</li>
-<li>`Http2`: HTTP/2 access.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`AccessUrlRedirect`: Access URL rewrite</li>
+<li>`UpstreamUrlRedirect`: Origin-pull URL rewrite</li>
+<li>`QUIC`: QUIC</li>
+<li>`WebSocket`: WebSocket</li>
+<li>`VideoSeek`: Video dragging</li>
+<li>`Authentication`: Token authentication</li>
+<li>`CacheKey`: Custom cache key</li>
+<li>`Cache`: Node cache TTL</li>
+<li>`MaxAge`: Browser cache TTL</li>
+<li>`OfflineCache`: Offline cache</li>
+<li>`SmartRouting`: Smart acceleration</li>
+<li>`RangeOriginPull`: Range GETs</li>
+<li>`UpstreamHttp2`: HTTP/2 forwarding</li>
+<li>`HostHeader`: Host header rewrite</li>
+<li>`ForceRedirect`: Force HTTPS</li>
+<li>`OriginPullProtocol`: Origin-pull HTTPS</li>
+<li>`CachePrefresh`: Cache prefresh</li>
+<li>`Compression`: Smart compression</li>
+<li>`Hsts`</li>
+<li>`ClientIpHeader`</li>
+<li>`TlsVersion`</li>
+<li>`OcspStapling`</li>
+<li>`Http2`: HTTP/2 access</li>
+<li>`UpstreamFollowRedirect: Follow origin redirect</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetNormalAction(const NormalAction& _normalAction);
 
@@ -227,30 +231,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Common feature operation. Features of this type include:
-<li>`AccessUrlRedirect`: Access URL rewrite.</li>
-<li>`UpstreamUrlRedirect`: Origin-pull URL rewrite.</li>
-<li>`QUIC`: QUIC.</li>
-<li>`WebSocket`: WebSocket.</li>
-<li>`VideoSeek`: Video dragging.</li>
-<li>`Authentication`: Token authentication.</li>
-<li>`CacheKey`: Custom cache key.</li>
-<li>`Cache`: Node cache TTL.</li>
-<li>`MaxAge`: Browser cache TTL.</li>
-<li>`OfflineCache`: Offline cache.</li>
-<li>`SmartRouting`: Smart acceleration.</li>
-<li>`RangeOriginPull`: Range GETs.</li>
-<li>`UpstreamHttp2`: HTTP/2 forwarding.</li>
-<li>`HostHeader`: Host header rewrite.</li>
-<li>`ForceRedirect`: Force HTTPS.</li>
-<li>`OriginPullProtocol`: Origin-pull HTTPS.</li>
-<li>`CachePrefresh`: Cache prefresh.</li>
-<li>`Compression`: Smart compression.</li>
-<li>`Hsts`.</li>
-<li>`ClientIpHeader`.</li>
-<li>`TlsVersion`.</li>
-<li>`OcspStapling`.</li>
-<li>`Http2`: HTTP/2 access.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`AccessUrlRedirect`: Access URL rewrite</li>
+<li>`UpstreamUrlRedirect`: Origin-pull URL rewrite</li>
+<li>`QUIC`: QUIC</li>
+<li>`WebSocket`: WebSocket</li>
+<li>`VideoSeek`: Video dragging</li>
+<li>`Authentication`: Token authentication</li>
+<li>`CacheKey`: Custom cache key</li>
+<li>`Cache`: Node cache TTL</li>
+<li>`MaxAge`: Browser cache TTL</li>
+<li>`OfflineCache`: Offline cache</li>
+<li>`SmartRouting`: Smart acceleration</li>
+<li>`RangeOriginPull`: Range GETs</li>
+<li>`UpstreamHttp2`: HTTP/2 forwarding</li>
+<li>`HostHeader`: Host header rewrite</li>
+<li>`ForceRedirect`: Force HTTPS</li>
+<li>`OriginPullProtocol`: Origin-pull HTTPS</li>
+<li>`CachePrefresh`: Cache prefresh</li>
+<li>`Compression`: Smart compression</li>
+<li>`Hsts`</li>
+<li>`ClientIpHeader`</li>
+<li>`TlsVersion`</li>
+<li>`OcspStapling`</li>
+<li>`Http2`: HTTP/2 access</li>
+<li>`UpstreamFollowRedirect: Follow origin redirect</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     NormalAction m_normalAction;
                     bool m_normalActionHasBeenSet;

@@ -49,14 +49,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Exception mode. Values:
+<li>`complete`: Skip the exception rule for full requests.</li>
+<li>`partial`: Skip the exception rule for partial requests.</li>
+                     * @return Type Exception mode. Values:
+<li>`complete`: Skip the exception rule for full requests.</li>
+<li>`partial`: Skip the exception rule for partial requests.</li>
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param Type 
+                     * 设置Exception mode. Values:
+<li>`complete`: Skip the exception rule for full requests.</li>
+<li>`partial`: Skip the exception rule for partial requests.</li>
+                     * @param Type Exception mode. Values:
+<li>`complete`: Skip the exception rule for full requests.</li>
+<li>`partial`: Skip the exception rule for partial requests.</li>
                      */
                     void SetType(const std::string& _type);
 
@@ -67,18 +75,30 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取The module that applies. Only WAF managed rules are supported currently.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Modules The module that applies. Only WAF managed rules are supported currently.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The module to be activated. Values:
+<li>`waf`: Managed rules</li>
+<li>`cc`: Rate limiting rules</li>
+<li>`bot`: bot protection</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return Modules The module to be activated. Values:
+<li>`waf`: Managed rules</li>
+<li>`cc`: Rate limiting rules</li>
+<li>`bot`: bot protection</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<std::string> GetModules() const;
 
                     /**
-                     * 设置The module that applies. Only WAF managed rules are supported currently.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Modules The module that applies. Only WAF managed rules are supported currently.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The module to be activated. Values:
+<li>`waf`: Managed rules</li>
+<li>`cc`: Rate limiting rules</li>
+<li>`bot`: bot protection</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param Modules The module to be activated. Values:
+<li>`waf`: Managed rules</li>
+<li>`cc`: Rate limiting rules</li>
+<li>`bot`: bot protection</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetModules(const std::vector<std::string>& _modules);
 
@@ -89,14 +109,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ModulesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PartialModules 
+                     * 获取Module settings of the exception rule. If it is null, the settings that were last configured will be used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return PartialModules Module settings of the exception rule. If it is null, the settings that were last configured will be used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<PartialModule> GetPartialModules() const;
 
                     /**
-                     * 设置
-                     * @param PartialModules 
+                     * 设置Module settings of the exception rule. If it is null, the settings that were last configured will be used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param PartialModules Module settings of the exception rule. If it is null, the settings that were last configured will be used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetPartialModules(const std::vector<PartialModule>& _partialModules);
 
@@ -107,14 +131,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PartialModulesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SkipConditions 
+                     * 获取Condition settings of the exception rule. If it is null, the settings that were last configured will be used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return SkipConditions Condition settings of the exception rule. If it is null, the settings that were last configured will be used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<SkipCondition> GetSkipConditions() const;
 
                     /**
-                     * 设置
-                     * @param SkipConditions 
+                     * 设置Condition settings of the exception rule. If it is null, the settings that were last configured will be used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param SkipConditions Condition settings of the exception rule. If it is null, the settings that were last configured will be used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetSkipConditions(const std::vector<SkipCondition>& _skipConditions);
 
@@ -127,26 +155,33 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * 
+                     * Exception mode. Values:
+<li>`complete`: Skip the exception rule for full requests.</li>
+<li>`partial`: Skip the exception rule for partial requests.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * The module that applies. Only WAF managed rules are supported currently.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The module to be activated. Values:
+<li>`waf`: Managed rules</li>
+<li>`cc`: Rate limiting rules</li>
+<li>`bot`: bot protection</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<std::string> m_modules;
                     bool m_modulesHasBeenSet;
 
                     /**
-                     * 
+                     * Module settings of the exception rule. If it is null, the settings that were last configured will be used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<PartialModule> m_partialModules;
                     bool m_partialModulesHasBeenSet;
 
                     /**
-                     * 
+                     * Condition settings of the exception rule. If it is null, the settings that were last configured will be used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<SkipCondition> m_skipConditions;
                     bool m_skipConditionsHasBeenSet;

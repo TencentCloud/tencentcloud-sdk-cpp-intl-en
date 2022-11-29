@@ -164,14 +164,22 @@ Value range: 60-86400 (in seconds). If it's not specified, the default value 600
                     bool TTLHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OriginType 
+                     * 获取The origin-pull type. Values:
+<li>`normal`: Primary/Secondary origin-pull</li>
+<li>`advanced`: Advanced origin-pull (only used when `Type=proxied`)</li>If it is left empty, primary/secondary origin-pull is applied.
+                     * @return OriginType The origin-pull type. Values:
+<li>`normal`: Primary/Secondary origin-pull</li>
+<li>`advanced`: Advanced origin-pull (only used when `Type=proxied`)</li>If it is left empty, primary/secondary origin-pull is applied.
                      */
                     std::string GetOriginType() const;
 
                     /**
-                     * 设置
-                     * @param OriginType 
+                     * 设置The origin-pull type. Values:
+<li>`normal`: Primary/Secondary origin-pull</li>
+<li>`advanced`: Advanced origin-pull (only used when `Type=proxied`)</li>If it is left empty, primary/secondary origin-pull is applied.
+                     * @param OriginType The origin-pull type. Values:
+<li>`normal`: Primary/Secondary origin-pull</li>
+<li>`advanced`: Advanced origin-pull (only used when `Type=proxied`)</li>If it is left empty, primary/secondary origin-pull is applied.
                      */
                     void SetOriginType(const std::string& _originType);
 
@@ -182,14 +190,18 @@ Value range: 60-86400 (in seconds). If it's not specified, the default value 600
                     bool OriginTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AdvancedOriginGroups 
+                     * 获取Advanced origin-pull configuration. This field is valid when `OriginType=advanced`.
+If it is left empty, this configuration is not used.
+                     * @return AdvancedOriginGroups Advanced origin-pull configuration. This field is valid when `OriginType=advanced`.
+If it is left empty, this configuration is not used.
                      */
                     std::vector<AdvancedOriginGroup> GetAdvancedOriginGroups() const;
 
                     /**
-                     * 设置
-                     * @param AdvancedOriginGroups 
+                     * 设置Advanced origin-pull configuration. This field is valid when `OriginType=advanced`.
+If it is left empty, this configuration is not used.
+                     * @param AdvancedOriginGroups Advanced origin-pull configuration. This field is valid when `OriginType=advanced`.
+If it is left empty, this configuration is not used.
                      */
                     void SetAdvancedOriginGroups(const std::vector<AdvancedOriginGroup>& _advancedOriginGroups);
 
@@ -241,13 +253,16 @@ Value range: 60-86400 (in seconds). If it's not specified, the default value 600
                     bool m_tTLHasBeenSet;
 
                     /**
-                     * 
+                     * The origin-pull type. Values:
+<li>`normal`: Primary/Secondary origin-pull</li>
+<li>`advanced`: Advanced origin-pull (only used when `Type=proxied`)</li>If it is left empty, primary/secondary origin-pull is applied.
                      */
                     std::string m_originType;
                     bool m_originTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Advanced origin-pull configuration. This field is valid when `OriginType=advanced`.
+If it is left empty, this configuration is not used.
                      */
                     std::vector<AdvancedOriginGroup> m_advancedOriginGroups;
                     bool m_advancedOriginGroupsHasBeenSet;

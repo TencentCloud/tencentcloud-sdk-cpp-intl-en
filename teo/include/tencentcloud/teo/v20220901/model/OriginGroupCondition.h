@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Origin-pull condition
                 */
                 class OriginGroupCondition : public AbstractModel
                 {
@@ -47,14 +47,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Target 
+                     * 获取Match type. Values:
+<li>`url`: Partial URL path under the current site, such as "/example" and "/example/foo.jpg". You can use an asterisk (*) to indicate all values and a question mark (?) to indicate any single character.
+</li>
+                     * @return Target Match type. Values:
+<li>`url`: Partial URL path under the current site, such as "/example" and "/example/foo.jpg". You can use an asterisk (*) to indicate all values and a question mark (?) to indicate any single character.
+</li>
                      */
                     std::string GetTarget() const;
 
                     /**
-                     * 设置
-                     * @param Target 
+                     * 设置Match type. Values:
+<li>`url`: Partial URL path under the current site, such as "/example" and "/example/foo.jpg". You can use an asterisk (*) to indicate all values and a question mark (?) to indicate any single character.
+</li>
+                     * @param Target Match type. Values:
+<li>`url`: Partial URL path under the current site, such as "/example" and "/example/foo.jpg". You can use an asterisk (*) to indicate all values and a question mark (?) to indicate any single character.
+</li>
                      */
                     void SetTarget(const std::string& _target);
 
@@ -65,14 +73,18 @@ namespace TencentCloud
                     bool TargetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Operator 
+                     * 获取The operator. Values:
+<li>`equal`: Equals</li>
+                     * @return Operator The operator. Values:
+<li>`equal`: Equals</li>
                      */
                     std::string GetOperator() const;
 
                     /**
-                     * 设置
-                     * @param Operator 
+                     * 设置The operator. Values:
+<li>`equal`: Equals</li>
+                     * @param Operator The operator. Values:
+<li>`equal`: Equals</li>
                      */
                     void SetOperator(const std::string& _operator);
 
@@ -83,14 +95,14 @@ namespace TencentCloud
                     bool OperatorHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Values 
+                     * 获取Values of the match type.
+                     * @return Values Values of the match type.
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
-                     * 设置
-                     * @param Values 
+                     * 设置Values of the match type.
+                     * @param Values Values of the match type.
                      */
                     void SetValues(const std::vector<std::string>& _values);
 
@@ -103,19 +115,22 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Match type. Values:
+<li>`url`: Partial URL path under the current site, such as "/example" and "/example/foo.jpg". You can use an asterisk (*) to indicate all values and a question mark (?) to indicate any single character.
+</li>
                      */
                     std::string m_target;
                     bool m_targetHasBeenSet;
 
                     /**
-                     * 
+                     * The operator. Values:
+<li>`equal`: Equals</li>
                      */
                     std::string m_operator;
                     bool m_operatorHasBeenSet;
 
                     /**
-                     * 
+                     * Values of the match type.
                      */
                     std::vector<std::string> m_values;
                     bool m_valuesHasBeenSet;

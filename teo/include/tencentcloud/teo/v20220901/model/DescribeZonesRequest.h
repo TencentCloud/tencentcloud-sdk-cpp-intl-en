@@ -81,17 +81,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No<li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No<li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No<li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No<li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No<li>`Fuzzy`:<br>   Filter by <strong>values in fuzzy query</strong> (only `zone-name` allowed). Values limit: 1<br>   Type: Boolean<br>   Required: No<br>   Default value: false
+<li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li><li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li><li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No</li><li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li><li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>Only `zone-name` supports fuzzy query.
                      * @return Filters Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No<li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No<li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No<li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No<li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No<li>`Fuzzy`:<br>   Filter by <strong>values in fuzzy query</strong> (only `zone-name` allowed). Values limit: 1<br>   Type: Boolean<br>   Required: No<br>   Default value: false
+<li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li><li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li><li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No</li><li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li><li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>Only `zone-name` supports fuzzy query.
                      */
                     std::vector<AdvancedFilter> GetFilters() const;
 
                     /**
                      * 设置Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No<li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No<li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No<li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No<li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No<li>`Fuzzy`:<br>   Filter by <strong>values in fuzzy query</strong> (only `zone-name` allowed). Values limit: 1<br>   Type: Boolean<br>   Required: No<br>   Default value: false
+<li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li><li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li><li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No</li><li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li><li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>Only `zone-name` supports fuzzy query.
                      * @param Filters Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No<li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No<li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No<li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No<li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No<li>`Fuzzy`:<br>   Filter by <strong>values in fuzzy query</strong> (only `zone-name` allowed). Values limit: 1<br>   Type: Boolean<br>   Required: No<br>   Default value: false
+<li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li><li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li><li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No</li><li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li><li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>Only `zone-name` supports fuzzy query.
                      */
                     void SetFilters(const std::vector<AdvancedFilter>& _filters);
 
@@ -100,6 +100,74 @@ namespace TencentCloud
                      * @return Filters 是否已赋值
                      */
                     bool FiltersHasBeenSet() const;
+
+                    /**
+                     * 获取The sorting field. Values:
+<li>`type`: Access mode</li>
+<li>`area`: Acceleration region</li>
+<li>`create-time`: Creation date</li>
+<li>`zone-name`: Site name</li>
+<li>`use-time`: Last used date</li>
+<li>`active-status`: Activation status</li>If it is left empty, the default value `create-time` is used.
+                     * @return Order The sorting field. Values:
+<li>`type`: Access mode</li>
+<li>`area`: Acceleration region</li>
+<li>`create-time`: Creation date</li>
+<li>`zone-name`: Site name</li>
+<li>`use-time`: Last used date</li>
+<li>`active-status`: Activation status</li>If it is left empty, the default value `create-time` is used.
+                     */
+                    std::string GetOrder() const;
+
+                    /**
+                     * 设置The sorting field. Values:
+<li>`type`: Access mode</li>
+<li>`area`: Acceleration region</li>
+<li>`create-time`: Creation date</li>
+<li>`zone-name`: Site name</li>
+<li>`use-time`: Last used date</li>
+<li>`active-status`: Activation status</li>If it is left empty, the default value `create-time` is used.
+                     * @param Order The sorting field. Values:
+<li>`type`: Access mode</li>
+<li>`area`: Acceleration region</li>
+<li>`create-time`: Creation date</li>
+<li>`zone-name`: Site name</li>
+<li>`use-time`: Last used date</li>
+<li>`active-status`: Activation status</li>If it is left empty, the default value `create-time` is used.
+                     */
+                    void SetOrder(const std::string& _order);
+
+                    /**
+                     * 判断参数 Order 是否已赋值
+                     * @return Order 是否已赋值
+                     */
+                    bool OrderHasBeenSet() const;
+
+                    /**
+                     * 获取The sorting direction. Values:
+<li>`asc`: From smallest to largest</li>
+<li>`desc`: From largest to smallest</li>If it is left empty, the default value `desc` is used.
+                     * @return Direction The sorting direction. Values:
+<li>`asc`: From smallest to largest</li>
+<li>`desc`: From largest to smallest</li>If it is left empty, the default value `desc` is used.
+                     */
+                    std::string GetDirection() const;
+
+                    /**
+                     * 设置The sorting direction. Values:
+<li>`asc`: From smallest to largest</li>
+<li>`desc`: From largest to smallest</li>If it is left empty, the default value `desc` is used.
+                     * @param Direction The sorting direction. Values:
+<li>`asc`: From smallest to largest</li>
+<li>`desc`: From largest to smallest</li>If it is left empty, the default value `desc` is used.
+                     */
+                    void SetDirection(const std::string& _direction);
+
+                    /**
+                     * 判断参数 Direction 是否已赋值
+                     * @return Direction 是否已赋值
+                     */
+                    bool DirectionHasBeenSet() const;
 
                 private:
 
@@ -117,10 +185,30 @@ namespace TencentCloud
 
                     /**
                      * Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No<li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No<li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No<li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No<li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No<li>`Fuzzy`:<br>   Filter by <strong>values in fuzzy query</strong> (only `zone-name` allowed). Values limit: 1<br>   Type: Boolean<br>   Required: No<br>   Default value: false
+<li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li><li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li><li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No</li><li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li><li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>Only `zone-name` supports fuzzy query.
                      */
                     std::vector<AdvancedFilter> m_filters;
                     bool m_filtersHasBeenSet;
+
+                    /**
+                     * The sorting field. Values:
+<li>`type`: Access mode</li>
+<li>`area`: Acceleration region</li>
+<li>`create-time`: Creation date</li>
+<li>`zone-name`: Site name</li>
+<li>`use-time`: Last used date</li>
+<li>`active-status`: Activation status</li>If it is left empty, the default value `create-time` is used.
+                     */
+                    std::string m_order;
+                    bool m_orderHasBeenSet;
+
+                    /**
+                     * The sorting direction. Values:
+<li>`asc`: From smallest to largest</li>
+<li>`desc`: From largest to smallest</li>If it is left empty, the default value `desc` is used.
+                     */
+                    std::string m_direction;
+                    bool m_directionHasBeenSet;
 
                 };
             }

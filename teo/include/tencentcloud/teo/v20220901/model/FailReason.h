@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool ReasonHasBeenSet() const;
 
                     /**
-                     * 获取List of resources failed to be processed.
-                     * @return Targets List of resources failed to be processed.
+                     * 获取List of resources failed to be processed. 
+                     * @return Targets List of resources failed to be processed. 
                      */
                     std::vector<std::string> GetTargets() const;
 
                     /**
-                     * 设置List of resources failed to be processed.
-                     * @param Targets List of resources failed to be processed.
+                     * 设置List of resources failed to be processed. 
+                     * @param Targets List of resources failed to be processed. 
                      */
                     void SetTargets(const std::vector<std::string>& _targets);
 
@@ -91,7 +91,7 @@ namespace TencentCloud
                     bool m_reasonHasBeenSet;
 
                     /**
-                     * List of resources failed to be processed.
+                     * List of resources failed to be processed. 
                      */
                     std::vector<std::string> m_targets;
                     bool m_targetsHasBeenSet;

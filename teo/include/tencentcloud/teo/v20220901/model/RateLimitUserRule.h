@@ -181,25 +181,21 @@ namespace TencentCloud
 
                     /**
                      * 获取The rule status. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-<li>Default value: on</li>
+<li>`on`: Enabled</li>
+<li>`off`: Disabled</li>Default value: on
                      * @return RuleStatus The rule status. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-<li>Default value: on</li>
+<li>`on`: Enabled</li>
+<li>`off`: Disabled</li>Default value: on
                      */
                     std::string GetRuleStatus() const;
 
                     /**
                      * 设置The rule status. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-<li>Default value: on</li>
+<li>`on`: Enabled</li>
+<li>`off`: Disabled</li>Default value: on
                      * @param RuleStatus The rule status. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-<li>Default value: on</li>
+<li>`on`: Enabled</li>
+<li>`off`: Disabled</li>Default value: on
                      */
                     void SetRuleStatus(const std::string& _ruleStatus);
 
@@ -269,11 +265,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取The filter. Values:
-<li>`host`: Domain name</li>
 <li>`sip`: Client IP</li>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FreqFields The filter. Values:
-<li>`host`: Domain name</li>
 <li>`sip`: Client IP</li>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
@@ -281,11 +275,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 设置The filter. Values:
-<li>`host`: Domain name</li>
 <li>`sip`: Client IP</li>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @param FreqFields The filter. Values:
-<li>`host`: Domain name</li>
 <li>`sip`: Client IP</li>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
@@ -318,6 +310,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return UpdateTime 是否已赋值
                      */
                     bool UpdateTimeHasBeenSet() const;
+
+                    /**
+                     * 获取The statistical dimension. Values:
+<li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
+<li>`client_to_eo`: Requests from the client to EdgeOne</li>
+Note: A null value indicates responses from the origin server to EdgeOne are recorded.
+                     * @return FreqScope The statistical dimension. Values:
+<li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
+<li>`client_to_eo`: Requests from the client to EdgeOne</li>
+Note: A null value indicates responses from the origin server to EdgeOne are recorded.
+                     */
+                    std::vector<std::string> GetFreqScope() const;
+
+                    /**
+                     * 设置The statistical dimension. Values:
+<li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
+<li>`client_to_eo`: Requests from the client to EdgeOne</li>
+Note: A null value indicates responses from the origin server to EdgeOne are recorded.
+                     * @param FreqScope The statistical dimension. Values:
+<li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
+<li>`client_to_eo`: Requests from the client to EdgeOne</li>
+Note: A null value indicates responses from the origin server to EdgeOne are recorded.
+                     */
+                    void SetFreqScope(const std::vector<std::string>& _freqScope);
+
+                    /**
+                     * 判断参数 FreqScope 是否已赋值
+                     * @return FreqScope 是否已赋值
+                     */
+                    bool FreqScopeHasBeenSet() const;
 
                 private:
 
@@ -365,9 +387,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * The rule status. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-<li>Default value: on</li>
+<li>`on`: Enabled</li>
+<li>`off`: Disabled</li>Default value: on
                      */
                     std::string m_ruleStatus;
                     bool m_ruleStatusHasBeenSet;
@@ -393,7 +414,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * The filter. Values:
-<li>`host`: Domain name</li>
 <li>`sip`: Client IP</li>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
@@ -406,6 +426,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
+
+                    /**
+                     * The statistical dimension. Values:
+<li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
+<li>`client_to_eo`: Requests from the client to EdgeOne</li>
+Note: A null value indicates responses from the origin server to EdgeOne are recorded.
+                     */
+                    std::vector<std::string> m_freqScope;
+                    bool m_freqScopeHasBeenSet;
 
                 };
             }

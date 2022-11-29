@@ -244,14 +244,22 @@ namespace TencentCloud
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OriginType 
+                     * 获取The origin-pull type. Values:
+<li>`normal`: Primary/Secondary origin-pull</li>
+<li>`advanced`: Advanced origin-pull</li>
+                     * @return OriginType The origin-pull type. Values:
+<li>`normal`: Primary/Secondary origin-pull</li>
+<li>`advanced`: Advanced origin-pull</li>
                      */
                     std::string GetOriginType() const;
 
                     /**
-                     * 设置
-                     * @param OriginType 
+                     * 设置The origin-pull type. Values:
+<li>`normal`: Primary/Secondary origin-pull</li>
+<li>`advanced`: Advanced origin-pull</li>
+                     * @param OriginType The origin-pull type. Values:
+<li>`normal`: Primary/Secondary origin-pull</li>
+<li>`advanced`: Advanced origin-pull</li>
                      */
                     void SetOriginType(const std::string& _originType);
 
@@ -262,14 +270,18 @@ namespace TencentCloud
                     bool OriginTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AdvancedOriginGroups 
+                     * 获取Advanced origin-pull configuration. This field is valid when `OriginType=advanced`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return AdvancedOriginGroups Advanced origin-pull configuration. This field is valid when `OriginType=advanced`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<AdvancedOriginGroup> GetAdvancedOriginGroups() const;
 
                     /**
-                     * 设置
-                     * @param AdvancedOriginGroups 
+                     * 设置Advanced origin-pull configuration. This field is valid when `OriginType=advanced`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param AdvancedOriginGroups Advanced origin-pull configuration. This field is valid when `OriginType=advanced`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetAdvancedOriginGroups(const std::vector<AdvancedOriginGroup>& _advancedOriginGroups);
 
@@ -346,13 +358,16 @@ namespace TencentCloud
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * 
+                     * The origin-pull type. Values:
+<li>`normal`: Primary/Secondary origin-pull</li>
+<li>`advanced`: Advanced origin-pull</li>
                      */
                     std::string m_originType;
                     bool m_originTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Advanced origin-pull configuration. This field is valid when `OriginType=advanced`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::vector<AdvancedOriginGroup> m_advancedOriginGroups;
                     bool m_advancedOriginGroupsHasBeenSet;

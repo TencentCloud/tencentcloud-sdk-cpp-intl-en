@@ -305,14 +305,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AreaHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LogSetType 
+                     * 获取Type of the shipping task. Values:
+<li>`cls`: Ship logs to CLS.</li>
+<li>`custom_endpoint`: Ship logs to custom APIs.</li>
+                     * @return LogSetType Type of the shipping task. Values:
+<li>`cls`: Ship logs to CLS.</li>
+<li>`custom_endpoint`: Ship logs to custom APIs.</li>
                      */
                     std::string GetLogSetType() const;
 
                     /**
-                     * 设置
-                     * @param LogSetType 
+                     * 设置Type of the shipping task. Values:
+<li>`cls`: Ship logs to CLS.</li>
+<li>`custom_endpoint`: Ship logs to custom APIs.</li>
+                     * @param LogSetType Type of the shipping task. Values:
+<li>`cls`: Ship logs to CLS.</li>
+<li>`custom_endpoint`: Ship logs to custom APIs.</li>
                      */
                     void SetLogSetType(const std::string& _logSetType);
 
@@ -409,7 +417,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_areaHasBeenSet;
 
                     /**
-                     * 
+                     * Type of the shipping task. Values:
+<li>`cls`: Ship logs to CLS.</li>
+<li>`custom_endpoint`: Ship logs to custom APIs.</li>
                      */
                     std::string m_logSetType;
                     bool m_logSetTypeHasBeenSet;

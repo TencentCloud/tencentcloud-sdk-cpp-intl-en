@@ -216,14 +216,18 @@ namespace TencentCloud
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HostHeader 
+                     * 获取The origin domain when `OriginType=self`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return HostHeader The origin domain when `OriginType=self`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string GetHostHeader() const;
 
                     /**
-                     * 设置
-                     * @param HostHeader 
+                     * 设置The origin domain when `OriginType=self`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param HostHeader The origin domain when `OriginType=self`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetHostHeader(const std::string& _hostHeader);
 
@@ -290,7 +294,8 @@ namespace TencentCloud
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * 
+                     * The origin domain when `OriginType=self`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     std::string m_hostHeader;
                     bool m_hostHeaderHasBeenSet;

@@ -59,7 +59,6 @@ namespace TencentCloud
 <li>`method`: Request method</li>
 <li>`header`: Request header</li>
 <li>`sip_proto`: Network layer protocol</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MatchFrom The field to match. Values:
 <li>`host`: Request domain name</li>
 <li>`sip`: Client IP</li>
@@ -72,7 +71,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`method`: Request method</li>
 <li>`header`: Request header</li>
 <li>`sip_proto`: Network layer protocol</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetMatchFrom() const;
 
@@ -89,7 +87,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`method`: Request method</li>
 <li>`header`: Request header</li>
 <li>`sip_proto`: Network layer protocol</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param MatchFrom The field to match. Values:
 <li>`host`: Request domain name</li>
 <li>`sip`: Client IP</li>
@@ -102,7 +99,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`method`: Request method</li>
 <li>`header`: Request header</li>
 <li>`sip_proto`: Network layer protocol</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetMatchFrom(const std::string& _matchFrom);
 
@@ -113,14 +109,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MatchFromHasBeenSet() const;
 
                     /**
-                     * 获取The parameter of the field. When `MatchFrom = header`, the key contained in the header can be passed.
-                     * @return MatchParam The parameter of the field. When `MatchFrom = header`, the key contained in the header can be passed.
+                     * 获取The parameter of the field. Only when `MatchFrom = header`, the key contained in the header can be passed.
+                     * @return MatchParam The parameter of the field. Only when `MatchFrom = header`, the key contained in the header can be passed.
                      */
                     std::string GetMatchParam() const;
 
                     /**
-                     * 设置The parameter of the field. When `MatchFrom = header`, the key contained in the header can be passed.
-                     * @param MatchParam The parameter of the field. When `MatchFrom = header`, the key contained in the header can be passed.
+                     * 设置The parameter of the field. Only when `MatchFrom = header`, the key contained in the header can be passed.
+                     * @param MatchParam The parameter of the field. Only when `MatchFrom = header`, the key contained in the header can be passed.
                      */
                     void SetMatchParam(const std::string& _matchParam);
 
@@ -148,7 +144,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`match_prefix`: Prefix matches</li>
 <li>`match_suffix`: Suffix matches</li>
 <li>`wildcard`: Wildcard</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Operator The logical operator. Values:
 <li>`equal`: String equals</li>
 <li>`not_equal`: Value not equals</li>
@@ -166,7 +161,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`match_prefix`: Prefix matches</li>
 <li>`match_suffix`: Suffix matches</li>
 <li>`wildcard`: Wildcard</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetOperator() const;
 
@@ -188,7 +182,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`match_prefix`: Prefix matches</li>
 <li>`match_suffix`: Suffix matches</li>
 <li>`wildcard`: Wildcard</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param Operator The logical operator. Values:
 <li>`equal`: String equals</li>
 <li>`not_equal`: Value not equals</li>
@@ -206,7 +199,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`match_prefix`: Prefix matches</li>
 <li>`match_suffix`: Suffix matches</li>
 <li>`wildcard`: Wildcard</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetOperator(const std::string& _operator);
 
@@ -218,17 +210,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取The value of the parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MatchContent The value of the parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetMatchContent() const;
 
                     /**
                      * 设置The value of the parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param MatchContent The value of the parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetMatchContent(const std::string& _matchContent);
 
@@ -253,13 +241,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`method`: Request method</li>
 <li>`header`: Request header</li>
 <li>`sip_proto`: Network layer protocol</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_matchFrom;
                     bool m_matchFromHasBeenSet;
 
                     /**
-                     * The parameter of the field. When `MatchFrom = header`, the key contained in the header can be passed.
+                     * The parameter of the field. Only when `MatchFrom = header`, the key contained in the header can be passed.
                      */
                     std::string m_matchParam;
                     bool m_matchParamHasBeenSet;
@@ -282,14 +269,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`match_prefix`: Prefix matches</li>
 <li>`match_suffix`: Suffix matches</li>
 <li>`wildcard`: Wildcard</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_operator;
                     bool m_operatorHasBeenSet;
 
                     /**
                      * The value of the parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_matchContent;
                     bool m_matchContentHasBeenSet;

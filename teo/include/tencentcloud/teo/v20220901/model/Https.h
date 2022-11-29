@@ -190,6 +190,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool CertInfoHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the certificate is managed by EdgeOne. Values:
+<li>`apply`: Managed by EdgeOne.</li>
+<li>`none`: Not managed by EdgeOne.</li>If it is left empty, the default value `none` is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return ApplyType Whether the certificate is managed by EdgeOne. Values:
+<li>`apply`: Managed by EdgeOne.</li>
+<li>`none`: Not managed by EdgeOne.</li>If it is left empty, the default value `none` is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetApplyType() const;
+
+                    /**
+                     * 设置Whether the certificate is managed by EdgeOne. Values:
+<li>`apply`: Managed by EdgeOne.</li>
+<li>`none`: Not managed by EdgeOne.</li>If it is left empty, the default value `none` is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param ApplyType Whether the certificate is managed by EdgeOne. Values:
+<li>`apply`: Managed by EdgeOne.</li>
+<li>`none`: Not managed by EdgeOne.</li>If it is left empty, the default value `none` is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetApplyType(const std::string& _applyType);
+
+                    /**
+                     * 判断参数 ApplyType 是否已赋值
+                     * @return ApplyType 是否已赋值
+                     */
+                    bool ApplyTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -234,6 +264,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<ServerCertInfo> m_certInfo;
                     bool m_certInfoHasBeenSet;
+
+                    /**
+                     * Whether the certificate is managed by EdgeOne. Values:
+<li>`apply`: Managed by EdgeOne.</li>
+<li>`none`: Not managed by EdgeOne.</li>If it is left empty, the default value `none` is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_applyType;
+                    bool m_applyTypeHasBeenSet;
 
                 };
             }
