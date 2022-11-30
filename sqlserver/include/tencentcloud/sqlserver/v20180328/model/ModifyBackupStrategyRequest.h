@@ -168,6 +168,96 @@ namespace TencentCloud
                      */
                     bool BackupSaveDaysHasBeenSet() const;
 
+                    /**
+                     * 获取Archive backup status. Valid values: `enable` (enabled); `disable` (disabled). Default value: `disable`.
+                     * @return RegularBackupEnable Archive backup status. Valid values: `enable` (enabled); `disable` (disabled). Default value: `disable`.
+                     */
+                    std::string GetRegularBackupEnable() const;
+
+                    /**
+                     * 设置Archive backup status. Valid values: `enable` (enabled); `disable` (disabled). Default value: `disable`.
+                     * @param RegularBackupEnable Archive backup status. Valid values: `enable` (enabled); `disable` (disabled). Default value: `disable`.
+                     */
+                    void SetRegularBackupEnable(const std::string& _regularBackupEnable);
+
+                    /**
+                     * 判断参数 RegularBackupEnable 是否已赋值
+                     * @return RegularBackupEnable 是否已赋值
+                     */
+                    bool RegularBackupEnableHasBeenSet() const;
+
+                    /**
+                     * 获取Archive backup retention days. Value range: 90–3650 days. Default value: 365 days.
+                     * @return RegularBackupSaveDays Archive backup retention days. Value range: 90–3650 days. Default value: 365 days.
+                     */
+                    uint64_t GetRegularBackupSaveDays() const;
+
+                    /**
+                     * 设置Archive backup retention days. Value range: 90–3650 days. Default value: 365 days.
+                     * @param RegularBackupSaveDays Archive backup retention days. Value range: 90–3650 days. Default value: 365 days.
+                     */
+                    void SetRegularBackupSaveDays(const uint64_t& _regularBackupSaveDays);
+
+                    /**
+                     * 判断参数 RegularBackupSaveDays 是否已赋值
+                     * @return RegularBackupSaveDays 是否已赋值
+                     */
+                    bool RegularBackupSaveDaysHasBeenSet() const;
+
+                    /**
+                     * 获取Archive backup policy. Valid values: `years` (yearly); `quarters (quarterly); `months` (monthly); Default value: `months`.
+                     * @return RegularBackupStrategy Archive backup policy. Valid values: `years` (yearly); `quarters (quarterly); `months` (monthly); Default value: `months`.
+                     */
+                    std::string GetRegularBackupStrategy() const;
+
+                    /**
+                     * 设置Archive backup policy. Valid values: `years` (yearly); `quarters (quarterly); `months` (monthly); Default value: `months`.
+                     * @param RegularBackupStrategy Archive backup policy. Valid values: `years` (yearly); `quarters (quarterly); `months` (monthly); Default value: `months`.
+                     */
+                    void SetRegularBackupStrategy(const std::string& _regularBackupStrategy);
+
+                    /**
+                     * 判断参数 RegularBackupStrategy 是否已赋值
+                     * @return RegularBackupStrategy 是否已赋值
+                     */
+                    bool RegularBackupStrategyHasBeenSet() const;
+
+                    /**
+                     * 获取The number of retained archive backups. Default value: `1`.
+                     * @return RegularBackupCounts The number of retained archive backups. Default value: `1`.
+                     */
+                    uint64_t GetRegularBackupCounts() const;
+
+                    /**
+                     * 设置The number of retained archive backups. Default value: `1`.
+                     * @param RegularBackupCounts The number of retained archive backups. Default value: `1`.
+                     */
+                    void SetRegularBackupCounts(const uint64_t& _regularBackupCounts);
+
+                    /**
+                     * 判断参数 RegularBackupCounts 是否已赋值
+                     * @return RegularBackupCounts 是否已赋值
+                     */
+                    bool RegularBackupCountsHasBeenSet() const;
+
+                    /**
+                     * 获取Archive backup start date in YYYY-MM-DD format, which is the current time by default.
+                     * @return RegularBackupStartTime Archive backup start date in YYYY-MM-DD format, which is the current time by default.
+                     */
+                    std::string GetRegularBackupStartTime() const;
+
+                    /**
+                     * 设置Archive backup start date in YYYY-MM-DD format, which is the current time by default.
+                     * @param RegularBackupStartTime Archive backup start date in YYYY-MM-DD format, which is the current time by default.
+                     */
+                    void SetRegularBackupStartTime(const std::string& _regularBackupStartTime);
+
+                    /**
+                     * 判断参数 RegularBackupStartTime 是否已赋值
+                     * @return RegularBackupStartTime 是否已赋值
+                     */
+                    bool RegularBackupStartTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -211,6 +301,36 @@ namespace TencentCloud
                      */
                     uint64_t m_backupSaveDays;
                     bool m_backupSaveDaysHasBeenSet;
+
+                    /**
+                     * Archive backup status. Valid values: `enable` (enabled); `disable` (disabled). Default value: `disable`.
+                     */
+                    std::string m_regularBackupEnable;
+                    bool m_regularBackupEnableHasBeenSet;
+
+                    /**
+                     * Archive backup retention days. Value range: 90–3650 days. Default value: 365 days.
+                     */
+                    uint64_t m_regularBackupSaveDays;
+                    bool m_regularBackupSaveDaysHasBeenSet;
+
+                    /**
+                     * Archive backup policy. Valid values: `years` (yearly); `quarters (quarterly); `months` (monthly); Default value: `months`.
+                     */
+                    std::string m_regularBackupStrategy;
+                    bool m_regularBackupStrategyHasBeenSet;
+
+                    /**
+                     * The number of retained archive backups. Default value: `1`.
+                     */
+                    uint64_t m_regularBackupCounts;
+                    bool m_regularBackupCountsHasBeenSet;
+
+                    /**
+                     * Archive backup start date in YYYY-MM-DD format, which is the current time by default.
+                     */
+                    std::string m_regularBackupStartTime;
+                    bool m_regularBackupStartTimeHasBeenSet;
 
                 };
             }

@@ -48,17 +48,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Node ID
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NodeId Node ID
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetNodeId() const;
 
                     /**
                      * 设置Node ID
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param NodeId Node ID
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetNodeId(const std::string& _nodeId);
 
@@ -68,14 +68,43 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool NodeIdHasBeenSet() const;
 
+                    /**
+                     * 获取AZ ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ZoneId AZ ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetZoneId() const;
+
+                    /**
+                     * 设置AZ ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ZoneId AZ ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetZoneId(const int64_t& _zoneId);
+
+                    /**
+                     * 判断参数 ZoneId 是否已赋值
+                     * @return ZoneId 是否已赋值
+                     */
+                    bool ZoneIdHasBeenSet() const;
+
                 private:
 
                     /**
                      * Node ID
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_nodeId;
                     bool m_nodeIdHasBeenSet;
+
+                    /**
+                     * AZ ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_zoneId;
+                    bool m_zoneIdHasBeenSet;
 
                 };
             }

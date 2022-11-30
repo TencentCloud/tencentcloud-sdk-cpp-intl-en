@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Length of purchase in months
-                     * @return Period Length of purchase in months
+                     * 获取Validity period in months
+                     * @return Period Validity period in months
                      */
                     uint64_t GetPeriod() const;
 
                     /**
-                     * 设置Length of purchase in months
-                     * @param Period Length of purchase in months
+                     * 设置Validity period in months
+                     * @param Period Validity period in months
                      */
                     void SetPeriod(const uint64_t& _period);
 
@@ -78,10 +78,28 @@ namespace TencentCloud
                      */
                     bool InstanceIdHasBeenSet() const;
 
+                    /**
+                     * 获取The parameter used to determine whether to modify the billing mode. <ul><li>If you want to change the billing mode from pay-as-you-go to monthly subscription, specify this parameter as <b>prepaid</b>. </li><li>If the current instance is monthly subscribed, this parameter is not required. </li></ul>
+                     * @return ModifyPayMode The parameter used to determine whether to modify the billing mode. <ul><li>If you want to change the billing mode from pay-as-you-go to monthly subscription, specify this parameter as <b>prepaid</b>. </li><li>If the current instance is monthly subscribed, this parameter is not required. </li></ul>
+                     */
+                    std::string GetModifyPayMode() const;
+
+                    /**
+                     * 设置The parameter used to determine whether to modify the billing mode. <ul><li>If you want to change the billing mode from pay-as-you-go to monthly subscription, specify this parameter as <b>prepaid</b>. </li><li>If the current instance is monthly subscribed, this parameter is not required. </li></ul>
+                     * @param ModifyPayMode The parameter used to determine whether to modify the billing mode. <ul><li>If you want to change the billing mode from pay-as-you-go to monthly subscription, specify this parameter as <b>prepaid</b>. </li><li>If the current instance is monthly subscribed, this parameter is not required. </li></ul>
+                     */
+                    void SetModifyPayMode(const std::string& _modifyPayMode);
+
+                    /**
+                     * 判断参数 ModifyPayMode 是否已赋值
+                     * @return ModifyPayMode 是否已赋值
+                     */
+                    bool ModifyPayModeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Length of purchase in months
+                     * Validity period in months
                      */
                     uint64_t m_period;
                     bool m_periodHasBeenSet;
@@ -91,6 +109,12 @@ namespace TencentCloud
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
+
+                    /**
+                     * The parameter used to determine whether to modify the billing mode. <ul><li>If you want to change the billing mode from pay-as-you-go to monthly subscription, specify this parameter as <b>prepaid</b>. </li><li>If the current instance is monthly subscribed, this parameter is not required. </li></ul>
+                     */
+                    std::string m_modifyPayMode;
+                    bool m_modifyPayModeHasBeenSet;
 
                 };
             }

@@ -1130,7 +1130,7 @@ namespace TencentCloud
                 SwitchProxyOutcomeCallable SwitchProxyCallable(const Model::SwitchProxyRequest& request);
 
                 /**
-                 *This API is used to upgrade an instance.
+                 *This API is used to modify the instance configuration.
                  * @param req UpgradeInstanceRequest
                  * @return UpgradeInstanceOutcome
                  */

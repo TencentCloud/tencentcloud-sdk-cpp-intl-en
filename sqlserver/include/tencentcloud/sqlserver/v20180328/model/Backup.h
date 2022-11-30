@@ -229,14 +229,14 @@ namespace TencentCloud
                     bool StrategyHasBeenSet() const;
 
                     /**
-                     * 获取Backup mode. 0: scheduled, 1: manual
-                     * @return BackupWay Backup mode. 0: scheduled, 1: manual
+                     * 获取Backup Mode. Valid values: `0` (scheduled backup); `1` (manual backup); `2` (archive backup).
+                     * @return BackupWay Backup Mode. Valid values: `0` (scheduled backup); `1` (manual backup); `2` (archive backup).
                      */
                     int64_t GetBackupWay() const;
 
                     /**
-                     * 设置Backup mode. 0: scheduled, 1: manual
-                     * @param BackupWay Backup mode. 0: scheduled, 1: manual
+                     * 设置Backup Mode. Valid values: `0` (scheduled backup); `1` (manual backup); `2` (archive backup).
+                     * @param BackupWay Backup Mode. Valid values: `0` (scheduled backup); `1` (manual backup); `2` (archive backup).
                      */
                     void SetBackupWay(const int64_t& _backupWay);
 
@@ -417,7 +417,7 @@ namespace TencentCloud
                     bool m_strategyHasBeenSet;
 
                     /**
-                     * Backup mode. 0: scheduled, 1: manual
+                     * Backup Mode. Valid values: `0` (scheduled backup); `1` (manual backup); `2` (archive backup).
                      */
                     int64_t m_backupWay;
                     bool m_backupWayHasBeenSet;
