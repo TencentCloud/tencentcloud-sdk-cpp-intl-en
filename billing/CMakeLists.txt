@@ -44,14 +44,17 @@ set(billing_public_header_model
   include/tencentcloud/billing/v20180709/model/ApplicableProducts.h
   include/tencentcloud/billing/v20180709/model/DescribeBillSummaryByProjectRequest.h
   include/tencentcloud/billing/v20180709/model/DescribeVoucherUsageDetailsRequest.h
+  include/tencentcloud/billing/v20180709/model/DescribeDosageCosDetailByDateRequest.h
   include/tencentcloud/billing/v20180709/model/DescribeBillResourceSummaryRequest.h
   include/tencentcloud/billing/v20180709/model/DescribeBillSummaryByProductRequest.h
   include/tencentcloud/billing/v20180709/model/SummaryTotal.h
   include/tencentcloud/billing/v20180709/model/BillDetail.h
+  include/tencentcloud/billing/v20180709/model/DescribeDosageCosDetailByDateResponse.h
   include/tencentcloud/billing/v20180709/model/TagSummaryOverviewItem.h
   include/tencentcloud/billing/v20180709/model/ProjectSummaryOverviewItem.h
   include/tencentcloud/billing/v20180709/model/DescribeBillDetailResponse.h
   include/tencentcloud/billing/v20180709/model/DescribeVoucherUsageDetailsResponse.h
+  include/tencentcloud/billing/v20180709/model/CosDetailSets.h
   include/tencentcloud/billing/v20180709/model/DescribeBillSummaryByProjectResponse.h
   include/tencentcloud/billing/v20180709/model/ExcludedProducts.h
   include/tencentcloud/billing/v20180709/model/PayModeSummaryOverviewItem.h
@@ -85,14 +88,17 @@ set(billing_src
   src/v20180709/model/ApplicableProducts.cpp
   src/v20180709/model/DescribeBillSummaryByProjectRequest.cpp
   src/v20180709/model/DescribeVoucherUsageDetailsRequest.cpp
+  src/v20180709/model/DescribeDosageCosDetailByDateRequest.cpp
   src/v20180709/model/DescribeBillResourceSummaryRequest.cpp
   src/v20180709/model/DescribeBillSummaryByProductRequest.cpp
   src/v20180709/model/SummaryTotal.cpp
   src/v20180709/model/BillDetail.cpp
+  src/v20180709/model/DescribeDosageCosDetailByDateResponse.cpp
   src/v20180709/model/TagSummaryOverviewItem.cpp
   src/v20180709/model/ProjectSummaryOverviewItem.cpp
   src/v20180709/model/DescribeBillDetailResponse.cpp
   src/v20180709/model/DescribeVoucherUsageDetailsResponse.cpp
+  src/v20180709/model/CosDetailSets.cpp
   src/v20180709/model/DescribeBillSummaryByProjectResponse.cpp
   src/v20180709/model/ExcludedProducts.cpp
   src/v20180709/model/PayModeSummaryOverviewItem.cpp
