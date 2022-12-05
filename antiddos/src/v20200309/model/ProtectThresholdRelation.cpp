@@ -27,7 +27,17 @@ ProtectThresholdRelation::ProtectThresholdRelation() :
     m_cCEnableHasBeenSet(false),
     m_cCThresholdHasBeenSet(false),
     m_instanceDetailListHasBeenSet(false),
-    m_listenerCcThresholdListHasBeenSet(false)
+    m_listenerCcThresholdListHasBeenSet(false),
+    m_synFloodThresholdHasBeenSet(false),
+    m_synFloodPktThresholdHasBeenSet(false),
+    m_udpFloodThresholdHasBeenSet(false),
+    m_udpFloodPktThresholdHasBeenSet(false),
+    m_ackFloodThresholdHasBeenSet(false),
+    m_ackFloodPktThresholdHasBeenSet(false),
+    m_synAckFloodThresholdHasBeenSet(false),
+    m_synAckFloodPktThresholdHasBeenSet(false),
+    m_rstFloodThresholdHasBeenSet(false),
+    m_rstFloodPktThresholdHasBeenSet(false)
 {
 }
 
@@ -126,6 +136,106 @@ CoreInternalOutcome ProtectThresholdRelation::Deserialize(const rapidjson::Value
         m_listenerCcThresholdListHasBeenSet = true;
     }
 
+    if (value.HasMember("SynFloodThreshold") && !value["SynFloodThreshold"].IsNull())
+    {
+        if (!value["SynFloodThreshold"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ProtectThresholdRelation.SynFloodThreshold` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_synFloodThreshold = value["SynFloodThreshold"].GetUint64();
+        m_synFloodThresholdHasBeenSet = true;
+    }
+
+    if (value.HasMember("SynFloodPktThreshold") && !value["SynFloodPktThreshold"].IsNull())
+    {
+        if (!value["SynFloodPktThreshold"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ProtectThresholdRelation.SynFloodPktThreshold` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_synFloodPktThreshold = value["SynFloodPktThreshold"].GetUint64();
+        m_synFloodPktThresholdHasBeenSet = true;
+    }
+
+    if (value.HasMember("UdpFloodThreshold") && !value["UdpFloodThreshold"].IsNull())
+    {
+        if (!value["UdpFloodThreshold"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ProtectThresholdRelation.UdpFloodThreshold` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_udpFloodThreshold = value["UdpFloodThreshold"].GetUint64();
+        m_udpFloodThresholdHasBeenSet = true;
+    }
+
+    if (value.HasMember("UdpFloodPktThreshold") && !value["UdpFloodPktThreshold"].IsNull())
+    {
+        if (!value["UdpFloodPktThreshold"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ProtectThresholdRelation.UdpFloodPktThreshold` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_udpFloodPktThreshold = value["UdpFloodPktThreshold"].GetUint64();
+        m_udpFloodPktThresholdHasBeenSet = true;
+    }
+
+    if (value.HasMember("AckFloodThreshold") && !value["AckFloodThreshold"].IsNull())
+    {
+        if (!value["AckFloodThreshold"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ProtectThresholdRelation.AckFloodThreshold` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_ackFloodThreshold = value["AckFloodThreshold"].GetUint64();
+        m_ackFloodThresholdHasBeenSet = true;
+    }
+
+    if (value.HasMember("AckFloodPktThreshold") && !value["AckFloodPktThreshold"].IsNull())
+    {
+        if (!value["AckFloodPktThreshold"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ProtectThresholdRelation.AckFloodPktThreshold` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_ackFloodPktThreshold = value["AckFloodPktThreshold"].GetUint64();
+        m_ackFloodPktThresholdHasBeenSet = true;
+    }
+
+    if (value.HasMember("SynAckFloodThreshold") && !value["SynAckFloodThreshold"].IsNull())
+    {
+        if (!value["SynAckFloodThreshold"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ProtectThresholdRelation.SynAckFloodThreshold` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_synAckFloodThreshold = value["SynAckFloodThreshold"].GetUint64();
+        m_synAckFloodThresholdHasBeenSet = true;
+    }
+
+    if (value.HasMember("SynAckFloodPktThreshold") && !value["SynAckFloodPktThreshold"].IsNull())
+    {
+        if (!value["SynAckFloodPktThreshold"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ProtectThresholdRelation.SynAckFloodPktThreshold` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_synAckFloodPktThreshold = value["SynAckFloodPktThreshold"].GetUint64();
+        m_synAckFloodPktThresholdHasBeenSet = true;
+    }
+
+    if (value.HasMember("RstFloodThreshold") && !value["RstFloodThreshold"].IsNull())
+    {
+        if (!value["RstFloodThreshold"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ProtectThresholdRelation.RstFloodThreshold` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_rstFloodThreshold = value["RstFloodThreshold"].GetUint64();
+        m_rstFloodThresholdHasBeenSet = true;
+    }
+
+    if (value.HasMember("RstFloodPktThreshold") && !value["RstFloodPktThreshold"].IsNull())
+    {
+        if (!value["RstFloodPktThreshold"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `ProtectThresholdRelation.RstFloodPktThreshold` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_rstFloodPktThreshold = value["RstFloodPktThreshold"].GetUint64();
+        m_rstFloodPktThresholdHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -201,6 +311,86 @@ void ProtectThresholdRelation::ToJsonObject(rapidjson::Value &value, rapidjson::
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_synFloodThresholdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SynFloodThreshold";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_synFloodThreshold, allocator);
+    }
+
+    if (m_synFloodPktThresholdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SynFloodPktThreshold";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_synFloodPktThreshold, allocator);
+    }
+
+    if (m_udpFloodThresholdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UdpFloodThreshold";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_udpFloodThreshold, allocator);
+    }
+
+    if (m_udpFloodPktThresholdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UdpFloodPktThreshold";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_udpFloodPktThreshold, allocator);
+    }
+
+    if (m_ackFloodThresholdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AckFloodThreshold";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_ackFloodThreshold, allocator);
+    }
+
+    if (m_ackFloodPktThresholdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AckFloodPktThreshold";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_ackFloodPktThreshold, allocator);
+    }
+
+    if (m_synAckFloodThresholdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SynAckFloodThreshold";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_synAckFloodThreshold, allocator);
+    }
+
+    if (m_synAckFloodPktThresholdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SynAckFloodPktThreshold";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_synAckFloodPktThreshold, allocator);
+    }
+
+    if (m_rstFloodThresholdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RstFloodThreshold";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_rstFloodThreshold, allocator);
+    }
+
+    if (m_rstFloodPktThresholdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RstFloodPktThreshold";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_rstFloodPktThreshold, allocator);
     }
 
 }
@@ -316,5 +506,165 @@ void ProtectThresholdRelation::SetListenerCcThresholdList(const vector<ListenerC
 bool ProtectThresholdRelation::ListenerCcThresholdListHasBeenSet() const
 {
     return m_listenerCcThresholdListHasBeenSet;
+}
+
+uint64_t ProtectThresholdRelation::GetSynFloodThreshold() const
+{
+    return m_synFloodThreshold;
+}
+
+void ProtectThresholdRelation::SetSynFloodThreshold(const uint64_t& _synFloodThreshold)
+{
+    m_synFloodThreshold = _synFloodThreshold;
+    m_synFloodThresholdHasBeenSet = true;
+}
+
+bool ProtectThresholdRelation::SynFloodThresholdHasBeenSet() const
+{
+    return m_synFloodThresholdHasBeenSet;
+}
+
+uint64_t ProtectThresholdRelation::GetSynFloodPktThreshold() const
+{
+    return m_synFloodPktThreshold;
+}
+
+void ProtectThresholdRelation::SetSynFloodPktThreshold(const uint64_t& _synFloodPktThreshold)
+{
+    m_synFloodPktThreshold = _synFloodPktThreshold;
+    m_synFloodPktThresholdHasBeenSet = true;
+}
+
+bool ProtectThresholdRelation::SynFloodPktThresholdHasBeenSet() const
+{
+    return m_synFloodPktThresholdHasBeenSet;
+}
+
+uint64_t ProtectThresholdRelation::GetUdpFloodThreshold() const
+{
+    return m_udpFloodThreshold;
+}
+
+void ProtectThresholdRelation::SetUdpFloodThreshold(const uint64_t& _udpFloodThreshold)
+{
+    m_udpFloodThreshold = _udpFloodThreshold;
+    m_udpFloodThresholdHasBeenSet = true;
+}
+
+bool ProtectThresholdRelation::UdpFloodThresholdHasBeenSet() const
+{
+    return m_udpFloodThresholdHasBeenSet;
+}
+
+uint64_t ProtectThresholdRelation::GetUdpFloodPktThreshold() const
+{
+    return m_udpFloodPktThreshold;
+}
+
+void ProtectThresholdRelation::SetUdpFloodPktThreshold(const uint64_t& _udpFloodPktThreshold)
+{
+    m_udpFloodPktThreshold = _udpFloodPktThreshold;
+    m_udpFloodPktThresholdHasBeenSet = true;
+}
+
+bool ProtectThresholdRelation::UdpFloodPktThresholdHasBeenSet() const
+{
+    return m_udpFloodPktThresholdHasBeenSet;
+}
+
+uint64_t ProtectThresholdRelation::GetAckFloodThreshold() const
+{
+    return m_ackFloodThreshold;
+}
+
+void ProtectThresholdRelation::SetAckFloodThreshold(const uint64_t& _ackFloodThreshold)
+{
+    m_ackFloodThreshold = _ackFloodThreshold;
+    m_ackFloodThresholdHasBeenSet = true;
+}
+
+bool ProtectThresholdRelation::AckFloodThresholdHasBeenSet() const
+{
+    return m_ackFloodThresholdHasBeenSet;
+}
+
+uint64_t ProtectThresholdRelation::GetAckFloodPktThreshold() const
+{
+    return m_ackFloodPktThreshold;
+}
+
+void ProtectThresholdRelation::SetAckFloodPktThreshold(const uint64_t& _ackFloodPktThreshold)
+{
+    m_ackFloodPktThreshold = _ackFloodPktThreshold;
+    m_ackFloodPktThresholdHasBeenSet = true;
+}
+
+bool ProtectThresholdRelation::AckFloodPktThresholdHasBeenSet() const
+{
+    return m_ackFloodPktThresholdHasBeenSet;
+}
+
+uint64_t ProtectThresholdRelation::GetSynAckFloodThreshold() const
+{
+    return m_synAckFloodThreshold;
+}
+
+void ProtectThresholdRelation::SetSynAckFloodThreshold(const uint64_t& _synAckFloodThreshold)
+{
+    m_synAckFloodThreshold = _synAckFloodThreshold;
+    m_synAckFloodThresholdHasBeenSet = true;
+}
+
+bool ProtectThresholdRelation::SynAckFloodThresholdHasBeenSet() const
+{
+    return m_synAckFloodThresholdHasBeenSet;
+}
+
+uint64_t ProtectThresholdRelation::GetSynAckFloodPktThreshold() const
+{
+    return m_synAckFloodPktThreshold;
+}
+
+void ProtectThresholdRelation::SetSynAckFloodPktThreshold(const uint64_t& _synAckFloodPktThreshold)
+{
+    m_synAckFloodPktThreshold = _synAckFloodPktThreshold;
+    m_synAckFloodPktThresholdHasBeenSet = true;
+}
+
+bool ProtectThresholdRelation::SynAckFloodPktThresholdHasBeenSet() const
+{
+    return m_synAckFloodPktThresholdHasBeenSet;
+}
+
+uint64_t ProtectThresholdRelation::GetRstFloodThreshold() const
+{
+    return m_rstFloodThreshold;
+}
+
+void ProtectThresholdRelation::SetRstFloodThreshold(const uint64_t& _rstFloodThreshold)
+{
+    m_rstFloodThreshold = _rstFloodThreshold;
+    m_rstFloodThresholdHasBeenSet = true;
+}
+
+bool ProtectThresholdRelation::RstFloodThresholdHasBeenSet() const
+{
+    return m_rstFloodThresholdHasBeenSet;
+}
+
+uint64_t ProtectThresholdRelation::GetRstFloodPktThreshold() const
+{
+    return m_rstFloodPktThreshold;
+}
+
+void ProtectThresholdRelation::SetRstFloodPktThreshold(const uint64_t& _rstFloodPktThreshold)
+{
+    m_rstFloodPktThreshold = _rstFloodPktThreshold;
+    m_rstFloodPktThresholdHasBeenSet = true;
+}
+
+bool ProtectThresholdRelation::RstFloodPktThresholdHasBeenSet() const
+{
+    return m_rstFloodPktThresholdHasBeenSet;
 }
 

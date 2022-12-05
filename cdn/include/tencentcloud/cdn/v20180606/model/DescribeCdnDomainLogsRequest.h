@@ -167,18 +167,18 @@ Default value: `mainland`.
                     bool AreaHasBeenSet() const;
 
                     /**
-                     * 获取The type of log to be downloaded.
-access: access logs
-                     * @return LogType The type of log to be downloaded.
-access: access logs
+                     * 获取Specifies the type of logs to download (only access logs supported).
+`access`: Access logs.
+                     * @return LogType Specifies the type of logs to download (only access logs supported).
+`access`: Access logs.
                      */
                     std::string GetLogType() const;
 
                     /**
-                     * 设置The type of log to be downloaded.
-access: access logs
-                     * @param LogType The type of log to be downloaded.
-access: access logs
+                     * 设置Specifies the type of logs to download (only access logs supported).
+`access`: Access logs.
+                     * @param LogType Specifies the type of logs to download (only access logs supported).
+`access`: Access logs.
                      */
                     void SetLogType(const std::string& _logType);
 
@@ -231,8 +231,8 @@ Default value: `mainland`.
                     bool m_areaHasBeenSet;
 
                     /**
-                     * The type of log to be downloaded.
-access: access logs
+                     * Specifies the type of logs to download (only access logs supported).
+`access`: Access logs.
                      */
                     std::string m_logType;
                     bool m_logTypeHasBeenSet;

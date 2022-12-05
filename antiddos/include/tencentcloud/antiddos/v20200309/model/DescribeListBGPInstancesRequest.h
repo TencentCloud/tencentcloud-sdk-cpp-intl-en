@@ -242,6 +242,42 @@ namespace TencentCloud
                     bool FilterEnterpriseFlagHasBeenSet() const;
 
                     /**
+                     * 获取Whether it’s a Lighthouse edition
+                     * @return FilterLightFlag Whether it’s a Lighthouse edition
+                     */
+                    uint64_t GetFilterLightFlag() const;
+
+                    /**
+                     * 设置Whether it’s a Lighthouse edition
+                     * @param FilterLightFlag Whether it’s a Lighthouse edition
+                     */
+                    void SetFilterLightFlag(const uint64_t& _filterLightFlag);
+
+                    /**
+                     * 判断参数 FilterLightFlag 是否已赋值
+                     * @return FilterLightFlag 是否已赋值
+                     */
+                    bool FilterLightFlagHasBeenSet() const;
+
+                    /**
+                     * 获取Whether it’s a Channel edition
+                     * @return FilterChannelFlag Whether it’s a Channel edition
+                     */
+                    uint64_t GetFilterChannelFlag() const;
+
+                    /**
+                     * 设置Whether it’s a Channel edition
+                     * @param FilterChannelFlag Whether it’s a Channel edition
+                     */
+                    void SetFilterChannelFlag(const uint64_t& _filterChannelFlag);
+
+                    /**
+                     * 判断参数 FilterChannelFlag 是否已赋值
+                     * @return FilterChannelFlag 是否已赋值
+                     */
+                    bool FilterChannelFlagHasBeenSet() const;
+
+                    /**
                      * 获取Filters by tag
                      * @return FilterTag Filters by tag
                      */
@@ -326,6 +362,18 @@ namespace TencentCloud
                      */
                     uint64_t m_filterEnterpriseFlag;
                     bool m_filterEnterpriseFlagHasBeenSet;
+
+                    /**
+                     * Whether it’s a Lighthouse edition
+                     */
+                    uint64_t m_filterLightFlag;
+                    bool m_filterLightFlagHasBeenSet;
+
+                    /**
+                     * Whether it’s a Channel edition
+                     */
+                    uint64_t m_filterChannelFlag;
+                    bool m_filterChannelFlagHasBeenSet;
 
                     /**
                      * Filters by tag

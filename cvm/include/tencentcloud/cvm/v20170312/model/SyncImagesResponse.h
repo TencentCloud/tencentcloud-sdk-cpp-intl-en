@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cvm/v20170312/model/SyncImage.h>
 
 
 namespace TencentCloud
@@ -43,7 +44,25 @@ namespace TencentCloud
                     std::string ToJsonString() const;
 
 
+                    /**
+                     * 获取
+                     * @return ImageSet 
+                     */
+                    std::vector<SyncImage> GetImageSet() const;
+
+                    /**
+                     * 判断参数 ImageSet 是否已赋值
+                     * @return ImageSet 是否已赋值
+                     */
+                    bool ImageSetHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * 
+                     */
+                    std::vector<SyncImage> m_imageSet;
+                    bool m_imageSetHasBeenSet;
 
                 };
             }

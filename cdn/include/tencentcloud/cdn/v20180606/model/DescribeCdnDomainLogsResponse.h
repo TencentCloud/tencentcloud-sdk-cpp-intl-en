@@ -45,8 +45,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Download link of the log package
-                     * @return DomainLogs Download link of the log package
+                     * 获取Download link of the log package.
+You can open the link to download a .gz log package that contains all log files without extension.
+                     * @return DomainLogs Download link of the log package.
+You can open the link to download a .gz log package that contains all log files without extension.
                      */
                     std::vector<DomainLog> GetDomainLogs() const;
 
@@ -71,7 +73,8 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Download link of the log package
+                     * Download link of the log package.
+You can open the link to download a .gz log package that contains all log files without extension.
                      */
                     std::vector<DomainLog> m_domainLogs;
                     bool m_domainLogsHasBeenSet;

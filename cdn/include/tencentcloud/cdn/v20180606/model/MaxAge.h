@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cdn/v20180606/model/MaxAgeRule.h>
+#include <tencentcloud/cdn/v20180606/model/MaxAgeCodeRule.h>
 
 
 namespace TencentCloud
@@ -99,6 +100,28 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool MaxAgeRulesHasBeenSet() const;
 
+                    /**
+                     * 获取MaxAge status code
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return MaxAgeCodeRule MaxAge status code
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    MaxAgeCodeRule GetMaxAgeCodeRule() const;
+
+                    /**
+                     * 设置MaxAge status code
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param MaxAgeCodeRule MaxAge status code
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetMaxAgeCodeRule(const MaxAgeCodeRule& _maxAgeCodeRule);
+
+                    /**
+                     * 判断参数 MaxAgeCodeRule 是否已赋值
+                     * @return MaxAgeCodeRule 是否已赋值
+                     */
+                    bool MaxAgeCodeRuleHasBeenSet() const;
+
                 private:
 
                     /**
@@ -116,6 +139,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     std::vector<MaxAgeRule> m_maxAgeRules;
                     bool m_maxAgeRulesHasBeenSet;
+
+                    /**
+                     * MaxAge status code
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    MaxAgeCodeRule m_maxAgeCodeRule;
+                    bool m_maxAgeCodeRuleHasBeenSet;
 
                 };
             }

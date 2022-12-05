@@ -143,6 +143,8 @@
 #include <tencentcloud/antiddos/v20200309/model/DescribeNewL7RulesErrHealthResponse.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeOverviewDDoSEventListRequest.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeOverviewDDoSEventListResponse.h>
+#include <tencentcloud/antiddos/v20200309/model/DescribePendingRiskInfoRequest.h>
+#include <tencentcloud/antiddos/v20200309/model/DescribePendingRiskInfoResponse.h>
 #include <tencentcloud/antiddos/v20200309/model/DisassociateDDoSEipAddressRequest.h>
 #include <tencentcloud/antiddos/v20200309/model/DisassociateDDoSEipAddressResponse.h>
 #include <tencentcloud/antiddos/v20200309/model/ModifyCCPrecisionPolicyRequest.h>
@@ -355,6 +357,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeOverviewDDoSEventListResponse> DescribeOverviewDDoSEventListOutcome;
                 typedef std::future<DescribeOverviewDDoSEventListOutcome> DescribeOverviewDDoSEventListOutcomeCallable;
                 typedef std::function<void(const AntiddosClient*, const Model::DescribeOverviewDDoSEventListRequest&, DescribeOverviewDDoSEventListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOverviewDDoSEventListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribePendingRiskInfoResponse> DescribePendingRiskInfoOutcome;
+                typedef std::future<DescribePendingRiskInfoOutcome> DescribePendingRiskInfoOutcomeCallable;
+                typedef std::function<void(const AntiddosClient*, const Model::DescribePendingRiskInfoRequest&, DescribePendingRiskInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePendingRiskInfoAsyncHandler;
                 typedef Outcome<Core::Error, Model::DisassociateDDoSEipAddressResponse> DisassociateDDoSEipAddressOutcome;
                 typedef std::future<DisassociateDDoSEipAddressOutcome> DisassociateDDoSEipAddressOutcomeCallable;
                 typedef std::function<void(const AntiddosClient*, const Model::DisassociateDDoSEipAddressRequest&, DisassociateDDoSEipAddressOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DisassociateDDoSEipAddressAsyncHandler;
@@ -926,6 +931,15 @@ namespace TencentCloud
                 DescribeOverviewDDoSEventListOutcome DescribeOverviewDDoSEventList(const Model::DescribeOverviewDDoSEventListRequest &request);
                 void DescribeOverviewDDoSEventListAsync(const Model::DescribeOverviewDDoSEventListRequest& request, const DescribeOverviewDDoSEventListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeOverviewDDoSEventListOutcomeCallable DescribeOverviewDDoSEventListCallable(const Model::DescribeOverviewDDoSEventListRequest& request);
+
+                /**
+                 *This API is used to query the information of pending risks at the account level.
+                 * @param req DescribePendingRiskInfoRequest
+                 * @return DescribePendingRiskInfoOutcome
+                 */
+                DescribePendingRiskInfoOutcome DescribePendingRiskInfo(const Model::DescribePendingRiskInfoRequest &request);
+                void DescribePendingRiskInfoAsync(const Model::DescribePendingRiskInfoRequest& request, const DescribePendingRiskInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribePendingRiskInfoOutcomeCallable DescribePendingRiskInfoCallable(const Model::DescribePendingRiskInfoRequest& request);
 
                 /**
                  *This API is used to unbind an Anti-DDoS EIP.

@@ -33,8 +33,9 @@ set(cdn_public_header_model
   include/tencentcloud/cdn/v20180606/model/Https.h
   include/tencentcloud/cdn/v20180606/model/RuleCache.h
   include/tencentcloud/cdn/v20180606/model/DescribeCdnDomainLogsRequest.h
+  include/tencentcloud/cdn/v20180606/model/AvifAdapter.h
   include/tencentcloud/cdn/v20180606/model/CreateClsLogTopicResponse.h
-  include/tencentcloud/cdn/v20180606/model/RemoteAuthenticationRule.h
+  include/tencentcloud/cdn/v20180606/model/MaxAgeCodeRule.h
   include/tencentcloud/cdn/v20180606/model/Compression.h
   include/tencentcloud/cdn/v20180606/model/PurgePathCacheResponse.h
   include/tencentcloud/cdn/v20180606/model/DomainFilter.h
@@ -92,6 +93,7 @@ set(cdn_public_header_model
   include/tencentcloud/cdn/v20180606/model/DescribeIpVisitResponse.h
   include/tencentcloud/cdn/v20180606/model/EnableClsLogTopicResponse.h
   include/tencentcloud/cdn/v20180606/model/ListClsLogTopicsResponse.h
+  include/tencentcloud/cdn/v20180606/model/RemoteAuthenticationRule.h
   include/tencentcloud/cdn/v20180606/model/OverseaConfig.h
   include/tencentcloud/cdn/v20180606/model/UserAgentFilterRule.h
   include/tencentcloud/cdn/v20180606/model/UpdateDomainConfigRequest.h
@@ -277,8 +279,9 @@ set(cdn_src
   src/v20180606/model/Https.cpp
   src/v20180606/model/RuleCache.cpp
   src/v20180606/model/DescribeCdnDomainLogsRequest.cpp
+  src/v20180606/model/AvifAdapter.cpp
   src/v20180606/model/CreateClsLogTopicResponse.cpp
-  src/v20180606/model/RemoteAuthenticationRule.cpp
+  src/v20180606/model/MaxAgeCodeRule.cpp
   src/v20180606/model/Compression.cpp
   src/v20180606/model/PurgePathCacheResponse.cpp
   src/v20180606/model/DomainFilter.cpp
@@ -336,6 +339,7 @@ set(cdn_src
   src/v20180606/model/DescribeIpVisitResponse.cpp
   src/v20180606/model/EnableClsLogTopicResponse.cpp
   src/v20180606/model/ListClsLogTopicsResponse.cpp
+  src/v20180606/model/RemoteAuthenticationRule.cpp
   src/v20180606/model/OverseaConfig.cpp
   src/v20180606/model/UserAgentFilterRule.cpp
   src/v20180606/model/UpdateDomainConfigRequest.cpp

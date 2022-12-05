@@ -27,6 +27,7 @@
 #include <tencentcloud/cdn/v20180606/model/WebpAdapter.h>
 #include <tencentcloud/cdn/v20180606/model/TpgAdapter.h>
 #include <tencentcloud/cdn/v20180606/model/GuetzliAdapter.h>
+#include <tencentcloud/cdn/v20180606/model/AvifAdapter.h>
 
 
 namespace TencentCloud
@@ -115,6 +116,28 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool GuetzliAdapterHasBeenSet() const;
 
+                    /**
+                     * 获取AVIF adapter configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return AvifAdapter AVIF adapter configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    AvifAdapter GetAvifAdapter() const;
+
+                    /**
+                     * 设置AVIF adapter configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param AvifAdapter AVIF adapter configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetAvifAdapter(const AvifAdapter& _avifAdapter);
+
+                    /**
+                     * 判断参数 AvifAdapter 是否已赋值
+                     * @return AvifAdapter 是否已赋值
+                     */
+                    bool AvifAdapterHasBeenSet() const;
+
                 private:
 
                     /**
@@ -137,6 +160,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     GuetzliAdapter m_guetzliAdapter;
                     bool m_guetzliAdapterHasBeenSet;
+
+                    /**
+                     * AVIF adapter configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    AvifAdapter m_avifAdapter;
+                    bool m_avifAdapterHasBeenSet;
 
                 };
             }

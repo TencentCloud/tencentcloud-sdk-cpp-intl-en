@@ -136,6 +136,42 @@ namespace TencentCloud
                      */
                     bool CheckExceptNullConnectHasBeenSet() const;
 
+                    /**
+                     * 获取PoD protection. Values: `0` (disable), `1` (enable).
+                     * @return PingOfDeath PoD protection. Values: `0` (disable), `1` (enable).
+                     */
+                    int64_t GetPingOfDeath() const;
+
+                    /**
+                     * 设置PoD protection. Values: `0` (disable), `1` (enable).
+                     * @param PingOfDeath PoD protection. Values: `0` (disable), `1` (enable).
+                     */
+                    void SetPingOfDeath(const int64_t& _pingOfDeath);
+
+                    /**
+                     * 判断参数 PingOfDeath 是否已赋值
+                     * @return PingOfDeath 是否已赋值
+                     */
+                    bool PingOfDeathHasBeenSet() const;
+
+                    /**
+                     * 获取Teardrop protection. Values: `0` (disable), `1` (enable).
+                     * @return TearDrop Teardrop protection. Values: `0` (disable), `1` (enable).
+                     */
+                    int64_t GetTearDrop() const;
+
+                    /**
+                     * 设置Teardrop protection. Values: `0` (disable), `1` (enable).
+                     * @param TearDrop Teardrop protection. Values: `0` (disable), `1` (enable).
+                     */
+                    void SetTearDrop(const int64_t& _tearDrop);
+
+                    /**
+                     * 判断参数 TearDrop 是否已赋值
+                     * @return TearDrop 是否已赋值
+                     */
+                    bool TearDropHasBeenSet() const;
+
                 private:
 
                     /**
@@ -167,6 +203,18 @@ namespace TencentCloud
                      */
                     int64_t m_checkExceptNullConnect;
                     bool m_checkExceptNullConnectHasBeenSet;
+
+                    /**
+                     * PoD protection. Values: `0` (disable), `1` (enable).
+                     */
+                    int64_t m_pingOfDeath;
+                    bool m_pingOfDeathHasBeenSet;
+
+                    /**
+                     * Teardrop protection. Values: `0` (disable), `1` (enable).
+                     */
+                    int64_t m_tearDrop;
+                    bool m_tearDropHasBeenSet;
 
                 };
             }

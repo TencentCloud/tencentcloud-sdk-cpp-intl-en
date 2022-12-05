@@ -168,6 +168,24 @@ namespace TencentCloud
                      */
                     bool DigestHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to use exact matching. Valid values: `true` (exact matching), `null` (fuzzy matching).
+                     * @return ExactMatch Whether to use exact matching. Valid values: `true` (exact matching), `null` (fuzzy matching).
+                     */
+                    bool GetExactMatch() const;
+
+                    /**
+                     * 设置Whether to use exact matching. Valid values: `true` (exact matching), `null` (fuzzy matching).
+                     * @param ExactMatch Whether to use exact matching. Valid values: `true` (exact matching), `null` (fuzzy matching).
+                     */
+                    void SetExactMatch(const bool& _exactMatch);
+
+                    /**
+                     * 判断参数 ExactMatch 是否已赋值
+                     * @return ExactMatch 是否已赋值
+                     */
+                    bool ExactMatchHasBeenSet() const;
+
                 private:
 
                     /**
@@ -211,6 +229,12 @@ namespace TencentCloud
                      */
                     std::string m_digest;
                     bool m_digestHasBeenSet;
+
+                    /**
+                     * Whether to use exact matching. Valid values: `true` (exact matching), `null` (fuzzy matching).
+                     */
+                    bool m_exactMatch;
+                    bool m_exactMatchHasBeenSet;
 
                 };
             }

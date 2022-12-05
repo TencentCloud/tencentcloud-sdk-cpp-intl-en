@@ -770,7 +770,7 @@ namespace TencentCloud
                 DescribeInstanceAllOutcomeCallable DescribeInstanceAllCallable(const Model::DescribeInstanceAllRequest& request);
 
                 /**
-                 *This API is used to query the list of all instance namespaces.
+                 *This API is used to query the list of all namespaces in an instance.
                  * @param req DescribeInstanceAllNamespacesRequest
                  * @return DescribeInstanceAllNamespacesOutcome
                  */

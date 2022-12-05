@@ -586,6 +586,24 @@ When the `MatchType` is `pcre`, enter a regular expression.
                      */
                     bool IdHasBeenSet() const;
 
+                    /**
+                     * 获取Byte threshold of the packet. Packets larger than the specified size are not returned. It must be an integer larger than 1.
+                     * @return PktLenGT Byte threshold of the packet. Packets larger than the specified size are not returned. It must be an integer larger than 1.
+                     */
+                    int64_t GetPktLenGT() const;
+
+                    /**
+                     * 设置Byte threshold of the packet. Packets larger than the specified size are not returned. It must be an integer larger than 1.
+                     * @param PktLenGT Byte threshold of the packet. Packets larger than the specified size are not returned. It must be an integer larger than 1.
+                     */
+                    void SetPktLenGT(const int64_t& _pktLenGT);
+
+                    /**
+                     * 判断参数 PktLenGT 是否已赋值
+                     * @return PktLenGT 是否已赋值
+                     */
+                    bool PktLenGTHasBeenSet() const;
+
                 private:
 
                     /**
@@ -755,6 +773,12 @@ When the `MatchType` is `pcre`, enter a regular expression.
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
+
+                    /**
+                     * Byte threshold of the packet. Packets larger than the specified size are not returned. It must be an integer larger than 1.
+                     */
+                    int64_t m_pktLenGT;
+                    bool m_pktLenGTHasBeenSet;
 
                 };
             }
