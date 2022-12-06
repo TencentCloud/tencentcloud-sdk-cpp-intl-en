@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Speech detection task list
+                * Voice detection task list
                 */
                 class Task : public AbstractModel
                 {
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool DataIdHasBeenSet() const;
 
                     /**
-                     * 获取URL-encoded data file URL, which is a pull address if the detected speech is a stream
-                     * @return Url URL-encoded data file URL, which is a pull address if the detected speech is a stream
+                     * 获取URL-encoded data file URL, which is a pull address if the detected voice is a stream.
+                     * @return Url URL-encoded data file URL, which is a pull address if the detected voice is a stream.
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置URL-encoded data file URL, which is a pull address if the detected speech is a stream
-                     * @param Url URL-encoded data file URL, which is a pull address if the detected speech is a stream
+                     * 设置URL-encoded data file URL, which is a pull address if the detected voice is a stream.
+                     * @param Url URL-encoded data file URL, which is a pull address if the detected voice is a stream.
                      */
                     void SetUrl(const std::string& _url);
 
@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取GME voice chat room ID, which is entered during speech detection by GME voice chat
-                     * @return RoomId GME voice chat room ID, which is entered during speech detection by GME voice chat
+                     * 获取GME Voice Chat room ID, which is entered during voice analysis by GME Voice Chat.
+                     * @return RoomId GME Voice Chat room ID, which is entered during voice analysis by GME Voice Chat.
                      */
                     std::string GetRoomId() const;
 
                     /**
-                     * 设置GME voice chat room ID, which is entered during speech detection by GME voice chat
-                     * @param RoomId GME voice chat room ID, which is entered during speech detection by GME voice chat
+                     * 设置GME Voice Chat room ID, which is entered during voice analysis by GME Voice Chat.
+                     * @param RoomId GME Voice Chat room ID, which is entered during voice analysis by GME Voice Chat.
                      */
                     void SetRoomId(const std::string& _roomId);
 
@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool RoomIdHasBeenSet() const;
 
                     /**
-                     * 获取GME voice chat user ID, which is entered during speech detection by GME voice chat
-                     * @return OpenId GME voice chat user ID, which is entered during speech detection by GME voice chat
+                     * 获取GME Voice Chat user ID, which is entered during voice analysis by GME Voice Chat.
+                     * @return OpenId GME Voice Chat user ID, which is entered during voice analysis by GME Voice Chat.
                      */
                     std::string GetOpenId() const;
 
                     /**
-                     * 设置GME voice chat user ID, which is entered during speech detection by GME voice chat
-                     * @param OpenId GME voice chat user ID, which is entered during speech detection by GME voice chat
+                     * 设置GME Voice Chat user ID, which is entered during voice analysis by GME Voice Chat.
+                     * @param OpenId GME Voice Chat user ID, which is entered during voice analysis by GME Voice Chat.
                      */
                     void SetOpenId(const std::string& _openId);
 
@@ -127,19 +127,19 @@ namespace TencentCloud
                     bool m_dataIdHasBeenSet;
 
                     /**
-                     * URL-encoded data file URL, which is a pull address if the detected speech is a stream
+                     * URL-encoded data file URL, which is a pull address if the detected voice is a stream.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * GME voice chat room ID, which is entered during speech detection by GME voice chat
+                     * GME Voice Chat room ID, which is entered during voice analysis by GME Voice Chat.
                      */
                     std::string m_roomId;
                     bool m_roomIdHasBeenSet;
 
                     /**
-                     * GME voice chat user ID, which is entered during speech detection by GME voice chat
+                     * GME Voice Chat user ID, which is entered during voice analysis by GME Voice Chat.
                      */
                     std::string m_openId;
                     bool m_openIdHasBeenSet;

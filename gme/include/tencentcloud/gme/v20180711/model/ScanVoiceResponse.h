@@ -45,10 +45,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Speech detection return. The `Data` field is a JSON array where each element contains: <li>DataId: corresponding `DataId` in request.</li>
-<li>TaskID: detection task ID, which is used to poll the speech detection result.</li>
-                     * @return Data Speech detection return. The `Data` field is a JSON array where each element contains: <li>DataId: corresponding `DataId` in request.</li>
-<li>TaskID: detection task ID, which is used to poll the speech detection result.</li>
+                     * 获取Voice moderation result. <li>`DataId`: Corresponding `DataId` in request.</li>
+<li>`TaskID`: Moderation task ID, which is used to poll the voice detection result.</li>
+                     * @return Data Voice moderation result. <li>`DataId`: Corresponding `DataId` in request.</li>
+<li>`TaskID`: Moderation task ID, which is used to poll the voice detection result.</li>
                      */
                     std::vector<ScanVoiceResult> GetData() const;
 
@@ -61,8 +61,8 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Speech detection return. The `Data` field is a JSON array where each element contains: <li>DataId: corresponding `DataId` in request.</li>
-<li>TaskID: detection task ID, which is used to poll the speech detection result.</li>
+                     * Voice moderation result. <li>`DataId`: Corresponding `DataId` in request.</li>
+<li>`TaskID`: Moderation task ID, which is used to poll the voice detection result.</li>
                      */
                     std::vector<ScanVoiceResult> m_data;
                     bool m_dataHasBeenSet;

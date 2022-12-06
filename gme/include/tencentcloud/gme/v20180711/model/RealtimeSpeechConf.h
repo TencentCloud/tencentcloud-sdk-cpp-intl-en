@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Configuration information of voice chat
+                * Configuration information of Voice Chat
                 */
                 class RealtimeSpeechConf : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Voice chat status. Valid values: open, close
-                     * @return Status Voice chat status. Valid values: open, close
+                     * 获取Voice Chat status. Valid values: `open`, `close`.
+                     * @return Status Voice Chat status. Valid values: `open`, `close`.
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Voice chat status. Valid values: open, close
-                     * @param Status Voice chat status. Valid values: open, close
+                     * 设置Voice Chat status. Valid values: `open`, `close`.
+                     * @param Status Voice Chat status. Valid values: `open`, `close`.
                      */
                     void SetStatus(const std::string& _status);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Voice chat sound quality. Valid value: `high`
-                     * @return Quality Voice chat sound quality. Valid value: `high`
+                     * 获取Voice Chat sound quality. Valid value: `high`.
+                     * @return Quality Voice Chat sound quality. Valid value: `high`.
                      */
                     std::string GetQuality() const;
 
                     /**
-                     * 设置Voice chat sound quality. Valid value: `high`
-                     * @param Quality Voice chat sound quality. Valid value: `high`
+                     * 设置Voice Chat sound quality. Valid value: `high`.
+                     * @param Quality Voice Chat sound quality. Valid value: `high`.
                      */
                     void SetQuality(const std::string& _quality);
 
@@ -85,13 +85,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Voice chat status. Valid values: open, close
+                     * Voice Chat status. Valid values: `open`, `close`.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Voice chat sound quality. Valid value: `high`
+                     * Voice Chat sound quality. Valid value: `high`.
                      */
                     std::string m_quality;
                     bool m_qualityHasBeenSet;

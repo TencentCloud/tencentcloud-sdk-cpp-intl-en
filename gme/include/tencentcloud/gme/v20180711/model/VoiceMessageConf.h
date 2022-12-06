@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Configuration information of voice messaging and speech-to-text
+                * Configuration information of Voice Message Service
                 */
                 class VoiceMessageConf : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Voice messaging and speech-to-text status. Valid values: open, close
-                     * @return Status Voice messaging and speech-to-text status. Valid values: open, close
+                     * 获取Voice Message Service status. Valid values: `open`, `close`.
+                     * @return Status Voice Message Service status. Valid values: `open`, `close`.
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Voice messaging and speech-to-text status. Valid values: open, close
-                     * @param Status Voice messaging and speech-to-text status. Valid values: open, close
+                     * 设置Voice Message Service status. Valid values: `open`, `close`.
+                     * @param Status Voice Message Service status. Valid values: `open`, `close`.
                      */
                     void SetStatus(const std::string& _status);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Language supported for voice messaging and speech-to-text. Valid values: all (all languages), cnen (Chinese and English). Default value: cnen
-                     * @return Language Language supported for voice messaging and speech-to-text. Valid values: all (all languages), cnen (Chinese and English). Default value: cnen
+                     * 获取Language supported for Voice Message Service. Valid values: `all` (all languages), `cnen` (Chinese and English). Default value: `cnen`.
+                     * @return Language Language supported for Voice Message Service. Valid values: `all` (all languages), `cnen` (Chinese and English). Default value: `cnen`.
                      */
                     std::string GetLanguage() const;
 
                     /**
-                     * 设置Language supported for voice messaging and speech-to-text. Valid values: all (all languages), cnen (Chinese and English). Default value: cnen
-                     * @param Language Language supported for voice messaging and speech-to-text. Valid values: all (all languages), cnen (Chinese and English). Default value: cnen
+                     * 设置Language supported for Voice Message Service. Valid values: `all` (all languages), `cnen` (Chinese and English). Default value: `cnen`.
+                     * @param Language Language supported for Voice Message Service. Valid values: `all` (all languages), `cnen` (Chinese and English). Default value: `cnen`.
                      */
                     void SetLanguage(const std::string& _language);
 
@@ -85,13 +85,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Voice messaging and speech-to-text status. Valid values: open, close
+                     * Voice Message Service status. Valid values: `open`, `close`.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Language supported for voice messaging and speech-to-text. Valid values: all (all languages), cnen (Chinese and English). Default value: cnen
+                     * Language supported for Voice Message Service. Valid values: `all` (all languages), `cnen` (Chinese and English). Default value: `cnen`.
                      */
                     std::string m_language;
                     bool m_languageHasBeenSet;

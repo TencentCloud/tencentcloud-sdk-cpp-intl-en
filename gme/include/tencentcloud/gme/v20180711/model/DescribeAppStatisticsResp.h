@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Output parameters of app usage statistics
+                * Output parameters of application usage statistics
                 */
                 class DescribeAppStatisticsResp : public AbstractModel
                 {
@@ -48,14 +48,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取App usage statistics
-                     * @return AppStatistics App usage statistics
+                     * 获取Application usage statistics
+                     * @return AppStatistics Application usage statistics
                      */
                     std::vector<AppStatisticsItem> GetAppStatistics() const;
 
                     /**
-                     * 设置App usage statistics
-                     * @param AppStatistics App usage statistics
+                     * 设置Application usage statistics
+                     * @param AppStatistics Application usage statistics
                      */
                     void SetAppStatistics(const std::vector<AppStatisticsItem>& _appStatistics);
 
@@ -68,7 +68,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * App usage statistics
+                     * Application usage statistics
                      */
                     std::vector<AppStatisticsItem> m_appStatistics;
                     bool m_appStatisticsHasBeenSet;

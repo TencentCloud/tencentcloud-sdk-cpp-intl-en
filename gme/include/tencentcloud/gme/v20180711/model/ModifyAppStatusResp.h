@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取GME app ID
-                     * @return BizId GME app ID
+                     * 获取GME application ID
+                     * @return BizId GME application ID
                      */
                     uint64_t GetBizId() const;
 
                     /**
-                     * 设置GME app ID
-                     * @param BizId GME app ID
+                     * 设置GME application ID
+                     * @param BizId GME application ID
                      */
                     void SetBizId(const uint64_t& _bizId);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool BizIdHasBeenSet() const;
 
                     /**
-                     * 获取App status. Valid values: `open`, `close`
-                     * @return Status App status. Valid values: `open`, `close`
+                     * 获取Application status. Valid values: `open`, `close`.
+                     * @return Status Application status. Valid values: `open`, `close`.
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置App status. Valid values: `open`, `close`
-                     * @param Status App status. Valid values: `open`, `close`
+                     * 设置Application status. Valid values: `open`, `close`.
+                     * @param Status Application status. Valid values: `open`, `close`.
                      */
                     void SetStatus(const std::string& _status);
 
@@ -85,13 +85,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * GME app ID
+                     * GME application ID
                      */
                     uint64_t m_bizId;
                     bool m_bizIdHasBeenSet;
 
                     /**
-                     * App status. Valid values: `open`, `close`
+                     * Application status. Valid values: `open`, `close`.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

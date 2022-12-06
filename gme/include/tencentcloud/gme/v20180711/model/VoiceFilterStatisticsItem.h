@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Phrase filtering usage statistics
+                * Phrase Filtering usage statistics
                 */
                 class VoiceFilterStatisticsItem : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total duration of phrase filtering
-                     * @return Duration Total duration of phrase filtering
+                     * 获取Total duration of phrase filtering (in minutes)
+                     * @return Duration Total duration of phrase filtering (in minutes)
                      */
                     uint64_t GetDuration() const;
 
                     /**
-                     * 设置Total duration of phrase filtering
-                     * @param Duration Total duration of phrase filtering
+                     * 设置Total duration of phrase filtering (in minutes)
+                     * @param Duration Total duration of phrase filtering (in minutes)
                      */
                     void SetDuration(const uint64_t& _duration);
 
@@ -67,7 +67,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total duration of phrase filtering
+                     * Total duration of phrase filtering (in minutes)
                      */
                     uint64_t m_duration;
                     bool m_durationHasBeenSet;

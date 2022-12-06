@@ -66,14 +66,14 @@ namespace TencentCloud
                     bool BizIdHasBeenSet() const;
 
                     /**
-                     * 获取DAU data
-                     * @return DauDataNum DAU data
+                     * 获取Number of DAU metrics
+                     * @return DauDataNum Number of DAU metrics
                      */
                     uint64_t GetDauDataNum() const;
 
                     /**
-                     * 设置DAU data
-                     * @param DauDataNum DAU data
+                     * 设置Number of DAU metrics
+                     * @param DauDataNum Number of DAU metrics
                      */
                     void SetDauDataNum(const uint64_t& _dauDataNum);
 
@@ -84,14 +84,14 @@ namespace TencentCloud
                     bool DauDataNumHasBeenSet() const;
 
                     /**
-                     * 获取DAU in Chinese mainland
-                     * @return DauDataMainland DAU in Chinese mainland
+                     * 获取DAUs in the Chinese mainland
+                     * @return DauDataMainland DAUs in the Chinese mainland
                      */
                     std::vector<StatisticsItem> GetDauDataMainland() const;
 
                     /**
-                     * 设置DAU in Chinese mainland
-                     * @param DauDataMainland DAU in Chinese mainland
+                     * 设置DAUs in the Chinese mainland
+                     * @param DauDataMainland DAUs in the Chinese mainland
                      */
                     void SetDauDataMainland(const std::vector<StatisticsItem>& _dauDataMainland);
 
@@ -102,14 +102,14 @@ namespace TencentCloud
                     bool DauDataMainlandHasBeenSet() const;
 
                     /**
-                     * 获取DAU outside Chinese mainland
-                     * @return DauDataOversea DAU outside Chinese mainland
+                     * 获取DAUs outside the Chinese mainland
+                     * @return DauDataOversea DAUs outside the Chinese mainland
                      */
                     std::vector<StatisticsItem> GetDauDataOversea() const;
 
                     /**
-                     * 设置DAU outside Chinese mainland
-                     * @param DauDataOversea DAU outside Chinese mainland
+                     * 设置DAUs outside the Chinese mainland
+                     * @param DauDataOversea DAUs outside the Chinese mainland
                      */
                     void SetDauDataOversea(const std::vector<StatisticsItem>& _dauDataOversea);
 
@@ -120,14 +120,14 @@ namespace TencentCloud
                     bool DauDataOverseaHasBeenSet() const;
 
                     /**
-                     * 获取Total DAU
-                     * @return DauDataSum Total DAU
+                     * 获取Total DAUs
+                     * @return DauDataSum Total DAUs
                      */
                     std::vector<StatisticsItem> GetDauDataSum() const;
 
                     /**
-                     * 设置Total DAU
-                     * @param DauDataSum Total DAU
+                     * 设置Total DAUs
+                     * @param DauDataSum Total DAUs
                      */
                     void SetDauDataSum(const std::vector<StatisticsItem>& _dauDataSum);
 
@@ -138,14 +138,14 @@ namespace TencentCloud
                     bool DauDataSumHasBeenSet() const;
 
                     /**
-                     * 获取Number of voice chat metrics
-                     * @return DurationDataNum Number of voice chat metrics
+                     * 获取Number of Voice Chat metrics
+                     * @return DurationDataNum Number of Voice Chat metrics
                      */
                     uint64_t GetDurationDataNum() const;
 
                     /**
-                     * 设置Number of voice chat metrics
-                     * @param DurationDataNum Number of voice chat metrics
+                     * 设置Number of Voice Chat metrics
+                     * @param DurationDataNum Number of Voice Chat metrics
                      */
                     void SetDurationDataNum(const uint64_t& _durationDataNum);
 
@@ -156,14 +156,14 @@ namespace TencentCloud
                     bool DurationDataNumHasBeenSet() const;
 
                     /**
-                     * 获取Duration of voice chat in Chinese mainland in minutes
-                     * @return DurationDataMainland Duration of voice chat in Chinese mainland in minutes
+                     * 获取Duration of Voice Chat in the Chinese mainland (in minutes)
+                     * @return DurationDataMainland Duration of Voice Chat in the Chinese mainland (in minutes)
                      */
                     std::vector<StatisticsItem> GetDurationDataMainland() const;
 
                     /**
-                     * 设置Duration of voice chat in Chinese mainland in minutes
-                     * @param DurationDataMainland Duration of voice chat in Chinese mainland in minutes
+                     * 设置Duration of Voice Chat in the Chinese mainland (in minutes)
+                     * @param DurationDataMainland Duration of Voice Chat in the Chinese mainland (in minutes)
                      */
                     void SetDurationDataMainland(const std::vector<StatisticsItem>& _durationDataMainland);
 
@@ -174,14 +174,14 @@ namespace TencentCloud
                     bool DurationDataMainlandHasBeenSet() const;
 
                     /**
-                     * 获取Duration of voice chat outside Chinese mainland in minutes
-                     * @return DurationDataOversea Duration of voice chat outside Chinese mainland in minutes
+                     * 获取Duration of Voice Chat outside the Chinese mainland (in minutes)
+                     * @return DurationDataOversea Duration of Voice Chat outside the Chinese mainland (in minutes)
                      */
                     std::vector<StatisticsItem> GetDurationDataOversea() const;
 
                     /**
-                     * 设置Duration of voice chat outside Chinese mainland in minutes
-                     * @param DurationDataOversea Duration of voice chat outside Chinese mainland in minutes
+                     * 设置Duration of Voice Chat outside the Chinese mainland (in minutes)
+                     * @param DurationDataOversea Duration of Voice Chat outside the Chinese mainland (in minutes)
                      */
                     void SetDurationDataOversea(const std::vector<StatisticsItem>& _durationDataOversea);
 
@@ -192,14 +192,14 @@ namespace TencentCloud
                     bool DurationDataOverseaHasBeenSet() const;
 
                     /**
-                     * 获取Total duration of voice chat in minutes
-                     * @return DurationDataSum Total duration of voice chat in minutes
+                     * 获取Total duration of Voice Chat (in minutes)
+                     * @return DurationDataSum Total duration of Voice Chat (in minutes)
                      */
                     std::vector<StatisticsItem> GetDurationDataSum() const;
 
                     /**
-                     * 设置Total duration of voice chat in minutes
-                     * @param DurationDataSum Total duration of voice chat in minutes
+                     * 设置Total duration of Voice Chat (in minutes)
+                     * @param DurationDataSum Total duration of Voice Chat (in minutes)
                      */
                     void SetDurationDataSum(const std::vector<StatisticsItem>& _durationDataSum);
 
@@ -210,14 +210,14 @@ namespace TencentCloud
                     bool DurationDataSumHasBeenSet() const;
 
                     /**
-                     * 获取PCU data
-                     * @return PcuDataNum PCU data
+                     * 获取Number of PCU metrics
+                     * @return PcuDataNum Number of PCU metrics
                      */
                     uint64_t GetPcuDataNum() const;
 
                     /**
-                     * 设置PCU data
-                     * @param PcuDataNum PCU data
+                     * 设置Number of PCU metrics
+                     * @param PcuDataNum Number of PCU metrics
                      */
                     void SetPcuDataNum(const uint64_t& _pcuDataNum);
 
@@ -228,14 +228,14 @@ namespace TencentCloud
                     bool PcuDataNumHasBeenSet() const;
 
                     /**
-                     * 获取PCU in Chinese mainland
-                     * @return PcuDataMainland PCU in Chinese mainland
+                     * 获取PCUs in the Chinese mainland
+                     * @return PcuDataMainland PCUs in the Chinese mainland
                      */
                     std::vector<StatisticsItem> GetPcuDataMainland() const;
 
                     /**
-                     * 设置PCU in Chinese mainland
-                     * @param PcuDataMainland PCU in Chinese mainland
+                     * 设置PCUs in the Chinese mainland
+                     * @param PcuDataMainland PCUs in the Chinese mainland
                      */
                     void SetPcuDataMainland(const std::vector<StatisticsItem>& _pcuDataMainland);
 
@@ -246,14 +246,14 @@ namespace TencentCloud
                     bool PcuDataMainlandHasBeenSet() const;
 
                     /**
-                     * 获取PCU outside Chinese mainland
-                     * @return PcuDataOversea PCU outside Chinese mainland
+                     * 获取PCUs outside the Chinese mainland
+                     * @return PcuDataOversea PCUs outside the Chinese mainland
                      */
                     std::vector<StatisticsItem> GetPcuDataOversea() const;
 
                     /**
-                     * 设置PCU outside Chinese mainland
-                     * @param PcuDataOversea PCU outside Chinese mainland
+                     * 设置PCUs outside the Chinese mainland
+                     * @param PcuDataOversea PCUs outside the Chinese mainland
                      */
                     void SetPcuDataOversea(const std::vector<StatisticsItem>& _pcuDataOversea);
 
@@ -264,14 +264,14 @@ namespace TencentCloud
                     bool PcuDataOverseaHasBeenSet() const;
 
                     /**
-                     * 获取Total PCU
-                     * @return PcuDataSum Total PCU
+                     * 获取Total PCUs
+                     * @return PcuDataSum Total PCUs
                      */
                     std::vector<StatisticsItem> GetPcuDataSum() const;
 
                     /**
-                     * 设置Total PCU
-                     * @param PcuDataSum Total PCU
+                     * 设置Total PCUs
+                     * @param PcuDataSum Total PCUs
                      */
                     void SetPcuDataSum(const std::vector<StatisticsItem>& _pcuDataSum);
 
@@ -290,73 +290,73 @@ namespace TencentCloud
                     bool m_bizIdHasBeenSet;
 
                     /**
-                     * DAU data
+                     * Number of DAU metrics
                      */
                     uint64_t m_dauDataNum;
                     bool m_dauDataNumHasBeenSet;
 
                     /**
-                     * DAU in Chinese mainland
+                     * DAUs in the Chinese mainland
                      */
                     std::vector<StatisticsItem> m_dauDataMainland;
                     bool m_dauDataMainlandHasBeenSet;
 
                     /**
-                     * DAU outside Chinese mainland
+                     * DAUs outside the Chinese mainland
                      */
                     std::vector<StatisticsItem> m_dauDataOversea;
                     bool m_dauDataOverseaHasBeenSet;
 
                     /**
-                     * Total DAU
+                     * Total DAUs
                      */
                     std::vector<StatisticsItem> m_dauDataSum;
                     bool m_dauDataSumHasBeenSet;
 
                     /**
-                     * Number of voice chat metrics
+                     * Number of Voice Chat metrics
                      */
                     uint64_t m_durationDataNum;
                     bool m_durationDataNumHasBeenSet;
 
                     /**
-                     * Duration of voice chat in Chinese mainland in minutes
+                     * Duration of Voice Chat in the Chinese mainland (in minutes)
                      */
                     std::vector<StatisticsItem> m_durationDataMainland;
                     bool m_durationDataMainlandHasBeenSet;
 
                     /**
-                     * Duration of voice chat outside Chinese mainland in minutes
+                     * Duration of Voice Chat outside the Chinese mainland (in minutes)
                      */
                     std::vector<StatisticsItem> m_durationDataOversea;
                     bool m_durationDataOverseaHasBeenSet;
 
                     /**
-                     * Total duration of voice chat in minutes
+                     * Total duration of Voice Chat (in minutes)
                      */
                     std::vector<StatisticsItem> m_durationDataSum;
                     bool m_durationDataSumHasBeenSet;
 
                     /**
-                     * PCU data
+                     * Number of PCU metrics
                      */
                     uint64_t m_pcuDataNum;
                     bool m_pcuDataNumHasBeenSet;
 
                     /**
-                     * PCU in Chinese mainland
+                     * PCUs in the Chinese mainland
                      */
                     std::vector<StatisticsItem> m_pcuDataMainland;
                     bool m_pcuDataMainlandHasBeenSet;
 
                     /**
-                     * PCU outside Chinese mainland
+                     * PCUs outside the Chinese mainland
                      */
                     std::vector<StatisticsItem> m_pcuDataOversea;
                     bool m_pcuDataOverseaHasBeenSet;
 
                     /**
-                     * Total PCU
+                     * Total PCUs
                      */
                     std::vector<StatisticsItem> m_pcuDataSum;
                     bool m_pcuDataSumHasBeenSet;

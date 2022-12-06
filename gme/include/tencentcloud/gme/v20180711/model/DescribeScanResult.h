@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Returned speech detection result
+                * Returned voice detection result
                 */
                 class DescribeScanResult : public AbstractModel
                 {
@@ -139,17 +139,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Business return description
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Msg Business return description
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetMsg() const;
 
                     /**
                      * 设置Business return description
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @param Msg Business return description
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetMsg(const std::string& _msg);
 
@@ -161,17 +161,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Detection result, which will be returned if `Code` is 0
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return ScanPiece Detection result, which will be returned if `Code` is 0
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<ScanPiece> GetScanPiece() const;
 
                     /**
                      * 设置Detection result, which will be returned if `Code` is 0
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @param ScanPiece Detection result, which will be returned if `Code` is 0
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetScanPiece(const std::vector<ScanPiece>& _scanPiece);
 
@@ -200,14 +200,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ScanStartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Speech detection scenario, which corresponds to the `Scene` at the time of request
-                     * @return Scenes Speech detection scenario, which corresponds to the `Scene` at the time of request
+                     * 获取Voice detection scenario, which corresponds to the `Scene` at the time of request
+                     * @return Scenes Voice detection scenario, which corresponds to the `Scene` at the time of request
                      */
                     std::vector<std::string> GetScenes() const;
 
                     /**
-                     * 设置Speech detection scenario, which corresponds to the `Scene` at the time of request
-                     * @param Scenes Speech detection scenario, which corresponds to the `Scene` at the time of request
+                     * 设置Voice detection scenario, which corresponds to the `Scene` at the time of request
+                     * @param Scenes Voice detection scenario, which corresponds to the `Scene` at the time of request
                      */
                     void SetScenes(const std::vector<std::string>& _scenes);
 
@@ -218,14 +218,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ScenesHasBeenSet() const;
 
                     /**
-                     * 获取Speech detection task ID, which is assigned by the backend
-                     * @return TaskId Speech detection task ID, which is assigned by the backend
+                     * 获取Voice detection task ID, which is assigned by the backend
+                     * @return TaskId Voice detection task ID, which is assigned by the backend
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置Speech detection task ID, which is assigned by the backend
-                     * @param TaskId Speech detection task ID, which is assigned by the backend
+                     * 设置Voice detection task ID, which is assigned by the backend
+                     * @param TaskId Voice detection task ID, which is assigned by the backend
                      */
                     void SetTaskId(const std::string& _taskId);
 
@@ -254,26 +254,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取Detection task execution result task. Valid values:
-<li>Start: task started</li>
-<li>Success: task ended successfully</li>
-<li>Error: exceptional</li>
-                     * @return Status Detection task execution result task. Valid values:
-<li>Start: task started</li>
-<li>Success: task ended successfully</li>
-<li>Error: exceptional</li>
+                     * 获取Detection task execution result status. Valid values:
+<li>Start: Task started</li>
+<li>Success: Task ended successfully</li>
+<li>Error: An exception occurs</li>
+                     * @return Status Detection task execution result status. Valid values:
+<li>Start: Task started</li>
+<li>Success: Task ended successfully</li>
+<li>Error: An exception occurs</li>
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Detection task execution result task. Valid values:
-<li>Start: task started</li>
-<li>Success: task ended successfully</li>
-<li>Error: exceptional</li>
-                     * @param Status Detection task execution result task. Valid values:
-<li>Start: task started</li>
-<li>Success: task ended successfully</li>
-<li>Error: exceptional</li>
+                     * 设置Detection task execution result status. Valid values:
+<li>Start: Task started</li>
+<li>Success: Task ended successfully</li>
+<li>Error: An exception occurs</li>
+                     * @param Status Detection task execution result status. Valid values:
+<li>Start: Task started</li>
+<li>Success: Task ended successfully</li>
+<li>Error: An exception occurs</li>
                      */
                     void SetStatus(const std::string& _status);
 
@@ -335,14 +335,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Business return description
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_msg;
                     bool m_msgHasBeenSet;
 
                     /**
                      * Detection result, which will be returned if `Code` is 0
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<ScanPiece> m_scanPiece;
                     bool m_scanPieceHasBeenSet;
@@ -354,13 +354,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_scanStartTimeHasBeenSet;
 
                     /**
-                     * Speech detection scenario, which corresponds to the `Scene` at the time of request
+                     * Voice detection scenario, which corresponds to the `Scene` at the time of request
                      */
                     std::vector<std::string> m_scenes;
                     bool m_scenesHasBeenSet;
 
                     /**
-                     * Speech detection task ID, which is assigned by the backend
+                     * Voice detection task ID, which is assigned by the backend
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
@@ -372,10 +372,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_urlHasBeenSet;
 
                     /**
-                     * Detection task execution result task. Valid values:
-<li>Start: task started</li>
-<li>Success: task ended successfully</li>
-<li>Error: exceptional</li>
+                     * Detection task execution result status. Valid values:
+<li>Start: Task started</li>
+<li>Success: Task ended successfully</li>
+<li>Error: An exception occurs</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

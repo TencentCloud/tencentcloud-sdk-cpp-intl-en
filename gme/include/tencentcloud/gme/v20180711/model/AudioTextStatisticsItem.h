@@ -14,14 +14,16 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_GME_V20180711_MODEL_DESCRIBESCANRESULTLISTRESPONSE_H_
-#define TENCENTCLOUD_GME_V20180711_MODEL_DESCRIBESCANRESULTLISTRESPONSE_H_
+#ifndef TENCENTCLOUD_GME_V20180711_MODEL_AUDIOTEXTSTATISTICSITEM_H_
+#define TENCENTCLOUD_GME_V20180711_MODEL_AUDIOTEXTSTATISTICSITEM_H_
 
 #include <string>
 #include <vector>
 #include <map>
+#include <tencentcloud/core/utils/rapidjson/document.h>
+#include <tencentcloud/core/utils/rapidjson/writer.h>
+#include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/gme/v20180711/model/DescribeScanResult.h>
 
 
 namespace TencentCloud
@@ -33,24 +35,32 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * DescribeScanResultList response structure.
+                * Recording-to-Text usage statistics
                 */
-                class DescribeScanResultListResponse : public AbstractModel
+                class AudioTextStatisticsItem : public AbstractModel
                 {
                 public:
-                    DescribeScanResultListResponse();
-                    ~DescribeScanResultListResponse() = default;
-                    CoreInternalOutcome Deserialize(const std::string &payload);
-                    std::string ToJsonString() const;
+                    AudioTextStatisticsItem();
+                    ~AudioTextStatisticsItem() = default;
+                    void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
+                    CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
                     /**
-                     * 获取Result of the voice detection task to be queried
+                     * 获取Statistical value (in seconds)
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return Data Result of the voice detection task to be queried
+                     * @return Data Statistical value (in seconds)
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
-                    std::vector<DescribeScanResult> GetData() const;
+                    double GetData() const;
+
+                    /**
+                     * 设置Statistical value (in seconds)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param Data Statistical value (in seconds)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetData(const double& _data);
 
                     /**
                      * 判断参数 Data 是否已赋值
@@ -61,10 +71,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Result of the voice detection task to be queried
+                     * Statistical value (in seconds)
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
-                    std::vector<DescribeScanResult> m_data;
+                    double m_data;
                     bool m_dataHasBeenSet;
 
                 };
@@ -73,4 +83,4 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 }
 
-#endif // !TENCENTCLOUD_GME_V20180711_MODEL_DESCRIBESCANRESULTLISTRESPONSE_H_
+#endif // !TENCENTCLOUD_GME_V20180711_MODEL_AUDIOTEXTSTATISTICSITEM_H_

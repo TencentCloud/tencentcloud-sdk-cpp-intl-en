@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Voice chat usage statistics
+                * Voice Chat usage statistics
                 */
                 class RealTimeSpeechStatisticsItem : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取DAU in Mainland China
-                     * @return MainLandDau DAU in Mainland China
+                     * 获取DAUs in the Chinese mainland
+                     * @return MainLandDau DAUs in the Chinese mainland
                      */
                     uint64_t GetMainLandDau() const;
 
                     /**
-                     * 设置DAU in Mainland China
-                     * @param MainLandDau DAU in Mainland China
+                     * 设置DAUs in the Chinese mainland
+                     * @param MainLandDau DAUs in the Chinese mainland
                      */
                     void SetMainLandDau(const uint64_t& _mainLandDau);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool MainLandDauHasBeenSet() const;
 
                     /**
-                     * 获取PCU in Mainland China
-                     * @return MainLandPcu PCU in Mainland China
+                     * 获取PCUs in the Chinese mainland
+                     * @return MainLandPcu PCUs in the Chinese mainland
                      */
                     uint64_t GetMainLandPcu() const;
 
                     /**
-                     * 设置PCU in Mainland China
-                     * @param MainLandPcu PCU in Mainland China
+                     * 设置PCUs in the Chinese mainland
+                     * @param MainLandPcu PCUs in the Chinese mainland
                      */
                     void SetMainLandPcu(const uint64_t& _mainLandPcu);
 
@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool MainLandPcuHasBeenSet() const;
 
                     /**
-                     * 获取Total duration of use in Mainland China in minutes
-                     * @return MainLandDuration Total duration of use in Mainland China in minutes
+                     * 获取Total duration of use in the Chinese mainland (in minutes)
+                     * @return MainLandDuration Total duration of use in the Chinese mainland (in minutes)
                      */
                     uint64_t GetMainLandDuration() const;
 
                     /**
-                     * 设置Total duration of use in Mainland China in minutes
-                     * @param MainLandDuration Total duration of use in Mainland China in minutes
+                     * 设置Total duration of use in the Chinese mainland (in minutes)
+                     * @param MainLandDuration Total duration of use in the Chinese mainland (in minutes)
                      */
                     void SetMainLandDuration(const uint64_t& _mainLandDuration);
 
@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool MainLandDurationHasBeenSet() const;
 
                     /**
-                     * 获取DAU outside Mainland China
-                     * @return OverseaDau DAU outside Mainland China
+                     * 获取DAUs outside the Chinese mainland
+                     * @return OverseaDau DAUs outside the Chinese mainland
                      */
                     uint64_t GetOverseaDau() const;
 
                     /**
-                     * 设置DAU outside Mainland China
-                     * @param OverseaDau DAU outside Mainland China
+                     * 设置DAUs outside the Chinese mainland
+                     * @param OverseaDau DAUs outside the Chinese mainland
                      */
                     void SetOverseaDau(const uint64_t& _overseaDau);
 
@@ -119,14 +119,14 @@ namespace TencentCloud
                     bool OverseaDauHasBeenSet() const;
 
                     /**
-                     * 获取PCU outside Mainland China
-                     * @return OverseaPcu PCU outside Mainland China
+                     * 获取PCUs outside the Chinese mainland
+                     * @return OverseaPcu PCUs outside the Chinese mainland
                      */
                     uint64_t GetOverseaPcu() const;
 
                     /**
-                     * 设置PCU outside Mainland China
-                     * @param OverseaPcu PCU outside Mainland China
+                     * 设置PCUs outside the Chinese mainland
+                     * @param OverseaPcu PCUs outside the Chinese mainland
                      */
                     void SetOverseaPcu(const uint64_t& _overseaPcu);
 
@@ -137,14 +137,14 @@ namespace TencentCloud
                     bool OverseaPcuHasBeenSet() const;
 
                     /**
-                     * 获取Total duration of use outside Mainland China in minutes
-                     * @return OverseaDuration Total duration of use outside Mainland China in minutes
+                     * 获取Total duration of use outside the Chinese mainland (in minutes)
+                     * @return OverseaDuration Total duration of use outside the Chinese mainland (in minutes)
                      */
                     uint64_t GetOverseaDuration() const;
 
                     /**
-                     * 设置Total duration of use outside Mainland China in minutes
-                     * @param OverseaDuration Total duration of use outside Mainland China in minutes
+                     * 设置Total duration of use outside the Chinese mainland (in minutes)
+                     * @param OverseaDuration Total duration of use outside the Chinese mainland (in minutes)
                      */
                     void SetOverseaDuration(const uint64_t& _overseaDuration);
 
@@ -157,37 +157,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * DAU in Mainland China
+                     * DAUs in the Chinese mainland
                      */
                     uint64_t m_mainLandDau;
                     bool m_mainLandDauHasBeenSet;
 
                     /**
-                     * PCU in Mainland China
+                     * PCUs in the Chinese mainland
                      */
                     uint64_t m_mainLandPcu;
                     bool m_mainLandPcuHasBeenSet;
 
                     /**
-                     * Total duration of use in Mainland China in minutes
+                     * Total duration of use in the Chinese mainland (in minutes)
                      */
                     uint64_t m_mainLandDuration;
                     bool m_mainLandDurationHasBeenSet;
 
                     /**
-                     * DAU outside Mainland China
+                     * DAUs outside the Chinese mainland
                      */
                     uint64_t m_overseaDau;
                     bool m_overseaDauHasBeenSet;
 
                     /**
-                     * PCU outside Mainland China
+                     * PCUs outside the Chinese mainland
                      */
                     uint64_t m_overseaPcu;
                     bool m_overseaPcuHasBeenSet;
 
                     /**
-                     * Total duration of use outside Mainland China in minutes
+                     * Total duration of use outside the Chinese mainland (in minutes)
                      */
                     uint64_t m_overseaDuration;
                     bool m_overseaDurationHasBeenSet;

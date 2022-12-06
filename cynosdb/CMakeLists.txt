@@ -92,6 +92,7 @@ set(cynosdb_public_header_model
   include/tencentcloud/cynosdb/v20190107/model/DescribeBackupDownloadUrlRequest.h
   include/tencentcloud/cynosdb/v20190107/model/OfflineInstanceRequest.h
   include/tencentcloud/cynosdb/v20190107/model/NetAddr.h
+  include/tencentcloud/cynosdb/v20190107/model/TemplateParamInfo.h
   include/tencentcloud/cynosdb/v20190107/model/DescribeResourcesByDealNameRequest.h
   include/tencentcloud/cynosdb/v20190107/model/CreateBackupResponse.h
   include/tencentcloud/cynosdb/v20190107/model/DescribeRollbackTimeValidityResponse.h
@@ -223,6 +224,7 @@ set(cynosdb_src
   src/v20190107/model/DescribeBackupDownloadUrlRequest.cpp
   src/v20190107/model/OfflineInstanceRequest.cpp
   src/v20190107/model/NetAddr.cpp
+  src/v20190107/model/TemplateParamInfo.cpp
   src/v20190107/model/DescribeResourcesByDealNameRequest.cpp
   src/v20190107/model/CreateBackupResponse.cpp
   src/v20190107/model/DescribeRollbackTimeValidityResponse.cpp

@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool BizIdHasBeenSet() const;
 
                     /**
-                     * 获取Data start date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13
-                     * @return StartDate Data start date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13
+                     * 获取Data start date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13.
+                     * @return StartDate Data start date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13.
                      */
                     std::string GetStartDate() const;
 
                     /**
-                     * 设置Data start date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13
-                     * @param StartDate Data start date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13
+                     * 设置Data start date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13.
+                     * @param StartDate Data start date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13.
                      */
                     void SetStartDate(const std::string& _startDate);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool StartDateHasBeenSet() const;
 
                     /**
-                     * 获取Data end date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13
-                     * @return EndDate Data end date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13
+                     * 获取Data end date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13.
+                     * @return EndDate Data end date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13.
                      */
                     std::string GetEndDate() const;
 
                     /**
-                     * 设置Data end date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13
-                     * @param EndDate Data end date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13
+                     * 设置Data end date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13.
+                     * @param EndDate Data end date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13.
                      */
                     void SetEndDate(const std::string& _endDate);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool EndDateHasBeenSet() const;
 
                     /**
-                     * 获取List of services to be queried. Valid values: RealTimeSpeech, VoiceMessage, VoiceFilter
-                     * @return Services List of services to be queried. Valid values: RealTimeSpeech, VoiceMessage, VoiceFilter
+                     * 获取List of services to be queried. Valid values: `RealTimeSpeech`, `VoiceMessage`, `VoiceFilter`, `SpeechToText`.
+                     * @return Services List of services to be queried. Valid values: `RealTimeSpeech`, `VoiceMessage`, `VoiceFilter`, `SpeechToText`.
                      */
                     std::vector<std::string> GetServices() const;
 
                     /**
-                     * 设置List of services to be queried. Valid values: RealTimeSpeech, VoiceMessage, VoiceFilter
-                     * @param Services List of services to be queried. Valid values: RealTimeSpeech, VoiceMessage, VoiceFilter
+                     * 设置List of services to be queried. Valid values: `RealTimeSpeech`, `VoiceMessage`, `VoiceFilter`, `SpeechToText`.
+                     * @param Services List of services to be queried. Valid values: `RealTimeSpeech`, `VoiceMessage`, `VoiceFilter`, `SpeechToText`.
                      */
                     void SetServices(const std::vector<std::string>& _services);
 
@@ -123,19 +123,19 @@ namespace TencentCloud
                     bool m_bizIdHasBeenSet;
 
                     /**
-                     * Data start date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13
+                     * Data start date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13.
                      */
                     std::string m_startDate;
                     bool m_startDateHasBeenSet;
 
                     /**
-                     * Data end date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13
+                     * Data end date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13.
                      */
                     std::string m_endDate;
                     bool m_endDateHasBeenSet;
 
                     /**
-                     * List of services to be queried. Valid values: RealTimeSpeech, VoiceMessage, VoiceFilter
+                     * List of services to be queried. Valid values: `RealTimeSpeech`, `VoiceMessage`, `VoiceFilter`, `SpeechToText`.
                      */
                     std::vector<std::string> m_services;
                     bool m_servicesHasBeenSet;

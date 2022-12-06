@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Returned result of speech detection
+                * Result of voice moderation
                 */
                 class ScanVoiceResult : public AbstractModel
                 {

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Speech detection details
+                * Voice detection details
                 */
                 class ScanDetail : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Violation scenario. For more information, please see the definition of <a href="https://intl.cloud.tencent.com/document/product/607/37622?from_cn_redirect=1#Label_Value">Label</a>
-                     * @return Label Violation scenario. For more information, please see the definition of <a href="https://intl.cloud.tencent.com/document/product/607/37622?from_cn_redirect=1#Label_Value">Label</a>
+                     * 获取Violation scenario. For more information, please see the definition of <a href="https://intl.cloud.tencent.com/document/product/607/37622?from_cn_redirect=1#Label_Value">Label</a>.
+                     * @return Label Violation scenario. For more information, please see the definition of <a href="https://intl.cloud.tencent.com/document/product/607/37622?from_cn_redirect=1#Label_Value">Label</a>.
                      */
                     std::string GetLabel() const;
 
                     /**
-                     * 设置Violation scenario. For more information, please see the definition of <a href="https://intl.cloud.tencent.com/document/product/607/37622?from_cn_redirect=1#Label_Value">Label</a>
-                     * @param Label Violation scenario. For more information, please see the definition of <a href="https://intl.cloud.tencent.com/document/product/607/37622?from_cn_redirect=1#Label_Value">Label</a>
+                     * 设置Violation scenario. For more information, please see the definition of <a href="https://intl.cloud.tencent.com/document/product/607/37622?from_cn_redirect=1#Label_Value">Label</a>.
+                     * @param Label Violation scenario. For more information, please see the definition of <a href="https://intl.cloud.tencent.com/document/product/607/37622?from_cn_redirect=1#Label_Value">Label</a>.
                      */
                     void SetLabel(const std::string& _label);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool LabelHasBeenSet() const;
 
                     /**
-                     * 获取Confidence score in scenario. Value range: [0.00,100.00]. The higher the score, the more likely the content is non-compliant
-                     * @return Rate Confidence score in scenario. Value range: [0.00,100.00]. The higher the score, the more likely the content is non-compliant
+                     * 获取Confidence score in scenario. Value range: [0.00,100.00]. The higher the score, the more likely the content is non-compliant.
+                     * @return Rate Confidence score in scenario. Value range: [0.00,100.00]. The higher the score, the more likely the content is non-compliant.
                      */
                     std::string GetRate() const;
 
                     /**
-                     * 设置Confidence score in scenario. Value range: [0.00,100.00]. The higher the score, the more likely the content is non-compliant
-                     * @param Rate Confidence score in scenario. Value range: [0.00,100.00]. The higher the score, the more likely the content is non-compliant
+                     * 设置Confidence score in scenario. Value range: [0.00,100.00]. The higher the score, the more likely the content is non-compliant.
+                     * @param Rate Confidence score in scenario. Value range: [0.00,100.00]. The higher the score, the more likely the content is non-compliant.
                      */
                     void SetRate(const std::string& _rate);
 
@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool KeyWordHasBeenSet() const;
 
                     /**
-                     * 获取Start time offset in milliseconds from 0 of keyword in audio
-                     * @return StartTime Start time offset in milliseconds from 0 of keyword in audio
+                     * 获取Start time offset of keyword from 0 in audio (in milliseconds)
+                     * @return StartTime Start time offset of keyword from 0 in audio (in milliseconds)
                      */
                     uint64_t GetStartTime() const;
 
                     /**
-                     * 设置Start time offset in milliseconds from 0 of keyword in audio
-                     * @param StartTime Start time offset in milliseconds from 0 of keyword in audio
+                     * 设置Start time offset of keyword from 0 in audio (in milliseconds)
+                     * @param StartTime Start time offset of keyword from 0 in audio (in milliseconds)
                      */
                     void SetStartTime(const uint64_t& _startTime);
 
@@ -119,14 +119,14 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time offset in milliseconds from 0 of keyword in audio
-                     * @return EndTime End time offset in milliseconds from 0 of keyword in audio
+                     * 获取End time offset of keyword from 0 in audio (in milliseconds)
+                     * @return EndTime End time offset of keyword from 0 in audio (in milliseconds)
                      */
                     uint64_t GetEndTime() const;
 
                     /**
-                     * 设置End time offset in milliseconds from 0 of keyword in audio
-                     * @param EndTime End time offset in milliseconds from 0 of keyword in audio
+                     * 设置End time offset of keyword from 0 in audio (in milliseconds)
+                     * @param EndTime End time offset of keyword from 0 in audio (in milliseconds)
                      */
                     void SetEndTime(const uint64_t& _endTime);
 
@@ -139,13 +139,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Violation scenario. For more information, please see the definition of <a href="https://intl.cloud.tencent.com/document/product/607/37622?from_cn_redirect=1#Label_Value">Label</a>
+                     * Violation scenario. For more information, please see the definition of <a href="https://intl.cloud.tencent.com/document/product/607/37622?from_cn_redirect=1#Label_Value">Label</a>.
                      */
                     std::string m_label;
                     bool m_labelHasBeenSet;
 
                     /**
-                     * Confidence score in scenario. Value range: [0.00,100.00]. The higher the score, the more likely the content is non-compliant
+                     * Confidence score in scenario. Value range: [0.00,100.00]. The higher the score, the more likely the content is non-compliant.
                      */
                     std::string m_rate;
                     bool m_rateHasBeenSet;
@@ -157,13 +157,13 @@ namespace TencentCloud
                     bool m_keyWordHasBeenSet;
 
                     /**
-                     * Start time offset in milliseconds from 0 of keyword in audio
+                     * Start time offset of keyword from 0 in audio (in milliseconds)
                      */
                     uint64_t m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time offset in milliseconds from 0 of keyword in audio
+                     * End time offset of keyword from 0 in audio (in milliseconds)
                      */
                     uint64_t m_endTime;
                     bool m_endTimeHasBeenSet;

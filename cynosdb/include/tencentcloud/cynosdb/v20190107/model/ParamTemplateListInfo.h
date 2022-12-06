@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cynosdb/v20190107/model/TemplateParamInfo.h>
 
 
 namespace TencentCloud
@@ -118,6 +119,46 @@ namespace TencentCloud
                      */
                     bool EngineVersionHasBeenSet() const;
 
+                    /**
+                     * 获取Database Type. Valid values: `NORMAL`, `SERVERLESS`.
+                     * @return DbMode Database Type. Valid values: `NORMAL`, `SERVERLESS`.
+                     */
+                    std::string GetDbMode() const;
+
+                    /**
+                     * 设置Database Type. Valid values: `NORMAL`, `SERVERLESS`.
+                     * @param DbMode Database Type. Valid values: `NORMAL`, `SERVERLESS`.
+                     */
+                    void SetDbMode(const std::string& _dbMode);
+
+                    /**
+                     * 判断参数 DbMode 是否已赋值
+                     * @return DbMode 是否已赋值
+                     */
+                    bool DbModeHasBeenSet() const;
+
+                    /**
+                     * 获取Parameter template details
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ParamInfoSet Parameter template details
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<TemplateParamInfo> GetParamInfoSet() const;
+
+                    /**
+                     * 设置Parameter template details
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ParamInfoSet Parameter template details
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetParamInfoSet(const std::vector<TemplateParamInfo>& _paramInfoSet);
+
+                    /**
+                     * 判断参数 ParamInfoSet 是否已赋值
+                     * @return ParamInfoSet 是否已赋值
+                     */
+                    bool ParamInfoSetHasBeenSet() const;
+
                 private:
 
                     /**
@@ -143,6 +184,19 @@ namespace TencentCloud
                      */
                     std::string m_engineVersion;
                     bool m_engineVersionHasBeenSet;
+
+                    /**
+                     * Database Type. Valid values: `NORMAL`, `SERVERLESS`.
+                     */
+                    std::string m_dbMode;
+                    bool m_dbModeHasBeenSet;
+
+                    /**
+                     * Parameter template details
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<TemplateParamInfo> m_paramInfoSet;
+                    bool m_paramInfoSetHasBeenSet;
 
                 };
             }

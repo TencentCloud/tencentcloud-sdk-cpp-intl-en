@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Application ID, which is generated and returned by the backend after application creation.
-                     * @return BizId Application ID, which is generated and returned by the backend after application creation.
+                     * 获取Application ID, which is generated and returned by the backend after the application creation.
+                     * @return BizId Application ID, which is generated and returned by the backend after the application creation.
                      */
                     uint64_t GetBizId() const;
 
                     /**
-                     * 设置Application ID, which is generated and returned by the backend after application creation.
-                     * @param BizId Application ID, which is generated and returned by the backend after application creation.
+                     * 设置Application ID, which is generated and returned by the backend after the application creation.
+                     * @param BizId Application ID, which is generated and returned by the backend after the application creation.
                      */
                     void SetBizId(const uint64_t& _bizId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool BizIdHasBeenSet() const;
 
                     /**
-                     * 获取Application status. Valid values: open, close
-                     * @return Status Application status. Valid values: open, close
+                     * 获取Application status. Valid values: `open`, `close`.
+                     * @return Status Application status. Valid values: `open`, `close`.
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Application status. Valid values: open, close
-                     * @param Status Application status. Valid values: open, close
+                     * 设置Application status. Valid values: `open`, `close`.
+                     * @param Status Application status. Valid values: `open`, `close`.
                      */
                     void SetStatus(const std::string& _status);
 
@@ -81,13 +81,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Application ID, which is generated and returned by the backend after application creation.
+                     * Application ID, which is generated and returned by the backend after the application creation.
                      */
                     uint64_t m_bizId;
                     bool m_bizIdHasBeenSet;
 
                     /**
-                     * Application status. Valid values: open, close
+                     * Application status. Valid values: `open`, `close`.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

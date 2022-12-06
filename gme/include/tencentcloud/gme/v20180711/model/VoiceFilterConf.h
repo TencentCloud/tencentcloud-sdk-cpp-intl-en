@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Configuration information of phrase filtering
+                * Configuration information of Phrase Filtering
                 */
                 class VoiceFilterConf : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Phrase filtering status. Valid values: open, close
-                     * @return Status Phrase filtering status. Valid values: open, close
+                     * 获取Phrase Filtering status. Valid values: `open`, `close`.
+                     * @return Status Phrase Filtering status. Valid values: `open`, `close`.
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Phrase filtering status. Valid values: open, close
-                     * @param Status Phrase filtering status. Valid values: open, close
+                     * 设置Phrase Filtering status. Valid values: `open`, `close`.
+                     * @param Status Phrase Filtering status. Valid values: `open`, `close`.
                      */
                     void SetStatus(const std::string& _status);
 
@@ -67,7 +67,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Phrase filtering status. Valid values: open, close
+                     * Phrase Filtering status. Valid values: `open`, `close`.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

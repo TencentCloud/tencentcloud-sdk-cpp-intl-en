@@ -48,17 +48,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Tag key
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return TagKey Tag key
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetTagKey() const;
 
                     /**
                      * 设置Tag key
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @param TagKey Tag key
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetTagKey(const std::string& _tagKey);
 
@@ -70,17 +70,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Tag value
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return TagValue Tag value
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetTagValue() const;
 
                     /**
                      * 设置Tag value
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @param TagValue Tag value
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetTagValue(const std::string& _tagValue);
 
@@ -94,14 +94,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Tag key
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_tagKey;
                     bool m_tagKeyHasBeenSet;
 
                     /**
                      * Tag value
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_tagValue;
                     bool m_tagValueHasBeenSet;

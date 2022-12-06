@@ -44,14 +44,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Application ID, which is the `AppID` obtained when you create an application in [Console > Service Management](https://console.cloud.tencent.com/gamegme)
-                     * @return BizId Application ID, which is the `AppID` obtained when you create an application in [Console > Service Management](https://console.cloud.tencent.com/gamegme)
+                     * 获取Application ID, which is obtained when you create an application in the [GME console - Service Management](https://console.cloud.tencent.com/gamegme).
+                     * @return BizId Application ID, which is obtained when you create an application in the [GME console - Service Management](https://console.cloud.tencent.com/gamegme).
                      */
                     uint64_t GetBizId() const;
 
                     /**
-                     * 设置Application ID, which is the `AppID` obtained when you create an application in [Console > Service Management](https://console.cloud.tencent.com/gamegme)
-                     * @param BizId Application ID, which is the `AppID` obtained when you create an application in [Console > Service Management](https://console.cloud.tencent.com/gamegme)
+                     * 设置Application ID, which is obtained when you create an application in the [GME console - Service Management](https://console.cloud.tencent.com/gamegme).
+                     * @param BizId Application ID, which is obtained when you create an application in the [GME console - Service Management](https://console.cloud.tencent.com/gamegme).
                      */
                     void SetBizId(const uint64_t& _bizId);
 
@@ -62,14 +62,14 @@ namespace TencentCloud
                     bool BizIdHasBeenSet() const;
 
                     /**
-                     * 获取Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, advertising, and other prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
-                     * @return Scenes Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, advertising, and other prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
+                     * 获取Voice detection scenario. It must be `default`. See the <a href="#Label_Value">Label description</a> as the result.
+                     * @return Scenes Voice detection scenario. It must be `default`. See the <a href="#Label_Value">Label description</a> as the result.
                      */
                     std::vector<std::string> GetScenes() const;
 
                     /**
-                     * 设置Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, advertising, and other prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
-                     * @param Scenes Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, advertising, and other prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
+                     * 设置Voice detection scenario. It must be `default`. See the <a href="#Label_Value">Label description</a> as the result.
+                     * @param Scenes Voice detection scenario. It must be `default`. See the <a href="#Label_Value">Label description</a> as the result.
                      */
                     void SetScenes(const std::vector<std::string>& _scenes);
 
@@ -80,14 +80,14 @@ namespace TencentCloud
                     bool ScenesHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is a live stream. false: audio file detection, true: audio stream detection.
-                     * @return Live Whether it is a live stream. false: audio file detection, true: audio stream detection.
+                     * 获取Whether it is a live stream. Values: `false` (voice file), `true` (live stream).
+                     * @return Live Whether it is a live stream. Values: `false` (voice file), `true` (live stream).
                      */
                     bool GetLive() const;
 
                     /**
-                     * 设置Whether it is a live stream. false: audio file detection, true: audio stream detection.
-                     * @param Live Whether it is a live stream. false: audio file detection, true: audio stream detection.
+                     * 设置Whether it is a live stream. Values: `false` (voice file), `true` (live stream).
+                     * @param Live Whether it is a live stream. Values: `false` (voice file), `true` (live stream).
                      */
                     void SetLive(const bool& _live);
 
@@ -98,22 +98,22 @@ namespace TencentCloud
                     bool LiveHasBeenSet() const;
 
                     /**
-                     * 获取Speech detection task list. Up to 100 tasks can be added in the list. The structure contains:
-<li>DataId: unique data ID</li>
-<li>Url: URL-encoded data file URL, which is a pull address if the detected speech is a stream</li>
-                     * @return Tasks Speech detection task list. Up to 100 tasks can be added in the list. The structure contains:
-<li>DataId: unique data ID</li>
-<li>Url: URL-encoded data file URL, which is a pull address if the detected speech is a stream</li>
+                     * 获取Voice detection task list. Up to 100 tasks can be added in the list. 
+<li>`DataId`: Unique data ID</li>
+<li>`Url`: URL-encoded data file URL, which is a pull address if the detected voice is a stream</li>
+                     * @return Tasks Voice detection task list. Up to 100 tasks can be added in the list. 
+<li>`DataId`: Unique data ID</li>
+<li>`Url`: URL-encoded data file URL, which is a pull address if the detected voice is a stream</li>
                      */
                     std::vector<Task> GetTasks() const;
 
                     /**
-                     * 设置Speech detection task list. Up to 100 tasks can be added in the list. The structure contains:
-<li>DataId: unique data ID</li>
-<li>Url: URL-encoded data file URL, which is a pull address if the detected speech is a stream</li>
-                     * @param Tasks Speech detection task list. Up to 100 tasks can be added in the list. The structure contains:
-<li>DataId: unique data ID</li>
-<li>Url: URL-encoded data file URL, which is a pull address if the detected speech is a stream</li>
+                     * 设置Voice detection task list. Up to 100 tasks can be added in the list. 
+<li>`DataId`: Unique data ID</li>
+<li>`Url`: URL-encoded data file URL, which is a pull address if the detected voice is a stream</li>
+                     * @param Tasks Voice detection task list. Up to 100 tasks can be added in the list. 
+<li>`DataId`: Unique data ID</li>
+<li>`Url`: URL-encoded data file URL, which is a pull address if the detected voice is a stream</li>
                      */
                     void SetTasks(const std::vector<Task>& _tasks);
 
@@ -124,14 +124,14 @@ namespace TencentCloud
                     bool TasksHasBeenSet() const;
 
                     /**
-                     * 获取Async callback address for detection result. For more information, please see the <a href="#Callback_Declare">callback description</a> above. (Note: if this field is empty, the detection result can only be obtained by calling the `DescribeScanResultList` API.)
-                     * @return Callback Async callback address for detection result. For more information, please see the <a href="#Callback_Declare">callback description</a> above. (Note: if this field is empty, the detection result can only be obtained by calling the `DescribeScanResultList` API.)
+                     * 获取Async callback address for detection result. For more information, please see the <a href="#Callback_Declare">Callback description</a> above. (Note: If this field is empty, the detection result can only be queried by calling the `DescribeScanResultList` API.)
+                     * @return Callback Async callback address for detection result. For more information, please see the <a href="#Callback_Declare">Callback description</a> above. (Note: If this field is empty, the detection result can only be queried by calling the `DescribeScanResultList` API.)
                      */
                     std::string GetCallback() const;
 
                     /**
-                     * 设置Async callback address for detection result. For more information, please see the <a href="#Callback_Declare">callback description</a> above. (Note: if this field is empty, the detection result can only be obtained by calling the `DescribeScanResultList` API.)
-                     * @param Callback Async callback address for detection result. For more information, please see the <a href="#Callback_Declare">callback description</a> above. (Note: if this field is empty, the detection result can only be obtained by calling the `DescribeScanResultList` API.)
+                     * 设置Async callback address for detection result. For more information, please see the <a href="#Callback_Declare">Callback description</a> above. (Note: If this field is empty, the detection result can only be queried by calling the `DescribeScanResultList` API.)
+                     * @param Callback Async callback address for detection result. For more information, please see the <a href="#Callback_Declare">Callback description</a> above. (Note: If this field is empty, the detection result can only be queried by calling the `DescribeScanResultList` API.)
                      */
                     void SetCallback(const std::string& _callback);
 
@@ -142,14 +142,14 @@ namespace TencentCloud
                     bool CallbackHasBeenSet() const;
 
                     /**
-                     * 获取The language. `jp` represents Japanese
-                     * @return Lang The language. `jp` represents Japanese
+                     * 获取Language. `jp`: Japanese
+                     * @return Lang Language. `jp`: Japanese
                      */
                     std::string GetLang() const;
 
                     /**
-                     * 设置The language. `jp` represents Japanese
-                     * @param Lang The language. `jp` represents Japanese
+                     * 设置Language. `jp`: Japanese
+                     * @param Lang Language. `jp`: Japanese
                      */
                     void SetLang(const std::string& _lang);
 
@@ -162,39 +162,39 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Application ID, which is the `AppID` obtained when you create an application in [Console > Service Management](https://console.cloud.tencent.com/gamegme)
+                     * Application ID, which is obtained when you create an application in the [GME console - Service Management](https://console.cloud.tencent.com/gamegme).
                      */
                     uint64_t m_bizId;
                     bool m_bizIdHasBeenSet;
 
                     /**
-                     * Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, advertising, and other prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
+                     * Voice detection scenario. It must be `default`. See the <a href="#Label_Value">Label description</a> as the result.
                      */
                     std::vector<std::string> m_scenes;
                     bool m_scenesHasBeenSet;
 
                     /**
-                     * Whether it is a live stream. false: audio file detection, true: audio stream detection.
+                     * Whether it is a live stream. Values: `false` (voice file), `true` (live stream).
                      */
                     bool m_live;
                     bool m_liveHasBeenSet;
 
                     /**
-                     * Speech detection task list. Up to 100 tasks can be added in the list. The structure contains:
-<li>DataId: unique data ID</li>
-<li>Url: URL-encoded data file URL, which is a pull address if the detected speech is a stream</li>
+                     * Voice detection task list. Up to 100 tasks can be added in the list. 
+<li>`DataId`: Unique data ID</li>
+<li>`Url`: URL-encoded data file URL, which is a pull address if the detected voice is a stream</li>
                      */
                     std::vector<Task> m_tasks;
                     bool m_tasksHasBeenSet;
 
                     /**
-                     * Async callback address for detection result. For more information, please see the <a href="#Callback_Declare">callback description</a> above. (Note: if this field is empty, the detection result can only be obtained by calling the `DescribeScanResultList` API.)
+                     * Async callback address for detection result. For more information, please see the <a href="#Callback_Declare">Callback description</a> above. (Note: If this field is empty, the detection result can only be queried by calling the `DescribeScanResultList` API.)
                      */
                     std::string m_callback;
                     bool m_callbackHasBeenSet;
 
                     /**
-                     * The language. `jp` represents Japanese
+                     * Language. `jp`: Japanese
                      */
                     std::string m_lang;
                     bool m_langHasBeenSet;

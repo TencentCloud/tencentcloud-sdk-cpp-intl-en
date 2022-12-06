@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool AppNameHasBeenSet() const;
 
                     /**
-                     * 获取Tencent Cloud project ID. Default value: 0, which means the default project
-                     * @return ProjectId Tencent Cloud project ID. Default value: 0, which means the default project
+                     * 获取Tencent Cloud project ID. Default value: 0, which means that the default project is used.
+                     * @return ProjectId Tencent Cloud project ID. Default value: 0, which means that the default project is used.
                      */
                     uint64_t GetProjectId() const;
 
                     /**
-                     * 设置Tencent Cloud project ID. Default value: 0, which means the default project
-                     * @param ProjectId Tencent Cloud project ID. Default value: 0, which means the default project
+                     * 设置Tencent Cloud project ID. Default value: 0, which means that the default project is used.
+                     * @param ProjectId Tencent Cloud project ID. Default value: 0, which means that the default project is used.
                      */
                     void SetProjectId(const uint64_t& _projectId);
 
@@ -119,14 +119,14 @@ namespace TencentCloud
                     bool RegionListHasBeenSet() const;
 
                     /**
-                     * 获取Configuration information of voice chat
-                     * @return RealtimeSpeechConf Configuration information of voice chat
+                     * 获取Configuration information of Voice Chat
+                     * @return RealtimeSpeechConf Configuration information of Voice Chat
                      */
                     RealtimeSpeechConf GetRealtimeSpeechConf() const;
 
                     /**
-                     * 设置Configuration information of voice chat
-                     * @param RealtimeSpeechConf Configuration information of voice chat
+                     * 设置Configuration information of Voice Chat
+                     * @param RealtimeSpeechConf Configuration information of Voice Chat
                      */
                     void SetRealtimeSpeechConf(const RealtimeSpeechConf& _realtimeSpeechConf);
 
@@ -137,14 +137,14 @@ namespace TencentCloud
                     bool RealtimeSpeechConfHasBeenSet() const;
 
                     /**
-                     * 获取Configuration information of voice messaging and speech-to-text
-                     * @return VoiceMessageConf Configuration information of voice messaging and speech-to-text
+                     * 获取Configuration information of Voice Message Service
+                     * @return VoiceMessageConf Configuration information of Voice Message Service
                      */
                     VoiceMessageConf GetVoiceMessageConf() const;
 
                     /**
-                     * 设置Configuration information of voice messaging and speech-to-text
-                     * @param VoiceMessageConf Configuration information of voice messaging and speech-to-text
+                     * 设置Configuration information of Voice Message Service
+                     * @param VoiceMessageConf Configuration information of Voice Message Service
                      */
                     void SetVoiceMessageConf(const VoiceMessageConf& _voiceMessageConf);
 
@@ -155,14 +155,14 @@ namespace TencentCloud
                     bool VoiceMessageConfHasBeenSet() const;
 
                     /**
-                     * 获取Configuration information of phrase analysis
-                     * @return VoiceFilterConf Configuration information of phrase analysis
+                     * 获取Configuration information of Voice Analysis Service
+                     * @return VoiceFilterConf Configuration information of Voice Analysis Service
                      */
                     VoiceFilterConf GetVoiceFilterConf() const;
 
                     /**
-                     * 设置Configuration information of phrase analysis
-                     * @param VoiceFilterConf Configuration information of phrase analysis
+                     * 设置Configuration information of Voice Analysis Service
+                     * @param VoiceFilterConf Configuration information of Voice Analysis Service
                      */
                     void SetVoiceFilterConf(const VoiceFilterConf& _voiceFilterConf);
 
@@ -199,7 +199,7 @@ namespace TencentCloud
                     bool m_appNameHasBeenSet;
 
                     /**
-                     * Tencent Cloud project ID. Default value: 0, which means the default project
+                     * Tencent Cloud project ID. Default value: 0, which means that the default project is used.
                      */
                     uint64_t m_projectId;
                     bool m_projectIdHasBeenSet;
@@ -217,19 +217,19 @@ namespace TencentCloud
                     bool m_regionListHasBeenSet;
 
                     /**
-                     * Configuration information of voice chat
+                     * Configuration information of Voice Chat
                      */
                     RealtimeSpeechConf m_realtimeSpeechConf;
                     bool m_realtimeSpeechConfHasBeenSet;
 
                     /**
-                     * Configuration information of voice messaging and speech-to-text
+                     * Configuration information of Voice Message Service
                      */
                     VoiceMessageConf m_voiceMessageConf;
                     bool m_voiceMessageConfHasBeenSet;
 
                     /**
-                     * Configuration information of phrase analysis
+                     * Configuration information of Voice Analysis Service
                      */
                     VoiceFilterConf m_voiceFilterConf;
                     bool m_voiceFilterConfHasBeenSet;

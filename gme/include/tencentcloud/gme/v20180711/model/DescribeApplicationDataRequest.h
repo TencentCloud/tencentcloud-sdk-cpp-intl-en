@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool BizIdHasBeenSet() const;
 
                     /**
-                     * 获取Data start date in the format of yyyy-mm-dd, such as 2018-07-13
-                     * @return StartDate Data start date in the format of yyyy-mm-dd, such as 2018-07-13
+                     * 获取Data start date in the format of yyyy-mm-dd, such as 2018-07-13.
+                     * @return StartDate Data start date in the format of yyyy-mm-dd, such as 2018-07-13.
                      */
                     std::string GetStartDate() const;
 
                     /**
-                     * 设置Data start date in the format of yyyy-mm-dd, such as 2018-07-13
-                     * @param StartDate Data start date in the format of yyyy-mm-dd, such as 2018-07-13
+                     * 设置Data start date in the format of yyyy-mm-dd, such as 2018-07-13.
+                     * @param StartDate Data start date in the format of yyyy-mm-dd, such as 2018-07-13.
                      */
                     void SetStartDate(const std::string& _startDate);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool StartDateHasBeenSet() const;
 
                     /**
-                     * 获取Data end date in the format of yyyy-mm-dd, such as 2018-07-13
-                     * @return EndDate Data end date in the format of yyyy-mm-dd, such as 2018-07-13
+                     * 获取Data end date in the format of yyyy-mm-dd, such as 2018-07-13.
+                     * @return EndDate Data end date in the format of yyyy-mm-dd, such as 2018-07-13.
                      */
                     std::string GetEndDate() const;
 
                     /**
-                     * 设置Data end date in the format of yyyy-mm-dd, such as 2018-07-13
-                     * @param EndDate Data end date in the format of yyyy-mm-dd, such as 2018-07-13
+                     * 设置Data end date in the format of yyyy-mm-dd, such as 2018-07-13.
+                     * @param EndDate Data end date in the format of yyyy-mm-dd, such as 2018-07-13.
                      */
                     void SetEndDate(const std::string& _endDate);
 
@@ -105,13 +105,13 @@ namespace TencentCloud
                     bool m_bizIdHasBeenSet;
 
                     /**
-                     * Data start date in the format of yyyy-mm-dd, such as 2018-07-13
+                     * Data start date in the format of yyyy-mm-dd, such as 2018-07-13.
                      */
                     std::string m_startDate;
                     bool m_startDateHasBeenSet;
 
                     /**
-                     * Data end date in the format of yyyy-mm-dd, such as 2018-07-13
+                     * Data end date in the format of yyyy-mm-dd, such as 2018-07-13.
                      */
                     std::string m_endDate;
                     bool m_endDateHasBeenSet;

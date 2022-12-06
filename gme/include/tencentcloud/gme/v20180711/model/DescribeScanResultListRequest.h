@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Application ID, which is the `AppID` obtained when you create an application in the [console](https://console.cloud.tencent.com/gamegme)
-                     * @return BizId Application ID, which is the `AppID` obtained when you create an application in the [console](https://console.cloud.tencent.com/gamegme)
+                     * 获取Application ID, which is obtained when you create an application in the [GME console](https://console.cloud.tencent.com/gamegme).
+                     * @return BizId Application ID, which is obtained when you create an application in the [GME console](https://console.cloud.tencent.com/gamegme).
                      */
                     uint64_t GetBizId() const;
 
                     /**
-                     * 设置Application ID, which is the `AppID` obtained when you create an application in the [console](https://console.cloud.tencent.com/gamegme)
-                     * @param BizId Application ID, which is the `AppID` obtained when you create an application in the [console](https://console.cloud.tencent.com/gamegme)
+                     * 设置Application ID, which is obtained when you create an application in the [GME console](https://console.cloud.tencent.com/gamegme).
+                     * @param BizId Application ID, which is obtained when you create an application in the [GME console](https://console.cloud.tencent.com/gamegme).
                      */
                     void SetBizId(const uint64_t& _bizId);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool TaskIdListHasBeenSet() const;
 
                     /**
-                     * 获取Number of task results to be returned. Default value: 10. Maximum value: 500. This parameter will be ignored for large file tasks where all results will be returned
-                     * @return Limit Number of task results to be returned. Default value: 10. Maximum value: 500. This parameter will be ignored for large file tasks where all results will be returned
+                     * 获取Number of task results to be returned. Default value: 10. Maximum value: 500. This parameter will be ignored for large file tasks where all results will be returned.
+                     * @return Limit Number of task results to be returned. Default value: 10. Maximum value: 500. This parameter will be ignored for large file tasks where all results will be returned.
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of task results to be returned. Default value: 10. Maximum value: 500. This parameter will be ignored for large file tasks where all results will be returned
-                     * @param Limit Number of task results to be returned. Default value: 10. Maximum value: 500. This parameter will be ignored for large file tasks where all results will be returned
+                     * 设置Number of task results to be returned. Default value: 10. Maximum value: 500. This parameter will be ignored for large file tasks where all results will be returned.
+                     * @param Limit Number of task results to be returned. Default value: 10. Maximum value: 500. This parameter will be ignored for large file tasks where all results will be returned.
                      */
                     void SetLimit(const uint64_t& _limit);
 
@@ -99,7 +99,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Application ID, which is the `AppID` obtained when you create an application in the [console](https://console.cloud.tencent.com/gamegme)
+                     * Application ID, which is obtained when you create an application in the [GME console](https://console.cloud.tencent.com/gamegme).
                      */
                     uint64_t m_bizId;
                     bool m_bizIdHasBeenSet;
@@ -111,7 +111,7 @@ namespace TencentCloud
                     bool m_taskIdListHasBeenSet;
 
                     /**
-                     * Number of task results to be returned. Default value: 10. Maximum value: 500. This parameter will be ignored for large file tasks where all results will be returned
+                     * Number of task results to be returned. Default value: 10. Maximum value: 500. This parameter will be ignored for large file tasks where all results will be returned.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;

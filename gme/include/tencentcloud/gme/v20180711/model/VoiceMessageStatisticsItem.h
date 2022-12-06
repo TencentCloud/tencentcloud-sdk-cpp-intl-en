@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Voice messaging usage statistics
+                * Voice Message Service usage statistics
                 */
                 class VoiceMessageStatisticsItem : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取DAU of voice messaging and speech-to-text
-                     * @return Dau DAU of voice messaging and speech-to-text
+                     * 获取DAUs of Voice Message Service
+                     * @return Dau DAUs of Voice Message Service
                      */
                     uint64_t GetDau() const;
 
                     /**
-                     * 设置DAU of voice messaging and speech-to-text
-                     * @param Dau DAU of voice messaging and speech-to-text
+                     * 设置DAUs of Voice Message Service
+                     * @param Dau DAUs of Voice Message Service
                      */
                     void SetDau(const uint64_t& _dau);
 
@@ -67,7 +67,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * DAU of voice messaging and speech-to-text
+                     * DAUs of Voice Message Service
                      */
                     uint64_t m_dau;
                     bool m_dauHasBeenSet;

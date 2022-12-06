@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Usage data
+                * Usage data unit
                 */
                 class StatisticsItem : public AbstractModel
                 {
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool StatDateHasBeenSet() const;
 
                     /**
-                     * 获取Statistics
-                     * @return Data Statistics
+                     * 获取Statistical value
+                     * @return Data Statistical value
                      */
                     uint64_t GetData() const;
 
                     /**
-                     * 设置Statistics
-                     * @param Data Statistics
+                     * 设置Statistical value
+                     * @param Data Statistical value
                      */
                     void SetData(const uint64_t& _data);
 
@@ -91,7 +91,7 @@ namespace TencentCloud
                     bool m_statDateHasBeenSet;
 
                     /**
-                     * Statistics
+                     * Statistical value
                      */
                     uint64_t m_data;
                     bool m_dataHasBeenSet;

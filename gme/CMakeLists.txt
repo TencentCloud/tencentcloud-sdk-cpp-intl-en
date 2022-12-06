@@ -29,8 +29,10 @@ set(gme_public_header_model
   include/tencentcloud/gme/v20180711/model/DeleteRoomMemberRequest.h
   include/tencentcloud/gme/v20180711/model/DescribeScanResultListRequest.h
   include/tencentcloud/gme/v20180711/model/RealTimeSpeechStatisticsItem.h
+  include/tencentcloud/gme/v20180711/model/StreamTextStatisticsItem.h
   include/tencentcloud/gme/v20180711/model/Tag.h
   include/tencentcloud/gme/v20180711/model/VoiceMessageConf.h
+  include/tencentcloud/gme/v20180711/model/AudioTextStatisticsItem.h
   include/tencentcloud/gme/v20180711/model/ApplicationDataStatistics.h
   include/tencentcloud/gme/v20180711/model/ModifyAppStatusResp.h
   include/tencentcloud/gme/v20180711/model/DescribeAppStatisticsResponse.h
@@ -38,7 +40,9 @@ set(gme_public_header_model
   include/tencentcloud/gme/v20180711/model/DeleteRoomMemberResponse.h
   include/tencentcloud/gme/v20180711/model/VoiceFilterStatisticsItem.h
   include/tencentcloud/gme/v20180711/model/CreateAppResp.h
+  include/tencentcloud/gme/v20180711/model/RealtimeTextStatisticsItem.h
   include/tencentcloud/gme/v20180711/model/DeleteResult.h
+  include/tencentcloud/gme/v20180711/model/OverseaTextStatisticsItem.h
   include/tencentcloud/gme/v20180711/model/DescribeScanResult.h
   include/tencentcloud/gme/v20180711/model/ScanDetail.h
   include/tencentcloud/gme/v20180711/model/CreateAppRequest.h
@@ -66,8 +70,10 @@ set(gme_src
   src/v20180711/model/DeleteRoomMemberRequest.cpp
   src/v20180711/model/DescribeScanResultListRequest.cpp
   src/v20180711/model/RealTimeSpeechStatisticsItem.cpp
+  src/v20180711/model/StreamTextStatisticsItem.cpp
   src/v20180711/model/Tag.cpp
   src/v20180711/model/VoiceMessageConf.cpp
+  src/v20180711/model/AudioTextStatisticsItem.cpp
   src/v20180711/model/ApplicationDataStatistics.cpp
   src/v20180711/model/ModifyAppStatusResp.cpp
   src/v20180711/model/DescribeAppStatisticsResponse.cpp
@@ -75,7 +81,9 @@ set(gme_src
   src/v20180711/model/DeleteRoomMemberResponse.cpp
   src/v20180711/model/VoiceFilterStatisticsItem.cpp
   src/v20180711/model/CreateAppResp.cpp
+  src/v20180711/model/RealtimeTextStatisticsItem.cpp
   src/v20180711/model/DeleteResult.cpp
+  src/v20180711/model/OverseaTextStatisticsItem.cpp
   src/v20180711/model/DescribeScanResult.cpp
   src/v20180711/model/ScanDetail.cpp
   src/v20180711/model/CreateAppRequest.cpp

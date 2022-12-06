@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Speech detection result, which will be returned if `Code` is 0
+                * Voice detection result, which will be returned if `Code` is 0.
                 */
                 class ScanPiece : public AbstractModel
                 {
@@ -48,18 +48,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Audio retention address, which will be returned for stream detection. The audio will be retained for 30 minutes
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return DumpUrl Audio retention address, which will be returned for stream detection. The audio will be retained for 30 minutes
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Audio retention address, which will be returned for stream detection. The audio will be retained for 30 minutes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return DumpUrl Audio retention address, which will be returned for stream detection. The audio will be retained for 30 minutes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetDumpUrl() const;
 
                     /**
-                     * 设置Audio retention address, which will be returned for stream detection. The audio will be retained for 30 minutes
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param DumpUrl Audio retention address, which will be returned for stream detection. The audio will be retained for 30 minutes
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Audio retention address, which will be returned for stream detection. The audio will be retained for 30 minutes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param DumpUrl Audio retention address, which will be returned for stream detection. The audio will be retained for 30 minutes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetDumpUrl(const std::string& _dumpUrl);
 
@@ -89,17 +89,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Main non-compliant content type
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return MainType Main non-compliant content type
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetMainType() const;
 
                     /**
                      * 设置Main non-compliant content type
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @param MainType Main non-compliant content type
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetMainType(const std::string& _mainType);
 
@@ -110,14 +110,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MainTypeHasBeenSet() const;
 
                     /**
-                     * 获取Speech detection details
-                     * @return ScanDetail Speech detection details
+                     * 获取Voice detection details
+                     * @return ScanDetail Voice detection details
                      */
                     std::vector<ScanDetail> GetScanDetail() const;
 
                     /**
-                     * 设置Speech detection details
-                     * @param ScanDetail Speech detection details
+                     * 设置Voice detection details
+                     * @param ScanDetail Voice detection details
                      */
                     void SetScanDetail(const std::vector<ScanDetail>& _scanDetail);
 
@@ -128,18 +128,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ScanDetailHasBeenSet() const;
 
                     /**
-                     * 获取GME voice chat room ID, which is the `RoomId` passed through when the task was submitted
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return RoomId GME voice chat room ID, which is the `RoomId` passed through when the task was submitted
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取GME Voice Chat room ID, which is the `RoomId` passed through when the task was submitted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return RoomId GME Voice Chat room ID, which is the `RoomId` passed through when the task was submitted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetRoomId() const;
 
                     /**
-                     * 设置GME voice chat room ID, which is the `RoomId` passed through when the task was submitted
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param RoomId GME voice chat room ID, which is the `RoomId` passed through when the task was submitted
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置GME Voice Chat room ID, which is the `RoomId` passed through when the task was submitted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param RoomId GME Voice Chat room ID, which is the `RoomId` passed through when the task was submitted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetRoomId(const std::string& _roomId);
 
@@ -150,18 +150,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool RoomIdHasBeenSet() const;
 
                     /**
-                     * 获取GME voice chat user ID, which is the `OpenId` passed through when the task was submitted
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return OpenId GME voice chat user ID, which is the `OpenId` passed through when the task was submitted
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取GME Voice Chat user ID, which is the `OpenId` passed through when the task was submitted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return OpenId GME Voice Chat user ID, which is the `OpenId` passed through when the task was submitted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetOpenId() const;
 
                     /**
-                     * 设置GME voice chat user ID, which is the `OpenId` passed through when the task was submitted
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param OpenId GME voice chat user ID, which is the `OpenId` passed through when the task was submitted
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置GME Voice Chat user ID, which is the `OpenId` passed through when the task was submitted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param OpenId GME Voice Chat user ID, which is the `OpenId` passed through when the task was submitted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetOpenId(const std::string& _openId);
 
@@ -173,17 +173,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Info Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetInfo() const;
 
                     /**
                      * 设置Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @param Info Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetInfo(const std::string& _info);
 
@@ -194,18 +194,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool InfoHasBeenSet() const;
 
                     /**
-                     * 获取Offset time in milliseconds of segment in stream during stream detection
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Offset Offset time in milliseconds of segment in stream during stream detection
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Offset time of multipart in stream during stream detection (in milliseconds)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Offset Offset time of multipart in stream during stream detection (in milliseconds)
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset time in milliseconds of segment in stream during stream detection
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Offset Offset time in milliseconds of segment in stream during stream detection
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Offset time of multipart in stream during stream detection (in milliseconds)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param Offset Offset time of multipart in stream during stream detection (in milliseconds)
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetOffset(const uint64_t& _offset);
 
@@ -216,18 +216,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Segment duration during stream detection
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Duration Segment duration during stream detection
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Multipart duration during stream detection
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Duration Multipart duration during stream detection
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     uint64_t GetDuration() const;
 
                     /**
-                     * 设置Segment duration during stream detection
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Duration Segment duration during stream detection
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Multipart duration during stream detection
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param Duration Multipart duration during stream detection
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetDuration(const uint64_t& _duration);
 
@@ -238,18 +238,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DurationHasBeenSet() const;
 
                     /**
-                     * 获取Segment detection start time
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return PieceStartTime Segment detection start time
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Multipart detection start time
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return PieceStartTime Multipart detection start time
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     uint64_t GetPieceStartTime() const;
 
                     /**
-                     * 设置Segment detection start time
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param PieceStartTime Segment detection start time
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Multipart detection start time
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param PieceStartTime Multipart detection start time
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetPieceStartTime(const uint64_t& _pieceStartTime);
 
@@ -262,8 +262,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Audio retention address, which will be returned for stream detection. The audio will be retained for 30 minutes
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Audio retention address, which will be returned for stream detection. The audio will be retained for 30 minutes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_dumpUrl;
                     bool m_dumpUrlHasBeenSet;
@@ -276,55 +276,55 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Main non-compliant content type
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_mainType;
                     bool m_mainTypeHasBeenSet;
 
                     /**
-                     * Speech detection details
+                     * Voice detection details
                      */
                     std::vector<ScanDetail> m_scanDetail;
                     bool m_scanDetailHasBeenSet;
 
                     /**
-                     * GME voice chat room ID, which is the `RoomId` passed through when the task was submitted
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * GME Voice Chat room ID, which is the `RoomId` passed through when the task was submitted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_roomId;
                     bool m_roomIdHasBeenSet;
 
                     /**
-                     * GME voice chat user ID, which is the `OpenId` passed through when the task was submitted
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * GME Voice Chat user ID, which is the `OpenId` passed through when the task was submitted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_openId;
                     bool m_openIdHasBeenSet;
 
                     /**
                      * Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_info;
                     bool m_infoHasBeenSet;
 
                     /**
-                     * Offset time in milliseconds of segment in stream during stream detection
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Offset time of multipart in stream during stream detection (in milliseconds)
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Segment duration during stream detection
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Multipart duration during stream detection
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     uint64_t m_duration;
                     bool m_durationHasBeenSet;
 
                     /**
-                     * Segment detection start time
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Multipart detection start time
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     uint64_t m_pieceStartTime;
                     bool m_pieceStartTimeHasBeenSet;
