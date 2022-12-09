@@ -142,14 +142,14 @@ namespace TencentCloud
                     bool CallbackHasBeenSet() const;
 
                     /**
-                     * 获取Language. `jp`: Japanese
-                     * @return Lang Language. `jp`: Japanese
+                     * 获取Language. Chinese will be used if it is left empty.
+                     * @return Lang Language. Chinese will be used if it is left empty.
                      */
                     std::string GetLang() const;
 
                     /**
-                     * 设置Language. `jp`: Japanese
-                     * @param Lang Language. `jp`: Japanese
+                     * 设置Language. Chinese will be used if it is left empty.
+                     * @param Lang Language. Chinese will be used if it is left empty.
                      */
                     void SetLang(const std::string& _lang);
 
@@ -194,7 +194,7 @@ namespace TencentCloud
                     bool m_callbackHasBeenSet;
 
                     /**
-                     * Language. `jp`: Japanese
+                     * Language. Chinese will be used if it is left empty.
                      */
                     std::string m_lang;
                     bool m_langHasBeenSet;
