@@ -64,20 +64,20 @@ namespace TencentCloud
                     /**
                      * 获取The access mode. Values:
 <li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>This field will be set to the default value `full` if not specified.
+<li>`partial`: Access through a CNAME record. Note that you should verify your site with the IdentifyZone API before starting site access.</li>If it is left empty, the default value `full` is used.
                      * @return Type The access mode. Values:
 <li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>This field will be set to the default value `full` if not specified.
+<li>`partial`: Access through a CNAME record. Note that you should verify your site with the IdentifyZone API before starting site access.</li>If it is left empty, the default value `full` is used.
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置The access mode. Values:
 <li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>This field will be set to the default value `full` if not specified.
+<li>`partial`: Access through a CNAME record. Note that you should verify your site with the IdentifyZone API before starting site access.</li>If it is left empty, the default value `full` is used.
                      * @param Type The access mode. Values:
 <li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>This field will be set to the default value `full` if not specified.
+<li>`partial`: Access through a CNAME record. Note that you should verify your site with the IdentifyZone API before starting site access.</li>If it is left empty, the default value `full` is used.
                      */
                     void SetType(const std::string& _type);
 
@@ -178,7 +178,7 @@ namespace TencentCloud
                     /**
                      * The access mode. Values:
 <li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>This field will be set to the default value `full` if not specified.
+<li>`partial`: Access through a CNAME record. Note that you should verify your site with the IdentifyZone API before starting site access.</li>If it is left empty, the default value `full` is used.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

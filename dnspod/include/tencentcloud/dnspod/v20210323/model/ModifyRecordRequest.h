@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool ValueHasBeenSet() const;
 
                     /**
-                     * 获取Record ID.
-                     * @return RecordId Record ID.
+                     * 获取The record ID. You can view all DNS records and their IDs via the `DescribeRecordList` API.
+                     * @return RecordId The record ID. You can view all DNS records and their IDs via the `DescribeRecordList` API.
                      */
                     uint64_t GetRecordId() const;
 
                     /**
-                     * 设置Record ID.
-                     * @param RecordId Record ID.
+                     * 设置The record ID. You can view all DNS records and their IDs via the `DescribeRecordList` API.
+                     * @param RecordId The record ID. You can view all DNS records and their IDs via the `DescribeRecordList` API.
                      */
                     void SetRecordId(const uint64_t& _recordId);
 
@@ -133,14 +133,14 @@ namespace TencentCloud
                     bool RecordIdHasBeenSet() const;
 
                     /**
-                     * 获取Domain ID. The `DomainId` parameter has a higher priority than `Domain`. If `DomainId` is passed in, `Domain` will be ignored.
-                     * @return DomainId Domain ID. The `DomainId` parameter has a higher priority than `Domain`. If `DomainId` is passed in, `Domain` will be ignored.
+                     * 获取The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+                     * @return DomainId The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
                      */
                     uint64_t GetDomainId() const;
 
                     /**
-                     * 设置Domain ID. The `DomainId` parameter has a higher priority than `Domain`. If `DomainId` is passed in, `Domain` will be ignored.
-                     * @param DomainId Domain ID. The `DomainId` parameter has a higher priority than `Domain`. If `DomainId` is passed in, `Domain` will be ignored.
+                     * 设置The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+                     * @param DomainId The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
                      */
                     void SetDomainId(const uint64_t& _domainId);
 
@@ -285,13 +285,13 @@ namespace TencentCloud
                     bool m_valueHasBeenSet;
 
                     /**
-                     * Record ID.
+                     * The record ID. You can view all DNS records and their IDs via the `DescribeRecordList` API.
                      */
                     uint64_t m_recordId;
                     bool m_recordIdHasBeenSet;
 
                     /**
-                     * Domain ID. The `DomainId` parameter has a higher priority than `Domain`. If `DomainId` is passed in, `Domain` will be ignored.
+                     * The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
                      */
                     uint64_t m_domainId;
                     bool m_domainIdHasBeenSet;

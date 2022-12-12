@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取Domain group ID
-                     * @return GroupId Domain group ID
+                     * 获取The group ID of the domain. You can view the group information of this domain via the `DescribeDomainGroupList` API.
+                     * @return GroupId The group ID of the domain. You can view the group information of this domain via the `DescribeDomainGroupList` API.
                      */
                     uint64_t GetGroupId() const;
 
                     /**
-                     * 设置Domain group ID
-                     * @param GroupId Domain group ID
+                     * 设置The group ID of the domain. You can view the group information of this domain via the `DescribeDomainGroupList` API.
+                     * @param GroupId The group ID of the domain. You can view the group information of this domain via the `DescribeDomainGroupList` API.
                      */
                     void SetGroupId(const uint64_t& _groupId);
 
@@ -105,7 +105,7 @@ namespace TencentCloud
                     bool m_domainHasBeenSet;
 
                     /**
-                     * Domain group ID
+                     * The group ID of the domain. You can view the group information of this domain via the `DescribeDomainGroupList` API.
                      */
                     uint64_t m_groupId;
                     bool m_groupIdHasBeenSet;

@@ -148,7 +148,7 @@ namespace TencentCloud
                 DescribeRecordOutcomeCallable DescribeRecordCallable(const Model::DescribeRecordRequest& request);
 
                 /**
-                 *This API is used to get DNS records of a domain.
+                 *This API is used to get the DNS records of a domain.
                  * @param req DescribeRecordListRequest
                  * @return DescribeRecordListOutcome
                  */

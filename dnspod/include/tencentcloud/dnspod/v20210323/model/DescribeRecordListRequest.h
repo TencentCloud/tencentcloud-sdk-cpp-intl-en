@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取The ID of the domain for which DNS records are to be obtained. If `DomainId` is passed in, the system will omit the parameter `Domain`.
-                     * @return DomainId The ID of the domain for which DNS records are to be obtained. If `DomainId` is passed in, the system will omit the parameter `Domain`.
+                     * 获取The ID of the domain whose DNS records are requested. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+                     * @return DomainId The ID of the domain whose DNS records are requested. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
                      */
                     uint64_t GetDomainId() const;
 
                     /**
-                     * 设置The ID of the domain for which DNS records are to be obtained. If `DomainId` is passed in, the system will omit the parameter `Domain`.
-                     * @param DomainId The ID of the domain for which DNS records are to be obtained. If `DomainId` is passed in, the system will omit the parameter `Domain`.
+                     * 设置The ID of the domain whose DNS records are requested. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+                     * @param DomainId The ID of the domain whose DNS records are requested. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
                      */
                     void SetDomainId(const uint64_t& _domainId);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool RecordTypeHasBeenSet() const;
 
                     /**
-                     * 获取The split zone name.
-                     * @return RecordLine The split zone name.
+                     * 获取The name of the split zone for which DNS records are requested. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
+                     * @return RecordLine The name of the split zone for which DNS records are requested. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
                      */
                     std::string GetRecordLine() const;
 
                     /**
-                     * 设置The split zone name.
-                     * @param RecordLine The split zone name.
+                     * 设置The name of the split zone for which DNS records are requested. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
+                     * @param RecordLine The name of the split zone for which DNS records are requested. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
                      */
                     void SetRecordLine(const std::string& _recordLine);
 
@@ -133,14 +133,14 @@ namespace TencentCloud
                     bool RecordLineHasBeenSet() const;
 
                     /**
-                     * 获取The split zone ID. If `RecordLineId` is passed in, the system will omit the parameter `RecordLine`.
-                     * @return RecordLineId The split zone ID. If `RecordLineId` is passed in, the system will omit the parameter `RecordLine`.
+                     * 获取The ID of the split zone for which DNS records are requested. If `RecordLineId` is passed in, `RecordLine` is ignored. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
+                     * @return RecordLineId The ID of the split zone for which DNS records are requested. If `RecordLineId` is passed in, `RecordLine` is ignored. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
                      */
                     std::string GetRecordLineId() const;
 
                     /**
-                     * 设置The split zone ID. If `RecordLineId` is passed in, the system will omit the parameter `RecordLine`.
-                     * @param RecordLineId The split zone ID. If `RecordLineId` is passed in, the system will omit the parameter `RecordLine`.
+                     * 设置The ID of the split zone for which DNS records are requested. If `RecordLineId` is passed in, `RecordLine` is ignored. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
+                     * @param RecordLineId The ID of the split zone for which DNS records are requested. If `RecordLineId` is passed in, `RecordLine` is ignored. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
                      */
                     void SetRecordLineId(const std::string& _recordLineId);
 
@@ -151,14 +151,14 @@ namespace TencentCloud
                     bool RecordLineIdHasBeenSet() const;
 
                     /**
-                     * 获取The group ID.
-                     * @return GroupId The group ID.
+                     * 获取The group ID passed in to get DNS records in the group.
+                     * @return GroupId The group ID passed in to get DNS records in the group.
                      */
                     uint64_t GetGroupId() const;
 
                     /**
-                     * 设置The group ID.
-                     * @param GroupId The group ID.
+                     * 设置The group ID passed in to get DNS records in the group.
+                     * @param GroupId The group ID passed in to get DNS records in the group.
                      */
                     void SetGroupId(const uint64_t& _groupId);
 
@@ -267,7 +267,7 @@ namespace TencentCloud
                     bool m_domainHasBeenSet;
 
                     /**
-                     * The ID of the domain for which DNS records are to be obtained. If `DomainId` is passed in, the system will omit the parameter `Domain`.
+                     * The ID of the domain whose DNS records are requested. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
                      */
                     uint64_t m_domainId;
                     bool m_domainIdHasBeenSet;
@@ -285,19 +285,19 @@ namespace TencentCloud
                     bool m_recordTypeHasBeenSet;
 
                     /**
-                     * The split zone name.
+                     * The name of the split zone for which DNS records are requested. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
                      */
                     std::string m_recordLine;
                     bool m_recordLineHasBeenSet;
 
                     /**
-                     * The split zone ID. If `RecordLineId` is passed in, the system will omit the parameter `RecordLine`.
+                     * The ID of the split zone for which DNS records are requested. If `RecordLineId` is passed in, `RecordLine` is ignored. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
                      */
                     std::string m_recordLineId;
                     bool m_recordLineIdHasBeenSet;
 
                     /**
-                     * The group ID.
+                     * The group ID passed in to get DNS records in the group.
                      */
                     uint64_t m_groupId;
                     bool m_groupIdHasBeenSet;
