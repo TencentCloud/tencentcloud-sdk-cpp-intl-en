@@ -177,6 +177,20 @@ Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     bool SubLabelHasBeenSet() const;
 
+                    /**
+                     * 获取Returns the context text.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ContextText Returns the context text.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetContextText() const;
+
+                    /**
+                     * 判断参数 ContextText 是否已赋值
+                     * @return ContextText 是否已赋值
+                     */
+                    bool ContextTextHasBeenSet() const;
+
                 private:
 
                     /**
@@ -244,6 +258,13 @@ Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     std::string m_subLabel;
                     bool m_subLabelHasBeenSet;
+
+                    /**
+                     * Returns the context text.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_contextText;
+                    bool m_contextTextHasBeenSet;
 
                 };
             }

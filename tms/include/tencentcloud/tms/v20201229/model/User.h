@@ -232,6 +232,60 @@ Note: Up to 5 MB is supported, and the minimum resolution is 256 x 256. When it 
                      */
                     bool DescHasBeenSet() const;
 
+                    /**
+                     * 获取Room ID of the group chat.
+                     * @return RoomId Room ID of the group chat.
+                     */
+                    std::string GetRoomId() const;
+
+                    /**
+                     * 设置Room ID of the group chat.
+                     * @param RoomId Room ID of the group chat.
+                     */
+                    void SetRoomId(const std::string& _roomId);
+
+                    /**
+                     * 判断参数 RoomId 是否已赋值
+                     * @return RoomId 是否已赋值
+                     */
+                    bool RoomIdHasBeenSet() const;
+
+                    /**
+                     * 获取Receiver ID.
+                     * @return ReceiverId Receiver ID.
+                     */
+                    std::string GetReceiverId() const;
+
+                    /**
+                     * 设置Receiver ID.
+                     * @param ReceiverId Receiver ID.
+                     */
+                    void SetReceiverId(const std::string& _receiverId);
+
+                    /**
+                     * 判断参数 ReceiverId 是否已赋值
+                     * @return ReceiverId 是否已赋值
+                     */
+                    bool ReceiverIdHasBeenSet() const;
+
+                    /**
+                     * 获取Generation time of the message, in ms.
+                     * @return SendTime Generation time of the message, in ms.
+                     */
+                    int64_t GetSendTime() const;
+
+                    /**
+                     * 设置Generation time of the message, in ms.
+                     * @param SendTime Generation time of the message, in ms.
+                     */
+                    void SetSendTime(const int64_t& _sendTime);
+
+                    /**
+                     * 判断参数 SendTime 是否已赋值
+                     * @return SendTime 是否已赋值
+                     */
+                    bool SendTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -293,6 +347,24 @@ Note: Up to 5 MB is supported, and the minimum resolution is 256 x 256. When it 
                      */
                     std::string m_desc;
                     bool m_descHasBeenSet;
+
+                    /**
+                     * Room ID of the group chat.
+                     */
+                    std::string m_roomId;
+                    bool m_roomIdHasBeenSet;
+
+                    /**
+                     * Receiver ID.
+                     */
+                    std::string m_receiverId;
+                    bool m_receiverIdHasBeenSet;
+
+                    /**
+                     * Generation time of the message, in ms.
+                     */
+                    int64_t m_sendTime;
+                    bool m_sendTimeHasBeenSet;
 
                 };
             }

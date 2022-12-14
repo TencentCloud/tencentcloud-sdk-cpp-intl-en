@@ -23,6 +23,8 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/lighthouse/v20200324/model/Price.h>
 #include <tencentcloud/lighthouse/v20200324/model/DataDiskPrice.h>
+#include <tencentcloud/lighthouse/v20200324/model/InstancePriceDetail.h>
+#include <tencentcloud/lighthouse/v20200324/model/TotalPrice.h>
 
 
 namespace TencentCloud
@@ -46,8 +48,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Price query information.
-                     * @return Price Price query information.
+                     * 获取Price information. It defaults to the price information of the first instance in the list.
+                     * @return Price Price information. It defaults to the price information of the first instance in the list.
                      */
                     Price GetPrice() const;
 
@@ -71,10 +73,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool DataDiskPriceSetHasBeenSet() const;
 
+                    /**
+                     * 获取Price list of the instances to be renewed.
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return InstancePriceDetailSet Price list of the instances to be renewed.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::vector<InstancePriceDetail> GetInstancePriceDetailSet() const;
+
+                    /**
+                     * 判断参数 InstancePriceDetailSet 是否已赋值
+                     * @return InstancePriceDetailSet 是否已赋值
+                     */
+                    bool InstancePriceDetailSetHasBeenSet() const;
+
+                    /**
+                     * 获取Total price
+                     * @return TotalPrice Total price
+                     */
+                    TotalPrice GetTotalPrice() const;
+
+                    /**
+                     * 判断参数 TotalPrice 是否已赋值
+                     * @return TotalPrice 是否已赋值
+                     */
+                    bool TotalPriceHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Price query information.
+                     * Price information. It defaults to the price information of the first instance in the list.
                      */
                     Price m_price;
                     bool m_priceHasBeenSet;
@@ -85,6 +113,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<DataDiskPrice> m_dataDiskPriceSet;
                     bool m_dataDiskPriceSetHasBeenSet;
+
+                    /**
+                     * Price list of the instances to be renewed.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::vector<InstancePriceDetail> m_instancePriceDetailSet;
+                    bool m_instancePriceDetailSetHasBeenSet;
+
+                    /**
+                     * Total price
+                     */
+                    TotalPrice m_totalPrice;
+                    bool m_totalPriceHasBeenSet;
 
                 };
             }

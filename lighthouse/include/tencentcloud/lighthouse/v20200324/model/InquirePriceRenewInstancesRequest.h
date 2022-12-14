@@ -44,14 +44,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance to be renewed.
-                     * @return InstanceIds Instance to be renewed.
+                     * 获取IDs of the instances to be renewed. Each request can contain up to 50 instances at a time. You can get an instance ID from the `InstanceId` returned by the [DescribeInstances](https://intl.cloud.tencent.com/document/api/1207/47573?from_cn_redirect=1) API.
+                     * @return InstanceIds IDs of the instances to be renewed. Each request can contain up to 50 instances at a time. You can get an instance ID from the `InstanceId` returned by the [DescribeInstances](https://intl.cloud.tencent.com/document/api/1207/47573?from_cn_redirect=1) API.
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置Instance to be renewed.
-                     * @param InstanceIds Instance to be renewed.
+                     * 设置IDs of the instances to be renewed. Each request can contain up to 50 instances at a time. You can get an instance ID from the `InstanceId` returned by the [DescribeInstances](https://intl.cloud.tencent.com/document/api/1207/47573?from_cn_redirect=1) API.
+                     * @param InstanceIds IDs of the instances to be renewed. Each request can contain up to 50 instances at a time. You can get an instance ID from the `InstanceId` returned by the [DescribeInstances](https://intl.cloud.tencent.com/document/api/1207/47573?from_cn_redirect=1) API.
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
@@ -80,14 +80,14 @@ namespace TencentCloud
                     bool InstanceChargePrepaidHasBeenSet() const;
 
                     /**
-                     * 获取Whether to renew the data disk
-                     * @return RenewDataDisk Whether to renew the data disk
+                     * 获取Whether to renew the data disk. Default: `false`.
+                     * @return RenewDataDisk Whether to renew the data disk. Default: `false`.
                      */
                     bool GetRenewDataDisk() const;
 
                     /**
-                     * 设置Whether to renew the data disk
-                     * @param RenewDataDisk Whether to renew the data disk
+                     * 设置Whether to renew the data disk. Default: `false`.
+                     * @param RenewDataDisk Whether to renew the data disk. Default: `false`.
                      */
                     void SetRenewDataDisk(const bool& _renewDataDisk);
 
@@ -98,14 +98,14 @@ namespace TencentCloud
                     bool RenewDataDiskHasBeenSet() const;
 
                     /**
-                     * 获取Whether the data disk has the same expiration time as the instance
-                     * @return AlignInstanceExpiredTime Whether the data disk has the same expiration time as the instance
+                     * 获取Whether to align the data disk expiration with the instance expiration time. Default: `false`.
+                     * @return AlignInstanceExpiredTime Whether to align the data disk expiration with the instance expiration time. Default: `false`.
                      */
                     bool GetAlignInstanceExpiredTime() const;
 
                     /**
-                     * 设置Whether the data disk has the same expiration time as the instance
-                     * @param AlignInstanceExpiredTime Whether the data disk has the same expiration time as the instance
+                     * 设置Whether to align the data disk expiration with the instance expiration time. Default: `false`.
+                     * @param AlignInstanceExpiredTime Whether to align the data disk expiration with the instance expiration time. Default: `false`.
                      */
                     void SetAlignInstanceExpiredTime(const bool& _alignInstanceExpiredTime);
 
@@ -118,7 +118,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance to be renewed.
+                     * IDs of the instances to be renewed. Each request can contain up to 50 instances at a time. You can get an instance ID from the `InstanceId` returned by the [DescribeInstances](https://intl.cloud.tencent.com/document/api/1207/47573?from_cn_redirect=1) API.
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
@@ -130,13 +130,13 @@ namespace TencentCloud
                     bool m_instanceChargePrepaidHasBeenSet;
 
                     /**
-                     * Whether to renew the data disk
+                     * Whether to renew the data disk. Default: `false`.
                      */
                     bool m_renewDataDisk;
                     bool m_renewDataDiskHasBeenSet;
 
                     /**
-                     * Whether the data disk has the same expiration time as the instance
+                     * Whether to align the data disk expiration with the instance expiration time. Default: `false`.
                      */
                     bool m_alignInstanceExpiredTime;
                     bool m_alignInstanceExpiredTimeHasBeenSet;

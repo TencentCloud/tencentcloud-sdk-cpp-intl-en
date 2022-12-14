@@ -62,46 +62,78 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Filter list.
-<li>bundle-id</li>Filter by **package ID**.
+                     * 获取Filter list
+<li>bundle-id</li>Filter by the **bundle ID**.
 Type: String
-Required: no
-<li>support-platform-type</li>Filter by **system type**.
-Valid values: LINUX_UNIX (Linux/Unix), WINDOWS ( Windows)
+Required: No
+<li>support-platform-type</li>Filter by the **OS type**.
+Valid values: `LINUX_UNIX` (Linux or Unix), `WINDOWS` (Windows)
 Type: String
-Required: no
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
-                     * @return Filters Filter list.
-<li>bundle-id</li>Filter by **package ID**.
+Required: No
+<li>bundle-type</li>Filter by the **bundle type**.
+Valid values: `GENERAL_BUNDLE` (General bundle), `STORAGE_BUNDLE` (Storage bundle), `ENTERPRISE_BUNDLE` (Enterprise bundle), `EXCLUSIVE_BUNDLE` (Dedicated bundle), `BEFAST_BUNDLE` (BeFast bundle)
 Type: String
-Required: no
-<li>support-platform-type</li>Filter by **system type**.
-Valid values: LINUX_UNIX (Linux/Unix), WINDOWS ( Windows)
+Required: No
+<li>bundle-state</li>Filter by the **bundle status**.
+Valid values: `ONLINE`, `OFFLINE`
 Type: String
-Required: no
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+Required: No
+Each request can contain up to 10 `Filters`, and each filter can have up to 5 `Filter.Values`.
+                     * @return Filters Filter list
+<li>bundle-id</li>Filter by the **bundle ID**.
+Type: String
+Required: No
+<li>support-platform-type</li>Filter by the **OS type**.
+Valid values: `LINUX_UNIX` (Linux or Unix), `WINDOWS` (Windows)
+Type: String
+Required: No
+<li>bundle-type</li>Filter by the **bundle type**.
+Valid values: `GENERAL_BUNDLE` (General bundle), `STORAGE_BUNDLE` (Storage bundle), `ENTERPRISE_BUNDLE` (Enterprise bundle), `EXCLUSIVE_BUNDLE` (Dedicated bundle), `BEFAST_BUNDLE` (BeFast bundle)
+Type: String
+Required: No
+<li>bundle-state</li>Filter by the **bundle status**.
+Valid values: `ONLINE`, `OFFLINE`
+Type: String
+Required: No
+Each request can contain up to 10 `Filters`, and each filter can have up to 5 `Filter.Values`.
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter list.
-<li>bundle-id</li>Filter by **package ID**.
+                     * 设置Filter list
+<li>bundle-id</li>Filter by the **bundle ID**.
 Type: String
-Required: no
-<li>support-platform-type</li>Filter by **system type**.
-Valid values: LINUX_UNIX (Linux/Unix), WINDOWS ( Windows)
+Required: No
+<li>support-platform-type</li>Filter by the **OS type**.
+Valid values: `LINUX_UNIX` (Linux or Unix), `WINDOWS` (Windows)
 Type: String
-Required: no
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
-                     * @param Filters Filter list.
-<li>bundle-id</li>Filter by **package ID**.
+Required: No
+<li>bundle-type</li>Filter by the **bundle type**.
+Valid values: `GENERAL_BUNDLE` (General bundle), `STORAGE_BUNDLE` (Storage bundle), `ENTERPRISE_BUNDLE` (Enterprise bundle), `EXCLUSIVE_BUNDLE` (Dedicated bundle), `BEFAST_BUNDLE` (BeFast bundle)
 Type: String
-Required: no
-<li>support-platform-type</li>Filter by **system type**.
-Valid values: LINUX_UNIX (Linux/Unix), WINDOWS ( Windows)
+Required: No
+<li>bundle-state</li>Filter by the **bundle status**.
+Valid values: `ONLINE`, `OFFLINE`
 Type: String
-Required: no
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+Required: No
+Each request can contain up to 10 `Filters`, and each filter can have up to 5 `Filter.Values`.
+                     * @param Filters Filter list
+<li>bundle-id</li>Filter by the **bundle ID**.
+Type: String
+Required: No
+<li>support-platform-type</li>Filter by the **OS type**.
+Valid values: `LINUX_UNIX` (Linux or Unix), `WINDOWS` (Windows)
+Type: String
+Required: No
+<li>bundle-type</li>Filter by the **bundle type**.
+Valid values: `GENERAL_BUNDLE` (General bundle), `STORAGE_BUNDLE` (Storage bundle), `ENTERPRISE_BUNDLE` (Enterprise bundle), `EXCLUSIVE_BUNDLE` (Dedicated bundle), `BEFAST_BUNDLE` (BeFast bundle)
+Type: String
+Required: No
+<li>bundle-state</li>Filter by the **bundle status**.
+Valid values: `ONLINE`, `OFFLINE`
+Type: String
+Required: No
+Each request can contain up to 10 `Filters`, and each filter can have up to 5 `Filter.Values`.
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
@@ -156,15 +188,23 @@ Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Filter list.
-<li>bundle-id</li>Filter by **package ID**.
+                     * Filter list
+<li>bundle-id</li>Filter by the **bundle ID**.
 Type: String
-Required: no
-<li>support-platform-type</li>Filter by **system type**.
-Valid values: LINUX_UNIX (Linux/Unix), WINDOWS ( Windows)
+Required: No
+<li>support-platform-type</li>Filter by the **OS type**.
+Valid values: `LINUX_UNIX` (Linux or Unix), `WINDOWS` (Windows)
 Type: String
-Required: no
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+Required: No
+<li>bundle-type</li>Filter by the **bundle type**.
+Valid values: `GENERAL_BUNDLE` (General bundle), `STORAGE_BUNDLE` (Storage bundle), `ENTERPRISE_BUNDLE` (Enterprise bundle), `EXCLUSIVE_BUNDLE` (Dedicated bundle), `BEFAST_BUNDLE` (BeFast bundle)
+Type: String
+Required: No
+<li>bundle-state</li>Filter by the **bundle status**.
+Valid values: `ONLINE`, `OFFLINE`
+Type: String
+Required: No
+Each request can contain up to 10 `Filters`, and each filter can have up to 5 `Filter.Values`.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

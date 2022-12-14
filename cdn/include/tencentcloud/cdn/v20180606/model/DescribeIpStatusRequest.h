@@ -138,6 +138,42 @@ If this parameter is left empty, edge server information will be returned by def
                      */
                     bool SegmentHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return ShowIpv6 
+                     */
+                    bool GetShowIpv6() const;
+
+                    /**
+                     * 设置
+                     * @param ShowIpv6 
+                     */
+                    void SetShowIpv6(const bool& _showIpv6);
+
+                    /**
+                     * 判断参数 ShowIpv6 是否已赋值
+                     * @return ShowIpv6 是否已赋值
+                     */
+                    bool ShowIpv6HasBeenSet() const;
+
+                    /**
+                     * 获取Whether to abbreviate the IPv6 address.
+                     * @return AbbreviationIpv6 Whether to abbreviate the IPv6 address.
+                     */
+                    bool GetAbbreviationIpv6() const;
+
+                    /**
+                     * 设置Whether to abbreviate the IPv6 address.
+                     * @param AbbreviationIpv6 Whether to abbreviate the IPv6 address.
+                     */
+                    void SetAbbreviationIpv6(const bool& _abbreviationIpv6);
+
+                    /**
+                     * 判断参数 AbbreviationIpv6 是否已赋值
+                     * @return AbbreviationIpv6 是否已赋值
+                     */
+                    bool AbbreviationIpv6HasBeenSet() const;
+
                 private:
 
                     /**
@@ -169,6 +205,18 @@ If this parameter is left empty, edge server information will be returned by def
                      */
                     bool m_segment;
                     bool m_segmentHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    bool m_showIpv6;
+                    bool m_showIpv6HasBeenSet;
+
+                    /**
+                     * Whether to abbreviate the IPv6 address.
+                     */
+                    bool m_abbreviationIpv6;
+                    bool m_abbreviationIpv6HasBeenSet;
 
                 };
             }

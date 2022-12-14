@@ -69,17 +69,17 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool ConnectTimeoutHasBeenSet() const;
 
                     /**
-                     * 获取The origin-pull receipt timeout (in seconds). Valid range: 10-60.
+                     * 获取The origin-pull receipt timeout (in seconds). Valid range: 10-300.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return ReceiveTimeout The origin-pull receipt timeout (in seconds). Valid range: 10-60.
+                     * @return ReceiveTimeout The origin-pull receipt timeout (in seconds). Valid range: 10-300.
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     uint64_t GetReceiveTimeout() const;
 
                     /**
-                     * 设置The origin-pull receipt timeout (in seconds). Valid range: 10-60.
+                     * 设置The origin-pull receipt timeout (in seconds). Valid range: 10-300.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param ReceiveTimeout The origin-pull receipt timeout (in seconds). Valid range: 10-60.
+                     * @param ReceiveTimeout The origin-pull receipt timeout (in seconds). Valid range: 10-300.
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetReceiveTimeout(const uint64_t& _receiveTimeout);
@@ -100,7 +100,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_connectTimeoutHasBeenSet;
 
                     /**
-                     * The origin-pull receipt timeout (in seconds). Valid range: 10-60.
+                     * The origin-pull receipt timeout (in seconds). Valid range: 10-300.
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     uint64_t m_receiveTimeout;

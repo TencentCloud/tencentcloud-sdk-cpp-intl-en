@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Cross-border origin-pull optimization configuration. This is disabled by default. (This feature is in beta and not generally available yet.)
+                * (Disused) Cross-border origin-pull optimization
                 */
                 class OriginPullOptimization : public AbstractModel
                 {

@@ -98,42 +98,42 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Filter list
+                     * 获取Filter list.
 <li>key-id</li>Filter by **key pair ID**.
 Type: String
 Required: no
-<li>key-name</li>Filter by **key pair name**.
+<li>key-name</li>Filter by the **key pair name**. Fuzzy match is supported.
 Type: String
 Required: no
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`. `KeyIds` and `Filters` cannot be specified at the same time.
-                     * @return Filters Filter list
+Each request can contain up to 10 `Filters` and up to 5 `Filter.Values` for each filter. `KeyIds` and `Filters` cannot be specified at the same time.
+                     * @return Filters Filter list.
 <li>key-id</li>Filter by **key pair ID**.
 Type: String
 Required: no
-<li>key-name</li>Filter by **key pair name**.
+<li>key-name</li>Filter by the **key pair name**. Fuzzy match is supported.
 Type: String
 Required: no
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`. `KeyIds` and `Filters` cannot be specified at the same time.
+Each request can contain up to 10 `Filters` and up to 5 `Filter.Values` for each filter. `KeyIds` and `Filters` cannot be specified at the same time.
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter list
+                     * 设置Filter list.
 <li>key-id</li>Filter by **key pair ID**.
 Type: String
 Required: no
-<li>key-name</li>Filter by **key pair name**.
+<li>key-name</li>Filter by the **key pair name**. Fuzzy match is supported.
 Type: String
 Required: no
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`. `KeyIds` and `Filters` cannot be specified at the same time.
-                     * @param Filters Filter list
+Each request can contain up to 10 `Filters` and up to 5 `Filter.Values` for each filter. `KeyIds` and `Filters` cannot be specified at the same time.
+                     * @param Filters Filter list.
 <li>key-id</li>Filter by **key pair ID**.
 Type: String
 Required: no
-<li>key-name</li>Filter by **key pair name**.
+<li>key-name</li>Filter by the **key pair name**. Fuzzy match is supported.
 Type: String
 Required: no
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`. `KeyIds` and `Filters` cannot be specified at the same time.
+Each request can contain up to 10 `Filters` and up to 5 `Filter.Values` for each filter. `KeyIds` and `Filters` cannot be specified at the same time.
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
@@ -164,14 +164,14 @@ Each request can contain up to 10 `Filters` and 5 `Filter.Values`. `KeyIds` and 
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Filter list
+                     * Filter list.
 <li>key-id</li>Filter by **key pair ID**.
 Type: String
 Required: no
-<li>key-name</li>Filter by **key pair name**.
+<li>key-name</li>Filter by the **key pair name**. Fuzzy match is supported.
 Type: String
 Required: no
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`. `KeyIds` and `Filters` cannot be specified at the same time.
+Each request can contain up to 10 `Filters` and up to 5 `Filter.Values` for each filter. `KeyIds` and `Filters` cannot be specified at the same time.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

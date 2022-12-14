@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tms/v20201229/model/Tag.h>
 
 
 namespace TencentCloud
@@ -87,18 +88,18 @@ Note: This field may return `null`, indicating that no valid value can be found.
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取This field returns the matched keywords. This parameter can include multiple returned values, which means multiple keywords are matched. If no keyword is returned but there is a `Score`, it means that the result of `Label` is determined by a semantic model.
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @return Keywords This field returns the matched keywords. This parameter can include multiple returned values, which means multiple keywords are matched. If no keyword is returned but there is a `Score`, it means that the result of `Label` is determined by a semantic model.
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 获取Returns the information of keywords hit in the text. When no value is returned and `Score` is not empty, it means the `Label` is determined by the semantic-based detection model.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Keywords Returns the information of keywords hit in the text. When no value is returned and `Score` is not empty, it means the `Label` is determined by the semantic-based detection model.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> GetKeywords() const;
 
                     /**
-                     * 设置This field returns the matched keywords. This parameter can include multiple returned values, which means multiple keywords are matched. If no keyword is returned but there is a `Score`, it means that the result of `Label` is determined by a semantic model.
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param Keywords This field returns the matched keywords. This parameter can include multiple returned values, which means multiple keywords are matched. If no keyword is returned but there is a `Score`, it means that the result of `Label` is determined by a semantic model.
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 设置Returns the information of keywords hit in the text. When no value is returned and `Score` is not empty, it means the `Label` is determined by the semantic-based detection model.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Keywords Returns the information of keywords hit in the text. When no value is returned and `Score` is not empty, it means the `Label` is determined by the semantic-based detection model.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetKeywords(const std::vector<std::string>& _keywords);
 
@@ -218,6 +219,28 @@ Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     bool SubLabelHasBeenSet() const;
 
+                    /**
+                     * 获取Returns the keywords, label, sub-label and the score.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Tags Returns the keywords, label, sub-label and the score.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 设置Returns the keywords, label, sub-label and the score.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Tags Returns the keywords, label, sub-label and the score.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -234,8 +257,8 @@ Note: This field may return `null`, indicating that no valid value can be found.
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * This field returns the matched keywords. This parameter can include multiple returned values, which means multiple keywords are matched. If no keyword is returned but there is a `Score`, it means that the result of `Label` is determined by a semantic model.
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * Returns the information of keywords hit in the text. When no value is returned and `Score` is not empty, it means the `Label` is determined by the semantic-based detection model.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_keywords;
                     bool m_keywordsHasBeenSet;
@@ -274,6 +297,13 @@ Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     std::string m_subLabel;
                     bool m_subLabelHasBeenSet;
+
+                    /**
+                     * Returns the keywords, label, sub-label and the score.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
 
                 };
             }

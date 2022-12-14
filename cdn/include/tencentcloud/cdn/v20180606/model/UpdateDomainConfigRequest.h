@@ -409,14 +409,14 @@ namespace TencentCloud
                     bool CacheHasBeenSet() const;
 
                     /**
-                     * 获取Cross-border linkage optimization configuration
-                     * @return OriginPullOptimization Cross-border linkage optimization configuration
+                     * 获取(Disused) Cross-border linkage optimization\
+                     * @return OriginPullOptimization (Disused) Cross-border linkage optimization\
                      */
                     OriginPullOptimization GetOriginPullOptimization() const;
 
                     /**
-                     * 设置Cross-border linkage optimization configuration
-                     * @param OriginPullOptimization Cross-border linkage optimization configuration
+                     * 设置(Disused) Cross-border linkage optimization\
+                     * @param OriginPullOptimization (Disused) Cross-border linkage optimization\
                      */
                     void SetOriginPullOptimization(const OriginPullOptimization& _originPullOptimization);
 
@@ -1073,7 +1073,7 @@ After switching to global acceleration, configurations of the domain name will b
                     bool m_cacheHasBeenSet;
 
                     /**
-                     * Cross-border linkage optimization configuration
+                     * (Disused) Cross-border linkage optimization\
                      */
                     OriginPullOptimization m_originPullOptimization;
                     bool m_originPullOptimizationHasBeenSet;

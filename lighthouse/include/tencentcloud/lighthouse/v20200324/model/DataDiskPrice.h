@@ -136,6 +136,28 @@ namespace TencentCloud
                      */
                     bool DiscountPriceHasBeenSet() const;
 
+                    /**
+                     * 获取ID of the instance to which the data disk is mounted.
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return InstanceId ID of the instance to which the data disk is mounted.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string GetInstanceId() const;
+
+                    /**
+                     * 设置ID of the instance to which the data disk is mounted.
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param InstanceId ID of the instance to which the data disk is mounted.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetInstanceId(const std::string& _instanceId);
+
+                    /**
+                     * 判断参数 InstanceId 是否已赋值
+                     * @return InstanceId 是否已赋值
+                     */
+                    bool InstanceIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -167,6 +189,13 @@ namespace TencentCloud
                      */
                     double m_discountPrice;
                     bool m_discountPriceHasBeenSet;
+
+                    /**
+                     * ID of the instance to which the data disk is mounted.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string m_instanceId;
+                    bool m_instanceIdHasBeenSet;
 
                 };
             }
