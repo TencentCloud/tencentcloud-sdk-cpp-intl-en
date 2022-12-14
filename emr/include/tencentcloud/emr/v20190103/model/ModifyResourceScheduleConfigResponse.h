@@ -69,6 +69,20 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool ErrorMsgHasBeenSet() const;
 
+                    /**
+                     * 获取The response data.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Data The response data.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetData() const;
+
+                    /**
+                     * 判断参数 Data 是否已赋值
+                     * @return Data 是否已赋值
+                     */
+                    bool DataHasBeenSet() const;
+
                 private:
 
                     /**
@@ -83,6 +97,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     std::string m_errorMsg;
                     bool m_errorMsgHasBeenSet;
+
+                    /**
+                     * The response data.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_data;
+                    bool m_dataHasBeenSet;
 
                 };
             }

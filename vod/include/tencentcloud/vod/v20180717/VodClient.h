@@ -45,6 +45,8 @@
 #include <tencentcloud/vod/v20180717/model/CreateClassResponse.h>
 #include <tencentcloud/vod/v20180717/model/CreateContentReviewTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/CreateContentReviewTemplateResponse.h>
+#include <tencentcloud/vod/v20180717/model/CreateImageProcessingTemplateRequest.h>
+#include <tencentcloud/vod/v20180717/model/CreateImageProcessingTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/CreateImageSpriteTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/CreateImageSpriteTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/CreatePersonSampleRequest.h>
@@ -81,6 +83,8 @@
 #include <tencentcloud/vod/v20180717/model/DeleteClassResponse.h>
 #include <tencentcloud/vod/v20180717/model/DeleteContentReviewTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/DeleteContentReviewTemplateResponse.h>
+#include <tencentcloud/vod/v20180717/model/DeleteImageProcessingTemplateRequest.h>
+#include <tencentcloud/vod/v20180717/model/DeleteImageProcessingTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/DeleteImageSpriteTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/DeleteImageSpriteTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/DeleteMediaRequest.h>
@@ -127,6 +131,8 @@
 #include <tencentcloud/vod/v20180717/model/DescribeDailyPlayStatFileListResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeDrmKeyProviderInfoRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeDrmKeyProviderInfoResponse.h>
+#include <tencentcloud/vod/v20180717/model/DescribeImageProcessingTemplatesRequest.h>
+#include <tencentcloud/vod/v20180717/model/DescribeImageProcessingTemplatesResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeImageReviewUsageDataRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeImageReviewUsageDataResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeImageSpriteTemplatesRequest.h>
@@ -300,6 +306,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateContentReviewTemplateResponse> CreateContentReviewTemplateOutcome;
                 typedef std::future<CreateContentReviewTemplateOutcome> CreateContentReviewTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CreateContentReviewTemplateRequest&, CreateContentReviewTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateContentReviewTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateImageProcessingTemplateResponse> CreateImageProcessingTemplateOutcome;
+                typedef std::future<CreateImageProcessingTemplateOutcome> CreateImageProcessingTemplateOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::CreateImageProcessingTemplateRequest&, CreateImageProcessingTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateImageProcessingTemplateAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateImageSpriteTemplateResponse> CreateImageSpriteTemplateOutcome;
                 typedef std::future<CreateImageSpriteTemplateOutcome> CreateImageSpriteTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CreateImageSpriteTemplateRequest&, CreateImageSpriteTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateImageSpriteTemplateAsyncHandler;
@@ -354,6 +363,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteContentReviewTemplateResponse> DeleteContentReviewTemplateOutcome;
                 typedef std::future<DeleteContentReviewTemplateOutcome> DeleteContentReviewTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DeleteContentReviewTemplateRequest&, DeleteContentReviewTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteContentReviewTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteImageProcessingTemplateResponse> DeleteImageProcessingTemplateOutcome;
+                typedef std::future<DeleteImageProcessingTemplateOutcome> DeleteImageProcessingTemplateOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::DeleteImageProcessingTemplateRequest&, DeleteImageProcessingTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteImageProcessingTemplateAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteImageSpriteTemplateResponse> DeleteImageSpriteTemplateOutcome;
                 typedef std::future<DeleteImageSpriteTemplateOutcome> DeleteImageSpriteTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DeleteImageSpriteTemplateRequest&, DeleteImageSpriteTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteImageSpriteTemplateAsyncHandler;
@@ -423,6 +435,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeDrmKeyProviderInfoResponse> DescribeDrmKeyProviderInfoOutcome;
                 typedef std::future<DescribeDrmKeyProviderInfoOutcome> DescribeDrmKeyProviderInfoOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeDrmKeyProviderInfoRequest&, DescribeDrmKeyProviderInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDrmKeyProviderInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeImageProcessingTemplatesResponse> DescribeImageProcessingTemplatesOutcome;
+                typedef std::future<DescribeImageProcessingTemplatesOutcome> DescribeImageProcessingTemplatesOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::DescribeImageProcessingTemplatesRequest&, DescribeImageProcessingTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeImageProcessingTemplatesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeImageReviewUsageDataResponse> DescribeImageReviewUsageDataOutcome;
                 typedef std::future<DescribeImageReviewUsageDataOutcome> DescribeImageReviewUsageDataOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeImageReviewUsageDataRequest&, DescribeImageReviewUsageDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeImageReviewUsageDataAsyncHandler;
@@ -732,6 +747,15 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
                 CreateContentReviewTemplateOutcomeCallable CreateContentReviewTemplateCallable(const Model::CreateContentReviewTemplateRequest& request);
 
                 /**
+                 *This API is used to create a custom image processing template. You can create up to 16 templates, and each template can contain up to three operations, for example, cropping, scaling, and cropping again.
+                 * @param req CreateImageProcessingTemplateRequest
+                 * @return CreateImageProcessingTemplateOutcome
+                 */
+                CreateImageProcessingTemplateOutcome CreateImageProcessingTemplate(const Model::CreateImageProcessingTemplateRequest &request);
+                void CreateImageProcessingTemplateAsync(const Model::CreateImageProcessingTemplateRequest& request, const CreateImageProcessingTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateImageProcessingTemplateOutcomeCallable CreateImageProcessingTemplateCallable(const Model::CreateImageProcessingTemplateRequest& request);
+
+                /**
                  *This API is used to create a custom image sprite generating template. Up to 16 templates can be created.
                  * @param req CreateImageSpriteTemplateRequest
                  * @return CreateImageSpriteTemplateOutcome
@@ -899,6 +923,15 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DeleteContentReviewTemplateOutcome DeleteContentReviewTemplate(const Model::DeleteContentReviewTemplateRequest &request);
                 void DeleteContentReviewTemplateAsync(const Model::DeleteContentReviewTemplateRequest& request, const DeleteContentReviewTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteContentReviewTemplateOutcomeCallable DeleteContentReviewTemplateCallable(const Model::DeleteContentReviewTemplateRequest& request);
+
+                /**
+                 *This API is used to delete an image processing template.
+                 * @param req DeleteImageProcessingTemplateRequest
+                 * @return DeleteImageProcessingTemplateOutcome
+                 */
+                DeleteImageProcessingTemplateOutcome DeleteImageProcessingTemplate(const Model::DeleteImageProcessingTemplateRequest &request);
+                void DeleteImageProcessingTemplateAsync(const Model::DeleteImageProcessingTemplateRequest& request, const DeleteImageProcessingTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteImageProcessingTemplateOutcomeCallable DeleteImageProcessingTemplateCallable(const Model::DeleteImageProcessingTemplateRequest& request);
 
                 /**
                  *This API is used to delete an image sprite generating template.
@@ -1132,6 +1165,15 @@ This API is used to delete a player configuration.
                 DescribeDrmKeyProviderInfoOutcome DescribeDrmKeyProviderInfo(const Model::DescribeDrmKeyProviderInfoRequest &request);
                 void DescribeDrmKeyProviderInfoAsync(const Model::DescribeDrmKeyProviderInfoRequest& request, const DescribeDrmKeyProviderInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeDrmKeyProviderInfoOutcomeCallable DescribeDrmKeyProviderInfoCallable(const Model::DescribeDrmKeyProviderInfoRequest& request);
+
+                /**
+                 *This API is used to query image processing templates. You can specify the filters as well as the offset to start returning records from.
+                 * @param req DescribeImageProcessingTemplatesRequest
+                 * @return DescribeImageProcessingTemplatesOutcome
+                 */
+                DescribeImageProcessingTemplatesOutcome DescribeImageProcessingTemplates(const Model::DescribeImageProcessingTemplatesRequest &request);
+                void DescribeImageProcessingTemplatesAsync(const Model::DescribeImageProcessingTemplatesRequest& request, const DescribeImageProcessingTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeImageProcessingTemplatesOutcomeCallable DescribeImageProcessingTemplatesCallable(const Model::DescribeImageProcessingTemplatesRequest& request);
 
                 /**
                  *This API is used to query your daily usage of the image recognition feature in a specified time period.
@@ -1661,17 +1703,11 @@ This API is used to modify a player configuration.
 5. Image sprite generating
 6. Taking a screenshot to use as the thumbnail
 7. Adaptive bitrate streaming and encryption
-8. Intelligent recognition of pornographic, terrorism, and politically sensitive content
-9. Intelligent content analysis for labeling, categorization, thumbnail generation, or frame-specific labeling
-10. Recognition of opening and closing credits, faces, full text, text keywords, full speech, speech keywords, and objects
+8. Detecting pornographic, terrorist, and politically sensitive content
+9. Content analysis for labeling, categorization, thumbnail generation, or frame-specific labeling
+10. Recognition of opening and closing segments, faces, full text, text keywords, full speech, speech keywords, and objects
 
 If event notifications are used, the event type is [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1).
-
-A digital watermark has the following restrictions:
-<li>Digital watermarks can only be image watermarks.</li>
-<li>Digital watermarks must be looped.</li>
-<li>If you use digital watermarks, the output video must be in HLS format.</li>
-<li>Digital watermarks can only be displayed in the upper half of a video.</li>
                  * @param req ProcessMediaRequest
                  * @return ProcessMediaOutcome
                  */

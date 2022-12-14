@@ -164,6 +164,24 @@ namespace TencentCloud
                      */
                     bool CurrencyHasBeenSet() const;
 
+                    /**
+                     * 获取The resource ID list for batch configuration change.
+                     * @return ResourceIdList The resource ID list for batch configuration change.
+                     */
+                    std::vector<std::string> GetResourceIdList() const;
+
+                    /**
+                     * 设置The resource ID list for batch configuration change.
+                     * @param ResourceIdList The resource ID list for batch configuration change.
+                     */
+                    void SetResourceIdList(const std::vector<std::string>& _resourceIdList);
+
+                    /**
+                     * 判断参数 ResourceIdList 是否已赋值
+                     * @return ResourceIdList 是否已赋值
+                     */
+                    bool ResourceIdListHasBeenSet() const;
+
                 private:
 
                     /**
@@ -204,6 +222,12 @@ namespace TencentCloud
                      */
                     std::string m_currency;
                     bool m_currencyHasBeenSet;
+
+                    /**
+                     * The resource ID list for batch configuration change.
+                     */
+                    std::vector<std::string> m_resourceIdList;
+                    bool m_resourceIdListHasBeenSet;
 
                 };
             }

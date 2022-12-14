@@ -180,6 +180,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool SubnetIdHasBeenSet() const;
 
+                    /**
+                     * 获取Database connection protocol type. Valid values: `postgresql`, `mssql` (MSSQL-compatible)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ProtocolType Database connection protocol type. Valid values: `postgresql`, `mssql` (MSSQL-compatible)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetProtocolType() const;
+
+                    /**
+                     * 设置Database connection protocol type. Valid values: `postgresql`, `mssql` (MSSQL-compatible)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ProtocolType Database connection protocol type. Valid values: `postgresql`, `mssql` (MSSQL-compatible)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetProtocolType(const std::string& _protocolType);
+
+                    /**
+                     * 判断参数 ProtocolType 是否已赋值
+                     * @return ProtocolType 是否已赋值
+                     */
+                    bool ProtocolTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -225,6 +247,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
+
+                    /**
+                     * Database connection protocol type. Valid values: `postgresql`, `mssql` (MSSQL-compatible)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_protocolType;
+                    bool m_protocolTypeHasBeenSet;
 
                 };
             }

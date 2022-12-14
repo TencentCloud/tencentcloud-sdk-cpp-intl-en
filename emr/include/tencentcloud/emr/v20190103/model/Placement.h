@@ -47,32 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` field in the return value of the `DescribeProject` API. If 0 is entered, the default project will be used.
-                     * @return ProjectId ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` field in the return value of the `DescribeProject` API. If 0 is entered, the default project will be used.
-                     */
-                    int64_t GetProjectId() const;
-
-                    /**
-                     * 设置ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` field in the return value of the `DescribeProject` API. If 0 is entered, the default project will be used.
-                     * @param ProjectId ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` field in the return value of the `DescribeProject` API. If 0 is entered, the default project will be used.
-                     */
-                    void SetProjectId(const int64_t& _projectId);
-
-                    /**
-                     * 判断参数 ProjectId 是否已赋值
-                     * @return ProjectId 是否已赋值
-                     */
-                    bool ProjectIdHasBeenSet() const;
-
-                    /**
-                     * 获取AZ where the instance resides, such as ap-guangzhou-1. You can call the `DescribeZones` API and see the `Zone` field to get the value of this parameter.
-                     * @return Zone AZ where the instance resides, such as ap-guangzhou-1. You can call the `DescribeZones` API and see the `Zone` field to get the value of this parameter.
+                     * 获取The ID of the availability zone where the instance resides, such as `ap-guangzhou-1`. You can call the [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1) API and obtain this ID from the `Zone` field in the response.
+                     * @return Zone The ID of the availability zone where the instance resides, such as `ap-guangzhou-1`. You can call the [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1) API and obtain this ID from the `Zone` field in the response.
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置AZ where the instance resides, such as ap-guangzhou-1. You can call the `DescribeZones` API and see the `Zone` field to get the value of this parameter.
-                     * @param Zone AZ where the instance resides, such as ap-guangzhou-1. You can call the `DescribeZones` API and see the `Zone` field to get the value of this parameter.
+                     * 设置The ID of the availability zone where the instance resides, such as `ap-guangzhou-1`. You can call the [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1) API and obtain this ID from the `Zone` field in the response.
+                     * @param Zone The ID of the availability zone where the instance resides, such as `ap-guangzhou-1`. You can call the [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1) API and obtain this ID from the `Zone` field in the response.
                      */
                     void SetZone(const std::string& _zone);
 
@@ -82,19 +64,37 @@ namespace TencentCloud
                      */
                     bool ZoneHasBeenSet() const;
 
+                    /**
+                     * 获取The ID of the project to which the instance belongs. You can call the [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) and obtain this ID from the `projectId` field in the response. If this is left empty, the ID of the default project is used.
+                     * @return ProjectId The ID of the project to which the instance belongs. You can call the [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) and obtain this ID from the `projectId` field in the response. If this is left empty, the ID of the default project is used.
+                     */
+                    int64_t GetProjectId() const;
+
+                    /**
+                     * 设置The ID of the project to which the instance belongs. You can call the [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) and obtain this ID from the `projectId` field in the response. If this is left empty, the ID of the default project is used.
+                     * @param ProjectId The ID of the project to which the instance belongs. You can call the [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) and obtain this ID from the `projectId` field in the response. If this is left empty, the ID of the default project is used.
+                     */
+                    void SetProjectId(const int64_t& _projectId);
+
+                    /**
+                     * 判断参数 ProjectId 是否已赋值
+                     * @return ProjectId 是否已赋值
+                     */
+                    bool ProjectIdHasBeenSet() const;
+
                 private:
 
                     /**
-                     * ID of the project to which the instance belongs. This parameter can be obtained from the `projectId` field in the return value of the `DescribeProject` API. If 0 is entered, the default project will be used.
-                     */
-                    int64_t m_projectId;
-                    bool m_projectIdHasBeenSet;
-
-                    /**
-                     * AZ where the instance resides, such as ap-guangzhou-1. You can call the `DescribeZones` API and see the `Zone` field to get the value of this parameter.
+                     * The ID of the availability zone where the instance resides, such as `ap-guangzhou-1`. You can call the [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1) API and obtain this ID from the `Zone` field in the response.
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
+
+                    /**
+                     * The ID of the project to which the instance belongs. You can call the [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) and obtain this ID from the `projectId` field in the response. If this is left empty, the ID of the default project is used.
+                     */
+                    int64_t m_projectId;
+                    bool m_projectIdHasBeenSet;
 
                 };
             }

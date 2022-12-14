@@ -19,6 +19,7 @@ set(emr_public_header
   )
 
 set(emr_public_header_model
+  include/tencentcloud/emr/v20190103/model/ScaleOutInstanceRequest.h
   include/tencentcloud/emr/v20190103/model/MultiDiskMC.h
   include/tencentcloud/emr/v20190103/model/AddUsersForUserManagerRequest.h
   include/tencentcloud/emr/v20190103/model/ModifyResourceSchedulerRequest.h
@@ -90,11 +91,12 @@ set(emr_public_header_model
   include/tencentcloud/emr/v20190103/model/InquiryPriceRenewInstanceRequest.h
   include/tencentcloud/emr/v20190103/model/DescribeResourceScheduleResponse.h
   include/tencentcloud/emr/v20190103/model/CdbInfo.h
-  include/tencentcloud/emr/v20190103/model/ScaleOutInstanceRequest.h
+  include/tencentcloud/emr/v20190103/model/PriceDetail.h
   )
 
 set(emr_src
   src/v20190103/EmrClient.cpp
+  src/v20190103/model/ScaleOutInstanceRequest.cpp
   src/v20190103/model/MultiDiskMC.cpp
   src/v20190103/model/AddUsersForUserManagerRequest.cpp
   src/v20190103/model/ModifyResourceSchedulerRequest.cpp
@@ -166,7 +168,7 @@ set(emr_src
   src/v20190103/model/InquiryPriceRenewInstanceRequest.cpp
   src/v20190103/model/DescribeResourceScheduleResponse.cpp
   src/v20190103/model/CdbInfo.cpp
-  src/v20190103/model/ScaleOutInstanceRequest.cpp
+  src/v20190103/model/PriceDetail.cpp
   )
 
 set(emr_include

@@ -145,7 +145,7 @@ This API is used to add user lists (user management).
                 CreateInstanceOutcomeCallable CreateInstanceCallable(const Model::CreateInstanceRequest& request);
 
                 /**
-                 *This API is used to query the information of a hardware node.
+                 *This API is used to query the information of nodes in a cluster.
                  * @param req DescribeClusterNodesRequest
                  * @return DescribeClusterNodesOutcome
                  */
@@ -163,7 +163,7 @@ This API is used to add user lists (user management).
                 DescribeEmrApplicationStaticsOutcomeCallable DescribeEmrApplicationStaticsCallable(const Model::DescribeEmrApplicationStaticsRequest& request);
 
                 /**
-                 *This API is used to query EMR instances.
+                 *This API is used to query the information of instances in a cluster.
                  * @param req DescribeInstancesRequest
                  * @return DescribeInstancesOutcome
                  */
@@ -172,7 +172,7 @@ This API is used to add user lists (user management).
                 DescribeInstancesOutcomeCallable DescribeInstancesCallable(const Model::DescribeInstancesRequest& request);
 
                 /**
-                 *This API is used to query EMR cluster instances.
+                 *This API is used to query the cluster list.
                  * @param req DescribeInstancesListRequest
                  * @return DescribeInstancesListOutcome
                  */
@@ -181,7 +181,7 @@ This API is used to add user lists (user management).
                 DescribeInstancesListOutcomeCallable DescribeInstancesListCallable(const Model::DescribeInstancesListRequest& request);
 
                 /**
-                 *This API is used to get data from the YARN Resource Scheduling page.
+                 *This API is used to query the data of YARN Resource Scheduling.
                  * @param req DescribeResourceScheduleRequest
                  * @return DescribeResourceScheduleOutcome
                  */

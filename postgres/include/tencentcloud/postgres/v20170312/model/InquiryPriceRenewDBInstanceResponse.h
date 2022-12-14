@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total cost before discount; for example, 24650 indicates 246.5 CNY
-                     * @return OriginalPrice Total cost before discount; for example, 24650 indicates 246.5 CNY
+                     * 获取Published price in cents. For example, 24650 indicates 246.5 USD.
+                     * @return OriginalPrice Published price in cents. For example, 24650 indicates 246.5 USD.
                      */
                     int64_t GetOriginalPrice() const;
 
@@ -56,8 +56,8 @@ namespace TencentCloud
                     bool OriginalPriceHasBeenSet() const;
 
                     /**
-                     * 获取Actual amount payable; for example, 24650 indicates 246.5 CNY
-                     * @return Price Actual amount payable; for example, 24650 indicates 246.5 CNY
+                     * 获取Discounted total amount. For example, 24650 indicates 246.5 USD.
+                     * @return Price Discounted total amount. For example, 24650 indicates 246.5 USD.
                      */
                     int64_t GetPrice() const;
 
@@ -82,13 +82,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total cost before discount; for example, 24650 indicates 246.5 CNY
+                     * Published price in cents. For example, 24650 indicates 246.5 USD.
                      */
                     int64_t m_originalPrice;
                     bool m_originalPriceHasBeenSet;
 
                     /**
-                     * Actual amount payable; for example, 24650 indicates 246.5 CNY
+                     * Discounted total amount. For example, 24650 indicates 246.5 USD.
                      */
                     int64_t m_price;
                     bool m_priceHasBeenSet;

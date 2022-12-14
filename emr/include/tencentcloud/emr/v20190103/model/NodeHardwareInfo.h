@@ -1106,6 +1106,50 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ServiceClientHasBeenSet() const;
 
+                    /**
+                     * 获取Enabling instance protection for this instance. Valid values: `true` (enable) and `false` (disable).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DisableApiTermination Enabling instance protection for this instance. Valid values: `true` (enable) and `false` (disable).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool GetDisableApiTermination() const;
+
+                    /**
+                     * 设置Enabling instance protection for this instance. Valid values: `true` (enable) and `false` (disable).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param DisableApiTermination Enabling instance protection for this instance. Valid values: `true` (enable) and `false` (disable).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetDisableApiTermination(const bool& _disableApiTermination);
+
+                    /**
+                     * 判断参数 DisableApiTermination 是否已赋值
+                     * @return DisableApiTermination 是否已赋值
+                     */
+                    bool DisableApiTerminationHasBeenSet() const;
+
+                    /**
+                     * 获取The billing version. Valid values: `0` (original billing) and `1` (new billing)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TradeVersion The billing version. Valid values: `0` (original billing) and `1` (new billing)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetTradeVersion() const;
+
+                    /**
+                     * 设置The billing version. Valid values: `0` (original billing) and `1` (new billing)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param TradeVersion The billing version. Valid values: `0` (original billing) and `1` (new billing)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetTradeVersion(const int64_t& _tradeVersion);
+
+                    /**
+                     * 判断参数 TradeVersion 是否已赋值
+                     * @return TradeVersion 是否已赋值
+                     */
+                    bool TradeVersionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1443,6 +1487,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_serviceClient;
                     bool m_serviceClientHasBeenSet;
+
+                    /**
+                     * Enabling instance protection for this instance. Valid values: `true` (enable) and `false` (disable).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool m_disableApiTermination;
+                    bool m_disableApiTerminationHasBeenSet;
+
+                    /**
+                     * The billing version. Valid values: `0` (original billing) and `1` (new billing)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_tradeVersion;
+                    bool m_tradeVersionHasBeenSet;
 
                 };
             }

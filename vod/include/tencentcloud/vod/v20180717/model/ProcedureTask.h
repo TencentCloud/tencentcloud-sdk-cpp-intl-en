@@ -427,6 +427,50 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool SessionIdHasBeenSet() const;
 
+                    /**
+                     * 获取The operator. Valid values:
+<li>`SYSTEM`: The task is triggered by the system.</li>
+                     * @return Operator The operator. Valid values:
+<li>`SYSTEM`: The task is triggered by the system.</li>
+                     */
+                    std::string GetOperator() const;
+
+                    /**
+                     * 设置The operator. Valid values:
+<li>`SYSTEM`: The task is triggered by the system.</li>
+                     * @param Operator The operator. Valid values:
+<li>`SYSTEM`: The task is triggered by the system.</li>
+                     */
+                    void SetOperator(const std::string& _operator);
+
+                    /**
+                     * 判断参数 Operator 是否已赋值
+                     * @return Operator 是否已赋值
+                     */
+                    bool OperatorHasBeenSet() const;
+
+                    /**
+                     * 获取The operation type. Valid values:
+<li>`TSC`: TSC-based smart bitrate reduction</li>
+                     * @return OperationType The operation type. Valid values:
+<li>`TSC`: TSC-based smart bitrate reduction</li>
+                     */
+                    std::string GetOperationType() const;
+
+                    /**
+                     * 设置The operation type. Valid values:
+<li>`TSC`: TSC-based smart bitrate reduction</li>
+                     * @param OperationType The operation type. Valid values:
+<li>`TSC`: TSC-based smart bitrate reduction</li>
+                     */
+                    void SetOperationType(const std::string& _operationType);
+
+                    /**
+                     * 判断参数 OperationType 是否已赋值
+                     * @return OperationType 是否已赋值
+                     */
+                    bool OperationTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -546,6 +590,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;
+
+                    /**
+                     * The operator. Valid values:
+<li>`SYSTEM`: The task is triggered by the system.</li>
+                     */
+                    std::string m_operator;
+                    bool m_operatorHasBeenSet;
+
+                    /**
+                     * The operation type. Valid values:
+<li>`TSC`: TSC-based smart bitrate reduction</li>
+                     */
+                    std::string m_operationType;
+                    bool m_operationTypeHasBeenSet;
 
                 };
             }

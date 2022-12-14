@@ -43,6 +43,7 @@
 #include <tencentcloud/vod/v20180717/model/ExtractTraceWatermarkTask.h>
 #include <tencentcloud/vod/v20180717/model/ReviewAudioVideoTask.h>
 #include <tencentcloud/vod/v20180717/model/ReduceMediaBitrateTask.h>
+#include <tencentcloud/vod/v20180717/model/DescribeFileAttributesTask.h>
 
 
 namespace TencentCloud
@@ -570,17 +571,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ReviewAudioVideoCompleteEventHasBeenSet() const;
 
                     /**
-                     * 获取The callback for the completion of bitrate reduction. This parameter is valid only if `EventType` is `ReduceMediaBitrateComplete`.
+                     * 获取This parameter is invalid now.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ReduceMediaBitrateCompleteEvent The callback for the completion of bitrate reduction. This parameter is valid only if `EventType` is `ReduceMediaBitrateComplete`.
+                     * @return ReduceMediaBitrateCompleteEvent This parameter is invalid now.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ReduceMediaBitrateTask GetReduceMediaBitrateCompleteEvent() const;
 
                     /**
-                     * 设置The callback for the completion of bitrate reduction. This parameter is valid only if `EventType` is `ReduceMediaBitrateComplete`.
+                     * 设置This parameter is invalid now.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ReduceMediaBitrateCompleteEvent The callback for the completion of bitrate reduction. This parameter is valid only if `EventType` is `ReduceMediaBitrateComplete`.
+                     * @param ReduceMediaBitrateCompleteEvent This parameter is invalid now.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetReduceMediaBitrateCompleteEvent(const ReduceMediaBitrateTask& _reduceMediaBitrateCompleteEvent);
@@ -590,6 +591,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return ReduceMediaBitrateCompleteEvent 是否已赋值
                      */
                     bool ReduceMediaBitrateCompleteEventHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return DescribeFileAttributesCompleteEvent 
+                     */
+                    DescribeFileAttributesTask GetDescribeFileAttributesCompleteEvent() const;
+
+                    /**
+                     * 设置
+                     * @param DescribeFileAttributesCompleteEvent 
+                     */
+                    void SetDescribeFileAttributesCompleteEvent(const DescribeFileAttributesTask& _describeFileAttributesCompleteEvent);
+
+                    /**
+                     * 判断参数 DescribeFileAttributesCompleteEvent 是否已赋值
+                     * @return DescribeFileAttributesCompleteEvent 是否已赋值
+                     */
+                    bool DescribeFileAttributesCompleteEventHasBeenSet() const;
 
                 private:
 
@@ -750,11 +769,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_reviewAudioVideoCompleteEventHasBeenSet;
 
                     /**
-                     * The callback for the completion of bitrate reduction. This parameter is valid only if `EventType` is `ReduceMediaBitrateComplete`.
+                     * This parameter is invalid now.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ReduceMediaBitrateTask m_reduceMediaBitrateCompleteEvent;
                     bool m_reduceMediaBitrateCompleteEventHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    DescribeFileAttributesTask m_describeFileAttributesCompleteEvent;
+                    bool m_describeFileAttributesCompleteEventHasBeenSet;
 
                 };
             }

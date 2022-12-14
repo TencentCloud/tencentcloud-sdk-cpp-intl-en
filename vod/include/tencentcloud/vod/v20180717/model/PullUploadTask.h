@@ -270,6 +270,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool SessionIdHasBeenSet() const;
 
+                    /**
+                     * 获取The progress of a pull and upload task. Value range: 0-100.
+                     * @return Progress The progress of a pull and upload task. Value range: 0-100.
+                     */
+                    int64_t GetProgress() const;
+
+                    /**
+                     * 设置The progress of a pull and upload task. Value range: 0-100.
+                     * @param Progress The progress of a pull and upload task. Value range: 0-100.
+                     */
+                    void SetProgress(const int64_t& _progress);
+
+                    /**
+                     * 判断参数 Progress 是否已赋值
+                     * @return Progress 是否已赋值
+                     */
+                    bool ProgressHasBeenSet() const;
+
                 private:
 
                     /**
@@ -343,6 +361,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;
+
+                    /**
+                     * The progress of a pull and upload task. Value range: 0-100.
+                     */
+                    int64_t m_progress;
+                    bool m_progressHasBeenSet;
 
                 };
             }

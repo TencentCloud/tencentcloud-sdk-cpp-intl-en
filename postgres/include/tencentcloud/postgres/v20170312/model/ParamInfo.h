@@ -24,6 +24,8 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/postgres/v20170312/model/ParamVersionRelation.h>
+#include <tencentcloud/postgres/v20170312/model/ParamSpecRelation.h>
 
 
 namespace TencentCloud
@@ -125,18 +127,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool ParamValueTypeHasBeenSet() const;
 
                     /**
-                     * 获取Value unit of the parameter. If the parameter has no unit, this field will return an empty string.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Unit Value unit of the parameter. If the parameter has no unit, this field will return an empty string.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Unit of the parameter value. If the parameter has no unit, this field will return null.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Unit Unit of the parameter value. If the parameter has no unit, this field will return null.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetUnit() const;
 
                     /**
-                     * 设置Value unit of the parameter. If the parameter has no unit, this field will return an empty string.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Unit Value unit of the parameter. If the parameter has no unit, this field will return an empty string.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Unit of the parameter value. If the parameter has no unit, this field will return null.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Unit Unit of the parameter value. If the parameter has no unit, this field will return null.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetUnit(const std::string& _unit);
 
@@ -191,28 +193,6 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool CurrentValueHasBeenSet() const;
 
                     /**
-                     * 获取Value range of the enum parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return EnumValue Value range of the enum parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     */
-                    std::vector<std::string> GetEnumValue() const;
-
-                    /**
-                     * 设置Value range of the enum parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param EnumValue Value range of the enum parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     */
-                    void SetEnumValue(const std::vector<std::string>& _enumValue);
-
-                    /**
-                     * 判断参数 EnumValue 是否已赋值
-                     * @return EnumValue 是否已赋值
-                     */
-                    bool EnumValueHasBeenSet() const;
-
-                    /**
                      * 获取The maximum value of the `integer` or `real` parameter
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Max The maximum value of the `integer` or `real` parameter
@@ -233,6 +213,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      * @return Max 是否已赋值
                      */
                     bool MaxHasBeenSet() const;
+
+                    /**
+                     * 获取Value range of the enum parameter
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return EnumValue Value range of the enum parameter
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> GetEnumValue() const;
+
+                    /**
+                     * 设置Value range of the enum parameter
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param EnumValue Value range of the enum parameter
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetEnumValue(const std::vector<std::string>& _enumValue);
+
+                    /**
+                     * 判断参数 EnumValue 是否已赋值
+                     * @return EnumValue 是否已赋值
+                     */
+                    bool EnumValueHasBeenSet() const;
 
                     /**
                      * 获取The minimum value of the `integer` or `real` parameter
@@ -432,6 +434,72 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool LastModifyTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Primary-standby constraint. Valid values: `0` (no constraint), `1` (The parameter value of the standby server must be greater than that of the primary server), `2` (The parameter value of the primary server must be greater than that of the standby server.)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return StandbyRelated Primary-standby constraint. Valid values: `0` (no constraint), `1` (The parameter value of the standby server must be greater than that of the primary server), `2` (The parameter value of the primary server must be greater than that of the standby server.)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetStandbyRelated() const;
+
+                    /**
+                     * 设置Primary-standby constraint. Valid values: `0` (no constraint), `1` (The parameter value of the standby server must be greater than that of the primary server), `2` (The parameter value of the primary server must be greater than that of the standby server.)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param StandbyRelated Primary-standby constraint. Valid values: `0` (no constraint), `1` (The parameter value of the standby server must be greater than that of the primary server), `2` (The parameter value of the primary server must be greater than that of the standby server.)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetStandbyRelated(const int64_t& _standbyRelated);
+
+                    /**
+                     * 判断参数 StandbyRelated 是否已赋值
+                     * @return StandbyRelated 是否已赋值
+                     */
+                    bool StandbyRelatedHasBeenSet() const;
+
+                    /**
+                     * 获取Associated parameter version information, which refers to the detailed parameter information of the kernel version.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return VersionRelationSet Associated parameter version information, which refers to the detailed parameter information of the kernel version.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<ParamVersionRelation> GetVersionRelationSet() const;
+
+                    /**
+                     * 设置Associated parameter version information, which refers to the detailed parameter information of the kernel version.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param VersionRelationSet Associated parameter version information, which refers to the detailed parameter information of the kernel version.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetVersionRelationSet(const std::vector<ParamVersionRelation>& _versionRelationSet);
+
+                    /**
+                     * 判断参数 VersionRelationSet 是否已赋值
+                     * @return VersionRelationSet 是否已赋值
+                     */
+                    bool VersionRelationSetHasBeenSet() const;
+
+                    /**
+                     * 获取Associated parameter specification information, which refers to the detailed parameter information of the specifications.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SpecRelationSet Associated parameter specification information, which refers to the detailed parameter information of the specifications.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<ParamSpecRelation> GetSpecRelationSet() const;
+
+                    /**
+                     * 设置Associated parameter specification information, which refers to the detailed parameter information of the specifications.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param SpecRelationSet Associated parameter specification information, which refers to the detailed parameter information of the specifications.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetSpecRelationSet(const std::vector<ParamSpecRelation>& _specRelationSet);
+
+                    /**
+                     * 判断参数 SpecRelationSet 是否已赋值
+                     * @return SpecRelationSet 是否已赋值
+                     */
+                    bool SpecRelationSetHasBeenSet() const;
+
                 private:
 
                     /**
@@ -459,8 +527,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_paramValueTypeHasBeenSet;
 
                     /**
-                     * Value unit of the parameter. If the parameter has no unit, this field will return an empty string.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Unit of the parameter value. If the parameter has no unit, this field will return null.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_unit;
                     bool m_unitHasBeenSet;
@@ -480,18 +548,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_currentValueHasBeenSet;
 
                     /**
-                     * Value range of the enum parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     */
-                    std::vector<std::string> m_enumValue;
-                    bool m_enumValueHasBeenSet;
-
-                    /**
                      * The maximum value of the `integer` or `real` parameter
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     double m_max;
                     bool m_maxHasBeenSet;
+
+                    /**
+                     * Value range of the enum parameter
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_enumValue;
+                    bool m_enumValueHasBeenSet;
 
                     /**
                      * The minimum value of the `integer` or `real` parameter
@@ -555,6 +623,27 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_lastModifyTime;
                     bool m_lastModifyTimeHasBeenSet;
+
+                    /**
+                     * Primary-standby constraint. Valid values: `0` (no constraint), `1` (The parameter value of the standby server must be greater than that of the primary server), `2` (The parameter value of the primary server must be greater than that of the standby server.)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_standbyRelated;
+                    bool m_standbyRelatedHasBeenSet;
+
+                    /**
+                     * Associated parameter version information, which refers to the detailed parameter information of the kernel version.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<ParamVersionRelation> m_versionRelationSet;
+                    bool m_versionRelationSetHasBeenSet;
+
+                    /**
+                     * Associated parameter specification information, which refers to the detailed parameter information of the specifications.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<ParamSpecRelation> m_specRelationSet;
+                    bool m_specRelationSetHasBeenSet;
 
                 };
             }

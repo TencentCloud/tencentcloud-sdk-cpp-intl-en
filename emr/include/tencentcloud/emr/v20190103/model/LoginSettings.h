@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Password
-                     * @return Password Password
+                     * 获取The login password of the instance, which contains 8 to 16 uppercase letters, lowercase letters, digits, and special characters (only !@%^*) and cannot start with a special character.
+                     * @return Password The login password of the instance, which contains 8 to 16 uppercase letters, lowercase letters, digits, and special characters (only !@%^*) and cannot start with a special character.
                      */
                     std::string GetPassword() const;
 
                     /**
-                     * 设置Password
-                     * @param Password Password
+                     * 设置The login password of the instance, which contains 8 to 16 uppercase letters, lowercase letters, digits, and special characters (only !@%^*) and cannot start with a special character.
+                     * @param Password The login password of the instance, which contains 8 to 16 uppercase letters, lowercase letters, digits, and special characters (only !@%^*) and cannot start with a special character.
                      */
                     void SetPassword(const std::string& _password);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool PasswordHasBeenSet() const;
 
                     /**
-                     * 获取Public Key
-                     * @return PublicKeyId Public Key
+                     * 获取The key ID. After an instance is associated with a key, you can access it with the private key in the key pair. You can call [DescribeKeyPairs](https://intl.cloud.tencent.com/document/api/213/15699?from_cn_redirect=1) to obtain `PublicKeyId`.
+                     * @return PublicKeyId The key ID. After an instance is associated with a key, you can access it with the private key in the key pair. You can call [DescribeKeyPairs](https://intl.cloud.tencent.com/document/api/213/15699?from_cn_redirect=1) to obtain `PublicKeyId`.
                      */
                     std::string GetPublicKeyId() const;
 
                     /**
-                     * 设置Public Key
-                     * @param PublicKeyId Public Key
+                     * 设置The key ID. After an instance is associated with a key, you can access it with the private key in the key pair. You can call [DescribeKeyPairs](https://intl.cloud.tencent.com/document/api/213/15699?from_cn_redirect=1) to obtain `PublicKeyId`.
+                     * @param PublicKeyId The key ID. After an instance is associated with a key, you can access it with the private key in the key pair. You can call [DescribeKeyPairs](https://intl.cloud.tencent.com/document/api/213/15699?from_cn_redirect=1) to obtain `PublicKeyId`.
                      */
                     void SetPublicKeyId(const std::string& _publicKeyId);
 
@@ -85,13 +85,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Password
+                     * The login password of the instance, which contains 8 to 16 uppercase letters, lowercase letters, digits, and special characters (only !@%^*) and cannot start with a special character.
                      */
                     std::string m_password;
                     bool m_passwordHasBeenSet;
 
                     /**
-                     * Public Key
+                     * The key ID. After an instance is associated with a key, you can access it with the private key in the key pair. You can call [DescribeKeyPairs](https://intl.cloud.tencent.com/document/api/213/15699?from_cn_redirect=1) to obtain `PublicKeyId`.
                      */
                     std::string m_publicKeyId;
                     bool m_publicKeyIdHasBeenSet;
