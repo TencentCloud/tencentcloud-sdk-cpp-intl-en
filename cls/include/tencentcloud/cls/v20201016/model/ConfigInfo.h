@@ -67,6 +67,28 @@ namespace TencentCloud
                     bool ConfigIdHasBeenSet() const;
 
                     /**
+                     * 获取Name of the collection rule configuration
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Name Name of the collection rule configuration
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetName() const;
+
+                    /**
+                     * 设置Name of the collection rule configuration
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Name Name of the collection rule configuration
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetName(const std::string& _name);
+
+                    /**
+                     * 判断参数 Name 是否已赋值
+                     * @return Name 是否已赋值
+                     */
+                    bool NameHasBeenSet() const;
+
+                    /**
                      * 获取Log formatting method
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return LogFormat Log formatting method
@@ -263,6 +285,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_configId;
                     bool m_configIdHasBeenSet;
+
+                    /**
+                     * Name of the collection rule configuration
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_name;
+                    bool m_nameHasBeenSet;
 
                     /**
                      * Log formatting method

@@ -44,14 +44,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Sync task ID
-                     * @return JobId Sync task ID
+                     * 获取Sync task ID, such as `sync-werwfs23`.
+                     * @return JobId Sync task ID, such as `sync-werwfs23`.
                      */
                     std::string GetJobId() const;
 
                     /**
-                     * 设置Sync task ID
-                     * @param JobId Sync task ID
+                     * 设置Sync task ID, such as `sync-werwfs23`.
+                     * @param JobId Sync task ID, such as `sync-werwfs23`.
                      */
                     void SetJobId(const std::string& _jobId);
 
@@ -244,7 +244,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Sync task ID
+                     * Sync task ID, such as `sync-werwfs23`.
                      */
                     std::string m_jobId;
                     bool m_jobIdHasBeenSet;

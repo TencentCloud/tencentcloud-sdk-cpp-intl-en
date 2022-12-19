@@ -69,6 +69,8 @@
 #include <tencentcloud/mariadb/v20170312/model/DescribeLogFileRetentionPeriodResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeOrdersRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeOrdersResponse.h>
+#include <tencentcloud/mariadb/v20170312/model/DescribePriceRequest.h>
+#include <tencentcloud/mariadb/v20170312/model/DescribePriceResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeProjectSecurityGroupsRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeProjectSecurityGroupsResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/DestroyDBInstanceRequest.h>
@@ -188,6 +190,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeOrdersResponse> DescribeOrdersOutcome;
                 typedef std::future<DescribeOrdersOutcome> DescribeOrdersOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::DescribeOrdersRequest&, DescribeOrdersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOrdersAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribePriceResponse> DescribePriceOutcome;
+                typedef std::future<DescribePriceOutcome> DescribePriceOutcomeCallable;
+                typedef std::function<void(const MariadbClient*, const Model::DescribePriceRequest&, DescribePriceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePriceAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeProjectSecurityGroupsResponse> DescribeProjectSecurityGroupsOutcome;
                 typedef std::future<DescribeProjectSecurityGroupsOutcome> DescribeProjectSecurityGroupsOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::DescribeProjectSecurityGroupsRequest&, DescribeProjectSecurityGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProjectSecurityGroupsAsyncHandler;
@@ -454,6 +459,15 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
                 DescribeOrdersOutcome DescribeOrders(const Model::DescribeOrdersRequest &request);
                 void DescribeOrdersAsync(const Model::DescribeOrdersRequest& request, const DescribeOrdersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeOrdersOutcomeCallable DescribeOrdersCallable(const Model::DescribeOrdersRequest& request);
+
+                /**
+                 *This API is used to query the instance price before you purchase it.
+                 * @param req DescribePriceRequest
+                 * @return DescribePriceOutcome
+                 */
+                DescribePriceOutcome DescribePrice(const Model::DescribePriceRequest &request);
+                void DescribePriceAsync(const Model::DescribePriceRequest& request, const DescribePriceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribePriceOutcomeCallable DescribePriceCallable(const Model::DescribePriceRequest& request);
 
                 /**
                  *This API is used to query the security group details of a project.

@@ -254,14 +254,14 @@ This parameter specifies the type of the stream displayed in the big window. If 
                     bool BackgroundImageRenderModeHasBeenSet() const;
 
                     /**
-                     * 获取The download URL of the default background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
-                     * @return DefaultSubBackgroundImage The download URL of the default background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
+                     * 获取The URL of the background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
+                     * @return DefaultSubBackgroundImage The URL of the background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
                      */
                     std::string GetDefaultSubBackgroundImage() const;
 
                     /**
-                     * 设置The download URL of the default background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
-                     * @param DefaultSubBackgroundImage The download URL of the default background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
+                     * 设置The URL of the background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
+                     * @param DefaultSubBackgroundImage The URL of the background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
                      */
                     void SetDefaultSubBackgroundImage(const std::string& _defaultSubBackgroundImage);
 
@@ -288,6 +288,42 @@ This parameter specifies the type of the stream displayed in the big window. If 
                      * @return WaterMarkList 是否已赋值
                      */
                     bool WaterMarkListHasBeenSet() const;
+
+                    /**
+                     * 获取The render mode to use when the aspect ratio of a video is different from that of the window. This parameter is invalid if a custom layout is used. It is defined the same as `RenderMode` in `MixLayoufList`.
+                     * @return RenderMode The render mode to use when the aspect ratio of a video is different from that of the window. This parameter is invalid if a custom layout is used. It is defined the same as `RenderMode` in `MixLayoufList`.
+                     */
+                    uint64_t GetRenderMode() const;
+
+                    /**
+                     * 设置The render mode to use when the aspect ratio of a video is different from that of the window. This parameter is invalid if a custom layout is used. It is defined the same as `RenderMode` in `MixLayoufList`.
+                     * @param RenderMode The render mode to use when the aspect ratio of a video is different from that of the window. This parameter is invalid if a custom layout is used. It is defined the same as `RenderMode` in `MixLayoufList`.
+                     */
+                    void SetRenderMode(const uint64_t& _renderMode);
+
+                    /**
+                     * 判断参数 RenderMode 是否已赋值
+                     * @return RenderMode 是否已赋值
+                     */
+                    bool RenderModeHasBeenSet() const;
+
+                    /**
+                     * 获取This parameter is valid only if the screen sharing layout is used. If you set it to `1`, the large video window will appear on the right and the small window on the left. The default value is `0`.
+                     * @return MaxResolutionUserAlign This parameter is valid only if the screen sharing layout is used. If you set it to `1`, the large video window will appear on the right and the small window on the left. The default value is `0`.
+                     */
+                    uint64_t GetMaxResolutionUserAlign() const;
+
+                    /**
+                     * 设置This parameter is valid only if the screen sharing layout is used. If you set it to `1`, the large video window will appear on the right and the small window on the left. The default value is `0`.
+                     * @param MaxResolutionUserAlign This parameter is valid only if the screen sharing layout is used. If you set it to `1`, the large video window will appear on the right and the small window on the left. The default value is `0`.
+                     */
+                    void SetMaxResolutionUserAlign(const uint64_t& _maxResolutionUserAlign);
+
+                    /**
+                     * 判断参数 MaxResolutionUserAlign 是否已赋值
+                     * @return MaxResolutionUserAlign 是否已赋值
+                     */
+                    bool MaxResolutionUserAlignHasBeenSet() const;
 
                 private:
 
@@ -355,7 +391,7 @@ This parameter specifies the type of the stream displayed in the big window. If 
                     bool m_backgroundImageRenderModeHasBeenSet;
 
                     /**
-                     * The download URL of the default background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
+                     * The URL of the background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
                      */
                     std::string m_defaultSubBackgroundImage;
                     bool m_defaultSubBackgroundImageHasBeenSet;
@@ -365,6 +401,18 @@ This parameter specifies the type of the stream displayed in the big window. If 
                      */
                     std::vector<WaterMark> m_waterMarkList;
                     bool m_waterMarkListHasBeenSet;
+
+                    /**
+                     * The render mode to use when the aspect ratio of a video is different from that of the window. This parameter is invalid if a custom layout is used. It is defined the same as `RenderMode` in `MixLayoufList`.
+                     */
+                    uint64_t m_renderMode;
+                    bool m_renderModeHasBeenSet;
+
+                    /**
+                     * This parameter is valid only if the screen sharing layout is used. If you set it to `1`, the large video window will appear on the right and the small window on the left. The default value is `0`.
+                     */
+                    uint64_t m_maxResolutionUserAlign;
+                    bool m_maxResolutionUserAlignHasBeenSet;
 
                 };
             }

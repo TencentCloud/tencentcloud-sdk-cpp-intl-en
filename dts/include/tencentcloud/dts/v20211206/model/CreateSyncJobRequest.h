@@ -152,14 +152,14 @@ namespace TencentCloud
                     bool SpecificationHasBeenSet() const;
 
                     /**
-                     * 获取Tag
-                     * @return Tags Tag
+                     * 获取Tag information
+                     * @return Tags Tag information
                      */
                     std::vector<TagItem> GetTags() const;
 
                     /**
-                     * 设置Tag
-                     * @param Tags Tag
+                     * 设置Tag information
+                     * @param Tags Tag information
                      */
                     void SetTags(const std::vector<TagItem>& _tags);
 
@@ -170,14 +170,14 @@ namespace TencentCloud
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Number of sync tasks
-                     * @return Count Number of sync tasks
+                     * 获取The number of sync tasks purchased at a time. Value range: [1, 10]. Default value: `1`.
+                     * @return Count The number of sync tasks purchased at a time. Value range: [1, 10]. Default value: `1`.
                      */
                     uint64_t GetCount() const;
 
                     /**
-                     * 设置Number of sync tasks
-                     * @param Count Number of sync tasks
+                     * 设置The number of sync tasks purchased at a time. Value range: [1, 10]. Default value: `1`.
+                     * @param Count The number of sync tasks purchased at a time. Value range: [1, 10]. Default value: `1`.
                      */
                     void SetCount(const uint64_t& _count);
 
@@ -188,14 +188,14 @@ namespace TencentCloud
                     bool CountHasBeenSet() const;
 
                     /**
-                     * 获取Auto-renewal flag
-                     * @return AutoRenew Auto-renewal flag
+                     * 获取Auto-renewal flag, which takes effect if `PayMode` is `PrePay`. Valid values: `1` (auto-renewal enabled); `0` (auto-renewal disabled). Default value: `0`.
+                     * @return AutoRenew Auto-renewal flag, which takes effect if `PayMode` is `PrePay`. Valid values: `1` (auto-renewal enabled); `0` (auto-renewal disabled). Default value: `0`.
                      */
                     uint64_t GetAutoRenew() const;
 
                     /**
-                     * 设置Auto-renewal flag
-                     * @param AutoRenew Auto-renewal flag
+                     * 设置Auto-renewal flag, which takes effect if `PayMode` is `PrePay`. Valid values: `1` (auto-renewal enabled); `0` (auto-renewal disabled). Default value: `0`.
+                     * @param AutoRenew Auto-renewal flag, which takes effect if `PayMode` is `PrePay`. Valid values: `1` (auto-renewal enabled); `0` (auto-renewal disabled). Default value: `0`.
                      */
                     void SetAutoRenew(const uint64_t& _autoRenew);
 
@@ -206,14 +206,14 @@ namespace TencentCloud
                     bool AutoRenewHasBeenSet() const;
 
                     /**
-                     * 获取Sync link specification
-                     * @return InstanceClass Sync link specification
+                     * 获取Sync link specification, such as `micro`, `small`, `medium`, and `large`. Default value: `medium`.
+                     * @return InstanceClass Sync link specification, such as `micro`, `small`, `medium`, and `large`. Default value: `medium`.
                      */
                     std::string GetInstanceClass() const;
 
                     /**
-                     * 设置Sync link specification
-                     * @param InstanceClass Sync link specification
+                     * 设置Sync link specification, such as `micro`, `small`, `medium`, and `large`. Default value: `medium`.
+                     * @param InstanceClass Sync link specification, such as `micro`, `small`, `medium`, and `large`. Default value: `medium`.
                      */
                     void SetInstanceClass(const std::string& _instanceClass);
 
@@ -224,14 +224,14 @@ namespace TencentCloud
                     bool InstanceClassHasBeenSet() const;
 
                     /**
-                     * 获取Sync link name
-                     * @return JobName Sync link name
+                     * 获取Sync task name
+                     * @return JobName Sync task name
                      */
                     std::string GetJobName() const;
 
                     /**
-                     * 设置Sync link name
-                     * @param JobName Sync link name
+                     * 设置Sync task name
+                     * @param JobName Sync task name
                      */
                     void SetJobName(const std::string& _jobName);
 
@@ -298,31 +298,31 @@ namespace TencentCloud
                     bool m_specificationHasBeenSet;
 
                     /**
-                     * Tag
+                     * Tag information
                      */
                     std::vector<TagItem> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Number of sync tasks
+                     * The number of sync tasks purchased at a time. Value range: [1, 10]. Default value: `1`.
                      */
                     uint64_t m_count;
                     bool m_countHasBeenSet;
 
                     /**
-                     * Auto-renewal flag
+                     * Auto-renewal flag, which takes effect if `PayMode` is `PrePay`. Valid values: `1` (auto-renewal enabled); `0` (auto-renewal disabled). Default value: `0`.
                      */
                     uint64_t m_autoRenew;
                     bool m_autoRenewHasBeenSet;
 
                     /**
-                     * Sync link specification
+                     * Sync link specification, such as `micro`, `small`, `medium`, and `large`. Default value: `medium`.
                      */
                     std::string m_instanceClass;
                     bool m_instanceClassHasBeenSet;
 
                     /**
-                     * Sync link name
+                     * Sync task name
                      */
                     std::string m_jobName;
                     bool m_jobNameHasBeenSet;

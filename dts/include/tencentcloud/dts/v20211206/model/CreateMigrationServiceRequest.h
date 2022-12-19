@@ -116,14 +116,14 @@ namespace TencentCloud
                     bool DstRegionHasBeenSet() const;
 
                     /**
-                     * 获取Instance specification. Valid values: `micro`, `small`, `medium`, `large`, `xlarge`, `2xlarge`.
-                     * @return InstanceClass Instance specification. Valid values: `micro`, `small`, `medium`, `large`, `xlarge`, `2xlarge`.
+                     * 获取Instance specification. Valid values: `small`, `medium`, `large`, `xlarge`, `2xlarge`.
+                     * @return InstanceClass Instance specification. Valid values: `small`, `medium`, `large`, `xlarge`, `2xlarge`.
                      */
                     std::string GetInstanceClass() const;
 
                     /**
-                     * 设置Instance specification. Valid values: `micro`, `small`, `medium`, `large`, `xlarge`, `2xlarge`.
-                     * @param InstanceClass Instance specification. Valid values: `micro`, `small`, `medium`, `large`, `xlarge`, `2xlarge`.
+                     * 设置Instance specification. Valid values: `small`, `medium`, `large`, `xlarge`, `2xlarge`.
+                     * @param InstanceClass Instance specification. Valid values: `small`, `medium`, `large`, `xlarge`, `2xlarge`.
                      */
                     void SetInstanceClass(const std::string& _instanceClass);
 
@@ -214,7 +214,7 @@ namespace TencentCloud
                     bool m_dstRegionHasBeenSet;
 
                     /**
-                     * Instance specification. Valid values: `micro`, `small`, `medium`, `large`, `xlarge`, `2xlarge`.
+                     * Instance specification. Valid values: `small`, `medium`, `large`, `xlarge`, `2xlarge`.
                      */
                     std::string m_instanceClass;
                     bool m_instanceClassHasBeenSet;

@@ -102,6 +102,28 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
+                     * 获取Cloud product identifier. If the logset is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AssumerName Cloud product identifier. If the logset is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetAssumerName() const;
+
+                    /**
+                     * 设置Cloud product identifier. If the logset is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param AssumerName Cloud product identifier. If the logset is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetAssumerName(const std::string& _assumerName);
+
+                    /**
+                     * 判断参数 AssumerName 是否已赋值
+                     * @return AssumerName 是否已赋值
+                     */
+                    bool AssumerNameHasBeenSet() const;
+
+                    /**
                      * 获取Tag bound to logset
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Tags Tag bound to logset
@@ -142,14 +164,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool TopicCountHasBeenSet() const;
 
                     /**
-                     * 获取If `AssumerUin` is not empty, it indicates the service provider who creates the logset
-                     * @return RoleName If `AssumerUin` is not empty, it indicates the service provider who creates the logset
+                     * 获取If `AssumerName` is not empty, it indicates the service provider who creates the logset.
+                     * @return RoleName If `AssumerName` is not empty, it indicates the service provider who creates the logset.
                      */
                     std::string GetRoleName() const;
 
                     /**
-                     * 设置If `AssumerUin` is not empty, it indicates the service provider who creates the logset
-                     * @param RoleName If `AssumerUin` is not empty, it indicates the service provider who creates the logset
+                     * 设置If `AssumerName` is not empty, it indicates the service provider who creates the logset.
+                     * @param RoleName If `AssumerName` is not empty, it indicates the service provider who creates the logset.
                      */
                     void SetRoleName(const std::string& _roleName);
 
@@ -180,6 +202,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_createTimeHasBeenSet;
 
                     /**
+                     * Cloud product identifier. If the logset is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_assumerName;
+                    bool m_assumerNameHasBeenSet;
+
+                    /**
                      * Tag bound to logset
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
@@ -193,7 +222,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_topicCountHasBeenSet;
 
                     /**
-                     * If `AssumerUin` is not empty, it indicates the service provider who creates the logset
+                     * If `AssumerName` is not empty, it indicates the service provider who creates the logset.
                      */
                     std::string m_roleName;
                     bool m_roleNameHasBeenSet;

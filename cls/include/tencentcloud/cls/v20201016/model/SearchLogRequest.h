@@ -238,6 +238,40 @@ The two response methods differ slightly in terms of encoding format. You are ad
                      */
                     bool UseNewAnalysisHasBeenSet() const;
 
+                    /**
+                     * 获取Indicates whether to sample raw logs before statistical analysis (`Query` includes SQL statements).
+`0`: Auto-sample.
+`0–1`: Sample by the specified sample rate, such as `0.02`.
+`1`: Precise analysis without sampling.
+Default value: `1`
+                     * @return SamplingRate Indicates whether to sample raw logs before statistical analysis (`Query` includes SQL statements).
+`0`: Auto-sample.
+`0–1`: Sample by the specified sample rate, such as `0.02`.
+`1`: Precise analysis without sampling.
+Default value: `1`
+                     */
+                    double GetSamplingRate() const;
+
+                    /**
+                     * 设置Indicates whether to sample raw logs before statistical analysis (`Query` includes SQL statements).
+`0`: Auto-sample.
+`0–1`: Sample by the specified sample rate, such as `0.02`.
+`1`: Precise analysis without sampling.
+Default value: `1`
+                     * @param SamplingRate Indicates whether to sample raw logs before statistical analysis (`Query` includes SQL statements).
+`0`: Auto-sample.
+`0–1`: Sample by the specified sample rate, such as `0.02`.
+`1`: Precise analysis without sampling.
+Default value: `1`
+                     */
+                    void SetSamplingRate(const double& _samplingRate);
+
+                    /**
+                     * 判断参数 SamplingRate 是否已赋值
+                     * @return SamplingRate 是否已赋值
+                     */
+                    bool SamplingRateHasBeenSet() const;
+
                 private:
 
                     /**
@@ -300,6 +334,16 @@ The two response methods differ slightly in terms of encoding format. You are ad
                      */
                     bool m_useNewAnalysis;
                     bool m_useNewAnalysisHasBeenSet;
+
+                    /**
+                     * Indicates whether to sample raw logs before statistical analysis (`Query` includes SQL statements).
+`0`: Auto-sample.
+`0–1`: Sample by the specified sample rate, such as `0.02`.
+`1`: Precise analysis without sampling.
+Default value: `1`
+                     */
+                    double m_samplingRate;
+                    bool m_samplingRateHasBeenSet;
 
                 };
             }

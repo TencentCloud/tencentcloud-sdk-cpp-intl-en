@@ -242,7 +242,7 @@ If the task status queried through the `DescribeMigrationJobs` API is ready (`St
                 ConfigureSyncJobOutcomeCallable ConfigureSyncJobCallable(const Model::ConfigureSyncJobRequest& request);
 
                 /**
-                 *This API is used to verify a sync task by checking required parameters and peripheral information.
+                 *This API is used to verify a sync task by checking required parameters and peripheral configuration.
                  * @param req CreateCheckSyncJobRequest
                  * @return CreateCheckSyncJobOutcome
                  */
@@ -290,7 +290,7 @@ After successful check, if the migration task needs to be modified, a new check 
                 CreateSyncJobOutcomeCallable CreateSyncJobCallable(const Model::CreateSyncJobRequest& request);
 
                 /**
-                 *This API is used to delete a data consistency check task.
+                 *This API is used to delete a data consistency check task, which can be called when the task status is `success`, `failed`, or `canceled`.
                  * @param req DeleteCompareTaskRequest
                  * @return DeleteCompareTaskOutcome
                  */
@@ -346,7 +346,7 @@ If the check fails, the cause can be queried. Modify the migration configuration
                 DescribeMigrationCheckJobOutcomeCallable DescribeMigrationCheckJobCallable(const Model::DescribeMigrationCheckJobRequest& request);
 
                 /**
-                 *This API is used to query the details of a data migration task.
+                 *This API is used to query the details of a migration task.
                  * @param req DescribeMigrationDetailRequest
                  * @return DescribeMigrationDetailOutcome
                  */
@@ -481,7 +481,7 @@ If the check fails, the cause can be queried. Modify the migration configuration
                 ResizeSyncJobOutcomeCallable ResizeSyncJobCallable(const Model::ResizeSyncJobRequest& request);
 
                 /**
-                 *This API is used to retry a failed Redis data migration task. Note that this operation will skip the check stage and directly start the task, just like by calling `StartMigrationJob`. After calling this API, you can call the `DescribeMigrationJobs` API to query the latest task status.
+                 *This API is used to retry an abnormal or failed Redis data migration task. Note that this operation will skip the check stage and directly start the task, just like by calling `StartMigrationJob`. After calling this API, you can call the `DescribeMigrationJobs` API to query the latest task status.
                  * @param req ResumeMigrateJobRequest
                  * @return ResumeMigrateJobOutcome
                  */
@@ -545,7 +545,7 @@ After calling this API, you can call the `DescribeMigrationJobs` API to query th
                 StopMigrateJobOutcomeCallable StopMigrateJobCallable(const Model::StopMigrateJobRequest& request);
 
                 /**
-                 *This API is used to stop a sync task.
+                 *This API is used to stop a sync task. After calling this API, you can call the `DescribeSyncJobs` API to query the latest task status.
                  * @param req StopSyncJobRequest
                  * @return StopSyncJobOutcome
                  */

@@ -1029,6 +1029,49 @@ MariadbClient::DescribeOrdersOutcomeCallable MariadbClient::DescribeOrdersCallab
     return task->get_future();
 }
 
+MariadbClient::DescribePriceOutcome MariadbClient::DescribePrice(const DescribePriceRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribePrice");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribePriceResponse rsp = DescribePriceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribePriceOutcome(rsp);
+        else
+            return DescribePriceOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribePriceOutcome(outcome.GetError());
+    }
+}
+
+void MariadbClient::DescribePriceAsync(const DescribePriceRequest& request, const DescribePriceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribePrice(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MariadbClient::DescribePriceOutcomeCallable MariadbClient::DescribePriceCallable(const DescribePriceRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribePriceOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribePrice(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 MariadbClient::DescribeProjectSecurityGroupsOutcome MariadbClient::DescribeProjectSecurityGroups(const DescribeProjectSecurityGroupsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeProjectSecurityGroups");

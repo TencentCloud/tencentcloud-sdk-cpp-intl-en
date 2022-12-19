@@ -119,17 +119,17 @@ namespace TencentCloud
                     bool FlowIdHasBeenSet() const;
 
                     /**
-                     * 获取This field is populated only for orders that create instances, indicating the ID of the created instance.
+                     * 获取The ID of the created instance, which is required only for the order that creates an instance.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceIds This field is populated only for orders that create instances, indicating the ID of the created instance.
+                     * @return InstanceIds The ID of the created instance, which is required only for the order that creates an instance.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置This field is populated only for orders that create instances, indicating the ID of the created instance.
+                     * 设置The ID of the created instance, which is required only for the order that creates an instance.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param InstanceIds This field is populated only for orders that create instances, indicating the ID of the created instance.
+                     * @param InstanceIds The ID of the created instance, which is required only for the order that creates an instance.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
@@ -185,7 +185,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_flowIdHasBeenSet;
 
                     /**
-                     * This field is populated only for orders that create instances, indicating the ID of the created instance.
+                     * The ID of the created instance, which is required only for the order that creates an instance.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_instanceIds;

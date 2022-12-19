@@ -530,6 +530,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool TmpTokenHasBeenSet() const;
 
+                    /**
+                     * 获取External role ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RoleExternalId External role ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetRoleExternalId() const;
+
+                    /**
+                     * 设置External role ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param RoleExternalId External role ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetRoleExternalId(const std::string& _roleExternalId);
+
+                    /**
+                     * 判断参数 RoleExternalId 是否已赋值
+                     * @return RoleExternalId 是否已赋值
+                     */
+                    bool RoleExternalIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -685,6 +707,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_tmpToken;
                     bool m_tmpTokenHasBeenSet;
+
+                    /**
+                     * External role ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_roleExternalId;
+                    bool m_roleExternalIdHasBeenSet;
 
                 };
             }

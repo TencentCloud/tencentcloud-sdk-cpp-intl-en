@@ -24,6 +24,8 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/mariadb/v20170312/model/DCNReplicaConfig.h>
+#include <tencentcloud/mariadb/v20170312/model/DCNReplicaStatus.h>
 
 
 namespace TencentCloud
@@ -370,6 +372,68 @@ namespace TencentCloud
                      */
                     bool InstanceTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Configuration information of DCN replication. This field is null for a primary instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ReplicaConfig Configuration information of DCN replication. This field is null for a primary instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    DCNReplicaConfig GetReplicaConfig() const;
+
+                    /**
+                     * 设置Configuration information of DCN replication. This field is null for a primary instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ReplicaConfig Configuration information of DCN replication. This field is null for a primary instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetReplicaConfig(const DCNReplicaConfig& _replicaConfig);
+
+                    /**
+                     * 判断参数 ReplicaConfig 是否已赋值
+                     * @return ReplicaConfig 是否已赋值
+                     */
+                    bool ReplicaConfigHasBeenSet() const;
+
+                    /**
+                     * 获取DCN replication status. This field is null for the primary instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ReplicaStatus DCN replication status. This field is null for the primary instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    DCNReplicaStatus GetReplicaStatus() const;
+
+                    /**
+                     * 设置DCN replication status. This field is null for the primary instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ReplicaStatus DCN replication status. This field is null for the primary instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetReplicaStatus(const DCNReplicaStatus& _replicaStatus);
+
+                    /**
+                     * 判断参数 ReplicaStatus 是否已赋值
+                     * @return ReplicaStatus 是否已赋值
+                     */
+                    bool ReplicaStatusHasBeenSet() const;
+
+                    /**
+                     * 获取Whether KMS is enabled.
+                     * @return EncryptStatus Whether KMS is enabled.
+                     */
+                    int64_t GetEncryptStatus() const;
+
+                    /**
+                     * 设置Whether KMS is enabled.
+                     * @param EncryptStatus Whether KMS is enabled.
+                     */
+                    void SetEncryptStatus(const int64_t& _encryptStatus);
+
+                    /**
+                     * 判断参数 EncryptStatus 是否已赋值
+                     * @return EncryptStatus 是否已赋值
+                     */
+                    bool EncryptStatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -479,6 +543,26 @@ namespace TencentCloud
                      */
                     int64_t m_instanceType;
                     bool m_instanceTypeHasBeenSet;
+
+                    /**
+                     * Configuration information of DCN replication. This field is null for a primary instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    DCNReplicaConfig m_replicaConfig;
+                    bool m_replicaConfigHasBeenSet;
+
+                    /**
+                     * DCN replication status. This field is null for the primary instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    DCNReplicaStatus m_replicaStatus;
+                    bool m_replicaStatusHasBeenSet;
+
+                    /**
+                     * Whether KMS is enabled.
+                     */
+                    int64_t m_encryptStatus;
+                    bool m_encryptStatusHasBeenSet;
 
                 };
             }

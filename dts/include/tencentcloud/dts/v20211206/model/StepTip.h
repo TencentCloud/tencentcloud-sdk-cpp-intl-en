@@ -134,6 +134,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool HelpDocHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the current step is skipped
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SkipInfo Whether the current step is skipped
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetSkipInfo() const;
+
+                    /**
+                     * 设置Whether the current step is skipped
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param SkipInfo Whether the current step is skipped
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetSkipInfo(const std::string& _skipInfo);
+
+                    /**
+                     * 判断参数 SkipInfo 是否已赋值
+                     * @return SkipInfo 是否已赋值
+                     */
+                    bool SkipInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -163,6 +185,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_helpDoc;
                     bool m_helpDocHasBeenSet;
+
+                    /**
+                     * Whether the current step is skipped
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_skipInfo;
+                    bool m_skipInfoHasBeenSet;
 
                 };
             }

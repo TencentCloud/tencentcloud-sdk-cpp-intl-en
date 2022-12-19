@@ -177,14 +177,14 @@ The default value is `0`, which means others.
                     bool SourceContextHasBeenSet() const;
 
                     /**
-                     * 获取The format of recording files saved to VOD. 0 (default): MP4; 1: HLS.
-                     * @return MediaType The format of recording files saved to VOD. 0 (default): MP4; 1: HLS.
+                     * 获取The format of recording files uploaded to VOD. `0` (default): MP4; `1`: HLS; `2`: AAC (valid only if `StreamType` is `1`).
+                     * @return MediaType The format of recording files uploaded to VOD. `0` (default): MP4; `1`: HLS; `2`: AAC (valid only if `StreamType` is `1`).
                      */
                     uint64_t GetMediaType() const;
 
                     /**
-                     * 设置The format of recording files saved to VOD. 0 (default): MP4; 1: HLS.
-                     * @param MediaType The format of recording files saved to VOD. 0 (default): MP4; 1: HLS.
+                     * 设置The format of recording files uploaded to VOD. `0` (default): MP4; `1`: HLS; `2`: AAC (valid only if `StreamType` is `1`).
+                     * @param MediaType The format of recording files uploaded to VOD. `0` (default): MP4; `1`: HLS; `2`: AAC (valid only if `StreamType` is `1`).
                      */
                     void SetMediaType(const uint64_t& _mediaType);
 
@@ -193,6 +193,24 @@ The default value is `0`, which means others.
                      * @return MediaType 是否已赋值
                      */
                     bool MediaTypeHasBeenSet() const;
+
+                    /**
+                     * 获取The custom prefix of recording files. This parameter is valid only if recording files are uploaded to VOD. It can contain letters, numbers, underscores, and hyphens and cannot exceed 64 bytes. This prefix and the automatically generated filename are connected with `__UserId_u_`.
+                     * @return UserDefineRecordId The custom prefix of recording files. This parameter is valid only if recording files are uploaded to VOD. It can contain letters, numbers, underscores, and hyphens and cannot exceed 64 bytes. This prefix and the automatically generated filename are connected with `__UserId_u_`.
+                     */
+                    std::string GetUserDefineRecordId() const;
+
+                    /**
+                     * 设置The custom prefix of recording files. This parameter is valid only if recording files are uploaded to VOD. It can contain letters, numbers, underscores, and hyphens and cannot exceed 64 bytes. This prefix and the automatically generated filename are connected with `__UserId_u_`.
+                     * @param UserDefineRecordId The custom prefix of recording files. This parameter is valid only if recording files are uploaded to VOD. It can contain letters, numbers, underscores, and hyphens and cannot exceed 64 bytes. This prefix and the automatically generated filename are connected with `__UserId_u_`.
+                     */
+                    void SetUserDefineRecordId(const std::string& _userDefineRecordId);
+
+                    /**
+                     * 判断参数 UserDefineRecordId 是否已赋值
+                     * @return UserDefineRecordId 是否已赋值
+                     */
+                    bool UserDefineRecordIdHasBeenSet() const;
 
                 private:
 
@@ -240,10 +258,16 @@ The default value is `0`, which means others.
                     bool m_sourceContextHasBeenSet;
 
                     /**
-                     * The format of recording files saved to VOD. 0 (default): MP4; 1: HLS.
+                     * The format of recording files uploaded to VOD. `0` (default): MP4; `1`: HLS; `2`: AAC (valid only if `StreamType` is `1`).
                      */
                     uint64_t m_mediaType;
                     bool m_mediaTypeHasBeenSet;
+
+                    /**
+                     * The custom prefix of recording files. This parameter is valid only if recording files are uploaded to VOD. It can contain letters, numbers, underscores, and hyphens and cannot exceed 64 bytes. This prefix and the automatically generated filename are connected with `__UserId_u_`.
+                     */
+                    std::string m_userDefineRecordId;
+                    bool m_userDefineRecordIdHasBeenSet;
 
                 };
             }

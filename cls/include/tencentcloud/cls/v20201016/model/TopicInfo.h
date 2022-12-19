@@ -138,6 +138,28 @@ namespace TencentCloud
                     bool IndexHasBeenSet() const;
 
                     /**
+                     * 获取Cloud product identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AssumerName Cloud product identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetAssumerName() const;
+
+                    /**
+                     * 设置Cloud product identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param AssumerName Cloud product identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetAssumerName(const std::string& _assumerName);
+
+                    /**
+                     * 判断参数 AssumerName 是否已赋值
+                     * @return AssumerName 是否已赋值
+                     */
+                    bool AssumerNameHasBeenSet() const;
+
+                    /**
                      * 获取Creation time
                      * @return CreateTime Creation time
                      */
@@ -283,6 +305,50 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     bool PeriodHasBeenSet() const;
 
+                    /**
+                     * 获取Cloud product sub-identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product and its log type, such as `TKE-Audit` or `TKE-Event`. Some products only return the cloud product identifier (`AssumerName`), without this field.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SubAssumerName Cloud product sub-identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product and its log type, such as `TKE-Audit` or `TKE-Event`. Some products only return the cloud product identifier (`AssumerName`), without this field.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetSubAssumerName() const;
+
+                    /**
+                     * 设置Cloud product sub-identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product and its log type, such as `TKE-Audit` or `TKE-Event`. Some products only return the cloud product identifier (`AssumerName`), without this field.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param SubAssumerName Cloud product sub-identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product and its log type, such as `TKE-Audit` or `TKE-Event`. Some products only return the cloud product identifier (`AssumerName`), without this field.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetSubAssumerName(const std::string& _subAssumerName);
+
+                    /**
+                     * 判断参数 SubAssumerName 是否已赋值
+                     * @return SubAssumerName 是否已赋值
+                     */
+                    bool SubAssumerNameHasBeenSet() const;
+
+                    /**
+                     * 获取Log topic description
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Describes Log topic description
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetDescribes() const;
+
+                    /**
+                     * 设置Log topic description
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Describes Log topic description
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetDescribes(const std::string& _describes);
+
+                    /**
+                     * 判断参数 Describes 是否已赋值
+                     * @return Describes 是否已赋值
+                     */
+                    bool DescribesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -314,6 +380,13 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     bool m_index;
                     bool m_indexHasBeenSet;
+
+                    /**
+                     * Cloud product identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_assumerName;
+                    bool m_assumerNameHasBeenSet;
 
                     /**
                      * Creation time
@@ -361,6 +434,20 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     int64_t m_period;
                     bool m_periodHasBeenSet;
+
+                    /**
+                     * Cloud product sub-identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product and its log type, such as `TKE-Audit` or `TKE-Event`. Some products only return the cloud product identifier (`AssumerName`), without this field.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_subAssumerName;
+                    bool m_subAssumerNameHasBeenSet;
+
+                    /**
+                     * Log topic description
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_describes;
+                    bool m_describesHasBeenSet;
 
                 };
             }
