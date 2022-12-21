@@ -61,6 +61,8 @@
 #include <tencentcloud/dcdb/v20180411/model/DescribeDCDBInstanceNodeInfoResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeDCDBInstancesRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeDCDBInstancesResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/DescribeDCDBPriceRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/DescribeDCDBPriceResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeDCDBShardsRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeDCDBShardsResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeDatabaseObjectsRequest.h>
@@ -97,6 +99,8 @@
 #include <tencentcloud/dcdb/v20180411/model/KillSessionResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/ModifyAccountDescriptionRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/ModifyAccountDescriptionResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/ModifyAccountPrivilegesRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/ModifyAccountPrivilegesResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/ModifyDBInstanceNameRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/ModifyDBInstanceNameResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/ModifyDBInstanceSecurityGroupsRequest.h>
@@ -190,6 +194,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeDCDBInstancesResponse> DescribeDCDBInstancesOutcome;
                 typedef std::future<DescribeDCDBInstancesOutcome> DescribeDCDBInstancesOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::DescribeDCDBInstancesRequest&, DescribeDCDBInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDCDBInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDCDBPriceResponse> DescribeDCDBPriceOutcome;
+                typedef std::future<DescribeDCDBPriceOutcome> DescribeDCDBPriceOutcomeCallable;
+                typedef std::function<void(const DcdbClient*, const Model::DescribeDCDBPriceRequest&, DescribeDCDBPriceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDCDBPriceAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDCDBShardsResponse> DescribeDCDBShardsOutcome;
                 typedef std::future<DescribeDCDBShardsOutcome> DescribeDCDBShardsOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::DescribeDCDBShardsRequest&, DescribeDCDBShardsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDCDBShardsAsyncHandler;
@@ -244,6 +251,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyAccountDescriptionResponse> ModifyAccountDescriptionOutcome;
                 typedef std::future<ModifyAccountDescriptionOutcome> ModifyAccountDescriptionOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::ModifyAccountDescriptionRequest&, ModifyAccountDescriptionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAccountDescriptionAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyAccountPrivilegesResponse> ModifyAccountPrivilegesOutcome;
+                typedef std::future<ModifyAccountPrivilegesOutcome> ModifyAccountPrivilegesOutcomeCallable;
+                typedef std::function<void(const DcdbClient*, const Model::ModifyAccountPrivilegesRequest&, ModifyAccountPrivilegesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAccountPrivilegesAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyDBInstanceNameResponse> ModifyDBInstanceNameOutcome;
                 typedef std::future<ModifyDBInstanceNameOutcome> ModifyDBInstanceNameOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::ModifyDBInstanceNameRequest&, ModifyDBInstanceNameOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBInstanceNameAsyncHandler;
@@ -455,6 +465,15 @@ If no filter is specified, 10 instances will be returned by default. Up to 100 i
                 DescribeDCDBInstancesOutcomeCallable DescribeDCDBInstancesCallable(const Model::DescribeDCDBInstancesRequest& request);
 
                 /**
+                 *This API is used to query the price of an instance before you purchase it.
+                 * @param req DescribeDCDBPriceRequest
+                 * @return DescribeDCDBPriceOutcome
+                 */
+                DescribeDCDBPriceOutcome DescribeDCDBPrice(const Model::DescribeDCDBPriceRequest &request);
+                void DescribeDCDBPriceAsync(const Model::DescribeDCDBPriceRequest& request, const DescribeDCDBPriceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDCDBPriceOutcomeCallable DescribeDCDBPriceCallable(const Model::DescribeDCDBPriceRequest& request);
+
+                /**
                  *This API is used to query the information of shards of a TencentDB instance.
                  * @param req DescribeDCDBShardsRequest
                  * @return DescribeDCDBShardsOutcome
@@ -617,6 +636,20 @@ Note: accounts with the same username but different hosts are different accounts
                 ModifyAccountDescriptionOutcome ModifyAccountDescription(const Model::ModifyAccountDescriptionRequest &request);
                 void ModifyAccountDescriptionAsync(const Model::ModifyAccountDescriptionRequest& request, const ModifyAccountDescriptionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyAccountDescriptionOutcomeCallable ModifyAccountDescriptionCallable(const Model::ModifyAccountDescriptionRequest& request);
+
+                /**
+                 *This API is used to modify the permissions of a TencentDB instance account.
+
+**Notes**
+- Only the SELECT permission (that is, set the permission parameter to `["SELECT"]`) of the system database `mysql` can be granted.
+- An error will be reported if read-write permissions are granted to a read-only account.
+- If the parameter is not passed in, no change will be made to the granted table permissions. To clear the granted table permissions, set `Privileges` to an empty array.
+                 * @param req ModifyAccountPrivilegesRequest
+                 * @return ModifyAccountPrivilegesOutcome
+                 */
+                ModifyAccountPrivilegesOutcome ModifyAccountPrivileges(const Model::ModifyAccountPrivilegesRequest &request);
+                void ModifyAccountPrivilegesAsync(const Model::ModifyAccountPrivilegesRequest& request, const ModifyAccountPrivilegesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyAccountPrivilegesOutcomeCallable ModifyAccountPrivilegesCallable(const Model::ModifyAccountPrivilegesRequest& request);
 
                 /**
                  *This API is used to modify instance name.

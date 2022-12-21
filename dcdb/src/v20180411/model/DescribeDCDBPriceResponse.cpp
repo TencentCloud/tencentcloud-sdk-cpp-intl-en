@@ -14,20 +14,22 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/cdb/v20170320/model/ModifyCDBProxyResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/DescribeDCDBPriceResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using TencentCloud::CoreInternalOutcome;
-using namespace TencentCloud::Cdb::V20170320::Model;
+using namespace TencentCloud::Dcdb::V20180411::Model;
 using namespace std;
 
-ModifyCDBProxyResponse::ModifyCDBProxyResponse()
+DescribeDCDBPriceResponse::DescribeDCDBPriceResponse() :
+    m_originalPriceHasBeenSet(false),
+    m_priceHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome ModifyCDBProxyResponse::Deserialize(const string &payload)
+CoreInternalOutcome DescribeDCDBPriceResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -61,15 +63,51 @@ CoreInternalOutcome ModifyCDBProxyResponse::Deserialize(const string &payload)
     }
 
 
+    if (rsp.HasMember("OriginalPrice") && !rsp["OriginalPrice"].IsNull())
+    {
+        if (!rsp["OriginalPrice"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `OriginalPrice` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_originalPrice = rsp["OriginalPrice"].GetInt64();
+        m_originalPriceHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("Price") && !rsp["Price"].IsNull())
+    {
+        if (!rsp["Price"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `Price` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_price = rsp["Price"].GetInt64();
+        m_priceHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-string ModifyCDBProxyResponse::ToJsonString() const
+string DescribeDCDBPriceResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_originalPriceHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OriginalPrice";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_originalPrice, allocator);
+    }
+
+    if (m_priceHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Price";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_price, allocator);
+    }
 
     rapidjson::Value iKey(rapidjson::kStringType);
     string key = "RequestId";
@@ -82,5 +120,25 @@ string ModifyCDBProxyResponse::ToJsonString() const
     return buffer.GetString();
 }
 
+
+int64_t DescribeDCDBPriceResponse::GetOriginalPrice() const
+{
+    return m_originalPrice;
+}
+
+bool DescribeDCDBPriceResponse::OriginalPriceHasBeenSet() const
+{
+    return m_originalPriceHasBeenSet;
+}
+
+int64_t DescribeDCDBPriceResponse::GetPrice() const
+{
+    return m_price;
+}
+
+bool DescribeDCDBPriceResponse::PriceHasBeenSet() const
+{
+    return m_priceHasBeenSet;
+}
 
 

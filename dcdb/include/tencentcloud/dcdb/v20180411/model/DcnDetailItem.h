@@ -370,6 +370,24 @@ namespace TencentCloud
                      */
                     bool InstanceTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Whether KMS is enabled.
+                     * @return EncryptStatus Whether KMS is enabled.
+                     */
+                    int64_t GetEncryptStatus() const;
+
+                    /**
+                     * 设置Whether KMS is enabled.
+                     * @param EncryptStatus Whether KMS is enabled.
+                     */
+                    void SetEncryptStatus(const int64_t& _encryptStatus);
+
+                    /**
+                     * 判断参数 EncryptStatus 是否已赋值
+                     * @return EncryptStatus 是否已赋值
+                     */
+                    bool EncryptStatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -479,6 +497,12 @@ namespace TencentCloud
                      */
                     int64_t m_instanceType;
                     bool m_instanceTypeHasBeenSet;
+
+                    /**
+                     * Whether KMS is enabled.
+                     */
+                    int64_t m_encryptStatus;
+                    bool m_encryptStatusHasBeenSet;
 
                 };
             }

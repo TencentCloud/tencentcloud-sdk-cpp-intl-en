@@ -389,6 +389,28 @@ namespace TencentCloud
                      */
                     bool InstanceIdHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the backup file is encrypted. Valid values: `on` (encrypted), `off` (unencrypted).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return EncryptionFlag Whether the backup file is encrypted. Valid values: `on` (encrypted), `off` (unencrypted).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetEncryptionFlag() const;
+
+                    /**
+                     * 设置Whether the backup file is encrypted. Valid values: `on` (encrypted), `off` (unencrypted).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param EncryptionFlag Whether the backup file is encrypted. Valid values: `on` (encrypted), `off` (unencrypted).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetEncryptionFlag(const std::string& _encryptionFlag);
+
+                    /**
+                     * 判断参数 EncryptionFlag 是否已赋值
+                     * @return EncryptionFlag 是否已赋值
+                     */
+                    bool EncryptionFlagHasBeenSet() const;
+
                 private:
 
                     /**
@@ -504,6 +526,13 @@ namespace TencentCloud
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
+
+                    /**
+                     * Whether the backup file is encrypted. Valid values: `on` (encrypted), `off` (unencrypted).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_encryptionFlag;
+                    bool m_encryptionFlagHasBeenSet;
 
                 };
             }

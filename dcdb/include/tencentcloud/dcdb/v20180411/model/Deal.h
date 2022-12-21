@@ -120,17 +120,17 @@ namespace TencentCloud
 
                     /**
                      * 获取The ID of the created instance, which is required only for the order that creates an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InstanceIds The ID of the created instance, which is required only for the order that creates an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
                      * 设置The ID of the created instance, which is required only for the order that creates an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param InstanceIds The ID of the created instance, which is required only for the order that creates an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
@@ -186,7 +186,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * The ID of the created instance, which is required only for the order that creates an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;

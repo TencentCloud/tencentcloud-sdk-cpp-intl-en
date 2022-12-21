@@ -14,21 +14,21 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/cdb/v20170320/model/ApplyCDBProxyResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/ModifyAccountPrivilegesResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using TencentCloud::CoreInternalOutcome;
-using namespace TencentCloud::Cdb::V20170320::Model;
+using namespace TencentCloud::Dcdb::V20180411::Model;
 using namespace std;
 
-ApplyCDBProxyResponse::ApplyCDBProxyResponse() :
-    m_asyncRequestIdHasBeenSet(false)
+ModifyAccountPrivilegesResponse::ModifyAccountPrivilegesResponse() :
+    m_flowIdHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome ApplyCDBProxyResponse::Deserialize(const string &payload)
+CoreInternalOutcome ModifyAccountPrivilegesResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -62,32 +62,32 @@ CoreInternalOutcome ApplyCDBProxyResponse::Deserialize(const string &payload)
     }
 
 
-    if (rsp.HasMember("AsyncRequestId") && !rsp["AsyncRequestId"].IsNull())
+    if (rsp.HasMember("FlowId") && !rsp["FlowId"].IsNull())
     {
-        if (!rsp["AsyncRequestId"].IsString())
+        if (!rsp["FlowId"].IsInt64())
         {
-            return CoreInternalOutcome(Core::Error("response `AsyncRequestId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `FlowId` IsInt64=false incorrectly").SetRequestId(requestId));
         }
-        m_asyncRequestId = string(rsp["AsyncRequestId"].GetString());
-        m_asyncRequestIdHasBeenSet = true;
+        m_flowId = rsp["FlowId"].GetInt64();
+        m_flowIdHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string ApplyCDBProxyResponse::ToJsonString() const
+string ModifyAccountPrivilegesResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_asyncRequestIdHasBeenSet)
+    if (m_flowIdHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "AsyncRequestId";
+        string key = "FlowId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_asyncRequestId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, m_flowId, allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -102,14 +102,14 @@ string ApplyCDBProxyResponse::ToJsonString() const
 }
 
 
-string ApplyCDBProxyResponse::GetAsyncRequestId() const
+int64_t ModifyAccountPrivilegesResponse::GetFlowId() const
 {
-    return m_asyncRequestId;
+    return m_flowId;
 }
 
-bool ApplyCDBProxyResponse::AsyncRequestIdHasBeenSet() const
+bool ModifyAccountPrivilegesResponse::FlowIdHasBeenSet() const
 {
-    return m_asyncRequestIdHasBeenSet;
+    return m_flowIdHasBeenSet;
 }
 
 

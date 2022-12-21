@@ -25,8 +25,6 @@
 #include <tencentcloud/core/AsyncCallerContext.h>
 #include <tencentcloud/cdb/v20170320/model/AddTimeWindowRequest.h>
 #include <tencentcloud/cdb/v20170320/model/AddTimeWindowResponse.h>
-#include <tencentcloud/cdb/v20170320/model/ApplyCDBProxyRequest.h>
-#include <tencentcloud/cdb/v20170320/model/ApplyCDBProxyResponse.h>
 #include <tencentcloud/cdb/v20170320/model/AssociateSecurityGroupsRequest.h>
 #include <tencentcloud/cdb/v20170320/model/AssociateSecurityGroupsResponse.h>
 #include <tencentcloud/cdb/v20170320/model/BalanceRoGroupLoadRequest.h>
@@ -179,8 +177,6 @@
 #include <tencentcloud/cdb/v20170320/model/ModifyBackupConfigResponse.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyBackupDownloadRestrictionRequest.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyBackupDownloadRestrictionResponse.h>
-#include <tencentcloud/cdb/v20170320/model/ModifyCDBProxyRequest.h>
-#include <tencentcloud/cdb/v20170320/model/ModifyCDBProxyResponse.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyCDBProxyConnectionPoolRequest.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyCDBProxyConnectionPoolResponse.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyCDBProxyDescRequest.h>
@@ -272,9 +268,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::AddTimeWindowResponse> AddTimeWindowOutcome;
                 typedef std::future<AddTimeWindowOutcome> AddTimeWindowOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::AddTimeWindowRequest&, AddTimeWindowOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddTimeWindowAsyncHandler;
-                typedef Outcome<Core::Error, Model::ApplyCDBProxyResponse> ApplyCDBProxyOutcome;
-                typedef std::future<ApplyCDBProxyOutcome> ApplyCDBProxyOutcomeCallable;
-                typedef std::function<void(const CdbClient*, const Model::ApplyCDBProxyRequest&, ApplyCDBProxyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ApplyCDBProxyAsyncHandler;
                 typedef Outcome<Core::Error, Model::AssociateSecurityGroupsResponse> AssociateSecurityGroupsOutcome;
                 typedef std::future<AssociateSecurityGroupsOutcome> AssociateSecurityGroupsOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::AssociateSecurityGroupsRequest&, AssociateSecurityGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AssociateSecurityGroupsAsyncHandler;
@@ -503,9 +496,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyBackupDownloadRestrictionResponse> ModifyBackupDownloadRestrictionOutcome;
                 typedef std::future<ModifyBackupDownloadRestrictionOutcome> ModifyBackupDownloadRestrictionOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::ModifyBackupDownloadRestrictionRequest&, ModifyBackupDownloadRestrictionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyBackupDownloadRestrictionAsyncHandler;
-                typedef Outcome<Core::Error, Model::ModifyCDBProxyResponse> ModifyCDBProxyOutcome;
-                typedef std::future<ModifyCDBProxyOutcome> ModifyCDBProxyOutcomeCallable;
-                typedef std::function<void(const CdbClient*, const Model::ModifyCDBProxyRequest&, ModifyCDBProxyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCDBProxyAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyCDBProxyConnectionPoolResponse> ModifyCDBProxyConnectionPoolOutcome;
                 typedef std::future<ModifyCDBProxyConnectionPoolOutcome> ModifyCDBProxyConnectionPoolOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::ModifyCDBProxyConnectionPoolRequest&, ModifyCDBProxyConnectionPoolOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCDBProxyConnectionPoolAsyncHandler;
@@ -628,15 +618,6 @@ namespace TencentCloud
                 AddTimeWindowOutcome AddTimeWindow(const Model::AddTimeWindowRequest &request);
                 void AddTimeWindowAsync(const Model::AddTimeWindowRequest& request, const AddTimeWindowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 AddTimeWindowOutcomeCallable AddTimeWindowCallable(const Model::AddTimeWindowRequest& request);
-
-                /**
-                 *This API is used to create a database proxy group for a source instance.
-                 * @param req ApplyCDBProxyRequest
-                 * @return ApplyCDBProxyOutcome
-                 */
-                ApplyCDBProxyOutcome ApplyCDBProxy(const Model::ApplyCDBProxyRequest &request);
-                void ApplyCDBProxyAsync(const Model::ApplyCDBProxyRequest& request, const ApplyCDBProxyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                ApplyCDBProxyOutcomeCallable ApplyCDBProxyCallable(const Model::ApplyCDBProxyRequest& request);
 
                 /**
                  *This API (AssociateSecurityGroups) is used to bind security groups to instances in batches.
@@ -1338,15 +1319,6 @@ Note that when modifying account permissions, you need to pass in the full permi
                 ModifyBackupDownloadRestrictionOutcome ModifyBackupDownloadRestriction(const Model::ModifyBackupDownloadRestrictionRequest &request);
                 void ModifyBackupDownloadRestrictionAsync(const Model::ModifyBackupDownloadRestrictionRequest& request, const ModifyBackupDownloadRestrictionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyBackupDownloadRestrictionOutcomeCallable ModifyBackupDownloadRestrictionCallable(const Model::ModifyBackupDownloadRestrictionRequest& request);
-
-                /**
-                 *This API is used to configure read/write separation of database proxy.
-                 * @param req ModifyCDBProxyRequest
-                 * @return ModifyCDBProxyOutcome
-                 */
-                ModifyCDBProxyOutcome ModifyCDBProxy(const Model::ModifyCDBProxyRequest &request);
-                void ModifyCDBProxyAsync(const Model::ModifyCDBProxyRequest& request, const ModifyCDBProxyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                ModifyCDBProxyOutcomeCallable ModifyCDBProxyCallable(const Model::ModifyCDBProxyRequest& request);
 
                 /**
                  *This API is used to configure the connection pool of database proxy. You can use the `DescribeProxyConnectionPoolConf` API to query the supported connection pool configurations.

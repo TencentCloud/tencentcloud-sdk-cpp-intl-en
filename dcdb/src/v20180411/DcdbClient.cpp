@@ -857,6 +857,49 @@ DcdbClient::DescribeDCDBInstancesOutcomeCallable DcdbClient::DescribeDCDBInstanc
     return task->get_future();
 }
 
+DcdbClient::DescribeDCDBPriceOutcome DcdbClient::DescribeDCDBPrice(const DescribeDCDBPriceRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDCDBPrice");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDCDBPriceResponse rsp = DescribeDCDBPriceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDCDBPriceOutcome(rsp);
+        else
+            return DescribeDCDBPriceOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDCDBPriceOutcome(outcome.GetError());
+    }
+}
+
+void DcdbClient::DescribeDCDBPriceAsync(const DescribeDCDBPriceRequest& request, const DescribeDCDBPriceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeDCDBPrice(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DcdbClient::DescribeDCDBPriceOutcomeCallable DcdbClient::DescribeDCDBPriceCallable(const DescribeDCDBPriceRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeDCDBPriceOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeDCDBPrice(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 DcdbClient::DescribeDCDBShardsOutcome DcdbClient::DescribeDCDBShards(const DescribeDCDBShardsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeDCDBShards");
@@ -1624,6 +1667,49 @@ DcdbClient::ModifyAccountDescriptionOutcomeCallable DcdbClient::ModifyAccountDes
         [this, request]()
         {
             return this->ModifyAccountDescription(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DcdbClient::ModifyAccountPrivilegesOutcome DcdbClient::ModifyAccountPrivileges(const ModifyAccountPrivilegesRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyAccountPrivileges");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyAccountPrivilegesResponse rsp = ModifyAccountPrivilegesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyAccountPrivilegesOutcome(rsp);
+        else
+            return ModifyAccountPrivilegesOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyAccountPrivilegesOutcome(outcome.GetError());
+    }
+}
+
+void DcdbClient::ModifyAccountPrivilegesAsync(const ModifyAccountPrivilegesRequest& request, const ModifyAccountPrivilegesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyAccountPrivileges(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DcdbClient::ModifyAccountPrivilegesOutcomeCallable DcdbClient::ModifyAccountPrivilegesCallable(const ModifyAccountPrivilegesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyAccountPrivilegesOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyAccountPrivileges(request);
         }
     );
 
