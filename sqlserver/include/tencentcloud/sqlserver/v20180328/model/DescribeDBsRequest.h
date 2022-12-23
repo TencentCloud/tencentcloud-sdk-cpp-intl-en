@@ -96,6 +96,42 @@ namespace TencentCloud
                      */
                     bool OffsetHasBeenSet() const;
 
+                    /**
+                     * 获取Database name
+                     * @return Name Database name
+                     */
+                    std::string GetName() const;
+
+                    /**
+                     * 设置Database name
+                     * @param Name Database name
+                     */
+                    void SetName(const std::string& _name);
+
+                    /**
+                     * 判断参数 Name 是否已赋值
+                     * @return Name 是否已赋值
+                     */
+                    bool NameHasBeenSet() const;
+
+                    /**
+                     * 获取Sorting rule. Valid values: `desc` (descending order), `asc` (ascending order). Default value: `desc`.
+                     * @return OrderByType Sorting rule. Valid values: `desc` (descending order), `asc` (ascending order). Default value: `desc`.
+                     */
+                    std::string GetOrderByType() const;
+
+                    /**
+                     * 设置Sorting rule. Valid values: `desc` (descending order), `asc` (ascending order). Default value: `desc`.
+                     * @param OrderByType Sorting rule. Valid values: `desc` (descending order), `asc` (ascending order). Default value: `desc`.
+                     */
+                    void SetOrderByType(const std::string& _orderByType);
+
+                    /**
+                     * 判断参数 OrderByType 是否已赋值
+                     * @return OrderByType 是否已赋值
+                     */
+                    bool OrderByTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -115,6 +151,18 @@ namespace TencentCloud
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
+
+                    /**
+                     * Database name
+                     */
+                    std::string m_name;
+                    bool m_nameHasBeenSet;
+
+                    /**
+                     * Sorting rule. Valid values: `desc` (descending order), `asc` (ascending order). Default value: `desc`.
+                     */
+                    std::string m_orderByType;
+                    bool m_orderByTypeHasBeenSet;
 
                 };
             }

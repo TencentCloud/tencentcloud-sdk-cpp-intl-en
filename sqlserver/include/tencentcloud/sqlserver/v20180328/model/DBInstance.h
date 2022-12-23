@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/sqlserver/v20180328/model/ResourceTag.h>
+#include <tencentcloud/sqlserver/v20180328/model/SlaveZones.h>
 
 
 namespace TencentCloud
@@ -975,6 +976,46 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool TimeZoneHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the instance is deployed across AZs
+                     * @return IsDrZone Whether the instance is deployed across AZs
+                     */
+                    bool GetIsDrZone() const;
+
+                    /**
+                     * 设置Whether the instance is deployed across AZs
+                     * @param IsDrZone Whether the instance is deployed across AZs
+                     */
+                    void SetIsDrZone(const bool& _isDrZone);
+
+                    /**
+                     * 判断参数 IsDrZone 是否已赋值
+                     * @return IsDrZone 是否已赋值
+                     */
+                    bool IsDrZoneHasBeenSet() const;
+
+                    /**
+                     * 获取Replica AZ information
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SlaveZones Replica AZ information
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    SlaveZones GetSlaveZones() const;
+
+                    /**
+                     * 设置Replica AZ information
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param SlaveZones Replica AZ information
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetSlaveZones(const SlaveZones& _slaveZones);
+
+                    /**
+                     * 判断参数 SlaveZones 是否已赋值
+                     * @return SlaveZones 是否已赋值
+                     */
+                    bool SlaveZonesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1283,6 +1324,19 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_timeZone;
                     bool m_timeZoneHasBeenSet;
+
+                    /**
+                     * Whether the instance is deployed across AZs
+                     */
+                    bool m_isDrZone;
+                    bool m_isDrZoneHasBeenSet;
+
+                    /**
+                     * Replica AZ information
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    SlaveZones m_slaveZones;
+                    bool m_slaveZonesHasBeenSet;
 
                 };
             }

@@ -35,6 +35,7 @@ set(sqlserver_public_header_model
   include/tencentcloud/sqlserver/v20180328/model/StartBackupMigrationResponse.h
   include/tencentcloud/sqlserver/v20180328/model/RegionInfo.h
   include/tencentcloud/sqlserver/v20180328/model/ModifyBackupStrategyResponse.h
+  include/tencentcloud/sqlserver/v20180328/model/SlaveZones.h
   include/tencentcloud/sqlserver/v20180328/model/ModifyIncrementalMigrationRequest.h
   include/tencentcloud/sqlserver/v20180328/model/MigrateDetail.h
   include/tencentcloud/sqlserver/v20180328/model/CreateIncrementalMigrationRequest.h
@@ -222,6 +223,7 @@ set(sqlserver_src
   src/v20180328/model/StartBackupMigrationResponse.cpp
   src/v20180328/model/RegionInfo.cpp
   src/v20180328/model/ModifyBackupStrategyResponse.cpp
+  src/v20180328/model/SlaveZones.cpp
   src/v20180328/model/ModifyIncrementalMigrationRequest.cpp
   src/v20180328/model/MigrateDetail.cpp
   src/v20180328/model/CreateIncrementalMigrationRequest.cpp

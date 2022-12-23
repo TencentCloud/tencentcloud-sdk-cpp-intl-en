@@ -35,6 +35,8 @@
 #include <tencentcloud/mariadb/v20170312/model/CopyAccountPrivilegesResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/CreateAccountRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/CreateAccountResponse.h>
+#include <tencentcloud/mariadb/v20170312/model/CreateDBInstanceRequest.h>
+#include <tencentcloud/mariadb/v20170312/model/CreateDBInstanceResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/CreateHourDBInstanceRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/CreateHourDBInstanceResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/DeleteAccountRequest.h>
@@ -85,6 +87,8 @@
 #include <tencentcloud/mariadb/v20170312/model/IsolateDBInstanceResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/IsolateDedicatedDBInstanceRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/IsolateDedicatedDBInstanceResponse.h>
+#include <tencentcloud/mariadb/v20170312/model/KillSessionRequest.h>
+#include <tencentcloud/mariadb/v20170312/model/KillSessionResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/ModifyAccountDescriptionRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/ModifyAccountDescriptionResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/ModifyAccountPrivilegesRequest.h>
@@ -139,6 +143,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateAccountResponse> CreateAccountOutcome;
                 typedef std::future<CreateAccountOutcome> CreateAccountOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::CreateAccountRequest&, CreateAccountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAccountAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateDBInstanceResponse> CreateDBInstanceOutcome;
+                typedef std::future<CreateDBInstanceOutcome> CreateDBInstanceOutcomeCallable;
+                typedef std::function<void(const MariadbClient*, const Model::CreateDBInstanceRequest&, CreateDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDBInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateHourDBInstanceResponse> CreateHourDBInstanceOutcome;
                 typedef std::future<CreateHourDBInstanceOutcome> CreateHourDBInstanceOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::CreateHourDBInstanceRequest&, CreateHourDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateHourDBInstanceAsyncHandler;
@@ -214,6 +221,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::IsolateDedicatedDBInstanceResponse> IsolateDedicatedDBInstanceOutcome;
                 typedef std::future<IsolateDedicatedDBInstanceOutcome> IsolateDedicatedDBInstanceOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::IsolateDedicatedDBInstanceRequest&, IsolateDedicatedDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> IsolateDedicatedDBInstanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::KillSessionResponse> KillSessionOutcome;
+                typedef std::future<KillSessionOutcome> KillSessionOutcomeCallable;
+                typedef std::function<void(const MariadbClient*, const Model::KillSessionRequest&, KillSessionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> KillSessionAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyAccountDescriptionResponse> ModifyAccountDescriptionOutcome;
                 typedef std::future<ModifyAccountDescriptionOutcome> ModifyAccountDescriptionOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::ModifyAccountDescriptionRequest&, ModifyAccountDescriptionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAccountDescriptionAsyncHandler;
@@ -304,6 +314,15 @@ Note: accounts with the same username but different hosts are different accounts
                 CreateAccountOutcome CreateAccount(const Model::CreateAccountRequest &request);
                 void CreateAccountAsync(const Model::CreateAccountRequest& request, const CreateAccountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateAccountOutcomeCallable CreateAccountCallable(const Model::CreateAccountRequest& request);
+
+                /**
+                 *This API is used to create a monthly subscribed TencentDB instance by passing in information such as instance specifications, database version number, validity period, and quantity.
+                 * @param req CreateDBInstanceRequest
+                 * @return CreateDBInstanceOutcome
+                 */
+                CreateDBInstanceOutcome CreateDBInstance(const Model::CreateDBInstanceRequest &request);
+                void CreateDBInstanceAsync(const Model::CreateDBInstanceRequest& request, const CreateDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateDBInstanceOutcomeCallable CreateDBInstanceCallable(const Model::CreateDBInstanceRequest& request);
 
                 /**
                  *This API is used to create pay-as-you-go instances.
@@ -532,6 +551,15 @@ Note: accounts with the same username but different hosts are different accounts
                 IsolateDedicatedDBInstanceOutcome IsolateDedicatedDBInstance(const Model::IsolateDedicatedDBInstanceRequest &request);
                 void IsolateDedicatedDBInstanceAsync(const Model::IsolateDedicatedDBInstanceRequest& request, const IsolateDedicatedDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 IsolateDedicatedDBInstanceOutcomeCallable IsolateDedicatedDBInstanceCallable(const Model::IsolateDedicatedDBInstanceRequest& request);
+
+                /**
+                 *This API is used to kill the specified session.
+                 * @param req KillSessionRequest
+                 * @return KillSessionOutcome
+                 */
+                KillSessionOutcome KillSession(const Model::KillSessionRequest &request);
+                void KillSessionAsync(const Model::KillSessionRequest& request, const KillSessionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                KillSessionOutcomeCallable KillSessionCallable(const Model::KillSessionRequest& request);
 
                 /**
                  *This API is used to modify the remarks of a TencentDB account.

@@ -298,6 +298,49 @@ MariadbClient::CreateAccountOutcomeCallable MariadbClient::CreateAccountCallable
     return task->get_future();
 }
 
+MariadbClient::CreateDBInstanceOutcome MariadbClient::CreateDBInstance(const CreateDBInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateDBInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateDBInstanceResponse rsp = CreateDBInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateDBInstanceOutcome(rsp);
+        else
+            return CreateDBInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateDBInstanceOutcome(outcome.GetError());
+    }
+}
+
+void MariadbClient::CreateDBInstanceAsync(const CreateDBInstanceRequest& request, const CreateDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateDBInstance(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MariadbClient::CreateDBInstanceOutcomeCallable MariadbClient::CreateDBInstanceCallable(const CreateDBInstanceRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateDBInstanceOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateDBInstance(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 MariadbClient::CreateHourDBInstanceOutcome MariadbClient::CreateHourDBInstance(const CreateHourDBInstanceRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateHourDBInstance");
@@ -1366,6 +1409,49 @@ MariadbClient::IsolateDedicatedDBInstanceOutcomeCallable MariadbClient::IsolateD
         [this, request]()
         {
             return this->IsolateDedicatedDBInstance(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+MariadbClient::KillSessionOutcome MariadbClient::KillSession(const KillSessionRequest &request)
+{
+    auto outcome = MakeRequest(request, "KillSession");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        KillSessionResponse rsp = KillSessionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return KillSessionOutcome(rsp);
+        else
+            return KillSessionOutcome(o.GetError());
+    }
+    else
+    {
+        return KillSessionOutcome(outcome.GetError());
+    }
+}
+
+void MariadbClient::KillSessionAsync(const KillSessionRequest& request, const KillSessionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->KillSession(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MariadbClient::KillSessionOutcomeCallable MariadbClient::KillSessionCallable(const KillSessionRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<KillSessionOutcome()>>(
+        [this, request]()
+        {
+            return this->KillSession(request);
         }
     );
 

@@ -96,6 +96,60 @@ namespace TencentCloud
                      */
                     bool OffsetHasBeenSet() const;
 
+                    /**
+                     * 获取Account ID
+                     * @return Name Account ID
+                     */
+                    std::string GetName() const;
+
+                    /**
+                     * 设置Account ID
+                     * @param Name Account ID
+                     */
+                    void SetName(const std::string& _name);
+
+                    /**
+                     * 判断参数 Name 是否已赋值
+                     * @return Name 是否已赋值
+                     */
+                    bool NameHasBeenSet() const;
+
+                    /**
+                     * 获取Sorting by `createTime`, `updateTime`, or `passTime`. Default value: `createTime` (desc).
+                     * @return OrderBy Sorting by `createTime`, `updateTime`, or `passTime`. Default value: `createTime` (desc).
+                     */
+                    std::string GetOrderBy() const;
+
+                    /**
+                     * 设置Sorting by `createTime`, `updateTime`, or `passTime`. Default value: `createTime` (desc).
+                     * @param OrderBy Sorting by `createTime`, `updateTime`, or `passTime`. Default value: `createTime` (desc).
+                     */
+                    void SetOrderBy(const std::string& _orderBy);
+
+                    /**
+                     * 判断参数 OrderBy 是否已赋值
+                     * @return OrderBy 是否已赋值
+                     */
+                    bool OrderByHasBeenSet() const;
+
+                    /**
+                     * 获取Sorting rule. Valid values: `desc` (descending order), `asc` (ascending order). Default value: `desc`.
+                     * @return OrderByType Sorting rule. Valid values: `desc` (descending order), `asc` (ascending order). Default value: `desc`.
+                     */
+                    std::string GetOrderByType() const;
+
+                    /**
+                     * 设置Sorting rule. Valid values: `desc` (descending order), `asc` (ascending order). Default value: `desc`.
+                     * @param OrderByType Sorting rule. Valid values: `desc` (descending order), `asc` (ascending order). Default value: `desc`.
+                     */
+                    void SetOrderByType(const std::string& _orderByType);
+
+                    /**
+                     * 判断参数 OrderByType 是否已赋值
+                     * @return OrderByType 是否已赋值
+                     */
+                    bool OrderByTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -115,6 +169,24 @@ namespace TencentCloud
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
+
+                    /**
+                     * Account ID
+                     */
+                    std::string m_name;
+                    bool m_nameHasBeenSet;
+
+                    /**
+                     * Sorting by `createTime`, `updateTime`, or `passTime`. Default value: `createTime` (desc).
+                     */
+                    std::string m_orderBy;
+                    bool m_orderByHasBeenSet;
+
+                    /**
+                     * Sorting rule. Valid values: `desc` (descending order), `asc` (ascending order). Default value: `desc`.
+                     */
+                    std::string m_orderByType;
+                    bool m_orderByTypeHasBeenSet;
 
                 };
             }
