@@ -60,6 +60,24 @@ namespace TencentCloud
                      */
                     bool ClusterIdHasBeenSet() const;
 
+                    /**
+                     * 获取Parameter name
+                     * @return ParamName Parameter name
+                     */
+                    std::string GetParamName() const;
+
+                    /**
+                     * 设置Parameter name
+                     * @param ParamName Parameter name
+                     */
+                    void SetParamName(const std::string& _paramName);
+
+                    /**
+                     * 判断参数 ParamName 是否已赋值
+                     * @return ParamName 是否已赋值
+                     */
+                    bool ParamNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -67,6 +85,12 @@ namespace TencentCloud
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
+
+                    /**
+                     * Parameter name
+                     */
+                    std::string m_paramName;
+                    bool m_paramNameHasBeenSet;
 
                 };
             }

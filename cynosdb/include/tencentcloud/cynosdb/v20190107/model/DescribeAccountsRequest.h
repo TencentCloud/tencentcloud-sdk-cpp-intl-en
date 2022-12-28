@@ -81,16 +81,20 @@ namespace TencentCloud
                     /**
                      * 获取Database type. Valid values: 
 <li> MYSQL </li>
+This parameter has been disused.
                      * @return DbType Database type. Valid values: 
 <li> MYSQL </li>
+This parameter has been disused.
                      */
                     std::string GetDbType() const;
 
                     /**
                      * 设置Database type. Valid values: 
 <li> MYSQL </li>
+This parameter has been disused.
                      * @param DbType Database type. Valid values: 
 <li> MYSQL </li>
+This parameter has been disused.
                      */
                     void SetDbType(const std::string& _dbType);
 
@@ -99,6 +103,60 @@ namespace TencentCloud
                      * @return DbType 是否已赋值
                      */
                     bool DbTypeHasBeenSet() const;
+
+                    /**
+                     * 获取List of accounts to be filtered
+                     * @return Hosts List of accounts to be filtered
+                     */
+                    std::vector<std::string> GetHosts() const;
+
+                    /**
+                     * 设置List of accounts to be filtered
+                     * @param Hosts List of accounts to be filtered
+                     */
+                    void SetHosts(const std::vector<std::string>& _hosts);
+
+                    /**
+                     * 判断参数 Hosts 是否已赋值
+                     * @return Hosts 是否已赋值
+                     */
+                    bool HostsHasBeenSet() const;
+
+                    /**
+                     * 获取Maximum entries returned per page
+                     * @return Limit Maximum entries returned per page
+                     */
+                    int64_t GetLimit() const;
+
+                    /**
+                     * 设置Maximum entries returned per page
+                     * @param Limit Maximum entries returned per page
+                     */
+                    void SetLimit(const int64_t& _limit);
+
+                    /**
+                     * 判断参数 Limit 是否已赋值
+                     * @return Limit 是否已赋值
+                     */
+                    bool LimitHasBeenSet() const;
+
+                    /**
+                     * 获取Offset
+                     * @return Offset Offset
+                     */
+                    int64_t GetOffset() const;
+
+                    /**
+                     * 设置Offset
+                     * @param Offset Offset
+                     */
+                    void SetOffset(const int64_t& _offset);
+
+                    /**
+                     * 判断参数 Offset 是否已赋值
+                     * @return Offset 是否已赋值
+                     */
+                    bool OffsetHasBeenSet() const;
 
                 private:
 
@@ -117,9 +175,28 @@ namespace TencentCloud
                     /**
                      * Database type. Valid values: 
 <li> MYSQL </li>
+This parameter has been disused.
                      */
                     std::string m_dbType;
                     bool m_dbTypeHasBeenSet;
+
+                    /**
+                     * List of accounts to be filtered
+                     */
+                    std::vector<std::string> m_hosts;
+                    bool m_hostsHasBeenSet;
+
+                    /**
+                     * Maximum entries returned per page
+                     */
+                    int64_t m_limit;
+                    bool m_limitHasBeenSet;
+
+                    /**
+                     * Offset
+                     */
+                    int64_t m_offset;
+                    bool m_offsetHasBeenSet;
 
                 };
             }

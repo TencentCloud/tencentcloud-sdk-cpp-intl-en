@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cynosdb/v20190107/model/ModifiableInfo.h>
 
 
 namespace TencentCloud
@@ -248,6 +249,94 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool DescriptionHasBeenSet() const;
 
+                    /**
+                     * 获取Whether it is global parameter
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IsGlobal Whether it is global parameter
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetIsGlobal() const;
+
+                    /**
+                     * 设置Whether it is global parameter
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param IsGlobal Whether it is global parameter
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetIsGlobal(const int64_t& _isGlobal);
+
+                    /**
+                     * 判断参数 IsGlobal 是否已赋值
+                     * @return IsGlobal 是否已赋值
+                     */
+                    bool IsGlobalHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the parameter can be modified
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ModifiableInfo Whether the parameter can be modified
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    ModifiableInfo GetModifiableInfo() const;
+
+                    /**
+                     * 设置Whether the parameter can be modified
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ModifiableInfo Whether the parameter can be modified
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetModifiableInfo(const ModifiableInfo& _modifiableInfo);
+
+                    /**
+                     * 判断参数 ModifiableInfo 是否已赋值
+                     * @return ModifiableInfo 是否已赋值
+                     */
+                    bool ModifiableInfoHasBeenSet() const;
+
+                    /**
+                     * 获取Whether it is a function
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IsFunc Whether it is a function
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool GetIsFunc() const;
+
+                    /**
+                     * 设置Whether it is a function
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param IsFunc Whether it is a function
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetIsFunc(const bool& _isFunc);
+
+                    /**
+                     * 判断参数 IsFunc 是否已赋值
+                     * @return IsFunc 是否已赋值
+                     */
+                    bool IsFuncHasBeenSet() const;
+
+                    /**
+                     * 获取Function
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Func Function
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetFunc() const;
+
+                    /**
+                     * 设置Function
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Func Function
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetFunc(const std::string& _func);
+
+                    /**
+                     * 判断参数 Func 是否已赋值
+                     * @return Func 是否已赋值
+                     */
+                    bool FuncHasBeenSet() const;
+
                 private:
 
                     /**
@@ -316,6 +405,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
+
+                    /**
+                     * Whether it is global parameter
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_isGlobal;
+                    bool m_isGlobalHasBeenSet;
+
+                    /**
+                     * Whether the parameter can be modified
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    ModifiableInfo m_modifiableInfo;
+                    bool m_modifiableInfoHasBeenSet;
+
+                    /**
+                     * Whether it is a function
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool m_isFunc;
+                    bool m_isFuncHasBeenSet;
+
+                    /**
+                     * Function
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_func;
+                    bool m_funcHasBeenSet;
 
                 };
             }

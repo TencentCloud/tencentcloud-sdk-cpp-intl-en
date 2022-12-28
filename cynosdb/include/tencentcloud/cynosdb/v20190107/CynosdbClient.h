@@ -115,12 +115,20 @@
 #include <tencentcloud/cynosdb/v20190107/model/PauseServerlessResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/RemoveClusterSlaveZoneRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/RemoveClusterSlaveZoneResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/ResetAccountPasswordRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/ResetAccountPasswordResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/ResumeServerlessRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/ResumeServerlessResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/SearchClusterDatabasesRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/SearchClusterDatabasesResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/SearchClusterTablesRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/SearchClusterTablesResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/SetRenewFlagRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/SetRenewFlagResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/SwitchClusterZoneRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/SwitchClusterZoneResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/SwitchProxyVpcRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/SwitchProxyVpcResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/UpgradeInstanceRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/UpgradeInstanceResponse.h>
 
@@ -275,15 +283,27 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::RemoveClusterSlaveZoneResponse> RemoveClusterSlaveZoneOutcome;
                 typedef std::future<RemoveClusterSlaveZoneOutcome> RemoveClusterSlaveZoneOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::RemoveClusterSlaveZoneRequest&, RemoveClusterSlaveZoneOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RemoveClusterSlaveZoneAsyncHandler;
+                typedef Outcome<Core::Error, Model::ResetAccountPasswordResponse> ResetAccountPasswordOutcome;
+                typedef std::future<ResetAccountPasswordOutcome> ResetAccountPasswordOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::ResetAccountPasswordRequest&, ResetAccountPasswordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetAccountPasswordAsyncHandler;
                 typedef Outcome<Core::Error, Model::ResumeServerlessResponse> ResumeServerlessOutcome;
                 typedef std::future<ResumeServerlessOutcome> ResumeServerlessOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::ResumeServerlessRequest&, ResumeServerlessOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResumeServerlessAsyncHandler;
+                typedef Outcome<Core::Error, Model::SearchClusterDatabasesResponse> SearchClusterDatabasesOutcome;
+                typedef std::future<SearchClusterDatabasesOutcome> SearchClusterDatabasesOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::SearchClusterDatabasesRequest&, SearchClusterDatabasesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SearchClusterDatabasesAsyncHandler;
+                typedef Outcome<Core::Error, Model::SearchClusterTablesResponse> SearchClusterTablesOutcome;
+                typedef std::future<SearchClusterTablesOutcome> SearchClusterTablesOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::SearchClusterTablesRequest&, SearchClusterTablesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SearchClusterTablesAsyncHandler;
                 typedef Outcome<Core::Error, Model::SetRenewFlagResponse> SetRenewFlagOutcome;
                 typedef std::future<SetRenewFlagOutcome> SetRenewFlagOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::SetRenewFlagRequest&, SetRenewFlagOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SetRenewFlagAsyncHandler;
                 typedef Outcome<Core::Error, Model::SwitchClusterZoneResponse> SwitchClusterZoneOutcome;
                 typedef std::future<SwitchClusterZoneOutcome> SwitchClusterZoneOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::SwitchClusterZoneRequest&, SwitchClusterZoneOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SwitchClusterZoneAsyncHandler;
+                typedef Outcome<Core::Error, Model::SwitchProxyVpcResponse> SwitchProxyVpcOutcome;
+                typedef std::future<SwitchProxyVpcOutcome> SwitchProxyVpcOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::SwitchProxyVpcRequest&, SwitchProxyVpcOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SwitchProxyVpcAsyncHandler;
                 typedef Outcome<Core::Error, Model::UpgradeInstanceResponse> UpgradeInstanceOutcome;
                 typedef std::future<UpgradeInstanceOutcome> UpgradeInstanceOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::UpgradeInstanceRequest&, UpgradeInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpgradeInstanceAsyncHandler;
@@ -705,6 +725,15 @@ namespace TencentCloud
                 RemoveClusterSlaveZoneOutcomeCallable RemoveClusterSlaveZoneCallable(const Model::RemoveClusterSlaveZoneRequest& request);
 
                 /**
+                 *This API is used to reset the password of a TencentDB instance account.
+                 * @param req ResetAccountPasswordRequest
+                 * @return ResetAccountPasswordOutcome
+                 */
+                ResetAccountPasswordOutcome ResetAccountPassword(const Model::ResetAccountPasswordRequest &request);
+                void ResetAccountPasswordAsync(const Model::ResetAccountPasswordRequest& request, const ResetAccountPasswordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ResetAccountPasswordOutcomeCallable ResetAccountPasswordCallable(const Model::ResetAccountPasswordRequest& request);
+
+                /**
                  *This API is used to resume a serverless cluster.
                  * @param req ResumeServerlessRequest
                  * @return ResumeServerlessOutcome
@@ -712,6 +741,24 @@ namespace TencentCloud
                 ResumeServerlessOutcome ResumeServerless(const Model::ResumeServerlessRequest &request);
                 void ResumeServerlessAsync(const Model::ResumeServerlessRequest& request, const ResumeServerlessAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ResumeServerlessOutcomeCallable ResumeServerlessCallable(const Model::ResumeServerlessRequest& request);
+
+                /**
+                 *This API is used to search the list of cluster databases.
+                 * @param req SearchClusterDatabasesRequest
+                 * @return SearchClusterDatabasesOutcome
+                 */
+                SearchClusterDatabasesOutcome SearchClusterDatabases(const Model::SearchClusterDatabasesRequest &request);
+                void SearchClusterDatabasesAsync(const Model::SearchClusterDatabasesRequest& request, const SearchClusterDatabasesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SearchClusterDatabasesOutcomeCallable SearchClusterDatabasesCallable(const Model::SearchClusterDatabasesRequest& request);
+
+                /**
+                 *This API is used to search the list of cluster data tables.
+                 * @param req SearchClusterTablesRequest
+                 * @return SearchClusterTablesOutcome
+                 */
+                SearchClusterTablesOutcome SearchClusterTables(const Model::SearchClusterTablesRequest &request);
+                void SearchClusterTablesAsync(const Model::SearchClusterTablesRequest& request, const SearchClusterTablesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SearchClusterTablesOutcomeCallable SearchClusterTablesCallable(const Model::SearchClusterTablesRequest& request);
 
                 /**
                  *This API is used to set auto-renewal for an instance.
@@ -730,6 +777,15 @@ namespace TencentCloud
                 SwitchClusterZoneOutcome SwitchClusterZone(const Model::SwitchClusterZoneRequest &request);
                 void SwitchClusterZoneAsync(const Model::SwitchClusterZoneRequest& request, const SwitchClusterZoneAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 SwitchClusterZoneOutcomeCallable SwitchClusterZoneCallable(const Model::SwitchClusterZoneRequest& request);
+
+                /**
+                 *This API is used to modify the database proxy VPC.
+                 * @param req SwitchProxyVpcRequest
+                 * @return SwitchProxyVpcOutcome
+                 */
+                SwitchProxyVpcOutcome SwitchProxyVpc(const Model::SwitchProxyVpcRequest &request);
+                void SwitchProxyVpcAsync(const Model::SwitchProxyVpcRequest& request, const SwitchProxyVpcAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SwitchProxyVpcOutcomeCallable SwitchProxyVpcCallable(const Model::SwitchProxyVpcRequest& request);
 
                 /**
                  *This API is used to upgrade an instance.

@@ -24,6 +24,8 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cynosdb/v20190107/model/ObjectTask.h>
+#include <tencentcloud/cynosdb/v20190107/model/Tag.h>
 
 
 namespace TencentCloud
@@ -814,6 +816,112 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                      */
                     bool StoragePayModeHasBeenSet() const;
 
+                    /**
+                     * 获取Physical zone
+                     * @return PhysicalZone Physical zone
+                     */
+                    std::string GetPhysicalZone() const;
+
+                    /**
+                     * 设置Physical zone
+                     * @param PhysicalZone Physical zone
+                     */
+                    void SetPhysicalZone(const std::string& _physicalZone);
+
+                    /**
+                     * 判断参数 PhysicalZone 是否已赋值
+                     * @return PhysicalZone 是否已赋值
+                     */
+                    bool PhysicalZoneHasBeenSet() const;
+
+                    /**
+                     * 获取Business type
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return BusinessType Business type
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string GetBusinessType() const;
+
+                    /**
+                     * 设置Business type
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param BusinessType Business type
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    void SetBusinessType(const std::string& _businessType);
+
+                    /**
+                     * 判断参数 BusinessType 是否已赋值
+                     * @return BusinessType 是否已赋值
+                     */
+                    bool BusinessTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Task
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Tasks Task
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<ObjectTask> GetTasks() const;
+
+                    /**
+                     * 设置Task
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Tasks Task
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetTasks(const std::vector<ObjectTask>& _tasks);
+
+                    /**
+                     * 判断参数 Tasks 是否已赋值
+                     * @return Tasks 是否已赋值
+                     */
+                    bool TasksHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to freeze
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IsFreeze Whether to freeze
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetIsFreeze() const;
+
+                    /**
+                     * 设置Whether to freeze
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param IsFreeze Whether to freeze
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetIsFreeze(const std::string& _isFreeze);
+
+                    /**
+                     * 判断参数 IsFreeze 是否已赋值
+                     * @return IsFreeze 是否已赋值
+                     */
+                    bool IsFreezeHasBeenSet() const;
+
+                    /**
+                     * 获取The resource tag
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ResourceTags The resource tag
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<Tag> GetResourceTags() const;
+
+                    /**
+                     * 设置The resource tag
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ResourceTags The resource tag
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetResourceTags(const std::vector<Tag>& _resourceTags);
+
+                    /**
+                     * 判断参数 ResourceTags 是否已赋值
+                     * @return ResourceTags 是否已赋值
+                     */
+                    bool ResourceTagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1070,6 +1178,40 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                      */
                     int64_t m_storagePayMode;
                     bool m_storagePayModeHasBeenSet;
+
+                    /**
+                     * Physical zone
+                     */
+                    std::string m_physicalZone;
+                    bool m_physicalZoneHasBeenSet;
+
+                    /**
+                     * Business type
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string m_businessType;
+                    bool m_businessTypeHasBeenSet;
+
+                    /**
+                     * Task
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<ObjectTask> m_tasks;
+                    bool m_tasksHasBeenSet;
+
+                    /**
+                     * Whether to freeze
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_isFreeze;
+                    bool m_isFreezeHasBeenSet;
+
+                    /**
+                     * The resource tag
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<Tag> m_resourceTags;
+                    bool m_resourceTagsHasBeenSet;
 
                 };
             }

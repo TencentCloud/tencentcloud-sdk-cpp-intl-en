@@ -46,7 +46,9 @@ namespace TencentCloud
 
                     /**
                      * 获取Start time of valid rollback time range (disused)
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TimeRangeStart Start time of valid rollback time range (disused)
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetTimeRangeStart() const;
 
@@ -58,7 +60,9 @@ namespace TencentCloud
 
                     /**
                      * 获取End time of valid rollback time range (disused)
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TimeRangeEnd End time of valid rollback time range (disused)
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetTimeRangeEnd() const;
 
@@ -84,12 +88,14 @@ namespace TencentCloud
 
                     /**
                      * Start time of valid rollback time range (disused)
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_timeRangeStart;
                     bool m_timeRangeStartHasBeenSet;
 
                     /**
                      * End time of valid rollback time range (disused)
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_timeRangeEnd;
                     bool m_timeRangeEndHasBeenSet;

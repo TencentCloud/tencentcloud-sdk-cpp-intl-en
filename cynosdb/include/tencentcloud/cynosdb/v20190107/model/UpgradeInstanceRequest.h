@@ -186,6 +186,24 @@ namespace TencentCloud
                      */
                     bool DealModeHasBeenSet() const;
 
+                    /**
+                     * 获取Valid values: `NormalUpgrade` (Normal mode), `FastUpgrade` (QuickChange). If the system detects that the configuration modification process will cause a momentary disconnection, the process will be terminated.
+                     * @return UpgradeMode Valid values: `NormalUpgrade` (Normal mode), `FastUpgrade` (QuickChange). If the system detects that the configuration modification process will cause a momentary disconnection, the process will be terminated.
+                     */
+                    std::string GetUpgradeMode() const;
+
+                    /**
+                     * 设置Valid values: `NormalUpgrade` (Normal mode), `FastUpgrade` (QuickChange). If the system detects that the configuration modification process will cause a momentary disconnection, the process will be terminated.
+                     * @param UpgradeMode Valid values: `NormalUpgrade` (Normal mode), `FastUpgrade` (QuickChange). If the system detects that the configuration modification process will cause a momentary disconnection, the process will be terminated.
+                     */
+                    void SetUpgradeMode(const std::string& _upgradeMode);
+
+                    /**
+                     * 判断参数 UpgradeMode 是否已赋值
+                     * @return UpgradeMode 是否已赋值
+                     */
+                    bool UpgradeModeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -235,6 +253,12 @@ namespace TencentCloud
                      */
                     int64_t m_dealMode;
                     bool m_dealModeHasBeenSet;
+
+                    /**
+                     * Valid values: `NormalUpgrade` (Normal mode), `FastUpgrade` (QuickChange). If the system detects that the configuration modification process will cause a momentary disconnection, the process will be terminated.
+                     */
+                    std::string m_upgradeMode;
+                    bool m_upgradeModeHasBeenSet;
 
                 };
             }

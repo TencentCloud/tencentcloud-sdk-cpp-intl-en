@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cynosdb/v20190107/model/Tag.h>
 #include <tencentcloud/cynosdb/v20190107/model/ParamItem.h>
+#include <tencentcloud/cynosdb/v20190107/model/InstanceInitInfo.h>
 
 
 namespace TencentCloud
@@ -777,14 +778,14 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
                     bool AlarmPolicyIdsHasBeenSet() const;
 
                     /**
-                     * 获取Array of parameters
-                     * @return ClusterParams Array of parameters
+                     * 获取Array of parameters. Valid values: `character_set_server` (utf8｜latin1｜gbk｜utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
+                     * @return ClusterParams Array of parameters. Valid values: `character_set_server` (utf8｜latin1｜gbk｜utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
                      */
                     std::vector<ParamItem> GetClusterParams() const;
 
                     /**
-                     * 设置Array of parameters
-                     * @param ClusterParams Array of parameters
+                     * 设置Array of parameters. Valid values: `character_set_server` (utf8｜latin1｜gbk｜utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
+                     * @param ClusterParams Array of parameters. Valid values: `character_set_server` (utf8｜latin1｜gbk｜utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
                      */
                     void SetClusterParams(const std::vector<ParamItem>& _clusterParams);
 
@@ -847,6 +848,24 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
                      * @return SlaveZone 是否已赋值
                      */
                     bool SlaveZoneHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return InstanceInitInfos 
+                     */
+                    std::vector<InstanceInitInfo> GetInstanceInitInfos() const;
+
+                    /**
+                     * 设置
+                     * @param InstanceInitInfos 
+                     */
+                    void SetInstanceInitInfos(const std::vector<InstanceInitInfo>& _instanceInitInfos);
+
+                    /**
+                     * 判断参数 InstanceInitInfos 是否已赋值
+                     * @return InstanceInitInfos 是否已赋值
+                     */
+                    bool InstanceInitInfosHasBeenSet() const;
 
                 private:
 
@@ -1088,7 +1107,7 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
                     bool m_alarmPolicyIdsHasBeenSet;
 
                     /**
-                     * Array of parameters
+                     * Array of parameters. Valid values: `character_set_server` (utf8｜latin1｜gbk｜utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
                      */
                     std::vector<ParamItem> m_clusterParams;
                     bool m_clusterParamsHasBeenSet;
@@ -1110,6 +1129,12 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
                      */
                     std::string m_slaveZone;
                     bool m_slaveZoneHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<InstanceInitInfo> m_instanceInitInfos;
+                    bool m_instanceInitInfosHasBeenSet;
 
                 };
             }

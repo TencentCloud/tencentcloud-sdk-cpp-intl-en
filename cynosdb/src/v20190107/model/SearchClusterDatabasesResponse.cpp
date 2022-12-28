@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/cynosdb/v20190107/model/DescribeAccountsResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/SearchClusterDatabasesResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,13 +23,12 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Cynosdb::V20190107::Model;
 using namespace std;
 
-DescribeAccountsResponse::DescribeAccountsResponse() :
-    m_accountSetHasBeenSet(false),
-    m_totalCountHasBeenSet(false)
+SearchClusterDatabasesResponse::SearchClusterDatabasesResponse() :
+    m_databasesHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome DescribeAccountsResponse::Deserialize(const string &payload)
+CoreInternalOutcome SearchClusterDatabasesResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -63,67 +62,40 @@ CoreInternalOutcome DescribeAccountsResponse::Deserialize(const string &payload)
     }
 
 
-    if (rsp.HasMember("AccountSet") && !rsp["AccountSet"].IsNull())
+    if (rsp.HasMember("Databases") && !rsp["Databases"].IsNull())
     {
-        if (!rsp["AccountSet"].IsArray())
-            return CoreInternalOutcome(Core::Error("response `AccountSet` is not array type"));
+        if (!rsp["Databases"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `Databases` is not array type"));
 
-        const rapidjson::Value &tmpValue = rsp["AccountSet"];
+        const rapidjson::Value &tmpValue = rsp["Databases"];
         for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
-            Account item;
-            CoreInternalOutcome outcome = item.Deserialize(*itr);
-            if (!outcome.IsSuccess())
-            {
-                outcome.GetError().SetRequestId(requestId);
-                return outcome;
-            }
-            m_accountSet.push_back(item);
+            m_databases.push_back((*itr).GetString());
         }
-        m_accountSetHasBeenSet = true;
-    }
-
-    if (rsp.HasMember("TotalCount") && !rsp["TotalCount"].IsNull())
-    {
-        if (!rsp["TotalCount"].IsInt64())
-        {
-            return CoreInternalOutcome(Core::Error("response `TotalCount` IsInt64=false incorrectly").SetRequestId(requestId));
-        }
-        m_totalCount = rsp["TotalCount"].GetInt64();
-        m_totalCountHasBeenSet = true;
+        m_databasesHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string DescribeAccountsResponse::ToJsonString() const
+string SearchClusterDatabasesResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_accountSetHasBeenSet)
+    if (m_databasesHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "AccountSet";
+        string key = "Databases";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
-        int i=0;
-        for (auto itr = m_accountSet.begin(); itr != m_accountSet.end(); ++itr, ++i)
+        for (auto itr = m_databases.begin(); itr != m_databases.end(); ++itr)
         {
-            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
-            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
-    }
-
-    if (m_totalCountHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "TotalCount";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_totalCount, allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -138,24 +110,14 @@ string DescribeAccountsResponse::ToJsonString() const
 }
 
 
-vector<Account> DescribeAccountsResponse::GetAccountSet() const
+vector<string> SearchClusterDatabasesResponse::GetDatabases() const
 {
-    return m_accountSet;
+    return m_databases;
 }
 
-bool DescribeAccountsResponse::AccountSetHasBeenSet() const
+bool SearchClusterDatabasesResponse::DatabasesHasBeenSet() const
 {
-    return m_accountSetHasBeenSet;
-}
-
-int64_t DescribeAccountsResponse::GetTotalCount() const
-{
-    return m_totalCount;
-}
-
-bool DescribeAccountsResponse::TotalCountHasBeenSet() const
-{
-    return m_totalCountHasBeenSet;
+    return m_databasesHasBeenSet;
 }
 
 

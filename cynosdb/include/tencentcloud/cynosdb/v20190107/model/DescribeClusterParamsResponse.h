@@ -58,7 +58,9 @@ namespace TencentCloud
 
                     /**
                      * 获取Instance parameter list
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Items Instance parameter list
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<ParamInfo> GetItems() const;
 
@@ -78,6 +80,7 @@ namespace TencentCloud
 
                     /**
                      * Instance parameter list
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<ParamInfo> m_items;
                     bool m_itemsHasBeenSet;

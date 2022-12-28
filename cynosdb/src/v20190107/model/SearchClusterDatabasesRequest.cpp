@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/cynosdb/v20190107/model/DescribeClusterParamsRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/SearchClusterDatabasesRequest.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -22,13 +22,14 @@
 using namespace TencentCloud::Cynosdb::V20190107::Model;
 using namespace std;
 
-DescribeClusterParamsRequest::DescribeClusterParamsRequest() :
+SearchClusterDatabasesRequest::SearchClusterDatabasesRequest() :
     m_clusterIdHasBeenSet(false),
-    m_paramNameHasBeenSet(false)
+    m_databaseHasBeenSet(false),
+    m_matchTypeHasBeenSet(false)
 {
 }
 
-string DescribeClusterParamsRequest::ToJsonString() const
+string SearchClusterDatabasesRequest::ToJsonString() const
 {
     rapidjson::Document d;
     d.SetObject();
@@ -43,12 +44,20 @@ string DescribeClusterParamsRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_clusterId.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_paramNameHasBeenSet)
+    if (m_databaseHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "ParamName";
+        string key = "Database";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_paramName.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_database.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_matchTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MatchType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_matchType, allocator);
     }
 
 
@@ -59,36 +68,52 @@ string DescribeClusterParamsRequest::ToJsonString() const
 }
 
 
-string DescribeClusterParamsRequest::GetClusterId() const
+string SearchClusterDatabasesRequest::GetClusterId() const
 {
     return m_clusterId;
 }
 
-void DescribeClusterParamsRequest::SetClusterId(const string& _clusterId)
+void SearchClusterDatabasesRequest::SetClusterId(const string& _clusterId)
 {
     m_clusterId = _clusterId;
     m_clusterIdHasBeenSet = true;
 }
 
-bool DescribeClusterParamsRequest::ClusterIdHasBeenSet() const
+bool SearchClusterDatabasesRequest::ClusterIdHasBeenSet() const
 {
     return m_clusterIdHasBeenSet;
 }
 
-string DescribeClusterParamsRequest::GetParamName() const
+string SearchClusterDatabasesRequest::GetDatabase() const
 {
-    return m_paramName;
+    return m_database;
 }
 
-void DescribeClusterParamsRequest::SetParamName(const string& _paramName)
+void SearchClusterDatabasesRequest::SetDatabase(const string& _database)
 {
-    m_paramName = _paramName;
-    m_paramNameHasBeenSet = true;
+    m_database = _database;
+    m_databaseHasBeenSet = true;
 }
 
-bool DescribeClusterParamsRequest::ParamNameHasBeenSet() const
+bool SearchClusterDatabasesRequest::DatabaseHasBeenSet() const
 {
-    return m_paramNameHasBeenSet;
+    return m_databaseHasBeenSet;
+}
+
+int64_t SearchClusterDatabasesRequest::GetMatchType() const
+{
+    return m_matchType;
+}
+
+void SearchClusterDatabasesRequest::SetMatchType(const int64_t& _matchType)
+{
+    m_matchType = _matchType;
+    m_matchTypeHasBeenSet = true;
+}
+
+bool SearchClusterDatabasesRequest::MatchTypeHasBeenSet() const
+{
+    return m_matchTypeHasBeenSet;
 }
 
 
