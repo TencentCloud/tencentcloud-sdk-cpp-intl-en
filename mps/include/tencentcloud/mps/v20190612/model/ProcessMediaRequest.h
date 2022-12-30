@@ -289,6 +289,32 @@ Note 3: The trigger configured for a scheme is for automatically starting a sche
                      */
                     bool ScheduleIdHasBeenSet() const;
 
+                    /**
+                     * 获取The task type.
+<li> `Online` (default): A task that is executed immediately.</li>
+<li> `Offline`: A task that is executed when the system is idle (within three days by default).</li>
+                     * @return TaskType The task type.
+<li> `Online` (default): A task that is executed immediately.</li>
+<li> `Offline`: A task that is executed when the system is idle (within three days by default).</li>
+                     */
+                    std::string GetTaskType() const;
+
+                    /**
+                     * 设置The task type.
+<li> `Online` (default): A task that is executed immediately.</li>
+<li> `Offline`: A task that is executed when the system is idle (within three days by default).</li>
+                     * @param TaskType The task type.
+<li> `Online` (default): A task that is executed immediately.</li>
+<li> `Offline`: A task that is executed when the system is idle (within three days by default).</li>
+                     */
+                    void SetTaskType(const std::string& _taskType);
+
+                    /**
+                     * 判断参数 TaskType 是否已赋值
+                     * @return TaskType 是否已赋值
+                     */
+                    bool TaskTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -368,6 +394,14 @@ Note 3: The trigger configured for a scheme is for automatically starting a sche
                      */
                     int64_t m_scheduleId;
                     bool m_scheduleIdHasBeenSet;
+
+                    /**
+                     * The task type.
+<li> `Online` (default): A task that is executed immediately.</li>
+<li> `Offline`: A task that is executed when the system is idle (within three days by default).</li>
+                     */
+                    std::string m_taskType;
+                    bool m_taskTypeHasBeenSet;
 
                 };
             }

@@ -116,6 +116,28 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool DefaultCacheHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies whether to use the default caching policy when Cache-Control is not returned from the origin
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return DefaultCacheStrategy Specifies whether to use the default caching policy when Cache-Control is not returned from the origin
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetDefaultCacheStrategy() const;
+
+                    /**
+                     * 设置Specifies whether to use the default caching policy when Cache-Control is not returned from the origin
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param DefaultCacheStrategy Specifies whether to use the default caching policy when Cache-Control is not returned from the origin
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetDefaultCacheStrategy(const std::string& _defaultCacheStrategy);
+
+                    /**
+                     * 判断参数 DefaultCacheStrategy 是否已赋值
+                     * @return DefaultCacheStrategy 是否已赋值
+                     */
+                    bool DefaultCacheStrategyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -139,6 +161,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     std::string m_defaultCache;
                     bool m_defaultCacheHasBeenSet;
+
+                    /**
+                     * Specifies whether to use the default caching policy when Cache-Control is not returned from the origin
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_defaultCacheStrategy;
+                    bool m_defaultCacheStrategyHasBeenSet;
 
                 };
             }

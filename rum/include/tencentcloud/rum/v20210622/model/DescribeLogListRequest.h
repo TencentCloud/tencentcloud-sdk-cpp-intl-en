@@ -151,14 +151,14 @@ namespace TencentCloud
                     bool ContextHasBeenSet() const;
 
                     /**
-                     * 获取Query statement, which is required and can contain up to 4,096 characters.
-                     * @return Query Query statement, which is required and can contain up to 4,096 characters.
+                     * 获取Query statement, which is required and can contain up to 4,096 characters, such as "id:120001 AND type:\"log\"".
+                     * @return Query Query statement, which is required and can contain up to 4,096 characters, such as "id:120001 AND type:\"log\"".
                      */
                     std::string GetQuery() const;
 
                     /**
-                     * 设置Query statement, which is required and can contain up to 4,096 characters.
-                     * @param Query Query statement, which is required and can contain up to 4,096 characters.
+                     * 设置Query statement, which is required and can contain up to 4,096 characters, such as "id:120001 AND type:\"log\"".
+                     * @param Query Query statement, which is required and can contain up to 4,096 characters, such as "id:120001 AND type:\"log\"".
                      */
                     void SetQuery(const std::string& _query);
 
@@ -225,7 +225,7 @@ namespace TencentCloud
                     bool m_contextHasBeenSet;
 
                     /**
-                     * Query statement, which is required and can contain up to 4,096 characters.
+                     * Query statement, which is required and can contain up to 4,096 characters, such as "id:120001 AND type:\"log\"".
                      */
                     std::string m_query;
                     bool m_queryHasBeenSet;

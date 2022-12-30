@@ -131,6 +131,8 @@
 #include <tencentcloud/vod/v20180717/model/DescribeDailyPlayStatFileListResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeDrmKeyProviderInfoRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeDrmKeyProviderInfoResponse.h>
+#include <tencentcloud/vod/v20180717/model/DescribeFileAttributesRequest.h>
+#include <tencentcloud/vod/v20180717/model/DescribeFileAttributesResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeImageProcessingTemplatesRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeImageProcessingTemplatesResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeImageReviewUsageDataRequest.h>
@@ -435,6 +437,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeDrmKeyProviderInfoResponse> DescribeDrmKeyProviderInfoOutcome;
                 typedef std::future<DescribeDrmKeyProviderInfoOutcome> DescribeDrmKeyProviderInfoOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeDrmKeyProviderInfoRequest&, DescribeDrmKeyProviderInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDrmKeyProviderInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeFileAttributesResponse> DescribeFileAttributesOutcome;
+                typedef std::future<DescribeFileAttributesOutcome> DescribeFileAttributesOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::DescribeFileAttributesRequest&, DescribeFileAttributesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeFileAttributesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeImageProcessingTemplatesResponse> DescribeImageProcessingTemplatesOutcome;
                 typedef std::future<DescribeImageProcessingTemplatesOutcome> DescribeImageProcessingTemplatesOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeImageProcessingTemplatesRequest&, DescribeImageProcessingTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeImageProcessingTemplatesAsyncHandler;
@@ -1165,6 +1170,17 @@ This API is used to delete a player configuration.
                 DescribeDrmKeyProviderInfoOutcome DescribeDrmKeyProviderInfo(const Model::DescribeDrmKeyProviderInfoRequest &request);
                 void DescribeDrmKeyProviderInfoAsync(const Model::DescribeDrmKeyProviderInfoRequest& request, const DescribeDrmKeyProviderInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeDrmKeyProviderInfoOutcomeCallable DescribeDrmKeyProviderInfoCallable(const Model::DescribeDrmKeyProviderInfoRequest& request);
+
+                /**
+                 *This API is used to get file attributes asynchronously.
+- Currently, this API can only get the MD5 hash of a file.
+- If the file queried is in HLS or DASH format, the attributes of the index file will be returned.
+                 * @param req DescribeFileAttributesRequest
+                 * @return DescribeFileAttributesOutcome
+                 */
+                DescribeFileAttributesOutcome DescribeFileAttributes(const Model::DescribeFileAttributesRequest &request);
+                void DescribeFileAttributesAsync(const Model::DescribeFileAttributesRequest& request, const DescribeFileAttributesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeFileAttributesOutcomeCallable DescribeFileAttributesCallable(const Model::DescribeFileAttributesRequest& request);
 
                 /**
                  *This API is used to query image processing templates. You can specify the filters as well as the offset to start returning records from.

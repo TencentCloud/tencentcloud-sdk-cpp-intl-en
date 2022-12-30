@@ -64,6 +64,24 @@ namespace TencentCloud
                      */
                     bool FileIdHasBeenSet() const;
 
+                    /**
+                     * 获取The moderation template ID.
+                     * @return Definition The moderation template ID.
+                     */
+                    uint64_t GetDefinition() const;
+
+                    /**
+                     * 设置The moderation template ID.
+                     * @param Definition The moderation template ID.
+                     */
+                    void SetDefinition(const uint64_t& _definition);
+
+                    /**
+                     * 判断参数 Definition 是否已赋值
+                     * @return Definition 是否已赋值
+                     */
+                    bool DefinitionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -71,6 +89,12 @@ namespace TencentCloud
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
+
+                    /**
+                     * The moderation template ID.
+                     */
+                    uint64_t m_definition;
+                    bool m_definitionHasBeenSet;
 
                 };
             }

@@ -243,6 +243,100 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool IsVipHasBeenSet() const;
 
+                    /**
+                     * 获取TDMQ for RocketMQ cluster type flag
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RocketMQFlag TDMQ for RocketMQ cluster type flag
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool GetRocketMQFlag() const;
+
+                    /**
+                     * 设置TDMQ for RocketMQ cluster type flag
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param RocketMQFlag TDMQ for RocketMQ cluster type flag
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetRocketMQFlag(const bool& _rocketMQFlag);
+
+                    /**
+                     * 判断参数 RocketMQFlag 是否已赋值
+                     * @return RocketMQFlag 是否已赋值
+                     */
+                    bool RocketMQFlagHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return Status 
+                     */
+                    int64_t GetStatus() const;
+
+                    /**
+                     * 设置
+                     * @param Status 
+                     */
+                    void SetStatus(const int64_t& _status);
+
+                    /**
+                     * 判断参数 Status 是否已赋值
+                     * @return Status 是否已赋值
+                     */
+                    bool StatusHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return IsolateTime 
+                     */
+                    int64_t GetIsolateTime() const;
+
+                    /**
+                     * 设置
+                     * @param IsolateTime 
+                     */
+                    void SetIsolateTime(const int64_t& _isolateTime);
+
+                    /**
+                     * 判断参数 IsolateTime 是否已赋值
+                     * @return IsolateTime 是否已赋值
+                     */
+                    bool IsolateTimeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return HttpPublicEndpoint 
+                     */
+                    std::string GetHttpPublicEndpoint() const;
+
+                    /**
+                     * 设置
+                     * @param HttpPublicEndpoint 
+                     */
+                    void SetHttpPublicEndpoint(const std::string& _httpPublicEndpoint);
+
+                    /**
+                     * 判断参数 HttpPublicEndpoint 是否已赋值
+                     * @return HttpPublicEndpoint 是否已赋值
+                     */
+                    bool HttpPublicEndpointHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return HttpVpcEndpoint 
+                     */
+                    std::string GetHttpVpcEndpoint() const;
+
+                    /**
+                     * 设置
+                     * @param HttpVpcEndpoint 
+                     */
+                    void SetHttpVpcEndpoint(const std::string& _httpVpcEndpoint);
+
+                    /**
+                     * 判断参数 HttpVpcEndpoint 是否已赋值
+                     * @return HttpVpcEndpoint 是否已赋值
+                     */
+                    bool HttpVpcEndpointHasBeenSet() const;
+
                 private:
 
                     /**
@@ -308,6 +402,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool m_isVip;
                     bool m_isVipHasBeenSet;
+
+                    /**
+                     * TDMQ for RocketMQ cluster type flag
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool m_rocketMQFlag;
+                    bool m_rocketMQFlagHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_status;
+                    bool m_statusHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_isolateTime;
+                    bool m_isolateTimeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_httpPublicEndpoint;
+                    bool m_httpPublicEndpointHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_httpVpcEndpoint;
+                    bool m_httpVpcEndpointHasBeenSet;
 
                 };
             }

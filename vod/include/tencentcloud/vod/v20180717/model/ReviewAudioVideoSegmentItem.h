@@ -314,6 +314,46 @@ Valid values when `Form` is `Voice` and `Label` is `Porn`:
                      */
                     bool KeywordSetHasBeenSet() const;
 
+                    /**
+                     * 获取The URL of a suspected image (which will be deleted
+ after `PicUrlExpireTime`).
+                     * @return Url The URL of a suspected image (which will be deleted
+ after `PicUrlExpireTime`).
+                     */
+                    std::string GetUrl() const;
+
+                    /**
+                     * 设置The URL of a suspected image (which will be deleted
+ after `PicUrlExpireTime`).
+                     * @param Url The URL of a suspected image (which will be deleted
+ after `PicUrlExpireTime`).
+                     */
+                    void SetUrl(const std::string& _url);
+
+                    /**
+                     * 判断参数 Url 是否已赋值
+                     * @return Url 是否已赋值
+                     */
+                    bool UrlHasBeenSet() const;
+
+                    /**
+                     * 获取The expiration time of the suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return PicUrlExpireTime The expiration time of the suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     */
+                    std::string GetPicUrlExpireTime() const;
+
+                    /**
+                     * 设置The expiration time of the suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param PicUrlExpireTime The expiration time of the suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     */
+                    void SetPicUrlExpireTime(const std::string& _picUrlExpireTime);
+
+                    /**
+                     * 判断参数 PicUrlExpireTime 是否已赋值
+                     * @return PicUrlExpireTime 是否已赋值
+                     */
+                    bool PicUrlExpireTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -397,6 +437,19 @@ Valid values when `Form` is `Voice` and `Label` is `Porn`:
                      */
                     std::vector<std::string> m_keywordSet;
                     bool m_keywordSetHasBeenSet;
+
+                    /**
+                     * The URL of a suspected image (which will be deleted
+ after `PicUrlExpireTime`).
+                     */
+                    std::string m_url;
+                    bool m_urlHasBeenSet;
+
+                    /**
+                     * The expiration time of the suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     */
+                    std::string m_picUrlExpireTime;
+                    bool m_picUrlExpireTimeHasBeenSet;
 
                 };
             }

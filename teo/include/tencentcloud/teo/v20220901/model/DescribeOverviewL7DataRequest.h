@@ -218,48 +218,22 @@ namespace TencentCloud
                     bool IntervalHasBeenSet() const;
 
                     /**
-                     * 获取Data storage region. Values:
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location.
-                     * @return Area Data storage region. Values:
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location.
-                     */
-                    std::string GetArea() const;
-
-                    /**
-                     * 设置Data storage region. Values:
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location.
-                     * @param Area Data storage region. Values:
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location.
-                     */
-                    void SetArea(const std::string& _area);
-
-                    /**
-                     * 判断参数 Area 是否已赋值
-                     * @return Area 是否已赋值
-                     */
-                    bool AreaHasBeenSet() const;
-
-                    /**
-                     * 获取Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`tagKey`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li>
-<li>`tagValue`<br>  Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>
-                     * @return Filters Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`tagKey`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li>
-<li>`tagValue`<br>  Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>
+                     * 获取Filter conditions. See below for details: 
+<li>`tagKey`:<br>   Filter by the <strong>tag key</strong><br>   Type: String<br>   Required: No</li>
+<li>`tagValue`<br>  Filter by the <strong>tag value</strong><br>   Type: String<br>   Required: No</li>
+                     * @return Filters Filter conditions. See below for details: 
+<li>`tagKey`:<br>   Filter by the <strong>tag key</strong><br>   Type: String<br>   Required: No</li>
+<li>`tagValue`<br>  Filter by the <strong>tag value</strong><br>   Type: String<br>   Required: No</li>
                      */
                     std::vector<QueryCondition> GetFilters() const;
 
                     /**
-                     * 设置Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`tagKey`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li>
-<li>`tagValue`<br>  Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>
-                     * @param Filters Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`tagKey`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li>
-<li>`tagValue`<br>  Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>
+                     * 设置Filter conditions. See below for details: 
+<li>`tagKey`:<br>   Filter by the <strong>tag key</strong><br>   Type: String<br>   Required: No</li>
+<li>`tagValue`<br>  Filter by the <strong>tag value</strong><br>   Type: String<br>   Required: No</li>
+                     * @param Filters Filter conditions. See below for details: 
+<li>`tagKey`:<br>   Filter by the <strong>tag key</strong><br>   Type: String<br>   Required: No</li>
+<li>`tagValue`<br>  Filter by the <strong>tag value</strong><br>   Type: String<br>   Required: No</li>
                      */
                     void SetFilters(const std::vector<QueryCondition>& _filters);
 
@@ -268,6 +242,36 @@ namespace TencentCloud
                      * @return Filters 是否已赋值
                      */
                     bool FiltersHasBeenSet() const;
+
+                    /**
+                     * 获取Geolocation scope. Values:
+<li>`overseas`: Regions outside the Chinese mainland</li>
+<li>`mainland`: Chinese mainland</li>
+<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
+                     * @return Area Geolocation scope. Values:
+<li>`overseas`: Regions outside the Chinese mainland</li>
+<li>`mainland`: Chinese mainland</li>
+<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
+                     */
+                    std::string GetArea() const;
+
+                    /**
+                     * 设置Geolocation scope. Values:
+<li>`overseas`: Regions outside the Chinese mainland</li>
+<li>`mainland`: Chinese mainland</li>
+<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
+                     * @param Area Geolocation scope. Values:
+<li>`overseas`: Regions outside the Chinese mainland</li>
+<li>`mainland`: Chinese mainland</li>
+<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
+                     */
+                    void SetArea(const std::string& _area);
+
+                    /**
+                     * 判断参数 Area 是否已赋值
+                     * @return Area 是否已赋值
+                     */
+                    bool AreaHasBeenSet() const;
 
                 private:
 
@@ -326,20 +330,21 @@ namespace TencentCloud
                     bool m_intervalHasBeenSet;
 
                     /**
-                     * Data storage region. Values:
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location.
-                     */
-                    std::string m_area;
-                    bool m_areaHasBeenSet;
-
-                    /**
-                     * Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`tagKey`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li>
-<li>`tagValue`<br>  Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>
+                     * Filter conditions. See below for details: 
+<li>`tagKey`:<br>   Filter by the <strong>tag key</strong><br>   Type: String<br>   Required: No</li>
+<li>`tagValue`<br>  Filter by the <strong>tag value</strong><br>   Type: String<br>   Required: No</li>
                      */
                     std::vector<QueryCondition> m_filters;
                     bool m_filtersHasBeenSet;
+
+                    /**
+                     * Geolocation scope. Values:
+<li>`overseas`: Regions outside the Chinese mainland</li>
+<li>`mainland`: Chinese mainland</li>
+<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
+                     */
+                    std::string m_area;
+                    bool m_areaHasBeenSet;
 
                 };
             }

@@ -30,8 +30,8 @@ DescribeOverviewL7DataRequest::DescribeOverviewL7DataRequest() :
     m_domainsHasBeenSet(false),
     m_protocolHasBeenSet(false),
     m_intervalHasBeenSet(false),
-    m_areaHasBeenSet(false),
-    m_filtersHasBeenSet(false)
+    m_filtersHasBeenSet(false),
+    m_areaHasBeenSet(false)
 {
 }
 
@@ -113,14 +113,6 @@ string DescribeOverviewL7DataRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_interval.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_areaHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Area";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_area.c_str(), allocator).Move(), allocator);
-    }
-
     if (m_filtersHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -134,6 +126,14 @@ string DescribeOverviewL7DataRequest::ToJsonString() const
             d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(d[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_areaHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Area";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_area.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -256,22 +256,6 @@ bool DescribeOverviewL7DataRequest::IntervalHasBeenSet() const
     return m_intervalHasBeenSet;
 }
 
-string DescribeOverviewL7DataRequest::GetArea() const
-{
-    return m_area;
-}
-
-void DescribeOverviewL7DataRequest::SetArea(const string& _area)
-{
-    m_area = _area;
-    m_areaHasBeenSet = true;
-}
-
-bool DescribeOverviewL7DataRequest::AreaHasBeenSet() const
-{
-    return m_areaHasBeenSet;
-}
-
 vector<QueryCondition> DescribeOverviewL7DataRequest::GetFilters() const
 {
     return m_filters;
@@ -286,6 +270,22 @@ void DescribeOverviewL7DataRequest::SetFilters(const vector<QueryCondition>& _fi
 bool DescribeOverviewL7DataRequest::FiltersHasBeenSet() const
 {
     return m_filtersHasBeenSet;
+}
+
+string DescribeOverviewL7DataRequest::GetArea() const
+{
+    return m_area;
+}
+
+void DescribeOverviewL7DataRequest::SetArea(const string& _area)
+{
+    m_area = _area;
+    m_areaHasBeenSet = true;
+}
+
+bool DescribeOverviewL7DataRequest::AreaHasBeenSet() const
+{
+    return m_areaHasBeenSet;
 }
 
 

@@ -37,12 +37,8 @@
 #include <tencentcloud/teo/v20220901/model/CreateCredentialResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateCustomErrorPageRequest.h>
 #include <tencentcloud/teo/v20220901/model/CreateCustomErrorPageResponse.h>
-#include <tencentcloud/teo/v20220901/model/CreateDnsRecordRequest.h>
-#include <tencentcloud/teo/v20220901/model/CreateDnsRecordResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateIpTableListRequest.h>
 #include <tencentcloud/teo/v20220901/model/CreateIpTableListResponse.h>
-#include <tencentcloud/teo/v20220901/model/CreateLoadBalancingRequest.h>
-#include <tencentcloud/teo/v20220901/model/CreateLoadBalancingResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateLogSetRequest.h>
 #include <tencentcloud/teo/v20220901/model/CreateLogSetResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateLogTopicTaskRequest.h>
@@ -71,10 +67,6 @@
 #include <tencentcloud/teo/v20220901/model/DeleteApplicationProxyResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteApplicationProxyRuleRequest.h>
 #include <tencentcloud/teo/v20220901/model/DeleteApplicationProxyRuleResponse.h>
-#include <tencentcloud/teo/v20220901/model/DeleteDnsRecordsRequest.h>
-#include <tencentcloud/teo/v20220901/model/DeleteDnsRecordsResponse.h>
-#include <tencentcloud/teo/v20220901/model/DeleteLoadBalancingRequest.h>
-#include <tencentcloud/teo/v20220901/model/DeleteLoadBalancingResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteLogTopicTaskRequest.h>
 #include <tencentcloud/teo/v20220901/model/DeleteLogTopicTaskResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteOriginGroupRequest.h>
@@ -125,18 +117,16 @@
 #include <tencentcloud/teo/v20220901/model/DescribeDDoSPolicyResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeDefaultCertificatesRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeDefaultCertificatesResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeDistributionL4AccessDataRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeDistributionL4AccessDataResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeDnsDataRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeDnsDataResponse.h>
-#include <tencentcloud/teo/v20220901/model/DescribeDnsRecordsRequest.h>
-#include <tencentcloud/teo/v20220901/model/DescribeDnsRecordsResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeDnssecRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeDnssecResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeHostsSettingRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeHostsSettingResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeIdentificationsRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeIdentificationsResponse.h>
-#include <tencentcloud/teo/v20220901/model/DescribeLoadBalancingRequest.h>
-#include <tencentcloud/teo/v20220901/model/DescribeLoadBalancingResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeLogSetsRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeLogSetsResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeLogTopicTaskDetailRequest.h>
@@ -177,6 +167,8 @@
 #include <tencentcloud/teo/v20220901/model/DescribeSpeedTestingMetricDataResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeSpeedTestingQuotaRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeSpeedTestingQuotaResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeTimingL4AccessDataRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeTimingL4AccessDataResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeTimingL4DataRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeTimingL4DataResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeTimingL7AnalysisDataRequest.h>
@@ -237,16 +229,10 @@
 #include <tencentcloud/teo/v20220901/model/ModifyDDoSPolicyHostResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyDefaultCertificateRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifyDefaultCertificateResponse.h>
-#include <tencentcloud/teo/v20220901/model/ModifyDnsRecordRequest.h>
-#include <tencentcloud/teo/v20220901/model/ModifyDnsRecordResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyDnssecRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifyDnssecResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyHostsCertificateRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifyHostsCertificateResponse.h>
-#include <tencentcloud/teo/v20220901/model/ModifyLoadBalancingRequest.h>
-#include <tencentcloud/teo/v20220901/model/ModifyLoadBalancingResponse.h>
-#include <tencentcloud/teo/v20220901/model/ModifyLoadBalancingStatusRequest.h>
-#include <tencentcloud/teo/v20220901/model/ModifyLoadBalancingStatusResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyLogTopicTaskRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifyLogTopicTaskResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyOriginGroupRequest.h>
@@ -308,15 +294,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateCustomErrorPageResponse> CreateCustomErrorPageOutcome;
                 typedef std::future<CreateCustomErrorPageOutcome> CreateCustomErrorPageOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateCustomErrorPageRequest&, CreateCustomErrorPageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCustomErrorPageAsyncHandler;
-                typedef Outcome<Core::Error, Model::CreateDnsRecordResponse> CreateDnsRecordOutcome;
-                typedef std::future<CreateDnsRecordOutcome> CreateDnsRecordOutcomeCallable;
-                typedef std::function<void(const TeoClient*, const Model::CreateDnsRecordRequest&, CreateDnsRecordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDnsRecordAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateIpTableListResponse> CreateIpTableListOutcome;
                 typedef std::future<CreateIpTableListOutcome> CreateIpTableListOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateIpTableListRequest&, CreateIpTableListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateIpTableListAsyncHandler;
-                typedef Outcome<Core::Error, Model::CreateLoadBalancingResponse> CreateLoadBalancingOutcome;
-                typedef std::future<CreateLoadBalancingOutcome> CreateLoadBalancingOutcomeCallable;
-                typedef std::function<void(const TeoClient*, const Model::CreateLoadBalancingRequest&, CreateLoadBalancingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLoadBalancingAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateLogSetResponse> CreateLogSetOutcome;
                 typedef std::future<CreateLogSetOutcome> CreateLogSetOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateLogSetRequest&, CreateLogSetOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLogSetAsyncHandler;
@@ -359,12 +339,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteApplicationProxyRuleResponse> DeleteApplicationProxyRuleOutcome;
                 typedef std::future<DeleteApplicationProxyRuleOutcome> DeleteApplicationProxyRuleOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DeleteApplicationProxyRuleRequest&, DeleteApplicationProxyRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteApplicationProxyRuleAsyncHandler;
-                typedef Outcome<Core::Error, Model::DeleteDnsRecordsResponse> DeleteDnsRecordsOutcome;
-                typedef std::future<DeleteDnsRecordsOutcome> DeleteDnsRecordsOutcomeCallable;
-                typedef std::function<void(const TeoClient*, const Model::DeleteDnsRecordsRequest&, DeleteDnsRecordsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteDnsRecordsAsyncHandler;
-                typedef Outcome<Core::Error, Model::DeleteLoadBalancingResponse> DeleteLoadBalancingOutcome;
-                typedef std::future<DeleteLoadBalancingOutcome> DeleteLoadBalancingOutcomeCallable;
-                typedef std::function<void(const TeoClient*, const Model::DeleteLoadBalancingRequest&, DeleteLoadBalancingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLoadBalancingAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteLogTopicTaskResponse> DeleteLogTopicTaskOutcome;
                 typedef std::future<DeleteLogTopicTaskOutcome> DeleteLogTopicTaskOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DeleteLogTopicTaskRequest&, DeleteLogTopicTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLogTopicTaskAsyncHandler;
@@ -440,12 +414,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeDefaultCertificatesResponse> DescribeDefaultCertificatesOutcome;
                 typedef std::future<DescribeDefaultCertificatesOutcome> DescribeDefaultCertificatesOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeDefaultCertificatesRequest&, DescribeDefaultCertificatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDefaultCertificatesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDistributionL4AccessDataResponse> DescribeDistributionL4AccessDataOutcome;
+                typedef std::future<DescribeDistributionL4AccessDataOutcome> DescribeDistributionL4AccessDataOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeDistributionL4AccessDataRequest&, DescribeDistributionL4AccessDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDistributionL4AccessDataAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDnsDataResponse> DescribeDnsDataOutcome;
                 typedef std::future<DescribeDnsDataOutcome> DescribeDnsDataOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeDnsDataRequest&, DescribeDnsDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDnsDataAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeDnsRecordsResponse> DescribeDnsRecordsOutcome;
-                typedef std::future<DescribeDnsRecordsOutcome> DescribeDnsRecordsOutcomeCallable;
-                typedef std::function<void(const TeoClient*, const Model::DescribeDnsRecordsRequest&, DescribeDnsRecordsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDnsRecordsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDnssecResponse> DescribeDnssecOutcome;
                 typedef std::future<DescribeDnssecOutcome> DescribeDnssecOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeDnssecRequest&, DescribeDnssecOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDnssecAsyncHandler;
@@ -455,9 +429,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeIdentificationsResponse> DescribeIdentificationsOutcome;
                 typedef std::future<DescribeIdentificationsOutcome> DescribeIdentificationsOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeIdentificationsRequest&, DescribeIdentificationsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeIdentificationsAsyncHandler;
-                typedef Outcome<Core::Error, Model::DescribeLoadBalancingResponse> DescribeLoadBalancingOutcome;
-                typedef std::future<DescribeLoadBalancingOutcome> DescribeLoadBalancingOutcomeCallable;
-                typedef std::function<void(const TeoClient*, const Model::DescribeLoadBalancingRequest&, DescribeLoadBalancingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLoadBalancingAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeLogSetsResponse> DescribeLogSetsOutcome;
                 typedef std::future<DescribeLogSetsOutcome> DescribeLogSetsOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeLogSetsRequest&, DescribeLogSetsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLogSetsAsyncHandler;
@@ -518,6 +489,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeSpeedTestingQuotaResponse> DescribeSpeedTestingQuotaOutcome;
                 typedef std::future<DescribeSpeedTestingQuotaOutcome> DescribeSpeedTestingQuotaOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeSpeedTestingQuotaRequest&, DescribeSpeedTestingQuotaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSpeedTestingQuotaAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeTimingL4AccessDataResponse> DescribeTimingL4AccessDataOutcome;
+                typedef std::future<DescribeTimingL4AccessDataOutcome> DescribeTimingL4AccessDataOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeTimingL4AccessDataRequest&, DescribeTimingL4AccessDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTimingL4AccessDataAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeTimingL4DataResponse> DescribeTimingL4DataOutcome;
                 typedef std::future<DescribeTimingL4DataOutcome> DescribeTimingL4DataOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeTimingL4DataRequest&, DescribeTimingL4DataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTimingL4DataAsyncHandler;
@@ -608,21 +582,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyDefaultCertificateResponse> ModifyDefaultCertificateOutcome;
                 typedef std::future<ModifyDefaultCertificateOutcome> ModifyDefaultCertificateOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyDefaultCertificateRequest&, ModifyDefaultCertificateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDefaultCertificateAsyncHandler;
-                typedef Outcome<Core::Error, Model::ModifyDnsRecordResponse> ModifyDnsRecordOutcome;
-                typedef std::future<ModifyDnsRecordOutcome> ModifyDnsRecordOutcomeCallable;
-                typedef std::function<void(const TeoClient*, const Model::ModifyDnsRecordRequest&, ModifyDnsRecordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDnsRecordAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyDnssecResponse> ModifyDnssecOutcome;
                 typedef std::future<ModifyDnssecOutcome> ModifyDnssecOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyDnssecRequest&, ModifyDnssecOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDnssecAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyHostsCertificateResponse> ModifyHostsCertificateOutcome;
                 typedef std::future<ModifyHostsCertificateOutcome> ModifyHostsCertificateOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyHostsCertificateRequest&, ModifyHostsCertificateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyHostsCertificateAsyncHandler;
-                typedef Outcome<Core::Error, Model::ModifyLoadBalancingResponse> ModifyLoadBalancingOutcome;
-                typedef std::future<ModifyLoadBalancingOutcome> ModifyLoadBalancingOutcomeCallable;
-                typedef std::function<void(const TeoClient*, const Model::ModifyLoadBalancingRequest&, ModifyLoadBalancingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLoadBalancingAsyncHandler;
-                typedef Outcome<Core::Error, Model::ModifyLoadBalancingStatusResponse> ModifyLoadBalancingStatusOutcome;
-                typedef std::future<ModifyLoadBalancingStatusOutcome> ModifyLoadBalancingStatusOutcomeCallable;
-                typedef std::function<void(const TeoClient*, const Model::ModifyLoadBalancingStatusRequest&, ModifyLoadBalancingStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLoadBalancingStatusAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyLogTopicTaskResponse> ModifyLogTopicTaskOutcome;
                 typedef std::future<ModifyLogTopicTaskOutcome> ModifyLogTopicTaskOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyLogTopicTaskRequest&, ModifyLogTopicTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLogTopicTaskAsyncHandler;
@@ -729,15 +694,6 @@ namespace TencentCloud
                 CreateCustomErrorPageOutcomeCallable CreateCustomErrorPageCallable(const Model::CreateCustomErrorPageRequest& request);
 
                 /**
-                 *This API is used to create a DNS record.
-                 * @param req CreateDnsRecordRequest
-                 * @return CreateDnsRecordOutcome
-                 */
-                CreateDnsRecordOutcome CreateDnsRecord(const Model::CreateDnsRecordRequest &request);
-                void CreateDnsRecordAsync(const Model::CreateDnsRecordRequest& request, const CreateDnsRecordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                CreateDnsRecordOutcomeCallable CreateDnsRecordCallable(const Model::CreateDnsRecordRequest& request);
-
-                /**
                  *This API is used to create an IP blocklist/allowlist.
                  * @param req CreateIpTableListRequest
                  * @return CreateIpTableListOutcome
@@ -745,15 +701,6 @@ namespace TencentCloud
                 CreateIpTableListOutcome CreateIpTableList(const Model::CreateIpTableListRequest &request);
                 void CreateIpTableListAsync(const Model::CreateIpTableListRequest& request, const CreateIpTableListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateIpTableListOutcomeCallable CreateIpTableListCallable(const Model::CreateIpTableListRequest& request);
-
-                /**
-                 *This API is used to create a CLB instance.
-                 * @param req CreateLoadBalancingRequest
-                 * @return CreateLoadBalancingOutcome
-                 */
-                CreateLoadBalancingOutcome CreateLoadBalancing(const Model::CreateLoadBalancingRequest &request);
-                void CreateLoadBalancingAsync(const Model::CreateLoadBalancingRequest& request, const CreateLoadBalancingAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                CreateLoadBalancingOutcomeCallable CreateLoadBalancingCallable(const Model::CreateLoadBalancingRequest& request);
 
                 /**
                  *This API is used to create a CLS logset.
@@ -880,24 +827,6 @@ namespace TencentCloud
                 DeleteApplicationProxyRuleOutcome DeleteApplicationProxyRule(const Model::DeleteApplicationProxyRuleRequest &request);
                 void DeleteApplicationProxyRuleAsync(const Model::DeleteApplicationProxyRuleRequest& request, const DeleteApplicationProxyRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteApplicationProxyRuleOutcomeCallable DeleteApplicationProxyRuleCallable(const Model::DeleteApplicationProxyRuleRequest& request);
-
-                /**
-                 *This API is used to delete DNS records in batches.
-                 * @param req DeleteDnsRecordsRequest
-                 * @return DeleteDnsRecordsOutcome
-                 */
-                DeleteDnsRecordsOutcome DeleteDnsRecords(const Model::DeleteDnsRecordsRequest &request);
-                void DeleteDnsRecordsAsync(const Model::DeleteDnsRecordsRequest& request, const DeleteDnsRecordsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DeleteDnsRecordsOutcomeCallable DeleteDnsRecordsCallable(const Model::DeleteDnsRecordsRequest& request);
-
-                /**
-                 *This API is used to delete a CLB instance.
-                 * @param req DeleteLoadBalancingRequest
-                 * @return DeleteLoadBalancingOutcome
-                 */
-                DeleteLoadBalancingOutcome DeleteLoadBalancing(const Model::DeleteLoadBalancingRequest &request);
-                void DeleteLoadBalancingAsync(const Model::DeleteLoadBalancingRequest& request, const DeleteLoadBalancingAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DeleteLoadBalancingOutcomeCallable DeleteLoadBalancingCallable(const Model::DeleteLoadBalancingRequest& request);
 
                 /**
                  *This API is used to delete a shipping task.
@@ -1125,6 +1054,15 @@ namespace TencentCloud
                 DescribeDefaultCertificatesOutcomeCallable DescribeDefaultCertificatesCallable(const Model::DescribeDefaultCertificatesRequest& request);
 
                 /**
+                 *This API is used to query the data of L4 connection duration over time.
+                 * @param req DescribeDistributionL4AccessDataRequest
+                 * @return DescribeDistributionL4AccessDataOutcome
+                 */
+                DescribeDistributionL4AccessDataOutcome DescribeDistributionL4AccessData(const Model::DescribeDistributionL4AccessDataRequest &request);
+                void DescribeDistributionL4AccessDataAsync(const Model::DescribeDistributionL4AccessDataRequest& request, const DescribeDistributionL4AccessDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDistributionL4AccessDataOutcomeCallable DescribeDistributionL4AccessDataCallable(const Model::DescribeDistributionL4AccessDataRequest& request);
+
+                /**
                  *This API is used to get DNS requests.
                  * @param req DescribeDnsDataRequest
                  * @return DescribeDnsDataOutcome
@@ -1132,15 +1070,6 @@ namespace TencentCloud
                 DescribeDnsDataOutcome DescribeDnsData(const Model::DescribeDnsDataRequest &request);
                 void DescribeDnsDataAsync(const Model::DescribeDnsDataRequest& request, const DescribeDnsDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeDnsDataOutcomeCallable DescribeDnsDataCallable(const Model::DescribeDnsDataRequest& request);
-
-                /**
-                 *This API is used to query DNS records. Paging, sorting and filtering are supported.
-                 * @param req DescribeDnsRecordsRequest
-                 * @return DescribeDnsRecordsOutcome
-                 */
-                DescribeDnsRecordsOutcome DescribeDnsRecords(const Model::DescribeDnsRecordsRequest &request);
-                void DescribeDnsRecordsAsync(const Model::DescribeDnsRecordsRequest& request, const DescribeDnsRecordsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeDnsRecordsOutcomeCallable DescribeDnsRecordsCallable(const Model::DescribeDnsRecordsRequest& request);
 
                 /**
                  *This API is used to query DNSSEC information.
@@ -1168,15 +1097,6 @@ namespace TencentCloud
                 DescribeIdentificationsOutcome DescribeIdentifications(const Model::DescribeIdentificationsRequest &request);
                 void DescribeIdentificationsAsync(const Model::DescribeIdentificationsRequest& request, const DescribeIdentificationsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeIdentificationsOutcomeCallable DescribeIdentificationsCallable(const Model::DescribeIdentificationsRequest& request);
-
-                /**
-                 *This API is used to obtain a list of CLB instances.
-                 * @param req DescribeLoadBalancingRequest
-                 * @return DescribeLoadBalancingOutcome
-                 */
-                DescribeLoadBalancingOutcome DescribeLoadBalancing(const Model::DescribeLoadBalancingRequest &request);
-                void DescribeLoadBalancingAsync(const Model::DescribeLoadBalancingRequest& request, const DescribeLoadBalancingAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DescribeLoadBalancingOutcomeCallable DescribeLoadBalancingCallable(const Model::DescribeLoadBalancingRequest& request);
 
                 /**
                  *This API is used to get a list of logsets.
@@ -1357,6 +1277,15 @@ namespace TencentCloud
                 DescribeSpeedTestingQuotaOutcome DescribeSpeedTestingQuota(const Model::DescribeSpeedTestingQuotaRequest &request);
                 void DescribeSpeedTestingQuotaAsync(const Model::DescribeSpeedTestingQuotaRequest& request, const DescribeSpeedTestingQuotaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeSpeedTestingQuotaOutcomeCallable DescribeSpeedTestingQuotaCallable(const Model::DescribeSpeedTestingQuotaRequest& request);
+
+                /**
+                 *This API is used to query the number of L4 connections over time.
+                 * @param req DescribeTimingL4AccessDataRequest
+                 * @return DescribeTimingL4AccessDataOutcome
+                 */
+                DescribeTimingL4AccessDataOutcome DescribeTimingL4AccessData(const Model::DescribeTimingL4AccessDataRequest &request);
+                void DescribeTimingL4AccessDataAsync(const Model::DescribeTimingL4AccessDataRequest& request, const DescribeTimingL4AccessDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeTimingL4AccessDataOutcomeCallable DescribeTimingL4AccessDataCallable(const Model::DescribeTimingL4AccessDataRequest& request);
 
                 /**
                  *This API is used to query the list of L4 traffic data recorded over time.
@@ -1629,15 +1558,6 @@ namespace TencentCloud
                 ModifyDefaultCertificateOutcomeCallable ModifyDefaultCertificateCallable(const Model::ModifyDefaultCertificateRequest& request);
 
                 /**
-                 *This API is used to modify DNS records.
-                 * @param req ModifyDnsRecordRequest
-                 * @return ModifyDnsRecordOutcome
-                 */
-                ModifyDnsRecordOutcome ModifyDnsRecord(const Model::ModifyDnsRecordRequest &request);
-                void ModifyDnsRecordAsync(const Model::ModifyDnsRecordRequest& request, const ModifyDnsRecordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                ModifyDnsRecordOutcomeCallable ModifyDnsRecordCallable(const Model::ModifyDnsRecordRequest& request);
-
-                /**
                  *This API is used to modify the DNSSEC status of a site.
                  * @param req ModifyDnssecRequest
                  * @return ModifyDnssecOutcome
@@ -1654,24 +1574,6 @@ namespace TencentCloud
                 ModifyHostsCertificateOutcome ModifyHostsCertificate(const Model::ModifyHostsCertificateRequest &request);
                 void ModifyHostsCertificateAsync(const Model::ModifyHostsCertificateRequest& request, const ModifyHostsCertificateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyHostsCertificateOutcomeCallable ModifyHostsCertificateCallable(const Model::ModifyHostsCertificateRequest& request);
-
-                /**
-                 *This API is used to modify a CLB instance.
-                 * @param req ModifyLoadBalancingRequest
-                 * @return ModifyLoadBalancingOutcome
-                 */
-                ModifyLoadBalancingOutcome ModifyLoadBalancing(const Model::ModifyLoadBalancingRequest &request);
-                void ModifyLoadBalancingAsync(const Model::ModifyLoadBalancingRequest& request, const ModifyLoadBalancingAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                ModifyLoadBalancingOutcomeCallable ModifyLoadBalancingCallable(const Model::ModifyLoadBalancingRequest& request);
-
-                /**
-                 *This API is used to modify the status of a CLB instance.
-                 * @param req ModifyLoadBalancingStatusRequest
-                 * @return ModifyLoadBalancingStatusOutcome
-                 */
-                ModifyLoadBalancingStatusOutcome ModifyLoadBalancingStatus(const Model::ModifyLoadBalancingStatusRequest &request);
-                void ModifyLoadBalancingStatusAsync(const Model::ModifyLoadBalancingStatusRequest& request, const ModifyLoadBalancingStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                ModifyLoadBalancingStatusOutcomeCallable ModifyLoadBalancingStatusCallable(const Model::ModifyLoadBalancingStatusRequest& request);
 
                 /**
                  *This API is used to modify a shipping task.

@@ -30,7 +30,12 @@ RocketMQClusterInfo::RocketMQClusterInfo() :
     m_vpcEndPointHasBeenSet(false),
     m_supportNamespaceEndpointHasBeenSet(false),
     m_vpcsHasBeenSet(false),
-    m_isVipHasBeenSet(false)
+    m_isVipHasBeenSet(false),
+    m_rocketMQFlagHasBeenSet(false),
+    m_statusHasBeenSet(false),
+    m_isolateTimeHasBeenSet(false),
+    m_httpPublicEndpointHasBeenSet(false),
+    m_httpVpcEndpointHasBeenSet(false)
 {
 }
 
@@ -149,6 +154,56 @@ CoreInternalOutcome RocketMQClusterInfo::Deserialize(const rapidjson::Value &val
         m_isVipHasBeenSet = true;
     }
 
+    if (value.HasMember("RocketMQFlag") && !value["RocketMQFlag"].IsNull())
+    {
+        if (!value["RocketMQFlag"].IsBool())
+        {
+            return CoreInternalOutcome(Core::Error("response `RocketMQClusterInfo.RocketMQFlag` IsBool=false incorrectly").SetRequestId(requestId));
+        }
+        m_rocketMQFlag = value["RocketMQFlag"].GetBool();
+        m_rocketMQFlagHasBeenSet = true;
+    }
+
+    if (value.HasMember("Status") && !value["Status"].IsNull())
+    {
+        if (!value["Status"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `RocketMQClusterInfo.Status` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_status = value["Status"].GetInt64();
+        m_statusHasBeenSet = true;
+    }
+
+    if (value.HasMember("IsolateTime") && !value["IsolateTime"].IsNull())
+    {
+        if (!value["IsolateTime"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `RocketMQClusterInfo.IsolateTime` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_isolateTime = value["IsolateTime"].GetInt64();
+        m_isolateTimeHasBeenSet = true;
+    }
+
+    if (value.HasMember("HttpPublicEndpoint") && !value["HttpPublicEndpoint"].IsNull())
+    {
+        if (!value["HttpPublicEndpoint"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `RocketMQClusterInfo.HttpPublicEndpoint` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_httpPublicEndpoint = string(value["HttpPublicEndpoint"].GetString());
+        m_httpPublicEndpointHasBeenSet = true;
+    }
+
+    if (value.HasMember("HttpVpcEndpoint") && !value["HttpVpcEndpoint"].IsNull())
+    {
+        if (!value["HttpVpcEndpoint"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `RocketMQClusterInfo.HttpVpcEndpoint` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_httpVpcEndpoint = string(value["HttpVpcEndpoint"].GetString());
+        m_httpVpcEndpointHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -241,6 +296,46 @@ void RocketMQClusterInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Docum
         string key = "IsVip";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_isVip, allocator);
+    }
+
+    if (m_rocketMQFlagHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RocketMQFlag";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_rocketMQFlag, allocator);
+    }
+
+    if (m_statusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Status";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_status, allocator);
+    }
+
+    if (m_isolateTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsolateTime";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_isolateTime, allocator);
+    }
+
+    if (m_httpPublicEndpointHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HttpPublicEndpoint";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_httpPublicEndpoint.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_httpVpcEndpointHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "HttpVpcEndpoint";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_httpVpcEndpoint.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -404,5 +499,85 @@ void RocketMQClusterInfo::SetIsVip(const bool& _isVip)
 bool RocketMQClusterInfo::IsVipHasBeenSet() const
 {
     return m_isVipHasBeenSet;
+}
+
+bool RocketMQClusterInfo::GetRocketMQFlag() const
+{
+    return m_rocketMQFlag;
+}
+
+void RocketMQClusterInfo::SetRocketMQFlag(const bool& _rocketMQFlag)
+{
+    m_rocketMQFlag = _rocketMQFlag;
+    m_rocketMQFlagHasBeenSet = true;
+}
+
+bool RocketMQClusterInfo::RocketMQFlagHasBeenSet() const
+{
+    return m_rocketMQFlagHasBeenSet;
+}
+
+int64_t RocketMQClusterInfo::GetStatus() const
+{
+    return m_status;
+}
+
+void RocketMQClusterInfo::SetStatus(const int64_t& _status)
+{
+    m_status = _status;
+    m_statusHasBeenSet = true;
+}
+
+bool RocketMQClusterInfo::StatusHasBeenSet() const
+{
+    return m_statusHasBeenSet;
+}
+
+int64_t RocketMQClusterInfo::GetIsolateTime() const
+{
+    return m_isolateTime;
+}
+
+void RocketMQClusterInfo::SetIsolateTime(const int64_t& _isolateTime)
+{
+    m_isolateTime = _isolateTime;
+    m_isolateTimeHasBeenSet = true;
+}
+
+bool RocketMQClusterInfo::IsolateTimeHasBeenSet() const
+{
+    return m_isolateTimeHasBeenSet;
+}
+
+string RocketMQClusterInfo::GetHttpPublicEndpoint() const
+{
+    return m_httpPublicEndpoint;
+}
+
+void RocketMQClusterInfo::SetHttpPublicEndpoint(const string& _httpPublicEndpoint)
+{
+    m_httpPublicEndpoint = _httpPublicEndpoint;
+    m_httpPublicEndpointHasBeenSet = true;
+}
+
+bool RocketMQClusterInfo::HttpPublicEndpointHasBeenSet() const
+{
+    return m_httpPublicEndpointHasBeenSet;
+}
+
+string RocketMQClusterInfo::GetHttpVpcEndpoint() const
+{
+    return m_httpVpcEndpoint;
+}
+
+void RocketMQClusterInfo::SetHttpVpcEndpoint(const string& _httpVpcEndpoint)
+{
+    m_httpVpcEndpoint = _httpVpcEndpoint;
+    m_httpVpcEndpointHasBeenSet = true;
+}
+
+bool RocketMQClusterInfo::HttpVpcEndpointHasBeenSet() const
+{
+    return m_httpVpcEndpointHasBeenSet;
 }
 

@@ -62,27 +62,29 @@ namespace TencentCloud
 
                     /**
                      * 获取The task type. Valid values:
-<li>Procedure: Video processing</li>
-<li>EditMedia: Video editing</li>
-<li>SplitMedia: Video splitting</li>
-<li>ComposeMedia: Media file production</li>
-<li>WechatPublish: WeChat publishing</li>
-<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
-<li>PullUpload: Pulling media files for upload</li>
-<li>FastClipMedia: Quick clipping</li>
-<li>RemoveWatermarkTask: Watermark removal</li>
-<li> ReviewAudioVideo: Moderation</li>
+<li>`Procedure`: Video processing</li>
+<li>`EditMedia`: Video editing</li>
+<li>`SplitMedia`: Video splitting</li>
+<li>`ComposeMedia`: Media file production</li>
+<li>`WechatPublish`: WeChat publishing</li>
+<li>`WechatMiniProgramPublish`: Publishing videos on WeChat Mini Program</li>
+<li>`PullUpload`: Pulling media files for upload</li>
+<li>`FastClipMedia`: Quick clipping</li>
+<li>`RemoveWatermarkTask`: Watermark removal</li>
+<li>`DescribeFileAttributesTask`: Getting file attributes</li>
+<li> `ReviewAudioVideo`: Moderation</li>
                      * @return TaskType The task type. Valid values:
-<li>Procedure: Video processing</li>
-<li>EditMedia: Video editing</li>
-<li>SplitMedia: Video splitting</li>
-<li>ComposeMedia: Media file production</li>
-<li>WechatPublish: WeChat publishing</li>
-<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
-<li>PullUpload: Pulling media files for upload</li>
-<li>FastClipMedia: Quick clipping</li>
-<li>RemoveWatermarkTask: Watermark removal</li>
-<li> ReviewAudioVideo: Moderation</li>
+<li>`Procedure`: Video processing</li>
+<li>`EditMedia`: Video editing</li>
+<li>`SplitMedia`: Video splitting</li>
+<li>`ComposeMedia`: Media file production</li>
+<li>`WechatPublish`: WeChat publishing</li>
+<li>`WechatMiniProgramPublish`: Publishing videos on WeChat Mini Program</li>
+<li>`PullUpload`: Pulling media files for upload</li>
+<li>`FastClipMedia`: Quick clipping</li>
+<li>`RemoveWatermarkTask`: Watermark removal</li>
+<li>`DescribeFileAttributesTask`: Getting file attributes</li>
+<li> `ReviewAudioVideo`: Moderation</li>
                      */
                     std::string GetTaskType() const;
 
@@ -371,8 +373,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ReduceMediaBitrateTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DescribeFileAttributesTask 
+                     * 获取The information of a task to get file attributes. This parameter is valid only if `TaskType` is `DescribeFileAttributes`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DescribeFileAttributesTask The information of a task to get file attributes. This parameter is valid only if `TaskType` is `DescribeFileAttributes`.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     DescribeFileAttributesTask GetDescribeFileAttributesTask() const;
 
@@ -386,16 +390,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * The task type. Valid values:
-<li>Procedure: Video processing</li>
-<li>EditMedia: Video editing</li>
-<li>SplitMedia: Video splitting</li>
-<li>ComposeMedia: Media file production</li>
-<li>WechatPublish: WeChat publishing</li>
-<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
-<li>PullUpload: Pulling media files for upload</li>
-<li>FastClipMedia: Quick clipping</li>
-<li>RemoveWatermarkTask: Watermark removal</li>
-<li> ReviewAudioVideo: Moderation</li>
+<li>`Procedure`: Video processing</li>
+<li>`EditMedia`: Video editing</li>
+<li>`SplitMedia`: Video splitting</li>
+<li>`ComposeMedia`: Media file production</li>
+<li>`WechatPublish`: WeChat publishing</li>
+<li>`WechatMiniProgramPublish`: Publishing videos on WeChat Mini Program</li>
+<li>`PullUpload`: Pulling media files for upload</li>
+<li>`FastClipMedia`: Quick clipping</li>
+<li>`RemoveWatermarkTask`: Watermark removal</li>
+<li>`DescribeFileAttributesTask`: Getting file attributes</li>
+<li> `ReviewAudioVideo`: Moderation</li>
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;
@@ -540,7 +545,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_reduceMediaBitrateTaskHasBeenSet;
 
                     /**
-                     * 
+                     * The information of a task to get file attributes. This parameter is valid only if `TaskType` is `DescribeFileAttributes`.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     DescribeFileAttributesTask m_describeFileAttributesTask;
                     bool m_describeFileAttributesTaskHasBeenSet;

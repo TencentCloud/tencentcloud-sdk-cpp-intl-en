@@ -145,14 +145,14 @@ Number of nodes (2-50)
                     bool PasswordHasBeenSet() const;
 
                     /**
-                     * 获取Access control list
-                     * @return EsAcl Access control list
+                     * 获取The policy for visual component (Kibana and Cerebro) access over public network.
+                     * @return EsAcl The policy for visual component (Kibana and Cerebro) access over public network.
                      */
                     EsAcl GetEsAcl() const;
 
                     /**
-                     * 设置Access control list
-                     * @param EsAcl Access control list
+                     * 设置The policy for visual component (Kibana and Cerebro) access over public network.
+                     * @param EsAcl The policy for visual component (Kibana and Cerebro) access over public network.
                      */
                     void SetEsAcl(const EsAcl& _esAcl);
 
@@ -327,14 +327,22 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
                     bool NodeInfoListHasBeenSet() const;
 
                     /**
-                     * 获取Public network access status
-                     * @return PublicAccess Public network access status
+                     * 获取The status of ES cluster access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
+                     * @return PublicAccess The status of ES cluster access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
                      */
                     std::string GetPublicAccess() const;
 
                     /**
-                     * 设置Public network access status
-                     * @param PublicAccess Public network access status
+                     * 设置The status of ES cluster access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
+                     * @param PublicAccess The status of ES cluster access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
                      */
                     void SetPublicAccess(const std::string& _publicAccess);
 
@@ -363,14 +371,22 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
                     bool EsPublicAclHasBeenSet() const;
 
                     /**
-                     * 获取Public network access status of Kibana
-                     * @return KibanaPublicAccess Public network access status of Kibana
+                     * 获取The status of Kibana access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
+                     * @return KibanaPublicAccess The status of Kibana access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
                      */
                     std::string GetKibanaPublicAccess() const;
 
                     /**
-                     * 设置Public network access status of Kibana
-                     * @param KibanaPublicAccess Public network access status of Kibana
+                     * 设置The status of Kibana access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
+                     * @param KibanaPublicAccess The status of Kibana access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
                      */
                     void SetKibanaPublicAccess(const std::string& _kibanaPublicAccess);
 
@@ -381,14 +397,22 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
                     bool KibanaPublicAccessHasBeenSet() const;
 
                     /**
-                     * 获取Private network access status of Kibana
-                     * @return KibanaPrivateAccess Private network access status of Kibana
+                     * 获取The status of Kibana access over private network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
+                     * @return KibanaPrivateAccess The status of Kibana access over private network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
                      */
                     std::string GetKibanaPrivateAccess() const;
 
                     /**
-                     * 设置Private network access status of Kibana
-                     * @param KibanaPrivateAccess Private network access status of Kibana
+                     * 设置The status of Kibana access over private network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
+                     * @param KibanaPrivateAccess The status of Kibana access over private network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
                      */
                     void SetKibanaPrivateAccess(const std::string& _kibanaPrivateAccess);
 
@@ -561,14 +585,22 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
                     bool EnableCerebroHasBeenSet() const;
 
                     /**
-                     * 获取Cerebro public network access status
-                     * @return CerebroPublicAccess Cerebro public network access status
+                     * 获取The status of Cerebro access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
+                     * @return CerebroPublicAccess The status of Cerebro access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
                      */
                     std::string GetCerebroPublicAccess() const;
 
                     /**
-                     * 设置Cerebro public network access status
-                     * @param CerebroPublicAccess Cerebro public network access status
+                     * 设置The status of Cerebro access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
+                     * @param CerebroPublicAccess The status of Cerebro access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
                      */
                     void SetCerebroPublicAccess(const std::string& _cerebroPublicAccess);
 
@@ -579,14 +611,22 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
                     bool CerebroPublicAccessHasBeenSet() const;
 
                     /**
-                     * 获取Cerebro private network access status
-                     * @return CerebroPrivateAccess Cerebro private network access status
+                     * 获取The status of Cerebro access over private network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
+                     * @return CerebroPrivateAccess The status of Cerebro access over private network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
                      */
                     std::string GetCerebroPrivateAccess() const;
 
                     /**
-                     * 设置Cerebro private network access status
-                     * @param CerebroPrivateAccess Cerebro private network access status
+                     * 设置The status of Cerebro access over private network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
+                     * @param CerebroPrivateAccess The status of Cerebro access over private network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
                      */
                     void SetCerebroPrivateAccess(const std::string& _cerebroPrivateAccess);
 
@@ -634,13 +674,21 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
 
                     /**
                      * 获取Whether to enable the option for sending alerting messages over the public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
                      * @return KibanaAlteringPublicAccess Whether to enable the option for sending alerting messages over the public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
                      */
                     std::string GetKibanaAlteringPublicAccess() const;
 
                     /**
                      * 设置Whether to enable the option for sending alerting messages over the public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
                      * @param KibanaAlteringPublicAccess Whether to enable the option for sending alerting messages over the public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
                      */
                     void SetKibanaAlteringPublicAccess(const std::string& _kibanaAlteringPublicAccess);
 
@@ -684,7 +732,7 @@ Number of nodes (2-50)
                     bool m_passwordHasBeenSet;
 
                     /**
-                     * Access control list
+                     * The policy for visual component (Kibana and Cerebro) access over public network.
                      */
                     EsAcl m_esAcl;
                     bool m_esAclHasBeenSet;
@@ -743,7 +791,9 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
                     bool m_nodeInfoListHasBeenSet;
 
                     /**
-                     * Public network access status
+                     * The status of ES cluster access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
                      */
                     std::string m_publicAccess;
                     bool m_publicAccessHasBeenSet;
@@ -755,13 +805,17 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
                     bool m_esPublicAclHasBeenSet;
 
                     /**
-                     * Public network access status of Kibana
+                     * The status of Kibana access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
                      */
                     std::string m_kibanaPublicAccess;
                     bool m_kibanaPublicAccessHasBeenSet;
 
                     /**
-                     * Private network access status of Kibana
+                     * The status of Kibana access over private network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
                      */
                     std::string m_kibanaPrivateAccess;
                     bool m_kibanaPrivateAccessHasBeenSet;
@@ -821,13 +875,17 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
                     bool m_enableCerebroHasBeenSet;
 
                     /**
-                     * Cerebro public network access status
+                     * The status of Cerebro access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
                      */
                     std::string m_cerebroPublicAccess;
                     bool m_cerebroPublicAccessHasBeenSet;
 
                     /**
-                     * Cerebro private network access status
+                     * The status of Cerebro access over private network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
                      */
                     std::string m_cerebroPrivateAccess;
                     bool m_cerebroPrivateAccessHasBeenSet;
@@ -846,6 +904,8 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
 
                     /**
                      * Whether to enable the option for sending alerting messages over the public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
                      */
                     std::string m_kibanaAlteringPublicAccess;
                     bool m_kibanaAlteringPublicAccessHasBeenSet;

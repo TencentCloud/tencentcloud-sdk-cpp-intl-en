@@ -290,6 +290,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool AudioDurationHasBeenSet() const;
 
+                    /**
+                     * 获取The MD5 hash of the file.
+<li><font color=red>Note</font>: To get the MD5 hash of a file, call the `DescribeFileAttributes` API. The information will be returned after the task is completed.</li>
+                     * @return Md5 The MD5 hash of the file.
+<li><font color=red>Note</font>: To get the MD5 hash of a file, call the `DescribeFileAttributes` API. The information will be returned after the task is completed.</li>
+                     */
+                    std::string GetMd5() const;
+
+                    /**
+                     * 设置The MD5 hash of the file.
+<li><font color=red>Note</font>: To get the MD5 hash of a file, call the `DescribeFileAttributes` API. The information will be returned after the task is completed.</li>
+                     * @param Md5 The MD5 hash of the file.
+<li><font color=red>Note</font>: To get the MD5 hash of a file, call the `DescribeFileAttributes` API. The information will be returned after the task is completed.</li>
+                     */
+                    void SetMd5(const std::string& _md5);
+
+                    /**
+                     * 判断参数 Md5 是否已赋值
+                     * @return Md5 是否已赋值
+                     */
+                    bool Md5HasBeenSet() const;
+
                 private:
 
                     /**
@@ -368,6 +390,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     double m_audioDuration;
                     bool m_audioDurationHasBeenSet;
+
+                    /**
+                     * The MD5 hash of the file.
+<li><font color=red>Note</font>: To get the MD5 hash of a file, call the `DescribeFileAttributes` API. The information will be returned after the task is completed.</li>
+                     */
+                    std::string m_md5;
+                    bool m_md5HasBeenSet;
 
                 };
             }

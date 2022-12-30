@@ -336,6 +336,28 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool AppIdHasBeenSet() const;
 
+                    /**
+                     * 获取The number of index docs.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IndexDocs The number of index docs.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetIndexDocs() const;
+
+                    /**
+                     * 设置The number of index docs.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param IndexDocs The number of index docs.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetIndexDocs(const uint64_t& _indexDocs);
+
+                    /**
+                     * 判断参数 IndexDocs 是否已赋值
+                     * @return IndexDocs 是否已赋值
+                     */
+                    bool IndexDocsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -428,6 +450,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     uint64_t m_appId;
                     bool m_appIdHasBeenSet;
+
+                    /**
+                     * The number of index docs.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_indexDocs;
+                    bool m_indexDocsHasBeenSet;
 
                 };
             }

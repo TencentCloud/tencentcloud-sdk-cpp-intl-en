@@ -49,14 +49,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The type of video processing input object, which supports COS and URL.
-                     * @return Type The type of video processing input object, which supports COS and URL.
+                     * 获取The input type, which can be `COS` or `URL`.
+                     * @return Type The input type, which can be `COS` or `URL`.
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The type of video processing input object, which supports COS and URL.
-                     * @param Type The type of video processing input object, which supports COS and URL.
+                     * 设置The input type, which can be `COS` or `URL`.
+                     * @param Type The input type, which can be `COS` or `URL`.
                      */
                     void SetType(const std::string& _type);
 
@@ -109,7 +109,7 @@ Note: This field may return null, indicating that no valid value can be obtained
                 private:
 
                     /**
-                     * The type of video processing input object, which supports COS and URL.
+                     * The input type, which can be `COS` or `URL`.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

@@ -79,6 +79,28 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
+                     * 获取The moderation template ID. Valid values:
+<li>`10` (default): The preset template, which can detect inappropriate information with labels including pornographic (`Porn`), terrorist (`Terror`), and politically sensitive (`Polity`).</li>
+                     * @return Definition The moderation template ID. Valid values:
+<li>`10` (default): The preset template, which can detect inappropriate information with labels including pornographic (`Porn`), terrorist (`Terror`), and politically sensitive (`Polity`).</li>
+                     */
+                    uint64_t GetDefinition() const;
+
+                    /**
+                     * 设置The moderation template ID. Valid values:
+<li>`10` (default): The preset template, which can detect inappropriate information with labels including pornographic (`Porn`), terrorist (`Terror`), and politically sensitive (`Polity`).</li>
+                     * @param Definition The moderation template ID. Valid values:
+<li>`10` (default): The preset template, which can detect inappropriate information with labels including pornographic (`Porn`), terrorist (`Terror`), and politically sensitive (`Polity`).</li>
+                     */
+                    void SetDefinition(const uint64_t& _definition);
+
+                    /**
+                     * 判断参数 Definition 是否已赋值
+                     * @return Definition 是否已赋值
+                     */
+                    bool DefinitionHasBeenSet() const;
+
+                    /**
                      * 获取The priority of a task flow. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
                      * @return TasksPriority The priority of a task flow. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
                      */
@@ -163,6 +185,13 @@ namespace TencentCloud
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
+
+                    /**
+                     * The moderation template ID. Valid values:
+<li>`10` (default): The preset template, which can detect inappropriate information with labels including pornographic (`Porn`), terrorist (`Terror`), and politically sensitive (`Polity`).</li>
+                     */
+                    uint64_t m_definition;
+                    bool m_definitionHasBeenSet;
 
                     /**
                      * The priority of a task flow. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.

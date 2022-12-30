@@ -25,6 +25,8 @@
 #include <tencentcloud/core/AsyncCallerContext.h>
 #include <tencentcloud/emr/v20190103/model/AddUsersForUserManagerRequest.h>
 #include <tencentcloud/emr/v20190103/model/AddUsersForUserManagerResponse.h>
+#include <tencentcloud/emr/v20190103/model/CreateClusterRequest.h>
+#include <tencentcloud/emr/v20190103/model/CreateClusterResponse.h>
 #include <tencentcloud/emr/v20190103/model/CreateInstanceRequest.h>
 #include <tencentcloud/emr/v20190103/model/CreateInstanceResponse.h>
 #include <tencentcloud/emr/v20190103/model/DescribeClusterNodesRequest.h>
@@ -51,6 +53,8 @@
 #include <tencentcloud/emr/v20190103/model/ModifyResourceScheduleConfigResponse.h>
 #include <tencentcloud/emr/v20190103/model/ModifyResourceSchedulerRequest.h>
 #include <tencentcloud/emr/v20190103/model/ModifyResourceSchedulerResponse.h>
+#include <tencentcloud/emr/v20190103/model/ScaleOutClusterRequest.h>
+#include <tencentcloud/emr/v20190103/model/ScaleOutClusterResponse.h>
 #include <tencentcloud/emr/v20190103/model/ScaleOutInstanceRequest.h>
 #include <tencentcloud/emr/v20190103/model/ScaleOutInstanceResponse.h>
 #include <tencentcloud/emr/v20190103/model/TerminateInstanceRequest.h>
@@ -74,6 +78,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::AddUsersForUserManagerResponse> AddUsersForUserManagerOutcome;
                 typedef std::future<AddUsersForUserManagerOutcome> AddUsersForUserManagerOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::AddUsersForUserManagerRequest&, AddUsersForUserManagerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddUsersForUserManagerAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateClusterResponse> CreateClusterOutcome;
+                typedef std::future<CreateClusterOutcome> CreateClusterOutcomeCallable;
+                typedef std::function<void(const EmrClient*, const Model::CreateClusterRequest&, CreateClusterOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateClusterAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateInstanceResponse> CreateInstanceOutcome;
                 typedef std::future<CreateInstanceOutcome> CreateInstanceOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::CreateInstanceRequest&, CreateInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateInstanceAsyncHandler;
@@ -113,6 +120,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyResourceSchedulerResponse> ModifyResourceSchedulerOutcome;
                 typedef std::future<ModifyResourceSchedulerOutcome> ModifyResourceSchedulerOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::ModifyResourceSchedulerRequest&, ModifyResourceSchedulerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyResourceSchedulerAsyncHandler;
+                typedef Outcome<Core::Error, Model::ScaleOutClusterResponse> ScaleOutClusterOutcome;
+                typedef std::future<ScaleOutClusterOutcome> ScaleOutClusterOutcomeCallable;
+                typedef std::function<void(const EmrClient*, const Model::ScaleOutClusterRequest&, ScaleOutClusterOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ScaleOutClusterAsyncHandler;
                 typedef Outcome<Core::Error, Model::ScaleOutInstanceResponse> ScaleOutInstanceOutcome;
                 typedef std::future<ScaleOutInstanceOutcome> ScaleOutInstanceOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::ScaleOutInstanceRequest&, ScaleOutInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ScaleOutInstanceAsyncHandler;
@@ -134,6 +144,15 @@ This API is used to add user lists (user management).
                 AddUsersForUserManagerOutcome AddUsersForUserManager(const Model::AddUsersForUserManagerRequest &request);
                 void AddUsersForUserManagerAsync(const Model::AddUsersForUserManagerRequest& request, const AddUsersForUserManagerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 AddUsersForUserManagerOutcomeCallable AddUsersForUserManagerCallable(const Model::AddUsersForUserManagerRequest& request);
+
+                /**
+                 *This API is used to create an EMR cluster instance.
+                 * @param req CreateClusterRequest
+                 * @return CreateClusterOutcome
+                 */
+                CreateClusterOutcome CreateCluster(const Model::CreateClusterRequest &request);
+                void CreateClusterAsync(const Model::CreateClusterRequest& request, const CreateClusterAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateClusterOutcomeCallable CreateClusterCallable(const Model::CreateClusterRequest& request);
 
                 /**
                  *This API is used to create an EMR cluster instance.
@@ -252,6 +271,15 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
                 ModifyResourceSchedulerOutcome ModifyResourceScheduler(const Model::ModifyResourceSchedulerRequest &request);
                 void ModifyResourceSchedulerAsync(const Model::ModifyResourceSchedulerRequest& request, const ModifyResourceSchedulerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyResourceSchedulerOutcomeCallable ModifyResourceSchedulerCallable(const Model::ModifyResourceSchedulerRequest& request);
+
+                /**
+                 *This API is used to scale out a cluster.
+                 * @param req ScaleOutClusterRequest
+                 * @return ScaleOutClusterOutcome
+                 */
+                ScaleOutClusterOutcome ScaleOutCluster(const Model::ScaleOutClusterRequest &request);
+                void ScaleOutClusterAsync(const Model::ScaleOutClusterRequest& request, const ScaleOutClusterAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ScaleOutClusterOutcomeCallable ScaleOutClusterCallable(const Model::ScaleOutClusterRequest& request);
 
                 /**
                  *This API is used to scale out instances.

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * The output of a task to get file attributes.
                 */
                 class DescribeFileAttributesTaskOutput : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Md5 
+                     * 获取The MD5 hash of the file.
+                     * @return Md5 The MD5 hash of the file.
                      */
                     std::string GetMd5() const;
 
                     /**
-                     * 设置
-                     * @param Md5 
+                     * 设置The MD5 hash of the file.
+                     * @param Md5 The MD5 hash of the file.
                      */
                     void SetMd5(const std::string& _md5);
 
@@ -67,7 +67,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * The MD5 hash of the file.
                      */
                     std::string m_md5;
                     bool m_md5HasBeenSet;

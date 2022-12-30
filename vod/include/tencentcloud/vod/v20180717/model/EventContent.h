@@ -86,85 +86,89 @@ namespace TencentCloud
 
                     /**
                      * 获取<b>Supported event types:</b>
-<li>NewFileUpload: Video uploaded.</li>
-<li>ProcedureStateChanged: Task flow status changed.</li>
-<li>FileDeleted: Video deleted.</li>
-<li>PullComplete: Finished video pulling.</li>
-<li>EditMediaComplete: Finished video editing.</li>
-<li>SplitMediaComplete: Finished video splitting.</li>
-<li>WechatPublishComplete: Published to WeChat.</li>
-<li>ComposeMediaComplete: Finished producing the media file.</li>
-<li>WechatMiniProgramPublishComplete: Finished publishing on WeChat Mini Program</li>
-<li>FastClipMediaComplete: Finished quick clipping.</li>
-<li>ReviewAudioVideoComplete: Finished moderation.</li>
-<li>ExtractTraceWatermarkComplete: Finished digital watermark extraction.</li>
+<li>`NewFileUpload`: Video uploaded.</li>
+<li>`ProcedureStateChanged`: Task flow status changed.</li>
+<li>`FileDeleted`: Video deleted.</li>
+<li>`PullComplete`: Finished video pulling.</li>
+<li>`EditMediaComplete`: Finished video editing.</li>
+<li>`SplitMediaComplete`: Finished video splitting.</li>
+<li>`WechatPublishComplete`: Published to WeChat.</li>
+<li>`ComposeMediaComplete`: Finished producing the media file.</li>
+<li>`WechatMiniProgramPublishComplete`: Finished publishing on WeChat Mini Program.</li>
+<li>`FastClipMediaComplete`: Finished quick clipping.</li>
+<li>`ReviewAudioVideoComplete`: Finished moderation.</li>
+<li>`ExtractTraceWatermarkComplete`: Finished digital watermark extraction.</li>
+<li>`DescribeFileAttributesComplete`: Finished getting file attributes.</li>
 <b>v2017 task types:</b>
-<li>TranscodeComplete: Finished video transcoding.</li>
-<li>ConcatComplete: Finished video splicing.</li>
-<li>ClipComplete: Finished video clipping.</li>
-<li>CreateImageSpriteComplete: Finished image sprite generation.</li>
-<li>CreateSnapshotByTimeOffsetComplete: Finished time point screencapturing.</li>
+<li>`TranscodeComplete`: Finished video transcoding.</li>
+<li>`ConcatComplete`: Finished video splicing.</li>
+<li>`ClipComplete`: Finished video clipping.</li>
+<li>`CreateImageSpriteComplete`: Finished image sprite generation.</li>
+<li>`CreateSnapshotByTimeOffsetComplete`: Finished time point screencapturing.</li>
                      * @return EventType <b>Supported event types:</b>
-<li>NewFileUpload: Video uploaded.</li>
-<li>ProcedureStateChanged: Task flow status changed.</li>
-<li>FileDeleted: Video deleted.</li>
-<li>PullComplete: Finished video pulling.</li>
-<li>EditMediaComplete: Finished video editing.</li>
-<li>SplitMediaComplete: Finished video splitting.</li>
-<li>WechatPublishComplete: Published to WeChat.</li>
-<li>ComposeMediaComplete: Finished producing the media file.</li>
-<li>WechatMiniProgramPublishComplete: Finished publishing on WeChat Mini Program</li>
-<li>FastClipMediaComplete: Finished quick clipping.</li>
-<li>ReviewAudioVideoComplete: Finished moderation.</li>
-<li>ExtractTraceWatermarkComplete: Finished digital watermark extraction.</li>
+<li>`NewFileUpload`: Video uploaded.</li>
+<li>`ProcedureStateChanged`: Task flow status changed.</li>
+<li>`FileDeleted`: Video deleted.</li>
+<li>`PullComplete`: Finished video pulling.</li>
+<li>`EditMediaComplete`: Finished video editing.</li>
+<li>`SplitMediaComplete`: Finished video splitting.</li>
+<li>`WechatPublishComplete`: Published to WeChat.</li>
+<li>`ComposeMediaComplete`: Finished producing the media file.</li>
+<li>`WechatMiniProgramPublishComplete`: Finished publishing on WeChat Mini Program.</li>
+<li>`FastClipMediaComplete`: Finished quick clipping.</li>
+<li>`ReviewAudioVideoComplete`: Finished moderation.</li>
+<li>`ExtractTraceWatermarkComplete`: Finished digital watermark extraction.</li>
+<li>`DescribeFileAttributesComplete`: Finished getting file attributes.</li>
 <b>v2017 task types:</b>
-<li>TranscodeComplete: Finished video transcoding.</li>
-<li>ConcatComplete: Finished video splicing.</li>
-<li>ClipComplete: Finished video clipping.</li>
-<li>CreateImageSpriteComplete: Finished image sprite generation.</li>
-<li>CreateSnapshotByTimeOffsetComplete: Finished time point screencapturing.</li>
+<li>`TranscodeComplete`: Finished video transcoding.</li>
+<li>`ConcatComplete`: Finished video splicing.</li>
+<li>`ClipComplete`: Finished video clipping.</li>
+<li>`CreateImageSpriteComplete`: Finished image sprite generation.</li>
+<li>`CreateSnapshotByTimeOffsetComplete`: Finished time point screencapturing.</li>
                      */
                     std::string GetEventType() const;
 
                     /**
                      * 设置<b>Supported event types:</b>
-<li>NewFileUpload: Video uploaded.</li>
-<li>ProcedureStateChanged: Task flow status changed.</li>
-<li>FileDeleted: Video deleted.</li>
-<li>PullComplete: Finished video pulling.</li>
-<li>EditMediaComplete: Finished video editing.</li>
-<li>SplitMediaComplete: Finished video splitting.</li>
-<li>WechatPublishComplete: Published to WeChat.</li>
-<li>ComposeMediaComplete: Finished producing the media file.</li>
-<li>WechatMiniProgramPublishComplete: Finished publishing on WeChat Mini Program</li>
-<li>FastClipMediaComplete: Finished quick clipping.</li>
-<li>ReviewAudioVideoComplete: Finished moderation.</li>
-<li>ExtractTraceWatermarkComplete: Finished digital watermark extraction.</li>
+<li>`NewFileUpload`: Video uploaded.</li>
+<li>`ProcedureStateChanged`: Task flow status changed.</li>
+<li>`FileDeleted`: Video deleted.</li>
+<li>`PullComplete`: Finished video pulling.</li>
+<li>`EditMediaComplete`: Finished video editing.</li>
+<li>`SplitMediaComplete`: Finished video splitting.</li>
+<li>`WechatPublishComplete`: Published to WeChat.</li>
+<li>`ComposeMediaComplete`: Finished producing the media file.</li>
+<li>`WechatMiniProgramPublishComplete`: Finished publishing on WeChat Mini Program.</li>
+<li>`FastClipMediaComplete`: Finished quick clipping.</li>
+<li>`ReviewAudioVideoComplete`: Finished moderation.</li>
+<li>`ExtractTraceWatermarkComplete`: Finished digital watermark extraction.</li>
+<li>`DescribeFileAttributesComplete`: Finished getting file attributes.</li>
 <b>v2017 task types:</b>
-<li>TranscodeComplete: Finished video transcoding.</li>
-<li>ConcatComplete: Finished video splicing.</li>
-<li>ClipComplete: Finished video clipping.</li>
-<li>CreateImageSpriteComplete: Finished image sprite generation.</li>
-<li>CreateSnapshotByTimeOffsetComplete: Finished time point screencapturing.</li>
+<li>`TranscodeComplete`: Finished video transcoding.</li>
+<li>`ConcatComplete`: Finished video splicing.</li>
+<li>`ClipComplete`: Finished video clipping.</li>
+<li>`CreateImageSpriteComplete`: Finished image sprite generation.</li>
+<li>`CreateSnapshotByTimeOffsetComplete`: Finished time point screencapturing.</li>
                      * @param EventType <b>Supported event types:</b>
-<li>NewFileUpload: Video uploaded.</li>
-<li>ProcedureStateChanged: Task flow status changed.</li>
-<li>FileDeleted: Video deleted.</li>
-<li>PullComplete: Finished video pulling.</li>
-<li>EditMediaComplete: Finished video editing.</li>
-<li>SplitMediaComplete: Finished video splitting.</li>
-<li>WechatPublishComplete: Published to WeChat.</li>
-<li>ComposeMediaComplete: Finished producing the media file.</li>
-<li>WechatMiniProgramPublishComplete: Finished publishing on WeChat Mini Program</li>
-<li>FastClipMediaComplete: Finished quick clipping.</li>
-<li>ReviewAudioVideoComplete: Finished moderation.</li>
-<li>ExtractTraceWatermarkComplete: Finished digital watermark extraction.</li>
+<li>`NewFileUpload`: Video uploaded.</li>
+<li>`ProcedureStateChanged`: Task flow status changed.</li>
+<li>`FileDeleted`: Video deleted.</li>
+<li>`PullComplete`: Finished video pulling.</li>
+<li>`EditMediaComplete`: Finished video editing.</li>
+<li>`SplitMediaComplete`: Finished video splitting.</li>
+<li>`WechatPublishComplete`: Published to WeChat.</li>
+<li>`ComposeMediaComplete`: Finished producing the media file.</li>
+<li>`WechatMiniProgramPublishComplete`: Finished publishing on WeChat Mini Program.</li>
+<li>`FastClipMediaComplete`: Finished quick clipping.</li>
+<li>`ReviewAudioVideoComplete`: Finished moderation.</li>
+<li>`ExtractTraceWatermarkComplete`: Finished digital watermark extraction.</li>
+<li>`DescribeFileAttributesComplete`: Finished getting file attributes.</li>
 <b>v2017 task types:</b>
-<li>TranscodeComplete: Finished video transcoding.</li>
-<li>ConcatComplete: Finished video splicing.</li>
-<li>ClipComplete: Finished video clipping.</li>
-<li>CreateImageSpriteComplete: Finished image sprite generation.</li>
-<li>CreateSnapshotByTimeOffsetComplete: Finished time point screencapturing.</li>
+<li>`TranscodeComplete`: Finished video transcoding.</li>
+<li>`ConcatComplete`: Finished video splicing.</li>
+<li>`ClipComplete`: Finished video clipping.</li>
+<li>`CreateImageSpriteComplete`: Finished image sprite generation.</li>
+<li>`CreateSnapshotByTimeOffsetComplete`: Finished time point screencapturing.</li>
                      */
                     void SetEventType(const std::string& _eventType);
 
@@ -593,14 +597,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ReduceMediaBitrateCompleteEventHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DescribeFileAttributesCompleteEvent 
+                     * 获取The event of finishing getting file attributes. This parameter is valid only if `EventType` is `DescribeFileAttributesComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DescribeFileAttributesCompleteEvent The event of finishing getting file attributes. This parameter is valid only if `EventType` is `DescribeFileAttributesComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     DescribeFileAttributesTask GetDescribeFileAttributesCompleteEvent() const;
 
                     /**
-                     * 设置
-                     * @param DescribeFileAttributesCompleteEvent 
+                     * 设置The event of finishing getting file attributes. This parameter is valid only if `EventType` is `DescribeFileAttributesComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param DescribeFileAttributesCompleteEvent The event of finishing getting file attributes. This parameter is valid only if `EventType` is `DescribeFileAttributesComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetDescribeFileAttributesCompleteEvent(const DescribeFileAttributesTask& _describeFileAttributesCompleteEvent);
 
@@ -620,24 +628,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * <b>Supported event types:</b>
-<li>NewFileUpload: Video uploaded.</li>
-<li>ProcedureStateChanged: Task flow status changed.</li>
-<li>FileDeleted: Video deleted.</li>
-<li>PullComplete: Finished video pulling.</li>
-<li>EditMediaComplete: Finished video editing.</li>
-<li>SplitMediaComplete: Finished video splitting.</li>
-<li>WechatPublishComplete: Published to WeChat.</li>
-<li>ComposeMediaComplete: Finished producing the media file.</li>
-<li>WechatMiniProgramPublishComplete: Finished publishing on WeChat Mini Program</li>
-<li>FastClipMediaComplete: Finished quick clipping.</li>
-<li>ReviewAudioVideoComplete: Finished moderation.</li>
-<li>ExtractTraceWatermarkComplete: Finished digital watermark extraction.</li>
+<li>`NewFileUpload`: Video uploaded.</li>
+<li>`ProcedureStateChanged`: Task flow status changed.</li>
+<li>`FileDeleted`: Video deleted.</li>
+<li>`PullComplete`: Finished video pulling.</li>
+<li>`EditMediaComplete`: Finished video editing.</li>
+<li>`SplitMediaComplete`: Finished video splitting.</li>
+<li>`WechatPublishComplete`: Published to WeChat.</li>
+<li>`ComposeMediaComplete`: Finished producing the media file.</li>
+<li>`WechatMiniProgramPublishComplete`: Finished publishing on WeChat Mini Program.</li>
+<li>`FastClipMediaComplete`: Finished quick clipping.</li>
+<li>`ReviewAudioVideoComplete`: Finished moderation.</li>
+<li>`ExtractTraceWatermarkComplete`: Finished digital watermark extraction.</li>
+<li>`DescribeFileAttributesComplete`: Finished getting file attributes.</li>
 <b>v2017 task types:</b>
-<li>TranscodeComplete: Finished video transcoding.</li>
-<li>ConcatComplete: Finished video splicing.</li>
-<li>ClipComplete: Finished video clipping.</li>
-<li>CreateImageSpriteComplete: Finished image sprite generation.</li>
-<li>CreateSnapshotByTimeOffsetComplete: Finished time point screencapturing.</li>
+<li>`TranscodeComplete`: Finished video transcoding.</li>
+<li>`ConcatComplete`: Finished video splicing.</li>
+<li>`ClipComplete`: Finished video clipping.</li>
+<li>`CreateImageSpriteComplete`: Finished image sprite generation.</li>
+<li>`CreateSnapshotByTimeOffsetComplete`: Finished time point screencapturing.</li>
                      */
                     std::string m_eventType;
                     bool m_eventTypeHasBeenSet;
@@ -776,7 +785,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_reduceMediaBitrateCompleteEventHasBeenSet;
 
                     /**
-                     * 
+                     * The event of finishing getting file attributes. This parameter is valid only if `EventType` is `DescribeFileAttributesComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     DescribeFileAttributesTask m_describeFileAttributesCompleteEvent;
                     bool m_describeFileAttributesCompleteEventHasBeenSet;

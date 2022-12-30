@@ -134,14 +134,14 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Sort by field <li>1: instance ID </li><li>2: instance name </li><li>3: AZ </li><li>4: creation time </li>If `orderKey` is not passed in, sort by creation time in descending order
-                     * @return OrderByKey Sort by field <li>1: instance ID </li><li>2: instance name </li><li>3: AZ </li><li>4: creation time </li>If `orderKey` is not passed in, sort by creation time in descending order
+                     * 获取The sorting field. <li>1: Instance ID </li><li>2: Instance name </li><li>3: AZ </li><li>4: Creation time </li>If `OrderByKey` is not passed in, sorting is performed by creation time in descending order.
+                     * @return OrderByKey The sorting field. <li>1: Instance ID </li><li>2: Instance name </li><li>3: AZ </li><li>4: Creation time </li>If `OrderByKey` is not passed in, sorting is performed by creation time in descending order.
                      */
                     uint64_t GetOrderByKey() const;
 
                     /**
-                     * 设置Sort by field <li>1: instance ID </li><li>2: instance name </li><li>3: AZ </li><li>4: creation time </li>If `orderKey` is not passed in, sort by creation time in descending order
-                     * @param OrderByKey Sort by field <li>1: instance ID </li><li>2: instance name </li><li>3: AZ </li><li>4: creation time </li>If `orderKey` is not passed in, sort by creation time in descending order
+                     * 设置The sorting field. <li>1: Instance ID </li><li>2: Instance name </li><li>3: AZ </li><li>4: Creation time </li>If `OrderByKey` is not passed in, sorting is performed by creation time in descending order.
+                     * @param OrderByKey The sorting field. <li>1: Instance ID </li><li>2: Instance name </li><li>3: AZ </li><li>4: Creation time </li>If `OrderByKey` is not passed in, sorting is performed by creation time in descending order.
                      */
                     void SetOrderByKey(const uint64_t& _orderByKey);
 
@@ -224,14 +224,14 @@ namespace TencentCloud
                     bool ZoneListHasBeenSet() const;
 
                     /**
-                     * 获取Health status filter list
-                     * @return HealthStatus Health status filter list
+                     * 获取The health status filter. Valid values: `0` (green), `1` (yellow), `2` (red), `-1` (unknown).
+                     * @return HealthStatus The health status filter. Valid values: `0` (green), `1` (yellow), `2` (red), `-1` (unknown).
                      */
                     std::vector<int64_t> GetHealthStatus() const;
 
                     /**
-                     * 设置Health status filter list
-                     * @param HealthStatus Health status filter list
+                     * 设置The health status filter. Valid values: `0` (green), `1` (yellow), `2` (red), `-1` (unknown).
+                     * @param HealthStatus The health status filter. Valid values: `0` (green), `1` (yellow), `2` (red), `-1` (unknown).
                      */
                     void SetHealthStatus(const std::vector<int64_t>& _healthStatus);
 
@@ -292,7 +292,7 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Sort by field <li>1: instance ID </li><li>2: instance name </li><li>3: AZ </li><li>4: creation time </li>If `orderKey` is not passed in, sort by creation time in descending order
+                     * The sorting field. <li>1: Instance ID </li><li>2: Instance name </li><li>3: AZ </li><li>4: Creation time </li>If `OrderByKey` is not passed in, sorting is performed by creation time in descending order.
                      */
                     uint64_t m_orderByKey;
                     bool m_orderByKeyHasBeenSet;
@@ -322,7 +322,7 @@ namespace TencentCloud
                     bool m_zoneListHasBeenSet;
 
                     /**
-                     * Health status filter list
+                     * The health status filter. Valid values: `0` (green), `1` (yellow), `2` (red), `-1` (unknown).
                      */
                     std::vector<int64_t> m_healthStatus;
                     bool m_healthStatusHasBeenSet;
