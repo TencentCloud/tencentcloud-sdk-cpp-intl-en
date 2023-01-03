@@ -850,14 +850,14 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
                     bool SlaveZoneHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceInitInfos 
+                     * 获取Instance initialization configuration information, which is used to select instances with different specifications when purchasing a cluster.
+                     * @return InstanceInitInfos Instance initialization configuration information, which is used to select instances with different specifications when purchasing a cluster.
                      */
                     std::vector<InstanceInitInfo> GetInstanceInitInfos() const;
 
                     /**
-                     * 设置
-                     * @param InstanceInitInfos 
+                     * 设置Instance initialization configuration information, which is used to select instances with different specifications when purchasing a cluster.
+                     * @param InstanceInitInfos Instance initialization configuration information, which is used to select instances with different specifications when purchasing a cluster.
                      */
                     void SetInstanceInitInfos(const std::vector<InstanceInitInfo>& _instanceInitInfos);
 
@@ -1131,7 +1131,7 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
                     bool m_slaveZoneHasBeenSet;
 
                     /**
-                     * 
+                     * Instance initialization configuration information, which is used to select instances with different specifications when purchasing a cluster.
                      */
                     std::vector<InstanceInitInfo> m_instanceInitInfos;
                     bool m_instanceInitInfosHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Instance initialization configuration information
                 */
                 class InstanceInitInfo : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Cpu 
+                     * 获取Instance CPU
+                     * @return Cpu Instance CPU
                      */
                     int64_t GetCpu() const;
 
                     /**
-                     * 设置
-                     * @param Cpu 
+                     * 设置Instance CPU
+                     * @param Cpu Instance CPU
                      */
                     void SetCpu(const int64_t& _cpu);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Memory 
+                     * 获取Instance memory
+                     * @return Memory Instance memory
                      */
                     int64_t GetMemory() const;
 
                     /**
-                     * 设置
-                     * @param Memory 
+                     * 设置Instance memory
+                     * @param Memory Instance memory
                      */
                     void SetMemory(const int64_t& _memory);
 
@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceType 
+                     * 获取Instance type. Valid values:`rw`, `ro`.
+                     * @return InstanceType Instance type. Valid values:`rw`, `ro`.
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置
-                     * @param InstanceType 
+                     * 设置Instance type. Valid values:`rw`, `ro`.
+                     * @param InstanceType Instance type. Valid values:`rw`, `ro`.
                      */
                     void SetInstanceType(const std::string& _instanceType);
 
@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceCount 
+                     * 获取Number of the instances. Value range: 1-15.
+                     * @return InstanceCount Number of the instances. Value range: 1-15.
                      */
                     int64_t GetInstanceCount() const;
 
                     /**
-                     * 设置
-                     * @param InstanceCount 
+                     * 设置Number of the instances. Value range: 1-15.
+                     * @param InstanceCount Number of the instances. Value range: 1-15.
                      */
                     void SetInstanceCount(const int64_t& _instanceCount);
 
@@ -121,25 +121,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Instance CPU
                      */
                     int64_t m_cpu;
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * 
+                     * Instance memory
                      */
                     int64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * 
+                     * Instance type. Valid values:`rw`, `ro`.
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Number of the instances. Value range: 1-15.
                      */
                     int64_t m_instanceCount;
                     bool m_instanceCountHasBeenSet;
