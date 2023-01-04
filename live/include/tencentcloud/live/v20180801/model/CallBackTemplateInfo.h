@@ -226,6 +226,28 @@ namespace TencentCloud
                      */
                     bool CallbackKeyHasBeenSet() const;
 
+                    /**
+                     * 获取The push error callback URL.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return PushExceptionNotifyUrl The push error callback URL.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetPushExceptionNotifyUrl() const;
+
+                    /**
+                     * 设置The push error callback URL.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param PushExceptionNotifyUrl The push error callback URL.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetPushExceptionNotifyUrl(const std::string& _pushExceptionNotifyUrl);
+
+                    /**
+                     * 判断参数 PushExceptionNotifyUrl 是否已赋值
+                     * @return PushExceptionNotifyUrl 是否已赋值
+                     */
+                    bool PushExceptionNotifyUrlHasBeenSet() const;
+
                 private:
 
                     /**
@@ -287,6 +309,13 @@ namespace TencentCloud
                      */
                     std::string m_callbackKey;
                     bool m_callbackKeyHasBeenSet;
+
+                    /**
+                     * The push error callback URL.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_pushExceptionNotifyUrl;
+                    bool m_pushExceptionNotifyUrlHasBeenSet;
 
                 };
             }

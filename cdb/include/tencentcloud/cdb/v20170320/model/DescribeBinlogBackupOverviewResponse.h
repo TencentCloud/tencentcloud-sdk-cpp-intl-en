@@ -115,6 +115,30 @@ namespace TencentCloud
                      */
                     bool BinlogArchiveCountHasBeenSet() const;
 
+                    /**
+                     * 获取Log backup capacity of standard storage in bytes
+                     * @return BinlogStandbyVolume Log backup capacity of standard storage in bytes
+                     */
+                    int64_t GetBinlogStandbyVolume() const;
+
+                    /**
+                     * 判断参数 BinlogStandbyVolume 是否已赋值
+                     * @return BinlogStandbyVolume 是否已赋值
+                     */
+                    bool BinlogStandbyVolumeHasBeenSet() const;
+
+                    /**
+                     * 获取Number of log backups of standard storage
+                     * @return BinlogStandbyCount Number of log backups of standard storage
+                     */
+                    int64_t GetBinlogStandbyCount() const;
+
+                    /**
+                     * 判断参数 BinlogStandbyCount 是否已赋值
+                     * @return BinlogStandbyCount 是否已赋值
+                     */
+                    bool BinlogStandbyCountHasBeenSet() const;
+
                 private:
 
                     /**
@@ -152,6 +176,18 @@ namespace TencentCloud
                      */
                     int64_t m_binlogArchiveCount;
                     bool m_binlogArchiveCountHasBeenSet;
+
+                    /**
+                     * Log backup capacity of standard storage in bytes
+                     */
+                    int64_t m_binlogStandbyVolume;
+                    bool m_binlogStandbyVolumeHasBeenSet;
+
+                    /**
+                     * Number of log backups of standard storage
+                     */
+                    int64_t m_binlogStandbyCount;
+                    bool m_binlogStandbyCountHasBeenSet;
 
                 };
             }

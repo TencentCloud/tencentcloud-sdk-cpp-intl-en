@@ -244,6 +244,24 @@ Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/d
                      */
                     bool StreamMixNotifyUrlHasBeenSet() const;
 
+                    /**
+                     * 获取The push error callback URL.
+                     * @return PushExceptionNotifyUrl The push error callback URL.
+                     */
+                    std::string GetPushExceptionNotifyUrl() const;
+
+                    /**
+                     * 设置The push error callback URL.
+                     * @param PushExceptionNotifyUrl The push error callback URL.
+                     */
+                    void SetPushExceptionNotifyUrl(const std::string& _pushExceptionNotifyUrl);
+
+                    /**
+                     * 判断参数 PushExceptionNotifyUrl 是否已赋值
+                     * @return PushExceptionNotifyUrl 是否已赋值
+                     */
+                    bool PushExceptionNotifyUrlHasBeenSet() const;
+
                 private:
 
                     /**
@@ -309,6 +327,12 @@ Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/d
                      */
                     std::string m_streamMixNotifyUrl;
                     bool m_streamMixNotifyUrlHasBeenSet;
+
+                    /**
+                     * The push error callback URL.
+                     */
+                    std::string m_pushExceptionNotifyUrl;
+                    bool m_pushExceptionNotifyUrlHasBeenSet;
 
                 };
             }

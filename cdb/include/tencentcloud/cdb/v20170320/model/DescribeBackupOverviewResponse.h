@@ -119,6 +119,20 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool BackupArchiveVolumeHasBeenSet() const;
 
+                    /**
+                     * 获取Backup capacity of standard storage, which includes data backups and log backups.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return BackupStandbyVolume Backup capacity of standard storage, which includes data backups and log backups.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    int64_t GetBackupStandbyVolume() const;
+
+                    /**
+                     * 判断参数 BackupStandbyVolume 是否已赋值
+                     * @return BackupStandbyVolume 是否已赋值
+                     */
+                    bool BackupStandbyVolumeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -158,6 +172,13 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     int64_t m_backupArchiveVolume;
                     bool m_backupArchiveVolumeHasBeenSet;
+
+                    /**
+                     * Backup capacity of standard storage, which includes data backups and log backups.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    int64_t m_backupStandbyVolume;
+                    bool m_backupStandbyVolumeHasBeenSet;
 
                 };
             }

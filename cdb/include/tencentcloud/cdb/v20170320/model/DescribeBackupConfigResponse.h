@@ -224,6 +224,54 @@ namespace TencentCloud
                      */
                     bool BinlogArchiveDaysHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable the standard storage policy for data backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+                     * @return EnableBackupStandby Whether to enable the standard storage policy for data backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+                     */
+                    std::string GetEnableBackupStandby() const;
+
+                    /**
+                     * 判断参数 EnableBackupStandby 是否已赋值
+                     * @return EnableBackupStandby 是否已赋值
+                     */
+                    bool EnableBackupStandbyHasBeenSet() const;
+
+                    /**
+                     * 获取The period (in days) of how long a data backup is retained before switching to standard storage, which falls between 30 days and the number of days from the time it is created until it expires. If the archive backup is enabled, this period cannot be greater than archive backup period.
+                     * @return BackupStandbyDays The period (in days) of how long a data backup is retained before switching to standard storage, which falls between 30 days and the number of days from the time it is created until it expires. If the archive backup is enabled, this period cannot be greater than archive backup period.
+                     */
+                    int64_t GetBackupStandbyDays() const;
+
+                    /**
+                     * 判断参数 BackupStandbyDays 是否已赋值
+                     * @return BackupStandbyDays 是否已赋值
+                     */
+                    bool BackupStandbyDaysHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable the standard storage policy for log backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+                     * @return EnableBinlogStandby Whether to enable the standard storage policy for log backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+                     */
+                    std::string GetEnableBinlogStandby() const;
+
+                    /**
+                     * 判断参数 EnableBinlogStandby 是否已赋值
+                     * @return EnableBinlogStandby 是否已赋值
+                     */
+                    bool EnableBinlogStandbyHasBeenSet() const;
+
+                    /**
+                     * 获取The period (in days) of how long a log backup is retained before switching to standard storage, which falls between 30 days and the number of days from the time it is created until it expires. If the archive backup is enabled, this period cannot be greater than archive backup period.
+                     * @return BinlogStandbyDays The period (in days) of how long a log backup is retained before switching to standard storage, which falls between 30 days and the number of days from the time it is created until it expires. If the archive backup is enabled, this period cannot be greater than archive backup period.
+                     */
+                    int64_t GetBinlogStandbyDays() const;
+
+                    /**
+                     * 判断参数 BinlogStandbyDays 是否已赋值
+                     * @return BinlogStandbyDays 是否已赋值
+                     */
+                    bool BinlogStandbyDaysHasBeenSet() const;
+
                 private:
 
                     /**
@@ -315,6 +363,30 @@ namespace TencentCloud
                      */
                     int64_t m_binlogArchiveDays;
                     bool m_binlogArchiveDaysHasBeenSet;
+
+                    /**
+                     * Whether to enable the standard storage policy for data backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+                     */
+                    std::string m_enableBackupStandby;
+                    bool m_enableBackupStandbyHasBeenSet;
+
+                    /**
+                     * The period (in days) of how long a data backup is retained before switching to standard storage, which falls between 30 days and the number of days from the time it is created until it expires. If the archive backup is enabled, this period cannot be greater than archive backup period.
+                     */
+                    int64_t m_backupStandbyDays;
+                    bool m_backupStandbyDaysHasBeenSet;
+
+                    /**
+                     * Whether to enable the standard storage policy for log backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+                     */
+                    std::string m_enableBinlogStandby;
+                    bool m_enableBinlogStandbyHasBeenSet;
+
+                    /**
+                     * The period (in days) of how long a log backup is retained before switching to standard storage, which falls between 30 days and the number of days from the time it is created until it expires. If the archive backup is enabled, this period cannot be greater than archive backup period.
+                     */
+                    int64_t m_binlogStandbyDays;
+                    bool m_binlogStandbyDaysHasBeenSet;
 
                 };
             }

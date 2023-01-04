@@ -133,6 +133,8 @@
 #include <tencentcloud/cdb/v20170320/model/DescribeProxyConnectionPoolConfResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeProxyCustomConfRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeProxyCustomConfResponse.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeRemoteBackupConfigRequest.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeRemoteBackupConfigResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeRoGroupsRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeRoGroupsResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeRoMinScaleRequest.h>
@@ -203,6 +205,8 @@
 #include <tencentcloud/cdb/v20170320/model/ModifyNameOrDescByDpIdResponse.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyParamTemplateRequest.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyParamTemplateResponse.h>
+#include <tencentcloud/cdb/v20170320/model/ModifyRemoteBackupConfigRequest.h>
+#include <tencentcloud/cdb/v20170320/model/ModifyRemoteBackupConfigResponse.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyRoGroupInfoRequest.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyRoGroupInfoResponse.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyTimeWindowRequest.h>
@@ -430,6 +434,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeProxyCustomConfResponse> DescribeProxyCustomConfOutcome;
                 typedef std::future<DescribeProxyCustomConfOutcome> DescribeProxyCustomConfOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeProxyCustomConfRequest&, DescribeProxyCustomConfOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProxyCustomConfAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRemoteBackupConfigResponse> DescribeRemoteBackupConfigOutcome;
+                typedef std::future<DescribeRemoteBackupConfigOutcome> DescribeRemoteBackupConfigOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::DescribeRemoteBackupConfigRequest&, DescribeRemoteBackupConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRemoteBackupConfigAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeRoGroupsResponse> DescribeRoGroupsOutcome;
                 typedef std::future<DescribeRoGroupsOutcome> DescribeRoGroupsOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeRoGroupsRequest&, DescribeRoGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRoGroupsAsyncHandler;
@@ -535,6 +542,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyParamTemplateResponse> ModifyParamTemplateOutcome;
                 typedef std::future<ModifyParamTemplateOutcome> ModifyParamTemplateOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::ModifyParamTemplateRequest&, ModifyParamTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyParamTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyRemoteBackupConfigResponse> ModifyRemoteBackupConfigOutcome;
+                typedef std::future<ModifyRemoteBackupConfigOutcome> ModifyRemoteBackupConfigOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::ModifyRemoteBackupConfigRequest&, ModifyRemoteBackupConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyRemoteBackupConfigAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyRoGroupInfoResponse> ModifyRoGroupInfoOutcome;
                 typedef std::future<ModifyRoGroupInfoOutcome> ModifyRoGroupInfoOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::ModifyRoGroupInfoRequest&, ModifyRoGroupInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyRoGroupInfoAsyncHandler;
@@ -1119,6 +1129,15 @@ Note: the HTTP response packet will be very large if it contain a single large e
                 DescribeProxyCustomConfOutcomeCallable DescribeProxyCustomConfCallable(const Model::DescribeProxyCustomConfRequest& request);
 
                 /**
+                 *This API is used to query the configuration information of a remote TencentDB instance backup.
+                 * @param req DescribeRemoteBackupConfigRequest
+                 * @return DescribeRemoteBackupConfigOutcome
+                 */
+                DescribeRemoteBackupConfigOutcome DescribeRemoteBackupConfig(const Model::DescribeRemoteBackupConfigRequest &request);
+                void DescribeRemoteBackupConfigAsync(const Model::DescribeRemoteBackupConfigRequest& request, const DescribeRemoteBackupConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRemoteBackupConfigOutcomeCallable DescribeRemoteBackupConfigCallable(const Model::DescribeRemoteBackupConfigRequest& request);
+
+                /**
                  *This API is used to query the information of all RO groups of a TencentDB instance.
                  * @param req DescribeRoGroupsRequest
                  * @return DescribeRoGroupsOutcome
@@ -1436,6 +1455,15 @@ Note that when modifying account permissions, you need to pass in the full permi
                 ModifyParamTemplateOutcome ModifyParamTemplate(const Model::ModifyParamTemplateRequest &request);
                 void ModifyParamTemplateAsync(const Model::ModifyParamTemplateRequest& request, const ModifyParamTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyParamTemplateOutcomeCallable ModifyParamTemplateCallable(const Model::ModifyParamTemplateRequest& request);
+
+                /**
+                 *This API is used to modify the configuration information of a remote TencentDB instance backup.
+                 * @param req ModifyRemoteBackupConfigRequest
+                 * @return ModifyRemoteBackupConfigOutcome
+                 */
+                ModifyRemoteBackupConfigOutcome ModifyRemoteBackupConfig(const Model::ModifyRemoteBackupConfigRequest &request);
+                void ModifyRemoteBackupConfigAsync(const Model::ModifyRemoteBackupConfigRequest& request, const ModifyRemoteBackupConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyRemoteBackupConfigOutcomeCallable ModifyRemoteBackupConfigCallable(const Model::ModifyRemoteBackupConfigRequest& request);
 
                 /**
                  *This API is used to update the information of a TencentDB RO group, such as configuring a read-only instance removal policy in case of excessive delay, setting read weights of read-only instances, and setting the replication delay.

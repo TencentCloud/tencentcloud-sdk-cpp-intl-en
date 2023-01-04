@@ -283,30 +283,62 @@ Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.c
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取The region of the source (please choose the nearest region).
-ap-beijing: North China (Beijing)
-ap-shanghai: East China (Shanghai)
-ap-guangzhou: South China (Guangzhou)
-ap-mumbai: India
-                     * @return Region The region of the source (please choose the nearest region).
-ap-beijing: North China (Beijing)
-ap-shanghai: East China (Shanghai)
-ap-guangzhou: South China (Guangzhou)
-ap-mumbai: India
+                     * 获取The region where the task was created.
+`ap-beijing`: North China (Beijing)
+`ap-shanghai`: East China (Shanghai)
+`ap-guangzhou`: South China (Guangzhou)
+`ap-mumbai`: India
+`ap-hongkong`: Hong Kong
+`eu-frankfurt`: Germany
+`ap-seoul`: Korea
+`ap-bangkok`: Thailand
+`ap-singapore`: Singapore
+`na-siliconvalley`: Western US
+`na-ashburn`: Eastern US
+`ap-tokyo`: Japan
+                     * @return Region The region where the task was created.
+`ap-beijing`: North China (Beijing)
+`ap-shanghai`: East China (Shanghai)
+`ap-guangzhou`: South China (Guangzhou)
+`ap-mumbai`: India
+`ap-hongkong`: Hong Kong
+`eu-frankfurt`: Germany
+`ap-seoul`: Korea
+`ap-bangkok`: Thailand
+`ap-singapore`: Singapore
+`na-siliconvalley`: Western US
+`na-ashburn`: Eastern US
+`ap-tokyo`: Japan
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置The region of the source (please choose the nearest region).
-ap-beijing: North China (Beijing)
-ap-shanghai: East China (Shanghai)
-ap-guangzhou: South China (Guangzhou)
-ap-mumbai: India
-                     * @param Region The region of the source (please choose the nearest region).
-ap-beijing: North China (Beijing)
-ap-shanghai: East China (Shanghai)
-ap-guangzhou: South China (Guangzhou)
-ap-mumbai: India
+                     * 设置The region where the task was created.
+`ap-beijing`: North China (Beijing)
+`ap-shanghai`: East China (Shanghai)
+`ap-guangzhou`: South China (Guangzhou)
+`ap-mumbai`: India
+`ap-hongkong`: Hong Kong
+`eu-frankfurt`: Germany
+`ap-seoul`: Korea
+`ap-bangkok`: Thailand
+`ap-singapore`: Singapore
+`na-siliconvalley`: Western US
+`na-ashburn`: Eastern US
+`ap-tokyo`: Japan
+                     * @param Region The region where the task was created.
+`ap-beijing`: North China (Beijing)
+`ap-shanghai`: East China (Shanghai)
+`ap-guangzhou`: South China (Guangzhou)
+`ap-mumbai`: India
+`ap-hongkong`: Hong Kong
+`eu-frankfurt`: Germany
+`ap-seoul`: Korea
+`ap-bangkok`: Thailand
+`ap-singapore`: Singapore
+`na-siliconvalley`: Western US
+`na-ashburn`: Eastern US
+`ap-tokyo`: Japan
                      */
                     void SetRegion(const std::string& _region);
 
@@ -829,11 +861,19 @@ Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.c
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * The region of the source (please choose the nearest region).
-ap-beijing: North China (Beijing)
-ap-shanghai: East China (Shanghai)
-ap-guangzhou: South China (Guangzhou)
-ap-mumbai: India
+                     * The region where the task was created.
+`ap-beijing`: North China (Beijing)
+`ap-shanghai`: East China (Shanghai)
+`ap-guangzhou`: South China (Guangzhou)
+`ap-mumbai`: India
+`ap-hongkong`: Hong Kong
+`eu-frankfurt`: Germany
+`ap-seoul`: Korea
+`ap-bangkok`: Thailand
+`ap-singapore`: Singapore
+`na-siliconvalley`: Western US
+`na-ashburn`: Eastern US
+`ap-tokyo`: Japan
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
