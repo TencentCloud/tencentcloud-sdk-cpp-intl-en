@@ -14,21 +14,20 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/tke/v20180525/model/CreateClusterNodePoolFromExistingAsgResponse.h>
+#include <tencentcloud/cam/v20190116/model/UpdateAccessKeyResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using TencentCloud::CoreInternalOutcome;
-using namespace TencentCloud::Tke::V20180525::Model;
+using namespace TencentCloud::Cam::V20190116::Model;
 using namespace std;
 
-CreateClusterNodePoolFromExistingAsgResponse::CreateClusterNodePoolFromExistingAsgResponse() :
-    m_nodePoolIdHasBeenSet(false)
+UpdateAccessKeyResponse::UpdateAccessKeyResponse()
 {
 }
 
-CoreInternalOutcome CreateClusterNodePoolFromExistingAsgResponse::Deserialize(const string &payload)
+CoreInternalOutcome UpdateAccessKeyResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -62,33 +61,15 @@ CoreInternalOutcome CreateClusterNodePoolFromExistingAsgResponse::Deserialize(co
     }
 
 
-    if (rsp.HasMember("NodePoolId") && !rsp["NodePoolId"].IsNull())
-    {
-        if (!rsp["NodePoolId"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `NodePoolId` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_nodePoolId = string(rsp["NodePoolId"].GetString());
-        m_nodePoolIdHasBeenSet = true;
-    }
-
 
     return CoreInternalOutcome(true);
 }
 
-string CreateClusterNodePoolFromExistingAsgResponse::ToJsonString() const
+string UpdateAccessKeyResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
-
-    if (m_nodePoolIdHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "NodePoolId";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_nodePoolId.c_str(), allocator).Move(), allocator);
-    }
 
     rapidjson::Value iKey(rapidjson::kStringType);
     string key = "RequestId";
@@ -101,15 +82,5 @@ string CreateClusterNodePoolFromExistingAsgResponse::ToJsonString() const
     return buffer.GetString();
 }
 
-
-string CreateClusterNodePoolFromExistingAsgResponse::GetNodePoolId() const
-{
-    return m_nodePoolId;
-}
-
-bool CreateClusterNodePoolFromExistingAsgResponse::NodePoolIdHasBeenSet() const
-{
-    return m_nodePoolIdHasBeenSet;
-}
 
 

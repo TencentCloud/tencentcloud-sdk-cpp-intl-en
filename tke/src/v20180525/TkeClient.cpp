@@ -513,49 +513,6 @@ TkeClient::CreateClusterNodePoolOutcomeCallable TkeClient::CreateClusterNodePool
     return task->get_future();
 }
 
-TkeClient::CreateClusterNodePoolFromExistingAsgOutcome TkeClient::CreateClusterNodePoolFromExistingAsg(const CreateClusterNodePoolFromExistingAsgRequest &request)
-{
-    auto outcome = MakeRequest(request, "CreateClusterNodePoolFromExistingAsg");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        CreateClusterNodePoolFromExistingAsgResponse rsp = CreateClusterNodePoolFromExistingAsgResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return CreateClusterNodePoolFromExistingAsgOutcome(rsp);
-        else
-            return CreateClusterNodePoolFromExistingAsgOutcome(o.GetError());
-    }
-    else
-    {
-        return CreateClusterNodePoolFromExistingAsgOutcome(outcome.GetError());
-    }
-}
-
-void TkeClient::CreateClusterNodePoolFromExistingAsgAsync(const CreateClusterNodePoolFromExistingAsgRequest& request, const CreateClusterNodePoolFromExistingAsgAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->CreateClusterNodePoolFromExistingAsg(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-TkeClient::CreateClusterNodePoolFromExistingAsgOutcomeCallable TkeClient::CreateClusterNodePoolFromExistingAsgCallable(const CreateClusterNodePoolFromExistingAsgRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<CreateClusterNodePoolFromExistingAsgOutcome()>>(
-        [this, request]()
-        {
-            return this->CreateClusterNodePoolFromExistingAsg(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
 TkeClient::CreateClusterRouteTableOutcome TkeClient::CreateClusterRouteTable(const CreateClusterRouteTableRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateClusterRouteTable");
@@ -2448,6 +2405,49 @@ TkeClient::DescribeEdgeClusterInstancesOutcomeCallable TkeClient::DescribeEdgeCl
     return task->get_future();
 }
 
+TkeClient::DescribeEdgeClusterUpgradeInfoOutcome TkeClient::DescribeEdgeClusterUpgradeInfo(const DescribeEdgeClusterUpgradeInfoRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeEdgeClusterUpgradeInfo");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeEdgeClusterUpgradeInfoResponse rsp = DescribeEdgeClusterUpgradeInfoResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeEdgeClusterUpgradeInfoOutcome(rsp);
+        else
+            return DescribeEdgeClusterUpgradeInfoOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeEdgeClusterUpgradeInfoOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::DescribeEdgeClusterUpgradeInfoAsync(const DescribeEdgeClusterUpgradeInfoRequest& request, const DescribeEdgeClusterUpgradeInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeEdgeClusterUpgradeInfo(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::DescribeEdgeClusterUpgradeInfoOutcomeCallable TkeClient::DescribeEdgeClusterUpgradeInfoCallable(const DescribeEdgeClusterUpgradeInfoRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeEdgeClusterUpgradeInfoOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeEdgeClusterUpgradeInfo(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TkeClient::DescribeEdgeLogSwitchesOutcome TkeClient::DescribeEdgeLogSwitches(const DescribeEdgeLogSwitchesRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeEdgeLogSwitches");
@@ -3903,6 +3903,49 @@ TkeClient::UpdateClusterVersionOutcomeCallable TkeClient::UpdateClusterVersionCa
         [this, request]()
         {
             return this->UpdateClusterVersion(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TkeClient::UpdateEdgeClusterVersionOutcome TkeClient::UpdateEdgeClusterVersion(const UpdateEdgeClusterVersionRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateEdgeClusterVersion");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateEdgeClusterVersionResponse rsp = UpdateEdgeClusterVersionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateEdgeClusterVersionOutcome(rsp);
+        else
+            return UpdateEdgeClusterVersionOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateEdgeClusterVersionOutcome(outcome.GetError());
+    }
+}
+
+void TkeClient::UpdateEdgeClusterVersionAsync(const UpdateEdgeClusterVersionRequest& request, const UpdateEdgeClusterVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->UpdateEdgeClusterVersion(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TkeClient::UpdateEdgeClusterVersionOutcomeCallable TkeClient::UpdateEdgeClusterVersionCallable(const UpdateEdgeClusterVersionRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<UpdateEdgeClusterVersionOutcome()>>(
+        [this, request]()
+        {
+            return this->UpdateEdgeClusterVersion(request);
         }
     );
 

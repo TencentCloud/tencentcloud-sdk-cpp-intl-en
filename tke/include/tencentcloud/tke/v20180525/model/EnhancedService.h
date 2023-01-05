@@ -86,14 +86,14 @@ namespace TencentCloud
                     bool MonitorServiceHasBeenSet() const;
 
                     /**
-                     * 获取Enables the TAT service. If this parameter is not specified, the TAT service will not be enabled.
-                     * @return AutomationService Enables the TAT service. If this parameter is not specified, the TAT service will not be enabled.
+                     * 获取Whether to enable the TAT service. If this parameter is not specified, the TAT service is enabled for public images and disabled for other images by default.
+                     * @return AutomationService Whether to enable the TAT service. If this parameter is not specified, the TAT service is enabled for public images and disabled for other images by default.
                      */
                     RunAutomationServiceEnabled GetAutomationService() const;
 
                     /**
-                     * 设置Enables the TAT service. If this parameter is not specified, the TAT service will not be enabled.
-                     * @param AutomationService Enables the TAT service. If this parameter is not specified, the TAT service will not be enabled.
+                     * 设置Whether to enable the TAT service. If this parameter is not specified, the TAT service is enabled for public images and disabled for other images by default.
+                     * @param AutomationService Whether to enable the TAT service. If this parameter is not specified, the TAT service is enabled for public images and disabled for other images by default.
                      */
                     void SetAutomationService(const RunAutomationServiceEnabled& _automationService);
 
@@ -118,7 +118,7 @@ namespace TencentCloud
                     bool m_monitorServiceHasBeenSet;
 
                     /**
-                     * Enables the TAT service. If this parameter is not specified, the TAT service will not be enabled.
+                     * Whether to enable the TAT service. If this parameter is not specified, the TAT service is enabled for public images and disabled for other images by default.
                      */
                     RunAutomationServiceEnabled m_automationService;
                     bool m_automationServiceHasBeenSet;

@@ -45,8 +45,6 @@
 #include <tencentcloud/tke/v20180525/model/CreateClusterInstancesResponse.h>
 #include <tencentcloud/tke/v20180525/model/CreateClusterNodePoolRequest.h>
 #include <tencentcloud/tke/v20180525/model/CreateClusterNodePoolResponse.h>
-#include <tencentcloud/tke/v20180525/model/CreateClusterNodePoolFromExistingAsgRequest.h>
-#include <tencentcloud/tke/v20180525/model/CreateClusterNodePoolFromExistingAsgResponse.h>
 #include <tencentcloud/tke/v20180525/model/CreateClusterRouteTableRequest.h>
 #include <tencentcloud/tke/v20180525/model/CreateClusterRouteTableResponse.h>
 #include <tencentcloud/tke/v20180525/model/CreateECMInstancesRequest.h>
@@ -135,6 +133,8 @@
 #include <tencentcloud/tke/v20180525/model/DescribeEdgeClusterExtraArgsResponse.h>
 #include <tencentcloud/tke/v20180525/model/DescribeEdgeClusterInstancesRequest.h>
 #include <tencentcloud/tke/v20180525/model/DescribeEdgeClusterInstancesResponse.h>
+#include <tencentcloud/tke/v20180525/model/DescribeEdgeClusterUpgradeInfoRequest.h>
+#include <tencentcloud/tke/v20180525/model/DescribeEdgeClusterUpgradeInfoResponse.h>
 #include <tencentcloud/tke/v20180525/model/DescribeEdgeLogSwitchesRequest.h>
 #include <tencentcloud/tke/v20180525/model/DescribeEdgeLogSwitchesResponse.h>
 #include <tencentcloud/tke/v20180525/model/DescribeEnableVpcCniProgressRequest.h>
@@ -203,6 +203,8 @@
 #include <tencentcloud/tke/v20180525/model/UninstallEdgeLogAgentResponse.h>
 #include <tencentcloud/tke/v20180525/model/UpdateClusterVersionRequest.h>
 #include <tencentcloud/tke/v20180525/model/UpdateClusterVersionResponse.h>
+#include <tencentcloud/tke/v20180525/model/UpdateEdgeClusterVersionRequest.h>
+#include <tencentcloud/tke/v20180525/model/UpdateEdgeClusterVersionResponse.h>
 #include <tencentcloud/tke/v20180525/model/UpgradeClusterInstancesRequest.h>
 #include <tencentcloud/tke/v20180525/model/UpgradeClusterInstancesResponse.h>
 
@@ -252,9 +254,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateClusterNodePoolResponse> CreateClusterNodePoolOutcome;
                 typedef std::future<CreateClusterNodePoolOutcome> CreateClusterNodePoolOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::CreateClusterNodePoolRequest&, CreateClusterNodePoolOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateClusterNodePoolAsyncHandler;
-                typedef Outcome<Core::Error, Model::CreateClusterNodePoolFromExistingAsgResponse> CreateClusterNodePoolFromExistingAsgOutcome;
-                typedef std::future<CreateClusterNodePoolFromExistingAsgOutcome> CreateClusterNodePoolFromExistingAsgOutcomeCallable;
-                typedef std::function<void(const TkeClient*, const Model::CreateClusterNodePoolFromExistingAsgRequest&, CreateClusterNodePoolFromExistingAsgOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateClusterNodePoolFromExistingAsgAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateClusterRouteTableResponse> CreateClusterRouteTableOutcome;
                 typedef std::future<CreateClusterRouteTableOutcome> CreateClusterRouteTableOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::CreateClusterRouteTableRequest&, CreateClusterRouteTableOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateClusterRouteTableAsyncHandler;
@@ -387,6 +386,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeEdgeClusterInstancesResponse> DescribeEdgeClusterInstancesOutcome;
                 typedef std::future<DescribeEdgeClusterInstancesOutcome> DescribeEdgeClusterInstancesOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::DescribeEdgeClusterInstancesRequest&, DescribeEdgeClusterInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeEdgeClusterInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeEdgeClusterUpgradeInfoResponse> DescribeEdgeClusterUpgradeInfoOutcome;
+                typedef std::future<DescribeEdgeClusterUpgradeInfoOutcome> DescribeEdgeClusterUpgradeInfoOutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::DescribeEdgeClusterUpgradeInfoRequest&, DescribeEdgeClusterUpgradeInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeEdgeClusterUpgradeInfoAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeEdgeLogSwitchesResponse> DescribeEdgeLogSwitchesOutcome;
                 typedef std::future<DescribeEdgeLogSwitchesOutcome> DescribeEdgeLogSwitchesOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::DescribeEdgeLogSwitchesRequest&, DescribeEdgeLogSwitchesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeEdgeLogSwitchesAsyncHandler;
@@ -489,6 +491,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::UpdateClusterVersionResponse> UpdateClusterVersionOutcome;
                 typedef std::future<UpdateClusterVersionOutcome> UpdateClusterVersionOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::UpdateClusterVersionRequest&, UpdateClusterVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateClusterVersionAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateEdgeClusterVersionResponse> UpdateEdgeClusterVersionOutcome;
+                typedef std::future<UpdateEdgeClusterVersionOutcome> UpdateEdgeClusterVersionOutcomeCallable;
+                typedef std::function<void(const TkeClient*, const Model::UpdateEdgeClusterVersionRequest&, UpdateEdgeClusterVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateEdgeClusterVersionAsyncHandler;
                 typedef Outcome<Core::Error, Model::UpgradeClusterInstancesResponse> UpgradeClusterInstancesOutcome;
                 typedef std::future<UpgradeClusterInstancesOutcome> UpgradeClusterInstancesOutcomeCallable;
                 typedef std::function<void(const TkeClient*, const Model::UpgradeClusterInstancesRequest&, UpgradeClusterInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpgradeClusterInstancesAsyncHandler;
@@ -593,15 +598,6 @@ namespace TencentCloud
                 CreateClusterNodePoolOutcome CreateClusterNodePool(const Model::CreateClusterNodePoolRequest &request);
                 void CreateClusterNodePoolAsync(const Model::CreateClusterNodePoolRequest& request, const CreateClusterNodePoolAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateClusterNodePoolOutcomeCallable CreateClusterNodePoolCallable(const Model::CreateClusterNodePoolRequest& request);
-
-                /**
-                 *This API is used to upgrade a scaling group to a node pool.
-                 * @param req CreateClusterNodePoolFromExistingAsgRequest
-                 * @return CreateClusterNodePoolFromExistingAsgOutcome
-                 */
-                CreateClusterNodePoolFromExistingAsgOutcome CreateClusterNodePoolFromExistingAsg(const Model::CreateClusterNodePoolFromExistingAsgRequest &request);
-                void CreateClusterNodePoolFromExistingAsgAsync(const Model::CreateClusterNodePoolFromExistingAsgRequest& request, const CreateClusterNodePoolFromExistingAsgAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                CreateClusterNodePoolFromExistingAsgOutcomeCallable CreateClusterNodePoolFromExistingAsgCallable(const Model::CreateClusterNodePoolFromExistingAsgRequest& request);
 
                 /**
                  *This API is used to create a cluster route table.
@@ -1000,6 +996,15 @@ namespace TencentCloud
                 DescribeEdgeClusterInstancesOutcomeCallable DescribeEdgeClusterInstancesCallable(const Model::DescribeEdgeClusterInstancesRequest& request);
 
                 /**
+                 *This API is used to query the upgrade information of an edge cluster, including the upgradeable components, the current upgrade status, and errors occur during the upgrade.
+                 * @param req DescribeEdgeClusterUpgradeInfoRequest
+                 * @return DescribeEdgeClusterUpgradeInfoOutcome
+                 */
+                DescribeEdgeClusterUpgradeInfoOutcome DescribeEdgeClusterUpgradeInfo(const Model::DescribeEdgeClusterUpgradeInfoRequest &request);
+                void DescribeEdgeClusterUpgradeInfoAsync(const Model::DescribeEdgeClusterUpgradeInfoRequest& request, const DescribeEdgeClusterUpgradeInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeEdgeClusterUpgradeInfoOutcomeCallable DescribeEdgeClusterUpgradeInfoCallable(const Model::DescribeEdgeClusterUpgradeInfoRequest& request);
+
+                /**
                  *This API is used to query the status of events, audits and logs.
                  * @param req DescribeEdgeLogSwitchesRequest
                  * @return DescribeEdgeLogSwitchesOutcome
@@ -1304,6 +1309,15 @@ namespace TencentCloud
                 UpdateClusterVersionOutcome UpdateClusterVersion(const Model::UpdateClusterVersionRequest &request);
                 void UpdateClusterVersionAsync(const Model::UpdateClusterVersionRequest& request, const UpdateClusterVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 UpdateClusterVersionOutcomeCallable UpdateClusterVersionCallable(const Model::UpdateClusterVersionRequest& request);
+
+                /**
+                 *This API is used to upgrade an edge cluster component to a TKE Edge version.
+                 * @param req UpdateEdgeClusterVersionRequest
+                 * @return UpdateEdgeClusterVersionOutcome
+                 */
+                UpdateEdgeClusterVersionOutcome UpdateEdgeClusterVersion(const Model::UpdateEdgeClusterVersionRequest &request);
+                void UpdateEdgeClusterVersionAsync(const Model::UpdateEdgeClusterVersionRequest& request, const UpdateEdgeClusterVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateEdgeClusterVersionOutcomeCallable UpdateEdgeClusterVersionCallable(const Model::UpdateEdgeClusterVersionRequest& request);
 
                 /**
                  *This API is used to upgrade one or more work nodes in the cluster. 

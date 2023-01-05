@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/tke/v20180525/model/Label.h>
 #include <tencentcloud/tke/v20180525/model/Taint.h>
+#include <tencentcloud/tke/v20180525/model/GPUArgs.h>
 #include <tencentcloud/tke/v20180525/model/InstanceExtraArgs.h>
 #include <tencentcloud/tke/v20180525/model/Tag.h>
 
@@ -227,6 +228,60 @@ namespace TencentCloud
                     bool OsCustomizeTypeHasBeenSet() const;
 
                     /**
+                     * 获取GPU driver version, CUDA version, cuDNN version and wether to enable MIG
+                     * @return GPUArgs GPU driver version, CUDA version, cuDNN version and wether to enable MIG
+                     */
+                    GPUArgs GetGPUArgs() const;
+
+                    /**
+                     * 设置GPU driver version, CUDA version, cuDNN version and wether to enable MIG
+                     * @param GPUArgs GPU driver version, CUDA version, cuDNN version and wether to enable MIG
+                     */
+                    void SetGPUArgs(const GPUArgs& _gPUArgs);
+
+                    /**
+                     * 判断参数 GPUArgs 是否已赋值
+                     * @return GPUArgs 是否已赋值
+                     */
+                    bool GPUArgsHasBeenSet() const;
+
+                    /**
+                     * 获取Base64-encoded custom script
+                     * @return UserScript Base64-encoded custom script
+                     */
+                    std::string GetUserScript() const;
+
+                    /**
+                     * 设置Base64-encoded custom script
+                     * @param UserScript Base64-encoded custom script
+                     */
+                    void SetUserScript(const std::string& _userScript);
+
+                    /**
+                     * 判断参数 UserScript 是否已赋值
+                     * @return UserScript 是否已赋值
+                     */
+                    bool UserScriptHasBeenSet() const;
+
+                    /**
+                     * 获取Ignore existing nodes when update `Label` and `Taint`
+                     * @return IgnoreExistedNode Ignore existing nodes when update `Label` and `Taint`
+                     */
+                    bool GetIgnoreExistedNode() const;
+
+                    /**
+                     * 设置Ignore existing nodes when update `Label` and `Taint`
+                     * @param IgnoreExistedNode Ignore existing nodes when update `Label` and `Taint`
+                     */
+                    void SetIgnoreExistedNode(const bool& _ignoreExistedNode);
+
+                    /**
+                     * 判断参数 IgnoreExistedNode 是否已赋值
+                     * @return IgnoreExistedNode 是否已赋值
+                     */
+                    bool IgnoreExistedNodeHasBeenSet() const;
+
+                    /**
                      * 获取Node custom parameter
                      * @return ExtraArgs Node custom parameter
                      */
@@ -298,6 +353,24 @@ namespace TencentCloud
                      */
                     bool DeletionProtectionHasBeenSet() const;
 
+                    /**
+                     * 获取Specified value of dockerd --graph. Default value: /var/lib/docker
+                     * @return DockerGraphPath Specified value of dockerd --graph. Default value: /var/lib/docker
+                     */
+                    std::string GetDockerGraphPath() const;
+
+                    /**
+                     * 设置Specified value of dockerd --graph. Default value: /var/lib/docker
+                     * @param DockerGraphPath Specified value of dockerd --graph. Default value: /var/lib/docker
+                     */
+                    void SetDockerGraphPath(const std::string& _dockerGraphPath);
+
+                    /**
+                     * 判断参数 DockerGraphPath 是否已赋值
+                     * @return DockerGraphPath 是否已赋值
+                     */
+                    bool DockerGraphPathHasBeenSet() const;
+
                 private:
 
                     /**
@@ -361,6 +434,24 @@ namespace TencentCloud
                     bool m_osCustomizeTypeHasBeenSet;
 
                     /**
+                     * GPU driver version, CUDA version, cuDNN version and wether to enable MIG
+                     */
+                    GPUArgs m_gPUArgs;
+                    bool m_gPUArgsHasBeenSet;
+
+                    /**
+                     * Base64-encoded custom script
+                     */
+                    std::string m_userScript;
+                    bool m_userScriptHasBeenSet;
+
+                    /**
+                     * Ignore existing nodes when update `Label` and `Taint`
+                     */
+                    bool m_ignoreExistedNode;
+                    bool m_ignoreExistedNodeHasBeenSet;
+
+                    /**
                      * Node custom parameter
                      */
                     InstanceExtraArgs m_extraArgs;
@@ -383,6 +474,12 @@ namespace TencentCloud
                      */
                     bool m_deletionProtection;
                     bool m_deletionProtectionHasBeenSet;
+
+                    /**
+                     * Specified value of dockerd --graph. Default value: /var/lib/docker
+                     */
+                    std::string m_dockerGraphPath;
+                    bool m_dockerGraphPathHasBeenSet;
 
                 };
             }

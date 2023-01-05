@@ -65,22 +65,22 @@ namespace TencentCloud
                     bool CaseSensitiveHasBeenSet() const;
 
                     /**
-                     * 获取Separator of the full-text index. Each character represents a separator;
-Supports only English punctuation marks and (\n\t\r);
-We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\) as separators;
-                     * @return Tokenizer Separator of the full-text index. Each character represents a separator;
-Supports only English punctuation marks and (\n\t\r);
-We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\) as separators;
+                     * 获取Separator of the full-text index. Each character represents a separator.
+Only symbols, \n\t\r, and escape character \ are supported.
+Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
+                     * @return Tokenizer Separator of the full-text index. Each character represents a separator.
+Only symbols, \n\t\r, and escape character \ are supported.
+Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
                      */
                     std::string GetTokenizer() const;
 
                     /**
-                     * 设置Separator of the full-text index. Each character represents a separator;
-Supports only English punctuation marks and (\n\t\r);
-We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\) as separators;
-                     * @param Tokenizer Separator of the full-text index. Each character represents a separator;
-Supports only English punctuation marks and (\n\t\r);
-We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\) as separators;
+                     * 设置Separator of the full-text index. Each character represents a separator.
+Only symbols, \n\t\r, and escape character \ are supported.
+Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
+                     * @param Tokenizer Separator of the full-text index. Each character represents a separator.
+Only symbols, \n\t\r, and escape character \ are supported.
+Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
                      */
                     void SetTokenizer(const std::string& _tokenizer);
 
@@ -121,9 +121,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_caseSensitiveHasBeenSet;
 
                     /**
-                     * Separator of the full-text index. Each character represents a separator;
-Supports only English punctuation marks and (\n\t\r);
-We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\) as separators;
+                     * Separator of the full-text index. Each character represents a separator.
+Only symbols, \n\t\r, and escape character \ are supported.
+Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
                      */
                     std::string m_tokenizer;
                     bool m_tokenizerHasBeenSet;

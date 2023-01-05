@@ -271,6 +271,28 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool ClusterAdvancedSettingsHasBeenSet() const;
 
+                    /**
+                     * 获取TKE edge cluster level
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Level TKE edge cluster level
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetLevel() const;
+
+                    /**
+                     * 设置TKE edge cluster level
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param Level TKE edge cluster level
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetLevel(const std::string& _level);
+
+                    /**
+                     * 判断参数 Level 是否已赋值
+                     * @return Level 是否已赋值
+                     */
+                    bool LevelHasBeenSet() const;
+
                 private:
 
                     /**
@@ -346,6 +368,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     EdgeClusterAdvancedSettings m_clusterAdvancedSettings;
                     bool m_clusterAdvancedSettingsHasBeenSet;
+
+                    /**
+                     * TKE edge cluster level
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_level;
+                    bool m_levelHasBeenSet;
 
                 };
             }

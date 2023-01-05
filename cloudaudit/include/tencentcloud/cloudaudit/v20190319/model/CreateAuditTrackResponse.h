@@ -43,7 +43,25 @@ namespace TencentCloud
                     std::string ToJsonString() const;
 
 
+                    /**
+                     * 获取Tracking set ID
+                     * @return TrackId Tracking set ID
+                     */
+                    uint64_t GetTrackId() const;
+
+                    /**
+                     * 判断参数 TrackId 是否已赋值
+                     * @return TrackId 是否已赋值
+                     */
+                    bool TrackIdHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * Tracking set ID
+                     */
+                    uint64_t m_trackId;
+                    bool m_trackIdHasBeenSet;
 
                 };
             }

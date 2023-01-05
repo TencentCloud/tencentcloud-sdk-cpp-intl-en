@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_TKE_V20180525_MODEL_CREATECLUSTERNODEPOOLFROMEXISTINGASGRESPONSE_H_
-#define TENCENTCLOUD_TKE_V20180525_MODEL_CREATECLUSTERNODEPOOLFROMEXISTINGASGRESPONSE_H_
+#ifndef TENCENTCLOUD_MONITOR_V20180724_MODEL_DESCRIBEPROMETHEUSZONESREQUEST_H_
+#define TENCENTCLOUD_MONITOR_V20180724_MODEL_DESCRIBEPROMETHEUSZONESREQUEST_H_
 
 #include <string>
 #include <vector>
@@ -25,43 +25,48 @@
 
 namespace TencentCloud
 {
-    namespace Tke
+    namespace Monitor
     {
-        namespace V20180525
+        namespace V20180724
         {
             namespace Model
             {
                 /**
-                * CreateClusterNodePoolFromExistingAsg response structure.
+                * DescribePrometheusZones request structure.
                 */
-                class CreateClusterNodePoolFromExistingAsgResponse : public AbstractModel
+                class DescribePrometheusZonesRequest : public AbstractModel
                 {
                 public:
-                    CreateClusterNodePoolFromExistingAsgResponse();
-                    ~CreateClusterNodePoolFromExistingAsgResponse() = default;
-                    CoreInternalOutcome Deserialize(const std::string &payload);
+                    DescribePrometheusZonesRequest();
+                    ~DescribePrometheusZonesRequest() = default;
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Node pool ID
-                     * @return NodePoolId Node pool ID
+                     * 获取Region ID
+                     * @return RegionId Region ID
                      */
-                    std::string GetNodePoolId() const;
+                    int64_t GetRegionId() const;
 
                     /**
-                     * 判断参数 NodePoolId 是否已赋值
-                     * @return NodePoolId 是否已赋值
+                     * 设置Region ID
+                     * @param RegionId Region ID
                      */
-                    bool NodePoolIdHasBeenSet() const;
+                    void SetRegionId(const int64_t& _regionId);
+
+                    /**
+                     * 判断参数 RegionId 是否已赋值
+                     * @return RegionId 是否已赋值
+                     */
+                    bool RegionIdHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Node pool ID
+                     * Region ID
                      */
-                    std::string m_nodePoolId;
-                    bool m_nodePoolIdHasBeenSet;
+                    int64_t m_regionId;
+                    bool m_regionIdHasBeenSet;
 
                 };
             }
@@ -69,4 +74,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_TKE_V20180525_MODEL_CREATECLUSTERNODEPOOLFROMEXISTINGASGRESPONSE_H_
+#endif // !TENCENTCLOUD_MONITOR_V20180724_MODEL_DESCRIBEPROMETHEUSZONESREQUEST_H_

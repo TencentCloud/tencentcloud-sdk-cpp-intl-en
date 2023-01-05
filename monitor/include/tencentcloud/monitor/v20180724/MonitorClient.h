@@ -145,6 +145,8 @@
 #include <tencentcloud/monitor/v20180724/model/DescribePrometheusInstancesResponse.h>
 #include <tencentcloud/monitor/v20180724/model/DescribePrometheusScrapeJobsRequest.h>
 #include <tencentcloud/monitor/v20180724/model/DescribePrometheusScrapeJobsResponse.h>
+#include <tencentcloud/monitor/v20180724/model/DescribePrometheusZonesRequest.h>
+#include <tencentcloud/monitor/v20180724/model/DescribePrometheusZonesResponse.h>
 #include <tencentcloud/monitor/v20180724/model/DescribeRecordingRulesRequest.h>
 #include <tencentcloud/monitor/v20180724/model/DescribeRecordingRulesResponse.h>
 #include <tencentcloud/monitor/v20180724/model/DescribeSSOAccountRequest.h>
@@ -434,6 +436,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribePrometheusScrapeJobsResponse> DescribePrometheusScrapeJobsOutcome;
                 typedef std::future<DescribePrometheusScrapeJobsOutcome> DescribePrometheusScrapeJobsOutcomeCallable;
                 typedef std::function<void(const MonitorClient*, const Model::DescribePrometheusScrapeJobsRequest&, DescribePrometheusScrapeJobsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePrometheusScrapeJobsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribePrometheusZonesResponse> DescribePrometheusZonesOutcome;
+                typedef std::future<DescribePrometheusZonesOutcome> DescribePrometheusZonesOutcomeCallable;
+                typedef std::function<void(const MonitorClient*, const Model::DescribePrometheusZonesRequest&, DescribePrometheusZonesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePrometheusZonesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeRecordingRulesResponse> DescribeRecordingRulesOutcome;
                 typedef std::future<DescribeRecordingRulesOutcome> DescribeRecordingRulesOutcomeCallable;
                 typedef std::function<void(const MonitorClient*, const Model::DescribeRecordingRulesRequest&, DescribeRecordingRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRecordingRulesAsyncHandler;
@@ -1133,6 +1138,15 @@ Note: **If you use a sub-account, you can only query the alarm records of author
                 DescribePrometheusScrapeJobsOutcome DescribePrometheusScrapeJobs(const Model::DescribePrometheusScrapeJobsRequest &request);
                 void DescribePrometheusScrapeJobsAsync(const Model::DescribePrometheusScrapeJobsRequest& request, const DescribePrometheusScrapeJobsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribePrometheusScrapeJobsOutcomeCallable DescribePrometheusScrapeJobsCallable(const Model::DescribePrometheusScrapeJobsRequest& request);
+
+                /**
+                 *This API is used to list the AZs of Tencent Managed Service for Prometheus (TMP).
+                 * @param req DescribePrometheusZonesRequest
+                 * @return DescribePrometheusZonesOutcome
+                 */
+                DescribePrometheusZonesOutcome DescribePrometheusZones(const Model::DescribePrometheusZonesRequest &request);
+                void DescribePrometheusZonesAsync(const Model::DescribePrometheusZonesRequest& request, const DescribePrometheusZonesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribePrometheusZonesOutcomeCallable DescribePrometheusZonesCallable(const Model::DescribePrometheusZonesRequest& request);
 
                 /**
                  *This API is used to query Prometheus recording rules by filter.

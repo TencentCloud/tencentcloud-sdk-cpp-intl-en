@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/tke/v20180525/model/CreateClusterNodePoolFromExistingAsgRequest.h>
+#include <tencentcloud/tke/v20180525/model/DescribeEdgeClusterUpgradeInfoRequest.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -22,13 +22,13 @@
 using namespace TencentCloud::Tke::V20180525::Model;
 using namespace std;
 
-CreateClusterNodePoolFromExistingAsgRequest::CreateClusterNodePoolFromExistingAsgRequest() :
+DescribeEdgeClusterUpgradeInfoRequest::DescribeEdgeClusterUpgradeInfoRequest() :
     m_clusterIdHasBeenSet(false),
-    m_autoscalingGroupIdHasBeenSet(false)
+    m_edgeVersionHasBeenSet(false)
 {
 }
 
-string CreateClusterNodePoolFromExistingAsgRequest::ToJsonString() const
+string DescribeEdgeClusterUpgradeInfoRequest::ToJsonString() const
 {
     rapidjson::Document d;
     d.SetObject();
@@ -43,12 +43,12 @@ string CreateClusterNodePoolFromExistingAsgRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_clusterId.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_autoscalingGroupIdHasBeenSet)
+    if (m_edgeVersionHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "AutoscalingGroupId";
+        string key = "EdgeVersion";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_autoscalingGroupId.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_edgeVersion.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -59,36 +59,36 @@ string CreateClusterNodePoolFromExistingAsgRequest::ToJsonString() const
 }
 
 
-string CreateClusterNodePoolFromExistingAsgRequest::GetClusterId() const
+string DescribeEdgeClusterUpgradeInfoRequest::GetClusterId() const
 {
     return m_clusterId;
 }
 
-void CreateClusterNodePoolFromExistingAsgRequest::SetClusterId(const string& _clusterId)
+void DescribeEdgeClusterUpgradeInfoRequest::SetClusterId(const string& _clusterId)
 {
     m_clusterId = _clusterId;
     m_clusterIdHasBeenSet = true;
 }
 
-bool CreateClusterNodePoolFromExistingAsgRequest::ClusterIdHasBeenSet() const
+bool DescribeEdgeClusterUpgradeInfoRequest::ClusterIdHasBeenSet() const
 {
     return m_clusterIdHasBeenSet;
 }
 
-string CreateClusterNodePoolFromExistingAsgRequest::GetAutoscalingGroupId() const
+string DescribeEdgeClusterUpgradeInfoRequest::GetEdgeVersion() const
 {
-    return m_autoscalingGroupId;
+    return m_edgeVersion;
 }
 
-void CreateClusterNodePoolFromExistingAsgRequest::SetAutoscalingGroupId(const string& _autoscalingGroupId)
+void DescribeEdgeClusterUpgradeInfoRequest::SetEdgeVersion(const string& _edgeVersion)
 {
-    m_autoscalingGroupId = _autoscalingGroupId;
-    m_autoscalingGroupIdHasBeenSet = true;
+    m_edgeVersion = _edgeVersion;
+    m_edgeVersionHasBeenSet = true;
 }
 
-bool CreateClusterNodePoolFromExistingAsgRequest::AutoscalingGroupIdHasBeenSet() const
+bool DescribeEdgeClusterUpgradeInfoRequest::EdgeVersionHasBeenSet() const
 {
-    return m_autoscalingGroupIdHasBeenSet;
+    return m_edgeVersionHasBeenSet;
 }
 
 

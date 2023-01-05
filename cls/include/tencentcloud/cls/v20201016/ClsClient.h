@@ -23,6 +23,8 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/cls/v20201016/model/AddMachineGroupInfoRequest.h>
+#include <tencentcloud/cls/v20201016/model/AddMachineGroupInfoResponse.h>
 #include <tencentcloud/cls/v20201016/model/ApplyConfigToMachineGroupRequest.h>
 #include <tencentcloud/cls/v20201016/model/ApplyConfigToMachineGroupResponse.h>
 #include <tencentcloud/cls/v20201016/model/CloseKafkaConsumerRequest.h>
@@ -65,6 +67,8 @@
 #include <tencentcloud/cls/v20201016/model/DeleteLogsetResponse.h>
 #include <tencentcloud/cls/v20201016/model/DeleteMachineGroupRequest.h>
 #include <tencentcloud/cls/v20201016/model/DeleteMachineGroupResponse.h>
+#include <tencentcloud/cls/v20201016/model/DeleteMachineGroupInfoRequest.h>
+#include <tencentcloud/cls/v20201016/model/DeleteMachineGroupInfoResponse.h>
 #include <tencentcloud/cls/v20201016/model/DeleteShipperRequest.h>
 #include <tencentcloud/cls/v20201016/model/DeleteShipperResponse.h>
 #include <tencentcloud/cls/v20201016/model/DeleteTopicRequest.h>
@@ -149,6 +153,9 @@ namespace TencentCloud
                 ClsClient(const Credential &credential, const std::string &region);
                 ClsClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
+                typedef Outcome<Core::Error, Model::AddMachineGroupInfoResponse> AddMachineGroupInfoOutcome;
+                typedef std::future<AddMachineGroupInfoOutcome> AddMachineGroupInfoOutcomeCallable;
+                typedef std::function<void(const ClsClient*, const Model::AddMachineGroupInfoRequest&, AddMachineGroupInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddMachineGroupInfoAsyncHandler;
                 typedef Outcome<Core::Error, Model::ApplyConfigToMachineGroupResponse> ApplyConfigToMachineGroupOutcome;
                 typedef std::future<ApplyConfigToMachineGroupOutcome> ApplyConfigToMachineGroupOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::ApplyConfigToMachineGroupRequest&, ApplyConfigToMachineGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ApplyConfigToMachineGroupAsyncHandler;
@@ -212,6 +219,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteMachineGroupResponse> DeleteMachineGroupOutcome;
                 typedef std::future<DeleteMachineGroupOutcome> DeleteMachineGroupOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::DeleteMachineGroupRequest&, DeleteMachineGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteMachineGroupAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteMachineGroupInfoResponse> DeleteMachineGroupInfoOutcome;
+                typedef std::future<DeleteMachineGroupInfoOutcome> DeleteMachineGroupInfoOutcomeCallable;
+                typedef std::function<void(const ClsClient*, const Model::DeleteMachineGroupInfoRequest&, DeleteMachineGroupInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteMachineGroupInfoAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteShipperResponse> DeleteShipperOutcome;
                 typedef std::future<DeleteShipperOutcome> DeleteShipperOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::DeleteShipperRequest&, DeleteShipperOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteShipperAsyncHandler;
@@ -319,6 +329,15 @@ namespace TencentCloud
                 typedef std::function<void(const ClsClient*, const Model::UploadLogRequest&, UploadLogOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UploadLogAsyncHandler;
 
 
+
+                /**
+                 *This API is used to add machine group information.
+                 * @param req AddMachineGroupInfoRequest
+                 * @return AddMachineGroupInfoOutcome
+                 */
+                AddMachineGroupInfoOutcome AddMachineGroupInfo(const Model::AddMachineGroupInfoRequest &request);
+                void AddMachineGroupInfoAsync(const Model::AddMachineGroupInfoRequest& request, const AddMachineGroupInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AddMachineGroupInfoOutcomeCallable AddMachineGroupInfoCallable(const Model::AddMachineGroupInfoRequest& request);
 
                 /**
                  *This API is used to apply the collection configuration to the specified machine group.
@@ -508,6 +527,15 @@ namespace TencentCloud
                 DeleteMachineGroupOutcome DeleteMachineGroup(const Model::DeleteMachineGroupRequest &request);
                 void DeleteMachineGroupAsync(const Model::DeleteMachineGroupRequest& request, const DeleteMachineGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteMachineGroupOutcomeCallable DeleteMachineGroupCallable(const Model::DeleteMachineGroupRequest& request);
+
+                /**
+                 *This API is used to delete machine group information.
+                 * @param req DeleteMachineGroupInfoRequest
+                 * @return DeleteMachineGroupInfoOutcome
+                 */
+                DeleteMachineGroupInfoOutcome DeleteMachineGroupInfo(const Model::DeleteMachineGroupInfoRequest &request);
+                void DeleteMachineGroupInfoAsync(const Model::DeleteMachineGroupInfoRequest& request, const DeleteMachineGroupInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteMachineGroupInfoOutcomeCallable DeleteMachineGroupInfoCallable(const Model::DeleteMachineGroupInfoRequest& request);
 
                 /**
                  *This API is used to delete a shipping rule.

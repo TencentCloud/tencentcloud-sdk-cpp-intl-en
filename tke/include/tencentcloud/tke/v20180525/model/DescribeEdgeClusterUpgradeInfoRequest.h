@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_TKE_V20180525_MODEL_CREATECLUSTERNODEPOOLFROMEXISTINGASGREQUEST_H_
-#define TENCENTCLOUD_TKE_V20180525_MODEL_CREATECLUSTERNODEPOOLFROMEXISTINGASGREQUEST_H_
+#ifndef TENCENTCLOUD_TKE_V20180525_MODEL_DESCRIBEEDGECLUSTERUPGRADEINFOREQUEST_H_
+#define TENCENTCLOUD_TKE_V20180525_MODEL_DESCRIBEEDGECLUSTERUPGRADEINFOREQUEST_H_
 
 #include <string>
 #include <vector>
@@ -32,13 +32,13 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * CreateClusterNodePoolFromExistingAsg request structure.
+                * DescribeEdgeClusterUpgradeInfo request structure.
                 */
-                class CreateClusterNodePoolFromExistingAsgRequest : public AbstractModel
+                class DescribeEdgeClusterUpgradeInfoRequest : public AbstractModel
                 {
                 public:
-                    CreateClusterNodePoolFromExistingAsgRequest();
-                    ~CreateClusterNodePoolFromExistingAsgRequest() = default;
+                    DescribeEdgeClusterUpgradeInfoRequest();
+                    ~DescribeEdgeClusterUpgradeInfoRequest() = default;
                     std::string ToJsonString() const;
 
 
@@ -61,22 +61,22 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Scaling group ID
-                     * @return AutoscalingGroupId Scaling group ID
+                     * 获取Target TKEEdge version
+                     * @return EdgeVersion Target TKEEdge version
                      */
-                    std::string GetAutoscalingGroupId() const;
+                    std::string GetEdgeVersion() const;
 
                     /**
-                     * 设置Scaling group ID
-                     * @param AutoscalingGroupId Scaling group ID
+                     * 设置Target TKEEdge version
+                     * @param EdgeVersion Target TKEEdge version
                      */
-                    void SetAutoscalingGroupId(const std::string& _autoscalingGroupId);
+                    void SetEdgeVersion(const std::string& _edgeVersion);
 
                     /**
-                     * 判断参数 AutoscalingGroupId 是否已赋值
-                     * @return AutoscalingGroupId 是否已赋值
+                     * 判断参数 EdgeVersion 是否已赋值
+                     * @return EdgeVersion 是否已赋值
                      */
-                    bool AutoscalingGroupIdHasBeenSet() const;
+                    bool EdgeVersionHasBeenSet() const;
 
                 private:
 
@@ -87,10 +87,10 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Scaling group ID
+                     * Target TKEEdge version
                      */
-                    std::string m_autoscalingGroupId;
-                    bool m_autoscalingGroupIdHasBeenSet;
+                    std::string m_edgeVersion;
+                    bool m_edgeVersionHasBeenSet;
 
                 };
             }
@@ -98,4 +98,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_TKE_V20180525_MODEL_CREATECLUSTERNODEPOOLFROMEXISTINGASGREQUEST_H_
+#endif // !TENCENTCLOUD_TKE_V20180525_MODEL_DESCRIBEEDGECLUSTERUPGRADEINFOREQUEST_H_

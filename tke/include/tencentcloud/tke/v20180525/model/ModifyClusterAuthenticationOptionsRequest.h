@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/tke/v20180525/model/ServiceAccountAuthenticationOptions.h>
+#include <tencentcloud/tke/v20180525/model/OIDCConfigAuthenticationOptions.h>
 
 
 namespace TencentCloud
@@ -79,6 +80,24 @@ namespace TencentCloud
                      */
                     bool ServiceAccountsHasBeenSet() const;
 
+                    /**
+                     * 获取OIDC authentication configurations
+                     * @return OIDCConfig OIDC authentication configurations
+                     */
+                    OIDCConfigAuthenticationOptions GetOIDCConfig() const;
+
+                    /**
+                     * 设置OIDC authentication configurations
+                     * @param OIDCConfig OIDC authentication configurations
+                     */
+                    void SetOIDCConfig(const OIDCConfigAuthenticationOptions& _oIDCConfig);
+
+                    /**
+                     * 判断参数 OIDCConfig 是否已赋值
+                     * @return OIDCConfig 是否已赋值
+                     */
+                    bool OIDCConfigHasBeenSet() const;
+
                 private:
 
                     /**
@@ -92,6 +111,12 @@ namespace TencentCloud
                      */
                     ServiceAccountAuthenticationOptions m_serviceAccounts;
                     bool m_serviceAccountsHasBeenSet;
+
+                    /**
+                     * OIDC authentication configurations
+                     */
+                    OIDCConfigAuthenticationOptions m_oIDCConfig;
+                    bool m_oIDCConfigHasBeenSet;
 
                 };
             }

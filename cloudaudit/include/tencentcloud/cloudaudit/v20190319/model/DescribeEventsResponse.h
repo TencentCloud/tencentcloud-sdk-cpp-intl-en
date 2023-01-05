@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether the logset ends.
-                     * @return ListOver Whether the logset ends.
+                     * 获取Whether the log list has come to an end. `true`: Yes. Pagination is not required.
+                     * @return ListOver Whether the log list has come to an end. `true`: Yes. Pagination is not required.
                      */
                     bool GetListOver() const;
 
@@ -83,10 +83,10 @@ Note: `null` may be returned for this field, indicating that no valid values can
                     bool EventsHasBeenSet() const;
 
                     /**
-                     * 获取Total number of events.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return TotalCount Total number of events.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取This parameter has been deprecated. Please use `ListOver` and `NextToken` for pagination, and read data of the next page when the value of `ListOver` is `false`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TotalCount This parameter has been deprecated. Please use `ListOver` and `NextToken` for pagination, and read data of the next page when the value of `ListOver` is `false`.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetTotalCount() const;
 
@@ -99,7 +99,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Whether the logset ends.
+                     * Whether the log list has come to an end. `true`: Yes. Pagination is not required.
                      */
                     bool m_listOver;
                     bool m_listOverHasBeenSet;
@@ -118,8 +118,8 @@ Note: `null` may be returned for this field, indicating that no valid values can
                     bool m_eventsHasBeenSet;
 
                     /**
-                     * Total number of events.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * This parameter has been deprecated. Please use `ListOver` and `NextToken` for pagination, and read data of the next page when the value of `ListOver` is `false`.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

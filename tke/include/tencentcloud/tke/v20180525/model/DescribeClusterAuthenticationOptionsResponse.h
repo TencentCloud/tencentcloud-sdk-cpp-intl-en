@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/tke/v20180525/model/ServiceAccountAuthenticationOptions.h>
+#include <tencentcloud/tke/v20180525/model/OIDCConfigAuthenticationOptions.h>
 
 
 namespace TencentCloud
@@ -72,6 +73,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool LatestOperationStateHasBeenSet() const;
 
+                    /**
+                     * 获取OIDC authentication configurations
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return OIDCConfig OIDC authentication configurations
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    OIDCConfigAuthenticationOptions GetOIDCConfig() const;
+
+                    /**
+                     * 判断参数 OIDCConfig 是否已赋值
+                     * @return OIDCConfig 是否已赋值
+                     */
+                    bool OIDCConfigHasBeenSet() const;
+
                 private:
 
                     /**
@@ -87,6 +102,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_latestOperationState;
                     bool m_latestOperationStateHasBeenSet;
+
+                    /**
+                     * OIDC authentication configurations
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    OIDCConfigAuthenticationOptions m_oIDCConfig;
+                    bool m_oIDCConfigHasBeenSet;
 
                 };
             }

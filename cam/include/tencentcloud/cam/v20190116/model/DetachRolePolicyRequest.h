@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool PolicyIdHasBeenSet() const;
 
                     /**
-                     * 获取Role ID, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
-                     * @return DetachRoleId Role ID, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
+                     * 获取Role ID, which is used to specify a role. The input parameter is either `DetachRoleId` or `DetachRoleName`.
+                     * @return DetachRoleId Role ID, which is used to specify a role. The input parameter is either `DetachRoleId` or `DetachRoleName`.
                      */
                     std::string GetDetachRoleId() const;
 
                     /**
-                     * 设置Role ID, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
-                     * @param DetachRoleId Role ID, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
+                     * 设置Role ID, which is used to specify a role. The input parameter is either `DetachRoleId` or `DetachRoleName`.
+                     * @param DetachRoleId Role ID, which is used to specify a role. The input parameter is either `DetachRoleId` or `DetachRoleName`.
                      */
                     void SetDetachRoleId(const std::string& _detachRoleId);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool DetachRoleIdHasBeenSet() const;
 
                     /**
-                     * 获取Role name, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
-                     * @return DetachRoleName Role name, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
+                     * 获取Role name, which is used to specify a role. The input parameter is either `DetachRoleId` or `DetachRoleName`.
+                     * @return DetachRoleName Role name, which is used to specify a role. The input parameter is either `DetachRoleId` or `DetachRoleName`.
                      */
                     std::string GetDetachRoleName() const;
 
                     /**
-                     * 设置Role name, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
-                     * @param DetachRoleName Role name, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
+                     * 设置Role name, which is used to specify a role. The input parameter is either `DetachRoleId` or `DetachRoleName`.
+                     * @param DetachRoleName Role name, which is used to specify a role. The input parameter is either `DetachRoleId` or `DetachRoleName`.
                      */
                     void SetDetachRoleName(const std::string& _detachRoleName);
 
@@ -123,13 +123,13 @@ namespace TencentCloud
                     bool m_policyIdHasBeenSet;
 
                     /**
-                     * Role ID, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
+                     * Role ID, which is used to specify a role. The input parameter is either `DetachRoleId` or `DetachRoleName`.
                      */
                     std::string m_detachRoleId;
                     bool m_detachRoleIdHasBeenSet;
 
                     /**
-                     * Role name, used to specify a role. Input either `AttachRoleId` or `AttachRoleName`
+                     * Role name, which is used to specify a role. The input parameter is either `DetachRoleId` or `DetachRoleName`.
                      */
                     std::string m_detachRoleName;
                     bool m_detachRoleNameHasBeenSet;
