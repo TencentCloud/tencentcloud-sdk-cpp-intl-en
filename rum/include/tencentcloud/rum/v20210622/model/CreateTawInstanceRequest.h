@@ -206,14 +206,14 @@ namespace TencentCloud
                     bool BuyingChannelHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ResourcePackageType 
+                     * 获取Type of prepaid resource pack (only required for prepaid mode)
+                     * @return ResourcePackageType Type of prepaid resource pack (only required for prepaid mode)
                      */
                     uint64_t GetResourcePackageType() const;
 
                     /**
-                     * 设置
-                     * @param ResourcePackageType 
+                     * 设置Type of prepaid resource pack (only required for prepaid mode)
+                     * @param ResourcePackageType Type of prepaid resource pack (only required for prepaid mode)
                      */
                     void SetResourcePackageType(const uint64_t& _resourcePackageType);
 
@@ -224,14 +224,14 @@ namespace TencentCloud
                     bool ResourcePackageTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ResourcePackageNum 
+                     * 获取The number of prepaid resource packs (only required for prepaid mode)
+                     * @return ResourcePackageNum The number of prepaid resource packs (only required for prepaid mode)
                      */
                     uint64_t GetResourcePackageNum() const;
 
                     /**
-                     * 设置
-                     * @param ResourcePackageNum 
+                     * 设置The number of prepaid resource packs (only required for prepaid mode)
+                     * @param ResourcePackageNum The number of prepaid resource packs (only required for prepaid mode)
                      */
                     void SetResourcePackageNum(const uint64_t& _resourcePackageNum);
 
@@ -298,13 +298,13 @@ namespace TencentCloud
                     bool m_buyingChannelHasBeenSet;
 
                     /**
-                     * 
+                     * Type of prepaid resource pack (only required for prepaid mode)
                      */
                     uint64_t m_resourcePackageType;
                     bool m_resourcePackageTypeHasBeenSet;
 
                     /**
-                     * 
+                     * The number of prepaid resource packs (only required for prepaid mode)
                      */
                     uint64_t m_resourcePackageNum;
                     bool m_resourcePackageNumHasBeenSet;

@@ -384,3 +384,132 @@ IntlpartnersmgtClient::QueryPartnerCreditOutcomeCallable IntlpartnersmgtClient::
     return task->get_future();
 }
 
+IntlpartnersmgtClient::QueryVoucherAmountByUinOutcome IntlpartnersmgtClient::QueryVoucherAmountByUin(const QueryVoucherAmountByUinRequest &request)
+{
+    auto outcome = MakeRequest(request, "QueryVoucherAmountByUin");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        QueryVoucherAmountByUinResponse rsp = QueryVoucherAmountByUinResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return QueryVoucherAmountByUinOutcome(rsp);
+        else
+            return QueryVoucherAmountByUinOutcome(o.GetError());
+    }
+    else
+    {
+        return QueryVoucherAmountByUinOutcome(outcome.GetError());
+    }
+}
+
+void IntlpartnersmgtClient::QueryVoucherAmountByUinAsync(const QueryVoucherAmountByUinRequest& request, const QueryVoucherAmountByUinAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->QueryVoucherAmountByUin(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+IntlpartnersmgtClient::QueryVoucherAmountByUinOutcomeCallable IntlpartnersmgtClient::QueryVoucherAmountByUinCallable(const QueryVoucherAmountByUinRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<QueryVoucherAmountByUinOutcome()>>(
+        [this, request]()
+        {
+            return this->QueryVoucherAmountByUin(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+IntlpartnersmgtClient::QueryVoucherListByUinOutcome IntlpartnersmgtClient::QueryVoucherListByUin(const QueryVoucherListByUinRequest &request)
+{
+    auto outcome = MakeRequest(request, "QueryVoucherListByUin");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        QueryVoucherListByUinResponse rsp = QueryVoucherListByUinResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return QueryVoucherListByUinOutcome(rsp);
+        else
+            return QueryVoucherListByUinOutcome(o.GetError());
+    }
+    else
+    {
+        return QueryVoucherListByUinOutcome(outcome.GetError());
+    }
+}
+
+void IntlpartnersmgtClient::QueryVoucherListByUinAsync(const QueryVoucherListByUinRequest& request, const QueryVoucherListByUinAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->QueryVoucherListByUin(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+IntlpartnersmgtClient::QueryVoucherListByUinOutcomeCallable IntlpartnersmgtClient::QueryVoucherListByUinCallable(const QueryVoucherListByUinRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<QueryVoucherListByUinOutcome()>>(
+        [this, request]()
+        {
+            return this->QueryVoucherListByUin(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+IntlpartnersmgtClient::QueryVoucherPoolOutcome IntlpartnersmgtClient::QueryVoucherPool(const QueryVoucherPoolRequest &request)
+{
+    auto outcome = MakeRequest(request, "QueryVoucherPool");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        QueryVoucherPoolResponse rsp = QueryVoucherPoolResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return QueryVoucherPoolOutcome(rsp);
+        else
+            return QueryVoucherPoolOutcome(o.GetError());
+    }
+    else
+    {
+        return QueryVoucherPoolOutcome(outcome.GetError());
+    }
+}
+
+void IntlpartnersmgtClient::QueryVoucherPoolAsync(const QueryVoucherPoolRequest& request, const QueryVoucherPoolAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->QueryVoucherPool(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+IntlpartnersmgtClient::QueryVoucherPoolOutcomeCallable IntlpartnersmgtClient::QueryVoucherPoolCallable(const QueryVoucherPoolRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<QueryVoucherPoolOutcome()>>(
+        [this, request]()
+        {
+            return this->QueryVoucherPool(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+

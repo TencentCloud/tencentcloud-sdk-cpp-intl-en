@@ -118,14 +118,22 @@ namespace TencentCloud
                     bool MetricNamesHasBeenSet() const;
 
                     /**
-                     * 获取List of sites to be queried. All sites will be selected if this field is not specified.
-                     * @return ZoneIds List of sites to be queried. All sites will be selected if this field is not specified.
+                     * 获取List of sites
+If it's not specified, all sites are selected by default, and the query period must be within the last 30 days. 
+Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. 
+                     * @return ZoneIds List of sites
+If it's not specified, all sites are selected by default, and the query period must be within the last 30 days. 
+Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. 
                      */
                     std::vector<std::string> GetZoneIds() const;
 
                     /**
-                     * 设置List of sites to be queried. All sites will be selected if this field is not specified.
-                     * @param ZoneIds List of sites to be queried. All sites will be selected if this field is not specified.
+                     * 设置List of sites
+If it's not specified, all sites are selected by default, and the query period must be within the last 30 days. 
+Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. 
+                     * @param ZoneIds List of sites
+If it's not specified, all sites are selected by default, and the query period must be within the last 30 days. 
+Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. 
                      */
                     void SetZoneIds(const std::vector<std::string>& _zoneIds);
 
@@ -154,30 +162,30 @@ namespace TencentCloud
                     bool ProxyIdsHasBeenSet() const;
 
                     /**
-                     * 获取The query time granularity. Values:
+                     * 获取The query granularity. Values:
 <li>`min`: 1 minute;</li>
-<li>`5min`: 5 minute;</li>
+<li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
-<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the interval between the start time and end time as follows: 1-minute granularity applies for a 1-hour interval, 5-minute granularity for a 2-day interval, 1-hour granularity for a 7-day interval, and 1-day granularity for an interval of over 7 days.
-                     * @return Interval The query time granularity. Values:
+<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
+                     * @return Interval The query granularity. Values:
 <li>`min`: 1 minute;</li>
-<li>`5min`: 5 minute;</li>
+<li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
-<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the interval between the start time and end time as follows: 1-minute granularity applies for a 1-hour interval, 5-minute granularity for a 2-day interval, 1-hour granularity for a 7-day interval, and 1-day granularity for an interval of over 7 days.
+<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
                      */
                     std::string GetInterval() const;
 
                     /**
-                     * 设置The query time granularity. Values:
+                     * 设置The query granularity. Values:
 <li>`min`: 1 minute;</li>
-<li>`5min`: 5 minute;</li>
+<li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
-<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the interval between the start time and end time as follows: 1-minute granularity applies for a 1-hour interval, 5-minute granularity for a 2-day interval, 1-hour granularity for a 7-day interval, and 1-day granularity for an interval of over 7 days.
-                     * @param Interval The query time granularity. Values:
+<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
+                     * @param Interval The query granularity. Values:
 <li>`min`: 1 minute;</li>
-<li>`5min`: 5 minute;</li>
+<li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
-<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the interval between the start time and end time as follows: 1-minute granularity applies for a 1-hour interval, 5-minute granularity for a 2-day interval, 1-hour granularity for a 7-day interval, and 1-day granularity for an interval of over 7 days.
+<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
                      */
                     void SetInterval(const std::string& _interval);
 
@@ -188,22 +196,22 @@ namespace TencentCloud
                     bool IntervalHasBeenSet() const;
 
                     /**
-                     * 获取Filter conditions. See below for details: 
-<li>`ruleId`:<br>   Filter by the <strong>forwarding rule ID</strong><br>   Type: String<br>   Required: No</li>
-<li>`proxyId`:<br>   Filter by the <strong>L4 proxy ID</strong><br>   Type: String<br>   Required: No</li>
-                     * @return Filters Filter conditions. See below for details: 
-<li>`ruleId`:<br>   Filter by the <strong>forwarding rule ID</strong><br>   Type: String<br>   Required: No</li>
-<li>`proxyId`:<br>   Filter by the <strong>L4 proxy ID</strong><br>   Type: String<br>   Required: No</li>
+                     * 获取Filters
+<li>ruleId<br>   Filter by the specified <strong>forwarding rule ID</strong></li>
+<li>proxyId<br>   Filter by the specified <strong>L4 agent ID</strong></li>
+                     * @return Filters Filters
+<li>ruleId<br>   Filter by the specified <strong>forwarding rule ID</strong></li>
+<li>proxyId<br>   Filter by the specified <strong>L4 agent ID</strong></li>
                      */
                     std::vector<QueryCondition> GetFilters() const;
 
                     /**
-                     * 设置Filter conditions. See below for details: 
-<li>`ruleId`:<br>   Filter by the <strong>forwarding rule ID</strong><br>   Type: String<br>   Required: No</li>
-<li>`proxyId`:<br>   Filter by the <strong>L4 proxy ID</strong><br>   Type: String<br>   Required: No</li>
-                     * @param Filters Filter conditions. See below for details: 
-<li>`ruleId`:<br>   Filter by the <strong>forwarding rule ID</strong><br>   Type: String<br>   Required: No</li>
-<li>`proxyId`:<br>   Filter by the <strong>L4 proxy ID</strong><br>   Type: String<br>   Required: No</li>
+                     * 设置Filters
+<li>ruleId<br>   Filter by the specified <strong>forwarding rule ID</strong></li>
+<li>proxyId<br>   Filter by the specified <strong>L4 agent ID</strong></li>
+                     * @param Filters Filters
+<li>ruleId<br>   Filter by the specified <strong>forwarding rule ID</strong></li>
+<li>proxyId<br>   Filter by the specified <strong>L4 agent ID</strong></li>
                      */
                     void SetFilters(const std::vector<QueryCondition>& _filters);
 
@@ -269,7 +277,9 @@ namespace TencentCloud
                     bool m_metricNamesHasBeenSet;
 
                     /**
-                     * List of sites to be queried. All sites will be selected if this field is not specified.
+                     * List of sites
+If it's not specified, all sites are selected by default, and the query period must be within the last 30 days. 
+Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. 
                      */
                     std::vector<std::string> m_zoneIds;
                     bool m_zoneIdsHasBeenSet;
@@ -281,19 +291,19 @@ namespace TencentCloud
                     bool m_proxyIdsHasBeenSet;
 
                     /**
-                     * The query time granularity. Values:
+                     * The query granularity. Values:
 <li>`min`: 1 minute;</li>
-<li>`5min`: 5 minute;</li>
+<li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
-<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the interval between the start time and end time as follows: 1-minute granularity applies for a 1-hour interval, 5-minute granularity for a 2-day interval, 1-hour granularity for a 7-day interval, and 1-day granularity for an interval of over 7 days.
+<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
                      */
                     std::string m_interval;
                     bool m_intervalHasBeenSet;
 
                     /**
-                     * Filter conditions. See below for details: 
-<li>`ruleId`:<br>   Filter by the <strong>forwarding rule ID</strong><br>   Type: String<br>   Required: No</li>
-<li>`proxyId`:<br>   Filter by the <strong>L4 proxy ID</strong><br>   Type: String<br>   Required: No</li>
+                     * Filters
+<li>ruleId<br>   Filter by the specified <strong>forwarding rule ID</strong></li>
+<li>proxyId<br>   Filter by the specified <strong>L4 agent ID</strong></li>
                      */
                     std::vector<QueryCondition> m_filters;
                     bool m_filtersHasBeenSet;

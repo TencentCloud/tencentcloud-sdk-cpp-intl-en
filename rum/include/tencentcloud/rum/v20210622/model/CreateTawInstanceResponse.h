@@ -55,6 +55,20 @@ namespace TencentCloud
                      */
                     bool InstanceIdHasBeenSet() const;
 
+                    /**
+                     * 获取ID of prepaid order
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DealName ID of prepaid order
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetDealName() const;
+
+                    /**
+                     * 判断参数 DealName 是否已赋值
+                     * @return DealName 是否已赋值
+                     */
+                    bool DealNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -62,6 +76,13 @@ namespace TencentCloud
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
+
+                    /**
+                     * ID of prepaid order
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_dealName;
+                    bool m_dealNameHasBeenSet;
 
                 };
             }

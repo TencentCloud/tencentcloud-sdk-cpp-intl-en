@@ -39,6 +39,12 @@
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryDirectCustomersCreditResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryPartnerCreditRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/QueryPartnerCreditResponse.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/QueryVoucherAmountByUinRequest.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/QueryVoucherAmountByUinResponse.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/QueryVoucherListByUinRequest.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/QueryVoucherListByUinResponse.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/QueryVoucherPoolRequest.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/QueryVoucherPoolResponse.h>
 
 
 namespace TencentCloud
@@ -77,6 +83,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::QueryPartnerCreditResponse> QueryPartnerCreditOutcome;
                 typedef std::future<QueryPartnerCreditOutcome> QueryPartnerCreditOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::QueryPartnerCreditRequest&, QueryPartnerCreditOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryPartnerCreditAsyncHandler;
+                typedef Outcome<Core::Error, Model::QueryVoucherAmountByUinResponse> QueryVoucherAmountByUinOutcome;
+                typedef std::future<QueryVoucherAmountByUinOutcome> QueryVoucherAmountByUinOutcomeCallable;
+                typedef std::function<void(const IntlpartnersmgtClient*, const Model::QueryVoucherAmountByUinRequest&, QueryVoucherAmountByUinOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryVoucherAmountByUinAsyncHandler;
+                typedef Outcome<Core::Error, Model::QueryVoucherListByUinResponse> QueryVoucherListByUinOutcome;
+                typedef std::future<QueryVoucherListByUinOutcome> QueryVoucherListByUinOutcomeCallable;
+                typedef std::function<void(const IntlpartnersmgtClient*, const Model::QueryVoucherListByUinRequest&, QueryVoucherListByUinOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryVoucherListByUinAsyncHandler;
+                typedef Outcome<Core::Error, Model::QueryVoucherPoolResponse> QueryVoucherPoolOutcome;
+                typedef std::future<QueryVoucherPoolOutcome> QueryVoucherPoolOutcomeCallable;
+                typedef std::function<void(const IntlpartnersmgtClient*, const Model::QueryVoucherPoolRequest&, QueryVoucherPoolOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryVoucherPoolAsyncHandler;
 
 
 
@@ -159,6 +174,33 @@ Notes:<br>
                 QueryPartnerCreditOutcome QueryPartnerCredit(const Model::QueryPartnerCreditRequest &request);
                 void QueryPartnerCreditAsync(const Model::QueryPartnerCreditRequest& request, const QueryPartnerCreditAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 QueryPartnerCreditOutcomeCallable QueryPartnerCreditCallable(const Model::QueryPartnerCreditRequest& request);
+
+                /**
+                 *This API is used to query the voucher quota based on the customer UIN.
+                 * @param req QueryVoucherAmountByUinRequest
+                 * @return QueryVoucherAmountByUinOutcome
+                 */
+                QueryVoucherAmountByUinOutcome QueryVoucherAmountByUin(const Model::QueryVoucherAmountByUinRequest &request);
+                void QueryVoucherAmountByUinAsync(const Model::QueryVoucherAmountByUinRequest& request, const QueryVoucherAmountByUinAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                QueryVoucherAmountByUinOutcomeCallable QueryVoucherAmountByUinCallable(const Model::QueryVoucherAmountByUinRequest& request);
+
+                /**
+                 *This API is used to query the voucher list based on the customer UIN.
+                 * @param req QueryVoucherListByUinRequest
+                 * @return QueryVoucherListByUinOutcome
+                 */
+                QueryVoucherListByUinOutcome QueryVoucherListByUin(const Model::QueryVoucherListByUinRequest &request);
+                void QueryVoucherListByUinAsync(const Model::QueryVoucherListByUinRequest& request, const QueryVoucherListByUinAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                QueryVoucherListByUinOutcomeCallable QueryVoucherListByUinCallable(const Model::QueryVoucherListByUinRequest& request);
+
+                /**
+                 *This API is used to query the voucher quota pool.
+                 * @param req QueryVoucherPoolRequest
+                 * @return QueryVoucherPoolOutcome
+                 */
+                QueryVoucherPoolOutcome QueryVoucherPool(const Model::QueryVoucherPoolRequest &request);
+                void QueryVoucherPoolAsync(const Model::QueryVoucherPoolRequest& request, const QueryVoucherPoolAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                QueryVoucherPoolOutcomeCallable QueryVoucherPoolCallable(const Model::QueryVoucherPoolRequest& request);
 
             };
         }

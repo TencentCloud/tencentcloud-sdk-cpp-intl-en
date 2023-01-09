@@ -33,6 +33,8 @@
 #include <tencentcloud/ckafka/v20190819/model/CreateAclResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/CreateConsumerRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/CreateConsumerResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/CreateInstancePostRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/CreateInstancePostResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/CreatePartitionRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/CreatePartitionResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/CreateTopicRequest.h>
@@ -95,6 +97,8 @@
 #include <tencentcloud/ckafka/v20190819/model/FetchMessageByOffsetResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/FetchMessageListByOffsetRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/FetchMessageListByOffsetResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/InquireCkafkaPriceRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/InquireCkafkaPriceResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/ModifyGroupOffsetsRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/ModifyGroupOffsetsResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/ModifyInstanceAttributesRequest.h>
@@ -136,6 +140,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateConsumerResponse> CreateConsumerOutcome;
                 typedef std::future<CreateConsumerOutcome> CreateConsumerOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::CreateConsumerRequest&, CreateConsumerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateConsumerAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateInstancePostResponse> CreateInstancePostOutcome;
+                typedef std::future<CreateInstancePostOutcome> CreateInstancePostOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::CreateInstancePostRequest&, CreateInstancePostOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateInstancePostAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreatePartitionResponse> CreatePartitionOutcome;
                 typedef std::future<CreatePartitionOutcome> CreatePartitionOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::CreatePartitionRequest&, CreatePartitionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreatePartitionAsyncHandler;
@@ -229,6 +236,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::FetchMessageListByOffsetResponse> FetchMessageListByOffsetOutcome;
                 typedef std::future<FetchMessageListByOffsetOutcome> FetchMessageListByOffsetOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::FetchMessageListByOffsetRequest&, FetchMessageListByOffsetOutcome, const std::shared_ptr<const AsyncCallerContext>&)> FetchMessageListByOffsetAsyncHandler;
+                typedef Outcome<Core::Error, Model::InquireCkafkaPriceResponse> InquireCkafkaPriceOutcome;
+                typedef std::future<InquireCkafkaPriceOutcome> InquireCkafkaPriceOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::InquireCkafkaPriceRequest&, InquireCkafkaPriceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquireCkafkaPriceAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyGroupOffsetsResponse> ModifyGroupOffsetsOutcome;
                 typedef std::future<ModifyGroupOffsetsOutcome> ModifyGroupOffsetsOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::ModifyGroupOffsetsRequest&, ModifyGroupOffsetsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyGroupOffsetsAsyncHandler;
@@ -294,6 +304,15 @@ namespace TencentCloud
                 CreateConsumerOutcome CreateConsumer(const Model::CreateConsumerRequest &request);
                 void CreateConsumerAsync(const Model::CreateConsumerRequest& request, const CreateConsumerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateConsumerOutcomeCallable CreateConsumerCallable(const Model::CreateConsumerRequest& request);
+
+                /**
+                 *This API is used to create a pay-as-you-go instance.
+                 * @param req CreateInstancePostRequest
+                 * @return CreateInstancePostOutcome
+                 */
+                CreateInstancePostOutcome CreateInstancePost(const Model::CreateInstancePostRequest &request);
+                void CreateInstancePostAsync(const Model::CreateInstancePostRequest& request, const CreateInstancePostAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateInstancePostOutcomeCallable CreateInstancePostCallable(const Model::CreateInstancePostRequest& request);
 
                 /**
                  *This API is used to add a partition in a topic.
@@ -575,6 +594,15 @@ This API is used to get the list of topics in a CKafka instance of a user.
                 FetchMessageListByOffsetOutcome FetchMessageListByOffset(const Model::FetchMessageListByOffsetRequest &request);
                 void FetchMessageListByOffsetAsync(const Model::FetchMessageListByOffsetRequest& request, const FetchMessageListByOffsetAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 FetchMessageListByOffsetOutcomeCallable FetchMessageListByOffsetCallable(const Model::FetchMessageListByOffsetRequest& request);
+
+                /**
+                 *This API is used to purchase a CKafka instance or query the instance renewal price.
+                 * @param req InquireCkafkaPriceRequest
+                 * @return InquireCkafkaPriceOutcome
+                 */
+                InquireCkafkaPriceOutcome InquireCkafkaPrice(const Model::InquireCkafkaPriceRequest &request);
+                void InquireCkafkaPriceAsync(const Model::InquireCkafkaPriceRequest& request, const InquireCkafkaPriceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                InquireCkafkaPriceOutcomeCallable InquireCkafkaPriceCallable(const Model::InquireCkafkaPriceRequest& request);
 
                 /**
                  *This API is used to set the consumer group (Groups) offset.
