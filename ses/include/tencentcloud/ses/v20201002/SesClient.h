@@ -69,6 +69,8 @@
 #include <tencentcloud/ses/v20201002/model/SendEmailResponse.h>
 #include <tencentcloud/ses/v20201002/model/UpdateEmailIdentityRequest.h>
 #include <tencentcloud/ses/v20201002/model/UpdateEmailIdentityResponse.h>
+#include <tencentcloud/ses/v20201002/model/UpdateEmailSmtpPassWordRequest.h>
+#include <tencentcloud/ses/v20201002/model/UpdateEmailSmtpPassWordResponse.h>
 #include <tencentcloud/ses/v20201002/model/UpdateEmailTemplateRequest.h>
 #include <tencentcloud/ses/v20201002/model/UpdateEmailTemplateResponse.h>
 
@@ -154,6 +156,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::UpdateEmailIdentityResponse> UpdateEmailIdentityOutcome;
                 typedef std::future<UpdateEmailIdentityOutcome> UpdateEmailIdentityOutcomeCallable;
                 typedef std::function<void(const SesClient*, const Model::UpdateEmailIdentityRequest&, UpdateEmailIdentityOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateEmailIdentityAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateEmailSmtpPassWordResponse> UpdateEmailSmtpPassWordOutcome;
+                typedef std::future<UpdateEmailSmtpPassWordOutcome> UpdateEmailSmtpPassWordOutcomeCallable;
+                typedef std::function<void(const SesClient*, const Model::UpdateEmailSmtpPassWordRequest&, UpdateEmailSmtpPassWordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateEmailSmtpPassWordAsyncHandler;
                 typedef Outcome<Core::Error, Model::UpdateEmailTemplateResponse> UpdateEmailTemplateOutcome;
                 typedef std::future<UpdateEmailTemplateOutcome> UpdateEmailTemplateOutcomeCallable;
                 typedef std::function<void(const SesClient*, const Model::UpdateEmailTemplateRequest&, UpdateEmailTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateEmailTemplateAsyncHandler;
@@ -368,6 +373,15 @@ Default API request rate limit: 1 request/sec.
                 UpdateEmailIdentityOutcome UpdateEmailIdentity(const Model::UpdateEmailIdentityRequest &request);
                 void UpdateEmailIdentityAsync(const Model::UpdateEmailIdentityRequest& request, const UpdateEmailIdentityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 UpdateEmailIdentityOutcomeCallable UpdateEmailIdentityCallable(const Model::UpdateEmailIdentityRequest& request);
+
+                /**
+                 *This API is used to set the SMTP password. Initially, no SMTP password is set for your email address, so emails cannot be sent over SMTP. To send emails over SMTP, you must set the SMTP password. The set password can be changed subsequently.
+                 * @param req UpdateEmailSmtpPassWordRequest
+                 * @return UpdateEmailSmtpPassWordOutcome
+                 */
+                UpdateEmailSmtpPassWordOutcome UpdateEmailSmtpPassWord(const Model::UpdateEmailSmtpPassWordRequest &request);
+                void UpdateEmailSmtpPassWordAsync(const Model::UpdateEmailSmtpPassWordRequest& request, const UpdateEmailSmtpPassWordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateEmailSmtpPassWordOutcomeCallable UpdateEmailSmtpPassWordCallable(const Model::UpdateEmailSmtpPassWordRequest& request);
 
                 /**
                  *This API is used to update an email template. An updated template must be approved again before it can be used.
