@@ -222,6 +222,50 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool DescriptionHasBeenSet() const;
 
+                    /**
+                     * 获取Public IP
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return WanIP Public IP
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetWanIP() const;
+
+                    /**
+                     * 设置Public IP
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param WanIP Public IP
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetWanIP(const std::string& _wanIP);
+
+                    /**
+                     * 判断参数 WanIP 是否已赋值
+                     * @return WanIP 是否已赋值
+                     */
+                    bool WanIPHasBeenSet() const;
+
+                    /**
+                     * 获取Public network status
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return WanStatus Public network status
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetWanStatus() const;
+
+                    /**
+                     * 设置Public network status
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param WanStatus Public network status
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetWanStatus(const std::string& _wanStatus);
+
+                    /**
+                     * 判断参数 WanStatus 是否已赋值
+                     * @return WanStatus 是否已赋值
+                     */
+                    bool WanStatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -279,6 +323,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
+
+                    /**
+                     * Public IP
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_wanIP;
+                    bool m_wanIPHasBeenSet;
+
+                    /**
+                     * Public network status
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_wanStatus;
+                    bool m_wanStatusHasBeenSet;
 
                 };
             }

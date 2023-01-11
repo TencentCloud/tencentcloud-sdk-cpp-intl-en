@@ -29,16 +29,26 @@
 #include <tencentcloud/cynosdb/v20190107/model/AddClusterSlaveZoneResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/AddInstancesRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/AddInstancesResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/CloseAuditServiceRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/CloseAuditServiceResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/CreateAccountsRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/CreateAccountsResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/CreateAuditRuleTemplateRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/CreateAuditRuleTemplateResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/CreateBackupRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/CreateBackupResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/CreateClustersRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/CreateClustersResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/DeleteAuditRuleTemplatesRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/DeleteAuditRuleTemplatesResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DeleteBackupRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/DeleteBackupResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeAccountsRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeAccountsResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeAuditRuleTemplatesRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeAuditRuleTemplatesResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeAuditRuleWithInstanceIdsRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeAuditRuleWithInstanceIdsResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeBackupConfigRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeBackupConfigResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeBackupDownloadUrlRequest.h>
@@ -91,6 +101,10 @@
 #include <tencentcloud/cynosdb/v20190107/model/IsolateClusterResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/IsolateInstanceRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/IsolateInstanceResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/ModifyAuditRuleTemplatesRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/ModifyAuditRuleTemplatesResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/ModifyAuditServiceRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/ModifyAuditServiceResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/ModifyBackupConfigRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/ModifyBackupConfigResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/ModifyBackupNameRequest.h>
@@ -111,6 +125,8 @@
 #include <tencentcloud/cynosdb/v20190107/model/OfflineClusterResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/OfflineInstanceRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/OfflineInstanceResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/OpenAuditServiceRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/OpenAuditServiceResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/PauseServerlessRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/PauseServerlessResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/RemoveClusterSlaveZoneRequest.h>
@@ -154,21 +170,36 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::AddInstancesResponse> AddInstancesOutcome;
                 typedef std::future<AddInstancesOutcome> AddInstancesOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::AddInstancesRequest&, AddInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::CloseAuditServiceResponse> CloseAuditServiceOutcome;
+                typedef std::future<CloseAuditServiceOutcome> CloseAuditServiceOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::CloseAuditServiceRequest&, CloseAuditServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CloseAuditServiceAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateAccountsResponse> CreateAccountsOutcome;
                 typedef std::future<CreateAccountsOutcome> CreateAccountsOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::CreateAccountsRequest&, CreateAccountsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAccountsAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateAuditRuleTemplateResponse> CreateAuditRuleTemplateOutcome;
+                typedef std::future<CreateAuditRuleTemplateOutcome> CreateAuditRuleTemplateOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::CreateAuditRuleTemplateRequest&, CreateAuditRuleTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAuditRuleTemplateAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateBackupResponse> CreateBackupOutcome;
                 typedef std::future<CreateBackupOutcome> CreateBackupOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::CreateBackupRequest&, CreateBackupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateBackupAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateClustersResponse> CreateClustersOutcome;
                 typedef std::future<CreateClustersOutcome> CreateClustersOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::CreateClustersRequest&, CreateClustersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateClustersAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteAuditRuleTemplatesResponse> DeleteAuditRuleTemplatesOutcome;
+                typedef std::future<DeleteAuditRuleTemplatesOutcome> DeleteAuditRuleTemplatesOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::DeleteAuditRuleTemplatesRequest&, DeleteAuditRuleTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAuditRuleTemplatesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteBackupResponse> DeleteBackupOutcome;
                 typedef std::future<DeleteBackupOutcome> DeleteBackupOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::DeleteBackupRequest&, DeleteBackupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteBackupAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAccountsResponse> DescribeAccountsOutcome;
                 typedef std::future<DescribeAccountsOutcome> DescribeAccountsOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::DescribeAccountsRequest&, DescribeAccountsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccountsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAuditRuleTemplatesResponse> DescribeAuditRuleTemplatesOutcome;
+                typedef std::future<DescribeAuditRuleTemplatesOutcome> DescribeAuditRuleTemplatesOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::DescribeAuditRuleTemplatesRequest&, DescribeAuditRuleTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAuditRuleTemplatesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAuditRuleWithInstanceIdsResponse> DescribeAuditRuleWithInstanceIdsOutcome;
+                typedef std::future<DescribeAuditRuleWithInstanceIdsOutcome> DescribeAuditRuleWithInstanceIdsOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::DescribeAuditRuleWithInstanceIdsRequest&, DescribeAuditRuleWithInstanceIdsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAuditRuleWithInstanceIdsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeBackupConfigResponse> DescribeBackupConfigOutcome;
                 typedef std::future<DescribeBackupConfigOutcome> DescribeBackupConfigOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::DescribeBackupConfigRequest&, DescribeBackupConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBackupConfigAsyncHandler;
@@ -247,6 +278,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::IsolateInstanceResponse> IsolateInstanceOutcome;
                 typedef std::future<IsolateInstanceOutcome> IsolateInstanceOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::IsolateInstanceRequest&, IsolateInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> IsolateInstanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyAuditRuleTemplatesResponse> ModifyAuditRuleTemplatesOutcome;
+                typedef std::future<ModifyAuditRuleTemplatesOutcome> ModifyAuditRuleTemplatesOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::ModifyAuditRuleTemplatesRequest&, ModifyAuditRuleTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAuditRuleTemplatesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyAuditServiceResponse> ModifyAuditServiceOutcome;
+                typedef std::future<ModifyAuditServiceOutcome> ModifyAuditServiceOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::ModifyAuditServiceRequest&, ModifyAuditServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAuditServiceAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyBackupConfigResponse> ModifyBackupConfigOutcome;
                 typedef std::future<ModifyBackupConfigOutcome> ModifyBackupConfigOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::ModifyBackupConfigRequest&, ModifyBackupConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyBackupConfigAsyncHandler;
@@ -277,6 +314,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::OfflineInstanceResponse> OfflineInstanceOutcome;
                 typedef std::future<OfflineInstanceOutcome> OfflineInstanceOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::OfflineInstanceRequest&, OfflineInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> OfflineInstanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::OpenAuditServiceResponse> OpenAuditServiceOutcome;
+                typedef std::future<OpenAuditServiceOutcome> OpenAuditServiceOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::OpenAuditServiceRequest&, OpenAuditServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> OpenAuditServiceAsyncHandler;
                 typedef Outcome<Core::Error, Model::PauseServerlessResponse> PauseServerlessOutcome;
                 typedef std::future<PauseServerlessOutcome> PauseServerlessOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::PauseServerlessRequest&, PauseServerlessOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PauseServerlessAsyncHandler;
@@ -338,6 +378,15 @@ namespace TencentCloud
                 AddInstancesOutcomeCallable AddInstancesCallable(const Model::AddInstancesRequest& request);
 
                 /**
+                 *This API is used to disable the audit service for a TDSQL-C for MySQL instance.
+                 * @param req CloseAuditServiceRequest
+                 * @return CloseAuditServiceOutcome
+                 */
+                CloseAuditServiceOutcome CloseAuditService(const Model::CloseAuditServiceRequest &request);
+                void CloseAuditServiceAsync(const Model::CloseAuditServiceRequest& request, const CloseAuditServiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CloseAuditServiceOutcomeCallable CloseAuditServiceCallable(const Model::CloseAuditServiceRequest& request);
+
+                /**
                  *This API is used to create an account.
                  * @param req CreateAccountsRequest
                  * @return CreateAccountsOutcome
@@ -345,6 +394,15 @@ namespace TencentCloud
                 CreateAccountsOutcome CreateAccounts(const Model::CreateAccountsRequest &request);
                 void CreateAccountsAsync(const Model::CreateAccountsRequest& request, const CreateAccountsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateAccountsOutcomeCallable CreateAccountsCallable(const Model::CreateAccountsRequest& request);
+
+                /**
+                 *This API is used to create an audit rule template.
+                 * @param req CreateAuditRuleTemplateRequest
+                 * @return CreateAuditRuleTemplateOutcome
+                 */
+                CreateAuditRuleTemplateOutcome CreateAuditRuleTemplate(const Model::CreateAuditRuleTemplateRequest &request);
+                void CreateAuditRuleTemplateAsync(const Model::CreateAuditRuleTemplateRequest& request, const CreateAuditRuleTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateAuditRuleTemplateOutcomeCallable CreateAuditRuleTemplateCallable(const Model::CreateAuditRuleTemplateRequest& request);
 
                 /**
                  *This API is used to create manual backup.
@@ -365,6 +423,15 @@ namespace TencentCloud
                 CreateClustersOutcomeCallable CreateClustersCallable(const Model::CreateClustersRequest& request);
 
                 /**
+                 *This API is used to delete an audit rule template.
+                 * @param req DeleteAuditRuleTemplatesRequest
+                 * @return DeleteAuditRuleTemplatesOutcome
+                 */
+                DeleteAuditRuleTemplatesOutcome DeleteAuditRuleTemplates(const Model::DeleteAuditRuleTemplatesRequest &request);
+                void DeleteAuditRuleTemplatesAsync(const Model::DeleteAuditRuleTemplatesRequest& request, const DeleteAuditRuleTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteAuditRuleTemplatesOutcomeCallable DeleteAuditRuleTemplatesCallable(const Model::DeleteAuditRuleTemplatesRequest& request);
+
+                /**
                  *This API is used to delete the manual backup for a cluster. It cannot be used to delete the automatic backup.
                  * @param req DeleteBackupRequest
                  * @return DeleteBackupOutcome
@@ -381,6 +448,24 @@ namespace TencentCloud
                 DescribeAccountsOutcome DescribeAccounts(const Model::DescribeAccountsRequest &request);
                 void DescribeAccountsAsync(const Model::DescribeAccountsRequest& request, const DescribeAccountsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeAccountsOutcomeCallable DescribeAccountsCallable(const Model::DescribeAccountsRequest& request);
+
+                /**
+                 *This API is used to query audit rule templates.
+                 * @param req DescribeAuditRuleTemplatesRequest
+                 * @return DescribeAuditRuleTemplatesOutcome
+                 */
+                DescribeAuditRuleTemplatesOutcome DescribeAuditRuleTemplates(const Model::DescribeAuditRuleTemplatesRequest &request);
+                void DescribeAuditRuleTemplatesAsync(const Model::DescribeAuditRuleTemplatesRequest& request, const DescribeAuditRuleTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAuditRuleTemplatesOutcomeCallable DescribeAuditRuleTemplatesCallable(const Model::DescribeAuditRuleTemplatesRequest& request);
+
+                /**
+                 *This API is used to get the audit rule templates of an instance.
+                 * @param req DescribeAuditRuleWithInstanceIdsRequest
+                 * @return DescribeAuditRuleWithInstanceIdsOutcome
+                 */
+                DescribeAuditRuleWithInstanceIdsOutcome DescribeAuditRuleWithInstanceIds(const Model::DescribeAuditRuleWithInstanceIdsRequest &request);
+                void DescribeAuditRuleWithInstanceIdsAsync(const Model::DescribeAuditRuleWithInstanceIdsRequest& request, const DescribeAuditRuleWithInstanceIdsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAuditRuleWithInstanceIdsOutcomeCallable DescribeAuditRuleWithInstanceIdsCallable(const Model::DescribeAuditRuleWithInstanceIdsRequest& request);
 
                 /**
                  *This API is used to get the backup configuration information of the specified cluster, including the full backup time range and backup file retention period.
@@ -437,7 +522,7 @@ namespace TencentCloud
                 DescribeBinlogsOutcomeCallable DescribeBinlogsCallable(const Model::DescribeBinlogsRequest& request);
 
                 /**
-                 *This API is used to display cluster details.
+                 *This API is used to show the details of an instance.
                  * @param req DescribeClusterDetailRequest
                  * @return DescribeClusterDetailOutcome
                  */
@@ -617,6 +702,24 @@ namespace TencentCloud
                 IsolateInstanceOutcomeCallable IsolateInstanceCallable(const Model::IsolateInstanceRequest& request);
 
                 /**
+                 *This API is used to modify an audit rule template.
+                 * @param req ModifyAuditRuleTemplatesRequest
+                 * @return ModifyAuditRuleTemplatesOutcome
+                 */
+                ModifyAuditRuleTemplatesOutcome ModifyAuditRuleTemplates(const Model::ModifyAuditRuleTemplatesRequest &request);
+                void ModifyAuditRuleTemplatesAsync(const Model::ModifyAuditRuleTemplatesRequest& request, const ModifyAuditRuleTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyAuditRuleTemplatesOutcomeCallable ModifyAuditRuleTemplatesCallable(const Model::ModifyAuditRuleTemplatesRequest& request);
+
+                /**
+                 *This API is used to modify the audit configurations of an instance, such as audit log retention period and audit rule.
+                 * @param req ModifyAuditServiceRequest
+                 * @return ModifyAuditServiceOutcome
+                 */
+                ModifyAuditServiceOutcome ModifyAuditService(const Model::ModifyAuditServiceRequest &request);
+                void ModifyAuditServiceAsync(const Model::ModifyAuditServiceRequest& request, const ModifyAuditServiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyAuditServiceOutcomeCallable ModifyAuditServiceCallable(const Model::ModifyAuditServiceRequest& request);
+
+                /**
                  *This API is used to modify the backup configuration of the specified cluster.
                  * @param req ModifyBackupConfigRequest
                  * @return ModifyBackupConfigOutcome
@@ -705,6 +808,15 @@ namespace TencentCloud
                 OfflineInstanceOutcome OfflineInstance(const Model::OfflineInstanceRequest &request);
                 void OfflineInstanceAsync(const Model::OfflineInstanceRequest& request, const OfflineInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 OfflineInstanceOutcomeCallable OfflineInstanceCallable(const Model::OfflineInstanceRequest& request);
+
+                /**
+                 *This API is used to enable the audit service for a TDSQL-C for MySQL instance.
+                 * @param req OpenAuditServiceRequest
+                 * @return OpenAuditServiceOutcome
+                 */
+                OpenAuditServiceOutcome OpenAuditService(const Model::OpenAuditServiceRequest &request);
+                void OpenAuditServiceAsync(const Model::OpenAuditServiceRequest& request, const OpenAuditServiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                OpenAuditServiceOutcomeCallable OpenAuditServiceCallable(const Model::OpenAuditServiceRequest& request);
 
                 /**
                  *This API is used to pause a serverless cluster.

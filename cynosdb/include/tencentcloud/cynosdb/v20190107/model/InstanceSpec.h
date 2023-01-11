@@ -213,6 +213,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ZoneStockInfosHasBeenSet() const;
 
+                    /**
+                     * 获取Quantity in stock
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return StockCount Quantity in stock
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetStockCount() const;
+
+                    /**
+                     * 设置Quantity in stock
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param StockCount Quantity in stock
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetStockCount(const int64_t& _stockCount);
+
+                    /**
+                     * 判断参数 StockCount 是否已赋值
+                     * @return StockCount 是否已赋值
+                     */
+                    bool StockCountHasBeenSet() const;
+
                 private:
 
                     /**
@@ -269,6 +291,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<ZoneStockInfo> m_zoneStockInfos;
                     bool m_zoneStockInfosHasBeenSet;
+
+                    /**
+                     * Quantity in stock
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_stockCount;
+                    bool m_stockCountHasBeenSet;
 
                 };
             }

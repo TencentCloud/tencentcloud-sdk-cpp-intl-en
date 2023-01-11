@@ -82,6 +82,24 @@ namespace TencentCloud
                      */
                     bool HasStockHasBeenSet() const;
 
+                    /**
+                     * 获取Quantity in stock
+                     * @return StockCount Quantity in stock
+                     */
+                    int64_t GetStockCount() const;
+
+                    /**
+                     * 设置Quantity in stock
+                     * @param StockCount Quantity in stock
+                     */
+                    void SetStockCount(const int64_t& _stockCount);
+
+                    /**
+                     * 判断参数 StockCount 是否已赋值
+                     * @return StockCount 是否已赋值
+                     */
+                    bool StockCountHasBeenSet() const;
+
                 private:
 
                     /**
@@ -95,6 +113,12 @@ namespace TencentCloud
                      */
                     bool m_hasStock;
                     bool m_hasStockHasBeenSet;
+
+                    /**
+                     * Quantity in stock
+                     */
+                    int64_t m_stockCount;
+                    bool m_stockCountHasBeenSet;
 
                 };
             }

@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/emr/v20190103/model/Tag.h>
+#include <tencentcloud/emr/v20190103/model/SoftDependInfo.h>
 
 
 namespace TencentCloud
@@ -623,6 +624,28 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool IsHandsClusterHasBeenSet() const;
 
+                    /**
+                     * 获取Client component information.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return OutSideSoftInfo Client component information.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<SoftDependInfo> GetOutSideSoftInfo() const;
+
+                    /**
+                     * 设置Client component information.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param OutSideSoftInfo Client component information.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetOutSideSoftInfo(const std::vector<SoftDependInfo>& _outSideSoftInfo);
+
+                    /**
+                     * 判断参数 OutSideSoftInfo 是否已赋值
+                     * @return OutSideSoftInfo 是否已赋值
+                     */
+                    bool OutSideSoftInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -810,6 +833,13 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool m_isHandsCluster;
                     bool m_isHandsClusterHasBeenSet;
+
+                    /**
+                     * Client component information.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<SoftDependInfo> m_outSideSoftInfo;
+                    bool m_outSideSoftInfoHasBeenSet;
 
                 };
             }

@@ -25,6 +25,8 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cynosdb/v20190107/model/CynosdbInstance.h>
+#include <tencentcloud/cynosdb/v20190107/model/OldAddrInfo.h>
+#include <tencentcloud/cynosdb/v20190107/model/ObjectTask.h>
 
 
 namespace TencentCloud
@@ -48,14 +50,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取appId
-                     * @return AppId appId
+                     * 获取User `appId`
+                     * @return AppId User `appId`
                      */
                     int64_t GetAppId() const;
 
                     /**
-                     * 设置appId
-                     * @param AppId appId
+                     * 设置User `appId`
+                     * @param AppId User `appId`
                      */
                     void SetAppId(const int64_t& _appId);
 
@@ -317,10 +319,130 @@ namespace TencentCloud
                      */
                     bool InstanceSetHasBeenSet() const;
 
+                    /**
+                     * 获取VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return UniqVpcId VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetUniqVpcId() const;
+
+                    /**
+                     * 设置VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param UniqVpcId VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetUniqVpcId(const std::string& _uniqVpcId);
+
+                    /**
+                     * 判断参数 UniqVpcId 是否已赋值
+                     * @return UniqVpcId 是否已赋值
+                     */
+                    bool UniqVpcIdHasBeenSet() const;
+
+                    /**
+                     * 获取Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return UniqSubnetId Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetUniqSubnetId() const;
+
+                    /**
+                     * 设置Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param UniqSubnetId Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetUniqSubnetId(const std::string& _uniqSubnetId);
+
+                    /**
+                     * 判断参数 UniqSubnetId 是否已赋值
+                     * @return UniqSubnetId 是否已赋值
+                     */
+                    bool UniqSubnetIdHasBeenSet() const;
+
+                    /**
+                     * 获取Information of the old IP
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return OldAddrInfo Information of the old IP
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    OldAddrInfo GetOldAddrInfo() const;
+
+                    /**
+                     * 设置Information of the old IP
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param OldAddrInfo Information of the old IP
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetOldAddrInfo(const OldAddrInfo& _oldAddrInfo);
+
+                    /**
+                     * 判断参数 OldAddrInfo 是否已赋值
+                     * @return OldAddrInfo 是否已赋值
+                     */
+                    bool OldAddrInfoHasBeenSet() const;
+
+                    /**
+                     * 获取Task in progress
+                     * @return ProcessingTasks Task in progress
+                     */
+                    std::vector<std::string> GetProcessingTasks() const;
+
+                    /**
+                     * 设置Task in progress
+                     * @param ProcessingTasks Task in progress
+                     */
+                    void SetProcessingTasks(const std::vector<std::string>& _processingTasks);
+
+                    /**
+                     * 判断参数 ProcessingTasks 是否已赋值
+                     * @return ProcessingTasks 是否已赋值
+                     */
+                    bool ProcessingTasksHasBeenSet() const;
+
+                    /**
+                     * 获取Task list
+                     * @return Tasks Task list
+                     */
+                    std::vector<ObjectTask> GetTasks() const;
+
+                    /**
+                     * 设置Task list
+                     * @param Tasks Task list
+                     */
+                    void SetTasks(const std::vector<ObjectTask>& _tasks);
+
+                    /**
+                     * 判断参数 Tasks 是否已赋值
+                     * @return Tasks 是否已赋值
+                     */
+                    bool TasksHasBeenSet() const;
+
+                    /**
+                     * 获取biz_net_service table ID
+                     * @return NetServiceId biz_net_service table ID
+                     */
+                    int64_t GetNetServiceId() const;
+
+                    /**
+                     * 设置biz_net_service table ID
+                     * @param NetServiceId biz_net_service table ID
+                     */
+                    void SetNetServiceId(const int64_t& _netServiceId);
+
+                    /**
+                     * 判断参数 NetServiceId 是否已赋值
+                     * @return NetServiceId 是否已赋值
+                     */
+                    bool NetServiceIdHasBeenSet() const;
+
                 private:
 
                     /**
-                     * appId
+                     * User `appId`
                      */
                     int64_t m_appId;
                     bool m_appIdHasBeenSet;
@@ -408,6 +530,45 @@ namespace TencentCloud
                      */
                     std::vector<CynosdbInstance> m_instanceSet;
                     bool m_instanceSetHasBeenSet;
+
+                    /**
+                     * VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_uniqVpcId;
+                    bool m_uniqVpcIdHasBeenSet;
+
+                    /**
+                     * Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_uniqSubnetId;
+                    bool m_uniqSubnetIdHasBeenSet;
+
+                    /**
+                     * Information of the old IP
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    OldAddrInfo m_oldAddrInfo;
+                    bool m_oldAddrInfoHasBeenSet;
+
+                    /**
+                     * Task in progress
+                     */
+                    std::vector<std::string> m_processingTasks;
+                    bool m_processingTasksHasBeenSet;
+
+                    /**
+                     * Task list
+                     */
+                    std::vector<ObjectTask> m_tasks;
+                    bool m_tasksHasBeenSet;
+
+                    /**
+                     * biz_net_service table ID
+                     */
+                    int64_t m_netServiceId;
+                    bool m_netServiceIdHasBeenSet;
 
                 };
             }

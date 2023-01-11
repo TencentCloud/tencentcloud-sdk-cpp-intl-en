@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/emr/v20190103/model/ZoneDetailPriceResult.h>
 
 
 namespace TencentCloud
@@ -101,6 +102,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool TimeSpanHasBeenSet() const;
 
+                    /**
+                     * 获取The price list.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return PriceList The price list.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<ZoneDetailPriceResult> GetPriceList() const;
+
+                    /**
+                     * 判断参数 PriceList 是否已赋值
+                     * @return PriceList 是否已赋值
+                     */
+                    bool PriceListHasBeenSet() const;
+
                 private:
 
                     /**
@@ -131,6 +146,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_timeSpan;
                     bool m_timeSpanHasBeenSet;
+
+                    /**
+                     * The price list.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<ZoneDetailPriceResult> m_priceList;
+                    bool m_priceListHasBeenSet;
 
                 };
             }

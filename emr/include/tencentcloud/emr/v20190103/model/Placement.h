@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取The ID of the project to which the instance belongs. You can call the [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) and obtain this ID from the `projectId` field in the response. If this is left empty, the ID of the default project is used.
-                     * @return ProjectId The ID of the project to which the instance belongs. You can call the [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) and obtain this ID from the `projectId` field in the response. If this is left empty, the ID of the default project is used.
+                     * 获取Project ID of the instance. If no ID is passed in, the default project ID is used.
+                     * @return ProjectId Project ID of the instance. If no ID is passed in, the default project ID is used.
                      */
                     int64_t GetProjectId() const;
 
                     /**
-                     * 设置The ID of the project to which the instance belongs. You can call the [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) and obtain this ID from the `projectId` field in the response. If this is left empty, the ID of the default project is used.
-                     * @param ProjectId The ID of the project to which the instance belongs. You can call the [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) and obtain this ID from the `projectId` field in the response. If this is left empty, the ID of the default project is used.
+                     * 设置Project ID of the instance. If no ID is passed in, the default project ID is used.
+                     * @param ProjectId Project ID of the instance. If no ID is passed in, the default project ID is used.
                      */
                     void SetProjectId(const int64_t& _projectId);
 
@@ -91,7 +91,7 @@ namespace TencentCloud
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * The ID of the project to which the instance belongs. You can call the [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) and obtain this ID from the `projectId` field in the response. If this is left empty, the ID of the default project is used.
+                     * Project ID of the instance. If no ID is passed in, the default project ID is used.
                      */
                     int64_t m_projectId;
                     bool m_projectIdHasBeenSet;

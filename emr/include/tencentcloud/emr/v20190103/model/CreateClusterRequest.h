@@ -122,20 +122,16 @@ namespace TencentCloud
 
                     /**
                      * 获取The instance billing mode. Valid values:
-<li>`PREPAID`: The prepaid mode, namely monthly subscription.</li>
 <li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
                      * @return InstanceChargeType The instance billing mode. Valid values:
-<li>`PREPAID`: The prepaid mode, namely monthly subscription.</li>
 <li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
                      */
                     std::string GetInstanceChargeType() const;
 
                     /**
                      * 设置The instance billing mode. Valid values:
-<li>`PREPAID`: The prepaid mode, namely monthly subscription.</li>
 <li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
                      * @param InstanceChargeType The instance billing mode. Valid values:
-<li>`PREPAID`: The prepaid mode, namely monthly subscription.</li>
 <li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
                      */
                     void SetInstanceChargeType(const std::string& _instanceChargeType);
@@ -512,7 +508,6 @@ If `MetaType` is `USER_CUSTOM_META`, `MetaDataJdbcUrl`, `MetaDataUser`, and `Met
 
                     /**
                      * The instance billing mode. Valid values:
-<li>`PREPAID`: The prepaid mode, namely monthly subscription.</li>
 <li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
                      */
                     std::string m_instanceChargeType;

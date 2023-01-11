@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cynosdb/v20190107/model/ModifyParamItem.h>
 
 
 namespace TencentCloud
@@ -280,6 +281,42 @@ namespace TencentCloud
                      */
                     bool DealModeHasBeenSet() const;
 
+                    /**
+                     * 获取Parameter template ID
+                     * @return ParamTemplateId Parameter template ID
+                     */
+                    int64_t GetParamTemplateId() const;
+
+                    /**
+                     * 设置Parameter template ID
+                     * @param ParamTemplateId Parameter template ID
+                     */
+                    void SetParamTemplateId(const int64_t& _paramTemplateId);
+
+                    /**
+                     * 判断参数 ParamTemplateId 是否已赋值
+                     * @return ParamTemplateId 是否已赋值
+                     */
+                    bool ParamTemplateIdHasBeenSet() const;
+
+                    /**
+                     * 获取Parameter list, which is valid only if `InstanceParams` is passed in to `ParamTemplateId`.
+                     * @return InstanceParams Parameter list, which is valid only if `InstanceParams` is passed in to `ParamTemplateId`.
+                     */
+                    std::vector<ModifyParamItem> GetInstanceParams() const;
+
+                    /**
+                     * 设置Parameter list, which is valid only if `InstanceParams` is passed in to `ParamTemplateId`.
+                     * @param InstanceParams Parameter list, which is valid only if `InstanceParams` is passed in to `ParamTemplateId`.
+                     */
+                    void SetInstanceParams(const std::vector<ModifyParamItem>& _instanceParams);
+
+                    /**
+                     * 判断参数 InstanceParams 是否已赋值
+                     * @return InstanceParams 是否已赋值
+                     */
+                    bool InstanceParamsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -360,6 +397,18 @@ namespace TencentCloud
                      */
                     int64_t m_dealMode;
                     bool m_dealModeHasBeenSet;
+
+                    /**
+                     * Parameter template ID
+                     */
+                    int64_t m_paramTemplateId;
+                    bool m_paramTemplateIdHasBeenSet;
+
+                    /**
+                     * Parameter list, which is valid only if `InstanceParams` is passed in to `ParamTemplateId`.
+                     */
+                    std::vector<ModifyParamItem> m_instanceParams;
+                    bool m_instanceParamsHasBeenSet;
 
                 };
             }

@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/emr/v20190103/model/PriceResource.h>
+#include <tencentcloud/emr/v20190103/model/EmrPrice.h>
 
 
 namespace TencentCloud
@@ -102,6 +103,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool PriceSpecHasBeenSet() const;
 
+                    /**
+                     * 获取The inquiry results corresponding to the specs specified by the input parameter `MultipleResources`, with the result of the first spec returned by other output parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MultipleEmrPrice The inquiry results corresponding to the specs specified by the input parameter `MultipleResources`, with the result of the first spec returned by other output parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<EmrPrice> GetMultipleEmrPrice() const;
+
+                    /**
+                     * 判断参数 MultipleEmrPrice 是否已赋值
+                     * @return MultipleEmrPrice 是否已赋值
+                     */
+                    bool MultipleEmrPriceHasBeenSet() const;
+
                 private:
 
                     /**
@@ -132,6 +147,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     PriceResource m_priceSpec;
                     bool m_priceSpecHasBeenSet;
+
+                    /**
+                     * The inquiry results corresponding to the specs specified by the input parameter `MultipleResources`, with the result of the first spec returned by other output parameters.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<EmrPrice> m_multipleEmrPrice;
+                    bool m_multipleEmrPriceHasBeenSet;
 
                 };
             }

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Newly created account
+                * The newly created x08 account
                 */
                 class NewAccount : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Account name
-                     * @return AccountName Account name
+                     * 获取Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit.
+                     * @return AccountName Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit.
                      */
                     std::string GetAccountName() const;
 
                     /**
-                     * 设置Account name
-                     * @param AccountName Account name
+                     * 设置Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit.
+                     * @param AccountName Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit.
                      */
                     void SetAccountName(const std::string& _accountName);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool AccountNameHasBeenSet() const;
 
                     /**
-                     * 获取Password
-                     * @return AccountPassword Password
+                     * 获取Password, which can contain 8-64 characters.
+                     * @return AccountPassword Password, which can contain 8-64 characters.
                      */
                     std::string GetAccountPassword() const;
 
                     /**
-                     * 设置Password
-                     * @param AccountPassword Password
+                     * 设置Password, which can contain 8-64 characters.
+                     * @param AccountPassword Password, which can contain 8-64 characters.
                      */
                     void SetAccountPassword(const std::string& _accountPassword);
 
@@ -118,16 +118,34 @@ namespace TencentCloud
                      */
                     bool DescriptionHasBeenSet() const;
 
+                    /**
+                     * 获取Maximum number of user connections, which cannot be above 10,240.
+                     * @return MaxUserConnections Maximum number of user connections, which cannot be above 10,240.
+                     */
+                    int64_t GetMaxUserConnections() const;
+
+                    /**
+                     * 设置Maximum number of user connections, which cannot be above 10,240.
+                     * @param MaxUserConnections Maximum number of user connections, which cannot be above 10,240.
+                     */
+                    void SetMaxUserConnections(const int64_t& _maxUserConnections);
+
+                    /**
+                     * 判断参数 MaxUserConnections 是否已赋值
+                     * @return MaxUserConnections 是否已赋值
+                     */
+                    bool MaxUserConnectionsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Account name
+                     * Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit.
                      */
                     std::string m_accountName;
                     bool m_accountNameHasBeenSet;
 
                     /**
-                     * Password
+                     * Password, which can contain 8-64 characters.
                      */
                     std::string m_accountPassword;
                     bool m_accountPasswordHasBeenSet;
@@ -143,6 +161,12 @@ namespace TencentCloud
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
+
+                    /**
+                     * Maximum number of user connections, which cannot be above 10,240.
+                     */
+                    int64_t m_maxUserConnections;
+                    bool m_maxUserConnectionsHasBeenSet;
 
                 };
             }

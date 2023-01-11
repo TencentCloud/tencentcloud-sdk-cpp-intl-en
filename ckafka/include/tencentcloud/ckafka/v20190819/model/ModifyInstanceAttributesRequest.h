@@ -154,14 +154,14 @@ namespace TencentCloud
                     bool RebalanceTimeHasBeenSet() const;
 
                     /**
-                     * 获取Timestamp
-                     * @return PublicNetwork Timestamp
+                     * 获取Public network bandwidth
+                     * @return PublicNetwork Public network bandwidth
                      */
                     int64_t GetPublicNetwork() const;
 
                     /**
-                     * 设置Timestamp
-                     * @param PublicNetwork Timestamp
+                     * 设置Public network bandwidth
+                     * @param PublicNetwork Public network bandwidth
                      */
                     void SetPublicNetwork(const int64_t& _publicNetwork);
 
@@ -246,7 +246,7 @@ namespace TencentCloud
                     bool m_rebalanceTimeHasBeenSet;
 
                     /**
-                     * Timestamp
+                     * Public network bandwidth
                      */
                     int64_t m_publicNetwork;
                     bool m_publicNetworkHasBeenSet;

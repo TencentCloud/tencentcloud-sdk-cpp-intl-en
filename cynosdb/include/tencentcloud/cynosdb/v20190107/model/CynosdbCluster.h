@@ -27,6 +27,7 @@
 #include <tencentcloud/cynosdb/v20190107/model/ObjectTask.h>
 #include <tencentcloud/cynosdb/v20190107/model/Tag.h>
 #include <tencentcloud/cynosdb/v20190107/model/NetAddr.h>
+#include <tencentcloud/cynosdb/v20190107/model/Ability.h>
 
 
 namespace TencentCloud
@@ -230,14 +231,18 @@ deleted
                     bool InstanceNumHasBeenSet() const;
 
                     /**
-                     * 获取User `uin`
-                     * @return Uin User `uin`
+                     * 获取User UIN
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Uin User UIN
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetUin() const;
 
                     /**
-                     * 设置User `uin`
-                     * @param Uin User `uin`
+                     * 设置User UIN
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Uin User UIN
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetUin(const std::string& _uin);
 
@@ -249,13 +254,17 @@ deleted
 
                     /**
                      * 获取Engine type
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DbType Engine type
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetDbType() const;
 
                     /**
                      * 设置Engine type
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param DbType Engine type
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetDbType(const std::string& _dbType);
 
@@ -267,13 +276,17 @@ deleted
 
                     /**
                      * 获取User `appid`
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AppId User `appid`
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetAppId() const;
 
                     /**
                      * 设置User `appid`
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param AppId User `appid`
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetAppId(const int64_t& _appId);
 
@@ -285,13 +298,17 @@ deleted
 
                     /**
                      * 获取Cluster status description
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StatusDesc Cluster status description
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetStatusDesc() const;
 
                     /**
                      * 设置Cluster status description
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param StatusDesc Cluster status description
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetStatusDesc(const std::string& _statusDesc);
 
@@ -303,13 +320,17 @@ deleted
 
                     /**
                      * 获取Cluster creation time
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CreateTime Cluster creation time
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Cluster creation time
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param CreateTime Cluster creation time
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetCreateTime(const std::string& _createTime);
 
@@ -320,14 +341,18 @@ deleted
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode. 0: pay-as-you-go; 1: monthly subscription
-                     * @return PayMode Billing mode. 0: pay-as-you-go; 1: monthly subscription
+                     * 获取Billing mode. `0`: Pay-as-you-go; `1`: Monthly subscription.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return PayMode Billing mode. `0`: Pay-as-you-go; `1`: Monthly subscription.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetPayMode() const;
 
                     /**
-                     * 设置Billing mode. 0: pay-as-you-go; 1: monthly subscription
-                     * @param PayMode Billing mode. 0: pay-as-you-go; 1: monthly subscription
+                     * 设置Billing mode. `0`: Pay-as-you-go; `1`: Monthly subscription.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param PayMode Billing mode. `0`: Pay-as-you-go; `1`: Monthly subscription.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetPayMode(const int64_t& _payMode);
 
@@ -339,13 +364,17 @@ deleted
 
                     /**
                      * 获取End time
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PeriodEndTime End time
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetPeriodEndTime() const;
 
                     /**
                      * 设置End time
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param PeriodEndTime End time
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetPeriodEndTime(const std::string& _periodEndTime);
 
@@ -357,13 +386,17 @@ deleted
 
                     /**
                      * 获取Cluster read-write VIP
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Vip Cluster read-write VIP
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetVip() const;
 
                     /**
                      * 设置Cluster read-write VIP
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param Vip Cluster read-write VIP
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetVip(const std::string& _vip);
 
@@ -375,13 +408,17 @@ deleted
 
                     /**
                      * 获取Cluster read-write vport
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Vport Cluster read-write vport
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetVport() const;
 
                     /**
                      * 设置Cluster read-write vport
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param Vport Cluster read-write vport
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetVport(const int64_t& _vport);
 
@@ -393,13 +430,17 @@ deleted
 
                     /**
                      * 获取Project ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ProjectID Project ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetProjectID() const;
 
                     /**
                      * 设置Project ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param ProjectID Project ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetProjectID(const int64_t& _projectID);
 
@@ -411,13 +452,17 @@ deleted
 
                     /**
                      * 获取VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VpcId VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetVpcId() const;
 
                     /**
                      * 设置VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param VpcId VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetVpcId(const std::string& _vpcId);
 
@@ -429,13 +474,17 @@ deleted
 
                     /**
                      * 获取Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SubnetId Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetSubnetId() const;
 
                     /**
                      * 设置Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param SubnetId Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
@@ -447,13 +496,17 @@ deleted
 
                     /**
                      * 获取TDSQL-C kernel version
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CynosVersion TDSQL-C kernel version
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetCynosVersion() const;
 
                     /**
                      * 设置TDSQL-C kernel version
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param CynosVersion TDSQL-C kernel version
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetCynosVersion(const std::string& _cynosVersion);
 
@@ -465,13 +518,17 @@ deleted
 
                     /**
                      * 获取Storage capacity
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StorageLimit Storage capacity
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetStorageLimit() const;
 
                     /**
                      * 设置Storage capacity
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param StorageLimit Storage capacity
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetStorageLimit(const int64_t& _storageLimit);
 
@@ -483,13 +540,17 @@ deleted
 
                     /**
                      * 获取Renewal flag
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RenewFlag Renewal flag
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetRenewFlag() const;
 
                     /**
                      * 设置Renewal flag
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param RenewFlag Renewal flag
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetRenewFlag(const int64_t& _renewFlag);
 
@@ -501,13 +562,17 @@ deleted
 
                     /**
                      * 获取Task in progress
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ProcessingTask Task in progress
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetProcessingTask() const;
 
                     /**
                      * 设置Task in progress
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param ProcessingTask Task in progress
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetProcessingTask(const std::string& _processingTask);
 
@@ -518,14 +583,18 @@ deleted
                     bool ProcessingTaskHasBeenSet() const;
 
                     /**
-                     * 获取Array of tasks in cluster
-                     * @return Tasks Array of tasks in cluster
+                     * 获取Array of tasks in the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Tasks Array of tasks in the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<ObjectTask> GetTasks() const;
 
                     /**
-                     * 设置Array of tasks in cluster
-                     * @param Tasks Array of tasks in cluster
+                     * 设置Array of tasks in the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Tasks Array of tasks in the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetTasks(const std::vector<ObjectTask>& _tasks);
 
@@ -536,14 +605,18 @@ deleted
                     bool TasksHasBeenSet() const;
 
                     /**
-                     * 获取Array of tags bound to cluster
-                     * @return ResourceTags Array of tags bound to cluster
+                     * 获取Array of tags bound to the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ResourceTags Array of tags bound to the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<Tag> GetResourceTags() const;
 
                     /**
-                     * 设置Array of tags bound to cluster
-                     * @param ResourceTags Array of tags bound to cluster
+                     * 设置Array of tags bound to the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ResourceTags Array of tags bound to the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetResourceTags(const std::vector<Tag>& _resourceTags);
 
@@ -554,14 +627,18 @@ deleted
                     bool ResourceTagsHasBeenSet() const;
 
                     /**
-                     * 获取Database type (`NORMAL` or `SERVERLESS`)
-                     * @return DbMode Database type (`NORMAL` or `SERVERLESS`)
+                     * 获取Database type. Valid values: `NORMAL`, `SERVERLESS`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DbMode Database type. Valid values: `NORMAL`, `SERVERLESS`.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetDbMode() const;
 
                     /**
-                     * 设置Database type (`NORMAL` or `SERVERLESS`)
-                     * @param DbMode Database type (`NORMAL` or `SERVERLESS`)
+                     * 设置Database type. Valid values: `NORMAL`, `SERVERLESS`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param DbMode Database type. Valid values: `NORMAL`, `SERVERLESS`.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetDbMode(const std::string& _dbMode);
 
@@ -573,21 +650,25 @@ deleted
 
                     /**
                      * 获取Serverless cluster status when the database type is `SERVERLESS`. Valid values:
-resume
-pause
+`resume`
+`pause`
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ServerlessStatus Serverless cluster status when the database type is `SERVERLESS`. Valid values:
-resume
-pause
+`resume`
+`pause`
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetServerlessStatus() const;
 
                     /**
                      * 设置Serverless cluster status when the database type is `SERVERLESS`. Valid values:
-resume
-pause
+`resume`
+`pause`
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param ServerlessStatus Serverless cluster status when the database type is `SERVERLESS`. Valid values:
-resume
-pause
+`resume`
+`pause`
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetServerlessStatus(const std::string& _serverlessStatus);
 
@@ -598,14 +679,18 @@ pause
                     bool ServerlessStatusHasBeenSet() const;
 
                     /**
-                     * 获取Prepaid cluster storage
-                     * @return Storage Prepaid cluster storage
+                     * 获取Prepaid cluster storage capacity
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Storage Prepaid cluster storage capacity
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetStorage() const;
 
                     /**
-                     * 设置Prepaid cluster storage
-                     * @param Storage Prepaid cluster storage
+                     * 设置Prepaid cluster storage capacity
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Storage Prepaid cluster storage capacity
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetStorage(const int64_t& _storage);
 
@@ -617,13 +702,17 @@ pause
 
                     /**
                      * 获取Cluster storage ID used in prepaid storage modification
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StorageId Cluster storage ID used in prepaid storage modification
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetStorageId() const;
 
                     /**
                      * 设置Cluster storage ID used in prepaid storage modification
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param StorageId Cluster storage ID used in prepaid storage modification
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetStorageId(const std::string& _storageId);
 
@@ -634,14 +723,18 @@ pause
                     bool StorageIdHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid)
-                     * @return StoragePayMode Billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid)
+                     * 获取Billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (monthly subscription).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return StoragePayMode Billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (monthly subscription).
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetStoragePayMode() const;
 
                     /**
-                     * 设置Billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid)
-                     * @param StoragePayMode Billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid)
+                     * 设置Billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (monthly subscription).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param StoragePayMode Billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (monthly subscription).
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetStoragePayMode(const int64_t& _storagePayMode);
 
@@ -652,14 +745,18 @@ pause
                     bool StoragePayModeHasBeenSet() const;
 
                     /**
-                     * 获取The minimum storage corresponding to the compute specifications of the cluster
-                     * @return MinStorageSize The minimum storage corresponding to the compute specifications of the cluster
+                     * 获取The minimum storage corresponding to the compute specification of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MinStorageSize The minimum storage corresponding to the compute specification of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetMinStorageSize() const;
 
                     /**
-                     * 设置The minimum storage corresponding to the compute specifications of the cluster
-                     * @param MinStorageSize The minimum storage corresponding to the compute specifications of the cluster
+                     * 设置The minimum storage corresponding to the compute specification of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param MinStorageSize The minimum storage corresponding to the compute specification of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetMinStorageSize(const int64_t& _minStorageSize);
 
@@ -670,14 +767,18 @@ pause
                     bool MinStorageSizeHasBeenSet() const;
 
                     /**
-                     * 获取The maximum storage corresponding to the compute specifications of the cluster
-                     * @return MaxStorageSize The maximum storage corresponding to the compute specifications of the cluster
+                     * 获取The maximum storage corresponding to the compute specification of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MaxStorageSize The maximum storage corresponding to the compute specification of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetMaxStorageSize() const;
 
                     /**
-                     * 设置The maximum storage corresponding to the compute specifications of the cluster
-                     * @param MaxStorageSize The maximum storage corresponding to the compute specifications of the cluster
+                     * 设置The maximum storage corresponding to the compute specification of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param MaxStorageSize The maximum storage corresponding to the compute specification of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetMaxStorageSize(const int64_t& _maxStorageSize);
 
@@ -689,13 +790,17 @@ pause
 
                     /**
                      * 获取Network information of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NetAddrs Network information of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<NetAddr> GetNetAddrs() const;
 
                     /**
                      * 设置Network information of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param NetAddrs Network information of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetNetAddrs(const std::vector<NetAddr>& _netAddrs);
 
@@ -704,6 +809,182 @@ pause
                      * @return NetAddrs 是否已赋值
                      */
                     bool NetAddrsHasBeenSet() const;
+
+                    /**
+                     * 获取Physical AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return PhysicalZone Physical AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetPhysicalZone() const;
+
+                    /**
+                     * 设置Physical AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param PhysicalZone Physical AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetPhysicalZone(const std::string& _physicalZone);
+
+                    /**
+                     * 判断参数 PhysicalZone 是否已赋值
+                     * @return PhysicalZone 是否已赋值
+                     */
+                    bool PhysicalZoneHasBeenSet() const;
+
+                    /**
+                     * 获取Primary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MasterZone Primary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetMasterZone() const;
+
+                    /**
+                     * 设置Primary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param MasterZone Primary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetMasterZone(const std::string& _masterZone);
+
+                    /**
+                     * 判断参数 MasterZone 是否已赋值
+                     * @return MasterZone 是否已赋值
+                     */
+                    bool MasterZoneHasBeenSet() const;
+
+                    /**
+                     * 获取Whether there is a secondary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return HasSlaveZone Whether there is a secondary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetHasSlaveZone() const;
+
+                    /**
+                     * 设置Whether there is a secondary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param HasSlaveZone Whether there is a secondary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetHasSlaveZone(const std::string& _hasSlaveZone);
+
+                    /**
+                     * 判断参数 HasSlaveZone 是否已赋值
+                     * @return HasSlaveZone 是否已赋值
+                     */
+                    bool HasSlaveZoneHasBeenSet() const;
+
+                    /**
+                     * 获取Secondary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SlaveZones Secondary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> GetSlaveZones() const;
+
+                    /**
+                     * 设置Secondary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param SlaveZones Secondary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetSlaveZones(const std::vector<std::string>& _slaveZones);
+
+                    /**
+                     * 判断参数 SlaveZones 是否已赋值
+                     * @return SlaveZones 是否已赋值
+                     */
+                    bool SlaveZonesHasBeenSet() const;
+
+                    /**
+                     * 获取Business type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return BusinessType Business type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetBusinessType() const;
+
+                    /**
+                     * 设置Business type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param BusinessType Business type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetBusinessType(const std::string& _businessType);
+
+                    /**
+                     * 判断参数 BusinessType 是否已赋值
+                     * @return BusinessType 是否已赋值
+                     */
+                    bool BusinessTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to freeze
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IsFreeze Whether to freeze
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetIsFreeze() const;
+
+                    /**
+                     * 设置Whether to freeze
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param IsFreeze Whether to freeze
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetIsFreeze(const std::string& _isFreeze);
+
+                    /**
+                     * 判断参数 IsFreeze 是否已赋值
+                     * @return IsFreeze 是否已赋值
+                     */
+                    bool IsFreezeHasBeenSet() const;
+
+                    /**
+                     * 获取Order source
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return OrderSource Order source
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetOrderSource() const;
+
+                    /**
+                     * 设置Order source
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param OrderSource Order source
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetOrderSource(const std::string& _orderSource);
+
+                    /**
+                     * 判断参数 OrderSource 是否已赋值
+                     * @return OrderSource 是否已赋值
+                     */
+                    bool OrderSourceHasBeenSet() const;
+
+                    /**
+                     * 获取Capability
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Ability Capability
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    Ability GetAbility() const;
+
+                    /**
+                     * 设置Capability
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Ability Capability
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetAbility(const Ability& _ability);
+
+                    /**
+                     * 判断参数 Ability 是否已赋值
+                     * @return Ability 是否已赋值
+                     */
+                    bool AbilityHasBeenSet() const;
 
                 private:
 
@@ -765,162 +1046,244 @@ deleted
                     bool m_instanceNumHasBeenSet;
 
                     /**
-                     * User `uin`
+                     * User UIN
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_uin;
                     bool m_uinHasBeenSet;
 
                     /**
                      * Engine type
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_dbType;
                     bool m_dbTypeHasBeenSet;
 
                     /**
                      * User `appid`
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_appId;
                     bool m_appIdHasBeenSet;
 
                     /**
                      * Cluster status description
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_statusDesc;
                     bool m_statusDescHasBeenSet;
 
                     /**
                      * Cluster creation time
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Billing mode. 0: pay-as-you-go; 1: monthly subscription
+                     * Billing mode. `0`: Pay-as-you-go; `1`: Monthly subscription.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_payMode;
                     bool m_payModeHasBeenSet;
 
                     /**
                      * End time
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_periodEndTime;
                     bool m_periodEndTimeHasBeenSet;
 
                     /**
                      * Cluster read-write VIP
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_vip;
                     bool m_vipHasBeenSet;
 
                     /**
                      * Cluster read-write vport
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_vport;
                     bool m_vportHasBeenSet;
 
                     /**
                      * Project ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_projectID;
                     bool m_projectIDHasBeenSet;
 
                     /**
                      * VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
                      * Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
                      * TDSQL-C kernel version
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_cynosVersion;
                     bool m_cynosVersionHasBeenSet;
 
                     /**
                      * Storage capacity
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_storageLimit;
                     bool m_storageLimitHasBeenSet;
 
                     /**
                      * Renewal flag
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_renewFlag;
                     bool m_renewFlagHasBeenSet;
 
                     /**
                      * Task in progress
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_processingTask;
                     bool m_processingTaskHasBeenSet;
 
                     /**
-                     * Array of tasks in cluster
+                     * Array of tasks in the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<ObjectTask> m_tasks;
                     bool m_tasksHasBeenSet;
 
                     /**
-                     * Array of tags bound to cluster
+                     * Array of tags bound to the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<Tag> m_resourceTags;
                     bool m_resourceTagsHasBeenSet;
 
                     /**
-                     * Database type (`NORMAL` or `SERVERLESS`)
+                     * Database type. Valid values: `NORMAL`, `SERVERLESS`.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_dbMode;
                     bool m_dbModeHasBeenSet;
 
                     /**
                      * Serverless cluster status when the database type is `SERVERLESS`. Valid values:
-resume
-pause
+`resume`
+`pause`
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_serverlessStatus;
                     bool m_serverlessStatusHasBeenSet;
 
                     /**
-                     * Prepaid cluster storage
+                     * Prepaid cluster storage capacity
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_storage;
                     bool m_storageHasBeenSet;
 
                     /**
                      * Cluster storage ID used in prepaid storage modification
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_storageId;
                     bool m_storageIdHasBeenSet;
 
                     /**
-                     * Billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid)
+                     * Billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (monthly subscription).
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_storagePayMode;
                     bool m_storagePayModeHasBeenSet;
 
                     /**
-                     * The minimum storage corresponding to the compute specifications of the cluster
+                     * The minimum storage corresponding to the compute specification of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_minStorageSize;
                     bool m_minStorageSizeHasBeenSet;
 
                     /**
-                     * The maximum storage corresponding to the compute specifications of the cluster
+                     * The maximum storage corresponding to the compute specification of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_maxStorageSize;
                     bool m_maxStorageSizeHasBeenSet;
 
                     /**
                      * Network information of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<NetAddr> m_netAddrs;
                     bool m_netAddrsHasBeenSet;
+
+                    /**
+                     * Physical AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_physicalZone;
+                    bool m_physicalZoneHasBeenSet;
+
+                    /**
+                     * Primary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_masterZone;
+                    bool m_masterZoneHasBeenSet;
+
+                    /**
+                     * Whether there is a secondary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_hasSlaveZone;
+                    bool m_hasSlaveZoneHasBeenSet;
+
+                    /**
+                     * Secondary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_slaveZones;
+                    bool m_slaveZonesHasBeenSet;
+
+                    /**
+                     * Business type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_businessType;
+                    bool m_businessTypeHasBeenSet;
+
+                    /**
+                     * Whether to freeze
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_isFreeze;
+                    bool m_isFreezeHasBeenSet;
+
+                    /**
+                     * Order source
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_orderSource;
+                    bool m_orderSourceHasBeenSet;
+
+                    /**
+                     * Capability
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    Ability m_ability;
+                    bool m_abilityHasBeenSet;
 
                 };
             }
