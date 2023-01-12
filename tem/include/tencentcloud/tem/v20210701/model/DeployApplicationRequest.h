@@ -813,14 +813,14 @@ If `konajdk` is selected, the value can be:
                     bool OsFlavourHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether to enable Prometheus metric
-                     * @return EnablePrometheusConf Specifies whether to enable Prometheus metric
+                     * 获取Configuration of metrics of this application
+                     * @return EnablePrometheusConf Configuration of metrics of this application
                      */
                     EnablePrometheusConf GetEnablePrometheusConf() const;
 
                     /**
-                     * 设置Specifies whether to enable Prometheus metric
-                     * @param EnablePrometheusConf Specifies whether to enable Prometheus metric
+                     * 设置Configuration of metrics of this application
+                     * @param EnablePrometheusConf Configuration of metrics of this application
                      */
                     void SetEnablePrometheusConf(const EnablePrometheusConf& _enablePrometheusConf);
 
@@ -831,17 +831,17 @@ If `konajdk` is selected, the value can be:
                     bool EnablePrometheusConfHasBeenSet() const;
 
                     /**
-                     * 获取`1`: Enable APM tracing (Skywalking)
+                     * 获取`1`: Automatically enable APM tracing (Skywalking)
 `0`: Disable APM tracing
-                     * @return EnableTracing `1`: Enable APM tracing (Skywalking)
+                     * @return EnableTracing `1`: Automatically enable APM tracing (Skywalking)
 `0`: Disable APM tracing
                      */
                     int64_t GetEnableTracing() const;
 
                     /**
-                     * 设置`1`: Enable APM tracing (Skywalking)
+                     * 设置`1`: Automatically enable APM tracing (Skywalking)
 `0`: Disable APM tracing
-                     * @param EnableTracing `1`: Enable APM tracing (Skywalking)
+                     * @param EnableTracing `1`: Automatically enable APM tracing (Skywalking)
 `0`: Disable APM tracing
                      */
                     void SetEnableTracing(const int64_t& _enableTracing);
@@ -853,14 +853,18 @@ If `konajdk` is selected, the value can be:
                     bool EnableTracingHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EnableMetrics 
+                     * 获取`1`: Automatically enable metrics collection (open-telemetry)
+`0`: Disable metrics collection
+                     * @return EnableMetrics `1`: Automatically enable metrics collection (open-telemetry)
+`0`: Disable metrics collection
                      */
                     int64_t GetEnableMetrics() const;
 
                     /**
-                     * 设置
-                     * @param EnableMetrics 
+                     * 设置`1`: Automatically enable metrics collection (open-telemetry)
+`0`: Disable metrics collection
+                     * @param EnableMetrics `1`: Automatically enable metrics collection (open-telemetry)
+`0`: Disable metrics collection
                      */
                     void SetEnableMetrics(const int64_t& _enableMetrics);
 
@@ -871,14 +875,14 @@ If `konajdk` is selected, the value can be:
                     bool EnableMetricsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TcrInstanceId 
+                     * 获取ID of the TCR instance used for image deployment
+                     * @return TcrInstanceId ID of the TCR instance used for image deployment
                      */
                     std::string GetTcrInstanceId() const;
 
                     /**
-                     * 设置
-                     * @param TcrInstanceId 
+                     * 设置ID of the TCR instance used for image deployment
+                     * @param TcrInstanceId ID of the TCR instance used for image deployment
                      */
                     void SetTcrInstanceId(const std::string& _tcrInstanceId);
 
@@ -889,14 +893,14 @@ If `konajdk` is selected, the value can be:
                     bool TcrInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RepoServer 
+                     * 获取Image server address for image deployment
+                     * @return RepoServer Image server address for image deployment
                      */
                     std::string GetRepoServer() const;
 
                     /**
-                     * 设置
-                     * @param RepoServer 
+                     * 设置Image server address for image deployment
+                     * @param RepoServer Image server address for image deployment
                      */
                     void SetRepoServer(const std::string& _repoServer);
 
@@ -907,14 +911,14 @@ If `konajdk` is selected, the value can be:
                     bool RepoServerHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RepoType 
+                     * 获取Type of the repository. `0`: TCR Personal; `1`: TCR Enterprise; `2`: Public repository; `3`: TEM hosted repository; `4`: Demo repository
+                     * @return RepoType Type of the repository. `0`: TCR Personal; `1`: TCR Enterprise; `2`: Public repository; `3`: TEM hosted repository; `4`: Demo repository
                      */
                     int64_t GetRepoType() const;
 
                     /**
-                     * 设置
-                     * @param RepoType 
+                     * 设置Type of the repository. `0`: TCR Personal; `1`: TCR Enterprise; `2`: Public repository; `3`: TEM hosted repository; `4`: Demo repository
+                     * @param RepoType Type of the repository. `0`: TCR Personal; `1`: TCR Enterprise; `2`: Public repository; `3`: TEM hosted repository; `4`: Demo repository
                      */
                     void SetRepoType(const int64_t& _repoType);
 
@@ -1175,38 +1179,39 @@ If `konajdk` is selected, the value can be:
                     bool m_osFlavourHasBeenSet;
 
                     /**
-                     * Specifies whether to enable Prometheus metric
+                     * Configuration of metrics of this application
                      */
                     EnablePrometheusConf m_enablePrometheusConf;
                     bool m_enablePrometheusConfHasBeenSet;
 
                     /**
-                     * `1`: Enable APM tracing (Skywalking)
+                     * `1`: Automatically enable APM tracing (Skywalking)
 `0`: Disable APM tracing
                      */
                     int64_t m_enableTracing;
                     bool m_enableTracingHasBeenSet;
 
                     /**
-                     * 
+                     * `1`: Automatically enable metrics collection (open-telemetry)
+`0`: Disable metrics collection
                      */
                     int64_t m_enableMetrics;
                     bool m_enableMetricsHasBeenSet;
 
                     /**
-                     * 
+                     * ID of the TCR instance used for image deployment
                      */
                     std::string m_tcrInstanceId;
                     bool m_tcrInstanceIdHasBeenSet;
 
                     /**
-                     * 
+                     * Image server address for image deployment
                      */
                     std::string m_repoServer;
                     bool m_repoServerHasBeenSet;
 
                     /**
-                     * 
+                     * Type of the repository. `0`: TCR Personal; `1`: TCR Enterprise; `2`: Public repository; `3`: TEM hosted repository; `4`: Demo repository
                      */
                     int64_t m_repoType;
                     bool m_repoTypeHasBeenSet;

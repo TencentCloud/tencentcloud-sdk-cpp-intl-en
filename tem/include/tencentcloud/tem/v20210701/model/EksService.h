@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/tem/v20210701/model/PortMapping.h>
+#include <tencentcloud/tem/v20210701/model/ServicePortMapping.h>
 
 
 namespace TencentCloud
@@ -289,6 +290,116 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool PortMappingsHasBeenSet() const;
 
+                    /**
+                     * 获取Details of each type of access configuration
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return ServicePortMappingList Details of each type of access configuration
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<ServicePortMapping> GetServicePortMappingList() const;
+
+                    /**
+                     * 设置Details of each type of access configuration
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param ServicePortMappingList Details of each type of access configuration
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetServicePortMappingList(const std::vector<ServicePortMapping>& _servicePortMappingList);
+
+                    /**
+                     * 判断参数 ServicePortMappingList 是否已赋值
+                     * @return ServicePortMappingList 是否已赋值
+                     */
+                    bool ServicePortMappingListHasBeenSet() const;
+
+                    /**
+                     * 获取Flush all types
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return FlushAll Flush all types
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool GetFlushAll() const;
+
+                    /**
+                     * 设置Flush all types
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param FlushAll Flush all types
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetFlushAll(const bool& _flushAll);
+
+                    /**
+                     * 判断参数 FlushAll 是否已赋值
+                     * @return FlushAll 是否已赋值
+                     */
+                    bool FlushAllHasBeenSet() const;
+
+                    /**
+                     * 获取`0`: Do not inject. `1`: Inject registry information automatically for the next deployment
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return EnableRegistryNextDeploy `0`: Do not inject. `1`: Inject registry information automatically for the next deployment
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetEnableRegistryNextDeploy() const;
+
+                    /**
+                     * 设置`0`: Do not inject. `1`: Inject registry information automatically for the next deployment
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param EnableRegistryNextDeploy `0`: Do not inject. `1`: Inject registry information automatically for the next deployment
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetEnableRegistryNextDeploy(const int64_t& _enableRegistryNextDeploy);
+
+                    /**
+                     * 判断参数 EnableRegistryNextDeploy 是否已赋值
+                     * @return EnableRegistryNextDeploy 是否已赋值
+                     */
+                    bool EnableRegistryNextDeployHasBeenSet() const;
+
+                    /**
+                     * 获取The application ID returned.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return ApplicationId The application ID returned.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetApplicationId() const;
+
+                    /**
+                     * 设置The application ID returned.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param ApplicationId The application ID returned.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetApplicationId(const std::string& _applicationId);
+
+                    /**
+                     * 判断参数 ApplicationId 是否已赋值
+                     * @return ApplicationId 是否已赋值
+                     */
+                    bool ApplicationIdHasBeenSet() const;
+
+                    /**
+                     * 获取Whether all the application IPs are ready
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return AllIpDone Whether all the application IPs are ready
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool GetAllIpDone() const;
+
+                    /**
+                     * 设置Whether all the application IPs are ready
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param AllIpDone Whether all the application IPs are ready
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetAllIpDone(const bool& _allIpDone);
+
+                    /**
+                     * 判断参数 AllIpDone 是否已赋值
+                     * @return AllIpDone 是否已赋值
+                     */
+                    bool AllIpDoneHasBeenSet() const;
+
                 private:
 
                     /**
@@ -367,6 +478,41 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::vector<PortMapping> m_portMappings;
                     bool m_portMappingsHasBeenSet;
+
+                    /**
+                     * Details of each type of access configuration
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<ServicePortMapping> m_servicePortMappingList;
+                    bool m_servicePortMappingListHasBeenSet;
+
+                    /**
+                     * Flush all types
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool m_flushAll;
+                    bool m_flushAllHasBeenSet;
+
+                    /**
+                     * `0`: Do not inject. `1`: Inject registry information automatically for the next deployment
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_enableRegistryNextDeploy;
+                    bool m_enableRegistryNextDeployHasBeenSet;
+
+                    /**
+                     * The application ID returned.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_applicationId;
+                    bool m_applicationIdHasBeenSet;
+
+                    /**
+                     * Whether all the application IPs are ready
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool m_allIpDone;
+                    bool m_allIpDoneHasBeenSet;
 
                 };
             }

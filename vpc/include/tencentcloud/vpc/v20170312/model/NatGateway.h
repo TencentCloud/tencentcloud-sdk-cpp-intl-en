@@ -406,6 +406,28 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool ExclusiveGatewayBandwidthHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the NAT gateway is blocked. Values: `NORMAL`, `RESTRICTED`
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RestrictState Whether the NAT gateway is blocked. Values: `NORMAL`, `RESTRICTED`
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetRestrictState() const;
+
+                    /**
+                     * 设置Whether the NAT gateway is blocked. Values: `NORMAL`, `RESTRICTED`
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param RestrictState Whether the NAT gateway is blocked. Values: `NORMAL`, `RESTRICTED`
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetRestrictState(const std::string& _restrictState);
+
+                    /**
+                     * 判断参数 RestrictState 是否已赋值
+                     * @return RestrictState 是否已赋值
+                     */
+                    bool RestrictStateHasBeenSet() const;
+
                 private:
 
                     /**
@@ -523,6 +545,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     uint64_t m_exclusiveGatewayBandwidth;
                     bool m_exclusiveGatewayBandwidthHasBeenSet;
+
+                    /**
+                     * Whether the NAT gateway is blocked. Values: `NORMAL`, `RESTRICTED`
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_restrictState;
+                    bool m_restrictStateHasBeenSet;
 
                 };
             }

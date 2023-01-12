@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tem/v20210701/model/NodeInfo.h>
 
 
 namespace TencentCloud
@@ -246,6 +247,138 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool ContainerStateHasBeenSet() const;
 
+                    /**
+                     * 获取Information of the node whether the instance locates
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return NodeInfo Information of the node whether the instance locates
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    NodeInfo GetNodeInfo() const;
+
+                    /**
+                     * 设置Information of the node whether the instance locates
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param NodeInfo Information of the node whether the instance locates
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetNodeInfo(const NodeInfo& _nodeInfo);
+
+                    /**
+                     * 判断参数 NodeInfo 是否已赋值
+                     * @return NodeInfo 是否已赋值
+                     */
+                    bool NodeInfoHasBeenSet() const;
+
+                    /**
+                     * 获取Start time
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @return StartTime Start time
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetStartTime() const;
+
+                    /**
+                     * 设置Start time
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @param StartTime Start time
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetStartTime(const std::string& _startTime);
+
+                    /**
+                     * 判断参数 StartTime 是否已赋值
+                     * @return StartTime 是否已赋值
+                     */
+                    bool StartTimeHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the status is unhealthy or healthy
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @return Unhealthy Whether the status is unhealthy or healthy
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    bool GetUnhealthy() const;
+
+                    /**
+                     * 设置Whether the status is unhealthy or healthy
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     * @param Unhealthy Whether the status is unhealthy or healthy
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetUnhealthy(const bool& _unhealthy);
+
+                    /**
+                     * 判断参数 Unhealthy 是否已赋值
+                     * @return Unhealthy 是否已赋值
+                     */
+                    bool UnhealthyHasBeenSet() const;
+
+                    /**
+                     * 获取Warning message when the result is unhealthy
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return UnhealthyWarningMsg Warning message when the result is unhealthy
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string GetUnhealthyWarningMsg() const;
+
+                    /**
+                     * 设置Warning message when the result is unhealthy
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param UnhealthyWarningMsg Warning message when the result is unhealthy
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetUnhealthyWarningMsg(const std::string& _unhealthyWarningMsg);
+
+                    /**
+                     * 判断参数 UnhealthyWarningMsg 是否已赋值
+                     * @return UnhealthyWarningMsg 是否已赋值
+                     */
+                    bool UnhealthyWarningMsgHasBeenSet() const;
+
+                    /**
+                     * 获取Version ID
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return VersionId Version ID
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string GetVersionId() const;
+
+                    /**
+                     * 设置Version ID
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param VersionId Version ID
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetVersionId(const std::string& _versionId);
+
+                    /**
+                     * 判断参数 VersionId 是否已赋值
+                     * @return VersionId 是否已赋值
+                     */
+                    bool VersionIdHasBeenSet() const;
+
+                    /**
+                     * 获取Application name
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return ApplicationName Application name
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetApplicationName() const;
+
+                    /**
+                     * 设置Application name
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param ApplicationName Application name
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetApplicationName(const std::string& _applicationName);
+
+                    /**
+                     * 判断参数 ApplicationName 是否已赋值
+                     * @return ApplicationName 是否已赋值
+                     */
+                    bool ApplicationNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -312,6 +445,48 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_containerState;
                     bool m_containerStateHasBeenSet;
+
+                    /**
+                     * Information of the node whether the instance locates
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    NodeInfo m_nodeInfo;
+                    bool m_nodeInfoHasBeenSet;
+
+                    /**
+                     * Start time
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_startTime;
+                    bool m_startTimeHasBeenSet;
+
+                    /**
+                     * Whether the status is unhealthy or healthy
+Note: this field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    bool m_unhealthy;
+                    bool m_unhealthyHasBeenSet;
+
+                    /**
+                     * Warning message when the result is unhealthy
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string m_unhealthyWarningMsg;
+                    bool m_unhealthyWarningMsgHasBeenSet;
+
+                    /**
+                     * Version ID
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string m_versionId;
+                    bool m_versionIdHasBeenSet;
+
+                    /**
+                     * Application name
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_applicationName;
+                    bool m_applicationNameHasBeenSet;
 
                 };
             }

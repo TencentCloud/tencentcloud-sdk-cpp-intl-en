@@ -247,14 +247,14 @@ namespace TencentCloud
                     bool IsEipDirectConnectionHasBeenSet() const;
 
                     /**
-                     * 获取EIP resource type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (elastic IP) and `AnycastEIP` (accelerated EIP).
-                     * @return AddressType EIP resource type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (elastic IP) and `AnycastEIP` (accelerated EIP).
+                     * 获取IP type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (general elastic IP), `AnycastEIP` (accelerated EIP), and `AntiDDoSEIP` (Anti DDoS EIP).
+                     * @return AddressType IP type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (general elastic IP), `AnycastEIP` (accelerated EIP), and `AntiDDoSEIP` (Anti DDoS EIP).
                      */
                     std::string GetAddressType() const;
 
                     /**
-                     * 设置EIP resource type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (elastic IP) and `AnycastEIP` (accelerated EIP).
-                     * @param AddressType EIP resource type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (elastic IP) and `AnycastEIP` (accelerated EIP).
+                     * 设置IP type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (general elastic IP), `AnycastEIP` (accelerated EIP), and `AntiDDoSEIP` (Anti DDoS EIP).
+                     * @param AddressType IP type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (general elastic IP), `AnycastEIP` (accelerated EIP), and `AntiDDoSEIP` (Anti DDoS EIP).
                      */
                     void SetAddressType(const std::string& _addressType);
 
@@ -511,7 +511,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_isEipDirectConnectionHasBeenSet;
 
                     /**
-                     * EIP resource type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (elastic IP) and `AnycastEIP` (accelerated EIP).
+                     * IP type. Valid values: `CalcIP` (device IP), `WanIP` (public network IP), `EIP` (general elastic IP), `AnycastEIP` (accelerated EIP), and `AntiDDoSEIP` (Anti DDoS EIP).
                      */
                     std::string m_addressType;
                     bool m_addressTypeHasBeenSet;

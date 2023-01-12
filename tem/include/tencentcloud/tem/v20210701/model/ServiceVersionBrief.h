@@ -25,6 +25,9 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/tem/v20210701/model/LogOutputConf.h>
+#include <tencentcloud/tem/v20210701/model/NodeInfo.h>
+#include <tencentcloud/tem/v20210701/model/DescribeRunPodPage.h>
+#include <tencentcloud/tem/v20210701/model/WorkloadInfo.h>
 
 
 namespace TencentCloud
@@ -335,6 +338,138 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool UnderDeployingHasBeenSet() const;
 
+                    /**
+                     * 获取Status of batch deployment
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return BatchDeployStatus Status of batch deployment
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string GetBatchDeployStatus() const;
+
+                    /**
+                     * 设置Status of batch deployment
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param BatchDeployStatus Status of batch deployment
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetBatchDeployStatus(const std::string& _batchDeployStatus);
+
+                    /**
+                     * 判断参数 BatchDeployStatus 是否已赋值
+                     * @return BatchDeployStatus 是否已赋值
+                     */
+                    bool BatchDeployStatusHasBeenSet() const;
+
+                    /**
+                     * 获取Availability zones
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return Zones Availability zones
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::vector<std::string> GetZones() const;
+
+                    /**
+                     * 设置Availability zones
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param Zones Availability zones
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetZones(const std::vector<std::string>& _zones);
+
+                    /**
+                     * 判断参数 Zones 是否已赋值
+                     * @return Zones 是否已赋值
+                     */
+                    bool ZonesHasBeenSet() const;
+
+                    /**
+                     * 获取Node information
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return NodeInfos Node information
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::vector<NodeInfo> GetNodeInfos() const;
+
+                    /**
+                     * 设置Node information
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param NodeInfos Node information
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetNodeInfos(const std::vector<NodeInfo>& _nodeInfos);
+
+                    /**
+                     * 判断参数 NodeInfos 是否已赋值
+                     * @return NodeInfos 是否已赋值
+                     */
+                    bool NodeInfosHasBeenSet() const;
+
+                    /**
+                     * 获取Pod information
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return PodList Pod information
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    DescribeRunPodPage GetPodList() const;
+
+                    /**
+                     * 设置Pod information
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param PodList Pod information
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetPodList(const DescribeRunPodPage& _podList);
+
+                    /**
+                     * 判断参数 PodList 是否已赋值
+                     * @return PodList 是否已赋值
+                     */
+                    bool PodListHasBeenSet() const;
+
+                    /**
+                     * 获取Workload information
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return WorkloadInfo Workload information
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    WorkloadInfo GetWorkloadInfo() const;
+
+                    /**
+                     * 设置Workload information
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param WorkloadInfo Workload information
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetWorkloadInfo(const WorkloadInfo& _workloadInfo);
+
+                    /**
+                     * 判断参数 WorkloadInfo 是否已赋值
+                     * @return WorkloadInfo 是否已赋值
+                     */
+                    bool WorkloadInfoHasBeenSet() const;
+
+                    /**
+                     * 获取Creation time
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return CreateDate Creation time
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string GetCreateDate() const;
+
+                    /**
+                     * 设置Creation time
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param CreateDate Creation time
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetCreateDate(const std::string& _createDate);
+
+                    /**
+                     * 判断参数 CreateDate 是否已赋值
+                     * @return CreateDate 是否已赋值
+                     */
+                    bool CreateDateHasBeenSet() const;
+
                 private:
 
                     /**
@@ -429,6 +564,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool m_underDeploying;
                     bool m_underDeployingHasBeenSet;
+
+                    /**
+                     * Status of batch deployment
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string m_batchDeployStatus;
+                    bool m_batchDeployStatusHasBeenSet;
+
+                    /**
+                     * Availability zones
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::vector<std::string> m_zones;
+                    bool m_zonesHasBeenSet;
+
+                    /**
+                     * Node information
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::vector<NodeInfo> m_nodeInfos;
+                    bool m_nodeInfosHasBeenSet;
+
+                    /**
+                     * Pod information
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    DescribeRunPodPage m_podList;
+                    bool m_podListHasBeenSet;
+
+                    /**
+                     * Workload information
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    WorkloadInfo m_workloadInfo;
+                    bool m_workloadInfoHasBeenSet;
+
+                    /**
+                     * Creation time
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string m_createDate;
+                    bool m_createDateHasBeenSet;
 
                 };
             }

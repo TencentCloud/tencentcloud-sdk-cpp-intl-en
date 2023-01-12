@@ -120,17 +120,13 @@ namespace TencentCloud
 
                     /**
                      * 获取Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address.
-Important note: When the GatewayType is EIP, the GatewayId has a fixed value `0`
                      * @return GatewayId Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address.
-Important note: When the GatewayType is EIP, the GatewayId has a fixed value `0`
                      */
                     std::string GetGatewayId() const;
 
                     /**
                      * 设置Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address.
-Important note: When the GatewayType is EIP, the GatewayId has a fixed value `0`
                      * @param GatewayId Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address.
-Important note: When the GatewayType is EIP, the GatewayId has a fixed value `0`
                      */
                     void SetGatewayId(const std::string& _gatewayId);
 
@@ -351,7 +347,6 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address.
-Important note: When the GatewayType is EIP, the GatewayId has a fixed value `0`
                      */
                     std::string m_gatewayId;
                     bool m_gatewayIdHasBeenSet;

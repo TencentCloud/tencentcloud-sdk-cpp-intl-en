@@ -235,6 +235,24 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool CreateTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Mounted PaaS service type. Values: `CLB`, `CDB`, `CRS`
+                     * @return ServiceType Mounted PaaS service type. Values: `CLB`, `CDB`, `CRS`
+                     */
+                    std::string GetServiceType() const;
+
+                    /**
+                     * 设置Mounted PaaS service type. Values: `CLB`, `CDB`, `CRS`
+                     * @param ServiceType Mounted PaaS service type. Values: `CLB`, `CDB`, `CRS`
+                     */
+                    void SetServiceType(const std::string& _serviceType);
+
+                    /**
+                     * 判断参数 ServiceType 是否已赋值
+                     * @return ServiceType 是否已赋值
+                     */
+                    bool ServiceTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -298,6 +316,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
+
+                    /**
+                     * Mounted PaaS service type. Values: `CLB`, `CDB`, `CRS`
+                     */
+                    std::string m_serviceType;
+                    bool m_serviceTypeHasBeenSet;
 
                 };
             }

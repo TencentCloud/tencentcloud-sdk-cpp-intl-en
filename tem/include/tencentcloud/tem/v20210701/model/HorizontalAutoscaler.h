@@ -83,14 +83,70 @@ namespace TencentCloud
                     bool MaxReplicasHasBeenSet() const;
 
                     /**
-                     * 获取Metrics (CPU or memory)
-                     * @return Metrics Metrics (CPU or memory)
+                     * 获取Metric measurement
+`CPU`: CPU utilization (%)
+`MEMORY`: Memory utilization (%)
+`CPU_CORE_USED`: CPU usage (core)
+`MEMORY_SIZE_USED`: Memory usage (MiB)
+`NETWORK_BANDWIDTH_RECEIVE`: Network bandwidth in (Mbps)
+`NETWORK_BANDWIDTH_TRANSMIT`: Network bandwidth out (Mbps)
+`NETWORK_TRAFFIC_RECEIVE`: Network traffic in (MiB/s)
+`NETWORK_TRAFFIC_TRANSMIT`: Network traffic  out (MiB/s)
+`NETWORK_PACKETS_RECEIVE`: Network packets in (packets/sec)
+`NETWORK_PACKETS_TRANSMIT`: Network packets out (packets/sec)
+`FS_IOPS_WRITE`: Disk writes (count/sec)
+`FS_IOPS_READ`: Disk reads (count/sec)
+`FS_SIZE_WRITE`: Disk write size (MiB/s)
+`FS_SIZE_READ`: Disk read size (MiB/s)
+                     * @return Metrics Metric measurement
+`CPU`: CPU utilization (%)
+`MEMORY`: Memory utilization (%)
+`CPU_CORE_USED`: CPU usage (core)
+`MEMORY_SIZE_USED`: Memory usage (MiB)
+`NETWORK_BANDWIDTH_RECEIVE`: Network bandwidth in (Mbps)
+`NETWORK_BANDWIDTH_TRANSMIT`: Network bandwidth out (Mbps)
+`NETWORK_TRAFFIC_RECEIVE`: Network traffic in (MiB/s)
+`NETWORK_TRAFFIC_TRANSMIT`: Network traffic  out (MiB/s)
+`NETWORK_PACKETS_RECEIVE`: Network packets in (packets/sec)
+`NETWORK_PACKETS_TRANSMIT`: Network packets out (packets/sec)
+`FS_IOPS_WRITE`: Disk writes (count/sec)
+`FS_IOPS_READ`: Disk reads (count/sec)
+`FS_SIZE_WRITE`: Disk write size (MiB/s)
+`FS_SIZE_READ`: Disk read size (MiB/s)
                      */
                     std::string GetMetrics() const;
 
                     /**
-                     * 设置Metrics (CPU or memory)
-                     * @param Metrics Metrics (CPU or memory)
+                     * 设置Metric measurement
+`CPU`: CPU utilization (%)
+`MEMORY`: Memory utilization (%)
+`CPU_CORE_USED`: CPU usage (core)
+`MEMORY_SIZE_USED`: Memory usage (MiB)
+`NETWORK_BANDWIDTH_RECEIVE`: Network bandwidth in (Mbps)
+`NETWORK_BANDWIDTH_TRANSMIT`: Network bandwidth out (Mbps)
+`NETWORK_TRAFFIC_RECEIVE`: Network traffic in (MiB/s)
+`NETWORK_TRAFFIC_TRANSMIT`: Network traffic  out (MiB/s)
+`NETWORK_PACKETS_RECEIVE`: Network packets in (packets/sec)
+`NETWORK_PACKETS_TRANSMIT`: Network packets out (packets/sec)
+`FS_IOPS_WRITE`: Disk writes (count/sec)
+`FS_IOPS_READ`: Disk reads (count/sec)
+`FS_SIZE_WRITE`: Disk write size (MiB/s)
+`FS_SIZE_READ`: Disk read size (MiB/s)
+                     * @param Metrics Metric measurement
+`CPU`: CPU utilization (%)
+`MEMORY`: Memory utilization (%)
+`CPU_CORE_USED`: CPU usage (core)
+`MEMORY_SIZE_USED`: Memory usage (MiB)
+`NETWORK_BANDWIDTH_RECEIVE`: Network bandwidth in (Mbps)
+`NETWORK_BANDWIDTH_TRANSMIT`: Network bandwidth out (Mbps)
+`NETWORK_TRAFFIC_RECEIVE`: Network traffic in (MiB/s)
+`NETWORK_TRAFFIC_TRANSMIT`: Network traffic  out (MiB/s)
+`NETWORK_PACKETS_RECEIVE`: Network packets in (packets/sec)
+`NETWORK_PACKETS_TRANSMIT`: Network packets out (packets/sec)
+`FS_IOPS_WRITE`: Disk writes (count/sec)
+`FS_IOPS_READ`: Disk reads (count/sec)
+`FS_SIZE_WRITE`: Disk write size (MiB/s)
+`FS_SIZE_READ`: Disk read size (MiB/s)
                      */
                     void SetMetrics(const std::string& _metrics);
 
@@ -101,14 +157,14 @@ namespace TencentCloud
                     bool MetricsHasBeenSet() const;
 
                     /**
-                     * 获取Threshold (percentage)
-                     * @return Threshold Threshold (percentage)
+                     * 获取The value of threshold (integer)
+                     * @return Threshold The value of threshold (integer)
                      */
                     int64_t GetThreshold() const;
 
                     /**
-                     * 设置Threshold (percentage)
-                     * @param Threshold Threshold (percentage)
+                     * 设置The value of threshold (integer)
+                     * @param Threshold The value of threshold (integer)
                      */
                     void SetThreshold(const int64_t& _threshold);
 
@@ -136,6 +192,28 @@ namespace TencentCloud
                      */
                     bool EnabledHasBeenSet() const;
 
+                    /**
+                     * 获取The value of threshold (demical)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DoubleThreshold The value of threshold (demical)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    double GetDoubleThreshold() const;
+
+                    /**
+                     * 设置The value of threshold (demical)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param DoubleThreshold The value of threshold (demical)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetDoubleThreshold(const double& _doubleThreshold);
+
+                    /**
+                     * 判断参数 DoubleThreshold 是否已赋值
+                     * @return DoubleThreshold 是否已赋值
+                     */
+                    bool DoubleThresholdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -151,13 +229,27 @@ namespace TencentCloud
                     bool m_maxReplicasHasBeenSet;
 
                     /**
-                     * Metrics (CPU or memory)
+                     * Metric measurement
+`CPU`: CPU utilization (%)
+`MEMORY`: Memory utilization (%)
+`CPU_CORE_USED`: CPU usage (core)
+`MEMORY_SIZE_USED`: Memory usage (MiB)
+`NETWORK_BANDWIDTH_RECEIVE`: Network bandwidth in (Mbps)
+`NETWORK_BANDWIDTH_TRANSMIT`: Network bandwidth out (Mbps)
+`NETWORK_TRAFFIC_RECEIVE`: Network traffic in (MiB/s)
+`NETWORK_TRAFFIC_TRANSMIT`: Network traffic  out (MiB/s)
+`NETWORK_PACKETS_RECEIVE`: Network packets in (packets/sec)
+`NETWORK_PACKETS_TRANSMIT`: Network packets out (packets/sec)
+`FS_IOPS_WRITE`: Disk writes (count/sec)
+`FS_IOPS_READ`: Disk reads (count/sec)
+`FS_SIZE_WRITE`: Disk write size (MiB/s)
+`FS_SIZE_READ`: Disk read size (MiB/s)
                      */
                     std::string m_metrics;
                     bool m_metricsHasBeenSet;
 
                     /**
-                     * Threshold (percentage)
+                     * The value of threshold (integer)
                      */
                     int64_t m_threshold;
                     bool m_thresholdHasBeenSet;
@@ -167,6 +259,13 @@ namespace TencentCloud
                      */
                     bool m_enabled;
                     bool m_enabledHasBeenSet;
+
+                    /**
+                     * The value of threshold (demical)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    double m_doubleThreshold;
+                    bool m_doubleThresholdHasBeenSet;
 
                 };
             }

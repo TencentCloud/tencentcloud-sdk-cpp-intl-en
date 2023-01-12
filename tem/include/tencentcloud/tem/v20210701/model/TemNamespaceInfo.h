@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tem/v20210701/model/Tag.h>
 
 
 namespace TencentCloud
@@ -356,6 +357,182 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool LockedHasBeenSet() const;
 
+                    /**
+                     * 获取User AppId
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AppId User AppId
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetAppId() const;
+
+                    /**
+                     * 设置User AppId
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param AppId User AppId
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetAppId(const std::string& _appId);
+
+                    /**
+                     * 判断参数 AppId 是否已赋值
+                     * @return AppId 是否已赋值
+                     */
+                    bool AppIdHasBeenSet() const;
+
+                    /**
+                     * 获取User UIN
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Uin User UIN
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetUin() const;
+
+                    /**
+                     * 设置User UIN
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Uin User UIN
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetUin(const std::string& _uin);
+
+                    /**
+                     * 判断参数 Uin 是否已赋值
+                     * @return Uin 是否已赋值
+                     */
+                    bool UinHasBeenSet() const;
+
+                    /**
+                     * 获取The UIN of sub-account
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SubAccountUin The UIN of sub-account
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetSubAccountUin() const;
+
+                    /**
+                     * 设置The UIN of sub-account
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param SubAccountUin The UIN of sub-account
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetSubAccountUin(const std::string& _subAccountUin);
+
+                    /**
+                     * 判断参数 SubAccountUin 是否已赋值
+                     * @return SubAccountUin 是否已赋值
+                     */
+                    bool SubAccountUinHasBeenSet() const;
+
+                    /**
+                     * 获取Application ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ClusterId Application ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetClusterId() const;
+
+                    /**
+                     * 设置Application ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ClusterId Application ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetClusterId(const std::string& _clusterId);
+
+                    /**
+                     * 判断参数 ClusterId 是否已赋值
+                     * @return ClusterId 是否已赋值
+                     */
+                    bool ClusterIdHasBeenSet() const;
+
+                    /**
+                     * 获取Tag.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return Tags Tag.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 设置Tag.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param Tags Tag.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
+                    /**
+                     * 获取Whether it’s authorized to access the resource
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return HasAuthority Whether it’s authorized to access the resource
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool GetHasAuthority() const;
+
+                    /**
+                     * 设置Whether it’s authorized to access the resource
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param HasAuthority Whether it’s authorized to access the resource
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetHasAuthority(const bool& _hasAuthority);
+
+                    /**
+                     * 判断参数 HasAuthority 是否已赋值
+                     * @return HasAuthority 是否已赋值
+                     */
+                    bool HasAuthorityHasBeenSet() const;
+
+                    /**
+                     * 获取Environment type. Values: `test`, `pre`, `prod`
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return EnvType Environment type. Values: `test`, `pre`, `prod`
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string GetEnvType() const;
+
+                    /**
+                     * 设置Environment type. Values: `test`, `pre`, `prod`
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param EnvType Environment type. Values: `test`, `pre`, `prod`
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetEnvType(const std::string& _envType);
+
+                    /**
+                     * 判断参数 EnvType 是否已赋值
+                     * @return EnvType 是否已赋值
+                     */
+                    bool EnvTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Region code
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return RegionId Region code
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string GetRegionId() const;
+
+                    /**
+                     * 设置Region code
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param RegionId Region code
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetRegionId(const std::string& _regionId);
+
+                    /**
+                     * 判断参数 RegionId 是否已赋值
+                     * @return RegionId 是否已赋值
+                     */
+                    bool RegionIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -460,6 +637,62 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     int64_t m_locked;
                     bool m_lockedHasBeenSet;
+
+                    /**
+                     * User AppId
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_appId;
+                    bool m_appIdHasBeenSet;
+
+                    /**
+                     * User UIN
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_uin;
+                    bool m_uinHasBeenSet;
+
+                    /**
+                     * The UIN of sub-account
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_subAccountUin;
+                    bool m_subAccountUinHasBeenSet;
+
+                    /**
+                     * Application ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_clusterId;
+                    bool m_clusterIdHasBeenSet;
+
+                    /**
+                     * Tag.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
+
+                    /**
+                     * Whether it’s authorized to access the resource
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool m_hasAuthority;
+                    bool m_hasAuthorityHasBeenSet;
+
+                    /**
+                     * Environment type. Values: `test`, `pre`, `prod`
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string m_envType;
+                    bool m_envTypeHasBeenSet;
+
+                    /**
+                     * Region code
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string m_regionId;
+                    bool m_regionIdHasBeenSet;
 
                 };
             }

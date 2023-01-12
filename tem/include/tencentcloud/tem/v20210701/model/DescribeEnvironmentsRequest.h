@@ -21,6 +21,8 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tem/v20210701/model/QueryFilter.h>
+#include <tencentcloud/tem/v20210701/model/SortType.h>
 
 
 namespace TencentCloud
@@ -96,6 +98,60 @@ namespace TencentCloud
                      */
                     bool SourceChannelHasBeenSet() const;
 
+                    /**
+                     * 获取Filters for query 
+                     * @return Filters Filters for query 
+                     */
+                    std::vector<QueryFilter> GetFilters() const;
+
+                    /**
+                     * 设置Filters for query 
+                     * @param Filters Filters for query 
+                     */
+                    void SetFilters(const std::vector<QueryFilter>& _filters);
+
+                    /**
+                     * 判断参数 Filters 是否已赋值
+                     * @return Filters 是否已赋值
+                     */
+                    bool FiltersHasBeenSet() const;
+
+                    /**
+                     * 获取Sorting field
+                     * @return SortInfo Sorting field
+                     */
+                    SortType GetSortInfo() const;
+
+                    /**
+                     * 设置Sorting field
+                     * @param SortInfo Sorting field
+                     */
+                    void SetSortInfo(const SortType& _sortInfo);
+
+                    /**
+                     * 判断参数 SortInfo 是否已赋值
+                     * @return SortInfo 是否已赋值
+                     */
+                    bool SortInfoHasBeenSet() const;
+
+                    /**
+                     * 获取Environment ID
+                     * @return EnvironmentId Environment ID
+                     */
+                    std::string GetEnvironmentId() const;
+
+                    /**
+                     * 设置Environment ID
+                     * @param EnvironmentId Environment ID
+                     */
+                    void SetEnvironmentId(const std::string& _environmentId);
+
+                    /**
+                     * 判断参数 EnvironmentId 是否已赋值
+                     * @return EnvironmentId 是否已赋值
+                     */
+                    bool EnvironmentIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -115,6 +171,24 @@ namespace TencentCloud
                      */
                     int64_t m_sourceChannel;
                     bool m_sourceChannelHasBeenSet;
+
+                    /**
+                     * Filters for query 
+                     */
+                    std::vector<QueryFilter> m_filters;
+                    bool m_filtersHasBeenSet;
+
+                    /**
+                     * Sorting field
+                     */
+                    SortType m_sortInfo;
+                    bool m_sortInfoHasBeenSet;
+
+                    /**
+                     * Environment ID
+                     */
+                    std::string m_environmentId;
+                    bool m_environmentIdHasBeenSet;
 
                 };
             }

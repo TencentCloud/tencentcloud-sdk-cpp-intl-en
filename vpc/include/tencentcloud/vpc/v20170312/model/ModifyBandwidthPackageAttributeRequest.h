@@ -79,14 +79,18 @@ namespace TencentCloud
                     bool BandwidthPackageNameHasBeenSet() const;
 
                     /**
-                     * 获取The billing mode of the bandwidth package.
-                     * @return ChargeType The billing mode of the bandwidth package.
+                     * 获取The billing mode of the bandwidth package. Values: 
+`TOP5_POSTPAID_BY_MONTH`: Bill by the top 5 bandwidth value of the current month in a postpaid manner
+                     * @return ChargeType The billing mode of the bandwidth package. Values: 
+`TOP5_POSTPAID_BY_MONTH`: Bill by the top 5 bandwidth value of the current month in a postpaid manner
                      */
                     std::string GetChargeType() const;
 
                     /**
-                     * 设置The billing mode of the bandwidth package.
-                     * @param ChargeType The billing mode of the bandwidth package.
+                     * 设置The billing mode of the bandwidth package. Values: 
+`TOP5_POSTPAID_BY_MONTH`: Bill by the top 5 bandwidth value of the current month in a postpaid manner
+                     * @param ChargeType The billing mode of the bandwidth package. Values: 
+`TOP5_POSTPAID_BY_MONTH`: Bill by the top 5 bandwidth value of the current month in a postpaid manner
                      */
                     void SetChargeType(const std::string& _chargeType);
 
@@ -95,24 +99,6 @@ namespace TencentCloud
                      * @return ChargeType 是否已赋值
                      */
                     bool ChargeTypeHasBeenSet() const;
-
-                    /**
-                     * 获取When a monthly-subscribed bandwidth package is returned, whether to convert it to a pay-as-you-go bandwidth packages. Default value: `No`
-                     * @return MigrateOnRefund When a monthly-subscribed bandwidth package is returned, whether to convert it to a pay-as-you-go bandwidth packages. Default value: `No`
-                     */
-                    bool GetMigrateOnRefund() const;
-
-                    /**
-                     * 设置When a monthly-subscribed bandwidth package is returned, whether to convert it to a pay-as-you-go bandwidth packages. Default value: `No`
-                     * @param MigrateOnRefund When a monthly-subscribed bandwidth package is returned, whether to convert it to a pay-as-you-go bandwidth packages. Default value: `No`
-                     */
-                    void SetMigrateOnRefund(const bool& _migrateOnRefund);
-
-                    /**
-                     * 判断参数 MigrateOnRefund 是否已赋值
-                     * @return MigrateOnRefund 是否已赋值
-                     */
-                    bool MigrateOnRefundHasBeenSet() const;
 
                 private:
 
@@ -129,16 +115,11 @@ namespace TencentCloud
                     bool m_bandwidthPackageNameHasBeenSet;
 
                     /**
-                     * The billing mode of the bandwidth package.
+                     * The billing mode of the bandwidth package. Values: 
+`TOP5_POSTPAID_BY_MONTH`: Bill by the top 5 bandwidth value of the current month in a postpaid manner
                      */
                     std::string m_chargeType;
                     bool m_chargeTypeHasBeenSet;
-
-                    /**
-                     * When a monthly-subscribed bandwidth package is returned, whether to convert it to a pay-as-you-go bandwidth packages. Default value: `No`
-                     */
-                    bool m_migrateOnRefund;
-                    bool m_migrateOnRefundHasBeenSet;
 
                 };
             }

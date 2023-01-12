@@ -318,6 +318,24 @@ Whether the Anycast EIP can be bound to CLB instances.
                      */
                     bool AddressNameHasBeenSet() const;
 
+                    /**
+                     * 获取Network egress. It defaults to `center_egress1`.
+                     * @return Egress Network egress. It defaults to `center_egress1`.
+                     */
+                    std::string GetEgress() const;
+
+                    /**
+                     * 设置Network egress. It defaults to `center_egress1`.
+                     * @param Egress Network egress. It defaults to `center_egress1`.
+                     */
+                    void SetEgress(const std::string& _egress);
+
+                    /**
+                     * 判断参数 Egress 是否已赋值
+                     * @return Egress 是否已赋值
+                     */
+                    bool EgressHasBeenSet() const;
+
                 private:
 
                     /**
@@ -404,6 +422,12 @@ Whether the Anycast EIP can be bound to CLB instances.
                      */
                     std::string m_addressName;
                     bool m_addressNameHasBeenSet;
+
+                    /**
+                     * Network egress. It defaults to `center_egress1`.
+                     */
+                    std::string m_egress;
+                    bool m_egressHasBeenSet;
 
                 };
             }

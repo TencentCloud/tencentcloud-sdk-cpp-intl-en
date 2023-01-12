@@ -428,6 +428,66 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool AttachTypeHasBeenSet() const;
 
+                    /**
+                     * 获取The ID of resource to retain the ENI primary IP. It’s used as the request parameters for deleting an ENI.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return ResourceId The ID of resource to retain the ENI primary IP. It’s used as the request parameters for deleting an ENI.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetResourceId() const;
+
+                    /**
+                     * 设置The ID of resource to retain the ENI primary IP. It’s used as the request parameters for deleting an ENI.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param ResourceId The ID of resource to retain the ENI primary IP. It’s used as the request parameters for deleting an ENI.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetResourceId(const std::string& _resourceId);
+
+                    /**
+                     * 判断参数 ResourceId 是否已赋值
+                     * @return ResourceId 是否已赋值
+                     */
+                    bool ResourceIdHasBeenSet() const;
+
+                    /**
+                     * 获取Service level
+<li>`DEFAULT`: Default level</lil>
+<li>`PT`: Gold</li>
+<li>`AU`: Silver</li>
+<li>`AG`: Bronze</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return QosLevel Service level
+<li>`DEFAULT`: Default level</lil>
+<li>`PT`: Gold</li>
+<li>`AU`: Silver</li>
+<li>`AG`: Bronze</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetQosLevel() const;
+
+                    /**
+                     * 设置Service level
+<li>`DEFAULT`: Default level</lil>
+<li>`PT`: Gold</li>
+<li>`AU`: Silver</li>
+<li>`AG`: Bronze</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param QosLevel Service level
+<li>`DEFAULT`: Default level</lil>
+<li>`PT`: Gold</li>
+<li>`AU`: Silver</li>
+<li>`AG`: Bronze</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetQosLevel(const std::string& _qosLevel);
+
+                    /**
+                     * 判断参数 QosLevel 是否已赋值
+                     * @return QosLevel 是否已赋值
+                     */
+                    bool QosLevelHasBeenSet() const;
+
                 private:
 
                     /**
@@ -552,6 +612,24 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     uint64_t m_attachType;
                     bool m_attachTypeHasBeenSet;
+
+                    /**
+                     * The ID of resource to retain the ENI primary IP. It’s used as the request parameters for deleting an ENI.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_resourceId;
+                    bool m_resourceIdHasBeenSet;
+
+                    /**
+                     * Service level
+<li>`DEFAULT`: Default level</lil>
+<li>`PT`: Gold</li>
+<li>`AU`: Silver</li>
+<li>`AG`: Bronze</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_qosLevel;
+                    bool m_qosLevelHasBeenSet;
 
                 };
             }

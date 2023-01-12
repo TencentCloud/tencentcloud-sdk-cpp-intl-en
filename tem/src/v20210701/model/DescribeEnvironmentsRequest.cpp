@@ -25,7 +25,10 @@ using namespace std;
 DescribeEnvironmentsRequest::DescribeEnvironmentsRequest() :
     m_limitHasBeenSet(false),
     m_offsetHasBeenSet(false),
-    m_sourceChannelHasBeenSet(false)
+    m_sourceChannelHasBeenSet(false),
+    m_filtersHasBeenSet(false),
+    m_sortInfoHasBeenSet(false),
+    m_environmentIdHasBeenSet(false)
 {
 }
 
@@ -58,6 +61,38 @@ string DescribeEnvironmentsRequest::ToJsonString() const
         string key = "SourceChannel";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_sourceChannel, allocator);
+    }
+
+    if (m_filtersHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Filters";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_filters.begin(); itr != m_filters.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_sortInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SortInfo";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_sortInfo.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_environmentIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EnvironmentId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_environmentId.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -114,6 +149,54 @@ void DescribeEnvironmentsRequest::SetSourceChannel(const int64_t& _sourceChannel
 bool DescribeEnvironmentsRequest::SourceChannelHasBeenSet() const
 {
     return m_sourceChannelHasBeenSet;
+}
+
+vector<QueryFilter> DescribeEnvironmentsRequest::GetFilters() const
+{
+    return m_filters;
+}
+
+void DescribeEnvironmentsRequest::SetFilters(const vector<QueryFilter>& _filters)
+{
+    m_filters = _filters;
+    m_filtersHasBeenSet = true;
+}
+
+bool DescribeEnvironmentsRequest::FiltersHasBeenSet() const
+{
+    return m_filtersHasBeenSet;
+}
+
+SortType DescribeEnvironmentsRequest::GetSortInfo() const
+{
+    return m_sortInfo;
+}
+
+void DescribeEnvironmentsRequest::SetSortInfo(const SortType& _sortInfo)
+{
+    m_sortInfo = _sortInfo;
+    m_sortInfoHasBeenSet = true;
+}
+
+bool DescribeEnvironmentsRequest::SortInfoHasBeenSet() const
+{
+    return m_sortInfoHasBeenSet;
+}
+
+string DescribeEnvironmentsRequest::GetEnvironmentId() const
+{
+    return m_environmentId;
+}
+
+void DescribeEnvironmentsRequest::SetEnvironmentId(const string& _environmentId)
+{
+    m_environmentId = _environmentId;
+    m_environmentIdHasBeenSet = true;
+}
+
+bool DescribeEnvironmentsRequest::EnvironmentIdHasBeenSet() const
+{
+    return m_environmentIdHasBeenSet;
 }
 
 

@@ -119,6 +119,28 @@ namespace TencentCloud
                      */
                     bool PagesHasBeenSet() const;
 
+                    /**
+                     * 获取Current entry
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Current Current entry
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetCurrent() const;
+
+                    /**
+                     * 设置Current entry
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Current Current entry
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetCurrent(const int64_t& _current);
+
+                    /**
+                     * 判断参数 Current 是否已赋值
+                     * @return Current 是否已赋值
+                     */
+                    bool CurrentHasBeenSet() const;
+
                 private:
 
                     /**
@@ -144,6 +166,13 @@ namespace TencentCloud
                      */
                     int64_t m_pages;
                     bool m_pagesHasBeenSet;
+
+                    /**
+                     * Current entry
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_current;
+                    bool m_currentHasBeenSet;
 
                 };
             }

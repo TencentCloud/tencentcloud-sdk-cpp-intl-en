@@ -43,7 +43,43 @@ namespace TencentCloud
                     std::string ToJsonString() const;
 
 
+                    /**
+                     * 获取
+                     * @return TaskId 
+                     */
+                    uint64_t GetTaskId() const;
+
+                    /**
+                     * 判断参数 TaskId 是否已赋值
+                     * @return TaskId 是否已赋值
+                     */
+                    bool TaskIdHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return AddressId 
+                     */
+                    std::string GetAddressId() const;
+
+                    /**
+                     * 判断参数 AddressId 是否已赋值
+                     * @return AddressId 是否已赋值
+                     */
+                    bool AddressIdHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_taskId;
+                    bool m_taskIdHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_addressId;
+                    bool m_addressIdHasBeenSet;
 
                 };
             }

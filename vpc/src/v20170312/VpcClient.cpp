@@ -5845,6 +5845,49 @@ VpcClient::DescribeTaskResultOutcomeCallable VpcClient::DescribeTaskResultCallab
     return task->get_future();
 }
 
+VpcClient::DescribeTrafficPackagesOutcome VpcClient::DescribeTrafficPackages(const DescribeTrafficPackagesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeTrafficPackages");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeTrafficPackagesResponse rsp = DescribeTrafficPackagesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeTrafficPackagesOutcome(rsp);
+        else
+            return DescribeTrafficPackagesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeTrafficPackagesOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::DescribeTrafficPackagesAsync(const DescribeTrafficPackagesRequest& request, const DescribeTrafficPackagesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeTrafficPackages(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::DescribeTrafficPackagesOutcomeCallable VpcClient::DescribeTrafficPackagesCallable(const DescribeTrafficPackagesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeTrafficPackagesOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeTrafficPackages(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VpcClient::DescribeVpcEndPointOutcome VpcClient::DescribeVpcEndPoint(const DescribeVpcEndPointRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeVpcEndPoint");
@@ -9844,6 +9887,49 @@ VpcClient::ResetVpnGatewayInternetMaxBandwidthOutcomeCallable VpcClient::ResetVp
     return task->get_future();
 }
 
+VpcClient::ReturnNormalAddressesOutcome VpcClient::ReturnNormalAddresses(const ReturnNormalAddressesRequest &request)
+{
+    auto outcome = MakeRequest(request, "ReturnNormalAddresses");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ReturnNormalAddressesResponse rsp = ReturnNormalAddressesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ReturnNormalAddressesOutcome(rsp);
+        else
+            return ReturnNormalAddressesOutcome(o.GetError());
+    }
+    else
+    {
+        return ReturnNormalAddressesOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::ReturnNormalAddressesAsync(const ReturnNormalAddressesRequest& request, const ReturnNormalAddressesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ReturnNormalAddresses(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::ReturnNormalAddressesOutcomeCallable VpcClient::ReturnNormalAddressesCallable(const ReturnNormalAddressesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ReturnNormalAddressesOutcome()>>(
+        [this, request]()
+        {
+            return this->ReturnNormalAddresses(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 VpcClient::SetCcnRegionBandwidthLimitsOutcome VpcClient::SetCcnRegionBandwidthLimits(const SetCcnRegionBandwidthLimitsRequest &request)
 {
     auto outcome = MakeRequest(request, "SetCcnRegionBandwidthLimits");
@@ -9880,6 +9966,49 @@ VpcClient::SetCcnRegionBandwidthLimitsOutcomeCallable VpcClient::SetCcnRegionBan
         [this, request]()
         {
             return this->SetCcnRegionBandwidthLimits(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+VpcClient::SetVpnGatewaysRenewFlagOutcome VpcClient::SetVpnGatewaysRenewFlag(const SetVpnGatewaysRenewFlagRequest &request)
+{
+    auto outcome = MakeRequest(request, "SetVpnGatewaysRenewFlag");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        SetVpnGatewaysRenewFlagResponse rsp = SetVpnGatewaysRenewFlagResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return SetVpnGatewaysRenewFlagOutcome(rsp);
+        else
+            return SetVpnGatewaysRenewFlagOutcome(o.GetError());
+    }
+    else
+    {
+        return SetVpnGatewaysRenewFlagOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::SetVpnGatewaysRenewFlagAsync(const SetVpnGatewaysRenewFlagRequest& request, const SetVpnGatewaysRenewFlagAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->SetVpnGatewaysRenewFlag(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+VpcClient::SetVpnGatewaysRenewFlagOutcomeCallable VpcClient::SetVpnGatewaysRenewFlagCallable(const SetVpnGatewaysRenewFlagRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<SetVpnGatewaysRenewFlagOutcome()>>(
+        [this, request]()
+        {
+            return this->SetVpnGatewaysRenewFlag(request);
         }
     );
 

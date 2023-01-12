@@ -150,6 +150,24 @@ namespace TencentCloud
                      */
                     bool SourceChannelHasBeenSet() const;
 
+                    /**
+                     * 获取Environment type. Values: `test`, `pre`, `prod`
+                     * @return EnvType Environment type. Values: `test`, `pre`, `prod`
+                     */
+                    std::string GetEnvType() const;
+
+                    /**
+                     * 设置Environment type. Values: `test`, `pre`, `prod`
+                     * @param EnvType Environment type. Values: `test`, `pre`, `prod`
+                     */
+                    void SetEnvType(const std::string& _envType);
+
+                    /**
+                     * 判断参数 EnvType 是否已赋值
+                     * @return EnvType 是否已赋值
+                     */
+                    bool EnvTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -187,6 +205,12 @@ namespace TencentCloud
                      */
                     int64_t m_sourceChannel;
                     bool m_sourceChannelHasBeenSet;
+
+                    /**
+                     * Environment type. Values: `test`, `pre`, `prod`
+                     */
+                    std::string m_envType;
+                    bool m_envTypeHasBeenSet;
 
                 };
             }

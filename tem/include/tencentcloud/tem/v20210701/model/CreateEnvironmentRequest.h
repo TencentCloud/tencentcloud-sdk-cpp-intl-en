@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tem/v20210701/model/Tag.h>
 
 
 namespace TencentCloud
@@ -168,6 +169,60 @@ namespace TencentCloud
                      */
                     bool EnableTswTraceServiceHasBeenSet() const;
 
+                    /**
+                     * 获取Tag
+                     * @return Tags Tag
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 设置Tag
+                     * @param Tags Tag
+                     */
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
+                    /**
+                     * 获取Environment type. Values: `test`, `pre`, `prod`
+                     * @return EnvType Environment type. Values: `test`, `pre`, `prod`
+                     */
+                    std::string GetEnvType() const;
+
+                    /**
+                     * 设置Environment type. Values: `test`, `pre`, `prod`
+                     * @param EnvType Environment type. Values: `test`, `pre`, `prod`
+                     */
+                    void SetEnvType(const std::string& _envType);
+
+                    /**
+                     * 判断参数 EnvType 是否已赋值
+                     * @return EnvType 是否已赋值
+                     */
+                    bool EnvTypeHasBeenSet() const;
+
+                    /**
+                     * 获取The region to create the environment
+                     * @return CreateRegion The region to create the environment
+                     */
+                    std::string GetCreateRegion() const;
+
+                    /**
+                     * 设置The region to create the environment
+                     * @param CreateRegion The region to create the environment
+                     */
+                    void SetCreateRegion(const std::string& _createRegion);
+
+                    /**
+                     * 判断参数 CreateRegion 是否已赋值
+                     * @return CreateRegion 是否已赋值
+                     */
+                    bool CreateRegionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -211,6 +266,24 @@ namespace TencentCloud
                      */
                     bool m_enableTswTraceService;
                     bool m_enableTswTraceServiceHasBeenSet;
+
+                    /**
+                     * Tag
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
+
+                    /**
+                     * Environment type. Values: `test`, `pre`, `prod`
+                     */
+                    std::string m_envType;
+                    bool m_envTypeHasBeenSet;
+
+                    /**
+                     * The region to create the environment
+                     */
+                    std::string m_createRegion;
+                    bool m_createRegionHasBeenSet;
 
                 };
             }

@@ -23,7 +23,9 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Vpc::V20170312::Model;
 using namespace std;
 
-TransformAddressResponse::TransformAddressResponse()
+TransformAddressResponse::TransformAddressResponse() :
+    m_taskIdHasBeenSet(false),
+    m_addressIdHasBeenSet(false)
 {
 }
 
@@ -61,6 +63,26 @@ CoreInternalOutcome TransformAddressResponse::Deserialize(const string &payload)
     }
 
 
+    if (rsp.HasMember("TaskId") && !rsp["TaskId"].IsNull())
+    {
+        if (!rsp["TaskId"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `TaskId` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_taskId = rsp["TaskId"].GetUint64();
+        m_taskIdHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("AddressId") && !rsp["AddressId"].IsNull())
+    {
+        if (!rsp["AddressId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AddressId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_addressId = string(rsp["AddressId"].GetString());
+        m_addressIdHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -70,6 +92,22 @@ string TransformAddressResponse::ToJsonString() const
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_taskIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "TaskId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_taskId, allocator);
+    }
+
+    if (m_addressIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AddressId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_addressId.c_str(), allocator).Move(), allocator);
+    }
 
     rapidjson::Value iKey(rapidjson::kStringType);
     string key = "RequestId";
@@ -82,5 +120,25 @@ string TransformAddressResponse::ToJsonString() const
     return buffer.GetString();
 }
 
+
+uint64_t TransformAddressResponse::GetTaskId() const
+{
+    return m_taskId;
+}
+
+bool TransformAddressResponse::TaskIdHasBeenSet() const
+{
+    return m_taskIdHasBeenSet;
+}
+
+string TransformAddressResponse::GetAddressId() const
+{
+    return m_addressId;
+}
+
+bool TransformAddressResponse::AddressIdHasBeenSet() const
+{
+    return m_addressIdHasBeenSet;
+}
 
 

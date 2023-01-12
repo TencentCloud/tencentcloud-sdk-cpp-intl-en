@@ -29,7 +29,10 @@ CreateEnvironmentRequest::CreateEnvironmentRequest() :
     m_descriptionHasBeenSet(false),
     m_k8sVersionHasBeenSet(false),
     m_sourceChannelHasBeenSet(false),
-    m_enableTswTraceServiceHasBeenSet(false)
+    m_enableTswTraceServiceHasBeenSet(false),
+    m_tagsHasBeenSet(false),
+    m_envTypeHasBeenSet(false),
+    m_createRegionHasBeenSet(false)
 {
 }
 
@@ -99,6 +102,37 @@ string CreateEnvironmentRequest::ToJsonString() const
         string key = "EnableTswTraceService";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_enableTswTraceService, allocator);
+    }
+
+    if (m_tagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tags";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_envTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EnvType";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_envType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_createRegionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CreateRegion";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_createRegion.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -219,6 +253,54 @@ void CreateEnvironmentRequest::SetEnableTswTraceService(const bool& _enableTswTr
 bool CreateEnvironmentRequest::EnableTswTraceServiceHasBeenSet() const
 {
     return m_enableTswTraceServiceHasBeenSet;
+}
+
+vector<Tag> CreateEnvironmentRequest::GetTags() const
+{
+    return m_tags;
+}
+
+void CreateEnvironmentRequest::SetTags(const vector<Tag>& _tags)
+{
+    m_tags = _tags;
+    m_tagsHasBeenSet = true;
+}
+
+bool CreateEnvironmentRequest::TagsHasBeenSet() const
+{
+    return m_tagsHasBeenSet;
+}
+
+string CreateEnvironmentRequest::GetEnvType() const
+{
+    return m_envType;
+}
+
+void CreateEnvironmentRequest::SetEnvType(const string& _envType)
+{
+    m_envType = _envType;
+    m_envTypeHasBeenSet = true;
+}
+
+bool CreateEnvironmentRequest::EnvTypeHasBeenSet() const
+{
+    return m_envTypeHasBeenSet;
+}
+
+string CreateEnvironmentRequest::GetCreateRegion() const
+{
+    return m_createRegion;
+}
+
+void CreateEnvironmentRequest::SetCreateRegion(const string& _createRegion)
+{
+    m_createRegion = _createRegion;
+    m_createRegionHasBeenSet = true;
+}
+
+bool CreateEnvironmentRequest::CreateRegionHasBeenSet() const
+{
+    return m_createRegionHasBeenSet;
 }
 
 

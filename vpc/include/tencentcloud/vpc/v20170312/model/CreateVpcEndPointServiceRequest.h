@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool ServiceInstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is of the type `PassService`. Valid values: true: yes; false: no. Default value: false
-                     * @return IsPassService Whether it is of the type `PassService`. Valid values: true: yes; false: no. Default value: false
+                     * 获取(Disused) Whether it’s a PaaS service
+                     * @return IsPassService (Disused) Whether it’s a PaaS service
                      */
                     bool GetIsPassService() const;
 
                     /**
-                     * 设置Whether it is of the type `PassService`. Valid values: true: yes; false: no. Default value: false
-                     * @param IsPassService Whether it is of the type `PassService`. Valid values: true: yes; false: no. Default value: false
+                     * 设置(Disused) Whether it’s a PaaS service
+                     * @param IsPassService (Disused) Whether it’s a PaaS service
                      */
                     void SetIsPassService(const bool& _isPassService);
 
@@ -131,6 +131,24 @@ namespace TencentCloud
                      * @return IsPassService 是否已赋值
                      */
                     bool IsPassServiceHasBeenSet() const;
+
+                    /**
+                     * 获取Mounted PaaS service type. Values: `CLB` (default), `CDB`, `CRS`
+                     * @return ServiceType Mounted PaaS service type. Values: `CLB` (default), `CDB`, `CRS`
+                     */
+                    std::string GetServiceType() const;
+
+                    /**
+                     * 设置Mounted PaaS service type. Values: `CLB` (default), `CDB`, `CRS`
+                     * @param ServiceType Mounted PaaS service type. Values: `CLB` (default), `CDB`, `CRS`
+                     */
+                    void SetServiceType(const std::string& _serviceType);
+
+                    /**
+                     * 判断参数 ServiceType 是否已赋值
+                     * @return ServiceType 是否已赋值
+                     */
+                    bool ServiceTypeHasBeenSet() const;
 
                 private:
 
@@ -159,10 +177,16 @@ namespace TencentCloud
                     bool m_serviceInstanceIdHasBeenSet;
 
                     /**
-                     * Whether it is of the type `PassService`. Valid values: true: yes; false: no. Default value: false
+                     * (Disused) Whether it’s a PaaS service
                      */
                     bool m_isPassService;
                     bool m_isPassServiceHasBeenSet;
+
+                    /**
+                     * Mounted PaaS service type. Values: `CLB` (default), `CDB`, `CRS`
+                     */
+                    std::string m_serviceType;
+                    bool m_serviceTypeHasBeenSet;
 
                 };
             }
