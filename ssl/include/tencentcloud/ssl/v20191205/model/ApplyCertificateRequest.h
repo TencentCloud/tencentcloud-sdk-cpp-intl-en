@@ -258,6 +258,42 @@ namespace TencentCloud
                      */
                     bool OldCertificateIdHasBeenSet() const;
 
+                    /**
+                     * 获取Benefit package ID, which is used to expand the free certificate package
+                     * @return PackageId Benefit package ID, which is used to expand the free certificate package
+                     */
+                    std::string GetPackageId() const;
+
+                    /**
+                     * 设置Benefit package ID, which is used to expand the free certificate package
+                     * @param PackageId Benefit package ID, which is used to expand the free certificate package
+                     */
+                    void SetPackageId(const std::string& _packageId);
+
+                    /**
+                     * 判断参数 PackageId 是否已赋值
+                     * @return PackageId 是否已赋值
+                     */
+                    bool PackageIdHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to delete the automatic domain name verification record after issuance, which is no by default. This parameter can be passed in only for domain names of the DNS_AUTO verification type.
+                     * @return DeleteDnsAutoRecord Whether to delete the automatic domain name verification record after issuance, which is no by default. This parameter can be passed in only for domain names of the DNS_AUTO verification type.
+                     */
+                    bool GetDeleteDnsAutoRecord() const;
+
+                    /**
+                     * 设置Whether to delete the automatic domain name verification record after issuance, which is no by default. This parameter can be passed in only for domain names of the DNS_AUTO verification type.
+                     * @param DeleteDnsAutoRecord Whether to delete the automatic domain name verification record after issuance, which is no by default. This parameter can be passed in only for domain names of the DNS_AUTO verification type.
+                     */
+                    void SetDeleteDnsAutoRecord(const bool& _deleteDnsAutoRecord);
+
+                    /**
+                     * 判断参数 DeleteDnsAutoRecord 是否已赋值
+                     * @return DeleteDnsAutoRecord 是否已赋值
+                     */
+                    bool DeleteDnsAutoRecordHasBeenSet() const;
+
                 private:
 
                     /**
@@ -331,6 +367,18 @@ namespace TencentCloud
                      */
                     std::string m_oldCertificateId;
                     bool m_oldCertificateIdHasBeenSet;
+
+                    /**
+                     * Benefit package ID, which is used to expand the free certificate package
+                     */
+                    std::string m_packageId;
+                    bool m_packageIdHasBeenSet;
+
+                    /**
+                     * Whether to delete the automatic domain name verification record after issuance, which is no by default. This parameter can be passed in only for domain names of the DNS_AUTO verification type.
+                     */
+                    bool m_deleteDnsAutoRecord;
+                    bool m_deleteDnsAutoRecordHasBeenSet;
 
                 };
             }

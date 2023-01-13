@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * This describes the conditions of enhancement services for the instance and their settings, such as the Agent of Cloud Security or Cloud Monitor.
+                * This describes the conditions and configurations of the enhanced services of the instance, such as cloud security, cloud monitor, TencentCloud Automation Tools, and other instance agents.
                 */
                 class EnhancedService : public AbstractModel
                 {
@@ -104,14 +104,14 @@ namespace TencentCloud
                     bool AutomationServiceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AutomationToolsService 
+                     * 获取Enable TAT service. If this parameter is not specified, the default logic is the same as that of the CVM instance. Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return AutomationToolsService Enable TAT service. If this parameter is not specified, the default logic is the same as that of the CVM instance. Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     RunAutomationServiceEnabled GetAutomationToolsService() const;
 
                     /**
-                     * 设置
-                     * @param AutomationToolsService 
+                     * 设置Enable TAT service. If this parameter is not specified, the default logic is the same as that of the CVM instance. Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param AutomationToolsService Enable TAT service. If this parameter is not specified, the default logic is the same as that of the CVM instance. Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetAutomationToolsService(const RunAutomationServiceEnabled& _automationToolsService);
 
@@ -142,7 +142,7 @@ namespace TencentCloud
                     bool m_automationServiceHasBeenSet;
 
                     /**
-                     * 
+                     * Enable TAT service. If this parameter is not specified, the default logic is the same as that of the CVM instance. Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     RunAutomationServiceEnabled m_automationToolsService;
                     bool m_automationToolsServiceHasBeenSet;

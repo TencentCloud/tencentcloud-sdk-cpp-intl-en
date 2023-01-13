@@ -57,7 +57,13 @@ DescribeCertificateDetailResponse::DescribeCertificateDetailResponse() :
     m_submittedDataHasBeenSet(false),
     m_renewAbleHasBeenSet(false),
     m_deployableHasBeenSet(false),
-    m_tagsHasBeenSet(false)
+    m_tagsHasBeenSet(false),
+    m_rootCertHasBeenSet(false),
+    m_encryptCertHasBeenSet(false),
+    m_encryptPrivateKeyHasBeenSet(false),
+    m_certFingerprintHasBeenSet(false),
+    m_encryptCertFingerprintHasBeenSet(false),
+    m_encryptAlgorithmHasBeenSet(false)
 {
 }
 
@@ -469,6 +475,73 @@ CoreInternalOutcome DescribeCertificateDetailResponse::Deserialize(const string 
         m_tagsHasBeenSet = true;
     }
 
+    if (rsp.HasMember("RootCert") && !rsp["RootCert"].IsNull())
+    {
+        if (!rsp["RootCert"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `RootCert` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_rootCert.Deserialize(rsp["RootCert"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_rootCertHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("EncryptCert") && !rsp["EncryptCert"].IsNull())
+    {
+        if (!rsp["EncryptCert"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `EncryptCert` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_encryptCert = string(rsp["EncryptCert"].GetString());
+        m_encryptCertHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("EncryptPrivateKey") && !rsp["EncryptPrivateKey"].IsNull())
+    {
+        if (!rsp["EncryptPrivateKey"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `EncryptPrivateKey` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_encryptPrivateKey = string(rsp["EncryptPrivateKey"].GetString());
+        m_encryptPrivateKeyHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("CertFingerprint") && !rsp["CertFingerprint"].IsNull())
+    {
+        if (!rsp["CertFingerprint"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `CertFingerprint` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_certFingerprint = string(rsp["CertFingerprint"].GetString());
+        m_certFingerprintHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("EncryptCertFingerprint") && !rsp["EncryptCertFingerprint"].IsNull())
+    {
+        if (!rsp["EncryptCertFingerprint"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `EncryptCertFingerprint` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_encryptCertFingerprint = string(rsp["EncryptCertFingerprint"].GetString());
+        m_encryptCertFingerprintHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("EncryptAlgorithm") && !rsp["EncryptAlgorithm"].IsNull())
+    {
+        if (!rsp["EncryptAlgorithm"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `EncryptAlgorithm` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_encryptAlgorithm = string(rsp["EncryptAlgorithm"].GetString());
+        m_encryptAlgorithmHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -764,6 +837,55 @@ string DescribeCertificateDetailResponse::ToJsonString() const
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_rootCertHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RootCert";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_rootCert.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_encryptCertHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EncryptCert";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_encryptCert.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_encryptPrivateKeyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EncryptPrivateKey";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_encryptPrivateKey.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_certFingerprintHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CertFingerprint";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_certFingerprint.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_encryptCertFingerprintHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EncryptCertFingerprint";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_encryptCertFingerprint.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_encryptAlgorithmHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EncryptAlgorithm";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_encryptAlgorithm.c_str(), allocator).Move(), allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -1116,6 +1238,66 @@ vector<Tags> DescribeCertificateDetailResponse::GetTags() const
 bool DescribeCertificateDetailResponse::TagsHasBeenSet() const
 {
     return m_tagsHasBeenSet;
+}
+
+RootCertificates DescribeCertificateDetailResponse::GetRootCert() const
+{
+    return m_rootCert;
+}
+
+bool DescribeCertificateDetailResponse::RootCertHasBeenSet() const
+{
+    return m_rootCertHasBeenSet;
+}
+
+string DescribeCertificateDetailResponse::GetEncryptCert() const
+{
+    return m_encryptCert;
+}
+
+bool DescribeCertificateDetailResponse::EncryptCertHasBeenSet() const
+{
+    return m_encryptCertHasBeenSet;
+}
+
+string DescribeCertificateDetailResponse::GetEncryptPrivateKey() const
+{
+    return m_encryptPrivateKey;
+}
+
+bool DescribeCertificateDetailResponse::EncryptPrivateKeyHasBeenSet() const
+{
+    return m_encryptPrivateKeyHasBeenSet;
+}
+
+string DescribeCertificateDetailResponse::GetCertFingerprint() const
+{
+    return m_certFingerprint;
+}
+
+bool DescribeCertificateDetailResponse::CertFingerprintHasBeenSet() const
+{
+    return m_certFingerprintHasBeenSet;
+}
+
+string DescribeCertificateDetailResponse::GetEncryptCertFingerprint() const
+{
+    return m_encryptCertFingerprint;
+}
+
+bool DescribeCertificateDetailResponse::EncryptCertFingerprintHasBeenSet() const
+{
+    return m_encryptCertFingerprintHasBeenSet;
+}
+
+string DescribeCertificateDetailResponse::GetEncryptAlgorithm() const
+{
+    return m_encryptAlgorithm;
+}
+
+bool DescribeCertificateDetailResponse::EncryptAlgorithmHasBeenSet() const
+{
+    return m_encryptAlgorithmHasBeenSet;
 }
 
 

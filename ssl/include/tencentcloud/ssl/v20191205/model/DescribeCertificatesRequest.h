@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of certificates on each page. The default value is 20.
-                     * @return Limit Number of certificates on each page. The default value is 20.
+                     * 获取Number of entries per page. Default value: `20`. Maximum value: `1000`.
+                     * @return Limit Number of entries per page. Default value: `20`. Maximum value: `1000`.
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of certificates on each page. The default value is 20.
-                     * @param Limit Number of certificates on each page. The default value is 20.
+                     * 设置Number of entries per page. Default value: `20`. Maximum value: `1000`.
+                     * @param Limit Number of entries per page. Default value: `20`. Maximum value: `1000`.
                      */
                     void SetLimit(const uint64_t& _limit);
 
@@ -151,14 +151,14 @@ namespace TencentCloud
                     bool ExpirationSortHasBeenSet() const;
 
                     /**
-                     * 获取Certificate status
-                     * @return CertificateStatus Certificate status
+                     * 获取Certificate status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate.
+                     * @return CertificateStatus Certificate status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate.
                      */
                     std::vector<uint64_t> GetCertificateStatus() const;
 
                     /**
-                     * 设置Certificate status
-                     * @param CertificateStatus Certificate status
+                     * 设置Certificate status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate.
+                     * @param CertificateStatus Certificate status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate.
                      */
                     void SetCertificateStatus(const std::vector<uint64_t>& _certificateStatus);
 
@@ -186,6 +186,96 @@ namespace TencentCloud
                      */
                     bool DeployableHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to filter uploaded hosted certificates. `1`: Yes; `0`: No.
+                     * @return Upload Whether to filter uploaded hosted certificates. `1`: Yes; `0`: No.
+                     */
+                    int64_t GetUpload() const;
+
+                    /**
+                     * 设置Whether to filter uploaded hosted certificates. `1`: Yes; `0`: No.
+                     * @param Upload Whether to filter uploaded hosted certificates. `1`: Yes; `0`: No.
+                     */
+                    void SetUpload(const int64_t& _upload);
+
+                    /**
+                     * 判断参数 Upload 是否已赋值
+                     * @return Upload 是否已赋值
+                     */
+                    bool UploadHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to filter renewable certificates. `1`: Yes; `0`: No.
+                     * @return Renew Whether to filter renewable certificates. `1`: Yes; `0`: No.
+                     */
+                    int64_t GetRenew() const;
+
+                    /**
+                     * 设置Whether to filter renewable certificates. `1`: Yes; `0`: No.
+                     * @param Renew Whether to filter renewable certificates. `1`: Yes; `0`: No.
+                     */
+                    void SetRenew(const int64_t& _renew);
+
+                    /**
+                     * 判断参数 Renew 是否已赋值
+                     * @return Renew 是否已赋值
+                     */
+                    bool RenewHasBeenSet() const;
+
+                    /**
+                     * 获取Filter by source. `upload`: Uploaded certificate; `buy`: Tencent Cloud certificate. If this parameter is left empty, all certificates will be queried.
+                     * @return FilterSource Filter by source. `upload`: Uploaded certificate; `buy`: Tencent Cloud certificate. If this parameter is left empty, all certificates will be queried.
+                     */
+                    std::string GetFilterSource() const;
+
+                    /**
+                     * 设置Filter by source. `upload`: Uploaded certificate; `buy`: Tencent Cloud certificate. If this parameter is left empty, all certificates will be queried.
+                     * @param FilterSource Filter by source. `upload`: Uploaded certificate; `buy`: Tencent Cloud certificate. If this parameter is left empty, all certificates will be queried.
+                     */
+                    void SetFilterSource(const std::string& _filterSource);
+
+                    /**
+                     * 判断参数 FilterSource 是否已赋值
+                     * @return FilterSource 是否已赋值
+                     */
+                    bool FilterSourceHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to filter Chinese SM certificates. `1`: Yes; `0`: No.
+                     * @return IsSM Whether to filter Chinese SM certificates. `1`: Yes; `0`: No.
+                     */
+                    int64_t GetIsSM() const;
+
+                    /**
+                     * 设置Whether to filter Chinese SM certificates. `1`: Yes; `0`: No.
+                     * @param IsSM Whether to filter Chinese SM certificates. `1`: Yes; `0`: No.
+                     */
+                    void SetIsSM(const int64_t& _isSM);
+
+                    /**
+                     * 判断参数 IsSM 是否已赋值
+                     * @return IsSM 是否已赋值
+                     */
+                    bool IsSMHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to filter expiring certificates. `1`: Yes; `0`: No.
+                     * @return FilterExpiring Whether to filter expiring certificates. `1`: Yes; `0`: No.
+                     */
+                    uint64_t GetFilterExpiring() const;
+
+                    /**
+                     * 设置Whether to filter expiring certificates. `1`: Yes; `0`: No.
+                     * @param FilterExpiring Whether to filter expiring certificates. `1`: Yes; `0`: No.
+                     */
+                    void SetFilterExpiring(const uint64_t& _filterExpiring);
+
+                    /**
+                     * 判断参数 FilterExpiring 是否已赋值
+                     * @return FilterExpiring 是否已赋值
+                     */
+                    bool FilterExpiringHasBeenSet() const;
+
                 private:
 
                     /**
@@ -195,7 +285,7 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of certificates on each page. The default value is 20.
+                     * Number of entries per page. Default value: `20`. Maximum value: `1000`.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
@@ -225,7 +315,7 @@ namespace TencentCloud
                     bool m_expirationSortHasBeenSet;
 
                     /**
-                     * Certificate status
+                     * Certificate status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate.
                      */
                     std::vector<uint64_t> m_certificateStatus;
                     bool m_certificateStatusHasBeenSet;
@@ -235,6 +325,36 @@ namespace TencentCloud
                      */
                     uint64_t m_deployable;
                     bool m_deployableHasBeenSet;
+
+                    /**
+                     * Whether to filter uploaded hosted certificates. `1`: Yes; `0`: No.
+                     */
+                    int64_t m_upload;
+                    bool m_uploadHasBeenSet;
+
+                    /**
+                     * Whether to filter renewable certificates. `1`: Yes; `0`: No.
+                     */
+                    int64_t m_renew;
+                    bool m_renewHasBeenSet;
+
+                    /**
+                     * Filter by source. `upload`: Uploaded certificate; `buy`: Tencent Cloud certificate. If this parameter is left empty, all certificates will be queried.
+                     */
+                    std::string m_filterSource;
+                    bool m_filterSourceHasBeenSet;
+
+                    /**
+                     * Whether to filter Chinese SM certificates. `1`: Yes; `0`: No.
+                     */
+                    int64_t m_isSM;
+                    bool m_isSMHasBeenSet;
+
+                    /**
+                     * Whether to filter expiring certificates. `1`: Yes; `0`: No.
+                     */
+                    uint64_t m_filterExpiring;
+                    bool m_filterExpiringHasBeenSet;
 
                 };
             }

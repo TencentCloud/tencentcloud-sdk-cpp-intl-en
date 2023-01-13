@@ -30,7 +30,12 @@ DescribeCertificatesRequest::DescribeCertificatesRequest() :
     m_projectIdHasBeenSet(false),
     m_expirationSortHasBeenSet(false),
     m_certificateStatusHasBeenSet(false),
-    m_deployableHasBeenSet(false)
+    m_deployableHasBeenSet(false),
+    m_uploadHasBeenSet(false),
+    m_renewHasBeenSet(false),
+    m_filterSourceHasBeenSet(false),
+    m_isSMHasBeenSet(false),
+    m_filterExpiringHasBeenSet(false)
 {
 }
 
@@ -108,6 +113,46 @@ string DescribeCertificatesRequest::ToJsonString() const
         string key = "Deployable";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_deployable, allocator);
+    }
+
+    if (m_uploadHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Upload";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_upload, allocator);
+    }
+
+    if (m_renewHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Renew";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_renew, allocator);
+    }
+
+    if (m_filterSourceHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FilterSource";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_filterSource.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_isSMHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "IsSM";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_isSM, allocator);
+    }
+
+    if (m_filterExpiringHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FilterExpiring";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_filterExpiring, allocator);
     }
 
 
@@ -244,6 +289,86 @@ void DescribeCertificatesRequest::SetDeployable(const uint64_t& _deployable)
 bool DescribeCertificatesRequest::DeployableHasBeenSet() const
 {
     return m_deployableHasBeenSet;
+}
+
+int64_t DescribeCertificatesRequest::GetUpload() const
+{
+    return m_upload;
+}
+
+void DescribeCertificatesRequest::SetUpload(const int64_t& _upload)
+{
+    m_upload = _upload;
+    m_uploadHasBeenSet = true;
+}
+
+bool DescribeCertificatesRequest::UploadHasBeenSet() const
+{
+    return m_uploadHasBeenSet;
+}
+
+int64_t DescribeCertificatesRequest::GetRenew() const
+{
+    return m_renew;
+}
+
+void DescribeCertificatesRequest::SetRenew(const int64_t& _renew)
+{
+    m_renew = _renew;
+    m_renewHasBeenSet = true;
+}
+
+bool DescribeCertificatesRequest::RenewHasBeenSet() const
+{
+    return m_renewHasBeenSet;
+}
+
+string DescribeCertificatesRequest::GetFilterSource() const
+{
+    return m_filterSource;
+}
+
+void DescribeCertificatesRequest::SetFilterSource(const string& _filterSource)
+{
+    m_filterSource = _filterSource;
+    m_filterSourceHasBeenSet = true;
+}
+
+bool DescribeCertificatesRequest::FilterSourceHasBeenSet() const
+{
+    return m_filterSourceHasBeenSet;
+}
+
+int64_t DescribeCertificatesRequest::GetIsSM() const
+{
+    return m_isSM;
+}
+
+void DescribeCertificatesRequest::SetIsSM(const int64_t& _isSM)
+{
+    m_isSM = _isSM;
+    m_isSMHasBeenSet = true;
+}
+
+bool DescribeCertificatesRequest::IsSMHasBeenSet() const
+{
+    return m_isSMHasBeenSet;
+}
+
+uint64_t DescribeCertificatesRequest::GetFilterExpiring() const
+{
+    return m_filterExpiring;
+}
+
+void DescribeCertificatesRequest::SetFilterExpiring(const uint64_t& _filterExpiring)
+{
+    m_filterExpiring = _filterExpiring;
+    m_filterExpiringHasBeenSet = true;
+}
+
+bool DescribeCertificatesRequest::FilterExpiringHasBeenSet() const
+{
+    return m_filterExpiringHasBeenSet;
 }
 
 

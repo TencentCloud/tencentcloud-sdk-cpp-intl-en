@@ -27,6 +27,7 @@
 #include <tencentcloud/ssl/v20191205/model/CertificateExtra.h>
 #include <tencentcloud/ssl/v20191205/model/ProjectInfo.h>
 #include <tencentcloud/ssl/v20191205/model/Tags.h>
+#include <tencentcloud/ssl/v20191205/model/PreAuditInfo.h>
 
 
 namespace TencentCloud
@@ -226,18 +227,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool AliasHasBeenSet() const;
 
                     /**
-                     * 获取Status value. `0`: reviewing; `1`: approved; `2`: unapproved; `3`: expired; `4`: DNS record added; `5`: OV/EV certificate, information to be submitted; `6`: canceling order; `7`: canceled; `8`: information submitted, pending confirmation letter upload
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Status Status value. `0`: reviewing; `1`: approved; `2`: unapproved; `3`: expired; `4`: DNS record added; `5`: OV/EV certificate, information to be submitted; `6`: canceling order; `7`: canceled; `8`: information submitted, pending confirmation letter upload
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added for domain names of the DNS_AUTO verification type; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate; `14`: Refunded.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Status Status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added for domain names of the DNS_AUTO verification type; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate; `14`: Refunded.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetStatus() const;
 
                     /**
-                     * 设置Status value. `0`: reviewing; `1`: approved; `2`: unapproved; `3`: expired; `4`: DNS record added; `5`: OV/EV certificate, information to be submitted; `6`: canceling order; `7`: canceled; `8`: information submitted, pending confirmation letter upload
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param Status Status value. `0`: reviewing; `1`: approved; `2`: unapproved; `3`: expired; `4`: DNS record added; `5`: OV/EV certificate, information to be submitted; `6`: canceling order; `7`: canceled; `8`: information submitted, pending confirmation letter upload
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added for domain names of the DNS_AUTO verification type; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate; `14`: Refunded.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Status Status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added for domain names of the DNS_AUTO verification type; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate; `14`: Refunded.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetStatus(const uint64_t& _status);
 
@@ -709,6 +710,182 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool TagsHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the expiration notification was ignored
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IsIgnore Whether the expiration notification was ignored
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool GetIsIgnore() const;
+
+                    /**
+                     * 设置Whether the expiration notification was ignored
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param IsIgnore Whether the expiration notification was ignored
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetIsIgnore(const bool& _isIgnore);
+
+                    /**
+                     * 判断参数 IsIgnore 是否已赋值
+                     * @return IsIgnore 是否已赋值
+                     */
+                    bool IsIgnoreHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the certificate is a Chinese SM certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IsSM Whether the certificate is a Chinese SM certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool GetIsSM() const;
+
+                    /**
+                     * 设置Whether the certificate is a Chinese SM certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param IsSM Whether the certificate is a Chinese SM certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetIsSM(const bool& _isSM);
+
+                    /**
+                     * 判断参数 IsSM 是否已赋值
+                     * @return IsSM 是否已赋值
+                     */
+                    bool IsSMHasBeenSet() const;
+
+                    /**
+                     * 获取Certificate algorithm
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return EncryptAlgorithm Certificate algorithm
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetEncryptAlgorithm() const;
+
+                    /**
+                     * 设置Certificate algorithm
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param EncryptAlgorithm Certificate algorithm
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetEncryptAlgorithm(const std::string& _encryptAlgorithm);
+
+                    /**
+                     * 判断参数 EncryptAlgorithm 是否已赋值
+                     * @return EncryptAlgorithm 是否已赋值
+                     */
+                    bool EncryptAlgorithmHasBeenSet() const;
+
+                    /**
+                     * 获取Encryption algorithm of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CAEncryptAlgorithms Encryption algorithm of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> GetCAEncryptAlgorithms() const;
+
+                    /**
+                     * 设置Encryption algorithm of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param CAEncryptAlgorithms Encryption algorithm of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetCAEncryptAlgorithms(const std::vector<std::string>& _cAEncryptAlgorithms);
+
+                    /**
+                     * 判断参数 CAEncryptAlgorithms 是否已赋值
+                     * @return CAEncryptAlgorithms 是否已赋值
+                     */
+                    bool CAEncryptAlgorithmsHasBeenSet() const;
+
+                    /**
+                     * 获取Expiration time of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CAEndTimes Expiration time of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> GetCAEndTimes() const;
+
+                    /**
+                     * 设置Expiration time of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param CAEndTimes Expiration time of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetCAEndTimes(const std::vector<std::string>& _cAEndTimes);
+
+                    /**
+                     * 判断参数 CAEndTimes 是否已赋值
+                     * @return CAEndTimes 是否已赋值
+                     */
+                    bool CAEndTimesHasBeenSet() const;
+
+                    /**
+                     * 获取Generic name of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CACommonNames Generic name of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> GetCACommonNames() const;
+
+                    /**
+                     * 设置Generic name of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param CACommonNames Generic name of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetCACommonNames(const std::vector<std::string>& _cACommonNames);
+
+                    /**
+                     * 判断参数 CACommonNames 是否已赋值
+                     * @return CACommonNames 是否已赋值
+                     */
+                    bool CACommonNamesHasBeenSet() const;
+
+                    /**
+                     * 获取Prereview information of the certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return PreAuditInfo Prereview information of the certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    PreAuditInfo GetPreAuditInfo() const;
+
+                    /**
+                     * 设置Prereview information of the certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param PreAuditInfo Prereview information of the certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetPreAuditInfo(const PreAuditInfo& _preAuditInfo);
+
+                    /**
+                     * 判断参数 PreAuditInfo 是否已赋值
+                     * @return PreAuditInfo 是否已赋值
+                     */
+                    bool PreAuditInfoHasBeenSet() const;
+
+                    /**
+                     * 获取Whether auto-renewal is enabled.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return AutoRenewFlag Whether auto-renewal is enabled.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    int64_t GetAutoRenewFlag() const;
+
+                    /**
+                     * 设置Whether auto-renewal is enabled.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param AutoRenewFlag Whether auto-renewal is enabled.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    void SetAutoRenewFlag(const int64_t& _autoRenewFlag);
+
+                    /**
+                     * 判断参数 AutoRenewFlag 是否已赋值
+                     * @return AutoRenewFlag 是否已赋值
+                     */
+                    bool AutoRenewFlagHasBeenSet() const;
+
                 private:
 
                     /**
@@ -768,8 +945,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_aliasHasBeenSet;
 
                     /**
-                     * Status value. `0`: reviewing; `1`: approved; `2`: unapproved; `3`: expired; `4`: DNS record added; `5`: OV/EV certificate, information to be submitted; `6`: canceling order; `7`: canceled; `8`: information submitted, pending confirmation letter upload
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added for domain names of the DNS_AUTO verification type; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate; `14`: Refunded.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;
@@ -920,6 +1097,62 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::vector<Tags> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * Whether the expiration notification was ignored
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool m_isIgnore;
+                    bool m_isIgnoreHasBeenSet;
+
+                    /**
+                     * Whether the certificate is a Chinese SM certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool m_isSM;
+                    bool m_isSMHasBeenSet;
+
+                    /**
+                     * Certificate algorithm
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_encryptAlgorithm;
+                    bool m_encryptAlgorithmHasBeenSet;
+
+                    /**
+                     * Encryption algorithm of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_cAEncryptAlgorithms;
+                    bool m_cAEncryptAlgorithmsHasBeenSet;
+
+                    /**
+                     * Expiration time of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_cAEndTimes;
+                    bool m_cAEndTimesHasBeenSet;
+
+                    /**
+                     * Generic name of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_cACommonNames;
+                    bool m_cACommonNamesHasBeenSet;
+
+                    /**
+                     * Prereview information of the certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    PreAuditInfo m_preAuditInfo;
+                    bool m_preAuditInfoHasBeenSet;
+
+                    /**
+                     * Whether auto-renewal is enabled.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    int64_t m_autoRenewFlag;
+                    bool m_autoRenewFlagHasBeenSet;
 
                 };
             }

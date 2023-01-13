@@ -31,6 +31,7 @@
 #include <tencentcloud/as/v20180419/model/HostNameSettings.h>
 #include <tencentcloud/as/v20180419/model/InstanceNameSettings.h>
 #include <tencentcloud/as/v20180419/model/InstanceChargePrepaid.h>
+#include <tencentcloud/as/v20180419/model/IPv6InternetAccessible.h>
 
 
 namespace TencentCloud
@@ -466,6 +467,24 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
                      */
                     bool DiskTypePolicyHasBeenSet() const;
 
+                    /**
+                     * 获取IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
+                     * @return IPv6InternetAccessible IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
+                     */
+                    IPv6InternetAccessible GetIPv6InternetAccessible() const;
+
+                    /**
+                     * 设置IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
+                     * @param IPv6InternetAccessible IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
+                     */
+                    void SetIPv6InternetAccessible(const IPv6InternetAccessible& _iPv6InternetAccessible);
+
+                    /**
+                     * 判断参数 IPv6InternetAccessible 是否已赋值
+                     * @return IPv6InternetAccessible 是否已赋值
+                     */
+                    bool IPv6InternetAccessibleHasBeenSet() const;
+
                 private:
 
                     /**
@@ -602,6 +621,12 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
                      */
                     std::string m_diskTypePolicy;
                     bool m_diskTypePolicyHasBeenSet;
+
+                    /**
+                     * IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
+                     */
+                    IPv6InternetAccessible m_iPv6InternetAccessible;
+                    bool m_iPv6InternetAccessibleHasBeenSet;
 
                 };
             }

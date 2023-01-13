@@ -29,6 +29,7 @@
 #include <tencentcloud/as/v20180419/model/HostNameSettings.h>
 #include <tencentcloud/as/v20180419/model/InstanceNameSettings.h>
 #include <tencentcloud/as/v20180419/model/EnhancedService.h>
+#include <tencentcloud/as/v20180419/model/IPv6InternetAccessible.h>
 
 
 namespace TencentCloud
@@ -492,6 +493,24 @@ Note: This field is default to empty
                      */
                     bool HpcClusterIdHasBeenSet() const;
 
+                    /**
+                     * 获取IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
+                     * @return IPv6InternetAccessible IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
+                     */
+                    IPv6InternetAccessible GetIPv6InternetAccessible() const;
+
+                    /**
+                     * 设置IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
+                     * @param IPv6InternetAccessible IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
+                     */
+                    void SetIPv6InternetAccessible(const IPv6InternetAccessible& _iPv6InternetAccessible);
+
+                    /**
+                     * 判断参数 IPv6InternetAccessible 是否已赋值
+                     * @return IPv6InternetAccessible 是否已赋值
+                     */
+                    bool IPv6InternetAccessibleHasBeenSet() const;
+
                 private:
 
                     /**
@@ -632,6 +651,12 @@ Note: This field is default to empty
                      */
                     std::string m_hpcClusterId;
                     bool m_hpcClusterIdHasBeenSet;
+
+                    /**
+                     * IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
+                     */
+                    IPv6InternetAccessible m_iPv6InternetAccessible;
+                    bool m_iPv6InternetAccessibleHasBeenSet;
 
                 };
             }

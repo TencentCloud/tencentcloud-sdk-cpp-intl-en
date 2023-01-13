@@ -34,7 +34,9 @@ ApplyCertificateRequest::ApplyCertificateRequest() :
     m_csrKeyParameterHasBeenSet(false),
     m_csrKeyPasswordHasBeenSet(false),
     m_aliasHasBeenSet(false),
-    m_oldCertificateIdHasBeenSet(false)
+    m_oldCertificateIdHasBeenSet(false),
+    m_packageIdHasBeenSet(false),
+    m_deleteDnsAutoRecordHasBeenSet(false)
 {
 }
 
@@ -139,6 +141,22 @@ string ApplyCertificateRequest::ToJsonString() const
         string key = "OldCertificateId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_oldCertificateId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_packageIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PackageId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_packageId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_deleteDnsAutoRecordHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DeleteDnsAutoRecord";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_deleteDnsAutoRecord, allocator);
     }
 
 
@@ -339,6 +357,38 @@ void ApplyCertificateRequest::SetOldCertificateId(const string& _oldCertificateI
 bool ApplyCertificateRequest::OldCertificateIdHasBeenSet() const
 {
     return m_oldCertificateIdHasBeenSet;
+}
+
+string ApplyCertificateRequest::GetPackageId() const
+{
+    return m_packageId;
+}
+
+void ApplyCertificateRequest::SetPackageId(const string& _packageId)
+{
+    m_packageId = _packageId;
+    m_packageIdHasBeenSet = true;
+}
+
+bool ApplyCertificateRequest::PackageIdHasBeenSet() const
+{
+    return m_packageIdHasBeenSet;
+}
+
+bool ApplyCertificateRequest::GetDeleteDnsAutoRecord() const
+{
+    return m_deleteDnsAutoRecord;
+}
+
+void ApplyCertificateRequest::SetDeleteDnsAutoRecord(const bool& _deleteDnsAutoRecord)
+{
+    m_deleteDnsAutoRecord = _deleteDnsAutoRecord;
+    m_deleteDnsAutoRecordHasBeenSet = true;
+}
+
+bool ApplyCertificateRequest::DeleteDnsAutoRecordHasBeenSet() const
+{
+    return m_deleteDnsAutoRecordHasBeenSet;
 }
 
 

@@ -25,6 +25,7 @@
 #include <tencentcloud/ssl/v20191205/model/DvAuthDetail.h>
 #include <tencentcloud/ssl/v20191205/model/SubmittedData.h>
 #include <tencentcloud/ssl/v20191205/model/Tags.h>
+#include <tencentcloud/ssl/v20191205/model/RootCertificates.h>
 
 
 namespace TencentCloud
@@ -398,10 +399,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool StatusNameHasBeenSet() const;
 
                     /**
-                     * 获取Domain names associated with the certificate (including the primary domain name)
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SubjectAltName Domain names associated with the certificate (including the primary domain name)
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Multiple domain names included in the certificate (excluding the primary domain name, which uses the `Domain` field)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SubjectAltName Multiple domain names included in the certificate (excluding the primary domain name, which uses the `Domain` field)
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> GetSubjectAltName() const;
 
@@ -412,10 +413,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SubjectAltNameHasBeenSet() const;
 
                     /**
-                     * 获取Whether the customer is a VIP customer
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return IsVip Whether the customer is a VIP customer
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether the certificate is a paid one.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IsVip Whether the certificate is a paid one.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     bool GetIsVip() const;
 
@@ -482,10 +483,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SubmittedDataHasBeenSet() const;
 
                     /**
-                     * 获取Whether the certificate can be reissued
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return RenewAble Whether the certificate can be reissued
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether the certificate can be renewed.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RenewAble Whether the certificate can be renewed.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     bool GetRenewAble() const;
 
@@ -522,6 +523,90 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      * @return Tags 是否已赋值
                      */
                     bool TagsHasBeenSet() const;
+
+                    /**
+                     * 获取Root certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RootCert Root certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    RootCertificates GetRootCert() const;
+
+                    /**
+                     * 判断参数 RootCert 是否已赋值
+                     * @return RootCert 是否已赋值
+                     */
+                    bool RootCertHasBeenSet() const;
+
+                    /**
+                     * 获取Chinese SM encryption certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return EncryptCert Chinese SM encryption certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetEncryptCert() const;
+
+                    /**
+                     * 判断参数 EncryptCert 是否已赋值
+                     * @return EncryptCert 是否已赋值
+                     */
+                    bool EncryptCertHasBeenSet() const;
+
+                    /**
+                     * 获取Private key of Chinese SM encryption
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return EncryptPrivateKey Private key of Chinese SM encryption
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetEncryptPrivateKey() const;
+
+                    /**
+                     * 判断参数 EncryptPrivateKey 是否已赋值
+                     * @return EncryptPrivateKey 是否已赋值
+                     */
+                    bool EncryptPrivateKeyHasBeenSet() const;
+
+                    /**
+                     * 获取SHA1 fingerprint of the signature certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CertFingerprint SHA1 fingerprint of the signature certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetCertFingerprint() const;
+
+                    /**
+                     * 判断参数 CertFingerprint 是否已赋值
+                     * @return CertFingerprint 是否已赋值
+                     */
+                    bool CertFingerprintHasBeenSet() const;
+
+                    /**
+                     * 获取SHA1 fingerprint of the encryption certificate (for Chinese SM certificates only)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return EncryptCertFingerprint SHA1 fingerprint of the encryption certificate (for Chinese SM certificates only)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetEncryptCertFingerprint() const;
+
+                    /**
+                     * 判断参数 EncryptCertFingerprint 是否已赋值
+                     * @return EncryptCertFingerprint 是否已赋值
+                     */
+                    bool EncryptCertFingerprintHasBeenSet() const;
+
+                    /**
+                     * 获取Certificate algorithm
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return EncryptAlgorithm Certificate algorithm
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetEncryptAlgorithm() const;
+
+                    /**
+                     * 判断参数 EncryptAlgorithm 是否已赋值
+                     * @return EncryptAlgorithm 是否已赋值
+                     */
+                    bool EncryptAlgorithmHasBeenSet() const;
 
                 private:
 
@@ -701,15 +786,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_statusNameHasBeenSet;
 
                     /**
-                     * Domain names associated with the certificate (including the primary domain name)
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Multiple domain names included in the certificate (excluding the primary domain name, which uses the `Domain` field)
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_subjectAltName;
                     bool m_subjectAltNameHasBeenSet;
 
                     /**
-                     * Whether the customer is a VIP customer
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Whether the certificate is a paid one.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_isVip;
                     bool m_isVipHasBeenSet;
@@ -743,8 +828,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_submittedDataHasBeenSet;
 
                     /**
-                     * Whether the certificate can be reissued
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Whether the certificate can be renewed.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_renewAble;
                     bool m_renewAbleHasBeenSet;
@@ -762,6 +847,48 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::vector<Tags> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * Root certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    RootCertificates m_rootCert;
+                    bool m_rootCertHasBeenSet;
+
+                    /**
+                     * Chinese SM encryption certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_encryptCert;
+                    bool m_encryptCertHasBeenSet;
+
+                    /**
+                     * Private key of Chinese SM encryption
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_encryptPrivateKey;
+                    bool m_encryptPrivateKeyHasBeenSet;
+
+                    /**
+                     * SHA1 fingerprint of the signature certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_certFingerprint;
+                    bool m_certFingerprintHasBeenSet;
+
+                    /**
+                     * SHA1 fingerprint of the encryption certificate (for Chinese SM certificates only)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_encryptCertFingerprint;
+                    bool m_encryptCertFingerprintHasBeenSet;
+
+                    /**
+                     * Certificate algorithm
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_encryptAlgorithm;
+                    bool m_encryptAlgorithmHasBeenSet;
 
                 };
             }

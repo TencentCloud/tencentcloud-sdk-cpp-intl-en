@@ -32,6 +32,7 @@ set(ssl_public_header_model
   include/tencentcloud/ssl/v20191205/model/CertificateExtra.h
   include/tencentcloud/ssl/v20191205/model/DescribeCertificateResponse.h
   include/tencentcloud/ssl/v20191205/model/OperationLog.h
+  include/tencentcloud/ssl/v20191205/model/RootCertificates.h
   include/tencentcloud/ssl/v20191205/model/UploadCertificateRequest.h
   include/tencentcloud/ssl/v20191205/model/DescribeCertificateDetailRequest.h
   include/tencentcloud/ssl/v20191205/model/Tags.h
@@ -55,6 +56,7 @@ set(ssl_public_header_model
   include/tencentcloud/ssl/v20191205/model/SubmitCertificateInformationRequest.h
   include/tencentcloud/ssl/v20191205/model/SubmittedData.h
   include/tencentcloud/ssl/v20191205/model/DescribeCertificatesRequest.h
+  include/tencentcloud/ssl/v20191205/model/PreAuditInfo.h
   )
 
 set(ssl_src
@@ -72,6 +74,7 @@ set(ssl_src
   src/v20191205/model/CertificateExtra.cpp
   src/v20191205/model/DescribeCertificateResponse.cpp
   src/v20191205/model/OperationLog.cpp
+  src/v20191205/model/RootCertificates.cpp
   src/v20191205/model/UploadCertificateRequest.cpp
   src/v20191205/model/DescribeCertificateDetailRequest.cpp
   src/v20191205/model/Tags.cpp
@@ -95,6 +98,7 @@ set(ssl_src
   src/v20191205/model/SubmitCertificateInformationRequest.cpp
   src/v20191205/model/SubmittedData.cpp
   src/v20191205/model/DescribeCertificatesRequest.cpp
+  src/v20191205/model/PreAuditInfo.cpp
   )
 
 set(ssl_include
