@@ -69,18 +69,18 @@ namespace TencentCloud
                     bool InternationalHasBeenSet() const;
 
                     /**
-                     * 获取Array of template IDs. If the array is empty, the template list information will be queried by default (only allowed for root accounts). You need to use the `Limit` and `Offset` fields to set the query range.
-<dx-alert infotype="notice" title="Note">The default array length can be up to 100</dx-alert>
-                     * @return TemplateIdSet Array of template IDs. If the array is empty, the template list information will be queried by default (only allowed for root accounts). You need to use the `Limit` and `Offset` fields to set the query range.
-<dx-alert infotype="notice" title="Note">The default array length can be up to 100</dx-alert>
+                     * 获取Array of template IDs. If the array is empty, the template list information will be queried by default. You need to use the `Limit` and `Offset` fields to set the query range.
+<dx-alert infotype="notice" title="Note">The max array length is 100 by default.</dx-alert>
+                     * @return TemplateIdSet Array of template IDs. If the array is empty, the template list information will be queried by default. You need to use the `Limit` and `Offset` fields to set the query range.
+<dx-alert infotype="notice" title="Note">The max array length is 100 by default.</dx-alert>
                      */
                     std::vector<uint64_t> GetTemplateIdSet() const;
 
                     /**
-                     * 设置Array of template IDs. If the array is empty, the template list information will be queried by default (only allowed for root accounts). You need to use the `Limit` and `Offset` fields to set the query range.
-<dx-alert infotype="notice" title="Note">The default array length can be up to 100</dx-alert>
-                     * @param TemplateIdSet Array of template IDs. If the array is empty, the template list information will be queried by default (only allowed for root accounts). You need to use the `Limit` and `Offset` fields to set the query range.
-<dx-alert infotype="notice" title="Note">The default array length can be up to 100</dx-alert>
+                     * 设置Array of template IDs. If the array is empty, the template list information will be queried by default. You need to use the `Limit` and `Offset` fields to set the query range.
+<dx-alert infotype="notice" title="Note">The max array length is 100 by default.</dx-alert>
+                     * @param TemplateIdSet Array of template IDs. If the array is empty, the template list information will be queried by default. You need to use the `Limit` and `Offset` fields to set the query range.
+<dx-alert infotype="notice" title="Note">The max array length is 100 by default.</dx-alert>
                      */
                     void SetTemplateIdSet(const std::vector<uint64_t>& _templateIdSet);
 
@@ -145,8 +145,8 @@ Note: it is 0 by default and is enabled when `TemplateIdSet` is empty.
                     bool m_internationalHasBeenSet;
 
                     /**
-                     * Array of template IDs. If the array is empty, the template list information will be queried by default (only allowed for root accounts). You need to use the `Limit` and `Offset` fields to set the query range.
-<dx-alert infotype="notice" title="Note">The default array length can be up to 100</dx-alert>
+                     * Array of template IDs. If the array is empty, the template list information will be queried by default. You need to use the `Limit` and `Offset` fields to set the query range.
+<dx-alert infotype="notice" title="Note">The max array length is 100 by default.</dx-alert>
                      */
                     std::vector<uint64_t> m_templateIdSet;
                     bool m_templateIdSetHasBeenSet;
