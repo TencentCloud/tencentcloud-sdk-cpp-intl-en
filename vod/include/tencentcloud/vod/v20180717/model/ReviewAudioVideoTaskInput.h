@@ -82,6 +82,32 @@ namespace TencentCloud
                      */
                     bool DefinitionHasBeenSet() const;
 
+                    /**
+                     * 获取The type of moderated content. Valid values:
+<li>`Media`: The original audio/video.</li>
+<li>`Cover`: Thumbnails.</li>
+                     * @return ReviewContents The type of moderated content. Valid values:
+<li>`Media`: The original audio/video.</li>
+<li>`Cover`: Thumbnails.</li>
+                     */
+                    std::vector<std::string> GetReviewContents() const;
+
+                    /**
+                     * 设置The type of moderated content. Valid values:
+<li>`Media`: The original audio/video.</li>
+<li>`Cover`: Thumbnails.</li>
+                     * @param ReviewContents The type of moderated content. Valid values:
+<li>`Media`: The original audio/video.</li>
+<li>`Cover`: Thumbnails.</li>
+                     */
+                    void SetReviewContents(const std::vector<std::string>& _reviewContents);
+
+                    /**
+                     * 判断参数 ReviewContents 是否已赋值
+                     * @return ReviewContents 是否已赋值
+                     */
+                    bool ReviewContentsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -95,6 +121,14 @@ namespace TencentCloud
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
+
+                    /**
+                     * The type of moderated content. Valid values:
+<li>`Media`: The original audio/video.</li>
+<li>`Cover`: Thumbnails.</li>
+                     */
+                    std::vector<std::string> m_reviewContents;
+                    bool m_reviewContentsHasBeenSet;
 
                 };
             }

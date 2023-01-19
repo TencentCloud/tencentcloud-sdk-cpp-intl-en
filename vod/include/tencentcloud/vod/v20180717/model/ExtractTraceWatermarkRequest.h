@@ -61,6 +61,28 @@ namespace TencentCloud
                     bool UrlHasBeenSet() const;
 
                     /**
+                     * 获取The ID of the file specified by `Url`.
+<li><font color=red>Note</font>: This parameter is required.</li>
+                     * @return FileId The ID of the file specified by `Url`.
+<li><font color=red>Note</font>: This parameter is required.</li>
+                     */
+                    std::string GetFileId() const;
+
+                    /**
+                     * 设置The ID of the file specified by `Url`.
+<li><font color=red>Note</font>: This parameter is required.</li>
+                     * @param FileId The ID of the file specified by `Url`.
+<li><font color=red>Note</font>: This parameter is required.</li>
+                     */
+                    void SetFileId(const std::string& _fileId);
+
+                    /**
+                     * 判断参数 FileId 是否已赋值
+                     * @return FileId 是否已赋值
+                     */
+                    bool FileIdHasBeenSet() const;
+
+                    /**
                      * 获取<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
                      * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
                      */
@@ -157,6 +179,13 @@ namespace TencentCloud
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
+
+                    /**
+                     * The ID of the file specified by `Url`.
+<li><font color=red>Note</font>: This parameter is required.</li>
+                     */
+                    std::string m_fileId;
+                    bool m_fileIdHasBeenSet;
 
                     /**
                      * <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>

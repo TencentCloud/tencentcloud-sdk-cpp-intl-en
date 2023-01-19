@@ -101,14 +101,18 @@ namespace TencentCloud
                     bool MediaProcessTaskHasBeenSet() const;
 
                     /**
-                     * 获取Parameters for intelligent recognition
-                     * @return AiContentReviewTask Parameters for intelligent recognition
+                     * 获取The information of the audio/video moderation task\*.
+This parameter is <font color=red>\*no longer recommended</font>. Please use [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) instead.
+                     * @return AiContentReviewTask The information of the audio/video moderation task\*.
+This parameter is <font color=red>\*no longer recommended</font>. Please use [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) instead.
                      */
                     AiContentReviewTaskInput GetAiContentReviewTask() const;
 
                     /**
-                     * 设置Parameters for intelligent recognition
-                     * @param AiContentReviewTask Parameters for intelligent recognition
+                     * 设置The information of the audio/video moderation task\*.
+This parameter is <font color=red>\*no longer recommended</font>. Please use [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) instead.
+                     * @param AiContentReviewTask The information of the audio/video moderation task\*.
+This parameter is <font color=red>\*no longer recommended</font>. Please use [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) instead.
                      */
                     void SetAiContentReviewTask(const AiContentReviewTaskInput& _aiContentReviewTask);
 
@@ -265,7 +269,8 @@ namespace TencentCloud
                     bool m_mediaProcessTaskHasBeenSet;
 
                     /**
-                     * Parameters for intelligent recognition
+                     * The information of the audio/video moderation task\*.
+This parameter is <font color=red>\*no longer recommended</font>. Please use [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) instead.
                      */
                     AiContentReviewTaskInput m_aiContentReviewTask;
                     bool m_aiContentReviewTaskHasBeenSet;

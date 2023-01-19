@@ -29,6 +29,7 @@
 #include <tencentcloud/vod/v20180717/model/AiAnalysisTaskInput.h>
 #include <tencentcloud/vod/v20180717/model/AiRecognitionTaskInput.h>
 #include <tencentcloud/vod/v20180717/model/WechatMiniProgramPublishTaskInput.h>
+#include <tencentcloud/vod/v20180717/model/ProcedureReviewAudioVideoTaskInput.h>
 
 
 namespace TencentCloud
@@ -136,18 +137,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MediaProcessTaskHasBeenSet() const;
 
                     /**
-                     * 获取Intelligent recognition task
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @return AiContentReviewTask Intelligent recognition task
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 获取The information of the intelligent moderation task\*.
+<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AiContentReviewTask The information of the intelligent moderation task\*.
+<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     AiContentReviewTaskInput GetAiContentReviewTask() const;
 
                     /**
-                     * 设置Intelligent recognition task
-Note: This field may return `null`, indicating that no valid value can be found.
-                     * @param AiContentReviewTask Intelligent recognition task
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * 设置The information of the intelligent moderation task\*.
+<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param AiContentReviewTask The information of the intelligent moderation task\*.
+<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetAiContentReviewTask(const AiContentReviewTaskInput& _aiContentReviewTask);
 
@@ -224,6 +229,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MiniProgramPublishTaskHasBeenSet() const;
 
                     /**
+                     * 获取The information of the moderation task.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ReviewAudioVideoTask The information of the moderation task.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    ProcedureReviewAudioVideoTaskInput GetReviewAudioVideoTask() const;
+
+                    /**
+                     * 设置The information of the moderation task.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ReviewAudioVideoTask The information of the moderation task.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetReviewAudioVideoTask(const ProcedureReviewAudioVideoTaskInput& _reviewAudioVideoTask);
+
+                    /**
+                     * 判断参数 ReviewAudioVideoTask 是否已赋值
+                     * @return ReviewAudioVideoTask 是否已赋值
+                     */
+                    bool ReviewAudioVideoTaskHasBeenSet() const;
+
+                    /**
                      * 获取Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      * @return CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
@@ -289,8 +316,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_mediaProcessTaskHasBeenSet;
 
                     /**
-                     * Intelligent recognition task
-Note: This field may return `null`, indicating that no valid value can be found.
+                     * The information of the intelligent moderation task\*.
+<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     AiContentReviewTaskInput m_aiContentReviewTask;
                     bool m_aiContentReviewTaskHasBeenSet;
@@ -315,6 +343,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     WechatMiniProgramPublishTaskInput m_miniProgramPublishTask;
                     bool m_miniProgramPublishTaskHasBeenSet;
+
+                    /**
+                     * The information of the moderation task.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    ProcedureReviewAudioVideoTaskInput m_reviewAudioVideoTask;
+                    bool m_reviewAudioVideoTaskHasBeenSet;
 
                     /**
                      * Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).

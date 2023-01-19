@@ -135,14 +135,18 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取The expiration time of the certificate.
-                     * @return CertExpireTime The expiration time of the certificate.
+                     * 获取The certificate expiration time.
+Note: Beijing time (UTC+8) is used.
+                     * @return CertExpireTime The certificate expiration time.
+Note: Beijing time (UTC+8) is used.
                      */
                     std::string GetCertExpireTime() const;
 
                     /**
-                     * 设置The expiration time of the certificate.
-                     * @param CertExpireTime The expiration time of the certificate.
+                     * 设置The certificate expiration time.
+Note: Beijing time (UTC+8) is used.
+                     * @param CertExpireTime The certificate expiration time.
+Note: Beijing time (UTC+8) is used.
                      */
                     void SetCertExpireTime(const std::string& _certExpireTime);
 
@@ -190,16 +194,20 @@ namespace TencentCloud
 
                     /**
                      * 获取The last updated time.
+Note: Beijing time (UTC+8) is used.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UpdateTime The last updated time.
+Note: Beijing time (UTC+8) is used.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置The last updated time.
+Note: Beijing time (UTC+8) is used.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @param UpdateTime The last updated time.
+Note: Beijing time (UTC+8) is used.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -241,7 +249,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_statusHasBeenSet;
 
                     /**
-                     * The expiration time of the certificate.
+                     * The certificate expiration time.
+Note: Beijing time (UTC+8) is used.
                      */
                     std::string m_certExpireTime;
                     bool m_certExpireTimeHasBeenSet;
@@ -260,6 +269,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * The last updated time.
+Note: Beijing time (UTC+8) is used.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_updateTime;

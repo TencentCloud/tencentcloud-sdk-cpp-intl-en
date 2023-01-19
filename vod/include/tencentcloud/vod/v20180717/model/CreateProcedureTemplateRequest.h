@@ -25,6 +25,7 @@
 #include <tencentcloud/vod/v20180717/model/AiContentReviewTaskInput.h>
 #include <tencentcloud/vod/v20180717/model/AiAnalysisTaskInput.h>
 #include <tencentcloud/vod/v20180717/model/AiRecognitionTaskInput.h>
+#include <tencentcloud/vod/v20180717/model/ProcedureReviewAudioVideoTaskInput.h>
 
 
 namespace TencentCloud
@@ -65,6 +66,24 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
+                     * 获取[Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * @return SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     */
+                    uint64_t GetSubAppId() const;
+
+                    /**
+                     * 设置[Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * @param SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     */
+                    void SetSubAppId(const uint64_t& _subAppId);
+
+                    /**
+                     * 判断参数 SubAppId 是否已赋值
+                     * @return SubAppId 是否已赋值
+                     */
+                    bool SubAppIdHasBeenSet() const;
+
+                    /**
                      * 获取Template description. Length limit: 256 characters.
                      * @return Comment Template description. Length limit: 256 characters.
                      */
@@ -101,14 +120,18 @@ namespace TencentCloud
                     bool MediaProcessTaskHasBeenSet() const;
 
                     /**
-                     * 获取Intelligent recognition task
-                     * @return AiContentReviewTask Intelligent recognition task
+                     * 获取The information of the intelligent moderation task\*.
+<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
+                     * @return AiContentReviewTask The information of the intelligent moderation task\*.
+<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
                      */
                     AiContentReviewTaskInput GetAiContentReviewTask() const;
 
                     /**
-                     * 设置Intelligent recognition task
-                     * @param AiContentReviewTask Intelligent recognition task
+                     * 设置The information of the intelligent moderation task\*.
+<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
+                     * @param AiContentReviewTask The information of the intelligent moderation task\*.
+<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
                      */
                     void SetAiContentReviewTask(const AiContentReviewTaskInput& _aiContentReviewTask);
 
@@ -155,22 +178,22 @@ namespace TencentCloud
                     bool AiRecognitionTaskHasBeenSet() const;
 
                     /**
-                     * 获取[Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-                     * @return SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * 获取The information of the moderation task.
+                     * @return ReviewAudioVideoTask The information of the moderation task.
                      */
-                    uint64_t GetSubAppId() const;
+                    ProcedureReviewAudioVideoTaskInput GetReviewAudioVideoTask() const;
 
                     /**
-                     * 设置[Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-                     * @param SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * 设置The information of the moderation task.
+                     * @param ReviewAudioVideoTask The information of the moderation task.
                      */
-                    void SetSubAppId(const uint64_t& _subAppId);
+                    void SetReviewAudioVideoTask(const ProcedureReviewAudioVideoTaskInput& _reviewAudioVideoTask);
 
                     /**
-                     * 判断参数 SubAppId 是否已赋值
-                     * @return SubAppId 是否已赋值
+                     * 判断参数 ReviewAudioVideoTask 是否已赋值
+                     * @return ReviewAudioVideoTask 是否已赋值
                      */
-                    bool SubAppIdHasBeenSet() const;
+                    bool ReviewAudioVideoTaskHasBeenSet() const;
 
                 private:
 
@@ -179,6 +202,12 @@ namespace TencentCloud
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
+
+                    /**
+                     * [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     */
+                    uint64_t m_subAppId;
+                    bool m_subAppIdHasBeenSet;
 
                     /**
                      * Template description. Length limit: 256 characters.
@@ -193,7 +222,8 @@ namespace TencentCloud
                     bool m_mediaProcessTaskHasBeenSet;
 
                     /**
-                     * Intelligent recognition task
+                     * The information of the intelligent moderation task\*.
+<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
                      */
                     AiContentReviewTaskInput m_aiContentReviewTask;
                     bool m_aiContentReviewTaskHasBeenSet;
@@ -211,10 +241,10 @@ namespace TencentCloud
                     bool m_aiRecognitionTaskHasBeenSet;
 
                     /**
-                     * [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+                     * The information of the moderation task.
                      */
-                    uint64_t m_subAppId;
-                    bool m_subAppIdHasBeenSet;
+                    ProcedureReviewAudioVideoTaskInput m_reviewAudioVideoTask;
+                    bool m_reviewAudioVideoTaskHasBeenSet;
 
                 };
             }

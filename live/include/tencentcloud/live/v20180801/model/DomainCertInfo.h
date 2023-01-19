@@ -101,14 +101,18 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Creation time in UTC format.
-                     * @return CreateTime Creation time in UTC format.
+                     * 获取The creation time in UTC format.
+Note: Beijing time (UTC+8) is used.
+                     * @return CreateTime The creation time in UTC format.
+Note: Beijing time (UTC+8) is used.
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time in UTC format.
-                     * @param CreateTime Creation time in UTC format.
+                     * 设置The creation time in UTC format.
+Note: Beijing time (UTC+8) is used.
+                     * @param CreateTime The creation time in UTC format.
+Note: Beijing time (UTC+8) is used.
                      */
                     void SetCreateTime(const std::string& _createTime);
 
@@ -163,14 +167,18 @@ namespace TencentCloud
                     bool CertTypeHasBeenSet() const;
 
                     /**
-                     * 获取Certificate expiration time in UTC format.
-                     * @return CertExpireTime Certificate expiration time in UTC format.
+                     * 获取The certificate expiration time in UTC format.
+Note: Beijing time (UTC+8) is used.
+                     * @return CertExpireTime The certificate expiration time in UTC format.
+Note: Beijing time (UTC+8) is used.
                      */
                     std::string GetCertExpireTime() const;
 
                     /**
-                     * 设置Certificate expiration time in UTC format.
-                     * @param CertExpireTime Certificate expiration time in UTC format.
+                     * 设置The certificate expiration time in UTC format.
+Note: Beijing time (UTC+8) is used.
+                     * @param CertExpireTime The certificate expiration time in UTC format.
+Note: Beijing time (UTC+8) is used.
                      */
                     void SetCertExpireTime(const std::string& _certExpireTime);
 
@@ -285,7 +293,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Creation time in UTC format.
+                     * The creation time in UTC format.
+Note: Beijing time (UTC+8) is used.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
@@ -305,7 +314,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_certTypeHasBeenSet;
 
                     /**
-                     * Certificate expiration time in UTC format.
+                     * The certificate expiration time in UTC format.
+Note: Beijing time (UTC+8) is used.
                      */
                     std::string m_certExpireTime;
                     bool m_certExpireTimeHasBeenSet;

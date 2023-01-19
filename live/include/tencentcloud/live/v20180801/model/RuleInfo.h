@@ -47,14 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Rule creation time.
-                     * @return CreateTime Rule creation time.
+                     * 获取The rule creation time.
+Note: Beijing time (UTC+8) is used.
+                     * @return CreateTime The rule creation time.
+Note: Beijing time (UTC+8) is used.
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Rule creation time.
-                     * @param CreateTime Rule creation time.
+                     * 设置The rule creation time.
+Note: Beijing time (UTC+8) is used.
+                     * @param CreateTime The rule creation time.
+Note: Beijing time (UTC+8) is used.
                      */
                     void SetCreateTime(const std::string& _createTime);
 
@@ -65,14 +69,18 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Rule update time.
-                     * @return UpdateTime Rule update time.
+                     * 获取The rule update time.
+Note: Beijing time (UTC+8) is used.
+                     * @return UpdateTime The rule update time.
+Note: Beijing time (UTC+8) is used.
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Rule update time.
-                     * @param UpdateTime Rule update time.
+                     * 设置The rule update time.
+Note: Beijing time (UTC+8) is used.
+                     * @param UpdateTime The rule update time.
+Note: Beijing time (UTC+8) is used.
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
@@ -157,13 +165,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Rule creation time.
+                     * The rule creation time.
+Note: Beijing time (UTC+8) is used.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Rule update time.
+                     * The rule update time.
+Note: Beijing time (UTC+8) is used.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

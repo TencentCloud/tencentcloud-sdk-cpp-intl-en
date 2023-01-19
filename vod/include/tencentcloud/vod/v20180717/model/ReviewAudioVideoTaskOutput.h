@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/vod/v20180717/model/ReviewAudioVideoSegmentItem.h>
+#include <tencentcloud/vod/v20180717/model/ReviewImageResult.h>
 
 
 namespace TencentCloud
@@ -195,6 +196,28 @@ namespace TencentCloud
                      */
                     bool SegmentSetFileUrlExpireTimeHasBeenSet() const;
 
+                    /**
+                     * 获取The thumbnail moderation result.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CoverReviewResult The thumbnail moderation result.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    ReviewImageResult GetCoverReviewResult() const;
+
+                    /**
+                     * 设置The thumbnail moderation result.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param CoverReviewResult The thumbnail moderation result.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetCoverReviewResult(const ReviewImageResult& _coverReviewResult);
+
+                    /**
+                     * 判断参数 CoverReviewResult 是否已赋值
+                     * @return CoverReviewResult 是否已赋值
+                     */
+                    bool CoverReviewResultHasBeenSet() const;
+
                 private:
 
                     /**
@@ -242,6 +265,13 @@ namespace TencentCloud
                      */
                     std::string m_segmentSetFileUrlExpireTime;
                     bool m_segmentSetFileUrlExpireTimeHasBeenSet;
+
+                    /**
+                     * The thumbnail moderation result.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    ReviewImageResult m_coverReviewResult;
+                    bool m_coverReviewResultHasBeenSet;
 
                 };
             }

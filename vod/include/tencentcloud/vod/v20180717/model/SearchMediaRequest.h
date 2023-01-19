@@ -89,22 +89,22 @@ namespace TencentCloud
                     bool FileIdsHasBeenSet() const;
 
                     /**
-                     * 获取Filename set. Filenames of media files are fuzzily matched. The higher the match rate, the higher-ranked the result.
-<li>Filename length limit: 40 characters.</li>
-<li>Array length limit: 10.</li>
-                     * @return Names Filename set. Filenames of media files are fuzzily matched. The higher the match rate, the higher-ranked the result.
-<li>Filename length limit: 40 characters.</li>
-<li>Array length limit: 10.</li>
+                     * 获取The file names to use for fuzzy search, which are sorted by relevance in descending order.
+<li>Name length limit: 100 characters.</li>
+<li>Array length limit: 10</li>
+                     * @return Names The file names to use for fuzzy search, which are sorted by relevance in descending order.
+<li>Name length limit: 100 characters.</li>
+<li>Array length limit: 10</li>
                      */
                     std::vector<std::string> GetNames() const;
 
                     /**
-                     * 设置Filename set. Filenames of media files are fuzzily matched. The higher the match rate, the higher-ranked the result.
-<li>Filename length limit: 40 characters.</li>
-<li>Array length limit: 10.</li>
-                     * @param Names Filename set. Filenames of media files are fuzzily matched. The higher the match rate, the higher-ranked the result.
-<li>Filename length limit: 40 characters.</li>
-<li>Array length limit: 10.</li>
+                     * 设置The file names to use for fuzzy search, which are sorted by relevance in descending order.
+<li>Name length limit: 100 characters.</li>
+<li>Array length limit: 10</li>
+                     * @param Names The file names to use for fuzzy search, which are sorted by relevance in descending order.
+<li>Name length limit: 100 characters.</li>
+<li>Array length limit: 10</li>
                      */
                     void SetNames(const std::vector<std::string>& _names);
 
@@ -115,21 +115,21 @@ namespace TencentCloud
                     bool NamesHasBeenSet() const;
 
                     /**
-                     * 获取Filename prefix, which matches the filenames of media files.
-<li>Filename prefix length limit: 20 characters.</li>
+                     * 获取The file name prefixes to search.
+<li>Prefix length limit: 100 characters.</li>
 <li>Array length limit: 10.</li>
-                     * @return NamePrefixes Filename prefix, which matches the filenames of media files.
-<li>Filename prefix length limit: 20 characters.</li>
+                     * @return NamePrefixes The file name prefixes to search.
+<li>Prefix length limit: 100 characters.</li>
 <li>Array length limit: 10.</li>
                      */
                     std::vector<std::string> GetNamePrefixes() const;
 
                     /**
-                     * 设置Filename prefix, which matches the filenames of media files.
-<li>Filename prefix length limit: 20 characters.</li>
+                     * 设置The file name prefixes to search.
+<li>Prefix length limit: 100 characters.</li>
 <li>Array length limit: 10.</li>
-                     * @param NamePrefixes Filename prefix, which matches the filenames of media files.
-<li>Filename prefix length limit: 20 characters.</li>
+                     * @param NamePrefixes The file name prefixes to search.
+<li>Prefix length limit: 100 characters.</li>
 <li>Array length limit: 10.</li>
                      */
                     void SetNamePrefixes(const std::vector<std::string>& _namePrefixes);
@@ -189,22 +189,22 @@ namespace TencentCloud
                     bool ClassIdsHasBeenSet() const;
 
                     /**
-                     * 获取The tag set. A file is considered a match if it has any of the tags in the tag set.
-<li>Tag length limit: 16 characters.</li>
-<li>Array length limit: 10.</li>
-                     * @return Tags The tag set. A file is considered a match if it has any of the tags in the tag set.
-<li>Tag length limit: 16 characters.</li>
-<li>Array length limit: 10.</li>
+                     * 获取The tags to search. A file is considered a match if it has any of the tags specified.
+<li>Tag length limit: 32 characters.</li>
+<li>Array length limit: 16.</li>
+                     * @return Tags The tags to search. A file is considered a match if it has any of the tags specified.
+<li>Tag length limit: 32 characters.</li>
+<li>Array length limit: 16.</li>
                      */
                     std::vector<std::string> GetTags() const;
 
                     /**
-                     * 设置The tag set. A file is considered a match if it has any of the tags in the tag set.
-<li>Tag length limit: 16 characters.</li>
-<li>Array length limit: 10.</li>
-                     * @param Tags The tag set. A file is considered a match if it has any of the tags in the tag set.
-<li>Tag length limit: 16 characters.</li>
-<li>Array length limit: 10.</li>
+                     * 设置The tags to search. A file is considered a match if it has any of the tags specified.
+<li>Tag length limit: 32 characters.</li>
+<li>Array length limit: 16.</li>
+                     * @param Tags The tags to search. A file is considered a match if it has any of the tags specified.
+<li>Tag length limit: 32 characters.</li>
+<li>Array length limit: 16.</li>
                      */
                     void SetTags(const std::vector<std::string>& _tags);
 
@@ -755,16 +755,16 @@ End time in the creation time range.
                     bool m_fileIdsHasBeenSet;
 
                     /**
-                     * Filename set. Filenames of media files are fuzzily matched. The higher the match rate, the higher-ranked the result.
-<li>Filename length limit: 40 characters.</li>
-<li>Array length limit: 10.</li>
+                     * The file names to use for fuzzy search, which are sorted by relevance in descending order.
+<li>Name length limit: 100 characters.</li>
+<li>Array length limit: 10</li>
                      */
                     std::vector<std::string> m_names;
                     bool m_namesHasBeenSet;
 
                     /**
-                     * Filename prefix, which matches the filenames of media files.
-<li>Filename prefix length limit: 20 characters.</li>
+                     * The file name prefixes to search.
+<li>Prefix length limit: 100 characters.</li>
 <li>Array length limit: 10.</li>
                      */
                     std::vector<std::string> m_namePrefixes;
@@ -786,9 +786,9 @@ End time in the creation time range.
                     bool m_classIdsHasBeenSet;
 
                     /**
-                     * The tag set. A file is considered a match if it has any of the tags in the tag set.
-<li>Tag length limit: 16 characters.</li>
-<li>Array length limit: 10.</li>
+                     * The tags to search. A file is considered a match if it has any of the tags specified.
+<li>Tag length limit: 32 characters.</li>
+<li>Array length limit: 16.</li>
                      */
                     std::vector<std::string> m_tags;
                     bool m_tagsHasBeenSet;

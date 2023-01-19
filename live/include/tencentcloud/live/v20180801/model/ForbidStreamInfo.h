@@ -65,14 +65,18 @@ namespace TencentCloud
                     bool StreamNameHasBeenSet() const;
 
                     /**
-                     * 获取Creation time.
-                     * @return CreateTime Creation time.
+                     * 获取The creation time.
+Note: Beijing time (UTC+8) is used.
+                     * @return CreateTime The creation time.
+Note: Beijing time (UTC+8) is used.
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time.
-                     * @param CreateTime Creation time.
+                     * 设置The creation time.
+Note: Beijing time (UTC+8) is used.
+                     * @param CreateTime The creation time.
+Note: Beijing time (UTC+8) is used.
                      */
                     void SetCreateTime(const std::string& _createTime);
 
@@ -83,14 +87,18 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Forbidding expiration time.
-                     * @return ExpireTime Forbidding expiration time.
+                     * 获取The end time.
+Note: Beijing time (UTC+8) is used.
+                     * @return ExpireTime The end time.
+Note: Beijing time (UTC+8) is used.
                      */
                     std::string GetExpireTime() const;
 
                     /**
-                     * 设置Forbidding expiration time.
-                     * @param ExpireTime Forbidding expiration time.
+                     * 设置The end time.
+Note: Beijing time (UTC+8) is used.
+                     * @param ExpireTime The end time.
+Note: Beijing time (UTC+8) is used.
                      */
                     void SetExpireTime(const std::string& _expireTime);
 
@@ -153,13 +161,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_streamNameHasBeenSet;
 
                     /**
-                     * Creation time.
+                     * The creation time.
+Note: Beijing time (UTC+8) is used.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Forbidding expiration time.
+                     * The end time.
+Note: Beijing time (UTC+8) is used.
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;

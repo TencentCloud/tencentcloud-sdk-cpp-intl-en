@@ -23,11 +23,11 @@ using namespace TencentCloud::Vod::V20180717::Model;
 using namespace std;
 
 DescribeProcedureTemplatesRequest::DescribeProcedureTemplatesRequest() :
+    m_subAppIdHasBeenSet(false),
     m_namesHasBeenSet(false),
     m_typeHasBeenSet(false),
     m_offsetHasBeenSet(false),
-    m_limitHasBeenSet(false),
-    m_subAppIdHasBeenSet(false)
+    m_limitHasBeenSet(false)
 {
 }
 
@@ -37,6 +37,14 @@ string DescribeProcedureTemplatesRequest::ToJsonString() const
     d.SetObject();
     rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
+
+    if (m_subAppIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SubAppId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_subAppId, allocator);
+    }
 
     if (m_namesHasBeenSet)
     {
@@ -75,14 +83,6 @@ string DescribeProcedureTemplatesRequest::ToJsonString() const
         d.AddMember(iKey, m_limit, allocator);
     }
 
-    if (m_subAppIdHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "SubAppId";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, m_subAppId, allocator);
-    }
-
 
     rapidjson::StringBuffer buffer;
     rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
@@ -90,6 +90,22 @@ string DescribeProcedureTemplatesRequest::ToJsonString() const
     return buffer.GetString();
 }
 
+
+uint64_t DescribeProcedureTemplatesRequest::GetSubAppId() const
+{
+    return m_subAppId;
+}
+
+void DescribeProcedureTemplatesRequest::SetSubAppId(const uint64_t& _subAppId)
+{
+    m_subAppId = _subAppId;
+    m_subAppIdHasBeenSet = true;
+}
+
+bool DescribeProcedureTemplatesRequest::SubAppIdHasBeenSet() const
+{
+    return m_subAppIdHasBeenSet;
+}
 
 vector<string> DescribeProcedureTemplatesRequest::GetNames() const
 {
@@ -153,22 +169,6 @@ void DescribeProcedureTemplatesRequest::SetLimit(const uint64_t& _limit)
 bool DescribeProcedureTemplatesRequest::LimitHasBeenSet() const
 {
     return m_limitHasBeenSet;
-}
-
-uint64_t DescribeProcedureTemplatesRequest::GetSubAppId() const
-{
-    return m_subAppId;
-}
-
-void DescribeProcedureTemplatesRequest::SetSubAppId(const uint64_t& _subAppId)
-{
-    m_subAppId = _subAppId;
-    m_subAppIdHasBeenSet = true;
-}
-
-bool DescribeProcedureTemplatesRequest::SubAppIdHasBeenSet() const
-{
-    return m_subAppIdHasBeenSet;
 }
 
 

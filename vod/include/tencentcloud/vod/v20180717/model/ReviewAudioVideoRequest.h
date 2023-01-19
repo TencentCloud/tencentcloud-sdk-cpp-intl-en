@@ -79,18 +79,44 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取The moderation template ID. Valid values:
-<li>`10` (default): The preset template, which can detect inappropriate information with labels including pornographic (`Porn`), terrorist (`Terror`), and politically sensitive (`Polity`).</li>
-                     * @return Definition The moderation template ID. Valid values:
-<li>`10` (default): The preset template, which can detect inappropriate information with labels including pornographic (`Porn`), terrorist (`Terror`), and politically sensitive (`Polity`).</li>
+                     * 获取The type of moderated content. Valid values:
+<li>`Media`: The original audio/video.</li>
+<li>`Cover`: Thumbnails.</li>
+If this parameter is not specified or an empty array is passed in, `Media` will be used.
+                     * @return ReviewContents The type of moderated content. Valid values:
+<li>`Media`: The original audio/video.</li>
+<li>`Cover`: Thumbnails.</li>
+If this parameter is not specified or an empty array is passed in, `Media` will be used.
+                     */
+                    std::vector<std::string> GetReviewContents() const;
+
+                    /**
+                     * 设置The type of moderated content. Valid values:
+<li>`Media`: The original audio/video.</li>
+<li>`Cover`: Thumbnails.</li>
+If this parameter is not specified or an empty array is passed in, `Media` will be used.
+                     * @param ReviewContents The type of moderated content. Valid values:
+<li>`Media`: The original audio/video.</li>
+<li>`Cover`: Thumbnails.</li>
+If this parameter is not specified or an empty array is passed in, `Media` will be used.
+                     */
+                    void SetReviewContents(const std::vector<std::string>& _reviewContents);
+
+                    /**
+                     * 判断参数 ReviewContents 是否已赋值
+                     * @return ReviewContents 是否已赋值
+                     */
+                    bool ReviewContentsHasBeenSet() const;
+
+                    /**
+                     * 获取The moderation template ID. Valid values: <li>10 (default): The preset template, whose violation labels are `Porn` and `Terror`.</li>
+                     * @return Definition The moderation template ID. Valid values: <li>10 (default): The preset template, whose violation labels are `Porn` and `Terror`.</li>
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置The moderation template ID. Valid values:
-<li>`10` (default): The preset template, which can detect inappropriate information with labels including pornographic (`Porn`), terrorist (`Terror`), and politically sensitive (`Polity`).</li>
-                     * @param Definition The moderation template ID. Valid values:
-<li>`10` (default): The preset template, which can detect inappropriate information with labels including pornographic (`Porn`), terrorist (`Terror`), and politically sensitive (`Polity`).</li>
+                     * 设置The moderation template ID. Valid values: <li>10 (default): The preset template, whose violation labels are `Porn` and `Terror`.</li>
+                     * @param Definition The moderation template ID. Valid values: <li>10 (default): The preset template, whose violation labels are `Porn` and `Terror`.</li>
                      */
                     void SetDefinition(const uint64_t& _definition);
 
@@ -187,8 +213,16 @@ namespace TencentCloud
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * The moderation template ID. Valid values:
-<li>`10` (default): The preset template, which can detect inappropriate information with labels including pornographic (`Porn`), terrorist (`Terror`), and politically sensitive (`Polity`).</li>
+                     * The type of moderated content. Valid values:
+<li>`Media`: The original audio/video.</li>
+<li>`Cover`: Thumbnails.</li>
+If this parameter is not specified or an empty array is passed in, `Media` will be used.
+                     */
+                    std::vector<std::string> m_reviewContents;
+                    bool m_reviewContentsHasBeenSet;
+
+                    /**
+                     * The moderation template ID. Valid values: <li>10 (default): The preset template, whose violation labels are `Porn` and `Terror`.</li>
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

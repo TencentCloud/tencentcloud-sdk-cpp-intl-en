@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Video pull for upload task information
+                * The information of a pull and upload task.
                 */
                 class PullUploadTask : public AbstractModel
                 {
@@ -49,14 +49,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Pull for upload task ID.
-                     * @return TaskId Pull for upload task ID.
+                     * 获取The task ID.
+                     * @return TaskId The task ID.
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置Pull for upload task ID.
-                     * @param TaskId Pull for upload task ID.
+                     * 设置The task ID.
+                     * @param TaskId The task ID.
                      */
                     void SetTaskId(const std::string& _taskId);
 
@@ -141,14 +141,14 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取ID of video generated after pull for upload is completed.
-                     * @return FileId ID of video generated after pull for upload is completed.
+                     * 获取The ID of the uploaded file.
+                     * @return FileId The ID of the uploaded file.
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置ID of video generated after pull for upload is completed.
-                     * @param FileId ID of video generated after pull for upload is completed.
+                     * 设置The ID of the uploaded file.
+                     * @param FileId The ID of the uploaded file.
                      */
                     void SetFileId(const std::string& _fileId);
 
@@ -159,18 +159,18 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取Basic information of media file generated after pull for upload is completed.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return MediaBasicInfo Basic information of media file generated after pull for upload is completed.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取The basic information of the uploaded file.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MediaBasicInfo The basic information of the uploaded file.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MediaBasicInfo GetMediaBasicInfo() const;
 
                     /**
-                     * 设置Basic information of media file generated after pull for upload is completed.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param MediaBasicInfo Basic information of media file generated after pull for upload is completed.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置The basic information of the uploaded file.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param MediaBasicInfo The basic information of the uploaded file.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetMediaBasicInfo(const MediaBasicInfo& _mediaBasicInfo);
 
@@ -199,14 +199,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MetaDataHasBeenSet() const;
 
                     /**
-                     * 获取Playback address generated after pull for upload is completed.
-                     * @return FileUrl Playback address generated after pull for upload is completed.
+                     * 获取The playback address of the uploaded file.
+                     * @return FileUrl The playback address of the uploaded file.
                      */
                     std::string GetFileUrl() const;
 
                     /**
-                     * 设置Playback address generated after pull for upload is completed.
-                     * @param FileUrl Playback address generated after pull for upload is completed.
+                     * 设置The playback address of the uploaded file.
+                     * @param FileUrl The playback address of the uploaded file.
                      */
                     void SetFileUrl(const std::string& _fileUrl);
 
@@ -217,14 +217,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool FileUrlHasBeenSet() const;
 
                     /**
-                     * 获取If a video processing flow is specified when a video is pulled for upload, this parameter will be the ID of the task flow.
-                     * @return ProcedureTaskId If a video processing flow is specified when a video is pulled for upload, this parameter will be the ID of the task flow.
+                     * 获取The task ID for the task type `Procedure`. If a task flow is specified by [PullUpload](https://intl.cloud.tencent.com/document/api/266/35575?from_cn_redirect=1), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed.
+                     * @return ProcedureTaskId The task ID for the task type `Procedure`. If a task flow is specified by [PullUpload](https://intl.cloud.tencent.com/document/api/266/35575?from_cn_redirect=1), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed.
                      */
                     std::string GetProcedureTaskId() const;
 
                     /**
-                     * 设置If a video processing flow is specified when a video is pulled for upload, this parameter will be the ID of the task flow.
-                     * @param ProcedureTaskId If a video processing flow is specified when a video is pulled for upload, this parameter will be the ID of the task flow.
+                     * 设置The task ID for the task type `Procedure`. If a task flow is specified by [PullUpload](https://intl.cloud.tencent.com/document/api/266/35575?from_cn_redirect=1), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed.
+                     * @param ProcedureTaskId The task ID for the task type `Procedure`. If a task flow is specified by [PullUpload](https://intl.cloud.tencent.com/document/api/266/35575?from_cn_redirect=1), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed.
                      */
                     void SetProcedureTaskId(const std::string& _procedureTaskId);
 
@@ -235,14 +235,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ProcedureTaskIdHasBeenSet() const;
 
                     /**
-                     * 获取The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-                     * @return SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+                     * 获取The task ID for the task type `ReviewAudioVideo`. If a task flow is specified by [PullUpload](https://intl.cloud.tencent.com/document/api/266/35575?from_cn_redirect=1), and the task flow includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
+                     * @return ReviewAudioVideoTaskId The task ID for the task type `ReviewAudioVideo`. If a task flow is specified by [PullUpload](https://intl.cloud.tencent.com/document/api/266/35575?from_cn_redirect=1), and the task flow includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
+                     */
+                    std::string GetReviewAudioVideoTaskId() const;
+
+                    /**
+                     * 设置The task ID for the task type `ReviewAudioVideo`. If a task flow is specified by [PullUpload](https://intl.cloud.tencent.com/document/api/266/35575?from_cn_redirect=1), and the task flow includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
+                     * @param ReviewAudioVideoTaskId The task ID for the task type `ReviewAudioVideo`. If a task flow is specified by [PullUpload](https://intl.cloud.tencent.com/document/api/266/35575?from_cn_redirect=1), and the task flow includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
+                     */
+                    void SetReviewAudioVideoTaskId(const std::string& _reviewAudioVideoTaskId);
+
+                    /**
+                     * 判断参数 ReviewAudioVideoTaskId 是否已赋值
+                     * @return ReviewAudioVideoTaskId 是否已赋值
+                     */
+                    bool ReviewAudioVideoTaskIdHasBeenSet() const;
+
+                    /**
+                     * 获取The source context, which is used to pass through user request information. The [PullComplete](https://intl.cloud.tencent.com/document/product/266/7831?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters.
+                     * @return SessionContext The source context, which is used to pass through user request information. The [PullComplete](https://intl.cloud.tencent.com/document/product/266/7831?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters.
                      */
                     std::string GetSessionContext() const;
 
                     /**
-                     * 设置The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-                     * @param SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+                     * 设置The source context, which is used to pass through user request information. The [PullComplete](https://intl.cloud.tencent.com/document/product/266/7831?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters.
+                     * @param SessionContext The source context, which is used to pass through user request information. The [PullComplete](https://intl.cloud.tencent.com/document/product/266/7831?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters.
                      */
                     void SetSessionContext(const std::string& _sessionContext);
 
@@ -271,14 +289,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SessionIdHasBeenSet() const;
 
                     /**
-                     * 获取The progress of a pull and upload task. Value range: 0-100.
-                     * @return Progress The progress of a pull and upload task. Value range: 0-100.
+                     * 获取The progress of the pull and upload task. Value range: 1-100.
+                     * @return Progress The progress of the pull and upload task. Value range: 1-100.
                      */
                     int64_t GetProgress() const;
 
                     /**
-                     * 设置The progress of a pull and upload task. Value range: 0-100.
-                     * @param Progress The progress of a pull and upload task. Value range: 0-100.
+                     * 设置The progress of the pull and upload task. Value range: 1-100.
+                     * @param Progress The progress of the pull and upload task. Value range: 1-100.
                      */
                     void SetProgress(const int64_t& _progress);
 
@@ -291,7 +309,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Pull for upload task ID.
+                     * The task ID.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
@@ -320,14 +338,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_messageHasBeenSet;
 
                     /**
-                     * ID of video generated after pull for upload is completed.
+                     * The ID of the uploaded file.
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * Basic information of media file generated after pull for upload is completed.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * The basic information of the uploaded file.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MediaBasicInfo m_mediaBasicInfo;
                     bool m_mediaBasicInfoHasBeenSet;
@@ -339,19 +357,25 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_metaDataHasBeenSet;
 
                     /**
-                     * Playback address generated after pull for upload is completed.
+                     * The playback address of the uploaded file.
                      */
                     std::string m_fileUrl;
                     bool m_fileUrlHasBeenSet;
 
                     /**
-                     * If a video processing flow is specified when a video is pulled for upload, this parameter will be the ID of the task flow.
+                     * The task ID for the task type `Procedure`. If a task flow is specified by [PullUpload](https://intl.cloud.tencent.com/document/api/266/35575?from_cn_redirect=1), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed.
                      */
                     std::string m_procedureTaskId;
                     bool m_procedureTaskIdHasBeenSet;
 
                     /**
-                     * The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+                     * The task ID for the task type `ReviewAudioVideo`. If a task flow is specified by [PullUpload](https://intl.cloud.tencent.com/document/api/266/35575?from_cn_redirect=1), and the task flow includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
+                     */
+                    std::string m_reviewAudioVideoTaskId;
+                    bool m_reviewAudioVideoTaskIdHasBeenSet;
+
+                    /**
+                     * The source context, which is used to pass through user request information. The [PullComplete](https://intl.cloud.tencent.com/document/product/266/7831?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters.
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;
@@ -363,7 +387,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_sessionIdHasBeenSet;
 
                     /**
-                     * The progress of a pull and upload task. Value range: 0-100.
+                     * The progress of the pull and upload task. Value range: 1-100.
                      */
                     int64_t m_progress;
                     bool m_progressHasBeenSet;

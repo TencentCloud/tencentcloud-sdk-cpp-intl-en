@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/vod/v20180717/model/DynamicRangeInfo.h>
 
 
 namespace TencentCloud
@@ -174,6 +175,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool CodecTagHasBeenSet() const;
 
+                    /**
+                     * 获取Dynamic range information.
+<li><font color=red>Note</font>: This parameter is valid for transcoding files generated after 2023-01-10T00:00:00Z.</li>
+                     * @return DynamicRangeInfo Dynamic range information.
+<li><font color=red>Note</font>: This parameter is valid for transcoding files generated after 2023-01-10T00:00:00Z.</li>
+                     */
+                    DynamicRangeInfo GetDynamicRangeInfo() const;
+
+                    /**
+                     * 设置Dynamic range information.
+<li><font color=red>Note</font>: This parameter is valid for transcoding files generated after 2023-01-10T00:00:00Z.</li>
+                     * @param DynamicRangeInfo Dynamic range information.
+<li><font color=red>Note</font>: This parameter is valid for transcoding files generated after 2023-01-10T00:00:00Z.</li>
+                     */
+                    void SetDynamicRangeInfo(const DynamicRangeInfo& _dynamicRangeInfo);
+
+                    /**
+                     * 判断参数 DynamicRangeInfo 是否已赋值
+                     * @return DynamicRangeInfo 是否已赋值
+                     */
+                    bool DynamicRangeInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -216,6 +239,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_codecTag;
                     bool m_codecTagHasBeenSet;
+
+                    /**
+                     * Dynamic range information.
+<li><font color=red>Note</font>: This parameter is valid for transcoding files generated after 2023-01-10T00:00:00Z.</li>
+                     */
+                    DynamicRangeInfo m_dynamicRangeInfo;
+                    bool m_dynamicRangeInfoHasBeenSet;
 
                 };
             }

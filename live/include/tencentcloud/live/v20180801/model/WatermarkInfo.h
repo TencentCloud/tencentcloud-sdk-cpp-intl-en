@@ -155,14 +155,18 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Creation time.
-                     * @return CreateTime Creation time.
+                     * 获取The time when the watermark was added.
+Note: Beijing time (UTC+8) is used.
+                     * @return CreateTime The time when the watermark was added.
+Note: Beijing time (UTC+8) is used.
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time.
-                     * @param CreateTime Creation time.
+                     * 设置The time when the watermark was added.
+Note: Beijing time (UTC+8) is used.
+                     * @param CreateTime The time when the watermark was added.
+Note: Beijing time (UTC+8) is used.
                      */
                     void SetCreateTime(const std::string& _createTime);
 
@@ -247,7 +251,8 @@ namespace TencentCloud
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Creation time.
+                     * The time when the watermark was added.
+Note: Beijing time (UTC+8) is used.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;

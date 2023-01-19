@@ -35,6 +35,7 @@
 #include <tencentcloud/vod/v20180717/model/MediaAdaptiveDynamicStreamingInfo.h>
 #include <tencentcloud/vod/v20180717/model/MediaMiniProgramReviewInfo.h>
 #include <tencentcloud/vod/v20180717/model/MediaSubtitleInfo.h>
+#include <tencentcloud/vod/v20180717/model/FileReviewInfo.h>
 
 
 namespace TencentCloud
@@ -317,6 +318,28 @@ Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     bool FileIdHasBeenSet() const;
 
+                    /**
+                     * 获取Moderation details.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ReviewInfo Moderation details.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    FileReviewInfo GetReviewInfo() const;
+
+                    /**
+                     * 设置Moderation details.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ReviewInfo Moderation details.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetReviewInfo(const FileReviewInfo& _reviewInfo);
+
+                    /**
+                     * 判断参数 ReviewInfo 是否已赋值
+                     * @return ReviewInfo 是否已赋值
+                     */
+                    bool ReviewInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -401,6 +424,13 @@ Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
+
+                    /**
+                     * Moderation details.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    FileReviewInfo m_reviewInfo;
+                    bool m_reviewInfoHasBeenSet;
 
                 };
             }

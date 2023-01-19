@@ -24,12 +24,13 @@ using namespace std;
 
 CreateProcedureTemplateRequest::CreateProcedureTemplateRequest() :
     m_nameHasBeenSet(false),
+    m_subAppIdHasBeenSet(false),
     m_commentHasBeenSet(false),
     m_mediaProcessTaskHasBeenSet(false),
     m_aiContentReviewTaskHasBeenSet(false),
     m_aiAnalysisTaskHasBeenSet(false),
     m_aiRecognitionTaskHasBeenSet(false),
-    m_subAppIdHasBeenSet(false)
+    m_reviewAudioVideoTaskHasBeenSet(false)
 {
 }
 
@@ -46,6 +47,14 @@ string CreateProcedureTemplateRequest::ToJsonString() const
         string key = "Name";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_name.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_subAppIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SubAppId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_subAppId, allocator);
     }
 
     if (m_commentHasBeenSet)
@@ -92,12 +101,13 @@ string CreateProcedureTemplateRequest::ToJsonString() const
         m_aiRecognitionTask.ToJsonObject(d[key.c_str()], allocator);
     }
 
-    if (m_subAppIdHasBeenSet)
+    if (m_reviewAudioVideoTaskHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "SubAppId";
+        string key = "ReviewAudioVideoTask";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, m_subAppId, allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_reviewAudioVideoTask.ToJsonObject(d[key.c_str()], allocator);
     }
 
 
@@ -122,6 +132,22 @@ void CreateProcedureTemplateRequest::SetName(const string& _name)
 bool CreateProcedureTemplateRequest::NameHasBeenSet() const
 {
     return m_nameHasBeenSet;
+}
+
+uint64_t CreateProcedureTemplateRequest::GetSubAppId() const
+{
+    return m_subAppId;
+}
+
+void CreateProcedureTemplateRequest::SetSubAppId(const uint64_t& _subAppId)
+{
+    m_subAppId = _subAppId;
+    m_subAppIdHasBeenSet = true;
+}
+
+bool CreateProcedureTemplateRequest::SubAppIdHasBeenSet() const
+{
+    return m_subAppIdHasBeenSet;
 }
 
 string CreateProcedureTemplateRequest::GetComment() const
@@ -204,20 +230,20 @@ bool CreateProcedureTemplateRequest::AiRecognitionTaskHasBeenSet() const
     return m_aiRecognitionTaskHasBeenSet;
 }
 
-uint64_t CreateProcedureTemplateRequest::GetSubAppId() const
+ProcedureReviewAudioVideoTaskInput CreateProcedureTemplateRequest::GetReviewAudioVideoTask() const
 {
-    return m_subAppId;
+    return m_reviewAudioVideoTask;
 }
 
-void CreateProcedureTemplateRequest::SetSubAppId(const uint64_t& _subAppId)
+void CreateProcedureTemplateRequest::SetReviewAudioVideoTask(const ProcedureReviewAudioVideoTaskInput& _reviewAudioVideoTask)
 {
-    m_subAppId = _subAppId;
-    m_subAppIdHasBeenSet = true;
+    m_reviewAudioVideoTask = _reviewAudioVideoTask;
+    m_reviewAudioVideoTaskHasBeenSet = true;
 }
 
-bool CreateProcedureTemplateRequest::SubAppIdHasBeenSet() const
+bool CreateProcedureTemplateRequest::ReviewAudioVideoTaskHasBeenSet() const
 {
-    return m_subAppIdHasBeenSet;
+    return m_reviewAudioVideoTaskHasBeenSet;
 }
 
 
