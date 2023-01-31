@@ -334,6 +334,94 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ProceduresHasBeenSet() const;
 
+                    /**
+                     * 获取Trigger migration mode (`all`: All objects; `partial`: Some objects)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TriggerMode Trigger migration mode (`all`: All objects; `partial`: Some objects)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetTriggerMode() const;
+
+                    /**
+                     * 设置Trigger migration mode (`all`: All objects; `partial`: Some objects)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param TriggerMode Trigger migration mode (`all`: All objects; `partial`: Some objects)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetTriggerMode(const std::string& _triggerMode);
+
+                    /**
+                     * 判断参数 TriggerMode 是否已赋值
+                     * @return TriggerMode 是否已赋值
+                     */
+                    bool TriggerModeHasBeenSet() const;
+
+                    /**
+                     * 获取This parameter is used to specify the names of the triggers to be migrated when the value of `TriggerMode` is `partial`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Triggers This parameter is used to specify the names of the triggers to be migrated when the value of `TriggerMode` is `partial`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> GetTriggers() const;
+
+                    /**
+                     * 设置This parameter is used to specify the names of the triggers to be migrated when the value of `TriggerMode` is `partial`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Triggers This parameter is used to specify the names of the triggers to be migrated when the value of `TriggerMode` is `partial`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetTriggers(const std::vector<std::string>& _triggers);
+
+                    /**
+                     * 判断参数 Triggers 是否已赋值
+                     * @return Triggers 是否已赋值
+                     */
+                    bool TriggersHasBeenSet() const;
+
+                    /**
+                     * 获取Event migration mode (`all`: All objects; `partial`: Some objects)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return EventMode Event migration mode (`all`: All objects; `partial`: Some objects)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetEventMode() const;
+
+                    /**
+                     * 设置Event migration mode (`all`: All objects; `partial`: Some objects)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param EventMode Event migration mode (`all`: All objects; `partial`: Some objects)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetEventMode(const std::string& _eventMode);
+
+                    /**
+                     * 判断参数 EventMode 是否已赋值
+                     * @return EventMode 是否已赋值
+                     */
+                    bool EventModeHasBeenSet() const;
+
+                    /**
+                     * 获取This parameter is used to specify the names of the events to be migrated when the value of `EventMode` is `partial`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Events This parameter is used to specify the names of the events to be migrated when the value of `EventMode` is `partial`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> GetEvents() const;
+
+                    /**
+                     * 设置This parameter is used to specify the names of the events to be migrated when the value of `EventMode` is `partial`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Events This parameter is used to specify the names of the events to be migrated when the value of `EventMode` is `partial`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetEvents(const std::vector<std::string>& _events);
+
+                    /**
+                     * 判断参数 Events 是否已赋值
+                     * @return Events 是否已赋值
+                     */
+                    bool EventsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -426,6 +514,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<std::string> m_procedures;
                     bool m_proceduresHasBeenSet;
+
+                    /**
+                     * Trigger migration mode (`all`: All objects; `partial`: Some objects)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_triggerMode;
+                    bool m_triggerModeHasBeenSet;
+
+                    /**
+                     * This parameter is used to specify the names of the triggers to be migrated when the value of `TriggerMode` is `partial`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_triggers;
+                    bool m_triggersHasBeenSet;
+
+                    /**
+                     * Event migration mode (`all`: All objects; `partial`: Some objects)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_eventMode;
+                    bool m_eventModeHasBeenSet;
+
+                    /**
+                     * This parameter is used to specify the names of the events to be migrated when the value of `EventMode` is `partial`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_events;
+                    bool m_eventsHasBeenSet;
 
                 };
             }

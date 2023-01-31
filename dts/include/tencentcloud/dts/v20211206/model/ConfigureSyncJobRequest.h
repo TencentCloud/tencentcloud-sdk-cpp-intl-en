@@ -21,9 +21,9 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/dts/v20211206/model/Endpoint.h>
 #include <tencentcloud/dts/v20211206/model/Options.h>
 #include <tencentcloud/dts/v20211206/model/Objects.h>
+#include <tencentcloud/dts/v20211206/model/Endpoint.h>
 
 
 namespace TencentCloud
@@ -82,24 +82,6 @@ namespace TencentCloud
                     bool SrcAccessTypeHasBeenSet() const;
 
                     /**
-                     * 获取Source database information
-                     * @return SrcInfo Source database information
-                     */
-                    Endpoint GetSrcInfo() const;
-
-                    /**
-                     * 设置Source database information
-                     * @param SrcInfo Source database information
-                     */
-                    void SetSrcInfo(const Endpoint& _srcInfo);
-
-                    /**
-                     * 判断参数 SrcInfo 是否已赋值
-                     * @return SrcInfo 是否已赋值
-                     */
-                    bool SrcInfoHasBeenSet() const;
-
-                    /**
                      * 获取Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `noProxy`. Note that the valid values are subject to the current link.
                      * @return DstAccessType Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `noProxy`. Note that the valid values are subject to the current link.
                      */
@@ -116,24 +98,6 @@ namespace TencentCloud
                      * @return DstAccessType 是否已赋值
                      */
                     bool DstAccessTypeHasBeenSet() const;
-
-                    /**
-                     * 获取Target database information
-                     * @return DstInfo Target database information
-                     */
-                    Endpoint GetDstInfo() const;
-
-                    /**
-                     * 设置Target database information
-                     * @param DstInfo Target database information
-                     */
-                    void SetDstInfo(const Endpoint& _dstInfo);
-
-                    /**
-                     * 判断参数 DstInfo 是否已赋值
-                     * @return DstInfo 是否已赋值
-                     */
-                    bool DstInfoHasBeenSet() const;
 
                     /**
                      * 获取Sync task options
@@ -190,6 +154,24 @@ namespace TencentCloud
                     bool JobNameHasBeenSet() const;
 
                     /**
+                     * 获取Enumerated values: `liteMode`: Lite mode; `fullMode`: Standard mode
+                     * @return JobMode Enumerated values: `liteMode`: Lite mode; `fullMode`: Standard mode
+                     */
+                    std::string GetJobMode() const;
+
+                    /**
+                     * 设置Enumerated values: `liteMode`: Lite mode; `fullMode`: Standard mode
+                     * @param JobMode Enumerated values: `liteMode`: Lite mode; `fullMode`: Standard mode
+                     */
+                    void SetJobMode(const std::string& _jobMode);
+
+                    /**
+                     * 判断参数 JobMode 是否已赋值
+                     * @return JobMode 是否已赋值
+                     */
+                    bool JobModeHasBeenSet() const;
+
+                    /**
                      * 获取Running mode. Valid values: `Immediate`, `Timed`. Default value: `Immediate`.
                      * @return RunMode Running mode. Valid values: `Immediate`, `Timed`. Default value: `Immediate`.
                      */
@@ -225,6 +207,60 @@ namespace TencentCloud
                      */
                     bool ExpectRunTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Source database information. This parameter is used by single-node databases.
+                     * @return SrcInfo Source database information. This parameter is used by single-node databases.
+                     */
+                    Endpoint GetSrcInfo() const;
+
+                    /**
+                     * 设置Source database information. This parameter is used by single-node databases.
+                     * @param SrcInfo Source database information. This parameter is used by single-node databases.
+                     */
+                    void SetSrcInfo(const Endpoint& _srcInfo);
+
+                    /**
+                     * 判断参数 SrcInfo 是否已赋值
+                     * @return SrcInfo 是否已赋值
+                     */
+                    bool SrcInfoHasBeenSet() const;
+
+                    /**
+                     * 获取Target database information. This parameter is used by single-node databases.
+                     * @return DstInfo Target database information. This parameter is used by single-node databases.
+                     */
+                    Endpoint GetDstInfo() const;
+
+                    /**
+                     * 设置Target database information. This parameter is used by single-node databases.
+                     * @param DstInfo Target database information. This parameter is used by single-node databases.
+                     */
+                    void SetDstInfo(const Endpoint& _dstInfo);
+
+                    /**
+                     * 判断参数 DstInfo 是否已赋值
+                     * @return DstInfo 是否已赋值
+                     */
+                    bool DstInfoHasBeenSet() const;
+
+                    /**
+                     * 获取Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
+                     * @return AutoRetryTimeRangeMinutes Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
+                     */
+                    int64_t GetAutoRetryTimeRangeMinutes() const;
+
+                    /**
+                     * 设置Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
+                     * @param AutoRetryTimeRangeMinutes Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
+                     */
+                    void SetAutoRetryTimeRangeMinutes(const int64_t& _autoRetryTimeRangeMinutes);
+
+                    /**
+                     * 判断参数 AutoRetryTimeRangeMinutes 是否已赋值
+                     * @return AutoRetryTimeRangeMinutes 是否已赋值
+                     */
+                    bool AutoRetryTimeRangeMinutesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -240,22 +276,10 @@ namespace TencentCloud
                     bool m_srcAccessTypeHasBeenSet;
 
                     /**
-                     * Source database information
-                     */
-                    Endpoint m_srcInfo;
-                    bool m_srcInfoHasBeenSet;
-
-                    /**
                      * Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `noProxy`. Note that the valid values are subject to the current link.
                      */
                     std::string m_dstAccessType;
                     bool m_dstAccessTypeHasBeenSet;
-
-                    /**
-                     * Target database information
-                     */
-                    Endpoint m_dstInfo;
-                    bool m_dstInfoHasBeenSet;
 
                     /**
                      * Sync task options
@@ -276,6 +300,12 @@ namespace TencentCloud
                     bool m_jobNameHasBeenSet;
 
                     /**
+                     * Enumerated values: `liteMode`: Lite mode; `fullMode`: Standard mode
+                     */
+                    std::string m_jobMode;
+                    bool m_jobModeHasBeenSet;
+
+                    /**
                      * Running mode. Valid values: `Immediate`, `Timed`. Default value: `Immediate`.
                      */
                     std::string m_runMode;
@@ -286,6 +316,24 @@ namespace TencentCloud
                      */
                     std::string m_expectRunTime;
                     bool m_expectRunTimeHasBeenSet;
+
+                    /**
+                     * Source database information. This parameter is used by single-node databases.
+                     */
+                    Endpoint m_srcInfo;
+                    bool m_srcInfoHasBeenSet;
+
+                    /**
+                     * Target database information. This parameter is used by single-node databases.
+                     */
+                    Endpoint m_dstInfo;
+                    bool m_dstInfoHasBeenSet;
+
+                    /**
+                     * Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
+                     */
+                    int64_t m_autoRetryTimeRangeMinutes;
+                    bool m_autoRetryTimeRangeMinutesHasBeenSet;
 
                 };
             }

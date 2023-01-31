@@ -360,17 +360,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SrcAccessTypeHasBeenSet() const;
 
                     /**
-                     * 获取Source database information
+                     * 获取Source database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SrcInfo Source database information
+                     * @return SrcInfo Source database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     Endpoint GetSrcInfo() const;
 
                     /**
-                     * 设置Source database information
+                     * 设置Source database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SrcInfo Source database information
+                     * @param SrcInfo Source database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetSrcInfo(const Endpoint& _srcInfo);
@@ -448,17 +448,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DstAccessTypeHasBeenSet() const;
 
                     /**
-                     * 获取Target database information
+                     * 获取Target database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DstInfo Target database information
+                     * @return DstInfo Target database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     Endpoint GetDstInfo() const;
 
                     /**
-                     * 设置Target database information
+                     * 设置Target database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DstInfo Target database information
+                     * @param DstInfo Target database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetDstInfo(const Endpoint& _dstInfo);
@@ -689,6 +689,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool OfflineTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Settings of automatic retry time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AutoRetryTimeRangeMinutes Settings of automatic retry time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetAutoRetryTimeRangeMinutes() const;
+
+                    /**
+                     * 设置Settings of automatic retry time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param AutoRetryTimeRangeMinutes Settings of automatic retry time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetAutoRetryTimeRangeMinutes(const int64_t& _autoRetryTimeRangeMinutes);
+
+                    /**
+                     * 判断参数 AutoRetryTimeRangeMinutes 是否已赋值
+                     * @return AutoRetryTimeRangeMinutes 是否已赋值
+                     */
+                    bool AutoRetryTimeRangeMinutesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -790,7 +812,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_srcAccessTypeHasBeenSet;
 
                     /**
-                     * Source database information
+                     * Source database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     Endpoint m_srcInfo;
@@ -818,7 +840,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_dstAccessTypeHasBeenSet;
 
                     /**
-                     * Target database information
+                     * Target database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     Endpoint m_dstInfo;
@@ -893,6 +915,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_offlineTime;
                     bool m_offlineTimeHasBeenSet;
+
+                    /**
+                     * Settings of automatic retry time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_autoRetryTimeRangeMinutes;
+                    bool m_autoRetryTimeRangeMinutesHasBeenSet;
 
                 };
             }

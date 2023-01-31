@@ -83,6 +83,10 @@
 #include <tencentcloud/dts/v20211206/model/ResumeMigrateJobResponse.h>
 #include <tencentcloud/dts/v20211206/model/ResumeSyncJobRequest.h>
 #include <tencentcloud/dts/v20211206/model/ResumeSyncJobResponse.h>
+#include <tencentcloud/dts/v20211206/model/SkipCheckItemRequest.h>
+#include <tencentcloud/dts/v20211206/model/SkipCheckItemResponse.h>
+#include <tencentcloud/dts/v20211206/model/SkipSyncCheckItemRequest.h>
+#include <tencentcloud/dts/v20211206/model/SkipSyncCheckItemResponse.h>
 #include <tencentcloud/dts/v20211206/model/StartCompareRequest.h>
 #include <tencentcloud/dts/v20211206/model/StartCompareResponse.h>
 #include <tencentcloud/dts/v20211206/model/StartMigrateJobRequest.h>
@@ -199,6 +203,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ResumeSyncJobResponse> ResumeSyncJobOutcome;
                 typedef std::future<ResumeSyncJobOutcome> ResumeSyncJobOutcomeCallable;
                 typedef std::function<void(const DtsClient*, const Model::ResumeSyncJobRequest&, ResumeSyncJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResumeSyncJobAsyncHandler;
+                typedef Outcome<Core::Error, Model::SkipCheckItemResponse> SkipCheckItemOutcome;
+                typedef std::future<SkipCheckItemOutcome> SkipCheckItemOutcomeCallable;
+                typedef std::function<void(const DtsClient*, const Model::SkipCheckItemRequest&, SkipCheckItemOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SkipCheckItemAsyncHandler;
+                typedef Outcome<Core::Error, Model::SkipSyncCheckItemResponse> SkipSyncCheckItemOutcome;
+                typedef std::future<SkipSyncCheckItemOutcome> SkipSyncCheckItemOutcomeCallable;
+                typedef std::function<void(const DtsClient*, const Model::SkipSyncCheckItemRequest&, SkipSyncCheckItemOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SkipSyncCheckItemAsyncHandler;
                 typedef Outcome<Core::Error, Model::StartCompareResponse> StartCompareOutcome;
                 typedef std::future<StartCompareOutcome> StartCompareOutcomeCallable;
                 typedef std::function<void(const DtsClient*, const Model::StartCompareRequest&, StartCompareOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StartCompareAsyncHandler;
@@ -497,6 +507,24 @@ If the check fails, the cause can be queried. Modify the migration configuration
                 ResumeSyncJobOutcome ResumeSyncJob(const Model::ResumeSyncJobRequest &request);
                 void ResumeSyncJobAsync(const Model::ResumeSyncJobRequest& request, const ResumeSyncJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ResumeSyncJobOutcomeCallable ResumeSyncJobCallable(const Model::ResumeSyncJobRequest& request);
+
+                /**
+                 *This API is used for the backend to skip a failed check item. Theoretically, to execute a migration task normally, any check step cannot be skipped, and the check must be passed. For products or links that support check item skipping, see [Check Item Overview](https://www.tencentcloud.com/document/product/571/42551).
+                 * @param req SkipCheckItemRequest
+                 * @return SkipCheckItemOutcome
+                 */
+                SkipCheckItemOutcome SkipCheckItem(const Model::SkipCheckItemRequest &request);
+                void SkipCheckItemAsync(const Model::SkipCheckItemRequest& request, const SkipCheckItemAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SkipCheckItemOutcomeCallable SkipCheckItemCallable(const Model::SkipCheckItemRequest& request);
+
+                /**
+                 *This API is used for the backend to skip a failed check item. Theoretically, to execute a sync task normally, any check step cannot be skipped, and the check must be passed. For products or links that support check item skipping, see [Check Item Overview](https://www.tencentcloud.com/document/product/571/42551).
+                 * @param req SkipSyncCheckItemRequest
+                 * @return SkipSyncCheckItemOutcome
+                 */
+                SkipSyncCheckItemOutcome SkipSyncCheckItem(const Model::SkipSyncCheckItemRequest &request);
+                void SkipSyncCheckItemAsync(const Model::SkipSyncCheckItemRequest& request, const SkipSyncCheckItemAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SkipSyncCheckItemOutcomeCallable SkipSyncCheckItemCallable(const Model::SkipSyncCheckItemRequest& request);
 
                 /**
                  *This API is used to start a data consistency check task after creating it by calling the `CreateCompareTask` API. After calling this API, you can call the `DescribeCompareTasks` API to query the latest task status.

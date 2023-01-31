@@ -69,6 +69,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RegionHasBeenSet() const;
 
                     /**
+                     * 获取Node type of TDSQL for MySQL. Enumerated values: `proxy`, `set`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Role Node type of TDSQL for MySQL. Enumerated values: `proxy`, `set`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetRole() const;
+
+                    /**
+                     * 设置Node type of TDSQL for MySQL. Enumerated values: `proxy`, `set`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Role Node type of TDSQL for MySQL. Enumerated values: `proxy`, `set`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetRole(const std::string& _role);
+
+                    /**
+                     * 判断参数 Role 是否已赋值
+                     * @return Role 是否已赋值
+                     */
+                    bool RoleHasBeenSet() const;
+
+                    /**
                      * 获取Database kernel type, which is used to distinguish between different kernels in TDSQL. Valid values: `percona`, `mariadb`, `mysql`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DbKernel Database kernel type, which is used to distinguish between different kernels in TDSQL. Valid values: `percona`, `mariadb`, `mysql`.
@@ -399,28 +421,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EngineVersionHasBeenSet() const;
 
                     /**
-                     * 获取The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AccountMode The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     */
-                    std::string GetAccountMode() const;
-
-                    /**
-                     * 设置The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AccountMode The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     */
-                    void SetAccountMode(const std::string& _accountMode);
-
-                    /**
-                     * 判断参数 AccountMode 是否已赋值
-                     * @return AccountMode 是否已赋值
-                     */
-                    bool AccountModeHasBeenSet() const;
-
-                    /**
                      * 获取Instance account, which is required if the operation is performed across accounts.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Account Instance account, which is required if the operation is performed across accounts.
@@ -443,6 +443,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AccountHasBeenSet() const;
 
                     /**
+                     * 获取The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AccountMode The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetAccountMode() const;
+
+                    /**
+                     * 设置The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param AccountMode The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetAccountMode(const std::string& _accountMode);
+
+                    /**
+                     * 判断参数 AccountMode 是否已赋值
+                     * @return AccountMode 是否已赋值
+                     */
+                    bool AccountModeHasBeenSet() const;
+
+                    /**
                      * 获取The role used for cross-account sync, which can contain [a-zA-Z0-9\-\_]+ and is required if the operation is performed across accounts.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AccountRole The role used for cross-account sync, which can contain [a-zA-Z0-9\-\_]+ and is required if the operation is performed across accounts.
@@ -463,6 +485,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return AccountRole 是否已赋值
                      */
                     bool AccountRoleHasBeenSet() const;
+
+                    /**
+                     * 获取External role ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RoleExternalId External role ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetRoleExternalId() const;
+
+                    /**
+                     * 设置External role ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param RoleExternalId External role ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetRoleExternalId(const std::string& _roleExternalId);
+
+                    /**
+                     * 判断参数 RoleExternalId 是否已赋值
+                     * @return RoleExternalId 是否已赋值
+                     */
+                    bool RoleExternalIdHasBeenSet() const;
 
                     /**
                      * 获取ID of the temporary key, which is required if the operation is performed across accounts.
@@ -531,26 +575,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TmpTokenHasBeenSet() const;
 
                     /**
-                     * 获取External role ID
+                     * 获取Whether to enable encrypted transfer (`UnEncrypted`: No; `Encrypted`: Yes). Default value: `UnEncrypted`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RoleExternalId External role ID
+                     * @return EncryptConn Whether to enable encrypted transfer (`UnEncrypted`: No; `Encrypted`: Yes). Default value: `UnEncrypted`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    std::string GetRoleExternalId() const;
+                    std::string GetEncryptConn() const;
 
                     /**
-                     * 设置External role ID
+                     * 设置Whether to enable encrypted transfer (`UnEncrypted`: No; `Encrypted`: Yes). Default value: `UnEncrypted`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RoleExternalId External role ID
+                     * @param EncryptConn Whether to enable encrypted transfer (`UnEncrypted`: No; `Encrypted`: Yes). Default value: `UnEncrypted`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    void SetRoleExternalId(const std::string& _roleExternalId);
+                    void SetEncryptConn(const std::string& _encryptConn);
 
                     /**
-                     * 判断参数 RoleExternalId 是否已赋值
-                     * @return RoleExternalId 是否已赋值
+                     * 判断参数 EncryptConn 是否已赋值
+                     * @return EncryptConn 是否已赋值
                      */
-                    bool RoleExternalIdHasBeenSet() const;
+                    bool EncryptConnHasBeenSet() const;
 
                 private:
 
@@ -560,6 +604,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
+
+                    /**
+                     * Node type of TDSQL for MySQL. Enumerated values: `proxy`, `set`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_role;
+                    bool m_roleHasBeenSet;
 
                     /**
                      * Database kernel type, which is used to distinguish between different kernels in TDSQL. Valid values: `percona`, `mariadb`, `mysql`.
@@ -667,13 +718,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_engineVersionHasBeenSet;
 
                     /**
-                     * The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     */
-                    std::string m_accountMode;
-                    bool m_accountModeHasBeenSet;
-
-                    /**
                      * Instance account, which is required if the operation is performed across accounts.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
@@ -681,11 +725,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_accountHasBeenSet;
 
                     /**
+                     * The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_accountMode;
+                    bool m_accountModeHasBeenSet;
+
+                    /**
                      * The role used for cross-account sync, which can contain [a-zA-Z0-9\-\_]+ and is required if the operation is performed across accounts.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_accountRole;
                     bool m_accountRoleHasBeenSet;
+
+                    /**
+                     * External role ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_roleExternalId;
+                    bool m_roleExternalIdHasBeenSet;
 
                     /**
                      * ID of the temporary key, which is required if the operation is performed across accounts.
@@ -709,11 +767,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_tmpTokenHasBeenSet;
 
                     /**
-                     * External role ID
+                     * Whether to enable encrypted transfer (`UnEncrypted`: No; `Encrypted`: Yes). Default value: `UnEncrypted`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    std::string m_roleExternalId;
-                    bool m_roleExternalIdHasBeenSet;
+                    std::string m_encryptConn;
+                    bool m_encryptConnHasBeenSet;
 
                 };
             }

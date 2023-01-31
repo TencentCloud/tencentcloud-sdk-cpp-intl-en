@@ -36,6 +36,7 @@ set(clb_public_header_model
   include/tencentcloud/clb/v20180317/model/DisassociateTargetGroupsResponse.h
   include/tencentcloud/clb/v20180317/model/SetLoadBalancerClsLogResponse.h
   include/tencentcloud/clb/v20180317/model/DescribeLoadBalancerTrafficResponse.h
+  include/tencentcloud/clb/v20180317/model/MultiCertInfo.h
   include/tencentcloud/clb/v20180317/model/ModifyRuleRequest.h
   include/tencentcloud/clb/v20180317/model/DescribeCustomizedConfigListResponse.h
   include/tencentcloud/clb/v20180317/model/DescribeBlockIPListResponse.h
@@ -111,6 +112,7 @@ set(clb_public_header_model
   include/tencentcloud/clb/v20180317/model/TargetGroupBackend.h
   include/tencentcloud/clb/v20180317/model/DescribeClassicalLBByInstanceIdRequest.h
   include/tencentcloud/clb/v20180317/model/DescribeResourcesResponse.h
+  include/tencentcloud/clb/v20180317/model/ModifyTargetGroupInstancesWeightRequest.h
   include/tencentcloud/clb/v20180317/model/ManualRewriteResponse.h
   include/tencentcloud/clb/v20180317/model/ModifyBlockIPListRequest.h
   include/tencentcloud/clb/v20180317/model/ModifyBlockIPListResponse.h
@@ -142,7 +144,7 @@ set(clb_public_header_model
   include/tencentcloud/clb/v20180317/model/ManualRewriteRequest.h
   include/tencentcloud/clb/v20180317/model/ModifyListenerResponse.h
   include/tencentcloud/clb/v20180317/model/DescribeTargetHealthResponse.h
-  include/tencentcloud/clb/v20180317/model/DescribeTargetGroupInstancesResponse.h
+  include/tencentcloud/clb/v20180317/model/CertInfo.h
   include/tencentcloud/clb/v20180317/model/CreateTargetGroupRequest.h
   include/tencentcloud/clb/v20180317/model/ClusterItem.h
   include/tencentcloud/clb/v20180317/model/BindDetailItem.h
@@ -179,7 +181,7 @@ set(clb_public_header_model
   include/tencentcloud/clb/v20180317/model/DeregisterTargetsRequest.h
   include/tencentcloud/clb/v20180317/model/InternetAccessible.h
   include/tencentcloud/clb/v20180317/model/CreateLoadBalancerSnatIpsRequest.h
-  include/tencentcloud/clb/v20180317/model/ModifyTargetGroupInstancesWeightRequest.h
+  include/tencentcloud/clb/v20180317/model/DescribeTargetGroupInstancesResponse.h
   include/tencentcloud/clb/v20180317/model/DescribeQuotaResponse.h
   include/tencentcloud/clb/v20180317/model/DeleteTargetGroupsResponse.h
   include/tencentcloud/clb/v20180317/model/ModifyTargetGroupInstancesPortRequest.h
@@ -243,6 +245,7 @@ set(clb_src
   src/v20180317/model/DisassociateTargetGroupsResponse.cpp
   src/v20180317/model/SetLoadBalancerClsLogResponse.cpp
   src/v20180317/model/DescribeLoadBalancerTrafficResponse.cpp
+  src/v20180317/model/MultiCertInfo.cpp
   src/v20180317/model/ModifyRuleRequest.cpp
   src/v20180317/model/DescribeCustomizedConfigListResponse.cpp
   src/v20180317/model/DescribeBlockIPListResponse.cpp
@@ -318,6 +321,7 @@ set(clb_src
   src/v20180317/model/TargetGroupBackend.cpp
   src/v20180317/model/DescribeClassicalLBByInstanceIdRequest.cpp
   src/v20180317/model/DescribeResourcesResponse.cpp
+  src/v20180317/model/ModifyTargetGroupInstancesWeightRequest.cpp
   src/v20180317/model/ManualRewriteResponse.cpp
   src/v20180317/model/ModifyBlockIPListRequest.cpp
   src/v20180317/model/ModifyBlockIPListResponse.cpp
@@ -349,7 +353,7 @@ set(clb_src
   src/v20180317/model/ManualRewriteRequest.cpp
   src/v20180317/model/ModifyListenerResponse.cpp
   src/v20180317/model/DescribeTargetHealthResponse.cpp
-  src/v20180317/model/DescribeTargetGroupInstancesResponse.cpp
+  src/v20180317/model/CertInfo.cpp
   src/v20180317/model/CreateTargetGroupRequest.cpp
   src/v20180317/model/ClusterItem.cpp
   src/v20180317/model/BindDetailItem.cpp
@@ -386,7 +390,7 @@ set(clb_src
   src/v20180317/model/DeregisterTargetsRequest.cpp
   src/v20180317/model/InternetAccessible.cpp
   src/v20180317/model/CreateLoadBalancerSnatIpsRequest.cpp
-  src/v20180317/model/ModifyTargetGroupInstancesWeightRequest.cpp
+  src/v20180317/model/DescribeTargetGroupInstancesResponse.cpp
   src/v20180317/model/DescribeQuotaResponse.cpp
   src/v20180317/model/DeleteTargetGroupsResponse.cpp
   src/v20180317/model/ModifyTargetGroupInstancesPortRequest.cpp

@@ -47,17 +47,17 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Name of the table to be migrated
+                     * 获取Name of the migrated table, which is case-sensitive
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TableName Name of the table to be migrated
+                     * @return TableName Name of the migrated table, which is case-sensitive
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetTableName() const;
 
                     /**
-                     * 设置Name of the table to be migrated
+                     * 设置Name of the migrated table, which is case-sensitive
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TableName Name of the table to be migrated
+                     * @param TableName Name of the migrated table, which is case-sensitive
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetTableName(const std::string& _tableName);
@@ -137,7 +137,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Name of the table to be migrated
+                     * Name of the migrated table, which is case-sensitive
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_tableName;

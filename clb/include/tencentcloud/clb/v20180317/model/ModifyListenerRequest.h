@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/clb/v20180317/model/HealthCheck.h>
 #include <tencentcloud/clb/v20180317/model/CertificateInput.h>
+#include <tencentcloud/clb/v20180317/model/MultiCertInfo.h>
 
 
 namespace TencentCloud
@@ -135,14 +136,14 @@ namespace TencentCloud
                     bool HealthCheckHasBeenSet() const;
 
                     /**
-                     * 获取Certificate information. This parameter is applicable only to HTTPS and TCP_SSL listeners.
-                     * @return Certificate Certificate information. This parameter is applicable only to HTTPS and TCP_SSL listeners.
+                     * 获取Certificate information. This parameter is only applicable to HTTPS/TCP_SSL listeners. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+                     * @return Certificate Certificate information. This parameter is only applicable to HTTPS/TCP_SSL listeners. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
                      */
                     CertificateInput GetCertificate() const;
 
                     /**
-                     * 设置Certificate information. This parameter is applicable only to HTTPS and TCP_SSL listeners.
-                     * @param Certificate Certificate information. This parameter is applicable only to HTTPS and TCP_SSL listeners.
+                     * 设置Certificate information. This parameter is only applicable to HTTPS/TCP_SSL listeners. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+                     * @param Certificate Certificate information. This parameter is only applicable to HTTPS/TCP_SSL listeners. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
                      */
                     void SetCertificate(const CertificateInput& _certificate);
 
@@ -264,6 +265,60 @@ They represent weighted round robin and least connections, respectively. Default
                      */
                     bool SessionTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Certificate information. You can specify multiple server-side certificates with different algorithm types. This parameter is only applicable to HTTPS listeners with the SNI feature not enabled. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+                     * @return MultiCertInfo Certificate information. You can specify multiple server-side certificates with different algorithm types. This parameter is only applicable to HTTPS listeners with the SNI feature not enabled. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+                     */
+                    MultiCertInfo GetMultiCertInfo() const;
+
+                    /**
+                     * 设置Certificate information. You can specify multiple server-side certificates with different algorithm types. This parameter is only applicable to HTTPS listeners with the SNI feature not enabled. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+                     * @param MultiCertInfo Certificate information. You can specify multiple server-side certificates with different algorithm types. This parameter is only applicable to HTTPS listeners with the SNI feature not enabled. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+                     */
+                    void SetMultiCertInfo(const MultiCertInfo& _multiCertInfo);
+
+                    /**
+                     * 判断参数 MultiCertInfo 是否已赋值
+                     * @return MultiCertInfo 是否已赋值
+                     */
+                    bool MultiCertInfoHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return MaxConn 
+                     */
+                    int64_t GetMaxConn() const;
+
+                    /**
+                     * 设置
+                     * @param MaxConn 
+                     */
+                    void SetMaxConn(const int64_t& _maxConn);
+
+                    /**
+                     * 判断参数 MaxConn 是否已赋值
+                     * @return MaxConn 是否已赋值
+                     */
+                    bool MaxConnHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return MaxCps 
+                     */
+                    int64_t GetMaxCps() const;
+
+                    /**
+                     * 设置
+                     * @param MaxCps 
+                     */
+                    void SetMaxCps(const int64_t& _maxCps);
+
+                    /**
+                     * 判断参数 MaxCps 是否已赋值
+                     * @return MaxCps 是否已赋值
+                     */
+                    bool MaxCpsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -297,7 +352,7 @@ They represent weighted round robin and least connections, respectively. Default
                     bool m_healthCheckHasBeenSet;
 
                     /**
-                     * Certificate information. This parameter is applicable only to HTTPS and TCP_SSL listeners.
+                     * Certificate information. This parameter is only applicable to HTTPS/TCP_SSL listeners. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
                      */
                     CertificateInput m_certificate;
                     bool m_certificateHasBeenSet;
@@ -338,6 +393,24 @@ They represent weighted round robin and least connections, respectively. Default
                      */
                     std::string m_sessionType;
                     bool m_sessionTypeHasBeenSet;
+
+                    /**
+                     * Certificate information. You can specify multiple server-side certificates with different algorithm types. This parameter is only applicable to HTTPS listeners with the SNI feature not enabled. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+                     */
+                    MultiCertInfo m_multiCertInfo;
+                    bool m_multiCertInfoHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_maxConn;
+                    bool m_maxConnHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_maxCps;
+                    bool m_maxCpsHasBeenSet;
 
                 };
             }

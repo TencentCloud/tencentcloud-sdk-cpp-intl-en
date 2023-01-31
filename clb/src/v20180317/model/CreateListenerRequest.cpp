@@ -36,7 +36,10 @@ CreateListenerRequest::CreateListenerRequest() :
     m_sessionTypeHasBeenSet(false),
     m_keepaliveEnableHasBeenSet(false),
     m_endPortHasBeenSet(false),
-    m_deregisterTargetRstHasBeenSet(false)
+    m_deregisterTargetRstHasBeenSet(false),
+    m_multiCertInfoHasBeenSet(false),
+    m_maxConnHasBeenSet(false),
+    m_maxCpsHasBeenSet(false)
 {
 }
 
@@ -169,6 +172,31 @@ string CreateListenerRequest::ToJsonString() const
         string key = "DeregisterTargetRst";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_deregisterTargetRst, allocator);
+    }
+
+    if (m_multiCertInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MultiCertInfo";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_multiCertInfo.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_maxConnHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MaxConn";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_maxConn, allocator);
+    }
+
+    if (m_maxCpsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MaxCps";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_maxCps, allocator);
     }
 
 
@@ -401,6 +429,54 @@ void CreateListenerRequest::SetDeregisterTargetRst(const bool& _deregisterTarget
 bool CreateListenerRequest::DeregisterTargetRstHasBeenSet() const
 {
     return m_deregisterTargetRstHasBeenSet;
+}
+
+MultiCertInfo CreateListenerRequest::GetMultiCertInfo() const
+{
+    return m_multiCertInfo;
+}
+
+void CreateListenerRequest::SetMultiCertInfo(const MultiCertInfo& _multiCertInfo)
+{
+    m_multiCertInfo = _multiCertInfo;
+    m_multiCertInfoHasBeenSet = true;
+}
+
+bool CreateListenerRequest::MultiCertInfoHasBeenSet() const
+{
+    return m_multiCertInfoHasBeenSet;
+}
+
+int64_t CreateListenerRequest::GetMaxConn() const
+{
+    return m_maxConn;
+}
+
+void CreateListenerRequest::SetMaxConn(const int64_t& _maxConn)
+{
+    m_maxConn = _maxConn;
+    m_maxConnHasBeenSet = true;
+}
+
+bool CreateListenerRequest::MaxConnHasBeenSet() const
+{
+    return m_maxConnHasBeenSet;
+}
+
+int64_t CreateListenerRequest::GetMaxCps() const
+{
+    return m_maxCps;
+}
+
+void CreateListenerRequest::SetMaxCps(const int64_t& _maxCps)
+{
+    m_maxCps = _maxCps;
+    m_maxCpsHasBeenSet = true;
+}
+
+bool CreateListenerRequest::MaxCpsHasBeenSet() const
+{
+    return m_maxCpsHasBeenSet;
 }
 
 

@@ -426,6 +426,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool TagsHasBeenSet() const;
 
+                    /**
+                     * 获取Information of automatic retry time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AutoRetryTimeRangeMinutes Information of automatic retry time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetAutoRetryTimeRangeMinutes() const;
+
+                    /**
+                     * 设置Information of automatic retry time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param AutoRetryTimeRangeMinutes Information of automatic retry time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetAutoRetryTimeRangeMinutes(const int64_t& _autoRetryTimeRangeMinutes);
+
+                    /**
+                     * 判断参数 AutoRetryTimeRangeMinutes 是否已赋值
+                     * @return AutoRetryTimeRangeMinutes 是否已赋值
+                     */
+                    bool AutoRetryTimeRangeMinutesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -546,6 +568,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<TagItem> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * Information of automatic retry time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_autoRetryTimeRangeMinutes;
+                    bool m_autoRetryTimeRangeMinutesHasBeenSet;
 
                 };
             }

@@ -189,6 +189,24 @@ namespace TencentCloud
                      */
                     bool TagsHasBeenSet() const;
 
+                    /**
+                     * 获取Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
+                     * @return AutoRetryTimeRangeMinutes Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
+                     */
+                    int64_t GetAutoRetryTimeRangeMinutes() const;
+
+                    /**
+                     * 设置Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
+                     * @param AutoRetryTimeRangeMinutes Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
+                     */
+                    void SetAutoRetryTimeRangeMinutes(const int64_t& _autoRetryTimeRangeMinutes);
+
+                    /**
+                     * 判断参数 AutoRetryTimeRangeMinutes 是否已赋值
+                     * @return AutoRetryTimeRangeMinutes 是否已赋值
+                     */
+                    bool AutoRetryTimeRangeMinutesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -238,6 +256,12 @@ namespace TencentCloud
                      */
                     std::vector<TagItem> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
+                     */
+                    int64_t m_autoRetryTimeRangeMinutes;
+                    bool m_autoRetryTimeRangeMinutesHasBeenSet;
 
                 };
             }

@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Migration object information
+                * Migration object information, which is case-sensitive when objects such as databases, tables, and views are configured.
                 */
                 class DBItem : public AbstractModel
                 {

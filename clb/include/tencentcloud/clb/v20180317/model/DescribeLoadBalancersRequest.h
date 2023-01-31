@@ -156,14 +156,14 @@ OPEN: public network; INTERNAL: private network.
                     bool LoadBalancerVipsHasBeenSet() const;
 
                     /**
-                     * 获取Public IP of the real server bound to a CLB.
-                     * @return BackendPublicIps Public IP of the real server bound to a CLB.
+                     * 获取Public IPs of the backend services bound with the load balancer. Only the public IPs of CVMs are supported now.
+                     * @return BackendPublicIps Public IPs of the backend services bound with the load balancer. Only the public IPs of CVMs are supported now.
                      */
                     std::vector<std::string> GetBackendPublicIps() const;
 
                     /**
-                     * 设置Public IP of the real server bound to a CLB.
-                     * @param BackendPublicIps Public IP of the real server bound to a CLB.
+                     * 设置Public IPs of the backend services bound with the load balancer. Only the public IPs of CVMs are supported now.
+                     * @param BackendPublicIps Public IPs of the backend services bound with the load balancer. Only the public IPs of CVMs are supported now.
                      */
                     void SetBackendPublicIps(const std::vector<std::string>& _backendPublicIps);
 
@@ -174,14 +174,14 @@ OPEN: public network; INTERNAL: private network.
                     bool BackendPublicIpsHasBeenSet() const;
 
                     /**
-                     * 获取Private IP of the real server bound to a CLB.
-                     * @return BackendPrivateIps Private IP of the real server bound to a CLB.
+                     * 获取Private IPs of the backend services bound with the load balancer. Only the private IPs of CVMs are supported now.
+                     * @return BackendPrivateIps Private IPs of the backend services bound with the load balancer. Only the private IPs of CVMs are supported now.
                      */
                     std::vector<std::string> GetBackendPrivateIps() const;
 
                     /**
-                     * 设置Private IP of the real server bound to a CLB.
-                     * @param BackendPrivateIps Private IP of the real server bound to a CLB.
+                     * 设置Private IPs of the backend services bound with the load balancer. Only the private IPs of CVMs are supported now.
+                     * @param BackendPrivateIps Private IPs of the backend services bound with the load balancer. Only the private IPs of CVMs are supported now.
                      */
                     void SetBackendPrivateIps(const std::vector<std::string>& _backendPrivateIps);
 
@@ -437,13 +437,13 @@ OPEN: public network; INTERNAL: private network.
                     bool m_loadBalancerVipsHasBeenSet;
 
                     /**
-                     * Public IP of the real server bound to a CLB.
+                     * Public IPs of the backend services bound with the load balancer. Only the public IPs of CVMs are supported now.
                      */
                     std::vector<std::string> m_backendPublicIps;
                     bool m_backendPublicIpsHasBeenSet;
 
                     /**
-                     * Private IP of the real server bound to a CLB.
+                     * Private IPs of the backend services bound with the load balancer. Only the private IPs of CVMs are supported now.
                      */
                     std::vector<std::string> m_backendPrivateIps;
                     bool m_backendPrivateIpsHasBeenSet;

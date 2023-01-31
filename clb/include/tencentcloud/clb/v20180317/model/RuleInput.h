@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/clb/v20180317/model/HealthCheck.h>
 #include <tencentcloud/clb/v20180317/model/CertificateInput.h>
+#include <tencentcloud/clb/v20180317/model/MultiCertInfo.h>
 
 
 namespace TencentCloud
@@ -121,14 +122,14 @@ namespace TencentCloud
                     bool HealthCheckHasBeenSet() const;
 
                     /**
-                     * 获取Certificate information
-                     * @return Certificate Certificate information
+                     * 获取Certificate information. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+                     * @return Certificate Certificate information. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
                      */
                     CertificateInput GetCertificate() const;
 
                     /**
-                     * 设置Certificate information
-                     * @param Certificate Certificate information
+                     * 设置Certificate information. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+                     * @param Certificate Certificate information. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
                      */
                     void SetCertificate(const CertificateInput& _certificate);
 
@@ -304,6 +305,24 @@ They represent weighted round robin, least connections, and IP hash, respectivel
                      */
                     bool DomainsHasBeenSet() const;
 
+                    /**
+                     * 获取Certificate information. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+                     * @return MultiCertInfo Certificate information. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+                     */
+                    MultiCertInfo GetMultiCertInfo() const;
+
+                    /**
+                     * 设置Certificate information. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+                     * @param MultiCertInfo Certificate information. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+                     */
+                    void SetMultiCertInfo(const MultiCertInfo& _multiCertInfo);
+
+                    /**
+                     * 判断参数 MultiCertInfo 是否已赋值
+                     * @return MultiCertInfo 是否已赋值
+                     */
+                    bool MultiCertInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -331,7 +350,7 @@ They represent weighted round robin, least connections, and IP hash, respectivel
                     bool m_healthCheckHasBeenSet;
 
                     /**
-                     * Certificate information
+                     * Certificate information. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
                      */
                     CertificateInput m_certificate;
                     bool m_certificateHasBeenSet;
@@ -390,6 +409,12 @@ They represent weighted round robin, least connections, and IP hash, respectivel
                      */
                     std::vector<std::string> m_domains;
                     bool m_domainsHasBeenSet;
+
+                    /**
+                     * Certificate information. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+                     */
+                    MultiCertInfo m_multiCertInfo;
+                    bool m_multiCertInfoHasBeenSet;
 
                 };
             }
