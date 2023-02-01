@@ -266,14 +266,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RocketMQFlagHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取Billing status (`1`: Normal; `2`: Service suspended; `3`: Terminated)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Status Billing status (`1`: Normal; `2`: Service suspended; `3`: Terminated)
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param Status 
+                     * 设置Billing status (`1`: Normal; `2`: Service suspended; `3`: Terminated)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Status Billing status (`1`: Normal; `2`: Service suspended; `3`: Terminated)
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetStatus(const int64_t& _status);
 
@@ -284,14 +288,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IsolateTime 
+                     * 获取Service suspension time in milliseconds
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IsolateTime Service suspension time in milliseconds
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetIsolateTime() const;
 
                     /**
-                     * 设置
-                     * @param IsolateTime 
+                     * 设置Service suspension time in milliseconds
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param IsolateTime Service suspension time in milliseconds
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetIsolateTime(const int64_t& _isolateTime);
 
@@ -302,14 +310,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsolateTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HttpPublicEndpoint 
+                     * 获取HTTP-based public network access address
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return HttpPublicEndpoint HTTP-based public network access address
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetHttpPublicEndpoint() const;
 
                     /**
-                     * 设置
-                     * @param HttpPublicEndpoint 
+                     * 设置HTTP-based public network access address
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param HttpPublicEndpoint HTTP-based public network access address
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetHttpPublicEndpoint(const std::string& _httpPublicEndpoint);
 
@@ -320,14 +332,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HttpPublicEndpointHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HttpVpcEndpoint 
+                     * 获取HTTP-based VPC access address
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return HttpVpcEndpoint HTTP-based VPC access address
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetHttpVpcEndpoint() const;
 
                     /**
-                     * 设置
-                     * @param HttpVpcEndpoint 
+                     * 设置HTTP-based VPC access address
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param HttpVpcEndpoint HTTP-based VPC access address
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetHttpVpcEndpoint(const std::string& _httpVpcEndpoint);
 
@@ -411,25 +427,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_rocketMQFlagHasBeenSet;
 
                     /**
-                     * 
+                     * Billing status (`1`: Normal; `2`: Service suspended; `3`: Terminated)
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * 
+                     * Service suspension time in milliseconds
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_isolateTime;
                     bool m_isolateTimeHasBeenSet;
 
                     /**
-                     * 
+                     * HTTP-based public network access address
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_httpPublicEndpoint;
                     bool m_httpPublicEndpointHasBeenSet;
 
                     /**
-                     * 
+                     * HTTP-based VPC access address
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_httpVpcEndpoint;
                     bool m_httpVpcEndpointHasBeenSet;

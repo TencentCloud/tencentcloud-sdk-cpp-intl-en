@@ -446,7 +446,7 @@ namespace TencentCloud
 
 
                 /**
-                 *This API is used to add sub-users.
+                 *This API is used to create a sub-user.
                  * @param req AddUserRequest
                  * @return AddUserOutcome
                  */

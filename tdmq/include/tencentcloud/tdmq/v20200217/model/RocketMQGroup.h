@@ -292,6 +292,50 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool BroadcastEnabledHasBeenSet() const;
 
+                    /**
+                     * 获取Group type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return GroupType Group type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetGroupType() const;
+
+                    /**
+                     * 设置Group type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param GroupType Group type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetGroupType(const std::string& _groupType);
+
+                    /**
+                     * 判断参数 GroupType 是否已赋值
+                     * @return GroupType 是否已赋值
+                     */
+                    bool GroupTypeHasBeenSet() const;
+
+                    /**
+                     * 获取The number of retries
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RetryMaxTimes The number of retries
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetRetryMaxTimes() const;
+
+                    /**
+                     * 设置The number of retries
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param RetryMaxTimes The number of retries
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetRetryMaxTimes(const uint64_t& _retryMaxTimes);
+
+                    /**
+                     * 判断参数 RetryMaxTimes 是否已赋值
+                     * @return RetryMaxTimes 是否已赋值
+                     */
+                    bool RetryMaxTimesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -374,6 +418,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool m_broadcastEnabled;
                     bool m_broadcastEnabledHasBeenSet;
+
+                    /**
+                     * Group type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_groupType;
+                    bool m_groupTypeHasBeenSet;
+
+                    /**
+                     * The number of retries
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_retryMaxTimes;
+                    bool m_retryMaxTimesHasBeenSet;
 
                 };
             }

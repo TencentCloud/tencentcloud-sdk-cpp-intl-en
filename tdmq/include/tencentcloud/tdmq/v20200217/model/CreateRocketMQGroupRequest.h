@@ -150,6 +150,42 @@ namespace TencentCloud
                      */
                     bool RemarkHasBeenSet() const;
 
+                    /**
+                     * 获取Group type (`TCP`, `HTTP`)
+                     * @return GroupType Group type (`TCP`, `HTTP`)
+                     */
+                    std::string GetGroupType() const;
+
+                    /**
+                     * 设置Group type (`TCP`, `HTTP`)
+                     * @param GroupType Group type (`TCP`, `HTTP`)
+                     */
+                    void SetGroupType(const std::string& _groupType);
+
+                    /**
+                     * 判断参数 GroupType 是否已赋值
+                     * @return GroupType 是否已赋值
+                     */
+                    bool GroupTypeHasBeenSet() const;
+
+                    /**
+                     * 获取The maximum number of retries for a group
+                     * @return RetryMaxTimes The maximum number of retries for a group
+                     */
+                    uint64_t GetRetryMaxTimes() const;
+
+                    /**
+                     * 设置The maximum number of retries for a group
+                     * @param RetryMaxTimes The maximum number of retries for a group
+                     */
+                    void SetRetryMaxTimes(const uint64_t& _retryMaxTimes);
+
+                    /**
+                     * 判断参数 RetryMaxTimes 是否已赋值
+                     * @return RetryMaxTimes 是否已赋值
+                     */
+                    bool RetryMaxTimesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -187,6 +223,18 @@ namespace TencentCloud
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
+
+                    /**
+                     * Group type (`TCP`, `HTTP`)
+                     */
+                    std::string m_groupType;
+                    bool m_groupTypeHasBeenSet;
+
+                    /**
+                     * The maximum number of retries for a group
+                     */
+                    uint64_t m_retryMaxTimes;
+                    bool m_retryMaxTimesHasBeenSet;
 
                 };
             }

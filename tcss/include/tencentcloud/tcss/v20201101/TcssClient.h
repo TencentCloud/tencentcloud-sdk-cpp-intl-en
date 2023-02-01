@@ -61,6 +61,10 @@
 #include <tencentcloud/tcss/v20201101/model/CheckRepeatAssetImageRegistryResponse.h>
 #include <tencentcloud/tcss/v20201101/model/ConfirmNetworkFirewallPolicyRequest.h>
 #include <tencentcloud/tcss/v20201101/model/ConfirmNetworkFirewallPolicyResponse.h>
+#include <tencentcloud/tcss/v20201101/model/CreateAbnormalProcessRulesExportJobRequest.h>
+#include <tencentcloud/tcss/v20201101/model/CreateAbnormalProcessRulesExportJobResponse.h>
+#include <tencentcloud/tcss/v20201101/model/CreateAccessControlsRuleExportJobRequest.h>
+#include <tencentcloud/tcss/v20201101/model/CreateAccessControlsRuleExportJobResponse.h>
 #include <tencentcloud/tcss/v20201101/model/CreateAssetImageRegistryScanTaskRequest.h>
 #include <tencentcloud/tcss/v20201101/model/CreateAssetImageRegistryScanTaskResponse.h>
 #include <tencentcloud/tcss/v20201101/model/CreateAssetImageRegistryScanTaskOneKeyRequest.h>
@@ -748,6 +752,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ConfirmNetworkFirewallPolicyResponse> ConfirmNetworkFirewallPolicyOutcome;
                 typedef std::future<ConfirmNetworkFirewallPolicyOutcome> ConfirmNetworkFirewallPolicyOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::ConfirmNetworkFirewallPolicyRequest&, ConfirmNetworkFirewallPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ConfirmNetworkFirewallPolicyAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateAbnormalProcessRulesExportJobResponse> CreateAbnormalProcessRulesExportJobOutcome;
+                typedef std::future<CreateAbnormalProcessRulesExportJobOutcome> CreateAbnormalProcessRulesExportJobOutcomeCallable;
+                typedef std::function<void(const TcssClient*, const Model::CreateAbnormalProcessRulesExportJobRequest&, CreateAbnormalProcessRulesExportJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAbnormalProcessRulesExportJobAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateAccessControlsRuleExportJobResponse> CreateAccessControlsRuleExportJobOutcome;
+                typedef std::future<CreateAccessControlsRuleExportJobOutcome> CreateAccessControlsRuleExportJobOutcomeCallable;
+                typedef std::function<void(const TcssClient*, const Model::CreateAccessControlsRuleExportJobRequest&, CreateAccessControlsRuleExportJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAccessControlsRuleExportJobAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateAssetImageRegistryScanTaskResponse> CreateAssetImageRegistryScanTaskOutcome;
                 typedef std::future<CreateAssetImageRegistryScanTaskOutcome> CreateAssetImageRegistryScanTaskOutcomeCallable;
                 typedef std::function<void(const TcssClient*, const Model::CreateAssetImageRegistryScanTaskRequest&, CreateAssetImageRegistryScanTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAssetImageRegistryScanTaskAsyncHandler;
@@ -1847,6 +1857,24 @@ namespace TencentCloud
                 ConfirmNetworkFirewallPolicyOutcome ConfirmNetworkFirewallPolicy(const Model::ConfirmNetworkFirewallPolicyRequest &request);
                 void ConfirmNetworkFirewallPolicyAsync(const Model::ConfirmNetworkFirewallPolicyRequest& request, const ConfirmNetworkFirewallPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ConfirmNetworkFirewallPolicyOutcomeCallable ConfirmNetworkFirewallPolicyCallable(const Model::ConfirmNetworkFirewallPolicyRequest& request);
+
+                /**
+                 *This API is used to export abnormal process rules.
+                 * @param req CreateAbnormalProcessRulesExportJobRequest
+                 * @return CreateAbnormalProcessRulesExportJobOutcome
+                 */
+                CreateAbnormalProcessRulesExportJobOutcome CreateAbnormalProcessRulesExportJob(const Model::CreateAbnormalProcessRulesExportJobRequest &request);
+                void CreateAbnormalProcessRulesExportJobAsync(const Model::CreateAbnormalProcessRulesExportJobRequest& request, const CreateAbnormalProcessRulesExportJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateAbnormalProcessRulesExportJobOutcomeCallable CreateAbnormalProcessRulesExportJobCallable(const Model::CreateAbnormalProcessRulesExportJobRequest& request);
+
+                /**
+                 *This API is used to export file tampering detection rules.
+                 * @param req CreateAccessControlsRuleExportJobRequest
+                 * @return CreateAccessControlsRuleExportJobOutcome
+                 */
+                CreateAccessControlsRuleExportJobOutcome CreateAccessControlsRuleExportJob(const Model::CreateAccessControlsRuleExportJobRequest &request);
+                void CreateAccessControlsRuleExportJobAsync(const Model::CreateAccessControlsRuleExportJobRequest& request, const CreateAccessControlsRuleExportJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateAccessControlsRuleExportJobOutcomeCallable CreateAccessControlsRuleExportJobCallable(const Model::CreateAccessControlsRuleExportJobRequest& request);
 
                 /**
                  *This API is used to create an image scan task for an image repository.

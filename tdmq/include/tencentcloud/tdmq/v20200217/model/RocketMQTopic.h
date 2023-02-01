@@ -65,6 +65,42 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
+                     * 获取Topic type. Enumerated values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`, `Retry`, and `DeadLetter`.
+                     * @return Type Topic type. Enumerated values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`, `Retry`, and `DeadLetter`.
+                     */
+                    std::string GetType() const;
+
+                    /**
+                     * 设置Topic type. Enumerated values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`, `Retry`, and `DeadLetter`.
+                     * @param Type Topic type. Enumerated values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`, `Retry`, and `DeadLetter`.
+                     */
+                    void SetType(const std::string& _type);
+
+                    /**
+                     * 判断参数 Type 是否已赋值
+                     * @return Type 是否已赋值
+                     */
+                    bool TypeHasBeenSet() const;
+
+                    /**
+                     * 获取The number of subscription groups
+                     * @return GroupNum The number of subscription groups
+                     */
+                    uint64_t GetGroupNum() const;
+
+                    /**
+                     * 设置The number of subscription groups
+                     * @param GroupNum The number of subscription groups
+                     */
+                    void SetGroupNum(const uint64_t& _groupNum);
+
+                    /**
+                     * 判断参数 GroupNum 是否已赋值
+                     * @return GroupNum 是否已赋值
+                     */
+                    bool GroupNumHasBeenSet() const;
+
+                    /**
                      * 获取Description.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Remark Description.
@@ -147,6 +183,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
+
+                    /**
+                     * Topic type. Enumerated values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`, `Retry`, and `DeadLetter`.
+                     */
+                    std::string m_type;
+                    bool m_typeHasBeenSet;
+
+                    /**
+                     * The number of subscription groups
+                     */
+                    uint64_t m_groupNum;
+                    bool m_groupNumHasBeenSet;
 
                     /**
                      * Description.

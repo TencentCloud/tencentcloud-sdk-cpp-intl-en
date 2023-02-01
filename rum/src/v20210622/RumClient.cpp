@@ -1932,6 +1932,135 @@ RumClient::DescribeReleaseFilesOutcomeCallable RumClient::DescribeReleaseFilesCa
     return task->get_future();
 }
 
+RumClient::DescribeRumGroupLogOutcome RumClient::DescribeRumGroupLog(const DescribeRumGroupLogRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRumGroupLog");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRumGroupLogResponse rsp = DescribeRumGroupLogResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRumGroupLogOutcome(rsp);
+        else
+            return DescribeRumGroupLogOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRumGroupLogOutcome(outcome.GetError());
+    }
+}
+
+void RumClient::DescribeRumGroupLogAsync(const DescribeRumGroupLogRequest& request, const DescribeRumGroupLogAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeRumGroupLog(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+RumClient::DescribeRumGroupLogOutcomeCallable RumClient::DescribeRumGroupLogCallable(const DescribeRumGroupLogRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeRumGroupLogOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeRumGroupLog(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+RumClient::DescribeRumLogListOutcome RumClient::DescribeRumLogList(const DescribeRumLogListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRumLogList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRumLogListResponse rsp = DescribeRumLogListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRumLogListOutcome(rsp);
+        else
+            return DescribeRumLogListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRumLogListOutcome(outcome.GetError());
+    }
+}
+
+void RumClient::DescribeRumLogListAsync(const DescribeRumLogListRequest& request, const DescribeRumLogListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeRumLogList(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+RumClient::DescribeRumLogListOutcomeCallable RumClient::DescribeRumLogListCallable(const DescribeRumLogListRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeRumLogListOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeRumLogList(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+RumClient::DescribeRumStatsLogListOutcome RumClient::DescribeRumStatsLogList(const DescribeRumStatsLogListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRumStatsLogList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRumStatsLogListResponse rsp = DescribeRumStatsLogListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRumStatsLogListOutcome(rsp);
+        else
+            return DescribeRumStatsLogListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRumStatsLogListOutcome(outcome.GetError());
+    }
+}
+
+void RumClient::DescribeRumStatsLogListAsync(const DescribeRumStatsLogListRequest& request, const DescribeRumStatsLogListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeRumStatsLogList(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+RumClient::DescribeRumStatsLogListOutcomeCallable RumClient::DescribeRumStatsLogListCallable(const DescribeRumStatsLogListRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeRumStatsLogListOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeRumStatsLogList(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 RumClient::DescribeScoresOutcome RumClient::DescribeScores(const DescribeScoresRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeScores");
@@ -2312,6 +2441,49 @@ RumClient::StopInstanceOutcomeCallable RumClient::StopInstanceCallable(const Sto
         [this, request]()
         {
             return this->StopInstance(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+RumClient::StopProjectOutcome RumClient::StopProject(const StopProjectRequest &request)
+{
+    auto outcome = MakeRequest(request, "StopProject");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        StopProjectResponse rsp = StopProjectResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return StopProjectOutcome(rsp);
+        else
+            return StopProjectOutcome(o.GetError());
+    }
+    else
+    {
+        return StopProjectOutcome(outcome.GetError());
+    }
+}
+
+void RumClient::StopProjectAsync(const StopProjectRequest& request, const StopProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->StopProject(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+RumClient::StopProjectOutcomeCallable RumClient::StopProjectCallable(const StopProjectRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<StopProjectOutcome()>>(
+        [this, request]()
+        {
+            return this->StopProject(request);
         }
     );
 

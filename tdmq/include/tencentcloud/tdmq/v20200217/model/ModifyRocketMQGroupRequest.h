@@ -150,6 +150,24 @@ namespace TencentCloud
                      */
                     bool BroadcastEnableHasBeenSet() const;
 
+                    /**
+                     * 获取The maximum number of retries
+                     * @return RetryMaxTimes The maximum number of retries
+                     */
+                    uint64_t GetRetryMaxTimes() const;
+
+                    /**
+                     * 设置The maximum number of retries
+                     * @param RetryMaxTimes The maximum number of retries
+                     */
+                    void SetRetryMaxTimes(const uint64_t& _retryMaxTimes);
+
+                    /**
+                     * 判断参数 RetryMaxTimes 是否已赋值
+                     * @return RetryMaxTimes 是否已赋值
+                     */
+                    bool RetryMaxTimesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -187,6 +205,12 @@ namespace TencentCloud
                      */
                     bool m_broadcastEnable;
                     bool m_broadcastEnableHasBeenSet;
+
+                    /**
+                     * The maximum number of retries
+                     */
+                    uint64_t m_retryMaxTimes;
+                    bool m_retryMaxTimesHasBeenSet;
 
                 };
             }

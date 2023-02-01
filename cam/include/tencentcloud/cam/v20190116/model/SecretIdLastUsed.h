@@ -86,6 +86,28 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                      */
                     bool LastUsedDateHasBeenSet() const;
 
+                    /**
+                     * 获取The most recent date the key was accessed
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return LastSecretUsedDate The most recent date the key was accessed
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetLastSecretUsedDate() const;
+
+                    /**
+                     * 设置The most recent date the key was accessed
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param LastSecretUsedDate The most recent date the key was accessed
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetLastSecretUsedDate(const uint64_t& _lastSecretUsedDate);
+
+                    /**
+                     * 判断参数 LastSecretUsedDate 是否已赋值
+                     * @return LastSecretUsedDate 是否已赋值
+                     */
+                    bool LastSecretUsedDateHasBeenSet() const;
+
                 private:
 
                     /**
@@ -100,6 +122,13 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                      */
                     std::string m_lastUsedDate;
                     bool m_lastUsedDateHasBeenSet;
+
+                    /**
+                     * The most recent date the key was accessed
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_lastSecretUsedDate;
+                    bool m_lastSecretUsedDateHasBeenSet;
 
                 };
             }
