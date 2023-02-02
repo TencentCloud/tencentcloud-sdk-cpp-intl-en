@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID.
-                     * @return InstanceId Instance ID.
+                     * 获取TCMG instance ID, such as “grafana-12345678”.
+                     * @return InstanceId TCMG instance ID, such as “grafana-12345678”.
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID.
-                     * @param InstanceId Instance ID.
+                     * 设置TCMG instance ID, such as “grafana-12345678”.
+                     * @param InstanceId TCMG instance ID, such as “grafana-12345678”.
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Channel name
-                     * @return ChannelName Channel name
+                     * 获取Alert channel name, such as “test”.
+                     * @return ChannelName Alert channel name, such as “test”.
                      */
                     std::string GetChannelName() const;
 
                     /**
-                     * 设置Channel name
-                     * @param ChannelName Channel name
+                     * 设置Alert channel name, such as “test”.
+                     * @param ChannelName Alert channel name, such as “test”.
                      */
                     void SetChannelName(const std::string& _channelName);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool ChannelNameHasBeenSet() const;
 
                     /**
-                     * 获取Channel ID
-                     * @return ChannelIDs Channel ID
+                     * 获取Alert channel ID, such as “nchannel-abcd1234”.
+                     * @return ChannelIDs Alert channel ID, such as “nchannel-abcd1234”.
                      */
                     std::vector<std::string> GetChannelIDs() const;
 
                     /**
-                     * 设置Channel ID
-                     * @param ChannelIDs Channel ID
+                     * 设置Alert channel ID, such as “nchannel-abcd1234”.
+                     * @param ChannelIDs Alert channel ID, such as “nchannel-abcd1234”.
                      */
                     void SetChannelIDs(const std::vector<std::string>& _channelIDs);
 
@@ -133,14 +133,14 @@ namespace TencentCloud
                     bool ChannelIDsHasBeenSet() const;
 
                     /**
-                     * 获取Status
-                     * @return ChannelState Status
+                     * 获取Alert channel status
+                     * @return ChannelState Alert channel status
                      */
                     int64_t GetChannelState() const;
 
                     /**
-                     * 设置Status
-                     * @param ChannelState Status
+                     * 设置Alert channel status
+                     * @param ChannelState Alert channel status
                      */
                     void SetChannelState(const int64_t& _channelState);
 
@@ -153,7 +153,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID.
+                     * TCMG instance ID, such as “grafana-12345678”.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -171,19 +171,19 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Channel name
+                     * Alert channel name, such as “test”.
                      */
                     std::string m_channelName;
                     bool m_channelNameHasBeenSet;
 
                     /**
-                     * Channel ID
+                     * Alert channel ID, such as “nchannel-abcd1234”.
                      */
                     std::vector<std::string> m_channelIDs;
                     bool m_channelIDsHasBeenSet;
 
                     /**
-                     * Status
+                     * Alert channel status
                      */
                     int64_t m_channelState;
                     bool m_channelStateHasBeenSet;

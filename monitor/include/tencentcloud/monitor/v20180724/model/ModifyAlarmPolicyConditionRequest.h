@@ -190,6 +190,78 @@ namespace TencentCloud
                      */
                     bool LogAlarmReqInfoHasBeenSet() const;
 
+                    /**
+                     * 获取Template ID, which is dedicated to TMP.
+                     * @return NoticeIds Template ID, which is dedicated to TMP.
+                     */
+                    std::vector<std::string> GetNoticeIds() const;
+
+                    /**
+                     * 设置Template ID, which is dedicated to TMP.
+                     * @param NoticeIds Template ID, which is dedicated to TMP.
+                     */
+                    void SetNoticeIds(const std::vector<std::string>& _noticeIds);
+
+                    /**
+                     * 判断参数 NoticeIds 是否已赋值
+                     * @return NoticeIds 是否已赋值
+                     */
+                    bool NoticeIdsHasBeenSet() const;
+
+                    /**
+                     * 获取Status (`0`: Disabled; `1`: Enabled)
+                     * @return Enable Status (`0`: Disabled; `1`: Enabled)
+                     */
+                    int64_t GetEnable() const;
+
+                    /**
+                     * 设置Status (`0`: Disabled; `1`: Enabled)
+                     * @param Enable Status (`0`: Disabled; `1`: Enabled)
+                     */
+                    void SetEnable(const int64_t& _enable);
+
+                    /**
+                     * 判断参数 Enable 是否已赋值
+                     * @return Enable 是否已赋值
+                     */
+                    bool EnableHasBeenSet() const;
+
+                    /**
+                     * 获取Name of the policy dedicated to TMP
+                     * @return PolicyName Name of the policy dedicated to TMP
+                     */
+                    std::string GetPolicyName() const;
+
+                    /**
+                     * 设置Name of the policy dedicated to TMP
+                     * @param PolicyName Name of the policy dedicated to TMP
+                     */
+                    void SetPolicyName(const std::string& _policyName);
+
+                    /**
+                     * 判断参数 PolicyName 是否已赋值
+                     * @return PolicyName 是否已赋值
+                     */
+                    bool PolicyNameHasBeenSet() const;
+
+                    /**
+                     * 获取The alert configured for an event
+                     * @return EbSubject The alert configured for an event
+                     */
+                    std::string GetEbSubject() const;
+
+                    /**
+                     * 设置The alert configured for an event
+                     * @param EbSubject The alert configured for an event
+                     */
+                    void SetEbSubject(const std::string& _ebSubject);
+
+                    /**
+                     * 判断参数 EbSubject 是否已赋值
+                     * @return EbSubject 是否已赋值
+                     */
+                    bool EbSubjectHasBeenSet() const;
+
                 private:
 
                     /**
@@ -239,6 +311,30 @@ namespace TencentCloud
                      */
                     LogAlarmReq m_logAlarmReqInfo;
                     bool m_logAlarmReqInfoHasBeenSet;
+
+                    /**
+                     * Template ID, which is dedicated to TMP.
+                     */
+                    std::vector<std::string> m_noticeIds;
+                    bool m_noticeIdsHasBeenSet;
+
+                    /**
+                     * Status (`0`: Disabled; `1`: Enabled)
+                     */
+                    int64_t m_enable;
+                    bool m_enableHasBeenSet;
+
+                    /**
+                     * Name of the policy dedicated to TMP
+                     */
+                    std::string m_policyName;
+                    bool m_policyNameHasBeenSet;
+
+                    /**
+                     * The alert configured for an event
+                     */
+                    std::string m_ebSubject;
+                    bool m_ebSubjectHasBeenSet;
 
                 };
             }

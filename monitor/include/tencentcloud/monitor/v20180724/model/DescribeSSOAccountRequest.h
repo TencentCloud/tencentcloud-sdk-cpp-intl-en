@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取TCMG instance ID, such as “grafana-abcdefgh”.
+                     * @return InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * 设置TCMG instance ID, such as “grafana-abcdefgh”.
+                     * @param InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Filter by account UIN
-                     * @return UserId Filter by account UIN
+                     * 获取Filter by account ID such as “10000”
+                     * @return UserId Filter by account ID such as “10000”
                      */
                     std::string GetUserId() const;
 
                     /**
-                     * 设置Filter by account UIN
-                     * @param UserId Filter by account UIN
+                     * 设置Filter by account ID such as “10000”
+                     * @param UserId Filter by account ID such as “10000”
                      */
                     void SetUserId(const std::string& _userId);
 
@@ -81,13 +81,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * TCMG instance ID, such as “grafana-abcdefgh”.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Filter by account UIN
+                     * Filter by account ID such as “10000”
                      */
                     std::string m_userId;
                     bool m_userIdHasBeenSet;

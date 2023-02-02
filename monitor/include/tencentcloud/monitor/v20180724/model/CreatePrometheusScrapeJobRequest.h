@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取TMP instance ID, such as “prom-abcd1234”.
+                     * @return InstanceId TMP instance ID, such as “prom-abcd1234”.
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * 设置TMP instance ID, such as “prom-abcd1234”.
+                     * @param InstanceId TMP instance ID, such as “prom-abcd1234”.
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Agent ID
-                     * @return AgentId Agent ID
+                     * 获取Agent ID, such as “agent-abcd1234”. It can be obtained on the **Agent Management** page in the console.
+                     * @return AgentId Agent ID, such as “agent-abcd1234”. It can be obtained on the **Agent Management** page in the console.
                      */
                     std::string GetAgentId() const;
 
                     /**
-                     * 设置Agent ID
-                     * @param AgentId Agent ID
+                     * 设置Agent ID, such as “agent-abcd1234”. It can be obtained on the **Agent Management** page in the console.
+                     * @param AgentId Agent ID, such as “agent-abcd1234”. It can be obtained on the **Agent Management** page in the console.
                      */
                     void SetAgentId(const std::string& _agentId);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool AgentIdHasBeenSet() const;
 
                     /**
-                     * 获取Task content
-                     * @return Config Task content
+                     * 获取Scrape task ID in the format of “job_name:xx”
+                     * @return Config Scrape task ID in the format of “job_name:xx”
                      */
                     std::string GetConfig() const;
 
                     /**
-                     * 设置Task content
-                     * @param Config Task content
+                     * 设置Scrape task ID in the format of “job_name:xx”
+                     * @param Config Scrape task ID in the format of “job_name:xx”
                      */
                     void SetConfig(const std::string& _config);
 
@@ -99,19 +99,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * TMP instance ID, such as “prom-abcd1234”.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Agent ID
+                     * Agent ID, such as “agent-abcd1234”. It can be obtained on the **Agent Management** page in the console.
                      */
                     std::string m_agentId;
                     bool m_agentIdHasBeenSet;
 
                     /**
-                     * Task content
+                     * Scrape task ID in the format of “job_name:xx”
                      */
                     std::string m_config;
                     bool m_configHasBeenSet;

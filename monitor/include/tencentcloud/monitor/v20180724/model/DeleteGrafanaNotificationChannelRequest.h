@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Array of channel IDs
-                     * @return ChannelIDs Array of channel IDs
+                     * 获取Array of channel IDs, such as “nchannel-abcd1234”.
+                     * @return ChannelIDs Array of channel IDs, such as “nchannel-abcd1234”.
                      */
                     std::vector<std::string> GetChannelIDs() const;
 
                     /**
-                     * 设置Array of channel IDs
-                     * @param ChannelIDs Array of channel IDs
+                     * 设置Array of channel IDs, such as “nchannel-abcd1234”.
+                     * @param ChannelIDs Array of channel IDs, such as “nchannel-abcd1234”.
                      */
                     void SetChannelIDs(const std::vector<std::string>& _channelIDs);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool ChannelIDsHasBeenSet() const;
 
                     /**
-                     * 获取Instance name
-                     * @return InstanceId Instance name
+                     * 获取TCMG instance ID, such as “grafana-abcdefgh”.
+                     * @return InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance name
-                     * @param InstanceId Instance name
+                     * 设置TCMG instance ID, such as “grafana-abcdefgh”.
+                     * @param InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
@@ -81,13 +81,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Array of channel IDs
+                     * Array of channel IDs, such as “nchannel-abcd1234”.
                      */
                     std::vector<std::string> m_channelIDs;
                     bool m_channelIDsHasBeenSet;
 
                     /**
-                     * Instance name
+                     * TCMG instance ID, such as “grafana-abcdefgh”.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;

@@ -189,6 +189,24 @@ namespace TencentCloud
                      */
                     bool CLSNoticesHasBeenSet() const;
 
+                    /**
+                     * 获取List of IDs of the alerting rules bound to an alarm notification template
+                     * @return PolicyIds List of IDs of the alerting rules bound to an alarm notification template
+                     */
+                    std::vector<std::string> GetPolicyIds() const;
+
+                    /**
+                     * 设置List of IDs of the alerting rules bound to an alarm notification template
+                     * @param PolicyIds List of IDs of the alerting rules bound to an alarm notification template
+                     */
+                    void SetPolicyIds(const std::vector<std::string>& _policyIds);
+
+                    /**
+                     * 判断参数 PolicyIds 是否已赋值
+                     * @return PolicyIds 是否已赋值
+                     */
+                    bool PolicyIdsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -238,6 +256,12 @@ namespace TencentCloud
                      */
                     std::vector<CLSNotice> m_cLSNotices;
                     bool m_cLSNoticesHasBeenSet;
+
+                    /**
+                     * List of IDs of the alerting rules bound to an alarm notification template
+                     */
+                    std::vector<std::string> m_policyIds;
+                    bool m_policyIdsHasBeenSet;
 
                 };
             }

@@ -193,6 +193,24 @@ major: in-place upgrade of major version
                      */
                     bool MaxNotReadyPercentHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to upgrade node runtime. Values: `true`, `false` (default).
+                     * @return UpgradeRunTime Whether to upgrade node runtime. Values: `true`, `false` (default).
+                     */
+                    bool GetUpgradeRunTime() const;
+
+                    /**
+                     * 设置Whether to upgrade node runtime. Values: `true`, `false` (default).
+                     * @param UpgradeRunTime Whether to upgrade node runtime. Values: `true`, `false` (default).
+                     */
+                    void SetUpgradeRunTime(const bool& _upgradeRunTime);
+
+                    /**
+                     * 判断参数 UpgradeRunTime 是否已赋值
+                     * @return UpgradeRunTime 是否已赋值
+                     */
+                    bool UpgradeRunTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -242,6 +260,12 @@ major: in-place upgrade of major version
                      */
                     double m_maxNotReadyPercent;
                     bool m_maxNotReadyPercentHasBeenSet;
+
+                    /**
+                     * Whether to upgrade node runtime. Values: `true`, `false` (default).
+                     */
+                    bool m_upgradeRunTime;
+                    bool m_upgradeRunTimeHasBeenSet;
 
                 };
             }

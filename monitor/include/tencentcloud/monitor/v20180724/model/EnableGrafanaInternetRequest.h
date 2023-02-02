@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceID Instance ID
+                     * 获取TCMG instance ID, such as “grafana-kleu3gt0”.
+                     * @return InstanceID TCMG instance ID, such as “grafana-kleu3gt0”.
                      */
                     std::string GetInstanceID() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param InstanceID Instance ID
+                     * 设置TCMG instance ID, such as “grafana-kleu3gt0”.
+                     * @param InstanceID TCMG instance ID, such as “grafana-kleu3gt0”.
                      */
                     void SetInstanceID(const std::string& _instanceID);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIDHasBeenSet() const;
 
                     /**
-                     * 获取Enable or disable
-                     * @return EnableInternet Enable or disable
+                     * 获取Whether to enable public network access (`true`: Yes; `false`: No)
+                     * @return EnableInternet Whether to enable public network access (`true`: Yes; `false`: No)
                      */
                     bool GetEnableInternet() const;
 
                     /**
-                     * 设置Enable or disable
-                     * @param EnableInternet Enable or disable
+                     * 设置Whether to enable public network access (`true`: Yes; `false`: No)
+                     * @param EnableInternet Whether to enable public network access (`true`: Yes; `false`: No)
                      */
                     void SetEnableInternet(const bool& _enableInternet);
 
@@ -81,13 +81,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * TCMG instance ID, such as “grafana-kleu3gt0”.
                      */
                     std::string m_instanceID;
                     bool m_instanceIDHasBeenSet;
 
                     /**
-                     * Enable or disable
+                     * Whether to enable public network access (`true`: Yes; `false`: No)
                      */
                     bool m_enableInternet;
                     bool m_enableInternetHasBeenSet;

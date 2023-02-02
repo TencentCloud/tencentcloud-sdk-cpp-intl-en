@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID.
-                     * @return InstanceId Instance ID.
+                     * 获取TCMG instance ID, such as “grafana-abcdefgh”.
+                     * @return InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID.
-                     * @param InstanceId Instance ID.
+                     * 设置TCMG instance ID, such as “grafana-abcdefgh”.
+                     * @param InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Channel name
-                     * @return ChannelName Channel name
+                     * 获取Alert channel name, such as “test”.
+                     * @return ChannelName Alert channel name, such as “test”.
                      */
                     std::string GetChannelName() const;
 
                     /**
-                     * 设置Channel name
-                     * @param ChannelName Channel name
+                     * 设置Alert channel name, such as “test”.
+                     * @param ChannelName Alert channel name, such as “test”.
                      */
                     void SetChannelName(const std::string& _channelName);
 
@@ -153,13 +153,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID.
+                     * TCMG instance ID, such as “grafana-abcdefgh”.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Channel name
+                     * Alert channel name, such as “test”.
                      */
                     std::string m_channelName;
                     bool m_channelNameHasBeenSet;

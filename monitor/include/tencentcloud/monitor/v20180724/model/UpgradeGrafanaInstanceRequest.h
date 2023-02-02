@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID.
-                     * @return InstanceId Instance ID.
+                     * 获取TCMG instance ID, such as “grafana-12345678”.
+                     * @return InstanceId TCMG instance ID, such as “grafana-12345678”.
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID.
-                     * @param InstanceId Instance ID.
+                     * 设置TCMG instance ID, such as “grafana-12345678”.
+                     * @param InstanceId TCMG instance ID, such as “grafana-12345678”.
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Version alias
-                     * @return Alias Version alias
+                     * 获取Version alias, such as v7.4.2.
+                     * @return Alias Version alias, such as v7.4.2.
                      */
                     std::string GetAlias() const;
 
                     /**
-                     * 设置Version alias
-                     * @param Alias Version alias
+                     * 设置Version alias, such as v7.4.2.
+                     * @param Alias Version alias, such as v7.4.2.
                      */
                     void SetAlias(const std::string& _alias);
 
@@ -81,13 +81,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID.
+                     * TCMG instance ID, such as “grafana-12345678”.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Version alias
+                     * Version alias, such as v7.4.2.
                      */
                     std::string m_alias;
                     bool m_aliasHasBeenSet;

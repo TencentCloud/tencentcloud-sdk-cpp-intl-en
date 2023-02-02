@@ -44,14 +44,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Prometheus instance ID
-                     * @return InstanceId Prometheus instance ID
+                     * 获取TMP instance ID, such as “prom-abcd1234”.
+                     * @return InstanceId TMP instance ID, such as “prom-abcd1234”.
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Prometheus instance ID
-                     * @param InstanceId Prometheus instance ID
+                     * 设置TMP instance ID, such as “prom-abcd1234”.
+                     * @param InstanceId TMP instance ID, such as “prom-abcd1234”.
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
@@ -80,14 +80,14 @@ namespace TencentCloud
                     bool RuleNameHasBeenSet() const;
 
                     /**
-                     * 获取Rule expression
-                     * @return Expr Rule expression
+                     * 获取Alerting rule expression. For more information, see <a href="https://www.tencentcloud.com/document/product/1116/43192?lang=en&pg=">Alerting Rule Description</a>
+                     * @return Expr Alerting rule expression. For more information, see <a href="https://www.tencentcloud.com/document/product/1116/43192?lang=en&pg=">Alerting Rule Description</a>
                      */
                     std::string GetExpr() const;
 
                     /**
-                     * 设置Rule expression
-                     * @param Expr Rule expression
+                     * 设置Alerting rule expression. For more information, see <a href="https://www.tencentcloud.com/document/product/1116/43192?lang=en&pg=">Alerting Rule Description</a>
+                     * @param Expr Alerting rule expression. For more information, see <a href="https://www.tencentcloud.com/document/product/1116/43192?lang=en&pg=">Alerting Rule Description</a>
                      */
                     void SetExpr(const std::string& _expr);
 
@@ -224,7 +224,7 @@ Alert object and alert message are special fields of Prometheus Rule Annotations
                 private:
 
                     /**
-                     * Prometheus instance ID
+                     * TMP instance ID, such as “prom-abcd1234”.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -236,7 +236,7 @@ Alert object and alert message are special fields of Prometheus Rule Annotations
                     bool m_ruleNameHasBeenSet;
 
                     /**
-                     * Rule expression
+                     * Alerting rule expression. For more information, see <a href="https://www.tencentcloud.com/document/product/1116/43192?lang=en&pg=">Alerting Rule Description</a>
                      */
                     std::string m_expr;
                     bool m_exprHasBeenSet;

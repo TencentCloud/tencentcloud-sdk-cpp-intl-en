@@ -373,6 +373,24 @@ namespace TencentCloud
                      */
                     bool MigrateFlagHasBeenSet() const;
 
+                    /**
+                     * 获取The alert configured for an event
+                     * @return EbSubject The alert configured for an event
+                     */
+                    std::string GetEbSubject() const;
+
+                    /**
+                     * 设置The alert configured for an event
+                     * @param EbSubject The alert configured for an event
+                     */
+                    void SetEbSubject(const std::string& _ebSubject);
+
+                    /**
+                     * 判断参数 EbSubject 是否已赋值
+                     * @return EbSubject 是否已赋值
+                     */
+                    bool EbSubjectHasBeenSet() const;
+
                 private:
 
                     /**
@@ -482,6 +500,12 @@ namespace TencentCloud
                      */
                     int64_t m_migrateFlag;
                     bool m_migrateFlagHasBeenSet;
+
+                    /**
+                     * The alert configured for an event
+                     */
+                    std::string m_ebSubject;
+                    bool m_ebSubjectHasBeenSet;
 
                 };
             }

@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Channel ID
-                     * @return ChannelId Channel ID
+                     * 获取Channel ID, such as “nchannel-abcd1234”.
+                     * @return ChannelId Channel ID, such as “nchannel-abcd1234”.
                      */
                     std::string GetChannelId() const;
 
                     /**
-                     * 设置Channel ID
-                     * @param ChannelId Channel ID
+                     * 设置Channel ID, such as “nchannel-abcd1234”.
+                     * @param ChannelId Channel ID, such as “nchannel-abcd1234”.
                      */
                     void SetChannelId(const std::string& _channelId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool ChannelIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID.
-                     * @return InstanceId Instance ID.
+                     * 获取TCMG instance ID, such as “grafana-12345678”.
+                     * @return InstanceId TCMG instance ID, such as “grafana-12345678”.
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID.
-                     * @param InstanceId Instance ID.
+                     * 设置TCMG instance ID, such as “grafana-12345678”.
+                     * @param InstanceId TCMG instance ID, such as “grafana-12345678”.
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Channel name
-                     * @return ChannelName Channel name
+                     * 获取Alert channel name, such as “test”.
+                     * @return ChannelName Alert channel name, such as “test”.
                      */
                     std::string GetChannelName() const;
 
                     /**
-                     * 设置Channel name
-                     * @param ChannelName Channel name
+                     * 设置Alert channel name, such as “test”.
+                     * @param ChannelName Alert channel name, such as “test”.
                      */
                     void SetChannelName(const std::string& _channelName);
 
@@ -153,19 +153,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Channel ID
+                     * Channel ID, such as “nchannel-abcd1234”.
                      */
                     std::string m_channelId;
                     bool m_channelIdHasBeenSet;
 
                     /**
-                     * Instance ID.
+                     * TCMG instance ID, such as “grafana-12345678”.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Channel name
+                     * Alert channel name, such as “test”.
                      */
                     std::string m_channelName;
                     bool m_channelNameHasBeenSet;

@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Integration ID
-                     * @return IntegrationId Integration ID
+                     * 获取Integration ID, such as “integration-abcd1234”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**.
+                     * @return IntegrationId Integration ID, such as “integration-abcd1234”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**.
                      */
                     std::string GetIntegrationId() const;
 
                     /**
-                     * 设置Integration ID
-                     * @param IntegrationId Integration ID
+                     * 设置Integration ID, such as “integration-abcd1234”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**.
+                     * @param IntegrationId Integration ID, such as “integration-abcd1234”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**.
                      */
                     void SetIntegrationId(const std::string& _integrationId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool IntegrationIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取TCMG instance ID, such as “grafana-12345678”.
+                     * @return InstanceId TCMG instance ID, such as “grafana-12345678”.
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * 设置TCMG instance ID, such as “grafana-12345678”.
+                     * @param InstanceId TCMG instance ID, such as “grafana-12345678”.
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Integration type
-                     * @return Kind Integration type
+                     * 获取Integration type, such as “tencent-cloud-prometheus”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**.
+                     * @return Kind Integration type, such as “tencent-cloud-prometheus”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**.
                      */
                     std::string GetKind() const;
 
                     /**
-                     * 设置Integration type
-                     * @param Kind Integration type
+                     * 设置Integration type, such as “tencent-cloud-prometheus”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**.
+                     * @param Kind Integration type, such as “tencent-cloud-prometheus”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**.
                      */
                     void SetKind(const std::string& _kind);
 
@@ -117,19 +117,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Integration ID
+                     * Integration ID, such as “integration-abcd1234”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**.
                      */
                     std::string m_integrationId;
                     bool m_integrationIdHasBeenSet;
 
                     /**
-                     * Instance ID
+                     * TCMG instance ID, such as “grafana-12345678”.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Integration type
+                     * Integration type, such as “tencent-cloud-prometheus”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**.
                      */
                     std::string m_kind;
                     bool m_kindHasBeenSet;

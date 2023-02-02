@@ -96,6 +96,42 @@ namespace TencentCloud
                      */
                     bool PolicyIdHasBeenSet() const;
 
+                    /**
+                     * 获取The alert configured for an event
+                     * @return EbSubject The alert configured for an event
+                     */
+                    std::string GetEbSubject() const;
+
+                    /**
+                     * 设置The alert configured for an event
+                     * @param EbSubject The alert configured for an event
+                     */
+                    void SetEbSubject(const std::string& _ebSubject);
+
+                    /**
+                     * 判断参数 EbSubject 是否已赋值
+                     * @return EbSubject 是否已赋值
+                     */
+                    bool EbSubjectHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the event alert has been configured
+                     * @return EbEventFlag Whether the event alert has been configured
+                     */
+                    int64_t GetEbEventFlag() const;
+
+                    /**
+                     * 设置Whether the event alert has been configured
+                     * @param EbEventFlag Whether the event alert has been configured
+                     */
+                    void SetEbEventFlag(const int64_t& _ebEventFlag);
+
+                    /**
+                     * 判断参数 EbEventFlag 是否已赋值
+                     * @return EbEventFlag 是否已赋值
+                     */
+                    bool EbEventFlagHasBeenSet() const;
+
                 private:
 
                     /**
@@ -115,6 +151,18 @@ namespace TencentCloud
                      */
                     std::string m_policyId;
                     bool m_policyIdHasBeenSet;
+
+                    /**
+                     * The alert configured for an event
+                     */
+                    std::string m_ebSubject;
+                    bool m_ebSubjectHasBeenSet;
+
+                    /**
+                     * Whether the event alert has been configured
+                     */
+                    int64_t m_ebEventFlag;
+                    bool m_ebEventFlagHasBeenSet;
 
                 };
             }

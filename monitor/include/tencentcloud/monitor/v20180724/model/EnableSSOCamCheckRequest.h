@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取TCMG instance ID, such as “grafana-abcdefgh”.
+                     * @return InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * 设置TCMG instance ID, such as “grafana-abcdefgh”.
+                     * @param InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable CAM authentication
-                     * @return EnableSSOCamCheck Whether to enable CAM authentication
+                     * 获取Whether to enable CAM authentication (`true`: Yes; `false`: No)
+                     * @return EnableSSOCamCheck Whether to enable CAM authentication (`true`: Yes; `false`: No)
                      */
                     bool GetEnableSSOCamCheck() const;
 
                     /**
-                     * 设置Whether to enable CAM authentication
-                     * @param EnableSSOCamCheck Whether to enable CAM authentication
+                     * 设置Whether to enable CAM authentication (`true`: Yes; `false`: No)
+                     * @param EnableSSOCamCheck Whether to enable CAM authentication (`true`: Yes; `false`: No)
                      */
                     void SetEnableSSOCamCheck(const bool& _enableSSOCamCheck);
 
@@ -81,13 +81,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * TCMG instance ID, such as “grafana-abcdefgh”.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Whether to enable CAM authentication
+                     * Whether to enable CAM authentication (`true`: Yes; `false`: No)
                      */
                     bool m_enableSSOCamCheck;
                     bool m_enableSSOCamCheckHasBeenSet;

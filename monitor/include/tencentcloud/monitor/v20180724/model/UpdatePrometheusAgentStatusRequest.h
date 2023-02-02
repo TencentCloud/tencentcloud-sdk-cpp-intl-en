@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取TMP instance ID, such as “prom-abcd1234”.
+                     * @return InstanceId TMP instance ID, such as “prom-abcd1234”.
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * 设置TMP instance ID, such as “prom-abcd1234”.
+                     * @param InstanceId TMP instance ID, such as “prom-abcd1234”.
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取List of agent IDs
-                     * @return AgentIds List of agent IDs
+                     * 获取List of agent IDs such as “agent-abcd1234”, which can be obtained on the **Agent Management** page in the console.
+                     * @return AgentIds List of agent IDs such as “agent-abcd1234”, which can be obtained on the **Agent Management** page in the console.
                      */
                     std::vector<std::string> GetAgentIds() const;
 
                     /**
-                     * 设置List of agent IDs
-                     * @param AgentIds List of agent IDs
+                     * 设置List of agent IDs such as “agent-abcd1234”, which can be obtained on the **Agent Management** page in the console.
+                     * @param AgentIds List of agent IDs such as “agent-abcd1234”, which can be obtained on the **Agent Management** page in the console.
                      */
                     void SetAgentIds(const std::vector<std::string>& _agentIds);
 
@@ -107,13 +107,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * TMP instance ID, such as “prom-abcd1234”.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * List of agent IDs
+                     * List of agent IDs such as “agent-abcd1234”, which can be obtained on the **Agent Management** page in the console.
                      */
                     std::vector<std::string> m_agentIds;
                     bool m_agentIdsHasBeenSet;

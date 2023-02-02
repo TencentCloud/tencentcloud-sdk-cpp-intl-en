@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Array of plugin IDs
-                     * @return PluginIds Array of plugin IDs
+                     * 获取Array of plugin IDs, such as "PluginIds": [ "grafana-clock-panel" ]. The plugin ID can be obtained through the `DescribePluginOverviews` API.
+                     * @return PluginIds Array of plugin IDs, such as "PluginIds": [ "grafana-clock-panel" ]. The plugin ID can be obtained through the `DescribePluginOverviews` API.
                      */
                     std::vector<std::string> GetPluginIds() const;
 
                     /**
-                     * 设置Array of plugin IDs
-                     * @param PluginIds Array of plugin IDs
+                     * 设置Array of plugin IDs, such as "PluginIds": [ "grafana-clock-panel" ]. The plugin ID can be obtained through the `DescribePluginOverviews` API.
+                     * @param PluginIds Array of plugin IDs, such as "PluginIds": [ "grafana-clock-panel" ]. The plugin ID can be obtained through the `DescribePluginOverviews` API.
                      */
                     void SetPluginIds(const std::vector<std::string>& _pluginIds);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool PluginIdsHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取TCMG instance ID, such as “grafana-abcdefg”.
+                     * @return InstanceId TCMG instance ID, such as “grafana-abcdefg”.
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * 设置TCMG instance ID, such as “grafana-abcdefg”.
+                     * @param InstanceId TCMG instance ID, such as “grafana-abcdefg”.
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
@@ -81,13 +81,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Array of plugin IDs
+                     * Array of plugin IDs, such as "PluginIds": [ "grafana-clock-panel" ]. The plugin ID can be obtained through the `DescribePluginOverviews` API.
                      */
                     std::vector<std::string> m_pluginIds;
                     bool m_pluginIdsHasBeenSet;
 
                     /**
-                     * Instance ID
+                     * TCMG instance ID, such as “grafana-abcdefg”.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;

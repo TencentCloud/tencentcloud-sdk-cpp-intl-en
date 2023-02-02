@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable SSO
-                     * @return EnableSSO Whether to enable SSO
+                     * 获取Whether to enable SSO (`true`: Yes; `false`: No)
+                     * @return EnableSSO Whether to enable SSO (`true`: Yes; `false`: No)
                      */
                     bool GetEnableSSO() const;
 
                     /**
-                     * 设置Whether to enable SSO
-                     * @param EnableSSO Whether to enable SSO
+                     * 设置Whether to enable SSO (`true`: Yes; `false`: No)
+                     * @param EnableSSO Whether to enable SSO (`true`: Yes; `false`: No)
                      */
                     void SetEnableSSO(const bool& _enableSSO);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool EnableSSOHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取TCMG instance ID, such as “grafana-abcdefgh”.
+                     * @return InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * 设置TCMG instance ID, such as “grafana-abcdefgh”.
+                     * @param InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
@@ -81,13 +81,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable SSO
+                     * Whether to enable SSO (`true`: Yes; `false`: No)
                      */
                     bool m_enableSSO;
                     bool m_enableSSOHasBeenSet;
 
                     /**
-                     * Instance ID
+                     * TCMG instance ID, such as “grafana-abcdefgh”.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;

@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取TCMG instance ID, such as “grafana-kleu3gt0”.
+                     * @return InstanceId TCMG instance ID, such as “grafana-kleu3gt0”.
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * 设置TCMG instance ID, such as “grafana-kleu3gt0”.
+                     * @param InstanceId TCMG instance ID, such as “grafana-kleu3gt0”.
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Filter by plugin ID
-                     * @return PluginId Filter by plugin ID
+                     * 获取Filter by plugin ID such as “grafana-piechart-panel”. You can view the IDs of installed plugins through the `DescribeInstalledPlugins` API.
+                     * @return PluginId Filter by plugin ID such as “grafana-piechart-panel”. You can view the IDs of installed plugins through the `DescribeInstalledPlugins` API.
                      */
                     std::string GetPluginId() const;
 
                     /**
-                     * 设置Filter by plugin ID
-                     * @param PluginId Filter by plugin ID
+                     * 设置Filter by plugin ID such as “grafana-piechart-panel”. You can view the IDs of installed plugins through the `DescribeInstalledPlugins` API.
+                     * @param PluginId Filter by plugin ID such as “grafana-piechart-panel”. You can view the IDs of installed plugins through the `DescribeInstalledPlugins` API.
                      */
                     void SetPluginId(const std::string& _pluginId);
 
@@ -81,13 +81,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * TCMG instance ID, such as “grafana-kleu3gt0”.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Filter by plugin ID
+                     * Filter by plugin ID such as “grafana-piechart-panel”. You can view the IDs of installed plugins through the `DescribeInstalledPlugins` API.
                      */
                     std::string m_pluginId;
                     bool m_pluginIdHasBeenSet;

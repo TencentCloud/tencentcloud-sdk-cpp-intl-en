@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取TCMG instance ID, such as “grafana-abcdefgh”.
+                     * @return InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param InstanceId Instance ID
+                     * 设置TCMG instance ID, such as “grafana-abcdefgh”.
+                     * @param InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取User account ID
-                     * @return UserId User account ID
+                     * 获取User account ID, such as “10000000”.
+                     * @return UserId User account ID, such as “10000000”.
                      */
                     std::string GetUserId() const;
 
                     /**
-                     * 设置User account ID
-                     * @param UserId User account ID
+                     * 设置User account ID, such as “10000000”.
+                     * @param UserId User account ID, such as “10000000”.
                      */
                     void SetUserId(const std::string& _userId);
 
@@ -81,13 +81,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID
+                     * TCMG instance ID, such as “grafana-abcdefgh”.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * User account ID
+                     * User account ID, such as “10000000”.
                      */
                     std::string m_userId;
                     bool m_userIdHasBeenSet;

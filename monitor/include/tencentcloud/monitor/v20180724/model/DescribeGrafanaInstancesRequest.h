@@ -80,14 +80,14 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Array of instance IDs
-                     * @return InstanceIds Array of instance IDs
+                     * 获取Array of TCMG instance IDs
+                     * @return InstanceIds Array of TCMG instance IDs
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置Array of instance IDs
-                     * @param InstanceIds Array of instance IDs
+                     * 设置Array of TCMG instance IDs
+                     * @param InstanceIds Array of TCMG instance IDs
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
@@ -98,14 +98,14 @@ namespace TencentCloud
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Instance name, which supports fuzzy search by prefix.
-                     * @return InstanceName Instance name, which supports fuzzy search by prefix.
+                     * 获取TCMG instance name, which can be fuzzily matched by prefix.
+                     * @return InstanceName TCMG instance name, which can be fuzzily matched by prefix.
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name, which supports fuzzy search by prefix.
-                     * @param InstanceName Instance name, which supports fuzzy search by prefix.
+                     * 设置TCMG instance name, which can be fuzzily matched by prefix.
+                     * @param InstanceName TCMG instance name, which can be fuzzily matched by prefix.
                      */
                     void SetInstanceName(const std::string& _instanceName);
 
@@ -166,13 +166,13 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Array of instance IDs
+                     * Array of TCMG instance IDs
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * Instance name, which supports fuzzy search by prefix.
+                     * TCMG instance name, which can be fuzzily matched by prefix.
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
