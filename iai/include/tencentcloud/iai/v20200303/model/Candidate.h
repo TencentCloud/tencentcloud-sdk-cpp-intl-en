@@ -66,14 +66,14 @@ namespace TencentCloud
                     bool PersonIdHasBeenSet() const;
 
                     /**
-                     * 获取Face ID
-                     * @return FaceId Face ID
+                     * 获取Face ID, which is valid only when returned by the `SearchFaces` or `SearchFacesReturnsByGroup` API. User search APIs use facial feature fusion to search for users, for which this field is meaningless.
+                     * @return FaceId Face ID, which is valid only when returned by the `SearchFaces` or `SearchFacesReturnsByGroup` API. User search APIs use facial feature fusion to search for users, for which this field is meaningless.
                      */
                     std::string GetFaceId() const;
 
                     /**
-                     * 设置Face ID
-                     * @param FaceId Face ID
+                     * 设置Face ID, which is valid only when returned by the `SearchFaces` or `SearchFacesReturnsByGroup` API. User search APIs use facial feature fusion to search for users, for which this field is meaningless.
+                     * @param FaceId Face ID, which is valid only when returned by the `SearchFaces` or `SearchFacesReturnsByGroup` API. User search APIs use facial feature fusion to search for users, for which this field is meaningless.
                      */
                     void SetFaceId(const std::string& _faceId);
 
@@ -200,7 +200,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_personIdHasBeenSet;
 
                     /**
-                     * Face ID
+                     * Face ID, which is valid only when returned by the `SearchFaces` or `SearchFacesReturnsByGroup` API. User search APIs use facial feature fusion to search for users, for which this field is meaningless.
                      */
                     std::string m_faceId;
                     bool m_faceIdHasBeenSet;

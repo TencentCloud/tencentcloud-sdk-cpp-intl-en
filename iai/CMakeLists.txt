@@ -29,7 +29,7 @@ set(iai_public_header_model
   include/tencentcloud/iai/v20200303/model/SearchPersonsReturnsByGroupResponse.h
   include/tencentcloud/iai/v20200303/model/DeleteFaceRequest.h
   include/tencentcloud/iai/v20200303/model/HeadPose.h
-  include/tencentcloud/iai/v20200303/model/ModifyPersonBaseInfoResponse.h
+  include/tencentcloud/iai/v20200303/model/ModifyPersonGroupInfoRequest.h
   include/tencentcloud/iai/v20200303/model/GetGroupListResponse.h
   include/tencentcloud/iai/v20200303/model/GroupInfo.h
   include/tencentcloud/iai/v20200303/model/GetPersonListResponse.h
@@ -42,11 +42,10 @@ set(iai_public_header_model
   include/tencentcloud/iai/v20200303/model/GetGroupListRequest.h
   include/tencentcloud/iai/v20200303/model/DeleteGroupRequest.h
   include/tencentcloud/iai/v20200303/model/CreateFaceResponse.h
-  include/tencentcloud/iai/v20200303/model/ModifyPersonBaseInfoRequest.h
   include/tencentcloud/iai/v20200303/model/DetectFaceAttributesResponse.h
   include/tencentcloud/iai/v20200303/model/GroupCandidate.h
   include/tencentcloud/iai/v20200303/model/SearchPersonsResponse.h
-  include/tencentcloud/iai/v20200303/model/VerifyPersonRequest.h
+  include/tencentcloud/iai/v20200303/model/DetectLiveFaceAccurateRequest.h
   include/tencentcloud/iai/v20200303/model/CompareFaceResponse.h
   include/tencentcloud/iai/v20200303/model/PersonExDescriptionInfo.h
   include/tencentcloud/iai/v20200303/model/DetectLiveFaceRequest.h
@@ -57,7 +56,6 @@ set(iai_public_header_model
   include/tencentcloud/iai/v20200303/model/Mouth.h
   include/tencentcloud/iai/v20200303/model/CreateGroupRequest.h
   include/tencentcloud/iai/v20200303/model/PersonGroupInfo.h
-  include/tencentcloud/iai/v20200303/model/ModifyPersonGroupInfoRequest.h
   include/tencentcloud/iai/v20200303/model/GetPersonGroupInfoRequest.h
   include/tencentcloud/iai/v20200303/model/Result.h
   include/tencentcloud/iai/v20200303/model/SearchFacesReturnsByGroupResponse.h
@@ -80,6 +78,8 @@ set(iai_public_header_model
   include/tencentcloud/iai/v20200303/model/GetGroupInfoRequest.h
   include/tencentcloud/iai/v20200303/model/FaceDetailInfo.h
   include/tencentcloud/iai/v20200303/model/FaceHairAttributesInfo.h
+  include/tencentcloud/iai/v20200303/model/VerifyPersonRequest.h
+  include/tencentcloud/iai/v20200303/model/DetectLiveFaceAccurateResponse.h
   include/tencentcloud/iai/v20200303/model/AnalyzeFaceRequest.h
   include/tencentcloud/iai/v20200303/model/Point.h
   include/tencentcloud/iai/v20200303/model/DetectFaceRequest.h
@@ -115,7 +115,7 @@ set(iai_src
   src/v20200303/model/SearchPersonsReturnsByGroupResponse.cpp
   src/v20200303/model/DeleteFaceRequest.cpp
   src/v20200303/model/HeadPose.cpp
-  src/v20200303/model/ModifyPersonBaseInfoResponse.cpp
+  src/v20200303/model/ModifyPersonGroupInfoRequest.cpp
   src/v20200303/model/GetGroupListResponse.cpp
   src/v20200303/model/GroupInfo.cpp
   src/v20200303/model/GetPersonListResponse.cpp
@@ -128,11 +128,10 @@ set(iai_src
   src/v20200303/model/GetGroupListRequest.cpp
   src/v20200303/model/DeleteGroupRequest.cpp
   src/v20200303/model/CreateFaceResponse.cpp
-  src/v20200303/model/ModifyPersonBaseInfoRequest.cpp
   src/v20200303/model/DetectFaceAttributesResponse.cpp
   src/v20200303/model/GroupCandidate.cpp
   src/v20200303/model/SearchPersonsResponse.cpp
-  src/v20200303/model/VerifyPersonRequest.cpp
+  src/v20200303/model/DetectLiveFaceAccurateRequest.cpp
   src/v20200303/model/CompareFaceResponse.cpp
   src/v20200303/model/PersonExDescriptionInfo.cpp
   src/v20200303/model/DetectLiveFaceRequest.cpp
@@ -143,7 +142,6 @@ set(iai_src
   src/v20200303/model/Mouth.cpp
   src/v20200303/model/CreateGroupRequest.cpp
   src/v20200303/model/PersonGroupInfo.cpp
-  src/v20200303/model/ModifyPersonGroupInfoRequest.cpp
   src/v20200303/model/GetPersonGroupInfoRequest.cpp
   src/v20200303/model/Result.cpp
   src/v20200303/model/SearchFacesReturnsByGroupResponse.cpp
@@ -166,6 +164,8 @@ set(iai_src
   src/v20200303/model/GetGroupInfoRequest.cpp
   src/v20200303/model/FaceDetailInfo.cpp
   src/v20200303/model/FaceHairAttributesInfo.cpp
+  src/v20200303/model/VerifyPersonRequest.cpp
+  src/v20200303/model/DetectLiveFaceAccurateResponse.cpp
   src/v20200303/model/AnalyzeFaceRequest.cpp
   src/v20200303/model/Point.cpp
   src/v20200303/model/DetectFaceRequest.cpp

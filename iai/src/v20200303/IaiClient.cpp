@@ -599,6 +599,49 @@ IaiClient::DetectLiveFaceOutcomeCallable IaiClient::DetectLiveFaceCallable(const
     return task->get_future();
 }
 
+IaiClient::DetectLiveFaceAccurateOutcome IaiClient::DetectLiveFaceAccurate(const DetectLiveFaceAccurateRequest &request)
+{
+    auto outcome = MakeRequest(request, "DetectLiveFaceAccurate");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DetectLiveFaceAccurateResponse rsp = DetectLiveFaceAccurateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DetectLiveFaceAccurateOutcome(rsp);
+        else
+            return DetectLiveFaceAccurateOutcome(o.GetError());
+    }
+    else
+    {
+        return DetectLiveFaceAccurateOutcome(outcome.GetError());
+    }
+}
+
+void IaiClient::DetectLiveFaceAccurateAsync(const DetectLiveFaceAccurateRequest& request, const DetectLiveFaceAccurateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DetectLiveFaceAccurate(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+IaiClient::DetectLiveFaceAccurateOutcomeCallable IaiClient::DetectLiveFaceAccurateCallable(const DetectLiveFaceAccurateRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DetectLiveFaceAccurateOutcome()>>(
+        [this, request]()
+        {
+            return this->DetectLiveFaceAccurate(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 IaiClient::GetGroupInfoOutcome IaiClient::GetGroupInfo(const GetGroupInfoRequest &request)
 {
     auto outcome = MakeRequest(request, "GetGroupInfo");
@@ -893,49 +936,6 @@ IaiClient::ModifyGroupOutcomeCallable IaiClient::ModifyGroupCallable(const Modif
         [this, request]()
         {
             return this->ModifyGroup(request);
-        }
-    );
-
-    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
-    return task->get_future();
-}
-
-IaiClient::ModifyPersonBaseInfoOutcome IaiClient::ModifyPersonBaseInfo(const ModifyPersonBaseInfoRequest &request)
-{
-    auto outcome = MakeRequest(request, "ModifyPersonBaseInfo");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        ModifyPersonBaseInfoResponse rsp = ModifyPersonBaseInfoResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return ModifyPersonBaseInfoOutcome(rsp);
-        else
-            return ModifyPersonBaseInfoOutcome(o.GetError());
-    }
-    else
-    {
-        return ModifyPersonBaseInfoOutcome(outcome.GetError());
-    }
-}
-
-void IaiClient::ModifyPersonBaseInfoAsync(const ModifyPersonBaseInfoRequest& request, const ModifyPersonBaseInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    auto fn = [this, request, handler, context]()
-    {
-        handler(this, request, this->ModifyPersonBaseInfo(request), context);
-    };
-
-    Executor::GetInstance()->Submit(new Runnable(fn));
-}
-
-IaiClient::ModifyPersonBaseInfoOutcomeCallable IaiClient::ModifyPersonBaseInfoCallable(const ModifyPersonBaseInfoRequest &request)
-{
-    auto task = std::make_shared<std::packaged_task<ModifyPersonBaseInfoOutcome()>>(
-        [this, request]()
-        {
-            return this->ModifyPersonBaseInfo(request);
         }
     );
 

@@ -49,6 +49,8 @@
 #include <tencentcloud/iai/v20200303/model/DetectFaceAttributesResponse.h>
 #include <tencentcloud/iai/v20200303/model/DetectLiveFaceRequest.h>
 #include <tencentcloud/iai/v20200303/model/DetectLiveFaceResponse.h>
+#include <tencentcloud/iai/v20200303/model/DetectLiveFaceAccurateRequest.h>
+#include <tencentcloud/iai/v20200303/model/DetectLiveFaceAccurateResponse.h>
 #include <tencentcloud/iai/v20200303/model/GetGroupInfoRequest.h>
 #include <tencentcloud/iai/v20200303/model/GetGroupInfoResponse.h>
 #include <tencentcloud/iai/v20200303/model/GetGroupListRequest.h>
@@ -63,8 +65,6 @@
 #include <tencentcloud/iai/v20200303/model/GetPersonListNumResponse.h>
 #include <tencentcloud/iai/v20200303/model/ModifyGroupRequest.h>
 #include <tencentcloud/iai/v20200303/model/ModifyGroupResponse.h>
-#include <tencentcloud/iai/v20200303/model/ModifyPersonBaseInfoRequest.h>
-#include <tencentcloud/iai/v20200303/model/ModifyPersonBaseInfoResponse.h>
 #include <tencentcloud/iai/v20200303/model/ModifyPersonGroupInfoRequest.h>
 #include <tencentcloud/iai/v20200303/model/ModifyPersonGroupInfoResponse.h>
 #include <tencentcloud/iai/v20200303/model/SearchFacesRequest.h>
@@ -132,6 +132,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DetectLiveFaceResponse> DetectLiveFaceOutcome;
                 typedef std::future<DetectLiveFaceOutcome> DetectLiveFaceOutcomeCallable;
                 typedef std::function<void(const IaiClient*, const Model::DetectLiveFaceRequest&, DetectLiveFaceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DetectLiveFaceAsyncHandler;
+                typedef Outcome<Core::Error, Model::DetectLiveFaceAccurateResponse> DetectLiveFaceAccurateOutcome;
+                typedef std::future<DetectLiveFaceAccurateOutcome> DetectLiveFaceAccurateOutcomeCallable;
+                typedef std::function<void(const IaiClient*, const Model::DetectLiveFaceAccurateRequest&, DetectLiveFaceAccurateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DetectLiveFaceAccurateAsyncHandler;
                 typedef Outcome<Core::Error, Model::GetGroupInfoResponse> GetGroupInfoOutcome;
                 typedef std::future<GetGroupInfoOutcome> GetGroupInfoOutcomeCallable;
                 typedef std::function<void(const IaiClient*, const Model::GetGroupInfoRequest&, GetGroupInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetGroupInfoAsyncHandler;
@@ -153,9 +156,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyGroupResponse> ModifyGroupOutcome;
                 typedef std::future<ModifyGroupOutcome> ModifyGroupOutcomeCallable;
                 typedef std::function<void(const IaiClient*, const Model::ModifyGroupRequest&, ModifyGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyGroupAsyncHandler;
-                typedef Outcome<Core::Error, Model::ModifyPersonBaseInfoResponse> ModifyPersonBaseInfoOutcome;
-                typedef std::future<ModifyPersonBaseInfoOutcome> ModifyPersonBaseInfoOutcomeCallable;
-                typedef std::function<void(const IaiClient*, const Model::ModifyPersonBaseInfoRequest&, ModifyPersonBaseInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyPersonBaseInfoAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyPersonGroupInfoResponse> ModifyPersonGroupInfoOutcome;
                 typedef std::future<ModifyPersonGroupInfoOutcome> ModifyPersonGroupInfoOutcomeCallable;
                 typedef std::function<void(const IaiClient*, const Model::ModifyPersonGroupInfoRequest&, ModifyPersonGroupInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyPersonGroupInfoAsyncHandler;
@@ -321,24 +321,24 @@ The face quality information is mainly used to evaluate the quality of the input
                  *This API is used to detect the position, attributes, and quality information of a face in the given image. The position information includes (x, y, w, h); the face attributes include gender, age, expression, beauty, glass, hair, mask, and pose (pitch, roll, yaw); and the face quality information includes the overall quality score, sharpness, brightness, and completeness.
 
  
-The face quality information is mainly used to evaluate the quality of the input face image. When using the Face Recognition service, we recommended evaluating the quality of the input face image first to improve the effects of subsequent processing. Application scenarios of this feature include:
+The face quality information is mainly used to evaluate the quality of the input face image. When using the Face Recognition service, we recommend evaluating the quality of the input face image first to improve the effects of subsequent processing. Application scenarios of this feature include:
 
-1. [Creating](https://intl.cloud.tencent.com/document/product/867/32793?from_cn_redirect=1)/[Adding](https://intl.cloud.tencent.com/document/product/867/32795?from_cn_redirect=1) a person in a group: this is to ensure the quality of the face information to facilitate subsequent processing.
+1. [Creating](https://intl.cloud.tencent.com/document/api/1059/36964)/[Adding](https://intl.cloud.tencent.com/document/api/1059/36966) a person in a group: This is to ensure the quality of the face information to facilitate subsequent processing.
 
-2. [Face search](https://intl.cloud.tencent.com/document/product/867/32798?from_cn_redirect=1): this is to ensure the quality of the input image to quickly find the corresponding person.
+2. [Face search](https://intl.cloud.tencent.com/document/api/1059/36977): This is to ensure the quality of the input image to quickly find the corresponding person.
 
-3. [Face verification](https://intl.cloud.tencent.com/document/product/867/32806?from_cn_redirect=1): this is to ensure the quality of the face information to avoid cases where the verification incorrectly fails.
+3. [Face verification](https://intl.cloud.tencent.com/document/api/1059/36972): This is to ensure the quality of the face information to avoid cases where the verification fails unexpectedly.
 
-4. [Face fusion](https://intl.cloud.tencent.com/product/facefusion?from_cn_redirect=1): this is to ensure the quality of the uploaded face images to improve the fusion effect.
+4. Face fusion: This is to ensure the quality of the uploaded face images to improve the fusion effect.
 
 >     
-- This API is an upgrade of [DetectFace](https://intl.cloud.tencent.com/document/product/867/44989?from_cn_redirect=1) in the following terms:
+- This API is an upgrade of [DetectFace](https://intl.cloud.tencent.com/document/api/1059/36979); specifically:
 1. This API can be used to specify the face attributes that need to be computed and returned, which avoids ineffective computation and reduces time consumption.
 2. This API supports more detailed attribute items and will continue providing new features in the future.
-Please use this API for corresponding face detection and attribute analysis.
+Use this API for corresponding face detection and attribute analysis.
 
 >     
-- Please use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the `SignatureMethod` parameter to `TC3-HMAC-SHA256`.
+- Use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the parameter `SignatureMethod` to `TC3-HMAC-SHA256`.
                  * @param req DetectFaceAttributesRequest
                  * @return DetectFaceAttributesOutcome
                  */
@@ -365,6 +365,19 @@ Image-based liveness detection is suitable for scenarios where the image is a se
                 DetectLiveFaceOutcome DetectLiveFace(const Model::DetectLiveFaceRequest &request);
                 void DetectLiveFaceAsync(const Model::DetectLiveFaceRequest& request, const DetectLiveFaceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DetectLiveFaceOutcomeCallable DetectLiveFaceCallable(const Model::DetectLiveFaceRequest& request);
+
+                /**
+                 *This API is used to detect the liveness of faces in images uploaded by users and determine whether these images are photographed.
+
+Compared with normal Image-based Liveness Detection services, this API enhances the defense capability against attacks from HD screens, printed photos, and 3D masks, as well as improves attack blocking four to five times the competing products, while maintaining high accuracy. It also supports face verification in different use cases, and satisfies the image-based liveness detection needs on mobile or PCs, making it ideal for liveness detection applications in various industries.
+
+Pay-as-you-go billing officially started for this API at 00:00, August 1, 2022. For more information, see [Billing Overview](https://intl.cloud.tencent.com/document/product/867/17640?from_cn_redirect=1).
+                 * @param req DetectLiveFaceAccurateRequest
+                 * @return DetectLiveFaceAccurateOutcome
+                 */
+                DetectLiveFaceAccurateOutcome DetectLiveFaceAccurate(const Model::DetectLiveFaceAccurateRequest &request);
+                void DetectLiveFaceAccurateAsync(const Model::DetectLiveFaceAccurateRequest& request, const DetectLiveFaceAccurateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DetectLiveFaceAccurateOutcomeCallable DetectLiveFaceAccurateCallable(const Model::DetectLiveFaceAccurateRequest& request);
 
                 /**
                  *This API is used to get the group information.
@@ -428,15 +441,6 @@ Image-based liveness detection is suitable for scenarios where the image is a se
                 ModifyGroupOutcome ModifyGroup(const Model::ModifyGroupRequest &request);
                 void ModifyGroupAsync(const Model::ModifyGroupRequest& request, const ModifyGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyGroupOutcomeCallable ModifyGroupCallable(const Model::ModifyGroupRequest& request);
-
-                /**
-                 *This API is used to modify the information of a person, including name, gender, etc. The changes of person name and gender will be synced to all the groups that contain the person.
-                 * @param req ModifyPersonBaseInfoRequest
-                 * @return ModifyPersonBaseInfoOutcome
-                 */
-                ModifyPersonBaseInfoOutcome ModifyPersonBaseInfo(const Model::ModifyPersonBaseInfoRequest &request);
-                void ModifyPersonBaseInfoAsync(const Model::ModifyPersonBaseInfoRequest& request, const ModifyPersonBaseInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                ModifyPersonBaseInfoOutcomeCallable ModifyPersonBaseInfoCallable(const Model::ModifyPersonBaseInfoRequest& request);
 
                 /**
                  *This API is used to modify the description of a specified person in a group.

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/iai/v20200303/model/ModifyPersonBaseInfoResponse.h>
+#include <tencentcloud/iai/v20200303/model/DetectLiveFaceAccurateResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,11 +23,13 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Iai::V20200303::Model;
 using namespace std;
 
-ModifyPersonBaseInfoResponse::ModifyPersonBaseInfoResponse()
+DetectLiveFaceAccurateResponse::DetectLiveFaceAccurateResponse() :
+    m_scoreHasBeenSet(false),
+    m_faceModelVersionHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome ModifyPersonBaseInfoResponse::Deserialize(const string &payload)
+CoreInternalOutcome DetectLiveFaceAccurateResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -61,15 +63,51 @@ CoreInternalOutcome ModifyPersonBaseInfoResponse::Deserialize(const string &payl
     }
 
 
+    if (rsp.HasMember("Score") && !rsp["Score"].IsNull())
+    {
+        if (!rsp["Score"].IsLosslessDouble())
+        {
+            return CoreInternalOutcome(Core::Error("response `Score` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
+        }
+        m_score = rsp["Score"].GetDouble();
+        m_scoreHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("FaceModelVersion") && !rsp["FaceModelVersion"].IsNull())
+    {
+        if (!rsp["FaceModelVersion"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `FaceModelVersion` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_faceModelVersion = string(rsp["FaceModelVersion"].GetString());
+        m_faceModelVersionHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-string ModifyPersonBaseInfoResponse::ToJsonString() const
+string DetectLiveFaceAccurateResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_scoreHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Score";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_score, allocator);
+    }
+
+    if (m_faceModelVersionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FaceModelVersion";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_faceModelVersion.c_str(), allocator).Move(), allocator);
+    }
 
     rapidjson::Value iKey(rapidjson::kStringType);
     string key = "RequestId";
@@ -82,5 +120,25 @@ string ModifyPersonBaseInfoResponse::ToJsonString() const
     return buffer.GetString();
 }
 
+
+double DetectLiveFaceAccurateResponse::GetScore() const
+{
+    return m_score;
+}
+
+bool DetectLiveFaceAccurateResponse::ScoreHasBeenSet() const
+{
+    return m_scoreHasBeenSet;
+}
+
+string DetectLiveFaceAccurateResponse::GetFaceModelVersion() const
+{
+    return m_faceModelVersion;
+}
+
+bool DetectLiveFaceAccurateResponse::FaceModelVersionHasBeenSet() const
+{
+    return m_faceModelVersionHasBeenSet;
+}
 
 
