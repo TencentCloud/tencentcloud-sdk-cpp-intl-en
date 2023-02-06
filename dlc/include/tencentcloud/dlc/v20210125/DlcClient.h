@@ -47,6 +47,8 @@
 #include <tencentcloud/dlc/v20210125/model/DescribeTasksResponse.h>
 #include <tencentcloud/dlc/v20210125/model/ModifySparkAppRequest.h>
 #include <tencentcloud/dlc/v20210125/model/ModifySparkAppResponse.h>
+#include <tencentcloud/dlc/v20210125/model/SuspendResumeDataEngineRequest.h>
+#include <tencentcloud/dlc/v20210125/model/SuspendResumeDataEngineResponse.h>
 
 
 namespace TencentCloud
@@ -97,6 +99,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifySparkAppResponse> ModifySparkAppOutcome;
                 typedef std::future<ModifySparkAppOutcome> ModifySparkAppOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::ModifySparkAppRequest&, ModifySparkAppOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifySparkAppAsyncHandler;
+                typedef Outcome<Core::Error, Model::SuspendResumeDataEngineResponse> SuspendResumeDataEngineOutcome;
+                typedef std::future<SuspendResumeDataEngineOutcome> SuspendResumeDataEngineOutcomeCallable;
+                typedef std::function<void(const DlcClient*, const Model::SuspendResumeDataEngineRequest&, SuspendResumeDataEngineOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SuspendResumeDataEngineAsyncHandler;
 
 
 
@@ -207,6 +212,15 @@ namespace TencentCloud
                 ModifySparkAppOutcome ModifySparkApp(const Model::ModifySparkAppRequest &request);
                 void ModifySparkAppAsync(const Model::ModifySparkAppRequest& request, const ModifySparkAppAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifySparkAppOutcomeCallable ModifySparkAppCallable(const Model::ModifySparkAppRequest& request);
+
+                /**
+                 *This API is used to suspend or resume a data engine.
+                 * @param req SuspendResumeDataEngineRequest
+                 * @return SuspendResumeDataEngineOutcome
+                 */
+                SuspendResumeDataEngineOutcome SuspendResumeDataEngine(const Model::SuspendResumeDataEngineRequest &request);
+                void SuspendResumeDataEngineAsync(const Model::SuspendResumeDataEngineRequest& request, const SuspendResumeDataEngineAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SuspendResumeDataEngineOutcomeCallable SuspendResumeDataEngineCallable(const Model::SuspendResumeDataEngineRequest& request);
 
             };
         }

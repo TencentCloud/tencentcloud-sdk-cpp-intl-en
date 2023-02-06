@@ -48,14 +48,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Items 
+                     * 获取Array of session details
+                     * @return Items Array of session details
                      */
                     std::vector<SessionItem> GetItems() const;
 
                     /**
-                     * 设置
-                     * @param Items 
+                     * 设置Array of session details
+                     * @param Items Array of session details
                      */
                     void SetItems(const std::vector<SessionItem>& _items);
 
@@ -66,14 +66,14 @@ namespace TencentCloud
                     bool ItemsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AllConnSum 
+                     * 获取The total number of connections
+                     * @return AllConnSum The total number of connections
                      */
                     int64_t GetAllConnSum() const;
 
                     /**
-                     * 设置
-                     * @param AllConnSum 
+                     * 设置The total number of connections
+                     * @param AllConnSum The total number of connections
                      */
                     void SetAllConnSum(const int64_t& _allConnSum);
 
@@ -84,14 +84,14 @@ namespace TencentCloud
                     bool AllConnSumHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ActiveConnSum 
+                     * 获取The total number of active connections
+                     * @return ActiveConnSum The total number of active connections
                      */
                     int64_t GetActiveConnSum() const;
 
                     /**
-                     * 设置
-                     * @param ActiveConnSum 
+                     * 设置The total number of active connections
+                     * @param ActiveConnSum The total number of active connections
                      */
                     void SetActiveConnSum(const int64_t& _activeConnSum);
 
@@ -104,19 +104,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Array of session details
                      */
                     std::vector<SessionItem> m_items;
                     bool m_itemsHasBeenSet;
 
                     /**
-                     * 
+                     * The total number of connections
                      */
                     int64_t m_allConnSum;
                     bool m_allConnSumHasBeenSet;
 
                     /**
-                     * 
+                     * The total number of active connections
                      */
                     int64_t m_activeConnSum;
                     bool m_activeConnSumHasBeenSet;

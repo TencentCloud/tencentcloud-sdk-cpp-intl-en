@@ -59,7 +59,6 @@ set(tcr_public_header_model
   include/tencentcloud/tcr/v20190924/model/DescribeInstanceAllNamespacesRequest.h
   include/tencentcloud/tcr/v20190924/model/DownloadHelmChartResponse.h
   include/tencentcloud/tcr/v20190924/model/ManageReplicationRequest.h
-  include/tencentcloud/tcr/v20190924/model/CreateSecurityPoliciesRequest.h
   include/tencentcloud/tcr/v20190924/model/DeleteWebhookTriggerResponse.h
   include/tencentcloud/tcr/v20190924/model/DescribeTagRetentionExecutionTaskResponse.h
   include/tencentcloud/tcr/v20190924/model/ModifySecurityPolicyRequest.h
@@ -124,7 +123,6 @@ set(tcr_public_header_model
   include/tencentcloud/tcr/v20190924/model/CreateInstanceRequest.h
   include/tencentcloud/tcr/v20190924/model/DescribeInstanceTokenRequest.h
   include/tencentcloud/tcr/v20190924/model/CreateNamespaceRequest.h
-  include/tencentcloud/tcr/v20190924/model/CreateSecurityPoliciesResponse.h
   include/tencentcloud/tcr/v20190924/model/DeleteReplicationInstanceResponse.h
   include/tencentcloud/tcr/v20190924/model/GCJobInfo.h
   include/tencentcloud/tcr/v20190924/model/Registry.h
@@ -240,7 +238,6 @@ set(tcr_src
   src/v20190924/model/DescribeInstanceAllNamespacesRequest.cpp
   src/v20190924/model/DownloadHelmChartResponse.cpp
   src/v20190924/model/ManageReplicationRequest.cpp
-  src/v20190924/model/CreateSecurityPoliciesRequest.cpp
   src/v20190924/model/DeleteWebhookTriggerResponse.cpp
   src/v20190924/model/DescribeTagRetentionExecutionTaskResponse.cpp
   src/v20190924/model/ModifySecurityPolicyRequest.cpp
@@ -305,7 +302,6 @@ set(tcr_src
   src/v20190924/model/CreateInstanceRequest.cpp
   src/v20190924/model/DescribeInstanceTokenRequest.cpp
   src/v20190924/model/CreateNamespaceRequest.cpp
-  src/v20190924/model/CreateSecurityPoliciesResponse.cpp
   src/v20190924/model/DeleteReplicationInstanceResponse.cpp
   src/v20190924/model/GCJobInfo.cpp
   src/v20190924/model/Registry.cpp

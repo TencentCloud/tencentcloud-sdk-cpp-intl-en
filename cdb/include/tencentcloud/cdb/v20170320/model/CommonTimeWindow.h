@@ -172,6 +172,60 @@ namespace TencentCloud
                      */
                     bool SundayHasBeenSet() const;
 
+                    /**
+                     * 获取Non-archive backup retention policy. Valid values: `weekly` (back up by week), monthly (back up by month), default value: `weekly`.
+                     * @return BackupPeriodStrategy Non-archive backup retention policy. Valid values: `weekly` (back up by week), monthly (back up by month), default value: `weekly`.
+                     */
+                    std::string GetBackupPeriodStrategy() const;
+
+                    /**
+                     * 设置Non-archive backup retention policy. Valid values: `weekly` (back up by week), monthly (back up by month), default value: `weekly`.
+                     * @param BackupPeriodStrategy Non-archive backup retention policy. Valid values: `weekly` (back up by week), monthly (back up by month), default value: `weekly`.
+                     */
+                    void SetBackupPeriodStrategy(const std::string& _backupPeriodStrategy);
+
+                    /**
+                     * 判断参数 BackupPeriodStrategy 是否已赋值
+                     * @return BackupPeriodStrategy 是否已赋值
+                     */
+                    bool BackupPeriodStrategyHasBeenSet() const;
+
+                    /**
+                     * 获取If `BackupPeriodStrategy` is `monthly`, you need to pass in the specific backup dates. The time interval between any two adjacent dates cannot exceed 2 days, for example, [1,4,7,9,11,14,17,19,22,25,28,30,31].
+                     * @return Days If `BackupPeriodStrategy` is `monthly`, you need to pass in the specific backup dates. The time interval between any two adjacent dates cannot exceed 2 days, for example, [1,4,7,9,11,14,17,19,22,25,28,30,31].
+                     */
+                    std::vector<int64_t> GetDays() const;
+
+                    /**
+                     * 设置If `BackupPeriodStrategy` is `monthly`, you need to pass in the specific backup dates. The time interval between any two adjacent dates cannot exceed 2 days, for example, [1,4,7,9,11,14,17,19,22,25,28,30,31].
+                     * @param Days If `BackupPeriodStrategy` is `monthly`, you need to pass in the specific backup dates. The time interval between any two adjacent dates cannot exceed 2 days, for example, [1,4,7,9,11,14,17,19,22,25,28,30,31].
+                     */
+                    void SetDays(const std::vector<int64_t>& _days);
+
+                    /**
+                     * 判断参数 Days 是否已赋值
+                     * @return Days 是否已赋值
+                     */
+                    bool DaysHasBeenSet() const;
+
+                    /**
+                     * 获取Backup time by month in the format of 02:00–06:00, which is required when `BackupPeriodStrategy` is `monthly`.
+                     * @return BackupPeriodTime Backup time by month in the format of 02:00–06:00, which is required when `BackupPeriodStrategy` is `monthly`.
+                     */
+                    std::string GetBackupPeriodTime() const;
+
+                    /**
+                     * 设置Backup time by month in the format of 02:00–06:00, which is required when `BackupPeriodStrategy` is `monthly`.
+                     * @param BackupPeriodTime Backup time by month in the format of 02:00–06:00, which is required when `BackupPeriodStrategy` is `monthly`.
+                     */
+                    void SetBackupPeriodTime(const std::string& _backupPeriodTime);
+
+                    /**
+                     * 判断参数 BackupPeriodTime 是否已赋值
+                     * @return BackupPeriodTime 是否已赋值
+                     */
+                    bool BackupPeriodTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -215,6 +269,24 @@ namespace TencentCloud
                      */
                     std::string m_sunday;
                     bool m_sundayHasBeenSet;
+
+                    /**
+                     * Non-archive backup retention policy. Valid values: `weekly` (back up by week), monthly (back up by month), default value: `weekly`.
+                     */
+                    std::string m_backupPeriodStrategy;
+                    bool m_backupPeriodStrategyHasBeenSet;
+
+                    /**
+                     * If `BackupPeriodStrategy` is `monthly`, you need to pass in the specific backup dates. The time interval between any two adjacent dates cannot exceed 2 days, for example, [1,4,7,9,11,14,17,19,22,25,28,30,31].
+                     */
+                    std::vector<int64_t> m_days;
+                    bool m_daysHasBeenSet;
+
+                    /**
+                     * Backup time by month in the format of 02:00–06:00, which is required when `BackupPeriodStrategy` is `monthly`.
+                     */
+                    std::string m_backupPeriodTime;
+                    bool m_backupPeriodTimeHasBeenSet;
 
                 };
             }

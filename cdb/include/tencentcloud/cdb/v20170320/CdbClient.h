@@ -43,6 +43,8 @@
 #include <tencentcloud/cdb/v20170320/model/CreateCloneInstanceResponse.h>
 #include <tencentcloud/cdb/v20170320/model/CreateDBImportJobRequest.h>
 #include <tencentcloud/cdb/v20170320/model/CreateDBImportJobResponse.h>
+#include <tencentcloud/cdb/v20170320/model/CreateDBInstanceRequest.h>
+#include <tencentcloud/cdb/v20170320/model/CreateDBInstanceResponse.h>
 #include <tencentcloud/cdb/v20170320/model/CreateDBInstanceHourRequest.h>
 #include <tencentcloud/cdb/v20170320/model/CreateDBInstanceHourResponse.h>
 #include <tencentcloud/cdb/v20170320/model/CreateParamTemplateRequest.h>
@@ -225,6 +227,8 @@
 #include <tencentcloud/cdb/v20170320/model/ReleaseIsolatedDBInstancesResponse.h>
 #include <tencentcloud/cdb/v20170320/model/ReloadBalanceProxyNodeRequest.h>
 #include <tencentcloud/cdb/v20170320/model/ReloadBalanceProxyNodeResponse.h>
+#include <tencentcloud/cdb/v20170320/model/RenewDBInstanceRequest.h>
+#include <tencentcloud/cdb/v20170320/model/RenewDBInstanceResponse.h>
 #include <tencentcloud/cdb/v20170320/model/ResetRootAccountRequest.h>
 #include <tencentcloud/cdb/v20170320/model/ResetRootAccountResponse.h>
 #include <tencentcloud/cdb/v20170320/model/RestartDBInstancesRequest.h>
@@ -299,6 +303,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateDBImportJobResponse> CreateDBImportJobOutcome;
                 typedef std::future<CreateDBImportJobOutcome> CreateDBImportJobOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::CreateDBImportJobRequest&, CreateDBImportJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDBImportJobAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateDBInstanceResponse> CreateDBInstanceOutcome;
+                typedef std::future<CreateDBInstanceOutcome> CreateDBInstanceOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::CreateDBInstanceRequest&, CreateDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDBInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateDBInstanceHourResponse> CreateDBInstanceHourOutcome;
                 typedef std::future<CreateDBInstanceHourOutcome> CreateDBInstanceHourOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::CreateDBInstanceHourRequest&, CreateDBInstanceHourOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDBInstanceHourAsyncHandler;
@@ -572,6 +579,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ReloadBalanceProxyNodeResponse> ReloadBalanceProxyNodeOutcome;
                 typedef std::future<ReloadBalanceProxyNodeOutcome> ReloadBalanceProxyNodeOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::ReloadBalanceProxyNodeRequest&, ReloadBalanceProxyNodeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ReloadBalanceProxyNodeAsyncHandler;
+                typedef Outcome<Core::Error, Model::RenewDBInstanceResponse> RenewDBInstanceOutcome;
+                typedef std::future<RenewDBInstanceOutcome> RenewDBInstanceOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::RenewDBInstanceRequest&, RenewDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RenewDBInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::ResetRootAccountResponse> ResetRootAccountOutcome;
                 typedef std::future<ResetRootAccountOutcome> ResetRootAccountOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::ResetRootAccountRequest&, ResetRootAccountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetRootAccountAsyncHandler;
@@ -711,6 +721,24 @@ Note that the files for a data import task must be uploaded to Tencent Cloud in 
                 CreateDBImportJobOutcome CreateDBImportJob(const Model::CreateDBImportJobRequest &request);
                 void CreateDBImportJobAsync(const Model::CreateDBImportJobRequest& request, const CreateDBImportJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateDBImportJobOutcomeCallable CreateDBImportJobCallable(const Model::CreateDBImportJobRequest& request);
+
+                /**
+                 *This API is used to create a monthly subscribed TencentDB instance (which can be a source, disaster recovery, or read-only instance) by passing in information such as instance specifications, MySQL version number, purchased duration, and quantity.
+
+This is an asynchronous API. You can also use the [DescribeDBInstances](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) API to query the instance details. If the output parameter `Status` is `1` and the output parameter `TaskStatus` is `0`, the instance has been successfully delivered.
+
+1. You can use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the purchasable instance specifications, and then use the [DescribeDBPrice](https://intl.cloud.tencent.com/document/api/236/18566?from_cn_redirect=1) API to query the prices of the purchasable instances.
+2. You can create up to 100 instances at a time, with an instance validity period of up to 36 months.
+3. MySQL v5.5, v5.6, v5.7, and v8.0 are supported.
+4. Source instances, read-only instances, and disaster recovery instances can be created.
+5. If `Port`, `ParamList`, or `Password` is specified in the input parameters, the instance (excluding basic instances) will be initialized.
+6. If `Port`, `ParamTemplateId`, or `AlarmPolicyList` is specified in the input parameters, you need to update your SDK to the latest version.
+                 * @param req CreateDBInstanceRequest
+                 * @return CreateDBInstanceOutcome
+                 */
+                CreateDBInstanceOutcome CreateDBInstance(const Model::CreateDBInstanceRequest &request);
+                void CreateDBInstanceAsync(const Model::CreateDBInstanceRequest& request, const CreateDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateDBInstanceOutcomeCallable CreateDBInstanceCallable(const Model::CreateDBInstanceRequest& request);
 
                 /**
                  *This API is used to create pay-as-you-go TencentDB instances (which can be source instances, disaster recovery instances, or read-only replicas) by passing in information such as instance specifications, MySQL version number, and instance quantity.
@@ -1551,6 +1579,15 @@ Note that before enabling public network access, you need to first [initialize t
                 ReloadBalanceProxyNodeOutcome ReloadBalanceProxyNode(const Model::ReloadBalanceProxyNodeRequest &request);
                 void ReloadBalanceProxyNodeAsync(const Model::ReloadBalanceProxyNodeRequest& request, const ReloadBalanceProxyNodeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ReloadBalanceProxyNodeOutcomeCallable ReloadBalanceProxyNodeCallable(const Model::ReloadBalanceProxyNodeRequest& request);
+
+                /**
+                 *This API is used to renew a monthly subscribed TencentDB instance, and a pay-as-you-go instance can be renewed as a monthly subscribed one by this API.
+                 * @param req RenewDBInstanceRequest
+                 * @return RenewDBInstanceOutcome
+                 */
+                RenewDBInstanceOutcome RenewDBInstance(const Model::RenewDBInstanceRequest &request);
+                void RenewDBInstanceAsync(const Model::RenewDBInstanceRequest& request, const RenewDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RenewDBInstanceOutcomeCallable RenewDBInstanceCallable(const Model::RenewDBInstanceRequest& request);
 
                 /**
                  *This API is used to reset the root account and initialize the account permissions.

@@ -470,6 +470,49 @@ CdbClient::CreateDBImportJobOutcomeCallable CdbClient::CreateDBImportJobCallable
     return task->get_future();
 }
 
+CdbClient::CreateDBInstanceOutcome CdbClient::CreateDBInstance(const CreateDBInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateDBInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateDBInstanceResponse rsp = CreateDBInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateDBInstanceOutcome(rsp);
+        else
+            return CreateDBInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateDBInstanceOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::CreateDBInstanceAsync(const CreateDBInstanceRequest& request, const CreateDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateDBInstance(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdbClient::CreateDBInstanceOutcomeCallable CdbClient::CreateDBInstanceCallable(const CreateDBInstanceRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateDBInstanceOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateDBInstance(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CdbClient::CreateDBInstanceHourOutcome CdbClient::CreateDBInstanceHour(const CreateDBInstanceHourRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateDBInstanceHour");
@@ -4376,6 +4419,49 @@ CdbClient::ReloadBalanceProxyNodeOutcomeCallable CdbClient::ReloadBalanceProxyNo
         [this, request]()
         {
             return this->ReloadBalanceProxyNode(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CdbClient::RenewDBInstanceOutcome CdbClient::RenewDBInstance(const RenewDBInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "RenewDBInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RenewDBInstanceResponse rsp = RenewDBInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RenewDBInstanceOutcome(rsp);
+        else
+            return RenewDBInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return RenewDBInstanceOutcome(outcome.GetError());
+    }
+}
+
+void CdbClient::RenewDBInstanceAsync(const RenewDBInstanceRequest& request, const RenewDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->RenewDBInstance(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdbClient::RenewDBInstanceOutcomeCallable CdbClient::RenewDBInstanceCallable(const RenewDBInstanceRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<RenewDBInstanceOutcome()>>(
+        [this, request]()
+        {
+            return this->RenewDBInstance(request);
         }
     );
 

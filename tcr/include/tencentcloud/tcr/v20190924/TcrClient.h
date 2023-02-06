@@ -45,8 +45,6 @@
 #include <tencentcloud/tcr/v20190924/model/CreateReplicationInstanceResponse.h>
 #include <tencentcloud/tcr/v20190924/model/CreateRepositoryRequest.h>
 #include <tencentcloud/tcr/v20190924/model/CreateRepositoryResponse.h>
-#include <tencentcloud/tcr/v20190924/model/CreateSecurityPoliciesRequest.h>
-#include <tencentcloud/tcr/v20190924/model/CreateSecurityPoliciesResponse.h>
 #include <tencentcloud/tcr/v20190924/model/CreateSecurityPolicyRequest.h>
 #include <tencentcloud/tcr/v20190924/model/CreateSecurityPolicyResponse.h>
 #include <tencentcloud/tcr/v20190924/model/CreateSignatureRequest.h>
@@ -214,9 +212,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateRepositoryResponse> CreateRepositoryOutcome;
                 typedef std::future<CreateRepositoryOutcome> CreateRepositoryOutcomeCallable;
                 typedef std::function<void(const TcrClient*, const Model::CreateRepositoryRequest&, CreateRepositoryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRepositoryAsyncHandler;
-                typedef Outcome<Core::Error, Model::CreateSecurityPoliciesResponse> CreateSecurityPoliciesOutcome;
-                typedef std::future<CreateSecurityPoliciesOutcome> CreateSecurityPoliciesOutcomeCallable;
-                typedef std::function<void(const TcrClient*, const Model::CreateSecurityPoliciesRequest&, CreateSecurityPoliciesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateSecurityPoliciesAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateSecurityPolicyResponse> CreateSecurityPolicyOutcome;
                 typedef std::future<CreateSecurityPolicyOutcome> CreateSecurityPolicyOutcomeCallable;
                 typedef std::function<void(const TcrClient*, const Model::CreateSecurityPolicyRequest&, CreateSecurityPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateSecurityPolicyAsyncHandler;
@@ -498,15 +493,6 @@ namespace TencentCloud
                 CreateRepositoryOutcome CreateRepository(const Model::CreateRepositoryRequest &request);
                 void CreateRepositoryAsync(const Model::CreateRepositoryRequest& request, const CreateRepositoryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateRepositoryOutcomeCallable CreateRepositoryCallable(const Model::CreateRepositoryRequest& request);
-
-                /**
-                 *This API is used to create public network access allowlist policies for an instance.
-                 * @param req CreateSecurityPoliciesRequest
-                 * @return CreateSecurityPoliciesOutcome
-                 */
-                CreateSecurityPoliciesOutcome CreateSecurityPolicies(const Model::CreateSecurityPoliciesRequest &request);
-                void CreateSecurityPoliciesAsync(const Model::CreateSecurityPoliciesRequest& request, const CreateSecurityPoliciesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                CreateSecurityPoliciesOutcomeCallable CreateSecurityPoliciesCallable(const Model::CreateSecurityPoliciesRequest& request);
 
                 /**
                  *This API is used to create a public network access allowlist policy for an instance.

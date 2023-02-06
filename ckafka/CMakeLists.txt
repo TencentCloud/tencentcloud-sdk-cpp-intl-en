@@ -71,6 +71,7 @@ set(ckafka_public_header_model
   include/tencentcloud/ckafka/v20190819/model/CreatePartitionResponse.h
   include/tencentcloud/ckafka/v20190819/model/ClusterInfo.h
   include/tencentcloud/ckafka/v20190819/model/DeleteUserResponse.h
+  include/tencentcloud/ckafka/v20190819/model/DescribeTopicProduceConnectionRequest.h
   include/tencentcloud/ckafka/v20190819/model/CreateAclRequest.h
   include/tencentcloud/ckafka/v20190819/model/DescribeTopicSyncReplicaResponse.h
   include/tencentcloud/ckafka/v20190819/model/DescribeAppInfoRequest.h
@@ -81,6 +82,7 @@ set(ckafka_public_header_model
   include/tencentcloud/ckafka/v20190819/model/CreateTopicIpWhiteListResponse.h
   include/tencentcloud/ckafka/v20190819/model/GroupOffsetTopic.h
   include/tencentcloud/ckafka/v20190819/model/ModifyGroupOffsetsResponse.h
+  include/tencentcloud/ckafka/v20190819/model/DescribeConnectInfoResultDTO.h
   include/tencentcloud/ckafka/v20190819/model/Partition.h
   include/tencentcloud/ckafka/v20190819/model/CreateAclResponse.h
   include/tencentcloud/ckafka/v20190819/model/CreateTopicRequest.h
@@ -120,6 +122,7 @@ set(ckafka_public_header_model
   include/tencentcloud/ckafka/v20190819/model/DescribeRegionResponse.h
   include/tencentcloud/ckafka/v20190819/model/DescribeConsumerGroupRequest.h
   include/tencentcloud/ckafka/v20190819/model/VipEntity.h
+  include/tencentcloud/ckafka/v20190819/model/DescribeTopicProduceConnectionResponse.h
   include/tencentcloud/ckafka/v20190819/model/ConsumerGroupTopic.h
   include/tencentcloud/ckafka/v20190819/model/User.h
   include/tencentcloud/ckafka/v20190819/model/GroupOffsetPartition.h
@@ -235,6 +238,7 @@ set(ckafka_src
   src/v20190819/model/CreatePartitionResponse.cpp
   src/v20190819/model/ClusterInfo.cpp
   src/v20190819/model/DeleteUserResponse.cpp
+  src/v20190819/model/DescribeTopicProduceConnectionRequest.cpp
   src/v20190819/model/CreateAclRequest.cpp
   src/v20190819/model/DescribeTopicSyncReplicaResponse.cpp
   src/v20190819/model/DescribeAppInfoRequest.cpp
@@ -245,6 +249,7 @@ set(ckafka_src
   src/v20190819/model/CreateTopicIpWhiteListResponse.cpp
   src/v20190819/model/GroupOffsetTopic.cpp
   src/v20190819/model/ModifyGroupOffsetsResponse.cpp
+  src/v20190819/model/DescribeConnectInfoResultDTO.cpp
   src/v20190819/model/Partition.cpp
   src/v20190819/model/CreateAclResponse.cpp
   src/v20190819/model/CreateTopicRequest.cpp
@@ -284,6 +289,7 @@ set(ckafka_src
   src/v20190819/model/DescribeRegionResponse.cpp
   src/v20190819/model/DescribeConsumerGroupRequest.cpp
   src/v20190819/model/VipEntity.cpp
+  src/v20190819/model/DescribeTopicProduceConnectionResponse.cpp
   src/v20190819/model/ConsumerGroupTopic.cpp
   src/v20190819/model/User.cpp
   src/v20190819/model/GroupOffsetPartition.cpp

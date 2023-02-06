@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Access source details of the real-time session
                 */
                 class SessionItem : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Ip 
+                     * 获取Access source
+                     * @return Ip Access source
                      */
                     std::string GetIp() const;
 
                     /**
-                     * 设置
-                     * @param Ip 
+                     * 设置Access source
+                     * @param Ip Access source
                      */
                     void SetIp(const std::string& _ip);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool IpHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ActiveConn 
+                     * 获取The number of active connections from the current access source
+                     * @return ActiveConn The number of active connections from the current access source
                      */
                     std::string GetActiveConn() const;
 
                     /**
-                     * 设置
-                     * @param ActiveConn 
+                     * 设置The number of active connections from the current access source
+                     * @param ActiveConn The number of active connections from the current access source
                      */
                     void SetActiveConn(const std::string& _activeConn);
 
@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool ActiveConnHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AllConn 
+                     * 获取The total number of connections from the current access source
+                     * @return AllConn The total number of connections from the current access source
                      */
                     int64_t GetAllConn() const;
 
                     /**
-                     * 设置
-                     * @param AllConn 
+                     * 设置The total number of connections from the current access source
+                     * @param AllConn The total number of connections from the current access source
                      */
                     void SetAllConn(const int64_t& _allConn);
 
@@ -103,19 +103,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Access source
                      */
                     std::string m_ip;
                     bool m_ipHasBeenSet;
 
                     /**
-                     * 
+                     * The number of active connections from the current access source
                      */
                     std::string m_activeConn;
                     bool m_activeConnHasBeenSet;
 
                     /**
-                     * 
+                     * The total number of connections from the current access source
                      */
                     int64_t m_allConn;
                     bool m_allConnHasBeenSet;

@@ -22,6 +22,7 @@ set(dlc_public_header_model
   include/tencentcloud/dlc/v20210125/model/DescribeTaskResultResponse.h
   include/tencentcloud/dlc/v20210125/model/DescribeTasksRequest.h
   include/tencentcloud/dlc/v20210125/model/CreateSparkAppTaskRequest.h
+  include/tencentcloud/dlc/v20210125/model/SuspendResumeDataEngineResponse.h
   include/tencentcloud/dlc/v20210125/model/KVPair.h
   include/tencentcloud/dlc/v20210125/model/StreamingStatistics.h
   include/tencentcloud/dlc/v20210125/model/Task.h
@@ -34,6 +35,7 @@ set(dlc_public_header_model
   include/tencentcloud/dlc/v20210125/model/CreateTaskResponse.h
   include/tencentcloud/dlc/v20210125/model/DeleteSparkAppResponse.h
   include/tencentcloud/dlc/v20210125/model/CreateSparkAppResponse.h
+  include/tencentcloud/dlc/v20210125/model/SuspendResumeDataEngineRequest.h
   include/tencentcloud/dlc/v20210125/model/TaskResultInfo.h
   include/tencentcloud/dlc/v20210125/model/DescribeSparkAppJobsResponse.h
   include/tencentcloud/dlc/v20210125/model/TasksOverview.h
@@ -61,6 +63,7 @@ set(dlc_src
   src/v20210125/model/DescribeTaskResultResponse.cpp
   src/v20210125/model/DescribeTasksRequest.cpp
   src/v20210125/model/CreateSparkAppTaskRequest.cpp
+  src/v20210125/model/SuspendResumeDataEngineResponse.cpp
   src/v20210125/model/KVPair.cpp
   src/v20210125/model/StreamingStatistics.cpp
   src/v20210125/model/Task.cpp
@@ -73,6 +76,7 @@ set(dlc_src
   src/v20210125/model/CreateTaskResponse.cpp
   src/v20210125/model/DeleteSparkAppResponse.cpp
   src/v20210125/model/CreateSparkAppResponse.cpp
+  src/v20210125/model/SuspendResumeDataEngineRequest.cpp
   src/v20210125/model/TaskResultInfo.cpp
   src/v20210125/model/DescribeSparkAppJobsResponse.cpp
   src/v20210125/model/TasksOverview.cpp

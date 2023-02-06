@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/tcr/v20190924/model/TagSpecification.h>
+#include <tencentcloud/tcr/v20190924/model/RegistryChargePrepaid.h>
 
 
 namespace TencentCloud
@@ -116,6 +117,24 @@ namespace TencentCloud
                     bool RegistryChargeTypeHasBeenSet() const;
 
                     /**
+                     * 获取Auto-renewal setting and purchase period
+                     * @return RegistryChargePrepaid Auto-renewal setting and purchase period
+                     */
+                    RegistryChargePrepaid GetRegistryChargePrepaid() const;
+
+                    /**
+                     * 设置Auto-renewal setting and purchase period
+                     * @param RegistryChargePrepaid Auto-renewal setting and purchase period
+                     */
+                    void SetRegistryChargePrepaid(const RegistryChargePrepaid& _registryChargePrepaid);
+
+                    /**
+                     * 判断参数 RegistryChargePrepaid 是否已赋值
+                     * @return RegistryChargePrepaid 是否已赋值
+                     */
+                    bool RegistryChargePrepaidHasBeenSet() const;
+
+                    /**
                      * 获取Whether to sync TCR cloud tags to the COS bucket
                      * @return SyncTag Whether to sync TCR cloud tags to the COS bucket
                      */
@@ -158,6 +177,12 @@ namespace TencentCloud
                      */
                     int64_t m_registryChargeType;
                     bool m_registryChargeTypeHasBeenSet;
+
+                    /**
+                     * Auto-renewal setting and purchase period
+                     */
+                    RegistryChargePrepaid m_registryChargePrepaid;
+                    bool m_registryChargePrepaidHasBeenSet;
 
                     /**
                      * Whether to sync TCR cloud tags to the COS bucket

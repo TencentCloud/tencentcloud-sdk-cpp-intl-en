@@ -14,54 +14,55 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_TCR_V20190924_MODEL_CREATESECURITYPOLICIESRESPONSE_H_
-#define TENCENTCLOUD_TCR_V20190924_MODEL_CREATESECURITYPOLICIESRESPONSE_H_
+#ifndef TENCENTCLOUD_CKAFKA_V20190819_MODEL_DESCRIBETOPICPRODUCECONNECTIONRESPONSE_H_
+#define TENCENTCLOUD_CKAFKA_V20190819_MODEL_DESCRIBETOPICPRODUCECONNECTIONRESPONSE_H_
 
 #include <string>
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/ckafka/v20190819/model/DescribeConnectInfoResultDTO.h>
 
 
 namespace TencentCloud
 {
-    namespace Tcr
+    namespace Ckafka
     {
-        namespace V20190924
+        namespace V20190819
         {
             namespace Model
             {
                 /**
-                * CreateSecurityPolicies response structure.
+                * DescribeTopicProduceConnection response structure.
                 */
-                class CreateSecurityPoliciesResponse : public AbstractModel
+                class DescribeTopicProduceConnectionResponse : public AbstractModel
                 {
                 public:
-                    CreateSecurityPoliciesResponse();
-                    ~CreateSecurityPoliciesResponse() = default;
+                    DescribeTopicProduceConnectionResponse();
+                    ~DescribeTopicProduceConnectionResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Instance ID
-                     * @return RegistryId Instance ID
+                     * 获取Result set of returned connection information
+                     * @return Result Result set of returned connection information
                      */
-                    std::string GetRegistryId() const;
+                    std::vector<DescribeConnectInfoResultDTO> GetResult() const;
 
                     /**
-                     * 判断参数 RegistryId 是否已赋值
-                     * @return RegistryId 是否已赋值
+                     * 判断参数 Result 是否已赋值
+                     * @return Result 是否已赋值
                      */
-                    bool RegistryIdHasBeenSet() const;
+                    bool ResultHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Instance ID
+                     * Result set of returned connection information
                      */
-                    std::string m_registryId;
-                    bool m_registryIdHasBeenSet;
+                    std::vector<DescribeConnectInfoResultDTO> m_result;
+                    bool m_resultHasBeenSet;
 
                 };
             }
@@ -69,4 +70,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_TCR_V20190924_MODEL_CREATESECURITYPOLICIESRESPONSE_H_
+#endif // !TENCENTCLOUD_CKAFKA_V20190819_MODEL_DESCRIBETOPICPRODUCECONNECTIONRESPONSE_H_

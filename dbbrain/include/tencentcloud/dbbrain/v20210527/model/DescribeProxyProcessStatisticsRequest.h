@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取`ProxyID` under the current instance.
-                     * @return InstanceProxyId `ProxyID` under the current instance.
+                     * 获取The proxy ID you want to query under the instance
+                     * @return InstanceProxyId The proxy ID you want to query under the instance
                      */
                     std::string GetInstanceProxyId() const;
 
                     /**
-                     * 设置`ProxyID` under the current instance.
-                     * @param InstanceProxyId `ProxyID` under the current instance.
+                     * 设置The proxy ID you want to query under the instance
+                     * @param InstanceProxyId The proxy ID you want to query under the instance
                      */
                     void SetInstanceProxyId(const std::string& _instanceProxyId);
 
@@ -177,7 +177,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * `ProxyID` under the current instance.
+                     * The proxy ID you want to query under the instance
                      */
                     std::string m_instanceProxyId;
                     bool m_instanceProxyIdHasBeenSet;

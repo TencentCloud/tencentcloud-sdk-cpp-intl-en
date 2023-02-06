@@ -619,6 +619,42 @@ namespace TencentCloud
                      */
                     bool TagsHasBeenSet() const;
 
+                    /**
+                     * 获取Database proxy IP
+                     * @return ProxyVips Database proxy IP
+                     */
+                    std::vector<std::string> GetProxyVips() const;
+
+                    /**
+                     * 设置Database proxy IP
+                     * @param ProxyVips Database proxy IP
+                     */
+                    void SetProxyVips(const std::vector<std::string>& _proxyVips);
+
+                    /**
+                     * 判断参数 ProxyVips 是否已赋值
+                     * @return ProxyVips 是否已赋值
+                     */
+                    bool ProxyVipsHasBeenSet() const;
+
+                    /**
+                     * 获取Database proxy ID
+                     * @return ProxyIds Database proxy ID
+                     */
+                    std::vector<std::string> GetProxyIds() const;
+
+                    /**
+                     * 设置Database proxy ID
+                     * @param ProxyIds Database proxy ID
+                     */
+                    void SetProxyIds(const std::vector<std::string>& _proxyIds);
+
+                    /**
+                     * 判断参数 ProxyIds 是否已赋值
+                     * @return ProxyIds 是否已赋值
+                     */
+                    bool ProxyIdsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -812,6 +848,18 @@ namespace TencentCloud
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * Database proxy IP
+                     */
+                    std::vector<std::string> m_proxyVips;
+                    bool m_proxyVipsHasBeenSet;
+
+                    /**
+                     * Database proxy ID
+                     */
+                    std::vector<std::string> m_proxyIds;
+                    bool m_proxyIdsHasBeenSet;
 
                 };
             }

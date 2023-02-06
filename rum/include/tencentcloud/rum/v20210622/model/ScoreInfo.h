@@ -280,6 +280,28 @@ namespace TencentCloud
                      */
                     bool PageDurationHasBeenSet() const;
 
+                    /**
+                     * 获取Time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CreateTime Time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetCreateTime() const;
+
+                    /**
+                     * 设置Time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param CreateTime Time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetCreateTime(const std::string& _createTime);
+
+                    /**
+                     * 判断参数 CreateTime 是否已赋值
+                     * @return CreateTime 是否已赋值
+                     */
+                    bool CreateTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -359,6 +381,13 @@ namespace TencentCloud
                      */
                     std::string m_pageDuration;
                     bool m_pageDurationHasBeenSet;
+
+                    /**
+                     * Time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_createTime;
+                    bool m_createTimeHasBeenSet;
 
                 };
             }
