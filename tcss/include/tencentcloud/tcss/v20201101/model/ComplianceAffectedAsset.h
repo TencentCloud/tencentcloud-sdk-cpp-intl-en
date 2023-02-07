@@ -295,14 +295,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VerifyInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceId 
+                     * 获取Instance ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return InstanceId Instance ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置
-                     * @param InstanceId 
+                     * 设置Instance ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param InstanceId Instance ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
@@ -392,7 +396,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_verifyInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Instance ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;

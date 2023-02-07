@@ -118,6 +118,28 @@ namespace TencentCloud
                      */
                     bool DiscountPriceHasBeenSet() const;
 
+                    /**
+                     * 获取Currency unit. Valid values: `CNY` and `USD`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Currency Currency unit. Valid values: `CNY` and `USD`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetCurrency() const;
+
+                    /**
+                     * 设置Currency unit. Valid values: `CNY` and `USD`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param Currency Currency unit. Valid values: `CNY` and `USD`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetCurrency(const std::string& _currency);
+
+                    /**
+                     * 判断参数 Currency 是否已赋值
+                     * @return Currency 是否已赋值
+                     */
+                    bool CurrencyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -143,6 +165,13 @@ namespace TencentCloud
                      */
                     double m_discountPrice;
                     bool m_discountPriceHasBeenSet;
+
+                    /**
+                     * Currency unit. Valid values: `CNY` and `USD`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_currency;
+                    bool m_currencyHasBeenSet;
 
                 };
             }

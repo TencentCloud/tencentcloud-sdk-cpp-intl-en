@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool RuleIDHasBeenSet() const;
 
                     /**
-                     * 获取Status (true: Enable; false: Disable)
-                     * @return Status Status (true: Enable; false: Disable)
+                     * 获取Status of the rule. Values: `true` (Enabled), `false` (Disabled)
+                     * @return Status Status of the rule. Values: `true` (Enabled), `false` (Disabled)
                      */
                     bool GetStatus() const;
 
                     /**
-                     * 设置Status (true: Enable; false: Disable)
-                     * @param Status Status (true: Enable; false: Disable)
+                     * 设置Status of the rule. Values: `true` (Enabled), `false` (Disabled)
+                     * @param Status Status of the rule. Values: `true` (Enabled), `false` (Disabled)
                      */
                     void SetStatus(const bool& _status);
 
@@ -87,7 +87,7 @@ namespace TencentCloud
                     bool m_ruleIDHasBeenSet;
 
                     /**
-                     * Status (true: Enable; false: Disable)
+                     * Status of the rule. Values: `true` (Enabled), `false` (Disabled)
                      */
                     bool m_status;
                     bool m_statusHasBeenSet;

@@ -93,14 +93,18 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool InstancePriceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DiscountDetail 
+                     * 获取Tiered-pricing details. The information of each tier includes the billable period, discount percentage, total price, discounted price, and discount details (`UserDiscount`, `CommonDiscount` and `FinalDiscount`).
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return DiscountDetail Tiered-pricing details. The information of each tier includes the billable period, discount percentage, total price, discounted price, and discount details (`UserDiscount`, `CommonDiscount` and `FinalDiscount`).
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<DiscountDetail> GetDiscountDetail() const;
 
                     /**
-                     * 设置
-                     * @param DiscountDetail 
+                     * 设置Tiered-pricing details. The information of each tier includes the billable period, discount percentage, total price, discounted price, and discount details (`UserDiscount`, `CommonDiscount` and `FinalDiscount`).
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param DiscountDetail Tiered-pricing details. The information of each tier includes the billable period, discount percentage, total price, discounted price, and discount details (`UserDiscount`, `CommonDiscount` and `FinalDiscount`).
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetDiscountDetail(const std::vector<DiscountDetail>& _discountDetail);
 
@@ -127,7 +131,8 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_instancePriceHasBeenSet;
 
                     /**
-                     * 
+                     * Tiered-pricing details. The information of each tier includes the billable period, discount percentage, total price, discounted price, and discount details (`UserDiscount`, `CommonDiscount` and `FinalDiscount`).
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<DiscountDetail> m_discountDetail;
                     bool m_discountDetailHasBeenSet;

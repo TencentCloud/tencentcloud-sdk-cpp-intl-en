@@ -116,6 +116,40 @@ namespace TencentCloud
                      */
                     bool DataDiskHasBeenSet() const;
 
+                    /**
+                     * 获取Instance billing type. Valid values:
+`0`: Bill by daily resource usage peak (CPU, memory, and disk). It applies only to non-GNR models;
+`1`: Bill by usage hours of an instance. It applies only to GNR models. It’s available to beta users now. To enable it, submit a ticket;
+`2`: Bill by usage month of an instance. It applies only to GNR models.
+If this field is left empty, `0` is selected by default for non-GNR models, and `2` is selected by default for GNR models.
+                     * @return InstanceChargeType Instance billing type. Valid values:
+`0`: Bill by daily resource usage peak (CPU, memory, and disk). It applies only to non-GNR models;
+`1`: Bill by usage hours of an instance. It applies only to GNR models. It’s available to beta users now. To enable it, submit a ticket;
+`2`: Bill by usage month of an instance. It applies only to GNR models.
+If this field is left empty, `0` is selected by default for non-GNR models, and `2` is selected by default for GNR models.
+                     */
+                    int64_t GetInstanceChargeType() const;
+
+                    /**
+                     * 设置Instance billing type. Valid values:
+`0`: Bill by daily resource usage peak (CPU, memory, and disk). It applies only to non-GNR models;
+`1`: Bill by usage hours of an instance. It applies only to GNR models. It’s available to beta users now. To enable it, submit a ticket;
+`2`: Bill by usage month of an instance. It applies only to GNR models.
+If this field is left empty, `0` is selected by default for non-GNR models, and `2` is selected by default for GNR models.
+                     * @param InstanceChargeType Instance billing type. Valid values:
+`0`: Bill by daily resource usage peak (CPU, memory, and disk). It applies only to non-GNR models;
+`1`: Bill by usage hours of an instance. It applies only to GNR models. It’s available to beta users now. To enable it, submit a ticket;
+`2`: Bill by usage month of an instance. It applies only to GNR models.
+If this field is left empty, `0` is selected by default for non-GNR models, and `2` is selected by default for GNR models.
+                     */
+                    void SetInstanceChargeType(const int64_t& _instanceChargeType);
+
+                    /**
+                     * 判断参数 InstanceChargeType 是否已赋值
+                     * @return InstanceChargeType 是否已赋值
+                     */
+                    bool InstanceChargeTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -141,6 +175,16 @@ namespace TencentCloud
                      */
                     std::vector<DataDisk> m_dataDisk;
                     bool m_dataDiskHasBeenSet;
+
+                    /**
+                     * Instance billing type. Valid values:
+`0`: Bill by daily resource usage peak (CPU, memory, and disk). It applies only to non-GNR models;
+`1`: Bill by usage hours of an instance. It applies only to GNR models. It’s available to beta users now. To enable it, submit a ticket;
+`2`: Bill by usage month of an instance. It applies only to GNR models.
+If this field is left empty, `0` is selected by default for non-GNR models, and `2` is selected by default for GNR models.
+                     */
+                    int64_t m_instanceChargeType;
+                    bool m_instanceChargeTypeHasBeenSet;
 
                 };
             }

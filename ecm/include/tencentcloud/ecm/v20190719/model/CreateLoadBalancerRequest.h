@@ -210,6 +210,42 @@ Note: if the name of the new CLB instance already exists, a default name will be
                      */
                     bool SecurityGroupsHasBeenSet() const;
 
+                    /**
+                     * 获取IP version. Valid values: `IPV4` (default), `IPv6FullChain` (IPv6 version). This parameter is only for public network CLB instances.
+                     * @return AddressIPVersion IP version. Valid values: `IPV4` (default), `IPv6FullChain` (IPv6 version). This parameter is only for public network CLB instances.
+                     */
+                    std::string GetAddressIPVersion() const;
+
+                    /**
+                     * 设置IP version. Valid values: `IPV4` (default), `IPv6FullChain` (IPv6 version). This parameter is only for public network CLB instances.
+                     * @param AddressIPVersion IP version. Valid values: `IPV4` (default), `IPv6FullChain` (IPv6 version). This parameter is only for public network CLB instances.
+                     */
+                    void SetAddressIPVersion(const std::string& _addressIPVersion);
+
+                    /**
+                     * 判断参数 AddressIPVersion 是否已赋值
+                     * @return AddressIPVersion 是否已赋值
+                     */
+                    bool AddressIPVersionHasBeenSet() const;
+
+                    /**
+                     * 获取Subnet ID. This parameter is required for IPv6 CLB instances.
+                     * @return SubnetId Subnet ID. This parameter is required for IPv6 CLB instances.
+                     */
+                    std::string GetSubnetId() const;
+
+                    /**
+                     * 设置Subnet ID. This parameter is required for IPv6 CLB instances.
+                     * @param SubnetId Subnet ID. This parameter is required for IPv6 CLB instances.
+                     */
+                    void SetSubnetId(const std::string& _subnetId);
+
+                    /**
+                     * 判断参数 SubnetId 是否已赋值
+                     * @return SubnetId 是否已赋值
+                     */
+                    bool SubnetIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -266,6 +302,18 @@ Note: if the name of the new CLB instance already exists, a default name will be
                      */
                     std::vector<std::string> m_securityGroups;
                     bool m_securityGroupsHasBeenSet;
+
+                    /**
+                     * IP version. Valid values: `IPV4` (default), `IPv6FullChain` (IPv6 version). This parameter is only for public network CLB instances.
+                     */
+                    std::string m_addressIPVersion;
+                    bool m_addressIPVersionHasBeenSet;
+
+                    /**
+                     * Subnet ID. This parameter is required for IPv6 CLB instances.
+                     */
+                    std::string m_subnetId;
+                    bool m_subnetIdHasBeenSet;
 
                 };
             }

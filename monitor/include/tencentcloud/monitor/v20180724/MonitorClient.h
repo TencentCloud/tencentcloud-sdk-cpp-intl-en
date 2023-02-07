@@ -27,6 +27,8 @@
 #include <tencentcloud/monitor/v20180724/model/BindPrometheusManagedGrafanaResponse.h>
 #include <tencentcloud/monitor/v20180724/model/BindingPolicyObjectRequest.h>
 #include <tencentcloud/monitor/v20180724/model/BindingPolicyObjectResponse.h>
+#include <tencentcloud/monitor/v20180724/model/CheckIsPrometheusNewUserRequest.h>
+#include <tencentcloud/monitor/v20180724/model/CheckIsPrometheusNewUserResponse.h>
 #include <tencentcloud/monitor/v20180724/model/CleanGrafanaInstanceRequest.h>
 #include <tencentcloud/monitor/v20180724/model/CleanGrafanaInstanceResponse.h>
 #include <tencentcloud/monitor/v20180724/model/CreateAlarmNoticeRequest.h>
@@ -49,8 +51,12 @@
 #include <tencentcloud/monitor/v20180724/model/CreatePrometheusAgentResponse.h>
 #include <tencentcloud/monitor/v20180724/model/CreatePrometheusMultiTenantInstancePostPayModeRequest.h>
 #include <tencentcloud/monitor/v20180724/model/CreatePrometheusMultiTenantInstancePostPayModeResponse.h>
+#include <tencentcloud/monitor/v20180724/model/CreatePrometheusRecordRuleYamlRequest.h>
+#include <tencentcloud/monitor/v20180724/model/CreatePrometheusRecordRuleYamlResponse.h>
 #include <tencentcloud/monitor/v20180724/model/CreatePrometheusScrapeJobRequest.h>
 #include <tencentcloud/monitor/v20180724/model/CreatePrometheusScrapeJobResponse.h>
+#include <tencentcloud/monitor/v20180724/model/CreatePrometheusTempRequest.h>
+#include <tencentcloud/monitor/v20180724/model/CreatePrometheusTempResponse.h>
 #include <tencentcloud/monitor/v20180724/model/CreateRecordingRuleRequest.h>
 #include <tencentcloud/monitor/v20180724/model/CreateRecordingRuleResponse.h>
 #include <tencentcloud/monitor/v20180724/model/CreateSSOAccountRequest.h>
@@ -73,8 +79,14 @@
 #include <tencentcloud/monitor/v20180724/model/DeleteGrafanaNotificationChannelResponse.h>
 #include <tencentcloud/monitor/v20180724/model/DeletePolicyGroupRequest.h>
 #include <tencentcloud/monitor/v20180724/model/DeletePolicyGroupResponse.h>
+#include <tencentcloud/monitor/v20180724/model/DeletePrometheusRecordRuleYamlRequest.h>
+#include <tencentcloud/monitor/v20180724/model/DeletePrometheusRecordRuleYamlResponse.h>
 #include <tencentcloud/monitor/v20180724/model/DeletePrometheusScrapeJobsRequest.h>
 #include <tencentcloud/monitor/v20180724/model/DeletePrometheusScrapeJobsResponse.h>
+#include <tencentcloud/monitor/v20180724/model/DeletePrometheusTempRequest.h>
+#include <tencentcloud/monitor/v20180724/model/DeletePrometheusTempResponse.h>
+#include <tencentcloud/monitor/v20180724/model/DeletePrometheusTempSyncRequest.h>
+#include <tencentcloud/monitor/v20180724/model/DeletePrometheusTempSyncResponse.h>
 #include <tencentcloud/monitor/v20180724/model/DeleteRecordingRulesRequest.h>
 #include <tencentcloud/monitor/v20180724/model/DeleteRecordingRulesResponse.h>
 #include <tencentcloud/monitor/v20180724/model/DeleteSSOAccountRequest.h>
@@ -139,14 +151,34 @@
 #include <tencentcloud/monitor/v20180724/model/DescribePolicyGroupListResponse.h>
 #include <tencentcloud/monitor/v20180724/model/DescribeProductEventListRequest.h>
 #include <tencentcloud/monitor/v20180724/model/DescribeProductEventListResponse.h>
+#include <tencentcloud/monitor/v20180724/model/DescribePrometheusAgentInstancesRequest.h>
+#include <tencentcloud/monitor/v20180724/model/DescribePrometheusAgentInstancesResponse.h>
 #include <tencentcloud/monitor/v20180724/model/DescribePrometheusAgentsRequest.h>
 #include <tencentcloud/monitor/v20180724/model/DescribePrometheusAgentsResponse.h>
+#include <tencentcloud/monitor/v20180724/model/DescribePrometheusAlertPolicyRequest.h>
+#include <tencentcloud/monitor/v20180724/model/DescribePrometheusAlertPolicyResponse.h>
+#include <tencentcloud/monitor/v20180724/model/DescribePrometheusConfigRequest.h>
+#include <tencentcloud/monitor/v20180724/model/DescribePrometheusConfigResponse.h>
+#include <tencentcloud/monitor/v20180724/model/DescribePrometheusInstanceDetailRequest.h>
+#include <tencentcloud/monitor/v20180724/model/DescribePrometheusInstanceDetailResponse.h>
+#include <tencentcloud/monitor/v20180724/model/DescribePrometheusInstanceInitStatusRequest.h>
+#include <tencentcloud/monitor/v20180724/model/DescribePrometheusInstanceInitStatusResponse.h>
 #include <tencentcloud/monitor/v20180724/model/DescribePrometheusInstanceUsageRequest.h>
 #include <tencentcloud/monitor/v20180724/model/DescribePrometheusInstanceUsageResponse.h>
 #include <tencentcloud/monitor/v20180724/model/DescribePrometheusInstancesRequest.h>
 #include <tencentcloud/monitor/v20180724/model/DescribePrometheusInstancesResponse.h>
+#include <tencentcloud/monitor/v20180724/model/DescribePrometheusInstancesOverviewRequest.h>
+#include <tencentcloud/monitor/v20180724/model/DescribePrometheusInstancesOverviewResponse.h>
+#include <tencentcloud/monitor/v20180724/model/DescribePrometheusRecordRuleYamlRequest.h>
+#include <tencentcloud/monitor/v20180724/model/DescribePrometheusRecordRuleYamlResponse.h>
+#include <tencentcloud/monitor/v20180724/model/DescribePrometheusRecordRulesRequest.h>
+#include <tencentcloud/monitor/v20180724/model/DescribePrometheusRecordRulesResponse.h>
 #include <tencentcloud/monitor/v20180724/model/DescribePrometheusScrapeJobsRequest.h>
 #include <tencentcloud/monitor/v20180724/model/DescribePrometheusScrapeJobsResponse.h>
+#include <tencentcloud/monitor/v20180724/model/DescribePrometheusTempRequest.h>
+#include <tencentcloud/monitor/v20180724/model/DescribePrometheusTempResponse.h>
+#include <tencentcloud/monitor/v20180724/model/DescribePrometheusTempSyncRequest.h>
+#include <tencentcloud/monitor/v20180724/model/DescribePrometheusTempSyncResponse.h>
 #include <tencentcloud/monitor/v20180724/model/DescribePrometheusZonesRequest.h>
 #include <tencentcloud/monitor/v20180724/model/DescribePrometheusZonesResponse.h>
 #include <tencentcloud/monitor/v20180724/model/DescribeRecordingRulesRequest.h>
@@ -191,14 +223,22 @@
 #include <tencentcloud/monitor/v20180724/model/ModifyPolicyGroupResponse.h>
 #include <tencentcloud/monitor/v20180724/model/ModifyPrometheusInstanceAttributesRequest.h>
 #include <tencentcloud/monitor/v20180724/model/ModifyPrometheusInstanceAttributesResponse.h>
+#include <tencentcloud/monitor/v20180724/model/ModifyPrometheusRecordRuleYamlRequest.h>
+#include <tencentcloud/monitor/v20180724/model/ModifyPrometheusRecordRuleYamlResponse.h>
+#include <tencentcloud/monitor/v20180724/model/ModifyPrometheusTempRequest.h>
+#include <tencentcloud/monitor/v20180724/model/ModifyPrometheusTempResponse.h>
 #include <tencentcloud/monitor/v20180724/model/PutMonitorDataRequest.h>
 #include <tencentcloud/monitor/v20180724/model/PutMonitorDataResponse.h>
 #include <tencentcloud/monitor/v20180724/model/ResumeGrafanaInstanceRequest.h>
 #include <tencentcloud/monitor/v20180724/model/ResumeGrafanaInstanceResponse.h>
+#include <tencentcloud/monitor/v20180724/model/RunPrometheusInstanceRequest.h>
+#include <tencentcloud/monitor/v20180724/model/RunPrometheusInstanceResponse.h>
 #include <tencentcloud/monitor/v20180724/model/SendCustomAlarmMsgRequest.h>
 #include <tencentcloud/monitor/v20180724/model/SendCustomAlarmMsgResponse.h>
 #include <tencentcloud/monitor/v20180724/model/SetDefaultAlarmPolicyRequest.h>
 #include <tencentcloud/monitor/v20180724/model/SetDefaultAlarmPolicyResponse.h>
+#include <tencentcloud/monitor/v20180724/model/SyncPrometheusTempRequest.h>
+#include <tencentcloud/monitor/v20180724/model/SyncPrometheusTempResponse.h>
 #include <tencentcloud/monitor/v20180724/model/TerminatePrometheusInstancesRequest.h>
 #include <tencentcloud/monitor/v20180724/model/TerminatePrometheusInstancesResponse.h>
 #include <tencentcloud/monitor/v20180724/model/UnBindingAllPolicyObjectRequest.h>
@@ -261,6 +301,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::BindingPolicyObjectResponse> BindingPolicyObjectOutcome;
                 typedef std::future<BindingPolicyObjectOutcome> BindingPolicyObjectOutcomeCallable;
                 typedef std::function<void(const MonitorClient*, const Model::BindingPolicyObjectRequest&, BindingPolicyObjectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BindingPolicyObjectAsyncHandler;
+                typedef Outcome<Core::Error, Model::CheckIsPrometheusNewUserResponse> CheckIsPrometheusNewUserOutcome;
+                typedef std::future<CheckIsPrometheusNewUserOutcome> CheckIsPrometheusNewUserOutcomeCallable;
+                typedef std::function<void(const MonitorClient*, const Model::CheckIsPrometheusNewUserRequest&, CheckIsPrometheusNewUserOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CheckIsPrometheusNewUserAsyncHandler;
                 typedef Outcome<Core::Error, Model::CleanGrafanaInstanceResponse> CleanGrafanaInstanceOutcome;
                 typedef std::future<CleanGrafanaInstanceOutcome> CleanGrafanaInstanceOutcomeCallable;
                 typedef std::function<void(const MonitorClient*, const Model::CleanGrafanaInstanceRequest&, CleanGrafanaInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CleanGrafanaInstanceAsyncHandler;
@@ -294,9 +337,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreatePrometheusMultiTenantInstancePostPayModeResponse> CreatePrometheusMultiTenantInstancePostPayModeOutcome;
                 typedef std::future<CreatePrometheusMultiTenantInstancePostPayModeOutcome> CreatePrometheusMultiTenantInstancePostPayModeOutcomeCallable;
                 typedef std::function<void(const MonitorClient*, const Model::CreatePrometheusMultiTenantInstancePostPayModeRequest&, CreatePrometheusMultiTenantInstancePostPayModeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreatePrometheusMultiTenantInstancePostPayModeAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreatePrometheusRecordRuleYamlResponse> CreatePrometheusRecordRuleYamlOutcome;
+                typedef std::future<CreatePrometheusRecordRuleYamlOutcome> CreatePrometheusRecordRuleYamlOutcomeCallable;
+                typedef std::function<void(const MonitorClient*, const Model::CreatePrometheusRecordRuleYamlRequest&, CreatePrometheusRecordRuleYamlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreatePrometheusRecordRuleYamlAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreatePrometheusScrapeJobResponse> CreatePrometheusScrapeJobOutcome;
                 typedef std::future<CreatePrometheusScrapeJobOutcome> CreatePrometheusScrapeJobOutcomeCallable;
                 typedef std::function<void(const MonitorClient*, const Model::CreatePrometheusScrapeJobRequest&, CreatePrometheusScrapeJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreatePrometheusScrapeJobAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreatePrometheusTempResponse> CreatePrometheusTempOutcome;
+                typedef std::future<CreatePrometheusTempOutcome> CreatePrometheusTempOutcomeCallable;
+                typedef std::function<void(const MonitorClient*, const Model::CreatePrometheusTempRequest&, CreatePrometheusTempOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreatePrometheusTempAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateRecordingRuleResponse> CreateRecordingRuleOutcome;
                 typedef std::future<CreateRecordingRuleOutcome> CreateRecordingRuleOutcomeCallable;
                 typedef std::function<void(const MonitorClient*, const Model::CreateRecordingRuleRequest&, CreateRecordingRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRecordingRuleAsyncHandler;
@@ -330,9 +379,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeletePolicyGroupResponse> DeletePolicyGroupOutcome;
                 typedef std::future<DeletePolicyGroupOutcome> DeletePolicyGroupOutcomeCallable;
                 typedef std::function<void(const MonitorClient*, const Model::DeletePolicyGroupRequest&, DeletePolicyGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeletePolicyGroupAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeletePrometheusRecordRuleYamlResponse> DeletePrometheusRecordRuleYamlOutcome;
+                typedef std::future<DeletePrometheusRecordRuleYamlOutcome> DeletePrometheusRecordRuleYamlOutcomeCallable;
+                typedef std::function<void(const MonitorClient*, const Model::DeletePrometheusRecordRuleYamlRequest&, DeletePrometheusRecordRuleYamlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeletePrometheusRecordRuleYamlAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeletePrometheusScrapeJobsResponse> DeletePrometheusScrapeJobsOutcome;
                 typedef std::future<DeletePrometheusScrapeJobsOutcome> DeletePrometheusScrapeJobsOutcomeCallable;
                 typedef std::function<void(const MonitorClient*, const Model::DeletePrometheusScrapeJobsRequest&, DeletePrometheusScrapeJobsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeletePrometheusScrapeJobsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeletePrometheusTempResponse> DeletePrometheusTempOutcome;
+                typedef std::future<DeletePrometheusTempOutcome> DeletePrometheusTempOutcomeCallable;
+                typedef std::function<void(const MonitorClient*, const Model::DeletePrometheusTempRequest&, DeletePrometheusTempOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeletePrometheusTempAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeletePrometheusTempSyncResponse> DeletePrometheusTempSyncOutcome;
+                typedef std::future<DeletePrometheusTempSyncOutcome> DeletePrometheusTempSyncOutcomeCallable;
+                typedef std::function<void(const MonitorClient*, const Model::DeletePrometheusTempSyncRequest&, DeletePrometheusTempSyncOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeletePrometheusTempSyncAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteRecordingRulesResponse> DeleteRecordingRulesOutcome;
                 typedef std::future<DeleteRecordingRulesOutcome> DeleteRecordingRulesOutcomeCallable;
                 typedef std::function<void(const MonitorClient*, const Model::DeleteRecordingRulesRequest&, DeleteRecordingRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRecordingRulesAsyncHandler;
@@ -429,18 +487,48 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeProductEventListResponse> DescribeProductEventListOutcome;
                 typedef std::future<DescribeProductEventListOutcome> DescribeProductEventListOutcomeCallable;
                 typedef std::function<void(const MonitorClient*, const Model::DescribeProductEventListRequest&, DescribeProductEventListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProductEventListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribePrometheusAgentInstancesResponse> DescribePrometheusAgentInstancesOutcome;
+                typedef std::future<DescribePrometheusAgentInstancesOutcome> DescribePrometheusAgentInstancesOutcomeCallable;
+                typedef std::function<void(const MonitorClient*, const Model::DescribePrometheusAgentInstancesRequest&, DescribePrometheusAgentInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePrometheusAgentInstancesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribePrometheusAgentsResponse> DescribePrometheusAgentsOutcome;
                 typedef std::future<DescribePrometheusAgentsOutcome> DescribePrometheusAgentsOutcomeCallable;
                 typedef std::function<void(const MonitorClient*, const Model::DescribePrometheusAgentsRequest&, DescribePrometheusAgentsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePrometheusAgentsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribePrometheusAlertPolicyResponse> DescribePrometheusAlertPolicyOutcome;
+                typedef std::future<DescribePrometheusAlertPolicyOutcome> DescribePrometheusAlertPolicyOutcomeCallable;
+                typedef std::function<void(const MonitorClient*, const Model::DescribePrometheusAlertPolicyRequest&, DescribePrometheusAlertPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePrometheusAlertPolicyAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribePrometheusConfigResponse> DescribePrometheusConfigOutcome;
+                typedef std::future<DescribePrometheusConfigOutcome> DescribePrometheusConfigOutcomeCallable;
+                typedef std::function<void(const MonitorClient*, const Model::DescribePrometheusConfigRequest&, DescribePrometheusConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePrometheusConfigAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribePrometheusInstanceDetailResponse> DescribePrometheusInstanceDetailOutcome;
+                typedef std::future<DescribePrometheusInstanceDetailOutcome> DescribePrometheusInstanceDetailOutcomeCallable;
+                typedef std::function<void(const MonitorClient*, const Model::DescribePrometheusInstanceDetailRequest&, DescribePrometheusInstanceDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePrometheusInstanceDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribePrometheusInstanceInitStatusResponse> DescribePrometheusInstanceInitStatusOutcome;
+                typedef std::future<DescribePrometheusInstanceInitStatusOutcome> DescribePrometheusInstanceInitStatusOutcomeCallable;
+                typedef std::function<void(const MonitorClient*, const Model::DescribePrometheusInstanceInitStatusRequest&, DescribePrometheusInstanceInitStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePrometheusInstanceInitStatusAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribePrometheusInstanceUsageResponse> DescribePrometheusInstanceUsageOutcome;
                 typedef std::future<DescribePrometheusInstanceUsageOutcome> DescribePrometheusInstanceUsageOutcomeCallable;
                 typedef std::function<void(const MonitorClient*, const Model::DescribePrometheusInstanceUsageRequest&, DescribePrometheusInstanceUsageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePrometheusInstanceUsageAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribePrometheusInstancesResponse> DescribePrometheusInstancesOutcome;
                 typedef std::future<DescribePrometheusInstancesOutcome> DescribePrometheusInstancesOutcomeCallable;
                 typedef std::function<void(const MonitorClient*, const Model::DescribePrometheusInstancesRequest&, DescribePrometheusInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePrometheusInstancesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribePrometheusInstancesOverviewResponse> DescribePrometheusInstancesOverviewOutcome;
+                typedef std::future<DescribePrometheusInstancesOverviewOutcome> DescribePrometheusInstancesOverviewOutcomeCallable;
+                typedef std::function<void(const MonitorClient*, const Model::DescribePrometheusInstancesOverviewRequest&, DescribePrometheusInstancesOverviewOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePrometheusInstancesOverviewAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribePrometheusRecordRuleYamlResponse> DescribePrometheusRecordRuleYamlOutcome;
+                typedef std::future<DescribePrometheusRecordRuleYamlOutcome> DescribePrometheusRecordRuleYamlOutcomeCallable;
+                typedef std::function<void(const MonitorClient*, const Model::DescribePrometheusRecordRuleYamlRequest&, DescribePrometheusRecordRuleYamlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePrometheusRecordRuleYamlAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribePrometheusRecordRulesResponse> DescribePrometheusRecordRulesOutcome;
+                typedef std::future<DescribePrometheusRecordRulesOutcome> DescribePrometheusRecordRulesOutcomeCallable;
+                typedef std::function<void(const MonitorClient*, const Model::DescribePrometheusRecordRulesRequest&, DescribePrometheusRecordRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePrometheusRecordRulesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribePrometheusScrapeJobsResponse> DescribePrometheusScrapeJobsOutcome;
                 typedef std::future<DescribePrometheusScrapeJobsOutcome> DescribePrometheusScrapeJobsOutcomeCallable;
                 typedef std::function<void(const MonitorClient*, const Model::DescribePrometheusScrapeJobsRequest&, DescribePrometheusScrapeJobsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePrometheusScrapeJobsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribePrometheusTempResponse> DescribePrometheusTempOutcome;
+                typedef std::future<DescribePrometheusTempOutcome> DescribePrometheusTempOutcomeCallable;
+                typedef std::function<void(const MonitorClient*, const Model::DescribePrometheusTempRequest&, DescribePrometheusTempOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePrometheusTempAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribePrometheusTempSyncResponse> DescribePrometheusTempSyncOutcome;
+                typedef std::future<DescribePrometheusTempSyncOutcome> DescribePrometheusTempSyncOutcomeCallable;
+                typedef std::function<void(const MonitorClient*, const Model::DescribePrometheusTempSyncRequest&, DescribePrometheusTempSyncOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePrometheusTempSyncAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribePrometheusZonesResponse> DescribePrometheusZonesOutcome;
                 typedef std::future<DescribePrometheusZonesOutcome> DescribePrometheusZonesOutcomeCallable;
                 typedef std::function<void(const MonitorClient*, const Model::DescribePrometheusZonesRequest&, DescribePrometheusZonesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePrometheusZonesAsyncHandler;
@@ -507,18 +595,30 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyPrometheusInstanceAttributesResponse> ModifyPrometheusInstanceAttributesOutcome;
                 typedef std::future<ModifyPrometheusInstanceAttributesOutcome> ModifyPrometheusInstanceAttributesOutcomeCallable;
                 typedef std::function<void(const MonitorClient*, const Model::ModifyPrometheusInstanceAttributesRequest&, ModifyPrometheusInstanceAttributesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyPrometheusInstanceAttributesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyPrometheusRecordRuleYamlResponse> ModifyPrometheusRecordRuleYamlOutcome;
+                typedef std::future<ModifyPrometheusRecordRuleYamlOutcome> ModifyPrometheusRecordRuleYamlOutcomeCallable;
+                typedef std::function<void(const MonitorClient*, const Model::ModifyPrometheusRecordRuleYamlRequest&, ModifyPrometheusRecordRuleYamlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyPrometheusRecordRuleYamlAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyPrometheusTempResponse> ModifyPrometheusTempOutcome;
+                typedef std::future<ModifyPrometheusTempOutcome> ModifyPrometheusTempOutcomeCallable;
+                typedef std::function<void(const MonitorClient*, const Model::ModifyPrometheusTempRequest&, ModifyPrometheusTempOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyPrometheusTempAsyncHandler;
                 typedef Outcome<Core::Error, Model::PutMonitorDataResponse> PutMonitorDataOutcome;
                 typedef std::future<PutMonitorDataOutcome> PutMonitorDataOutcomeCallable;
                 typedef std::function<void(const MonitorClient*, const Model::PutMonitorDataRequest&, PutMonitorDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PutMonitorDataAsyncHandler;
                 typedef Outcome<Core::Error, Model::ResumeGrafanaInstanceResponse> ResumeGrafanaInstanceOutcome;
                 typedef std::future<ResumeGrafanaInstanceOutcome> ResumeGrafanaInstanceOutcomeCallable;
                 typedef std::function<void(const MonitorClient*, const Model::ResumeGrafanaInstanceRequest&, ResumeGrafanaInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResumeGrafanaInstanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::RunPrometheusInstanceResponse> RunPrometheusInstanceOutcome;
+                typedef std::future<RunPrometheusInstanceOutcome> RunPrometheusInstanceOutcomeCallable;
+                typedef std::function<void(const MonitorClient*, const Model::RunPrometheusInstanceRequest&, RunPrometheusInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RunPrometheusInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::SendCustomAlarmMsgResponse> SendCustomAlarmMsgOutcome;
                 typedef std::future<SendCustomAlarmMsgOutcome> SendCustomAlarmMsgOutcomeCallable;
                 typedef std::function<void(const MonitorClient*, const Model::SendCustomAlarmMsgRequest&, SendCustomAlarmMsgOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SendCustomAlarmMsgAsyncHandler;
                 typedef Outcome<Core::Error, Model::SetDefaultAlarmPolicyResponse> SetDefaultAlarmPolicyOutcome;
                 typedef std::future<SetDefaultAlarmPolicyOutcome> SetDefaultAlarmPolicyOutcomeCallable;
                 typedef std::function<void(const MonitorClient*, const Model::SetDefaultAlarmPolicyRequest&, SetDefaultAlarmPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SetDefaultAlarmPolicyAsyncHandler;
+                typedef Outcome<Core::Error, Model::SyncPrometheusTempResponse> SyncPrometheusTempOutcome;
+                typedef std::future<SyncPrometheusTempOutcome> SyncPrometheusTempOutcomeCallable;
+                typedef std::function<void(const MonitorClient*, const Model::SyncPrometheusTempRequest&, SyncPrometheusTempOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SyncPrometheusTempAsyncHandler;
                 typedef Outcome<Core::Error, Model::TerminatePrometheusInstancesResponse> TerminatePrometheusInstancesOutcome;
                 typedef std::future<TerminatePrometheusInstancesOutcome> TerminatePrometheusInstancesOutcomeCallable;
                 typedef std::function<void(const MonitorClient*, const Model::TerminatePrometheusInstancesRequest&, TerminatePrometheusInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TerminatePrometheusInstancesAsyncHandler;
@@ -602,6 +702,15 @@ namespace TencentCloud
                 BindingPolicyObjectOutcome BindingPolicyObject(const Model::BindingPolicyObjectRequest &request);
                 void BindingPolicyObjectAsync(const Model::BindingPolicyObjectRequest& request, const BindingPolicyObjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 BindingPolicyObjectOutcomeCallable BindingPolicyObjectCallable(const Model::BindingPolicyObjectRequest& request);
+
+                /**
+                 *This API is used to determine whether the user is new to TMP, that is, whether the user has never created a TMP instance in any region.
+                 * @param req CheckIsPrometheusNewUserRequest
+                 * @return CheckIsPrometheusNewUserOutcome
+                 */
+                CheckIsPrometheusNewUserOutcome CheckIsPrometheusNewUser(const Model::CheckIsPrometheusNewUserRequest &request);
+                void CheckIsPrometheusNewUserAsync(const Model::CheckIsPrometheusNewUserRequest& request, const CheckIsPrometheusNewUserAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CheckIsPrometheusNewUserOutcomeCallable CheckIsPrometheusNewUserCallable(const Model::CheckIsPrometheusNewUserRequest& request);
 
                 /**
                  *This API is used to forcibly terminate a Grafana instance.
@@ -705,6 +814,15 @@ Note that alert object and alert message are special fields of Prometheus Rule A
                 CreatePrometheusMultiTenantInstancePostPayModeOutcomeCallable CreatePrometheusMultiTenantInstancePostPayModeCallable(const Model::CreatePrometheusMultiTenantInstancePostPayModeRequest& request);
 
                 /**
+                 *This API is used to create a recording rule in the YAML way.
+                 * @param req CreatePrometheusRecordRuleYamlRequest
+                 * @return CreatePrometheusRecordRuleYamlOutcome
+                 */
+                CreatePrometheusRecordRuleYamlOutcome CreatePrometheusRecordRuleYaml(const Model::CreatePrometheusRecordRuleYamlRequest &request);
+                void CreatePrometheusRecordRuleYamlAsync(const Model::CreatePrometheusRecordRuleYamlRequest& request, const CreatePrometheusRecordRuleYamlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreatePrometheusRecordRuleYamlOutcomeCallable CreatePrometheusRecordRuleYamlCallable(const Model::CreatePrometheusRecordRuleYamlRequest& request);
+
+                /**
                  *This API is used to create a Prometheus scrape task.
                  * @param req CreatePrometheusScrapeJobRequest
                  * @return CreatePrometheusScrapeJobOutcome
@@ -712,6 +830,15 @@ Note that alert object and alert message are special fields of Prometheus Rule A
                 CreatePrometheusScrapeJobOutcome CreatePrometheusScrapeJob(const Model::CreatePrometheusScrapeJobRequest &request);
                 void CreatePrometheusScrapeJobAsync(const Model::CreatePrometheusScrapeJobRequest& request, const CreatePrometheusScrapeJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreatePrometheusScrapeJobOutcomeCallable CreatePrometheusScrapeJobCallable(const Model::CreatePrometheusScrapeJobRequest& request);
+
+                /**
+                 *This API is used to create a TMP template.
+                 * @param req CreatePrometheusTempRequest
+                 * @return CreatePrometheusTempOutcome
+                 */
+                CreatePrometheusTempOutcome CreatePrometheusTemp(const Model::CreatePrometheusTempRequest &request);
+                void CreatePrometheusTempAsync(const Model::CreatePrometheusTempRequest& request, const CreatePrometheusTempAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreatePrometheusTempOutcomeCallable CreatePrometheusTempCallable(const Model::CreatePrometheusTempRequest& request);
 
                 /**
                  *This API is used to create a Prometheus recording rule.
@@ -815,6 +942,15 @@ Note that alert object and alert message are special fields of Prometheus Rule A
                 DeletePolicyGroupOutcomeCallable DeletePolicyGroupCallable(const Model::DeletePolicyGroupRequest& request);
 
                 /**
+                 *This API is used to delete a recording instance.
+                 * @param req DeletePrometheusRecordRuleYamlRequest
+                 * @return DeletePrometheusRecordRuleYamlOutcome
+                 */
+                DeletePrometheusRecordRuleYamlOutcome DeletePrometheusRecordRuleYaml(const Model::DeletePrometheusRecordRuleYamlRequest &request);
+                void DeletePrometheusRecordRuleYamlAsync(const Model::DeletePrometheusRecordRuleYamlRequest& request, const DeletePrometheusRecordRuleYamlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeletePrometheusRecordRuleYamlOutcomeCallable DeletePrometheusRecordRuleYamlCallable(const Model::DeletePrometheusRecordRuleYamlRequest& request);
+
+                /**
                  *This API is used to delete a Prometheus scrape task.
                  * @param req DeletePrometheusScrapeJobsRequest
                  * @return DeletePrometheusScrapeJobsOutcome
@@ -822,6 +958,24 @@ Note that alert object and alert message are special fields of Prometheus Rule A
                 DeletePrometheusScrapeJobsOutcome DeletePrometheusScrapeJobs(const Model::DeletePrometheusScrapeJobsRequest &request);
                 void DeletePrometheusScrapeJobsAsync(const Model::DeletePrometheusScrapeJobsRequest& request, const DeletePrometheusScrapeJobsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeletePrometheusScrapeJobsOutcomeCallable DeletePrometheusScrapeJobsCallable(const Model::DeletePrometheusScrapeJobsRequest& request);
+
+                /**
+                 *This API is used to delete a TMP template.
+                 * @param req DeletePrometheusTempRequest
+                 * @return DeletePrometheusTempOutcome
+                 */
+                DeletePrometheusTempOutcome DeletePrometheusTemp(const Model::DeletePrometheusTempRequest &request);
+                void DeletePrometheusTempAsync(const Model::DeletePrometheusTempRequest& request, const DeletePrometheusTempAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeletePrometheusTempOutcomeCallable DeletePrometheusTempCallable(const Model::DeletePrometheusTempRequest& request);
+
+                /**
+                 *This API is used to unsync a template, which will delete the configuration generated by the template in the target. It takes effect for v2 instances.
+                 * @param req DeletePrometheusTempSyncRequest
+                 * @return DeletePrometheusTempSyncOutcome
+                 */
+                DeletePrometheusTempSyncOutcome DeletePrometheusTempSync(const Model::DeletePrometheusTempSyncRequest &request);
+                void DeletePrometheusTempSyncAsync(const Model::DeletePrometheusTempSyncRequest& request, const DeletePrometheusTempSyncAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeletePrometheusTempSyncOutcomeCallable DeletePrometheusTempSyncCallable(const Model::DeletePrometheusTempSyncRequest& request);
 
                 /**
                  *This API is used to batch delete Prometheus recording rules.
@@ -1114,6 +1268,15 @@ Note: **If you use a sub-account, you can only query the alarm records of author
                 DescribeProductEventListOutcomeCallable DescribeProductEventListCallable(const Model::DescribeProductEventListRequest& request);
 
                 /**
+                 *This API is used to get the list of instances associated with the target cluster.
+                 * @param req DescribePrometheusAgentInstancesRequest
+                 * @return DescribePrometheusAgentInstancesOutcome
+                 */
+                DescribePrometheusAgentInstancesOutcome DescribePrometheusAgentInstances(const Model::DescribePrometheusAgentInstancesRequest &request);
+                void DescribePrometheusAgentInstancesAsync(const Model::DescribePrometheusAgentInstancesRequest& request, const DescribePrometheusAgentInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribePrometheusAgentInstancesOutcomeCallable DescribePrometheusAgentInstancesCallable(const Model::DescribePrometheusAgentInstancesRequest& request);
+
+                /**
                  *This API is used to list Prometheus CVM agents.
                  * @param req DescribePrometheusAgentsRequest
                  * @return DescribePrometheusAgentsOutcome
@@ -1121,6 +1284,42 @@ Note: **If you use a sub-account, you can only query the alarm records of author
                 DescribePrometheusAgentsOutcome DescribePrometheusAgents(const Model::DescribePrometheusAgentsRequest &request);
                 void DescribePrometheusAgentsAsync(const Model::DescribePrometheusAgentsRequest& request, const DescribePrometheusAgentsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribePrometheusAgentsOutcomeCallable DescribePrometheusAgentsCallable(const Model::DescribePrometheusAgentsRequest& request);
+
+                /**
+                 *This API is used to get the list of v2.0 instance alerting rules.
+                 * @param req DescribePrometheusAlertPolicyRequest
+                 * @return DescribePrometheusAlertPolicyOutcome
+                 */
+                DescribePrometheusAlertPolicyOutcome DescribePrometheusAlertPolicy(const Model::DescribePrometheusAlertPolicyRequest &request);
+                void DescribePrometheusAlertPolicyAsync(const Model::DescribePrometheusAlertPolicyRequest& request, const DescribePrometheusAlertPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribePrometheusAlertPolicyOutcomeCallable DescribePrometheusAlertPolicyCallable(const Model::DescribePrometheusAlertPolicyRequest& request);
+
+                /**
+                 *This API is used to get the Prometheus configuration.
+                 * @param req DescribePrometheusConfigRequest
+                 * @return DescribePrometheusConfigOutcome
+                 */
+                DescribePrometheusConfigOutcome DescribePrometheusConfig(const Model::DescribePrometheusConfigRequest &request);
+                void DescribePrometheusConfigAsync(const Model::DescribePrometheusConfigRequest& request, const DescribePrometheusConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribePrometheusConfigOutcomeCallable DescribePrometheusConfigCallable(const Model::DescribePrometheusConfigRequest& request);
+
+                /**
+                 *This API is used to get the details of a TMP instance.
+                 * @param req DescribePrometheusInstanceDetailRequest
+                 * @return DescribePrometheusInstanceDetailOutcome
+                 */
+                DescribePrometheusInstanceDetailOutcome DescribePrometheusInstanceDetail(const Model::DescribePrometheusInstanceDetailRequest &request);
+                void DescribePrometheusInstanceDetailAsync(const Model::DescribePrometheusInstanceDetailRequest& request, const DescribePrometheusInstanceDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribePrometheusInstanceDetailOutcomeCallable DescribePrometheusInstanceDetailCallable(const Model::DescribePrometheusInstanceDetailRequest& request);
+
+                /**
+                 *This API is used to get the initialization task status of a v2.0 instance.
+                 * @param req DescribePrometheusInstanceInitStatusRequest
+                 * @return DescribePrometheusInstanceInitStatusOutcome
+                 */
+                DescribePrometheusInstanceInitStatusOutcome DescribePrometheusInstanceInitStatus(const Model::DescribePrometheusInstanceInitStatusRequest &request);
+                void DescribePrometheusInstanceInitStatusAsync(const Model::DescribePrometheusInstanceInitStatusRequest& request, const DescribePrometheusInstanceInitStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribePrometheusInstanceInitStatusOutcomeCallable DescribePrometheusInstanceInitStatusCallable(const Model::DescribePrometheusInstanceInitStatusRequest& request);
 
                 /**
                  * This API is used to query the usage of a pay-as-you-go Tencent Managed Service for Prometheus (TMP) instance.
@@ -1145,6 +1344,33 @@ Note: **If you use a sub-account, you can only query the alarm records of author
                 DescribePrometheusInstancesOutcomeCallable DescribePrometheusInstancesCallable(const Model::DescribePrometheusInstancesRequest& request);
 
                 /**
+                 *This API is used to get the list of CM-integrated instances.
+                 * @param req DescribePrometheusInstancesOverviewRequest
+                 * @return DescribePrometheusInstancesOverviewOutcome
+                 */
+                DescribePrometheusInstancesOverviewOutcome DescribePrometheusInstancesOverview(const Model::DescribePrometheusInstancesOverviewRequest &request);
+                void DescribePrometheusInstancesOverviewAsync(const Model::DescribePrometheusInstancesOverviewRequest& request, const DescribePrometheusInstancesOverviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribePrometheusInstancesOverviewOutcomeCallable DescribePrometheusInstancesOverviewCallable(const Model::DescribePrometheusInstancesOverviewRequest& request);
+
+                /**
+                 *This API is used to get the YAML list of Prometheus recording rules.
+                 * @param req DescribePrometheusRecordRuleYamlRequest
+                 * @return DescribePrometheusRecordRuleYamlOutcome
+                 */
+                DescribePrometheusRecordRuleYamlOutcome DescribePrometheusRecordRuleYaml(const Model::DescribePrometheusRecordRuleYamlRequest &request);
+                void DescribePrometheusRecordRuleYamlAsync(const Model::DescribePrometheusRecordRuleYamlRequest& request, const DescribePrometheusRecordRuleYamlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribePrometheusRecordRuleYamlOutcomeCallable DescribePrometheusRecordRuleYamlCallable(const Model::DescribePrometheusRecordRuleYamlRequest& request);
+
+                /**
+                 *This API is used to get the list of recording rules, including those created by CRD resources in the associated cluster.
+                 * @param req DescribePrometheusRecordRulesRequest
+                 * @return DescribePrometheusRecordRulesOutcome
+                 */
+                DescribePrometheusRecordRulesOutcome DescribePrometheusRecordRules(const Model::DescribePrometheusRecordRulesRequest &request);
+                void DescribePrometheusRecordRulesAsync(const Model::DescribePrometheusRecordRulesRequest& request, const DescribePrometheusRecordRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribePrometheusRecordRulesOutcomeCallable DescribePrometheusRecordRulesCallable(const Model::DescribePrometheusRecordRulesRequest& request);
+
+                /**
                  *This API is used to list Prometheus scrape tasks.
                  * @param req DescribePrometheusScrapeJobsRequest
                  * @return DescribePrometheusScrapeJobsOutcome
@@ -1152,6 +1378,24 @@ Note: **If you use a sub-account, you can only query the alarm records of author
                 DescribePrometheusScrapeJobsOutcome DescribePrometheusScrapeJobs(const Model::DescribePrometheusScrapeJobsRequest &request);
                 void DescribePrometheusScrapeJobsAsync(const Model::DescribePrometheusScrapeJobsRequest& request, const DescribePrometheusScrapeJobsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribePrometheusScrapeJobsOutcomeCallable DescribePrometheusScrapeJobsCallable(const Model::DescribePrometheusScrapeJobsRequest& request);
+
+                /**
+                 *This API is used to get the list of templates, where the default template is always on top.
+                 * @param req DescribePrometheusTempRequest
+                 * @return DescribePrometheusTempOutcome
+                 */
+                DescribePrometheusTempOutcome DescribePrometheusTemp(const Model::DescribePrometheusTempRequest &request);
+                void DescribePrometheusTempAsync(const Model::DescribePrometheusTempRequest& request, const DescribePrometheusTempAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribePrometheusTempOutcomeCallable DescribePrometheusTempCallable(const Model::DescribePrometheusTempRequest& request);
+
+                /**
+                 *This API is used to get the information of instances associated with a template. It takes effect for v2 instances.
+                 * @param req DescribePrometheusTempSyncRequest
+                 * @return DescribePrometheusTempSyncOutcome
+                 */
+                DescribePrometheusTempSyncOutcome DescribePrometheusTempSync(const Model::DescribePrometheusTempSyncRequest &request);
+                void DescribePrometheusTempSyncAsync(const Model::DescribePrometheusTempSyncRequest& request, const DescribePrometheusTempSyncAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribePrometheusTempSyncOutcomeCallable DescribePrometheusTempSyncCallable(const Model::DescribePrometheusTempSyncRequest& request);
 
                 /**
                  *This API is used to list the AZs of Tencent Managed Service for Prometheus (TMP).
@@ -1358,6 +1602,24 @@ If you need to call a large number of APIs to pull metrics or objects at a time,
                 ModifyPrometheusInstanceAttributesOutcomeCallable ModifyPrometheusInstanceAttributesCallable(const Model::ModifyPrometheusInstanceAttributesRequest& request);
 
                 /**
+                 *This API is used to modify a Prometheus recording instance through YAML.
+                 * @param req ModifyPrometheusRecordRuleYamlRequest
+                 * @return ModifyPrometheusRecordRuleYamlOutcome
+                 */
+                ModifyPrometheusRecordRuleYamlOutcome ModifyPrometheusRecordRuleYaml(const Model::ModifyPrometheusRecordRuleYamlRequest &request);
+                void ModifyPrometheusRecordRuleYamlAsync(const Model::ModifyPrometheusRecordRuleYamlRequest& request, const ModifyPrometheusRecordRuleYamlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyPrometheusRecordRuleYamlOutcomeCallable ModifyPrometheusRecordRuleYamlCallable(const Model::ModifyPrometheusRecordRuleYamlRequest& request);
+
+                /**
+                 *This API is used to modify a template.
+                 * @param req ModifyPrometheusTempRequest
+                 * @return ModifyPrometheusTempOutcome
+                 */
+                ModifyPrometheusTempOutcome ModifyPrometheusTemp(const Model::ModifyPrometheusTempRequest &request);
+                void ModifyPrometheusTempAsync(const Model::ModifyPrometheusTempRequest& request, const ModifyPrometheusTempAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyPrometheusTempOutcomeCallable ModifyPrometheusTempCallable(const Model::ModifyPrometheusTempRequest& request);
+
+                /**
                  *The default API request rate limit is 50 requests/sec.
 The default upper limit on metrics of a single tenant is 100.
 A maximum of 30 metric/value pairs can be reported at a time. When an error is returned for a request, no metrics/values in the request will be saved.
@@ -1382,6 +1644,15 @@ The data of the same IP metric/value pair must be reported by minute in chronolo
                 ResumeGrafanaInstanceOutcomeCallable ResumeGrafanaInstanceCallable(const Model::ResumeGrafanaInstanceRequest& request);
 
                 /**
+                 *This API is used to initialize a TMP instance, which is called when the integration center is enabled.
+                 * @param req RunPrometheusInstanceRequest
+                 * @return RunPrometheusInstanceOutcome
+                 */
+                RunPrometheusInstanceOutcome RunPrometheusInstance(const Model::RunPrometheusInstanceRequest &request);
+                void RunPrometheusInstanceAsync(const Model::RunPrometheusInstanceRequest& request, const RunPrometheusInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RunPrometheusInstanceOutcomeCallable RunPrometheusInstanceCallable(const Model::RunPrometheusInstanceRequest& request);
+
+                /**
                  *This API is used to send a custom alarm notification.
                  * @param req SendCustomAlarmMsgRequest
                  * @return SendCustomAlarmMsgOutcome
@@ -1399,6 +1670,15 @@ Alarm policies in the same type under the project will be set as non-default.
                 SetDefaultAlarmPolicyOutcome SetDefaultAlarmPolicy(const Model::SetDefaultAlarmPolicyRequest &request);
                 void SetDefaultAlarmPolicyAsync(const Model::SetDefaultAlarmPolicyRequest& request, const SetDefaultAlarmPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 SetDefaultAlarmPolicyOutcomeCallable SetDefaultAlarmPolicyCallable(const Model::SetDefaultAlarmPolicyRequest& request);
+
+                /**
+                 *This API is used to sync a template to an instance or cluster. It takes effect for v2 instances.
+                 * @param req SyncPrometheusTempRequest
+                 * @return SyncPrometheusTempOutcome
+                 */
+                SyncPrometheusTempOutcome SyncPrometheusTemp(const Model::SyncPrometheusTempRequest &request);
+                void SyncPrometheusTempAsync(const Model::SyncPrometheusTempRequest& request, const SyncPrometheusTempAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SyncPrometheusTempOutcomeCallable SyncPrometheusTempCallable(const Model::SyncPrometheusTempRequest& request);
 
                 /**
                  *This API is used to terminate a pay-as-you-go Prometheus instance.

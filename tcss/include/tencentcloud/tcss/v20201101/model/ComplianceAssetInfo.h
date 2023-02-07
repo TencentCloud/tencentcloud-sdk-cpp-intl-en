@@ -305,14 +305,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CheckResultHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceId 
+                     * 获取Node instance ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return InstanceId Node instance ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置
-                     * @param InstanceId 
+                     * 设置Node instance ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param InstanceId Node instance ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
@@ -406,7 +410,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_checkResultHasBeenSet;
 
                     /**
-                     * 
+                     * Node instance ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;

@@ -383,6 +383,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool LoadBalancerPassToTargetHasBeenSet() const;
 
+                    /**
+                     * 获取IPv6 address of a CLB instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return AddressIPv6 IPv6 address of a CLB instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetAddressIPv6() const;
+
+                    /**
+                     * 设置IPv6 address of a CLB instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param AddressIPv6 IPv6 address of a CLB instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetAddressIPv6(const std::string& _addressIPv6);
+
+                    /**
+                     * 判断参数 AddressIPv6 是否已赋值
+                     * @return AddressIPv6 是否已赋值
+                     */
+                    bool AddressIPv6HasBeenSet() const;
+
                 private:
 
                     /**
@@ -490,6 +512,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool m_loadBalancerPassToTarget;
                     bool m_loadBalancerPassToTargetHasBeenSet;
+
+                    /**
+                     * IPv6 address of a CLB instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_addressIPv6;
+                    bool m_addressIPv6HasBeenSet;
 
                 };
             }
