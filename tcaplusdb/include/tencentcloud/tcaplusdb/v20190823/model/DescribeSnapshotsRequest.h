@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tcaplusdb/v20190823/model/SelectedTableInfoNew.h>
 
 
 namespace TencentCloud
@@ -114,6 +115,24 @@ namespace TencentCloud
                      */
                     bool SnapshotNameHasBeenSet() const;
 
+                    /**
+                     * 获取The list of snapshots pulled in batches
+                     * @return SelectedTables The list of snapshots pulled in batches
+                     */
+                    std::vector<SelectedTableInfoNew> GetSelectedTables() const;
+
+                    /**
+                     * 设置The list of snapshots pulled in batches
+                     * @param SelectedTables The list of snapshots pulled in batches
+                     */
+                    void SetSelectedTables(const std::vector<SelectedTableInfoNew>& _selectedTables);
+
+                    /**
+                     * 判断参数 SelectedTables 是否已赋值
+                     * @return SelectedTables 是否已赋值
+                     */
+                    bool SelectedTablesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -139,6 +158,12 @@ namespace TencentCloud
                      */
                     std::string m_snapshotName;
                     bool m_snapshotNameHasBeenSet;
+
+                    /**
+                     * The list of snapshots pulled in batches
+                     */
+                    std::vector<SelectedTableInfoNew> m_selectedTables;
+                    bool m_selectedTablesHasBeenSet;
 
                 };
             }
