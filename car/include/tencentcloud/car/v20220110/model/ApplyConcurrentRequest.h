@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool UserIdHasBeenSet() const;
 
                     /**
-                     * 获取The user’s IP address.
-                     * @return UserIp The user’s IP address.
+                     * 获取Public IP of user’s application client, which is used for nearby scheduling.
+                     * @return UserIp Public IP of user’s application client, which is used for nearby scheduling.
                      */
                     std::string GetUserIp() const;
 
                     /**
-                     * 设置The user’s IP address.
-                     * @param UserIp The user’s IP address.
+                     * 设置Public IP of user’s application client, which is used for nearby scheduling.
+                     * @param UserIp Public IP of user’s application client, which is used for nearby scheduling.
                      */
                     void SetUserIp(const std::string& _userIp);
 
@@ -114,6 +114,24 @@ namespace TencentCloud
                      */
                     bool ApplicationVersionIdHasBeenSet() const;
 
+                    /**
+                     * 获取Application ID, which is used only by the multi-application project to specify applications. For a single-application project, this parameter is ignored, and the application bound to the project will be used.
+                     * @return ApplicationId Application ID, which is used only by the multi-application project to specify applications. For a single-application project, this parameter is ignored, and the application bound to the project will be used.
+                     */
+                    std::string GetApplicationId() const;
+
+                    /**
+                     * 设置Application ID, which is used only by the multi-application project to specify applications. For a single-application project, this parameter is ignored, and the application bound to the project will be used.
+                     * @param ApplicationId Application ID, which is used only by the multi-application project to specify applications. For a single-application project, this parameter is ignored, and the application bound to the project will be used.
+                     */
+                    void SetApplicationId(const std::string& _applicationId);
+
+                    /**
+                     * 判断参数 ApplicationId 是否已赋值
+                     * @return ApplicationId 是否已赋值
+                     */
+                    bool ApplicationIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -123,7 +141,7 @@ namespace TencentCloud
                     bool m_userIdHasBeenSet;
 
                     /**
-                     * The user’s IP address.
+                     * Public IP of user’s application client, which is used for nearby scheduling.
                      */
                     std::string m_userIp;
                     bool m_userIpHasBeenSet;
@@ -139,6 +157,12 @@ namespace TencentCloud
                      */
                     std::string m_applicationVersionId;
                     bool m_applicationVersionIdHasBeenSet;
+
+                    /**
+                     * Application ID, which is used only by the multi-application project to specify applications. For a single-application project, this parameter is ignored, and the application bound to the project will be used.
+                     */
+                    std::string m_applicationId;
+                    bool m_applicationIdHasBeenSet;
 
                 };
             }

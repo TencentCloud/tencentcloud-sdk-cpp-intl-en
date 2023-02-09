@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool UserIdHasBeenSet() const;
 
                     /**
-                     * 获取The user’s IP address.
-                     * @return UserIp The user’s IP address.
+                     * 获取Public IP of user’s application client, which is used for nearby scheduling.
+                     * @return UserIp Public IP of user’s application client, which is used for nearby scheduling.
                      */
                     std::string GetUserIp() const;
 
                     /**
-                     * 设置The user’s IP address.
-                     * @param UserIp The user’s IP address.
+                     * 设置Public IP of user’s application client, which is used for nearby scheduling.
+                     * @param UserIp Public IP of user’s application client, which is used for nearby scheduling.
                      */
                     void SetUserIp(const std::string& _userIp);
 
@@ -131,7 +131,7 @@ Empty string (default): Keep the application running on the cloud only when ther
                     bool m_userIdHasBeenSet;
 
                     /**
-                     * The user’s IP address.
+                     * Public IP of user’s application client, which is used for nearby scheduling.
                      */
                     std::string m_userIp;
                     bool m_userIpHasBeenSet;
