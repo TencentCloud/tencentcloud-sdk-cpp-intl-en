@@ -30,6 +30,7 @@
 #include <tencentcloud/mdl/v20200326/model/VideoTemplateInfo.h>
 #include <tencentcloud/mdl/v20200326/model/AVTemplate.h>
 #include <tencentcloud/mdl/v20200326/model/PlanSettings.h>
+#include <tencentcloud/mdl/v20200326/model/EventNotifySetting.h>
 
 
 namespace TencentCloud
@@ -230,6 +231,28 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     bool PlanSettingsHasBeenSet() const;
 
+                    /**
+                     * 获取The callback settings.
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return EventNotifySettings The callback settings.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    EventNotifySetting GetEventNotifySettings() const;
+
+                    /**
+                     * 设置The callback settings.
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param EventNotifySettings The callback settings.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetEventNotifySettings(const EventNotifySetting& _eventNotifySettings);
+
+                    /**
+                     * 判断参数 EventNotifySettings 是否已赋值
+                     * @return EventNotifySettings 是否已赋值
+                     */
+                    bool EventNotifySettingsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -289,6 +312,13 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     PlanSettings m_planSettings;
                     bool m_planSettingsHasBeenSet;
+
+                    /**
+                     * The callback settings.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    EventNotifySetting m_eventNotifySettings;
+                    bool m_eventNotifySettingsHasBeenSet;
 
                 };
             }

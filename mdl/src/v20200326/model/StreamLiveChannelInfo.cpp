@@ -29,7 +29,8 @@ StreamLiveChannelInfo::StreamLiveChannelInfo() :
     m_audioTemplatesHasBeenSet(false),
     m_videoTemplatesHasBeenSet(false),
     m_aVTemplatesHasBeenSet(false),
-    m_planSettingsHasBeenSet(false)
+    m_planSettingsHasBeenSet(false),
+    m_eventNotifySettingsHasBeenSet(false)
 {
 }
 
@@ -185,6 +186,23 @@ CoreInternalOutcome StreamLiveChannelInfo::Deserialize(const rapidjson::Value &v
         m_planSettingsHasBeenSet = true;
     }
 
+    if (value.HasMember("EventNotifySettings") && !value["EventNotifySettings"].IsNull())
+    {
+        if (!value["EventNotifySettings"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `StreamLiveChannelInfo.EventNotifySettings` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_eventNotifySettings.Deserialize(value["EventNotifySettings"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_eventNotifySettingsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -298,6 +316,15 @@ void StreamLiveChannelInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Doc
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_planSettings.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_eventNotifySettingsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EventNotifySettings";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_eventNotifySettings.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -445,5 +472,21 @@ void StreamLiveChannelInfo::SetPlanSettings(const PlanSettings& _planSettings)
 bool StreamLiveChannelInfo::PlanSettingsHasBeenSet() const
 {
     return m_planSettingsHasBeenSet;
+}
+
+EventNotifySetting StreamLiveChannelInfo::GetEventNotifySettings() const
+{
+    return m_eventNotifySettings;
+}
+
+void StreamLiveChannelInfo::SetEventNotifySettings(const EventNotifySetting& _eventNotifySettings)
+{
+    m_eventNotifySettings = _eventNotifySettings;
+    m_eventNotifySettingsHasBeenSet = true;
+}
+
+bool StreamLiveChannelInfo::EventNotifySettingsHasBeenSet() const
+{
+    return m_eventNotifySettingsHasBeenSet;
 }
 

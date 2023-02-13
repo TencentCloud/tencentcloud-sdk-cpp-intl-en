@@ -100,6 +100,24 @@ namespace TencentCloud
                      */
                     bool PeriodTriggersHasBeenSet() const;
 
+                    /**
+                     * 获取The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
+                     * @return H265PackageType The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
+                     */
+                    std::string GetH265PackageType() const;
+
+                    /**
+                     * 设置The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
+                     * @param H265PackageType The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
+                     */
+                    void SetH265PackageType(const std::string& _h265PackageType);
+
+                    /**
+                     * 判断参数 H265PackageType 是否已赋值
+                     * @return H265PackageType 是否已赋值
+                     */
+                    bool H265PackageTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -119,6 +137,12 @@ namespace TencentCloud
                      */
                     std::string m_periodTriggers;
                     bool m_periodTriggersHasBeenSet;
+
+                    /**
+                     * The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
+                     */
+                    std::string m_h265PackageType;
+                    bool m_h265PackageTypeHasBeenSet;
 
                 };
             }

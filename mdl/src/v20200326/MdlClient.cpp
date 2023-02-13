@@ -1287,6 +1287,49 @@ MdlClient::ModifyStreamLiveWatermarkOutcomeCallable MdlClient::ModifyStreamLiveW
     return task->get_future();
 }
 
+MdlClient::QueryInputStreamStateOutcome MdlClient::QueryInputStreamState(const QueryInputStreamStateRequest &request)
+{
+    auto outcome = MakeRequest(request, "QueryInputStreamState");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        QueryInputStreamStateResponse rsp = QueryInputStreamStateResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return QueryInputStreamStateOutcome(rsp);
+        else
+            return QueryInputStreamStateOutcome(o.GetError());
+    }
+    else
+    {
+        return QueryInputStreamStateOutcome(outcome.GetError());
+    }
+}
+
+void MdlClient::QueryInputStreamStateAsync(const QueryInputStreamStateRequest& request, const QueryInputStreamStateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->QueryInputStreamState(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+MdlClient::QueryInputStreamStateOutcomeCallable MdlClient::QueryInputStreamStateCallable(const QueryInputStreamStateRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<QueryInputStreamStateOutcome()>>(
+        [this, request]()
+        {
+            return this->QueryInputStreamState(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 MdlClient::StartStreamLiveChannelOutcome MdlClient::StartStreamLiveChannel(const StartStreamLiveChannelRequest &request)
 {
     auto outcome = MakeRequest(request, "StartStreamLiveChannel");

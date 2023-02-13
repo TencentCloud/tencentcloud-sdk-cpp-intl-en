@@ -25,7 +25,8 @@ DrmSettingsInfo::DrmSettingsInfo() :
     m_schemeHasBeenSet(false),
     m_contentIdHasBeenSet(false),
     m_keysHasBeenSet(false),
-    m_sDMCSettingsHasBeenSet(false)
+    m_sDMCSettingsHasBeenSet(false),
+    m_drmTypeHasBeenSet(false)
 {
 }
 
@@ -101,6 +102,16 @@ CoreInternalOutcome DrmSettingsInfo::Deserialize(const rapidjson::Value &value)
         m_sDMCSettingsHasBeenSet = true;
     }
 
+    if (value.HasMember("DrmType") && !value["DrmType"].IsNull())
+    {
+        if (!value["DrmType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DrmSettingsInfo.DrmType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_drmType = string(value["DrmType"].GetString());
+        m_drmTypeHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -154,6 +165,14 @@ void DrmSettingsInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document:
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_sDMCSettings.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_drmTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DrmType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_drmType.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -237,5 +256,21 @@ void DrmSettingsInfo::SetSDMCSettings(const SDMCSettingsInfo& _sDMCSettings)
 bool DrmSettingsInfo::SDMCSettingsHasBeenSet() const
 {
     return m_sDMCSettingsHasBeenSet;
+}
+
+string DrmSettingsInfo::GetDrmType() const
+{
+    return m_drmType;
+}
+
+void DrmSettingsInfo::SetDrmType(const string& _drmType)
+{
+    m_drmType = _drmType;
+    m_drmTypeHasBeenSet = true;
+}
+
+bool DrmSettingsInfo::DrmTypeHasBeenSet() const
+{
+    return m_drmTypeHasBeenSet;
 }
 

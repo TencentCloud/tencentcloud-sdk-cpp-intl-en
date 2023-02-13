@@ -30,7 +30,8 @@ ModifyStreamLiveChannelRequest::ModifyStreamLiveChannelRequest() :
     m_audioTemplatesHasBeenSet(false),
     m_videoTemplatesHasBeenSet(false),
     m_aVTemplatesHasBeenSet(false),
-    m_planSettingsHasBeenSet(false)
+    m_planSettingsHasBeenSet(false),
+    m_eventNotifySettingsHasBeenSet(false)
 {
 }
 
@@ -139,6 +140,15 @@ string ModifyStreamLiveChannelRequest::ToJsonString() const
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_planSettings.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_eventNotifySettingsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EventNotifySettings";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_eventNotifySettings.ToJsonObject(d[key.c_str()], allocator);
     }
 
 
@@ -275,6 +285,22 @@ void ModifyStreamLiveChannelRequest::SetPlanSettings(const PlanSettings& _planSe
 bool ModifyStreamLiveChannelRequest::PlanSettingsHasBeenSet() const
 {
     return m_planSettingsHasBeenSet;
+}
+
+EventNotifySetting ModifyStreamLiveChannelRequest::GetEventNotifySettings() const
+{
+    return m_eventNotifySettings;
+}
+
+void ModifyStreamLiveChannelRequest::SetEventNotifySettings(const EventNotifySetting& _eventNotifySettings)
+{
+    m_eventNotifySettings = _eventNotifySettings;
+    m_eventNotifySettingsHasBeenSet = true;
+}
+
+bool ModifyStreamLiveChannelRequest::EventNotifySettingsHasBeenSet() const
+{
+    return m_eventNotifySettingsHasBeenSet;
 }
 
 

@@ -34,7 +34,9 @@ AVTemplate::AVTemplate() :
     m_audioBitrateHasBeenSet(false),
     m_videoBitrateHasBeenSet(false),
     m_rateControlModeHasBeenSet(false),
-    m_watermarkIdHasBeenSet(false)
+    m_watermarkIdHasBeenSet(false),
+    m_smartSubtitlesHasBeenSet(false),
+    m_subtitleConfigurationHasBeenSet(false)
 {
 }
 
@@ -183,6 +185,26 @@ CoreInternalOutcome AVTemplate::Deserialize(const rapidjson::Value &value)
         m_watermarkIdHasBeenSet = true;
     }
 
+    if (value.HasMember("SmartSubtitles") && !value["SmartSubtitles"].IsNull())
+    {
+        if (!value["SmartSubtitles"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `AVTemplate.SmartSubtitles` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_smartSubtitles = value["SmartSubtitles"].GetUint64();
+        m_smartSubtitlesHasBeenSet = true;
+    }
+
+    if (value.HasMember("SubtitleConfiguration") && !value["SubtitleConfiguration"].IsNull())
+    {
+        if (!value["SubtitleConfiguration"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AVTemplate.SubtitleConfiguration` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_subtitleConfiguration = string(value["SubtitleConfiguration"].GetString());
+        m_subtitleConfigurationHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -300,6 +322,22 @@ void AVTemplate::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Allo
         string key = "WatermarkId";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_watermarkId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_smartSubtitlesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SmartSubtitles";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_smartSubtitles, allocator);
+    }
+
+    if (m_subtitleConfigurationHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SubtitleConfiguration";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_subtitleConfiguration.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -527,5 +565,37 @@ void AVTemplate::SetWatermarkId(const string& _watermarkId)
 bool AVTemplate::WatermarkIdHasBeenSet() const
 {
     return m_watermarkIdHasBeenSet;
+}
+
+uint64_t AVTemplate::GetSmartSubtitles() const
+{
+    return m_smartSubtitles;
+}
+
+void AVTemplate::SetSmartSubtitles(const uint64_t& _smartSubtitles)
+{
+    m_smartSubtitles = _smartSubtitles;
+    m_smartSubtitlesHasBeenSet = true;
+}
+
+bool AVTemplate::SmartSubtitlesHasBeenSet() const
+{
+    return m_smartSubtitlesHasBeenSet;
+}
+
+string AVTemplate::GetSubtitleConfiguration() const
+{
+    return m_subtitleConfiguration;
+}
+
+void AVTemplate::SetSubtitleConfiguration(const string& _subtitleConfiguration)
+{
+    m_subtitleConfiguration = _subtitleConfiguration;
+    m_subtitleConfigurationHasBeenSet = true;
+}
+
+bool AVTemplate::SubtitleConfigurationHasBeenSet() const
+{
+    return m_subtitleConfigurationHasBeenSet;
 }
 

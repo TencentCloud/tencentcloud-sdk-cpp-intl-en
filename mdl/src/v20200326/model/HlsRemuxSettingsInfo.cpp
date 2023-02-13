@@ -25,7 +25,9 @@ HlsRemuxSettingsInfo::HlsRemuxSettingsInfo() :
     m_segmentNumberHasBeenSet(false),
     m_pdtInsertionHasBeenSet(false),
     m_pdtDurationHasBeenSet(false),
-    m_schemeHasBeenSet(false)
+    m_schemeHasBeenSet(false),
+    m_segmentTypeHasBeenSet(false),
+    m_h265PackageTypeHasBeenSet(false)
 {
 }
 
@@ -84,6 +86,26 @@ CoreInternalOutcome HlsRemuxSettingsInfo::Deserialize(const rapidjson::Value &va
         m_schemeHasBeenSet = true;
     }
 
+    if (value.HasMember("SegmentType") && !value["SegmentType"].IsNull())
+    {
+        if (!value["SegmentType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `HlsRemuxSettingsInfo.SegmentType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_segmentType = string(value["SegmentType"].GetString());
+        m_segmentTypeHasBeenSet = true;
+    }
+
+    if (value.HasMember("H265PackageType") && !value["H265PackageType"].IsNull())
+    {
+        if (!value["H265PackageType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `HlsRemuxSettingsInfo.H265PackageType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_h265PackageType = string(value["H265PackageType"].GetString());
+        m_h265PackageTypeHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -129,6 +151,22 @@ void HlsRemuxSettingsInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Docu
         string key = "Scheme";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_scheme.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_segmentTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SegmentType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_segmentType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_h265PackageTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "H265PackageType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_h265PackageType.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -212,5 +250,37 @@ void HlsRemuxSettingsInfo::SetScheme(const string& _scheme)
 bool HlsRemuxSettingsInfo::SchemeHasBeenSet() const
 {
     return m_schemeHasBeenSet;
+}
+
+string HlsRemuxSettingsInfo::GetSegmentType() const
+{
+    return m_segmentType;
+}
+
+void HlsRemuxSettingsInfo::SetSegmentType(const string& _segmentType)
+{
+    m_segmentType = _segmentType;
+    m_segmentTypeHasBeenSet = true;
+}
+
+bool HlsRemuxSettingsInfo::SegmentTypeHasBeenSet() const
+{
+    return m_segmentTypeHasBeenSet;
+}
+
+string HlsRemuxSettingsInfo::GetH265PackageType() const
+{
+    return m_h265PackageType;
+}
+
+void HlsRemuxSettingsInfo::SetH265PackageType(const string& _h265PackageType)
+{
+    m_h265PackageType = _h265PackageType;
+    m_h265PackageTypeHasBeenSet = true;
+}
+
+bool HlsRemuxSettingsInfo::H265PackageTypeHasBeenSet() const
+{
+    return m_h265PackageTypeHasBeenSet;
 }
 

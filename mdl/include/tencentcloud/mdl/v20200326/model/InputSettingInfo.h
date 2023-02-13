@@ -35,7 +35,9 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input settings information.
+                * The input settings.
+The format of an RTMP_PUSH address is ${InputAddress}/${AppName}/${StreamName}.
+The format of an SRT_PUSH address is ${InputAddress}?streamid=${StreamName},h=${InputDomain}.
                 */
                 class InputSettingInfo : public AbstractModel
                 {
@@ -186,6 +188,72 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     bool DelayTimeHasBeenSet() const;
 
+                    /**
+                     * 获取The domain of an SRT_PUSH address. If this is a request parameter, you don’t need to specify it.
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return InputDomain The domain of an SRT_PUSH address. If this is a request parameter, you don’t need to specify it.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string GetInputDomain() const;
+
+                    /**
+                     * 设置The domain of an SRT_PUSH address. If this is a request parameter, you don’t need to specify it.
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param InputDomain The domain of an SRT_PUSH address. If this is a request parameter, you don’t need to specify it.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetInputDomain(const std::string& _inputDomain);
+
+                    /**
+                     * 判断参数 InputDomain 是否已赋值
+                     * @return InputDomain 是否已赋值
+                     */
+                    bool InputDomainHasBeenSet() const;
+
+                    /**
+                     * 获取The username, which is used for authentication.
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return UserName The username, which is used for authentication.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string GetUserName() const;
+
+                    /**
+                     * 设置The username, which is used for authentication.
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param UserName The username, which is used for authentication.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetUserName(const std::string& _userName);
+
+                    /**
+                     * 判断参数 UserName 是否已赋值
+                     * @return UserName 是否已赋值
+                     */
+                    bool UserNameHasBeenSet() const;
+
+                    /**
+                     * 获取The password, which is used for authentication.
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return Password The password, which is used for authentication.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string GetPassword() const;
+
+                    /**
+                     * 设置The password, which is used for authentication.
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param Password The password, which is used for authentication.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetPassword(const std::string& _password);
+
+                    /**
+                     * 判断参数 Password 是否已赋值
+                     * @return Password 是否已赋值
+                     */
+                    bool PasswordHasBeenSet() const;
+
                 private:
 
                     /**
@@ -231,6 +299,27 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     int64_t m_delayTime;
                     bool m_delayTimeHasBeenSet;
+
+                    /**
+                     * The domain of an SRT_PUSH address. If this is a request parameter, you don’t need to specify it.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string m_inputDomain;
+                    bool m_inputDomainHasBeenSet;
+
+                    /**
+                     * The username, which is used for authentication.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string m_userName;
+                    bool m_userNameHasBeenSet;
+
+                    /**
+                     * The password, which is used for authentication.
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string m_password;
+                    bool m_passwordHasBeenSet;
 
                 };
             }

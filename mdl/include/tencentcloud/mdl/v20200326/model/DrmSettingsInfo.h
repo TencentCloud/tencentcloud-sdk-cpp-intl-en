@@ -162,6 +162,28 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     bool SDMCSettingsHasBeenSet() const;
 
+                    /**
+                     * 获取The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`. For HLS, this can be `FAIRPLAY` or `AES128`. For DASH, this can only be `WIDEVINE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return DrmType The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`. For HLS, this can be `FAIRPLAY` or `AES128`. For DASH, this can only be `WIDEVINE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetDrmType() const;
+
+                    /**
+                     * 设置The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`. For HLS, this can be `FAIRPLAY` or `AES128`. For DASH, this can only be `WIDEVINE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param DrmType The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`. For HLS, this can be `FAIRPLAY` or `AES128`. For DASH, this can only be `WIDEVINE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetDrmType(const std::string& _drmType);
+
+                    /**
+                     * 判断参数 DrmType 是否已赋值
+                     * @return DrmType 是否已赋值
+                     */
+                    bool DrmTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -199,6 +221,13 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     SDMCSettingsInfo m_sDMCSettings;
                     bool m_sDMCSettingsHasBeenSet;
+
+                    /**
+                     * The DRM type. Valid values: `FAIRPLAY`, `WIDEVINE`, `AES128`. For HLS, this can be `FAIRPLAY` or `AES128`. For DASH, this can only be `WIDEVINE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_drmType;
+                    bool m_drmTypeHasBeenSet;
 
                 };
             }

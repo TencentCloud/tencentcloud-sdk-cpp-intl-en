@@ -81,6 +81,8 @@
 #include <tencentcloud/mdl/v20200326/model/ModifyStreamLiveInputSecurityGroupResponse.h>
 #include <tencentcloud/mdl/v20200326/model/ModifyStreamLiveWatermarkRequest.h>
 #include <tencentcloud/mdl/v20200326/model/ModifyStreamLiveWatermarkResponse.h>
+#include <tencentcloud/mdl/v20200326/model/QueryInputStreamStateRequest.h>
+#include <tencentcloud/mdl/v20200326/model/QueryInputStreamStateResponse.h>
 #include <tencentcloud/mdl/v20200326/model/StartStreamLiveChannelRequest.h>
 #include <tencentcloud/mdl/v20200326/model/StartStreamLiveChannelResponse.h>
 #include <tencentcloud/mdl/v20200326/model/StopStreamLiveChannelRequest.h>
@@ -186,6 +188,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyStreamLiveWatermarkResponse> ModifyStreamLiveWatermarkOutcome;
                 typedef std::future<ModifyStreamLiveWatermarkOutcome> ModifyStreamLiveWatermarkOutcomeCallable;
                 typedef std::function<void(const MdlClient*, const Model::ModifyStreamLiveWatermarkRequest&, ModifyStreamLiveWatermarkOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyStreamLiveWatermarkAsyncHandler;
+                typedef Outcome<Core::Error, Model::QueryInputStreamStateResponse> QueryInputStreamStateOutcome;
+                typedef std::future<QueryInputStreamStateOutcome> QueryInputStreamStateOutcomeCallable;
+                typedef std::function<void(const MdlClient*, const Model::QueryInputStreamStateRequest&, QueryInputStreamStateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryInputStreamStateAsyncHandler;
                 typedef Outcome<Core::Error, Model::StartStreamLiveChannelResponse> StartStreamLiveChannelOutcome;
                 typedef std::future<StartStreamLiveChannelOutcome> StartStreamLiveChannelOutcomeCallable;
                 typedef std::function<void(const MdlClient*, const Model::StartStreamLiveChannelRequest&, StartStreamLiveChannelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StartStreamLiveChannelAsyncHandler;
@@ -455,6 +460,15 @@ namespace TencentCloud
                 ModifyStreamLiveWatermarkOutcome ModifyStreamLiveWatermark(const Model::ModifyStreamLiveWatermarkRequest &request);
                 void ModifyStreamLiveWatermarkAsync(const Model::ModifyStreamLiveWatermarkRequest& request, const ModifyStreamLiveWatermarkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyStreamLiveWatermarkOutcomeCallable ModifyStreamLiveWatermarkCallable(const Model::ModifyStreamLiveWatermarkRequest& request);
+
+                /**
+                 *This API is used to query the stream status of a StreamLive input.
+                 * @param req QueryInputStreamStateRequest
+                 * @return QueryInputStreamStateOutcome
+                 */
+                QueryInputStreamStateOutcome QueryInputStreamState(const Model::QueryInputStreamStateRequest &request);
+                void QueryInputStreamStateAsync(const Model::QueryInputStreamStateRequest& request, const QueryInputStreamStateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                QueryInputStreamStateOutcomeCallable QueryInputStreamStateCallable(const Model::QueryInputStreamStateRequest& request);
 
                 /**
                  *This API is used to start a StreamLive channel.

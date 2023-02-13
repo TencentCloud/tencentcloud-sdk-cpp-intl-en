@@ -302,6 +302,66 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                      */
                     bool WatermarkIdHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to convert audio to text. `0` (default): No; `1`: Yes.
+                     * @return SmartSubtitles Whether to convert audio to text. `0` (default): No; `1`: Yes.
+                     */
+                    uint64_t GetSmartSubtitles() const;
+
+                    /**
+                     * 设置Whether to convert audio to text. `0` (default): No; `1`: Yes.
+                     * @param SmartSubtitles Whether to convert audio to text. `0` (default): No; `1`: Yes.
+                     */
+                    void SetSmartSubtitles(const uint64_t& _smartSubtitles);
+
+                    /**
+                     * 判断参数 SmartSubtitles 是否已赋值
+                     * @return SmartSubtitles 是否已赋值
+                     */
+                    bool SmartSubtitlesHasBeenSet() const;
+
+                    /**
+                     * 获取The subtitle settings. Currently, the following subtitles are supported:
+`eng2eng`: English speech to English text.
+`eng2chs`: English speech to Chinese text. 
+`eng2chseng`: English speech to English and Chinese text. 
+`chs2chs`: Chinese speech to Chinese text.   
+`chs2eng`: Chinese speech to English text. 
+`chs2chseng`: Chinese speech to Chinese and English text.
+                     * @return SubtitleConfiguration The subtitle settings. Currently, the following subtitles are supported:
+`eng2eng`: English speech to English text.
+`eng2chs`: English speech to Chinese text. 
+`eng2chseng`: English speech to English and Chinese text. 
+`chs2chs`: Chinese speech to Chinese text.   
+`chs2eng`: Chinese speech to English text. 
+`chs2chseng`: Chinese speech to Chinese and English text.
+                     */
+                    std::string GetSubtitleConfiguration() const;
+
+                    /**
+                     * 设置The subtitle settings. Currently, the following subtitles are supported:
+`eng2eng`: English speech to English text.
+`eng2chs`: English speech to Chinese text. 
+`eng2chseng`: English speech to English and Chinese text. 
+`chs2chs`: Chinese speech to Chinese text.   
+`chs2eng`: Chinese speech to English text. 
+`chs2chseng`: Chinese speech to Chinese and English text.
+                     * @param SubtitleConfiguration The subtitle settings. Currently, the following subtitles are supported:
+`eng2eng`: English speech to English text.
+`eng2chs`: English speech to Chinese text. 
+`eng2chseng`: English speech to English and Chinese text. 
+`chs2chs`: Chinese speech to Chinese text.   
+`chs2eng`: Chinese speech to English text. 
+`chs2chseng`: Chinese speech to Chinese and English text.
+                     */
+                    void SetSubtitleConfiguration(const std::string& _subtitleConfiguration);
+
+                    /**
+                     * 判断参数 SubtitleConfiguration 是否已赋值
+                     * @return SubtitleConfiguration 是否已赋值
+                     */
+                    bool SubtitleConfigurationHasBeenSet() const;
+
                 private:
 
                     /**
@@ -388,6 +448,24 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
                      */
                     std::string m_watermarkId;
                     bool m_watermarkIdHasBeenSet;
+
+                    /**
+                     * Whether to convert audio to text. `0` (default): No; `1`: Yes.
+                     */
+                    uint64_t m_smartSubtitles;
+                    bool m_smartSubtitlesHasBeenSet;
+
+                    /**
+                     * The subtitle settings. Currently, the following subtitles are supported:
+`eng2eng`: English speech to English text.
+`eng2chs`: English speech to Chinese text. 
+`eng2chseng`: English speech to English and Chinese text. 
+`chs2chs`: Chinese speech to Chinese text.   
+`chs2eng`: Chinese speech to English text. 
+`chs2chseng`: Chinese speech to Chinese and English text.
+                     */
+                    std::string m_subtitleConfiguration;
+                    bool m_subtitleConfigurationHasBeenSet;
 
                 };
             }

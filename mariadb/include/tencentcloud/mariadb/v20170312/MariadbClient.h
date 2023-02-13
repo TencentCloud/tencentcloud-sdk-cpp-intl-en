@@ -45,6 +45,8 @@
 #include <tencentcloud/mariadb/v20170312/model/DescribeAccountPrivilegesResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeAccountsRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeAccountsResponse.h>
+#include <tencentcloud/mariadb/v20170312/model/DescribeDBEncryptAttributesRequest.h>
+#include <tencentcloud/mariadb/v20170312/model/DescribeDBEncryptAttributesResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeDBInstancesRequest.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeDBInstancesResponse.h>
 #include <tencentcloud/mariadb/v20170312/model/DescribeDBLogFilesRequest.h>
@@ -158,6 +160,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeAccountsResponse> DescribeAccountsOutcome;
                 typedef std::future<DescribeAccountsOutcome> DescribeAccountsOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::DescribeAccountsRequest&, DescribeAccountsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccountsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDBEncryptAttributesResponse> DescribeDBEncryptAttributesOutcome;
+                typedef std::future<DescribeDBEncryptAttributesOutcome> DescribeDBEncryptAttributesOutcomeCallable;
+                typedef std::function<void(const MariadbClient*, const Model::DescribeDBEncryptAttributesRequest&, DescribeDBEncryptAttributesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBEncryptAttributesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDBInstancesResponse> DescribeDBInstancesOutcome;
                 typedef std::future<DescribeDBInstancesOutcome> DescribeDBInstancesOutcomeCallable;
                 typedef std::function<void(const MariadbClient*, const Model::DescribeDBInstancesRequest&, DescribeDBInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBInstancesAsyncHandler;
@@ -360,6 +365,15 @@ Note: Accounts with the same username but different hosts are different accounts
                 DescribeAccountsOutcome DescribeAccounts(const Model::DescribeAccountsRequest &request);
                 void DescribeAccountsAsync(const Model::DescribeAccountsRequest& request, const DescribeAccountsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeAccountsOutcomeCallable DescribeAccountsCallable(const Model::DescribeAccountsRequest& request);
+
+                /**
+                 *This API is used to query the encryption status of the instance data.
+                 * @param req DescribeDBEncryptAttributesRequest
+                 * @return DescribeDBEncryptAttributesOutcome
+                 */
+                DescribeDBEncryptAttributesOutcome DescribeDBEncryptAttributes(const Model::DescribeDBEncryptAttributesRequest &request);
+                void DescribeDBEncryptAttributesAsync(const Model::DescribeDBEncryptAttributesRequest& request, const DescribeDBEncryptAttributesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDBEncryptAttributesOutcomeCallable DescribeDBEncryptAttributesCallable(const Model::DescribeDBEncryptAttributesRequest& request);
 
                 /**
                  *This API is used to query the TencentDB instance list. It supports filtering instances by project ID, instance ID, private address, and instance name.

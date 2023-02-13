@@ -1072,6 +1072,49 @@ CynosdbClient::DescribeDBSecurityGroupsOutcomeCallable CynosdbClient::DescribeDB
     return task->get_future();
 }
 
+CynosdbClient::DescribeFlowOutcome CynosdbClient::DescribeFlow(const DescribeFlowRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeFlow");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeFlowResponse rsp = DescribeFlowResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeFlowOutcome(rsp);
+        else
+            return DescribeFlowOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeFlowOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::DescribeFlowAsync(const DescribeFlowRequest& request, const DescribeFlowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeFlow(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::DescribeFlowOutcomeCallable CynosdbClient::DescribeFlowCallable(const DescribeFlowRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeFlowOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeFlow(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CynosdbClient::DescribeInstanceDetailOutcome CynosdbClient::DescribeInstanceDetail(const DescribeInstanceDetailRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeInstanceDetail");
@@ -2398,6 +2441,49 @@ CynosdbClient::ResetAccountPasswordOutcomeCallable CynosdbClient::ResetAccountPa
         [this, request]()
         {
             return this->ResetAccountPassword(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CynosdbClient::RestartInstanceOutcome CynosdbClient::RestartInstance(const RestartInstanceRequest &request)
+{
+    auto outcome = MakeRequest(request, "RestartInstance");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RestartInstanceResponse rsp = RestartInstanceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RestartInstanceOutcome(rsp);
+        else
+            return RestartInstanceOutcome(o.GetError());
+    }
+    else
+    {
+        return RestartInstanceOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::RestartInstanceAsync(const RestartInstanceRequest& request, const RestartInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->RestartInstance(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::RestartInstanceOutcomeCallable CynosdbClient::RestartInstanceCallable(const RestartInstanceRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<RestartInstanceOutcome()>>(
+        [this, request]()
+        {
+            return this->RestartInstance(request);
         }
     );
 

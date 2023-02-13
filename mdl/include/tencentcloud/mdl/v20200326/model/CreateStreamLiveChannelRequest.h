@@ -27,6 +27,7 @@
 #include <tencentcloud/mdl/v20200326/model/VideoTemplateInfo.h>
 #include <tencentcloud/mdl/v20200326/model/AVTemplate.h>
 #include <tencentcloud/mdl/v20200326/model/PlanSettings.h>
+#include <tencentcloud/mdl/v20200326/model/EventNotifySetting.h>
 
 
 namespace TencentCloud
@@ -174,6 +175,24 @@ namespace TencentCloud
                      */
                     bool PlanSettingsHasBeenSet() const;
 
+                    /**
+                     * 获取The callback settings.
+                     * @return EventNotifySettings The callback settings.
+                     */
+                    EventNotifySetting GetEventNotifySettings() const;
+
+                    /**
+                     * 设置The callback settings.
+                     * @param EventNotifySettings The callback settings.
+                     */
+                    void SetEventNotifySettings(const EventNotifySetting& _eventNotifySettings);
+
+                    /**
+                     * 判断参数 EventNotifySettings 是否已赋值
+                     * @return EventNotifySettings 是否已赋值
+                     */
+                    bool EventNotifySettingsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -217,6 +236,12 @@ namespace TencentCloud
                      */
                     PlanSettings m_planSettings;
                     bool m_planSettingsHasBeenSet;
+
+                    /**
+                     * The callback settings.
+                     */
+                    EventNotifySetting m_eventNotifySettings;
+                    bool m_eventNotifySettingsHasBeenSet;
 
                 };
             }

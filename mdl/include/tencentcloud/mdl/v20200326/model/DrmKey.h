@@ -154,6 +154,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool IvHasBeenSet() const;
 
+                    /**
+                     * 获取The URI of the license server when AES-128 is used. This parameter may be empty.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return KeyUri The URI of the license server when AES-128 is used. This parameter may be empty.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetKeyUri() const;
+
+                    /**
+                     * 设置The URI of the license server when AES-128 is used. This parameter may be empty.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param KeyUri The URI of the license server when AES-128 is used. This parameter may be empty.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetKeyUri(const std::string& _keyUri);
+
+                    /**
+                     * 判断参数 KeyUri 是否已赋值
+                     * @return KeyUri 是否已赋值
+                     */
+                    bool KeyUriHasBeenSet() const;
+
                 private:
 
                     /**
@@ -188,6 +210,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_iv;
                     bool m_ivHasBeenSet;
+
+                    /**
+                     * The URI of the license server when AES-128 is used. This parameter may be empty.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_keyUri;
+                    bool m_keyUriHasBeenSet;
 
                 };
             }

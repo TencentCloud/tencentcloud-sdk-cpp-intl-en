@@ -23,7 +23,8 @@ using namespace std;
 DashRemuxSettingsInfo::DashRemuxSettingsInfo() :
     m_segmentDurationHasBeenSet(false),
     m_segmentNumberHasBeenSet(false),
-    m_periodTriggersHasBeenSet(false)
+    m_periodTriggersHasBeenSet(false),
+    m_h265PackageTypeHasBeenSet(false)
 {
 }
 
@@ -62,6 +63,16 @@ CoreInternalOutcome DashRemuxSettingsInfo::Deserialize(const rapidjson::Value &v
         m_periodTriggersHasBeenSet = true;
     }
 
+    if (value.HasMember("H265PackageType") && !value["H265PackageType"].IsNull())
+    {
+        if (!value["H265PackageType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DashRemuxSettingsInfo.H265PackageType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_h265PackageType = string(value["H265PackageType"].GetString());
+        m_h265PackageTypeHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -91,6 +102,14 @@ void DashRemuxSettingsInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Doc
         string key = "PeriodTriggers";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_periodTriggers.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_h265PackageTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "H265PackageType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_h265PackageType.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -142,5 +161,21 @@ void DashRemuxSettingsInfo::SetPeriodTriggers(const string& _periodTriggers)
 bool DashRemuxSettingsInfo::PeriodTriggersHasBeenSet() const
 {
     return m_periodTriggersHasBeenSet;
+}
+
+string DashRemuxSettingsInfo::GetH265PackageType() const
+{
+    return m_h265PackageType;
+}
+
+void DashRemuxSettingsInfo::SetH265PackageType(const string& _h265PackageType)
+{
+    m_h265PackageType = _h265PackageType;
+    m_h265PackageTypeHasBeenSet = true;
+}
+
+bool DashRemuxSettingsInfo::H265PackageTypeHasBeenSet() const
+{
+    return m_h265PackageTypeHasBeenSet;
 }
 

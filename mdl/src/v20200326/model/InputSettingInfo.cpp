@@ -26,7 +26,10 @@ InputSettingInfo::InputSettingInfo() :
     m_sourceUrlHasBeenSet(false),
     m_inputAddressHasBeenSet(false),
     m_sourceTypeHasBeenSet(false),
-    m_delayTimeHasBeenSet(false)
+    m_delayTimeHasBeenSet(false),
+    m_inputDomainHasBeenSet(false),
+    m_userNameHasBeenSet(false),
+    m_passwordHasBeenSet(false)
 {
 }
 
@@ -95,6 +98,36 @@ CoreInternalOutcome InputSettingInfo::Deserialize(const rapidjson::Value &value)
         m_delayTimeHasBeenSet = true;
     }
 
+    if (value.HasMember("InputDomain") && !value["InputDomain"].IsNull())
+    {
+        if (!value["InputDomain"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `InputSettingInfo.InputDomain` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_inputDomain = string(value["InputDomain"].GetString());
+        m_inputDomainHasBeenSet = true;
+    }
+
+    if (value.HasMember("UserName") && !value["UserName"].IsNull())
+    {
+        if (!value["UserName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `InputSettingInfo.UserName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_userName = string(value["UserName"].GetString());
+        m_userNameHasBeenSet = true;
+    }
+
+    if (value.HasMember("Password") && !value["Password"].IsNull())
+    {
+        if (!value["Password"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `InputSettingInfo.Password` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_password = string(value["Password"].GetString());
+        m_passwordHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -148,6 +181,30 @@ void InputSettingInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document
         string key = "DelayTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_delayTime, allocator);
+    }
+
+    if (m_inputDomainHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InputDomain";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_inputDomain.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_userNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "UserName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_userName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_passwordHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Password";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_password.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -247,5 +304,53 @@ void InputSettingInfo::SetDelayTime(const int64_t& _delayTime)
 bool InputSettingInfo::DelayTimeHasBeenSet() const
 {
     return m_delayTimeHasBeenSet;
+}
+
+string InputSettingInfo::GetInputDomain() const
+{
+    return m_inputDomain;
+}
+
+void InputSettingInfo::SetInputDomain(const string& _inputDomain)
+{
+    m_inputDomain = _inputDomain;
+    m_inputDomainHasBeenSet = true;
+}
+
+bool InputSettingInfo::InputDomainHasBeenSet() const
+{
+    return m_inputDomainHasBeenSet;
+}
+
+string InputSettingInfo::GetUserName() const
+{
+    return m_userName;
+}
+
+void InputSettingInfo::SetUserName(const string& _userName)
+{
+    m_userName = _userName;
+    m_userNameHasBeenSet = true;
+}
+
+bool InputSettingInfo::UserNameHasBeenSet() const
+{
+    return m_userNameHasBeenSet;
+}
+
+string InputSettingInfo::GetPassword() const
+{
+    return m_password;
+}
+
+void InputSettingInfo::SetPassword(const string& _password)
+{
+    m_password = _password;
+    m_passwordHasBeenSet = true;
+}
+
+bool InputSettingInfo::PasswordHasBeenSet() const
+{
+    return m_passwordHasBeenSet;
 }
 

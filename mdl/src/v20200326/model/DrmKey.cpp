@@ -24,7 +24,8 @@ DrmKey::DrmKey() :
     m_keyHasBeenSet(false),
     m_trackHasBeenSet(false),
     m_keyIdHasBeenSet(false),
-    m_ivHasBeenSet(false)
+    m_ivHasBeenSet(false),
+    m_keyUriHasBeenSet(false)
 {
 }
 
@@ -73,6 +74,16 @@ CoreInternalOutcome DrmKey::Deserialize(const rapidjson::Value &value)
         m_ivHasBeenSet = true;
     }
 
+    if (value.HasMember("KeyUri") && !value["KeyUri"].IsNull())
+    {
+        if (!value["KeyUri"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DrmKey.KeyUri` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_keyUri = string(value["KeyUri"].GetString());
+        m_keyUriHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -110,6 +121,14 @@ void DrmKey::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Allocato
         string key = "Iv";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_iv.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_keyUriHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "KeyUri";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_keyUri.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -177,5 +196,21 @@ void DrmKey::SetIv(const string& _iv)
 bool DrmKey::IvHasBeenSet() const
 {
     return m_ivHasBeenSet;
+}
+
+string DrmKey::GetKeyUri() const
+{
+    return m_keyUri;
+}
+
+void DrmKey::SetKeyUri(const string& _keyUri)
+{
+    m_keyUri = _keyUri;
+    m_keyUriHasBeenSet = true;
+}
+
+bool DrmKey::KeyUriHasBeenSet() const
+{
+    return m_keyUriHasBeenSet;
 }
 
