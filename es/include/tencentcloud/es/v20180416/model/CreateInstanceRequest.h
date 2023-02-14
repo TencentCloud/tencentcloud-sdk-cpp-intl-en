@@ -673,6 +673,24 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
                      */
                     bool DiskEnhanceHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable smart inspection.
+                     * @return EnableDiagnose Whether to enable smart inspection.
+                     */
+                    bool GetEnableDiagnose() const;
+
+                    /**
+                     * 设置Whether to enable smart inspection.
+                     * @param EnableDiagnose Whether to enable smart inspection.
+                     */
+                    void SetEnableDiagnose(const bool& _enableDiagnose);
+
+                    /**
+                     * 判断参数 EnableDiagnose 是否已赋值
+                     * @return EnableDiagnose 是否已赋值
+                     */
+                    bool EnableDiagnoseHasBeenSet() const;
+
                 private:
 
                     /**
@@ -880,6 +898,12 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
                      */
                     uint64_t m_diskEnhance;
                     bool m_diskEnhanceHasBeenSet;
+
+                    /**
+                     * Whether to enable smart inspection.
+                     */
+                    bool m_enableDiagnose;
+                    bool m_enableDiagnoseHasBeenSet;
 
                 };
             }
