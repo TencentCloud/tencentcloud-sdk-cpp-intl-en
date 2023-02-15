@@ -123,6 +123,8 @@
 #include <tencentcloud/dcdb/v20180411/model/SwitchDBInstanceHAResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/TerminateDedicatedDBInstanceRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/TerminateDedicatedDBInstanceResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/UpgradeHourDCDBInstanceRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/UpgradeHourDCDBInstanceResponse.h>
 
 
 namespace TencentCloud
@@ -287,6 +289,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::TerminateDedicatedDBInstanceResponse> TerminateDedicatedDBInstanceOutcome;
                 typedef std::future<TerminateDedicatedDBInstanceOutcome> TerminateDedicatedDBInstanceOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::TerminateDedicatedDBInstanceRequest&, TerminateDedicatedDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TerminateDedicatedDBInstanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpgradeHourDCDBInstanceResponse> UpgradeHourDCDBInstanceOutcome;
+                typedef std::future<UpgradeHourDCDBInstanceOutcome> UpgradeHourDCDBInstanceOutcomeCallable;
+                typedef std::function<void(const DcdbClient*, const Model::UpgradeHourDCDBInstanceRequest&, UpgradeHourDCDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpgradeHourDCDBInstanceAsyncHandler;
 
 
 
@@ -750,6 +755,15 @@ Note: accounts with the same username but different hosts are different accounts
                 TerminateDedicatedDBInstanceOutcome TerminateDedicatedDBInstance(const Model::TerminateDedicatedDBInstanceRequest &request);
                 void TerminateDedicatedDBInstanceAsync(const Model::TerminateDedicatedDBInstanceRequest& request, const TerminateDedicatedDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 TerminateDedicatedDBInstanceOutcomeCallable TerminateDedicatedDBInstanceCallable(const Model::TerminateDedicatedDBInstanceRequest& request);
+
+                /**
+                 *This API is used to upgrade a pay-as-you-go TDSQL for MySQL instance.
+                 * @param req UpgradeHourDCDBInstanceRequest
+                 * @return UpgradeHourDCDBInstanceOutcome
+                 */
+                UpgradeHourDCDBInstanceOutcome UpgradeHourDCDBInstance(const Model::UpgradeHourDCDBInstanceRequest &request);
+                void UpgradeHourDCDBInstanceAsync(const Model::UpgradeHourDCDBInstanceRequest& request, const UpgradeHourDCDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpgradeHourDCDBInstanceOutcomeCallable UpgradeHourDCDBInstanceCallable(const Model::UpgradeHourDCDBInstanceRequest& request);
 
             };
         }
