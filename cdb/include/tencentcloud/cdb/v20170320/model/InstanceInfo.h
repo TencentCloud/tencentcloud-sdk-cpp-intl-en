@@ -147,14 +147,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取Instance status. Value range: 0 (creating), 1 (running), 4 (isolating), 5 (isolated)
-                     * @return Status Instance status. Value range: 0 (creating), 1 (running), 4 (isolating), 5 (isolated)
+                     * 获取Instance status. Valid values: `0` (creating), `1` (running), `4` (isolating), `5` (isolated).
+                     * @return Status Instance status. Valid values: `0` (creating), `1` (running), `4` (isolating), `5` (isolated).
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Instance status. Value range: 0 (creating), 1 (running), 4 (isolating), 5 (isolated)
-                     * @param Status Instance status. Value range: 0 (creating), 1 (running), 4 (isolating), 5 (isolated)
+                     * 设置Instance status. Valid values: `0` (creating), `1` (running), `4` (isolating), `5` (isolated).
+                     * @param Status Instance status. Valid values: `0` (creating), `1` (running), `4` (isolating), `5` (isolated).
                      */
                     void SetStatus(const int64_t& _status);
 
@@ -940,7 +940,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * Instance status. Value range: 0 (creating), 1 (running), 4 (isolating), 5 (isolated)
+                     * Instance status. Valid values: `0` (creating), `1` (running), `4` (isolating), `5` (isolated).
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;

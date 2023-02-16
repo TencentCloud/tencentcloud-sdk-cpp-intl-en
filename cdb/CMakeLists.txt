@@ -49,7 +49,7 @@ set(cdb_public_header_model
   include/tencentcloud/cdb/v20170320/model/CreateAccountsResponse.h
   include/tencentcloud/cdb/v20170320/model/SwitchDBInstanceMasterSlaveResponse.h
   include/tencentcloud/cdb/v20170320/model/InstanceRollbackRangeTime.h
-  include/tencentcloud/cdb/v20170320/model/SqlFileInfo.h
+  include/tencentcloud/cdb/v20170320/model/DescribeDBFeaturesResponse.h
   include/tencentcloud/cdb/v20170320/model/CdbSellType.h
   include/tencentcloud/cdb/v20170320/model/DescribeProxyCustomConfRequest.h
   include/tencentcloud/cdb/v20170320/model/DescribeDBSecurityGroupsResponse.h
@@ -148,6 +148,7 @@ set(cdb_public_header_model
   include/tencentcloud/cdb/v20170320/model/RestartDBInstancesResponse.h
   include/tencentcloud/cdb/v20170320/model/CreateRoInstanceIpResponse.h
   include/tencentcloud/cdb/v20170320/model/DescribeTimeWindowRequest.h
+  include/tencentcloud/cdb/v20170320/model/DescribeDBFeaturesRequest.h
   include/tencentcloud/cdb/v20170320/model/CreateAuditPolicyResponse.h
   include/tencentcloud/cdb/v20170320/model/SwitchForUpgradeResponse.h
   include/tencentcloud/cdb/v20170320/model/DescribeBackupSummariesResponse.h
@@ -286,7 +287,7 @@ set(cdb_public_header_model
   include/tencentcloud/cdb/v20170320/model/ModifyBackupConfigRequest.h
   include/tencentcloud/cdb/v20170320/model/DescribeSlowLogDataRequest.h
   include/tencentcloud/cdb/v20170320/model/DatabasesWithCharacterLists.h
-  include/tencentcloud/cdb/v20170320/model/UpgradeDBInstanceResponse.h
+  include/tencentcloud/cdb/v20170320/model/SqlFileInfo.h
   include/tencentcloud/cdb/v20170320/model/ModifyDBInstanceVipVportRequest.h
   include/tencentcloud/cdb/v20170320/model/DescribeRemoteBackupConfigRequest.h
   include/tencentcloud/cdb/v20170320/model/ModifyDBInstanceProjectResponse.h
@@ -324,6 +325,7 @@ set(cdb_public_header_model
   include/tencentcloud/cdb/v20170320/model/DescribeInstanceParamsRequest.h
   include/tencentcloud/cdb/v20170320/model/SlowLogItem.h
   include/tencentcloud/cdb/v20170320/model/DescribeDeviceMonitorInfoResponse.h
+  include/tencentcloud/cdb/v20170320/model/UpgradeDBInstanceResponse.h
   include/tencentcloud/cdb/v20170320/model/DescribeRollbackRangeTimeResponse.h
   include/tencentcloud/cdb/v20170320/model/ModifyRoGroupInfoRequest.h
   include/tencentcloud/cdb/v20170320/model/DescribeRollbackRangeTimeRequest.h
@@ -373,7 +375,7 @@ set(cdb_src
   src/v20170320/model/CreateAccountsResponse.cpp
   src/v20170320/model/SwitchDBInstanceMasterSlaveResponse.cpp
   src/v20170320/model/InstanceRollbackRangeTime.cpp
-  src/v20170320/model/SqlFileInfo.cpp
+  src/v20170320/model/DescribeDBFeaturesResponse.cpp
   src/v20170320/model/CdbSellType.cpp
   src/v20170320/model/DescribeProxyCustomConfRequest.cpp
   src/v20170320/model/DescribeDBSecurityGroupsResponse.cpp
@@ -472,6 +474,7 @@ set(cdb_src
   src/v20170320/model/RestartDBInstancesResponse.cpp
   src/v20170320/model/CreateRoInstanceIpResponse.cpp
   src/v20170320/model/DescribeTimeWindowRequest.cpp
+  src/v20170320/model/DescribeDBFeaturesRequest.cpp
   src/v20170320/model/CreateAuditPolicyResponse.cpp
   src/v20170320/model/SwitchForUpgradeResponse.cpp
   src/v20170320/model/DescribeBackupSummariesResponse.cpp
@@ -610,7 +613,7 @@ set(cdb_src
   src/v20170320/model/ModifyBackupConfigRequest.cpp
   src/v20170320/model/DescribeSlowLogDataRequest.cpp
   src/v20170320/model/DatabasesWithCharacterLists.cpp
-  src/v20170320/model/UpgradeDBInstanceResponse.cpp
+  src/v20170320/model/SqlFileInfo.cpp
   src/v20170320/model/ModifyDBInstanceVipVportRequest.cpp
   src/v20170320/model/DescribeRemoteBackupConfigRequest.cpp
   src/v20170320/model/ModifyDBInstanceProjectResponse.cpp
@@ -648,6 +651,7 @@ set(cdb_src
   src/v20170320/model/DescribeInstanceParamsRequest.cpp
   src/v20170320/model/SlowLogItem.cpp
   src/v20170320/model/DescribeDeviceMonitorInfoResponse.cpp
+  src/v20170320/model/UpgradeDBInstanceResponse.cpp
   src/v20170320/model/DescribeRollbackRangeTimeResponse.cpp
   src/v20170320/model/ModifyRoGroupInfoRequest.cpp
   src/v20170320/model/DescribeRollbackRangeTimeRequest.cpp

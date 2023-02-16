@@ -64,6 +64,32 @@ namespace TencentCloud
                      */
                     bool DefinitionHasBeenSet() const;
 
+                    /**
+                     * 获取An extended parameter, whose value is a stringfied JSON.
+Note: This parameter is for customers with special requirements. It needs to be customized offline.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ExtendedParameter An extended parameter, whose value is a stringfied JSON.
+Note: This parameter is for customers with special requirements. It needs to be customized offline.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetExtendedParameter() const;
+
+                    /**
+                     * 设置An extended parameter, whose value is a stringfied JSON.
+Note: This parameter is for customers with special requirements. It needs to be customized offline.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ExtendedParameter An extended parameter, whose value is a stringfied JSON.
+Note: This parameter is for customers with special requirements. It needs to be customized offline.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetExtendedParameter(const std::string& _extendedParameter);
+
+                    /**
+                     * 判断参数 ExtendedParameter 是否已赋值
+                     * @return ExtendedParameter 是否已赋值
+                     */
+                    bool ExtendedParameterHasBeenSet() const;
+
                 private:
 
                     /**
@@ -71,6 +97,14 @@ namespace TencentCloud
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
+
+                    /**
+                     * An extended parameter, whose value is a stringfied JSON.
+Note: This parameter is for customers with special requirements. It needs to be customized offline.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_extendedParameter;
+                    bool m_extendedParameterHasBeenSet;
 
                 };
             }

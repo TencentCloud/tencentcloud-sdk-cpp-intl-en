@@ -91,6 +91,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool GroupListHasBeenSet() const;
 
+                    /**
+                     * 获取Consumer group quota
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return GroupCountQuota Consumer group quota
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetGroupCountQuota() const;
+
+                    /**
+                     * 设置Consumer group quota
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param GroupCountQuota Consumer group quota
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetGroupCountQuota(const uint64_t& _groupCountQuota);
+
+                    /**
+                     * 判断参数 GroupCountQuota 是否已赋值
+                     * @return GroupCountQuota 是否已赋值
+                     */
+                    bool GroupCountQuotaHasBeenSet() const;
+
                 private:
 
                     /**
@@ -106,6 +128,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<DescribeGroup> m_groupList;
                     bool m_groupListHasBeenSet;
+
+                    /**
+                     * Consumer group quota
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_groupCountQuota;
+                    bool m_groupCountQuotaHasBeenSet;
 
                 };
             }

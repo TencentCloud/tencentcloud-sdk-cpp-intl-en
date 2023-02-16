@@ -62,14 +62,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取(Filter) filter by instance name. Fuzzy search is supported
-                     * @return SearchWord (Filter) filter by instance name. Fuzzy search is supported
+                     * 获取Filter by instance name, instance ID, AZ, VPC ID, or subnet ID. Fuzzy query is supported.
+                     * @return SearchWord Filter by instance name, instance ID, AZ, VPC ID, or subnet ID. Fuzzy query is supported.
                      */
                     std::string GetSearchWord() const;
 
                     /**
-                     * 设置(Filter) filter by instance name. Fuzzy search is supported
-                     * @param SearchWord (Filter) filter by instance name. Fuzzy search is supported
+                     * 设置Filter by instance name, instance ID, AZ, VPC ID, or subnet ID. Fuzzy query is supported.
+                     * @param SearchWord Filter by instance name, instance ID, AZ, VPC ID, or subnet ID. Fuzzy query is supported.
                      */
                     void SetSearchWord(const std::string& _searchWord);
 
@@ -214,7 +214,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * (Filter) filter by instance name. Fuzzy search is supported
+                     * Filter by instance name, instance ID, AZ, VPC ID, or subnet ID. Fuzzy query is supported.
                      */
                     std::string m_searchWord;
                     bool m_searchWordHasBeenSet;

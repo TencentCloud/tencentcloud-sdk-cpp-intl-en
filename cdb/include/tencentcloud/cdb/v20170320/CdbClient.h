@@ -89,6 +89,8 @@
 #include <tencentcloud/cdb/v20170320/model/DescribeCdbZoneConfigResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeCloneListRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeCloneListResponse.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeDBFeaturesRequest.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeDBFeaturesResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeDBImportRecordsRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeDBImportRecordsResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeDBInstanceCharsetRequest.h>
@@ -372,6 +374,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeCloneListResponse> DescribeCloneListOutcome;
                 typedef std::future<DescribeCloneListOutcome> DescribeCloneListOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeCloneListRequest&, DescribeCloneListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCloneListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDBFeaturesResponse> DescribeDBFeaturesOutcome;
+                typedef std::future<DescribeDBFeaturesOutcome> DescribeDBFeaturesOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::DescribeDBFeaturesRequest&, DescribeDBFeaturesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBFeaturesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDBImportRecordsResponse> DescribeDBImportRecordsOutcome;
                 typedef std::future<DescribeDBImportRecordsOutcome> DescribeDBImportRecordsOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeDBImportRecordsRequest&, DescribeDBImportRecordsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBImportRecordsAsyncHandler;
@@ -741,15 +746,15 @@ This is an asynchronous API. You can also use the [DescribeDBInstances](https://
                 CreateDBInstanceOutcomeCallable CreateDBInstanceCallable(const Model::CreateDBInstanceRequest& request);
 
                 /**
-                 *This API is used to create pay-as-you-go TencentDB instances (which can be source instances, disaster recovery instances, or read-only replicas) by passing in information such as instance specifications, MySQL version number, and instance quantity.
+                 *This API is used to create a pay-as-you-go TencentDB instance (which can be a source, disaster recovery, or read-only instance) by passing in information such as instance specifications, MySQL version number, and quantity.
 
-This is an asynchronous API. You can also use the [DescribeDBInstances](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) API to query instance details. If the output parameter `Status` is `1` and the output parameter `TaskStatus` is `0`, the instances have been successfully delivered.
+This is an async API. You can also use the [DescribeDBInstances](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) API to query the instance details. If the `Status` value of an instance is `1` and `TaskStatus` is `0`, the instance has been successfully delivered.
 
-1. Use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the purchasable instance specifications, and then use the [DescribeDBPrice](https://intl.cloud.tencent.com/document/api/236/18566?from_cn_redirect=1) API to query the prices of the purchasable instances;
-2. You can create up to 100 instances at a time, with an instance validity period of up to 36 months;
-3. MySQL v5.5, v5.6, v5.7, and v8.0 are supported;
-4. Source instances, disaster recovery instances, and read-only replicas can be created;
-5. If `Port`, `ParamList`, or `Password` is specified in the input parameters, the instance (excluding basic instances) will be initialized.
+1. You can use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the purchasable instance specifications, and then use the [DescribeDBPrice](https://intl.cloud.tencent.com/document/api/236/18566?from_cn_redirect=1) API to query the prices of the purchasable instances.
+2. You can create up to 100 instances at a time, with an instance validity period of up to 36 months.
+3. MySQL 5.5, 5.6, 5.7, and 8.0 are supported.
+4. Source instances, disaster recovery instances, and read-only instances can be created.
+5. If `Port`, `ParamList`, or `Password` is specified in the input parameters, the instance will be initialized.
                  * @param req CreateDBInstanceHourRequest
                  * @return CreateDBInstanceHourOutcome
                  */
@@ -945,6 +950,15 @@ This is an asynchronous API. You can also use the [DescribeDBInstances](https://
                 DescribeCloneListOutcome DescribeCloneList(const Model::DescribeCloneListRequest &request);
                 void DescribeCloneListAsync(const Model::DescribeCloneListRequest& request, const DescribeCloneListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeCloneListOutcomeCallable DescribeCloneListCallable(const Model::DescribeCloneListRequest& request);
+
+                /**
+                 *This API is used to query database version attributes, including supported features such as database encryption and audit.
+                 * @param req DescribeDBFeaturesRequest
+                 * @return DescribeDBFeaturesOutcome
+                 */
+                DescribeDBFeaturesOutcome DescribeDBFeatures(const Model::DescribeDBFeaturesRequest &request);
+                void DescribeDBFeaturesAsync(const Model::DescribeDBFeaturesRequest& request, const DescribeDBFeaturesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDBFeaturesOutcomeCallable DescribeDBFeaturesCallable(const Model::DescribeDBFeaturesRequest& request);
 
                 /**
                  *This API (DescribeDBImportRecords) is used to query the records of import tasks in a TencentDB instance.
@@ -1693,7 +1707,9 @@ Note:
                 SwitchForUpgradeOutcomeCallable SwitchForUpgradeCallable(const Model::SwitchForUpgradeRequest& request);
 
                 /**
-                 *This API is used to upgrade the configuration of database proxy.
+                 *接口已经废弃，请使用AdjustCdbProxy进行数据库代理的配置
+
+This API is used to upgrade the configuration of database proxy.
                  * @param req UpgradeCDBProxyRequest
                  * @return UpgradeCDBProxyOutcome
                  */

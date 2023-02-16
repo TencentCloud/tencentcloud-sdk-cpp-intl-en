@@ -259,14 +259,14 @@ namespace TencentCloud
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable QuickChange. Valid values: `0` (no), `1` (yes). After QuickChange is enabled, the required resources will be checked. QuickChange is performed only when the required resources support the feature; otherwise, an error message will be returned.
-                     * @return FastUpgrade Whether to enable QuickChange. Valid values: `0` (no), `1` (yes). After QuickChange is enabled, the required resources will be checked. QuickChange is performed only when the required resources support the feature; otherwise, an error message will be returned.
+                     * 获取Whether to enable QuickChange. Valid values: `0` (no), `1` (yes), `2` (QuickChange preferred). After QuickChange is enabled, the required resources will be checked. QuickChange is performed only when the required resources support the feature; otherwise, an error message will be returned.
+                     * @return FastUpgrade Whether to enable QuickChange. Valid values: `0` (no), `1` (yes), `2` (QuickChange preferred). After QuickChange is enabled, the required resources will be checked. QuickChange is performed only when the required resources support the feature; otherwise, an error message will be returned.
                      */
                     int64_t GetFastUpgrade() const;
 
                     /**
-                     * 设置Whether to enable QuickChange. Valid values: `0` (no), `1` (yes). After QuickChange is enabled, the required resources will be checked. QuickChange is performed only when the required resources support the feature; otherwise, an error message will be returned.
-                     * @param FastUpgrade Whether to enable QuickChange. Valid values: `0` (no), `1` (yes). After QuickChange is enabled, the required resources will be checked. QuickChange is performed only when the required resources support the feature; otherwise, an error message will be returned.
+                     * 设置Whether to enable QuickChange. Valid values: `0` (no), `1` (yes), `2` (QuickChange preferred). After QuickChange is enabled, the required resources will be checked. QuickChange is performed only when the required resources support the feature; otherwise, an error message will be returned.
+                     * @param FastUpgrade Whether to enable QuickChange. Valid values: `0` (no), `1` (yes), `2` (QuickChange preferred). After QuickChange is enabled, the required resources will be checked. QuickChange is performed only when the required resources support the feature; otherwise, an error message will be returned.
                      */
                     void SetFastUpgrade(const int64_t& _fastUpgrade);
 
@@ -405,7 +405,7 @@ namespace TencentCloud
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * Whether to enable QuickChange. Valid values: `0` (no), `1` (yes). After QuickChange is enabled, the required resources will be checked. QuickChange is performed only when the required resources support the feature; otherwise, an error message will be returned.
+                     * Whether to enable QuickChange. Valid values: `0` (no), `1` (yes), `2` (QuickChange preferred). After QuickChange is enabled, the required resources will be checked. QuickChange is performed only when the required resources support the feature; otherwise, an error message will be returned.
                      */
                     int64_t m_fastUpgrade;
                     bool m_fastUpgradeHasBeenSet;

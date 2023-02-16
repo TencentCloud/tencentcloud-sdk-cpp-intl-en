@@ -172,14 +172,14 @@ namespace TencentCloud
                     bool UniqSubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Project ID. If this is left empty, the default project will be used. If read-only instances or disaster recovery instances are purchased, the project ID will be the same as the source instance ID by default.
-                     * @return ProjectId Project ID. If this is left empty, the default project will be used. If read-only instances or disaster recovery instances are purchased, the project ID will be the same as the source instance ID by default.
+                     * 获取Project ID. If this parameter is left empty, the default project will be used. When you purchase read-only instances and disaster recovery instances, the project ID is the same as that of the source instance by default.
+                     * @return ProjectId Project ID. If this parameter is left empty, the default project will be used. When you purchase read-only instances and disaster recovery instances, the project ID is the same as that of the source instance by default.
                      */
                     int64_t GetProjectId() const;
 
                     /**
-                     * 设置Project ID. If this is left empty, the default project will be used. If read-only instances or disaster recovery instances are purchased, the project ID will be the same as the source instance ID by default.
-                     * @param ProjectId Project ID. If this is left empty, the default project will be used. If read-only instances or disaster recovery instances are purchased, the project ID will be the same as the source instance ID by default.
+                     * 设置Project ID. If this parameter is left empty, the default project will be used. When you purchase read-only instances and disaster recovery instances, the project ID is the same as that of the source instance by default.
+                     * @param ProjectId Project ID. If this parameter is left empty, the default project will be used. When you purchase read-only instances and disaster recovery instances, the project ID is the same as that of the source instance by default.
                      */
                     void SetProjectId(const int64_t& _projectId);
 
@@ -774,7 +774,7 @@ namespace TencentCloud
                     bool m_uniqSubnetIdHasBeenSet;
 
                     /**
-                     * Project ID. If this is left empty, the default project will be used. If read-only instances or disaster recovery instances are purchased, the project ID will be the same as the source instance ID by default.
+                     * Project ID. If this parameter is left empty, the default project will be used. When you purchase read-only instances and disaster recovery instances, the project ID is the same as that of the source instance by default.
                      */
                     int64_t m_projectId;
                     bool m_projectIdHasBeenSet;
