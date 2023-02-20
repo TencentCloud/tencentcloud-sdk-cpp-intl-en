@@ -570,6 +570,72 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool InstanceVersionHasBeenSet() const;
 
+                    /**
+                     * 获取Convoy instance ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return ConvoyId Convoy instance ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetConvoyId() const;
+
+                    /**
+                     * 设置Convoy instance ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param ConvoyId Convoy instance ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetConvoyId(const std::string& _convoyId);
+
+                    /**
+                     * 判断参数 ConvoyId 是否已赋值
+                     * @return ConvoyId 是否已赋值
+                     */
+                    bool ConvoyIdHasBeenSet() const;
+
+                    /**
+                     * 获取Pay-as-you-go bandwidth
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return ElasticBandwidth Pay-as-you-go bandwidth
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    uint64_t GetElasticBandwidth() const;
+
+                    /**
+                     * 设置Pay-as-you-go bandwidth
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param ElasticBandwidth Pay-as-you-go bandwidth
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetElasticBandwidth(const uint64_t& _elasticBandwidth);
+
+                    /**
+                     * 判断参数 ElasticBandwidth 是否已赋值
+                     * @return ElasticBandwidth 是否已赋值
+                     */
+                    bool ElasticBandwidthHasBeenSet() const;
+
+                    /**
+                     * 获取Whether it’s the IP broadcasted by EdgeOne. Values: `1` (yes), `0` (no)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return EOFlag Whether it’s the IP broadcasted by EdgeOne. Values: `1` (yes), `0` (no)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetEOFlag() const;
+
+                    /**
+                     * 设置Whether it’s the IP broadcasted by EdgeOne. Values: `1` (yes), `0` (no)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param EOFlag Whether it’s the IP broadcasted by EdgeOne. Values: `1` (yes), `0` (no)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetEOFlag(const uint64_t& _eOFlag);
+
+                    /**
+                     * 判断参数 EOFlag 是否已赋值
+                     * @return EOFlag 是否已赋值
+                     */
+                    bool EOFlagHasBeenSet() const;
+
                 private:
 
                     /**
@@ -734,6 +800,27 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     uint64_t m_instanceVersion;
                     bool m_instanceVersionHasBeenSet;
+
+                    /**
+                     * Convoy instance ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_convoyId;
+                    bool m_convoyIdHasBeenSet;
+
+                    /**
+                     * Pay-as-you-go bandwidth
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    uint64_t m_elasticBandwidth;
+                    bool m_elasticBandwidthHasBeenSet;
+
+                    /**
+                     * Whether it’s the IP broadcasted by EdgeOne. Values: `1` (yes), `0` (no)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_eOFlag;
+                    bool m_eOFlagHasBeenSet;
 
                 };
             }

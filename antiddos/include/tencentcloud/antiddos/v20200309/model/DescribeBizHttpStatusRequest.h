@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_ANTIDDOS_V20200309_MODEL_DESCRIBEBIZTRENDREQUEST_H_
-#define TENCENTCLOUD_ANTIDDOS_V20200309_MODEL_DESCRIBEBIZTRENDREQUEST_H_
+#ifndef TENCENTCLOUD_ANTIDDOS_V20200309_MODEL_DESCRIBEBIZHTTPSTATUSREQUEST_H_
+#define TENCENTCLOUD_ANTIDDOS_V20200309_MODEL_DESCRIBEBIZHTTPSTATUSREQUEST_H_
 
 #include <string>
 #include <vector>
@@ -33,25 +33,25 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * DescribeBizTrend request structure.
+                * DescribeBizHttpStatus request structure.
                 */
-                class DescribeBizTrendRequest : public AbstractModel
+                class DescribeBizHttpStatusRequest : public AbstractModel
                 {
                 public:
-                    DescribeBizTrendRequest();
-                    ~DescribeBizTrendRequest() = default;
+                    DescribeBizHttpStatusRequest();
+                    ~DescribeBizHttpStatusRequest() = default;
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Statistical method. Valid values: `max`, `min`, `avg`, `sum`. It can only be `max` if the statistical dimension is traffic rate or packet rate.
-                     * @return Statistics Statistical method. Valid values: `max`, `min`, `avg`, `sum`. It can only be `max` if the statistical dimension is traffic rate or packet rate.
+                     * 获取Statistical mode. Value: `sum`.
+                     * @return Statistics Statistical mode. Value: `sum`.
                      */
                     std::string GetStatistics() const;
 
                     /**
-                     * 设置Statistical method. Valid values: `max`, `min`, `avg`, `sum`. It can only be `max` if the statistical dimension is traffic rate or packet rate.
-                     * @param Statistics Statistical method. Valid values: `max`, `min`, `avg`, `sum`. It can only be `max` if the statistical dimension is traffic rate or packet rate.
+                     * 设置Statistical mode. Value: `sum`.
+                     * @param Statistics Statistical mode. Value: `sum`.
                      */
                     void SetStatistics(const std::string& _statistics);
 
@@ -80,16 +80,16 @@ namespace TencentCloud
                     bool BusinessHasBeenSet() const;
 
                     /**
-                     * 获取Sampling interval in seconds. Valid values: `60`, `300`, `1800`, `3600`, `21600`, `86400`
-                     * @return Period Sampling interval in seconds. Valid values: `60`, `300`, `1800`, `3600`, `21600`, `86400`
+                     * 获取Statistical period in seconds. Valid values: `60`, `300`, `1800`, `3600`, `21600`, and `86400`.
+                     * @return Period Statistical period in seconds. Valid values: `60`, `300`, `1800`, `3600`, `21600`, and `86400`.
                      */
-                    uint64_t GetPeriod() const;
+                    int64_t GetPeriod() const;
 
                     /**
-                     * 设置Sampling interval in seconds. Valid values: `60`, `300`, `1800`, `3600`, `21600`, `86400`
-                     * @param Period Sampling interval in seconds. Valid values: `60`, `300`, `1800`, `3600`, `21600`, `86400`
+                     * 设置Statistical period in seconds. Valid values: `60`, `300`, `1800`, `3600`, `21600`, and `86400`.
+                     * @param Period Statistical period in seconds. Valid values: `60`, `300`, `1800`, `3600`, `21600`, and `86400`.
                      */
-                    void SetPeriod(const uint64_t& _period);
+                    void SetPeriod(const int64_t& _period);
 
                     /**
                      * 判断参数 Period 是否已赋值
@@ -98,14 +98,14 @@ namespace TencentCloud
                     bool PeriodHasBeenSet() const;
 
                     /**
-                     * 获取Beginning of the time range for the query, such as `2020-09-22 00:00:00`.
-                     * @return StartTime Beginning of the time range for the query, such as `2020-09-22 00:00:00`.
+                     * 获取Statistics start time, such as `2020-02-01 12:04:12`
+                     * @return StartTime Statistics start time, such as `2020-02-01 12:04:12`
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Beginning of the time range for the query, such as `2020-09-22 00:00:00`.
-                     * @param StartTime Beginning of the time range for the query, such as `2020-09-22 00:00:00`.
+                     * 设置Statistics start time, such as `2020-02-01 12:04:12`
+                     * @param StartTime Statistics start time, such as `2020-02-01 12:04:12`
                      */
                     void SetStartTime(const std::string& _startTime);
 
@@ -116,14 +116,14 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End of the time range for the query, such as `2020-09-22 00:00:00`.
-                     * @return EndTime End of the time range for the query, such as `2020-09-22 00:00:00`.
+                     * 获取Statistics end time, such as `2020-02-03 18:03:23`
+                     * @return EndTime Statistics end time, such as `2020-02-03 18:03:23`
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End of the time range for the query, such as `2020-09-22 00:00:00`.
-                     * @param EndTime End of the time range for the query, such as `2020-09-22 00:00:00`.
+                     * 设置Statistics end time, such as `2020-02-03 18:03:23`
+                     * @param EndTime Statistics end time, such as `2020-02-03 18:03:23`
                      */
                     void SetEndTime(const std::string& _endTime);
 
@@ -134,14 +134,14 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID
-                     * @return Id Instance ID
+                     * 获取The resource ID.
+                     * @return Id The resource ID.
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param Id Instance ID
+                     * 设置The resource ID.
+                     * @param Id The resource ID.
                      */
                     void SetId(const std::string& _id);
 
@@ -152,32 +152,14 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Metric. Valid values: `connum`, `new_conn`, `inactive_conn`, `intraffic`, `outtraffic`, `inpkg`, `outpkg`, `qps`
-                     * @return MetricName Metric. Valid values: `connum`, `new_conn`, `inactive_conn`, `intraffic`, `outtraffic`, `inpkg`, `outpkg`, `qps`
-                     */
-                    std::string GetMetricName() const;
-
-                    /**
-                     * 设置Metric. Valid values: `connum`, `new_conn`, `inactive_conn`, `intraffic`, `outtraffic`, `inpkg`, `outpkg`, `qps`
-                     * @param MetricName Metric. Valid values: `connum`, `new_conn`, `inactive_conn`, `intraffic`, `outtraffic`, `inpkg`, `outpkg`, `qps`
-                     */
-                    void SetMetricName(const std::string& _metricName);
-
-                    /**
-                     * 判断参数 MetricName 是否已赋值
-                     * @return MetricName 是否已赋值
-                     */
-                    bool MetricNameHasBeenSet() const;
-
-                    /**
-                     * 获取You can query data by specifying a domain name when the metric is `qps`.
-                     * @return Domain You can query data by specifying a domain name when the metric is `qps`.
+                     * 获取Specific domain name query
+                     * @return Domain Specific domain name query
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置You can query data by specifying a domain name when the metric is `qps`.
-                     * @param Domain You can query data by specifying a domain name when the metric is `qps`.
+                     * 设置Specific domain name query
+                     * @param Domain Specific domain name query
                      */
                     void SetDomain(const std::string& _domain);
 
@@ -208,7 +190,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Statistical method. Valid values: `max`, `min`, `avg`, `sum`. It can only be `max` if the statistical dimension is traffic rate or packet rate.
+                     * Statistical mode. Value: `sum`.
                      */
                     std::string m_statistics;
                     bool m_statisticsHasBeenSet;
@@ -220,37 +202,31 @@ namespace TencentCloud
                     bool m_businessHasBeenSet;
 
                     /**
-                     * Sampling interval in seconds. Valid values: `60`, `300`, `1800`, `3600`, `21600`, `86400`
+                     * Statistical period in seconds. Valid values: `60`, `300`, `1800`, `3600`, `21600`, and `86400`.
                      */
-                    uint64_t m_period;
+                    int64_t m_period;
                     bool m_periodHasBeenSet;
 
                     /**
-                     * Beginning of the time range for the query, such as `2020-09-22 00:00:00`.
+                     * Statistics start time, such as `2020-02-01 12:04:12`
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End of the time range for the query, such as `2020-09-22 00:00:00`.
+                     * Statistics end time, such as `2020-02-03 18:03:23`
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Instance ID
+                     * The resource ID.
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * Metric. Valid values: `connum`, `new_conn`, `inactive_conn`, `intraffic`, `outtraffic`, `inpkg`, `outpkg`, `qps`
-                     */
-                    std::string m_metricName;
-                    bool m_metricNameHasBeenSet;
-
-                    /**
-                     * You can query data by specifying a domain name when the metric is `qps`.
+                     * Specific domain name query
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
@@ -267,4 +243,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_ANTIDDOS_V20200309_MODEL_DESCRIBEBIZTRENDREQUEST_H_
+#endif // !TENCENTCLOUD_ANTIDDOS_V20200309_MODEL_DESCRIBEBIZHTTPSTATUSREQUEST_H_

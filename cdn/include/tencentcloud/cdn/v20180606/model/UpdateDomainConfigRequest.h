@@ -63,6 +63,7 @@
 #include <tencentcloud/cdn/v20180606/model/ShareCname.h>
 #include <tencentcloud/cdn/v20180606/model/HwPrivateAccess.h>
 #include <tencentcloud/cdn/v20180606/model/QnPrivateAccess.h>
+#include <tencentcloud/cdn/v20180606/model/HttpsBilling.h>
 
 
 namespace TencentCloud
@@ -962,6 +963,24 @@ After switching to global acceleration, configurations of the domain name will b
                      */
                     bool QnPrivateAccessHasBeenSet() const;
 
+                    /**
+                     * 获取HTTPS service
+                     * @return HttpsBilling HTTPS service
+                     */
+                    HttpsBilling GetHttpsBilling() const;
+
+                    /**
+                     * 设置HTTPS service
+                     * @param HttpsBilling HTTPS service
+                     */
+                    void SetHttpsBilling(const HttpsBilling& _httpsBilling);
+
+                    /**
+                     * 判断参数 HttpsBilling 是否已赋值
+                     * @return HttpsBilling 是否已赋值
+                     */
+                    bool HttpsBillingHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1253,6 +1272,12 @@ After switching to global acceleration, configurations of the domain name will b
                      */
                     QnPrivateAccess m_qnPrivateAccess;
                     bool m_qnPrivateAccessHasBeenSet;
+
+                    /**
+                     * HTTPS service
+                     */
+                    HttpsBilling m_httpsBilling;
+                    bool m_httpsBillingHasBeenSet;
 
                 };
             }

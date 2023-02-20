@@ -389,6 +389,46 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool VitalityVersionHasBeenSet() const;
 
+                    /**
+                     * 获取Network line
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Line Network line
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetLine() const;
+
+                    /**
+                     * 设置Network line
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Line Network line
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetLine(const uint64_t& _line);
+
+                    /**
+                     * 判断参数 Line 是否已赋值
+                     * @return Line 是否已赋值
+                     */
+                    bool LineHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable elastic bandwidth
+                     * @return ElasticServiceBandwidth Whether to enable elastic bandwidth
+                     */
+                    uint64_t GetElasticServiceBandwidth() const;
+
+                    /**
+                     * 设置Whether to enable elastic bandwidth
+                     * @param ElasticServiceBandwidth Whether to enable elastic bandwidth
+                     */
+                    void SetElasticServiceBandwidth(const uint64_t& _elasticServiceBandwidth);
+
+                    /**
+                     * 判断参数 ElasticServiceBandwidth 是否已赋值
+                     * @return ElasticServiceBandwidth 是否已赋值
+                     */
+                    bool ElasticServiceBandwidthHasBeenSet() const;
+
                 private:
 
                     /**
@@ -498,6 +538,19 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     uint64_t m_vitalityVersion;
                     bool m_vitalityVersionHasBeenSet;
+
+                    /**
+                     * Network line
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_line;
+                    bool m_lineHasBeenSet;
+
+                    /**
+                     * Whether to enable elastic bandwidth
+                     */
+                    uint64_t m_elasticServiceBandwidth;
+                    bool m_elasticServiceBandwidthHasBeenSet;
 
                 };
             }

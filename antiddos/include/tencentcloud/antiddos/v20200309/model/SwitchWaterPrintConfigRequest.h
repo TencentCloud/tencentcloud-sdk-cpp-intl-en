@@ -78,6 +78,24 @@ namespace TencentCloud
                      */
                     bool OpenStatusHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable proxy. Values: `1` (Enable proxy and ignore IP+port verification), `0` (Do not enable proxy and IP+port verification is required)
+                     * @return CloudSdkProxy Whether to enable proxy. Values: `1` (Enable proxy and ignore IP+port verification), `0` (Do not enable proxy and IP+port verification is required)
+                     */
+                    int64_t GetCloudSdkProxy() const;
+
+                    /**
+                     * 设置Whether to enable proxy. Values: `1` (Enable proxy and ignore IP+port verification), `0` (Do not enable proxy and IP+port verification is required)
+                     * @param CloudSdkProxy Whether to enable proxy. Values: `1` (Enable proxy and ignore IP+port verification), `0` (Do not enable proxy and IP+port verification is required)
+                     */
+                    void SetCloudSdkProxy(const int64_t& _cloudSdkProxy);
+
+                    /**
+                     * 判断参数 CloudSdkProxy 是否已赋值
+                     * @return CloudSdkProxy 是否已赋值
+                     */
+                    bool CloudSdkProxyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -91,6 +109,12 @@ namespace TencentCloud
                      */
                     int64_t m_openStatus;
                     bool m_openStatusHasBeenSet;
+
+                    /**
+                     * Whether to enable proxy. Values: `1` (Enable proxy and ignore IP+port verification), `0` (Do not enable proxy and IP+port verification is required)
+                     */
+                    int64_t m_cloudSdkProxy;
+                    bool m_cloudSdkProxyHasBeenSet;
 
                 };
             }

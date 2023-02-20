@@ -87,6 +87,8 @@
 #include <tencentcloud/antiddos/v20200309/model/DescribeBasicDeviceStatusResponse.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeBgpBizTrendRequest.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeBgpBizTrendResponse.h>
+#include <tencentcloud/antiddos/v20200309/model/DescribeBizHttpStatusRequest.h>
+#include <tencentcloud/antiddos/v20200309/model/DescribeBizHttpStatusResponse.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeBizTrendRequest.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeBizTrendResponse.h>
 #include <tencentcloud/antiddos/v20200309/model/DescribeBlackWhiteIpListRequest.h>
@@ -273,6 +275,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeBgpBizTrendResponse> DescribeBgpBizTrendOutcome;
                 typedef std::future<DescribeBgpBizTrendOutcome> DescribeBgpBizTrendOutcomeCallable;
                 typedef std::function<void(const AntiddosClient*, const Model::DescribeBgpBizTrendRequest&, DescribeBgpBizTrendOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBgpBizTrendAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBizHttpStatusResponse> DescribeBizHttpStatusOutcome;
+                typedef std::future<DescribeBizHttpStatusOutcome> DescribeBizHttpStatusOutcomeCallable;
+                typedef std::function<void(const AntiddosClient*, const Model::DescribeBizHttpStatusRequest&, DescribeBizHttpStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBizHttpStatusAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeBizTrendResponse> DescribeBizTrendOutcome;
                 typedef std::future<DescribeBizTrendOutcome> DescribeBizTrendOutcomeCallable;
                 typedef std::function<void(const AntiddosClient*, const Model::DescribeBizTrendRequest&, DescribeBizTrendOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBizTrendAsyncHandler;
@@ -679,6 +684,15 @@ namespace TencentCloud
                 DescribeBgpBizTrendOutcomeCallable DescribeBgpBizTrendCallable(const Model::DescribeBgpBizTrendRequest& request);
 
                 /**
+                 *This API is used to get the statistics on the status codes of business traffic.
+                 * @param req DescribeBizHttpStatusRequest
+                 * @return DescribeBizHttpStatusOutcome
+                 */
+                DescribeBizHttpStatusOutcome DescribeBizHttpStatus(const Model::DescribeBizHttpStatusRequest &request);
+                void DescribeBizHttpStatusAsync(const Model::DescribeBizHttpStatusRequest& request, const DescribeBizHttpStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBizHttpStatusOutcomeCallable DescribeBizHttpStatusCallable(const Model::DescribeBizHttpStatusRequest& request);
+
+                /**
                  *This API is used to get the traffic flow data collected in the specified period.
                  * @param req DescribeBizTrendRequest
                  * @return DescribeBizTrendOutcome
@@ -797,8 +811,7 @@ namespace TencentCloud
                 DescribeListBGPIPInstancesOutcomeCallable DescribeListBGPIPInstancesCallable(const Model::DescribeListBGPIPInstancesRequest& request);
 
                 /**
-                 *This API is used to get a list of Anti-DDoS Pro instances.
-
+                 *This API is used to get the list of Anti-DDoS Pro instances.
                  * @param req DescribeListBGPInstancesRequest
                  * @return DescribeListBGPInstancesOutcome
                  */

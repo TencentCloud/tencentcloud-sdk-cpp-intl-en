@@ -43,7 +43,10 @@ BGPIPInstance::BGPIPInstance() :
     m_bGPIPChannelFlagHasBeenSet(false),
     m_tagInfoListHasBeenSet(false),
     m_anycastOutPackRelationHasBeenSet(false),
-    m_instanceVersionHasBeenSet(false)
+    m_instanceVersionHasBeenSet(false),
+    m_convoyIdHasBeenSet(false),
+    m_elasticBandwidthHasBeenSet(false),
+    m_eOFlagHasBeenSet(false)
 {
 }
 
@@ -355,6 +358,36 @@ CoreInternalOutcome BGPIPInstance::Deserialize(const rapidjson::Value &value)
         m_instanceVersionHasBeenSet = true;
     }
 
+    if (value.HasMember("ConvoyId") && !value["ConvoyId"].IsNull())
+    {
+        if (!value["ConvoyId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `BGPIPInstance.ConvoyId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_convoyId = string(value["ConvoyId"].GetString());
+        m_convoyIdHasBeenSet = true;
+    }
+
+    if (value.HasMember("ElasticBandwidth") && !value["ElasticBandwidth"].IsNull())
+    {
+        if (!value["ElasticBandwidth"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `BGPIPInstance.ElasticBandwidth` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_elasticBandwidth = value["ElasticBandwidth"].GetUint64();
+        m_elasticBandwidthHasBeenSet = true;
+    }
+
+    if (value.HasMember("EOFlag") && !value["EOFlag"].IsNull())
+    {
+        if (!value["EOFlag"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `BGPIPInstance.EOFlag` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_eOFlag = value["EOFlag"].GetUint64();
+        m_eOFlagHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -560,6 +593,30 @@ void BGPIPInstance::ToJsonObject(rapidjson::Value &value, rapidjson::Document::A
         string key = "InstanceVersion";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_instanceVersion, allocator);
+    }
+
+    if (m_convoyIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ConvoyId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_convoyId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_elasticBandwidthHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ElasticBandwidth";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_elasticBandwidth, allocator);
+    }
+
+    if (m_eOFlagHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EOFlag";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_eOFlag, allocator);
     }
 
 }
@@ -931,5 +988,53 @@ void BGPIPInstance::SetInstanceVersion(const uint64_t& _instanceVersion)
 bool BGPIPInstance::InstanceVersionHasBeenSet() const
 {
     return m_instanceVersionHasBeenSet;
+}
+
+string BGPIPInstance::GetConvoyId() const
+{
+    return m_convoyId;
+}
+
+void BGPIPInstance::SetConvoyId(const string& _convoyId)
+{
+    m_convoyId = _convoyId;
+    m_convoyIdHasBeenSet = true;
+}
+
+bool BGPIPInstance::ConvoyIdHasBeenSet() const
+{
+    return m_convoyIdHasBeenSet;
+}
+
+uint64_t BGPIPInstance::GetElasticBandwidth() const
+{
+    return m_elasticBandwidth;
+}
+
+void BGPIPInstance::SetElasticBandwidth(const uint64_t& _elasticBandwidth)
+{
+    m_elasticBandwidth = _elasticBandwidth;
+    m_elasticBandwidthHasBeenSet = true;
+}
+
+bool BGPIPInstance::ElasticBandwidthHasBeenSet() const
+{
+    return m_elasticBandwidthHasBeenSet;
+}
+
+uint64_t BGPIPInstance::GetEOFlag() const
+{
+    return m_eOFlag;
+}
+
+void BGPIPInstance::SetEOFlag(const uint64_t& _eOFlag)
+{
+    m_eOFlag = _eOFlag;
+    m_eOFlagHasBeenSet = true;
+}
+
+bool BGPIPInstance::EOFlagHasBeenSet() const
+{
+    return m_eOFlagHasBeenSet;
 }
 

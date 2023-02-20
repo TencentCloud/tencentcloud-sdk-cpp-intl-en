@@ -156,22 +156,18 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool FilterRulesHasBeenSet() const;
 
                     /**
-                     * 获取HTTP code returned when the IP allowlist/blocklist verification fails
-Valid values: 400-499
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return ReturnCode HTTP code returned when the IP allowlist/blocklist verification fails
-Valid values: 400-499
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取[Unavailable soon] The code returned when the IP blocklist/allowlist verification fails.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ReturnCode [Unavailable soon] The code returned when the IP blocklist/allowlist verification fails.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetReturnCode() const;
 
                     /**
-                     * 设置HTTP code returned when the IP allowlist/blocklist verification fails
-Valid values: 400-499
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param ReturnCode HTTP code returned when the IP allowlist/blocklist verification fails
-Valid values: 400-499
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置[Unavailable soon] The code returned when the IP blocklist/allowlist verification fails.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ReturnCode [Unavailable soon] The code returned when the IP blocklist/allowlist verification fails.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetReturnCode(const int64_t& _returnCode);
 
@@ -217,9 +213,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_filterRulesHasBeenSet;
 
                     /**
-                     * HTTP code returned when the IP allowlist/blocklist verification fails
-Valid values: 400-499
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * [Unavailable soon] The code returned when the IP blocklist/allowlist verification fails.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_returnCode;
                     bool m_returnCodeHasBeenSet;

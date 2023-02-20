@@ -116,14 +116,14 @@ namespace TencentCloud
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取Region blocking configuration. The configuration ID should be cleared when you set this parameter.
-                     * @return CcGeoIPBlockConfig Region blocking configuration. The configuration ID should be cleared when you set this parameter.
+                     * 获取CC regional blocking configuration
+                     * @return CcGeoIPBlockConfig CC regional blocking configuration
                      */
                     CcGeoIPBlockConfig GetCcGeoIPBlockConfig() const;
 
                     /**
-                     * 设置Region blocking configuration. The configuration ID should be cleared when you set this parameter.
-                     * @param CcGeoIPBlockConfig Region blocking configuration. The configuration ID should be cleared when you set this parameter.
+                     * 设置CC regional blocking configuration
+                     * @param CcGeoIPBlockConfig CC regional blocking configuration
                      */
                     void SetCcGeoIPBlockConfig(const CcGeoIPBlockConfig& _ccGeoIPBlockConfig);
 
@@ -160,7 +160,7 @@ namespace TencentCloud
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * Region blocking configuration. The configuration ID should be cleared when you set this parameter.
+                     * CC regional blocking configuration
                      */
                     CcGeoIPBlockConfig m_ccGeoIPBlockConfig;
                     bool m_ccGeoIPBlockConfigHasBeenSet;

@@ -73,6 +73,7 @@
 #include <tencentcloud/cdn/v20180606/model/RuleEngine.h>
 #include <tencentcloud/cdn/v20180606/model/HwPrivateAccess.h>
 #include <tencentcloud/cdn/v20180606/model/QnPrivateAccess.h>
+#include <tencentcloud/cdn/v20180606/model/HttpsBilling.h>
 
 
 namespace TencentCloud
@@ -1571,6 +1572,28 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool QnPrivateAccessHasBeenSet() const;
 
+                    /**
+                     * 获取HTTPS service
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return HttpsBilling HTTPS service
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    HttpsBilling GetHttpsBilling() const;
+
+                    /**
+                     * 设置HTTPS service
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param HttpsBilling HTTPS service
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetHttpsBilling(const HttpsBilling& _httpsBilling);
+
+                    /**
+                     * 判断参数 HttpsBilling 是否已赋值
+                     * @return HttpsBilling 是否已赋值
+                     */
+                    bool HttpsBillingHasBeenSet() const;
+
                 private:
 
                     /**
@@ -2037,6 +2060,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     QnPrivateAccess m_qnPrivateAccess;
                     bool m_qnPrivateAccessHasBeenSet;
+
+                    /**
+                     * HTTPS service
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    HttpsBilling m_httpsBilling;
+                    bool m_httpsBillingHasBeenSet;
 
                 };
             }

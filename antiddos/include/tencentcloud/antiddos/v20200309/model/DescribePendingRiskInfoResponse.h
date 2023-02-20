@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether the user is a paid user
-                     * @return IsPaidUsr Whether the user is a paid user
+                     * 获取Whether the user is a paid user. Values: `true`, `false`.
+                     * @return IsPaidUsr Whether the user is a paid user. Values: `true`, `false`.
                      */
                     bool GetIsPaidUsr() const;
 
@@ -106,7 +106,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether the user is a paid user
+                     * Whether the user is a paid user. Values: `true`, `false`.
                      */
                     bool m_isPaidUsr;
                     bool m_isPaidUsrHasBeenSet;

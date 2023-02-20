@@ -235,6 +235,7 @@ set(cdn_public_header_model
   include/tencentcloud/cdn/v20180606/model/VideoSeek.h
   include/tencentcloud/cdn/v20180606/model/Compatibility.h
   include/tencentcloud/cdn/v20180606/model/ManageClsTopicDomainsResponse.h
+  include/tencentcloud/cdn/v20180606/model/HttpsBilling.h
   include/tencentcloud/cdn/v20180606/model/ScdnAclGroup.h
   include/tencentcloud/cdn/v20180606/model/ScdnWafRule.h
   include/tencentcloud/cdn/v20180606/model/ClsSearchLogs.h
@@ -481,6 +482,7 @@ set(cdn_src
   src/v20180606/model/VideoSeek.cpp
   src/v20180606/model/Compatibility.cpp
   src/v20180606/model/ManageClsTopicDomainsResponse.cpp
+  src/v20180606/model/HttpsBilling.cpp
   src/v20180606/model/ScdnAclGroup.cpp
   src/v20180606/model/ScdnWafRule.cpp
   src/v20180606/model/ClsSearchLogs.cpp

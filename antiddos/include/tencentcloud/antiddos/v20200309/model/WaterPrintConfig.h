@@ -162,6 +162,28 @@ namespace TencentCloud
                      */
                     bool VerifyHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable proxy. Values: `1` (Enable proxy and ignore IP+port verification), `0` (Do not enable proxy and IP+port verification is required)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CloudSdkProxy Whether to enable proxy. Values: `1` (Enable proxy and ignore IP+port verification), `0` (Do not enable proxy and IP+port verification is required)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetCloudSdkProxy() const;
+
+                    /**
+                     * 设置Whether to enable proxy. Values: `1` (Enable proxy and ignore IP+port verification), `0` (Do not enable proxy and IP+port verification is required)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param CloudSdkProxy Whether to enable proxy. Values: `1` (Enable proxy and ignore IP+port verification), `0` (Do not enable proxy and IP+port verification is required)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetCloudSdkProxy(const int64_t& _cloudSdkProxy);
+
+                    /**
+                     * 判断参数 CloudSdkProxy 是否已赋值
+                     * @return CloudSdkProxy 是否已赋值
+                     */
+                    bool CloudSdkProxyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -199,6 +221,13 @@ namespace TencentCloud
                      */
                     std::string m_verify;
                     bool m_verifyHasBeenSet;
+
+                    /**
+                     * Whether to enable proxy. Values: `1` (Enable proxy and ignore IP+port verification), `0` (Do not enable proxy and IP+port verification is required)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_cloudSdkProxy;
+                    bool m_cloudSdkProxyHasBeenSet;
 
                 };
             }

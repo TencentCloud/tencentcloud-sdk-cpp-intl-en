@@ -71,6 +71,7 @@ set(antiddos_public_header_model
   include/tencentcloud/antiddos/v20200309/model/DisassociateDDoSEipAddressResponse.h
   include/tencentcloud/antiddos/v20200309/model/DescribeBgpBizTrendRequest.h
   include/tencentcloud/antiddos/v20200309/model/DeleteCCThresholdPolicyResponse.h
+  include/tencentcloud/antiddos/v20200309/model/DescribeBizHttpStatusRequest.h
   include/tencentcloud/antiddos/v20200309/model/SourceServer.h
   include/tencentcloud/antiddos/v20200309/model/ModifyDomainUsrNameResponse.h
   include/tencentcloud/antiddos/v20200309/model/ModifyCcBlackWhiteIpListResponse.h
@@ -87,6 +88,7 @@ set(antiddos_public_header_model
   include/tencentcloud/antiddos/v20200309/model/DescribeListDDoSGeoIPBlockConfigRequest.h
   include/tencentcloud/antiddos/v20200309/model/DescribeOverviewDDoSEventListResponse.h
   include/tencentcloud/antiddos/v20200309/model/CreateCcGeoIPBlockConfigResponse.h
+  include/tencentcloud/antiddos/v20200309/model/HttpStatusMap.h
   include/tencentcloud/antiddos/v20200309/model/Layer7Rule.h
   include/tencentcloud/antiddos/v20200309/model/L4RuleSource.h
   include/tencentcloud/antiddos/v20200309/model/DeleteCcGeoIPBlockConfigRequest.h
@@ -101,7 +103,7 @@ set(antiddos_public_header_model
   include/tencentcloud/antiddos/v20200309/model/ModifyPacketFilterConfigRequest.h
   include/tencentcloud/antiddos/v20200309/model/DescribeBlackWhiteIpListRequest.h
   include/tencentcloud/antiddos/v20200309/model/CreateCcGeoIPBlockConfigRequest.h
-  include/tencentcloud/antiddos/v20200309/model/ModifyDomainUsrNameRequest.h
+  include/tencentcloud/antiddos/v20200309/model/DescribeBizHttpStatusResponse.h
   include/tencentcloud/antiddos/v20200309/model/CreateDDoSSpeedLimitConfigResponse.h
   include/tencentcloud/antiddos/v20200309/model/DescribeNewL7RulesErrHealthResponse.h
   include/tencentcloud/antiddos/v20200309/model/DeletePacketFilterConfigRequest.h
@@ -160,6 +162,7 @@ set(antiddos_public_header_model
   include/tencentcloud/antiddos/v20200309/model/DefaultAlarmThreshold.h
   include/tencentcloud/antiddos/v20200309/model/ForwardListener.h
   include/tencentcloud/antiddos/v20200309/model/BGPInstanceSpecification.h
+  include/tencentcloud/antiddos/v20200309/model/ModifyDomainUsrNameRequest.h
   include/tencentcloud/antiddos/v20200309/model/CCLevelPolicy.h
   include/tencentcloud/antiddos/v20200309/model/CreateWaterPrintKeyRequest.h
   include/tencentcloud/antiddos/v20200309/model/WaterPrintRelation.h
@@ -278,6 +281,7 @@ set(antiddos_src
   src/v20200309/model/DisassociateDDoSEipAddressResponse.cpp
   src/v20200309/model/DescribeBgpBizTrendRequest.cpp
   src/v20200309/model/DeleteCCThresholdPolicyResponse.cpp
+  src/v20200309/model/DescribeBizHttpStatusRequest.cpp
   src/v20200309/model/SourceServer.cpp
   src/v20200309/model/ModifyDomainUsrNameResponse.cpp
   src/v20200309/model/ModifyCcBlackWhiteIpListResponse.cpp
@@ -294,6 +298,7 @@ set(antiddos_src
   src/v20200309/model/DescribeListDDoSGeoIPBlockConfigRequest.cpp
   src/v20200309/model/DescribeOverviewDDoSEventListResponse.cpp
   src/v20200309/model/CreateCcGeoIPBlockConfigResponse.cpp
+  src/v20200309/model/HttpStatusMap.cpp
   src/v20200309/model/Layer7Rule.cpp
   src/v20200309/model/L4RuleSource.cpp
   src/v20200309/model/DeleteCcGeoIPBlockConfigRequest.cpp
@@ -308,7 +313,7 @@ set(antiddos_src
   src/v20200309/model/ModifyPacketFilterConfigRequest.cpp
   src/v20200309/model/DescribeBlackWhiteIpListRequest.cpp
   src/v20200309/model/CreateCcGeoIPBlockConfigRequest.cpp
-  src/v20200309/model/ModifyDomainUsrNameRequest.cpp
+  src/v20200309/model/DescribeBizHttpStatusResponse.cpp
   src/v20200309/model/CreateDDoSSpeedLimitConfigResponse.cpp
   src/v20200309/model/DescribeNewL7RulesErrHealthResponse.cpp
   src/v20200309/model/DeletePacketFilterConfigRequest.cpp
@@ -367,6 +372,7 @@ set(antiddos_src
   src/v20200309/model/DefaultAlarmThreshold.cpp
   src/v20200309/model/ForwardListener.cpp
   src/v20200309/model/BGPInstanceSpecification.cpp
+  src/v20200309/model/ModifyDomainUsrNameRequest.cpp
   src/v20200309/model/CCLevelPolicy.cpp
   src/v20200309/model/CreateWaterPrintKeyRequest.cpp
   src/v20200309/model/WaterPrintRelation.cpp

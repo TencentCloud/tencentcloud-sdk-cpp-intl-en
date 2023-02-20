@@ -224,14 +224,14 @@ namespace TencentCloud
                     bool FilterInstanceIdListHasBeenSet() const;
 
                     /**
-                     * 获取Filters by Enterprise edition
-                     * @return FilterEnterpriseFlag Filters by Enterprise edition
+                     * 获取Enterprise edition. Values: `1` (the Convoy package included), `2` (the Convoy package not included)
+                     * @return FilterEnterpriseFlag Enterprise edition. Values: `1` (the Convoy package included), `2` (the Convoy package not included)
                      */
                     uint64_t GetFilterEnterpriseFlag() const;
 
                     /**
-                     * 设置Filters by Enterprise edition
-                     * @param FilterEnterpriseFlag Filters by Enterprise edition
+                     * 设置Enterprise edition. Values: `1` (the Convoy package included), `2` (the Convoy package not included)
+                     * @param FilterEnterpriseFlag Enterprise edition. Values: `1` (the Convoy package included), `2` (the Convoy package not included)
                      */
                     void SetFilterEnterpriseFlag(const uint64_t& _filterEnterpriseFlag);
 
@@ -294,6 +294,60 @@ namespace TencentCloud
                      * @return FilterTag 是否已赋值
                      */
                     bool FilterTagHasBeenSet() const;
+
+                    /**
+                     * 获取Filters out trial instances. Values: `1` (emergency protection instances), `2` (PLG instances)
+                     * @return FilterTrialFlag Filters out trial instances. Values: `1` (emergency protection instances), `2` (PLG instances)
+                     */
+                    uint64_t GetFilterTrialFlag() const;
+
+                    /**
+                     * 设置Filters out trial instances. Values: `1` (emergency protection instances), `2` (PLG instances)
+                     * @param FilterTrialFlag Filters out trial instances. Values: `1` (emergency protection instances), `2` (PLG instances)
+                     */
+                    void SetFilterTrialFlag(const uint64_t& _filterTrialFlag);
+
+                    /**
+                     * 判断参数 FilterTrialFlag 是否已赋值
+                     * @return FilterTrialFlag 是否已赋值
+                     */
+                    bool FilterTrialFlagHasBeenSet() const;
+
+                    /**
+                     * 获取Filters out Convoy instances
+                     * @return FilterConvoy Filters out Convoy instances
+                     */
+                    uint64_t GetFilterConvoy() const;
+
+                    /**
+                     * 设置Filters out Convoy instances
+                     * @param FilterConvoy Filters out Convoy instances
+                     */
+                    void SetFilterConvoy(const uint64_t& _filterConvoy);
+
+                    /**
+                     * 判断参数 FilterConvoy 是否已赋值
+                     * @return FilterConvoy 是否已赋值
+                     */
+                    bool FilterConvoyHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to exclude the advanced information (such as `InstanceList[0].Usage`). Values: `true` (exclude), `false` (do not exclude). The default value is `false`.
+                     * @return ExcludeAdvancedInfo Whether to exclude the advanced information (such as `InstanceList[0].Usage`). Values: `true` (exclude), `false` (do not exclude). The default value is `false`.
+                     */
+                    bool GetExcludeAdvancedInfo() const;
+
+                    /**
+                     * 设置Whether to exclude the advanced information (such as `InstanceList[0].Usage`). Values: `true` (exclude), `false` (do not exclude). The default value is `false`.
+                     * @param ExcludeAdvancedInfo Whether to exclude the advanced information (such as `InstanceList[0].Usage`). Values: `true` (exclude), `false` (do not exclude). The default value is `false`.
+                     */
+                    void SetExcludeAdvancedInfo(const bool& _excludeAdvancedInfo);
+
+                    /**
+                     * 判断参数 ExcludeAdvancedInfo 是否已赋值
+                     * @return ExcludeAdvancedInfo 是否已赋值
+                     */
+                    bool ExcludeAdvancedInfoHasBeenSet() const;
 
                 private:
 
@@ -358,7 +412,7 @@ namespace TencentCloud
                     bool m_filterInstanceIdListHasBeenSet;
 
                     /**
-                     * Filters by Enterprise edition
+                     * Enterprise edition. Values: `1` (the Convoy package included), `2` (the Convoy package not included)
                      */
                     uint64_t m_filterEnterpriseFlag;
                     bool m_filterEnterpriseFlagHasBeenSet;
@@ -380,6 +434,24 @@ namespace TencentCloud
                      */
                     TagFilter m_filterTag;
                     bool m_filterTagHasBeenSet;
+
+                    /**
+                     * Filters out trial instances. Values: `1` (emergency protection instances), `2` (PLG instances)
+                     */
+                    uint64_t m_filterTrialFlag;
+                    bool m_filterTrialFlagHasBeenSet;
+
+                    /**
+                     * Filters out Convoy instances
+                     */
+                    uint64_t m_filterConvoy;
+                    bool m_filterConvoyHasBeenSet;
+
+                    /**
+                     * Whether to exclude the advanced information (such as `InstanceList[0].Usage`). Values: `true` (exclude), `false` (do not exclude). The default value is `false`.
+                     */
+                    bool m_excludeAdvancedInfo;
+                    bool m_excludeAdvancedInfoHasBeenSet;
 
                 };
             }

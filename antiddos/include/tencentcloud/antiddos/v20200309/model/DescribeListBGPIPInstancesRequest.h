@@ -248,14 +248,14 @@ namespace TencentCloud
                     bool FilterDamDDoSStatusHasBeenSet() const;
 
                     /**
-                     * 获取Filters by status of bound resources. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
-                     * @return FilterStatus Filters by status of bound resources. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+                     * 获取Filters by the status of bound resources. Values: `idle` (normal), `attacking` (being attacked), `blocking` (being blocked), `trial` (in trial)
+                     * @return FilterStatus Filters by the status of bound resources. Values: `idle` (normal), `attacking` (being attacked), `blocking` (being blocked), `trial` (in trial)
                      */
                     std::string GetFilterStatus() const;
 
                     /**
-                     * 设置Filters by status of bound resources. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
-                     * @param FilterStatus Filters by status of bound resources. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+                     * 设置Filters by the status of bound resources. Values: `idle` (normal), `attacking` (being attacked), `blocking` (being blocked), `trial` (in trial)
+                     * @param FilterStatus Filters by the status of bound resources. Values: `idle` (normal), `attacking` (being attacked), `blocking` (being blocked), `trial` (in trial)
                      */
                     void SetFilterStatus(const std::string& _filterStatus);
 
@@ -337,6 +337,24 @@ namespace TencentCloud
                      */
                     bool FilterPackTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Filters out Convoy instances
+                     * @return FilterConvoy Filters out Convoy instances
+                     */
+                    uint64_t GetFilterConvoy() const;
+
+                    /**
+                     * 设置Filters out Convoy instances
+                     * @param FilterConvoy Filters out Convoy instances
+                     */
+                    void SetFilterConvoy(const uint64_t& _filterConvoy);
+
+                    /**
+                     * 判断参数 FilterConvoy 是否已赋值
+                     * @return FilterConvoy 是否已赋值
+                     */
+                    bool FilterConvoyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -406,7 +424,7 @@ namespace TencentCloud
                     bool m_filterDamDDoSStatusHasBeenSet;
 
                     /**
-                     * Filters by status of bound resources. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+                     * Filters by the status of bound resources. Values: `idle` (normal), `attacking` (being attacked), `blocking` (being blocked), `trial` (in trial)
                      */
                     std::string m_filterStatus;
                     bool m_filterStatusHasBeenSet;
@@ -434,6 +452,12 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_filterPackType;
                     bool m_filterPackTypeHasBeenSet;
+
+                    /**
+                     * Filters out Convoy instances
+                     */
+                    uint64_t m_filterConvoy;
+                    bool m_filterConvoyHasBeenSet;
 
                 };
             }

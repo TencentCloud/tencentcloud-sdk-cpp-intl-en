@@ -91,18 +91,18 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool ReorderHasBeenSet() const;
 
                     /**
-                     * 获取Include/exclude query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeAll`
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return Action Include/exclude query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeAll`
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 获取Includes/excludes query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeCustom`
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Action Includes/excludes query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeCustom`
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetAction() const;
 
                     /**
-                     * 设置Include/exclude query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeAll`
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Action Include/exclude query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeAll`
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * 设置Includes/excludes query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeCustom`
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Action Includes/excludes query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeCustom`
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetAction(const std::string& _action);
 
@@ -151,8 +151,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_reorderHasBeenSet;
 
                     /**
-                     * Include/exclude query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeAll`
-Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * Includes/excludes query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeCustom`
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;

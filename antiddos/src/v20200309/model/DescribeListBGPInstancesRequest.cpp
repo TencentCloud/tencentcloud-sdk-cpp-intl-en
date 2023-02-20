@@ -36,7 +36,10 @@ DescribeListBGPInstancesRequest::DescribeListBGPInstancesRequest() :
     m_filterEnterpriseFlagHasBeenSet(false),
     m_filterLightFlagHasBeenSet(false),
     m_filterChannelFlagHasBeenSet(false),
-    m_filterTagHasBeenSet(false)
+    m_filterTagHasBeenSet(false),
+    m_filterTrialFlagHasBeenSet(false),
+    m_filterConvoyHasBeenSet(false),
+    m_excludeAdvancedInfoHasBeenSet(false)
 {
 }
 
@@ -163,6 +166,30 @@ string DescribeListBGPInstancesRequest::ToJsonString() const
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_filterTag.ToJsonObject(d[key.c_str()], allocator);
+    }
+
+    if (m_filterTrialFlagHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FilterTrialFlag";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_filterTrialFlag, allocator);
+    }
+
+    if (m_filterConvoyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FilterConvoy";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_filterConvoy, allocator);
+    }
+
+    if (m_excludeAdvancedInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ExcludeAdvancedInfo";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_excludeAdvancedInfo, allocator);
     }
 
 
@@ -395,6 +422,54 @@ void DescribeListBGPInstancesRequest::SetFilterTag(const TagFilter& _filterTag)
 bool DescribeListBGPInstancesRequest::FilterTagHasBeenSet() const
 {
     return m_filterTagHasBeenSet;
+}
+
+uint64_t DescribeListBGPInstancesRequest::GetFilterTrialFlag() const
+{
+    return m_filterTrialFlag;
+}
+
+void DescribeListBGPInstancesRequest::SetFilterTrialFlag(const uint64_t& _filterTrialFlag)
+{
+    m_filterTrialFlag = _filterTrialFlag;
+    m_filterTrialFlagHasBeenSet = true;
+}
+
+bool DescribeListBGPInstancesRequest::FilterTrialFlagHasBeenSet() const
+{
+    return m_filterTrialFlagHasBeenSet;
+}
+
+uint64_t DescribeListBGPInstancesRequest::GetFilterConvoy() const
+{
+    return m_filterConvoy;
+}
+
+void DescribeListBGPInstancesRequest::SetFilterConvoy(const uint64_t& _filterConvoy)
+{
+    m_filterConvoy = _filterConvoy;
+    m_filterConvoyHasBeenSet = true;
+}
+
+bool DescribeListBGPInstancesRequest::FilterConvoyHasBeenSet() const
+{
+    return m_filterConvoyHasBeenSet;
+}
+
+bool DescribeListBGPInstancesRequest::GetExcludeAdvancedInfo() const
+{
+    return m_excludeAdvancedInfo;
+}
+
+void DescribeListBGPInstancesRequest::SetExcludeAdvancedInfo(const bool& _excludeAdvancedInfo)
+{
+    m_excludeAdvancedInfo = _excludeAdvancedInfo;
+    m_excludeAdvancedInfoHasBeenSet = true;
+}
+
+bool DescribeListBGPInstancesRequest::ExcludeAdvancedInfoHasBeenSet() const
+{
+    return m_excludeAdvancedInfoHasBeenSet;
 }
 
 
