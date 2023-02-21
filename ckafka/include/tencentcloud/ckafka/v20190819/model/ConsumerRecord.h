@@ -166,6 +166,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool TimestampHasBeenSet() const;
 
+                    /**
+                     * 获取Message headers
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Headers Message headers
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetHeaders() const;
+
+                    /**
+                     * 设置Message headers
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Headers Message headers
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetHeaders(const std::string& _headers);
+
+                    /**
+                     * 判断参数 Headers 是否已赋值
+                     * @return Headers 是否已赋值
+                     */
+                    bool HeadersHasBeenSet() const;
+
                 private:
 
                     /**
@@ -206,6 +228,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     int64_t m_timestamp;
                     bool m_timestampHasBeenSet;
+
+                    /**
+                     * Message headers
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_headers;
+                    bool m_headersHasBeenSet;
 
                 };
             }
