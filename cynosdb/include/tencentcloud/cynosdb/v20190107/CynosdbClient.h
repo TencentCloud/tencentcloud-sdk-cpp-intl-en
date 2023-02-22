@@ -93,6 +93,8 @@
 #include <tencentcloud/cynosdb/v20190107/model/DescribeRollbackTimeRangeResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeRollbackTimeValidityRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeRollbackTimeValidityResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeZonesRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeZonesResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/ExportInstanceSlowQueriesRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/ExportInstanceSlowQueriesResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/InquirePriceCreateRequest.h>
@@ -145,6 +147,8 @@
 #include <tencentcloud/cynosdb/v20190107/model/SearchClusterTablesResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/SetRenewFlagRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/SetRenewFlagResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/SwitchClusterVpcRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/SwitchClusterVpcResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/SwitchClusterZoneRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/SwitchClusterZoneResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/SwitchProxyVpcRequest.h>
@@ -270,6 +274,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeRollbackTimeValidityResponse> DescribeRollbackTimeValidityOutcome;
                 typedef std::future<DescribeRollbackTimeValidityOutcome> DescribeRollbackTimeValidityOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::DescribeRollbackTimeValidityRequest&, DescribeRollbackTimeValidityOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRollbackTimeValidityAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeZonesResponse> DescribeZonesOutcome;
+                typedef std::future<DescribeZonesOutcome> DescribeZonesOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::DescribeZonesRequest&, DescribeZonesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeZonesAsyncHandler;
                 typedef Outcome<Core::Error, Model::ExportInstanceSlowQueriesResponse> ExportInstanceSlowQueriesOutcome;
                 typedef std::future<ExportInstanceSlowQueriesOutcome> ExportInstanceSlowQueriesOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::ExportInstanceSlowQueriesRequest&, ExportInstanceSlowQueriesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ExportInstanceSlowQueriesAsyncHandler;
@@ -348,6 +355,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::SetRenewFlagResponse> SetRenewFlagOutcome;
                 typedef std::future<SetRenewFlagOutcome> SetRenewFlagOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::SetRenewFlagRequest&, SetRenewFlagOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SetRenewFlagAsyncHandler;
+                typedef Outcome<Core::Error, Model::SwitchClusterVpcResponse> SwitchClusterVpcOutcome;
+                typedef std::future<SwitchClusterVpcOutcome> SwitchClusterVpcOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::SwitchClusterVpcRequest&, SwitchClusterVpcOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SwitchClusterVpcAsyncHandler;
                 typedef Outcome<Core::Error, Model::SwitchClusterZoneResponse> SwitchClusterZoneOutcome;
                 typedef std::future<SwitchClusterZoneOutcome> SwitchClusterZoneOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::SwitchClusterZoneRequest&, SwitchClusterZoneOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SwitchClusterZoneAsyncHandler;
@@ -676,6 +686,15 @@ namespace TencentCloud
                 DescribeRollbackTimeValidityOutcomeCallable DescribeRollbackTimeValidityCallable(const Model::DescribeRollbackTimeValidityRequest& request);
 
                 /**
+                 *This API is used to query the AZ information in a purchasable region.
+                 * @param req DescribeZonesRequest
+                 * @return DescribeZonesOutcome
+                 */
+                DescribeZonesOutcome DescribeZones(const Model::DescribeZonesRequest &request);
+                void DescribeZonesAsync(const Model::DescribeZonesRequest& request, const DescribeZonesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeZonesOutcomeCallable DescribeZonesCallable(const Model::DescribeZonesRequest& request);
+
+                /**
                  *This API is used to export the slow logs of an instance.
                  * @param req ExportInstanceSlowQueriesRequest
                  * @return ExportInstanceSlowQueriesOutcome
@@ -908,6 +927,15 @@ namespace TencentCloud
                 SetRenewFlagOutcome SetRenewFlag(const Model::SetRenewFlagRequest &request);
                 void SetRenewFlagAsync(const Model::SetRenewFlagRequest& request, const SetRenewFlagAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 SetRenewFlagOutcomeCallable SetRenewFlagCallable(const Model::SetRenewFlagRequest& request);
+
+                /**
+                 *This API is used to modify the cluster VPC.
+                 * @param req SwitchClusterVpcRequest
+                 * @return SwitchClusterVpcOutcome
+                 */
+                SwitchClusterVpcOutcome SwitchClusterVpc(const Model::SwitchClusterVpcRequest &request);
+                void SwitchClusterVpcAsync(const Model::SwitchClusterVpcRequest& request, const SwitchClusterVpcAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SwitchClusterVpcOutcomeCallable SwitchClusterVpcCallable(const Model::SwitchClusterVpcRequest& request);
 
                 /**
                  *This API is used to switch to the replica AZ.

@@ -1545,6 +1545,49 @@ CynosdbClient::DescribeRollbackTimeValidityOutcomeCallable CynosdbClient::Descri
     return task->get_future();
 }
 
+CynosdbClient::DescribeZonesOutcome CynosdbClient::DescribeZones(const DescribeZonesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeZones");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeZonesResponse rsp = DescribeZonesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeZonesOutcome(rsp);
+        else
+            return DescribeZonesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeZonesOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::DescribeZonesAsync(const DescribeZonesRequest& request, const DescribeZonesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeZones(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::DescribeZonesOutcomeCallable CynosdbClient::DescribeZonesCallable(const DescribeZonesRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeZonesOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeZones(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CynosdbClient::ExportInstanceSlowQueriesOutcome CynosdbClient::ExportInstanceSlowQueries(const ExportInstanceSlowQueriesRequest &request)
 {
     auto outcome = MakeRequest(request, "ExportInstanceSlowQueries");
@@ -2656,6 +2699,49 @@ CynosdbClient::SetRenewFlagOutcomeCallable CynosdbClient::SetRenewFlagCallable(c
         [this, request]()
         {
             return this->SetRenewFlag(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+CynosdbClient::SwitchClusterVpcOutcome CynosdbClient::SwitchClusterVpc(const SwitchClusterVpcRequest &request)
+{
+    auto outcome = MakeRequest(request, "SwitchClusterVpc");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        SwitchClusterVpcResponse rsp = SwitchClusterVpcResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return SwitchClusterVpcOutcome(rsp);
+        else
+            return SwitchClusterVpcOutcome(o.GetError());
+    }
+    else
+    {
+        return SwitchClusterVpcOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::SwitchClusterVpcAsync(const SwitchClusterVpcRequest& request, const SwitchClusterVpcAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->SwitchClusterVpc(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CynosdbClient::SwitchClusterVpcOutcomeCallable CynosdbClient::SwitchClusterVpcCallable(const SwitchClusterVpcRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<SwitchClusterVpcOutcome()>>(
+        [this, request]()
+        {
+            return this->SwitchClusterVpc(request);
         }
     );
 

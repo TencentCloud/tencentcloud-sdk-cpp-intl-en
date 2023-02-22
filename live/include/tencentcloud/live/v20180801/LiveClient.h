@@ -51,6 +51,10 @@
 #include <tencentcloud/live/v20180801/model/CreateLiveSnapshotRuleResponse.h>
 #include <tencentcloud/live/v20180801/model/CreateLiveSnapshotTemplateRequest.h>
 #include <tencentcloud/live/v20180801/model/CreateLiveSnapshotTemplateResponse.h>
+#include <tencentcloud/live/v20180801/model/CreateLiveTimeShiftRuleRequest.h>
+#include <tencentcloud/live/v20180801/model/CreateLiveTimeShiftRuleResponse.h>
+#include <tencentcloud/live/v20180801/model/CreateLiveTimeShiftTemplateRequest.h>
+#include <tencentcloud/live/v20180801/model/CreateLiveTimeShiftTemplateResponse.h>
 #include <tencentcloud/live/v20180801/model/CreateLiveTranscodeRuleRequest.h>
 #include <tencentcloud/live/v20180801/model/CreateLiveTranscodeRuleResponse.h>
 #include <tencentcloud/live/v20180801/model/CreateLiveTranscodeTemplateRequest.h>
@@ -77,6 +81,10 @@
 #include <tencentcloud/live/v20180801/model/DeleteLiveSnapshotRuleResponse.h>
 #include <tencentcloud/live/v20180801/model/DeleteLiveSnapshotTemplateRequest.h>
 #include <tencentcloud/live/v20180801/model/DeleteLiveSnapshotTemplateResponse.h>
+#include <tencentcloud/live/v20180801/model/DeleteLiveTimeShiftRuleRequest.h>
+#include <tencentcloud/live/v20180801/model/DeleteLiveTimeShiftRuleResponse.h>
+#include <tencentcloud/live/v20180801/model/DeleteLiveTimeShiftTemplateRequest.h>
+#include <tencentcloud/live/v20180801/model/DeleteLiveTimeShiftTemplateResponse.h>
 #include <tencentcloud/live/v20180801/model/DeleteLiveTranscodeRuleRequest.h>
 #include <tencentcloud/live/v20180801/model/DeleteLiveTranscodeRuleResponse.h>
 #include <tencentcloud/live/v20180801/model/DeleteLiveTranscodeTemplateRequest.h>
@@ -151,6 +159,10 @@
 #include <tencentcloud/live/v20180801/model/DescribeLiveStreamStateResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeLiveTimeShiftBillInfoListRequest.h>
 #include <tencentcloud/live/v20180801/model/DescribeLiveTimeShiftBillInfoListResponse.h>
+#include <tencentcloud/live/v20180801/model/DescribeLiveTimeShiftRulesRequest.h>
+#include <tencentcloud/live/v20180801/model/DescribeLiveTimeShiftRulesResponse.h>
+#include <tencentcloud/live/v20180801/model/DescribeLiveTimeShiftTemplatesRequest.h>
+#include <tencentcloud/live/v20180801/model/DescribeLiveTimeShiftTemplatesResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeLiveTranscodeDetailInfoRequest.h>
 #include <tencentcloud/live/v20180801/model/DescribeLiveTranscodeDetailInfoResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeLiveTranscodeRulesRequest.h>
@@ -181,6 +193,10 @@
 #include <tencentcloud/live/v20180801/model/DescribeStreamPlayInfoListResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeStreamPushInfoListRequest.h>
 #include <tencentcloud/live/v20180801/model/DescribeStreamPushInfoListResponse.h>
+#include <tencentcloud/live/v20180801/model/DescribeTimeShiftRecordDetailRequest.h>
+#include <tencentcloud/live/v20180801/model/DescribeTimeShiftRecordDetailResponse.h>
+#include <tencentcloud/live/v20180801/model/DescribeTimeShiftStreamListRequest.h>
+#include <tencentcloud/live/v20180801/model/DescribeTimeShiftStreamListResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeTopClientIpSumInfoListRequest.h>
 #include <tencentcloud/live/v20180801/model/DescribeTopClientIpSumInfoListResponse.h>
 #include <tencentcloud/live/v20180801/model/DescribeTranscodeTaskNumRequest.h>
@@ -215,6 +231,8 @@
 #include <tencentcloud/live/v20180801/model/ModifyLiveRecordTemplateResponse.h>
 #include <tencentcloud/live/v20180801/model/ModifyLiveSnapshotTemplateRequest.h>
 #include <tencentcloud/live/v20180801/model/ModifyLiveSnapshotTemplateResponse.h>
+#include <tencentcloud/live/v20180801/model/ModifyLiveTimeShiftTemplateRequest.h>
+#include <tencentcloud/live/v20180801/model/ModifyLiveTimeShiftTemplateResponse.h>
 #include <tencentcloud/live/v20180801/model/ModifyLiveTranscodeTemplateRequest.h>
 #include <tencentcloud/live/v20180801/model/ModifyLiveTranscodeTemplateResponse.h>
 #include <tencentcloud/live/v20180801/model/ResumeDelayLiveStreamRequest.h>
@@ -285,6 +303,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateLiveSnapshotTemplateResponse> CreateLiveSnapshotTemplateOutcome;
                 typedef std::future<CreateLiveSnapshotTemplateOutcome> CreateLiveSnapshotTemplateOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::CreateLiveSnapshotTemplateRequest&, CreateLiveSnapshotTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLiveSnapshotTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateLiveTimeShiftRuleResponse> CreateLiveTimeShiftRuleOutcome;
+                typedef std::future<CreateLiveTimeShiftRuleOutcome> CreateLiveTimeShiftRuleOutcomeCallable;
+                typedef std::function<void(const LiveClient*, const Model::CreateLiveTimeShiftRuleRequest&, CreateLiveTimeShiftRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLiveTimeShiftRuleAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateLiveTimeShiftTemplateResponse> CreateLiveTimeShiftTemplateOutcome;
+                typedef std::future<CreateLiveTimeShiftTemplateOutcome> CreateLiveTimeShiftTemplateOutcomeCallable;
+                typedef std::function<void(const LiveClient*, const Model::CreateLiveTimeShiftTemplateRequest&, CreateLiveTimeShiftTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLiveTimeShiftTemplateAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateLiveTranscodeRuleResponse> CreateLiveTranscodeRuleOutcome;
                 typedef std::future<CreateLiveTranscodeRuleOutcome> CreateLiveTranscodeRuleOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::CreateLiveTranscodeRuleRequest&, CreateLiveTranscodeRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLiveTranscodeRuleAsyncHandler;
@@ -324,6 +348,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteLiveSnapshotTemplateResponse> DeleteLiveSnapshotTemplateOutcome;
                 typedef std::future<DeleteLiveSnapshotTemplateOutcome> DeleteLiveSnapshotTemplateOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DeleteLiveSnapshotTemplateRequest&, DeleteLiveSnapshotTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLiveSnapshotTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteLiveTimeShiftRuleResponse> DeleteLiveTimeShiftRuleOutcome;
+                typedef std::future<DeleteLiveTimeShiftRuleOutcome> DeleteLiveTimeShiftRuleOutcomeCallable;
+                typedef std::function<void(const LiveClient*, const Model::DeleteLiveTimeShiftRuleRequest&, DeleteLiveTimeShiftRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLiveTimeShiftRuleAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteLiveTimeShiftTemplateResponse> DeleteLiveTimeShiftTemplateOutcome;
+                typedef std::future<DeleteLiveTimeShiftTemplateOutcome> DeleteLiveTimeShiftTemplateOutcomeCallable;
+                typedef std::function<void(const LiveClient*, const Model::DeleteLiveTimeShiftTemplateRequest&, DeleteLiveTimeShiftTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLiveTimeShiftTemplateAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteLiveTranscodeRuleResponse> DeleteLiveTranscodeRuleOutcome;
                 typedef std::future<DeleteLiveTranscodeRuleOutcome> DeleteLiveTranscodeRuleOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DeleteLiveTranscodeRuleRequest&, DeleteLiveTranscodeRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLiveTranscodeRuleAsyncHandler;
@@ -435,6 +465,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeLiveTimeShiftBillInfoListResponse> DescribeLiveTimeShiftBillInfoListOutcome;
                 typedef std::future<DescribeLiveTimeShiftBillInfoListOutcome> DescribeLiveTimeShiftBillInfoListOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLiveTimeShiftBillInfoListRequest&, DescribeLiveTimeShiftBillInfoListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveTimeShiftBillInfoListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeLiveTimeShiftRulesResponse> DescribeLiveTimeShiftRulesOutcome;
+                typedef std::future<DescribeLiveTimeShiftRulesOutcome> DescribeLiveTimeShiftRulesOutcomeCallable;
+                typedef std::function<void(const LiveClient*, const Model::DescribeLiveTimeShiftRulesRequest&, DescribeLiveTimeShiftRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveTimeShiftRulesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeLiveTimeShiftTemplatesResponse> DescribeLiveTimeShiftTemplatesOutcome;
+                typedef std::future<DescribeLiveTimeShiftTemplatesOutcome> DescribeLiveTimeShiftTemplatesOutcomeCallable;
+                typedef std::function<void(const LiveClient*, const Model::DescribeLiveTimeShiftTemplatesRequest&, DescribeLiveTimeShiftTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveTimeShiftTemplatesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeLiveTranscodeDetailInfoResponse> DescribeLiveTranscodeDetailInfoOutcome;
                 typedef std::future<DescribeLiveTranscodeDetailInfoOutcome> DescribeLiveTranscodeDetailInfoOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeLiveTranscodeDetailInfoRequest&, DescribeLiveTranscodeDetailInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLiveTranscodeDetailInfoAsyncHandler;
@@ -480,6 +516,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeStreamPushInfoListResponse> DescribeStreamPushInfoListOutcome;
                 typedef std::future<DescribeStreamPushInfoListOutcome> DescribeStreamPushInfoListOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeStreamPushInfoListRequest&, DescribeStreamPushInfoListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStreamPushInfoListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeTimeShiftRecordDetailResponse> DescribeTimeShiftRecordDetailOutcome;
+                typedef std::future<DescribeTimeShiftRecordDetailOutcome> DescribeTimeShiftRecordDetailOutcomeCallable;
+                typedef std::function<void(const LiveClient*, const Model::DescribeTimeShiftRecordDetailRequest&, DescribeTimeShiftRecordDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTimeShiftRecordDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeTimeShiftStreamListResponse> DescribeTimeShiftStreamListOutcome;
+                typedef std::future<DescribeTimeShiftStreamListOutcome> DescribeTimeShiftStreamListOutcomeCallable;
+                typedef std::function<void(const LiveClient*, const Model::DescribeTimeShiftStreamListRequest&, DescribeTimeShiftStreamListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTimeShiftStreamListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeTopClientIpSumInfoListResponse> DescribeTopClientIpSumInfoListOutcome;
                 typedef std::future<DescribeTopClientIpSumInfoListOutcome> DescribeTopClientIpSumInfoListOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DescribeTopClientIpSumInfoListRequest&, DescribeTopClientIpSumInfoListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTopClientIpSumInfoListAsyncHandler;
@@ -531,6 +573,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyLiveSnapshotTemplateResponse> ModifyLiveSnapshotTemplateOutcome;
                 typedef std::future<ModifyLiveSnapshotTemplateOutcome> ModifyLiveSnapshotTemplateOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::ModifyLiveSnapshotTemplateRequest&, ModifyLiveSnapshotTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLiveSnapshotTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyLiveTimeShiftTemplateResponse> ModifyLiveTimeShiftTemplateOutcome;
+                typedef std::future<ModifyLiveTimeShiftTemplateOutcome> ModifyLiveTimeShiftTemplateOutcomeCallable;
+                typedef std::function<void(const LiveClient*, const Model::ModifyLiveTimeShiftTemplateRequest&, ModifyLiveTimeShiftTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLiveTimeShiftTemplateAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyLiveTranscodeTemplateResponse> ModifyLiveTranscodeTemplateOutcome;
                 typedef std::future<ModifyLiveTranscodeTemplateOutcome> ModifyLiveTranscodeTemplateOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::ModifyLiveTranscodeTemplateRequest&, ModifyLiveTranscodeTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyLiveTranscodeTemplateAsyncHandler;
@@ -717,6 +762,25 @@ Note: only one screencapturing template can be associated with one domain name.
                 CreateLiveSnapshotTemplateOutcomeCallable CreateLiveSnapshotTemplateCallable(const Model::CreateLiveSnapshotTemplateRequest& request);
 
                 /**
+                 *This API is used to create a time shifting rule. You need to first call the [CreateLiveTranscodeTemplate](https://intl.cloud.tencent.com/document/product/267/86169?from_cn_redirect=1) API to create a time shifting template, and then call this API to bind the template ID returned to a stream.
+<br>More about time shifting: [Time Shifting](https://intl.cloud.tencent.com/document/product/267/86134?from_cn_redirect=1).
+                 * @param req CreateLiveTimeShiftRuleRequest
+                 * @return CreateLiveTimeShiftRuleOutcome
+                 */
+                CreateLiveTimeShiftRuleOutcome CreateLiveTimeShiftRule(const Model::CreateLiveTimeShiftRuleRequest &request);
+                void CreateLiveTimeShiftRuleAsync(const Model::CreateLiveTimeShiftRuleRequest& request, const CreateLiveTimeShiftRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateLiveTimeShiftRuleOutcomeCallable CreateLiveTimeShiftRuleCallable(const Model::CreateLiveTimeShiftRuleRequest& request);
+
+                /**
+                 *This API is used to create a time shifting template.
+                 * @param req CreateLiveTimeShiftTemplateRequest
+                 * @return CreateLiveTimeShiftTemplateOutcome
+                 */
+                CreateLiveTimeShiftTemplateOutcome CreateLiveTimeShiftTemplate(const Model::CreateLiveTimeShiftTemplateRequest &request);
+                void CreateLiveTimeShiftTemplateAsync(const Model::CreateLiveTimeShiftTemplateRequest& request, const CreateLiveTimeShiftTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateLiveTimeShiftTemplateOutcomeCallable CreateLiveTimeShiftTemplateCallable(const Model::CreateLiveTimeShiftTemplateRequest& request);
+
+                /**
                  *To create a transcoding rule, you need to first call the [CreateLiveTranscodeTemplate](https://intl.cloud.tencent.com/document/product/267/32646?from_cn_redirect=1) API to create a transcoding template and bind the returned template ID to the stream.
 <br>Transcoding-related document: [LVB Remuxing and Transcoding](https://intl.cloud.tencent.com/document/product/267/32736?from_cn_redirect=1).
                  * @param req CreateLiveTranscodeRuleRequest
@@ -846,6 +910,24 @@ Notes:
                 DeleteLiveSnapshotTemplateOutcome DeleteLiveSnapshotTemplate(const Model::DeleteLiveSnapshotTemplateRequest &request);
                 void DeleteLiveSnapshotTemplateAsync(const Model::DeleteLiveSnapshotTemplateRequest& request, const DeleteLiveSnapshotTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteLiveSnapshotTemplateOutcomeCallable DeleteLiveSnapshotTemplateCallable(const Model::DeleteLiveSnapshotTemplateRequest& request);
+
+                /**
+                 *This API is used to delete a time shifting rule.
+                 * @param req DeleteLiveTimeShiftRuleRequest
+                 * @return DeleteLiveTimeShiftRuleOutcome
+                 */
+                DeleteLiveTimeShiftRuleOutcome DeleteLiveTimeShiftRule(const Model::DeleteLiveTimeShiftRuleRequest &request);
+                void DeleteLiveTimeShiftRuleAsync(const Model::DeleteLiveTimeShiftRuleRequest& request, const DeleteLiveTimeShiftRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteLiveTimeShiftRuleOutcomeCallable DeleteLiveTimeShiftRuleCallable(const Model::DeleteLiveTimeShiftRuleRequest& request);
+
+                /**
+                 *This API is used to delete a time shifting template.
+                 * @param req DeleteLiveTimeShiftTemplateRequest
+                 * @return DeleteLiveTimeShiftTemplateOutcome
+                 */
+                DeleteLiveTimeShiftTemplateOutcome DeleteLiveTimeShiftTemplate(const Model::DeleteLiveTimeShiftTemplateRequest &request);
+                void DeleteLiveTimeShiftTemplateAsync(const Model::DeleteLiveTimeShiftTemplateRequest& request, const DeleteLiveTimeShiftTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteLiveTimeShiftTemplateOutcomeCallable DeleteLiveTimeShiftTemplateCallable(const Model::DeleteLiveTimeShiftTemplateRequest& request);
 
                 /**
                  *This API is used to delete a transcoding rule.
@@ -1206,7 +1288,25 @@ This API allows you to query the status of a stream in real time. Given external
                 DescribeLiveTimeShiftBillInfoListOutcomeCallable DescribeLiveTimeShiftBillInfoListCallable(const Model::DescribeLiveTimeShiftBillInfoListRequest& request);
 
                 /**
-                 *This API is used to query the details of transcoding on a specified day or in a specified period of time.
+                 *This API is used to query time shifting rules.
+                 * @param req DescribeLiveTimeShiftRulesRequest
+                 * @return DescribeLiveTimeShiftRulesOutcome
+                 */
+                DescribeLiveTimeShiftRulesOutcome DescribeLiveTimeShiftRules(const Model::DescribeLiveTimeShiftRulesRequest &request);
+                void DescribeLiveTimeShiftRulesAsync(const Model::DescribeLiveTimeShiftRulesRequest& request, const DescribeLiveTimeShiftRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeLiveTimeShiftRulesOutcomeCallable DescribeLiveTimeShiftRulesCallable(const Model::DescribeLiveTimeShiftRulesRequest& request);
+
+                /**
+                 *This API is used to query time shifting templates.
+                 * @param req DescribeLiveTimeShiftTemplatesRequest
+                 * @return DescribeLiveTimeShiftTemplatesOutcome
+                 */
+                DescribeLiveTimeShiftTemplatesOutcome DescribeLiveTimeShiftTemplates(const Model::DescribeLiveTimeShiftTemplatesRequest &request);
+                void DescribeLiveTimeShiftTemplatesAsync(const Model::DescribeLiveTimeShiftTemplatesRequest& request, const DescribeLiveTimeShiftTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeLiveTimeShiftTemplatesOutcomeCallable DescribeLiveTimeShiftTemplatesCallable(const Model::DescribeLiveTimeShiftTemplatesRequest& request);
+
+                /**
+                 *This API is used to query the transcoding details of a particular day or a specific time period. Querying may fail if the amount of data queried is too large. In such cases, try shortening the time period.
                  * @param req DescribeLiveTranscodeDetailInfoRequest
                  * @return DescribeLiveTranscodeDetailInfoOutcome
                  */
@@ -1345,6 +1445,24 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
                 DescribeStreamPushInfoListOutcome DescribeStreamPushInfoList(const Model::DescribeStreamPushInfoListRequest &request);
                 void DescribeStreamPushInfoListAsync(const Model::DescribeStreamPushInfoListRequest& request, const DescribeStreamPushInfoListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeStreamPushInfoListOutcomeCallable DescribeStreamPushInfoListCallable(const Model::DescribeStreamPushInfoListRequest& request);
+
+                /**
+                 *This API is used to query the time shifting details of a specific time period (up to 24 hours). You need to call `DescribeTimeShiftStreamList` first to get the request parameters of this API.
+                 * @param req DescribeTimeShiftRecordDetailRequest
+                 * @return DescribeTimeShiftRecordDetailOutcome
+                 */
+                DescribeTimeShiftRecordDetailOutcome DescribeTimeShiftRecordDetail(const Model::DescribeTimeShiftRecordDetailRequest &request);
+                void DescribeTimeShiftRecordDetailAsync(const Model::DescribeTimeShiftRecordDetailRequest& request, const DescribeTimeShiftRecordDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeTimeShiftRecordDetailOutcomeCallable DescribeTimeShiftRecordDetailCallable(const Model::DescribeTimeShiftRecordDetailRequest& request);
+
+                /**
+                 *This API is used to query the time shifted streams in a specific time period (up to 24 hours).
+                 * @param req DescribeTimeShiftStreamListRequest
+                 * @return DescribeTimeShiftStreamListOutcome
+                 */
+                DescribeTimeShiftStreamListOutcome DescribeTimeShiftStreamList(const Model::DescribeTimeShiftStreamListRequest &request);
+                void DescribeTimeShiftStreamListAsync(const Model::DescribeTimeShiftStreamListRequest& request, const DescribeTimeShiftStreamListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeTimeShiftStreamListOutcomeCallable DescribeTimeShiftStreamListCallable(const Model::DescribeTimeShiftStreamListRequest& request);
 
                 /**
                  *This API is used to query the information of the top n client IPs in a certain period of time (top 1,000 is supported currently).
@@ -1503,6 +1621,15 @@ Referer information is included in HTTP requests. After you enable referer confi
                 ModifyLiveSnapshotTemplateOutcome ModifyLiveSnapshotTemplate(const Model::ModifyLiveSnapshotTemplateRequest &request);
                 void ModifyLiveSnapshotTemplateAsync(const Model::ModifyLiveSnapshotTemplateRequest& request, const ModifyLiveSnapshotTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyLiveSnapshotTemplateOutcomeCallable ModifyLiveSnapshotTemplateCallable(const Model::ModifyLiveSnapshotTemplateRequest& request);
+
+                /**
+                 *This API is used to modify a standby stream template.
+                 * @param req ModifyLiveTimeShiftTemplateRequest
+                 * @return ModifyLiveTimeShiftTemplateOutcome
+                 */
+                ModifyLiveTimeShiftTemplateOutcome ModifyLiveTimeShiftTemplate(const Model::ModifyLiveTimeShiftTemplateRequest &request);
+                void ModifyLiveTimeShiftTemplateAsync(const Model::ModifyLiveTimeShiftTemplateRequest& request, const ModifyLiveTimeShiftTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyLiveTimeShiftTemplateOutcomeCallable ModifyLiveTimeShiftTemplateCallable(const Model::ModifyLiveTimeShiftTemplateRequest& request);
 
                 /**
                  *This API is used to modify the transcoding template configuration.

@@ -99,18 +99,18 @@ If this value is 1, `output_stream_id` cannot appear in `input_stram_list`, and 
                     bool OutputStreamTypeHasBeenSet() const;
 
                     /**
-                     * 获取Output stream bitrate. Value range: [1,50000].
-If this parameter is left empty, the system will automatically determine.
-                     * @return OutputStreamBitRate Output stream bitrate. Value range: [1,50000].
-If this parameter is left empty, the system will automatically determine.
+                     * 获取The output bitrate. Value range: 1-10000.
+If you do not specify this, the system will select a bitrate automatically.
+                     * @return OutputStreamBitRate The output bitrate. Value range: 1-10000.
+If you do not specify this, the system will select a bitrate automatically.
                      */
                     int64_t GetOutputStreamBitRate() const;
 
                     /**
-                     * 设置Output stream bitrate. Value range: [1,50000].
-If this parameter is left empty, the system will automatically determine.
-                     * @param OutputStreamBitRate Output stream bitrate. Value range: [1,50000].
-If this parameter is left empty, the system will automatically determine.
+                     * 设置The output bitrate. Value range: 1-10000.
+If you do not specify this, the system will select a bitrate automatically.
+                     * @param OutputStreamBitRate The output bitrate. Value range: 1-10000.
+If you do not specify this, the system will select a bitrate automatically.
                      */
                     void SetOutputStreamBitRate(const int64_t& _outputStreamBitRate);
 
@@ -267,8 +267,8 @@ If this value is 1, `output_stream_id` cannot appear in `input_stram_list`, and 
                     bool m_outputStreamTypeHasBeenSet;
 
                     /**
-                     * Output stream bitrate. Value range: [1,50000].
-If this parameter is left empty, the system will automatically determine.
+                     * The output bitrate. Value range: 1-10000.
+If you do not specify this, the system will select a bitrate automatically.
                      */
                     int64_t m_outputStreamBitRate;
                     bool m_outputStreamBitRateHasBeenSet;
