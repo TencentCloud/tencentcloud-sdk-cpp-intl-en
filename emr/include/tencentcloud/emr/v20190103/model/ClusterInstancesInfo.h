@@ -1060,6 +1060,28 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool IsMultiZoneClusterHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the feature of automatic abnormal node replacement is enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IsCvmReplace Whether the feature of automatic abnormal node replacement is enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool GetIsCvmReplace() const;
+
+                    /**
+                     * 设置Whether the feature of automatic abnormal node replacement is enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param IsCvmReplace Whether the feature of automatic abnormal node replacement is enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetIsCvmReplace(const bool& _isCvmReplace);
+
+                    /**
+                     * 判断参数 IsCvmReplace 是否已赋值
+                     * @return IsCvmReplace 是否已赋值
+                     */
+                    bool IsCvmReplaceHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1375,6 +1397,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool m_isMultiZoneCluster;
                     bool m_isMultiZoneClusterHasBeenSet;
+
+                    /**
+                     * Whether the feature of automatic abnormal node replacement is enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool m_isCvmReplace;
+                    bool m_isCvmReplaceHasBeenSet;
 
                 };
             }

@@ -19,66 +19,90 @@ set(gme_public_header
   )
 
 set(gme_public_header_model
+  include/tencentcloud/gme/v20180711/model/StatisticsItem.h
   include/tencentcloud/gme/v20180711/model/AppStatisticsItem.h
+  include/tencentcloud/gme/v20180711/model/DeleteRoomMemberRequest.h
   include/tencentcloud/gme/v20180711/model/ModifyAppStatusRequest.h
+  include/tencentcloud/gme/v20180711/model/ModifyRecordInfoRequest.h
   include/tencentcloud/gme/v20180711/model/DescribeApplicationDataRequest.h
   include/tencentcloud/gme/v20180711/model/VoiceMessageStatisticsItem.h
-  include/tencentcloud/gme/v20180711/model/DeleteRoomMemberRequest.h
+  include/tencentcloud/gme/v20180711/model/DescribeRecordInfoRequest.h
+  include/tencentcloud/gme/v20180711/model/StartRecordResponse.h
+  include/tencentcloud/gme/v20180711/model/StartRecordRequest.h
   include/tencentcloud/gme/v20180711/model/RealTimeSpeechStatisticsItem.h
+  include/tencentcloud/gme/v20180711/model/DescribeAppStatisticsRequest.h
   include/tencentcloud/gme/v20180711/model/StreamTextStatisticsItem.h
   include/tencentcloud/gme/v20180711/model/Tag.h
   include/tencentcloud/gme/v20180711/model/VoiceMessageConf.h
   include/tencentcloud/gme/v20180711/model/AudioTextStatisticsItem.h
+  include/tencentcloud/gme/v20180711/model/DescribeTaskInfoResponse.h
   include/tencentcloud/gme/v20180711/model/ApplicationDataStatistics.h
   include/tencentcloud/gme/v20180711/model/ModifyAppStatusResp.h
-  include/tencentcloud/gme/v20180711/model/CreateAppResp.h
+  include/tencentcloud/gme/v20180711/model/DescribeAppStatisticsResponse.h
   include/tencentcloud/gme/v20180711/model/DescribeApplicationDataResponse.h
   include/tencentcloud/gme/v20180711/model/DeleteRoomMemberResponse.h
   include/tencentcloud/gme/v20180711/model/VoiceFilterStatisticsItem.h
-  include/tencentcloud/gme/v20180711/model/StatisticsItem.h
+  include/tencentcloud/gme/v20180711/model/CreateAppResp.h
+  include/tencentcloud/gme/v20180711/model/RecordInfo.h
+  include/tencentcloud/gme/v20180711/model/SubscribeRecordUserIds.h
   include/tencentcloud/gme/v20180711/model/RealtimeTextStatisticsItem.h
   include/tencentcloud/gme/v20180711/model/DeleteResult.h
   include/tencentcloud/gme/v20180711/model/OverseaTextStatisticsItem.h
-  include/tencentcloud/gme/v20180711/model/CreateAppRequest.h
+  include/tencentcloud/gme/v20180711/model/DescribeTaskInfoRequest.h
   include/tencentcloud/gme/v20180711/model/RealtimeSpeechConf.h
   include/tencentcloud/gme/v20180711/model/DescribeAppStatisticsResp.h
+  include/tencentcloud/gme/v20180711/model/DescribeRecordInfoResponse.h
   include/tencentcloud/gme/v20180711/model/CreateAppResponse.h
-  include/tencentcloud/gme/v20180711/model/DescribeAppStatisticsResponse.h
-  include/tencentcloud/gme/v20180711/model/DescribeAppStatisticsRequest.h
+  include/tencentcloud/gme/v20180711/model/StopRecordRequest.h
+  include/tencentcloud/gme/v20180711/model/StopRecordResponse.h
+  include/tencentcloud/gme/v20180711/model/CreateAppRequest.h
   include/tencentcloud/gme/v20180711/model/ModifyAppStatusResponse.h
   include/tencentcloud/gme/v20180711/model/VoiceFilterConf.h
+  include/tencentcloud/gme/v20180711/model/ModifyRecordInfoResponse.h
   )
 
 set(gme_src
   src/v20180711/GmeClient.cpp
+  src/v20180711/model/StatisticsItem.cpp
   src/v20180711/model/AppStatisticsItem.cpp
+  src/v20180711/model/DeleteRoomMemberRequest.cpp
   src/v20180711/model/ModifyAppStatusRequest.cpp
+  src/v20180711/model/ModifyRecordInfoRequest.cpp
   src/v20180711/model/DescribeApplicationDataRequest.cpp
   src/v20180711/model/VoiceMessageStatisticsItem.cpp
-  src/v20180711/model/DeleteRoomMemberRequest.cpp
+  src/v20180711/model/DescribeRecordInfoRequest.cpp
+  src/v20180711/model/StartRecordResponse.cpp
+  src/v20180711/model/StartRecordRequest.cpp
   src/v20180711/model/RealTimeSpeechStatisticsItem.cpp
+  src/v20180711/model/DescribeAppStatisticsRequest.cpp
   src/v20180711/model/StreamTextStatisticsItem.cpp
   src/v20180711/model/Tag.cpp
   src/v20180711/model/VoiceMessageConf.cpp
   src/v20180711/model/AudioTextStatisticsItem.cpp
+  src/v20180711/model/DescribeTaskInfoResponse.cpp
   src/v20180711/model/ApplicationDataStatistics.cpp
   src/v20180711/model/ModifyAppStatusResp.cpp
-  src/v20180711/model/CreateAppResp.cpp
+  src/v20180711/model/DescribeAppStatisticsResponse.cpp
   src/v20180711/model/DescribeApplicationDataResponse.cpp
   src/v20180711/model/DeleteRoomMemberResponse.cpp
   src/v20180711/model/VoiceFilterStatisticsItem.cpp
-  src/v20180711/model/StatisticsItem.cpp
+  src/v20180711/model/CreateAppResp.cpp
+  src/v20180711/model/RecordInfo.cpp
+  src/v20180711/model/SubscribeRecordUserIds.cpp
   src/v20180711/model/RealtimeTextStatisticsItem.cpp
   src/v20180711/model/DeleteResult.cpp
   src/v20180711/model/OverseaTextStatisticsItem.cpp
-  src/v20180711/model/CreateAppRequest.cpp
+  src/v20180711/model/DescribeTaskInfoRequest.cpp
   src/v20180711/model/RealtimeSpeechConf.cpp
   src/v20180711/model/DescribeAppStatisticsResp.cpp
+  src/v20180711/model/DescribeRecordInfoResponse.cpp
   src/v20180711/model/CreateAppResponse.cpp
-  src/v20180711/model/DescribeAppStatisticsResponse.cpp
-  src/v20180711/model/DescribeAppStatisticsRequest.cpp
+  src/v20180711/model/StopRecordRequest.cpp
+  src/v20180711/model/StopRecordResponse.cpp
+  src/v20180711/model/CreateAppRequest.cpp
   src/v20180711/model/ModifyAppStatusResponse.cpp
   src/v20180711/model/VoiceFilterConf.cpp
+  src/v20180711/model/ModifyRecordInfoResponse.cpp
   )
 
 set(gme_include
