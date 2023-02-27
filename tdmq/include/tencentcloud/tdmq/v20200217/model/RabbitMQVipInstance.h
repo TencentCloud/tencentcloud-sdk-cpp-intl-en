@@ -306,6 +306,28 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool SpecNameHasBeenSet() const;
 
+                    /**
+                     * 获取Cluster exception
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ExceptionInformation Cluster exception
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetExceptionInformation() const;
+
+                    /**
+                     * 设置Cluster exception
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ExceptionInformation Cluster exception
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetExceptionInformation(const std::string& _exceptionInformation);
+
+                    /**
+                     * 判断参数 ExceptionInformation 是否已赋值
+                     * @return ExceptionInformation 是否已赋值
+                     */
+                    bool ExceptionInformationHasBeenSet() const;
+
                 private:
 
                     /**
@@ -393,6 +415,13 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     std::string m_specName;
                     bool m_specNameHasBeenSet;
+
+                    /**
+                     * Cluster exception
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_exceptionInformation;
+                    bool m_exceptionInformationHasBeenSet;
 
                 };
             }

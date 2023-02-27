@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Region ID
-                     * @return RegionId Region ID
+                     * 获取Region ID. You only need to specify the value of either `RegionId` or `RegionName`.
+                     * @return RegionId Region ID. You only need to specify the value of either `RegionId` or `RegionName`.
                      */
                     int64_t GetRegionId() const;
 
                     /**
-                     * 设置Region ID
-                     * @param RegionId Region ID
+                     * 设置Region ID. You only need to specify the value of either `RegionId` or `RegionName`.
+                     * @param RegionId Region ID. You only need to specify the value of either `RegionId` or `RegionName`.
                      */
                     void SetRegionId(const int64_t& _regionId);
 
@@ -60,13 +60,37 @@ namespace TencentCloud
                      */
                     bool RegionIdHasBeenSet() const;
 
+                    /**
+                     * 获取Region name. You only need to specify the value of either `RegionId` or `RegionName`.
+                     * @return RegionName Region name. You only need to specify the value of either `RegionId` or `RegionName`.
+                     */
+                    std::string GetRegionName() const;
+
+                    /**
+                     * 设置Region name. You only need to specify the value of either `RegionId` or `RegionName`.
+                     * @param RegionName Region name. You only need to specify the value of either `RegionId` or `RegionName`.
+                     */
+                    void SetRegionName(const std::string& _regionName);
+
+                    /**
+                     * 判断参数 RegionName 是否已赋值
+                     * @return RegionName 是否已赋值
+                     */
+                    bool RegionNameHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Region ID
+                     * Region ID. You only need to specify the value of either `RegionId` or `RegionName`.
                      */
                     int64_t m_regionId;
                     bool m_regionIdHasBeenSet;
+
+                    /**
+                     * Region name. You only need to specify the value of either `RegionId` or `RegionName`.
+                     */
+                    std::string m_regionName;
+                    bool m_regionNameHasBeenSet;
 
                 };
             }

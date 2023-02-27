@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Start timestamp.
-                     * @return StartTime Start timestamp.
+                     * 获取Start timestamp, such as 1585142640.
+                     * @return StartTime Start timestamp, such as 1585142640.
                      */
                     uint64_t GetStartTime() const;
 
                     /**
-                     * 设置Start timestamp.
-                     * @param StartTime Start timestamp.
+                     * 设置Start timestamp, such as 1585142640.
+                     * @param StartTime Start timestamp, such as 1585142640.
                      */
                     void SetStartTime(const uint64_t& _startTime);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End timestamp.
-                     * @return EndTime End timestamp.
+                     * 获取End timestamp, such as 1585142640.
+                     * @return EndTime End timestamp, such as 1585142640.
                      */
                     uint64_t GetEndTime() const;
 
                     /**
-                     * 设置End timestamp.
-                     * @param EndTime End timestamp.
+                     * 设置End timestamp, such as 1585142640.
+                     * @param EndTime End timestamp, such as 1585142640.
                      */
                     void SetEndTime(const uint64_t& _endTime);
 
@@ -249,13 +249,13 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Start timestamp.
+                     * Start timestamp, such as 1585142640.
                      */
                     uint64_t m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End timestamp.
+                     * End timestamp, such as 1585142640.
                      */
                     uint64_t m_endTime;
                     bool m_endTimeHasBeenSet;

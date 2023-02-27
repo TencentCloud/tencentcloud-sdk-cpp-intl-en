@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取TCMG instance ID, such as “grafana-abcdefgh”.
-                     * @return InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
+                     * 获取ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
+                     * @return InstanceId ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置TCMG instance ID, such as “grafana-abcdefgh”.
-                     * @param InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
+                     * 设置ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
+                     * @param InstanceId ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
@@ -63,7 +63,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * TCMG instance ID, such as “grafana-abcdefgh”.
+                     * ID of a TencentCloud Managed Service for Grafana instance, such as “grafana-abcdefgh”.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;

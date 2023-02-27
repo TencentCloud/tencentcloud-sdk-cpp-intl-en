@@ -62,14 +62,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Backup method of target instance. Value range: logical (logical cold backup), physical (physical cold backup).
-                     * @return BackupMethod Backup method of target instance. Value range: logical (logical cold backup), physical (physical cold backup).
+                     * 获取Target backup method. Valid values: `logical` (logical cold backup), `physical` (physical cold backup), `snapshot` (snapshot backup). Basic Edition instances only support snapshot backups.
+                     * @return BackupMethod Target backup method. Valid values: `logical` (logical cold backup), `physical` (physical cold backup), `snapshot` (snapshot backup). Basic Edition instances only support snapshot backups.
                      */
                     std::string GetBackupMethod() const;
 
                     /**
-                     * 设置Backup method of target instance. Value range: logical (logical cold backup), physical (physical cold backup).
-                     * @param BackupMethod Backup method of target instance. Value range: logical (logical cold backup), physical (physical cold backup).
+                     * 设置Target backup method. Valid values: `logical` (logical cold backup), `physical` (physical cold backup), `snapshot` (snapshot backup). Basic Edition instances only support snapshot backups.
+                     * @param BackupMethod Target backup method. Valid values: `logical` (logical cold backup), `physical` (physical cold backup), `snapshot` (snapshot backup). Basic Edition instances only support snapshot backups.
                      */
                     void SetBackupMethod(const std::string& _backupMethod);
 
@@ -128,7 +128,7 @@ For example, if you want to backup tb1 and tb2 in db1 and the entire db2, you sh
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Backup method of target instance. Value range: logical (logical cold backup), physical (physical cold backup).
+                     * Target backup method. Valid values: `logical` (logical cold backup), `physical` (physical cold backup), `snapshot` (snapshot backup). Basic Edition instances only support snapshot backups.
                      */
                     std::string m_backupMethod;
                     bool m_backupMethodHasBeenSet;

@@ -68,6 +68,116 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool NodeNameHasBeenSet() const;
 
+                    /**
+                     * 获取Node status
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return NodeStatus Node status
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string GetNodeStatus() const;
+
+                    /**
+                     * 设置Node status
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param NodeStatus Node status
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    void SetNodeStatus(const std::string& _nodeStatus);
+
+                    /**
+                     * 判断参数 NodeStatus 是否已赋值
+                     * @return NodeStatus 是否已赋值
+                     */
+                    bool NodeStatusHasBeenSet() const;
+
+                    /**
+                     * 获取CPU utilization
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CPUUsage CPU utilization
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetCPUUsage() const;
+
+                    /**
+                     * 设置CPU utilization
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param CPUUsage CPU utilization
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetCPUUsage(const std::string& _cPUUsage);
+
+                    /**
+                     * 判断参数 CPUUsage 是否已赋值
+                     * @return CPUUsage 是否已赋值
+                     */
+                    bool CPUUsageHasBeenSet() const;
+
+                    /**
+                     * 获取Memory usage in MB
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Memory Memory usage in MB
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetMemory() const;
+
+                    /**
+                     * 设置Memory usage in MB
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Memory Memory usage in MB
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetMemory(const uint64_t& _memory);
+
+                    /**
+                     * 判断参数 Memory 是否已赋值
+                     * @return Memory 是否已赋值
+                     */
+                    bool MemoryHasBeenSet() const;
+
+                    /**
+                     * 获取Disk utilization
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DiskUsage Disk utilization
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetDiskUsage() const;
+
+                    /**
+                     * 设置Disk utilization
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param DiskUsage Disk utilization
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetDiskUsage(const std::string& _diskUsage);
+
+                    /**
+                     * 判断参数 DiskUsage 是否已赋值
+                     * @return DiskUsage 是否已赋值
+                     */
+                    bool DiskUsageHasBeenSet() const;
+
+                    /**
+                     * 获取The number of RabbitMQ Erlang processes
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ProcessNumber The number of RabbitMQ Erlang processes
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetProcessNumber() const;
+
+                    /**
+                     * 设置The number of RabbitMQ Erlang processes
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ProcessNumber The number of RabbitMQ Erlang processes
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetProcessNumber(const uint64_t& _processNumber);
+
+                    /**
+                     * 判断参数 ProcessNumber 是否已赋值
+                     * @return ProcessNumber 是否已赋值
+                     */
+                    bool ProcessNumberHasBeenSet() const;
+
                 private:
 
                     /**
@@ -76,6 +186,41 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     std::string m_nodeName;
                     bool m_nodeNameHasBeenSet;
+
+                    /**
+                     * Node status
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string m_nodeStatus;
+                    bool m_nodeStatusHasBeenSet;
+
+                    /**
+                     * CPU utilization
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_cPUUsage;
+                    bool m_cPUUsageHasBeenSet;
+
+                    /**
+                     * Memory usage in MB
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_memory;
+                    bool m_memoryHasBeenSet;
+
+                    /**
+                     * Disk utilization
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_diskUsage;
+                    bool m_diskUsageHasBeenSet;
+
+                    /**
+                     * The number of RabbitMQ Erlang processes
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_processNumber;
+                    bool m_processNumberHasBeenSet;
 
                 };
             }

@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tdmq/v20200217/model/Filter.h>
 
 
 namespace TencentCloud
@@ -96,6 +97,102 @@ namespace TencentCloud
                      */
                     bool LimitHasBeenSet() const;
 
+                    /**
+                     * 获取Node name for fuzzy search
+                     * @return NodeName Node name for fuzzy search
+                     */
+                    std::string GetNodeName() const;
+
+                    /**
+                     * 设置Node name for fuzzy search
+                     * @param NodeName Node name for fuzzy search
+                     */
+                    void SetNodeName(const std::string& _nodeName);
+
+                    /**
+                     * 判断参数 NodeName 是否已赋值
+                     * @return NodeName 是否已赋值
+                     */
+                    bool NodeNameHasBeenSet() const;
+
+                    /**
+                     * 获取Name and value of a filter.
+Currently, only the `nodeStatus` filter is supported.
+Valid values: `running`, `down`.
+It is an array type and can contain multiple filters.
+
+                     * @return Filters Name and value of a filter.
+Currently, only the `nodeStatus` filter is supported.
+Valid values: `running`, `down`.
+It is an array type and can contain multiple filters.
+
+                     */
+                    std::vector<Filter> GetFilters() const;
+
+                    /**
+                     * 设置Name and value of a filter.
+Currently, only the `nodeStatus` filter is supported.
+Valid values: `running`, `down`.
+It is an array type and can contain multiple filters.
+
+                     * @param Filters Name and value of a filter.
+Currently, only the `nodeStatus` filter is supported.
+Valid values: `running`, `down`.
+It is an array type and can contain multiple filters.
+
+                     */
+                    void SetFilters(const std::vector<Filter>& _filters);
+
+                    /**
+                     * 判断参数 Filters 是否已赋值
+                     * @return Filters 是否已赋值
+                     */
+                    bool FiltersHasBeenSet() const;
+
+                    /**
+                     * 获取Sorting by a specified element.
+Valid values: `cpuUsage`, `diskUsage`.
+                     * @return SortElement Sorting by a specified element.
+Valid values: `cpuUsage`, `diskUsage`.
+                     */
+                    std::string GetSortElement() const;
+
+                    /**
+                     * 设置Sorting by a specified element.
+Valid values: `cpuUsage`, `diskUsage`.
+                     * @param SortElement Sorting by a specified element.
+Valid values: `cpuUsage`, `diskUsage`.
+                     */
+                    void SetSortElement(const std::string& _sortElement);
+
+                    /**
+                     * 判断参数 SortElement 是否已赋值
+                     * @return SortElement 是否已赋值
+                     */
+                    bool SortElementHasBeenSet() const;
+
+                    /**
+                     * 获取Sorting order.
+Valid values: `ascend`, `descend`.
+                     * @return SortOrder Sorting order.
+Valid values: `ascend`, `descend`.
+                     */
+                    std::string GetSortOrder() const;
+
+                    /**
+                     * 设置Sorting order.
+Valid values: `ascend`, `descend`.
+                     * @param SortOrder Sorting order.
+Valid values: `ascend`, `descend`.
+                     */
+                    void SetSortOrder(const std::string& _sortOrder);
+
+                    /**
+                     * 判断参数 SortOrder 是否已赋值
+                     * @return SortOrder 是否已赋值
+                     */
+                    bool SortOrderHasBeenSet() const;
+
                 private:
 
                     /**
@@ -115,6 +212,36 @@ namespace TencentCloud
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
+
+                    /**
+                     * Node name for fuzzy search
+                     */
+                    std::string m_nodeName;
+                    bool m_nodeNameHasBeenSet;
+
+                    /**
+                     * Name and value of a filter.
+Currently, only the `nodeStatus` filter is supported.
+Valid values: `running`, `down`.
+It is an array type and can contain multiple filters.
+
+                     */
+                    std::vector<Filter> m_filters;
+                    bool m_filtersHasBeenSet;
+
+                    /**
+                     * Sorting by a specified element.
+Valid values: `cpuUsage`, `diskUsage`.
+                     */
+                    std::string m_sortElement;
+                    bool m_sortElementHasBeenSet;
+
+                    /**
+                     * Sorting order.
+Valid values: `ascend`, `descend`.
+                     */
+                    std::string m_sortOrder;
+                    bool m_sortOrderHasBeenSet;
 
                 };
             }

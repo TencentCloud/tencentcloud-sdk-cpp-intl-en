@@ -73,6 +73,8 @@
 #include <tencentcloud/cdb/v20170320/model/DescribeBackupConfigResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeBackupDownloadRestrictionRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeBackupDownloadRestrictionResponse.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeBackupEncryptionStatusRequest.h>
+#include <tencentcloud/cdb/v20170320/model/DescribeBackupEncryptionStatusResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeBackupOverviewRequest.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeBackupOverviewResponse.h>
 #include <tencentcloud/cdb/v20170320/model/DescribeBackupSummariesRequest.h>
@@ -183,6 +185,8 @@
 #include <tencentcloud/cdb/v20170320/model/ModifyBackupConfigResponse.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyBackupDownloadRestrictionRequest.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyBackupDownloadRestrictionResponse.h>
+#include <tencentcloud/cdb/v20170320/model/ModifyBackupEncryptionStatusRequest.h>
+#include <tencentcloud/cdb/v20170320/model/ModifyBackupEncryptionStatusResponse.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyCDBProxyConnectionPoolRequest.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyCDBProxyConnectionPoolResponse.h>
 #include <tencentcloud/cdb/v20170320/model/ModifyCDBProxyDescRequest.h>
@@ -219,6 +223,8 @@
 #include <tencentcloud/cdb/v20170320/model/OfflineIsolatedInstancesResponse.h>
 #include <tencentcloud/cdb/v20170320/model/OpenAuditServiceRequest.h>
 #include <tencentcloud/cdb/v20170320/model/OpenAuditServiceResponse.h>
+#include <tencentcloud/cdb/v20170320/model/OpenDBInstanceEncryptionRequest.h>
+#include <tencentcloud/cdb/v20170320/model/OpenDBInstanceEncryptionResponse.h>
 #include <tencentcloud/cdb/v20170320/model/OpenDBInstanceGTIDRequest.h>
 #include <tencentcloud/cdb/v20170320/model/OpenDBInstanceGTIDResponse.h>
 #include <tencentcloud/cdb/v20170320/model/OpenWanServiceRequest.h>
@@ -253,8 +259,6 @@
 #include <tencentcloud/cdb/v20170320/model/SwitchDrInstanceToMasterResponse.h>
 #include <tencentcloud/cdb/v20170320/model/SwitchForUpgradeRequest.h>
 #include <tencentcloud/cdb/v20170320/model/SwitchForUpgradeResponse.h>
-#include <tencentcloud/cdb/v20170320/model/UpgradeCDBProxyRequest.h>
-#include <tencentcloud/cdb/v20170320/model/UpgradeCDBProxyResponse.h>
 #include <tencentcloud/cdb/v20170320/model/UpgradeCDBProxyVersionRequest.h>
 #include <tencentcloud/cdb/v20170320/model/UpgradeCDBProxyVersionResponse.h>
 #include <tencentcloud/cdb/v20170320/model/UpgradeDBInstanceRequest.h>
@@ -350,6 +354,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeBackupDownloadRestrictionResponse> DescribeBackupDownloadRestrictionOutcome;
                 typedef std::future<DescribeBackupDownloadRestrictionOutcome> DescribeBackupDownloadRestrictionOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeBackupDownloadRestrictionRequest&, DescribeBackupDownloadRestrictionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBackupDownloadRestrictionAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBackupEncryptionStatusResponse> DescribeBackupEncryptionStatusOutcome;
+                typedef std::future<DescribeBackupEncryptionStatusOutcome> DescribeBackupEncryptionStatusOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::DescribeBackupEncryptionStatusRequest&, DescribeBackupEncryptionStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBackupEncryptionStatusAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeBackupOverviewResponse> DescribeBackupOverviewOutcome;
                 typedef std::future<DescribeBackupOverviewOutcome> DescribeBackupOverviewOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::DescribeBackupOverviewRequest&, DescribeBackupOverviewOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBackupOverviewAsyncHandler;
@@ -515,6 +522,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyBackupDownloadRestrictionResponse> ModifyBackupDownloadRestrictionOutcome;
                 typedef std::future<ModifyBackupDownloadRestrictionOutcome> ModifyBackupDownloadRestrictionOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::ModifyBackupDownloadRestrictionRequest&, ModifyBackupDownloadRestrictionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyBackupDownloadRestrictionAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyBackupEncryptionStatusResponse> ModifyBackupEncryptionStatusOutcome;
+                typedef std::future<ModifyBackupEncryptionStatusOutcome> ModifyBackupEncryptionStatusOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::ModifyBackupEncryptionStatusRequest&, ModifyBackupEncryptionStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyBackupEncryptionStatusAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyCDBProxyConnectionPoolResponse> ModifyCDBProxyConnectionPoolOutcome;
                 typedef std::future<ModifyCDBProxyConnectionPoolOutcome> ModifyCDBProxyConnectionPoolOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::ModifyCDBProxyConnectionPoolRequest&, ModifyCDBProxyConnectionPoolOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCDBProxyConnectionPoolAsyncHandler;
@@ -569,6 +579,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::OpenAuditServiceResponse> OpenAuditServiceOutcome;
                 typedef std::future<OpenAuditServiceOutcome> OpenAuditServiceOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::OpenAuditServiceRequest&, OpenAuditServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> OpenAuditServiceAsyncHandler;
+                typedef Outcome<Core::Error, Model::OpenDBInstanceEncryptionResponse> OpenDBInstanceEncryptionOutcome;
+                typedef std::future<OpenDBInstanceEncryptionOutcome> OpenDBInstanceEncryptionOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::OpenDBInstanceEncryptionRequest&, OpenDBInstanceEncryptionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> OpenDBInstanceEncryptionAsyncHandler;
                 typedef Outcome<Core::Error, Model::OpenDBInstanceGTIDResponse> OpenDBInstanceGTIDOutcome;
                 typedef std::future<OpenDBInstanceGTIDOutcome> OpenDBInstanceGTIDOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::OpenDBInstanceGTIDRequest&, OpenDBInstanceGTIDOutcome, const std::shared_ptr<const AsyncCallerContext>&)> OpenDBInstanceGTIDAsyncHandler;
@@ -620,9 +633,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::SwitchForUpgradeResponse> SwitchForUpgradeOutcome;
                 typedef std::future<SwitchForUpgradeOutcome> SwitchForUpgradeOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::SwitchForUpgradeRequest&, SwitchForUpgradeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SwitchForUpgradeAsyncHandler;
-                typedef Outcome<Core::Error, Model::UpgradeCDBProxyResponse> UpgradeCDBProxyOutcome;
-                typedef std::future<UpgradeCDBProxyOutcome> UpgradeCDBProxyOutcomeCallable;
-                typedef std::function<void(const CdbClient*, const Model::UpgradeCDBProxyRequest&, UpgradeCDBProxyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpgradeCDBProxyAsyncHandler;
                 typedef Outcome<Core::Error, Model::UpgradeCDBProxyVersionResponse> UpgradeCDBProxyVersionOutcome;
                 typedef std::future<UpgradeCDBProxyVersionOutcome> UpgradeCDBProxyVersionOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::UpgradeCDBProxyVersionRequest&, UpgradeCDBProxyVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpgradeCDBProxyVersionAsyncHandler;
@@ -878,6 +888,15 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
                 DescribeBackupDownloadRestrictionOutcome DescribeBackupDownloadRestriction(const Model::DescribeBackupDownloadRestrictionRequest &request);
                 void DescribeBackupDownloadRestrictionAsync(const Model::DescribeBackupDownloadRestrictionRequest& request, const DescribeBackupDownloadRestrictionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeBackupDownloadRestrictionOutcomeCallable DescribeBackupDownloadRestrictionCallable(const Model::DescribeBackupDownloadRestrictionRequest& request);
+
+                /**
+                 *This API is used to query the default encryption status of an instance backup.
+                 * @param req DescribeBackupEncryptionStatusRequest
+                 * @return DescribeBackupEncryptionStatusOutcome
+                 */
+                DescribeBackupEncryptionStatusOutcome DescribeBackupEncryptionStatus(const Model::DescribeBackupEncryptionStatusRequest &request);
+                void DescribeBackupEncryptionStatusAsync(const Model::DescribeBackupEncryptionStatusRequest& request, const DescribeBackupEncryptionStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBackupEncryptionStatusOutcomeCallable DescribeBackupEncryptionStatusCallable(const Model::DescribeBackupEncryptionStatusRequest& request);
 
                 /**
                  *This API is used to query the backup overview of a user. It will return the user's current total number of backups, total capacity used by backups, capacity in the free tier, and paid capacity (all capacity values are in bytes).
@@ -1382,6 +1401,15 @@ Note that when modifying account permissions, you need to pass in the full permi
                 ModifyBackupDownloadRestrictionOutcomeCallable ModifyBackupDownloadRestrictionCallable(const Model::ModifyBackupDownloadRestrictionRequest& request);
 
                 /**
+                 *This API is used to set the default encryption status of an instance backup. 
+                 * @param req ModifyBackupEncryptionStatusRequest
+                 * @return ModifyBackupEncryptionStatusOutcome
+                 */
+                ModifyBackupEncryptionStatusOutcome ModifyBackupEncryptionStatus(const Model::ModifyBackupEncryptionStatusRequest &request);
+                void ModifyBackupEncryptionStatusAsync(const Model::ModifyBackupEncryptionStatusRequest& request, const ModifyBackupEncryptionStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyBackupEncryptionStatusOutcomeCallable ModifyBackupEncryptionStatusCallable(const Model::ModifyBackupEncryptionStatusRequest& request);
+
+                /**
                  *This API is used to configure the connection pool of database proxy. You can use the `DescribeProxyConnectionPoolConf` API to query the supported connection pool configurations.
                  * @param req ModifyCDBProxyConnectionPoolRequest
                  * @return ModifyCDBProxyConnectionPoolOutcome
@@ -1548,6 +1576,25 @@ Note that once an instance is deactivated, its resources and data will not be re
                 OpenAuditServiceOutcomeCallable OpenAuditServiceCallable(const Model::OpenAuditServiceRequest& request);
 
                 /**
+                 *This API is used to enable the encryption feature for instance data storage, and custom keys are supported.
+
+Note: Before enabling data storage encryption for an instance, you need to perform the following operations:
+
+1. [Initialize an instance](https://intl.cloud.tencent.com/document/api/236/15873?from_cn_redirect=1).
+
+2. Enable [KMS service](https://console.cloud.tencent.com/kms2)
+
+3. [Grant permission to access KMS](https://console.cloud.tencent.com/cam/role) for TencentDB for MySQL. The role name is `MySQL_QCSRole`, and the preset policy name is `QcloudAccessForMySQLRole`.
+
+This API calling may take up to 10 seconds, causing the client to time out. If it returns `InternalError`, call `DescribeDBInstanceInfo` to confirm whether the backend encryption is enabled successfully.
+                 * @param req OpenDBInstanceEncryptionRequest
+                 * @return OpenDBInstanceEncryptionOutcome
+                 */
+                OpenDBInstanceEncryptionOutcome OpenDBInstanceEncryption(const Model::OpenDBInstanceEncryptionRequest &request);
+                void OpenDBInstanceEncryptionAsync(const Model::OpenDBInstanceEncryptionRequest& request, const OpenDBInstanceEncryptionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                OpenDBInstanceEncryptionOutcomeCallable OpenDBInstanceEncryptionCallable(const Model::OpenDBInstanceEncryptionRequest& request);
+
+                /**
                  *This API (OpenDBInstanceGTID) is used to enable GTID for a TencentDB instance. Only instances on or above version 5.6 are supported.
                  * @param req OpenDBInstanceGTIDRequest
                  * @return OpenDBInstanceGTIDOutcome
@@ -1705,17 +1752,6 @@ Note:
                 SwitchForUpgradeOutcome SwitchForUpgrade(const Model::SwitchForUpgradeRequest &request);
                 void SwitchForUpgradeAsync(const Model::SwitchForUpgradeRequest& request, const SwitchForUpgradeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 SwitchForUpgradeOutcomeCallable SwitchForUpgradeCallable(const Model::SwitchForUpgradeRequest& request);
-
-                /**
-                 *接口已经废弃，请使用AdjustCdbProxy进行数据库代理的配置
-
-This API is used to upgrade the configuration of database proxy.
-                 * @param req UpgradeCDBProxyRequest
-                 * @return UpgradeCDBProxyOutcome
-                 */
-                UpgradeCDBProxyOutcome UpgradeCDBProxy(const Model::UpgradeCDBProxyRequest &request);
-                void UpgradeCDBProxyAsync(const Model::UpgradeCDBProxyRequest& request, const UpgradeCDBProxyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                UpgradeCDBProxyOutcomeCallable UpgradeCDBProxyCallable(const Model::UpgradeCDBProxyRequest& request);
 
                 /**
                  *This API is used to upgrade the version of database proxy.

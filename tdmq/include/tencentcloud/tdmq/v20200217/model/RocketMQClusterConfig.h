@@ -208,6 +208,28 @@ namespace TencentCloud
                      */
                     bool MaxLatencyTimeHasBeenSet() const;
 
+                    /**
+                     * 获取The maximum number of queues in a single topic
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MaxQueuesPerTopic The maximum number of queues in a single topic
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetMaxQueuesPerTopic() const;
+
+                    /**
+                     * 设置The maximum number of queues in a single topic
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param MaxQueuesPerTopic The maximum number of queues in a single topic
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetMaxQueuesPerTopic(const uint64_t& _maxQueuesPerTopic);
+
+                    /**
+                     * 判断参数 MaxQueuesPerTopic 是否已赋值
+                     * @return MaxQueuesPerTopic 是否已赋值
+                     */
+                    bool MaxQueuesPerTopicHasBeenSet() const;
+
                 private:
 
                     /**
@@ -263,6 +285,13 @@ namespace TencentCloud
                      */
                     uint64_t m_maxLatencyTime;
                     bool m_maxLatencyTimeHasBeenSet;
+
+                    /**
+                     * The maximum number of queues in a single topic
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_maxQueuesPerTopic;
+                    bool m_maxQueuesPerTopicHasBeenSet;
 
                 };
             }

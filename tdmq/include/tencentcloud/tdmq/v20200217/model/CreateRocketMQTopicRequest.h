@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool NamespacesHasBeenSet() const;
 
                     /**
-                     * 获取Topic type. Valid values: Normal, GlobalOrder, PartitionedOrder.
-                     * @return Type Topic type. Valid values: Normal, GlobalOrder, PartitionedOrder.
+                     * 获取Topic type. Valid values: `Normal`, `PartitionedOrder`, `Transaction`, `DelayScheduled`.
+                     * @return Type Topic type. Valid values: `Normal`, `PartitionedOrder`, `Transaction`, `DelayScheduled`.
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Topic type. Valid values: Normal, GlobalOrder, PartitionedOrder.
-                     * @param Type Topic type. Valid values: Normal, GlobalOrder, PartitionedOrder.
+                     * 设置Topic type. Valid values: `Normal`, `PartitionedOrder`, `Transaction`, `DelayScheduled`.
+                     * @param Type Topic type. Valid values: `Normal`, `PartitionedOrder`, `Transaction`, `DelayScheduled`.
                      */
                     void SetType(const std::string& _type);
 
@@ -165,7 +165,7 @@ namespace TencentCloud
                     bool m_namespacesHasBeenSet;
 
                     /**
-                     * Topic type. Valid values: Normal, GlobalOrder, PartitionedOrder.
+                     * Topic type. Valid values: `Normal`, `PartitionedOrder`, `Transaction`, `DelayScheduled`.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

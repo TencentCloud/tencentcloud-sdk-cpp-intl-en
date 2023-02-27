@@ -14,57 +14,55 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_CDB_V20170320_MODEL_UPGRADECDBPROXYRESPONSE_H_
-#define TENCENTCLOUD_CDB_V20170320_MODEL_UPGRADECDBPROXYRESPONSE_H_
+#ifndef TENCENTCLOUD_MONITOR_V20180724_MODEL_DESCRIBEPROMETHEUSTARGETSTMPRESPONSE_H_
+#define TENCENTCLOUD_MONITOR_V20180724_MODEL_DESCRIBEPROMETHEUSTARGETSTMPRESPONSE_H_
 
 #include <string>
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/monitor/v20180724/model/PrometheusJobTargets.h>
 
 
 namespace TencentCloud
 {
-    namespace Cdb
+    namespace Monitor
     {
-        namespace V20170320
+        namespace V20180724
         {
             namespace Model
             {
                 /**
-                * UpgradeCDBProxy response structure.
+                * DescribePrometheusTargetsTMP response structure.
                 */
-                class UpgradeCDBProxyResponse : public AbstractModel
+                class DescribePrometheusTargetsTMPResponse : public AbstractModel
                 {
                 public:
-                    UpgradeCDBProxyResponse();
-                    ~UpgradeCDBProxyResponse() = default;
+                    DescribePrometheusTargetsTMPResponse();
+                    ~DescribePrometheusTargetsTMPResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Async request ID
-Note: this field may return `null`, indicating that no valid value can be found.
-                     * @return AsyncRequestId Async request ID
-Note: this field may return `null`, indicating that no valid value can be found.
+                     * 获取Targets information of all jobs
+                     * @return Jobs Targets information of all jobs
                      */
-                    std::string GetAsyncRequestId() const;
+                    std::vector<PrometheusJobTargets> GetJobs() const;
 
                     /**
-                     * 判断参数 AsyncRequestId 是否已赋值
-                     * @return AsyncRequestId 是否已赋值
+                     * 判断参数 Jobs 是否已赋值
+                     * @return Jobs 是否已赋值
                      */
-                    bool AsyncRequestIdHasBeenSet() const;
+                    bool JobsHasBeenSet() const;
 
                 private:
 
                     /**
-                     * Async request ID
-Note: this field may return `null`, indicating that no valid value can be found.
+                     * Targets information of all jobs
                      */
-                    std::string m_asyncRequestId;
-                    bool m_asyncRequestIdHasBeenSet;
+                    std::vector<PrometheusJobTargets> m_jobs;
+                    bool m_jobsHasBeenSet;
 
                 };
             }
@@ -72,4 +70,4 @@ Note: this field may return `null`, indicating that no valid value can be found.
     }
 }
 
-#endif // !TENCENTCLOUD_CDB_V20170320_MODEL_UPGRADECDBPROXYRESPONSE_H_
+#endif // !TENCENTCLOUD_MONITOR_V20180724_MODEL_DESCRIBEPROMETHEUSTARGETSTMPRESPONSE_H_
