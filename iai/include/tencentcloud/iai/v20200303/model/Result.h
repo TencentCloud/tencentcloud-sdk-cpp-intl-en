@@ -85,18 +85,14 @@ namespace TencentCloud
                     bool FaceRectHasBeenSet() const;
 
                     /**
-                     * 获取Status return code of detected face image. 0: normal. 
--1601: the image quality control requirement is not met; in this case, `Candidate` is empty.
-                     * @return RetCode Status return code of detected face image. 0: normal. 
--1601: the image quality control requirement is not met; in this case, `Candidate` is empty.
+                     * 获取The status return code for the face image detected. Valid values: `0` - normal; `-1601` - the image does not meet the quality requirements, in which case `Candidate` is empty; `-1604` - the face similarity is not higher than `FaceMatchThreshold`.
+                     * @return RetCode The status return code for the face image detected. Valid values: `0` - normal; `-1601` - the image does not meet the quality requirements, in which case `Candidate` is empty; `-1604` - the face similarity is not higher than `FaceMatchThreshold`.
                      */
                     int64_t GetRetCode() const;
 
                     /**
-                     * 设置Status return code of detected face image. 0: normal. 
--1601: the image quality control requirement is not met; in this case, `Candidate` is empty.
-                     * @param RetCode Status return code of detected face image. 0: normal. 
--1601: the image quality control requirement is not met; in this case, `Candidate` is empty.
+                     * 设置The status return code for the face image detected. Valid values: `0` - normal; `-1601` - the image does not meet the quality requirements, in which case `Candidate` is empty; `-1604` - the face similarity is not higher than `FaceMatchThreshold`.
+                     * @param RetCode The status return code for the face image detected. Valid values: `0` - normal; `-1601` - the image does not meet the quality requirements, in which case `Candidate` is empty; `-1604` - the face similarity is not higher than `FaceMatchThreshold`.
                      */
                     void SetRetCode(const int64_t& _retCode);
 
@@ -121,8 +117,7 @@ namespace TencentCloud
                     bool m_faceRectHasBeenSet;
 
                     /**
-                     * Status return code of detected face image. 0: normal. 
--1601: the image quality control requirement is not met; in this case, `Candidate` is empty.
+                     * The status return code for the face image detected. Valid values: `0` - normal; `-1601` - the image does not meet the quality requirements, in which case `Candidate` is empty; `-1604` - the face similarity is not higher than `FaceMatchThreshold`.
                      */
                     int64_t m_retCode;
                     bool m_retCodeHasBeenSet;

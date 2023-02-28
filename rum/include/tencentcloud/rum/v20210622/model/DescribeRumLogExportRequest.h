@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_RUM_V20210622_MODEL_DESCRIBERUMLOGLISTREQUEST_H_
-#define TENCENTCLOUD_RUM_V20210622_MODEL_DESCRIBERUMLOGLISTREQUEST_H_
+#ifndef TENCENTCLOUD_RUM_V20210622_MODEL_DESCRIBERUMLOGEXPORTREQUEST_H_
+#define TENCENTCLOUD_RUM_V20210622_MODEL_DESCRIBERUMLOGEXPORTREQUEST_H_
 
 #include <string>
 #include <vector>
@@ -32,43 +32,43 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * DescribeRumLogList request structure.
+                * DescribeRumLogExport request structure.
                 */
-                class DescribeRumLogListRequest : public AbstractModel
+                class DescribeRumLogExportRequest : public AbstractModel
                 {
                 public:
-                    DescribeRumLogListRequest();
-                    ~DescribeRumLogListRequest() = default;
+                    DescribeRumLogExportRequest();
+                    ~DescribeRumLogExportRequest() = default;
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Sorting order (required). Valid values: `desc`, `asc`.
-                     * @return OrderBy Sorting order (required). Valid values: `desc`, `asc`.
+                     * 获取Export identifier name
+                     * @return Name Export identifier name
                      */
-                    std::string GetOrderBy() const;
+                    std::string GetName() const;
 
                     /**
-                     * 设置Sorting order (required). Valid values: `desc`, `asc`.
-                     * @param OrderBy Sorting order (required). Valid values: `desc`, `asc`.
+                     * 设置Export identifier name
+                     * @param Name Export identifier name
                      */
-                    void SetOrderBy(const std::string& _orderBy);
+                    void SetName(const std::string& _name);
 
                     /**
-                     * 判断参数 OrderBy 是否已赋值
-                     * @return OrderBy 是否已赋值
+                     * 判断参数 Name 是否已赋值
+                     * @return Name 是否已赋值
                      */
-                    bool OrderByHasBeenSet() const;
+                    bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Start time in milliseconds. It is in timestamp format and is required.
-                     * @return StartTime Start time in milliseconds. It is in timestamp format and is required.
+                     * 获取Start time (required)
+                     * @return StartTime Start time (required)
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Start time in milliseconds. It is in timestamp format and is required.
-                     * @param StartTime Start time in milliseconds. It is in timestamp format and is required.
+                     * 设置Start time (required)
+                     * @param StartTime Start time (required)
                      */
                     void SetStartTime(const std::string& _startTime);
 
@@ -77,42 +77,6 @@ namespace TencentCloud
                      * @return StartTime 是否已赋值
                      */
                     bool StartTimeHasBeenSet() const;
-
-                    /**
-                     * 获取The number of raw logs returned for a single query. This parameter is required. Maximum value: `100`.
-                     * @return Limit The number of raw logs returned for a single query. This parameter is required. Maximum value: `100`.
-                     */
-                    int64_t GetLimit() const;
-
-                    /**
-                     * 设置The number of raw logs returned for a single query. This parameter is required. Maximum value: `100`.
-                     * @param Limit The number of raw logs returned for a single query. This parameter is required. Maximum value: `100`.
-                     */
-                    void SetLimit(const int64_t& _limit);
-
-                    /**
-                     * 判断参数 Limit 是否已赋值
-                     * @return Limit 是否已赋值
-                     */
-                    bool LimitHasBeenSet() const;
-
-                    /**
-                     * 获取Page number
-                     * @return Page Page number
-                     */
-                    int64_t GetPage() const;
-
-                    /**
-                     * 设置Page number
-                     * @param Page Page number
-                     */
-                    void SetPage(const int64_t& _page);
-
-                    /**
-                     * 判断参数 Page 是否已赋值
-                     * @return Page 是否已赋值
-                     */
-                    bool PageHasBeenSet() const;
 
                     /**
                      * 获取Query statement, which is required and can contain up to 4,096 characters.
@@ -133,14 +97,14 @@ namespace TencentCloud
                     bool QueryHasBeenSet() const;
 
                     /**
-                     * 获取End time in milliseconds. It is in timestamp format and is required.
-                     * @return EndTime End time in milliseconds. It is in timestamp format and is required.
+                     * 获取End time (required)
+                     * @return EndTime End time (required)
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time in milliseconds. It is in timestamp format and is required.
-                     * @param EndTime End time in milliseconds. It is in timestamp format and is required.
+                     * 设置End time (required)
+                     * @param EndTime End time (required)
                      */
                     void SetEndTime(const std::string& _endTime);
 
@@ -168,31 +132,37 @@ namespace TencentCloud
                      */
                     bool IDHasBeenSet() const;
 
+                    /**
+                     * 获取Filter field
+                     * @return Fields Filter field
+                     */
+                    std::vector<std::string> GetFields() const;
+
+                    /**
+                     * 设置Filter field
+                     * @param Fields Filter field
+                     */
+                    void SetFields(const std::vector<std::string>& _fields);
+
+                    /**
+                     * 判断参数 Fields 是否已赋值
+                     * @return Fields 是否已赋值
+                     */
+                    bool FieldsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Sorting order (required). Valid values: `desc`, `asc`.
+                     * Export identifier name
                      */
-                    std::string m_orderBy;
-                    bool m_orderByHasBeenSet;
+                    std::string m_name;
+                    bool m_nameHasBeenSet;
 
                     /**
-                     * Start time in milliseconds. It is in timestamp format and is required.
+                     * Start time (required)
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
-
-                    /**
-                     * The number of raw logs returned for a single query. This parameter is required. Maximum value: `100`.
-                     */
-                    int64_t m_limit;
-                    bool m_limitHasBeenSet;
-
-                    /**
-                     * Page number
-                     */
-                    int64_t m_page;
-                    bool m_pageHasBeenSet;
 
                     /**
                      * Query statement, which is required and can contain up to 4,096 characters.
@@ -201,7 +171,7 @@ namespace TencentCloud
                     bool m_queryHasBeenSet;
 
                     /**
-                     * End time in milliseconds. It is in timestamp format and is required.
+                     * End time (required)
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
@@ -212,10 +182,16 @@ namespace TencentCloud
                     int64_t m_iD;
                     bool m_iDHasBeenSet;
 
+                    /**
+                     * Filter field
+                     */
+                    std::vector<std::string> m_fields;
+                    bool m_fieldsHasBeenSet;
+
                 };
             }
         }
     }
 }
 
-#endif // !TENCENTCLOUD_RUM_V20210622_MODEL_DESCRIBERUMLOGLISTREQUEST_H_
+#endif // !TENCENTCLOUD_RUM_V20210622_MODEL_DESCRIBERUMLOGEXPORTREQUEST_H_

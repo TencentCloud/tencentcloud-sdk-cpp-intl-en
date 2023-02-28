@@ -113,6 +113,10 @@
 #include <tencentcloud/rum/v20210622/model/DescribeReleaseFilesResponse.h>
 #include <tencentcloud/rum/v20210622/model/DescribeRumGroupLogRequest.h>
 #include <tencentcloud/rum/v20210622/model/DescribeRumGroupLogResponse.h>
+#include <tencentcloud/rum/v20210622/model/DescribeRumLogExportRequest.h>
+#include <tencentcloud/rum/v20210622/model/DescribeRumLogExportResponse.h>
+#include <tencentcloud/rum/v20210622/model/DescribeRumLogExportsRequest.h>
+#include <tencentcloud/rum/v20210622/model/DescribeRumLogExportsResponse.h>
 #include <tencentcloud/rum/v20210622/model/DescribeRumLogListRequest.h>
 #include <tencentcloud/rum/v20210622/model/DescribeRumLogListResponse.h>
 #include <tencentcloud/rum/v20210622/model/DescribeRumStatsLogListRequest.h>
@@ -133,6 +137,8 @@
 #include <tencentcloud/rum/v20210622/model/ModifyProjectLimitResponse.h>
 #include <tencentcloud/rum/v20210622/model/ResumeInstanceRequest.h>
 #include <tencentcloud/rum/v20210622/model/ResumeInstanceResponse.h>
+#include <tencentcloud/rum/v20210622/model/ResumeProjectRequest.h>
+#include <tencentcloud/rum/v20210622/model/ResumeProjectResponse.h>
 #include <tencentcloud/rum/v20210622/model/StopInstanceRequest.h>
 #include <tencentcloud/rum/v20210622/model/StopInstanceResponse.h>
 #include <tencentcloud/rum/v20210622/model/StopProjectRequest.h>
@@ -286,6 +292,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeRumGroupLogResponse> DescribeRumGroupLogOutcome;
                 typedef std::future<DescribeRumGroupLogOutcome> DescribeRumGroupLogOutcomeCallable;
                 typedef std::function<void(const RumClient*, const Model::DescribeRumGroupLogRequest&, DescribeRumGroupLogOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRumGroupLogAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRumLogExportResponse> DescribeRumLogExportOutcome;
+                typedef std::future<DescribeRumLogExportOutcome> DescribeRumLogExportOutcomeCallable;
+                typedef std::function<void(const RumClient*, const Model::DescribeRumLogExportRequest&, DescribeRumLogExportOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRumLogExportAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRumLogExportsResponse> DescribeRumLogExportsOutcome;
+                typedef std::future<DescribeRumLogExportsOutcome> DescribeRumLogExportsOutcomeCallable;
+                typedef std::function<void(const RumClient*, const Model::DescribeRumLogExportsRequest&, DescribeRumLogExportsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRumLogExportsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeRumLogListResponse> DescribeRumLogListOutcome;
                 typedef std::future<DescribeRumLogListOutcome> DescribeRumLogListOutcomeCallable;
                 typedef std::function<void(const RumClient*, const Model::DescribeRumLogListRequest&, DescribeRumLogListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRumLogListAsyncHandler;
@@ -316,6 +328,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ResumeInstanceResponse> ResumeInstanceOutcome;
                 typedef std::future<ResumeInstanceOutcome> ResumeInstanceOutcomeCallable;
                 typedef std::function<void(const RumClient*, const Model::ResumeInstanceRequest&, ResumeInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResumeInstanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::ResumeProjectResponse> ResumeProjectOutcome;
+                typedef std::future<ResumeProjectOutcome> ResumeProjectOutcomeCallable;
+                typedef std::function<void(const RumClient*, const Model::ResumeProjectRequest&, ResumeProjectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResumeProjectAsyncHandler;
                 typedef Outcome<Core::Error, Model::StopInstanceResponse> StopInstanceOutcome;
                 typedef std::future<StopInstanceOutcome> StopInstanceOutcomeCallable;
                 typedef std::function<void(const RumClient*, const Model::StopInstanceRequest&, StopInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopInstanceAsyncHandler;
@@ -348,7 +363,7 @@ Default API request rate limit: 20 requests/sec.
                 CreateOfflineLogConfigOutcomeCallable CreateOfflineLogConfigCallable(const Model::CreateOfflineLogConfigRequest& request);
 
                 /**
-                 *This API is used to create a project (owned by the specified team).
+                 *This API is used to create a RUM application which belongs to a specific team.
                  * @param req CreateProjectRequest
                  * @return CreateProjectOutcome
                  */
@@ -375,7 +390,7 @@ Default API request rate limit: 20 requests/sec.
                 CreateStarProjectOutcomeCallable CreateStarProjectCallable(const Model::CreateStarProjectRequest& request);
 
                 /**
-                 *This API is used to create a RUM instance.
+                 *This API is used to create a RUM business system.
                  * @param req CreateTawInstanceRequest
                  * @return CreateTawInstanceOutcome
                  */
@@ -654,7 +669,7 @@ Default API request rate limit: 20 requests/sec.
                 DescribeLogExportsOutcomeCallable DescribeLogExportsCallable(const Model::DescribeLogExportsRequest& request);
 
                 /**
-                 *This API is used to get the list of logs in a project (created by an instance).
+                 *This API is used to get the log list. It has been deprecated. Use `DescribeRumLogList` instead.
                  * @param req DescribeLogListRequest
                  * @return DescribeLogListOutcome
                  */
@@ -690,7 +705,7 @@ Default API request rate limit: 20 requests/sec.
                 DescribeOfflineLogsOutcomeCallable DescribeOfflineLogsCallable(const Model::DescribeOfflineLogsRequest& request);
 
                 /**
-                 *This API is used to get the list of project reporting rates.
+                 *This API is used to get the sampling information of an application’s reporting APIs.
                  * @param req DescribeProjectLimitsRequest
                  * @return DescribeProjectLimitsOutcome
                  */
@@ -726,7 +741,7 @@ Default API request rate limit: 20 requests/sec.
                 DescribeReleaseFileSignOutcomeCallable DescribeReleaseFileSignCallable(const Model::DescribeReleaseFileSignRequest& request);
 
                 /**
-                 *This API is used to get the list of sourcemap files of a project.
+                 *This API is used to get the list of source maps of an application.
                  * @param req DescribeReleaseFilesRequest
                  * @return DescribeReleaseFilesOutcome
                  */
@@ -742,6 +757,24 @@ Default API request rate limit: 20 requests/sec.
                 DescribeRumGroupLogOutcome DescribeRumGroupLog(const Model::DescribeRumGroupLogRequest &request);
                 void DescribeRumGroupLogAsync(const Model::DescribeRumGroupLogRequest& request, const DescribeRumGroupLogAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeRumGroupLogOutcomeCallable DescribeRumGroupLogCallable(const Model::DescribeRumGroupLogRequest& request);
+
+                /**
+                 *This API is used to get the list of logs in a project (created by an instance).
+                 * @param req DescribeRumLogExportRequest
+                 * @return DescribeRumLogExportOutcome
+                 */
+                DescribeRumLogExportOutcome DescribeRumLogExport(const Model::DescribeRumLogExportRequest &request);
+                void DescribeRumLogExportAsync(const Model::DescribeRumLogExportRequest& request, const DescribeRumLogExportAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRumLogExportOutcomeCallable DescribeRumLogExportCallable(const Model::DescribeRumLogExportRequest& request);
+
+                /**
+                 *This API is used to get the list of exported logs in a project.
+                 * @param req DescribeRumLogExportsRequest
+                 * @return DescribeRumLogExportsOutcome
+                 */
+                DescribeRumLogExportsOutcome DescribeRumLogExports(const Model::DescribeRumLogExportsRequest &request);
+                void DescribeRumLogExportsAsync(const Model::DescribeRumLogExportsRequest& request, const DescribeRumLogExportsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRumLogExportsOutcomeCallable DescribeRumLogExportsCallable(const Model::DescribeRumLogExportsRequest& request);
 
                 /**
                  *This API is used to get the list of logs in a project (created by an instance).
@@ -798,7 +831,7 @@ Default API request rate limit: 20 requests/sec.
                 DescribeWhitelistsOutcomeCallable DescribeWhitelistsCallable(const Model::DescribeWhitelistsRequest& request);
 
                 /**
-                 *This API is used to modify an instance.
+                 *This API is used to modify a RUM business system.
                  * @param req ModifyInstanceRequest
                  * @return ModifyInstanceOutcome
                  */
@@ -807,7 +840,7 @@ Default API request rate limit: 20 requests/sec.
                 ModifyInstanceOutcomeCallable ModifyInstanceCallable(const Model::ModifyInstanceRequest& request);
 
                 /**
-                 *This API is used to modify a RUM project.
+                 *This API is used to modify the RUM application information.
                  * @param req ModifyProjectRequest
                  * @return ModifyProjectOutcome
                  */
@@ -825,13 +858,22 @@ Default API request rate limit: 20 requests/sec.
                 ModifyProjectLimitOutcomeCallable ModifyProjectLimitCallable(const Model::ModifyProjectLimitRequest& request);
 
                 /**
-                 *This API is used to resume an instance.
+                 *This API is used to recover a RUM business system so that you can use the application to report data normally.
                  * @param req ResumeInstanceRequest
                  * @return ResumeInstanceOutcome
                  */
                 ResumeInstanceOutcome ResumeInstance(const Model::ResumeInstanceRequest &request);
                 void ResumeInstanceAsync(const Model::ResumeInstanceRequest& request, const ResumeInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ResumeInstanceOutcomeCallable ResumeInstanceCallable(const Model::ResumeInstanceRequest& request);
+
+                /**
+                 *This API is used to recover an application and resume data reporting.
+                 * @param req ResumeProjectRequest
+                 * @return ResumeProjectOutcome
+                 */
+                ResumeProjectOutcome ResumeProject(const Model::ResumeProjectRequest &request);
+                void ResumeProjectAsync(const Model::ResumeProjectRequest& request, const ResumeProjectAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ResumeProjectOutcomeCallable ResumeProjectCallable(const Model::ResumeProjectRequest& request);
 
                 /**
                  *This API is used to stop an instance.

@@ -60,6 +60,24 @@ namespace TencentCloud
                      */
                     bool KeyIdHasBeenSet() const;
 
+                    /**
+                     * 获取The interval between each key rotation in days. Value range: 7 - 365 (default).
+                     * @return RotateDays The interval between each key rotation in days. Value range: 7 - 365 (default).
+                     */
+                    uint64_t GetRotateDays() const;
+
+                    /**
+                     * 设置The interval between each key rotation in days. Value range: 7 - 365 (default).
+                     * @param RotateDays The interval between each key rotation in days. Value range: 7 - 365 (default).
+                     */
+                    void SetRotateDays(const uint64_t& _rotateDays);
+
+                    /**
+                     * 判断参数 RotateDays 是否已赋值
+                     * @return RotateDays 是否已赋值
+                     */
+                    bool RotateDaysHasBeenSet() const;
+
                 private:
 
                     /**
@@ -67,6 +85,12 @@ namespace TencentCloud
                      */
                     std::string m_keyId;
                     bool m_keyIdHasBeenSet;
+
+                    /**
+                     * The interval between each key rotation in days. Value range: 7 - 365 (default).
+                     */
+                    uint64_t m_rotateDays;
+                    bool m_rotateDaysHasBeenSet;
 
                 };
             }

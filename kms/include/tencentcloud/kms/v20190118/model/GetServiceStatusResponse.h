@@ -80,10 +80,10 @@ namespace TencentCloud
                     bool UserLevelHasBeenSet() const;
 
                     /**
-                     * 获取Ultimate Edition expiration time
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ProExpireTime Ultimate Edition expiration time
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Expiration time of the KMS Ultimate edition. It’s represented in a Unix Epoch timestamp.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ProExpireTime Expiration time of the KMS Ultimate edition. It’s represented in a Unix Epoch timestamp.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetProExpireTime() const;
 
@@ -170,8 +170,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_userLevelHasBeenSet;
 
                     /**
-                     * Ultimate Edition expiration time
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Expiration time of the KMS Ultimate edition. It’s represented in a Unix Epoch timestamp.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_proExpireTime;
                     bool m_proExpireTimeHasBeenSet;
