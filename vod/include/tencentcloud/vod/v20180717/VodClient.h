@@ -55,6 +55,8 @@
 #include <tencentcloud/vod/v20180717/model/CreateProcedureTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/CreateReviewTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/CreateReviewTemplateResponse.h>
+#include <tencentcloud/vod/v20180717/model/CreateRoundPlayRequest.h>
+#include <tencentcloud/vod/v20180717/model/CreateRoundPlayResponse.h>
 #include <tencentcloud/vod/v20180717/model/CreateSampleSnapshotTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/CreateSampleSnapshotTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/CreateSnapshotByTimeOffsetTemplateRequest.h>
@@ -97,6 +99,8 @@
 #include <tencentcloud/vod/v20180717/model/DeleteProcedureTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/DeleteReviewTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/DeleteReviewTemplateResponse.h>
+#include <tencentcloud/vod/v20180717/model/DeleteRoundPlayRequest.h>
+#include <tencentcloud/vod/v20180717/model/DeleteRoundPlayResponse.h>
 #include <tencentcloud/vod/v20180717/model/DeleteSampleSnapshotTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/DeleteSampleSnapshotTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/DeleteSnapshotByTimeOffsetTemplateRequest.h>
@@ -159,6 +163,8 @@
 #include <tencentcloud/vod/v20180717/model/DescribeReviewDetailsResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeReviewTemplatesRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeReviewTemplatesResponse.h>
+#include <tencentcloud/vod/v20180717/model/DescribeRoundPlaysRequest.h>
+#include <tencentcloud/vod/v20180717/model/DescribeRoundPlaysResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeSampleSnapshotTemplatesRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeSampleSnapshotTemplatesResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeSnapshotByTimeOffsetTemplatesRequest.h>
@@ -219,6 +225,8 @@
 #include <tencentcloud/vod/v20180717/model/ModifyPersonSampleResponse.h>
 #include <tencentcloud/vod/v20180717/model/ModifyReviewTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/ModifyReviewTemplateResponse.h>
+#include <tencentcloud/vod/v20180717/model/ModifyRoundPlayRequest.h>
+#include <tencentcloud/vod/v20180717/model/ModifyRoundPlayResponse.h>
 #include <tencentcloud/vod/v20180717/model/ModifySampleSnapshotTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/ModifySampleSnapshotTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/ModifySnapshotByTimeOffsetTemplateRequest.h>
@@ -253,6 +261,8 @@
 #include <tencentcloud/vod/v20180717/model/PullUploadResponse.h>
 #include <tencentcloud/vod/v20180717/model/PushUrlCacheRequest.h>
 #include <tencentcloud/vod/v20180717/model/PushUrlCacheResponse.h>
+#include <tencentcloud/vod/v20180717/model/RebuildMediaRequest.h>
+#include <tencentcloud/vod/v20180717/model/RebuildMediaResponse.h>
 #include <tencentcloud/vod/v20180717/model/RefreshUrlCacheRequest.h>
 #include <tencentcloud/vod/v20180717/model/RefreshUrlCacheResponse.h>
 #include <tencentcloud/vod/v20180717/model/RemoveWatermarkRequest.h>
@@ -333,6 +343,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateReviewTemplateResponse> CreateReviewTemplateOutcome;
                 typedef std::future<CreateReviewTemplateOutcome> CreateReviewTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CreateReviewTemplateRequest&, CreateReviewTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateReviewTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateRoundPlayResponse> CreateRoundPlayOutcome;
+                typedef std::future<CreateRoundPlayOutcome> CreateRoundPlayOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::CreateRoundPlayRequest&, CreateRoundPlayOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRoundPlayAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateSampleSnapshotTemplateResponse> CreateSampleSnapshotTemplateOutcome;
                 typedef std::future<CreateSampleSnapshotTemplateOutcome> CreateSampleSnapshotTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CreateSampleSnapshotTemplateRequest&, CreateSampleSnapshotTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateSampleSnapshotTemplateAsyncHandler;
@@ -396,6 +409,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteReviewTemplateResponse> DeleteReviewTemplateOutcome;
                 typedef std::future<DeleteReviewTemplateOutcome> DeleteReviewTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DeleteReviewTemplateRequest&, DeleteReviewTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteReviewTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteRoundPlayResponse> DeleteRoundPlayOutcome;
+                typedef std::future<DeleteRoundPlayOutcome> DeleteRoundPlayOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::DeleteRoundPlayRequest&, DeleteRoundPlayOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRoundPlayAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteSampleSnapshotTemplateResponse> DeleteSampleSnapshotTemplateOutcome;
                 typedef std::future<DeleteSampleSnapshotTemplateOutcome> DeleteSampleSnapshotTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DeleteSampleSnapshotTemplateRequest&, DeleteSampleSnapshotTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteSampleSnapshotTemplateAsyncHandler;
@@ -489,6 +505,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeReviewTemplatesResponse> DescribeReviewTemplatesOutcome;
                 typedef std::future<DescribeReviewTemplatesOutcome> DescribeReviewTemplatesOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeReviewTemplatesRequest&, DescribeReviewTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeReviewTemplatesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRoundPlaysResponse> DescribeRoundPlaysOutcome;
+                typedef std::future<DescribeRoundPlaysOutcome> DescribeRoundPlaysOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::DescribeRoundPlaysRequest&, DescribeRoundPlaysOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRoundPlaysAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeSampleSnapshotTemplatesResponse> DescribeSampleSnapshotTemplatesOutcome;
                 typedef std::future<DescribeSampleSnapshotTemplatesOutcome> DescribeSampleSnapshotTemplatesOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeSampleSnapshotTemplatesRequest&, DescribeSampleSnapshotTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSampleSnapshotTemplatesAsyncHandler;
@@ -579,6 +598,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyReviewTemplateResponse> ModifyReviewTemplateOutcome;
                 typedef std::future<ModifyReviewTemplateOutcome> ModifyReviewTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ModifyReviewTemplateRequest&, ModifyReviewTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyReviewTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyRoundPlayResponse> ModifyRoundPlayOutcome;
+                typedef std::future<ModifyRoundPlayOutcome> ModifyRoundPlayOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::ModifyRoundPlayRequest&, ModifyRoundPlayOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyRoundPlayAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifySampleSnapshotTemplateResponse> ModifySampleSnapshotTemplateOutcome;
                 typedef std::future<ModifySampleSnapshotTemplateOutcome> ModifySampleSnapshotTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ModifySampleSnapshotTemplateRequest&, ModifySampleSnapshotTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifySampleSnapshotTemplateAsyncHandler;
@@ -630,6 +652,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::PushUrlCacheResponse> PushUrlCacheOutcome;
                 typedef std::future<PushUrlCacheOutcome> PushUrlCacheOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::PushUrlCacheRequest&, PushUrlCacheOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PushUrlCacheAsyncHandler;
+                typedef Outcome<Core::Error, Model::RebuildMediaResponse> RebuildMediaOutcome;
+                typedef std::future<RebuildMediaOutcome> RebuildMediaOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::RebuildMediaRequest&, RebuildMediaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RebuildMediaAsyncHandler;
                 typedef Outcome<Core::Error, Model::RefreshUrlCacheResponse> RefreshUrlCacheOutcome;
                 typedef std::future<RefreshUrlCacheOutcome> RefreshUrlCacheOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::RefreshUrlCacheRequest&, RefreshUrlCacheOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RefreshUrlCacheAsyncHandler;
@@ -822,6 +847,17 @@ This API is used to create a custom audio/video moderation template. Up to 50 te
                 CreateReviewTemplateOutcome CreateReviewTemplate(const Model::CreateReviewTemplateRequest &request);
                 void CreateReviewTemplateAsync(const Model::CreateReviewTemplateRequest& request, const CreateReviewTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateReviewTemplateOutcomeCallable CreateReviewTemplateCallable(const Model::CreateReviewTemplateRequest& request);
+
+                /**
+                 *This API is used to create a playlist. You can create at most 100 playlists.
+For each video on the list, you can either use the original file or a transcoding file.
+The files must be in HLS format. Preferably, they should have the same bitrate and resolution.
+                 * @param req CreateRoundPlayRequest
+                 * @return CreateRoundPlayOutcome
+                 */
+                CreateRoundPlayOutcome CreateRoundPlay(const Model::CreateRoundPlayRequest &request);
+                void CreateRoundPlayAsync(const Model::CreateRoundPlayRequest& request, const CreateRoundPlayAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateRoundPlayOutcomeCallable CreateRoundPlayCallable(const Model::CreateRoundPlayRequest& request);
 
                 /**
                  *This API is used to create a custom sampled screencapturing template. Up to 16 templates can be created.
@@ -1022,6 +1058,15 @@ This API is used to delete a custom audio/video moderation template.
                 DeleteReviewTemplateOutcome DeleteReviewTemplate(const Model::DeleteReviewTemplateRequest &request);
                 void DeleteReviewTemplateAsync(const Model::DeleteReviewTemplateRequest& request, const DeleteReviewTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteReviewTemplateOutcomeCallable DeleteReviewTemplateCallable(const Model::DeleteReviewTemplateRequest& request);
+
+                /**
+                 *This API is used to delete a playlist.
+                 * @param req DeleteRoundPlayRequest
+                 * @return DeleteRoundPlayOutcome
+                 */
+                DeleteRoundPlayOutcome DeleteRoundPlay(const Model::DeleteRoundPlayRequest &request);
+                void DeleteRoundPlayAsync(const Model::DeleteRoundPlayRequest& request, const DeleteRoundPlayAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteRoundPlayOutcomeCallable DeleteRoundPlayCallable(const Model::DeleteRoundPlayRequest& request);
 
                 /**
                  *This API is used to delete a custom sampled screencapturing template.
@@ -1360,6 +1405,15 @@ This API returns the video content duration for intelligent recognition in secon
                 DescribeReviewTemplatesOutcomeCallable DescribeReviewTemplatesCallable(const Model::DescribeReviewTemplatesRequest& request);
 
                 /**
+                 *This API is used to query playlists.
+                 * @param req DescribeRoundPlaysRequest
+                 * @return DescribeRoundPlaysOutcome
+                 */
+                DescribeRoundPlaysOutcome DescribeRoundPlays(const Model::DescribeRoundPlaysRequest &request);
+                void DescribeRoundPlaysAsync(const Model::DescribeRoundPlaysRequest& request, const DescribeRoundPlaysAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRoundPlaysOutcomeCallable DescribeRoundPlaysCallable(const Model::DescribeRoundPlaysRequest& request);
+
+                /**
                  *This API is used to query the list of sampled screencapturing templates and supports paged queries by filters.
                  * @param req DescribeSampleSnapshotTemplatesRequest
                  * @return DescribeSampleSnapshotTemplatesOutcome
@@ -1679,6 +1733,16 @@ If the current storage class is DEEP ARCHIVE, it can be changed to the following
                 ModifyReviewTemplateOutcomeCallable ModifyReviewTemplateCallable(const Model::ModifyReviewTemplateRequest& request);
 
                 /**
+                 *This API is used to modify a playlist.
+The modification will only take effect for new playback requests. For ongoing playback, the old playlist will be playable for seven days after the modification.
+                 * @param req ModifyRoundPlayRequest
+                 * @return ModifyRoundPlayOutcome
+                 */
+                ModifyRoundPlayOutcome ModifyRoundPlay(const Model::ModifyRoundPlayRequest &request);
+                void ModifyRoundPlayAsync(const Model::ModifyRoundPlayRequest& request, const ModifyRoundPlayAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyRoundPlayOutcomeCallable ModifyRoundPlayCallable(const Model::ModifyRoundPlayRequest& request);
+
+                /**
                  *This API is used to modify a custom sampled screencapturing template.
                  * @param req ModifySampleSnapshotTemplateRequest
                  * @return ModifySampleSnapshotTemplateOutcome
@@ -1858,6 +1922,15 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
                 PushUrlCacheOutcome PushUrlCache(const Model::PushUrlCacheRequest &request);
                 void PushUrlCacheAsync(const Model::PushUrlCacheRequest& request, const PushUrlCacheAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 PushUrlCacheOutcomeCallable PushUrlCacheCallable(const Model::PushUrlCacheRequest& request);
+
+                /**
+                 *This API is used to remaster audio/video.
+                 * @param req RebuildMediaRequest
+                 * @return RebuildMediaOutcome
+                 */
+                RebuildMediaOutcome RebuildMedia(const Model::RebuildMediaRequest &request);
+                void RebuildMediaAsync(const Model::RebuildMediaRequest& request, const RebuildMediaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RebuildMediaOutcomeCallable RebuildMediaCallable(const Model::RebuildMediaRequest& request);
 
                 /**
                  *1. This API is used to purge URLs.

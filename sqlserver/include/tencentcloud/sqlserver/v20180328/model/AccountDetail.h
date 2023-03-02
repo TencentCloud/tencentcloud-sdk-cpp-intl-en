@@ -245,6 +245,24 @@ namespace TencentCloud
                      */
                     bool HostHasBeenSet() const;
 
+                    /**
+                     * 获取Account type. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account).
+                     * @return AccountType Account type. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account).
+                     */
+                    std::string GetAccountType() const;
+
+                    /**
+                     * 设置Account type. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account).
+                     * @param AccountType Account type. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account).
+                     */
+                    void SetAccountType(const std::string& _accountType);
+
+                    /**
+                     * 判断参数 AccountType 是否已赋值
+                     * @return AccountType 是否已赋值
+                     */
+                    bool AccountTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -312,6 +330,12 @@ namespace TencentCloud
                      */
                     std::string m_host;
                     bool m_hostHasBeenSet;
+
+                    /**
+                     * Account type. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account).
+                     */
+                    std::string m_accountType;
+                    bool m_accountTypeHasBeenSet;
 
                 };
             }

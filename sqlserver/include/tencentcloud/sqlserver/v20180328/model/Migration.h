@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/sqlserver/v20180328/model/MigrationDetail.h>
 #include <tencentcloud/sqlserver/v20180328/model/MigrationAction.h>
+#include <tencentcloud/sqlserver/v20180328/model/DBRenameRes.h>
 
 
 namespace TencentCloud
@@ -344,6 +345,28 @@ Note: this field may return ‘null’, indicating that no valid values can be o
                      */
                     bool IsRecoveryHasBeenSet() const;
 
+                    /**
+                     * 获取Name set of renamed databases
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DBRename Name set of renamed databases
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<DBRenameRes> GetDBRename() const;
+
+                    /**
+                     * 设置Name set of renamed databases
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param DBRename Name set of renamed databases
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetDBRename(const std::vector<DBRenameRes>& _dBRename);
+
+                    /**
+                     * 判断参数 DBRename 是否已赋值
+                     * @return DBRename 是否已赋值
+                     */
+                    bool DBRenameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -443,6 +466,13 @@ Note: this field may return ‘null’, indicating that no valid values can be o
                      */
                     std::string m_isRecovery;
                     bool m_isRecoveryHasBeenSet;
+
+                    /**
+                     * Name set of renamed databases
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<DBRenameRes> m_dBRename;
+                    bool m_dBRenameHasBeenSet;
 
                 };
             }

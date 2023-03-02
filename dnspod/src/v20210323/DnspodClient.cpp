@@ -83,6 +83,135 @@ DnspodClient::CreateDomainOutcomeCallable DnspodClient::CreateDomainCallable(con
     return task->get_future();
 }
 
+DnspodClient::CreateDomainAliasOutcome DnspodClient::CreateDomainAlias(const CreateDomainAliasRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateDomainAlias");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateDomainAliasResponse rsp = CreateDomainAliasResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateDomainAliasOutcome(rsp);
+        else
+            return CreateDomainAliasOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateDomainAliasOutcome(outcome.GetError());
+    }
+}
+
+void DnspodClient::CreateDomainAliasAsync(const CreateDomainAliasRequest& request, const CreateDomainAliasAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateDomainAlias(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DnspodClient::CreateDomainAliasOutcomeCallable DnspodClient::CreateDomainAliasCallable(const CreateDomainAliasRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateDomainAliasOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateDomainAlias(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DnspodClient::CreateDomainBatchOutcome DnspodClient::CreateDomainBatch(const CreateDomainBatchRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateDomainBatch");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateDomainBatchResponse rsp = CreateDomainBatchResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateDomainBatchOutcome(rsp);
+        else
+            return CreateDomainBatchOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateDomainBatchOutcome(outcome.GetError());
+    }
+}
+
+void DnspodClient::CreateDomainBatchAsync(const CreateDomainBatchRequest& request, const CreateDomainBatchAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateDomainBatch(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DnspodClient::CreateDomainBatchOutcomeCallable DnspodClient::CreateDomainBatchCallable(const CreateDomainBatchRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateDomainBatchOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateDomainBatch(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DnspodClient::CreateDomainGroupOutcome DnspodClient::CreateDomainGroup(const CreateDomainGroupRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateDomainGroup");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateDomainGroupResponse rsp = CreateDomainGroupResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateDomainGroupOutcome(rsp);
+        else
+            return CreateDomainGroupOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateDomainGroupOutcome(outcome.GetError());
+    }
+}
+
+void DnspodClient::CreateDomainGroupAsync(const CreateDomainGroupRequest& request, const CreateDomainGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateDomainGroup(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DnspodClient::CreateDomainGroupOutcomeCallable DnspodClient::CreateDomainGroupCallable(const CreateDomainGroupRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateDomainGroupOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateDomainGroup(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 DnspodClient::CreateRecordOutcome DnspodClient::CreateRecord(const CreateRecordRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateRecord");
@@ -119,6 +248,92 @@ DnspodClient::CreateRecordOutcomeCallable DnspodClient::CreateRecordCallable(con
         [this, request]()
         {
             return this->CreateRecord(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DnspodClient::CreateRecordBatchOutcome DnspodClient::CreateRecordBatch(const CreateRecordBatchRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateRecordBatch");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateRecordBatchResponse rsp = CreateRecordBatchResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateRecordBatchOutcome(rsp);
+        else
+            return CreateRecordBatchOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateRecordBatchOutcome(outcome.GetError());
+    }
+}
+
+void DnspodClient::CreateRecordBatchAsync(const CreateRecordBatchRequest& request, const CreateRecordBatchAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateRecordBatch(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DnspodClient::CreateRecordBatchOutcomeCallable DnspodClient::CreateRecordBatchCallable(const CreateRecordBatchRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateRecordBatchOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateRecordBatch(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DnspodClient::CreateRecordGroupOutcome DnspodClient::CreateRecordGroup(const CreateRecordGroupRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateRecordGroup");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateRecordGroupResponse rsp = CreateRecordGroupResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateRecordGroupOutcome(rsp);
+        else
+            return CreateRecordGroupOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateRecordGroupOutcome(outcome.GetError());
+    }
+}
+
+void DnspodClient::CreateRecordGroupAsync(const CreateRecordGroupRequest& request, const CreateRecordGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateRecordGroup(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DnspodClient::CreateRecordGroupOutcomeCallable DnspodClient::CreateRecordGroupCallable(const CreateRecordGroupRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateRecordGroupOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateRecordGroup(request);
         }
     );
 
@@ -169,6 +384,92 @@ DnspodClient::DeleteDomainOutcomeCallable DnspodClient::DeleteDomainCallable(con
     return task->get_future();
 }
 
+DnspodClient::DeleteDomainAliasOutcome DnspodClient::DeleteDomainAlias(const DeleteDomainAliasRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteDomainAlias");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteDomainAliasResponse rsp = DeleteDomainAliasResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteDomainAliasOutcome(rsp);
+        else
+            return DeleteDomainAliasOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteDomainAliasOutcome(outcome.GetError());
+    }
+}
+
+void DnspodClient::DeleteDomainAliasAsync(const DeleteDomainAliasRequest& request, const DeleteDomainAliasAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteDomainAlias(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DnspodClient::DeleteDomainAliasOutcomeCallable DnspodClient::DeleteDomainAliasCallable(const DeleteDomainAliasRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteDomainAliasOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteDomainAlias(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DnspodClient::DeleteDomainBatchOutcome DnspodClient::DeleteDomainBatch(const DeleteDomainBatchRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteDomainBatch");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteDomainBatchResponse rsp = DeleteDomainBatchResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteDomainBatchOutcome(rsp);
+        else
+            return DeleteDomainBatchOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteDomainBatchOutcome(outcome.GetError());
+    }
+}
+
+void DnspodClient::DeleteDomainBatchAsync(const DeleteDomainBatchRequest& request, const DeleteDomainBatchAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteDomainBatch(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DnspodClient::DeleteDomainBatchOutcomeCallable DnspodClient::DeleteDomainBatchCallable(const DeleteDomainBatchRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteDomainBatchOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteDomainBatch(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 DnspodClient::DeleteRecordOutcome DnspodClient::DeleteRecord(const DeleteRecordRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteRecord");
@@ -205,6 +506,92 @@ DnspodClient::DeleteRecordOutcomeCallable DnspodClient::DeleteRecordCallable(con
         [this, request]()
         {
             return this->DeleteRecord(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DnspodClient::DeleteRecordGroupOutcome DnspodClient::DeleteRecordGroup(const DeleteRecordGroupRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteRecordGroup");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteRecordGroupResponse rsp = DeleteRecordGroupResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteRecordGroupOutcome(rsp);
+        else
+            return DeleteRecordGroupOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteRecordGroupOutcome(outcome.GetError());
+    }
+}
+
+void DnspodClient::DeleteRecordGroupAsync(const DeleteRecordGroupRequest& request, const DeleteRecordGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteRecordGroup(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DnspodClient::DeleteRecordGroupOutcomeCallable DnspodClient::DeleteRecordGroupCallable(const DeleteRecordGroupRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteRecordGroupOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteRecordGroup(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DnspodClient::DeleteShareDomainOutcome DnspodClient::DeleteShareDomain(const DeleteShareDomainRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteShareDomain");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteShareDomainResponse rsp = DeleteShareDomainResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteShareDomainOutcome(rsp);
+        else
+            return DeleteShareDomainOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteShareDomainOutcome(outcome.GetError());
+    }
+}
+
+void DnspodClient::DeleteShareDomainAsync(const DeleteShareDomainRequest& request, const DeleteShareDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteShareDomain(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DnspodClient::DeleteShareDomainOutcomeCallable DnspodClient::DeleteShareDomainCallable(const DeleteShareDomainRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteShareDomainOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteShareDomain(request);
         }
     );
 
@@ -255,6 +642,264 @@ DnspodClient::DescribeDomainOutcomeCallable DnspodClient::DescribeDomainCallable
     return task->get_future();
 }
 
+DnspodClient::DescribeDomainAliasListOutcome DnspodClient::DescribeDomainAliasList(const DescribeDomainAliasListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDomainAliasList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDomainAliasListResponse rsp = DescribeDomainAliasListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDomainAliasListOutcome(rsp);
+        else
+            return DescribeDomainAliasListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDomainAliasListOutcome(outcome.GetError());
+    }
+}
+
+void DnspodClient::DescribeDomainAliasListAsync(const DescribeDomainAliasListRequest& request, const DescribeDomainAliasListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeDomainAliasList(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DnspodClient::DescribeDomainAliasListOutcomeCallable DnspodClient::DescribeDomainAliasListCallable(const DescribeDomainAliasListRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeDomainAliasListOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeDomainAliasList(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DnspodClient::DescribeDomainGroupListOutcome DnspodClient::DescribeDomainGroupList(const DescribeDomainGroupListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDomainGroupList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDomainGroupListResponse rsp = DescribeDomainGroupListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDomainGroupListOutcome(rsp);
+        else
+            return DescribeDomainGroupListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDomainGroupListOutcome(outcome.GetError());
+    }
+}
+
+void DnspodClient::DescribeDomainGroupListAsync(const DescribeDomainGroupListRequest& request, const DescribeDomainGroupListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeDomainGroupList(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DnspodClient::DescribeDomainGroupListOutcomeCallable DnspodClient::DescribeDomainGroupListCallable(const DescribeDomainGroupListRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeDomainGroupListOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeDomainGroupList(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DnspodClient::DescribeDomainListOutcome DnspodClient::DescribeDomainList(const DescribeDomainListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDomainList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDomainListResponse rsp = DescribeDomainListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDomainListOutcome(rsp);
+        else
+            return DescribeDomainListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDomainListOutcome(outcome.GetError());
+    }
+}
+
+void DnspodClient::DescribeDomainListAsync(const DescribeDomainListRequest& request, const DescribeDomainListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeDomainList(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DnspodClient::DescribeDomainListOutcomeCallable DnspodClient::DescribeDomainListCallable(const DescribeDomainListRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeDomainListOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeDomainList(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DnspodClient::DescribeDomainLogListOutcome DnspodClient::DescribeDomainLogList(const DescribeDomainLogListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDomainLogList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDomainLogListResponse rsp = DescribeDomainLogListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDomainLogListOutcome(rsp);
+        else
+            return DescribeDomainLogListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDomainLogListOutcome(outcome.GetError());
+    }
+}
+
+void DnspodClient::DescribeDomainLogListAsync(const DescribeDomainLogListRequest& request, const DescribeDomainLogListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeDomainLogList(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DnspodClient::DescribeDomainLogListOutcomeCallable DnspodClient::DescribeDomainLogListCallable(const DescribeDomainLogListRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeDomainLogListOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeDomainLogList(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DnspodClient::DescribeDomainPurviewOutcome DnspodClient::DescribeDomainPurview(const DescribeDomainPurviewRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDomainPurview");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDomainPurviewResponse rsp = DescribeDomainPurviewResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDomainPurviewOutcome(rsp);
+        else
+            return DescribeDomainPurviewOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDomainPurviewOutcome(outcome.GetError());
+    }
+}
+
+void DnspodClient::DescribeDomainPurviewAsync(const DescribeDomainPurviewRequest& request, const DescribeDomainPurviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeDomainPurview(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DnspodClient::DescribeDomainPurviewOutcomeCallable DnspodClient::DescribeDomainPurviewCallable(const DescribeDomainPurviewRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeDomainPurviewOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeDomainPurview(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DnspodClient::DescribeDomainShareInfoOutcome DnspodClient::DescribeDomainShareInfo(const DescribeDomainShareInfoRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDomainShareInfo");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDomainShareInfoResponse rsp = DescribeDomainShareInfoResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDomainShareInfoOutcome(rsp);
+        else
+            return DescribeDomainShareInfoOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDomainShareInfoOutcome(outcome.GetError());
+    }
+}
+
+void DnspodClient::DescribeDomainShareInfoAsync(const DescribeDomainShareInfoRequest& request, const DescribeDomainShareInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeDomainShareInfo(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DnspodClient::DescribeDomainShareInfoOutcomeCallable DnspodClient::DescribeDomainShareInfoCallable(const DescribeDomainShareInfoRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeDomainShareInfoOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeDomainShareInfo(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 DnspodClient::DescribeRecordOutcome DnspodClient::DescribeRecord(const DescribeRecordRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeRecord");
@@ -298,6 +943,92 @@ DnspodClient::DescribeRecordOutcomeCallable DnspodClient::DescribeRecordCallable
     return task->get_future();
 }
 
+DnspodClient::DescribeRecordGroupListOutcome DnspodClient::DescribeRecordGroupList(const DescribeRecordGroupListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRecordGroupList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRecordGroupListResponse rsp = DescribeRecordGroupListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRecordGroupListOutcome(rsp);
+        else
+            return DescribeRecordGroupListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRecordGroupListOutcome(outcome.GetError());
+    }
+}
+
+void DnspodClient::DescribeRecordGroupListAsync(const DescribeRecordGroupListRequest& request, const DescribeRecordGroupListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeRecordGroupList(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DnspodClient::DescribeRecordGroupListOutcomeCallable DnspodClient::DescribeRecordGroupListCallable(const DescribeRecordGroupListRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeRecordGroupListOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeRecordGroupList(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DnspodClient::DescribeRecordLineListOutcome DnspodClient::DescribeRecordLineList(const DescribeRecordLineListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRecordLineList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRecordLineListResponse rsp = DescribeRecordLineListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRecordLineListOutcome(rsp);
+        else
+            return DescribeRecordLineListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRecordLineListOutcome(outcome.GetError());
+    }
+}
+
+void DnspodClient::DescribeRecordLineListAsync(const DescribeRecordLineListRequest& request, const DescribeRecordLineListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeRecordLineList(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DnspodClient::DescribeRecordLineListOutcomeCallable DnspodClient::DescribeRecordLineListCallable(const DescribeRecordLineListRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeRecordLineListOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeRecordLineList(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 DnspodClient::DescribeRecordListOutcome DnspodClient::DescribeRecordList(const DescribeRecordListRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeRecordList");
@@ -334,6 +1065,178 @@ DnspodClient::DescribeRecordListOutcomeCallable DnspodClient::DescribeRecordList
         [this, request]()
         {
             return this->DescribeRecordList(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DnspodClient::DescribeRecordTypeOutcome DnspodClient::DescribeRecordType(const DescribeRecordTypeRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeRecordType");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeRecordTypeResponse rsp = DescribeRecordTypeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeRecordTypeOutcome(rsp);
+        else
+            return DescribeRecordTypeOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeRecordTypeOutcome(outcome.GetError());
+    }
+}
+
+void DnspodClient::DescribeRecordTypeAsync(const DescribeRecordTypeRequest& request, const DescribeRecordTypeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeRecordType(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DnspodClient::DescribeRecordTypeOutcomeCallable DnspodClient::DescribeRecordTypeCallable(const DescribeRecordTypeRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeRecordTypeOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeRecordType(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DnspodClient::DescribeSubdomainAnalyticsOutcome DnspodClient::DescribeSubdomainAnalytics(const DescribeSubdomainAnalyticsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeSubdomainAnalytics");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeSubdomainAnalyticsResponse rsp = DescribeSubdomainAnalyticsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeSubdomainAnalyticsOutcome(rsp);
+        else
+            return DescribeSubdomainAnalyticsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeSubdomainAnalyticsOutcome(outcome.GetError());
+    }
+}
+
+void DnspodClient::DescribeSubdomainAnalyticsAsync(const DescribeSubdomainAnalyticsRequest& request, const DescribeSubdomainAnalyticsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeSubdomainAnalytics(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DnspodClient::DescribeSubdomainAnalyticsOutcomeCallable DnspodClient::DescribeSubdomainAnalyticsCallable(const DescribeSubdomainAnalyticsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeSubdomainAnalyticsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeSubdomainAnalytics(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DnspodClient::ModifyDomainLockOutcome DnspodClient::ModifyDomainLock(const ModifyDomainLockRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyDomainLock");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyDomainLockResponse rsp = ModifyDomainLockResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyDomainLockOutcome(rsp);
+        else
+            return ModifyDomainLockOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyDomainLockOutcome(outcome.GetError());
+    }
+}
+
+void DnspodClient::ModifyDomainLockAsync(const ModifyDomainLockRequest& request, const ModifyDomainLockAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyDomainLock(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DnspodClient::ModifyDomainLockOutcomeCallable DnspodClient::ModifyDomainLockCallable(const ModifyDomainLockRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyDomainLockOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyDomainLock(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DnspodClient::ModifyDomainOwnerOutcome DnspodClient::ModifyDomainOwner(const ModifyDomainOwnerRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyDomainOwner");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyDomainOwnerResponse rsp = ModifyDomainOwnerResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyDomainOwnerOutcome(rsp);
+        else
+            return ModifyDomainOwnerOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyDomainOwnerOutcome(outcome.GetError());
+    }
+}
+
+void DnspodClient::ModifyDomainOwnerAsync(const ModifyDomainOwnerRequest& request, const ModifyDomainOwnerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyDomainOwner(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DnspodClient::ModifyDomainOwnerOutcomeCallable DnspodClient::ModifyDomainOwnerCallable(const ModifyDomainOwnerRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyDomainOwnerOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyDomainOwner(request);
         }
     );
 
@@ -427,6 +1330,49 @@ DnspodClient::ModifyDomainStatusOutcomeCallable DnspodClient::ModifyDomainStatus
     return task->get_future();
 }
 
+DnspodClient::ModifyDomainUnlockOutcome DnspodClient::ModifyDomainUnlock(const ModifyDomainUnlockRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyDomainUnlock");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyDomainUnlockResponse rsp = ModifyDomainUnlockResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyDomainUnlockOutcome(rsp);
+        else
+            return ModifyDomainUnlockOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyDomainUnlockOutcome(outcome.GetError());
+    }
+}
+
+void DnspodClient::ModifyDomainUnlockAsync(const ModifyDomainUnlockRequest& request, const ModifyDomainUnlockAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyDomainUnlock(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DnspodClient::ModifyDomainUnlockOutcomeCallable DnspodClient::ModifyDomainUnlockCallable(const ModifyDomainUnlockRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyDomainUnlockOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyDomainUnlock(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 DnspodClient::ModifyRecordOutcome DnspodClient::ModifyRecord(const ModifyRecordRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyRecord");
@@ -463,6 +1409,221 @@ DnspodClient::ModifyRecordOutcomeCallable DnspodClient::ModifyRecordCallable(con
         [this, request]()
         {
             return this->ModifyRecord(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DnspodClient::ModifyRecordBatchOutcome DnspodClient::ModifyRecordBatch(const ModifyRecordBatchRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyRecordBatch");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyRecordBatchResponse rsp = ModifyRecordBatchResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyRecordBatchOutcome(rsp);
+        else
+            return ModifyRecordBatchOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyRecordBatchOutcome(outcome.GetError());
+    }
+}
+
+void DnspodClient::ModifyRecordBatchAsync(const ModifyRecordBatchRequest& request, const ModifyRecordBatchAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyRecordBatch(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DnspodClient::ModifyRecordBatchOutcomeCallable DnspodClient::ModifyRecordBatchCallable(const ModifyRecordBatchRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyRecordBatchOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyRecordBatch(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DnspodClient::ModifyRecordGroupOutcome DnspodClient::ModifyRecordGroup(const ModifyRecordGroupRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyRecordGroup");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyRecordGroupResponse rsp = ModifyRecordGroupResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyRecordGroupOutcome(rsp);
+        else
+            return ModifyRecordGroupOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyRecordGroupOutcome(outcome.GetError());
+    }
+}
+
+void DnspodClient::ModifyRecordGroupAsync(const ModifyRecordGroupRequest& request, const ModifyRecordGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyRecordGroup(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DnspodClient::ModifyRecordGroupOutcomeCallable DnspodClient::ModifyRecordGroupCallable(const ModifyRecordGroupRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyRecordGroupOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyRecordGroup(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DnspodClient::ModifyRecordRemarkOutcome DnspodClient::ModifyRecordRemark(const ModifyRecordRemarkRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyRecordRemark");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyRecordRemarkResponse rsp = ModifyRecordRemarkResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyRecordRemarkOutcome(rsp);
+        else
+            return ModifyRecordRemarkOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyRecordRemarkOutcome(outcome.GetError());
+    }
+}
+
+void DnspodClient::ModifyRecordRemarkAsync(const ModifyRecordRemarkRequest& request, const ModifyRecordRemarkAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyRecordRemark(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DnspodClient::ModifyRecordRemarkOutcomeCallable DnspodClient::ModifyRecordRemarkCallable(const ModifyRecordRemarkRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyRecordRemarkOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyRecordRemark(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DnspodClient::ModifyRecordStatusOutcome DnspodClient::ModifyRecordStatus(const ModifyRecordStatusRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyRecordStatus");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyRecordStatusResponse rsp = ModifyRecordStatusResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyRecordStatusOutcome(rsp);
+        else
+            return ModifyRecordStatusOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyRecordStatusOutcome(outcome.GetError());
+    }
+}
+
+void DnspodClient::ModifyRecordStatusAsync(const ModifyRecordStatusRequest& request, const ModifyRecordStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyRecordStatus(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DnspodClient::ModifyRecordStatusOutcomeCallable DnspodClient::ModifyRecordStatusCallable(const ModifyRecordStatusRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyRecordStatusOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyRecordStatus(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DnspodClient::ModifyRecordToGroupOutcome DnspodClient::ModifyRecordToGroup(const ModifyRecordToGroupRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyRecordToGroup");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyRecordToGroupResponse rsp = ModifyRecordToGroupResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyRecordToGroupOutcome(rsp);
+        else
+            return ModifyRecordToGroupOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyRecordToGroupOutcome(outcome.GetError());
+    }
+}
+
+void DnspodClient::ModifyRecordToGroupAsync(const ModifyRecordToGroupRequest& request, const ModifyRecordToGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyRecordToGroup(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DnspodClient::ModifyRecordToGroupOutcomeCallable DnspodClient::ModifyRecordToGroupCallable(const ModifyRecordToGroupRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyRecordToGroupOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyRecordToGroup(request);
         }
     );
 

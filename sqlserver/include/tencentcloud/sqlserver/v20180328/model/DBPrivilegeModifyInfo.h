@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool DBNameHasBeenSet() const;
 
                     /**
-                     * 获取Permission change information. ReadWrite: read/write, ReadOnly: read-only, Delete: the account has the permission to delete this database
-                     * @return Privilege Permission change information. ReadWrite: read/write, ReadOnly: read-only, Delete: the account has the permission to delete this database
+                     * 获取Permission modification information. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `Delete` (delete the account's permission to this database), `DBOwner` (owner).
+                     * @return Privilege Permission modification information. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `Delete` (delete the account's permission to this database), `DBOwner` (owner).
                      */
                     std::string GetPrivilege() const;
 
                     /**
-                     * 设置Permission change information. ReadWrite: read/write, ReadOnly: read-only, Delete: the account has the permission to delete this database
-                     * @param Privilege Permission change information. ReadWrite: read/write, ReadOnly: read-only, Delete: the account has the permission to delete this database
+                     * 设置Permission modification information. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `Delete` (delete the account's permission to this database), `DBOwner` (owner).
+                     * @param Privilege Permission modification information. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `Delete` (delete the account's permission to this database), `DBOwner` (owner).
                      */
                     void SetPrivilege(const std::string& _privilege);
 
@@ -91,7 +91,7 @@ namespace TencentCloud
                     bool m_dBNameHasBeenSet;
 
                     /**
-                     * Permission change information. ReadWrite: read/write, ReadOnly: read-only, Delete: the account has the permission to delete this database
+                     * Permission modification information. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `Delete` (delete the account's permission to this database), `DBOwner` (owner).
                      */
                     std::string m_privilege;
                     bool m_privilegeHasBeenSet;

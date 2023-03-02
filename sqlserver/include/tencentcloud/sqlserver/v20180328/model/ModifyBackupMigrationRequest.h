@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/sqlserver/v20180328/model/RenameRestoreDatabase.h>
 
 
 namespace TencentCloud
@@ -150,6 +151,24 @@ namespace TencentCloud
                      */
                     bool BackupFilesHasBeenSet() const;
 
+                    /**
+                     * 获取Name set of databases to be renamed
+                     * @return DBRename Name set of databases to be renamed
+                     */
+                    std::vector<RenameRestoreDatabase> GetDBRename() const;
+
+                    /**
+                     * 设置Name set of databases to be renamed
+                     * @param DBRename Name set of databases to be renamed
+                     */
+                    void SetDBRename(const std::vector<RenameRestoreDatabase>& _dBRename);
+
+                    /**
+                     * 判断参数 DBRename 是否已赋值
+                     * @return DBRename 是否已赋值
+                     */
+                    bool DBRenameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -187,6 +206,12 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_backupFiles;
                     bool m_backupFilesHasBeenSet;
+
+                    /**
+                     * Name set of databases to be renamed
+                     */
+                    std::vector<RenameRestoreDatabase> m_dBRename;
+                    bool m_dBRenameHasBeenSet;
 
                 };
             }

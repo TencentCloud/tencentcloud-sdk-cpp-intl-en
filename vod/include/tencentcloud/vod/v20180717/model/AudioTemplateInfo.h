@@ -48,77 +48,85 @@ namespace TencentCloud
 
                     /**
                      * 获取The audio codec.
-If `Container` parameter is `mp3`, the valid value is:
-<li>libmp3lame</li>
+If `Container` is `mp3`, the valid value is:
+<li>`libmp3lame`</li>
 If `Container` is `ogg` or `flac`, the valid value is:
-<li>flac</li>
+<li>`flac`</li>
 If `Container` is `m4a`, the valid values are:
-<li>libfdk_aac</li>
-<li>libmp3lame</li>
-<li>ac3</li>
+<li>`libfdk_aac`</li>
+<li>`libmp3lame`</li>
+<li>`ac3`</li>
 If `Container` is `mp4` or `flv`, the valid values are:
-<li>libfdk_aac: more suitable for mp4</li>
-<li>libmp3lame: More suitable for flv</li>
-<li>mp2</li>
-If `Container` is `hls`, the valid values are:
-<li>libfdk_aac</li>
-If `Format` is `HLS` or `MPEG-DASH`, the valid values are:
-<li>libfdk_aac</li>
+<li>`libfdk_aac` (Recommended for MP4)</li>
+<li>`libmp3lame` (Recommended for FLV)</li>
+<li>`mp2`</li>
+If `Container` is `hls`, the valid value is:
+<li>`libfdk_aac`</li>
+If `Format` is `HLS` or `MPEG-DASH`, the valid value is:
+<li>`libfdk_aac`</li>
+If `Container` is `wav`, the valid value is:
+<li>`pcm16`</li>
                      * @return Codec The audio codec.
-If `Container` parameter is `mp3`, the valid value is:
-<li>libmp3lame</li>
+If `Container` is `mp3`, the valid value is:
+<li>`libmp3lame`</li>
 If `Container` is `ogg` or `flac`, the valid value is:
-<li>flac</li>
+<li>`flac`</li>
 If `Container` is `m4a`, the valid values are:
-<li>libfdk_aac</li>
-<li>libmp3lame</li>
-<li>ac3</li>
+<li>`libfdk_aac`</li>
+<li>`libmp3lame`</li>
+<li>`ac3`</li>
 If `Container` is `mp4` or `flv`, the valid values are:
-<li>libfdk_aac: more suitable for mp4</li>
-<li>libmp3lame: More suitable for flv</li>
-<li>mp2</li>
-If `Container` is `hls`, the valid values are:
-<li>libfdk_aac</li>
-If `Format` is `HLS` or `MPEG-DASH`, the valid values are:
-<li>libfdk_aac</li>
+<li>`libfdk_aac` (Recommended for MP4)</li>
+<li>`libmp3lame` (Recommended for FLV)</li>
+<li>`mp2`</li>
+If `Container` is `hls`, the valid value is:
+<li>`libfdk_aac`</li>
+If `Format` is `HLS` or `MPEG-DASH`, the valid value is:
+<li>`libfdk_aac`</li>
+If `Container` is `wav`, the valid value is:
+<li>`pcm16`</li>
                      */
                     std::string GetCodec() const;
 
                     /**
                      * 设置The audio codec.
-If `Container` parameter is `mp3`, the valid value is:
-<li>libmp3lame</li>
+If `Container` is `mp3`, the valid value is:
+<li>`libmp3lame`</li>
 If `Container` is `ogg` or `flac`, the valid value is:
-<li>flac</li>
+<li>`flac`</li>
 If `Container` is `m4a`, the valid values are:
-<li>libfdk_aac</li>
-<li>libmp3lame</li>
-<li>ac3</li>
+<li>`libfdk_aac`</li>
+<li>`libmp3lame`</li>
+<li>`ac3`</li>
 If `Container` is `mp4` or `flv`, the valid values are:
-<li>libfdk_aac: more suitable for mp4</li>
-<li>libmp3lame: More suitable for flv</li>
-<li>mp2</li>
-If `Container` is `hls`, the valid values are:
-<li>libfdk_aac</li>
-If `Format` is `HLS` or `MPEG-DASH`, the valid values are:
-<li>libfdk_aac</li>
+<li>`libfdk_aac` (Recommended for MP4)</li>
+<li>`libmp3lame` (Recommended for FLV)</li>
+<li>`mp2`</li>
+If `Container` is `hls`, the valid value is:
+<li>`libfdk_aac`</li>
+If `Format` is `HLS` or `MPEG-DASH`, the valid value is:
+<li>`libfdk_aac`</li>
+If `Container` is `wav`, the valid value is:
+<li>`pcm16`</li>
                      * @param Codec The audio codec.
-If `Container` parameter is `mp3`, the valid value is:
-<li>libmp3lame</li>
+If `Container` is `mp3`, the valid value is:
+<li>`libmp3lame`</li>
 If `Container` is `ogg` or `flac`, the valid value is:
-<li>flac</li>
+<li>`flac`</li>
 If `Container` is `m4a`, the valid values are:
-<li>libfdk_aac</li>
-<li>libmp3lame</li>
-<li>ac3</li>
+<li>`libfdk_aac`</li>
+<li>`libmp3lame`</li>
+<li>`ac3`</li>
 If `Container` is `mp4` or `flv`, the valid values are:
-<li>libfdk_aac: more suitable for mp4</li>
-<li>libmp3lame: More suitable for flv</li>
-<li>mp2</li>
-If `Container` is `hls`, the valid values are:
-<li>libfdk_aac</li>
-If `Format` is `HLS` or `MPEG-DASH`, the valid values are:
-<li>libfdk_aac</li>
+<li>`libfdk_aac` (Recommended for MP4)</li>
+<li>`libmp3lame` (Recommended for FLV)</li>
+<li>`mp2`</li>
+If `Container` is `hls`, the valid value is:
+<li>`libfdk_aac`</li>
+If `Format` is `HLS` or `MPEG-DASH`, the valid value is:
+<li>`libfdk_aac`</li>
+If `Container` is `wav`, the valid value is:
+<li>`pcm16`</li>
                      */
                     void SetCodec(const std::string& _codec);
 
@@ -151,30 +159,34 @@ If the value is 0, the bitrate of the audio stream will be the same as that of t
                     bool BitrateHasBeenSet() const;
 
                     /**
-                     * 获取Audio stream sample rate. Valid values:
-<li>32,000</li>
-<li>44,100</li>
-<li>48,000</li>
-In Hz.
-                     * @return SampleRate Audio stream sample rate. Valid values:
-<li>32,000</li>
-<li>44,100</li>
-<li>48,000</li>
-In Hz.
+                     * 获取The audio sample rate. Valid values:
+<li>`16000` (valid only if `Codec` is `pcm16`)</li>
+<li>`32000`</li>
+<li>`44100`</li>
+<li>`48000`</li>
+Unit: Hz.
+                     * @return SampleRate The audio sample rate. Valid values:
+<li>`16000` (valid only if `Codec` is `pcm16`)</li>
+<li>`32000`</li>
+<li>`44100`</li>
+<li>`48000`</li>
+Unit: Hz.
                      */
                     uint64_t GetSampleRate() const;
 
                     /**
-                     * 设置Audio stream sample rate. Valid values:
-<li>32,000</li>
-<li>44,100</li>
-<li>48,000</li>
-In Hz.
-                     * @param SampleRate Audio stream sample rate. Valid values:
-<li>32,000</li>
-<li>44,100</li>
-<li>48,000</li>
-In Hz.
+                     * 设置The audio sample rate. Valid values:
+<li>`16000` (valid only if `Codec` is `pcm16`)</li>
+<li>`32000`</li>
+<li>`44100`</li>
+<li>`48000`</li>
+Unit: Hz.
+                     * @param SampleRate The audio sample rate. Valid values:
+<li>`16000` (valid only if `Codec` is `pcm16`)</li>
+<li>`32000`</li>
+<li>`44100`</li>
+<li>`48000`</li>
+Unit: Hz.
                      */
                     void SetSampleRate(const uint64_t& _sampleRate);
 
@@ -226,22 +238,24 @@ Default value: 2
 
                     /**
                      * The audio codec.
-If `Container` parameter is `mp3`, the valid value is:
-<li>libmp3lame</li>
+If `Container` is `mp3`, the valid value is:
+<li>`libmp3lame`</li>
 If `Container` is `ogg` or `flac`, the valid value is:
-<li>flac</li>
+<li>`flac`</li>
 If `Container` is `m4a`, the valid values are:
-<li>libfdk_aac</li>
-<li>libmp3lame</li>
-<li>ac3</li>
+<li>`libfdk_aac`</li>
+<li>`libmp3lame`</li>
+<li>`ac3`</li>
 If `Container` is `mp4` or `flv`, the valid values are:
-<li>libfdk_aac: more suitable for mp4</li>
-<li>libmp3lame: More suitable for flv</li>
-<li>mp2</li>
-If `Container` is `hls`, the valid values are:
-<li>libfdk_aac</li>
-If `Format` is `HLS` or `MPEG-DASH`, the valid values are:
-<li>libfdk_aac</li>
+<li>`libfdk_aac` (Recommended for MP4)</li>
+<li>`libmp3lame` (Recommended for FLV)</li>
+<li>`mp2`</li>
+If `Container` is `hls`, the valid value is:
+<li>`libfdk_aac`</li>
+If `Format` is `HLS` or `MPEG-DASH`, the valid value is:
+<li>`libfdk_aac`</li>
+If `Container` is `wav`, the valid value is:
+<li>`pcm16`</li>
                      */
                     std::string m_codec;
                     bool m_codecHasBeenSet;
@@ -254,11 +268,12 @@ If the value is 0, the bitrate of the audio stream will be the same as that of t
                     bool m_bitrateHasBeenSet;
 
                     /**
-                     * Audio stream sample rate. Valid values:
-<li>32,000</li>
-<li>44,100</li>
-<li>48,000</li>
-In Hz.
+                     * The audio sample rate. Valid values:
+<li>`16000` (valid only if `Codec` is `pcm16`)</li>
+<li>`32000`</li>
+<li>`44100`</li>
+<li>`48000`</li>
+Unit: Hz.
                      */
                     uint64_t m_sampleRate;
                     bool m_sampleRateHasBeenSet;

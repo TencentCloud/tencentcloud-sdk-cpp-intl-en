@@ -34,6 +34,7 @@
 #include <tencentcloud/vod/v20180717/model/CreateImageSpriteTask2017.h>
 #include <tencentcloud/vod/v20180717/model/SnapshotByTimeOffsetTask2017.h>
 #include <tencentcloud/vod/v20180717/model/RemoveWatermarkTask.h>
+#include <tencentcloud/vod/v20180717/model/RebuildMediaTask.h>
 #include <tencentcloud/vod/v20180717/model/ExtractTraceWatermarkTask.h>
 #include <tencentcloud/vod/v20180717/model/ReviewAudioVideoTask.h>
 #include <tencentcloud/vod/v20180717/model/ReduceMediaBitrateTask.h>
@@ -66,24 +67,26 @@ namespace TencentCloud
 <li>`EditMedia`: Video editing</li>
 <li>`SplitMedia`: Video splitting</li>
 <li>`ComposeMedia`: Media file production</li>
-<li>`WechatPublish`: WeChat publishing</li>
-<li>`WechatMiniProgramPublish`: Publishing videos on WeChat Mini Program</li>
+<li>`WechatPublish`: Weixin publishing</li>
+<li>`WechatMiniProgramPublish`: Publishing videos on Weixin Mini Program</li>
 <li>`PullUpload`: Pulling media files for upload</li>
 <li>`FastClipMedia`: Quick clipping</li>
 <li>`RemoveWatermarkTask`: Watermark removal</li>
 <li>`DescribeFileAttributesTask`: Getting file attributes</li>
+<li>`RebuildMedia`; Remastering audio/video</li>
 <li> `ReviewAudioVideo`: Moderation</li>
                      * @return TaskType The task type. Valid values:
 <li>`Procedure`: Video processing</li>
 <li>`EditMedia`: Video editing</li>
 <li>`SplitMedia`: Video splitting</li>
 <li>`ComposeMedia`: Media file production</li>
-<li>`WechatPublish`: WeChat publishing</li>
-<li>`WechatMiniProgramPublish`: Publishing videos on WeChat Mini Program</li>
+<li>`WechatPublish`: Weixin publishing</li>
+<li>`WechatMiniProgramPublish`: Publishing videos on Weixin Mini Program</li>
 <li>`PullUpload`: Pulling media files for upload</li>
 <li>`FastClipMedia`: Quick clipping</li>
 <li>`RemoveWatermarkTask`: Watermark removal</li>
 <li>`DescribeFileAttributesTask`: Getting file attributes</li>
+<li>`RebuildMedia`; Remastering audio/video</li>
 <li> `ReviewAudioVideo`: Moderation</li>
                      */
                     std::string GetTaskType() const;
@@ -331,6 +334,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RemoveWatermarkTaskHasBeenSet() const;
 
                     /**
+                     * 获取The information of an audio/video remastering task. This parameter is valid only if `TaskType` is `RebuildMedia`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RebuildMediaTask The information of an audio/video remastering task. This parameter is valid only if `TaskType` is `RebuildMedia`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    RebuildMediaTask GetRebuildMediaTask() const;
+
+                    /**
+                     * 判断参数 RebuildMediaTask 是否已赋值
+                     * @return RebuildMediaTask 是否已赋值
+                     */
+                    bool RebuildMediaTaskHasBeenSet() const;
+
+                    /**
                      * 获取The information of a digital watermark extraction task. This parameter is valid only if `TaskType` is `ExtractTraceWatermark`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ExtractTraceWatermarkTask The information of a digital watermark extraction task. This parameter is valid only if `TaskType` is `ExtractTraceWatermark`.
@@ -394,12 +411,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`EditMedia`: Video editing</li>
 <li>`SplitMedia`: Video splitting</li>
 <li>`ComposeMedia`: Media file production</li>
-<li>`WechatPublish`: WeChat publishing</li>
-<li>`WechatMiniProgramPublish`: Publishing videos on WeChat Mini Program</li>
+<li>`WechatPublish`: Weixin publishing</li>
+<li>`WechatMiniProgramPublish`: Publishing videos on Weixin Mini Program</li>
 <li>`PullUpload`: Pulling media files for upload</li>
 <li>`FastClipMedia`: Quick clipping</li>
 <li>`RemoveWatermarkTask`: Watermark removal</li>
 <li>`DescribeFileAttributesTask`: Getting file attributes</li>
+<li>`RebuildMedia`; Remastering audio/video</li>
 <li> `ReviewAudioVideo`: Moderation</li>
                      */
                     std::string m_taskType;
@@ -522,6 +540,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     RemoveWatermarkTask m_removeWatermarkTask;
                     bool m_removeWatermarkTaskHasBeenSet;
+
+                    /**
+                     * The information of an audio/video remastering task. This parameter is valid only if `TaskType` is `RebuildMedia`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    RebuildMediaTask m_rebuildMediaTask;
+                    bool m_rebuildMediaTaskHasBeenSet;
 
                     /**
                      * The information of a digital watermark extraction task. This parameter is valid only if `TaskType` is `ExtractTraceWatermark`.

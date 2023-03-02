@@ -288,6 +288,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool MXHasBeenSet() const;
 
+                    /**
+                     * 获取Whether it is a default NS record.
+                     * @return DefaultNS Whether it is a default NS record.
+                     */
+                    bool GetDefaultNS() const;
+
+                    /**
+                     * 设置Whether it is a default NS record.
+                     * @param DefaultNS Whether it is a default NS record.
+                     */
+                    void SetDefaultNS(const bool& _defaultNS);
+
+                    /**
+                     * 判断参数 DefaultNS 是否已赋值
+                     * @return DefaultNS 是否已赋值
+                     */
+                    bool DefaultNSHasBeenSet() const;
+
                 private:
 
                     /**
@@ -369,6 +387,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     uint64_t m_mX;
                     bool m_mXHasBeenSet;
+
+                    /**
+                     * Whether it is a default NS record.
+                     */
+                    bool m_defaultNS;
+                    bool m_defaultNSHasBeenSet;
 
                 };
             }

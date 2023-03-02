@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool UserNameHasBeenSet() const;
 
                     /**
-                     * 获取Database permissions. ReadWrite: read/write, ReadOnly: read-only
-                     * @return Privilege Database permissions. ReadWrite: read/write, ReadOnly: read-only
+                     * 获取Database permission. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `Delete` (delete the database permissions of this account), `DBOwner` (owner).
+                     * @return Privilege Database permission. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `Delete` (delete the database permissions of this account), `DBOwner` (owner).
                      */
                     std::string GetPrivilege() const;
 
                     /**
-                     * 设置Database permissions. ReadWrite: read/write, ReadOnly: read-only
-                     * @param Privilege Database permissions. ReadWrite: read/write, ReadOnly: read-only
+                     * 设置Database permission. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `Delete` (delete the database permissions of this account), `DBOwner` (owner).
+                     * @param Privilege Database permission. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `Delete` (delete the database permissions of this account), `DBOwner` (owner).
                      */
                     void SetPrivilege(const std::string& _privilege);
 
@@ -81,6 +81,24 @@ namespace TencentCloud
                      * @return Privilege 是否已赋值
                      */
                     bool PrivilegeHasBeenSet() const;
+
+                    /**
+                     * 获取Account name. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account).
+                     * @return AccountType Account name. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account).
+                     */
+                    std::string GetAccountType() const;
+
+                    /**
+                     * 设置Account name. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account).
+                     * @param AccountType Account name. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account).
+                     */
+                    void SetAccountType(const std::string& _accountType);
+
+                    /**
+                     * 判断参数 AccountType 是否已赋值
+                     * @return AccountType 是否已赋值
+                     */
+                    bool AccountTypeHasBeenSet() const;
 
                 private:
 
@@ -91,10 +109,16 @@ namespace TencentCloud
                     bool m_userNameHasBeenSet;
 
                     /**
-                     * Database permissions. ReadWrite: read/write, ReadOnly: read-only
+                     * Database permission. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `Delete` (delete the database permissions of this account), `DBOwner` (owner).
                      */
                     std::string m_privilege;
                     bool m_privilegeHasBeenSet;
+
+                    /**
+                     * Account name. Valid values: `L0` (admin account, only for basic edition), `L1` (privileged account), `L2` (designated account), `L3` (standard account).
+                     */
+                    std::string m_accountType;
+                    bool m_accountTypeHasBeenSet;
 
                 };
             }

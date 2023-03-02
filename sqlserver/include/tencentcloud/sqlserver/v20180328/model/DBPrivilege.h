@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool DBNameHasBeenSet() const;
 
                     /**
-                     * 获取Database permissions. ReadWrite: read/write, ReadOnly: read-only
-                     * @return Privilege Database permissions. ReadWrite: read/write, ReadOnly: read-only
+                     * 获取Database permissions. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `DBOwner` (owner)
+                     * @return Privilege Database permissions. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `DBOwner` (owner)
                      */
                     std::string GetPrivilege() const;
 
                     /**
-                     * 设置Database permissions. ReadWrite: read/write, ReadOnly: read-only
-                     * @param Privilege Database permissions. ReadWrite: read/write, ReadOnly: read-only
+                     * 设置Database permissions. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `DBOwner` (owner)
+                     * @param Privilege Database permissions. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `DBOwner` (owner)
                      */
                     void SetPrivilege(const std::string& _privilege);
 
@@ -91,7 +91,7 @@ namespace TencentCloud
                     bool m_dBNameHasBeenSet;
 
                     /**
-                     * Database permissions. ReadWrite: read/write, ReadOnly: read-only
+                     * Database permissions. Valid values: `ReadWrite` (read-write), `ReadOnly` (read-only), `DBOwner` (owner)
                      */
                     std::string m_privilege;
                     bool m_privilegeHasBeenSet;
