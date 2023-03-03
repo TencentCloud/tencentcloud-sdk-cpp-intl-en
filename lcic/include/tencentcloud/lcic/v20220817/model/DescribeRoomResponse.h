@@ -152,8 +152,8 @@ namespace TencentCloud
                     bool AudioQualityHasBeenSet() const;
 
                     /**
-                     * 获取Room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher	
-                     * @return SubType Room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher	
+                     * 获取The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only.
+                     * @return SubType The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only.
                      */
                     std::string GetSubType() const;
 
@@ -202,6 +202,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return RecordUrl 是否已赋值
                      */
                     bool RecordUrlHasBeenSet() const;
+
+                    /**
+                     * 获取The class status. `0`: The class has not started. `1`: The class has started. `2`: The class ended. `3`: The class expired.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Status The class status. `0`: The class has not started. `1`: The class has started. `2`: The class ended. `3`: The class expired.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetStatus() const;
+
+                    /**
+                     * 判断参数 Status 是否已赋值
+                     * @return Status 是否已赋值
+                     */
+                    bool StatusHasBeenSet() const;
+
+                    /**
+                     * 获取
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return GroupId 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetGroupId() const;
+
+                    /**
+                     * 判断参数 GroupId 是否已赋值
+                     * @return GroupId 是否已赋值
+                     */
+                    bool GroupIdHasBeenSet() const;
 
                 private:
 
@@ -260,7 +288,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_audioQualityHasBeenSet;
 
                     /**
-                     * Room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher	
+                     * The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only.
                      */
                     std::string m_subType;
                     bool m_subTypeHasBeenSet;
@@ -284,6 +312,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_recordUrl;
                     bool m_recordUrlHasBeenSet;
+
+                    /**
+                     * The class status. `0`: The class has not started. `1`: The class has started. `2`: The class ended. `3`: The class expired.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_status;
+                    bool m_statusHasBeenSet;
+
+                    /**
+                     * 
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_groupId;
+                    bool m_groupIdHasBeenSet;
 
                 };
             }

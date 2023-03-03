@@ -36,7 +36,9 @@ DescribeRoomResponse::DescribeRoomResponse() :
     m_subTypeHasBeenSet(false),
     m_disableRecordHasBeenSet(false),
     m_assistantsHasBeenSet(false),
-    m_recordUrlHasBeenSet(false)
+    m_recordUrlHasBeenSet(false),
+    m_statusHasBeenSet(false),
+    m_groupIdHasBeenSet(false)
 {
 }
 
@@ -207,6 +209,26 @@ CoreInternalOutcome DescribeRoomResponse::Deserialize(const string &payload)
         m_recordUrlHasBeenSet = true;
     }
 
+    if (rsp.HasMember("Status") && !rsp["Status"].IsNull())
+    {
+        if (!rsp["Status"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `Status` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_status = rsp["Status"].GetUint64();
+        m_statusHasBeenSet = true;
+    }
+
+    if (rsp.HasMember("GroupId") && !rsp["GroupId"].IsNull())
+    {
+        if (!rsp["GroupId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `GroupId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_groupId = string(rsp["GroupId"].GetString());
+        m_groupIdHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -324,6 +346,22 @@ string DescribeRoomResponse::ToJsonString() const
         string key = "RecordUrl";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_recordUrl.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_statusHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Status";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_status, allocator);
+    }
+
+    if (m_groupIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "GroupId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_groupId.c_str(), allocator).Move(), allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -466,6 +504,26 @@ string DescribeRoomResponse::GetRecordUrl() const
 bool DescribeRoomResponse::RecordUrlHasBeenSet() const
 {
     return m_recordUrlHasBeenSet;
+}
+
+uint64_t DescribeRoomResponse::GetStatus() const
+{
+    return m_status;
+}
+
+bool DescribeRoomResponse::StatusHasBeenSet() const
+{
+    return m_statusHasBeenSet;
+}
+
+string DescribeRoomResponse::GetGroupId() const
+{
+    return m_groupId;
+}
+
+bool DescribeRoomResponse::GroupIdHasBeenSet() const
+{
+    return m_groupIdHasBeenSet;
 }
 
 

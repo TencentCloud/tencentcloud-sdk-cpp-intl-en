@@ -92,6 +92,58 @@ namespace TencentCloud
                      */
                     bool MemberRecordsHasBeenSet() const;
 
+                    /**
+                     * 获取The actual start time of the room, in Unix timestamp, accurate to seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RealStartTime The actual start time of the room, in Unix timestamp, accurate to seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetRealStartTime() const;
+
+                    /**
+                     * 判断参数 RealStartTime 是否已赋值
+                     * @return RealStartTime 是否已赋值
+                     */
+                    bool RealStartTimeHasBeenSet() const;
+
+                    /**
+                     * 获取The actual end time of the room, in Unix timestamp, accurate to seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RealEndTime The actual end time of the room, in Unix timestamp, accurate to seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetRealEndTime() const;
+
+                    /**
+                     * 判断参数 RealEndTime 是否已赋值
+                     * @return RealEndTime 是否已赋值
+                     */
+                    bool RealEndTimeHasBeenSet() const;
+
+                    /**
+                     * 获取The total number of room messages.
+                     * @return MessageCount The total number of room messages.
+                     */
+                    uint64_t GetMessageCount() const;
+
+                    /**
+                     * 判断参数 MessageCount 是否已赋值
+                     * @return MessageCount 是否已赋值
+                     */
+                    bool MessageCountHasBeenSet() const;
+
+                    /**
+                     * 获取The total number of mics in the room.
+                     * @return MicCount The total number of mics in the room.
+                     */
+                    uint64_t GetMicCount() const;
+
+                    /**
+                     * 判断参数 MicCount 是否已赋值
+                     * @return MicCount 是否已赋值
+                     */
+                    bool MicCountHasBeenSet() const;
+
                 private:
 
                     /**
@@ -117,6 +169,32 @@ namespace TencentCloud
                      */
                     std::vector<MemberRecord> m_memberRecords;
                     bool m_memberRecordsHasBeenSet;
+
+                    /**
+                     * The actual start time of the room, in Unix timestamp, accurate to seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_realStartTime;
+                    bool m_realStartTimeHasBeenSet;
+
+                    /**
+                     * The actual end time of the room, in Unix timestamp, accurate to seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_realEndTime;
+                    bool m_realEndTimeHasBeenSet;
+
+                    /**
+                     * The total number of room messages.
+                     */
+                    uint64_t m_messageCount;
+                    bool m_messageCountHasBeenSet;
+
+                    /**
+                     * The total number of mics in the room.
+                     */
+                    uint64_t m_micCount;
+                    bool m_micCountHasBeenSet;
 
                 };
             }

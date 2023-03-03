@@ -197,6 +197,28 @@ This parameter is invalid if the output format is HLS.
                      */
                     bool MaxMediaFileDurationHasBeenSet() const;
 
+                    /**
+                     * 获取The type of stream to record. `0`: The primary stream and substream; `1`: The primary stream; `2`: The substream.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MediaId The type of stream to record. `0`: The primary stream and substream; `1`: The primary stream; `2`: The substream.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetMediaId() const;
+
+                    /**
+                     * 设置The type of stream to record. `0`: The primary stream and substream; `1`: The primary stream; `2`: The substream.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param MediaId The type of stream to record. `0`: The primary stream and substream; `1`: The primary stream; `2`: The substream.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetMediaId(const uint64_t& _mediaId);
+
+                    /**
+                     * 判断参数 MediaId 是否已赋值
+                     * @return MediaId 是否已赋值
+                     */
+                    bool MediaIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -246,6 +268,13 @@ This parameter is invalid if the output format is HLS.
                      */
                     uint64_t m_maxMediaFileDuration;
                     bool m_maxMediaFileDurationHasBeenSet;
+
+                    /**
+                     * The type of stream to record. `0`: The primary stream and substream; `1`: The primary stream; `2`: The substream.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_mediaId;
+                    bool m_mediaIdHasBeenSet;
 
                 };
             }

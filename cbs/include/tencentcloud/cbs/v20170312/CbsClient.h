@@ -35,6 +35,8 @@
 #include <tencentcloud/cbs/v20170312/model/CopySnapshotCrossRegionsResponse.h>
 #include <tencentcloud/cbs/v20170312/model/CreateAutoSnapshotPolicyRequest.h>
 #include <tencentcloud/cbs/v20170312/model/CreateAutoSnapshotPolicyResponse.h>
+#include <tencentcloud/cbs/v20170312/model/CreateDiskBackupRequest.h>
+#include <tencentcloud/cbs/v20170312/model/CreateDiskBackupResponse.h>
 #include <tencentcloud/cbs/v20170312/model/CreateDisksRequest.h>
 #include <tencentcloud/cbs/v20170312/model/CreateDisksResponse.h>
 #include <tencentcloud/cbs/v20170312/model/CreateSnapshotRequest.h>
@@ -129,6 +131,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateAutoSnapshotPolicyResponse> CreateAutoSnapshotPolicyOutcome;
                 typedef std::future<CreateAutoSnapshotPolicyOutcome> CreateAutoSnapshotPolicyOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::CreateAutoSnapshotPolicyRequest&, CreateAutoSnapshotPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAutoSnapshotPolicyAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateDiskBackupResponse> CreateDiskBackupOutcome;
+                typedef std::future<CreateDiskBackupOutcome> CreateDiskBackupOutcomeCallable;
+                typedef std::function<void(const CbsClient*, const Model::CreateDiskBackupRequest&, CreateDiskBackupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDiskBackupAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateDisksResponse> CreateDisksOutcome;
                 typedef std::future<CreateDisksOutcome> CreateDisksOutcomeCallable;
                 typedef std::function<void(const CbsClient*, const Model::CreateDisksRequest&, CreateDisksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDisksAsyncHandler;
@@ -300,6 +305,15 @@ namespace TencentCloud
                 CreateAutoSnapshotPolicyOutcomeCallable CreateAutoSnapshotPolicyCallable(const Model::CreateAutoSnapshotPolicyRequest& request);
 
                 /**
+                 *This API is used to create a backup point for a cloud disk.
+                 * @param req CreateDiskBackupRequest
+                 * @return CreateDiskBackupOutcome
+                 */
+                CreateDiskBackupOutcome CreateDiskBackup(const Model::CreateDiskBackupRequest &request);
+                void CreateDiskBackupAsync(const Model::CreateDiskBackupRequest& request, const CreateDiskBackupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateDiskBackupOutcomeCallable CreateDiskBackupCallable(const Model::CreateDiskBackupRequest& request);
+
+                /**
                  *This API is used to create cloud disks.
 
 * This API supports creating a cloud disk with a data disk snapshot so that the snapshot data can be copied to the purchased cloud disk.
@@ -400,7 +414,9 @@ If the parameter is empty, a certain number (as specified by `Limit` and 20 by d
                 DescribeDiskConfigQuotaOutcomeCallable DescribeDiskConfigQuotaCallable(const Model::DescribeDiskConfigQuotaRequest& request);
 
                 /**
-                 *This API (DescribeDiskOperationLogs) is used to query a list of cloud disk operation logs.
+                 *接口已废弃，切换至云审计接口。见https://tapd.woa.com/pro/prong/stories/view/1010114221880719007
+
+This API (DescribeDiskOperationLogs) is used to query a list of cloud disk operation logs.
 
 This can be filtered according to the cloud disk ID. The format of cloud disk IDs is as follows: disk-a1kmcp13.
 
@@ -435,9 +451,9 @@ This can be filtered according to the cloud disk ID. The format of cloud disk ID
                 DescribeInstancesDiskNumOutcomeCallable DescribeInstancesDiskNumCallable(const Model::DescribeInstancesDiskNumRequest& request);
 
                 /**
-                 *This API (DescribeSnapshotOperationLogs) is used to query a list of snapshot operation logs.
+                 *接口已废弃，切换至云审计接口。见https://tapd.woa.com/pro/prong/stories/view/1010114221880719007
 
-You can filter according to the snapshot ID. The snapshot ID format is as follows: snap-a1kmcp13.
+This API is used to query the operation logs of a snapshot. It will be disused soon. Use [LookUpEvents](https://intl.cloud.tencent.com/document/product/629/12359?from_cn_redirect=1) instead.
 
                  * @param req DescribeSnapshotOperationLogsRequest
                  * @return DescribeSnapshotOperationLogsOutcome

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The snapshot operation log.
+                * Snapshot operation log (disused).
                 */
                 class SnapshotOperationLog : public AbstractModel
                 {
@@ -45,92 +45,6 @@ namespace TencentCloud
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
-
-                    /**
-                     * 获取UIN of operator.
-Note: This field may return null, indicating that no valid value was found.
-                     * @return Operator UIN of operator.
-Note: This field may return null, indicating that no valid value was found.
-                     */
-                    std::string GetOperator() const;
-
-                    /**
-                     * 设置UIN of operator.
-Note: This field may return null, indicating that no valid value was found.
-                     * @param Operator UIN of operator.
-Note: This field may return null, indicating that no valid value was found.
-                     */
-                    void SetOperator(const std::string& _operator);
-
-                    /**
-                     * 判断参数 Operator 是否已赋值
-                     * @return Operator 是否已赋值
-                     */
-                    bool OperatorHasBeenSet() const;
-
-                    /**
-                     * 获取Operation type. Value range:
-SNAP_OPERATION_DELETE: Delete snapshot
-SNAP_OPERATION_ROLLBACK: Roll back snapshot
-SNAP_OPERATION_MODIFY: Modify snapshot attributes
-SNAP_OPERATION_CREATE: Create snapshot
-SNAP_OPERATION_COPY: Cross-region replication of snapshot
-ASP_OPERATION_CREATE_SNAP: Create snapshot with scheduled snapshot policy
-ASP_OPERATION_DELETE_SNAP: Delete snapshot from scheduled snapshot policy
-                     * @return Operation Operation type. Value range:
-SNAP_OPERATION_DELETE: Delete snapshot
-SNAP_OPERATION_ROLLBACK: Roll back snapshot
-SNAP_OPERATION_MODIFY: Modify snapshot attributes
-SNAP_OPERATION_CREATE: Create snapshot
-SNAP_OPERATION_COPY: Cross-region replication of snapshot
-ASP_OPERATION_CREATE_SNAP: Create snapshot with scheduled snapshot policy
-ASP_OPERATION_DELETE_SNAP: Delete snapshot from scheduled snapshot policy
-                     */
-                    std::string GetOperation() const;
-
-                    /**
-                     * 设置Operation type. Value range:
-SNAP_OPERATION_DELETE: Delete snapshot
-SNAP_OPERATION_ROLLBACK: Roll back snapshot
-SNAP_OPERATION_MODIFY: Modify snapshot attributes
-SNAP_OPERATION_CREATE: Create snapshot
-SNAP_OPERATION_COPY: Cross-region replication of snapshot
-ASP_OPERATION_CREATE_SNAP: Create snapshot with scheduled snapshot policy
-ASP_OPERATION_DELETE_SNAP: Delete snapshot from scheduled snapshot policy
-                     * @param Operation Operation type. Value range:
-SNAP_OPERATION_DELETE: Delete snapshot
-SNAP_OPERATION_ROLLBACK: Roll back snapshot
-SNAP_OPERATION_MODIFY: Modify snapshot attributes
-SNAP_OPERATION_CREATE: Create snapshot
-SNAP_OPERATION_COPY: Cross-region replication of snapshot
-ASP_OPERATION_CREATE_SNAP: Create snapshot with scheduled snapshot policy
-ASP_OPERATION_DELETE_SNAP: Delete snapshot from scheduled snapshot policy
-                     */
-                    void SetOperation(const std::string& _operation);
-
-                    /**
-                     * 判断参数 Operation 是否已赋值
-                     * @return Operation 是否已赋值
-                     */
-                    bool OperationHasBeenSet() const;
-
-                    /**
-                     * 获取ID of snapshot being operated.
-                     * @return SnapshotId ID of snapshot being operated.
-                     */
-                    std::string GetSnapshotId() const;
-
-                    /**
-                     * 设置ID of snapshot being operated.
-                     * @param SnapshotId ID of snapshot being operated.
-                     */
-                    void SetSnapshotId(const std::string& _snapshotId);
-
-                    /**
-                     * 判断参数 SnapshotId 是否已赋值
-                     * @return SnapshotId 是否已赋值
-                     */
-                    bool SnapshotIdHasBeenSet() const;
 
                     /**
                      * 获取Status of operation. Value range:
@@ -181,6 +95,92 @@ PROCESSING: Operation in process
                     bool StartTimeHasBeenSet() const;
 
                     /**
+                     * 获取UIN of operator.
+Note: This field may return null, indicating that no valid value was found.
+                     * @return Operator UIN of operator.
+Note: This field may return null, indicating that no valid value was found.
+                     */
+                    std::string GetOperator() const;
+
+                    /**
+                     * 设置UIN of operator.
+Note: This field may return null, indicating that no valid value was found.
+                     * @param Operator UIN of operator.
+Note: This field may return null, indicating that no valid value was found.
+                     */
+                    void SetOperator(const std::string& _operator);
+
+                    /**
+                     * 判断参数 Operator 是否已赋值
+                     * @return Operator 是否已赋值
+                     */
+                    bool OperatorHasBeenSet() const;
+
+                    /**
+                     * 获取ID of snapshot being operated.
+                     * @return SnapshotId ID of snapshot being operated.
+                     */
+                    std::string GetSnapshotId() const;
+
+                    /**
+                     * 设置ID of snapshot being operated.
+                     * @param SnapshotId ID of snapshot being operated.
+                     */
+                    void SetSnapshotId(const std::string& _snapshotId);
+
+                    /**
+                     * 判断参数 SnapshotId 是否已赋值
+                     * @return SnapshotId 是否已赋值
+                     */
+                    bool SnapshotIdHasBeenSet() const;
+
+                    /**
+                     * 获取Operation type. Value range:
+SNAP_OPERATION_DELETE: Delete snapshot
+SNAP_OPERATION_ROLLBACK: Roll back snapshot
+SNAP_OPERATION_MODIFY: Modify snapshot attributes
+SNAP_OPERATION_CREATE: Create snapshot
+SNAP_OPERATION_COPY: Cross-region replication of snapshot
+ASP_OPERATION_CREATE_SNAP: Create snapshot with scheduled snapshot policy
+ASP_OPERATION_DELETE_SNAP: Delete snapshot from scheduled snapshot policy
+                     * @return Operation Operation type. Value range:
+SNAP_OPERATION_DELETE: Delete snapshot
+SNAP_OPERATION_ROLLBACK: Roll back snapshot
+SNAP_OPERATION_MODIFY: Modify snapshot attributes
+SNAP_OPERATION_CREATE: Create snapshot
+SNAP_OPERATION_COPY: Cross-region replication of snapshot
+ASP_OPERATION_CREATE_SNAP: Create snapshot with scheduled snapshot policy
+ASP_OPERATION_DELETE_SNAP: Delete snapshot from scheduled snapshot policy
+                     */
+                    std::string GetOperation() const;
+
+                    /**
+                     * 设置Operation type. Value range:
+SNAP_OPERATION_DELETE: Delete snapshot
+SNAP_OPERATION_ROLLBACK: Roll back snapshot
+SNAP_OPERATION_MODIFY: Modify snapshot attributes
+SNAP_OPERATION_CREATE: Create snapshot
+SNAP_OPERATION_COPY: Cross-region replication of snapshot
+ASP_OPERATION_CREATE_SNAP: Create snapshot with scheduled snapshot policy
+ASP_OPERATION_DELETE_SNAP: Delete snapshot from scheduled snapshot policy
+                     * @param Operation Operation type. Value range:
+SNAP_OPERATION_DELETE: Delete snapshot
+SNAP_OPERATION_ROLLBACK: Roll back snapshot
+SNAP_OPERATION_MODIFY: Modify snapshot attributes
+SNAP_OPERATION_CREATE: Create snapshot
+SNAP_OPERATION_COPY: Cross-region replication of snapshot
+ASP_OPERATION_CREATE_SNAP: Create snapshot with scheduled snapshot policy
+ASP_OPERATION_DELETE_SNAP: Delete snapshot from scheduled snapshot policy
+                     */
+                    void SetOperation(const std::string& _operation);
+
+                    /**
+                     * 判断参数 Operation 是否已赋值
+                     * @return Operation 是否已赋值
+                     */
+                    bool OperationHasBeenSet() const;
+
+                    /**
                      * 获取End time
                      * @return EndTime End time
                      */
@@ -201,32 +201,6 @@ PROCESSING: Operation in process
                 private:
 
                     /**
-                     * UIN of operator.
-Note: This field may return null, indicating that no valid value was found.
-                     */
-                    std::string m_operator;
-                    bool m_operatorHasBeenSet;
-
-                    /**
-                     * Operation type. Value range:
-SNAP_OPERATION_DELETE: Delete snapshot
-SNAP_OPERATION_ROLLBACK: Roll back snapshot
-SNAP_OPERATION_MODIFY: Modify snapshot attributes
-SNAP_OPERATION_CREATE: Create snapshot
-SNAP_OPERATION_COPY: Cross-region replication of snapshot
-ASP_OPERATION_CREATE_SNAP: Create snapshot with scheduled snapshot policy
-ASP_OPERATION_DELETE_SNAP: Delete snapshot from scheduled snapshot policy
-                     */
-                    std::string m_operation;
-                    bool m_operationHasBeenSet;
-
-                    /**
-                     * ID of snapshot being operated.
-                     */
-                    std::string m_snapshotId;
-                    bool m_snapshotIdHasBeenSet;
-
-                    /**
                      * Status of operation. Value range:
 SUCCESS: Operation successful 
 FAILED: Operation failed 
@@ -240,6 +214,32 @@ PROCESSING: Operation in process
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
+
+                    /**
+                     * UIN of operator.
+Note: This field may return null, indicating that no valid value was found.
+                     */
+                    std::string m_operator;
+                    bool m_operatorHasBeenSet;
+
+                    /**
+                     * ID of snapshot being operated.
+                     */
+                    std::string m_snapshotId;
+                    bool m_snapshotIdHasBeenSet;
+
+                    /**
+                     * Operation type. Value range:
+SNAP_OPERATION_DELETE: Delete snapshot
+SNAP_OPERATION_ROLLBACK: Roll back snapshot
+SNAP_OPERATION_MODIFY: Modify snapshot attributes
+SNAP_OPERATION_CREATE: Create snapshot
+SNAP_OPERATION_COPY: Cross-region replication of snapshot
+ASP_OPERATION_CREATE_SNAP: Create snapshot with scheduled snapshot policy
+ASP_OPERATION_DELETE_SNAP: Delete snapshot from scheduled snapshot policy
+                     */
+                    std::string m_operation;
+                    bool m_operationHasBeenSet;
 
                     /**
                      * End time

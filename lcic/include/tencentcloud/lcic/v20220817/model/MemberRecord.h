@@ -244,6 +244,96 @@ namespace TencentCloud
                      */
                     bool RewordsHasBeenSet() const;
 
+                    /**
+                     * 获取The user’s IP address.
+                     * @return IPAddress The user’s IP address.
+                     */
+                    std::string GetIPAddress() const;
+
+                    /**
+                     * 设置The user’s IP address.
+                     * @param IPAddress The user’s IP address.
+                     */
+                    void SetIPAddress(const std::string& _iPAddress);
+
+                    /**
+                     * 判断参数 IPAddress 是否已赋值
+                     * @return IPAddress 是否已赋值
+                     */
+                    bool IPAddressHasBeenSet() const;
+
+                    /**
+                     * 获取The user’s location.
+                     * @return Location The user’s location.
+                     */
+                    std::string GetLocation() const;
+
+                    /**
+                     * 设置The user’s location.
+                     * @param Location The user’s location.
+                     */
+                    void SetLocation(const std::string& _location);
+
+                    /**
+                     * 判断参数 Location 是否已赋值
+                     * @return Location 是否已赋值
+                     */
+                    bool LocationHasBeenSet() const;
+
+                    /**
+                     * 获取The user’s device type. `0`: Unknown; `1`: Windows; `2`: macOS; `3`: Android; `4`: iOS; `5`: Web; `6`: Mobile webpage; `7`: Weixin Mini Program.
+                     * @return Device The user’s device type. `0`: Unknown; `1`: Windows; `2`: macOS; `3`: Android; `4`: iOS; `5`: Web; `6`: Mobile webpage; `7`: Weixin Mini Program.
+                     */
+                    int64_t GetDevice() const;
+
+                    /**
+                     * 设置The user’s device type. `0`: Unknown; `1`: Windows; `2`: macOS; `3`: Android; `4`: iOS; `5`: Web; `6`: Mobile webpage; `7`: Weixin Mini Program.
+                     * @param Device The user’s device type. `0`: Unknown; `1`: Windows; `2`: macOS; `3`: Android; `4`: iOS; `5`: Web; `6`: Mobile webpage; `7`: Weixin Mini Program.
+                     */
+                    void SetDevice(const int64_t& _device);
+
+                    /**
+                     * 判断参数 Device 是否已赋值
+                     * @return Device 是否已赋值
+                     */
+                    bool DeviceHasBeenSet() const;
+
+                    /**
+                     * 获取The number of times each member mics.
+                     * @return PerMemberMicCount The number of times each member mics.
+                     */
+                    int64_t GetPerMemberMicCount() const;
+
+                    /**
+                     * 设置The number of times each member mics.
+                     * @param PerMemberMicCount The number of times each member mics.
+                     */
+                    void SetPerMemberMicCount(const int64_t& _perMemberMicCount);
+
+                    /**
+                     * 判断参数 PerMemberMicCount 是否已赋值
+                     * @return PerMemberMicCount 是否已赋值
+                     */
+                    bool PerMemberMicCountHasBeenSet() const;
+
+                    /**
+                     * 获取The number of messages sent by each member.
+                     * @return PerMemberMessageCount The number of messages sent by each member.
+                     */
+                    int64_t GetPerMemberMessageCount() const;
+
+                    /**
+                     * 设置The number of messages sent by each member.
+                     * @param PerMemberMessageCount The number of messages sent by each member.
+                     */
+                    void SetPerMemberMessageCount(const int64_t& _perMemberMessageCount);
+
+                    /**
+                     * 判断参数 PerMemberMessageCount 是否已赋值
+                     * @return PerMemberMessageCount 是否已赋值
+                     */
+                    bool PerMemberMessageCountHasBeenSet() const;
+
                 private:
 
                     /**
@@ -311,6 +401,36 @@ namespace TencentCloud
                      */
                     uint64_t m_rewords;
                     bool m_rewordsHasBeenSet;
+
+                    /**
+                     * The user’s IP address.
+                     */
+                    std::string m_iPAddress;
+                    bool m_iPAddressHasBeenSet;
+
+                    /**
+                     * The user’s location.
+                     */
+                    std::string m_location;
+                    bool m_locationHasBeenSet;
+
+                    /**
+                     * The user’s device type. `0`: Unknown; `1`: Windows; `2`: macOS; `3`: Android; `4`: iOS; `5`: Web; `6`: Mobile webpage; `7`: Weixin Mini Program.
+                     */
+                    int64_t m_device;
+                    bool m_deviceHasBeenSet;
+
+                    /**
+                     * The number of times each member mics.
+                     */
+                    int64_t m_perMemberMicCount;
+                    bool m_perMemberMicCountHasBeenSet;
+
+                    /**
+                     * The number of messages sent by each member.
+                     */
+                    int64_t m_perMemberMessageCount;
+                    bool m_perMemberMessageCountHasBeenSet;
 
                 };
             }

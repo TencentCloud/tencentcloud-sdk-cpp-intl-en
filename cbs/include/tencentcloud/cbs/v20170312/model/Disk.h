@@ -749,6 +749,24 @@ Note: This field may return null, indicating that no valid value was found.
                     bool DeleteSnapshotHasBeenSet() const;
 
                     /**
+                     * 获取Quota of cloud disk backup points, i.e., the maximum number of backup points that a cloud disk can have.
+                     * @return DiskBackupQuota Quota of cloud disk backup points, i.e., the maximum number of backup points that a cloud disk can have.
+                     */
+                    uint64_t GetDiskBackupQuota() const;
+
+                    /**
+                     * 设置Quota of cloud disk backup points, i.e., the maximum number of backup points that a cloud disk can have.
+                     * @param DiskBackupQuota Quota of cloud disk backup points, i.e., the maximum number of backup points that a cloud disk can have.
+                     */
+                    void SetDiskBackupQuota(const uint64_t& _diskBackupQuota);
+
+                    /**
+                     * 判断参数 DiskBackupQuota 是否已赋值
+                     * @return DiskBackupQuota 是否已赋值
+                     */
+                    bool DiskBackupQuotaHasBeenSet() const;
+
+                    /**
                      * 获取Number of used cloud disk backups.
                      * @return DiskBackupCount Number of used cloud disk backups.
                      */
@@ -783,6 +801,42 @@ Note: This field may return null, indicating that no valid value was found.
                      * @return InstanceType 是否已赋值
                      */
                     bool InstanceTypeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return LastAttachInsId 
+                     */
+                    std::string GetLastAttachInsId() const;
+
+                    /**
+                     * 设置
+                     * @param LastAttachInsId 
+                     */
+                    void SetLastAttachInsId(const std::string& _lastAttachInsId);
+
+                    /**
+                     * 判断参数 LastAttachInsId 是否已赋值
+                     * @return LastAttachInsId 是否已赋值
+                     */
+                    bool LastAttachInsIdHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ErrorPrompt 
+                     */
+                    std::string GetErrorPrompt() const;
+
+                    /**
+                     * 设置
+                     * @param ErrorPrompt 
+                     */
+                    void SetErrorPrompt(const std::string& _errorPrompt);
+
+                    /**
+                     * 判断参数 ErrorPrompt 是否已赋值
+                     * @return ErrorPrompt 是否已赋值
+                     */
+                    bool ErrorPromptHasBeenSet() const;
 
                 private:
 
@@ -1016,6 +1070,12 @@ Note: This field may return null, indicating that no valid value was found.
                     bool m_deleteSnapshotHasBeenSet;
 
                     /**
+                     * Quota of cloud disk backup points, i.e., the maximum number of backup points that a cloud disk can have.
+                     */
+                    uint64_t m_diskBackupQuota;
+                    bool m_diskBackupQuotaHasBeenSet;
+
+                    /**
                      * Number of used cloud disk backups.
                      */
                     uint64_t m_diskBackupCount;
@@ -1026,6 +1086,18 @@ Note: This field may return null, indicating that no valid value was found.
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_lastAttachInsId;
+                    bool m_lastAttachInsIdHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_errorPrompt;
+                    bool m_errorPromptHasBeenSet;
 
                 };
             }

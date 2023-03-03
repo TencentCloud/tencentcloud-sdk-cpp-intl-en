@@ -78,6 +78,24 @@ namespace TencentCloud
                      */
                     bool CallbackHasBeenSet() const;
 
+                    /**
+                     * 获取The callback key.
+                     * @return CallbackKey The callback key.
+                     */
+                    std::string GetCallbackKey() const;
+
+                    /**
+                     * 设置The callback key.
+                     * @param CallbackKey The callback key.
+                     */
+                    void SetCallbackKey(const std::string& _callbackKey);
+
+                    /**
+                     * 判断参数 CallbackKey 是否已赋值
+                     * @return CallbackKey 是否已赋值
+                     */
+                    bool CallbackKeyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -91,6 +109,12 @@ namespace TencentCloud
                      */
                     std::string m_callback;
                     bool m_callbackHasBeenSet;
+
+                    /**
+                     * The callback key.
+                     */
+                    std::string m_callbackKey;
+                    bool m_callbackKeyHasBeenSet;
 
                 };
             }

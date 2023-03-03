@@ -151,14 +151,14 @@ namespace TencentCloud
                     bool MaxMicNumberHasBeenSet() const;
 
                     /**
-                     * 获取Room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher
-                     * @return SubType Room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher
+                     * 获取The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only. 
+                     * @return SubType The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only. 
                      */
                     std::string GetSubType() const;
 
                     /**
-                     * 设置Room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher
-                     * @param SubType Room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher
+                     * 设置The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only. 
+                     * @param SubType The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only. 
                      */
                     void SetSubType(const std::string& _subType);
 
@@ -169,14 +169,14 @@ namespace TencentCloud
                     bool SubTypeHasBeenSet() const;
 
                     /**
-                     * 获取Teacher ID, which is the `UserId` obtained by the `RegisterUser` API.
-                     * @return TeacherId Teacher ID, which is the `UserId` obtained by the `RegisterUser` API.
+                     * 获取The user ID of the teacher. User IDs are returned by the user registration APIs. The user specified will have teacher permissions in the room created.
+                     * @return TeacherId The user ID of the teacher. User IDs are returned by the user registration APIs. The user specified will have teacher permissions in the room created.
                      */
                     std::string GetTeacherId() const;
 
                     /**
-                     * 设置Teacher ID, which is the `UserId` obtained by the `RegisterUser` API.
-                     * @param TeacherId Teacher ID, which is the `UserId` obtained by the `RegisterUser` API.
+                     * 设置The user ID of the teacher. User IDs are returned by the user registration APIs. The user specified will have teacher permissions in the room created.
+                     * @param TeacherId The user ID of the teacher. User IDs are returned by the user registration APIs. The user specified will have teacher permissions in the room created.
                      */
                     void SetTeacherId(const std::string& _teacherId);
 
@@ -241,14 +241,14 @@ namespace TencentCloud
                     bool DisableRecordHasBeenSet() const;
 
                     /**
-                     * 获取Teacher assistant IDs, which are the `UserId` obtained by the `RegisterUser` API.
-                     * @return Assistants Teacher assistant IDs, which are the `UserId` obtained by the `RegisterUser` API.
+                     * 获取The user IDs of the teaching assistants. User IDs are returned by the user registration APIs. The users specified will have teaching assistant permissions in the room created.
+                     * @return Assistants The user IDs of the teaching assistants. User IDs are returned by the user registration APIs. The users specified will have teaching assistant permissions in the room created.
                      */
                     std::vector<std::string> GetAssistants() const;
 
                     /**
-                     * 设置Teacher assistant IDs, which are the `UserId` obtained by the `RegisterUser` API.
-                     * @param Assistants Teacher assistant IDs, which are the `UserId` obtained by the `RegisterUser` API.
+                     * 设置The user IDs of the teaching assistants. User IDs are returned by the user registration APIs. The users specified will have teaching assistant permissions in the room created.
+                     * @param Assistants The user IDs of the teaching assistants. User IDs are returned by the user registration APIs. The users specified will have teaching assistant permissions in the room created.
                      */
                     void SetAssistants(const std::vector<std::string>& _assistants);
 
@@ -275,6 +275,24 @@ namespace TencentCloud
                      * @return RecordLayout 是否已赋值
                      */
                     bool RecordLayoutHasBeenSet() const;
+
+                    /**
+                     * 获取The ID of the group to bind. If you specify this parameter, only members of the group can enter this room.
+                     * @return GroupId The ID of the group to bind. If you specify this parameter, only members of the group can enter this room.
+                     */
+                    std::string GetGroupId() const;
+
+                    /**
+                     * 设置The ID of the group to bind. If you specify this parameter, only members of the group can enter this room.
+                     * @param GroupId The ID of the group to bind. If you specify this parameter, only members of the group can enter this room.
+                     */
+                    void SetGroupId(const std::string& _groupId);
+
+                    /**
+                     * 判断参数 GroupId 是否已赋值
+                     * @return GroupId 是否已赋值
+                     */
+                    bool GroupIdHasBeenSet() const;
 
                 private:
 
@@ -315,13 +333,13 @@ namespace TencentCloud
                     bool m_maxMicNumberHasBeenSet;
 
                     /**
-                     * Room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher
+                     * The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only. 
                      */
                     std::string m_subType;
                     bool m_subTypeHasBeenSet;
 
                     /**
-                     * Teacher ID, which is the `UserId` obtained by the `RegisterUser` API.
+                     * The user ID of the teacher. User IDs are returned by the user registration APIs. The user specified will have teacher permissions in the room created.
                      */
                     std::string m_teacherId;
                     bool m_teacherIdHasBeenSet;
@@ -345,7 +363,7 @@ namespace TencentCloud
                     bool m_disableRecordHasBeenSet;
 
                     /**
-                     * Teacher assistant IDs, which are the `UserId` obtained by the `RegisterUser` API.
+                     * The user IDs of the teaching assistants. User IDs are returned by the user registration APIs. The users specified will have teaching assistant permissions in the room created.
                      */
                     std::vector<std::string> m_assistants;
                     bool m_assistantsHasBeenSet;
@@ -355,6 +373,12 @@ namespace TencentCloud
                      */
                     uint64_t m_recordLayout;
                     bool m_recordLayoutHasBeenSet;
+
+                    /**
+                     * The ID of the group to bind. If you specify this parameter, only members of the group can enter this room.
+                     */
+                    std::string m_groupId;
+                    bool m_groupIdHasBeenSet;
 
                 };
             }

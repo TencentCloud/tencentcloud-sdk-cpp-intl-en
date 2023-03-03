@@ -57,8 +57,11 @@ Disk::Disk() :
     m_shareableHasBeenSet(false),
     m_createTimeHasBeenSet(false),
     m_deleteSnapshotHasBeenSet(false),
+    m_diskBackupQuotaHasBeenSet(false),
     m_diskBackupCountHasBeenSet(false),
-    m_instanceTypeHasBeenSet(false)
+    m_instanceTypeHasBeenSet(false),
+    m_lastAttachInsIdHasBeenSet(false),
+    m_errorPromptHasBeenSet(false)
 {
 }
 
@@ -450,6 +453,16 @@ CoreInternalOutcome Disk::Deserialize(const rapidjson::Value &value)
         m_deleteSnapshotHasBeenSet = true;
     }
 
+    if (value.HasMember("DiskBackupQuota") && !value["DiskBackupQuota"].IsNull())
+    {
+        if (!value["DiskBackupQuota"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `Disk.DiskBackupQuota` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_diskBackupQuota = value["DiskBackupQuota"].GetUint64();
+        m_diskBackupQuotaHasBeenSet = true;
+    }
+
     if (value.HasMember("DiskBackupCount") && !value["DiskBackupCount"].IsNull())
     {
         if (!value["DiskBackupCount"].IsUint64())
@@ -468,6 +481,26 @@ CoreInternalOutcome Disk::Deserialize(const rapidjson::Value &value)
         }
         m_instanceType = string(value["InstanceType"].GetString());
         m_instanceTypeHasBeenSet = true;
+    }
+
+    if (value.HasMember("LastAttachInsId") && !value["LastAttachInsId"].IsNull())
+    {
+        if (!value["LastAttachInsId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Disk.LastAttachInsId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_lastAttachInsId = string(value["LastAttachInsId"].GetString());
+        m_lastAttachInsIdHasBeenSet = true;
+    }
+
+    if (value.HasMember("ErrorPrompt") && !value["ErrorPrompt"].IsNull())
+    {
+        if (!value["ErrorPrompt"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Disk.ErrorPrompt` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_errorPrompt = string(value["ErrorPrompt"].GetString());
+        m_errorPromptHasBeenSet = true;
     }
 
 
@@ -783,6 +816,14 @@ void Disk::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorT
         value.AddMember(iKey, m_deleteSnapshot, allocator);
     }
 
+    if (m_diskBackupQuotaHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DiskBackupQuota";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_diskBackupQuota, allocator);
+    }
+
     if (m_diskBackupCountHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -797,6 +838,22 @@ void Disk::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorT
         string key = "InstanceType";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_instanceType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_lastAttachInsIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "LastAttachInsId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_lastAttachInsId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_errorPromptHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ErrorPrompt";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_errorPrompt.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -1378,6 +1435,22 @@ bool Disk::DeleteSnapshotHasBeenSet() const
     return m_deleteSnapshotHasBeenSet;
 }
 
+uint64_t Disk::GetDiskBackupQuota() const
+{
+    return m_diskBackupQuota;
+}
+
+void Disk::SetDiskBackupQuota(const uint64_t& _diskBackupQuota)
+{
+    m_diskBackupQuota = _diskBackupQuota;
+    m_diskBackupQuotaHasBeenSet = true;
+}
+
+bool Disk::DiskBackupQuotaHasBeenSet() const
+{
+    return m_diskBackupQuotaHasBeenSet;
+}
+
 uint64_t Disk::GetDiskBackupCount() const
 {
     return m_diskBackupCount;
@@ -1408,5 +1481,37 @@ void Disk::SetInstanceType(const string& _instanceType)
 bool Disk::InstanceTypeHasBeenSet() const
 {
     return m_instanceTypeHasBeenSet;
+}
+
+string Disk::GetLastAttachInsId() const
+{
+    return m_lastAttachInsId;
+}
+
+void Disk::SetLastAttachInsId(const string& _lastAttachInsId)
+{
+    m_lastAttachInsId = _lastAttachInsId;
+    m_lastAttachInsIdHasBeenSet = true;
+}
+
+bool Disk::LastAttachInsIdHasBeenSet() const
+{
+    return m_lastAttachInsIdHasBeenSet;
+}
+
+string Disk::GetErrorPrompt() const
+{
+    return m_errorPrompt;
+}
+
+void Disk::SetErrorPrompt(const string& _errorPrompt)
+{
+    m_errorPrompt = _errorPrompt;
+    m_errorPromptHasBeenSet = true;
+}
+
+bool Disk::ErrorPromptHasBeenSet() const
+{
+    return m_errorPromptHasBeenSet;
 }
 
