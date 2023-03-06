@@ -45,6 +45,7 @@ set(mariadb_public_header_model
   include/tencentcloud/mariadb/v20170312/model/ModifyAccountDescriptionResponse.h
   include/tencentcloud/mariadb/v20170312/model/ParamConstraint.h
   include/tencentcloud/mariadb/v20170312/model/ModifyDBInstancesProjectResponse.h
+  include/tencentcloud/mariadb/v20170312/model/ModifyDBEncryptAttributesResponse.h
   include/tencentcloud/mariadb/v20170312/model/DatabaseView.h
   include/tencentcloud/mariadb/v20170312/model/DescribeDBLogFilesRequest.h
   include/tencentcloud/mariadb/v20170312/model/NodeInfo.h
@@ -115,6 +116,7 @@ set(mariadb_public_header_model
   include/tencentcloud/mariadb/v20170312/model/ModifyDBSyncModeRequest.h
   include/tencentcloud/mariadb/v20170312/model/DescribeInstanceNodeInfoRequest.h
   include/tencentcloud/mariadb/v20170312/model/CloneAccountRequest.h
+  include/tencentcloud/mariadb/v20170312/model/ModifyDBEncryptAttributesRequest.h
   include/tencentcloud/mariadb/v20170312/model/CreateAccountResponse.h
   include/tencentcloud/mariadb/v20170312/model/IsolateDedicatedDBInstanceResponse.h
   include/tencentcloud/mariadb/v20170312/model/DescribeLogFileRetentionPeriodResponse.h
@@ -169,6 +171,7 @@ set(mariadb_src
   src/v20170312/model/ModifyAccountDescriptionResponse.cpp
   src/v20170312/model/ParamConstraint.cpp
   src/v20170312/model/ModifyDBInstancesProjectResponse.cpp
+  src/v20170312/model/ModifyDBEncryptAttributesResponse.cpp
   src/v20170312/model/DatabaseView.cpp
   src/v20170312/model/DescribeDBLogFilesRequest.cpp
   src/v20170312/model/NodeInfo.cpp
@@ -239,6 +242,7 @@ set(mariadb_src
   src/v20170312/model/ModifyDBSyncModeRequest.cpp
   src/v20170312/model/DescribeInstanceNodeInfoRequest.cpp
   src/v20170312/model/CloneAccountRequest.cpp
+  src/v20170312/model/ModifyDBEncryptAttributesRequest.cpp
   src/v20170312/model/CreateAccountResponse.cpp
   src/v20170312/model/IsolateDedicatedDBInstanceResponse.cpp
   src/v20170312/model/DescribeLogFileRetentionPeriodResponse.cpp
