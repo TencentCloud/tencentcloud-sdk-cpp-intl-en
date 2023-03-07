@@ -60,6 +60,7 @@ set(cynosdb_public_header_model
   include/tencentcloud/cynosdb/v20190107/model/DatabaseTables.h
   include/tencentcloud/cynosdb/v20190107/model/AddClusterSlaveZoneRequest.h
   include/tencentcloud/cynosdb/v20190107/model/UpgradeInstanceResponse.h
+  include/tencentcloud/cynosdb/v20190107/model/ModifyVipVportRequest.h
   include/tencentcloud/cynosdb/v20190107/model/DescribeClustersRequest.h
   include/tencentcloud/cynosdb/v20190107/model/DescribeInstanceDetailResponse.h
   include/tencentcloud/cynosdb/v20190107/model/ModifyDBInstanceSecurityGroupsResponse.h
@@ -99,6 +100,7 @@ set(cynosdb_public_header_model
   include/tencentcloud/cynosdb/v20190107/model/CreateClustersRequest.h
   include/tencentcloud/cynosdb/v20190107/model/DescribeClustersResponse.h
   include/tencentcloud/cynosdb/v20190107/model/DescribeBackupConfigResponse.h
+  include/tencentcloud/cynosdb/v20190107/model/ModifyVipVportResponse.h
   include/tencentcloud/cynosdb/v20190107/model/ModifyDBInstanceSecurityGroupsRequest.h
   include/tencentcloud/cynosdb/v20190107/model/DescribeParamTemplatesResponse.h
   include/tencentcloud/cynosdb/v20190107/model/CloseAuditServiceRequest.h
@@ -236,6 +238,7 @@ set(cynosdb_src
   src/v20190107/model/DatabaseTables.cpp
   src/v20190107/model/AddClusterSlaveZoneRequest.cpp
   src/v20190107/model/UpgradeInstanceResponse.cpp
+  src/v20190107/model/ModifyVipVportRequest.cpp
   src/v20190107/model/DescribeClustersRequest.cpp
   src/v20190107/model/DescribeInstanceDetailResponse.cpp
   src/v20190107/model/ModifyDBInstanceSecurityGroupsResponse.cpp
@@ -275,6 +278,7 @@ set(cynosdb_src
   src/v20190107/model/CreateClustersRequest.cpp
   src/v20190107/model/DescribeClustersResponse.cpp
   src/v20190107/model/DescribeBackupConfigResponse.cpp
+  src/v20190107/model/ModifyVipVportResponse.cpp
   src/v20190107/model/ModifyDBInstanceSecurityGroupsRequest.cpp
   src/v20190107/model/DescribeParamTemplatesResponse.cpp
   src/v20190107/model/CloseAuditServiceRequest.cpp
