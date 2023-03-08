@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The ID list of the CVM instances newly created on the CDH.
-                     * @return HostIdSet The ID list of the CVM instances newly created on the CDH.
+                     * 获取IDs of created instances
+                     * @return HostIdSet IDs of created instances
                      */
                     std::vector<std::string> GetHostIdSet() const;
 
@@ -58,7 +58,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The ID list of the CVM instances newly created on the CDH.
+                     * IDs of created instances
                      */
                     std::vector<std::string> m_hostIdSet;
                     bool m_hostIdSetHasBeenSet;

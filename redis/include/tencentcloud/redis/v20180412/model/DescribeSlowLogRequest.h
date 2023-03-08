@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取The average execution time threshold of slow query in microseconds
-                     * @return MinQueryTime The average execution time threshold of slow query in microseconds
+                     * 获取The average execution time threshold of slow query in ms.
+                     * @return MinQueryTime The average execution time threshold of slow query in ms.
                      */
                     int64_t GetMinQueryTime() const;
 
                     /**
-                     * 设置The average execution time threshold of slow query in microseconds
-                     * @param MinQueryTime The average execution time threshold of slow query in microseconds
+                     * 设置The average execution time threshold of slow query in ms.
+                     * @param MinQueryTime The average execution time threshold of slow query in ms.
                      */
                     void SetMinQueryTime(const int64_t& _minQueryTime);
 
@@ -189,7 +189,7 @@ namespace TencentCloud
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * The average execution time threshold of slow query in microseconds
+                     * The average execution time threshold of slow query in ms.
                      */
                     int64_t m_minQueryTime;
                     bool m_minQueryTimeHasBeenSet;

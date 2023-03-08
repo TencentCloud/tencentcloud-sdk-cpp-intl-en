@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取User App ID
-                     * @return AppId User App ID
+                     * 获取User AppID
+                     * @return AppId User AppID
                      */
                     int64_t GetAppId() const;
 
                     /**
-                     * 设置User App ID
-                     * @param AppId User App ID
+                     * 设置User AppID
+                     * @param AppId User AppID
                      */
                     void SetAppId(const int64_t& _appId);
 
@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley)
-                     * @return RegionId Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley)
+                     * 获取Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li> <li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li> </ul>
+                     * @return RegionId Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li> <li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li> </ul>
                      */
                     uint64_t GetRegionId() const;
 
                     /**
-                     * 设置Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley)
-                     * @param RegionId Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley)
+                     * 设置Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li> <li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li> </ul>
+                     * @param RegionId Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li> <li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li> </ul>
                      */
                     void SetRegionId(const uint64_t& _regionId);
 
@@ -173,14 +173,14 @@ namespace TencentCloud
                     bool RedisShardNumHasBeenSet() const;
 
                     /**
-                     * 获取Shard size
-                     * @return RedisShardSize Shard size
+                     * 获取Shard memory size.
+                     * @return RedisShardSize Shard memory size.
                      */
                     int64_t GetRedisShardSize() const;
 
                     /**
-                     * 设置Shard size
-                     * @param RedisShardSize Shard size
+                     * 设置Shard memory size.
+                     * @param RedisShardSize Shard memory size.
                      */
                     void SetRedisShardSize(const int64_t& _redisShardSize);
 
@@ -213,14 +213,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool DiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取Engine: Redis community edition, Tencent Cloud CKV
-                     * @return Engine Engine: Redis community edition, Tencent Cloud CKV
+                     * 获取Engine: Redis Community Edition, Tencent Cloud CKV.
+                     * @return Engine Engine: Redis Community Edition, Tencent Cloud CKV.
                      */
                     std::string GetEngine() const;
 
                     /**
-                     * 设置Engine: Redis community edition, Tencent Cloud CKV
-                     * @param Engine Engine: Redis community edition, Tencent Cloud CKV
+                     * 设置Engine: Redis Community Edition, Tencent Cloud CKV.
+                     * @param Engine Engine: Redis Community Edition, Tencent Cloud CKV.
                      */
                     void SetEngine(const std::string& _engine);
 
@@ -231,14 +231,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool EngineHasBeenSet() const;
 
                     /**
-                     * 获取Instance role. Valid values: `rw` (read-write), `r`( read-only)
-                     * @return Role Instance role. Valid values: `rw` (read-write), `r`( read-only)
+                     * 获取Read-write permission of the instance. <ul><li>`rw`: Read/Write. </li><li>`r`: Read-only. </li></ul>
+                     * @return Role Read-write permission of the instance. <ul><li>`rw`: Read/Write. </li><li>`r`: Read-only. </li></ul>
                      */
                     std::string GetRole() const;
 
                     /**
-                     * 设置Instance role. Valid values: `rw` (read-write), `r`( read-only)
-                     * @param Role Instance role. Valid values: `rw` (read-write), `r`( read-only)
+                     * 设置Read-write permission of the instance. <ul><li>`rw`: Read/Write. </li><li>`r`: Read-only. </li></ul>
+                     * @param Role Read-write permission of the instance. <ul><li>`rw`: Read/Write. </li><li>`r`: Read-only. </li></ul>
                      */
                     void SetRole(const std::string& _role);
 
@@ -268,17 +268,17 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 获取Internal parameter, which can be ignored.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Vip6 Internal parameter, which can be ignored.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetVip6() const;
 
                     /**
                      * 设置Internal parameter, which can be ignored.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param Vip6 Internal parameter, which can be ignored.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetVip6(const std::string& _vip6);
 
@@ -289,14 +289,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool Vip6HasBeenSet() const;
 
                     /**
-                     * 获取VPC ID, such as 75101
-                     * @return VpcID VPC ID, such as 75101
+                     * 获取VPC ID, such as `75101`.
+                     * @return VpcID VPC ID, such as `75101`.
                      */
                     int64_t GetVpcID() const;
 
                     /**
-                     * 设置VPC ID, such as 75101
-                     * @param VpcID VPC ID, such as 75101
+                     * 设置VPC ID, such as `75101`.
+                     * @param VpcID VPC ID, such as `75101`.
                      */
                     void SetVpcID(const int64_t& _vpcID);
 
@@ -307,14 +307,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool VpcIDHasBeenSet() const;
 
                     /**
-                     * 获取Instance Port
-                     * @return VPort Instance Port
+                     * 获取Instance port
+                     * @return VPort Instance port
                      */
                     int64_t GetVPort() const;
 
                     /**
-                     * 设置Instance Port
-                     * @param VPort Instance Port
+                     * 设置Instance port
+                     * @param VPort Instance port
                      */
                     void SetVPort(const int64_t& _vPort);
 
@@ -325,14 +325,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool VPortHasBeenSet() const;
 
                     /**
-                     * 获取Instance status. 0: to be initialized; 1: in process; 2: running; -2: isolated; -3: to be deleted
-                     * @return Status Instance status. 0: to be initialized; 1: in process; 2: running; -2: isolated; -3: to be deleted
+                     * 获取Instance status. <ul><li>`0`: Uninitialized. </li><li>`1`: In the process. </li><li>`2`: Running. </li><li>`-2`: Isolated. </li><li>`-3`: To be deleted. </li></ul>
+                     * @return Status Instance status. <ul><li>`0`: Uninitialized. </li><li>`1`: In the process. </li><li>`2`: Running. </li><li>`-2`: Isolated. </li><li>`-3`: To be deleted. </li></ul>
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Instance status. 0: to be initialized; 1: in process; 2: running; -2: isolated; -3: to be deleted
-                     * @param Status Instance status. 0: to be initialized; 1: in process; 2: running; -2: isolated; -3: to be deleted
+                     * 设置Instance status. <ul><li>`0`: Uninitialized. </li><li>`1`: In the process. </li><li>`2`: Running. </li><li>`-2`: Isolated. </li><li>`-3`: To be deleted. </li></ul>
+                     * @param Status Instance status. <ul><li>`0`: Uninitialized. </li><li>`1`: In the process. </li><li>`2`: Running. </li><li>`-2`: Isolated. </li><li>`-3`: To be deleted. </li></ul>
                      */
                     void SetStatus(const int64_t& _status);
 
@@ -361,14 +361,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool GrocerySysIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance type. Valid values: `1` (Redis 2.8 memory edition in cluster architecture), `2` (Redis 2.8 memory edition in standard architecture), `3` (CKV 3.2 memory edition in standard architecture), `4` (CKV 3.2 memory edition in cluster architecture), `5` (Redis 2.8 memory edition in standalone architecture), `6` (Redis 4.0 memory edition in standard architecture), `7` (Redis 4.0 memory edition in cluster architecture), `8` (Redis 5.0 memory edition in standard architecture), `9` (Redis 5.0 memory edition in cluster architecture)
-                     * @return ProductType Instance type. Valid values: `1` (Redis 2.8 memory edition in cluster architecture), `2` (Redis 2.8 memory edition in standard architecture), `3` (CKV 3.2 memory edition in standard architecture), `4` (CKV 3.2 memory edition in cluster architecture), `5` (Redis 2.8 memory edition in standalone architecture), `6` (Redis 4.0 memory edition in standard architecture), `7` (Redis 4.0 memory edition in cluster architecture), `8` (Redis 5.0 memory edition in standard architecture), `9` (Redis 5.0 memory edition in cluster architecture)
+                     * 获取Instance type. <ul><li>`1`: Redis 2.8 Memory Edition (Cluster Architecture). </li><li>`2`: Redis 2.8 Memory Edition (Standard Architecture). </li><li>`3`: CKV 3.2 Memory Edition (Standard Architecture). </li><li>`4`: CKV 3.2 Memory Edition (Cluster Architecture). </li><li>`5`: Redis 2.8 Standalone Edition. </li><li>`6`: Redis 4.0 Memory Edition (Standard Architecture). </li><li>`7`: Redis 4.0 Memory Edition (Cluster Architecture). </li><li>`8`: Redis 5.0 Memory Edition (Standard Architecture). </li><li>`9`: Redis 5.0 Memory Edition (Cluster Architecture). </li></ul>
+                     * @return ProductType Instance type. <ul><li>`1`: Redis 2.8 Memory Edition (Cluster Architecture). </li><li>`2`: Redis 2.8 Memory Edition (Standard Architecture). </li><li>`3`: CKV 3.2 Memory Edition (Standard Architecture). </li><li>`4`: CKV 3.2 Memory Edition (Cluster Architecture). </li><li>`5`: Redis 2.8 Standalone Edition. </li><li>`6`: Redis 4.0 Memory Edition (Standard Architecture). </li><li>`7`: Redis 4.0 Memory Edition (Cluster Architecture). </li><li>`8`: Redis 5.0 Memory Edition (Standard Architecture). </li><li>`9`: Redis 5.0 Memory Edition (Cluster Architecture). </li></ul>
                      */
                     int64_t GetProductType() const;
 
                     /**
-                     * 设置Instance type. Valid values: `1` (Redis 2.8 memory edition in cluster architecture), `2` (Redis 2.8 memory edition in standard architecture), `3` (CKV 3.2 memory edition in standard architecture), `4` (CKV 3.2 memory edition in cluster architecture), `5` (Redis 2.8 memory edition in standalone architecture), `6` (Redis 4.0 memory edition in standard architecture), `7` (Redis 4.0 memory edition in cluster architecture), `8` (Redis 5.0 memory edition in standard architecture), `9` (Redis 5.0 memory edition in cluster architecture)
-                     * @param ProductType Instance type. Valid values: `1` (Redis 2.8 memory edition in cluster architecture), `2` (Redis 2.8 memory edition in standard architecture), `3` (CKV 3.2 memory edition in standard architecture), `4` (CKV 3.2 memory edition in cluster architecture), `5` (Redis 2.8 memory edition in standalone architecture), `6` (Redis 4.0 memory edition in standard architecture), `7` (Redis 4.0 memory edition in cluster architecture), `8` (Redis 5.0 memory edition in standard architecture), `9` (Redis 5.0 memory edition in cluster architecture)
+                     * 设置Instance type. <ul><li>`1`: Redis 2.8 Memory Edition (Cluster Architecture). </li><li>`2`: Redis 2.8 Memory Edition (Standard Architecture). </li><li>`3`: CKV 3.2 Memory Edition (Standard Architecture). </li><li>`4`: CKV 3.2 Memory Edition (Cluster Architecture). </li><li>`5`: Redis 2.8 Standalone Edition. </li><li>`6`: Redis 4.0 Memory Edition (Standard Architecture). </li><li>`7`: Redis 4.0 Memory Edition (Cluster Architecture). </li><li>`8`: Redis 5.0 Memory Edition (Standard Architecture). </li><li>`9`: Redis 5.0 Memory Edition (Cluster Architecture). </li></ul>
+                     * @param ProductType Instance type. <ul><li>`1`: Redis 2.8 Memory Edition (Cluster Architecture). </li><li>`2`: Redis 2.8 Memory Edition (Standard Architecture). </li><li>`3`: CKV 3.2 Memory Edition (Standard Architecture). </li><li>`4`: CKV 3.2 Memory Edition (Cluster Architecture). </li><li>`5`: Redis 2.8 Standalone Edition. </li><li>`6`: Redis 4.0 Memory Edition (Standard Architecture). </li><li>`7`: Redis 4.0 Memory Edition (Cluster Architecture). </li><li>`8`: Redis 5.0 Memory Edition (Standard Architecture). </li><li>`9`: Redis 5.0 Memory Edition (Cluster Architecture). </li></ul>
                      */
                     void SetProductType(const int64_t& _productType);
 
@@ -379,14 +379,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool ProductTypeHasBeenSet() const;
 
                     /**
-                     * 获取Creation time
-                     * @return CreateTime Creation time
+                     * 获取The time when the instance was added to the replication group.
+                     * @return CreateTime The time when the instance was added to the replication group.
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time
-                     * @param CreateTime Creation time
+                     * 设置The time when the instance was added to the replication group.
+                     * @param CreateTime The time when the instance was added to the replication group.
                      */
                     void SetCreateTime(const std::string& _createTime);
 
@@ -397,14 +397,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Update time
-                     * @return UpdateTime Update time
+                     * 获取The time when instances in the replication group were updated.
+                     * @return UpdateTime The time when instances in the replication group were updated.
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Update time
-                     * @param UpdateTime Update time
+                     * 设置The time when instances in the replication group were updated.
+                     * @param UpdateTime The time when instances in the replication group were updated.
                      */
                     void SetUpdateTime(const std::string& _updateTime);
 
@@ -417,7 +417,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * User App ID
+                     * User AppID
                      */
                     int64_t m_appId;
                     bool m_appIdHasBeenSet;
@@ -435,7 +435,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley)
+                     * Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li> <li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li> </ul>
                      */
                     uint64_t m_regionId;
                     bool m_regionIdHasBeenSet;
@@ -459,7 +459,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_redisShardNumHasBeenSet;
 
                     /**
-                     * Shard size
+                     * Shard memory size.
                      */
                     int64_t m_redisShardSize;
                     bool m_redisShardSizeHasBeenSet;
@@ -472,13 +472,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_diskSizeHasBeenSet;
 
                     /**
-                     * Engine: Redis community edition, Tencent Cloud CKV
+                     * Engine: Redis Community Edition, Tencent Cloud CKV.
                      */
                     std::string m_engine;
                     bool m_engineHasBeenSet;
 
                     /**
-                     * Instance role. Valid values: `rw` (read-write), `r`( read-only)
+                     * Read-write permission of the instance. <ul><li>`rw`: Read/Write. </li><li>`r`: Read-only. </li></ul>
                      */
                     std::string m_role;
                     bool m_roleHasBeenSet;
@@ -491,25 +491,25 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * Internal parameter, which can be ignored.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_vip6;
                     bool m_vip6HasBeenSet;
 
                     /**
-                     * VPC ID, such as 75101
+                     * VPC ID, such as `75101`.
                      */
                     int64_t m_vpcID;
                     bool m_vpcIDHasBeenSet;
 
                     /**
-                     * Instance Port
+                     * Instance port
                      */
                     int64_t m_vPort;
                     bool m_vPortHasBeenSet;
 
                     /**
-                     * Instance status. 0: to be initialized; 1: in process; 2: running; -2: isolated; -3: to be deleted
+                     * Instance status. <ul><li>`0`: Uninitialized. </li><li>`1`: In the process. </li><li>`2`: Running. </li><li>`-2`: Isolated. </li><li>`-3`: To be deleted. </li></ul>
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
@@ -521,19 +521,19 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_grocerySysIdHasBeenSet;
 
                     /**
-                     * Instance type. Valid values: `1` (Redis 2.8 memory edition in cluster architecture), `2` (Redis 2.8 memory edition in standard architecture), `3` (CKV 3.2 memory edition in standard architecture), `4` (CKV 3.2 memory edition in cluster architecture), `5` (Redis 2.8 memory edition in standalone architecture), `6` (Redis 4.0 memory edition in standard architecture), `7` (Redis 4.0 memory edition in cluster architecture), `8` (Redis 5.0 memory edition in standard architecture), `9` (Redis 5.0 memory edition in cluster architecture)
+                     * Instance type. <ul><li>`1`: Redis 2.8 Memory Edition (Cluster Architecture). </li><li>`2`: Redis 2.8 Memory Edition (Standard Architecture). </li><li>`3`: CKV 3.2 Memory Edition (Standard Architecture). </li><li>`4`: CKV 3.2 Memory Edition (Cluster Architecture). </li><li>`5`: Redis 2.8 Standalone Edition. </li><li>`6`: Redis 4.0 Memory Edition (Standard Architecture). </li><li>`7`: Redis 4.0 Memory Edition (Cluster Architecture). </li><li>`8`: Redis 5.0 Memory Edition (Standard Architecture). </li><li>`9`: Redis 5.0 Memory Edition (Cluster Architecture). </li></ul>
                      */
                     int64_t m_productType;
                     bool m_productTypeHasBeenSet;
 
                     /**
-                     * Creation time
+                     * The time when the instance was added to the replication group.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Update time
+                     * The time when instances in the replication group were updated.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

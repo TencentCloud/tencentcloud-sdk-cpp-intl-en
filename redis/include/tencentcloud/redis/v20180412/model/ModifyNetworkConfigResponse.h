@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Execution status: true or false
-                     * @return Status Execution status: true or false
+                     * 获取Execution status. Ignore this parameter.
+                     * @return Status Execution status. Ignore this parameter.
                      */
                     bool GetStatus() const;
 
@@ -56,8 +56,8 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Subnet ID
-                     * @return SubnetId Subnet ID
+                     * 获取New subnet ID of the instance
+                     * @return SubnetId New subnet ID of the instance
                      */
                     std::string GetSubnetId() const;
 
@@ -68,8 +68,8 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID
-                     * @return VpcId VPC ID
+                     * 获取New VPC ID of the instance
+                     * @return VpcId New VPC ID of the instance
                      */
                     std::string GetVpcId() const;
 
@@ -80,8 +80,8 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取VIP address
-                     * @return Vip VIP address
+                     * 获取New private IPv4 address of the instance
+                     * @return Vip New private IPv4 address of the instance
                      */
                     std::string GetVip() const;
 
@@ -91,31 +91,49 @@ namespace TencentCloud
                      */
                     bool VipHasBeenSet() const;
 
+                    /**
+                     * 获取Task ID, which can be used to query the task execution status through the `DescribeTaskInfo` API.
+                     * @return TaskId Task ID, which can be used to query the task execution status through the `DescribeTaskInfo` API.
+                     */
+                    int64_t GetTaskId() const;
+
+                    /**
+                     * 判断参数 TaskId 是否已赋值
+                     * @return TaskId 是否已赋值
+                     */
+                    bool TaskIdHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Execution status: true or false
+                     * Execution status. Ignore this parameter.
                      */
                     bool m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Subnet ID
+                     * New subnet ID of the instance
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * VPC ID
+                     * New VPC ID of the instance
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * VIP address
+                     * New private IPv4 address of the instance
                      */
                     std::string m_vip;
                     bool m_vipHasBeenSet;
+
+                    /**
+                     * Task ID, which can be used to query the task execution status through the `DescribeTaskInfo` API.
+                     */
+                    int64_t m_taskId;
+                    bool m_taskIdHasBeenSet;
 
                 };
             }

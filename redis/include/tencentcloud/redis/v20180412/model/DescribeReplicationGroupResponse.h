@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of replication group
-                     * @return TotalCount Number of replication group
+                     * 获取Number of replication groups
+                     * @return TotalCount Number of replication groups
                      */
                     int64_t GetTotalCount() const;
 
@@ -57,8 +57,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Replication group info
-                     * @return Groups Replication group info
+                     * 获取Replication group information
+                     * @return Groups Replication group information
                      */
                     std::vector<Groups> GetGroups() const;
 
@@ -71,13 +71,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of replication group
+                     * Number of replication groups
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Replication group info
+                     * Replication group information
                      */
                     std::vector<Groups> m_groups;
                     bool m_groupsHasBeenSet;

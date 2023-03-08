@@ -760,6 +760,64 @@ Note: this field may return null, indicating that no valid value was found.
                      */
                     bool DisableApiTerminationHasBeenSet() const;
 
+                    /**
+                     * 获取Default login user
+                     * @return DefaultLoginUser Default login user
+                     */
+                    std::string GetDefaultLoginUser() const;
+
+                    /**
+                     * 设置Default login user
+                     * @param DefaultLoginUser Default login user
+                     */
+                    void SetDefaultLoginUser(const std::string& _defaultLoginUser);
+
+                    /**
+                     * 判断参数 DefaultLoginUser 是否已赋值
+                     * @return DefaultLoginUser 是否已赋值
+                     */
+                    bool DefaultLoginUserHasBeenSet() const;
+
+                    /**
+                     * 获取Default login port
+                     * @return DefaultLoginPort Default login port
+                     */
+                    int64_t GetDefaultLoginPort() const;
+
+                    /**
+                     * 设置Default login port
+                     * @param DefaultLoginPort Default login port
+                     */
+                    void SetDefaultLoginPort(const int64_t& _defaultLoginPort);
+
+                    /**
+                     * 判断参数 DefaultLoginPort 是否已赋值
+                     * @return DefaultLoginPort 是否已赋值
+                     */
+                    bool DefaultLoginPortHasBeenSet() const;
+
+                    /**
+                     * 获取Latest operation errors of the instance.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return LatestOperationErrorMsg Latest operation errors of the instance.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetLatestOperationErrorMsg() const;
+
+                    /**
+                     * 设置Latest operation errors of the instance.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param LatestOperationErrorMsg Latest operation errors of the instance.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetLatestOperationErrorMsg(const std::string& _latestOperationErrorMsg);
+
+                    /**
+                     * 判断参数 LatestOperationErrorMsg 是否已赋值
+                     * @return LatestOperationErrorMsg 是否已赋值
+                     */
+                    bool LatestOperationErrorMsgHasBeenSet() const;
+
                 private:
 
                     /**
@@ -993,6 +1051,25 @@ Note: this field may return null, indicating that no valid value was found.
                      */
                     bool m_disableApiTermination;
                     bool m_disableApiTerminationHasBeenSet;
+
+                    /**
+                     * Default login user
+                     */
+                    std::string m_defaultLoginUser;
+                    bool m_defaultLoginUserHasBeenSet;
+
+                    /**
+                     * Default login port
+                     */
+                    int64_t m_defaultLoginPort;
+                    bool m_defaultLoginPortHasBeenSet;
+
+                    /**
+                     * Latest operation errors of the instance.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_latestOperationErrorMsg;
+                    bool m_latestOperationErrorMsgHasBeenSet;
 
                 };
             }

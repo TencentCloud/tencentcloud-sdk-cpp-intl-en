@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool HostIdsHasBeenSet() const;
 
                     /**
-                     * 获取Master host IP used to create the CVM
-                     * @return HostIps Master host IP used to create the CVM
+                     * 获取IPs of the hosts to create CVMs
+                     * @return HostIps IPs of the hosts to create CVMs
                      */
                     std::vector<std::string> GetHostIps() const;
 
                     /**
-                     * 设置Master host IP used to create the CVM
-                     * @param HostIps Master host IP used to create the CVM
+                     * 设置IPs of the hosts to create CVMs
+                     * @param HostIps IPs of the hosts to create CVMs
                      */
                     void SetHostIps(const std::vector<std::string>& _hostIps);
 
@@ -157,7 +157,7 @@ namespace TencentCloud
                     bool m_hostIdsHasBeenSet;
 
                     /**
-                     * Master host IP used to create the CVM
+                     * IPs of the hosts to create CVMs
                      */
                     std::vector<std::string> m_hostIps;
                     bool m_hostIpsHasBeenSet;

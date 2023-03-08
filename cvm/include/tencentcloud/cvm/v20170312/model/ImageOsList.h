@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Supported operating systems are divided into two categories, Windows and Linux.
+                * Supported operating systems. They are divided into two categories, Windows and Linux.
                 */
                 class ImageOsList : public AbstractModel
                 {
@@ -48,17 +48,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Supported Windows OS
-Note: This field may return null, indicating that no valid value is found.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Windows Supported Windows OS
-Note: This field may return null, indicating that no valid value is found.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> GetWindows() const;
 
                     /**
                      * 设置Supported Windows OS
-Note: This field may return null, indicating that no valid value is found.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @param Windows Supported Windows OS
-Note: This field may return null, indicating that no valid value is found.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetWindows(const std::vector<std::string>& _windows);
 
@@ -70,17 +70,17 @@ Note: This field may return null, indicating that no valid value is found.
 
                     /**
                      * 获取Supported Linux OS
-Note: This field may return null, indicating that no valid value is found.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Linux Supported Linux OS
-Note: This field may return null, indicating that no valid value is found.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> GetLinux() const;
 
                     /**
                      * 设置Supported Linux OS
-Note: This field may return null, indicating that no valid value is found.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @param Linux Supported Linux OS
-Note: This field may return null, indicating that no valid value is found.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetLinux(const std::vector<std::string>& _linux);
 
@@ -94,14 +94,14 @@ Note: This field may return null, indicating that no valid value is found.
 
                     /**
                      * Supported Windows OS
-Note: This field may return null, indicating that no valid value is found.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_windows;
                     bool m_windowsHasBeenSet;
 
                     /**
                      * Supported Linux OS
-Note: This field may return null, indicating that no valid value is found.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_linux;
                     bool m_linuxHasBeenSet;

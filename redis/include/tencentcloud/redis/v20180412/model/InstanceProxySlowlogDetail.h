@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Slow query duration
-                     * @return Duration Slow query duration
+                     * 获取Duration of the slow query in ms.
+                     * @return Duration Duration of the slow query in ms.
                      */
                     int64_t GetDuration() const;
 
                     /**
-                     * 设置Slow query duration
-                     * @param Duration Slow query duration
+                     * 设置Duration of the slow query in ms.
+                     * @param Duration Duration of the slow query in ms.
                      */
                     void SetDuration(const int64_t& _duration);
 
@@ -139,7 +139,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Slow query duration
+                     * Duration of the slow query in ms.
                      */
                     int64_t m_duration;
                     bool m_durationHasBeenSet;

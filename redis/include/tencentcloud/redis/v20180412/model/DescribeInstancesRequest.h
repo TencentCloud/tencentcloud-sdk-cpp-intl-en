@@ -44,14 +44,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of instances. Default value: 20. Maximum value: 1000.
-                     * @return Limit Number of instances. Default value: 20. Maximum value: 1000.
+                     * 获取Number of instances returned per page. Default value: `20`. Maximum value: `1000`.
+                     * @return Limit Number of instances returned per page. Default value: `20`. Maximum value: `1000`.
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of instances. Default value: 20. Maximum value: 1000.
-                     * @param Limit Number of instances. Default value: 20. Maximum value: 1000.
+                     * 设置Number of instances returned per page. Default value: `20`. Maximum value: `1000`.
+                     * @param Limit Number of instances returned per page. Default value: `20`. Maximum value: `1000`.
                      */
                     void SetLimit(const uint64_t& _limit);
 
@@ -62,14 +62,14 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset, which is an integral multiple of `Limit`.
-                     * @return Offset Offset, which is an integral multiple of `Limit`.
+                     * 获取Pagination offset, which is an integral multiple of `Limit`.
+                     * @return Offset Pagination offset, which is an integral multiple of `Limit`.
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset, which is an integral multiple of `Limit`.
-                     * @param Offset Offset, which is an integral multiple of `Limit`.
+                     * 设置Pagination offset, which is an integral multiple of `Limit`.
+                     * @param Offset Pagination offset, which is an integral multiple of `Limit`.
                      */
                     void SetOffset(const uint64_t& _offset);
 
@@ -532,13 +532,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of instances. Default value: 20. Maximum value: 1000.
+                     * Number of instances returned per page. Default value: `20`. Maximum value: `1000`.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset, which is an integral multiple of `Limit`.
+                     * Pagination offset, which is an integral multiple of `Limit`.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;

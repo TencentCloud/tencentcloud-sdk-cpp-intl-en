@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance list size. Default value: 20
-                     * @return Limit Instance list size. Default value: 20
+                     * 获取Number of instances returned per page. Default value: `20`.
+                     * @return Limit Number of instances returned per page. Default value: `20`.
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Instance list size. Default value: 20
-                     * @param Limit Instance list size. Default value: 20
+                     * 设置Number of instances returned per page. Default value: `20`.
+                     * @param Limit Number of instances returned per page. Default value: `20`.
                      */
                     void SetLimit(const int64_t& _limit);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset, which is an integral multiple of `Limit`
-                     * @return Offset Offset, which is an integral multiple of `Limit`
+                     * 获取Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
+                     * @return Offset Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset, which is an integral multiple of `Limit`
-                     * @param Offset Offset, which is an integral multiple of `Limit`
+                     * 设置Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
+                     * @param Offset Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
                      */
                     void SetOffset(const int64_t& _offset);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool GroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID/name. Fuzzy query is supported.
-                     * @return SearchKey Instance ID/name. Fuzzy query is supported.
+                     * 获取Keyword for fuzzy search, which can be an instance name or instance ID.
+                     * @return SearchKey Keyword for fuzzy search, which can be an instance name or instance ID.
                      */
                     std::string GetSearchKey() const;
 
                     /**
-                     * 设置Instance ID/name. Fuzzy query is supported.
-                     * @param SearchKey Instance ID/name. Fuzzy query is supported.
+                     * 设置Keyword for fuzzy search, which can be an instance name or instance ID.
+                     * @param SearchKey Keyword for fuzzy search, which can be an instance name or instance ID.
                      */
                     void SetSearchKey(const std::string& _searchKey);
 
@@ -117,13 +117,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance list size. Default value: 20
+                     * Number of instances returned per page. Default value: `20`.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset, which is an integral multiple of `Limit`
+                     * Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
@@ -135,7 +135,7 @@ namespace TencentCloud
                     bool m_groupIdHasBeenSet;
 
                     /**
-                     * Instance ID/name. Fuzzy query is supported.
+                     * Keyword for fuzzy search, which can be an instance name or instance ID.
                      */
                     std::string m_searchKey;
                     bool m_searchKeyHasBeenSet;

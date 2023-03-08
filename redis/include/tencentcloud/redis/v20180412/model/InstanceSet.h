@@ -86,14 +86,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取User's Appid
-                     * @return Appid User's Appid
+                     * 获取User AppID
+                     * @return Appid User AppID
                      */
                     int64_t GetAppid() const;
 
                     /**
-                     * 设置User's Appid
-                     * @param Appid User's Appid
+                     * 设置User AppID
+                     * @param Appid User AppID
                      */
                     void SetAppid(const int64_t& _appid);
 
@@ -122,14 +122,14 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan.
-                     * @return RegionId Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan.
+                     * 获取Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li><li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li><li>`16`: Chengdu. </li><li>`17`: Frankfurt. </li><li>`18`: Seoul. </li><li>`19`: Chongqing. </li><li>`21`: Mumbai. </li><li>`22`: East US (Virginia). </li><li>`23`: Bangkok. </li><li>`24`: Moscow. </li><li>`25`: Tokyo. </li></ul>
+                     * @return RegionId Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li><li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li><li>`16`: Chengdu. </li><li>`17`: Frankfurt. </li><li>`18`: Seoul. </li><li>`19`: Chongqing. </li><li>`21`: Mumbai. </li><li>`22`: East US (Virginia). </li><li>`23`: Bangkok. </li><li>`24`: Moscow. </li><li>`25`: Tokyo. </li></ul>
                      */
                     int64_t GetRegionId() const;
 
                     /**
-                     * 设置Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan.
-                     * @param RegionId Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan.
+                     * 设置Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li><li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li><li>`16`: Chengdu. </li><li>`17`: Frankfurt. </li><li>`18`: Seoul. </li><li>`19`: Chongqing. </li><li>`21`: Mumbai. </li><li>`22`: East US (Virginia). </li><li>`23`: Bangkok. </li><li>`24`: Moscow. </li><li>`25`: Tokyo. </li></ul>
+                     * @param RegionId Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li><li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li><li>`16`: Chengdu. </li><li>`17`: Frankfurt. </li><li>`18`: Seoul. </li><li>`19`: Chongqing. </li><li>`21`: Mumbai. </li><li>`22`: East US (Virginia). </li><li>`23`: Bangkok. </li><li>`24`: Moscow. </li><li>`25`: Tokyo. </li></ul>
                      */
                     void SetRegionId(const int64_t& _regionId);
 
@@ -158,14 +158,14 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID, such as 75101.
-                     * @return VpcId VPC ID, such as 75101.
+                     * 获取VPC ID, such as `75101`.
+                     * @return VpcId VPC ID, such as `75101`.
                      */
                     int64_t GetVpcId() const;
 
                     /**
-                     * 设置VPC ID, such as 75101.
-                     * @param VpcId VPC ID, such as 75101.
+                     * 设置VPC ID, such as `75101`.
+                     * @param VpcId VPC ID, such as `75101`.
                      */
                     void SetVpcId(const int64_t& _vpcId);
 
@@ -176,14 +176,14 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取VPC subnet ID, such as 46315.
-                     * @return SubnetId VPC subnet ID, such as 46315.
+                     * 获取Subnet ID, such as `46315`.
+                     * @return SubnetId Subnet ID, such as `46315`.
                      */
                     int64_t GetSubnetId() const;
 
                     /**
-                     * 设置VPC subnet ID, such as 46315.
-                     * @param SubnetId VPC subnet ID, such as 46315.
+                     * 设置Subnet ID, such as `46315`.
+                     * @param SubnetId Subnet ID, such as `46315`.
                      */
                     void SetSubnetId(const int64_t& _subnetId);
 
@@ -284,14 +284,14 @@ namespace TencentCloud
                     bool SizeHasBeenSet() const;
 
                     /**
-                     * 获取This field has been disused
-                     * @return SizeUsed This field has been disused
+                     * 获取This field has been disused. You can use the [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
+                     * @return SizeUsed This field has been disused. You can use the [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
                      */
                     double GetSizeUsed() const;
 
                     /**
-                     * 设置This field has been disused
-                     * @param SizeUsed This field has been disused
+                     * 设置This field has been disused. You can use the [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
+                     * @param SizeUsed This field has been disused. You can use the [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
                      */
                     void SetSizeUsed(const double& _sizeUsed);
 
@@ -886,18 +886,18 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool DiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity). </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return MonitorVersion Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity). </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity. </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MonitorVersion Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity. </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetMonitorVersion() const;
 
                     /**
-                     * 设置Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity). </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param MonitorVersion Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity). </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity. </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param MonitorVersion Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity. </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetMonitorVersion(const std::string& _monitorVersion);
 
@@ -1142,7 +1142,7 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * User's Appid
+                     * User AppID
                      */
                     int64_t m_appid;
                     bool m_appidHasBeenSet;
@@ -1154,7 +1154,7 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan.
+                     * Region ID. <ul><li>`1`: Guangzhou. </li><li>`4`: Shanghai. </li><li>`5`: Hong Kong (China). </li><li>`6`: Toronto. </li> <li>`7`: Shanghai Finance. </li> <li>`8`: Beijing. </li> <li>`9`: Singapore. </li> <li>`11`: Shenzhen Finance. </li> <li>`15`: West US (Silicon Valley). </li><li>`16`: Chengdu. </li><li>`17`: Frankfurt. </li><li>`18`: Seoul. </li><li>`19`: Chongqing. </li><li>`21`: Mumbai. </li><li>`22`: East US (Virginia). </li><li>`23`: Bangkok. </li><li>`24`: Moscow. </li><li>`25`: Tokyo. </li></ul>
                      */
                     int64_t m_regionId;
                     bool m_regionIdHasBeenSet;
@@ -1166,13 +1166,13 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * VPC ID, such as 75101.
+                     * VPC ID, such as `75101`.
                      */
                     int64_t m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * VPC subnet ID, such as 46315.
+                     * Subnet ID, such as `46315`.
                      */
                     int64_t m_subnetId;
                     bool m_subnetIdHasBeenSet;
@@ -1208,7 +1208,7 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_sizeHasBeenSet;
 
                     /**
-                     * This field has been disused
+                     * This field has been disused. You can use the [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
                      */
                     double m_sizeUsed;
                     bool m_sizeUsedHasBeenSet;
@@ -1405,8 +1405,8 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_diskSizeHasBeenSet;
 
                     /**
-                     * Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity). </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity. </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_monitorVersion;
                     bool m_monitorVersionHasBeenSet;

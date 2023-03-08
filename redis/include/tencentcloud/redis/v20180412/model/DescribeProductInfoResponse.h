@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Sale information of a region
-                     * @return RegionSet Sale information of a region
+                     * 获取Sale information of a region.
+                     * @return RegionSet Sale information of a region.
                      */
                     std::vector<RegionConf> GetRegionSet() const;
 
@@ -59,7 +59,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Sale information of a region
+                     * Sale information of a region.
                      */
                     std::vector<RegionConf> m_regionSet;
                     bool m_regionSetHasBeenSet;

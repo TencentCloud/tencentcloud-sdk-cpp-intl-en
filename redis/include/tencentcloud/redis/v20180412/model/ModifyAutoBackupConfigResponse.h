@@ -56,8 +56,8 @@ namespace TencentCloud
                     bool AutoBackupTypeHasBeenSet() const;
 
                     /**
-                     * 获取Date. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.
-                     * @return WeekDays Date. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.
+                     * 获取Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`.
+                     * @return WeekDays Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`.
                      */
                     std::vector<std::string> GetWeekDays() const;
 
@@ -68,8 +68,8 @@ namespace TencentCloud
                     bool WeekDaysHasBeenSet() const;
 
                     /**
-                     * 获取Time period. Value range: 00:00-01:00, 01:00-02:00...... 23:00-00:00
-                     * @return TimePeriod Time period. Value range: 00:00-01:00, 01:00-02:00...... 23:00-00:00
+                     * 获取Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
+                     * @return TimePeriod Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
                      */
                     std::string GetTimePeriod() const;
 
@@ -100,13 +100,13 @@ namespace TencentCloud
                     bool m_autoBackupTypeHasBeenSet;
 
                     /**
-                     * Date. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.
+                     * Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`.
                      */
                     std::vector<std::string> m_weekDays;
                     bool m_weekDaysHasBeenSet;
 
                     /**
-                     * Time period. Value range: 00:00-01:00, 01:00-02:00...... 23:00-00:00
+                     * Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
                      */
                     std::string m_timePeriod;
                     bool m_timePeriodHasBeenSet;

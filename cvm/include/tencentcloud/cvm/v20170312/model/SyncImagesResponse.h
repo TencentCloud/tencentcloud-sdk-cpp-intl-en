@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ImageSet 
+                     * 获取ID of the image created in the destination region
+                     * @return ImageSet ID of the image created in the destination region
                      */
                     std::vector<SyncImage> GetImageSet() const;
 
@@ -59,7 +59,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * ID of the image created in the destination region
                      */
                     std::vector<SyncImage> m_imageSet;
                     bool m_imageSetHasBeenSet;

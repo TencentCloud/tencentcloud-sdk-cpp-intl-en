@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Image sync information
                 */
                 class SyncImage : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ImageId 
+                     * 获取Image ID
+                     * @return ImageId Image ID
                      */
                     std::string GetImageId() const;
 
                     /**
-                     * 设置
-                     * @param ImageId 
+                     * 设置Image ID
+                     * @param ImageId Image ID
                      */
                     void SetImageId(const std::string& _imageId);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool ImageIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Region 
+                     * 获取Region
+                     * @return Region Region
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置
-                     * @param Region 
+                     * 设置Region
+                     * @param Region Region
                      */
                     void SetRegion(const std::string& _region);
 
@@ -85,13 +85,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Image ID
                      */
                     std::string m_imageId;
                     bool m_imageIdHasBeenSet;
 
                     /**
-                     * 
+                     * Region
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;

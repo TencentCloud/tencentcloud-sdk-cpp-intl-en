@@ -114,6 +114,24 @@ namespace TencentCloud
                      */
                     bool ImageNameHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to return the ID of image created in the destination region
+                     * @return ImageSetRequired Whether to return the ID of image created in the destination region
+                     */
+                    bool GetImageSetRequired() const;
+
+                    /**
+                     * 设置Whether to return the ID of image created in the destination region
+                     * @param ImageSetRequired Whether to return the ID of image created in the destination region
+                     */
+                    void SetImageSetRequired(const bool& _imageSetRequired);
+
+                    /**
+                     * 判断参数 ImageSetRequired 是否已赋值
+                     * @return ImageSetRequired 是否已赋值
+                     */
+                    bool ImageSetRequiredHasBeenSet() const;
+
                 private:
 
                     /**
@@ -139,6 +157,12 @@ namespace TencentCloud
                      */
                     std::string m_imageName;
                     bool m_imageNameHasBeenSet;
+
+                    /**
+                     * Whether to return the ID of image created in the destination region
+                     */
+                    bool m_imageSetRequired;
+                    bool m_imageSetRequiredHasBeenSet;
 
                 };
             }

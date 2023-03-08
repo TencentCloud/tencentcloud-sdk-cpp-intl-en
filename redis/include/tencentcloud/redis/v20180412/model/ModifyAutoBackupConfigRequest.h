@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter cannot be modified for now.
-                     * @return WeekDays Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter cannot be modified for now.
+                     * 获取Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter currently cannot be modified.
+                     * @return WeekDays Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter currently cannot be modified.
                      */
                     std::vector<std::string> GetWeekDays() const;
 
                     /**
-                     * 设置Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter cannot be modified for now.
-                     * @param WeekDays Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter cannot be modified for now.
+                     * 设置Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter currently cannot be modified.
+                     * @param WeekDays Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter currently cannot be modified.
                      */
                     void SetWeekDays(const std::vector<std::string>& _weekDays);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool WeekDaysHasBeenSet() const;
 
                     /**
-                     * 获取Time period. Value range: 00:00-01:00, 01:00-02:00...... 23:00-00:00
-                     * @return TimePeriod Time period. Value range: 00:00-01:00, 01:00-02:00...... 23:00-00:00
+                     * 获取Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
+                     * @return TimePeriod Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
                      */
                     std::string GetTimePeriod() const;
 
                     /**
-                     * 设置Time period. Value range: 00:00-01:00, 01:00-02:00...... 23:00-00:00
-                     * @param TimePeriod Time period. Value range: 00:00-01:00, 01:00-02:00...... 23:00-00:00
+                     * 设置Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
+                     * @param TimePeriod Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
                      */
                     void SetTimePeriod(const std::string& _timePeriod);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool TimePeriodHasBeenSet() const;
 
                     /**
-                     * 获取Automatic backup type: 1 (scheduled rollback)
-                     * @return AutoBackupType Automatic backup type: 1 (scheduled rollback)
+                     * 获取Automatic backup type. `1`: Scheduled rollback.
+                     * @return AutoBackupType Automatic backup type. `1`: Scheduled rollback.
                      */
                     int64_t GetAutoBackupType() const;
 
                     /**
-                     * 设置Automatic backup type: 1 (scheduled rollback)
-                     * @param AutoBackupType Automatic backup type: 1 (scheduled rollback)
+                     * 设置Automatic backup type. `1`: Scheduled rollback.
+                     * @param AutoBackupType Automatic backup type. `1`: Scheduled rollback.
                      */
                     void SetAutoBackupType(const int64_t& _autoBackupType);
 
@@ -123,19 +123,19 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter cannot be modified for now.
+                     * Automatic backup cycle. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. This parameter currently cannot be modified.
                      */
                     std::vector<std::string> m_weekDays;
                     bool m_weekDaysHasBeenSet;
 
                     /**
-                     * Time period. Value range: 00:00-01:00, 01:00-02:00...... 23:00-00:00
+                     * Automatic backup time in the format of 00:00-01:00, 01:00-02:00... 23:00-00:00.
                      */
                     std::string m_timePeriod;
                     bool m_timePeriodHasBeenSet;
 
                     /**
-                     * Automatic backup type: 1 (scheduled rollback)
+                     * Automatic backup type. `1`: Scheduled rollback.
                      */
                     int64_t m_autoBackupType;
                     bool m_autoBackupTypeHasBeenSet;

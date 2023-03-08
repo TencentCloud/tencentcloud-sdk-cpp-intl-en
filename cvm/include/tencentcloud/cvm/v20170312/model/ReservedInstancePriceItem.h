@@ -159,18 +159,18 @@ Unit: second
                     bool DurationHasBeenSet() const;
 
                     /**
-                     * 获取The operating system of the reserved instance, such as `linux`.
-Valid value: linux.
-                     * @return ProductDescription The operating system of the reserved instance, such as `linux`.
-Valid value: linux.
+                     * 获取The operating system of the reserved instance, such as `Linux`.
+Valid value: `Linux`.
+                     * @return ProductDescription The operating system of the reserved instance, such as `Linux`.
+Valid value: `Linux`.
                      */
                     std::string GetProductDescription() const;
 
                     /**
-                     * 设置The operating system of the reserved instance, such as `linux`.
-Valid value: linux.
-                     * @param ProductDescription The operating system of the reserved instance, such as `linux`.
-Valid value: linux.
+                     * 设置The operating system of the reserved instance, such as `Linux`.
+Valid value: `Linux`.
+                     * @param ProductDescription The operating system of the reserved instance, such as `Linux`.
+Valid value: `Linux`.
                      */
                     void SetProductDescription(const std::string& _productDescription);
 
@@ -220,8 +220,8 @@ Unit: second
                     bool m_durationHasBeenSet;
 
                     /**
-                     * The operating system of the reserved instance, such as `linux`.
-Valid value: linux.
+                     * The operating system of the reserved instance, such as `Linux`.
+Valid value: `Linux`.
                      */
                     std::string m_productDescription;
                     bool m_productDescriptionHasBeenSet;

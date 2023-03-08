@@ -146,14 +146,14 @@ Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_r
                     bool SysprepHasBeenSet() const;
 
                     /**
-                     * 获取Specified data disk ID included in the full image created from the instance.
-                     * @return DataDiskIds Specified data disk ID included in the full image created from the instance.
+                     * 获取IDs of data disks included in the image. 
+                     * @return DataDiskIds IDs of data disks included in the image. 
                      */
                     std::vector<std::string> GetDataDiskIds() const;
 
                     /**
-                     * 设置Specified data disk ID included in the full image created from the instance.
-                     * @param DataDiskIds Specified data disk ID included in the full image created from the instance.
+                     * 设置IDs of data disks included in the image. 
+                     * @param DataDiskIds IDs of data disks included in the image. 
                      */
                     void SetDataDiskIds(const std::vector<std::string>& _dataDiskIds);
 
@@ -253,7 +253,7 @@ Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_r
                     bool m_sysprepHasBeenSet;
 
                     /**
-                     * Specified data disk ID included in the full image created from the instance.
+                     * IDs of data disks included in the image. 
                      */
                     std::vector<std::string> m_dataDiskIds;
                     bool m_dataDiskIdsHasBeenSet;

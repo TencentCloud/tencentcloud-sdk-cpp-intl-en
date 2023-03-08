@@ -83,9 +83,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FilenamesHasBeenSet() const;
 
                     /**
-                     * 获取List of backup file information
+                     * 获取List of backup file information.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BackupInfos List of backup file information
+                     * @return BackupInfos List of backup file information.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<BackupDownloadInfo> GetBackupInfos() const;
@@ -118,7 +118,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_filenamesHasBeenSet;
 
                     /**
-                     * List of backup file information
+                     * List of backup file information.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<BackupDownloadInfo> m_backupInfos;
