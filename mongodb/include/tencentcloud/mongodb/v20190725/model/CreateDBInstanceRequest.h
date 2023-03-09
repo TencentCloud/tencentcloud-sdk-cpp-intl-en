@@ -278,14 +278,14 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance password, which must contain 8 to 16 characters and comprise at least two of the following types: letters, digits, and symbols (!@#%^*()). If it is left empty, the password is in the format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001".
-                     * @return Password Instance password, which must contain 8 to 16 characters and comprise at least two of the following types: letters, digits, and symbols (!@#%^*()). If it is left empty, the password is in the format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001".
+                     * 获取Instance password. If it is left empty, the password is in the default format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001". The custom password must contain 8-32 characters in at least two of the following types: letters, digits, and symbols (!@#%^*()_).
+                     * @return Password Instance password. If it is left empty, the password is in the default format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001". The custom password must contain 8-32 characters in at least two of the following types: letters, digits, and symbols (!@#%^*()_).
                      */
                     std::string GetPassword() const;
 
                     /**
-                     * 设置Instance password, which must contain 8 to 16 characters and comprise at least two of the following types: letters, digits, and symbols (!@#%^*()). If it is left empty, the password is in the format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001".
-                     * @param Password Instance password, which must contain 8 to 16 characters and comprise at least two of the following types: letters, digits, and symbols (!@#%^*()). If it is left empty, the password is in the format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001".
+                     * 设置Instance password. If it is left empty, the password is in the default format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001". The custom password must contain 8-32 characters in at least two of the following types: letters, digits, and symbols (!@#%^*()_).
+                     * @param Password Instance password. If it is left empty, the password is in the default format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001". The custom password must contain 8-32 characters in at least two of the following types: letters, digits, and symbols (!@#%^*()_).
                      */
                     void SetPassword(const std::string& _password);
 
@@ -511,6 +511,60 @@ namespace TencentCloud
                      */
                     bool MongosNodeNumHasBeenSet() const;
 
+                    /**
+                     * 获取Number of read-only nodes. Value range: 2-7.
+                     * @return ReadonlyNodeNum Number of read-only nodes. Value range: 2-7.
+                     */
+                    uint64_t GetReadonlyNodeNum() const;
+
+                    /**
+                     * 设置Number of read-only nodes. Value range: 2-7.
+                     * @param ReadonlyNodeNum Number of read-only nodes. Value range: 2-7.
+                     */
+                    void SetReadonlyNodeNum(const uint64_t& _readonlyNodeNum);
+
+                    /**
+                     * 判断参数 ReadonlyNodeNum 是否已赋值
+                     * @return ReadonlyNodeNum 是否已赋值
+                     */
+                    bool ReadonlyNodeNumHasBeenSet() const;
+
+                    /**
+                     * 获取The AZ where the read-only node is deployed
+                     * @return ReadonlyNodeAvailabilityZoneList The AZ where the read-only node is deployed
+                     */
+                    std::vector<std::string> GetReadonlyNodeAvailabilityZoneList() const;
+
+                    /**
+                     * 设置The AZ where the read-only node is deployed
+                     * @param ReadonlyNodeAvailabilityZoneList The AZ where the read-only node is deployed
+                     */
+                    void SetReadonlyNodeAvailabilityZoneList(const std::vector<std::string>& _readonlyNodeAvailabilityZoneList);
+
+                    /**
+                     * 判断参数 ReadonlyNodeAvailabilityZoneList 是否已赋值
+                     * @return ReadonlyNodeAvailabilityZoneList 是否已赋值
+                     */
+                    bool ReadonlyNodeAvailabilityZoneListHasBeenSet() const;
+
+                    /**
+                     * 获取The AZ where the hidden node resides. It is required for cross-AZ instances.
+                     * @return HiddenZone The AZ where the hidden node resides. It is required for cross-AZ instances.
+                     */
+                    std::string GetHiddenZone() const;
+
+                    /**
+                     * 设置The AZ where the hidden node resides. It is required for cross-AZ instances.
+                     * @param HiddenZone The AZ where the hidden node resides. It is required for cross-AZ instances.
+                     */
+                    void SetHiddenZone(const std::string& _hiddenZone);
+
+                    /**
+                     * 判断参数 HiddenZone 是否已赋值
+                     * @return HiddenZone 是否已赋值
+                     */
+                    bool HiddenZoneHasBeenSet() const;
+
                 private:
 
                     /**
@@ -592,7 +646,7 @@ namespace TencentCloud
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * Instance password, which must contain 8 to 16 characters and comprise at least two of the following types: letters, digits, and symbols (!@#%^*()). If it is left empty, the password is in the format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001".
+                     * Instance password. If it is left empty, the password is in the default format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001". The custom password must contain 8-32 characters in at least two of the following types: letters, digits, and symbols (!@#%^*()_).
                      */
                     std::string m_password;
                     bool m_passwordHasBeenSet;
@@ -668,6 +722,24 @@ namespace TencentCloud
                      */
                     uint64_t m_mongosNodeNum;
                     bool m_mongosNodeNumHasBeenSet;
+
+                    /**
+                     * Number of read-only nodes. Value range: 2-7.
+                     */
+                    uint64_t m_readonlyNodeNum;
+                    bool m_readonlyNodeNumHasBeenSet;
+
+                    /**
+                     * The AZ where the read-only node is deployed
+                     */
+                    std::vector<std::string> m_readonlyNodeAvailabilityZoneList;
+                    bool m_readonlyNodeAvailabilityZoneListHasBeenSet;
+
+                    /**
+                     * The AZ where the hidden node resides. It is required for cross-AZ instances.
+                     */
+                    std::string m_hiddenZone;
+                    bool m_hiddenZoneHasBeenSet;
 
                 };
             }

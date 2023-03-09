@@ -122,14 +122,14 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Cluster type. Valid values: 0 (replica set instance), 1 (sharding instance),
-                     * @return ClusterType Cluster type. Valid values: 0 (replica set instance), 1 (sharding instance),
+                     * 获取Cluster type. Valid values: `0` (replica set instance), `1` (sharded instance).
+                     * @return ClusterType Cluster type. Valid values: `0` (replica set instance), `1` (sharded instance).
                      */
                     uint64_t GetClusterType() const;
 
                     /**
-                     * 设置Cluster type. Valid values: 0 (replica set instance), 1 (sharding instance),
-                     * @param ClusterType Cluster type. Valid values: 0 (replica set instance), 1 (sharding instance),
+                     * 设置Cluster type. Valid values: `0` (replica set instance), `1` (sharded instance).
+                     * @param ClusterType Cluster type. Valid values: `0` (replica set instance), `1` (sharded instance).
                      */
                     void SetClusterType(const uint64_t& _clusterType);
 
@@ -230,14 +230,14 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance status. Valid values: 0 (to be initialized), 1 (in process), 2 (running), -2 (expired)
-                     * @return Status Instance status. Valid values: 0 (to be initialized), 1 (in process), 2 (running), -2 (expired)
+                     * 获取Instance status. Valid values: `0` (to be initialized), `1` (in process), `2` (running), `-2` (expired).
+                     * @return Status Instance status. Valid values: `0` (to be initialized), `1` (in process), `2` (running), `-2` (expired).
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Instance status. Valid values: 0 (to be initialized), 1 (in process), 2 (running), -2 (expired)
-                     * @param Status Instance status. Valid values: 0 (to be initialized), 1 (in process), 2 (running), -2 (expired)
+                     * 设置Instance status. Valid values: `0` (to be initialized), `1` (in process), `2` (running), `-2` (expired).
+                     * @param Status Instance status. Valid values: `0` (to be initialized), `1` (in process), `2` (running), `-2` (expired).
                      */
                     void SetStatus(const int64_t& _status);
 
@@ -446,14 +446,14 @@ namespace TencentCloud
                     bool ReplicationSetNumHasBeenSet() const;
 
                     /**
-                     * 获取Instance auto-renewal flag. Valid values: 0 (manual renewal), 1 (auto-renewal), 2 (no renewal upon expiration)
-                     * @return AutoRenewFlag Instance auto-renewal flag. Valid values: 0 (manual renewal), 1 (auto-renewal), 2 (no renewal upon expiration)
+                     * 获取Instance auto-renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal), `2` (no renewal upon expiration)
+                     * @return AutoRenewFlag Instance auto-renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal), `2` (no renewal upon expiration)
                      */
                     int64_t GetAutoRenewFlag() const;
 
                     /**
-                     * 设置Instance auto-renewal flag. Valid values: 0 (manual renewal), 1 (auto-renewal), 2 (no renewal upon expiration)
-                     * @param AutoRenewFlag Instance auto-renewal flag. Valid values: 0 (manual renewal), 1 (auto-renewal), 2 (no renewal upon expiration)
+                     * 设置Instance auto-renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal), `2` (no renewal upon expiration)
+                     * @param AutoRenewFlag Instance auto-renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal), `2` (no renewal upon expiration)
                      */
                     void SetAutoRenewFlag(const int64_t& _autoRenewFlag);
 
@@ -482,14 +482,14 @@ namespace TencentCloud
                     bool UsedVolumeHasBeenSet() const;
 
                     /**
-                     * 获取Start time of the maintenance time window
-                     * @return MaintenanceStart Start time of the maintenance time window
+                     * 获取Start time of the maintenance time
+                     * @return MaintenanceStart Start time of the maintenance time
                      */
                     std::string GetMaintenanceStart() const;
 
                     /**
-                     * 设置Start time of the maintenance time window
-                     * @param MaintenanceStart Start time of the maintenance time window
+                     * 设置Start time of the maintenance time
+                     * @param MaintenanceStart Start time of the maintenance time
                      */
                     void SetMaintenanceStart(const std::string& _maintenanceStart);
 
@@ -500,14 +500,14 @@ namespace TencentCloud
                     bool MaintenanceStartHasBeenSet() const;
 
                     /**
-                     * 获取End time of the maintenance time window
-                     * @return MaintenanceEnd End time of the maintenance time window
+                     * 获取End time of the maintenance time
+                     * @return MaintenanceEnd End time of the maintenance time
                      */
                     std::string GetMaintenanceEnd() const;
 
                     /**
-                     * 设置End time of the maintenance time window
-                     * @param MaintenanceEnd End time of the maintenance time window
+                     * 设置End time of the maintenance time
+                     * @param MaintenanceEnd End time of the maintenance time
                      */
                     void SetMaintenanceEnd(const std::string& _maintenanceEnd);
 
@@ -590,14 +590,14 @@ namespace TencentCloud
                     bool CloneInstancesHasBeenSet() const;
 
                     /**
-                     * 获取Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its primary instance
-                     * @return RelatedInstance Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its primary instance
+                     * 获取Information of associated instances. For a regular instance, this field represents the information of its temp instance; for a temp instance, this field represents the information of its regular instance; and for a read-only instance or a disaster recovery instance, this field represents the information of its primary instance.
+                     * @return RelatedInstance Information of associated instances. For a regular instance, this field represents the information of its temp instance; for a temp instance, this field represents the information of its regular instance; and for a read-only instance or a disaster recovery instance, this field represents the information of its primary instance.
                      */
                     DBInstanceInfo GetRelatedInstance() const;
 
                     /**
-                     * 设置Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its primary instance
-                     * @param RelatedInstance Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its primary instance
+                     * 设置Information of associated instances. For a regular instance, this field represents the information of its temp instance; for a temp instance, this field represents the information of its regular instance; and for a read-only instance or a disaster recovery instance, this field represents the information of its primary instance.
+                     * @param RelatedInstance Information of associated instances. For a regular instance, this field represents the information of its temp instance; for a temp instance, this field represents the information of its regular instance; and for a read-only instance or a disaster recovery instance, this field represents the information of its primary instance.
                      */
                     void SetRelatedInstance(const DBInstanceInfo& _relatedInstance);
 
@@ -626,14 +626,14 @@ namespace TencentCloud
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Instance version tag
-                     * @return InstanceVer Instance version tag
+                     * 获取Instance version
+                     * @return InstanceVer Instance version
                      */
                     uint64_t GetInstanceVer() const;
 
                     /**
-                     * 设置Instance version tag
-                     * @param InstanceVer Instance version tag
+                     * 设置Instance version
+                     * @param InstanceVer Instance version
                      */
                     void SetInstanceVer(const uint64_t& _instanceVer);
 
@@ -644,14 +644,14 @@ namespace TencentCloud
                     bool InstanceVerHasBeenSet() const;
 
                     /**
-                     * 获取Instance version tag
-                     * @return ClusterVer Instance version tag
+                     * 获取Instance version
+                     * @return ClusterVer Instance version
                      */
                     uint64_t GetClusterVer() const;
 
                     /**
-                     * 设置Instance version tag
-                     * @param ClusterVer Instance version tag
+                     * 设置Instance version
+                     * @param ClusterVer Instance version
                      */
                     void SetClusterVer(const uint64_t& _clusterVer);
 
@@ -662,14 +662,14 @@ namespace TencentCloud
                     bool ClusterVerHasBeenSet() const;
 
                     /**
-                     * 获取Protocol information. Valid values: 1 (mongodb), 2 (dynamodb)
-                     * @return Protocol Protocol information. Valid values: 1 (mongodb), 2 (dynamodb)
+                     * 获取Protocol information. Valid values: `1` (mongodb), `2` (dynamodb).
+                     * @return Protocol Protocol information. Valid values: `1` (mongodb), `2` (dynamodb).
                      */
                     uint64_t GetProtocol() const;
 
                     /**
-                     * 设置Protocol information. Valid values: 1 (mongodb), 2 (dynamodb)
-                     * @param Protocol Protocol information. Valid values: 1 (mongodb), 2 (dynamodb)
+                     * 设置Protocol information. Valid values: `1` (mongodb), `2` (dynamodb).
+                     * @param Protocol Protocol information. Valid values: `1` (mongodb), `2` (dynamodb).
                      */
                     void SetProtocol(const uint64_t& _protocol);
 
@@ -733,6 +733,182 @@ namespace TencentCloud
                      */
                     bool RealInstanceIdHasBeenSet() const;
 
+                    /**
+                     * 获取Number of mongos nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MongosNodeNum Number of mongos nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetMongosNodeNum() const;
+
+                    /**
+                     * 设置Number of mongos nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param MongosNodeNum Number of mongos nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetMongosNodeNum(const uint64_t& _mongosNodeNum);
+
+                    /**
+                     * 判断参数 MongosNodeNum 是否已赋值
+                     * @return MongosNodeNum 是否已赋值
+                     */
+                    bool MongosNodeNumHasBeenSet() const;
+
+                    /**
+                     * 获取mongos node memory
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MongosMemory mongos node memory
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetMongosMemory() const;
+
+                    /**
+                     * 设置mongos node memory
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param MongosMemory mongos node memory
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetMongosMemory(const uint64_t& _mongosMemory);
+
+                    /**
+                     * 判断参数 MongosMemory 是否已赋值
+                     * @return MongosMemory 是否已赋值
+                     */
+                    bool MongosMemoryHasBeenSet() const;
+
+                    /**
+                     * 获取Number of mongos nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MongosCpuNum Number of mongos nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetMongosCpuNum() const;
+
+                    /**
+                     * 设置Number of mongos nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param MongosCpuNum Number of mongos nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetMongosCpuNum(const uint64_t& _mongosCpuNum);
+
+                    /**
+                     * 判断参数 MongosCpuNum 是否已赋值
+                     * @return MongosCpuNum 是否已赋值
+                     */
+                    bool MongosCpuNumHasBeenSet() const;
+
+                    /**
+                     * 获取Number of ConfigServer nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ConfigServerNodeNum Number of ConfigServer nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetConfigServerNodeNum() const;
+
+                    /**
+                     * 设置Number of ConfigServer nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ConfigServerNodeNum Number of ConfigServer nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetConfigServerNodeNum(const uint64_t& _configServerNodeNum);
+
+                    /**
+                     * 判断参数 ConfigServerNodeNum 是否已赋值
+                     * @return ConfigServerNodeNum 是否已赋值
+                     */
+                    bool ConfigServerNodeNumHasBeenSet() const;
+
+                    /**
+                     * 获取Memory of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ConfigServerMemory Memory of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetConfigServerMemory() const;
+
+                    /**
+                     * 设置Memory of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ConfigServerMemory Memory of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetConfigServerMemory(const uint64_t& _configServerMemory);
+
+                    /**
+                     * 判断参数 ConfigServerMemory 是否已赋值
+                     * @return ConfigServerMemory 是否已赋值
+                     */
+                    bool ConfigServerMemoryHasBeenSet() const;
+
+                    /**
+                     * 获取Disk size of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ConfigServerVolume Disk size of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetConfigServerVolume() const;
+
+                    /**
+                     * 设置Disk size of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ConfigServerVolume Disk size of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetConfigServerVolume(const uint64_t& _configServerVolume);
+
+                    /**
+                     * 判断参数 ConfigServerVolume 是否已赋值
+                     * @return ConfigServerVolume 是否已赋值
+                     */
+                    bool ConfigServerVolumeHasBeenSet() const;
+
+                    /**
+                     * 获取CPU number of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ConfigServerCpuNum CPU number of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetConfigServerCpuNum() const;
+
+                    /**
+                     * 设置CPU number of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ConfigServerCpuNum CPU number of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetConfigServerCpuNum(const uint64_t& _configServerCpuNum);
+
+                    /**
+                     * 判断参数 ConfigServerCpuNum 是否已赋值
+                     * @return ConfigServerCpuNum 是否已赋值
+                     */
+                    bool ConfigServerCpuNumHasBeenSet() const;
+
+                    /**
+                     * 获取Number of read-only nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ReadonlyNodeNum Number of read-only nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetReadonlyNodeNum() const;
+
+                    /**
+                     * 设置Number of read-only nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ReadonlyNodeNum Number of read-only nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetReadonlyNodeNum(const uint64_t& _readonlyNodeNum);
+
+                    /**
+                     * 判断参数 ReadonlyNodeNum 是否已赋值
+                     * @return ReadonlyNodeNum 是否已赋值
+                     */
+                    bool ReadonlyNodeNumHasBeenSet() const;
+
                 private:
 
                     /**
@@ -760,7 +936,7 @@ namespace TencentCloud
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Cluster type. Valid values: 0 (replica set instance), 1 (sharding instance),
+                     * Cluster type. Valid values: `0` (replica set instance), `1` (sharded instance).
                      */
                     uint64_t m_clusterType;
                     bool m_clusterTypeHasBeenSet;
@@ -796,7 +972,7 @@ namespace TencentCloud
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * Instance status. Valid values: 0 (to be initialized), 1 (in process), 2 (running), -2 (expired)
+                     * Instance status. Valid values: `0` (to be initialized), `1` (in process), `2` (running), `-2` (expired).
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
@@ -868,7 +1044,7 @@ namespace TencentCloud
                     bool m_replicationSetNumHasBeenSet;
 
                     /**
-                     * Instance auto-renewal flag. Valid values: 0 (manual renewal), 1 (auto-renewal), 2 (no renewal upon expiration)
+                     * Instance auto-renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal), `2` (no renewal upon expiration)
                      */
                     int64_t m_autoRenewFlag;
                     bool m_autoRenewFlagHasBeenSet;
@@ -880,13 +1056,13 @@ namespace TencentCloud
                     bool m_usedVolumeHasBeenSet;
 
                     /**
-                     * Start time of the maintenance time window
+                     * Start time of the maintenance time
                      */
                     std::string m_maintenanceStart;
                     bool m_maintenanceStartHasBeenSet;
 
                     /**
-                     * End time of the maintenance time window
+                     * End time of the maintenance time
                      */
                     std::string m_maintenanceEnd;
                     bool m_maintenanceEndHasBeenSet;
@@ -916,7 +1092,7 @@ namespace TencentCloud
                     bool m_cloneInstancesHasBeenSet;
 
                     /**
-                     * Information of associated instances. For a promoted instance, this field represents information of its temp instance; for a temp instance, this field represents information of its promoted instance; and for a read-only/disaster recovery instance, this field represents information of its primary instance
+                     * Information of associated instances. For a regular instance, this field represents the information of its temp instance; for a temp instance, this field represents the information of its regular instance; and for a read-only instance or a disaster recovery instance, this field represents the information of its primary instance.
                      */
                     DBInstanceInfo m_relatedInstance;
                     bool m_relatedInstanceHasBeenSet;
@@ -928,19 +1104,19 @@ namespace TencentCloud
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Instance version tag
+                     * Instance version
                      */
                     uint64_t m_instanceVer;
                     bool m_instanceVerHasBeenSet;
 
                     /**
-                     * Instance version tag
+                     * Instance version
                      */
                     uint64_t m_clusterVer;
                     bool m_clusterVerHasBeenSet;
 
                     /**
-                     * Protocol information. Valid values: 1 (mongodb), 2 (dynamodb)
+                     * Protocol information. Valid values: `1` (mongodb), `2` (dynamodb).
                      */
                     uint64_t m_protocol;
                     bool m_protocolHasBeenSet;
@@ -962,6 +1138,62 @@ namespace TencentCloud
                      */
                     std::string m_realInstanceId;
                     bool m_realInstanceIdHasBeenSet;
+
+                    /**
+                     * Number of mongos nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_mongosNodeNum;
+                    bool m_mongosNodeNumHasBeenSet;
+
+                    /**
+                     * mongos node memory
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_mongosMemory;
+                    bool m_mongosMemoryHasBeenSet;
+
+                    /**
+                     * Number of mongos nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_mongosCpuNum;
+                    bool m_mongosCpuNumHasBeenSet;
+
+                    /**
+                     * Number of ConfigServer nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_configServerNodeNum;
+                    bool m_configServerNodeNumHasBeenSet;
+
+                    /**
+                     * Memory of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_configServerMemory;
+                    bool m_configServerMemoryHasBeenSet;
+
+                    /**
+                     * Disk size of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_configServerVolume;
+                    bool m_configServerVolumeHasBeenSet;
+
+                    /**
+                     * CPU number of ConfigServer node
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_configServerCpuNum;
+                    bool m_configServerCpuNumHasBeenSet;
+
+                    /**
+                     * Number of read-only nodes
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_readonlyNodeNum;
+                    bool m_readonlyNodeNumHasBeenSet;
 
                 };
             }

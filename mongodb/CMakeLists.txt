@@ -29,8 +29,6 @@ set(mongodb_public_header_model
   include/tencentcloud/mongodb/v20190725/model/ModifyDBInstanceNetworkAddressResponse.h
   include/tencentcloud/mongodb/v20190725/model/CreateBackupDBInstanceResponse.h
   include/tencentcloud/mongodb/v20190725/model/DBInstancePrice.h
-  include/tencentcloud/mongodb/v20190725/model/DescribeBackupAccessResponse.h
-  include/tencentcloud/mongodb/v20190725/model/InquirePriceCreateDBInstancesRequest.h
   include/tencentcloud/mongodb/v20190725/model/DescribeSlowLogPatternsResponse.h
   include/tencentcloud/mongodb/v20190725/model/ReplicaSetInfo.h
   include/tencentcloud/mongodb/v20190725/model/CreateDBInstanceHourRequest.h
@@ -60,7 +58,7 @@ set(mongodb_public_header_model
   include/tencentcloud/mongodb/v20190725/model/OfflineIsolatedDBInstanceRequest.h
   include/tencentcloud/mongodb/v20190725/model/InstanceIntegerParam.h
   include/tencentcloud/mongodb/v20190725/model/DescribeDBInstanceDealRequest.h
-  include/tencentcloud/mongodb/v20190725/model/DescribeDBInstancesRequest.h
+  include/tencentcloud/mongodb/v20190725/model/InquirePriceCreateDBInstancesRequest.h
   include/tencentcloud/mongodb/v20190725/model/DescribeAsyncRequestInfoResponse.h
   include/tencentcloud/mongodb/v20190725/model/CreateDBInstanceResponse.h
   include/tencentcloud/mongodb/v20190725/model/DescribeInstanceParamsResponse.h
@@ -75,7 +73,7 @@ set(mongodb_public_header_model
   include/tencentcloud/mongodb/v20190725/model/InstanceTextParam.h
   include/tencentcloud/mongodb/v20190725/model/OfflineIsolatedDBInstanceResponse.h
   include/tencentcloud/mongodb/v20190725/model/DescribeBackupDownloadTaskRequest.h
-  include/tencentcloud/mongodb/v20190725/model/DescribeBackupAccessRequest.h
+  include/tencentcloud/mongodb/v20190725/model/DescribeDBInstancesRequest.h
   include/tencentcloud/mongodb/v20190725/model/ModifyNetworkAddress.h
   include/tencentcloud/mongodb/v20190725/model/DescribeSecurityGroupRequest.h
   include/tencentcloud/mongodb/v20190725/model/RenameInstanceRequest.h
@@ -86,7 +84,6 @@ set(mongodb_public_header_model
   include/tencentcloud/mongodb/v20190725/model/FlushInstanceRouterConfigRequest.h
   include/tencentcloud/mongodb/v20190725/model/DBInstanceInfo.h
   include/tencentcloud/mongodb/v20190725/model/DescribeSlowLogsRequest.h
-  include/tencentcloud/mongodb/v20190725/model/BackupFile.h
   include/tencentcloud/mongodb/v20190725/model/DescribeDBBackupsResponse.h
   include/tencentcloud/mongodb/v20190725/model/InstanceDetail.h
   include/tencentcloud/mongodb/v20190725/model/ModifyDBInstanceSpecRequest.h
@@ -113,8 +110,6 @@ set(mongodb_src
   src/v20190725/model/ModifyDBInstanceNetworkAddressResponse.cpp
   src/v20190725/model/CreateBackupDBInstanceResponse.cpp
   src/v20190725/model/DBInstancePrice.cpp
-  src/v20190725/model/DescribeBackupAccessResponse.cpp
-  src/v20190725/model/InquirePriceCreateDBInstancesRequest.cpp
   src/v20190725/model/DescribeSlowLogPatternsResponse.cpp
   src/v20190725/model/ReplicaSetInfo.cpp
   src/v20190725/model/CreateDBInstanceHourRequest.cpp
@@ -144,7 +139,7 @@ set(mongodb_src
   src/v20190725/model/OfflineIsolatedDBInstanceRequest.cpp
   src/v20190725/model/InstanceIntegerParam.cpp
   src/v20190725/model/DescribeDBInstanceDealRequest.cpp
-  src/v20190725/model/DescribeDBInstancesRequest.cpp
+  src/v20190725/model/InquirePriceCreateDBInstancesRequest.cpp
   src/v20190725/model/DescribeAsyncRequestInfoResponse.cpp
   src/v20190725/model/CreateDBInstanceResponse.cpp
   src/v20190725/model/DescribeInstanceParamsResponse.cpp
@@ -159,7 +154,7 @@ set(mongodb_src
   src/v20190725/model/InstanceTextParam.cpp
   src/v20190725/model/OfflineIsolatedDBInstanceResponse.cpp
   src/v20190725/model/DescribeBackupDownloadTaskRequest.cpp
-  src/v20190725/model/DescribeBackupAccessRequest.cpp
+  src/v20190725/model/DescribeDBInstancesRequest.cpp
   src/v20190725/model/ModifyNetworkAddress.cpp
   src/v20190725/model/DescribeSecurityGroupRequest.cpp
   src/v20190725/model/RenameInstanceRequest.cpp
@@ -170,7 +165,6 @@ set(mongodb_src
   src/v20190725/model/FlushInstanceRouterConfigRequest.cpp
   src/v20190725/model/DBInstanceInfo.cpp
   src/v20190725/model/DescribeSlowLogsRequest.cpp
-  src/v20190725/model/BackupFile.cpp
   src/v20190725/model/DescribeDBBackupsResponse.cpp
   src/v20190725/model/InstanceDetail.cpp
   src/v20190725/model/ModifyDBInstanceSpecRequest.cpp

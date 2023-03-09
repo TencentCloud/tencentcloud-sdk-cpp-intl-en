@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.
-                     * @return NodeNum The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.
+                     * 获取Number of primary and secondary nodes per shard. <br>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and the `MinNodeNum` and `MaxNodeNum` parameters are the minimal and maximum value respectively.</li></ul>
+                     * @return NodeNum Number of primary and secondary nodes per shard. <br>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and the `MinNodeNum` and `MaxNodeNum` parameters are the minimal and maximum value respectively.</li></ul>
                      */
                     int64_t GetNodeNum() const;
 
                     /**
-                     * 设置The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.
-                     * @param NodeNum The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.
+                     * 设置Number of primary and secondary nodes per shard. <br>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and the `MinNodeNum` and `MaxNodeNum` parameters are the minimal and maximum value respectively.</li></ul>
+                     * @param NodeNum Number of primary and secondary nodes per shard. <br>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and the `MinNodeNum` and `MaxNodeNum` parameters are the minimal and maximum value respectively.</li></ul>
                      */
                     void SetNodeNum(const int64_t& _nodeNum);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取Instance disk size in GB.
-                     * @return Volume Instance disk size in GB.
+                     * 获取 Instance disk size. <ul><li>Unit: GB</li><li>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and `MinStorage` and `MaxStorage` parameters are the minimal and maximum value of the disk size respectively.</br>
+                     * @return Volume  Instance disk size. <ul><li>Unit: GB</li><li>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and `MinStorage` and `MaxStorage` parameters are the minimal and maximum value of the disk size respectively.</br>
                      */
                     int64_t GetVolume() const;
 
                     /**
-                     * 设置Instance disk size in GB.
-                     * @param Volume Instance disk size in GB.
+                     * 设置 Instance disk size. <ul><li>Unit: GB</li><li>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and `MinStorage` and `MaxStorage` parameters are the minimal and maximum value of the disk size respectively.</br>
+                     * @param Volume  Instance disk size. <ul><li>Unit: GB</li><li>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and `MinStorage` and `MaxStorage` parameters are the minimal and maximum value of the disk size respectively.</br>
                      */
                     void SetVolume(const int64_t& _volume);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool VolumeHasBeenSet() const;
 
                     /**
-                     * 获取Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition.
-                     * @return MongoVersion Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition.
+                     * 获取Instance version information. <ul><li>For specific supported versions, query through the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, the returned parameter `MongoVersionCode` in data structure `SpecItems` is the supported version information. </li><li>The correspondences between parameters and versions are as follows <ul><li>MONGO_3_WT: MongoDB 3.2 WiredTiger storage engine version. </li><li>MONGO_3_ROCKS: MongoDB 3.2 RocksDB storage engine version. </li><li>MONGO_36_WT: MongoDB 3.6 WiredTiger storage engine version. </li><li>MONGO_40_WT: MongoDB 4.0 WiredTiger storage engine version. </li><li>MONGO_42_WT: MongoDB 4.2 WiredTiger storage engine version. </li><li>MONGO_44_WT: MongoDB 4.4 WiredTiger storage engine version. </li></ul>
+                     * @return MongoVersion Instance version information. <ul><li>For specific supported versions, query through the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, the returned parameter `MongoVersionCode` in data structure `SpecItems` is the supported version information. </li><li>The correspondences between parameters and versions are as follows <ul><li>MONGO_3_WT: MongoDB 3.2 WiredTiger storage engine version. </li><li>MONGO_3_ROCKS: MongoDB 3.2 RocksDB storage engine version. </li><li>MONGO_36_WT: MongoDB 3.6 WiredTiger storage engine version. </li><li>MONGO_40_WT: MongoDB 4.0 WiredTiger storage engine version. </li><li>MONGO_42_WT: MongoDB 4.2 WiredTiger storage engine version. </li><li>MONGO_44_WT: MongoDB 4.4 WiredTiger storage engine version. </li></ul>
                      */
                     std::string GetMongoVersion() const;
 
                     /**
-                     * 设置Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition.
-                     * @param MongoVersion Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition.
+                     * 设置Instance version information. <ul><li>For specific supported versions, query through the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, the returned parameter `MongoVersionCode` in data structure `SpecItems` is the supported version information. </li><li>The correspondences between parameters and versions are as follows <ul><li>MONGO_3_WT: MongoDB 3.2 WiredTiger storage engine version. </li><li>MONGO_3_ROCKS: MongoDB 3.2 RocksDB storage engine version. </li><li>MONGO_36_WT: MongoDB 3.6 WiredTiger storage engine version. </li><li>MONGO_40_WT: MongoDB 4.0 WiredTiger storage engine version. </li><li>MONGO_42_WT: MongoDB 4.2 WiredTiger storage engine version. </li><li>MONGO_44_WT: MongoDB 4.4 WiredTiger storage engine version. </li></ul>
+                     * @param MongoVersion Instance version information. <ul><li>For specific supported versions, query through the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, the returned parameter `MongoVersionCode` in data structure `SpecItems` is the supported version information. </li><li>The correspondences between parameters and versions are as follows <ul><li>MONGO_3_WT: MongoDB 3.2 WiredTiger storage engine version. </li><li>MONGO_3_ROCKS: MongoDB 3.2 RocksDB storage engine version. </li><li>MONGO_36_WT: MongoDB 3.6 WiredTiger storage engine version. </li><li>MONGO_40_WT: MongoDB 4.0 WiredTiger storage engine version. </li><li>MONGO_42_WT: MongoDB 4.2 WiredTiger storage engine version. </li><li>MONGO_44_WT: MongoDB 4.4 WiredTiger storage engine version. </li></ul>
                      */
                     void SetMongoVersion(const std::string& _mongoVersion);
 
@@ -169,24 +169,6 @@ namespace TencentCloud
                     bool GoodsNumHasBeenSet() const;
 
                     /**
-                     * 获取Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
-                     * @return Period Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
-                     */
-                    int64_t GetPeriod() const;
-
-                    /**
-                     * 设置Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
-                     * @param Period Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
-                     */
-                    void SetPeriod(const int64_t& _period);
-
-                    /**
-                     * 判断参数 Period 是否已赋值
-                     * @return Period 是否已赋值
-                     */
-                    bool PeriodHasBeenSet() const;
-
-                    /**
                      * 获取Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster), STANDALONE (single-node).
                      * @return ClusterType Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster), STANDALONE (single-node).
                      */
@@ -222,6 +204,150 @@ namespace TencentCloud
                      */
                     bool ReplicateSetNumHasBeenSet() const;
 
+                    /**
+                     * 获取Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
+                     * @return Period Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
+                     */
+                    int64_t GetPeriod() const;
+
+                    /**
+                     * 设置Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
+                     * @param Period Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
+                     */
+                    void SetPeriod(const int64_t& _period);
+
+                    /**
+                     * 判断参数 Period 是否已赋值
+                     * @return Period 是否已赋值
+                     */
+                    bool PeriodHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return InstanceChargeType 
+                     */
+                    std::string GetInstanceChargeType() const;
+
+                    /**
+                     * 设置
+                     * @param InstanceChargeType 
+                     */
+                    void SetInstanceChargeType(const std::string& _instanceChargeType);
+
+                    /**
+                     * 判断参数 InstanceChargeType 是否已赋值
+                     * @return InstanceChargeType 是否已赋值
+                     */
+                    bool InstanceChargeTypeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return MongosCpu 
+                     */
+                    uint64_t GetMongosCpu() const;
+
+                    /**
+                     * 设置
+                     * @param MongosCpu 
+                     */
+                    void SetMongosCpu(const uint64_t& _mongosCpu);
+
+                    /**
+                     * 判断参数 MongosCpu 是否已赋值
+                     * @return MongosCpu 是否已赋值
+                     */
+                    bool MongosCpuHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return MongosMemory 
+                     */
+                    uint64_t GetMongosMemory() const;
+
+                    /**
+                     * 设置
+                     * @param MongosMemory 
+                     */
+                    void SetMongosMemory(const uint64_t& _mongosMemory);
+
+                    /**
+                     * 判断参数 MongosMemory 是否已赋值
+                     * @return MongosMemory 是否已赋值
+                     */
+                    bool MongosMemoryHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return MongosNum 
+                     */
+                    uint64_t GetMongosNum() const;
+
+                    /**
+                     * 设置
+                     * @param MongosNum 
+                     */
+                    void SetMongosNum(const uint64_t& _mongosNum);
+
+                    /**
+                     * 判断参数 MongosNum 是否已赋值
+                     * @return MongosNum 是否已赋值
+                     */
+                    bool MongosNumHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ConfigServerCpu 
+                     */
+                    uint64_t GetConfigServerCpu() const;
+
+                    /**
+                     * 设置
+                     * @param ConfigServerCpu 
+                     */
+                    void SetConfigServerCpu(const uint64_t& _configServerCpu);
+
+                    /**
+                     * 判断参数 ConfigServerCpu 是否已赋值
+                     * @return ConfigServerCpu 是否已赋值
+                     */
+                    bool ConfigServerCpuHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ConfigServerMemory 
+                     */
+                    uint64_t GetConfigServerMemory() const;
+
+                    /**
+                     * 设置
+                     * @param ConfigServerMemory 
+                     */
+                    void SetConfigServerMemory(const uint64_t& _configServerMemory);
+
+                    /**
+                     * 判断参数 ConfigServerMemory 是否已赋值
+                     * @return ConfigServerMemory 是否已赋值
+                     */
+                    bool ConfigServerMemoryHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ConfigServerVolume 
+                     */
+                    uint64_t GetConfigServerVolume() const;
+
+                    /**
+                     * 设置
+                     * @param ConfigServerVolume 
+                     */
+                    void SetConfigServerVolume(const uint64_t& _configServerVolume);
+
+                    /**
+                     * 判断参数 ConfigServerVolume 是否已赋值
+                     * @return ConfigServerVolume 是否已赋值
+                     */
+                    bool ConfigServerVolumeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -231,7 +357,7 @@ namespace TencentCloud
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.
+                     * Number of primary and secondary nodes per shard. <br>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and the `MinNodeNum` and `MaxNodeNum` parameters are the minimal and maximum value respectively.</li></ul>
                      */
                     int64_t m_nodeNum;
                     bool m_nodeNumHasBeenSet;
@@ -243,13 +369,13 @@ namespace TencentCloud
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * Instance disk size in GB.
+                     *  Instance disk size. <ul><li>Unit: GB</li><li>Value range: It can be queried by the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, and `MinStorage` and `MaxStorage` parameters are the minimal and maximum value of the disk size respectively.</br>
                      */
                     int64_t m_volume;
                     bool m_volumeHasBeenSet;
 
                     /**
-                     * Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition.
+                     * Instance version information. <ul><li>For specific supported versions, query through the <a href="https://intl.cloud.tencent.com/document/product/240/38567?from_cn_redirect=1">DescribeSpecInfo</a> API, the returned parameter `MongoVersionCode` in data structure `SpecItems` is the supported version information. </li><li>The correspondences between parameters and versions are as follows <ul><li>MONGO_3_WT: MongoDB 3.2 WiredTiger storage engine version. </li><li>MONGO_3_ROCKS: MongoDB 3.2 RocksDB storage engine version. </li><li>MONGO_36_WT: MongoDB 3.6 WiredTiger storage engine version. </li><li>MONGO_40_WT: MongoDB 4.0 WiredTiger storage engine version. </li><li>MONGO_42_WT: MongoDB 4.2 WiredTiger storage engine version. </li><li>MONGO_44_WT: MongoDB 4.4 WiredTiger storage engine version. </li></ul>
                      */
                     std::string m_mongoVersion;
                     bool m_mongoVersionHasBeenSet;
@@ -267,12 +393,6 @@ namespace TencentCloud
                     bool m_goodsNumHasBeenSet;
 
                     /**
-                     * Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
-                     */
-                    int64_t m_period;
-                    bool m_periodHasBeenSet;
-
-                    /**
                      * Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster), STANDALONE (single-node).
                      */
                     std::string m_clusterType;
@@ -283,6 +403,54 @@ namespace TencentCloud
                      */
                     int64_t m_replicateSetNum;
                     bool m_replicateSetNumHasBeenSet;
+
+                    /**
+                     * Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
+                     */
+                    int64_t m_period;
+                    bool m_periodHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_instanceChargeType;
+                    bool m_instanceChargeTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_mongosCpu;
+                    bool m_mongosCpuHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_mongosMemory;
+                    bool m_mongosMemoryHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_mongosNum;
+                    bool m_mongosNumHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_configServerCpu;
+                    bool m_configServerCpuHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_configServerMemory;
+                    bool m_configServerMemoryHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_configServerVolume;
+                    bool m_configServerVolumeHasBeenSet;
 
                 };
             }
