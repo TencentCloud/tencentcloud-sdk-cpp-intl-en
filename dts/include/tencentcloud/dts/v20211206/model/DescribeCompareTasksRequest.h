@@ -96,6 +96,42 @@ namespace TencentCloud
                      */
                     bool OffsetHasBeenSet() const;
 
+                    /**
+                     * 获取Check task ID
+                     * @return CompareTaskId Check task ID
+                     */
+                    std::string GetCompareTaskId() const;
+
+                    /**
+                     * 设置Check task ID
+                     * @param CompareTaskId Check task ID
+                     */
+                    void SetCompareTaskId(const std::string& _compareTaskId);
+
+                    /**
+                     * 判断参数 CompareTaskId 是否已赋值
+                     * @return CompareTaskId 是否已赋值
+                     */
+                    bool CompareTaskIdHasBeenSet() const;
+
+                    /**
+                     * 获取Data consistency check task status. Valid values: `created`, `readyRun`, `running`, `success`, `stopping`, `failed`, `canceled`.
+                     * @return Status Data consistency check task status. Valid values: `created`, `readyRun`, `running`, `success`, `stopping`, `failed`, `canceled`.
+                     */
+                    std::vector<std::string> GetStatus() const;
+
+                    /**
+                     * 设置Data consistency check task status. Valid values: `created`, `readyRun`, `running`, `success`, `stopping`, `failed`, `canceled`.
+                     * @param Status Data consistency check task status. Valid values: `created`, `readyRun`, `running`, `success`, `stopping`, `failed`, `canceled`.
+                     */
+                    void SetStatus(const std::vector<std::string>& _status);
+
+                    /**
+                     * 判断参数 Status 是否已赋值
+                     * @return Status 是否已赋值
+                     */
+                    bool StatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -115,6 +151,18 @@ namespace TencentCloud
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
+
+                    /**
+                     * Check task ID
+                     */
+                    std::string m_compareTaskId;
+                    bool m_compareTaskIdHasBeenSet;
+
+                    /**
+                     * Data consistency check task status. Valid values: `created`, `readyRun`, `running`, `success`, `stopping`, `failed`, `canceled`.
+                     */
+                    std::vector<std::string> m_status;
+                    bool m_statusHasBeenSet;
 
                 };
             }

@@ -24,6 +24,8 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/dts/v20211206/model/CompareOptions.h>
+#include <tencentcloud/dts/v20211206/model/CompareObject.h>
 
 
 namespace TencentCloud
@@ -45,6 +47,50 @@ namespace TencentCloud
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
+
+                    /**
+                     * 获取Configuration parameters of the check task
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Options Configuration parameters of the check task
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    CompareOptions GetOptions() const;
+
+                    /**
+                     * 设置Configuration parameters of the check task
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Options Configuration parameters of the check task
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetOptions(const CompareOptions& _options);
+
+                    /**
+                     * 判断参数 Options 是否已赋值
+                     * @return Options 是否已赋值
+                     */
+                    bool OptionsHasBeenSet() const;
+
+                    /**
+                     * 获取Consistency check objects
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Objects Consistency check objects
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    CompareObject GetObjects() const;
+
+                    /**
+                     * 设置Consistency check objects
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Objects Consistency check objects
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetObjects(const CompareObject& _objects);
+
+                    /**
+                     * 判断参数 Objects 是否已赋值
+                     * @return Objects 是否已赋值
+                     */
+                    bool ObjectsHasBeenSet() const;
 
                     /**
                      * 获取Comparison conclusion. Valid values: `same`, `different`.
@@ -179,6 +225,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SkippedTablesHasBeenSet() const;
 
                     /**
+                     * 获取The estimated number of tables
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return NearlyTableCount The estimated number of tables
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetNearlyTableCount() const;
+
+                    /**
+                     * 设置The estimated number of tables
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param NearlyTableCount The estimated number of tables
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetNearlyTableCount(const uint64_t& _nearlyTableCount);
+
+                    /**
+                     * 判断参数 NearlyTableCount 是否已赋值
+                     * @return NearlyTableCount 是否已赋值
+                     */
+                    bool NearlyTableCountHasBeenSet() const;
+
+                    /**
                      * 获取Number of inconsistent data rows
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DifferentRows Number of inconsistent data rows
@@ -200,7 +268,109 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool DifferentRowsHasBeenSet() const;
 
+                    /**
+                     * 获取Source database row count, which takes effect only when the comparison type is **Row count comparison**.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SrcSampleRows Source database row count, which takes effect only when the comparison type is **Row count comparison**.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetSrcSampleRows() const;
+
+                    /**
+                     * 设置Source database row count, which takes effect only when the comparison type is **Row count comparison**.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param SrcSampleRows Source database row count, which takes effect only when the comparison type is **Row count comparison**.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetSrcSampleRows(const uint64_t& _srcSampleRows);
+
+                    /**
+                     * 判断参数 SrcSampleRows 是否已赋值
+                     * @return SrcSampleRows 是否已赋值
+                     */
+                    bool SrcSampleRowsHasBeenSet() const;
+
+                    /**
+                     * 获取Target database row count, which takes effect only when the comparison type is **Row count comparison**.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DstSampleRows Target database row count, which takes effect only when the comparison type is **Row count comparison**.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetDstSampleRows() const;
+
+                    /**
+                     * 设置Target database row count, which takes effect only when the comparison type is **Row count comparison**.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param DstSampleRows Target database row count, which takes effect only when the comparison type is **Row count comparison**.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetDstSampleRows(const uint64_t& _dstSampleRows);
+
+                    /**
+                     * 判断参数 DstSampleRows 是否已赋值
+                     * @return DstSampleRows 是否已赋值
+                     */
+                    bool DstSampleRowsHasBeenSet() const;
+
+                    /**
+                     * 获取Start time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return StartedAt Start time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetStartedAt() const;
+
+                    /**
+                     * 设置Start time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param StartedAt Start time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetStartedAt(const std::string& _startedAt);
+
+                    /**
+                     * 判断参数 StartedAt 是否已赋值
+                     * @return StartedAt 是否已赋值
+                     */
+                    bool StartedAtHasBeenSet() const;
+
+                    /**
+                     * 获取End time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return FinishedAt End time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetFinishedAt() const;
+
+                    /**
+                     * 设置End time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param FinishedAt End time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetFinishedAt(const std::string& _finishedAt);
+
+                    /**
+                     * 判断参数 FinishedAt 是否已赋值
+                     * @return FinishedAt 是否已赋值
+                     */
+                    bool FinishedAtHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * Configuration parameters of the check task
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    CompareOptions m_options;
+                    bool m_optionsHasBeenSet;
+
+                    /**
+                     * Consistency check objects
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    CompareObject m_objects;
+                    bool m_objectsHasBeenSet;
 
                     /**
                      * Comparison conclusion. Valid values: `same`, `different`.
@@ -245,11 +415,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_skippedTablesHasBeenSet;
 
                     /**
+                     * The estimated number of tables
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_nearlyTableCount;
+                    bool m_nearlyTableCountHasBeenSet;
+
+                    /**
                      * Number of inconsistent data rows
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_differentRows;
                     bool m_differentRowsHasBeenSet;
+
+                    /**
+                     * Source database row count, which takes effect only when the comparison type is **Row count comparison**.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_srcSampleRows;
+                    bool m_srcSampleRowsHasBeenSet;
+
+                    /**
+                     * Target database row count, which takes effect only when the comparison type is **Row count comparison**.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_dstSampleRows;
+                    bool m_dstSampleRowsHasBeenSet;
+
+                    /**
+                     * Start time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_startedAt;
+                    bool m_startedAtHasBeenSet;
+
+                    /**
+                     * End time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_finishedAt;
+                    bool m_finishedAtHasBeenSet;
 
                 };
             }

@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/dts/v20211206/model/CompareObject.h>
 #include <tencentcloud/dts/v20211206/model/ProcessProgress.h>
+#include <tencentcloud/dts/v20211206/model/CompareOptions.h>
 
 
 namespace TencentCloud
@@ -49,17 +50,17 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Migration task ID
+                     * 获取Task ID
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return JobId Migration task ID
+                     * @return JobId Task ID
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetJobId() const;
 
                     /**
-                     * 设置Migration task ID
+                     * 设置Task ID
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param JobId Migration task ID
+                     * @param JobId Task ID
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetJobId(const std::string& _jobId);
@@ -290,10 +291,76 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool FinishedAtHasBeenSet() const;
 
+                    /**
+                     * 获取Comparison type: (`dataCheck`: Full data comparison; `sampleDataCheck`: Sampling data comparison; `rowsCount`: Row count comparison)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Method Comparison type: (`dataCheck`: Full data comparison; `sampleDataCheck`: Sampling data comparison; `rowsCount`: Row count comparison)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetMethod() const;
+
+                    /**
+                     * 设置Comparison type: (`dataCheck`: Full data comparison; `sampleDataCheck`: Sampling data comparison; `rowsCount`: Row count comparison)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Method Comparison type: (`dataCheck`: Full data comparison; `sampleDataCheck`: Sampling data comparison; `rowsCount`: Row count comparison)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetMethod(const std::string& _method);
+
+                    /**
+                     * 判断参数 Method 是否已赋值
+                     * @return Method 是否已赋值
+                     */
+                    bool MethodHasBeenSet() const;
+
+                    /**
+                     * 获取Configuration information of the comparison task
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Options Configuration information of the comparison task
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    CompareOptions GetOptions() const;
+
+                    /**
+                     * 设置Configuration information of the comparison task
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Options Configuration information of the comparison task
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetOptions(const CompareOptions& _options);
+
+                    /**
+                     * 判断参数 Options 是否已赋值
+                     * @return Options 是否已赋值
+                     */
+                    bool OptionsHasBeenSet() const;
+
+                    /**
+                     * 获取Consistency check prompt message
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Message Consistency check prompt message
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetMessage() const;
+
+                    /**
+                     * 设置Consistency check prompt message
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Message Consistency check prompt message
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetMessage(const std::string& _message);
+
+                    /**
+                     * 判断参数 Message 是否已赋值
+                     * @return Message 是否已赋值
+                     */
+                    bool MessageHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Migration task ID
+                     * Task ID
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_jobId;
@@ -368,6 +435,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_finishedAt;
                     bool m_finishedAtHasBeenSet;
+
+                    /**
+                     * Comparison type: (`dataCheck`: Full data comparison; `sampleDataCheck`: Sampling data comparison; `rowsCount`: Row count comparison)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_method;
+                    bool m_methodHasBeenSet;
+
+                    /**
+                     * Configuration information of the comparison task
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    CompareOptions m_options;
+                    bool m_optionsHasBeenSet;
+
+                    /**
+                     * Consistency check prompt message
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_message;
+                    bool m_messageHasBeenSet;
 
                 };
             }

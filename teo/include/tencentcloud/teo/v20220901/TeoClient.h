@@ -75,6 +75,8 @@
 #include <tencentcloud/teo/v20220901/model/DescribeClientRuleListResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeContentQuotaRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeContentQuotaResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeDDoSAttackDataRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeDDoSAttackDataResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeDDoSAttackTopDataRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeDDoSAttackTopDataResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeDefaultCertificatesRequest.h>
@@ -91,6 +93,8 @@
 #include <tencentcloud/teo/v20220901/model/DescribeLogTopicTasksResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeOriginGroupRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeOriginGroupResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeOriginProtectionRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeOriginProtectionResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeOverviewL7DataRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeOverviewL7DataResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribePrefetchTasksRequest.h>
@@ -179,6 +183,8 @@
 #include <tencentcloud/teo/v20220901/model/ReclaimAliasDomainResponse.h>
 #include <tencentcloud/teo/v20220901/model/ReclaimZoneRequest.h>
 #include <tencentcloud/teo/v20220901/model/ReclaimZoneResponse.h>
+#include <tencentcloud/teo/v20220901/model/UpdateOriginProtectionIPWhitelistRequest.h>
+#include <tencentcloud/teo/v20220901/model/UpdateOriginProtectionIPWhitelistResponse.h>
 
 
 namespace TencentCloud
@@ -271,6 +277,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeContentQuotaResponse> DescribeContentQuotaOutcome;
                 typedef std::future<DescribeContentQuotaOutcome> DescribeContentQuotaOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeContentQuotaRequest&, DescribeContentQuotaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeContentQuotaAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDDoSAttackDataResponse> DescribeDDoSAttackDataOutcome;
+                typedef std::future<DescribeDDoSAttackDataOutcome> DescribeDDoSAttackDataOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeDDoSAttackDataRequest&, DescribeDDoSAttackDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDDoSAttackDataAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDDoSAttackTopDataResponse> DescribeDDoSAttackTopDataOutcome;
                 typedef std::future<DescribeDDoSAttackTopDataOutcome> DescribeDDoSAttackTopDataOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeDDoSAttackTopDataRequest&, DescribeDDoSAttackTopDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDDoSAttackTopDataAsyncHandler;
@@ -295,6 +304,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeOriginGroupResponse> DescribeOriginGroupOutcome;
                 typedef std::future<DescribeOriginGroupOutcome> DescribeOriginGroupOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeOriginGroupRequest&, DescribeOriginGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOriginGroupAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeOriginProtectionResponse> DescribeOriginProtectionOutcome;
+                typedef std::future<DescribeOriginProtectionOutcome> DescribeOriginProtectionOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeOriginProtectionRequest&, DescribeOriginProtectionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOriginProtectionAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeOverviewL7DataResponse> DescribeOverviewL7DataOutcome;
                 typedef std::future<DescribeOverviewL7DataOutcome> DescribeOverviewL7DataOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeOverviewL7DataRequest&, DescribeOverviewL7DataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeOverviewL7DataAsyncHandler;
@@ -427,6 +439,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ReclaimZoneResponse> ReclaimZoneOutcome;
                 typedef std::future<ReclaimZoneOutcome> ReclaimZoneOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ReclaimZoneRequest&, ReclaimZoneOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ReclaimZoneAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateOriginProtectionIPWhitelistResponse> UpdateOriginProtectionIPWhitelistOutcome;
+                typedef std::future<UpdateOriginProtectionIPWhitelistOutcome> UpdateOriginProtectionIPWhitelistOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::UpdateOriginProtectionIPWhitelistRequest&, UpdateOriginProtectionIPWhitelistOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateOriginProtectionIPWhitelistAsyncHandler;
 
 
 
@@ -665,6 +680,15 @@ namespace TencentCloud
                 DescribeContentQuotaOutcomeCallable DescribeContentQuotaCallable(const Model::DescribeContentQuotaRequest& request);
 
                 /**
+                 *This API is used to query the time-series data of DDoS attacks.
+                 * @param req DescribeDDoSAttackDataRequest
+                 * @return DescribeDDoSAttackDataOutcome
+                 */
+                DescribeDDoSAttackDataOutcome DescribeDDoSAttackData(const Model::DescribeDDoSAttackDataRequest &request);
+                void DescribeDDoSAttackDataAsync(const Model::DescribeDDoSAttackDataRequest& request, const DescribeDDoSAttackDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDDoSAttackDataOutcomeCallable DescribeDDoSAttackDataCallable(const Model::DescribeDDoSAttackDataRequest& request);
+
+                /**
                  *This API is used to query the top-ranked DDoS attack data.
                  * @param req DescribeDDoSAttackTopDataRequest
                  * @return DescribeDDoSAttackTopDataOutcome
@@ -735,6 +759,15 @@ namespace TencentCloud
                 DescribeOriginGroupOutcome DescribeOriginGroup(const Model::DescribeOriginGroupRequest &request);
                 void DescribeOriginGroupAsync(const Model::DescribeOriginGroupRequest& request, const DescribeOriginGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeOriginGroupOutcomeCallable DescribeOriginGroupCallable(const Model::DescribeOriginGroupRequest& request);
+
+                /**
+                 *This API is used to query the origin protection configuration.
+                 * @param req DescribeOriginProtectionRequest
+                 * @return DescribeOriginProtectionOutcome
+                 */
+                DescribeOriginProtectionOutcome DescribeOriginProtection(const Model::DescribeOriginProtectionRequest &request);
+                void DescribeOriginProtectionAsync(const Model::DescribeOriginProtectionRequest& request, const DescribeOriginProtectionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeOriginProtectionOutcomeCallable DescribeOriginProtectionCallable(const Model::DescribeOriginProtectionRequest& request);
 
                 /**
                  *This API is used to query the L7 traffic summary statistics recorded over time.
@@ -1131,6 +1164,15 @@ namespace TencentCloud
                 ReclaimZoneOutcome ReclaimZone(const Model::ReclaimZoneRequest &request);
                 void ReclaimZoneAsync(const Model::ReclaimZoneRequest& request, const ReclaimZoneAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ReclaimZoneOutcomeCallable ReclaimZoneCallable(const Model::ReclaimZoneRequest& request);
+
+                /**
+                 *This API is used to update the list of intermediate IPs.
+                 * @param req UpdateOriginProtectionIPWhitelistRequest
+                 * @return UpdateOriginProtectionIPWhitelistOutcome
+                 */
+                UpdateOriginProtectionIPWhitelistOutcome UpdateOriginProtectionIPWhitelist(const Model::UpdateOriginProtectionIPWhitelistRequest &request);
+                void UpdateOriginProtectionIPWhitelistAsync(const Model::UpdateOriginProtectionIPWhitelistRequest& request, const UpdateOriginProtectionIPWhitelistAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateOriginProtectionIPWhitelistOutcomeCallable UpdateOriginProtectionIPWhitelistCallable(const Model::UpdateOriginProtectionIPWhitelistRequest& request);
 
             };
         }

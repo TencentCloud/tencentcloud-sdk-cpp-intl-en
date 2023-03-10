@@ -62,18 +62,18 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: string<br>   Required: No
-                     * @return Filters Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: string<br>   Required: No
+                     * 获取Filter conditions. Each filter condition can have up to 20 entries. See below for details:
+<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: String<br>   Required: No</li>
+                     * @return Filters Filter conditions. Each filter condition can have up to 20 entries. See below for details:
+<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: String<br>   Required: No</li>
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: string<br>   Required: No
-                     * @param Filters Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: string<br>   Required: No
+                     * 设置Filter conditions. Each filter condition can have up to 20 entries. See below for details:
+<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: String<br>   Required: No</li>
+                     * @param Filters Filter conditions. Each filter condition can have up to 20 entries. See below for details:
+<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: String<br>   Required: No</li>
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
@@ -92,8 +92,8 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: string<br>   Required: No
+                     * Filter conditions. Each filter condition can have up to 20 entries. See below for details:
+<li>`rule-id`:<br>   Filter by the <strong>rule ID</strong><br>   Type: String<br>   Required: No</li>
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

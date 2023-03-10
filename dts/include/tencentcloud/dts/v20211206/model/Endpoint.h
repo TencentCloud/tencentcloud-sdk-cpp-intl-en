@@ -596,6 +596,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool EncryptConnHasBeenSet() const;
 
+                    /**
+                     * 获取Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DatabaseNetEnv Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetDatabaseNetEnv() const;
+
+                    /**
+                     * 设置Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param DatabaseNetEnv Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetDatabaseNetEnv(const std::string& _databaseNetEnv);
+
+                    /**
+                     * 判断参数 DatabaseNetEnv 是否已赋值
+                     * @return DatabaseNetEnv 是否已赋值
+                     */
+                    bool DatabaseNetEnvHasBeenSet() const;
+
                 private:
 
                     /**
@@ -772,6 +794,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_encryptConn;
                     bool m_encryptConnHasBeenSet;
+
+                    /**
+                     * Network environment of the database. This parameter is required when `AccessType` is `ccn`. Valid values: `UserIDC` (user IDC), `TencentVPC` (Tencent Cloud VPC).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_databaseNetEnv;
+                    bool m_databaseNetEnvHasBeenSet;
 
                 };
             }

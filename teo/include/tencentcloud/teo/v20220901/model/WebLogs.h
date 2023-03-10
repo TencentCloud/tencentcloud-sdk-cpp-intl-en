@@ -66,22 +66,22 @@ namespace TencentCloud
                     bool EventIdHasBeenSet() const;
 
                     /**
-                     * 获取The attacker IP.
-                     * @return AttackIp The attacker IP.
+                     * 获取The HTTP log content.
+                     * @return HttpLog The HTTP log content.
                      */
-                    std::string GetAttackIp() const;
+                    std::string GetHttpLog() const;
 
                     /**
-                     * 设置The attacker IP.
-                     * @param AttackIp The attacker IP.
+                     * 设置The HTTP log content.
+                     * @param HttpLog The HTTP log content.
                      */
-                    void SetAttackIp(const std::string& _attackIp);
+                    void SetHttpLog(const std::string& _httpLog);
 
                     /**
-                     * 判断参数 AttackIp 是否已赋值
-                     * @return AttackIp 是否已赋值
+                     * 判断参数 HttpLog 是否已赋值
+                     * @return HttpLog 是否已赋值
                      */
-                    bool AttackIpHasBeenSet() const;
+                    bool HttpLogHasBeenSet() const;
 
                     /**
                      * 获取The attacked subdomain name.
@@ -102,22 +102,22 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取The HTTP log content.
-                     * @return HttpLog The HTTP log content.
+                     * 获取The attacker IP.
+                     * @return AttackIp The attacker IP.
                      */
-                    std::string GetHttpLog() const;
+                    std::string GetAttackIp() const;
 
                     /**
-                     * 设置The HTTP log content.
-                     * @param HttpLog The HTTP log content.
+                     * 设置The attacker IP.
+                     * @param AttackIp The attacker IP.
                      */
-                    void SetHttpLog(const std::string& _httpLog);
+                    void SetAttackIp(const std::string& _attackIp);
 
                     /**
-                     * 判断参数 HttpLog 是否已赋值
-                     * @return HttpLog 是否已赋值
+                     * 判断参数 AttackIp 是否已赋值
+                     * @return AttackIp 是否已赋值
                      */
-                    bool HttpLogHasBeenSet() const;
+                    bool AttackIpHasBeenSet() const;
 
                     /**
                      * 获取The country code of the attacker IP, which is defined in ISO-3166 alpha-2. For the list of country codes, see [ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json).
@@ -136,6 +136,42 @@ namespace TencentCloud
                      * @return SipCountryCode 是否已赋值
                      */
                     bool SipCountryCodeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return RealClientIp 
+                     */
+                    std::string GetRealClientIp() const;
+
+                    /**
+                     * 设置
+                     * @param RealClientIp 
+                     */
+                    void SetRealClientIp(const std::string& _realClientIp);
+
+                    /**
+                     * 判断参数 RealClientIp 是否已赋值
+                     * @return RealClientIp 是否已赋值
+                     */
+                    bool RealClientIpHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return RealClientIpCountryCode 
+                     */
+                    std::string GetRealClientIpCountryCode() const;
+
+                    /**
+                     * 设置
+                     * @param RealClientIpCountryCode 
+                     */
+                    void SetRealClientIpCountryCode(const std::string& _realClientIpCountryCode);
+
+                    /**
+                     * 判断参数 RealClientIpCountryCode 是否已赋值
+                     * @return RealClientIpCountryCode 是否已赋值
+                     */
+                    bool RealClientIpCountryCodeHasBeenSet() const;
 
                     /**
                      * 获取The attack time recorded in seconds using UNIX timestamp.
@@ -174,26 +210,26 @@ namespace TencentCloud
                     bool RequestUriHasBeenSet() const;
 
                     /**
-                     * 获取The attack content.
+                     * 获取The request type.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AttackContent The attack content.
+                     * @return ReqMethod The request type.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    std::string GetAttackContent() const;
+                    std::string GetReqMethod() const;
 
                     /**
-                     * 设置The attack content.
+                     * 设置The request type.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AttackContent The attack content.
+                     * @param ReqMethod The request type.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    void SetAttackContent(const std::string& _attackContent);
+                    void SetReqMethod(const std::string& _reqMethod);
 
                     /**
-                     * 判断参数 AttackContent 是否已赋值
-                     * @return AttackContent 是否已赋值
+                     * 判断参数 ReqMethod 是否已赋值
+                     * @return ReqMethod 是否已赋值
                      */
-                    bool AttackContentHasBeenSet() const;
+                    bool ReqMethodHasBeenSet() const;
 
                     /**
                      * 获取The security rule information.
@@ -218,26 +254,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RuleDetailListHasBeenSet() const;
 
                     /**
-                     * 获取The request type.
+                     * 获取The attack content.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ReqMethod The request type.
+                     * @return AttackContent The attack content.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    std::string GetReqMethod() const;
+                    std::string GetAttackContent() const;
 
                     /**
-                     * 设置The request type.
+                     * 设置The attack content.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ReqMethod The request type.
+                     * @param AttackContent The attack content.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    void SetReqMethod(const std::string& _reqMethod);
+                    void SetAttackContent(const std::string& _attackContent);
 
                     /**
-                     * 判断参数 ReqMethod 是否已赋值
-                     * @return ReqMethod 是否已赋值
+                     * 判断参数 AttackContent 是否已赋值
+                     * @return AttackContent 是否已赋值
                      */
-                    bool ReqMethodHasBeenSet() const;
+                    bool AttackContentHasBeenSet() const;
+
+                    /**
+                     * 获取Log region
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @return Area Log region
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string GetArea() const;
+
+                    /**
+                     * 设置Log region
+Note: This field may return `null`, indicating that no valid value was found.
+                     * @param Area Log region
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    void SetArea(const std::string& _area);
+
+                    /**
+                     * 判断参数 Area 是否已赋值
+                     * @return Area 是否已赋值
+                     */
+                    bool AreaHasBeenSet() const;
 
                 private:
 
@@ -248,10 +306,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_eventIdHasBeenSet;
 
                     /**
-                     * The attacker IP.
+                     * The HTTP log content.
                      */
-                    std::string m_attackIp;
-                    bool m_attackIpHasBeenSet;
+                    std::string m_httpLog;
+                    bool m_httpLogHasBeenSet;
 
                     /**
                      * The attacked subdomain name.
@@ -260,16 +318,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_domainHasBeenSet;
 
                     /**
-                     * The HTTP log content.
+                     * The attacker IP.
                      */
-                    std::string m_httpLog;
-                    bool m_httpLogHasBeenSet;
+                    std::string m_attackIp;
+                    bool m_attackIpHasBeenSet;
 
                     /**
                      * The country code of the attacker IP, which is defined in ISO-3166 alpha-2. For the list of country codes, see [ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json).
                      */
                     std::string m_sipCountryCode;
                     bool m_sipCountryCodeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_realClientIp;
+                    bool m_realClientIpHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_realClientIpCountryCode;
+                    bool m_realClientIpCountryCodeHasBeenSet;
 
                     /**
                      * The attack time recorded in seconds using UNIX timestamp.
@@ -284,11 +354,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_requestUriHasBeenSet;
 
                     /**
-                     * The attack content.
+                     * The request type.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    std::string m_attackContent;
-                    bool m_attackContentHasBeenSet;
+                    std::string m_reqMethod;
+                    bool m_reqMethodHasBeenSet;
 
                     /**
                      * The security rule information.
@@ -298,11 +368,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_ruleDetailListHasBeenSet;
 
                     /**
-                     * The request type.
+                     * The attack content.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    std::string m_reqMethod;
-                    bool m_reqMethodHasBeenSet;
+                    std::string m_attackContent;
+                    bool m_attackContentHasBeenSet;
+
+                    /**
+                     * Log region
+Note: This field may return `null`, indicating that no valid value was found.
+                     */
+                    std::string m_area;
+                    bool m_areaHasBeenSet;
 
                 };
             }

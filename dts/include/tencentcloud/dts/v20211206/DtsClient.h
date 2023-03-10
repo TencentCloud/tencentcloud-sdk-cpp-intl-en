@@ -27,6 +27,10 @@
 #include <tencentcloud/dts/v20211206/model/CompleteMigrateJobResponse.h>
 #include <tencentcloud/dts/v20211206/model/ConfigureSyncJobRequest.h>
 #include <tencentcloud/dts/v20211206/model/ConfigureSyncJobResponse.h>
+#include <tencentcloud/dts/v20211206/model/ContinueMigrateJobRequest.h>
+#include <tencentcloud/dts/v20211206/model/ContinueMigrateJobResponse.h>
+#include <tencentcloud/dts/v20211206/model/ContinueSyncJobRequest.h>
+#include <tencentcloud/dts/v20211206/model/ContinueSyncJobResponse.h>
 #include <tencentcloud/dts/v20211206/model/CreateCheckSyncJobRequest.h>
 #include <tencentcloud/dts/v20211206/model/CreateCheckSyncJobResponse.h>
 #include <tencentcloud/dts/v20211206/model/CreateCompareTaskRequest.h>
@@ -73,6 +77,10 @@
 #include <tencentcloud/dts/v20211206/model/ModifyMigrateNameResponse.h>
 #include <tencentcloud/dts/v20211206/model/ModifyMigrationJobRequest.h>
 #include <tencentcloud/dts/v20211206/model/ModifyMigrationJobResponse.h>
+#include <tencentcloud/dts/v20211206/model/PauseMigrateJobRequest.h>
+#include <tencentcloud/dts/v20211206/model/PauseMigrateJobResponse.h>
+#include <tencentcloud/dts/v20211206/model/PauseSyncJobRequest.h>
+#include <tencentcloud/dts/v20211206/model/PauseSyncJobResponse.h>
 #include <tencentcloud/dts/v20211206/model/RecoverMigrateJobRequest.h>
 #include <tencentcloud/dts/v20211206/model/RecoverMigrateJobResponse.h>
 #include <tencentcloud/dts/v20211206/model/RecoverSyncJobRequest.h>
@@ -119,6 +127,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ConfigureSyncJobResponse> ConfigureSyncJobOutcome;
                 typedef std::future<ConfigureSyncJobOutcome> ConfigureSyncJobOutcomeCallable;
                 typedef std::function<void(const DtsClient*, const Model::ConfigureSyncJobRequest&, ConfigureSyncJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ConfigureSyncJobAsyncHandler;
+                typedef Outcome<Core::Error, Model::ContinueMigrateJobResponse> ContinueMigrateJobOutcome;
+                typedef std::future<ContinueMigrateJobOutcome> ContinueMigrateJobOutcomeCallable;
+                typedef std::function<void(const DtsClient*, const Model::ContinueMigrateJobRequest&, ContinueMigrateJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ContinueMigrateJobAsyncHandler;
+                typedef Outcome<Core::Error, Model::ContinueSyncJobResponse> ContinueSyncJobOutcome;
+                typedef std::future<ContinueSyncJobOutcome> ContinueSyncJobOutcomeCallable;
+                typedef std::function<void(const DtsClient*, const Model::ContinueSyncJobRequest&, ContinueSyncJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ContinueSyncJobAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateCheckSyncJobResponse> CreateCheckSyncJobOutcome;
                 typedef std::future<CreateCheckSyncJobOutcome> CreateCheckSyncJobOutcomeCallable;
                 typedef std::function<void(const DtsClient*, const Model::CreateCheckSyncJobRequest&, CreateCheckSyncJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCheckSyncJobAsyncHandler;
@@ -188,6 +202,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyMigrationJobResponse> ModifyMigrationJobOutcome;
                 typedef std::future<ModifyMigrationJobOutcome> ModifyMigrationJobOutcomeCallable;
                 typedef std::function<void(const DtsClient*, const Model::ModifyMigrationJobRequest&, ModifyMigrationJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyMigrationJobAsyncHandler;
+                typedef Outcome<Core::Error, Model::PauseMigrateJobResponse> PauseMigrateJobOutcome;
+                typedef std::future<PauseMigrateJobOutcome> PauseMigrateJobOutcomeCallable;
+                typedef std::function<void(const DtsClient*, const Model::PauseMigrateJobRequest&, PauseMigrateJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PauseMigrateJobAsyncHandler;
+                typedef Outcome<Core::Error, Model::PauseSyncJobResponse> PauseSyncJobOutcome;
+                typedef std::future<PauseSyncJobOutcome> PauseSyncJobOutcomeCallable;
+                typedef std::function<void(const DtsClient*, const Model::PauseSyncJobRequest&, PauseSyncJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PauseSyncJobAsyncHandler;
                 typedef Outcome<Core::Error, Model::RecoverMigrateJobResponse> RecoverMigrateJobOutcome;
                 typedef std::future<RecoverMigrateJobOutcome> RecoverMigrateJobOutcomeCallable;
                 typedef std::function<void(const DtsClient*, const Model::RecoverMigrateJobRequest&, RecoverMigrateJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecoverMigrateJobAsyncHandler;
@@ -250,6 +270,24 @@ If the task status queried through the `DescribeMigrationJobs` API is ready (`St
                 ConfigureSyncJobOutcome ConfigureSyncJob(const Model::ConfigureSyncJobRequest &request);
                 void ConfigureSyncJobAsync(const Model::ConfigureSyncJobRequest& request, const ConfigureSyncJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ConfigureSyncJobOutcomeCallable ConfigureSyncJobCallable(const Model::ConfigureSyncJobRequest& request);
+
+                /**
+                 *This API is used to resume a paused migration task.
+                 * @param req ContinueMigrateJobRequest
+                 * @return ContinueMigrateJobOutcome
+                 */
+                ContinueMigrateJobOutcome ContinueMigrateJob(const Model::ContinueMigrateJobRequest &request);
+                void ContinueMigrateJobAsync(const Model::ContinueMigrateJobRequest& request, const ContinueMigrateJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ContinueMigrateJobOutcomeCallable ContinueMigrateJobCallable(const Model::ContinueMigrateJobRequest& request);
+
+                /**
+                 *This API is used to resume a paused data sync task.
+                 * @param req ContinueSyncJobRequest
+                 * @return ContinueSyncJobOutcome
+                 */
+                ContinueSyncJobOutcome ContinueSyncJob(const Model::ContinueSyncJobRequest &request);
+                void ContinueSyncJobAsync(const Model::ContinueSyncJobRequest& request, const ContinueSyncJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ContinueSyncJobOutcomeCallable ContinueSyncJobCallable(const Model::ContinueSyncJobRequest& request);
 
                 /**
                  *This API is used to verify a sync task by checking required parameters and peripheral configuration.
@@ -462,6 +500,24 @@ If the check fails, the cause can be queried. Modify the migration configuration
                 ModifyMigrationJobOutcome ModifyMigrationJob(const Model::ModifyMigrationJobRequest &request);
                 void ModifyMigrationJobAsync(const Model::ModifyMigrationJobRequest& request, const ModifyMigrationJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyMigrationJobOutcomeCallable ModifyMigrationJobCallable(const Model::ModifyMigrationJobRequest& request);
+
+                /**
+                 *This API is used to pause a migration task.
+                 * @param req PauseMigrateJobRequest
+                 * @return PauseMigrateJobOutcome
+                 */
+                PauseMigrateJobOutcome PauseMigrateJob(const Model::PauseMigrateJobRequest &request);
+                void PauseMigrateJobAsync(const Model::PauseMigrateJobRequest& request, const PauseMigrateJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                PauseMigrateJobOutcomeCallable PauseMigrateJobCallable(const Model::PauseMigrateJobRequest& request);
+
+                /**
+                 *This API is used to pause a data sync task.
+                 * @param req PauseSyncJobRequest
+                 * @return PauseSyncJobOutcome
+                 */
+                PauseSyncJobOutcome PauseSyncJob(const Model::PauseSyncJobRequest &request);
+                void PauseSyncJobAsync(const Model::PauseSyncJobRequest& request, const PauseSyncJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                PauseSyncJobOutcomeCallable PauseSyncJobCallable(const Model::PauseSyncJobRequest& request);
 
                 /**
                  *This API is used to recover a data migration task in **Isolated** status. After calling this API, you can call the `DescribeMigrationJobs` API to query the latest task status.

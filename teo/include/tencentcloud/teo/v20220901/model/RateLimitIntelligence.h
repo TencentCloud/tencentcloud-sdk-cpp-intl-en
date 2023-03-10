@@ -98,6 +98,24 @@ namespace TencentCloud
                      */
                     bool ActionHasBeenSet() const;
 
+                    /**
+                     * 获取The rule ID, which is only used as a response parameter.
+                     * @return RuleId The rule ID, which is only used as a response parameter.
+                     */
+                    int64_t GetRuleId() const;
+
+                    /**
+                     * 设置The rule ID, which is only used as a response parameter.
+                     * @param RuleId The rule ID, which is only used as a response parameter.
+                     */
+                    void SetRuleId(const int64_t& _ruleId);
+
+                    /**
+                     * 判断参数 RuleId 是否已赋值
+                     * @return RuleId 是否已赋值
+                     */
+                    bool RuleIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -115,6 +133,12 @@ namespace TencentCloud
                      */
                     std::string m_action;
                     bool m_actionHasBeenSet;
+
+                    /**
+                     * The rule ID, which is only used as a response parameter.
+                     */
+                    int64_t m_ruleId;
+                    bool m_ruleIdHasBeenSet;
 
                 };
             }

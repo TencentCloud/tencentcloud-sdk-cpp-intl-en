@@ -65,6 +65,10 @@
 #include <tencentcloud/ckafka/v20190819/model/DescribeCkafkaZoneResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeConsumerGroupRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeConsumerGroupResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/DescribeDatahubTopicRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/DescribeDatahubTopicResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/DescribeDatahubTopicsRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/DescribeDatahubTopicsResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeGroupRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeGroupResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeGroupInfoRequest.h>
@@ -190,6 +194,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeConsumerGroupResponse> DescribeConsumerGroupOutcome;
                 typedef std::future<DescribeConsumerGroupOutcome> DescribeConsumerGroupOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DescribeConsumerGroupRequest&, DescribeConsumerGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeConsumerGroupAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDatahubTopicResponse> DescribeDatahubTopicOutcome;
+                typedef std::future<DescribeDatahubTopicOutcome> DescribeDatahubTopicOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::DescribeDatahubTopicRequest&, DescribeDatahubTopicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDatahubTopicAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDatahubTopicsResponse> DescribeDatahubTopicsOutcome;
+                typedef std::future<DescribeDatahubTopicsOutcome> DescribeDatahubTopicsOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::DescribeDatahubTopicsRequest&, DescribeDatahubTopicsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDatahubTopicsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeGroupResponse> DescribeGroupOutcome;
                 typedef std::future<DescribeGroupOutcome> DescribeGroupOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DescribeGroupRequest&, DescribeGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeGroupAsyncHandler;
@@ -453,6 +463,24 @@ namespace TencentCloud
                 DescribeConsumerGroupOutcome DescribeConsumerGroup(const Model::DescribeConsumerGroupRequest &request);
                 void DescribeConsumerGroupAsync(const Model::DescribeConsumerGroupRequest& request, const DescribeConsumerGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeConsumerGroupOutcomeCallable DescribeConsumerGroupCallable(const Model::DescribeConsumerGroupRequest& request);
+
+                /**
+                 *This API is used to get the DataHub topic attributes.
+                 * @param req DescribeDatahubTopicRequest
+                 * @return DescribeDatahubTopicOutcome
+                 */
+                DescribeDatahubTopicOutcome DescribeDatahubTopic(const Model::DescribeDatahubTopicRequest &request);
+                void DescribeDatahubTopicAsync(const Model::DescribeDatahubTopicRequest& request, const DescribeDatahubTopicAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDatahubTopicOutcomeCallable DescribeDatahubTopicCallable(const Model::DescribeDatahubTopicRequest& request);
+
+                /**
+                 *This API is used to query the DataHub topic list.
+                 * @param req DescribeDatahubTopicsRequest
+                 * @return DescribeDatahubTopicsOutcome
+                 */
+                DescribeDatahubTopicsOutcome DescribeDatahubTopics(const Model::DescribeDatahubTopicsRequest &request);
+                void DescribeDatahubTopicsAsync(const Model::DescribeDatahubTopicsRequest& request, const DescribeDatahubTopicsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDatahubTopicsOutcomeCallable DescribeDatahubTopicsCallable(const Model::DescribeDatahubTopicsRequest& request);
 
                 /**
                  *This API is used to enumerate consumer groups (simplified).

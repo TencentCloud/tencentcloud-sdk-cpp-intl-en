@@ -21,9 +21,9 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/dts/v20211206/model/Options.h>
 #include <tencentcloud/dts/v20211206/model/Objects.h>
 #include <tencentcloud/dts/v20211206/model/Endpoint.h>
+#include <tencentcloud/dts/v20211206/model/Options.h>
 
 
 namespace TencentCloud
@@ -64,14 +64,14 @@ namespace TencentCloud
                     bool JobIdHasBeenSet() const;
 
                     /**
-                     * 获取Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `noProxy`. Note that the valid values are subject to the current link.
-                     * @return SrcAccessType Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `noProxy`. Note that the valid values are subject to the current link.
+                     * 获取Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet). Note that the valid values are subject to the current link.
+                     * @return SrcAccessType Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet). Note that the valid values are subject to the current link.
                      */
                     std::string GetSrcAccessType() const;
 
                     /**
-                     * 设置Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `noProxy`. Note that the valid values are subject to the current link.
-                     * @param SrcAccessType Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `noProxy`. Note that the valid values are subject to the current link.
+                     * 设置Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet). Note that the valid values are subject to the current link.
+                     * @param SrcAccessType Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet). Note that the valid values are subject to the current link.
                      */
                     void SetSrcAccessType(const std::string& _srcAccessType);
 
@@ -82,14 +82,14 @@ namespace TencentCloud
                     bool SrcAccessTypeHasBeenSet() const;
 
                     /**
-                     * 获取Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `noProxy`. Note that the valid values are subject to the current link.
-                     * @return DstAccessType Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `noProxy`. Note that the valid values are subject to the current link.
+                     * 获取Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `ckafka` (CKafka instance). Note that the valid values are subject to the current link.
+                     * @return DstAccessType Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `ckafka` (CKafka instance). Note that the valid values are subject to the current link.
                      */
                     std::string GetDstAccessType() const;
 
                     /**
-                     * 设置Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `noProxy`. Note that the valid values are subject to the current link.
-                     * @param DstAccessType Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `noProxy`. Note that the valid values are subject to the current link.
+                     * 设置Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `ckafka` (CKafka instance). Note that the valid values are subject to the current link.
+                     * @param DstAccessType Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `ckafka` (CKafka instance). Note that the valid values are subject to the current link.
                      */
                     void SetDstAccessType(const std::string& _dstAccessType);
 
@@ -98,24 +98,6 @@ namespace TencentCloud
                      * @return DstAccessType 是否已赋值
                      */
                     bool DstAccessTypeHasBeenSet() const;
-
-                    /**
-                     * 获取Sync task options
-                     * @return Options Sync task options
-                     */
-                    Options GetOptions() const;
-
-                    /**
-                     * 设置Sync task options
-                     * @param Options Sync task options
-                     */
-                    void SetOptions(const Options& _options);
-
-                    /**
-                     * 判断参数 Options 是否已赋值
-                     * @return Options 是否已赋值
-                     */
-                    bool OptionsHasBeenSet() const;
 
                     /**
                      * 获取Information of synced database/table objects
@@ -208,14 +190,14 @@ namespace TencentCloud
                     bool ExpectRunTimeHasBeenSet() const;
 
                     /**
-                     * 获取Source database information. This parameter is used by single-node databases.
-                     * @return SrcInfo Source database information. This parameter is used by single-node databases.
+                     * 获取Source database information. This parameter only applies to single-node databases, and `SrcNodeType` must be `single`.
+                     * @return SrcInfo Source database information. This parameter only applies to single-node databases, and `SrcNodeType` must be `single`.
                      */
                     Endpoint GetSrcInfo() const;
 
                     /**
-                     * 设置Source database information. This parameter is used by single-node databases.
-                     * @param SrcInfo Source database information. This parameter is used by single-node databases.
+                     * 设置Source database information. This parameter only applies to single-node databases, and `SrcNodeType` must be `single`.
+                     * @param SrcInfo Source database information. This parameter only applies to single-node databases, and `SrcNodeType` must be `single`.
                      */
                     void SetSrcInfo(const Endpoint& _srcInfo);
 
@@ -244,6 +226,24 @@ namespace TencentCloud
                     bool DstInfoHasBeenSet() const;
 
                     /**
+                     * 获取Sync task options
+                     * @return Options Sync task options
+                     */
+                    Options GetOptions() const;
+
+                    /**
+                     * 设置Sync task options
+                     * @param Options Sync task options
+                     */
+                    void SetOptions(const Options& _options);
+
+                    /**
+                     * 判断参数 Options 是否已赋值
+                     * @return Options 是否已赋值
+                     */
+                    bool OptionsHasBeenSet() const;
+
+                    /**
                      * 获取Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
                      * @return AutoRetryTimeRangeMinutes Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
                      */
@@ -270,22 +270,16 @@ namespace TencentCloud
                     bool m_jobIdHasBeenSet;
 
                     /**
-                     * Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `noProxy`. Note that the valid values are subject to the current link.
+                     * Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet). Note that the valid values are subject to the current link.
                      */
                     std::string m_srcAccessType;
                     bool m_srcAccessTypeHasBeenSet;
 
                     /**
-                     * Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `noProxy`. Note that the valid values are subject to the current link.
+                     * Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet); `ckafka` (CKafka instance). Note that the valid values are subject to the current link.
                      */
                     std::string m_dstAccessType;
                     bool m_dstAccessTypeHasBeenSet;
-
-                    /**
-                     * Sync task options
-                     */
-                    Options m_options;
-                    bool m_optionsHasBeenSet;
 
                     /**
                      * Information of synced database/table objects
@@ -318,7 +312,7 @@ namespace TencentCloud
                     bool m_expectRunTimeHasBeenSet;
 
                     /**
-                     * Source database information. This parameter is used by single-node databases.
+                     * Source database information. This parameter only applies to single-node databases, and `SrcNodeType` must be `single`.
                      */
                     Endpoint m_srcInfo;
                     bool m_srcInfoHasBeenSet;
@@ -328,6 +322,12 @@ namespace TencentCloud
                      */
                     Endpoint m_dstInfo;
                     bool m_dstInfoHasBeenSet;
+
+                    /**
+                     * Sync task options
+                     */
+                    Options m_options;
+                    bool m_optionsHasBeenSet;
 
                     /**
                      * Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.

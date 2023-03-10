@@ -46,7 +46,36 @@ namespace TencentCloud
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
+                    /**
+                     * 获取Status
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Status Status
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetStatus() const;
+
+                    /**
+                     * 设置Status
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Status Status
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetStatus(const std::string& _status);
+
+                    /**
+                     * 判断参数 Status 是否已赋值
+                     * @return Status 是否已赋值
+                     */
+                    bool StatusHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * Status
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_status;
+                    bool m_statusHasBeenSet;
 
                 };
             }

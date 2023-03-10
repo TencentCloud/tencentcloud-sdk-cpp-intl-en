@@ -47,6 +47,24 @@ namespace TencentCloud
 
 
                     /**
+                     * 获取The site ID.
+                     * @return ZoneId The site ID.
+                     */
+                    std::string GetZoneId() const;
+
+                    /**
+                     * 设置The site ID.
+                     * @param ZoneId The site ID.
+                     */
+                    void SetZoneId(const std::string& _zoneId);
+
+                    /**
+                     * 判断参数 ZoneId 是否已赋值
+                     * @return ZoneId 是否已赋值
+                     */
+                    bool ZoneIdHasBeenSet() const;
+
+                    /**
                      * 获取The rule ID.
                      * @return RuleId The rule ID.
                      */
@@ -81,52 +99,6 @@ namespace TencentCloud
                      * @return RuleTypeName 是否已赋值
                      */
                     bool RuleTypeNameHasBeenSet() const;
-
-                    /**
-                     * 获取Action. Values:
-<li>`trans`: Allow;</li>
-<li>`alg`: Algorithm challenge;</li>
-<li>`drop`: Discard;</li>
-<li>`ban`: Block the source IP;</li>
-<li>`redirect`: Redirect;</li>
-<li>`page`: Return to the specified page;</li>
-<li>`monitor`: Observe.</li>
-                     * @return Action Action. Values:
-<li>`trans`: Allow;</li>
-<li>`alg`: Algorithm challenge;</li>
-<li>`drop`: Discard;</li>
-<li>`ban`: Block the source IP;</li>
-<li>`redirect`: Redirect;</li>
-<li>`page`: Return to the specified page;</li>
-<li>`monitor`: Observe.</li>
-                     */
-                    std::string GetAction() const;
-
-                    /**
-                     * 设置Action. Values:
-<li>`trans`: Allow;</li>
-<li>`alg`: Algorithm challenge;</li>
-<li>`drop`: Discard;</li>
-<li>`ban`: Block the source IP;</li>
-<li>`redirect`: Redirect;</li>
-<li>`page`: Return to the specified page;</li>
-<li>`monitor`: Observe.</li>
-                     * @param Action Action. Values:
-<li>`trans`: Allow;</li>
-<li>`alg`: Algorithm challenge;</li>
-<li>`drop`: Discard;</li>
-<li>`ban`: Block the source IP;</li>
-<li>`redirect`: Redirect;</li>
-<li>`page`: Return to the specified page;</li>
-<li>`monitor`: Observe.</li>
-                     */
-                    void SetAction(const std::string& _action);
-
-                    /**
-                     * 判断参数 Action 是否已赋值
-                     * @return Action 是否已赋值
-                     */
-                    bool ActionHasBeenSet() const;
 
                     /**
                      * 获取The hit time recorded in seconds using UNIX timestamp.
@@ -201,6 +173,52 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
+                     * 获取Action. Values:
+<li>`trans`: Allow;</li>
+<li>`alg`: Algorithm challenge;</li>
+<li>`drop`: Discard;</li>
+<li>`ban`: Block the source IP;</li>
+<li>`redirect`: Redirect;</li>
+<li>`page`: Return to the specified page;</li>
+<li>`monitor`: Observe.</li>
+                     * @return Action Action. Values:
+<li>`trans`: Allow;</li>
+<li>`alg`: Algorithm challenge;</li>
+<li>`drop`: Discard;</li>
+<li>`ban`: Block the source IP;</li>
+<li>`redirect`: Redirect;</li>
+<li>`page`: Return to the specified page;</li>
+<li>`monitor`: Observe.</li>
+                     */
+                    std::string GetAction() const;
+
+                    /**
+                     * 设置Action. Values:
+<li>`trans`: Allow;</li>
+<li>`alg`: Algorithm challenge;</li>
+<li>`drop`: Discard;</li>
+<li>`ban`: Block the source IP;</li>
+<li>`redirect`: Redirect;</li>
+<li>`page`: Return to the specified page;</li>
+<li>`monitor`: Observe.</li>
+                     * @param Action Action. Values:
+<li>`trans`: Allow;</li>
+<li>`alg`: Algorithm challenge;</li>
+<li>`drop`: Discard;</li>
+<li>`ban`: Block the source IP;</li>
+<li>`redirect`: Redirect;</li>
+<li>`page`: Return to the specified page;</li>
+<li>`monitor`: Observe.</li>
+                     */
+                    void SetAction(const std::string& _action);
+
+                    /**
+                     * 判断参数 Action 是否已赋值
+                     * @return Action 是否已赋值
+                     */
+                    bool ActionHasBeenSet() const;
+
+                    /**
                      * 获取The bot tag. Values:
 <li>`evil_bot`: Malicious bot</li>
 <li>`suspect_bot`: Suspected bot</li>
@@ -238,7 +256,75 @@ namespace TencentCloud
                      */
                     bool BotLabelHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable the rule
+                     * @return RuleEnabled Whether to enable the rule
+                     */
+                    bool GetRuleEnabled() const;
+
+                    /**
+                     * 设置Whether to enable the rule
+                     * @param RuleEnabled Whether to enable the rule
+                     */
+                    void SetRuleEnabled(const bool& _ruleEnabled);
+
+                    /**
+                     * 判断参数 RuleEnabled 是否已赋值
+                     * @return RuleEnabled 是否已赋值
+                     */
+                    bool RuleEnabledHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable alerting for this rule
+                     * @return AlarmEnabled Whether to enable alerting for this rule
+                     */
+                    bool GetAlarmEnabled() const;
+
+                    /**
+                     * 设置Whether to enable alerting for this rule
+                     * @param AlarmEnabled Whether to enable alerting for this rule
+                     */
+                    void SetAlarmEnabled(const bool& _alarmEnabled);
+
+                    /**
+                     * 判断参数 AlarmEnabled 是否已赋值
+                     * @return AlarmEnabled 是否已赋值
+                     */
+                    bool AlarmEnabledHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the rule is deleted. Values: 
+<li>`true`: The rule has been deleted (does not exist).</li>
+<li>`false`: The rule is not deleted (exists).</li>
+                     * @return RuleDeleted Whether the rule is deleted. Values: 
+<li>`true`: The rule has been deleted (does not exist).</li>
+<li>`false`: The rule is not deleted (exists).</li>
+                     */
+                    bool GetRuleDeleted() const;
+
+                    /**
+                     * 设置Whether the rule is deleted. Values: 
+<li>`true`: The rule has been deleted (does not exist).</li>
+<li>`false`: The rule is not deleted (exists).</li>
+                     * @param RuleDeleted Whether the rule is deleted. Values: 
+<li>`true`: The rule has been deleted (does not exist).</li>
+<li>`false`: The rule is not deleted (exists).</li>
+                     */
+                    void SetRuleDeleted(const bool& _ruleDeleted);
+
+                    /**
+                     * 判断参数 RuleDeleted 是否已赋值
+                     * @return RuleDeleted 是否已赋值
+                     */
+                    bool RuleDeletedHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * The site ID.
+                     */
+                    std::string m_zoneId;
+                    bool m_zoneIdHasBeenSet;
 
                     /**
                      * The rule ID.
@@ -251,19 +337,6 @@ namespace TencentCloud
                      */
                     std::string m_ruleTypeName;
                     bool m_ruleTypeNameHasBeenSet;
-
-                    /**
-                     * Action. Values:
-<li>`trans`: Allow;</li>
-<li>`alg`: Algorithm challenge;</li>
-<li>`drop`: Discard;</li>
-<li>`ban`: Block the source IP;</li>
-<li>`redirect`: Redirect;</li>
-<li>`page`: Return to the specified page;</li>
-<li>`monitor`: Observe.</li>
-                     */
-                    std::string m_action;
-                    bool m_actionHasBeenSet;
 
                     /**
                      * The hit time recorded in seconds using UNIX timestamp.
@@ -290,6 +363,19 @@ namespace TencentCloud
                     bool m_domainHasBeenSet;
 
                     /**
+                     * Action. Values:
+<li>`trans`: Allow;</li>
+<li>`alg`: Algorithm challenge;</li>
+<li>`drop`: Discard;</li>
+<li>`ban`: Block the source IP;</li>
+<li>`redirect`: Redirect;</li>
+<li>`page`: Return to the specified page;</li>
+<li>`monitor`: Observe.</li>
+                     */
+                    std::string m_action;
+                    bool m_actionHasBeenSet;
+
+                    /**
                      * The bot tag. Values:
 <li>`evil_bot`: Malicious bot</li>
 <li>`suspect_bot`: Suspected bot</li>
@@ -299,6 +385,26 @@ namespace TencentCloud
                      */
                     std::string m_botLabel;
                     bool m_botLabelHasBeenSet;
+
+                    /**
+                     * Whether to enable the rule
+                     */
+                    bool m_ruleEnabled;
+                    bool m_ruleEnabledHasBeenSet;
+
+                    /**
+                     * Whether to enable alerting for this rule
+                     */
+                    bool m_alarmEnabled;
+                    bool m_alarmEnabledHasBeenSet;
+
+                    /**
+                     * Whether the rule is deleted. Values: 
+<li>`true`: The rule has been deleted (does not exist).</li>
+<li>`false`: The rule is not deleted (exists).</li>
+                     */
+                    bool m_ruleDeleted;
+                    bool m_ruleDeletedHasBeenSet;
 
                 };
             }

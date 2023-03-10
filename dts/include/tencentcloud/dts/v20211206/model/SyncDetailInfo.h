@@ -223,6 +223,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool StepInfosHasBeenSet() const;
 
+                    /**
+                     * 获取Cause of the failure of initiating data consistency check
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CauseOfCompareDisable Cause of the failure of initiating data consistency check
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetCauseOfCompareDisable() const;
+
+                    /**
+                     * 设置Cause of the failure of initiating data consistency check
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param CauseOfCompareDisable Cause of the failure of initiating data consistency check
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetCauseOfCompareDisable(const std::string& _causeOfCompareDisable);
+
+                    /**
+                     * 判断参数 CauseOfCompareDisable 是否已赋值
+                     * @return CauseOfCompareDisable 是否已赋值
+                     */
+                    bool CauseOfCompareDisableHasBeenSet() const;
+
                 private:
 
                     /**
@@ -280,6 +302,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<StepInfo> m_stepInfos;
                     bool m_stepInfosHasBeenSet;
+
+                    /**
+                     * Cause of the failure of initiating data consistency check
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_causeOfCompareDisable;
+                    bool m_causeOfCompareDisableHasBeenSet;
 
                 };
             }

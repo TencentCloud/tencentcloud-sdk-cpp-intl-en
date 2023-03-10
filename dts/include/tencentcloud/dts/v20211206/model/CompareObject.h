@@ -48,17 +48,17 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Object migration mode. Valid values: `all`, `partial`.
+                     * 获取Data comparison object mode (`all`: Entire instance; `partial`: Some objects)
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ObjectMode Object migration mode. Valid values: `all`, `partial`.
+                     * @return ObjectMode Data comparison object mode (`all`: Entire instance; `partial`: Some objects)
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetObjectMode() const;
 
                     /**
-                     * 设置Object migration mode. Valid values: `all`, `partial`.
+                     * 设置Data comparison object mode (`all`: Entire instance; `partial`: Some objects)
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ObjectMode Object migration mode. Valid values: `all`, `partial`.
+                     * @param ObjectMode Data comparison object mode (`all`: Entire instance; `partial`: Some objects)
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetObjectMode(const std::string& _objectMode);
@@ -70,17 +70,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ObjectModeHasBeenSet() const;
 
                     /**
-                     * 获取Migration database/table configuration
+                     * 获取Object list
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ObjectItems Migration database/table configuration
+                     * @return ObjectItems Object list
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<CompareObjectItem> GetObjectItems() const;
 
                     /**
-                     * 设置Migration database/table configuration
+                     * 设置Object list
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ObjectItems Migration database/table configuration
+                     * @param ObjectItems Object list
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetObjectItems(const std::vector<CompareObjectItem>& _objectItems);
@@ -91,21 +91,50 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ObjectItemsHasBeenSet() const;
 
+                    /**
+                     * 获取Advanced object type (`account`: Account; `index`: Index; `shardkey`: Shard key, which may be adjusted later; `schema`: Database/table structure)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AdvancedObjects Advanced object type (`account`: Account; `index`: Index; `shardkey`: Shard key, which may be adjusted later; `schema`: Database/table structure)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> GetAdvancedObjects() const;
+
+                    /**
+                     * 设置Advanced object type (`account`: Account; `index`: Index; `shardkey`: Shard key, which may be adjusted later; `schema`: Database/table structure)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param AdvancedObjects Advanced object type (`account`: Account; `index`: Index; `shardkey`: Shard key, which may be adjusted later; `schema`: Database/table structure)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetAdvancedObjects(const std::vector<std::string>& _advancedObjects);
+
+                    /**
+                     * 判断参数 AdvancedObjects 是否已赋值
+                     * @return AdvancedObjects 是否已赋值
+                     */
+                    bool AdvancedObjectsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Object migration mode. Valid values: `all`, `partial`.
+                     * Data comparison object mode (`all`: Entire instance; `partial`: Some objects)
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_objectMode;
                     bool m_objectModeHasBeenSet;
 
                     /**
-                     * Migration database/table configuration
+                     * Object list
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<CompareObjectItem> m_objectItems;
                     bool m_objectItemsHasBeenSet;
+
+                    /**
+                     * Advanced object type (`account`: Account; `index`: Index; `shardkey`: Shard key, which may be adjusted later; `schema`: Database/table structure)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_advancedObjects;
+                    bool m_advancedObjectsHasBeenSet;
 
                 };
             }

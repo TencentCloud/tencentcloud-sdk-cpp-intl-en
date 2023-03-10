@@ -49,17 +49,17 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The database to be migrated
+                     * 获取Database name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DbName The database to be migrated
+                     * @return DbName Database name
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetDbName() const;
 
                     /**
-                     * 设置The database to be migrated
+                     * 设置Database name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DbName The database to be migrated
+                     * @param DbName Database name
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetDbName(const std::string& _dbName);
@@ -93,17 +93,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DbModeHasBeenSet() const;
 
                     /**
-                     * 获取The schema to be migrated
+                     * 获取Schema name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SchemaName The schema to be migrated
+                     * @return SchemaName Schema name
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetSchemaName() const;
 
                     /**
-                     * 设置The schema to be migrated
+                     * 设置Schema name
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SchemaName The schema to be migrated
+                     * @param SchemaName Schema name
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetSchemaName(const std::string& _schemaName);
@@ -205,7 +205,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The database to be migrated
+                     * Database name
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_dbName;
@@ -219,7 +219,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_dbModeHasBeenSet;
 
                     /**
-                     * The schema to be migrated
+                     * Schema name
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_schemaName;

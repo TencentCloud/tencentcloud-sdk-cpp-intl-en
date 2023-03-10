@@ -103,22 +103,54 @@ namespace TencentCloud
                     bool MatchFromHasBeenSet() const;
 
                     /**
-                     * 获取The matching content.
-                     * @return MatchContent The matching content.
+                     * 获取Matching method. It defaults to `equal` if it’s left empty.
+Values: 
+<li>`is_empty`: The field is empty.</li>
+<li>`not_exists`: The configuration item does not exist.</li>
+<li>`include`: Include</li>
+<li>`not_include`: Do not include</li>
+<li>`equal`: Equal to</li>
+<li>`not_equal`: Not equal to</li>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Operator Matching method. It defaults to `equal` if it’s left empty.
+Values: 
+<li>`is_empty`: The field is empty.</li>
+<li>`not_exists`: The configuration item does not exist.</li>
+<li>`include`: Include</li>
+<li>`not_include`: Do not include</li>
+<li>`equal`: Equal to</li>
+<li>`not_equal`: Not equal to</li>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    std::string GetMatchContent() const;
+                    std::string GetOperator() const;
 
                     /**
-                     * 设置The matching content.
-                     * @param MatchContent The matching content.
+                     * 设置Matching method. It defaults to `equal` if it’s left empty.
+Values: 
+<li>`is_empty`: The field is empty.</li>
+<li>`not_exists`: The configuration item does not exist.</li>
+<li>`include`: Include</li>
+<li>`not_include`: Do not include</li>
+<li>`equal`: Equal to</li>
+<li>`not_equal`: Not equal to</li>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Operator Matching method. It defaults to `equal` if it’s left empty.
+Values: 
+<li>`is_empty`: The field is empty.</li>
+<li>`not_exists`: The configuration item does not exist.</li>
+<li>`include`: Include</li>
+<li>`not_include`: Do not include</li>
+<li>`equal`: Equal to</li>
+<li>`not_equal`: Not equal to</li>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    void SetMatchContent(const std::string& _matchContent);
+                    void SetOperator(const std::string& _operator);
 
                     /**
-                     * 判断参数 MatchContent 是否已赋值
-                     * @return MatchContent 是否已赋值
+                     * 判断参数 Operator 是否已赋值
+                     * @return Operator 是否已赋值
                      */
-                    bool MatchContentHasBeenSet() const;
+                    bool OperatorHasBeenSet() const;
 
                     /**
                      * 获取The rule ID, which is only used as an output parameter.
@@ -186,6 +218,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool StatusHasBeenSet() const;
 
+                    /**
+                     * 获取The rule name.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RuleName The rule name.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetRuleName() const;
+
+                    /**
+                     * 设置The rule name.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param RuleName The rule name.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetRuleName(const std::string& _ruleName);
+
+                    /**
+                     * 判断参数 RuleName 是否已赋值
+                     * @return RuleName 是否已赋值
+                     */
+                    bool RuleNameHasBeenSet() const;
+
+                    /**
+                     * 获取Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`. 
+                     * @return MatchContent Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`. 
+                     */
+                    std::string GetMatchContent() const;
+
+                    /**
+                     * 设置Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`. 
+                     * @param MatchContent Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`. 
+                     */
+                    void SetMatchContent(const std::string& _matchContent);
+
+                    /**
+                     * 判断参数 MatchContent 是否已赋值
+                     * @return MatchContent 是否已赋值
+                     */
+                    bool MatchContentHasBeenSet() const;
+
                 private:
 
                     /**
@@ -206,10 +278,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_matchFromHasBeenSet;
 
                     /**
-                     * The matching content.
+                     * Matching method. It defaults to `equal` if it’s left empty.
+Values: 
+<li>`is_empty`: The field is empty.</li>
+<li>`not_exists`: The configuration item does not exist.</li>
+<li>`include`: Include</li>
+<li>`not_include`: Do not include</li>
+<li>`equal`: Equal to</li>
+<li>`not_equal`: Not equal to</li>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    std::string m_matchContent;
-                    bool m_matchContentHasBeenSet;
+                    std::string m_operator;
+                    bool m_operatorHasBeenSet;
 
                     /**
                      * The rule ID, which is only used as an output parameter.
@@ -231,6 +311,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
+
+                    /**
+                     * The rule name.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_ruleName;
+                    bool m_ruleNameHasBeenSet;
+
+                    /**
+                     * Matching content. It’s not required when `Operator` is `is_emty` or `not_exists`. 
+                     */
+                    std::string m_matchContent;
+                    bool m_matchContentHasBeenSet;
 
                 };
             }

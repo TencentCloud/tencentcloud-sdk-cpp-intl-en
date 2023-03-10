@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/dts/v20211206/model/CompareObject.h>
+#include <tencentcloud/dts/v20211206/model/CompareOptions.h>
 
 
 namespace TencentCloud
@@ -44,14 +45,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Migration task ID
-                     * @return JobId Migration task ID
+                     * 获取Task ID
+                     * @return JobId Task ID
                      */
                     std::string GetJobId() const;
 
                     /**
-                     * 设置Migration task ID
-                     * @param JobId Migration task ID
+                     * 设置Task ID
+                     * @param JobId Task ID
                      */
                     void SetJobId(const std::string& _jobId);
 
@@ -98,14 +99,14 @@ namespace TencentCloud
                     bool TaskNameHasBeenSet() const;
 
                     /**
-                     * 获取Data comparison object mode. Valid values: `sameAsMigrate` (all migration objects); `custom` (custom mode). Default value: `sameAsMigrate`.
-                     * @return ObjectMode Data comparison object mode. Valid values: `sameAsMigrate` (all migration objects); `custom` (custom mode). Default value: `sameAsMigrate`.
+                     * 获取Data comparison object mode. Valid values: `sameAsMigrate` (All migration objects), `custom` (Custom mode. The custom comparison objects must be a subset of the migration objects). Default value: `sameAsMigrate`.
+                     * @return ObjectMode Data comparison object mode. Valid values: `sameAsMigrate` (All migration objects), `custom` (Custom mode. The custom comparison objects must be a subset of the migration objects). Default value: `sameAsMigrate`.
                      */
                     std::string GetObjectMode() const;
 
                     /**
-                     * 设置Data comparison object mode. Valid values: `sameAsMigrate` (all migration objects); `custom` (custom mode). Default value: `sameAsMigrate`.
-                     * @param ObjectMode Data comparison object mode. Valid values: `sameAsMigrate` (all migration objects); `custom` (custom mode). Default value: `sameAsMigrate`.
+                     * 设置Data comparison object mode. Valid values: `sameAsMigrate` (All migration objects), `custom` (Custom mode. The custom comparison objects must be a subset of the migration objects). Default value: `sameAsMigrate`.
+                     * @param ObjectMode Data comparison object mode. Valid values: `sameAsMigrate` (All migration objects), `custom` (Custom mode. The custom comparison objects must be a subset of the migration objects). Default value: `sameAsMigrate`.
                      */
                     void SetObjectMode(const std::string& _objectMode);
 
@@ -133,10 +134,28 @@ namespace TencentCloud
                      */
                     bool ObjectsHasBeenSet() const;
 
+                    /**
+                     * 获取Consistency check options
+                     * @return Options Consistency check options
+                     */
+                    CompareOptions GetOptions() const;
+
+                    /**
+                     * 设置Consistency check options
+                     * @param Options Consistency check options
+                     */
+                    void SetOptions(const CompareOptions& _options);
+
+                    /**
+                     * 判断参数 Options 是否已赋值
+                     * @return Options 是否已赋值
+                     */
+                    bool OptionsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Migration task ID
+                     * Task ID
                      */
                     std::string m_jobId;
                     bool m_jobIdHasBeenSet;
@@ -154,7 +173,7 @@ namespace TencentCloud
                     bool m_taskNameHasBeenSet;
 
                     /**
-                     * Data comparison object mode. Valid values: `sameAsMigrate` (all migration objects); `custom` (custom mode). Default value: `sameAsMigrate`.
+                     * Data comparison object mode. Valid values: `sameAsMigrate` (All migration objects), `custom` (Custom mode. The custom comparison objects must be a subset of the migration objects). Default value: `sameAsMigrate`.
                      */
                     std::string m_objectMode;
                     bool m_objectModeHasBeenSet;
@@ -164,6 +183,12 @@ namespace TencentCloud
                      */
                     CompareObject m_objects;
                     bool m_objectsHasBeenSet;
+
+                    /**
+                     * Consistency check options
+                     */
+                    CompareOptions m_options;
+                    bool m_optionsHasBeenSet;
 
                 };
             }

@@ -98,25 +98,21 @@ namespace TencentCloud
 
                     /**
                      * 获取Certificate configuration. Values:
-<li>`none`: Off</li>
+<li>`none`: (Default) Do not configure</li>
 <li>`hosting`: Managed SSL certificate</li>
-<li>`apply`: Free certificate</li>Default value: none
                      * @return CertType Certificate configuration. Values:
-<li>`none`: Off</li>
+<li>`none`: (Default) Do not configure</li>
 <li>`hosting`: Managed SSL certificate</li>
-<li>`apply`: Free certificate</li>Default value: none
                      */
                     std::string GetCertType() const;
 
                     /**
                      * 设置Certificate configuration. Values:
-<li>`none`: Off</li>
+<li>`none`: (Default) Do not configure</li>
 <li>`hosting`: Managed SSL certificate</li>
-<li>`apply`: Free certificate</li>Default value: none
                      * @param CertType Certificate configuration. Values:
-<li>`none`: Off</li>
+<li>`none`: (Default) Do not configure</li>
 <li>`hosting`: Managed SSL certificate</li>
-<li>`apply`: Free certificate</li>Default value: none
                      */
                     void SetCertType(const std::string& _certType);
 
@@ -166,9 +162,8 @@ namespace TencentCloud
 
                     /**
                      * Certificate configuration. Values:
-<li>`none`: Off</li>
+<li>`none`: (Default) Do not configure</li>
 <li>`hosting`: Managed SSL certificate</li>
-<li>`apply`: Free certificate</li>Default value: none
                      */
                     std::string m_certType;
                     bool m_certTypeHasBeenSet;

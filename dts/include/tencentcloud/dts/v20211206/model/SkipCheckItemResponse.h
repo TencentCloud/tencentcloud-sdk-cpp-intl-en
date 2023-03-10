@@ -44,8 +44,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Message 
+                     * 获取Message prompted for skipping the check item
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Message Message prompted for skipping the check item
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetMessage() const;
 
@@ -58,7 +60,8 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Message prompted for skipping the check item
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;

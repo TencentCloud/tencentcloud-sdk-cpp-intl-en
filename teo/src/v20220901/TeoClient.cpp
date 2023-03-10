@@ -1158,6 +1158,49 @@ TeoClient::DescribeContentQuotaOutcomeCallable TeoClient::DescribeContentQuotaCa
     return task->get_future();
 }
 
+TeoClient::DescribeDDoSAttackDataOutcome TeoClient::DescribeDDoSAttackData(const DescribeDDoSAttackDataRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDDoSAttackData");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDDoSAttackDataResponse rsp = DescribeDDoSAttackDataResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDDoSAttackDataOutcome(rsp);
+        else
+            return DescribeDDoSAttackDataOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDDoSAttackDataOutcome(outcome.GetError());
+    }
+}
+
+void TeoClient::DescribeDDoSAttackDataAsync(const DescribeDDoSAttackDataRequest& request, const DescribeDDoSAttackDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeDDoSAttackData(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TeoClient::DescribeDDoSAttackDataOutcomeCallable TeoClient::DescribeDDoSAttackDataCallable(const DescribeDDoSAttackDataRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeDDoSAttackDataOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeDDoSAttackData(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 TeoClient::DescribeDDoSAttackTopDataOutcome TeoClient::DescribeDDoSAttackTopData(const DescribeDDoSAttackTopDataRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeDDoSAttackTopData");
@@ -1495,6 +1538,49 @@ TeoClient::DescribeOriginGroupOutcomeCallable TeoClient::DescribeOriginGroupCall
         [this, request]()
         {
             return this->DescribeOriginGroup(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TeoClient::DescribeOriginProtectionOutcome TeoClient::DescribeOriginProtection(const DescribeOriginProtectionRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeOriginProtection");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeOriginProtectionResponse rsp = DescribeOriginProtectionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeOriginProtectionOutcome(rsp);
+        else
+            return DescribeOriginProtectionOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeOriginProtectionOutcome(outcome.GetError());
+    }
+}
+
+void TeoClient::DescribeOriginProtectionAsync(const DescribeOriginProtectionRequest& request, const DescribeOriginProtectionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeOriginProtection(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TeoClient::DescribeOriginProtectionOutcomeCallable TeoClient::DescribeOriginProtectionCallable(const DescribeOriginProtectionRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeOriginProtectionOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeOriginProtection(request);
         }
     );
 
@@ -3387,6 +3473,49 @@ TeoClient::ReclaimZoneOutcomeCallable TeoClient::ReclaimZoneCallable(const Recla
         [this, request]()
         {
             return this->ReclaimZone(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+TeoClient::UpdateOriginProtectionIPWhitelistOutcome TeoClient::UpdateOriginProtectionIPWhitelist(const UpdateOriginProtectionIPWhitelistRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateOriginProtectionIPWhitelist");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateOriginProtectionIPWhitelistResponse rsp = UpdateOriginProtectionIPWhitelistResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateOriginProtectionIPWhitelistOutcome(rsp);
+        else
+            return UpdateOriginProtectionIPWhitelistOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateOriginProtectionIPWhitelistOutcome(outcome.GetError());
+    }
+}
+
+void TeoClient::UpdateOriginProtectionIPWhitelistAsync(const UpdateOriginProtectionIPWhitelistRequest& request, const UpdateOriginProtectionIPWhitelistAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->UpdateOriginProtectionIPWhitelist(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+TeoClient::UpdateOriginProtectionIPWhitelistOutcomeCallable TeoClient::UpdateOriginProtectionIPWhitelistCallable(const UpdateOriginProtectionIPWhitelistRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<UpdateOriginProtectionIPWhitelistOutcome()>>(
+        [this, request]()
+        {
+            return this->UpdateOriginProtectionIPWhitelist(request);
         }
     );
 

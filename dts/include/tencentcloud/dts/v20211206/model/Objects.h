@@ -115,14 +115,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AdvancedObjectsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OnlineDDL 
+                     * 获取A redundant field that specifies the online DDL type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return OnlineDDL A redundant field that specifies the online DDL type
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     OnlineDDL GetOnlineDDL() const;
 
                     /**
-                     * 设置
-                     * @param OnlineDDL 
+                     * 设置A redundant field that specifies the online DDL type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param OnlineDDL A redundant field that specifies the online DDL type
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetOnlineDDL(const OnlineDDL& _onlineDDL);
 
@@ -156,7 +160,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_advancedObjectsHasBeenSet;
 
                     /**
-                     * 
+                     * A redundant field that specifies the online DDL type
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     OnlineDDL m_onlineDDL;
                     bool m_onlineDDLHasBeenSet;

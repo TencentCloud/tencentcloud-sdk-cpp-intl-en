@@ -224,6 +224,102 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool AttackContentHasBeenSet() const;
 
+                    /**
+                     * 获取The rule type. Values:
+<li>`waf`: Tencent Cloud-managed rule</li>
+<li>`acl`: Custom rule</li>
+<li>`rate`: Rate limiting rule</li>
+<li>`bot`: Bot rule</li>
+                     * @return RuleType The rule type. Values:
+<li>`waf`: Tencent Cloud-managed rule</li>
+<li>`acl`: Custom rule</li>
+<li>`rate`: Rate limiting rule</li>
+<li>`bot`: Bot rule</li>
+                     */
+                    std::string GetRuleType() const;
+
+                    /**
+                     * 设置The rule type. Values:
+<li>`waf`: Tencent Cloud-managed rule</li>
+<li>`acl`: Custom rule</li>
+<li>`rate`: Rate limiting rule</li>
+<li>`bot`: Bot rule</li>
+                     * @param RuleType The rule type. Values:
+<li>`waf`: Tencent Cloud-managed rule</li>
+<li>`acl`: Custom rule</li>
+<li>`rate`: Rate limiting rule</li>
+<li>`bot`: Bot rule</li>
+                     */
+                    void SetRuleType(const std::string& _ruleType);
+
+                    /**
+                     * 判断参数 RuleType 是否已赋值
+                     * @return RuleType 是否已赋值
+                     */
+                    bool RuleTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable the rule
+                     * @return RuleEnabled Whether to enable the rule
+                     */
+                    bool GetRuleEnabled() const;
+
+                    /**
+                     * 设置Whether to enable the rule
+                     * @param RuleEnabled Whether to enable the rule
+                     */
+                    void SetRuleEnabled(const bool& _ruleEnabled);
+
+                    /**
+                     * 判断参数 RuleEnabled 是否已赋值
+                     * @return RuleEnabled 是否已赋值
+                     */
+                    bool RuleEnabledHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the rule is deleted. Values: 
+<li>`true`: The rule has been deleted (does not exist).</li>
+<li>`false`: The rule is not deleted (exists).</li>
+                     * @return RuleDeleted Whether the rule is deleted. Values: 
+<li>`true`: The rule has been deleted (does not exist).</li>
+<li>`false`: The rule is not deleted (exists).</li>
+                     */
+                    bool GetRuleDeleted() const;
+
+                    /**
+                     * 设置Whether the rule is deleted. Values: 
+<li>`true`: The rule has been deleted (does not exist).</li>
+<li>`false`: The rule is not deleted (exists).</li>
+                     * @param RuleDeleted Whether the rule is deleted. Values: 
+<li>`true`: The rule has been deleted (does not exist).</li>
+<li>`false`: The rule is not deleted (exists).</li>
+                     */
+                    void SetRuleDeleted(const bool& _ruleDeleted);
+
+                    /**
+                     * 判断参数 RuleDeleted 是否已赋值
+                     * @return RuleDeleted 是否已赋值
+                     */
+                    bool RuleDeletedHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable alerting for this rule
+                     * @return AlarmEnabled Whether to enable alerting for this rule
+                     */
+                    bool GetAlarmEnabled() const;
+
+                    /**
+                     * 设置Whether to enable alerting for this rule
+                     * @param AlarmEnabled Whether to enable alerting for this rule
+                     */
+                    void SetAlarmEnabled(const bool& _alarmEnabled);
+
+                    /**
+                     * 判断参数 AlarmEnabled 是否已赋值
+                     * @return AlarmEnabled 是否已赋值
+                     */
+                    bool AlarmEnabledHasBeenSet() const;
+
                 private:
 
                     /**
@@ -280,6 +376,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_attackContent;
                     bool m_attackContentHasBeenSet;
+
+                    /**
+                     * The rule type. Values:
+<li>`waf`: Tencent Cloud-managed rule</li>
+<li>`acl`: Custom rule</li>
+<li>`rate`: Rate limiting rule</li>
+<li>`bot`: Bot rule</li>
+                     */
+                    std::string m_ruleType;
+                    bool m_ruleTypeHasBeenSet;
+
+                    /**
+                     * Whether to enable the rule
+                     */
+                    bool m_ruleEnabled;
+                    bool m_ruleEnabledHasBeenSet;
+
+                    /**
+                     * Whether the rule is deleted. Values: 
+<li>`true`: The rule has been deleted (does not exist).</li>
+<li>`false`: The rule is not deleted (exists).</li>
+                     */
+                    bool m_ruleDeleted;
+                    bool m_ruleDeletedHasBeenSet;
+
+                    /**
+                     * Whether to enable alerting for this rule
+                     */
+                    bool m_alarmEnabled;
+                    bool m_alarmEnabledHasBeenSet;
 
                 };
             }
