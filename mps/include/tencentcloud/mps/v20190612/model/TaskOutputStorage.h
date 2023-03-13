@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mps/v20190612/model/CosOutputStorage.h>
+#include <tencentcloud/mps/v20190612/model/S3OutputStorage.h>
 
 
 namespace TencentCloud
@@ -48,14 +49,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The type of storage location for the media processing output object. Only COS is supported currently.
-                     * @return Type The type of storage location for the media processing output object. Only COS is supported currently.
+                     * 获取The storage type for a media processing output file. Valid values:
+<li>`COS`: Tencent Cloud COS</li>
+<li>`>AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
+                     * @return Type The storage type for a media processing output file. Valid values:
+<li>`COS`: Tencent Cloud COS</li>
+<li>`>AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The type of storage location for the media processing output object. Only COS is supported currently.
-                     * @param Type The type of storage location for the media processing output object. Only COS is supported currently.
+                     * 设置The storage type for a media processing output file. Valid values:
+<li>`COS`: Tencent Cloud COS</li>
+<li>`>AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
+                     * @param Type The storage type for a media processing output file. Valid values:
+<li>`COS`: Tencent Cloud COS</li>
+<li>`>AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
                      */
                     void SetType(const std::string& _type);
 
@@ -87,10 +96,34 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool CosOutputStorageHasBeenSet() const;
 
+                    /**
+                     * 获取The AWS S3 bucket to save the output file. This parameter is required if `Type` is `AWS-S3`.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return S3OutputStorage The AWS S3 bucket to save the output file. This parameter is required if `Type` is `AWS-S3`.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    S3OutputStorage GetS3OutputStorage() const;
+
+                    /**
+                     * 设置The AWS S3 bucket to save the output file. This parameter is required if `Type` is `AWS-S3`.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param S3OutputStorage The AWS S3 bucket to save the output file. This parameter is required if `Type` is `AWS-S3`.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    void SetS3OutputStorage(const S3OutputStorage& _s3OutputStorage);
+
+                    /**
+                     * 判断参数 S3OutputStorage 是否已赋值
+                     * @return S3OutputStorage 是否已赋值
+                     */
+                    bool S3OutputStorageHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The type of storage location for the media processing output object. Only COS is supported currently.
+                     * The storage type for a media processing output file. Valid values:
+<li>`COS`: Tencent Cloud COS</li>
+<li>`>AWS-S3`: AWS S3. This type is only supported for AWS tasks, and the output bucket must be in the same region as the bucket of the source file.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -101,6 +134,13 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     CosOutputStorage m_cosOutputStorage;
                     bool m_cosOutputStorageHasBeenSet;
+
+                    /**
+                     * The AWS S3 bucket to save the output file. This parameter is required if `Type` is `AWS-S3`.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    S3OutputStorage m_s3OutputStorage;
+                    bool m_s3OutputStorageHasBeenSet;
 
                 };
             }

@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/mps/v20190612/model/AwsSQS.h>
 
 
 namespace TencentCloud
@@ -142,12 +143,14 @@ namespace TencentCloud
 <li>`TDMQ-CMQ`: Message queue</li>
 <li>`URL`: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
 <li>`SCF`: This notification type is not recommended. You need to configure it in the SCF console.</li>
+<li>`AWS-SQS`: AWS queue. This type is only supported for AWS tasks, and the queue must be in the same region as the AWS bucket.</li>
 <font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
                      * @return NotifyType The notification type. Valid values:
 <li>`CMQ`: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
 <li>`TDMQ-CMQ`: Message queue</li>
 <li>`URL`: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
 <li>`SCF`: This notification type is not recommended. You need to configure it in the SCF console.</li>
+<li>`AWS-SQS`: AWS queue. This type is only supported for AWS tasks, and the queue must be in the same region as the AWS bucket.</li>
 <font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
                      */
                     std::string GetNotifyType() const;
@@ -158,12 +161,14 @@ namespace TencentCloud
 <li>`TDMQ-CMQ`: Message queue</li>
 <li>`URL`: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
 <li>`SCF`: This notification type is not recommended. You need to configure it in the SCF console.</li>
+<li>`AWS-SQS`: AWS queue. This type is only supported for AWS tasks, and the queue must be in the same region as the AWS bucket.</li>
 <font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
                      * @param NotifyType The notification type. Valid values:
 <li>`CMQ`: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
 <li>`TDMQ-CMQ`: Message queue</li>
 <li>`URL`: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
 <li>`SCF`: This notification type is not recommended. You need to configure it in the SCF console.</li>
+<li>`AWS-SQS`: AWS queue. This type is only supported for AWS tasks, and the queue must be in the same region as the AWS bucket.</li>
 <font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
                      */
                     void SetNotifyType(const std::string& _notifyType);
@@ -191,6 +196,32 @@ namespace TencentCloud
                      * @return NotifyUrl 是否已赋值
                      */
                     bool NotifyUrlHasBeenSet() const;
+
+                    /**
+                     * 获取The AWS SQS queue. This parameter is required if `NotifyType` is `AWS-SQS`.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AwsSQS The AWS SQS queue. This parameter is required if `NotifyType` is `AWS-SQS`.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    AwsSQS GetAwsSQS() const;
+
+                    /**
+                     * 设置The AWS SQS queue. This parameter is required if `NotifyType` is `AWS-SQS`.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param AwsSQS The AWS SQS queue. This parameter is required if `NotifyType` is `AWS-SQS`.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetAwsSQS(const AwsSQS& _awsSQS);
+
+                    /**
+                     * 判断参数 AwsSQS 是否已赋值
+                     * @return AwsSQS 是否已赋值
+                     */
+                    bool AwsSQSHasBeenSet() const;
 
                 private:
 
@@ -230,6 +261,7 @@ namespace TencentCloud
 <li>`TDMQ-CMQ`: Message queue</li>
 <li>`URL`: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
 <li>`SCF`: This notification type is not recommended. You need to configure it in the SCF console.</li>
+<li>`AWS-SQS`: AWS queue. This type is only supported for AWS tasks, and the queue must be in the same region as the AWS bucket.</li>
 <font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
                      */
                     std::string m_notifyType;
@@ -240,6 +272,14 @@ namespace TencentCloud
                      */
                     std::string m_notifyUrl;
                     bool m_notifyUrlHasBeenSet;
+
+                    /**
+                     * The AWS SQS queue. This parameter is required if `NotifyType` is `AWS-SQS`.
+
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    AwsSQS m_awsSQS;
+                    bool m_awsSQSHasBeenSet;
 
                 };
             }

@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mps/v20190612/model/CosInputInfo.h>
 #include <tencentcloud/mps/v20190612/model/UrlInputInfo.h>
+#include <tencentcloud/mps/v20190612/model/S3InputInfo.h>
 
 
 namespace TencentCloud
@@ -49,14 +50,26 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The input type, which can be `COS` or `URL`.
-                     * @return Type The input type, which can be `COS` or `URL`.
+                     * 获取The input type. Valid values:
+<li>`COS`: A COS bucket address.</li>
+<li> `URL`: A URL.</li>
+<li> `AWS-S3`: An AWS S3 bucket address. Currently, this type is only supported for transcoding tasks.</li>
+                     * @return Type The input type. Valid values:
+<li>`COS`: A COS bucket address.</li>
+<li> `URL`: A URL.</li>
+<li> `AWS-S3`: An AWS S3 bucket address. Currently, this type is only supported for transcoding tasks.</li>
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The input type, which can be `COS` or `URL`.
-                     * @param Type The input type, which can be `COS` or `URL`.
+                     * 设置The input type. Valid values:
+<li>`COS`: A COS bucket address.</li>
+<li> `URL`: A URL.</li>
+<li> `AWS-S3`: An AWS S3 bucket address. Currently, this type is only supported for transcoding tasks.</li>
+                     * @param Type The input type. Valid values:
+<li>`COS`: A COS bucket address.</li>
+<li> `URL`: A URL.</li>
+<li> `AWS-S3`: An AWS S3 bucket address. Currently, this type is only supported for transcoding tasks.</li>
                      */
                     void SetType(const std::string& _type);
 
@@ -106,10 +119,35 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     bool UrlInputInfoHasBeenSet() const;
 
+                    /**
+                     * 获取The information of the AWS S3 object processed. This parameter is required if `Type` is `AWS-S3`.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return S3InputInfo The information of the AWS S3 object processed. This parameter is required if `Type` is `AWS-S3`.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    S3InputInfo GetS3InputInfo() const;
+
+                    /**
+                     * 设置The information of the AWS S3 object processed. This parameter is required if `Type` is `AWS-S3`.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param S3InputInfo The information of the AWS S3 object processed. This parameter is required if `Type` is `AWS-S3`.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    void SetS3InputInfo(const S3InputInfo& _s3InputInfo);
+
+                    /**
+                     * 判断参数 S3InputInfo 是否已赋值
+                     * @return S3InputInfo 是否已赋值
+                     */
+                    bool S3InputInfoHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The input type, which can be `COS` or `URL`.
+                     * The input type. Valid values:
+<li>`COS`: A COS bucket address.</li>
+<li> `URL`: A URL.</li>
+<li> `AWS-S3`: An AWS S3 bucket address. Currently, this type is only supported for transcoding tasks.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -126,6 +164,13 @@ Note: This field may return null, indicating that no valid value can be obtained
                      */
                     UrlInputInfo m_urlInputInfo;
                     bool m_urlInputInfoHasBeenSet;
+
+                    /**
+                     * The information of the AWS S3 object processed. This parameter is required if `Type` is `AWS-S3`.
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    S3InputInfo m_s3InputInfo;
+                    bool m_s3InputInfoHasBeenSet;
 
                 };
             }

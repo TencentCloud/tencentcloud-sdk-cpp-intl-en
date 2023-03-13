@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mps/v20190612/model/CosFileUploadTrigger.h>
+#include <tencentcloud/mps/v20190612/model/AwsS3FileUploadTrigger.h>
 
 
 namespace TencentCloud
@@ -48,14 +49,30 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Trigger type. Only `CosFileUpload` is supported currently.
-                     * @return Type Trigger type. Only `CosFileUpload` is supported currently.
+                     * 获取The trigger type. Valid values:
+<li>`CosFileUpload`: Tencent Cloud COS trigger.</li>
+<li>`AwsS3FileUpload`: AWS S3 trigger. Currently, this type is only supported for transcoding tasks and schemes (not supported for workflows).</li>
+
+
+                     * @return Type The trigger type. Valid values:
+<li>`CosFileUpload`: Tencent Cloud COS trigger.</li>
+<li>`AwsS3FileUpload`: AWS S3 trigger. Currently, this type is only supported for transcoding tasks and schemes (not supported for workflows).</li>
+
+
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Trigger type. Only `CosFileUpload` is supported currently.
-                     * @param Type Trigger type. Only `CosFileUpload` is supported currently.
+                     * 设置The trigger type. Valid values:
+<li>`CosFileUpload`: Tencent Cloud COS trigger.</li>
+<li>`AwsS3FileUpload`: AWS S3 trigger. Currently, this type is only supported for transcoding tasks and schemes (not supported for workflows).</li>
+
+
+                     * @param Type The trigger type. Valid values:
+<li>`CosFileUpload`: Tencent Cloud COS trigger.</li>
+<li>`AwsS3FileUpload`: AWS S3 trigger. Currently, this type is only supported for transcoding tasks and schemes (not supported for workflows).</li>
+
+
                      */
                     void SetType(const std::string& _type);
 
@@ -87,10 +104,44 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool CosFileUploadTriggerHasBeenSet() const;
 
+                    /**
+                     * 获取The AWS S3 trigger. This parameter is valid and required if `Type` is `AwsS3FileUpload`.
+
+Note: Currently, the key for the AWS S3 bucket, the trigger SQS queue, and the callback SQS queue must be the same.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AwsS3FileUploadTrigger The AWS S3 trigger. This parameter is valid and required if `Type` is `AwsS3FileUpload`.
+
+Note: Currently, the key for the AWS S3 bucket, the trigger SQS queue, and the callback SQS queue must be the same.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    AwsS3FileUploadTrigger GetAwsS3FileUploadTrigger() const;
+
+                    /**
+                     * 设置The AWS S3 trigger. This parameter is valid and required if `Type` is `AwsS3FileUpload`.
+
+Note: Currently, the key for the AWS S3 bucket, the trigger SQS queue, and the callback SQS queue must be the same.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param AwsS3FileUploadTrigger The AWS S3 trigger. This parameter is valid and required if `Type` is `AwsS3FileUpload`.
+
+Note: Currently, the key for the AWS S3 bucket, the trigger SQS queue, and the callback SQS queue must be the same.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetAwsS3FileUploadTrigger(const AwsS3FileUploadTrigger& _awsS3FileUploadTrigger);
+
+                    /**
+                     * 判断参数 AwsS3FileUploadTrigger 是否已赋值
+                     * @return AwsS3FileUploadTrigger 是否已赋值
+                     */
+                    bool AwsS3FileUploadTriggerHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Trigger type. Only `CosFileUpload` is supported currently.
+                     * The trigger type. Valid values:
+<li>`CosFileUpload`: Tencent Cloud COS trigger.</li>
+<li>`AwsS3FileUpload`: AWS S3 trigger. Currently, this type is only supported for transcoding tasks and schemes (not supported for workflows).</li>
+
+
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -101,6 +152,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     CosFileUploadTrigger m_cosFileUploadTrigger;
                     bool m_cosFileUploadTriggerHasBeenSet;
+
+                    /**
+                     * The AWS S3 trigger. This parameter is valid and required if `Type` is `AwsS3FileUpload`.
+
+Note: Currently, the key for the AWS S3 bucket, the trigger SQS queue, and the callback SQS queue must be the same.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    AwsS3FileUploadTrigger m_awsS3FileUploadTrigger;
+                    bool m_awsS3FileUploadTriggerHasBeenSet;
 
                 };
             }
