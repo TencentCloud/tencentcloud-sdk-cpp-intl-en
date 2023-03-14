@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool CertNameHasBeenSet() const;
 
                     /**
-                     * 获取Public key of the uploaded certificate. It's required if `CertId` is not specified.
-                     * @return CertContent Public key of the uploaded certificate. It's required if `CertId` is not specified.
+                     * 获取Public key of the uploaded certificate. This is required if `CertId` is not specified.
+                     * @return CertContent Public key of the uploaded certificate. This is required if `CertId` is not specified.
                      */
                     std::string GetCertContent() const;
 
                     /**
-                     * 设置Public key of the uploaded certificate. It's required if `CertId` is not specified.
-                     * @param CertContent Public key of the uploaded certificate. It's required if `CertId` is not specified.
+                     * 设置Public key of the uploaded certificate. This is required if `CertId` is not specified.
+                     * @param CertContent Public key of the uploaded certificate. This is required if `CertId` is not specified.
                      */
                     void SetCertContent(const std::string& _certContent);
 
@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool CertContentHasBeenSet() const;
 
                     /**
-                     * 获取Private key of the uploaded server certificate. It's required if `CertId` is not specified.
-                     * @return CertKey Private key of the uploaded server certificate. It's required if `CertId` is not specified.
+                     * 获取Private key of the uploaded server certificate. This is required if `CertId` is not specified.
+                     * @return CertKey Private key of the uploaded server certificate. This is required if `CertId` is not specified.
                      */
                     std::string GetCertKey() const;
 
                     /**
-                     * 设置Private key of the uploaded server certificate. It's required if `CertId` is not specified.
-                     * @param CertKey Private key of the uploaded server certificate. It's required if `CertId` is not specified.
+                     * 设置Private key of the uploaded server certificate. This is required if `CertId` is not specified.
+                     * @param CertKey Private key of the uploaded server certificate. This is required if `CertId` is not specified.
                      */
                     void SetCertKey(const std::string& _certKey);
 
@@ -133,13 +133,13 @@ namespace TencentCloud
                     bool m_certNameHasBeenSet;
 
                     /**
-                     * Public key of the uploaded certificate. It's required if `CertId` is not specified.
+                     * Public key of the uploaded certificate. This is required if `CertId` is not specified.
                      */
                     std::string m_certContent;
                     bool m_certContentHasBeenSet;
 
                     /**
-                     * Private key of the uploaded server certificate. It's required if `CertId` is not specified.
+                     * Private key of the uploaded server certificate. This is required if `CertId` is not specified.
                      */
                     std::string m_certKey;
                     bool m_certKeyHasBeenSet;

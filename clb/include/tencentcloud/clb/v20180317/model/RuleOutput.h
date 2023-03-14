@@ -490,6 +490,28 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool DomainsHasBeenSet() const;
 
+                    /**
+                     * 获取List of bound target groups
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return TargetGroupList List of bound target groups
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<BasicTargetGroupInfo> GetTargetGroupList() const;
+
+                    /**
+                     * 设置List of bound target groups
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param TargetGroupList List of bound target groups
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetTargetGroupList(const std::vector<BasicTargetGroupInfo>& _targetGroupList);
+
+                    /**
+                     * 判断参数 TargetGroupList 是否已赋值
+                     * @return TargetGroupList 是否已赋值
+                     */
+                    bool TargetGroupListHasBeenSet() const;
+
                 private:
 
                     /**
@@ -634,6 +656,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     std::vector<std::string> m_domains;
                     bool m_domainsHasBeenSet;
+
+                    /**
+                     * List of bound target groups
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<BasicTargetGroupInfo> m_targetGroupList;
+                    bool m_targetGroupListHasBeenSet;
 
                 };
             }

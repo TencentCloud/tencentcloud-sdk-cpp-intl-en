@@ -798,6 +798,90 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool DomainsHasBeenSet() const;
 
+                    /**
+                     * 获取The secondary zone of multi-AZ CLB instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return SlaveZone The secondary zone of multi-AZ CLB instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> GetSlaveZone() const;
+
+                    /**
+                     * 设置The secondary zone of multi-AZ CLB instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param SlaveZone The secondary zone of multi-AZ CLB instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetSlaveZone(const std::vector<std::string>& _slaveZone);
+
+                    /**
+                     * 判断参数 SlaveZone 是否已赋值
+                     * @return SlaveZone 是否已赋值
+                     */
+                    bool SlaveZoneHasBeenSet() const;
+
+                    /**
+                     * 获取The AZ of private CLB instance. This is only available for beta users.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Zones The AZ of private CLB instance. This is only available for beta users.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> GetZones() const;
+
+                    /**
+                     * 设置The AZ of private CLB instance. This is only available for beta users.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param Zones The AZ of private CLB instance. This is only available for beta users.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetZones(const std::vector<std::string>& _zones);
+
+                    /**
+                     * 判断参数 Zones 是否已赋值
+                     * @return Zones 是否已赋值
+                     */
+                    bool ZonesHasBeenSet() const;
+
+                    /**
+                     * 获取Whether SNI is enabled. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return SniSwitch Whether SNI is enabled. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetSniSwitch() const;
+
+                    /**
+                     * 设置Whether SNI is enabled. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param SniSwitch Whether SNI is enabled. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetSniSwitch(const int64_t& _sniSwitch);
+
+                    /**
+                     * 判断参数 SniSwitch 是否已赋值
+                     * @return SniSwitch 是否已赋值
+                     */
+                    bool SniSwitchHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return LoadBalancerDomain 
+                     */
+                    std::string GetLoadBalancerDomain() const;
+
+                    /**
+                     * 设置
+                     * @param LoadBalancerDomain 
+                     */
+                    void SetLoadBalancerDomain(const std::string& _loadBalancerDomain);
+
+                    /**
+                     * 判断参数 LoadBalancerDomain 是否已赋值
+                     * @return LoadBalancerDomain 是否已赋值
+                     */
+                    bool LoadBalancerDomainHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1037,6 +1121,33 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_domains;
                     bool m_domainsHasBeenSet;
+
+                    /**
+                     * The secondary zone of multi-AZ CLB instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_slaveZone;
+                    bool m_slaveZoneHasBeenSet;
+
+                    /**
+                     * The AZ of private CLB instance. This is only available for beta users.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_zones;
+                    bool m_zonesHasBeenSet;
+
+                    /**
+                     * Whether SNI is enabled. This parameter is only meaningful for HTTPS listeners.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_sniSwitch;
+                    bool m_sniSwitchHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_loadBalancerDomain;
+                    bool m_loadBalancerDomainHasBeenSet;
 
                 };
             }

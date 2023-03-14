@@ -156,6 +156,28 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool LocalZoneHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the AZ is an edge zone. Values: `true`, `false`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return EdgeZone Whether the AZ is an edge zone. Values: `true`, `false`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool GetEdgeZone() const;
+
+                    /**
+                     * 设置Whether the AZ is an edge zone. Values: `true`, `false`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param EdgeZone Whether the AZ is an edge zone. Values: `true`, `false`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetEdgeZone(const bool& _edgeZone);
+
+                    /**
+                     * 判断参数 EdgeZone 是否已赋值
+                     * @return EdgeZone 是否已赋值
+                     */
+                    bool EdgeZoneHasBeenSet() const;
+
                 private:
 
                     /**
@@ -192,6 +214,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool m_localZone;
                     bool m_localZoneHasBeenSet;
+
+                    /**
+                     * Whether the AZ is an edge zone. Values: `true`, `false`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool m_edgeZone;
+                    bool m_edgeZoneHasBeenSet;
 
                 };
             }

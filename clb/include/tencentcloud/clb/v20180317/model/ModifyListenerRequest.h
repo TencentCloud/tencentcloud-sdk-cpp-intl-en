@@ -284,14 +284,14 @@ They represent weighted round robin and least connections, respectively. Default
                     bool MultiCertInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MaxConn 
+                     * 获取Maximum number of listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
+                     * @return MaxConn Maximum number of listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
                      */
                     int64_t GetMaxConn() const;
 
                     /**
-                     * 设置
-                     * @param MaxConn 
+                     * 设置Maximum number of listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
+                     * @param MaxConn Maximum number of listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
                      */
                     void SetMaxConn(const int64_t& _maxConn);
 
@@ -302,14 +302,14 @@ They represent weighted round robin and least connections, respectively. Default
                     bool MaxConnHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MaxCps 
+                     * 获取Maximum number of listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
+                     * @return MaxCps Maximum number of listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
                      */
                     int64_t GetMaxCps() const;
 
                     /**
-                     * 设置
-                     * @param MaxCps 
+                     * 设置Maximum number of listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
+                     * @param MaxCps Maximum number of listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
                      */
                     void SetMaxCps(const int64_t& _maxCps);
 
@@ -401,13 +401,13 @@ They represent weighted round robin and least connections, respectively. Default
                     bool m_multiCertInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Maximum number of listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
                      */
                     int64_t m_maxConn;
                     bool m_maxConnHasBeenSet;
 
                     /**
-                     * 
+                     * Maximum number of listener connections. It’s available for TCP/UDP/TCP_SSL/QUIC listeners. If it’s set to `-1` or not specified, the listener speed is not limited. 
                      */
                     int64_t m_maxCps;
                     bool m_maxCpsHasBeenSet;

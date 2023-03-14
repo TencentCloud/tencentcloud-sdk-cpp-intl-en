@@ -429,6 +429,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ElasticServiceBandwidthHasBeenSet() const;
 
+                    /**
+                     * 获取Bandwidth quota given away by Tencent Cloud
+                     * @return GiftServiceBandWidth Bandwidth quota given away by Tencent Cloud
+                     */
+                    int64_t GetGiftServiceBandWidth() const;
+
+                    /**
+                     * 设置Bandwidth quota given away by Tencent Cloud
+                     * @param GiftServiceBandWidth Bandwidth quota given away by Tencent Cloud
+                     */
+                    void SetGiftServiceBandWidth(const int64_t& _giftServiceBandWidth);
+
+                    /**
+                     * 判断参数 GiftServiceBandWidth 是否已赋值
+                     * @return GiftServiceBandWidth 是否已赋值
+                     */
+                    bool GiftServiceBandWidthHasBeenSet() const;
+
                 private:
 
                     /**
@@ -551,6 +569,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     uint64_t m_elasticServiceBandwidth;
                     bool m_elasticServiceBandwidthHasBeenSet;
+
+                    /**
+                     * Bandwidth quota given away by Tencent Cloud
+                     */
+                    int64_t m_giftServiceBandWidth;
+                    bool m_giftServiceBandWidthHasBeenSet;
 
                 };
             }

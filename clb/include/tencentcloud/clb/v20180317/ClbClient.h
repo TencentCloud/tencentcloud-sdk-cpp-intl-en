@@ -63,6 +63,8 @@
 #include <tencentcloud/clb/v20180317/model/DeleteRuleResponse.h>
 #include <tencentcloud/clb/v20180317/model/DeleteTargetGroupsRequest.h>
 #include <tencentcloud/clb/v20180317/model/DeleteTargetGroupsResponse.h>
+#include <tencentcloud/clb/v20180317/model/DeregisterFunctionTargetsRequest.h>
+#include <tencentcloud/clb/v20180317/model/DeregisterFunctionTargetsResponse.h>
 #include <tencentcloud/clb/v20180317/model/DeregisterTargetGroupInstancesRequest.h>
 #include <tencentcloud/clb/v20180317/model/DeregisterTargetGroupInstancesResponse.h>
 #include <tencentcloud/clb/v20180317/model/DeregisterTargetsRequest.h>
@@ -153,6 +155,8 @@
 #include <tencentcloud/clb/v20180317/model/ModifyTargetPortResponse.h>
 #include <tencentcloud/clb/v20180317/model/ModifyTargetWeightRequest.h>
 #include <tencentcloud/clb/v20180317/model/ModifyTargetWeightResponse.h>
+#include <tencentcloud/clb/v20180317/model/RegisterFunctionTargetsRequest.h>
+#include <tencentcloud/clb/v20180317/model/RegisterFunctionTargetsResponse.h>
 #include <tencentcloud/clb/v20180317/model/RegisterTargetGroupInstancesRequest.h>
 #include <tencentcloud/clb/v20180317/model/RegisterTargetGroupInstancesResponse.h>
 #include <tencentcloud/clb/v20180317/model/RegisterTargetsRequest.h>
@@ -243,6 +247,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteTargetGroupsResponse> DeleteTargetGroupsOutcome;
                 typedef std::future<DeleteTargetGroupsOutcome> DeleteTargetGroupsOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::DeleteTargetGroupsRequest&, DeleteTargetGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteTargetGroupsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeregisterFunctionTargetsResponse> DeregisterFunctionTargetsOutcome;
+                typedef std::future<DeregisterFunctionTargetsOutcome> DeregisterFunctionTargetsOutcomeCallable;
+                typedef std::function<void(const ClbClient*, const Model::DeregisterFunctionTargetsRequest&, DeregisterFunctionTargetsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeregisterFunctionTargetsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeregisterTargetGroupInstancesResponse> DeregisterTargetGroupInstancesOutcome;
                 typedef std::future<DeregisterTargetGroupInstancesOutcome> DeregisterTargetGroupInstancesOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::DeregisterTargetGroupInstancesRequest&, DeregisterTargetGroupInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeregisterTargetGroupInstancesAsyncHandler;
@@ -378,6 +385,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyTargetWeightResponse> ModifyTargetWeightOutcome;
                 typedef std::future<ModifyTargetWeightOutcome> ModifyTargetWeightOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::ModifyTargetWeightRequest&, ModifyTargetWeightOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyTargetWeightAsyncHandler;
+                typedef Outcome<Core::Error, Model::RegisterFunctionTargetsResponse> RegisterFunctionTargetsOutcome;
+                typedef std::future<RegisterFunctionTargetsOutcome> RegisterFunctionTargetsOutcomeCallable;
+                typedef std::function<void(const ClbClient*, const Model::RegisterFunctionTargetsRequest&, RegisterFunctionTargetsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RegisterFunctionTargetsAsyncHandler;
                 typedef Outcome<Core::Error, Model::RegisterTargetGroupInstancesResponse> RegisterTargetGroupInstancesOutcome;
                 typedef std::future<RegisterTargetGroupInstancesOutcome> RegisterTargetGroupInstancesOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::RegisterTargetGroupInstancesRequest&, RegisterTargetGroupInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RegisterTargetGroupInstancesAsyncHandler;
@@ -608,6 +618,26 @@ This is an async API. After it is returned successfully, you can call the Descri
                 DeleteTargetGroupsOutcome DeleteTargetGroups(const Model::DeleteTargetGroupsRequest &request);
                 void DeleteTargetGroupsAsync(const Model::DeleteTargetGroupsRequest& request, const DeleteTargetGroupsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteTargetGroupsOutcomeCallable DeleteTargetGroupsCallable(const Model::DeleteTargetGroupsRequest& request);
+
+                /**
+                 *This API is used to unbind a SCF function with a CLB forwarding rule. For L7 listeners, you need to specify the forwarding rule by using `LocationId` or `Domain+Url`. 
+This is an async API. After it is returned successfully, you can call the [DescribeTaskStatus](https://intl.cloud.tencent.com/document/product/214/30683?from_cn_redirect=1) API with the returned RequestID to check whether this task is successful.
+<br/>Limits: 
+
+- Binding with SCF is only available in Guangzhou, Shenzhen Finance, Shanghai, Shanghai Finance, Beijing, Chengdu, Hong Kong (China), Singapore, Mumbai, Tokyo, and Silicon Valley.
+- SCF functions can only be bound with CLB instances of bill-by-IP accounts but not with bill-by-CVM accounts. If you are using a bill-by-CVM account, we recommend upgrading it to a bill-by-IP account. For more information, please see [Checking Account Type](https://intl.cloud.tencent.com/document/product/1199/49090?from_cn_redirect=1).
+- SCF functions cannot be bound with classic CLB instances.
+- SCF functions cannot be bound with classic network-based CLB instances.
+- SCF functions in the same region can be bound with CLB instances. SCF functions can only be bound across VPCs but not regions.
+- SCF functions can only be bound with IPv4 and IPv6 NAT64 CLB instances, but currently not with IPv6 CLB instances.
+- SCF functions can only be bound with layer-7 HTTP and HTTPS listeners, but not with layer-7 QUIC listeners or layer-4 (TCP, UDP, and TCP SSL) listeners.
+- Only SCF event-triggered functions can be bound with CLB instances.
+                 * @param req DeregisterFunctionTargetsRequest
+                 * @return DeregisterFunctionTargetsOutcome
+                 */
+                DeregisterFunctionTargetsOutcome DeregisterFunctionTargets(const Model::DeregisterFunctionTargetsRequest &request);
+                void DeregisterFunctionTargetsAsync(const Model::DeregisterFunctionTargetsRequest& request, const DeregisterFunctionTargetsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeregisterFunctionTargetsOutcomeCallable DeregisterFunctionTargetsCallable(const Model::DeregisterFunctionTargetsRequest& request);
 
                 /**
                  *This API is used to unbind a server from a target group.
@@ -1028,6 +1058,25 @@ This is an async API. After it is returned successfully, you can call the Descri
                 ModifyTargetWeightOutcome ModifyTargetWeight(const Model::ModifyTargetWeightRequest &request);
                 void ModifyTargetWeightAsync(const Model::ModifyTargetWeightRequest& request, const ModifyTargetWeightAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyTargetWeightOutcomeCallable ModifyTargetWeightCallable(const Model::ModifyTargetWeightRequest& request);
+
+                /**
+                 *This API is used to bind an SCF function with the L7 forwarding rule of a CLB instance. Note that you need to create an L7 listener (HTTP, HTTPS) and forwarding rule first.
+This is an async API. After it is returned successfully, you can call the `DescribeTaskStatus` API with the returned `RequestID` as an input parameter to check whether this task is successful.<br/>
+**Limits:**
+- Binding with SCF is only available in Guangzhou, Shenzhen Finance, Shanghai, Shanghai Finance, Beijing, Chengdu, Hong Kong (China), Singapore, Mumbai, Tokyo, and Silicon Valley.
+- SCF functions can only be bound with CLB instances of bill-by-IP accounts but not with bill-by-CVM accounts. If you are using a bill-by-CVM account, we recommend upgrading it to a bill-by-IP account. For more information, please see [Checking Account Type](https://intl.cloud.tencent.com/document/product/1199/49090?from_cn_redirect=1). 
+- SCF functions cannot be bound with classic CLB instances.
+- SCF functions cannot be bound with classic network-based CLB instances.
+- SCF functions in the same region can be bound with CLB instances. SCF functions can only be bound across VPCs but not regions.
+- SCF functions can only be bound with IPv4 and IPv6 NAT64 CLB instances, but currently not with IPv6 CLB instances.
+- SCF functions can only be bound with layer-7 HTTP and HTTPS listeners, but not with layer-7 QUIC listeners or layer-4 (TCP, UDP, and TCP SSL) listeners.
+- Only SCF event-triggered functions can be bound with CLB instances.
+                 * @param req RegisterFunctionTargetsRequest
+                 * @return RegisterFunctionTargetsOutcome
+                 */
+                RegisterFunctionTargetsOutcome RegisterFunctionTargets(const Model::RegisterFunctionTargetsRequest &request);
+                void RegisterFunctionTargetsAsync(const Model::RegisterFunctionTargetsRequest& request, const RegisterFunctionTargetsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RegisterFunctionTargetsOutcomeCallable RegisterFunctionTargetsCallable(const Model::RegisterFunctionTargetsRequest& request);
 
                 /**
                  *This API is used to register servers to a target group.

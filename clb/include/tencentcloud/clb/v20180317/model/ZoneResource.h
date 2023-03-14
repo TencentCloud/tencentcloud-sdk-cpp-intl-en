@@ -163,6 +163,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool LocalZoneHasBeenSet() const;
 
+                    /**
+                     * 获取Type of resources in the zone. Values: `SHARED`, `EXCLUSIVE`
+                     * @return ZoneResourceType Type of resources in the zone. Values: `SHARED`, `EXCLUSIVE`
+                     */
+                    std::string GetZoneResourceType() const;
+
+                    /**
+                     * 设置Type of resources in the zone. Values: `SHARED`, `EXCLUSIVE`
+                     * @param ZoneResourceType Type of resources in the zone. Values: `SHARED`, `EXCLUSIVE`
+                     */
+                    void SetZoneResourceType(const std::string& _zoneResourceType);
+
+                    /**
+                     * 判断参数 ZoneResourceType 是否已赋值
+                     * @return ZoneResourceType 是否已赋值
+                     */
+                    bool ZoneResourceTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the AZ is an edge zone. Values: `true`, `false`.
+                     * @return EdgeZone Whether the AZ is an edge zone. Values: `true`, `false`.
+                     */
+                    bool GetEdgeZone() const;
+
+                    /**
+                     * 设置Whether the AZ is an edge zone. Values: `true`, `false`.
+                     * @param EdgeZone Whether the AZ is an edge zone. Values: `true`, `false`.
+                     */
+                    void SetEdgeZone(const bool& _edgeZone);
+
+                    /**
+                     * 判断参数 EdgeZone 是否已赋值
+                     * @return EdgeZone 是否已赋值
+                     */
+                    bool EdgeZoneHasBeenSet() const;
+
                 private:
 
                     /**
@@ -202,6 +238,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool m_localZone;
                     bool m_localZoneHasBeenSet;
+
+                    /**
+                     * Type of resources in the zone. Values: `SHARED`, `EXCLUSIVE`
+                     */
+                    std::string m_zoneResourceType;
+                    bool m_zoneResourceTypeHasBeenSet;
+
+                    /**
+                     * Whether the AZ is an edge zone. Values: `true`, `false`.
+                     */
+                    bool m_edgeZone;
+                    bool m_edgeZoneHasBeenSet;
 
                 };
             }

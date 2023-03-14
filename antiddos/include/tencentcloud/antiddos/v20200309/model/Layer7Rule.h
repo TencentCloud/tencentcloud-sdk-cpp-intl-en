@@ -140,6 +140,42 @@ namespace TencentCloud
                      */
                     bool InstanceDetailRuleHasBeenSet() const;
 
+                    /**
+                     * 获取Protocol
+                     * @return Protocol Protocol
+                     */
+                    std::string GetProtocol() const;
+
+                    /**
+                     * 设置Protocol
+                     * @param Protocol Protocol
+                     */
+                    void SetProtocol(const std::string& _protocol);
+
+                    /**
+                     * 判断参数 Protocol 是否已赋值
+                     * @return Protocol 是否已赋值
+                     */
+                    bool ProtocolHasBeenSet() const;
+
+                    /**
+                     * 获取Port number
+                     * @return Vport Port number
+                     */
+                    int64_t GetVport() const;
+
+                    /**
+                     * 设置Port number
+                     * @param Vport Port number
+                     */
+                    void SetVport(const int64_t& _vport);
+
+                    /**
+                     * 判断参数 Vport 是否已赋值
+                     * @return Vport 是否已赋值
+                     */
+                    bool VportHasBeenSet() const;
+
                 private:
 
                     /**
@@ -171,6 +207,18 @@ namespace TencentCloud
                      */
                     std::vector<RuleInstanceRelation> m_instanceDetailRule;
                     bool m_instanceDetailRuleHasBeenSet;
+
+                    /**
+                     * Protocol
+                     */
+                    std::string m_protocol;
+                    bool m_protocolHasBeenSet;
+
+                    /**
+                     * Port number
+                     */
+                    int64_t m_vport;
+                    bool m_vportHasBeenSet;
 
                 };
             }

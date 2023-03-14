@@ -316,6 +316,24 @@ namespace TencentCloud
                      */
                     bool PassiveStatusCodeHasBeenSet() const;
 
+                    /**
+                     * 获取Configuration status of the passive health check. Values: `0` (Normal), `1` (configuration in progress) and `2` (configuration failed).
+                     * @return PassiveStatus Configuration status of the passive health check. Values: `0` (Normal), `1` (configuration in progress) and `2` (configuration failed).
+                     */
+                    uint64_t GetPassiveStatus() const;
+
+                    /**
+                     * 设置Configuration status of the passive health check. Values: `0` (Normal), `1` (configuration in progress) and `2` (configuration failed).
+                     * @param PassiveStatus Configuration status of the passive health check. Values: `0` (Normal), `1` (configuration in progress) and `2` (configuration failed).
+                     */
+                    void SetPassiveStatus(const uint64_t& _passiveStatus);
+
+                    /**
+                     * 判断参数 PassiveStatus 是否已赋值
+                     * @return PassiveStatus 是否已赋值
+                     */
+                    bool PassiveStatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -407,6 +425,12 @@ namespace TencentCloud
                      */
                     uint64_t m_passiveStatusCode;
                     bool m_passiveStatusCodeHasBeenSet;
+
+                    /**
+                     * Configuration status of the passive health check. Values: `0` (Normal), `1` (configuration in progress) and `2` (configuration failed).
+                     */
+                    uint64_t m_passiveStatus;
+                    bool m_passiveStatusHasBeenSet;
 
                 };
             }

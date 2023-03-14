@@ -456,6 +456,72 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool AttrFlagsHasBeenSet() const;
 
+                    /**
+                     * 获取List of bound target groups
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return TargetGroupList List of bound target groups
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<BasicTargetGroupInfo> GetTargetGroupList() const;
+
+                    /**
+                     * 设置List of bound target groups
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param TargetGroupList List of bound target groups
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetTargetGroupList(const std::vector<BasicTargetGroupInfo>& _targetGroupList);
+
+                    /**
+                     * 判断参数 TargetGroupList 是否已赋值
+                     * @return TargetGroupList 是否已赋值
+                     */
+                    bool TargetGroupListHasBeenSet() const;
+
+                    /**
+                     * 获取Maximum number of concurrent listener connections. If it’s set to `-1`, the listener speed is not limited. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return MaxConn Maximum number of concurrent listener connections. If it’s set to `-1`, the listener speed is not limited. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetMaxConn() const;
+
+                    /**
+                     * 设置Maximum number of concurrent listener connections. If it’s set to `-1`, the listener speed is not limited. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param MaxConn Maximum number of concurrent listener connections. If it’s set to `-1`, the listener speed is not limited. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetMaxConn(const int64_t& _maxConn);
+
+                    /**
+                     * 判断参数 MaxConn 是否已赋值
+                     * @return MaxConn 是否已赋值
+                     */
+                    bool MaxConnHasBeenSet() const;
+
+                    /**
+                     * 获取Maximum number of new listener connections. If it’s set to `-1`, the listener speed is not limited. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return MaxCps Maximum number of new listener connections. If it’s set to `-1`, the listener speed is not limited. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetMaxCps() const;
+
+                    /**
+                     * 设置Maximum number of new listener connections. If it’s set to `-1`, the listener speed is not limited. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param MaxCps Maximum number of new listener connections. If it’s set to `-1`, the listener speed is not limited. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetMaxCps(const int64_t& _maxCps);
+
+                    /**
+                     * 判断参数 MaxCps 是否已赋值
+                     * @return MaxCps 是否已赋值
+                     */
+                    bool MaxCpsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -587,6 +653,27 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     std::vector<std::string> m_attrFlags;
                     bool m_attrFlagsHasBeenSet;
+
+                    /**
+                     * List of bound target groups
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<BasicTargetGroupInfo> m_targetGroupList;
+                    bool m_targetGroupListHasBeenSet;
+
+                    /**
+                     * Maximum number of concurrent listener connections. If it’s set to `-1`, the listener speed is not limited. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_maxConn;
+                    bool m_maxConnHasBeenSet;
+
+                    /**
+                     * Maximum number of new listener connections. If it’s set to `-1`, the listener speed is not limited. 
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_maxCps;
+                    bool m_maxCpsHasBeenSet;
 
                 };
             }

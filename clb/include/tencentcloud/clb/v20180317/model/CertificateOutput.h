@@ -104,6 +104,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool CertCaIdHasBeenSet() const;
 
+                    /**
+                     * 获取IDs of extra server certificates
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return ExtCertIds IDs of extra server certificates
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> GetExtCertIds() const;
+
+                    /**
+                     * 设置IDs of extra server certificates
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param ExtCertIds IDs of extra server certificates
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetExtCertIds(const std::vector<std::string>& _extCertIds);
+
+                    /**
+                     * 判断参数 ExtCertIds 是否已赋值
+                     * @return ExtCertIds 是否已赋值
+                     */
+                    bool ExtCertIdsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -124,6 +146,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_certCaId;
                     bool m_certCaIdHasBeenSet;
+
+                    /**
+                     * IDs of extra server certificates
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_extCertIds;
+                    bool m_extCertIdsHasBeenSet;
 
                 };
             }

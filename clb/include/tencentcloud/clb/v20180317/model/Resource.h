@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/clb/v20180317/model/ResourceAvailability.h>
 
 
 namespace TencentCloud
@@ -82,6 +83,28 @@ namespace TencentCloud
                      */
                     bool IspHasBeenSet() const;
 
+                    /**
+                     * 获取Available resources
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return AvailabilitySet Available resources
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<ResourceAvailability> GetAvailabilitySet() const;
+
+                    /**
+                     * 设置Available resources
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param AvailabilitySet Available resources
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetAvailabilitySet(const std::vector<ResourceAvailability>& _availabilitySet);
+
+                    /**
+                     * 判断参数 AvailabilitySet 是否已赋值
+                     * @return AvailabilitySet 是否已赋值
+                     */
+                    bool AvailabilitySetHasBeenSet() const;
+
                 private:
 
                     /**
@@ -95,6 +118,13 @@ namespace TencentCloud
                      */
                     std::string m_isp;
                     bool m_ispHasBeenSet;
+
+                    /**
+                     * Available resources
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<ResourceAvailability> m_availabilitySet;
+                    bool m_availabilitySetHasBeenSet;
 
                 };
             }
