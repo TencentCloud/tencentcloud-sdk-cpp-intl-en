@@ -48,17 +48,17 @@ namespace TencentCloud
 
                     /**
                      * 获取The cloud storage provider.
-0: Tencent Cloud COS. The storage services of other providers are not supported currently.
+`0`: Tencent Cloud COS; `1`: AWS storage. Other vendors are not supported currently.
                      * @return Vendor The cloud storage provider.
-0: Tencent Cloud COS. The storage services of other providers are not supported currently.
+`0`: Tencent Cloud COS; `1`: AWS storage. Other vendors are not supported currently.
                      */
                     uint64_t GetVendor() const;
 
                     /**
                      * 设置The cloud storage provider.
-0: Tencent Cloud COS. The storage services of other providers are not supported currently.
+`0`: Tencent Cloud COS; `1`: AWS storage. Other vendors are not supported currently.
                      * @param Vendor The cloud storage provider.
-0: Tencent Cloud COS. The storage services of other providers are not supported currently.
+`0`: Tencent Cloud COS; `1`: AWS storage. Other vendors are not supported currently.
                      */
                     void SetVendor(const uint64_t& _vendor);
 
@@ -162,7 +162,7 @@ namespace TencentCloud
 
                     /**
                      * The cloud storage provider.
-0: Tencent Cloud COS. The storage services of other providers are not supported currently.
+`0`: Tencent Cloud COS; `1`: AWS storage. Other vendors are not supported currently.
                      */
                     uint64_t m_vendor;
                     bool m_vendorHasBeenSet;

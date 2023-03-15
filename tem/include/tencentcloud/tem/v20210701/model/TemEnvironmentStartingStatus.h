@@ -90,6 +90,28 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool StartedApplicationNumHasBeenSet() const;
 
+                    /**
+                     * 获取Number of applications failed to be started
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return StartFailedApplicationNum Number of applications failed to be started
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetStartFailedApplicationNum() const;
+
+                    /**
+                     * 设置Number of applications failed to be started
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param StartFailedApplicationNum Number of applications failed to be started
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetStartFailedApplicationNum(const int64_t& _startFailedApplicationNum);
+
+                    /**
+                     * 判断参数 StartFailedApplicationNum 是否已赋值
+                     * @return StartFailedApplicationNum 是否已赋值
+                     */
+                    bool StartFailedApplicationNumHasBeenSet() const;
+
                 private:
 
                     /**
@@ -105,6 +127,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     int64_t m_startedApplicationNum;
                     bool m_startedApplicationNumHasBeenSet;
+
+                    /**
+                     * Number of applications failed to be started
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_startFailedApplicationNum;
+                    bool m_startFailedApplicationNumHasBeenSet;
 
                 };
             }

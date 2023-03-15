@@ -100,6 +100,50 @@ namespace TencentCloud
                      */
                     bool PayloadUuidHasBeenSet() const;
 
+                    /**
+                     * 获取The SEI sending interval (milliseconds). The default value is 1000.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Interval The SEI sending interval (milliseconds). The default value is 1000.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetInterval() const;
+
+                    /**
+                     * 设置The SEI sending interval (milliseconds). The default value is 1000.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Interval The SEI sending interval (milliseconds). The default value is 1000.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetInterval(const uint64_t& _interval);
+
+                    /**
+                     * 判断参数 Interval 是否已赋值
+                     * @return Interval 是否已赋值
+                     */
+                    bool IntervalHasBeenSet() const;
+
+                    /**
+                     * 获取Valid values: `1`: SEI is guaranteed when keyframes are sent; `0` (default): SEI is not guaranteed when keyframes are sent.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return FollowIdr Valid values: `1`: SEI is guaranteed when keyframes are sent; `0` (default): SEI is not guaranteed when keyframes are sent.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetFollowIdr() const;
+
+                    /**
+                     * 设置Valid values: `1`: SEI is guaranteed when keyframes are sent; `0` (default): SEI is not guaranteed when keyframes are sent.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param FollowIdr Valid values: `1`: SEI is guaranteed when keyframes are sent; `0` (default): SEI is not guaranteed when keyframes are sent.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetFollowIdr(const uint64_t& _followIdr);
+
+                    /**
+                     * 判断参数 FollowIdr 是否已赋值
+                     * @return FollowIdr 是否已赋值
+                     */
+                    bool FollowIdrHasBeenSet() const;
+
                 private:
 
                     /**
@@ -119,6 +163,20 @@ namespace TencentCloud
                      */
                     std::string m_payloadUuid;
                     bool m_payloadUuidHasBeenSet;
+
+                    /**
+                     * The SEI sending interval (milliseconds). The default value is 1000.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_interval;
+                    bool m_intervalHasBeenSet;
+
+                    /**
+                     * Valid values: `1`: SEI is guaranteed when keyframes are sent; `0` (default): SEI is not guaranteed when keyframes are sent.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_followIdr;
+                    bool m_followIdrHasBeenSet;
 
                 };
             }

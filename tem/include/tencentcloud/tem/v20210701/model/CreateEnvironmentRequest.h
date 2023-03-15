@@ -62,6 +62,24 @@ namespace TencentCloud
                     bool EnvironmentNameHasBeenSet() const;
 
                     /**
+                     * 获取Environment description
+                     * @return Description Environment description
+                     */
+                    std::string GetDescription() const;
+
+                    /**
+                     * 设置Environment description
+                     * @param Description Environment description
+                     */
+                    void SetDescription(const std::string& _description);
+
+                    /**
+                     * 判断参数 Description 是否已赋值
+                     * @return Description 是否已赋值
+                     */
+                    bool DescriptionHasBeenSet() const;
+
+                    /**
                      * 获取VPC name
                      * @return Vpc VPC name
                      */
@@ -96,24 +114,6 @@ namespace TencentCloud
                      * @return SubnetIds 是否已赋值
                      */
                     bool SubnetIdsHasBeenSet() const;
-
-                    /**
-                     * 获取Environment description
-                     * @return Description Environment description
-                     */
-                    std::string GetDescription() const;
-
-                    /**
-                     * 设置Environment description
-                     * @param Description Environment description
-                     */
-                    void SetDescription(const std::string& _description);
-
-                    /**
-                     * 判断参数 Description 是否已赋值
-                     * @return Description 是否已赋值
-                     */
-                    bool DescriptionHasBeenSet() const;
 
                     /**
                      * 获取Kubernetes version
@@ -223,6 +223,78 @@ namespace TencentCloud
                      */
                     bool CreateRegionHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to create a VPC
+                     * @return SetupVpc Whether to create a VPC
+                     */
+                    bool GetSetupVpc() const;
+
+                    /**
+                     * 设置Whether to create a VPC
+                     * @param SetupVpc Whether to create a VPC
+                     */
+                    void SetSetupVpc(const bool& _setupVpc);
+
+                    /**
+                     * 判断参数 SetupVpc 是否已赋值
+                     * @return SetupVpc 是否已赋值
+                     */
+                    bool SetupVpcHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to create a TMP instance
+                     * @return SetupPrometheus Whether to create a TMP instance
+                     */
+                    bool GetSetupPrometheus() const;
+
+                    /**
+                     * 设置Whether to create a TMP instance
+                     * @param SetupPrometheus Whether to create a TMP instance
+                     */
+                    void SetSetupPrometheus(const bool& _setupPrometheus);
+
+                    /**
+                     * 判断参数 SetupPrometheus 是否已赋值
+                     * @return SetupPrometheus 是否已赋值
+                     */
+                    bool SetupPrometheusHasBeenSet() const;
+
+                    /**
+                     * 获取TMP instance ID
+                     * @return PrometheusId TMP instance ID
+                     */
+                    std::string GetPrometheusId() const;
+
+                    /**
+                     * 设置TMP instance ID
+                     * @param PrometheusId TMP instance ID
+                     */
+                    void SetPrometheusId(const std::string& _prometheusId);
+
+                    /**
+                     * 判断参数 PrometheusId 是否已赋值
+                     * @return PrometheusId 是否已赋值
+                     */
+                    bool PrometheusIdHasBeenSet() const;
+
+                    /**
+                     * 获取APM ID
+                     * @return ApmId APM ID
+                     */
+                    std::string GetApmId() const;
+
+                    /**
+                     * 设置APM ID
+                     * @param ApmId APM ID
+                     */
+                    void SetApmId(const std::string& _apmId);
+
+                    /**
+                     * 判断参数 ApmId 是否已赋值
+                     * @return ApmId 是否已赋值
+                     */
+                    bool ApmIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -230,6 +302,12 @@ namespace TencentCloud
                      */
                     std::string m_environmentName;
                     bool m_environmentNameHasBeenSet;
+
+                    /**
+                     * Environment description
+                     */
+                    std::string m_description;
+                    bool m_descriptionHasBeenSet;
 
                     /**
                      * VPC name
@@ -242,12 +320,6 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_subnetIds;
                     bool m_subnetIdsHasBeenSet;
-
-                    /**
-                     * Environment description
-                     */
-                    std::string m_description;
-                    bool m_descriptionHasBeenSet;
 
                     /**
                      * Kubernetes version
@@ -284,6 +356,30 @@ namespace TencentCloud
                      */
                     std::string m_createRegion;
                     bool m_createRegionHasBeenSet;
+
+                    /**
+                     * Whether to create a VPC
+                     */
+                    bool m_setupVpc;
+                    bool m_setupVpcHasBeenSet;
+
+                    /**
+                     * Whether to create a TMP instance
+                     */
+                    bool m_setupPrometheus;
+                    bool m_setupPrometheusHasBeenSet;
+
+                    /**
+                     * TMP instance ID
+                     */
+                    std::string m_prometheusId;
+                    bool m_prometheusIdHasBeenSet;
+
+                    /**
+                     * APM ID
+                     */
+                    std::string m_apmId;
+                    bool m_apmIdHasBeenSet;
 
                 };
             }

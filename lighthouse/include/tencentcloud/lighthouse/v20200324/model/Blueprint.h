@@ -102,13 +102,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Image description information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return Description Image description information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetDescription() const;
 
                     /**
                      * 设置Image description information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @param Description Image description information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetDescription(const std::string& _description);
 
@@ -404,6 +408,28 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool SceneIdSetHasBeenSet() const;
 
+                    /**
+                     * 获取Docker version.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return DockerVersion Docker version.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetDockerVersion() const;
+
+                    /**
+                     * 设置Docker version.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param DockerVersion Docker version.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetDockerVersion(const std::string& _dockerVersion);
+
+                    /**
+                     * 判断参数 DockerVersion 是否已赋值
+                     * @return DockerVersion 是否已赋值
+                     */
+                    bool DockerVersionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -426,6 +452,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * Image description information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
@@ -523,6 +550,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     std::vector<std::string> m_sceneIdSet;
                     bool m_sceneIdSetHasBeenSet;
+
+                    /**
+                     * Docker version.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_dockerVersion;
+                    bool m_dockerVersionHasBeenSet;
 
                 };
             }

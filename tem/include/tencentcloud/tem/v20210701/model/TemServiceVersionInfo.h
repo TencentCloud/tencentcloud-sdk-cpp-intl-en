@@ -1883,6 +1883,50 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     bool TagsHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to encode
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return PreStopEncoded Whether to encode
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetPreStopEncoded() const;
+
+                    /**
+                     * 设置Whether to encode
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param PreStopEncoded Whether to encode
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetPreStopEncoded(const std::string& _preStopEncoded);
+
+                    /**
+                     * 判断参数 PreStopEncoded 是否已赋值
+                     * @return PreStopEncoded 是否已赋值
+                     */
+                    bool PreStopEncodedHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to encode
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return PostStartEncoded Whether to encode
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetPostStartEncoded() const;
+
+                    /**
+                     * 设置Whether to encode
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param PostStartEncoded Whether to encode
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetPostStartEncoded(const std::string& _postStartEncoded);
+
+                    /**
+                     * 判断参数 PostStartEncoded 是否已赋值
+                     * @return PostStartEncoded 是否已赋值
+                     */
+                    bool PostStartEncodedHasBeenSet() const;
+
                 private:
 
                     /**
@@ -2468,6 +2512,20 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * Whether to encode
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_preStopEncoded;
+                    bool m_preStopEncodedHasBeenSet;
+
+                    /**
+                     * Whether to encode
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_postStartEncoded;
+                    bool m_postStartEncodedHasBeenSet;
 
                 };
             }

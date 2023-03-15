@@ -470,6 +470,28 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     bool CreateDateHasBeenSet() const;
 
+                    /**
+                     * 获取Region ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RegionId Region ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetRegionId() const;
+
+                    /**
+                     * 设置Region ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param RegionId Region ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetRegionId(const std::string& _regionId);
+
+                    /**
+                     * 判断参数 RegionId 是否已赋值
+                     * @return RegionId 是否已赋值
+                     */
+                    bool RegionIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -606,6 +628,13 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::string m_createDate;
                     bool m_createDateHasBeenSet;
+
+                    /**
+                     * Region ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_regionId;
+                    bool m_regionIdHasBeenSet;
 
                 };
             }

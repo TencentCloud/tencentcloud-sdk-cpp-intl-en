@@ -152,6 +152,24 @@ namespace TencentCloud
                      */
                     bool EnvironmentHasBeenSet() const;
 
+                    /**
+                     * 获取Features supported by the TAT agent.
+                     * @return SupportFeatures Features supported by the TAT agent.
+                     */
+                    std::vector<std::string> GetSupportFeatures() const;
+
+                    /**
+                     * 设置Features supported by the TAT agent.
+                     * @param SupportFeatures Features supported by the TAT agent.
+                     */
+                    void SetSupportFeatures(const std::vector<std::string>& _supportFeatures);
+
+                    /**
+                     * 判断参数 SupportFeatures 是否已赋值
+                     * @return SupportFeatures 是否已赋值
+                     */
+                    bool SupportFeaturesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -187,6 +205,12 @@ namespace TencentCloud
                      */
                     std::string m_environment;
                     bool m_environmentHasBeenSet;
+
+                    /**
+                     * Features supported by the TAT agent.
+                     */
+                    std::vector<std::string> m_supportFeatures;
+                    bool m_supportFeaturesHasBeenSet;
 
                 };
             }

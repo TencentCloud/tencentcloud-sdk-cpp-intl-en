@@ -38,7 +38,6 @@ namespace TencentCloud
             {
                 /**
                 * The layout parameters for mixed-stream recording.
-
                 */
                 class MixLayoutParams : public AbstractModel
                 {
@@ -200,14 +199,14 @@ This parameter specifies the type of the stream displayed in the big window. If 
                     bool MediaIdHasBeenSet() const;
 
                     /**
-                     * 获取The download URL of the background image for the canvas, which must be in JPG or PNG format and cannot be larger than 5 MB.
-                     * @return BackgroundImageUrl The download URL of the background image for the canvas, which must be in JPG or PNG format and cannot be larger than 5 MB.
+                     * 获取The URL of the background image, which cannot contain Chinese characters. The image must be in JPG or PNG format and cannot be larger than 5 MB.
+                     * @return BackgroundImageUrl The URL of the background image, which cannot contain Chinese characters. The image must be in JPG or PNG format and cannot be larger than 5 MB.
                      */
                     std::string GetBackgroundImageUrl() const;
 
                     /**
-                     * 设置The download URL of the background image for the canvas, which must be in JPG or PNG format and cannot be larger than 5 MB.
-                     * @param BackgroundImageUrl The download URL of the background image for the canvas, which must be in JPG or PNG format and cannot be larger than 5 MB.
+                     * 设置The URL of the background image, which cannot contain Chinese characters. The image must be in JPG or PNG format and cannot be larger than 5 MB.
+                     * @param BackgroundImageUrl The URL of the background image, which cannot contain Chinese characters. The image must be in JPG or PNG format and cannot be larger than 5 MB.
                      */
                     void SetBackgroundImageUrl(const std::string& _backgroundImageUrl);
 
@@ -373,7 +372,7 @@ This parameter specifies the type of the stream displayed in the big window. If 
                     bool m_mediaIdHasBeenSet;
 
                     /**
-                     * The download URL of the background image for the canvas, which must be in JPG or PNG format and cannot be larger than 5 MB.
+                     * The URL of the background image, which cannot contain Chinese characters. The image must be in JPG or PNG format and cannot be larger than 5 MB.
                      */
                     std::string m_backgroundImageUrl;
                     bool m_backgroundImageUrlHasBeenSet;

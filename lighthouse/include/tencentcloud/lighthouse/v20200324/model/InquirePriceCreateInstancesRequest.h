@@ -62,6 +62,24 @@ namespace TencentCloud
                     bool BundleIdHasBeenSet() const;
 
                     /**
+                     * 获取Parameter setting for prepaid mode. This parameter can specify the purchase period, whether to enable auto-renewal, and other attributes of the monthly subscribed instances.
+                     * @return InstanceChargePrepaid Parameter setting for prepaid mode. This parameter can specify the purchase period, whether to enable auto-renewal, and other attributes of the monthly subscribed instances.
+                     */
+                    InstanceChargePrepaid GetInstanceChargePrepaid() const;
+
+                    /**
+                     * 设置Parameter setting for prepaid mode. This parameter can specify the purchase period, whether to enable auto-renewal, and other attributes of the monthly subscribed instances.
+                     * @param InstanceChargePrepaid Parameter setting for prepaid mode. This parameter can specify the purchase period, whether to enable auto-renewal, and other attributes of the monthly subscribed instances.
+                     */
+                    void SetInstanceChargePrepaid(const InstanceChargePrepaid& _instanceChargePrepaid);
+
+                    /**
+                     * 判断参数 InstanceChargePrepaid 是否已赋值
+                     * @return InstanceChargePrepaid 是否已赋值
+                     */
+                    bool InstanceChargePrepaidHasBeenSet() const;
+
+                    /**
                      * 获取Number of instances to be created. Default value: 1.
                      * @return InstanceCount Number of instances to be created. Default value: 1.
                      */
@@ -78,24 +96,6 @@ namespace TencentCloud
                      * @return InstanceCount 是否已赋值
                      */
                     bool InstanceCountHasBeenSet() const;
-
-                    /**
-                     * 获取Prepaid mode, i.e., monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. It is required for prepaid instances.
-                     * @return InstanceChargePrepaid Prepaid mode, i.e., monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. It is required for prepaid instances.
-                     */
-                    InstanceChargePrepaid GetInstanceChargePrepaid() const;
-
-                    /**
-                     * 设置Prepaid mode, i.e., monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. It is required for prepaid instances.
-                     * @param InstanceChargePrepaid Prepaid mode, i.e., monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. It is required for prepaid instances.
-                     */
-                    void SetInstanceChargePrepaid(const InstanceChargePrepaid& _instanceChargePrepaid);
-
-                    /**
-                     * 判断参数 InstanceChargePrepaid 是否已赋值
-                     * @return InstanceChargePrepaid 是否已赋值
-                     */
-                    bool InstanceChargePrepaidHasBeenSet() const;
 
                     /**
                      * 获取Application image ID, which is required if a paid application image is used and can be obtained from the `BlueprintId` returned by the [DescribeBlueprints](https://intl.cloud.tencent.com/document/product/1207/47689?from_cn_redirect=1) API.
@@ -124,16 +124,16 @@ namespace TencentCloud
                     bool m_bundleIdHasBeenSet;
 
                     /**
+                     * Parameter setting for prepaid mode. This parameter can specify the purchase period, whether to enable auto-renewal, and other attributes of the monthly subscribed instances.
+                     */
+                    InstanceChargePrepaid m_instanceChargePrepaid;
+                    bool m_instanceChargePrepaidHasBeenSet;
+
+                    /**
                      * Number of instances to be created. Default value: 1.
                      */
                     int64_t m_instanceCount;
                     bool m_instanceCountHasBeenSet;
-
-                    /**
-                     * Prepaid mode, i.e., monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. It is required for prepaid instances.
-                     */
-                    InstanceChargePrepaid m_instanceChargePrepaid;
-                    bool m_instanceChargePrepaidHasBeenSet;
 
                     /**
                      * Application image ID, which is required if a paid application image is used and can be obtained from the `BlueprintId` returned by the [DescribeBlueprints](https://intl.cloud.tencent.com/document/product/1207/47689?from_cn_redirect=1) API.

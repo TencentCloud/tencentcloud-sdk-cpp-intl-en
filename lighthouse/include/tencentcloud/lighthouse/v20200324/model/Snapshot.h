@@ -272,13 +272,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Snapshot creation time.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @return CreatedTime Snapshot creation time.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetCreatedTime() const;
 
                     /**
                      * 设置Snapshot creation time.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      * @param CreatedTime Snapshot creation time.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetCreatedTime(const std::string& _createdTime);
 
@@ -363,6 +367,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Snapshot creation time.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_createdTime;
                     bool m_createdTimeHasBeenSet;

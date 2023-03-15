@@ -98,12 +98,12 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Filter list
+                     * 获取Filter list.
 <li>blueprint-id</li>Filter by the **image ID**.
 Type: String
 Required: no
 <li>blueprint-type</li>Filter by the **image type**.
-Valid values: `APP_OS` (application image); `PURE_OS` (system image); `PRIVATE` (custom image) and `SHARED` (shared image)
+Valid values: `APP_OS` (application image), `PURE_OS` (system image), `DOCKER` (Docker container image), `PRIVATE` (custom image), `SHARED` (shared image)
 Type: String
 Required: no
 <li>platform-type</li>Filter by the **image operating system**.
@@ -120,13 +120,13 @@ Required: no
 Type: String
 Required: no
 
-Each request can contain up to 10 `Filters`, each of which can contain up to 00 `Filter.Values`. `BlueprintIds` and `Filters` cannot be specified at the same time.
-                     * @return Filters Filter list
+Each request can contain up to 10 `Filters`, each of which can contain up to 100 `Filter.Values`. `BlueprintIds` and `Filters` cannot be specified at the same time.
+                     * @return Filters Filter list.
 <li>blueprint-id</li>Filter by the **image ID**.
 Type: String
 Required: no
 <li>blueprint-type</li>Filter by the **image type**.
-Valid values: `APP_OS` (application image); `PURE_OS` (system image); `PRIVATE` (custom image) and `SHARED` (shared image)
+Valid values: `APP_OS` (application image), `PURE_OS` (system image), `DOCKER` (Docker container image), `PRIVATE` (custom image), `SHARED` (shared image)
 Type: String
 Required: no
 <li>platform-type</li>Filter by the **image operating system**.
@@ -143,17 +143,17 @@ Required: no
 Type: String
 Required: no
 
-Each request can contain up to 10 `Filters`, each of which can contain up to 00 `Filter.Values`. `BlueprintIds` and `Filters` cannot be specified at the same time.
+Each request can contain up to 10 `Filters`, each of which can contain up to 100 `Filter.Values`. `BlueprintIds` and `Filters` cannot be specified at the same time.
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter list
+                     * 设置Filter list.
 <li>blueprint-id</li>Filter by the **image ID**.
 Type: String
 Required: no
 <li>blueprint-type</li>Filter by the **image type**.
-Valid values: `APP_OS` (application image); `PURE_OS` (system image); `PRIVATE` (custom image) and `SHARED` (shared image)
+Valid values: `APP_OS` (application image), `PURE_OS` (system image), `DOCKER` (Docker container image), `PRIVATE` (custom image), `SHARED` (shared image)
 Type: String
 Required: no
 <li>platform-type</li>Filter by the **image operating system**.
@@ -170,13 +170,13 @@ Required: no
 Type: String
 Required: no
 
-Each request can contain up to 10 `Filters`, each of which can contain up to 00 `Filter.Values`. `BlueprintIds` and `Filters` cannot be specified at the same time.
-                     * @param Filters Filter list
+Each request can contain up to 10 `Filters`, each of which can contain up to 100 `Filter.Values`. `BlueprintIds` and `Filters` cannot be specified at the same time.
+                     * @param Filters Filter list.
 <li>blueprint-id</li>Filter by the **image ID**.
 Type: String
 Required: no
 <li>blueprint-type</li>Filter by the **image type**.
-Valid values: `APP_OS` (application image); `PURE_OS` (system image); `PRIVATE` (custom image) and `SHARED` (shared image)
+Valid values: `APP_OS` (application image), `PURE_OS` (system image), `DOCKER` (Docker container image), `PRIVATE` (custom image), `SHARED` (shared image)
 Type: String
 Required: no
 <li>platform-type</li>Filter by the **image operating system**.
@@ -193,7 +193,7 @@ Required: no
 Type: String
 Required: no
 
-Each request can contain up to 10 `Filters`, each of which can contain up to 00 `Filter.Values`. `BlueprintIds` and `Filters` cannot be specified at the same time.
+Each request can contain up to 10 `Filters`, each of which can contain up to 100 `Filter.Values`. `BlueprintIds` and `Filters` cannot be specified at the same time.
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
@@ -224,12 +224,12 @@ Each request can contain up to 10 `Filters`, each of which can contain up to 00 
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Filter list
+                     * Filter list.
 <li>blueprint-id</li>Filter by the **image ID**.
 Type: String
 Required: no
 <li>blueprint-type</li>Filter by the **image type**.
-Valid values: `APP_OS` (application image); `PURE_OS` (system image); `PRIVATE` (custom image) and `SHARED` (shared image)
+Valid values: `APP_OS` (application image), `PURE_OS` (system image), `DOCKER` (Docker container image), `PRIVATE` (custom image), `SHARED` (shared image)
 Type: String
 Required: no
 <li>platform-type</li>Filter by the **image operating system**.
@@ -246,7 +246,7 @@ Required: no
 Type: String
 Required: no
 
-Each request can contain up to 10 `Filters`, each of which can contain up to 00 `Filter.Values`. `BlueprintIds` and `Filters` cannot be specified at the same time.
+Each request can contain up to 10 `Filters`, each of which can contain up to 100 `Filter.Values`. `BlueprintIds` and `Filters` cannot be specified at the same time.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

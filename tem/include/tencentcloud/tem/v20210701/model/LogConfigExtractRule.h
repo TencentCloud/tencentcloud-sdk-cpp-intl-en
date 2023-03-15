@@ -244,6 +244,50 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     bool UnMatchedKeyHasBeenSet() const;
 
+                    /**
+                     * 获取tracking
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Backtracking tracking
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetBacktracking() const;
+
+                    /**
+                     * 设置tracking
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Backtracking tracking
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetBacktracking(const std::string& _backtracking);
+
+                    /**
+                     * 判断参数 Backtracking 是否已赋值
+                     * @return Backtracking 是否已赋值
+                     */
+                    bool BacktrackingHasBeenSet() const;
+
+                    /**
+                     * 获取Separator
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Delimiter Separator
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetDelimiter() const;
+
+                    /**
+                     * 设置Separator
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Delimiter Separator
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetDelimiter(const std::string& _delimiter);
+
+                    /**
+                     * 判断参数 Delimiter 是否已赋值
+                     * @return Delimiter 是否已赋值
+                     */
+                    bool DelimiterHasBeenSet() const;
+
                 private:
 
                     /**
@@ -308,6 +352,20 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::string m_unMatchedKey;
                     bool m_unMatchedKeyHasBeenSet;
+
+                    /**
+                     * tracking
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_backtracking;
+                    bool m_backtrackingHasBeenSet;
+
+                    /**
+                     * Separator
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_delimiter;
+                    bool m_delimiterHasBeenSet;
 
                 };
             }
