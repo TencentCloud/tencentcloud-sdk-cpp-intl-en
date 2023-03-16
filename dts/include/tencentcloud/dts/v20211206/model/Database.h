@@ -93,17 +93,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NewDbNameHasBeenSet() const;
 
                     /**
-                     * 获取Database selection mode, which is required if `Mode` is `Partial`. Valid values: `All`, `Partial`. Note that the sync of advanced objects does not depend on this parameter.
+                     * 获取Database selection mode, which is required if `Mode` is `Partial`. Valid values: `All`, `Partial`. Note that the sync of advanced objects does not depend on this parameter. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DbMode Database selection mode, which is required if `Mode` is `Partial`. Valid values: `All`, `Partial`. Note that the sync of advanced objects does not depend on this parameter.
+                     * @return DbMode Database selection mode, which is required if `Mode` is `Partial`. Valid values: `All`, `Partial`. Note that the sync of advanced objects does not depend on this parameter. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetDbMode() const;
 
                     /**
-                     * 设置Database selection mode, which is required if `Mode` is `Partial`. Valid values: `All`, `Partial`. Note that the sync of advanced objects does not depend on this parameter.
+                     * 设置Database selection mode, which is required if `Mode` is `Partial`. Valid values: `All`, `Partial`. Note that the sync of advanced objects does not depend on this parameter. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DbMode Database selection mode, which is required if `Mode` is `Partial`. Valid values: `All`, `Partial`. Note that the sync of advanced objects does not depend on this parameter.
+                     * @param DbMode Database selection mode, which is required if `Mode` is `Partial`. Valid values: `All`, `Partial`. Note that the sync of advanced objects does not depend on this parameter. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetDbMode(const std::string& _dbMode);
@@ -159,17 +159,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NewSchemaNameHasBeenSet() const;
 
                     /**
-                     * 获取Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`.
+                     * 获取Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TableMode Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`.
+                     * @return TableMode Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetTableMode() const;
 
                     /**
-                     * 设置Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`.
+                     * 设置Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TableMode Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`.
+                     * @param TableMode Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetTableMode(const std::string& _tableMode);
@@ -203,17 +203,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TablesHasBeenSet() const;
 
                     /**
-                     * 获取View selection mode. Valid values: `All`, `Partial`.
+                     * 获取View selection mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ViewMode View selection mode. Valid values: `All`, `Partial`.
+                     * @return ViewMode View selection mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetViewMode() const;
 
                     /**
-                     * 设置View selection mode. Valid values: `All`, `Partial`.
+                     * 设置View selection mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ViewMode View selection mode. Valid values: `All`, `Partial`.
+                     * @param ViewMode View selection mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetViewMode(const std::string& _viewMode);
@@ -247,17 +247,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ViewsHasBeenSet() const;
 
                     /**
-                     * 获取Sync mode. Valid values: `Partial`, `All`.
+                     * 获取Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FunctionMode Sync mode. Valid values: `Partial`, `All`.
+                     * @return FunctionMode Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetFunctionMode() const;
 
                     /**
-                     * 设置Sync mode. Valid values: `Partial`, `All`.
+                     * 设置Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param FunctionMode Sync mode. Valid values: `Partial`, `All`.
+                     * @param FunctionMode Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetFunctionMode(const std::string& _functionMode);
@@ -291,17 +291,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FunctionsHasBeenSet() const;
 
                     /**
-                     * 获取Sync mode. Valid values: `Partial`, `All`.
+                     * 获取Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProcedureMode Sync mode. Valid values: `Partial`, `All`.
+                     * @return ProcedureMode Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetProcedureMode() const;
 
                     /**
-                     * 设置Sync mode. Valid values: `Partial`, `All`.
+                     * 设置Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ProcedureMode Sync mode. Valid values: `Partial`, `All`.
+                     * @param ProcedureMode Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetProcedureMode(const std::string& _procedureMode);
@@ -335,17 +335,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProceduresHasBeenSet() const;
 
                     /**
-                     * 获取Trigger migration mode (`all`: All objects; `partial`: Some objects)
+                     * 获取Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “trigger” is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TriggerMode Trigger migration mode (`all`: All objects; `partial`: Some objects)
+                     * @return TriggerMode Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “trigger” is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetTriggerMode() const;
 
                     /**
-                     * 设置Trigger migration mode (`all`: All objects; `partial`: Some objects)
+                     * 设置Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “trigger” is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TriggerMode Trigger migration mode (`all`: All objects; `partial`: Some objects)
+                     * @param TriggerMode Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “trigger” is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetTriggerMode(const std::string& _triggerMode);
@@ -379,17 +379,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TriggersHasBeenSet() const;
 
                     /**
-                     * 获取Event migration mode (`all`: All objects; `partial`: Some objects)
+                     * 获取Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “event” is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EventMode Event migration mode (`all`: All objects; `partial`: Some objects)
+                     * @return EventMode Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “event” is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetEventMode() const;
 
                     /**
-                     * 设置Event migration mode (`all`: All objects; `partial`: Some objects)
+                     * 设置Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “event” is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param EventMode Event migration mode (`all`: All objects; `partial`: Some objects)
+                     * @param EventMode Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “event” is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetEventMode(const std::string& _eventMode);
@@ -439,7 +439,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_newDbNameHasBeenSet;
 
                     /**
-                     * Database selection mode, which is required if `Mode` is `Partial`. Valid values: `All`, `Partial`. Note that the sync of advanced objects does not depend on this parameter.
+                     * Database selection mode, which is required if `Mode` is `Partial`. Valid values: `All`, `Partial`. Note that the sync of advanced objects does not depend on this parameter. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_dbMode;
@@ -460,7 +460,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_newSchemaNameHasBeenSet;
 
                     /**
-                     * Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`.
+                     * Table selection mode, which is required if `DBMode` is `Partial`. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_tableMode;
@@ -474,7 +474,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_tablesHasBeenSet;
 
                     /**
-                     * View selection mode. Valid values: `All`, `Partial`.
+                     * View selection mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_viewMode;
@@ -488,7 +488,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_viewsHasBeenSet;
 
                     /**
-                     * Sync mode. Valid values: `Partial`, `All`.
+                     * Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_functionMode;
@@ -502,7 +502,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_functionsHasBeenSet;
 
                     /**
-                     * Sync mode. Valid values: `Partial`, `All`.
+                     * Sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_procedureMode;
@@ -516,7 +516,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_proceduresHasBeenSet;
 
                     /**
-                     * Trigger migration mode (`all`: All objects; `partial`: Some objects)
+                     * Trigger sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “trigger” is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_triggerMode;
@@ -530,7 +530,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_triggersHasBeenSet;
 
                     /**
-                     * Event migration mode (`all`: All objects; `partial`: Some objects)
+                     * Event sync mode. Valid values: `All`, `Partial`. To sync an entire database, set this parameter to `All`. Currently, the advanced object “event” is not supported for data sync.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_eventMode;

@@ -114,17 +114,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StepIdHasBeenSet() const;
 
                     /**
-                     * 获取Current status
+                     * 获取Status of the current step. Valid values: `notStarted`, `running`, `failed`, `finished, `skipped`, `paused`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status Current status
+                     * @return Status Status of the current step. Valid values: `notStarted`, `running`, `failed`, `finished, `skipped`, `paused`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Current status
+                     * 设置Status of the current step. Valid values: `notStarted`, `running`, `failed`, `finished, `skipped`, `paused`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Status Current status
+                     * @param Status Status of the current step. Valid values: `notStarted`, `running`, `failed`, `finished, `skipped`, `paused`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetStatus(const std::string& _status);
@@ -136,17 +136,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Step start time
+                     * 获取Step start time, which may be null.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StartTime Step start time
+                     * @return StartTime Step start time, which may be null.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Step start time
+                     * 设置Step start time, which may be null.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param StartTime Step start time
+                     * @param StartTime Step start time, which may be null.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -202,17 +202,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool WarningsHasBeenSet() const;
 
                     /**
-                     * 获取Progress of the current step
+                     * 获取Progress of the current step. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Progress Progress of the current step
+                     * @return Progress Progress of the current step. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetProgress() const;
 
                     /**
-                     * 设置Progress of the current step
+                     * 设置Progress of the current step. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Progress Progress of the current step
+                     * @param Progress Progress of the current step. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetProgress(const int64_t& _progress);
@@ -247,14 +247,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_stepIdHasBeenSet;
 
                     /**
-                     * Current status
+                     * Status of the current step. Valid values: `notStarted`, `running`, `failed`, `finished, `skipped`, `paused`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Step start time
+                     * Step start time, which may be null.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_startTime;
@@ -275,7 +275,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_warningsHasBeenSet;
 
                     /**
-                     * Progress of the current step
+                     * Progress of the current step. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_progress;

@@ -45,9 +45,9 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Check result
+                     * 获取Execution status of the check task. Valid values: `notStarted`, `running`, `failed`, `success`.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status Check result
+                     * @return Status Execution status of the check task. Valid values: `notStarted`, `running`, `failed`, `success`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetStatus() const;
@@ -87,9 +87,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StepCurHasBeenSet() const;
 
                     /**
-                     * 获取Overall progress
+                     * 获取Overall progress. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Progress Overall progress
+                     * @return Progress Overall progress. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetProgress() const;
@@ -117,7 +117,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Check result
+                     * Execution status of the check task. Valid values: `notStarted`, `running`, `failed`, `success`.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_status;
@@ -138,7 +138,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_stepCurHasBeenSet;
 
                     /**
-                     * Overall progress
+                     * Overall progress. Value range: 0-100.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_progress;

@@ -141,6 +141,34 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool EmailHasBeenSet() const;
 
+                    /**
+                     * 获取Last login IP
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RecentlyLoginIP Last login IP
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetRecentlyLoginIP() const;
+
+                    /**
+                     * 判断参数 RecentlyLoginIP 是否已赋值
+                     * @return RecentlyLoginIP 是否已赋值
+                     */
+                    bool RecentlyLoginIPHasBeenSet() const;
+
+                    /**
+                     * 获取Last login time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RecentlyLoginTime Last login time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetRecentlyLoginTime() const;
+
+                    /**
+                     * 判断参数 RecentlyLoginTime 是否已赋值
+                     * @return RecentlyLoginTime 是否已赋值
+                     */
+                    bool RecentlyLoginTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -191,6 +219,20 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_email;
                     bool m_emailHasBeenSet;
+
+                    /**
+                     * Last login IP
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_recentlyLoginIP;
+                    bool m_recentlyLoginIPHasBeenSet;
+
+                    /**
+                     * Last login time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_recentlyLoginTime;
+                    bool m_recentlyLoginTimeHasBeenSet;
 
                 };
             }

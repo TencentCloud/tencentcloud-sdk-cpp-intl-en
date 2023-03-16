@@ -101,6 +101,8 @@
 #include <tencentcloud/dcdb/v20180411/model/ModifyAccountDescriptionResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/ModifyAccountPrivilegesRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/ModifyAccountPrivilegesResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/ModifyDBEncryptAttributesRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/ModifyDBEncryptAttributesResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/ModifyDBInstanceNameRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/ModifyDBInstanceNameResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/ModifyDBInstanceSecurityGroupsRequest.h>
@@ -256,6 +258,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyAccountPrivilegesResponse> ModifyAccountPrivilegesOutcome;
                 typedef std::future<ModifyAccountPrivilegesOutcome> ModifyAccountPrivilegesOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::ModifyAccountPrivilegesRequest&, ModifyAccountPrivilegesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAccountPrivilegesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyDBEncryptAttributesResponse> ModifyDBEncryptAttributesOutcome;
+                typedef std::future<ModifyDBEncryptAttributesOutcome> ModifyDBEncryptAttributesOutcomeCallable;
+                typedef std::function<void(const DcdbClient*, const Model::ModifyDBEncryptAttributesRequest&, ModifyDBEncryptAttributesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBEncryptAttributesAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyDBInstanceNameResponse> ModifyDBInstanceNameOutcome;
                 typedef std::future<ModifyDBInstanceNameOutcome> ModifyDBInstanceNameOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::ModifyDBInstanceNameRequest&, ModifyDBInstanceNameOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBInstanceNameAsyncHandler;
@@ -655,6 +660,15 @@ Note: accounts with the same username but different hosts are different accounts
                 ModifyAccountPrivilegesOutcome ModifyAccountPrivileges(const Model::ModifyAccountPrivilegesRequest &request);
                 void ModifyAccountPrivilegesAsync(const Model::ModifyAccountPrivilegesRequest& request, const ModifyAccountPrivilegesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyAccountPrivilegesOutcomeCallable ModifyAccountPrivilegesCallable(const Model::ModifyAccountPrivilegesRequest& request);
+
+                /**
+                 *This API is used to modify the instance data encryption.
+                 * @param req ModifyDBEncryptAttributesRequest
+                 * @return ModifyDBEncryptAttributesOutcome
+                 */
+                ModifyDBEncryptAttributesOutcome ModifyDBEncryptAttributes(const Model::ModifyDBEncryptAttributesRequest &request);
+                void ModifyDBEncryptAttributesAsync(const Model::ModifyDBEncryptAttributesRequest& request, const ModifyDBEncryptAttributesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyDBEncryptAttributesOutcomeCallable ModifyDBEncryptAttributesCallable(const Model::ModifyDBEncryptAttributesRequest& request);
 
                 /**
                  *This API is used to modify instance name.

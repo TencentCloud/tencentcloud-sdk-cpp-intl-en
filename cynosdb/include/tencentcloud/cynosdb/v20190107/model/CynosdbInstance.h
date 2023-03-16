@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cynosdb/v20190107/model/ObjectTask.h>
 #include <tencentcloud/cynosdb/v20190107/model/Tag.h>
+#include <tencentcloud/cynosdb/v20190107/model/InstanceNetInfo.h>
 
 
 namespace TencentCloud
@@ -922,6 +923,68 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ResourceTagsHasBeenSet() const;
 
+                    /**
+                     * 获取Source AZ
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return MasterZone Source AZ
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string GetMasterZone() const;
+
+                    /**
+                     * 设置Source AZ
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param MasterZone Source AZ
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    void SetMasterZone(const std::string& _masterZone);
+
+                    /**
+                     * 判断参数 MasterZone 是否已赋值
+                     * @return MasterZone 是否已赋值
+                     */
+                    bool MasterZoneHasBeenSet() const;
+
+                    /**
+                     * 获取Replica AZ
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return SlaveZones Replica AZ
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::vector<std::string> GetSlaveZones() const;
+
+                    /**
+                     * 设置Replica AZ
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param SlaveZones Replica AZ
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    void SetSlaveZones(const std::vector<std::string>& _slaveZones);
+
+                    /**
+                     * 判断参数 SlaveZones 是否已赋值
+                     * @return SlaveZones 是否已赋值
+                     */
+                    bool SlaveZonesHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return InstanceNetInfo 
+                     */
+                    std::vector<InstanceNetInfo> GetInstanceNetInfo() const;
+
+                    /**
+                     * 设置
+                     * @param InstanceNetInfo 
+                     */
+                    void SetInstanceNetInfo(const std::vector<InstanceNetInfo>& _instanceNetInfo);
+
+                    /**
+                     * 判断参数 InstanceNetInfo 是否已赋值
+                     * @return InstanceNetInfo 是否已赋值
+                     */
+                    bool InstanceNetInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1212,6 +1275,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<Tag> m_resourceTags;
                     bool m_resourceTagsHasBeenSet;
+
+                    /**
+                     * Source AZ
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::string m_masterZone;
+                    bool m_masterZoneHasBeenSet;
+
+                    /**
+                     * Replica AZ
+Note: This field may return null, indicating that no valid value can be obtained.
+                     */
+                    std::vector<std::string> m_slaveZones;
+                    bool m_slaveZonesHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<InstanceNetInfo> m_instanceNetInfo;
+                    bool m_instanceNetInfoHasBeenSet;
 
                 };
             }

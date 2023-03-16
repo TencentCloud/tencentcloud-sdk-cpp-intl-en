@@ -67,7 +67,10 @@ CynosdbInstance::CynosdbInstance() :
     m_businessTypeHasBeenSet(false),
     m_tasksHasBeenSet(false),
     m_isFreezeHasBeenSet(false),
-    m_resourceTagsHasBeenSet(false)
+    m_resourceTagsHasBeenSet(false),
+    m_masterZoneHasBeenSet(false),
+    m_slaveZonesHasBeenSet(false),
+    m_instanceNetInfoHasBeenSet(false)
 {
 }
 
@@ -566,6 +569,49 @@ CoreInternalOutcome CynosdbInstance::Deserialize(const rapidjson::Value &value)
         m_resourceTagsHasBeenSet = true;
     }
 
+    if (value.HasMember("MasterZone") && !value["MasterZone"].IsNull())
+    {
+        if (!value["MasterZone"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `CynosdbInstance.MasterZone` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_masterZone = string(value["MasterZone"].GetString());
+        m_masterZoneHasBeenSet = true;
+    }
+
+    if (value.HasMember("SlaveZones") && !value["SlaveZones"].IsNull())
+    {
+        if (!value["SlaveZones"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `CynosdbInstance.SlaveZones` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["SlaveZones"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_slaveZones.push_back((*itr).GetString());
+        }
+        m_slaveZonesHasBeenSet = true;
+    }
+
+    if (value.HasMember("InstanceNetInfo") && !value["InstanceNetInfo"].IsNull())
+    {
+        if (!value["InstanceNetInfo"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `CynosdbInstance.InstanceNetInfo` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["InstanceNetInfo"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            InstanceNetInfo item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_instanceNetInfo.push_back(item);
+        }
+        m_instanceNetInfoHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -957,6 +1003,42 @@ void CynosdbInstance::ToJsonObject(rapidjson::Value &value, rapidjson::Document:
 
         int i=0;
         for (auto itr = m_resourceTags.begin(); itr != m_resourceTags.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_masterZoneHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "MasterZone";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_masterZone.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_slaveZonesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SlaveZones";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_slaveZones.begin(); itr != m_slaveZones.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_instanceNetInfoHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceNetInfo";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_instanceNetInfo.begin(); itr != m_instanceNetInfo.end(); ++itr, ++i)
         {
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
@@ -1716,5 +1798,53 @@ void CynosdbInstance::SetResourceTags(const vector<Tag>& _resourceTags)
 bool CynosdbInstance::ResourceTagsHasBeenSet() const
 {
     return m_resourceTagsHasBeenSet;
+}
+
+string CynosdbInstance::GetMasterZone() const
+{
+    return m_masterZone;
+}
+
+void CynosdbInstance::SetMasterZone(const string& _masterZone)
+{
+    m_masterZone = _masterZone;
+    m_masterZoneHasBeenSet = true;
+}
+
+bool CynosdbInstance::MasterZoneHasBeenSet() const
+{
+    return m_masterZoneHasBeenSet;
+}
+
+vector<string> CynosdbInstance::GetSlaveZones() const
+{
+    return m_slaveZones;
+}
+
+void CynosdbInstance::SetSlaveZones(const vector<string>& _slaveZones)
+{
+    m_slaveZones = _slaveZones;
+    m_slaveZonesHasBeenSet = true;
+}
+
+bool CynosdbInstance::SlaveZonesHasBeenSet() const
+{
+    return m_slaveZonesHasBeenSet;
+}
+
+vector<InstanceNetInfo> CynosdbInstance::GetInstanceNetInfo() const
+{
+    return m_instanceNetInfo;
+}
+
+void CynosdbInstance::SetInstanceNetInfo(const vector<InstanceNetInfo>& _instanceNetInfo)
+{
+    m_instanceNetInfo = _instanceNetInfo;
+    m_instanceNetInfoHasBeenSet = true;
+}
+
+bool CynosdbInstance::InstanceNetInfoHasBeenSet() const
+{
+    return m_instanceNetInfoHasBeenSet;
 }
 

@@ -137,6 +137,7 @@ set(tke_public_header_model
   include/tencentcloud/tke/v20180525/model/DeleteClusterVirtualNodePoolRequest.h
   include/tencentcloud/tke/v20180525/model/CreateClusterVirtualNodePoolResponse.h
   include/tencentcloud/tke/v20180525/model/UpgradeAbleInstancesItem.h
+  include/tencentcloud/tke/v20180525/model/UnavailableReason.h
   include/tencentcloud/tke/v20180525/model/GetUpgradeInstanceProgressRequest.h
   include/tencentcloud/tke/v20180525/model/DescribeClusterEndpointsRequest.h
   include/tencentcloud/tke/v20180525/model/DescribeEdgeAvailableExtraArgsRequest.h
@@ -427,6 +428,7 @@ set(tke_src
   src/v20180525/model/DeleteClusterVirtualNodePoolRequest.cpp
   src/v20180525/model/CreateClusterVirtualNodePoolResponse.cpp
   src/v20180525/model/UpgradeAbleInstancesItem.cpp
+  src/v20180525/model/UnavailableReason.cpp
   src/v20180525/model/GetUpgradeInstanceProgressRequest.cpp
   src/v20180525/model/DescribeClusterEndpointsRequest.cpp
   src/v20180525/model/DescribeEdgeAvailableExtraArgsRequest.cpp

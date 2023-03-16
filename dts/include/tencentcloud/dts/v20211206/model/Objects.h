@@ -49,17 +49,17 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Migration object type, such as `Partial`.
+                     * 获取Sync object type. Valid value: `Partial` (default).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Mode Migration object type, such as `Partial`.
+                     * @return Mode Sync object type. Valid value: `Partial` (default).
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetMode() const;
 
                     /**
-                     * 设置Migration object type, such as `Partial`.
+                     * 设置Sync object type. Valid value: `Partial` (default).
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Mode Migration object type, such as `Partial`.
+                     * @param Mode Sync object type. Valid value: `Partial` (default).
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetMode(const std::string& _mode);
@@ -139,7 +139,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Migration object type, such as `Partial`.
+                     * Sync object type. Valid value: `Partial` (default).
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_mode;

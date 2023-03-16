@@ -24,11 +24,11 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tke/v20180525/model/GPUArgs.h>
+#include <tencentcloud/tke/v20180525/model/Taint.h>
 #include <tencentcloud/tke/v20180525/model/Label.h>
 #include <tencentcloud/tke/v20180525/model/DataDisk.h>
 #include <tencentcloud/tke/v20180525/model/InstanceExtraArgs.h>
-#include <tencentcloud/tke/v20180525/model/GPUArgs.h>
-#include <tencentcloud/tke/v20180525/model/Taint.h>
 
 
 namespace TencentCloud
@@ -50,6 +50,94 @@ namespace TencentCloud
                     void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
+
+                    /**
+                     * 获取When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return DesiredPodNumber When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetDesiredPodNumber() const;
+
+                    /**
+                     * 设置When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param DesiredPodNumber When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetDesiredPodNumber(const int64_t& _desiredPodNumber);
+
+                    /**
+                     * 判断参数 DesiredPodNumber 是否已赋值
+                     * @return DesiredPodNumber 是否已赋值
+                     */
+                    bool DesiredPodNumberHasBeenSet() const;
+
+                    /**
+                     * 获取GPU driver parameters
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return GPUArgs GPU driver parameters
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    GPUArgs GetGPUArgs() const;
+
+                    /**
+                     * 设置GPU driver parameters
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param GPUArgs GPU driver parameters
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetGPUArgs(const GPUArgs& _gPUArgs);
+
+                    /**
+                     * 判断参数 GPUArgs 是否已赋值
+                     * @return GPUArgs 是否已赋值
+                     */
+                    bool GPUArgsHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return PreStartUserScript Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetPreStartUserScript() const;
+
+                    /**
+                     * 设置Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param PreStartUserScript Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetPreStartUserScript(const std::string& _preStartUserScript);
+
+                    /**
+                     * 判断参数 PreStartUserScript 是否已赋值
+                     * @return PreStartUserScript 是否已赋值
+                     */
+                    bool PreStartUserScriptHasBeenSet() const;
+
+                    /**
+                     * 获取Node taint
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return Taints Node taint
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::vector<Taint> GetTaints() const;
+
+                    /**
+                     * 设置Node taint
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param Taints Node taint
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetTaints(const std::vector<Taint>& _taints);
+
+                    /**
+                     * 判断参数 Taints 是否已赋值
+                     * @return Taints 是否已赋值
+                     */
+                    bool TaintsHasBeenSet() const;
 
                     /**
                      * 获取Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 (xfs for tlinux system) and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
@@ -205,95 +293,35 @@ Note: This field may return null, indicating that no valid value was found.
                      */
                     bool ExtraArgsHasBeenSet() const;
 
-                    /**
-                     * 获取When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return DesiredPodNumber When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     */
-                    int64_t GetDesiredPodNumber() const;
-
-                    /**
-                     * 设置When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param DesiredPodNumber When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     */
-                    void SetDesiredPodNumber(const int64_t& _desiredPodNumber);
-
-                    /**
-                     * 判断参数 DesiredPodNumber 是否已赋值
-                     * @return DesiredPodNumber 是否已赋值
-                     */
-                    bool DesiredPodNumberHasBeenSet() const;
-
-                    /**
-                     * 获取GPU driver parameters
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return GPUArgs GPU driver parameters
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     */
-                    GPUArgs GetGPUArgs() const;
-
-                    /**
-                     * 设置GPU driver parameters
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param GPUArgs GPU driver parameters
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     */
-                    void SetGPUArgs(const GPUArgs& _gPUArgs);
-
-                    /**
-                     * 判断参数 GPUArgs 是否已赋值
-                     * @return GPUArgs 是否已赋值
-                     */
-                    bool GPUArgsHasBeenSet() const;
-
-                    /**
-                     * 获取Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return PreStartUserScript Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     */
-                    std::string GetPreStartUserScript() const;
-
-                    /**
-                     * 设置Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param PreStartUserScript Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     */
-                    void SetPreStartUserScript(const std::string& _preStartUserScript);
-
-                    /**
-                     * 判断参数 PreStartUserScript 是否已赋值
-                     * @return PreStartUserScript 是否已赋值
-                     */
-                    bool PreStartUserScriptHasBeenSet() const;
-
-                    /**
-                     * 获取Node taint
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return Taints Node taint
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     */
-                    std::vector<Taint> GetTaints() const;
-
-                    /**
-                     * 设置Node taint
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param Taints Node taint
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     */
-                    void SetTaints(const std::vector<Taint>& _taints);
-
-                    /**
-                     * 判断参数 Taints 是否已赋值
-                     * @return Taints 是否已赋值
-                     */
-                    bool TaintsHasBeenSet() const;
-
                 private:
+
+                    /**
+                     * When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_desiredPodNumber;
+                    bool m_desiredPodNumberHasBeenSet;
+
+                    /**
+                     * GPU driver parameters
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    GPUArgs m_gPUArgs;
+                    bool m_gPUArgsHasBeenSet;
+
+                    /**
+                     * Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_preStartUserScript;
+                    bool m_preStartUserScriptHasBeenSet;
+
+                    /**
+                     * Node taint
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::vector<Taint> m_taints;
+                    bool m_taintsHasBeenSet;
 
                     /**
                      * Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 (xfs for tlinux system) and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
@@ -343,34 +371,6 @@ Note: This field may return null, indicating that no valid value was found.
                      */
                     InstanceExtraArgs m_extraArgs;
                     bool m_extraArgsHasBeenSet;
-
-                    /**
-                     * When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     */
-                    int64_t m_desiredPodNumber;
-                    bool m_desiredPodNumberHasBeenSet;
-
-                    /**
-                     * GPU driver parameters
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     */
-                    GPUArgs m_gPUArgs;
-                    bool m_gPUArgsHasBeenSet;
-
-                    /**
-                     * Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     */
-                    std::string m_preStartUserScript;
-                    bool m_preStartUserScriptHasBeenSet;
-
-                    /**
-                     * Node taint
-Note: This field may return `null`, indicating that no valid value can be obtained.
-                     */
-                    std::vector<Taint> m_taints;
-                    bool m_taintsHasBeenSet;
 
                 };
             }

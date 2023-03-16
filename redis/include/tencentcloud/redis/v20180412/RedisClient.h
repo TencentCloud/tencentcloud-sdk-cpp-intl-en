@@ -53,6 +53,8 @@
 #include <tencentcloud/redis/v20180412/model/DeleteParamTemplateResponse.h>
 #include <tencentcloud/redis/v20180412/model/DescribeAutoBackupConfigRequest.h>
 #include <tencentcloud/redis/v20180412/model/DescribeAutoBackupConfigResponse.h>
+#include <tencentcloud/redis/v20180412/model/DescribeBackupDownloadRestrictionRequest.h>
+#include <tencentcloud/redis/v20180412/model/DescribeBackupDownloadRestrictionResponse.h>
 #include <tencentcloud/redis/v20180412/model/DescribeBackupUrlRequest.h>
 #include <tencentcloud/redis/v20180412/model/DescribeBackupUrlResponse.h>
 #include <tencentcloud/redis/v20180412/model/DescribeCommonDBInstancesRequest.h>
@@ -143,6 +145,8 @@
 #include <tencentcloud/redis/v20180412/model/ModfiyInstancePasswordResponse.h>
 #include <tencentcloud/redis/v20180412/model/ModifyAutoBackupConfigRequest.h>
 #include <tencentcloud/redis/v20180412/model/ModifyAutoBackupConfigResponse.h>
+#include <tencentcloud/redis/v20180412/model/ModifyBackupDownloadRestrictionRequest.h>
+#include <tencentcloud/redis/v20180412/model/ModifyBackupDownloadRestrictionResponse.h>
 #include <tencentcloud/redis/v20180412/model/ModifyDBInstanceSecurityGroupsRequest.h>
 #include <tencentcloud/redis/v20180412/model/ModifyDBInstanceSecurityGroupsResponse.h>
 #include <tencentcloud/redis/v20180412/model/ModifyInstanceRequest.h>
@@ -244,6 +248,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeAutoBackupConfigResponse> DescribeAutoBackupConfigOutcome;
                 typedef std::future<DescribeAutoBackupConfigOutcome> DescribeAutoBackupConfigOutcomeCallable;
                 typedef std::function<void(const RedisClient*, const Model::DescribeAutoBackupConfigRequest&, DescribeAutoBackupConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAutoBackupConfigAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBackupDownloadRestrictionResponse> DescribeBackupDownloadRestrictionOutcome;
+                typedef std::future<DescribeBackupDownloadRestrictionOutcome> DescribeBackupDownloadRestrictionOutcomeCallable;
+                typedef std::function<void(const RedisClient*, const Model::DescribeBackupDownloadRestrictionRequest&, DescribeBackupDownloadRestrictionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBackupDownloadRestrictionAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeBackupUrlResponse> DescribeBackupUrlOutcome;
                 typedef std::future<DescribeBackupUrlOutcome> DescribeBackupUrlOutcomeCallable;
                 typedef std::function<void(const RedisClient*, const Model::DescribeBackupUrlRequest&, DescribeBackupUrlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBackupUrlAsyncHandler;
@@ -379,6 +386,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyAutoBackupConfigResponse> ModifyAutoBackupConfigOutcome;
                 typedef std::future<ModifyAutoBackupConfigOutcome> ModifyAutoBackupConfigOutcomeCallable;
                 typedef std::function<void(const RedisClient*, const Model::ModifyAutoBackupConfigRequest&, ModifyAutoBackupConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAutoBackupConfigAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyBackupDownloadRestrictionResponse> ModifyBackupDownloadRestrictionOutcome;
+                typedef std::future<ModifyBackupDownloadRestrictionOutcome> ModifyBackupDownloadRestrictionOutcomeCallable;
+                typedef std::function<void(const RedisClient*, const Model::ModifyBackupDownloadRestrictionRequest&, ModifyBackupDownloadRestrictionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyBackupDownloadRestrictionAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyDBInstanceSecurityGroupsResponse> ModifyDBInstanceSecurityGroupsOutcome;
                 typedef std::future<ModifyDBInstanceSecurityGroupsOutcome> ModifyDBInstanceSecurityGroupsOutcomeCallable;
                 typedef std::function<void(const RedisClient*, const Model::ModifyDBInstanceSecurityGroupsRequest&, ModifyDBInstanceSecurityGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBInstanceSecurityGroupsAsyncHandler;
@@ -579,6 +589,15 @@ namespace TencentCloud
                 DescribeAutoBackupConfigOutcome DescribeAutoBackupConfig(const Model::DescribeAutoBackupConfigRequest &request);
                 void DescribeAutoBackupConfigAsync(const Model::DescribeAutoBackupConfigRequest& request, const DescribeAutoBackupConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeAutoBackupConfigOutcomeCallable DescribeAutoBackupConfigCallable(const Model::DescribeAutoBackupConfigRequest& request);
+
+                /**
+                 *This API is used to query the download address for a database backup file in the current region.
+                 * @param req DescribeBackupDownloadRestrictionRequest
+                 * @return DescribeBackupDownloadRestrictionOutcome
+                 */
+                DescribeBackupDownloadRestrictionOutcome DescribeBackupDownloadRestriction(const Model::DescribeBackupDownloadRestrictionRequest &request);
+                void DescribeBackupDownloadRestrictionAsync(const Model::DescribeBackupDownloadRestrictionRequest& request, const DescribeBackupDownloadRestrictionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBackupDownloadRestrictionOutcomeCallable DescribeBackupDownloadRestrictionCallable(const Model::DescribeBackupDownloadRestrictionRequest& request);
 
                 /**
                  *This API is used to query the download address of a backup RDB file.
@@ -984,6 +1003,15 @@ namespace TencentCloud
                 ModifyAutoBackupConfigOutcome ModifyAutoBackupConfig(const Model::ModifyAutoBackupConfigRequest &request);
                 void ModifyAutoBackupConfigAsync(const Model::ModifyAutoBackupConfigRequest& request, const ModifyAutoBackupConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyAutoBackupConfigOutcomeCallable ModifyAutoBackupConfigCallable(const Model::ModifyAutoBackupConfigRequest& request);
+
+                /**
+                 *This API is used to modify the network information and address for downloading a backup file.
+                 * @param req ModifyBackupDownloadRestrictionRequest
+                 * @return ModifyBackupDownloadRestrictionOutcome
+                 */
+                ModifyBackupDownloadRestrictionOutcome ModifyBackupDownloadRestriction(const Model::ModifyBackupDownloadRestrictionRequest &request);
+                void ModifyBackupDownloadRestrictionAsync(const Model::ModifyBackupDownloadRestrictionRequest& request, const ModifyBackupDownloadRestrictionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyBackupDownloadRestrictionOutcomeCallable ModifyBackupDownloadRestrictionCallable(const Model::ModifyBackupDownloadRestrictionRequest& request);
 
                 /**
                  *This API is used to modify the security groups bound to an instance.
