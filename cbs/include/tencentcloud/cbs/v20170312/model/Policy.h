@@ -82,6 +82,42 @@ namespace TencentCloud
                      */
                     bool DayOfWeekHasBeenSet() const;
 
+                    /**
+                     * 获取Specifies the dates of the month on which a scheduled snapshot will be triggered. Value range: [1, 31]. `1` to `31` indicate the specific dates of the month; for example, `5` indicates the 5th day of the month. Note: If you set a date that does not exist in some months such as 29, 30, and 31, these months will be skipped for scheduled snapshot creation.
+                     * @return DayOfMonth Specifies the dates of the month on which a scheduled snapshot will be triggered. Value range: [1, 31]. `1` to `31` indicate the specific dates of the month; for example, `5` indicates the 5th day of the month. Note: If you set a date that does not exist in some months such as 29, 30, and 31, these months will be skipped for scheduled snapshot creation.
+                     */
+                    std::vector<uint64_t> GetDayOfMonth() const;
+
+                    /**
+                     * 设置Specifies the dates of the month on which a scheduled snapshot will be triggered. Value range: [1, 31]. `1` to `31` indicate the specific dates of the month; for example, `5` indicates the 5th day of the month. Note: If you set a date that does not exist in some months such as 29, 30, and 31, these months will be skipped for scheduled snapshot creation.
+                     * @param DayOfMonth Specifies the dates of the month on which a scheduled snapshot will be triggered. Value range: [1, 31]. `1` to `31` indicate the specific dates of the month; for example, `5` indicates the 5th day of the month. Note: If you set a date that does not exist in some months such as 29, 30, and 31, these months will be skipped for scheduled snapshot creation.
+                     */
+                    void SetDayOfMonth(const std::vector<uint64_t>& _dayOfMonth);
+
+                    /**
+                     * 判断参数 DayOfMonth 是否已赋值
+                     * @return DayOfMonth 是否已赋值
+                     */
+                    bool DayOfMonthHasBeenSet() const;
+
+                    /**
+                     * 获取Specifies the interval for creating scheduled snapshots in days. Value range: [1, 365]. For example, if it is set to `5`, scheduled snapshots will be created every 5 days. Note: If you choose to back up by day, the time for the first backup is theoretically the day when the backup policy is created. If the backup policy creation time on the current day is later than the set backup time, the first backup will be performed in the second backup cycle.
+                     * @return IntervalDays Specifies the interval for creating scheduled snapshots in days. Value range: [1, 365]. For example, if it is set to `5`, scheduled snapshots will be created every 5 days. Note: If you choose to back up by day, the time for the first backup is theoretically the day when the backup policy is created. If the backup policy creation time on the current day is later than the set backup time, the first backup will be performed in the second backup cycle.
+                     */
+                    uint64_t GetIntervalDays() const;
+
+                    /**
+                     * 设置Specifies the interval for creating scheduled snapshots in days. Value range: [1, 365]. For example, if it is set to `5`, scheduled snapshots will be created every 5 days. Note: If you choose to back up by day, the time for the first backup is theoretically the day when the backup policy is created. If the backup policy creation time on the current day is later than the set backup time, the first backup will be performed in the second backup cycle.
+                     * @param IntervalDays Specifies the interval for creating scheduled snapshots in days. Value range: [1, 365]. For example, if it is set to `5`, scheduled snapshots will be created every 5 days. Note: If you choose to back up by day, the time for the first backup is theoretically the day when the backup policy is created. If the backup policy creation time on the current day is later than the set backup time, the first backup will be performed in the second backup cycle.
+                     */
+                    void SetIntervalDays(const uint64_t& _intervalDays);
+
+                    /**
+                     * 判断参数 IntervalDays 是否已赋值
+                     * @return IntervalDays 是否已赋值
+                     */
+                    bool IntervalDaysHasBeenSet() const;
+
                 private:
 
                     /**
@@ -95,6 +131,18 @@ namespace TencentCloud
                      */
                     std::vector<uint64_t> m_dayOfWeek;
                     bool m_dayOfWeekHasBeenSet;
+
+                    /**
+                     * Specifies the dates of the month on which a scheduled snapshot will be triggered. Value range: [1, 31]. `1` to `31` indicate the specific dates of the month; for example, `5` indicates the 5th day of the month. Note: If you set a date that does not exist in some months such as 29, 30, and 31, these months will be skipped for scheduled snapshot creation.
+                     */
+                    std::vector<uint64_t> m_dayOfMonth;
+                    bool m_dayOfMonthHasBeenSet;
+
+                    /**
+                     * Specifies the interval for creating scheduled snapshots in days. Value range: [1, 365]. For example, if it is set to `5`, scheduled snapshots will be created every 5 days. Note: If you choose to back up by day, the time for the first backup is theoretically the day when the backup policy is created. If the backup policy creation time on the current day is later than the set backup time, the first backup will be performed in the second backup cycle.
+                     */
+                    uint64_t m_intervalDays;
+                    bool m_intervalDaysHasBeenSet;
 
                 };
             }

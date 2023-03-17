@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Rate limiting configuration
+                * Rate limiting rules
                 */
                 class RateLimitConfig : public AbstractModel
                 {
@@ -137,6 +137,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool RateLimitIntelligenceHasBeenSet() const;
 
+                    /**
+                     * 获取The custom rate limiting rules. If it is `null`, the previous settings is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return RateLimitCustomizes The custom rate limiting rules. If it is `null`, the previous settings is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::vector<RateLimitUserRule> GetRateLimitCustomizes() const;
+
+                    /**
+                     * 设置The custom rate limiting rules. If it is `null`, the previous settings is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param RateLimitCustomizes The custom rate limiting rules. If it is `null`, the previous settings is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetRateLimitCustomizes(const std::vector<RateLimitUserRule>& _rateLimitCustomizes);
+
+                    /**
+                     * 判断参数 RateLimitCustomizes 是否已赋值
+                     * @return RateLimitCustomizes 是否已赋值
+                     */
+                    bool RateLimitCustomizesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -166,6 +188,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     RateLimitIntelligence m_rateLimitIntelligence;
                     bool m_rateLimitIntelligenceHasBeenSet;
+
+                    /**
+                     * The custom rate limiting rules. If it is `null`, the previous settings is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::vector<RateLimitUserRule> m_rateLimitCustomizes;
+                    bool m_rateLimitCustomizesHasBeenSet;
 
                 };
             }

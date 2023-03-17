@@ -138,14 +138,14 @@ namespace TencentCloud
                     bool SipCountryCodeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RealClientIp 
+                     * 获取The real client IP.
+                     * @return RealClientIp The real client IP.
                      */
                     std::string GetRealClientIp() const;
 
                     /**
-                     * 设置
-                     * @param RealClientIp 
+                     * 设置The real client IP.
+                     * @param RealClientIp The real client IP.
                      */
                     void SetRealClientIp(const std::string& _realClientIp);
 
@@ -156,14 +156,14 @@ namespace TencentCloud
                     bool RealClientIpHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RealClientIpCountryCode 
+                     * 获取The ISO-3166 alpha-2 country code of the real client IP.
+                     * @return RealClientIpCountryCode The ISO-3166 alpha-2 country code of the real client IP.
                      */
                     std::string GetRealClientIpCountryCode() const;
 
                     /**
-                     * 设置
-                     * @param RealClientIpCountryCode 
+                     * 设置The ISO-3166 alpha-2 country code of the real client IP.
+                     * @param RealClientIpCountryCode The ISO-3166 alpha-2 country code of the real client IP.
                      */
                     void SetRealClientIpCountryCode(const std::string& _realClientIpCountryCode);
 
@@ -330,13 +330,13 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_sipCountryCodeHasBeenSet;
 
                     /**
-                     * 
+                     * The real client IP.
                      */
                     std::string m_realClientIp;
                     bool m_realClientIpHasBeenSet;
 
                     /**
-                     * 
+                     * The ISO-3166 alpha-2 country code of the real client IP.
                      */
                     std::string m_realClientIpCountryCode;
                     bool m_realClientIpCountryCodeHasBeenSet;

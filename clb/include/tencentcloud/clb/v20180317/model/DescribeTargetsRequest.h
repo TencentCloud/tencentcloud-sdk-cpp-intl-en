@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/clb/v20180317/model/Filter.h>
 
 
 namespace TencentCloud
@@ -114,6 +115,32 @@ namespace TencentCloud
                      */
                     bool PortHasBeenSet() const;
 
+                    /**
+                     * 获取Query the list of backend services associated with a load balancer
+<li> `location-id` - String - Optional - Rule ID, such as "loc-12345678".</li>
+<li> `private-ip-address` - String - Optional - Backend service private IP, such as `172.16.1.1`</li>
+                     * @return Filters Query the list of backend services associated with a load balancer
+<li> `location-id` - String - Optional - Rule ID, such as "loc-12345678".</li>
+<li> `private-ip-address` - String - Optional - Backend service private IP, such as `172.16.1.1`</li>
+                     */
+                    std::vector<Filter> GetFilters() const;
+
+                    /**
+                     * 设置Query the list of backend services associated with a load balancer
+<li> `location-id` - String - Optional - Rule ID, such as "loc-12345678".</li>
+<li> `private-ip-address` - String - Optional - Backend service private IP, such as `172.16.1.1`</li>
+                     * @param Filters Query the list of backend services associated with a load balancer
+<li> `location-id` - String - Optional - Rule ID, such as "loc-12345678".</li>
+<li> `private-ip-address` - String - Optional - Backend service private IP, such as `172.16.1.1`</li>
+                     */
+                    void SetFilters(const std::vector<Filter>& _filters);
+
+                    /**
+                     * 判断参数 Filters 是否已赋值
+                     * @return Filters 是否已赋值
+                     */
+                    bool FiltersHasBeenSet() const;
+
                 private:
 
                     /**
@@ -139,6 +166,14 @@ namespace TencentCloud
                      */
                     int64_t m_port;
                     bool m_portHasBeenSet;
+
+                    /**
+                     * Query the list of backend services associated with a load balancer
+<li> `location-id` - String - Optional - Rule ID, such as "loc-12345678".</li>
+<li> `private-ip-address` - String - Optional - Backend service private IP, such as `172.16.1.1`</li>
+                     */
+                    std::vector<Filter> m_filters;
+                    bool m_filtersHasBeenSet;
 
                 };
             }

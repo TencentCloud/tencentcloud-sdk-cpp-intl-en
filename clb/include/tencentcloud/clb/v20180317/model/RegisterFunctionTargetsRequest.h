@@ -44,14 +44,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return LoadBalancerId 
+                     * 获取CLB instance ID.
+                     * @return LoadBalancerId CLB instance ID.
                      */
                     std::string GetLoadBalancerId() const;
 
                     /**
-                     * 设置
-                     * @param LoadBalancerId 
+                     * 设置CLB instance ID.
+                     * @param LoadBalancerId CLB instance ID.
                      */
                     void SetLoadBalancerId(const std::string& _loadBalancerId);
 
@@ -62,14 +62,14 @@ namespace TencentCloud
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ListenerId 
+                     * 获取CLB listener ID.
+                     * @return ListenerId CLB listener ID.
                      */
                     std::string GetListenerId() const;
 
                     /**
-                     * 设置
-                     * @param ListenerId 
+                     * 设置CLB listener ID.
+                     * @param ListenerId CLB listener ID.
                      */
                     void SetListenerId(const std::string& _listenerId);
 
@@ -80,14 +80,14 @@ namespace TencentCloud
                     bool ListenerIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FunctionTargets 
+                     * 获取SCF functions to be bound.
+                     * @return FunctionTargets SCF functions to be bound.
                      */
                     std::vector<FunctionTarget> GetFunctionTargets() const;
 
                     /**
-                     * 设置
-                     * @param FunctionTargets 
+                     * 设置SCF functions to be bound.
+                     * @param FunctionTargets SCF functions to be bound.
                      */
                     void SetFunctionTargets(const std::vector<FunctionTarget>& _functionTargets);
 
@@ -98,14 +98,14 @@ namespace TencentCloud
                     bool FunctionTargetsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LocationId 
+                     * 获取ID of the target forwarding rule. To bind an SCF function to a L7 forwarding rule, this parameter or `Domain+Url` is required.
+                     * @return LocationId ID of the target forwarding rule. To bind an SCF function to a L7 forwarding rule, this parameter or `Domain+Url` is required.
                      */
                     std::string GetLocationId() const;
 
                     /**
-                     * 设置
-                     * @param LocationId 
+                     * 设置ID of the target forwarding rule. To bind an SCF function to a L7 forwarding rule, this parameter or `Domain+Url` is required.
+                     * @param LocationId ID of the target forwarding rule. To bind an SCF function to a L7 forwarding rule, this parameter or `Domain+Url` is required.
                      */
                     void SetLocationId(const std::string& _locationId);
 
@@ -116,14 +116,14 @@ namespace TencentCloud
                     bool LocationIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Domain 
+                     * 获取Domain name of the target forwarding rule. It is ignored if `LocationId` is specified.
+                     * @return Domain Domain name of the target forwarding rule. It is ignored if `LocationId` is specified.
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置
-                     * @param Domain 
+                     * 设置Domain name of the target forwarding rule. It is ignored if `LocationId` is specified.
+                     * @param Domain Domain name of the target forwarding rule. It is ignored if `LocationId` is specified.
                      */
                     void SetDomain(const std::string& _domain);
 
@@ -134,14 +134,14 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Url 
+                     * 获取URL of the target forwarding rule. It is ignored if `LocationId` is specified.
+                     * @return Url URL of the target forwarding rule. It is ignored if `LocationId` is specified.
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置
-                     * @param Url 
+                     * 设置URL of the target forwarding rule. It is ignored if `LocationId` is specified.
+                     * @param Url URL of the target forwarding rule. It is ignored if `LocationId` is specified.
                      */
                     void SetUrl(const std::string& _url);
 
@@ -154,37 +154,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * CLB instance ID.
                      */
                     std::string m_loadBalancerId;
                     bool m_loadBalancerIdHasBeenSet;
 
                     /**
-                     * 
+                     * CLB listener ID.
                      */
                     std::string m_listenerId;
                     bool m_listenerIdHasBeenSet;
 
                     /**
-                     * 
+                     * SCF functions to be bound.
                      */
                     std::vector<FunctionTarget> m_functionTargets;
                     bool m_functionTargetsHasBeenSet;
 
                     /**
-                     * 
+                     * ID of the target forwarding rule. To bind an SCF function to a L7 forwarding rule, this parameter or `Domain+Url` is required.
                      */
                     std::string m_locationId;
                     bool m_locationIdHasBeenSet;
 
                     /**
-                     * 
+                     * Domain name of the target forwarding rule. It is ignored if `LocationId` is specified.
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
 
                     /**
-                     * 
+                     * URL of the target forwarding rule. It is ignored if `LocationId` is specified.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;

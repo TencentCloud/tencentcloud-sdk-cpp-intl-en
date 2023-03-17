@@ -40,6 +40,7 @@ set(cbs_public_header_model
   include/tencentcloud/cbs/v20170312/model/DescribeDiskBackupsResponse.h
   include/tencentcloud/cbs/v20170312/model/SnapshotCopyResult.h
   include/tencentcloud/cbs/v20170312/model/InquirePriceModifyDiskExtraPerformanceResponse.h
+  include/tencentcloud/cbs/v20170312/model/AdvancedRetentionPolicy.h
   include/tencentcloud/cbs/v20170312/model/CreateDisksRequest.h
   include/tencentcloud/cbs/v20170312/model/AttachDisksRequest.h
   include/tencentcloud/cbs/v20170312/model/DescribeDiskAssociatedAutoSnapshotPolicyRequest.h
@@ -139,6 +140,7 @@ set(cbs_src
   src/v20170312/model/DescribeDiskBackupsResponse.cpp
   src/v20170312/model/SnapshotCopyResult.cpp
   src/v20170312/model/InquirePriceModifyDiskExtraPerformanceResponse.cpp
+  src/v20170312/model/AdvancedRetentionPolicy.cpp
   src/v20170312/model/CreateDisksRequest.cpp
   src/v20170312/model/AttachDisksRequest.cpp
   src/v20170312/model/DescribeDiskAssociatedAutoSnapshotPolicyRequest.cpp

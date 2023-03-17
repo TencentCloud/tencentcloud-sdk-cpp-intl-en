@@ -238,22 +238,26 @@ namespace TencentCloud
                     bool PlanIdHasBeenSet() const;
 
                     /**
-                     * 获取The region. Values:
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Outside the Chinese mainland.</li>
-                     * @return Area The region. Values:
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Outside the Chinese mainland.</li>
+                     * 获取Applicable area. Values:
+<li>`mainland`: Chinese mainland</li>
+<li>`overseas`: Regions outside the Chinese mainland</li>
+<li>`global`: Global</li>
+                     * @return Area Applicable area. Values:
+<li>`mainland`: Chinese mainland</li>
+<li>`overseas`: Regions outside the Chinese mainland</li>
+<li>`global`: Global</li>
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置The region. Values:
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Outside the Chinese mainland.</li>
-                     * @param Area The region. Values:
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Outside the Chinese mainland.</li>
+                     * 设置Applicable area. Values:
+<li>`mainland`: Chinese mainland</li>
+<li>`overseas`: Regions outside the Chinese mainland</li>
+<li>`global`: Global</li>
+                     * @param Area Applicable area. Values:
+<li>`mainland`: Chinese mainland</li>
+<li>`overseas`: Regions outside the Chinese mainland</li>
+<li>`global`: Global</li>
                      */
                     void SetArea(const std::string& _area);
 
@@ -327,9 +331,10 @@ namespace TencentCloud
                     bool m_planIdHasBeenSet;
 
                     /**
-                     * The region. Values:
-<li>`mainland`: Chinese mainland.</li>
-<li>`overseas`: Outside the Chinese mainland.</li>
+                     * Applicable area. Values:
+<li>`mainland`: Chinese mainland</li>
+<li>`overseas`: Regions outside the Chinese mainland</li>
+<li>`global`: Global</li>
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;

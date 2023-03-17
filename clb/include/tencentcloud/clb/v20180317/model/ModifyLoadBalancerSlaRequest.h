@@ -44,14 +44,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取CLB instance information
-                     * @return LoadBalancerSla CLB instance information
+                     * 获取CLB instance information.
+                     * @return LoadBalancerSla CLB instance information.
                      */
                     std::vector<SlaUpdateParam> GetLoadBalancerSla() const;
 
                     /**
-                     * 设置CLB instance information
-                     * @param LoadBalancerSla CLB instance information
+                     * 设置CLB instance information.
+                     * @param LoadBalancerSla CLB instance information.
                      */
                     void SetLoadBalancerSla(const std::vector<SlaUpdateParam>& _loadBalancerSla);
 
@@ -64,7 +64,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * CLB instance information
+                     * CLB instance information.
                      */
                     std::vector<SlaUpdateParam> m_loadBalancerSla;
                     bool m_loadBalancerSlaHasBeenSet;

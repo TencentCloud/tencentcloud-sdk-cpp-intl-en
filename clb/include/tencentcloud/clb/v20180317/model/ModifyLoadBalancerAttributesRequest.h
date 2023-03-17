@@ -81,14 +81,14 @@ namespace TencentCloud
                     bool LoadBalancerNameHasBeenSet() const;
 
                     /**
-                     * 获取Region information of the real server bound to a CLB.
-                     * @return TargetRegionInfo Region information of the real server bound to a CLB.
+                     * 获取The backend service information of cross-region binding 1.0
+                     * @return TargetRegionInfo The backend service information of cross-region binding 1.0
                      */
                     TargetRegionInfo GetTargetRegionInfo() const;
 
                     /**
-                     * 设置Region information of the real server bound to a CLB.
-                     * @param TargetRegionInfo Region information of the real server bound to a CLB.
+                     * 设置The backend service information of cross-region binding 1.0
+                     * @param TargetRegionInfo The backend service information of cross-region binding 1.0
                      */
                     void SetTargetRegionInfo(const TargetRegionInfo& _targetRegionInfo);
 
@@ -135,14 +135,14 @@ namespace TencentCloud
                     bool LoadBalancerPassToTargetHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable SnatPro
-                     * @return SnatPro Whether to enable SnatPro
+                     * 获取Whether to enable cross-region binding 2.0
+                     * @return SnatPro Whether to enable cross-region binding 2.0
                      */
                     bool GetSnatPro() const;
 
                     /**
-                     * 设置Whether to enable SnatPro
-                     * @param SnatPro Whether to enable SnatPro
+                     * 设置Whether to enable cross-region binding 2.0
+                     * @param SnatPro Whether to enable cross-region binding 2.0
                      */
                     void SetSnatPro(const bool& _snatPro);
 
@@ -185,7 +185,7 @@ namespace TencentCloud
                     bool m_loadBalancerNameHasBeenSet;
 
                     /**
-                     * Region information of the real server bound to a CLB.
+                     * The backend service information of cross-region binding 1.0
                      */
                     TargetRegionInfo m_targetRegionInfo;
                     bool m_targetRegionInfoHasBeenSet;
@@ -203,7 +203,7 @@ namespace TencentCloud
                     bool m_loadBalancerPassToTargetHasBeenSet;
 
                     /**
-                     * Whether to enable SnatPro
+                     * Whether to enable cross-region binding 2.0
                      */
                     bool m_snatPro;
                     bool m_snatProHasBeenSet;

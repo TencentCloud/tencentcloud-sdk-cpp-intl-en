@@ -33,7 +33,12 @@ AutoSnapshotPolicy::AutoSnapshotPolicy() :
     m_createTimeHasBeenSet(false),
     m_retentionDaysHasBeenSet(false),
     m_copyToAccountUinHasBeenSet(false),
-    m_instanceIdSetHasBeenSet(false)
+    m_instanceIdSetHasBeenSet(false),
+    m_retentionMonthsHasBeenSet(false),
+    m_retentionAmountHasBeenSet(false),
+    m_advancedRetentionPolicyHasBeenSet(false),
+    m_copyFromAccountUinHasBeenSet(false),
+    m_tagsHasBeenSet(false)
 {
 }
 
@@ -188,6 +193,73 @@ CoreInternalOutcome AutoSnapshotPolicy::Deserialize(const rapidjson::Value &valu
         m_instanceIdSetHasBeenSet = true;
     }
 
+    if (value.HasMember("RetentionMonths") && !value["RetentionMonths"].IsNull())
+    {
+        if (!value["RetentionMonths"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `AutoSnapshotPolicy.RetentionMonths` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_retentionMonths = value["RetentionMonths"].GetUint64();
+        m_retentionMonthsHasBeenSet = true;
+    }
+
+    if (value.HasMember("RetentionAmount") && !value["RetentionAmount"].IsNull())
+    {
+        if (!value["RetentionAmount"].IsUint64())
+        {
+            return CoreInternalOutcome(Core::Error("response `AutoSnapshotPolicy.RetentionAmount` IsUint64=false incorrectly").SetRequestId(requestId));
+        }
+        m_retentionAmount = value["RetentionAmount"].GetUint64();
+        m_retentionAmountHasBeenSet = true;
+    }
+
+    if (value.HasMember("AdvancedRetentionPolicy") && !value["AdvancedRetentionPolicy"].IsNull())
+    {
+        if (!value["AdvancedRetentionPolicy"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `AutoSnapshotPolicy.AdvancedRetentionPolicy` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_advancedRetentionPolicy.Deserialize(value["AdvancedRetentionPolicy"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_advancedRetentionPolicyHasBeenSet = true;
+    }
+
+    if (value.HasMember("CopyFromAccountUin") && !value["CopyFromAccountUin"].IsNull())
+    {
+        if (!value["CopyFromAccountUin"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AutoSnapshotPolicy.CopyFromAccountUin` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_copyFromAccountUin = string(value["CopyFromAccountUin"].GetString());
+        m_copyFromAccountUinHasBeenSet = true;
+    }
+
+    if (value.HasMember("Tags") && !value["Tags"].IsNull())
+    {
+        if (!value["Tags"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `AutoSnapshotPolicy.Tags` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["Tags"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            Tag item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_tags.push_back(item);
+        }
+        m_tagsHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -313,6 +385,54 @@ void AutoSnapshotPolicy::ToJsonObject(rapidjson::Value &value, rapidjson::Docume
         for (auto itr = m_instanceIdSet.begin(); itr != m_instanceIdSet.end(); ++itr)
         {
             value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_retentionMonthsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RetentionMonths";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_retentionMonths, allocator);
+    }
+
+    if (m_retentionAmountHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RetentionAmount";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_retentionAmount, allocator);
+    }
+
+    if (m_advancedRetentionPolicyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AdvancedRetentionPolicy";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_advancedRetentionPolicy.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_copyFromAccountUinHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CopyFromAccountUin";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_copyFromAccountUin.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_tagsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Tags";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_tags.begin(); itr != m_tags.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
     }
 
@@ -525,5 +645,85 @@ void AutoSnapshotPolicy::SetInstanceIdSet(const vector<string>& _instanceIdSet)
 bool AutoSnapshotPolicy::InstanceIdSetHasBeenSet() const
 {
     return m_instanceIdSetHasBeenSet;
+}
+
+uint64_t AutoSnapshotPolicy::GetRetentionMonths() const
+{
+    return m_retentionMonths;
+}
+
+void AutoSnapshotPolicy::SetRetentionMonths(const uint64_t& _retentionMonths)
+{
+    m_retentionMonths = _retentionMonths;
+    m_retentionMonthsHasBeenSet = true;
+}
+
+bool AutoSnapshotPolicy::RetentionMonthsHasBeenSet() const
+{
+    return m_retentionMonthsHasBeenSet;
+}
+
+uint64_t AutoSnapshotPolicy::GetRetentionAmount() const
+{
+    return m_retentionAmount;
+}
+
+void AutoSnapshotPolicy::SetRetentionAmount(const uint64_t& _retentionAmount)
+{
+    m_retentionAmount = _retentionAmount;
+    m_retentionAmountHasBeenSet = true;
+}
+
+bool AutoSnapshotPolicy::RetentionAmountHasBeenSet() const
+{
+    return m_retentionAmountHasBeenSet;
+}
+
+AdvancedRetentionPolicy AutoSnapshotPolicy::GetAdvancedRetentionPolicy() const
+{
+    return m_advancedRetentionPolicy;
+}
+
+void AutoSnapshotPolicy::SetAdvancedRetentionPolicy(const AdvancedRetentionPolicy& _advancedRetentionPolicy)
+{
+    m_advancedRetentionPolicy = _advancedRetentionPolicy;
+    m_advancedRetentionPolicyHasBeenSet = true;
+}
+
+bool AutoSnapshotPolicy::AdvancedRetentionPolicyHasBeenSet() const
+{
+    return m_advancedRetentionPolicyHasBeenSet;
+}
+
+string AutoSnapshotPolicy::GetCopyFromAccountUin() const
+{
+    return m_copyFromAccountUin;
+}
+
+void AutoSnapshotPolicy::SetCopyFromAccountUin(const string& _copyFromAccountUin)
+{
+    m_copyFromAccountUin = _copyFromAccountUin;
+    m_copyFromAccountUinHasBeenSet = true;
+}
+
+bool AutoSnapshotPolicy::CopyFromAccountUinHasBeenSet() const
+{
+    return m_copyFromAccountUinHasBeenSet;
+}
+
+vector<Tag> AutoSnapshotPolicy::GetTags() const
+{
+    return m_tags;
+}
+
+void AutoSnapshotPolicy::SetTags(const vector<Tag>& _tags)
+{
+    m_tags = _tags;
+    m_tagsHasBeenSet = true;
+}
+
+bool AutoSnapshotPolicy::TagsHasBeenSet() const
+{
+    return m_tagsHasBeenSet;
 }
 

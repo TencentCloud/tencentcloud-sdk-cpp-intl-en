@@ -136,6 +136,28 @@ namespace TencentCloud
                      */
                     bool OutBandwidthHasBeenSet() const;
 
+                    /**
+                     * 获取CLB domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Domain CLB domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetDomain() const;
+
+                    /**
+                     * 设置CLB domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param Domain CLB domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetDomain(const std::string& _domain);
+
+                    /**
+                     * 判断参数 Domain 是否已赋值
+                     * @return Domain 是否已赋值
+                     */
+                    bool DomainHasBeenSet() const;
+
                 private:
 
                     /**
@@ -167,6 +189,13 @@ namespace TencentCloud
                      */
                     double m_outBandwidth;
                     bool m_outBandwidthHasBeenSet;
+
+                    /**
+                     * CLB domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_domain;
+                    bool m_domainHasBeenSet;
 
                 };
             }

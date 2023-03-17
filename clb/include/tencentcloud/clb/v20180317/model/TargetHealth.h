@@ -119,14 +119,32 @@ namespace TencentCloud
                     bool TargetIdHasBeenSet() const;
 
                     /**
-                     * 获取Detailed information of the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
-                     * @return HealthStatusDetial Detailed information of the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
+                     * 获取Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
+                     * @return HealthStatusDetail Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
+                     */
+                    std::string GetHealthStatusDetail() const;
+
+                    /**
+                     * 设置Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
+                     * @param HealthStatusDetail Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
+                     */
+                    void SetHealthStatusDetail(const std::string& _healthStatusDetail);
+
+                    /**
+                     * 判断参数 HealthStatusDetail 是否已赋值
+                     * @return HealthStatusDetail 是否已赋值
+                     */
+                    bool HealthStatusDetailHasBeenSet() const;
+
+                    /**
+                     * 获取Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status. This parameter will be discarded soon. We recommend that you use the HealthStatusDetail parameter.
+                     * @return HealthStatusDetial Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status. This parameter will be discarded soon. We recommend that you use the HealthStatusDetail parameter.
                      */
                     std::string GetHealthStatusDetial() const;
 
                     /**
-                     * 设置Detailed information of the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
-                     * @param HealthStatusDetial Detailed information of the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
+                     * 设置Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status. This parameter will be discarded soon. We recommend that you use the HealthStatusDetail parameter.
+                     * @param HealthStatusDetial Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status. This parameter will be discarded soon. We recommend that you use the HealthStatusDetail parameter.
                      */
                     void SetHealthStatusDetial(const std::string& _healthStatusDetial);
 
@@ -163,7 +181,13 @@ namespace TencentCloud
                     bool m_targetIdHasBeenSet;
 
                     /**
-                     * Detailed information of the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
+                     * Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status.
+                     */
+                    std::string m_healthStatusDetail;
+                    bool m_healthStatusDetailHasBeenSet;
+
+                    /**
+                     * Detailed information about the current health status. Alive: healthy; Dead: exceptional; Unknown: check not started/checking/unknown status. This parameter will be discarded soon. We recommend that you use the HealthStatusDetail parameter.
                      */
                     std::string m_healthStatusDetial;
                     bool m_healthStatusDetialHasBeenSet;

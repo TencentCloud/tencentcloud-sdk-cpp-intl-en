@@ -82,14 +82,14 @@ namespace TencentCloud
                     bool PortsHasBeenSet() const;
 
                     /**
-                     * 获取Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application).
-                     * @return Protocol Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application).
+                     * 获取Listener protocol. Values: TCP | UDP | HTTP | HTTPS | TCP_SSL | QUIC
+                     * @return Protocol Listener protocol. Values: TCP | UDP | HTTP | HTTPS | TCP_SSL | QUIC
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application).
-                     * @param Protocol Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application).
+                     * 设置Listener protocol. Values: TCP | UDP | HTTP | HTTPS | TCP_SSL | QUIC
+                     * @param Protocol Listener protocol. Values: TCP | UDP | HTTP | HTTPS | TCP_SSL | QUIC
                      */
                     void SetProtocol(const std::string& _protocol);
 
@@ -370,7 +370,7 @@ They represent weighted round robin and least connections, respectively. Default
                     bool m_portsHasBeenSet;
 
                     /**
-                     * Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application).
+                     * Listener protocol. Values: TCP | UDP | HTTP | HTTPS | TCP_SSL | QUIC
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;

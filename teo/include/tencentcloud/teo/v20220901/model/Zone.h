@@ -450,6 +450,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool AliasZoneNameHasBeenSet() const;
 
+                    /**
+                     * 获取Whether it’s a fake site. Values:
+<li>`0`: Non-fake site</li>
+<li>`1`: Fake site</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return IsFake Whether it’s a fake site. Values:
+<li>`0`: Non-fake site</li>
+<li>`1`: Fake site</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    int64_t GetIsFake() const;
+
+                    /**
+                     * 设置Whether it’s a fake site. Values:
+<li>`0`: Non-fake site</li>
+<li>`1`: Fake site</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param IsFake Whether it’s a fake site. Values:
+<li>`0`: Non-fake site</li>
+<li>`1`: Fake site</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetIsFake(const int64_t& _isFake);
+
+                    /**
+                     * 判断参数 IsFake 是否已赋值
+                     * @return IsFake 是否已赋值
+                     */
+                    bool IsFakeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -578,6 +608,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_aliasZoneName;
                     bool m_aliasZoneNameHasBeenSet;
+
+                    /**
+                     * Whether it’s a fake site. Values:
+<li>`0`: Non-fake site</li>
+<li>`1`: Fake site</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    int64_t m_isFake;
+                    bool m_isFakeHasBeenSet;
 
                 };
             }

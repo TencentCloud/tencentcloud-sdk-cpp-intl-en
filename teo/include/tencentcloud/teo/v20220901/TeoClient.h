@@ -27,6 +27,8 @@
 #include <tencentcloud/teo/v20220901/model/BindZoneToPlanResponse.h>
 #include <tencentcloud/teo/v20220901/model/CheckCertificateRequest.h>
 #include <tencentcloud/teo/v20220901/model/CheckCertificateResponse.h>
+#include <tencentcloud/teo/v20220901/model/CreateAccelerationDomainRequest.h>
+#include <tencentcloud/teo/v20220901/model/CreateAccelerationDomainResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateAliasDomainRequest.h>
 #include <tencentcloud/teo/v20220901/model/CreateAliasDomainResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateApplicationProxyRequest.h>
@@ -51,6 +53,8 @@
 #include <tencentcloud/teo/v20220901/model/CreateSpeedTestingResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateZoneRequest.h>
 #include <tencentcloud/teo/v20220901/model/CreateZoneResponse.h>
+#include <tencentcloud/teo/v20220901/model/DeleteAccelerationDomainsRequest.h>
+#include <tencentcloud/teo/v20220901/model/DeleteAccelerationDomainsResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteAliasDomainRequest.h>
 #include <tencentcloud/teo/v20220901/model/DeleteAliasDomainResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteApplicationProxyRequest.h>
@@ -63,6 +67,8 @@
 #include <tencentcloud/teo/v20220901/model/DeleteRulesResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteZoneRequest.h>
 #include <tencentcloud/teo/v20220901/model/DeleteZoneResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeAccelerationDomainsRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeAccelerationDomainsResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeAddableEntityListRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeAddableEntityListResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeAliasDomainsRequest.h>
@@ -119,6 +125,8 @@
 #include <tencentcloud/teo/v20220901/model/DescribeTimingL7AnalysisDataResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeTimingL7CacheDataRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeTimingL7CacheDataResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeTimingL7SourceDataRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeTimingL7SourceDataResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeTopL7AnalysisDataRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeTopL7AnalysisDataResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeTopL7CacheDataRequest.h>
@@ -147,6 +155,10 @@
 #include <tencentcloud/teo/v20220901/model/DownloadL7LogsResponse.h>
 #include <tencentcloud/teo/v20220901/model/IdentifyZoneRequest.h>
 #include <tencentcloud/teo/v20220901/model/IdentifyZoneResponse.h>
+#include <tencentcloud/teo/v20220901/model/ModifyAccelerationDomainRequest.h>
+#include <tencentcloud/teo/v20220901/model/ModifyAccelerationDomainResponse.h>
+#include <tencentcloud/teo/v20220901/model/ModifyAccelerationDomainStatusesRequest.h>
+#include <tencentcloud/teo/v20220901/model/ModifyAccelerationDomainStatusesResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyAliasDomainRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifyAliasDomainResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyAliasDomainStatusRequest.h>
@@ -205,6 +217,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CheckCertificateResponse> CheckCertificateOutcome;
                 typedef std::future<CheckCertificateOutcome> CheckCertificateOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CheckCertificateRequest&, CheckCertificateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CheckCertificateAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateAccelerationDomainResponse> CreateAccelerationDomainOutcome;
+                typedef std::future<CreateAccelerationDomainOutcome> CreateAccelerationDomainOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::CreateAccelerationDomainRequest&, CreateAccelerationDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAccelerationDomainAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateAliasDomainResponse> CreateAliasDomainOutcome;
                 typedef std::future<CreateAliasDomainOutcome> CreateAliasDomainOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateAliasDomainRequest&, CreateAliasDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAliasDomainAsyncHandler;
@@ -241,6 +256,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateZoneResponse> CreateZoneOutcome;
                 typedef std::future<CreateZoneOutcome> CreateZoneOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateZoneRequest&, CreateZoneOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateZoneAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteAccelerationDomainsResponse> DeleteAccelerationDomainsOutcome;
+                typedef std::future<DeleteAccelerationDomainsOutcome> DeleteAccelerationDomainsOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DeleteAccelerationDomainsRequest&, DeleteAccelerationDomainsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAccelerationDomainsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteAliasDomainResponse> DeleteAliasDomainOutcome;
                 typedef std::future<DeleteAliasDomainOutcome> DeleteAliasDomainOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DeleteAliasDomainRequest&, DeleteAliasDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAliasDomainAsyncHandler;
@@ -259,6 +277,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteZoneResponse> DeleteZoneOutcome;
                 typedef std::future<DeleteZoneOutcome> DeleteZoneOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DeleteZoneRequest&, DeleteZoneOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteZoneAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAccelerationDomainsResponse> DescribeAccelerationDomainsOutcome;
+                typedef std::future<DescribeAccelerationDomainsOutcome> DescribeAccelerationDomainsOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeAccelerationDomainsRequest&, DescribeAccelerationDomainsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccelerationDomainsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAddableEntityListResponse> DescribeAddableEntityListOutcome;
                 typedef std::future<DescribeAddableEntityListOutcome> DescribeAddableEntityListOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeAddableEntityListRequest&, DescribeAddableEntityListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAddableEntityListAsyncHandler;
@@ -343,6 +364,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeTimingL7CacheDataResponse> DescribeTimingL7CacheDataOutcome;
                 typedef std::future<DescribeTimingL7CacheDataOutcome> DescribeTimingL7CacheDataOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeTimingL7CacheDataRequest&, DescribeTimingL7CacheDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTimingL7CacheDataAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeTimingL7SourceDataResponse> DescribeTimingL7SourceDataOutcome;
+                typedef std::future<DescribeTimingL7SourceDataOutcome> DescribeTimingL7SourceDataOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeTimingL7SourceDataRequest&, DescribeTimingL7SourceDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTimingL7SourceDataAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeTopL7AnalysisDataResponse> DescribeTopL7AnalysisDataOutcome;
                 typedef std::future<DescribeTopL7AnalysisDataOutcome> DescribeTopL7AnalysisDataOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeTopL7AnalysisDataRequest&, DescribeTopL7AnalysisDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTopL7AnalysisDataAsyncHandler;
@@ -385,6 +409,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::IdentifyZoneResponse> IdentifyZoneOutcome;
                 typedef std::future<IdentifyZoneOutcome> IdentifyZoneOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::IdentifyZoneRequest&, IdentifyZoneOutcome, const std::shared_ptr<const AsyncCallerContext>&)> IdentifyZoneAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyAccelerationDomainResponse> ModifyAccelerationDomainOutcome;
+                typedef std::future<ModifyAccelerationDomainOutcome> ModifyAccelerationDomainOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::ModifyAccelerationDomainRequest&, ModifyAccelerationDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAccelerationDomainAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyAccelerationDomainStatusesResponse> ModifyAccelerationDomainStatusesOutcome;
+                typedef std::future<ModifyAccelerationDomainStatusesOutcome> ModifyAccelerationDomainStatusesOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::ModifyAccelerationDomainStatusesRequest&, ModifyAccelerationDomainStatusesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAccelerationDomainStatusesAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyAliasDomainResponse> ModifyAliasDomainOutcome;
                 typedef std::future<ModifyAliasDomainOutcome> ModifyAliasDomainOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyAliasDomainRequest&, ModifyAliasDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAliasDomainAsyncHandler;
@@ -462,6 +492,15 @@ namespace TencentCloud
                 CheckCertificateOutcome CheckCertificate(const Model::CheckCertificateRequest &request);
                 void CheckCertificateAsync(const Model::CheckCertificateRequest& request, const CheckCertificateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CheckCertificateOutcomeCallable CheckCertificateCallable(const Model::CheckCertificateRequest& request);
+
+                /**
+                 *This API is used to connect a domain to EdgeOne.
+                 * @param req CreateAccelerationDomainRequest
+                 * @return CreateAccelerationDomainOutcome
+                 */
+                CreateAccelerationDomainOutcome CreateAccelerationDomain(const Model::CreateAccelerationDomainRequest &request);
+                void CreateAccelerationDomainAsync(const Model::CreateAccelerationDomainRequest& request, const CreateAccelerationDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateAccelerationDomainOutcomeCallable CreateAccelerationDomainCallable(const Model::CreateAccelerationDomainRequest& request);
 
                 /**
                  *This API is used to create an alias domain name.
@@ -572,6 +611,15 @@ namespace TencentCloud
                 CreateZoneOutcomeCallable CreateZoneCallable(const Model::CreateZoneRequest& request);
 
                 /**
+                 *This API is used to batch remove accelerated domain names.
+                 * @param req DeleteAccelerationDomainsRequest
+                 * @return DeleteAccelerationDomainsOutcome
+                 */
+                DeleteAccelerationDomainsOutcome DeleteAccelerationDomains(const Model::DeleteAccelerationDomainsRequest &request);
+                void DeleteAccelerationDomainsAsync(const Model::DeleteAccelerationDomainsRequest& request, const DeleteAccelerationDomainsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteAccelerationDomainsOutcomeCallable DeleteAccelerationDomainsCallable(const Model::DeleteAccelerationDomainsRequest& request);
+
+                /**
                  *This API is used to delete an alias domain name.
                  * @param req DeleteAliasDomainRequest
                  * @return DeleteAliasDomainOutcome
@@ -624,6 +672,15 @@ namespace TencentCloud
                 DeleteZoneOutcome DeleteZone(const Model::DeleteZoneRequest &request);
                 void DeleteZoneAsync(const Model::DeleteZoneRequest& request, const DeleteZoneAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteZoneOutcomeCallable DeleteZoneCallable(const Model::DeleteZoneRequest& request);
+
+                /**
+                 *This API is used to query accelerated domain names. Paging, sorting and filtering are supported.
+                 * @param req DescribeAccelerationDomainsRequest
+                 * @return DescribeAccelerationDomainsOutcome
+                 */
+                DescribeAccelerationDomainsOutcome DescribeAccelerationDomains(const Model::DescribeAccelerationDomainsRequest &request);
+                void DescribeAccelerationDomainsAsync(const Model::DescribeAccelerationDomainsRequest& request, const DescribeAccelerationDomainsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAccelerationDomainsOutcomeCallable DescribeAccelerationDomainsCallable(const Model::DescribeAccelerationDomainsRequest& request);
 
                 /**
                  *This API is used to query available shipping entities.
@@ -878,6 +935,15 @@ namespace TencentCloud
                 DescribeTimingL7CacheDataOutcomeCallable DescribeTimingL7CacheDataCallable(const Model::DescribeTimingL7CacheDataRequest& request);
 
                 /**
+                 *This API is used to query the L7 time-series data of origin-pull.
+                 * @param req DescribeTimingL7SourceDataRequest
+                 * @return DescribeTimingL7SourceDataOutcome
+                 */
+                DescribeTimingL7SourceDataOutcome DescribeTimingL7SourceData(const Model::DescribeTimingL7SourceDataRequest &request);
+                void DescribeTimingL7SourceDataAsync(const Model::DescribeTimingL7SourceDataRequest& request, const DescribeTimingL7SourceDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeTimingL7SourceDataOutcomeCallable DescribeTimingL7SourceDataCallable(const Model::DescribeTimingL7SourceDataRequest& request);
+
+                /**
                  *This API is used to query the top-ranked L7 traffic data.
                  * @param req DescribeTopL7AnalysisDataRequest
                  * @return DescribeTopL7AnalysisDataOutcome
@@ -1002,6 +1068,24 @@ namespace TencentCloud
                 IdentifyZoneOutcome IdentifyZone(const Model::IdentifyZoneRequest &request);
                 void IdentifyZoneAsync(const Model::IdentifyZoneRequest& request, const IdentifyZoneAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 IdentifyZoneOutcomeCallable IdentifyZoneCallable(const Model::IdentifyZoneRequest& request);
+
+                /**
+                 *This API is used to modify an accelerated domain name.
+                 * @param req ModifyAccelerationDomainRequest
+                 * @return ModifyAccelerationDomainOutcome
+                 */
+                ModifyAccelerationDomainOutcome ModifyAccelerationDomain(const Model::ModifyAccelerationDomainRequest &request);
+                void ModifyAccelerationDomainAsync(const Model::ModifyAccelerationDomainRequest& request, const ModifyAccelerationDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyAccelerationDomainOutcomeCallable ModifyAccelerationDomainCallable(const Model::ModifyAccelerationDomainRequest& request);
+
+                /**
+                 *This API is used to batch modify the status of accelerated domains.
+                 * @param req ModifyAccelerationDomainStatusesRequest
+                 * @return ModifyAccelerationDomainStatusesOutcome
+                 */
+                ModifyAccelerationDomainStatusesOutcome ModifyAccelerationDomainStatuses(const Model::ModifyAccelerationDomainStatusesRequest &request);
+                void ModifyAccelerationDomainStatusesAsync(const Model::ModifyAccelerationDomainStatusesRequest& request, const ModifyAccelerationDomainStatusesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyAccelerationDomainStatusesOutcomeCallable ModifyAccelerationDomainStatusesCallable(const Model::ModifyAccelerationDomainStatusesRequest& request);
 
                 /**
                  *This API is used to modify an alias domain name.

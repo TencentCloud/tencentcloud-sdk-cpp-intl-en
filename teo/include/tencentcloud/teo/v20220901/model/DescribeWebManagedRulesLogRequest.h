@@ -152,58 +152,62 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取The key of the parameter QueryCondition, which is used to specify a filter. Values:
-<li>`attackType`: Attack type;</li>
-<li>`riskLevel`: Risk level;</li>
-<li>`action`: Action;</li>
-<li>`ruleId`: Rule ID;</li>
-<li>`sipCountryCode`: Country code of the attacker IP;</li>
-<li>`attackIp`: Attacker IP;</li>
-<li>`oriDomain`: Attacked subdomain name;</li>
-<li>`eventId`: Event ID;</li>
-<li>`ua`: User agent;</li>
-<li>`requestMethod`: Request method;</li>
-<li>`uri`: Uniform resource identifier.</li>
-                     * @return QueryCondition The key of the parameter QueryCondition, which is used to specify a filter. Values:
-<li>`attackType`: Attack type;</li>
-<li>`riskLevel`: Risk level;</li>
-<li>`action`: Action;</li>
-<li>`ruleId`: Rule ID;</li>
-<li>`sipCountryCode`: Country code of the attacker IP;</li>
-<li>`attackIp`: Attacker IP;</li>
-<li>`oriDomain`: Attacked subdomain name;</li>
-<li>`eventId`: Event ID;</li>
-<li>`ua`: User agent;</li>
-<li>`requestMethod`: Request method;</li>
-<li>`uri`: Uniform resource identifier.</li>
+                     * 获取Filters for the query. Values:
+<li>`attackType`: Attack type</li>
+<li>`riskLevel`: Risk level</li>
+<li>`action`: Action</li>
+<li>`ruleId`: Rule ID</li>
+<li>`sipCountryCode`: Country code of the attacker IP</li>
+<li>`attackIp`: Attacker IP</li>
+<li>`realClientIp`: Real client IP</li>
+<li>`oriDomain`: Attacked subdomain name</li>
+<li>`eventId`: Event ID</li>
+<li>`ua`: User agent</li>
+<li>`requestMethod`: Request method</li>
+<li>`uri`: Uniform resource identifier</li>
+                     * @return QueryCondition Filters for the query. Values:
+<li>`attackType`: Attack type</li>
+<li>`riskLevel`: Risk level</li>
+<li>`action`: Action</li>
+<li>`ruleId`: Rule ID</li>
+<li>`sipCountryCode`: Country code of the attacker IP</li>
+<li>`attackIp`: Attacker IP</li>
+<li>`realClientIp`: Real client IP</li>
+<li>`oriDomain`: Attacked subdomain name</li>
+<li>`eventId`: Event ID</li>
+<li>`ua`: User agent</li>
+<li>`requestMethod`: Request method</li>
+<li>`uri`: Uniform resource identifier</li>
                      */
                     std::vector<QueryCondition> GetQueryCondition() const;
 
                     /**
-                     * 设置The key of the parameter QueryCondition, which is used to specify a filter. Values:
-<li>`attackType`: Attack type;</li>
-<li>`riskLevel`: Risk level;</li>
-<li>`action`: Action;</li>
-<li>`ruleId`: Rule ID;</li>
-<li>`sipCountryCode`: Country code of the attacker IP;</li>
-<li>`attackIp`: Attacker IP;</li>
-<li>`oriDomain`: Attacked subdomain name;</li>
-<li>`eventId`: Event ID;</li>
-<li>`ua`: User agent;</li>
-<li>`requestMethod`: Request method;</li>
-<li>`uri`: Uniform resource identifier.</li>
-                     * @param QueryCondition The key of the parameter QueryCondition, which is used to specify a filter. Values:
-<li>`attackType`: Attack type;</li>
-<li>`riskLevel`: Risk level;</li>
-<li>`action`: Action;</li>
-<li>`ruleId`: Rule ID;</li>
-<li>`sipCountryCode`: Country code of the attacker IP;</li>
-<li>`attackIp`: Attacker IP;</li>
-<li>`oriDomain`: Attacked subdomain name;</li>
-<li>`eventId`: Event ID;</li>
-<li>`ua`: User agent;</li>
-<li>`requestMethod`: Request method;</li>
-<li>`uri`: Uniform resource identifier.</li>
+                     * 设置Filters for the query. Values:
+<li>`attackType`: Attack type</li>
+<li>`riskLevel`: Risk level</li>
+<li>`action`: Action</li>
+<li>`ruleId`: Rule ID</li>
+<li>`sipCountryCode`: Country code of the attacker IP</li>
+<li>`attackIp`: Attacker IP</li>
+<li>`realClientIp`: Real client IP</li>
+<li>`oriDomain`: Attacked subdomain name</li>
+<li>`eventId`: Event ID</li>
+<li>`ua`: User agent</li>
+<li>`requestMethod`: Request method</li>
+<li>`uri`: Uniform resource identifier</li>
+                     * @param QueryCondition Filters for the query. Values:
+<li>`attackType`: Attack type</li>
+<li>`riskLevel`: Risk level</li>
+<li>`action`: Action</li>
+<li>`ruleId`: Rule ID</li>
+<li>`sipCountryCode`: Country code of the attacker IP</li>
+<li>`attackIp`: Attacker IP</li>
+<li>`realClientIp`: Real client IP</li>
+<li>`oriDomain`: Attacked subdomain name</li>
+<li>`eventId`: Event ID</li>
+<li>`ua`: User agent</li>
+<li>`requestMethod`: Request method</li>
+<li>`uri`: Uniform resource identifier</li>
                      */
                     void SetQueryCondition(const std::vector<QueryCondition>& _queryCondition);
 
@@ -278,18 +282,19 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * The key of the parameter QueryCondition, which is used to specify a filter. Values:
-<li>`attackType`: Attack type;</li>
-<li>`riskLevel`: Risk level;</li>
-<li>`action`: Action;</li>
-<li>`ruleId`: Rule ID;</li>
-<li>`sipCountryCode`: Country code of the attacker IP;</li>
-<li>`attackIp`: Attacker IP;</li>
-<li>`oriDomain`: Attacked subdomain name;</li>
-<li>`eventId`: Event ID;</li>
-<li>`ua`: User agent;</li>
-<li>`requestMethod`: Request method;</li>
-<li>`uri`: Uniform resource identifier.</li>
+                     * Filters for the query. Values:
+<li>`attackType`: Attack type</li>
+<li>`riskLevel`: Risk level</li>
+<li>`action`: Action</li>
+<li>`ruleId`: Rule ID</li>
+<li>`sipCountryCode`: Country code of the attacker IP</li>
+<li>`attackIp`: Attacker IP</li>
+<li>`realClientIp`: Real client IP</li>
+<li>`oriDomain`: Attacked subdomain name</li>
+<li>`eventId`: Event ID</li>
+<li>`ua`: User agent</li>
+<li>`requestMethod`: Request method</li>
+<li>`uri`: Uniform resource identifier</li>
                      */
                     std::vector<QueryCondition> m_queryCondition;
                     bool m_queryConditionHasBeenSet;

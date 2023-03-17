@@ -329,14 +329,14 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
                     bool ClusterIdsHasBeenSet() const;
 
                     /**
-                     * 获取Guaranteed performance specification.
-                     * @return SlaType Guaranteed performance specification.
+                     * 获取Specification of the LCU-supported instance.
+                     * @return SlaType Specification of the LCU-supported instance.
                      */
                     std::string GetSlaType() const;
 
                     /**
-                     * 设置Guaranteed performance specification.
-                     * @param SlaType Guaranteed performance specification.
+                     * 设置Specification of the LCU-supported instance.
+                     * @param SlaType Specification of the LCU-supported instance.
                      */
                     void SetSlaType(const std::string& _slaType);
 
@@ -496,7 +496,7 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
                     bool m_clusterIdsHasBeenSet;
 
                     /**
-                     * Guaranteed performance specification.
+                     * Specification of the LCU-supported instance.
                      */
                     std::string m_slaType;
                     bool m_slaTypeHasBeenSet;

@@ -131,17 +131,17 @@ OPEN: public network; INTERNAL: private network.
                     bool ForwardHasBeenSet() const;
 
                     /**
-                     * 获取CLB instance domain name. This field is provided only to public network classic CLB instance.
+                     * 获取Domain name of the CLB instance. It is only available for public classic CLBs. This parameter will be discontinued soon. Please use `LoadBalancerDomain` instead.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Domain CLB instance domain name. This field is provided only to public network classic CLB instance.
+                     * @return Domain Domain name of the CLB instance. It is only available for public classic CLBs. This parameter will be discontinued soon. Please use `LoadBalancerDomain` instead.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置CLB instance domain name. This field is provided only to public network classic CLB instance.
+                     * 设置Domain name of the CLB instance. It is only available for public classic CLBs. This parameter will be discontinued soon. Please use `LoadBalancerDomain` instead.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Domain CLB instance domain name. This field is provided only to public network classic CLB instance.
+                     * @param Domain Domain name of the CLB instance. It is only available for public classic CLBs. This parameter will be discontinued soon. Please use `LoadBalancerDomain` instead.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetDomain(const std::string& _domain);
@@ -945,18 +945,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SnatIpsHasBeenSet() const;
 
                     /**
-                     * 获取Performance guarantee specification
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SlaType Performance guarantee specification
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Specification of the LCU-supported instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SlaType Specification of the LCU-supported instance.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetSlaType() const;
 
                     /**
-                     * 设置Performance guarantee specification
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param SlaType Performance guarantee specification
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Specification of the LCU-supported instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param SlaType Specification of the LCU-supported instance.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetSlaType(const std::string& _slaType);
 
@@ -1161,14 +1161,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool HealthLogTopicIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ClusterIds 
+                     * 获取Cluster ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ClusterIds Cluster ID.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> GetClusterIds() const;
 
                     /**
-                     * 设置
-                     * @param ClusterIds 
+                     * 设置Cluster ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ClusterIds Cluster ID.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetClusterIds(const std::vector<std::string>& _clusterIds);
 
@@ -1200,6 +1204,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     bool AttributeFlagsHasBeenSet() const;
 
+                    /**
+                     * 获取Domain name of the CLB instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return LoadBalancerDomain Domain name of the CLB instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetLoadBalancerDomain() const;
+
+                    /**
+                     * 设置Domain name of the CLB instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param LoadBalancerDomain Domain name of the CLB instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetLoadBalancerDomain(const std::string& _loadBalancerDomain);
+
+                    /**
+                     * 判断参数 LoadBalancerDomain 是否已赋值
+                     * @return LoadBalancerDomain 是否已赋值
+                     */
+                    bool LoadBalancerDomainHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1228,7 +1254,7 @@ OPEN: public network; INTERNAL: private network.
                     bool m_forwardHasBeenSet;
 
                     /**
-                     * CLB instance domain name. This field is provided only to public network classic CLB instance.
+                     * Domain name of the CLB instance. It is only available for public classic CLBs. This parameter will be discontinued soon. Please use `LoadBalancerDomain` instead.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_domain;
@@ -1487,8 +1513,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_snatIpsHasBeenSet;
 
                     /**
-                     * Performance guarantee specification
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Specification of the LCU-supported instance.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_slaType;
                     bool m_slaTypeHasBeenSet;
@@ -1556,7 +1582,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_healthLogTopicIdHasBeenSet;
 
                     /**
-                     * 
+                     * Cluster ID.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_clusterIds;
                     bool m_clusterIdsHasBeenSet;
@@ -1567,6 +1594,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      */
                     std::vector<std::string> m_attributeFlags;
                     bool m_attributeFlagsHasBeenSet;
+
+                    /**
+                     * Domain name of the CLB instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_loadBalancerDomain;
+                    bool m_loadBalancerDomainHasBeenSet;
 
                 };
             }

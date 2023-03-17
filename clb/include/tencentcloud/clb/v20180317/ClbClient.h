@@ -137,6 +137,8 @@
 #include <tencentcloud/clb/v20180317/model/ModifyDomainResponse.h>
 #include <tencentcloud/clb/v20180317/model/ModifyDomainAttributesRequest.h>
 #include <tencentcloud/clb/v20180317/model/ModifyDomainAttributesResponse.h>
+#include <tencentcloud/clb/v20180317/model/ModifyFunctionTargetsRequest.h>
+#include <tencentcloud/clb/v20180317/model/ModifyFunctionTargetsResponse.h>
 #include <tencentcloud/clb/v20180317/model/ModifyListenerRequest.h>
 #include <tencentcloud/clb/v20180317/model/ModifyListenerResponse.h>
 #include <tencentcloud/clb/v20180317/model/ModifyLoadBalancerAttributesRequest.h>
@@ -358,6 +360,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyDomainAttributesResponse> ModifyDomainAttributesOutcome;
                 typedef std::future<ModifyDomainAttributesOutcome> ModifyDomainAttributesOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::ModifyDomainAttributesRequest&, ModifyDomainAttributesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDomainAttributesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyFunctionTargetsResponse> ModifyFunctionTargetsOutcome;
+                typedef std::future<ModifyFunctionTargetsOutcome> ModifyFunctionTargetsOutcomeCallable;
+                typedef std::function<void(const ClbClient*, const Model::ModifyFunctionTargetsRequest&, ModifyFunctionTargetsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyFunctionTargetsAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyListenerResponse> ModifyListenerOutcome;
                 typedef std::future<ModifyListenerOutcome> ModifyListenerOutcomeCallable;
                 typedef std::function<void(const ClbClient*, const Model::ModifyListenerRequest&, ModifyListenerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyListenerAsyncHandler;
@@ -972,6 +977,15 @@ This is an async API. After it is returned successfully, you can call the Descri
                 ModifyDomainAttributesOutcomeCallable ModifyDomainAttributesCallable(const Model::ModifyDomainAttributesRequest& request);
 
                 /**
+                 *This API is used to modify the cloud functions associated with a load balancing forwarding rule.
+                 * @param req ModifyFunctionTargetsRequest
+                 * @return ModifyFunctionTargetsOutcome
+                 */
+                ModifyFunctionTargetsOutcome ModifyFunctionTargets(const Model::ModifyFunctionTargetsRequest &request);
+                void ModifyFunctionTargetsAsync(const Model::ModifyFunctionTargetsRequest& request, const ModifyFunctionTargetsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyFunctionTargetsOutcomeCallable ModifyFunctionTargetsCallable(const Model::ModifyFunctionTargetsRequest& request);
+
+                /**
                  *This API (ModifyListener) is used to modify the attributes of a CLB listener, such as listener name, health check parameter, certificate information, and forwarding policy.
 This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestID as an input parameter to check whether this task is successful.
                  * @param req ModifyListenerRequest
@@ -992,7 +1006,12 @@ This is an async API. After it is returned successfully, you can check the task 
                 ModifyLoadBalancerAttributesOutcomeCallable ModifyLoadBalancerAttributesCallable(const Model::ModifyLoadBalancerAttributesRequest& request);
 
                 /**
-                 *This API is used to upgrade shared CLB instances to LCU-supported CLB instances.
+                 *This API is used to upgrade a pay-as-you-go shared CLB instance to an LCU-supported CLB instance.<br/>
+Limits
+- This API can be used to upgrade only a pay-as-you-go shared instance. A monthly subscription shared instance must be upgraded in the console.
+- An LCU-supported instance cannot be rolled back to a shared instance.
+- LCU-supported instances are in beta testing. To upgrade to an LCU-supported instance, [submit a ticket](https://intl.cloud.tencent.com/apply/p/hf45esx99lf?from_cn_redirect=1) for application.
+- Classic CLB instances cannot be upgraded to LCU-supported instances.
                  * @param req ModifyLoadBalancerSlaRequest
                  * @return ModifyLoadBalancerSlaOutcome
                  */

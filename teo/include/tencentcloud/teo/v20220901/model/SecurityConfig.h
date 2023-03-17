@@ -33,6 +33,7 @@
 #include <tencentcloud/teo/v20220901/model/ExceptConfig.h>
 #include <tencentcloud/teo/v20220901/model/DropPageConfig.h>
 #include <tencentcloud/teo/v20220901/model/TemplateConfig.h>
+#include <tencentcloud/teo/v20220901/model/SlowPostConfig.h>
 
 
 namespace TencentCloud
@@ -253,6 +254,28 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool TemplateConfigHasBeenSet() const;
 
+                    /**
+                     * 获取Slow attack defense configuration. If it is `null`, the previous setting is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return SlowPostConfig Slow attack defense configuration. If it is `null`, the previous setting is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    SlowPostConfig GetSlowPostConfig() const;
+
+                    /**
+                     * 设置Slow attack defense configuration. If it is `null`, the previous setting is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param SlowPostConfig Slow attack defense configuration. If it is `null`, the previous setting is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetSlowPostConfig(const SlowPostConfig& _slowPostConfig);
+
+                    /**
+                     * 判断参数 SlowPostConfig 是否已赋值
+                     * @return SlowPostConfig 是否已赋值
+                     */
+                    bool SlowPostConfigHasBeenSet() const;
+
                 private:
 
                     /**
@@ -317,6 +340,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     TemplateConfig m_templateConfig;
                     bool m_templateConfigHasBeenSet;
+
+                    /**
+                     * Slow attack defense configuration. If it is `null`, the previous setting is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    SlowPostConfig m_slowPostConfig;
+                    bool m_slowPostConfigHasBeenSet;
 
                 };
             }

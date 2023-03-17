@@ -29,6 +29,14 @@
 #include <tencentcloud/trtc/v20190722/model/DeleteCloudRecordingResponse.h>
 #include <tencentcloud/trtc/v20190722/model/DescribeCloudRecordingRequest.h>
 #include <tencentcloud/trtc/v20190722/model/DescribeCloudRecordingResponse.h>
+#include <tencentcloud/trtc/v20190722/model/DescribeMixTranscodingUsageRequest.h>
+#include <tencentcloud/trtc/v20190722/model/DescribeMixTranscodingUsageResponse.h>
+#include <tencentcloud/trtc/v20190722/model/DescribeRecordingUsageRequest.h>
+#include <tencentcloud/trtc/v20190722/model/DescribeRecordingUsageResponse.h>
+#include <tencentcloud/trtc/v20190722/model/DescribeRelayUsageRequest.h>
+#include <tencentcloud/trtc/v20190722/model/DescribeRelayUsageResponse.h>
+#include <tencentcloud/trtc/v20190722/model/DescribeTrtcUsageRequest.h>
+#include <tencentcloud/trtc/v20190722/model/DescribeTrtcUsageResponse.h>
 #include <tencentcloud/trtc/v20190722/model/DismissRoomRequest.h>
 #include <tencentcloud/trtc/v20190722/model/DismissRoomResponse.h>
 #include <tencentcloud/trtc/v20190722/model/DismissRoomByStrRoomIdRequest.h>
@@ -72,6 +80,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeCloudRecordingResponse> DescribeCloudRecordingOutcome;
                 typedef std::future<DescribeCloudRecordingOutcome> DescribeCloudRecordingOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::DescribeCloudRecordingRequest&, DescribeCloudRecordingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCloudRecordingAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMixTranscodingUsageResponse> DescribeMixTranscodingUsageOutcome;
+                typedef std::future<DescribeMixTranscodingUsageOutcome> DescribeMixTranscodingUsageOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::DescribeMixTranscodingUsageRequest&, DescribeMixTranscodingUsageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMixTranscodingUsageAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRecordingUsageResponse> DescribeRecordingUsageOutcome;
+                typedef std::future<DescribeRecordingUsageOutcome> DescribeRecordingUsageOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::DescribeRecordingUsageRequest&, DescribeRecordingUsageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRecordingUsageAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRelayUsageResponse> DescribeRelayUsageOutcome;
+                typedef std::future<DescribeRelayUsageOutcome> DescribeRelayUsageOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::DescribeRelayUsageRequest&, DescribeRelayUsageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRelayUsageAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeTrtcUsageResponse> DescribeTrtcUsageOutcome;
+                typedef std::future<DescribeTrtcUsageOutcome> DescribeTrtcUsageOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::DescribeTrtcUsageRequest&, DescribeTrtcUsageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTrtcUsageAsyncHandler;
                 typedef Outcome<Core::Error, Model::DismissRoomResponse> DismissRoomOutcome;
                 typedef std::future<DismissRoomOutcome> DismissRoomOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::DismissRoomRequest&, DismissRoomOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DismissRoomAsyncHandler;
@@ -143,6 +163,62 @@ If a recording file is being uploaded to VOD, the response parameter `StorageFil
                 DescribeCloudRecordingOutcome DescribeCloudRecording(const Model::DescribeCloudRecordingRequest &request);
                 void DescribeCloudRecordingAsync(const Model::DescribeCloudRecordingRequest& request, const DescribeCloudRecordingAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeCloudRecordingOutcomeCallable DescribeCloudRecordingCallable(const Model::DescribeCloudRecordingRequest& request);
+
+                /**
+                 *This API is used to query your usage of TRTC’s On-Cloud MixTranscoding service.
+- If the period queried is one day or shorter, the statistics returned are on a five-minute basis. If the period queried is longer than one day, the statistics returned are on a daily basis.
+- The period queried per request cannot be longer than 31 days.
+- If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
+- You can use this API to query your historical usage or to reconcile data, but we do not recommend you use it for crucial business logic.
+- The rate limit of this API is five calls per second.
+                 * @param req DescribeMixTranscodingUsageRequest
+                 * @return DescribeMixTranscodingUsageOutcome
+                 */
+                DescribeMixTranscodingUsageOutcome DescribeMixTranscodingUsage(const Model::DescribeMixTranscodingUsageRequest &request);
+                void DescribeMixTranscodingUsageAsync(const Model::DescribeMixTranscodingUsageRequest& request, const DescribeMixTranscodingUsageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMixTranscodingUsageOutcomeCallable DescribeMixTranscodingUsageCallable(const Model::DescribeMixTranscodingUsageRequest& request);
+
+                /**
+                 *This API is used to query your TRTC recording usage.
+- If the period queried is one day or shorter, the statistics returned are on a five-minute basis. If the period queried is longer than one day, the statistics returned are on a daily basis.
+- The period queried per request cannot be longer than 31 days.
+- If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
+- You can use this API to query your historical usage or to reconcile data, but we do not recommend you use it for crucial business logic.
+- The rate limit of this API is five calls per second.
+                 * @param req DescribeRecordingUsageRequest
+                 * @return DescribeRecordingUsageOutcome
+                 */
+                DescribeRecordingUsageOutcome DescribeRecordingUsage(const Model::DescribeRecordingUsageRequest &request);
+                void DescribeRecordingUsageAsync(const Model::DescribeRecordingUsageRequest& request, const DescribeRecordingUsageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRecordingUsageOutcomeCallable DescribeRecordingUsageCallable(const Model::DescribeRecordingUsageRequest& request);
+
+                /**
+                 *This API is used to query your usage of TRTC’s relay to CDN service.
+- If the period queried is one day or shorter, the statistics returned are on a five-minute basis. If the period queried is longer than one day, the statistics returned are on a daily basis.
+- The period queried per request cannot be longer than 31 days.
+- If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
+- You can use this API to query your historical usage or to reconcile data, but we do not recommend you use it for crucial business logic.
+- The rate limit of this API is five calls per second.
+                 * @param req DescribeRelayUsageRequest
+                 * @return DescribeRelayUsageOutcome
+                 */
+                DescribeRelayUsageOutcome DescribeRelayUsage(const Model::DescribeRelayUsageRequest &request);
+                void DescribeRelayUsageAsync(const Model::DescribeRelayUsageRequest& request, const DescribeRelayUsageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRelayUsageOutcomeCallable DescribeRelayUsageCallable(const Model::DescribeRelayUsageRequest& request);
+
+                /**
+                 *This API is used to query your TRTC audio/video duration.
+- If the period queried is one day or shorter, the statistics returned are on a five-minute basis. If the period queried is longer than one day, the statistics returned are on a daily basis.
+- The period queried per request cannot be longer than 31 days.
+- If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
+- You can use this API to query your historical usage or to reconcile data, but we do not recommend you use it for crucial business logic.
+- The rate limit of this API is five calls per second.
+                 * @param req DescribeTrtcUsageRequest
+                 * @return DescribeTrtcUsageOutcome
+                 */
+                DescribeTrtcUsageOutcome DescribeTrtcUsage(const Model::DescribeTrtcUsageRequest &request);
+                void DescribeTrtcUsageAsync(const Model::DescribeTrtcUsageRequest& request, const DescribeTrtcUsageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeTrtcUsageOutcomeCallable DescribeTrtcUsageCallable(const Model::DescribeTrtcUsageRequest& request);
 
                 /**
                  *This API is used to remove all users from a room and dismiss the room. It supports all platforms. For Android, iOS, Windows, and macOS, the TRTC SDK needs to be upgraded to v6.6 or above.

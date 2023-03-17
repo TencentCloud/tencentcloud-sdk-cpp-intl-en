@@ -50,7 +50,7 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Common feature operation. Features of this type include:
+                     * 获取Common feature operation. Values:
 <li>`AccessUrlRedirect`: Access URL rewrite</li>
 <li>`UpstreamUrlRedirect`: Origin-pull URL rewrite</li>
 <li>`QUIC`: QUIC</li>
@@ -74,9 +74,10 @@ namespace TencentCloud
 <li>`TlsVersion`</li>
 <li>`OcspStapling`</li>
 <li>`Http2`: HTTP/2 access</li>
-<li>`UpstreamFollowRedirect: Follow origin redirect</li>
+<li>`UpstreamFollowRedirect`: Follow origin redirect</li>
+<li>`Origin`: Origin</li>
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @return NormalAction Common feature operation. Features of this type include:
+                     * @return NormalAction Common feature operation. Values:
 <li>`AccessUrlRedirect`: Access URL rewrite</li>
 <li>`UpstreamUrlRedirect`: Origin-pull URL rewrite</li>
 <li>`QUIC`: QUIC</li>
@@ -100,13 +101,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 <li>`TlsVersion`</li>
 <li>`OcspStapling`</li>
 <li>`Http2`: HTTP/2 access</li>
-<li>`UpstreamFollowRedirect: Follow origin redirect</li>
+<li>`UpstreamFollowRedirect`: Follow origin redirect</li>
+<li>`Origin`: Origin</li>
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     NormalAction GetNormalAction() const;
 
                     /**
-                     * 设置Common feature operation. Features of this type include:
+                     * 设置Common feature operation. Values:
 <li>`AccessUrlRedirect`: Access URL rewrite</li>
 <li>`UpstreamUrlRedirect`: Origin-pull URL rewrite</li>
 <li>`QUIC`: QUIC</li>
@@ -130,9 +132,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 <li>`TlsVersion`</li>
 <li>`OcspStapling`</li>
 <li>`Http2`: HTTP/2 access</li>
-<li>`UpstreamFollowRedirect: Follow origin redirect</li>
+<li>`UpstreamFollowRedirect`: Follow origin redirect</li>
+<li>`Origin`: Origin</li>
 Note: This field may return `null`, indicating that no valid value can be obtained.
-                     * @param NormalAction Common feature operation. Features of this type include:
+                     * @param NormalAction Common feature operation. Values:
 <li>`AccessUrlRedirect`: Access URL rewrite</li>
 <li>`UpstreamUrlRedirect`: Origin-pull URL rewrite</li>
 <li>`QUIC`: QUIC</li>
@@ -156,7 +159,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 <li>`TlsVersion`</li>
 <li>`OcspStapling`</li>
 <li>`Http2`: HTTP/2 access</li>
-<li>`UpstreamFollowRedirect: Follow origin redirect</li>
+<li>`UpstreamFollowRedirect`: Follow origin redirect</li>
+<li>`Origin`: Origin</li>
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     void SetNormalAction(const NormalAction& _normalAction);
@@ -230,7 +234,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Common feature operation. Features of this type include:
+                     * Common feature operation. Values:
 <li>`AccessUrlRedirect`: Access URL rewrite</li>
 <li>`UpstreamUrlRedirect`: Origin-pull URL rewrite</li>
 <li>`QUIC`: QUIC</li>
@@ -254,7 +258,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`TlsVersion`</li>
 <li>`OcspStapling`</li>
 <li>`Http2`: HTTP/2 access</li>
-<li>`UpstreamFollowRedirect: Follow origin redirect</li>
+<li>`UpstreamFollowRedirect`: Follow origin redirect</li>
+<li>`Origin`: Origin</li>
 Note: This field may return `null`, indicating that no valid value can be obtained.
                      */
                     NormalAction m_normalAction;

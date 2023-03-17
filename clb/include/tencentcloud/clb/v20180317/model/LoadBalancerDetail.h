@@ -425,18 +425,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ExtraInfoHasBeenSet() const;
 
                     /**
-                     * 获取Custom configuration ID at the CLB instance level.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ConfigId Custom configuration ID at the CLB instance level.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Custom configuration IDs of CLB instances. Multiple IDs must be separated by commas (,).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ConfigId Custom configuration IDs of CLB instances. Multiple IDs must be separated by commas (,).
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetConfigId() const;
 
                     /**
-                     * 设置Custom configuration ID at the CLB instance level.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param ConfigId Custom configuration ID at the CLB instance level.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Custom configuration IDs of CLB instances. Multiple IDs must be separated by commas (,).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ConfigId Custom configuration IDs of CLB instances. Multiple IDs must be separated by commas (,).
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetConfigId(const std::string& _configId);
 
@@ -865,14 +865,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool SniSwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LoadBalancerDomain 
+                     * 获取Domain name of the CLB instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return LoadBalancerDomain Domain name of the CLB instance.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetLoadBalancerDomain() const;
 
                     /**
-                     * 设置
-                     * @param LoadBalancerDomain 
+                     * 设置Domain name of the CLB instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param LoadBalancerDomain Domain name of the CLB instance.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetLoadBalancerDomain(const std::string& _loadBalancerDomain);
 
@@ -1004,8 +1008,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_extraInfoHasBeenSet;
 
                     /**
-                     * Custom configuration ID at the CLB instance level.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Custom configuration IDs of CLB instances. Multiple IDs must be separated by commas (,).
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_configId;
                     bool m_configIdHasBeenSet;
@@ -1144,7 +1148,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_sniSwitchHasBeenSet;
 
                     /**
-                     * 
+                     * Domain name of the CLB instance.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_loadBalancerDomain;
                     bool m_loadBalancerDomainHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Instance specification adjustment parameters
+                * Parameters for upgrading to an LCU-supported instance
                 */
                 class SlaUpdateParam : public AbstractModel
                 {
@@ -65,14 +65,22 @@ namespace TencentCloud
                     bool LoadBalancerIdHasBeenSet() const;
 
                     /**
-                     * 获取To upgrade to LCU-supported CLB instances. It must be `SLA`.
-                     * @return SlaType To upgrade to LCU-supported CLB instances. It must be `SLA`.
+                     * 获取This parameter is set to a fixed value of `SLA`, which specifies to upgrade to an LCU-supported instance of default specification.
+<ul><li>If you enable general LCU-supported instances, `SLA` corresponds to the Super Large 1 specification. General LCU-supported instances are in beta testing, [submit a ticket](https://intl.cloud.tencent.com/apply/p/hf45esx99lf?from_cn_redirect=1) for application.</li>
+<li>If you enable ultra-large LCU-supported instances, SLA corresponds to the Super Large 4 specification. Ultra-large LCU-supported instances are in beta testing, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application.</li></ul>
+                     * @return SlaType This parameter is set to a fixed value of `SLA`, which specifies to upgrade to an LCU-supported instance of default specification.
+<ul><li>If you enable general LCU-supported instances, `SLA` corresponds to the Super Large 1 specification. General LCU-supported instances are in beta testing, [submit a ticket](https://intl.cloud.tencent.com/apply/p/hf45esx99lf?from_cn_redirect=1) for application.</li>
+<li>If you enable ultra-large LCU-supported instances, SLA corresponds to the Super Large 4 specification. Ultra-large LCU-supported instances are in beta testing, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application.</li></ul>
                      */
                     std::string GetSlaType() const;
 
                     /**
-                     * 设置To upgrade to LCU-supported CLB instances. It must be `SLA`.
-                     * @param SlaType To upgrade to LCU-supported CLB instances. It must be `SLA`.
+                     * 设置This parameter is set to a fixed value of `SLA`, which specifies to upgrade to an LCU-supported instance of default specification.
+<ul><li>If you enable general LCU-supported instances, `SLA` corresponds to the Super Large 1 specification. General LCU-supported instances are in beta testing, [submit a ticket](https://intl.cloud.tencent.com/apply/p/hf45esx99lf?from_cn_redirect=1) for application.</li>
+<li>If you enable ultra-large LCU-supported instances, SLA corresponds to the Super Large 4 specification. Ultra-large LCU-supported instances are in beta testing, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application.</li></ul>
+                     * @param SlaType This parameter is set to a fixed value of `SLA`, which specifies to upgrade to an LCU-supported instance of default specification.
+<ul><li>If you enable general LCU-supported instances, `SLA` corresponds to the Super Large 1 specification. General LCU-supported instances are in beta testing, [submit a ticket](https://intl.cloud.tencent.com/apply/p/hf45esx99lf?from_cn_redirect=1) for application.</li>
+<li>If you enable ultra-large LCU-supported instances, SLA corresponds to the Super Large 4 specification. Ultra-large LCU-supported instances are in beta testing, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application.</li></ul>
                      */
                     void SetSlaType(const std::string& _slaType);
 
@@ -91,7 +99,9 @@ namespace TencentCloud
                     bool m_loadBalancerIdHasBeenSet;
 
                     /**
-                     * To upgrade to LCU-supported CLB instances. It must be `SLA`.
+                     * This parameter is set to a fixed value of `SLA`, which specifies to upgrade to an LCU-supported instance of default specification.
+<ul><li>If you enable general LCU-supported instances, `SLA` corresponds to the Super Large 1 specification. General LCU-supported instances are in beta testing, [submit a ticket](https://intl.cloud.tencent.com/apply/p/hf45esx99lf?from_cn_redirect=1) for application.</li>
+<li>If you enable ultra-large LCU-supported instances, SLA corresponds to the Super Large 4 specification. Ultra-large LCU-supported instances are in beta testing, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application.</li></ul>
                      */
                     std::string m_slaType;
                     bool m_slaTypeHasBeenSet;

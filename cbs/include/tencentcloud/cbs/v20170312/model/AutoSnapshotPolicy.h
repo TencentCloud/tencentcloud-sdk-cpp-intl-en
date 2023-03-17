@@ -25,6 +25,8 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cbs/v20170312/model/Policy.h>
+#include <tencentcloud/cbs/v20170312/model/AdvancedRetentionPolicy.h>
+#include <tencentcloud/cbs/v20170312/model/Tag.h>
 
 
 namespace TencentCloud
@@ -293,6 +295,108 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool InstanceIdSetHasBeenSet() const;
 
+                    /**
+                     * 获取The number of months for which the snapshots created by this scheduled snapshot policy can be retained.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RetentionMonths The number of months for which the snapshots created by this scheduled snapshot policy can be retained.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetRetentionMonths() const;
+
+                    /**
+                     * 设置The number of months for which the snapshots created by this scheduled snapshot policy can be retained.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param RetentionMonths The number of months for which the snapshots created by this scheduled snapshot policy can be retained.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetRetentionMonths(const uint64_t& _retentionMonths);
+
+                    /**
+                     * 判断参数 RetentionMonths 是否已赋值
+                     * @return RetentionMonths 是否已赋值
+                     */
+                    bool RetentionMonthsHasBeenSet() const;
+
+                    /**
+                     * 获取The maximum number of snapshots created by this scheduled snapshot policy that can be retained.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RetentionAmount The maximum number of snapshots created by this scheduled snapshot policy that can be retained.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetRetentionAmount() const;
+
+                    /**
+                     * 设置The maximum number of snapshots created by this scheduled snapshot policy that can be retained.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param RetentionAmount The maximum number of snapshots created by this scheduled snapshot policy that can be retained.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetRetentionAmount(const uint64_t& _retentionAmount);
+
+                    /**
+                     * 判断参数 RetentionAmount 是否已赋值
+                     * @return RetentionAmount 是否已赋值
+                     */
+                    bool RetentionAmountHasBeenSet() const;
+
+                    /**
+                     * 获取Retention policy for scheduled snapshots.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AdvancedRetentionPolicy Retention policy for scheduled snapshots.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    AdvancedRetentionPolicy GetAdvancedRetentionPolicy() const;
+
+                    /**
+                     * 设置Retention policy for scheduled snapshots.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param AdvancedRetentionPolicy Retention policy for scheduled snapshots.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetAdvancedRetentionPolicy(const AdvancedRetentionPolicy& _advancedRetentionPolicy);
+
+                    /**
+                     * 判断参数 AdvancedRetentionPolicy 是否已赋值
+                     * @return AdvancedRetentionPolicy 是否已赋值
+                     */
+                    bool AdvancedRetentionPolicyHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return CopyFromAccountUin 
+                     */
+                    std::string GetCopyFromAccountUin() const;
+
+                    /**
+                     * 设置
+                     * @param CopyFromAccountUin 
+                     */
+                    void SetCopyFromAccountUin(const std::string& _copyFromAccountUin);
+
+                    /**
+                     * 判断参数 CopyFromAccountUin 是否已赋值
+                     * @return CopyFromAccountUin 是否已赋值
+                     */
+                    bool CopyFromAccountUinHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return Tags 
+                     */
+                    std::vector<Tag> GetTags() const;
+
+                    /**
+                     * 设置
+                     * @param Tags 
+                     */
+                    void SetTags(const std::vector<Tag>& _tags);
+
+                    /**
+                     * 判断参数 Tags 是否已赋值
+                     * @return Tags 是否已赋值
+                     */
+                    bool TagsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -375,6 +479,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<std::string> m_instanceIdSet;
                     bool m_instanceIdSetHasBeenSet;
+
+                    /**
+                     * The number of months for which the snapshots created by this scheduled snapshot policy can be retained.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_retentionMonths;
+                    bool m_retentionMonthsHasBeenSet;
+
+                    /**
+                     * The maximum number of snapshots created by this scheduled snapshot policy that can be retained.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_retentionAmount;
+                    bool m_retentionAmountHasBeenSet;
+
+                    /**
+                     * Retention policy for scheduled snapshots.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    AdvancedRetentionPolicy m_advancedRetentionPolicy;
+                    bool m_advancedRetentionPolicyHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_copyFromAccountUin;
+                    bool m_copyFromAccountUinHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<Tag> m_tags;
+                    bool m_tagsHasBeenSet;
 
                 };
             }

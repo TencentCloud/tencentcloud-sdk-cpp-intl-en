@@ -102,6 +102,32 @@ namespace TencentCloud
                      */
                     bool EntityTypeHasBeenSet() const;
 
+                    /**
+                     * 获取The service region. Values:
+<li>`mainland`: Chinese mainland.</li>
+<li>`overseas`: Regions outside the Chinese mainland.</li>For an account registered on the Chinese site, it defaults to `mainland`. For an account registered on the international site, it defaults to `overseas`.
+                     * @return Area The service region. Values:
+<li>`mainland`: Chinese mainland.</li>
+<li>`overseas`: Regions outside the Chinese mainland.</li>For an account registered on the Chinese site, it defaults to `mainland`. For an account registered on the international site, it defaults to `overseas`.
+                     */
+                    std::string GetArea() const;
+
+                    /**
+                     * 设置The service region. Values:
+<li>`mainland`: Chinese mainland.</li>
+<li>`overseas`: Regions outside the Chinese mainland.</li>For an account registered on the Chinese site, it defaults to `mainland`. For an account registered on the international site, it defaults to `overseas`.
+                     * @param Area The service region. Values:
+<li>`mainland`: Chinese mainland.</li>
+<li>`overseas`: Regions outside the Chinese mainland.</li>For an account registered on the Chinese site, it defaults to `mainland`. For an account registered on the international site, it defaults to `overseas`.
+                     */
+                    void SetArea(const std::string& _area);
+
+                    /**
+                     * 判断参数 Area 是否已赋值
+                     * @return Area 是否已赋值
+                     */
+                    bool AreaHasBeenSet() const;
+
                 private:
 
                     /**
@@ -121,6 +147,14 @@ namespace TencentCloud
                      */
                     std::string m_entityType;
                     bool m_entityTypeHasBeenSet;
+
+                    /**
+                     * The service region. Values:
+<li>`mainland`: Chinese mainland.</li>
+<li>`overseas`: Regions outside the Chinese mainland.</li>For an account registered on the Chinese site, it defaults to `mainland`. For an account registered on the international site, it defaults to `overseas`.
+                     */
+                    std::string m_area;
+                    bool m_areaHasBeenSet;
 
                 };
             }

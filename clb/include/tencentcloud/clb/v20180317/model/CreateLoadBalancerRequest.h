@@ -293,26 +293,18 @@ Note: By default, the traffic goes to the primary AZ. The secondary AZs only car
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Specifies a VIP for the CLB instance.
-<ul><li>`VpcId` is optional for creating shared clusters of public network CLB instances. For IPv6 CLB instance type, `SubnetId` is required; for IPv4 and IPv6 NAT64 types, it can be left empty.</li>
-<li>`VpcId` is optional for creating shared clusters of public network CLB instances. For IPv6 CLB instance type, `SubnetId` is required; for IPv4 and IPv6 NAT64 types, it can be left empty.
-</li></ul>
-                     * @return Vip Specifies a VIP for the CLB instance.
-<ul><li>`VpcId` is optional for creating shared clusters of public network CLB instances. For IPv6 CLB instance type, `SubnetId` is required; for IPv4 and IPv6 NAT64 types, it can be left empty.</li>
-<li>`VpcId` is optional for creating shared clusters of public network CLB instances. For IPv6 CLB instance type, `SubnetId` is required; for IPv4 and IPv6 NAT64 types, it can be left empty.
-</li></ul>
+                     * 获取Specifies the VIP for the application of a CLB instance. This parameter is optional. If you do not specify this parameter, the system automatically assigns a value for the parameter. IPv4 and IPv6 CLB instances support this parameter, but IPv6 NAT64 CLB instances do not.
+Note: If the specified VIP is occupied or is not within the IP range of the specified VPC subnet, you cannot use the VIP to create a CLB instance in a private network or an IPv6 BGP CLB instance in a public network.
+                     * @return Vip Specifies the VIP for the application of a CLB instance. This parameter is optional. If you do not specify this parameter, the system automatically assigns a value for the parameter. IPv4 and IPv6 CLB instances support this parameter, but IPv6 NAT64 CLB instances do not.
+Note: If the specified VIP is occupied or is not within the IP range of the specified VPC subnet, you cannot use the VIP to create a CLB instance in a private network or an IPv6 BGP CLB instance in a public network.
                      */
                     std::string GetVip() const;
 
                     /**
-                     * 设置Specifies a VIP for the CLB instance.
-<ul><li>`VpcId` is optional for creating shared clusters of public network CLB instances. For IPv6 CLB instance type, `SubnetId` is required; for IPv4 and IPv6 NAT64 types, it can be left empty.</li>
-<li>`VpcId` is optional for creating shared clusters of public network CLB instances. For IPv6 CLB instance type, `SubnetId` is required; for IPv4 and IPv6 NAT64 types, it can be left empty.
-</li></ul>
-                     * @param Vip Specifies a VIP for the CLB instance.
-<ul><li>`VpcId` is optional for creating shared clusters of public network CLB instances. For IPv6 CLB instance type, `SubnetId` is required; for IPv4 and IPv6 NAT64 types, it can be left empty.</li>
-<li>`VpcId` is optional for creating shared clusters of public network CLB instances. For IPv6 CLB instance type, `SubnetId` is required; for IPv4 and IPv6 NAT64 types, it can be left empty.
-</li></ul>
+                     * 设置Specifies the VIP for the application of a CLB instance. This parameter is optional. If you do not specify this parameter, the system automatically assigns a value for the parameter. IPv4 and IPv6 CLB instances support this parameter, but IPv6 NAT64 CLB instances do not.
+Note: If the specified VIP is occupied or is not within the IP range of the specified VPC subnet, you cannot use the VIP to create a CLB instance in a private network or an IPv6 BGP CLB instance in a public network.
+                     * @param Vip Specifies the VIP for the application of a CLB instance. This parameter is optional. If you do not specify this parameter, the system automatically assigns a value for the parameter. IPv4 and IPv6 CLB instances support this parameter, but IPv6 NAT64 CLB instances do not.
+Note: If the specified VIP is occupied or is not within the IP range of the specified VPC subnet, you cannot use the VIP to create a CLB instance in a private network or an IPv6 BGP CLB instance in a public network.
                      */
                     void SetVip(const std::string& _vip);
 
@@ -341,14 +333,14 @@ Note: By default, the traffic goes to the primary AZ. The secondary AZs only car
                     bool BandwidthPackageIdHasBeenSet() const;
 
                     /**
-                     * 获取Exclusive cluster information. This parameter is required for creating exclusive clusters of CLB instances.
-                     * @return ExclusiveCluster Exclusive cluster information. This parameter is required for creating exclusive clusters of CLB instances.
+                     * 获取Information about the dedicated CLB instance. You must specify this parameter when you create a dedicated CLB instance in a private network.
+                     * @return ExclusiveCluster Information about the dedicated CLB instance. You must specify this parameter when you create a dedicated CLB instance in a private network.
                      */
                     ExclusiveCluster GetExclusiveCluster() const;
 
                     /**
-                     * 设置Exclusive cluster information. This parameter is required for creating exclusive clusters of CLB instances.
-                     * @param ExclusiveCluster Exclusive cluster information. This parameter is required for creating exclusive clusters of CLB instances.
+                     * 设置Information about the dedicated CLB instance. You must specify this parameter when you create a dedicated CLB instance in a private network.
+                     * @param ExclusiveCluster Information about the dedicated CLB instance. You must specify this parameter when you create a dedicated CLB instance in a private network.
                      */
                     void SetExclusiveCluster(const ExclusiveCluster& _exclusiveCluster);
 
@@ -359,22 +351,26 @@ Note: By default, the traffic goes to the primary AZ. The secondary AZs only car
                     bool ExclusiveClusterHasBeenSet() const;
 
                     /**
-                     * 获取Creates an LCU-supported CLB instance
-<ul><li>To create an LCU-supported CLB, this field is required and the value is `SLA`. LCU-supports CLBs adopt the pay-as-you-go model and their performance is guaranteed.</li>
-<li>It’s not required for a shared CLB instance.</li></ul>
-                     * @return SlaType Creates an LCU-supported CLB instance
-<ul><li>To create an LCU-supported CLB, this field is required and the value is `SLA`. LCU-supports CLBs adopt the pay-as-you-go model and their performance is guaranteed.</li>
-<li>It’s not required for a shared CLB instance.</li></ul>
+                     * 获取Creates an LCU-supported instance.
+<ul><li>To create an LCU-supported instance, set this parameter to `SLA`, which indicates that an LCU-supported instance is created with the default specification in pay-as-you-go mode.
+<ul><li>If you enable general LCU-supported instances, `SLA` corresponds to the Super Large 1 specification. General LCU-supported instances are in beta testing, [submit a ticket](https://intl.cloud.tencent.com/apply/p/hf45esx99lf?from_cn_redirect=1) for application.</li>
+<li>If you enable ultra-large LCU-supported instances, `SLA` corresponds to the Super Large 4 specification. Ultra-large LCU-supported instances are in beta testing, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application.</li></ul></li><li>This parameter is not required when you create a shared instance.</li></ul>
+                     * @return SlaType Creates an LCU-supported instance.
+<ul><li>To create an LCU-supported instance, set this parameter to `SLA`, which indicates that an LCU-supported instance is created with the default specification in pay-as-you-go mode.
+<ul><li>If you enable general LCU-supported instances, `SLA` corresponds to the Super Large 1 specification. General LCU-supported instances are in beta testing, [submit a ticket](https://intl.cloud.tencent.com/apply/p/hf45esx99lf?from_cn_redirect=1) for application.</li>
+<li>If you enable ultra-large LCU-supported instances, `SLA` corresponds to the Super Large 4 specification. Ultra-large LCU-supported instances are in beta testing, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application.</li></ul></li><li>This parameter is not required when you create a shared instance.</li></ul>
                      */
                     std::string GetSlaType() const;
 
                     /**
-                     * 设置Creates an LCU-supported CLB instance
-<ul><li>To create an LCU-supported CLB, this field is required and the value is `SLA`. LCU-supports CLBs adopt the pay-as-you-go model and their performance is guaranteed.</li>
-<li>It’s not required for a shared CLB instance.</li></ul>
-                     * @param SlaType Creates an LCU-supported CLB instance
-<ul><li>To create an LCU-supported CLB, this field is required and the value is `SLA`. LCU-supports CLBs adopt the pay-as-you-go model and their performance is guaranteed.</li>
-<li>It’s not required for a shared CLB instance.</li></ul>
+                     * 设置Creates an LCU-supported instance.
+<ul><li>To create an LCU-supported instance, set this parameter to `SLA`, which indicates that an LCU-supported instance is created with the default specification in pay-as-you-go mode.
+<ul><li>If you enable general LCU-supported instances, `SLA` corresponds to the Super Large 1 specification. General LCU-supported instances are in beta testing, [submit a ticket](https://intl.cloud.tencent.com/apply/p/hf45esx99lf?from_cn_redirect=1) for application.</li>
+<li>If you enable ultra-large LCU-supported instances, `SLA` corresponds to the Super Large 4 specification. Ultra-large LCU-supported instances are in beta testing, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application.</li></ul></li><li>This parameter is not required when you create a shared instance.</li></ul>
+                     * @param SlaType Creates an LCU-supported instance.
+<ul><li>To create an LCU-supported instance, set this parameter to `SLA`, which indicates that an LCU-supported instance is created with the default specification in pay-as-you-go mode.
+<ul><li>If you enable general LCU-supported instances, `SLA` corresponds to the Super Large 1 specification. General LCU-supported instances are in beta testing, [submit a ticket](https://intl.cloud.tencent.com/apply/p/hf45esx99lf?from_cn_redirect=1) for application.</li>
+<li>If you enable ultra-large LCU-supported instances, `SLA` corresponds to the Super Large 4 specification. Ultra-large LCU-supported instances are in beta testing, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application.</li></ul></li><li>This parameter is not required when you create a shared instance.</li></ul>
                      */
                     void SetSlaType(const std::string& _slaType);
 
@@ -598,10 +594,8 @@ Note: By default, the traffic goes to the primary AZ. The secondary AZs only car
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Specifies a VIP for the CLB instance.
-<ul><li>`VpcId` is optional for creating shared clusters of public network CLB instances. For IPv6 CLB instance type, `SubnetId` is required; for IPv4 and IPv6 NAT64 types, it can be left empty.</li>
-<li>`VpcId` is optional for creating shared clusters of public network CLB instances. For IPv6 CLB instance type, `SubnetId` is required; for IPv4 and IPv6 NAT64 types, it can be left empty.
-</li></ul>
+                     * Specifies the VIP for the application of a CLB instance. This parameter is optional. If you do not specify this parameter, the system automatically assigns a value for the parameter. IPv4 and IPv6 CLB instances support this parameter, but IPv6 NAT64 CLB instances do not.
+Note: If the specified VIP is occupied or is not within the IP range of the specified VPC subnet, you cannot use the VIP to create a CLB instance in a private network or an IPv6 BGP CLB instance in a public network.
                      */
                     std::string m_vip;
                     bool m_vipHasBeenSet;
@@ -613,15 +607,16 @@ Note: By default, the traffic goes to the primary AZ. The secondary AZs only car
                     bool m_bandwidthPackageIdHasBeenSet;
 
                     /**
-                     * Exclusive cluster information. This parameter is required for creating exclusive clusters of CLB instances.
+                     * Information about the dedicated CLB instance. You must specify this parameter when you create a dedicated CLB instance in a private network.
                      */
                     ExclusiveCluster m_exclusiveCluster;
                     bool m_exclusiveClusterHasBeenSet;
 
                     /**
-                     * Creates an LCU-supported CLB instance
-<ul><li>To create an LCU-supported CLB, this field is required and the value is `SLA`. LCU-supports CLBs adopt the pay-as-you-go model and their performance is guaranteed.</li>
-<li>It’s not required for a shared CLB instance.</li></ul>
+                     * Creates an LCU-supported instance.
+<ul><li>To create an LCU-supported instance, set this parameter to `SLA`, which indicates that an LCU-supported instance is created with the default specification in pay-as-you-go mode.
+<ul><li>If you enable general LCU-supported instances, `SLA` corresponds to the Super Large 1 specification. General LCU-supported instances are in beta testing, [submit a ticket](https://intl.cloud.tencent.com/apply/p/hf45esx99lf?from_cn_redirect=1) for application.</li>
+<li>If you enable ultra-large LCU-supported instances, `SLA` corresponds to the Super Large 4 specification. Ultra-large LCU-supported instances are in beta testing, [submit a ticket](https://console.cloud.tencent.com/workorder/category) for application.</li></ul></li><li>This parameter is not required when you create a shared instance.</li></ul>
                      */
                     std::string m_slaType;
                     bool m_slaTypeHasBeenSet;
