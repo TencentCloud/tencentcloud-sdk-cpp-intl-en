@@ -43,24 +43,6 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the log topic to be searched
-                     * @return TopicId ID of the log topic to be searched
-                     */
-                    std::string GetTopicId() const;
-
-                    /**
-                     * 设置ID of the log topic to be searched
-                     * @param TopicId ID of the log topic to be searched
-                     */
-                    void SetTopicId(const std::string& _topicId);
-
-                    /**
-                     * 判断参数 TopicId 是否已赋值
-                     * @return TopicId 是否已赋值
-                     */
-                    bool TopicIdHasBeenSet() const;
-
-                    /**
                      * 获取Start time of the log to be searched, which is a Unix timestamp in milliseconds
                      * @return From Start time of the log to be searched, which is a Unix timestamp in milliseconds
                      */
@@ -97,18 +79,22 @@ namespace TencentCloud
                     bool ToHasBeenSet() const;
 
                     /**
-                     * 获取Statement for search and analysis. Maximum length: 12 KB
-A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search rule]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
-                     * @return Query Statement for search and analysis. Maximum length: 12 KB
-A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search rule]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
+                     * 获取Search and analysis statement. Maximum length: 12 KB
+A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search criteria]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
+Queries all logs using * or an empty string
+                     * @return Query Search and analysis statement. Maximum length: 12 KB
+A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search criteria]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
+Queries all logs using * or an empty string
                      */
                     std::string GetQuery() const;
 
                     /**
-                     * 设置Statement for search and analysis. Maximum length: 12 KB
-A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search rule]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
-                     * @param Query Statement for search and analysis. Maximum length: 12 KB
-A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search rule]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
+                     * 设置Search and analysis statement. Maximum length: 12 KB
+A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search criteria]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
+Queries all logs using * or an empty string
+                     * @param Query Search and analysis statement. Maximum length: 12 KB
+A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search criteria]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
+Queries all logs using * or an empty string
                      */
                     void SetQuery(const std::string& _query);
 
@@ -117,6 +103,24 @@ A statement is in the format of <a href="https://intl.cloud.tencent.com/document
                      * @return Query 是否已赋值
                      */
                     bool QueryHasBeenSet() const;
+
+                    /**
+                     * 获取ID of the log topic to be searched
+                     * @return TopicId ID of the log topic to be searched
+                     */
+                    std::string GetTopicId() const;
+
+                    /**
+                     * 设置ID of the log topic to be searched
+                     * @param TopicId ID of the log topic to be searched
+                     */
+                    void SetTopicId(const std::string& _topicId);
+
+                    /**
+                     * 判断参数 TopicId 是否已赋值
+                     * @return TopicId 是否已赋值
+                     */
+                    bool TopicIdHasBeenSet() const;
 
                     /**
                      * 获取The number of raw logs returned by a single query. Maximum value: 1000. You need to use `Context` to continue to get logs.
@@ -275,12 +279,6 @@ Default value: `1`
                 private:
 
                     /**
-                     * ID of the log topic to be searched
-                     */
-                    std::string m_topicId;
-                    bool m_topicIdHasBeenSet;
-
-                    /**
                      * Start time of the log to be searched, which is a Unix timestamp in milliseconds
                      */
                     int64_t m_from;
@@ -293,11 +291,18 @@ Default value: `1`
                     bool m_toHasBeenSet;
 
                     /**
-                     * Statement for search and analysis. Maximum length: 12 KB
-A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search rule]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
+                     * Search and analysis statement. Maximum length: 12 KB
+A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search criteria]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
+Queries all logs using * or an empty string
                      */
                     std::string m_query;
                     bool m_queryHasBeenSet;
+
+                    /**
+                     * ID of the log topic to be searched
+                     */
+                    std::string m_topicId;
+                    bool m_topicIdHasBeenSet;
 
                     /**
                      * The number of raw logs returned by a single query. Maximum value: 1000. You need to use `Context` to continue to get logs.

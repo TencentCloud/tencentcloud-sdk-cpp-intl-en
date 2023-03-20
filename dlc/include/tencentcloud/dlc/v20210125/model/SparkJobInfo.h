@@ -612,6 +612,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool JobArchivesHasBeenSet() const;
 
                     /**
+                     * 获取The Spark image version.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SparkImage The Spark image version.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetSparkImage() const;
+
+                    /**
+                     * 设置The Spark image version.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param SparkImage The Spark image version.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetSparkImage(const std::string& _sparkImage);
+
+                    /**
+                     * 判断参数 SparkImage 是否已赋值
+                     * @return SparkImage 是否已赋值
+                     */
+                    bool SparkImageHasBeenSet() const;
+
+                    /**
                      * 获取PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return JobPythonFiles PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
@@ -676,6 +698,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return DataEngineStatus 是否已赋值
                      */
                     bool DataEngineStatusHasBeenSet() const;
+
+                    /**
+                     * 获取The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `JobExecutorNums`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return JobExecutorMaxNumbers The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `JobExecutorNums`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetJobExecutorMaxNumbers() const;
+
+                    /**
+                     * 设置The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `JobExecutorNums`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param JobExecutorMaxNumbers The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `JobExecutorNums`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetJobExecutorMaxNumbers(const int64_t& _jobExecutorMaxNumbers);
+
+                    /**
+                     * 判断参数 JobExecutorMaxNumbers 是否已赋值
+                     * @return JobExecutorMaxNumbers 是否已赋值
+                     */
+                    bool JobExecutorMaxNumbersHasBeenSet() const;
 
                 private:
 
@@ -866,6 +910,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_jobArchivesHasBeenSet;
 
                     /**
+                     * The Spark image version.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_sparkImage;
+                    bool m_sparkImageHasBeenSet;
+
+                    /**
                      * PySpark: Python dependency, which can be in .py, .zip, or .egg format. Multiple files should be separated by comma.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
@@ -885,6 +936,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_dataEngineStatus;
                     bool m_dataEngineStatusHasBeenSet;
+
+                    /**
+                     * The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `JobExecutorNums`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_jobExecutorMaxNumbers;
+                    bool m_jobExecutorMaxNumbersHasBeenSet;
 
                 };
             }

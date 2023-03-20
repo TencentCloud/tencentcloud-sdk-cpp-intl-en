@@ -14,12 +14,28 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_CORE_CONFIG_H_
-#define TENCENTCLOUD_CORE_CONFIG_H_
+#include <tencentcloud/dlc/v20210125/model/DataGovernPolicy.h>
 
-// version = (major << 16) + (minor << 8) + patch
-#define TENCENTCLOUD_VERSION ((3 << 16) + (0 << 8) + 8)
+using TencentCloud::CoreInternalOutcome;
+using namespace TencentCloud::Dlc::V20210125::Model;
+using namespace std;
 
-#define TENCENTCLOUD_VERSION_STR "3.0.282"
+DataGovernPolicy::DataGovernPolicy()
+{
+}
 
-#endif // !TENCENTCLOUD_CORE_CONFIG_H_
+CoreInternalOutcome DataGovernPolicy::Deserialize(const rapidjson::Value &value)
+{
+    string requestId = "";
+
+
+
+    return CoreInternalOutcome(true);
+}
+
+void DataGovernPolicy::ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const
+{
+
+}
+
+

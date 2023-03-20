@@ -66,14 +66,14 @@ namespace TencentCloud
                     bool CaseSensitiveHasBeenSet() const;
 
                     /**
-                     * 获取Key-Value pair information of the index to be created. Up to 100 key-value pairs can be configured.
-                     * @return KeyValues Key-Value pair information of the index to be created. Up to 100 key-value pairs can be configured.
+                     * 获取Key-value pair information of the index to be created
+                     * @return KeyValues Key-value pair information of the index to be created
                      */
                     std::vector<KeyValueInfo> GetKeyValues() const;
 
                     /**
-                     * 设置Key-Value pair information of the index to be created. Up to 100 key-value pairs can be configured.
-                     * @param KeyValues Key-Value pair information of the index to be created. Up to 100 key-value pairs can be configured.
+                     * 设置Key-value pair information of the index to be created
+                     * @param KeyValues Key-value pair information of the index to be created
                      */
                     void SetKeyValues(const std::vector<KeyValueInfo>& _keyValues);
 
@@ -92,7 +92,7 @@ namespace TencentCloud
                     bool m_caseSensitiveHasBeenSet;
 
                     /**
-                     * Key-Value pair information of the index to be created. Up to 100 key-value pairs can be configured.
+                     * Key-value pair information of the index to be created
                      */
                     std::vector<KeyValueInfo> m_keyValues;
                     bool m_keyValuesHasBeenSet;

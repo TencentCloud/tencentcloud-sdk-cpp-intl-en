@@ -25,6 +25,10 @@
 #include <tencentcloud/core/AsyncCallerContext.h>
 #include <tencentcloud/dlc/v20210125/model/CancelTaskRequest.h>
 #include <tencentcloud/dlc/v20210125/model/CancelTaskResponse.h>
+#include <tencentcloud/dlc/v20210125/model/CreateInternalTableRequest.h>
+#include <tencentcloud/dlc/v20210125/model/CreateInternalTableResponse.h>
+#include <tencentcloud/dlc/v20210125/model/CreateResultDownloadRequest.h>
+#include <tencentcloud/dlc/v20210125/model/CreateResultDownloadResponse.h>
 #include <tencentcloud/dlc/v20210125/model/CreateSparkAppRequest.h>
 #include <tencentcloud/dlc/v20210125/model/CreateSparkAppResponse.h>
 #include <tencentcloud/dlc/v20210125/model/CreateSparkAppTaskRequest.h>
@@ -35,6 +39,8 @@
 #include <tencentcloud/dlc/v20210125/model/CreateTasksResponse.h>
 #include <tencentcloud/dlc/v20210125/model/DeleteSparkAppRequest.h>
 #include <tencentcloud/dlc/v20210125/model/DeleteSparkAppResponse.h>
+#include <tencentcloud/dlc/v20210125/model/DescribeResultDownloadRequest.h>
+#include <tencentcloud/dlc/v20210125/model/DescribeResultDownloadResponse.h>
 #include <tencentcloud/dlc/v20210125/model/DescribeSparkAppJobRequest.h>
 #include <tencentcloud/dlc/v20210125/model/DescribeSparkAppJobResponse.h>
 #include <tencentcloud/dlc/v20210125/model/DescribeSparkAppJobsRequest.h>
@@ -45,6 +51,10 @@
 #include <tencentcloud/dlc/v20210125/model/DescribeTaskResultResponse.h>
 #include <tencentcloud/dlc/v20210125/model/DescribeTasksRequest.h>
 #include <tencentcloud/dlc/v20210125/model/DescribeTasksResponse.h>
+#include <tencentcloud/dlc/v20210125/model/GenerateCreateMangedTableSqlRequest.h>
+#include <tencentcloud/dlc/v20210125/model/GenerateCreateMangedTableSqlResponse.h>
+#include <tencentcloud/dlc/v20210125/model/ModifyGovernEventRuleRequest.h>
+#include <tencentcloud/dlc/v20210125/model/ModifyGovernEventRuleResponse.h>
 #include <tencentcloud/dlc/v20210125/model/ModifySparkAppRequest.h>
 #include <tencentcloud/dlc/v20210125/model/ModifySparkAppResponse.h>
 #include <tencentcloud/dlc/v20210125/model/SuspendResumeDataEngineRequest.h>
@@ -66,6 +76,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CancelTaskResponse> CancelTaskOutcome;
                 typedef std::future<CancelTaskOutcome> CancelTaskOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::CancelTaskRequest&, CancelTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CancelTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateInternalTableResponse> CreateInternalTableOutcome;
+                typedef std::future<CreateInternalTableOutcome> CreateInternalTableOutcomeCallable;
+                typedef std::function<void(const DlcClient*, const Model::CreateInternalTableRequest&, CreateInternalTableOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateInternalTableAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateResultDownloadResponse> CreateResultDownloadOutcome;
+                typedef std::future<CreateResultDownloadOutcome> CreateResultDownloadOutcomeCallable;
+                typedef std::function<void(const DlcClient*, const Model::CreateResultDownloadRequest&, CreateResultDownloadOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateResultDownloadAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateSparkAppResponse> CreateSparkAppOutcome;
                 typedef std::future<CreateSparkAppOutcome> CreateSparkAppOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::CreateSparkAppRequest&, CreateSparkAppOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateSparkAppAsyncHandler;
@@ -81,6 +97,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteSparkAppResponse> DeleteSparkAppOutcome;
                 typedef std::future<DeleteSparkAppOutcome> DeleteSparkAppOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::DeleteSparkAppRequest&, DeleteSparkAppOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteSparkAppAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeResultDownloadResponse> DescribeResultDownloadOutcome;
+                typedef std::future<DescribeResultDownloadOutcome> DescribeResultDownloadOutcomeCallable;
+                typedef std::function<void(const DlcClient*, const Model::DescribeResultDownloadRequest&, DescribeResultDownloadOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeResultDownloadAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeSparkAppJobResponse> DescribeSparkAppJobOutcome;
                 typedef std::future<DescribeSparkAppJobOutcome> DescribeSparkAppJobOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::DescribeSparkAppJobRequest&, DescribeSparkAppJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSparkAppJobAsyncHandler;
@@ -96,6 +115,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeTasksResponse> DescribeTasksOutcome;
                 typedef std::future<DescribeTasksOutcome> DescribeTasksOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::DescribeTasksRequest&, DescribeTasksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTasksAsyncHandler;
+                typedef Outcome<Core::Error, Model::GenerateCreateMangedTableSqlResponse> GenerateCreateMangedTableSqlOutcome;
+                typedef std::future<GenerateCreateMangedTableSqlOutcome> GenerateCreateMangedTableSqlOutcomeCallable;
+                typedef std::function<void(const DlcClient*, const Model::GenerateCreateMangedTableSqlRequest&, GenerateCreateMangedTableSqlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GenerateCreateMangedTableSqlAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyGovernEventRuleResponse> ModifyGovernEventRuleOutcome;
+                typedef std::future<ModifyGovernEventRuleOutcome> ModifyGovernEventRuleOutcomeCallable;
+                typedef std::function<void(const DlcClient*, const Model::ModifyGovernEventRuleRequest&, ModifyGovernEventRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyGovernEventRuleAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifySparkAppResponse> ModifySparkAppOutcome;
                 typedef std::future<ModifySparkAppOutcome> ModifySparkAppOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::ModifySparkAppRequest&, ModifySparkAppOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifySparkAppAsyncHandler;
@@ -113,6 +138,24 @@ namespace TencentCloud
                 CancelTaskOutcome CancelTask(const Model::CancelTaskRequest &request);
                 void CancelTaskAsync(const Model::CancelTaskRequest& request, const CancelTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CancelTaskOutcomeCallable CancelTaskCallable(const Model::CancelTaskRequest& request);
+
+                /**
+                 *This API is used to create a managed internal table. It has been disused.
+                 * @param req CreateInternalTableRequest
+                 * @return CreateInternalTableOutcome
+                 */
+                CreateInternalTableOutcome CreateInternalTable(const Model::CreateInternalTableRequest &request);
+                void CreateInternalTableAsync(const Model::CreateInternalTableRequest& request, const CreateInternalTableAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateInternalTableOutcomeCallable CreateInternalTableCallable(const Model::CreateInternalTableRequest& request);
+
+                /**
+                 *This API is used to create a query result download task.
+                 * @param req CreateResultDownloadRequest
+                 * @return CreateResultDownloadOutcome
+                 */
+                CreateResultDownloadOutcome CreateResultDownload(const Model::CreateResultDownloadRequest &request);
+                void CreateResultDownloadAsync(const Model::CreateResultDownloadRequest& request, const CreateResultDownloadAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateResultDownloadOutcomeCallable CreateResultDownloadCallable(const Model::CreateResultDownloadRequest& request);
 
                 /**
                  *This API is used to create a Spark application.
@@ -160,6 +203,15 @@ namespace TencentCloud
                 DeleteSparkAppOutcomeCallable DeleteSparkAppCallable(const Model::DeleteSparkAppRequest& request);
 
                 /**
+                 *This API is used to get a query result download task.
+                 * @param req DescribeResultDownloadRequest
+                 * @return DescribeResultDownloadOutcome
+                 */
+                DescribeResultDownloadOutcome DescribeResultDownload(const Model::DescribeResultDownloadRequest &request);
+                void DescribeResultDownloadAsync(const Model::DescribeResultDownloadRequest& request, const DescribeResultDownloadAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeResultDownloadOutcomeCallable DescribeResultDownloadCallable(const Model::DescribeResultDownloadRequest& request);
+
+                /**
                  *This API is used to query a specific Spark application.
                  * @param req DescribeSparkAppJobRequest
                  * @return DescribeSparkAppJobOutcome
@@ -203,6 +255,24 @@ namespace TencentCloud
                 DescribeTasksOutcome DescribeTasks(const Model::DescribeTasksRequest &request);
                 void DescribeTasksAsync(const Model::DescribeTasksRequest& request, const DescribeTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeTasksOutcomeCallable DescribeTasksCallable(const Model::DescribeTasksRequest& request);
+
+                /**
+                 *This API is used to generate SQL statements for creating a managed table.
+                 * @param req GenerateCreateMangedTableSqlRequest
+                 * @return GenerateCreateMangedTableSqlOutcome
+                 */
+                GenerateCreateMangedTableSqlOutcome GenerateCreateMangedTableSql(const Model::GenerateCreateMangedTableSqlRequest &request);
+                void GenerateCreateMangedTableSqlAsync(const Model::GenerateCreateMangedTableSqlRequest& request, const GenerateCreateMangedTableSqlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GenerateCreateMangedTableSqlOutcomeCallable GenerateCreateMangedTableSqlCallable(const Model::GenerateCreateMangedTableSqlRequest& request);
+
+                /**
+                 *This API is used to change data governance event thresholds.
+                 * @param req ModifyGovernEventRuleRequest
+                 * @return ModifyGovernEventRuleOutcome
+                 */
+                ModifyGovernEventRuleOutcome ModifyGovernEventRule(const Model::ModifyGovernEventRuleRequest &request);
+                void ModifyGovernEventRuleAsync(const Model::ModifyGovernEventRuleRequest& request, const ModifyGovernEventRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyGovernEventRuleOutcomeCallable ModifyGovernEventRuleCallable(const Model::ModifyGovernEventRuleRequest& request);
 
                 /**
                  *This API is used to update a Spark application.

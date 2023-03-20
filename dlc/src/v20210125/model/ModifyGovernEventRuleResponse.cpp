@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/dlc/v20210125/model/CreateSparkAppResponse.h>
+#include <tencentcloud/dlc/v20210125/model/ModifyGovernEventRuleResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,12 +23,11 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dlc::V20210125::Model;
 using namespace std;
 
-CreateSparkAppResponse::CreateSparkAppResponse() :
-    m_sparkAppIdHasBeenSet(false)
+ModifyGovernEventRuleResponse::ModifyGovernEventRuleResponse()
 {
 }
 
-CoreInternalOutcome CreateSparkAppResponse::Deserialize(const string &payload)
+CoreInternalOutcome ModifyGovernEventRuleResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -62,33 +61,15 @@ CoreInternalOutcome CreateSparkAppResponse::Deserialize(const string &payload)
     }
 
 
-    if (rsp.HasMember("SparkAppId") && !rsp["SparkAppId"].IsNull())
-    {
-        if (!rsp["SparkAppId"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `SparkAppId` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_sparkAppId = string(rsp["SparkAppId"].GetString());
-        m_sparkAppIdHasBeenSet = true;
-    }
-
 
     return CoreInternalOutcome(true);
 }
 
-string CreateSparkAppResponse::ToJsonString() const
+string ModifyGovernEventRuleResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
-
-    if (m_sparkAppIdHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "SparkAppId";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_sparkAppId.c_str(), allocator).Move(), allocator);
-    }
 
     rapidjson::Value iKey(rapidjson::kStringType);
     string key = "RequestId";
@@ -101,15 +82,5 @@ string CreateSparkAppResponse::ToJsonString() const
     return buffer.GetString();
 }
 
-
-string CreateSparkAppResponse::GetSparkAppId() const
-{
-    return m_sparkAppId;
-}
-
-bool CreateSparkAppResponse::SparkAppIdHasBeenSet() const
-{
-    return m_sparkAppIdHasBeenSet;
-}
 
 

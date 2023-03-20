@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_DLC_V20210125_MODEL_CREATESPARKAPPRESPONSE_H_
-#define TENCENTCLOUD_DLC_V20210125_MODEL_CREATESPARKAPPRESPONSE_H_
+#ifndef TENCENTCLOUD_DLC_V20210125_MODEL_CREATERESULTDOWNLOADRESPONSE_H_
+#define TENCENTCLOUD_DLC_V20210125_MODEL_CREATERESULTDOWNLOADRESPONSE_H_
 
 #include <string>
 #include <vector>
@@ -32,39 +32,36 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * CreateSparkApp response structure.
+                * CreateResultDownload response structure.
                 */
-                class CreateSparkAppResponse : public AbstractModel
+                class CreateResultDownloadResponse : public AbstractModel
                 {
                 public:
-                    CreateSparkAppResponse();
-                    ~CreateSparkAppResponse() = default;
+                    CreateResultDownloadResponse();
+                    ~CreateResultDownloadResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取The unique ID of the application.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SparkAppId The unique ID of the application.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The download task ID.
+                     * @return DownloadId The download task ID.
                      */
-                    std::string GetSparkAppId() const;
+                    std::string GetDownloadId() const;
 
                     /**
-                     * 判断参数 SparkAppId 是否已赋值
-                     * @return SparkAppId 是否已赋值
+                     * 判断参数 DownloadId 是否已赋值
+                     * @return DownloadId 是否已赋值
                      */
-                    bool SparkAppIdHasBeenSet() const;
+                    bool DownloadIdHasBeenSet() const;
 
                 private:
 
                     /**
-                     * The unique ID of the application.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The download task ID.
                      */
-                    std::string m_sparkAppId;
-                    bool m_sparkAppIdHasBeenSet;
+                    std::string m_downloadId;
+                    bool m_downloadIdHasBeenSet;
 
                 };
             }
@@ -72,4 +69,4 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 }
 
-#endif // !TENCENTCLOUD_DLC_V20210125_MODEL_CREATESPARKAPPRESPONSE_H_
+#endif // !TENCENTCLOUD_DLC_V20210125_MODEL_CREATERESULTDOWNLOADRESPONSE_H_

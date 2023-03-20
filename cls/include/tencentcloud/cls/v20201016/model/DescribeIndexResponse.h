@@ -95,10 +95,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool ModifyTimeHasBeenSet() const;
 
                     /**
-                     * 获取Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return IncludeInternalFields Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取Whether full-text indexing includes internal fields (`__FILENAME__`, `__HOSTNAME__`, and `__SOURCE__`)
+* `false`: Full-text indexing does not include internal fields.
+* `true`: Full-text indexing includes internal fields.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IncludeInternalFields Whether full-text indexing includes internal fields (`__FILENAME__`, `__HOSTNAME__`, and `__SOURCE__`)
+* `false`: Full-text indexing does not include internal fields.
+* `true`: Full-text indexing includes internal fields.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     bool GetIncludeInternalFields() const;
 
@@ -109,10 +113,16 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool IncludeInternalFieldsHasBeenSet() const;
 
                     /**
-                     * 获取Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return MetadataFlag Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取Whether full-text indexing includes metadata fields (which are prefixed with `__TAG__`)
+* `0`: Full-text indexing includes only the metadata fields with key-value indexing enabled.
+* `1`: Full-text indexing includes all metadata fields.
+* `2`: Full-text indexing does not include metadata fields.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MetadataFlag Whether full-text indexing includes metadata fields (which are prefixed with `__TAG__`)
+* `0`: Full-text indexing includes only the metadata fields with key-value indexing enabled.
+* `1`: Full-text indexing includes all metadata fields.
+* `2`: Full-text indexing does not include metadata fields.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetMetadataFlag() const;
 
@@ -150,15 +160,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_modifyTimeHasBeenSet;
 
                     /**
-                     * Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
-Note: This field may return `null`, indicating that no valid value was found.
+                     * Whether full-text indexing includes internal fields (`__FILENAME__`, `__HOSTNAME__`, and `__SOURCE__`)
+* `false`: Full-text indexing does not include internal fields.
+* `true`: Full-text indexing includes internal fields.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_includeInternalFields;
                     bool m_includeInternalFieldsHasBeenSet;
 
                     /**
-                     * Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
-Note: This field may return `null`, indicating that no valid value was found.
+                     * Whether full-text indexing includes metadata fields (which are prefixed with `__TAG__`)
+* `0`: Full-text indexing includes only the metadata fields with key-value indexing enabled.
+* `1`: Full-text indexing includes all metadata fields.
+* `2`: Full-text indexing does not include metadata fields.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_metadataFlag;
                     bool m_metadataFlagHasBeenSet;

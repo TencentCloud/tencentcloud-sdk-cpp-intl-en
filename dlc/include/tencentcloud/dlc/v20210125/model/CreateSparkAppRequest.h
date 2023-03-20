@@ -456,6 +456,60 @@ namespace TencentCloud
                      */
                     bool AppArchivesHasBeenSet() const;
 
+                    /**
+                     * 获取The Spark image version.
+                     * @return SparkImage The Spark image version.
+                     */
+                    std::string GetSparkImage() const;
+
+                    /**
+                     * 设置The Spark image version.
+                     * @param SparkImage The Spark image version.
+                     */
+                    void SetSparkImage(const std::string& _sparkImage);
+
+                    /**
+                     * 判断参数 SparkImage 是否已赋值
+                     * @return SparkImage 是否已赋值
+                     */
+                    bool SparkImageHasBeenSet() const;
+
+                    /**
+                     * 获取The Spark image version name.
+                     * @return SparkImageVersion The Spark image version name.
+                     */
+                    std::string GetSparkImageVersion() const;
+
+                    /**
+                     * 设置The Spark image version name.
+                     * @param SparkImageVersion The Spark image version name.
+                     */
+                    void SetSparkImageVersion(const std::string& _sparkImageVersion);
+
+                    /**
+                     * 判断参数 SparkImageVersion 是否已赋值
+                     * @return SparkImageVersion 是否已赋值
+                     */
+                    bool SparkImageVersionHasBeenSet() const;
+
+                    /**
+                     * 获取The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `AppExecutorNums`.
+                     * @return AppExecutorMaxNumbers The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `AppExecutorNums`.
+                     */
+                    int64_t GetAppExecutorMaxNumbers() const;
+
+                    /**
+                     * 设置The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `AppExecutorNums`.
+                     * @param AppExecutorMaxNumbers The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `AppExecutorNums`.
+                     */
+                    void SetAppExecutorMaxNumbers(const int64_t& _appExecutorMaxNumbers);
+
+                    /**
+                     * 判断参数 AppExecutorMaxNumbers 是否已赋值
+                     * @return AppExecutorMaxNumbers 是否已赋值
+                     */
+                    bool AppExecutorMaxNumbersHasBeenSet() const;
+
                 private:
 
                     /**
@@ -595,6 +649,24 @@ namespace TencentCloud
                      */
                     std::string m_appArchives;
                     bool m_appArchivesHasBeenSet;
+
+                    /**
+                     * The Spark image version.
+                     */
+                    std::string m_sparkImage;
+                    bool m_sparkImageHasBeenSet;
+
+                    /**
+                     * The Spark image version name.
+                     */
+                    std::string m_sparkImageVersion;
+                    bool m_sparkImageVersionHasBeenSet;
+
+                    /**
+                     * The specified executor count (max), which defaults to 1. This parameter applies if the "Dynamic" mode is selected. If the "Dynamic" mode is not selected, the executor count is equal to `AppExecutorNums`.
+                     */
+                    int64_t m_appExecutorMaxNumbers;
+                    bool m_appExecutorMaxNumbersHasBeenSet;
 
                 };
             }

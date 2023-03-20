@@ -98,14 +98,22 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
-                     * @return IncludeInternalFields Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
+                     * 获取Whether full-text indexing includes internal fields (`__FILENAME__`, `__HOSTNAME__`, and `__SOURCE__`). Default value: `false`. Recommended value: `true`.
+* `false`: Full-text indexing does not include internal fields.
+* `true`: Full-text indexing includes internal fields.
+                     * @return IncludeInternalFields Whether full-text indexing includes internal fields (`__FILENAME__`, `__HOSTNAME__`, and `__SOURCE__`). Default value: `false`. Recommended value: `true`.
+* `false`: Full-text indexing does not include internal fields.
+* `true`: Full-text indexing includes internal fields.
                      */
                     bool GetIncludeInternalFields() const;
 
                     /**
-                     * 设置Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
-                     * @param IncludeInternalFields Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
+                     * 设置Whether full-text indexing includes internal fields (`__FILENAME__`, `__HOSTNAME__`, and `__SOURCE__`). Default value: `false`. Recommended value: `true`.
+* `false`: Full-text indexing does not include internal fields.
+* `true`: Full-text indexing includes internal fields.
+                     * @param IncludeInternalFields Whether full-text indexing includes internal fields (`__FILENAME__`, `__HOSTNAME__`, and `__SOURCE__`). Default value: `false`. Recommended value: `true`.
+* `false`: Full-text indexing does not include internal fields.
+* `true`: Full-text indexing includes internal fields.
                      */
                     void SetIncludeInternalFields(const bool& _includeInternalFields);
 
@@ -116,14 +124,26 @@ namespace TencentCloud
                     bool IncludeInternalFieldsHasBeenSet() const;
 
                     /**
-                     * 获取Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
-                     * @return MetadataFlag Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
+                     * 获取Whether full-text indexing includes metadata fields (which are prefixed with `__TAG__`). Default value: `0`. Recommended value: `1`.
+* `0`: Full-text indexing includes only the metadata fields with key-value indexing enabled.
+* `1`: Full-text indexing includes all metadata fields.
+* `2`: Full-text indexing does not include metadata fields.
+                     * @return MetadataFlag Whether full-text indexing includes metadata fields (which are prefixed with `__TAG__`). Default value: `0`. Recommended value: `1`.
+* `0`: Full-text indexing includes only the metadata fields with key-value indexing enabled.
+* `1`: Full-text indexing includes all metadata fields.
+* `2`: Full-text indexing does not include metadata fields.
                      */
                     uint64_t GetMetadataFlag() const;
 
                     /**
-                     * 设置Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
-                     * @param MetadataFlag Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
+                     * 设置Whether full-text indexing includes metadata fields (which are prefixed with `__TAG__`). Default value: `0`. Recommended value: `1`.
+* `0`: Full-text indexing includes only the metadata fields with key-value indexing enabled.
+* `1`: Full-text indexing includes all metadata fields.
+* `2`: Full-text indexing does not include metadata fields.
+                     * @param MetadataFlag Whether full-text indexing includes metadata fields (which are prefixed with `__TAG__`). Default value: `0`. Recommended value: `1`.
+* `0`: Full-text indexing includes only the metadata fields with key-value indexing enabled.
+* `1`: Full-text indexing includes all metadata fields.
+* `2`: Full-text indexing does not include metadata fields.
                      */
                     void SetMetadataFlag(const uint64_t& _metadataFlag);
 
@@ -154,13 +174,18 @@ namespace TencentCloud
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
+                     * Whether full-text indexing includes internal fields (`__FILENAME__`, `__HOSTNAME__`, and `__SOURCE__`). Default value: `false`. Recommended value: `true`.
+* `false`: Full-text indexing does not include internal fields.
+* `true`: Full-text indexing includes internal fields.
                      */
                     bool m_includeInternalFields;
                     bool m_includeInternalFieldsHasBeenSet;
 
                     /**
-                     * Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
+                     * Whether full-text indexing includes metadata fields (which are prefixed with `__TAG__`). Default value: `0`. Recommended value: `1`.
+* `0`: Full-text indexing includes only the metadata fields with key-value indexing enabled.
+* `1`: Full-text indexing includes all metadata fields.
+* `2`: Full-text indexing does not include metadata fields.
                      */
                     uint64_t m_metadataFlag;
                     bool m_metadataFlagHasBeenSet;

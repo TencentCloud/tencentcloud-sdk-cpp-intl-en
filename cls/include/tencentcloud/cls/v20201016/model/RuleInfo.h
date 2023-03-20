@@ -39,6 +39,7 @@ namespace TencentCloud
             {
                 /**
                 * Index rule. At least one of the `FullText`, `KeyValue`, and `Tag` parameters must be valid.
+
                 */
                 class RuleInfo : public AbstractModel
                 {
@@ -50,18 +51,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Full-Text index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return FullText Full-Text index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return FullText Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     FullTextInfo GetFullText() const;
 
                     /**
-                     * 设置Full-Text index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param FullText Full-Text index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param FullText Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetFullText(const FullTextInfo& _fullText);
 
@@ -72,18 +73,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool FullTextHasBeenSet() const;
 
                     /**
-                     * 获取Key-Value index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return KeyValue Key-Value index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Key-value index configuration. If the configuration is left empty, key-value indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return KeyValue Key-value index configuration. If the configuration is left empty, key-value indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     RuleKeyValueInfo GetKeyValue() const;
 
                     /**
-                     * 设置Key-Value index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param KeyValue Key-Value index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Key-value index configuration. If the configuration is left empty, key-value indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param KeyValue Key-value index configuration. If the configuration is left empty, key-value indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetKeyValue(const RuleKeyValueInfo& _keyValue);
 
@@ -94,18 +95,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool KeyValueHasBeenSet() const;
 
                     /**
-                     * 获取Metafield index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return Tag Metafield index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Tag Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     RuleTagInfo GetTag() const;
 
                     /**
-                     * 设置Metafield index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param Tag Metafield index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Tag Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetTag(const RuleTagInfo& _tag);
 
@@ -118,22 +119,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 private:
 
                     /**
-                     * Full-Text index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Full-text index configuration. If the configuration is left empty, full-text indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     FullTextInfo m_fullText;
                     bool m_fullTextHasBeenSet;
 
                     /**
-                     * Key-Value index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Key-value index configuration. If the configuration is left empty, key-value indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     RuleKeyValueInfo m_keyValue;
                     bool m_keyValueHasBeenSet;
 
                     /**
-                     * Metafield index configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Metadata field index configuration. If the configuration is left empty, metadata field indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     RuleTagInfo m_tag;
                     bool m_tagHasBeenSet;

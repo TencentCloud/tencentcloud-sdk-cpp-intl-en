@@ -113,18 +113,18 @@ Note: \n\t\r can be directly enclosed in double quotes as the input parameter wi
                     bool SqlFlagHasBeenSet() const;
 
                     /**
-                     * 获取Whether Chinese characters are contained
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return ContainZH Whether Chinese characters are contained
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Whether Chinese characters are contained. For `long` and `double` fields, set them to `false`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ContainZH Whether Chinese characters are contained. For `long` and `double` fields, set them to `false`.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     bool GetContainZH() const;
 
                     /**
-                     * 设置Whether Chinese characters are contained
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param ContainZH Whether Chinese characters are contained
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Whether Chinese characters are contained. For `long` and `double` fields, set them to `false`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ContainZH Whether Chinese characters are contained. For `long` and `double` fields, set them to `false`.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetContainZH(const bool& _containZH);
 
@@ -158,8 +158,8 @@ Note: \n\t\r can be directly enclosed in double quotes as the input parameter wi
                     bool m_sqlFlagHasBeenSet;
 
                     /**
-                     * Whether Chinese characters are contained
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Whether Chinese characters are contained. For `long` and `double` fields, set them to `false`.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_containZH;
                     bool m_containZHHasBeenSet;

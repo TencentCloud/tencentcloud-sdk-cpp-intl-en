@@ -14,13 +14,14 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_DLC_V20210125_MODEL_CREATESPARKAPPRESPONSE_H_
-#define TENCENTCLOUD_DLC_V20210125_MODEL_CREATESPARKAPPRESPONSE_H_
+#ifndef TENCENTCLOUD_DLC_V20210125_MODEL_GENERATECREATEMANGEDTABLESQLRESPONSE_H_
+#define TENCENTCLOUD_DLC_V20210125_MODEL_GENERATECREATEMANGEDTABLESQLRESPONSE_H_
 
 #include <string>
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/dlc/v20210125/model/Execution.h>
 
 
 namespace TencentCloud
@@ -32,39 +33,36 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * CreateSparkApp response structure.
+                * GenerateCreateMangedTableSql response structure.
                 */
-                class CreateSparkAppResponse : public AbstractModel
+                class GenerateCreateMangedTableSqlResponse : public AbstractModel
                 {
                 public:
-                    CreateSparkAppResponse();
-                    ~CreateSparkAppResponse() = default;
+                    GenerateCreateMangedTableSqlResponse();
+                    ~GenerateCreateMangedTableSqlResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取The unique ID of the application.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SparkAppId The unique ID of the application.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The SQL statements for creating the managed internal table.
+                     * @return Execution The SQL statements for creating the managed internal table.
                      */
-                    std::string GetSparkAppId() const;
+                    Execution GetExecution() const;
 
                     /**
-                     * 判断参数 SparkAppId 是否已赋值
-                     * @return SparkAppId 是否已赋值
+                     * 判断参数 Execution 是否已赋值
+                     * @return Execution 是否已赋值
                      */
-                    bool SparkAppIdHasBeenSet() const;
+                    bool ExecutionHasBeenSet() const;
 
                 private:
 
                     /**
-                     * The unique ID of the application.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The SQL statements for creating the managed internal table.
                      */
-                    std::string m_sparkAppId;
-                    bool m_sparkAppIdHasBeenSet;
+                    Execution m_execution;
+                    bool m_executionHasBeenSet;
 
                 };
             }
@@ -72,4 +70,4 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 }
 
-#endif // !TENCENTCLOUD_DLC_V20210125_MODEL_CREATESPARKAPPRESPONSE_H_
+#endif // !TENCENTCLOUD_DLC_V20210125_MODEL_GENERATECREATEMANGEDTABLESQLRESPONSE_H_

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/dlc/v20210125/model/CreateSparkAppResponse.h>
+#include <tencentcloud/dlc/v20210125/model/CreateInternalTableResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -23,12 +23,12 @@ using TencentCloud::CoreInternalOutcome;
 using namespace TencentCloud::Dlc::V20210125::Model;
 using namespace std;
 
-CreateSparkAppResponse::CreateSparkAppResponse() :
-    m_sparkAppIdHasBeenSet(false)
+CreateInternalTableResponse::CreateInternalTableResponse() :
+    m_executionHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome CreateSparkAppResponse::Deserialize(const string &payload)
+CoreInternalOutcome CreateInternalTableResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -62,32 +62,32 @@ CoreInternalOutcome CreateSparkAppResponse::Deserialize(const string &payload)
     }
 
 
-    if (rsp.HasMember("SparkAppId") && !rsp["SparkAppId"].IsNull())
+    if (rsp.HasMember("Execution") && !rsp["Execution"].IsNull())
     {
-        if (!rsp["SparkAppId"].IsString())
+        if (!rsp["Execution"].IsString())
         {
-            return CoreInternalOutcome(Core::Error("response `SparkAppId` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Execution` IsString=false incorrectly").SetRequestId(requestId));
         }
-        m_sparkAppId = string(rsp["SparkAppId"].GetString());
-        m_sparkAppIdHasBeenSet = true;
+        m_execution = string(rsp["Execution"].GetString());
+        m_executionHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string CreateSparkAppResponse::ToJsonString() const
+string CreateInternalTableResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_sparkAppIdHasBeenSet)
+    if (m_executionHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "SparkAppId";
+        string key = "Execution";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_sparkAppId.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_execution.c_str(), allocator).Move(), allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -102,14 +102,14 @@ string CreateSparkAppResponse::ToJsonString() const
 }
 
 
-string CreateSparkAppResponse::GetSparkAppId() const
+string CreateInternalTableResponse::GetExecution() const
 {
-    return m_sparkAppId;
+    return m_execution;
 }
 
-bool CreateSparkAppResponse::SparkAppIdHasBeenSet() const
+bool CreateInternalTableResponse::ExecutionHasBeenSet() const
 {
-    return m_sparkAppIdHasBeenSet;
+    return m_executionHasBeenSet;
 }
 
 

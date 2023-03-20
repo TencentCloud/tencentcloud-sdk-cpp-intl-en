@@ -83,6 +83,92 @@ DlcClient::CancelTaskOutcomeCallable DlcClient::CancelTaskCallable(const CancelT
     return task->get_future();
 }
 
+DlcClient::CreateInternalTableOutcome DlcClient::CreateInternalTable(const CreateInternalTableRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateInternalTable");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateInternalTableResponse rsp = CreateInternalTableResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateInternalTableOutcome(rsp);
+        else
+            return CreateInternalTableOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateInternalTableOutcome(outcome.GetError());
+    }
+}
+
+void DlcClient::CreateInternalTableAsync(const CreateInternalTableRequest& request, const CreateInternalTableAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateInternalTable(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DlcClient::CreateInternalTableOutcomeCallable DlcClient::CreateInternalTableCallable(const CreateInternalTableRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateInternalTableOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateInternalTable(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DlcClient::CreateResultDownloadOutcome DlcClient::CreateResultDownload(const CreateResultDownloadRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateResultDownload");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateResultDownloadResponse rsp = CreateResultDownloadResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateResultDownloadOutcome(rsp);
+        else
+            return CreateResultDownloadOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateResultDownloadOutcome(outcome.GetError());
+    }
+}
+
+void DlcClient::CreateResultDownloadAsync(const CreateResultDownloadRequest& request, const CreateResultDownloadAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateResultDownload(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DlcClient::CreateResultDownloadOutcomeCallable DlcClient::CreateResultDownloadCallable(const CreateResultDownloadRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateResultDownloadOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateResultDownload(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 DlcClient::CreateSparkAppOutcome DlcClient::CreateSparkApp(const CreateSparkAppRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateSparkApp");
@@ -298,6 +384,49 @@ DlcClient::DeleteSparkAppOutcomeCallable DlcClient::DeleteSparkAppCallable(const
     return task->get_future();
 }
 
+DlcClient::DescribeResultDownloadOutcome DlcClient::DescribeResultDownload(const DescribeResultDownloadRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeResultDownload");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeResultDownloadResponse rsp = DescribeResultDownloadResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeResultDownloadOutcome(rsp);
+        else
+            return DescribeResultDownloadOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeResultDownloadOutcome(outcome.GetError());
+    }
+}
+
+void DlcClient::DescribeResultDownloadAsync(const DescribeResultDownloadRequest& request, const DescribeResultDownloadAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeResultDownload(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DlcClient::DescribeResultDownloadOutcomeCallable DlcClient::DescribeResultDownloadCallable(const DescribeResultDownloadRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeResultDownloadOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeResultDownload(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 DlcClient::DescribeSparkAppJobOutcome DlcClient::DescribeSparkAppJob(const DescribeSparkAppJobRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeSparkAppJob");
@@ -506,6 +635,92 @@ DlcClient::DescribeTasksOutcomeCallable DlcClient::DescribeTasksCallable(const D
         [this, request]()
         {
             return this->DescribeTasks(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DlcClient::GenerateCreateMangedTableSqlOutcome DlcClient::GenerateCreateMangedTableSql(const GenerateCreateMangedTableSqlRequest &request)
+{
+    auto outcome = MakeRequest(request, "GenerateCreateMangedTableSql");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        GenerateCreateMangedTableSqlResponse rsp = GenerateCreateMangedTableSqlResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return GenerateCreateMangedTableSqlOutcome(rsp);
+        else
+            return GenerateCreateMangedTableSqlOutcome(o.GetError());
+    }
+    else
+    {
+        return GenerateCreateMangedTableSqlOutcome(outcome.GetError());
+    }
+}
+
+void DlcClient::GenerateCreateMangedTableSqlAsync(const GenerateCreateMangedTableSqlRequest& request, const GenerateCreateMangedTableSqlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->GenerateCreateMangedTableSql(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DlcClient::GenerateCreateMangedTableSqlOutcomeCallable DlcClient::GenerateCreateMangedTableSqlCallable(const GenerateCreateMangedTableSqlRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<GenerateCreateMangedTableSqlOutcome()>>(
+        [this, request]()
+        {
+            return this->GenerateCreateMangedTableSql(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DlcClient::ModifyGovernEventRuleOutcome DlcClient::ModifyGovernEventRule(const ModifyGovernEventRuleRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyGovernEventRule");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyGovernEventRuleResponse rsp = ModifyGovernEventRuleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyGovernEventRuleOutcome(rsp);
+        else
+            return ModifyGovernEventRuleOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyGovernEventRuleOutcome(outcome.GetError());
+    }
+}
+
+void DlcClient::ModifyGovernEventRuleAsync(const ModifyGovernEventRuleRequest& request, const ModifyGovernEventRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->ModifyGovernEventRule(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DlcClient::ModifyGovernEventRuleOutcomeCallable DlcClient::ModifyGovernEventRuleCallable(const ModifyGovernEventRuleRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<ModifyGovernEventRuleOutcome()>>(
+        [this, request]()
+        {
+            return this->ModifyGovernEventRule(request);
         }
     );
 
