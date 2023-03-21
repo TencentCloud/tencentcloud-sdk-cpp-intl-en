@@ -173,14 +173,14 @@ namespace TencentCloud
                     bool ContinuePeriodHasBeenSet() const;
 
                     /**
-                     * 获取If a metric is created based on a template, the RuleId of the metric in the template must be passed in.
-                     * @return RuleId If a metric is created based on a template, the RuleId of the metric in the template must be passed in.
+                     * 获取If a metric is created based on a template, the `RuleId` of the metric in the template must be passed in.
+                     * @return RuleId If a metric is created based on a template, the `RuleId` of the metric in the template must be passed in.
                      */
                     int64_t GetRuleId() const;
 
                     /**
-                     * 设置If a metric is created based on a template, the RuleId of the metric in the template must be passed in.
-                     * @param RuleId If a metric is created based on a template, the RuleId of the metric in the template must be passed in.
+                     * 设置If a metric is created based on a template, the `RuleId` of the metric in the template must be passed in.
+                     * @param RuleId If a metric is created based on a template, the `RuleId` of the metric in the template must be passed in.
                      */
                     void SetRuleId(const int64_t& _ruleId);
 
@@ -235,7 +235,7 @@ namespace TencentCloud
                     bool m_continuePeriodHasBeenSet;
 
                     /**
-                     * If a metric is created based on a template, the RuleId of the metric in the template must be passed in.
+                     * If a metric is created based on a template, the `RuleId` of the metric in the template must be passed in.
                      */
                     int64_t m_ruleId;
                     bool m_ruleIdHasBeenSet;

@@ -48,18 +48,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Metric trigger condition operator. Valid values: 0 (OR), 1 (AND)
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return IsUnionRule Metric trigger condition operator. Valid values: 0 (OR), 1 (AND)
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Judgment condition of an alarm trigger condition (`0`: Any; `1`: All; `2`: Composite). When the value is set to `2` (i.e., composite trigger conditions), this parameter should be used together with `ComplexExpression`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IsUnionRule Judgment condition of an alarm trigger condition (`0`: Any; `1`: All; `2`: Composite). When the value is set to `2` (i.e., composite trigger conditions), this parameter should be used together with `ComplexExpression`.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetIsUnionRule() const;
 
                     /**
-                     * 设置Metric trigger condition operator. Valid values: 0 (OR), 1 (AND)
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param IsUnionRule Metric trigger condition operator. Valid values: 0 (OR), 1 (AND)
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Judgment condition of an alarm trigger condition (`0`: Any; `1`: All; `2`: Composite). When the value is set to `2` (i.e., composite trigger conditions), this parameter should be used together with `ComplexExpression`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param IsUnionRule Judgment condition of an alarm trigger condition (`0`: Any; `1`: All; `2`: Composite). When the value is set to `2` (i.e., composite trigger conditions), this parameter should be used together with `ComplexExpression`.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetIsUnionRule(const int64_t& _isUnionRule);
 
@@ -91,11 +91,33 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool RulesHasBeenSet() const;
 
+                    /**
+                     * 获取The judgment expression of composite alarm trigger conditions, which is valid when the value of `IsUnionRule` is `2`. This parameter is used to determine that an alarm condition is met only when the expression values are `True` for multiple trigger conditions.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ComplexExpression The judgment expression of composite alarm trigger conditions, which is valid when the value of `IsUnionRule` is `2`. This parameter is used to determine that an alarm condition is met only when the expression values are `True` for multiple trigger conditions.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetComplexExpression() const;
+
+                    /**
+                     * 设置The judgment expression of composite alarm trigger conditions, which is valid when the value of `IsUnionRule` is `2`. This parameter is used to determine that an alarm condition is met only when the expression values are `True` for multiple trigger conditions.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ComplexExpression The judgment expression of composite alarm trigger conditions, which is valid when the value of `IsUnionRule` is `2`. This parameter is used to determine that an alarm condition is met only when the expression values are `True` for multiple trigger conditions.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetComplexExpression(const std::string& _complexExpression);
+
+                    /**
+                     * 判断参数 ComplexExpression 是否已赋值
+                     * @return ComplexExpression 是否已赋值
+                     */
+                    bool ComplexExpressionHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Metric trigger condition operator. Valid values: 0 (OR), 1 (AND)
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Judgment condition of an alarm trigger condition (`0`: Any; `1`: All; `2`: Composite). When the value is set to `2` (i.e., composite trigger conditions), this parameter should be used together with `ComplexExpression`.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_isUnionRule;
                     bool m_isUnionRuleHasBeenSet;
@@ -106,6 +128,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<AlarmPolicyRule> m_rules;
                     bool m_rulesHasBeenSet;
+
+                    /**
+                     * The judgment expression of composite alarm trigger conditions, which is valid when the value of `IsUnionRule` is `2`. This parameter is used to determine that an alarm condition is met only when the expression values are `True` for multiple trigger conditions.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_complexExpression;
+                    bool m_complexExpressionHasBeenSet;
 
                 };
             }

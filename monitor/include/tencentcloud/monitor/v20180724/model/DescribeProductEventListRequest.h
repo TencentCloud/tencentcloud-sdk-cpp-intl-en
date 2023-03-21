@@ -62,14 +62,14 @@ namespace TencentCloud
                     bool ModuleHasBeenSet() const;
 
                     /**
-                     * 获取Filter by product type. For example, 'cvm' indicates Cloud Virtual Machine.
-                     * @return ProductName Filter by product type. For example, 'cvm' indicates Cloud Virtual Machine.
+                     * 获取Filter by product type. For example, "cvm" indicates Cloud Virtual Machine.
+                     * @return ProductName Filter by product type. For example, "cvm" indicates Cloud Virtual Machine.
                      */
                     std::vector<std::string> GetProductName() const;
 
                     /**
-                     * 设置Filter by product type. For example, 'cvm' indicates Cloud Virtual Machine.
-                     * @param ProductName Filter by product type. For example, 'cvm' indicates Cloud Virtual Machine.
+                     * 设置Filter by product type. For example, "cvm" indicates Cloud Virtual Machine.
+                     * @param ProductName Filter by product type. For example, "cvm" indicates Cloud Virtual Machine.
                      */
                     void SetProductName(const std::vector<std::string>& _productName);
 
@@ -80,14 +80,14 @@ namespace TencentCloud
                     bool ProductNameHasBeenSet() const;
 
                     /**
-                     * 获取Filter by product name. For example, "guest_reboot" indicates server restart.
-                     * @return EventName Filter by product name. For example, "guest_reboot" indicates server restart.
+                     * 获取Filter by event name. For example, "guest_reboot" indicates instance restart.
+                     * @return EventName Filter by event name. For example, "guest_reboot" indicates instance restart.
                      */
                     std::vector<std::string> GetEventName() const;
 
                     /**
-                     * 设置Filter by product name. For example, "guest_reboot" indicates server restart.
-                     * @param EventName Filter by product name. For example, "guest_reboot" indicates server restart.
+                     * 设置Filter by event name. For example, "guest_reboot" indicates instance restart.
+                     * @param EventName Filter by event name. For example, "guest_reboot" indicates instance restart.
                      */
                     void SetEventName(const std::vector<std::string>& _eventName);
 
@@ -98,14 +98,14 @@ namespace TencentCloud
                     bool EventNameHasBeenSet() const;
 
                     /**
-                     * 获取Affected object, such as "ins-19708ino"
-                     * @return InstanceId Affected object, such as "ins-19708ino"
+                     * 获取Affected object, such as "ins-19708ino".
+                     * @return InstanceId Affected object, such as "ins-19708ino".
                      */
                     std::vector<std::string> GetInstanceId() const;
 
                     /**
-                     * 设置Affected object, such as "ins-19708ino"
-                     * @param InstanceId Affected object, such as "ins-19708ino"
+                     * 设置Affected object, such as "ins-19708ino".
+                     * @param InstanceId Affected object, such as "ins-19708ino".
                      */
                     void SetInstanceId(const std::vector<std::string>& _instanceId);
 
@@ -322,19 +322,19 @@ namespace TencentCloud
                     bool m_moduleHasBeenSet;
 
                     /**
-                     * Filter by product type. For example, 'cvm' indicates Cloud Virtual Machine.
+                     * Filter by product type. For example, "cvm" indicates Cloud Virtual Machine.
                      */
                     std::vector<std::string> m_productName;
                     bool m_productNameHasBeenSet;
 
                     /**
-                     * Filter by product name. For example, "guest_reboot" indicates server restart.
+                     * Filter by event name. For example, "guest_reboot" indicates instance restart.
                      */
                     std::vector<std::string> m_eventName;
                     bool m_eventNameHasBeenSet;
 
                     /**
-                     * Affected object, such as "ins-19708ino"
+                     * Affected object, such as "ins-19708ino".
                      */
                     std::vector<std::string> m_instanceId;
                     bool m_instanceIdHasBeenSet;

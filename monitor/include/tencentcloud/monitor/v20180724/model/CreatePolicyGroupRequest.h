@@ -225,14 +225,14 @@ namespace TencentCloud
                     bool EventConditionsHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is a backend call. If the value is 1, rules from the policy template will be used to fill in the `Conditions` and `EventConditions` fields.
-                     * @return BackEndCall Whether it is a backend call. If the value is 1, rules from the policy template will be used to fill in the `Conditions` and `EventConditions` fields.
+                     * 获取Whether it is a backend call. Rules pulled from the policy template will be used to fill in the `Conditions` and `EventConditions` fields only when the value of this parameter is `1`.
+                     * @return BackEndCall Whether it is a backend call. Rules pulled from the policy template will be used to fill in the `Conditions` and `EventConditions` fields only when the value of this parameter is `1`.
                      */
                     int64_t GetBackEndCall() const;
 
                     /**
-                     * 设置Whether it is a backend call. If the value is 1, rules from the policy template will be used to fill in the `Conditions` and `EventConditions` fields.
-                     * @param BackEndCall Whether it is a backend call. If the value is 1, rules from the policy template will be used to fill in the `Conditions` and `EventConditions` fields.
+                     * 设置Whether it is a backend call. Rules pulled from the policy template will be used to fill in the `Conditions` and `EventConditions` fields only when the value of this parameter is `1`.
+                     * @param BackEndCall Whether it is a backend call. Rules pulled from the policy template will be used to fill in the `Conditions` and `EventConditions` fields only when the value of this parameter is `1`.
                      */
                     void SetBackEndCall(const int64_t& _backEndCall);
 
@@ -323,7 +323,7 @@ namespace TencentCloud
                     bool m_eventConditionsHasBeenSet;
 
                     /**
-                     * Whether it is a backend call. If the value is 1, rules from the policy template will be used to fill in the `Conditions` and `EventConditions` fields.
+                     * Whether it is a backend call. Rules pulled from the policy template will be used to fill in the `Conditions` and `EventConditions` fields only when the value of this parameter is `1`.
                      */
                     int64_t m_backEndCall;
                     bool m_backEndCallHasBeenSet;

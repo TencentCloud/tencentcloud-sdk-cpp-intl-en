@@ -306,6 +306,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool MXHasBeenSet() const;
 
+                    /**
+                     * 获取The record weight.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Weight The record weight.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetWeight() const;
+
+                    /**
+                     * 设置The record weight.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Weight The record weight.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetWeight(const uint64_t& _weight);
+
+                    /**
+                     * 判断参数 Weight 是否已赋值
+                     * @return Weight 是否已赋值
+                     */
+                    bool WeightHasBeenSet() const;
+
                 private:
 
                     /**
@@ -390,6 +412,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     uint64_t m_mX;
                     bool m_mXHasBeenSet;
+
+                    /**
+                     * The record weight.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_weight;
+                    bool m_weightHasBeenSet;
 
                 };
             }

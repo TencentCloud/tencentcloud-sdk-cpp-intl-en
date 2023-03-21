@@ -56,8 +56,8 @@ namespace TencentCloud
                     bool DealIdHasBeenSet() const;
 
                     /**
-                     * 获取List of IDs of created instances
-                     * @return InstanceIds List of IDs of created instances
+                     * 获取List of IDs of the created instances
+                     * @return InstanceIds List of IDs of the created instances
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
@@ -76,7 +76,7 @@ namespace TencentCloud
                     bool m_dealIdHasBeenSet;
 
                     /**
-                     * List of IDs of created instances
+                     * List of IDs of the created instances
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
