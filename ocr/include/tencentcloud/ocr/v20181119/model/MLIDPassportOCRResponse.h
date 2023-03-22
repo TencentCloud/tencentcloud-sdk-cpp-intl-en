@@ -209,6 +209,34 @@ namespace TencentCloud
                      */
                     bool CodeCrcHasBeenSet() const;
 
+                    /**
+                     * 获取The surname.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Surname The surname.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetSurname() const;
+
+                    /**
+                     * 判断参数 Surname 是否已赋值
+                     * @return Surname 是否已赋值
+                     */
+                    bool SurnameHasBeenSet() const;
+
+                    /**
+                     * 获取The given name.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return GivenName The given name.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetGivenName() const;
+
+                    /**
+                     * 判断参数 GivenName 是否已赋值
+                     * @return GivenName 是否已赋值
+                     */
+                    bool GivenNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -293,6 +321,20 @@ namespace TencentCloud
                      */
                     std::string m_codeCrc;
                     bool m_codeCrcHasBeenSet;
+
+                    /**
+                     * The surname.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_surname;
+                    bool m_surnameHasBeenSet;
+
+                    /**
+                     * The given name.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_givenName;
+                    bool m_givenNameHasBeenSet;
 
                 };
             }
