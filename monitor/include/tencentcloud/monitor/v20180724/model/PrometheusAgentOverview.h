@@ -219,6 +219,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool FailedReasonHasBeenSet() const;
 
+                    /**
+                     * 获取Agent name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Name Agent name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetName() const;
+
+                    /**
+                     * 设置Agent name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Name Agent name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetName(const std::string& _name);
+
+                    /**
+                     * 判断参数 Name 是否已赋值
+                     * @return Name 是否已赋值
+                     */
+                    bool NameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -275,6 +297,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_failedReason;
                     bool m_failedReasonHasBeenSet;
+
+                    /**
+                     * Agent name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_name;
+                    bool m_nameHasBeenSet;
 
                 };
             }

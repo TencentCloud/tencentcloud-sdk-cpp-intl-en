@@ -62,14 +62,14 @@ namespace TencentCloud
                     bool ModuleHasBeenSet() const;
 
                     /**
-                     * 获取Namespace. Valid values: QCE/TKE
-                     * @return Namespace Namespace. Valid values: QCE/TKE
+                     * 获取Namespace. Valid values: `QCE`, `TKE2`.
+                     * @return Namespace Namespace. Valid values: `QCE`, `TKE2`.
                      */
                     std::string GetNamespace() const;
 
                     /**
-                     * 设置Namespace. Valid values: QCE/TKE
-                     * @param Namespace Namespace. Valid values: QCE/TKE
+                     * 设置Namespace. Valid values: `QCE`, `TKE2`.
+                     * @param Namespace Namespace. Valid values: `QCE`, `TKE2`.
                      */
                     void SetNamespace(const std::string& _namespace);
 
@@ -216,7 +216,7 @@ Due to the storage period limit, the statistical period is subject to the time r
                     bool m_moduleHasBeenSet;
 
                     /**
-                     * Namespace. Valid values: QCE/TKE
+                     * Namespace. Valid values: `QCE`, `TKE2`.
                      */
                     std::string m_namespace;
                     bool m_namespaceHasBeenSet;

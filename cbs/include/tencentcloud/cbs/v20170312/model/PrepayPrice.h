@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cbs/v20170312/model/DetailPrice.h>
 
 
 namespace TencentCloud
@@ -47,24 +48,6 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Original payment of a monthly-subscribed cloud disk or a snapshot, in USD.
-                     * @return OriginalPrice Original payment of a monthly-subscribed cloud disk or a snapshot, in USD.
-                     */
-                    double GetOriginalPrice() const;
-
-                    /**
-                     * 设置Original payment of a monthly-subscribed cloud disk or a snapshot, in USD.
-                     * @param OriginalPrice Original payment of a monthly-subscribed cloud disk or a snapshot, in USD.
-                     */
-                    void SetOriginalPrice(const double& _originalPrice);
-
-                    /**
-                     * 判断参数 OriginalPrice 是否已赋值
-                     * @return OriginalPrice 是否已赋值
-                     */
-                    bool OriginalPriceHasBeenSet() const;
-
-                    /**
                      * 获取Discounted price of a monthly-subscribed cloud disk or a snapshot, in USD.
                      * @return DiscountPrice Discounted price of a monthly-subscribed cloud disk or a snapshot, in USD.
                      */
@@ -83,6 +66,50 @@ namespace TencentCloud
                     bool DiscountPriceHasBeenSet() const;
 
                     /**
+                     * 获取Billing unit for pay-as-you-go cloud disks. Valid value: <br><li>HOUR: billed hourly.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return ChargeUnit Billing unit for pay-as-you-go cloud disks. Valid value: <br><li>HOUR: billed hourly.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetChargeUnit() const;
+
+                    /**
+                     * 设置Billing unit for pay-as-you-go cloud disks. Valid value: <br><li>HOUR: billed hourly.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param ChargeUnit Billing unit for pay-as-you-go cloud disks. Valid value: <br><li>HOUR: billed hourly.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetChargeUnit(const std::string& _chargeUnit);
+
+                    /**
+                     * 判断参数 ChargeUnit 是否已赋值
+                     * @return ChargeUnit 是否已赋值
+                     */
+                    bool ChargeUnitHasBeenSet() const;
+
+                    /**
+                     * 获取Original unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return UnitPriceHigh Original unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetUnitPriceHigh() const;
+
+                    /**
+                     * 设置Original unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param UnitPriceHigh Original unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetUnitPriceHigh(const std::string& _unitPriceHigh);
+
+                    /**
+                     * 判断参数 UnitPriceHigh 是否已赋值
+                     * @return UnitPriceHigh 是否已赋值
+                     */
+                    bool UnitPriceHighHasBeenSet() const;
+
+                    /**
                      * 获取Original payment of a monthly-subscribed cloud disk or a snapshot, in USD, with six decimal places.
                      * @return OriginalPriceHigh Original payment of a monthly-subscribed cloud disk or a snapshot, in USD, with six decimal places.
                      */
@@ -99,6 +126,68 @@ namespace TencentCloud
                      * @return OriginalPriceHigh 是否已赋值
                      */
                     bool OriginalPriceHighHasBeenSet() const;
+
+                    /**
+                     * 获取Original payment of a monthly-subscribed cloud disk or a snapshot, in USD.
+                     * @return OriginalPrice Original payment of a monthly-subscribed cloud disk or a snapshot, in USD.
+                     */
+                    double GetOriginalPrice() const;
+
+                    /**
+                     * 设置Original payment of a monthly-subscribed cloud disk or a snapshot, in USD.
+                     * @param OriginalPrice Original payment of a monthly-subscribed cloud disk or a snapshot, in USD.
+                     */
+                    void SetOriginalPrice(const double& _originalPrice);
+
+                    /**
+                     * 判断参数 OriginalPrice 是否已赋值
+                     * @return OriginalPrice 是否已赋值
+                     */
+                    bool OriginalPriceHasBeenSet() const;
+
+                    /**
+                     * 获取Discount unit price of a pay-as-you-go cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return UnitPriceDiscount Discount unit price of a pay-as-you-go cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    double GetUnitPriceDiscount() const;
+
+                    /**
+                     * 设置Discount unit price of a pay-as-you-go cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param UnitPriceDiscount Discount unit price of a pay-as-you-go cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetUnitPriceDiscount(const double& _unitPriceDiscount);
+
+                    /**
+                     * 判断参数 UnitPriceDiscount 是否已赋值
+                     * @return UnitPriceDiscount 是否已赋值
+                     */
+                    bool UnitPriceDiscountHasBeenSet() const;
+
+                    /**
+                     * 获取Discounted unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return UnitPriceDiscountHigh Discounted unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetUnitPriceDiscountHigh() const;
+
+                    /**
+                     * 设置Discounted unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param UnitPriceDiscountHigh Discounted unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetUnitPriceDiscountHigh(const std::string& _unitPriceDiscountHigh);
+
+                    /**
+                     * 判断参数 UnitPriceDiscountHigh 是否已赋值
+                     * @return UnitPriceDiscountHigh 是否已赋值
+                     */
+                    bool UnitPriceDiscountHighHasBeenSet() const;
 
                     /**
                      * 获取Discounted price of a monthly-subscribed cloud disk or a snapshot, in USD, with six decimal places.
@@ -141,100 +230,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool UnitPriceHasBeenSet() const;
 
                     /**
-                     * 获取Billing unit for pay-as-you-go cloud disks. Valid value: <br><li>HOUR: billed hourly.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return ChargeUnit Billing unit for pay-as-you-go cloud disks. Valid value: <br><li>HOUR: billed hourly.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Detailed billing items
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DetailPrices Detailed billing items
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    std::string GetChargeUnit() const;
+                    std::vector<DetailPrice> GetDetailPrices() const;
 
                     /**
-                     * 设置Billing unit for pay-as-you-go cloud disks. Valid value: <br><li>HOUR: billed hourly.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param ChargeUnit Billing unit for pay-as-you-go cloud disks. Valid value: <br><li>HOUR: billed hourly.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Detailed billing items
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param DetailPrices Detailed billing items
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    void SetChargeUnit(const std::string& _chargeUnit);
+                    void SetDetailPrices(const std::vector<DetailPrice>& _detailPrices);
 
                     /**
-                     * 判断参数 ChargeUnit 是否已赋值
-                     * @return ChargeUnit 是否已赋值
+                     * 判断参数 DetailPrices 是否已赋值
+                     * @return DetailPrices 是否已赋值
                      */
-                    bool ChargeUnitHasBeenSet() const;
-
-                    /**
-                     * 获取Discount unit price of a pay-as-you-go cloud disk, in USD.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return UnitPriceDiscount Discount unit price of a pay-as-you-go cloud disk, in USD.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     */
-                    double GetUnitPriceDiscount() const;
-
-                    /**
-                     * 设置Discount unit price of a pay-as-you-go cloud disk, in USD.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param UnitPriceDiscount Discount unit price of a pay-as-you-go cloud disk, in USD.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     */
-                    void SetUnitPriceDiscount(const double& _unitPriceDiscount);
-
-                    /**
-                     * 判断参数 UnitPriceDiscount 是否已赋值
-                     * @return UnitPriceDiscount 是否已赋值
-                     */
-                    bool UnitPriceDiscountHasBeenSet() const;
-
-                    /**
-                     * 获取Original unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return UnitPriceHigh Original unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     */
-                    std::string GetUnitPriceHigh() const;
-
-                    /**
-                     * 设置Original unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param UnitPriceHigh Original unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     */
-                    void SetUnitPriceHigh(const std::string& _unitPriceHigh);
-
-                    /**
-                     * 判断参数 UnitPriceHigh 是否已赋值
-                     * @return UnitPriceHigh 是否已赋值
-                     */
-                    bool UnitPriceHighHasBeenSet() const;
-
-                    /**
-                     * 获取Discounted unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return UnitPriceDiscountHigh Discounted unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     */
-                    std::string GetUnitPriceDiscountHigh() const;
-
-                    /**
-                     * 设置Discounted unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param UnitPriceDiscountHigh Discounted unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     */
-                    void SetUnitPriceDiscountHigh(const std::string& _unitPriceDiscountHigh);
-
-                    /**
-                     * 判断参数 UnitPriceDiscountHigh 是否已赋值
-                     * @return UnitPriceDiscountHigh 是否已赋值
-                     */
-                    bool UnitPriceDiscountHighHasBeenSet() const;
+                    bool DetailPricesHasBeenSet() const;
 
                 private:
-
-                    /**
-                     * Original payment of a monthly-subscribed cloud disk or a snapshot, in USD.
-                     */
-                    double m_originalPrice;
-                    bool m_originalPriceHasBeenSet;
 
                     /**
                      * Discounted price of a monthly-subscribed cloud disk or a snapshot, in USD.
@@ -243,10 +260,44 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_discountPriceHasBeenSet;
 
                     /**
+                     * Billing unit for pay-as-you-go cloud disks. Valid value: <br><li>HOUR: billed hourly.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_chargeUnit;
+                    bool m_chargeUnitHasBeenSet;
+
+                    /**
+                     * Original unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_unitPriceHigh;
+                    bool m_unitPriceHighHasBeenSet;
+
+                    /**
                      * Original payment of a monthly-subscribed cloud disk or a snapshot, in USD, with six decimal places.
                      */
                     std::string m_originalPriceHigh;
                     bool m_originalPriceHighHasBeenSet;
+
+                    /**
+                     * Original payment of a monthly-subscribed cloud disk or a snapshot, in USD.
+                     */
+                    double m_originalPrice;
+                    bool m_originalPriceHasBeenSet;
+
+                    /**
+                     * Discount unit price of a pay-as-you-go cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    double m_unitPriceDiscount;
+                    bool m_unitPriceDiscountHasBeenSet;
+
+                    /**
+                     * Discounted unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_unitPriceDiscountHigh;
+                    bool m_unitPriceDiscountHighHasBeenSet;
 
                     /**
                      * Discounted price of a monthly-subscribed cloud disk or a snapshot, in USD, with six decimal places.
@@ -262,32 +313,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_unitPriceHasBeenSet;
 
                     /**
-                     * Billing unit for pay-as-you-go cloud disks. Valid value: <br><li>HOUR: billed hourly.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Detailed billing items
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
-                    std::string m_chargeUnit;
-                    bool m_chargeUnitHasBeenSet;
-
-                    /**
-                     * Discount unit price of a pay-as-you-go cloud disk, in USD.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     */
-                    double m_unitPriceDiscount;
-                    bool m_unitPriceDiscountHasBeenSet;
-
-                    /**
-                     * Original unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     */
-                    std::string m_unitPriceHigh;
-                    bool m_unitPriceHighHasBeenSet;
-
-                    /**
-                     * Discounted unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     */
-                    std::string m_unitPriceDiscountHigh;
-                    bool m_unitPriceDiscountHighHasBeenSet;
+                    std::vector<DetailPrice> m_detailPrices;
+                    bool m_detailPricesHasBeenSet;
 
                 };
             }

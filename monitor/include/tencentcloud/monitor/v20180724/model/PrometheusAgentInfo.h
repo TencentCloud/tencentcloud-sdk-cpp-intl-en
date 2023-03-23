@@ -46,7 +46,79 @@ namespace TencentCloud
                     CoreInternalOutcome Deserialize(const rapidjson::Value &value);
 
 
+                    /**
+                     * 获取Cluster type
+                     * @return ClusterType Cluster type
+                     */
+                    std::string GetClusterType() const;
+
+                    /**
+                     * 设置Cluster type
+                     * @param ClusterType Cluster type
+                     */
+                    void SetClusterType(const std::string& _clusterType);
+
+                    /**
+                     * 判断参数 ClusterType 是否已赋值
+                     * @return ClusterType 是否已赋值
+                     */
+                    bool ClusterTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Cluster ID
+                     * @return ClusterId Cluster ID
+                     */
+                    std::string GetClusterId() const;
+
+                    /**
+                     * 设置Cluster ID
+                     * @param ClusterId Cluster ID
+                     */
+                    void SetClusterId(const std::string& _clusterId);
+
+                    /**
+                     * 判断参数 ClusterId 是否已赋值
+                     * @return ClusterId 是否已赋值
+                     */
+                    bool ClusterIdHasBeenSet() const;
+
+                    /**
+                     * 获取Remarks
+                     * @return Describe Remarks
+                     */
+                    std::string GetDescribe() const;
+
+                    /**
+                     * 设置Remarks
+                     * @param Describe Remarks
+                     */
+                    void SetDescribe(const std::string& _describe);
+
+                    /**
+                     * 判断参数 Describe 是否已赋值
+                     * @return Describe 是否已赋值
+                     */
+                    bool DescribeHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * Cluster type
+                     */
+                    std::string m_clusterType;
+                    bool m_clusterTypeHasBeenSet;
+
+                    /**
+                     * Cluster ID
+                     */
+                    std::string m_clusterId;
+                    bool m_clusterIdHasBeenSet;
+
+                    /**
+                     * Remarks
+                     */
+                    std::string m_describe;
+                    bool m_describeHasBeenSet;
 
                 };
             }

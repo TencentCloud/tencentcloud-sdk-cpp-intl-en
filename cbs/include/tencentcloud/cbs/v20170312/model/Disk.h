@@ -803,14 +803,18 @@ Note: This field may return null, indicating that no valid value was found.
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LastAttachInsId 
+                     * 获取ID of the last instance to which the cloud disk is attached
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return LastAttachInsId ID of the last instance to which the cloud disk is attached
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetLastAttachInsId() const;
 
                     /**
-                     * 设置
-                     * @param LastAttachInsId 
+                     * 设置ID of the last instance to which the cloud disk is attached
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param LastAttachInsId ID of the last instance to which the cloud disk is attached
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetLastAttachInsId(const std::string& _lastAttachInsId);
 
@@ -821,14 +825,18 @@ Note: This field may return null, indicating that no valid value was found.
                     bool LastAttachInsIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ErrorPrompt 
+                     * 获取Error message for the last operation of the cloud disk
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ErrorPrompt Error message for the last operation of the cloud disk
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetErrorPrompt() const;
 
                     /**
-                     * 设置
-                     * @param ErrorPrompt 
+                     * 设置Error message for the last operation of the cloud disk
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ErrorPrompt Error message for the last operation of the cloud disk
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetErrorPrompt(const std::string& _errorPrompt);
 
@@ -1088,13 +1096,15 @@ Note: This field may return null, indicating that no valid value was found.
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * 
+                     * ID of the last instance to which the cloud disk is attached
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_lastAttachInsId;
                     bool m_lastAttachInsIdHasBeenSet;
 
                     /**
-                     * 
+                     * Error message for the last operation of the cloud disk
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_errorPrompt;
                     bool m_errorPromptHasBeenSet;

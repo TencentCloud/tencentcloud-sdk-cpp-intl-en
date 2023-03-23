@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cbs/v20170312/model/Price.h>
 
 
 namespace TencentCloud
@@ -260,6 +261,28 @@ Note: This field may return null, indicating that no valid value was found.
                      */
                     bool MaxDiskSizeHasBeenSet() const;
 
+                    /**
+                     * 获取Price of a monthly subscribed or pay-as-you-go cloud disk.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Price Price of a monthly subscribed or pay-as-you-go cloud disk.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    Price GetPrice() const;
+
+                    /**
+                     * 设置Price of a monthly subscribed or pay-as-you-go cloud disk.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Price Price of a monthly subscribed or pay-as-you-go cloud disk.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetPrice(const Price& _price);
+
+                    /**
+                     * 判断参数 Price 是否已赋值
+                     * @return Price 是否已赋值
+                     */
+                    bool PriceHasBeenSet() const;
+
                 private:
 
                     /**
@@ -331,6 +354,13 @@ Note: This field may return null, indicating that no valid value was found.
                      */
                     uint64_t m_maxDiskSize;
                     bool m_maxDiskSizeHasBeenSet;
+
+                    /**
+                     * Price of a monthly subscribed or pay-as-you-go cloud disk.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    Price m_price;
+                    bool m_priceHasBeenSet;
 
                 };
             }

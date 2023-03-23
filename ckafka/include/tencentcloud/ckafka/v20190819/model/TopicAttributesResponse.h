@@ -264,6 +264,28 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool QuotaConfigHasBeenSet() const;
 
+                    /**
+                     * 获取Number of replicas
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ReplicaNum Number of replicas
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetReplicaNum() const;
+
+                    /**
+                     * 设置Number of replicas
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ReplicaNum Number of replicas
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetReplicaNum(const int64_t& _replicaNum);
+
+                    /**
+                     * 判断参数 ReplicaNum 是否已赋值
+                     * @return ReplicaNum 是否已赋值
+                     */
+                    bool ReplicaNumHasBeenSet() const;
+
                 private:
 
                     /**
@@ -335,6 +357,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     InstanceQuotaConfigResp m_quotaConfig;
                     bool m_quotaConfigHasBeenSet;
+
+                    /**
+                     * Number of replicas
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_replicaNum;
+                    bool m_replicaNumHasBeenSet;
 
                 };
             }

@@ -362,14 +362,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AdvancedRetentionPolicyHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CopyFromAccountUin 
+                     * 获取Source account ID of the copied snapshot policy
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return CopyFromAccountUin Source account ID of the copied snapshot policy
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetCopyFromAccountUin() const;
 
                     /**
-                     * 设置
-                     * @param CopyFromAccountUin 
+                     * 设置Source account ID of the copied snapshot policy
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param CopyFromAccountUin Source account ID of the copied snapshot policy
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetCopyFromAccountUin(const std::string& _copyFromAccountUin);
 
@@ -380,14 +384,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CopyFromAccountUinHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Tags 
+                     * 获取Tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Tags Tag.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置
-                     * @param Tags 
+                     * 设置Tag.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Tags Tag.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetTags(const std::vector<Tag>& _tags);
 
@@ -502,13 +510,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_advancedRetentionPolicyHasBeenSet;
 
                     /**
-                     * 
+                     * Source account ID of the copied snapshot policy
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_copyFromAccountUin;
                     bool m_copyFromAccountUinHasBeenSet;
 
                     /**
-                     * 
+                     * Tag.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;

@@ -105,6 +105,28 @@ Note: This field may return null, indicating that no valid value was found.
                     bool ProjectIdHasBeenSet() const;
 
                     /**
+                     * 获取Project name of the instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ProjectName Project name of the instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetProjectName() const;
+
+                    /**
+                     * 设置Project name of the instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ProjectName Project name of the instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetProjectName(const std::string& _projectName);
+
+                    /**
+                     * 判断参数 ProjectName 是否已赋值
+                     * @return ProjectName 是否已赋值
+                     */
+                    bool ProjectNameHasBeenSet() const;
+
+                    /**
                      * 获取Dedicated cluster name. When it is an input parameter, it is ignored.  When it is an output parameter, it is the name of the dedicated cluster the cloud disk belongs to, and it can be left blank.
 Note: This field may return null, indicating that no valid value was found.
                      * @return CdcName Dedicated cluster name. When it is an input parameter, it is ignored.  When it is an output parameter, it is the name of the dedicated cluster the cloud disk belongs to, and it can be left blank.
@@ -186,6 +208,13 @@ Note: This field may return null, indicating that no valid value was found.
                      */
                     uint64_t m_projectId;
                     bool m_projectIdHasBeenSet;
+
+                    /**
+                     * Project name of the instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_projectName;
+                    bool m_projectNameHasBeenSet;
 
                     /**
                      * Dedicated cluster name. When it is an input parameter, it is ignored.  When it is an output parameter, it is the name of the dedicated cluster the cloud disk belongs to, and it can be left blank.

@@ -93,8 +93,8 @@ namespace TencentCloud
                     bool RawJobsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Probes 
+                     * 获取Probes
+                     * @return Probes Probes
                      */
                     std::vector<PrometheusConfigItem> GetProbes() const;
 
@@ -131,7 +131,7 @@ namespace TencentCloud
                     bool m_rawJobsHasBeenSet;
 
                     /**
-                     * 
+                     * Probes
                      */
                     std::vector<PrometheusConfigItem> m_probes;
                     bool m_probesHasBeenSet;
