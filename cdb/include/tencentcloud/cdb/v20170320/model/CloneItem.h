@@ -190,6 +190,42 @@ namespace TencentCloud
                      */
                     bool TaskStatusHasBeenSet() const;
 
+                    /**
+                     * 获取Clone instance region ID
+                     * @return NewRegionId Clone instance region ID
+                     */
+                    int64_t GetNewRegionId() const;
+
+                    /**
+                     * 设置Clone instance region ID
+                     * @param NewRegionId Clone instance region ID
+                     */
+                    void SetNewRegionId(const int64_t& _newRegionId);
+
+                    /**
+                     * 判断参数 NewRegionId 是否已赋值
+                     * @return NewRegionId 是否已赋值
+                     */
+                    bool NewRegionIdHasBeenSet() const;
+
+                    /**
+                     * 获取Source instance region ID
+                     * @return SrcRegionId Source instance region ID
+                     */
+                    int64_t GetSrcRegionId() const;
+
+                    /**
+                     * 设置Source instance region ID
+                     * @param SrcRegionId Source instance region ID
+                     */
+                    void SetSrcRegionId(const int64_t& _srcRegionId);
+
+                    /**
+                     * 判断参数 SrcRegionId 是否已赋值
+                     * @return SrcRegionId 是否已赋值
+                     */
+                    bool SrcRegionIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -239,6 +275,18 @@ namespace TencentCloud
                      */
                     std::string m_taskStatus;
                     bool m_taskStatusHasBeenSet;
+
+                    /**
+                     * Clone instance region ID
+                     */
+                    int64_t m_newRegionId;
+                    bool m_newRegionIdHasBeenSet;
+
+                    /**
+                     * Source instance region ID
+                     */
+                    int64_t m_srcRegionId;
+                    bool m_srcRegionIdHasBeenSet;
 
                 };
             }
