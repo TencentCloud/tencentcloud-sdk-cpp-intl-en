@@ -36,6 +36,7 @@ namespace TencentCloud
             {
                 /**
                 * Member record information
+Used by actions: DescribeCurrentMemberList, DescribeRoomStatistics.
                 */
                 class MemberRecord : public AbstractModel
                 {
@@ -281,14 +282,14 @@ namespace TencentCloud
                     bool LocationHasBeenSet() const;
 
                     /**
-                     * 获取The user’s device type. `0`: Unknown; `1`: Windows; `2`: macOS; `3`: Android; `4`: iOS; `5`: Web; `6`: Mobile webpage; `7`: Weixin Mini Program.
-                     * @return Device The user’s device type. `0`: Unknown; `1`: Windows; `2`: macOS; `3`: Android; `4`: iOS; `5`: Web; `6`: Mobile webpage; `7`: Weixin Mini Program.
+                     * 获取The user’s device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
+                     * @return Device The user’s device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
                      */
                     int64_t GetDevice() const;
 
                     /**
-                     * 设置The user’s device type. `0`: Unknown; `1`: Windows; `2`: macOS; `3`: Android; `4`: iOS; `5`: Web; `6`: Mobile webpage; `7`: Weixin Mini Program.
-                     * @param Device The user’s device type. `0`: Unknown; `1`: Windows; `2`: macOS; `3`: Android; `4`: iOS; `5`: Web; `6`: Mobile webpage; `7`: Weixin Mini Program.
+                     * 设置The user’s device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
+                     * @param Device The user’s device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
                      */
                     void SetDevice(const int64_t& _device);
 
@@ -299,14 +300,14 @@ namespace TencentCloud
                     bool DeviceHasBeenSet() const;
 
                     /**
-                     * 获取The number of times each member mics.
-                     * @return PerMemberMicCount The number of times each member mics.
+                     * 获取The number of times a user turned their mic on.
+                     * @return PerMemberMicCount The number of times a user turned their mic on.
                      */
                     int64_t GetPerMemberMicCount() const;
 
                     /**
-                     * 设置The number of times each member mics.
-                     * @param PerMemberMicCount The number of times each member mics.
+                     * 设置The number of times a user turned their mic on.
+                     * @param PerMemberMicCount The number of times a user turned their mic on.
                      */
                     void SetPerMemberMicCount(const int64_t& _perMemberMicCount);
 
@@ -317,14 +318,14 @@ namespace TencentCloud
                     bool PerMemberMicCountHasBeenSet() const;
 
                     /**
-                     * 获取The number of messages sent by each member.
-                     * @return PerMemberMessageCount The number of messages sent by each member.
+                     * 获取The number of messages sent by a user.
+                     * @return PerMemberMessageCount The number of messages sent by a user.
                      */
                     int64_t GetPerMemberMessageCount() const;
 
                     /**
-                     * 设置The number of messages sent by each member.
-                     * @param PerMemberMessageCount The number of messages sent by each member.
+                     * 设置The number of messages sent by a user.
+                     * @param PerMemberMessageCount The number of messages sent by a user.
                      */
                     void SetPerMemberMessageCount(const int64_t& _perMemberMessageCount);
 
@@ -415,19 +416,19 @@ namespace TencentCloud
                     bool m_locationHasBeenSet;
 
                     /**
-                     * The user’s device type. `0`: Unknown; `1`: Windows; `2`: macOS; `3`: Android; `4`: iOS; `5`: Web; `6`: Mobile webpage; `7`: Weixin Mini Program.
+                     * The user’s device type. 0: Unknown; 1: Windows; 2: macOS; 3: Android; 4: iOS; 5: Web; 6: Mobile webpage; 7: Weixin Mini Program.
                      */
                     int64_t m_device;
                     bool m_deviceHasBeenSet;
 
                     /**
-                     * The number of times each member mics.
+                     * The number of times a user turned their mic on.
                      */
                     int64_t m_perMemberMicCount;
                     bool m_perMemberMicCountHasBeenSet;
 
                     /**
-                     * The number of messages sent by each member.
+                     * The number of messages sent by a user.
                      */
                     int64_t m_perMemberMessageCount;
                     bool m_perMemberMessageCountHasBeenSet;

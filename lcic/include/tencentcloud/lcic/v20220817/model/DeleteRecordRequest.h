@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The room ID.	
-                     * @return RoomId The room ID.	
+                     * 获取The room ID.
+                     * @return RoomId The room ID.
                      */
                     int64_t GetRoomId() const;
 
                     /**
-                     * 设置The room ID.	
-                     * @param RoomId The room ID.	
+                     * 设置The room ID.
+                     * @param RoomId The room ID.
                      */
                     void SetRoomId(const int64_t& _roomId);
 
@@ -81,7 +81,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The room ID.	
+                     * The room ID.
                      */
                     int64_t m_roomId;
                     bool m_roomIdHasBeenSet;

@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool PageHasBeenSet() const;
 
                     /**
-                     * 获取The maximum number of records to return per page. The maximum value can be `1000`. The default value is `100`.
-                     * @return Limit The maximum number of records to return per page. The maximum value can be `1000`. The default value is `100`.
+                     * 获取The maximum number of records to return per page. The maximum value can be 1000. The default value is 100.
+                     * @return Limit The maximum number of records to return per page. The maximum value can be 1000. The default value is 100.
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置The maximum number of records to return per page. The maximum value can be `1000`. The default value is `100`.
-                     * @param Limit The maximum number of records to return per page. The maximum value can be `1000`. The default value is `100`.
+                     * 设置The maximum number of records to return per page. The maximum value can be 1000. The default value is 100.
+                     * @param Limit The maximum number of records to return per page. The maximum value can be 1000. The default value is 100.
                      */
                     void SetLimit(const int64_t& _limit);
 
@@ -115,34 +115,14 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取The document access type.
-[0]: The private documents of the owner.
-[1]: The public documents of the owner.
-[0,1]: The private and public documents of the owner.
-[2]: The private and public documents of all users (including the owner).
-Default value: [2].
-                     * @return Permission The document access type.
-[0]: The private documents of the owner.
-[1]: The public documents of the owner.
-[0,1]: The private and public documents of the owner.
-[2]: The private and public documents of all users (including the owner).
-Default value: [2].
+                     * 获取The document access type. [0]: The private documents of the owner. [1]: The public documents of the owner. [0,1]: The private and public documents of the owner. [2]: The private and public documents of all users (including the owner). Default value: [2].
+                     * @return Permission The document access type. [0]: The private documents of the owner. [1]: The public documents of the owner. [0,1]: The private and public documents of the owner. [2]: The private and public documents of all users (including the owner). Default value: [2].
                      */
                     std::vector<uint64_t> GetPermission() const;
 
                     /**
-                     * 设置The document access type.
-[0]: The private documents of the owner.
-[1]: The public documents of the owner.
-[0,1]: The private and public documents of the owner.
-[2]: The private and public documents of all users (including the owner).
-Default value: [2].
-                     * @param Permission The document access type.
-[0]: The private documents of the owner.
-[1]: The public documents of the owner.
-[0,1]: The private and public documents of the owner.
-[2]: The private and public documents of all users (including the owner).
-Default value: [2].
+                     * 设置The document access type. [0]: The private documents of the owner. [1]: The public documents of the owner. [0,1]: The private and public documents of the owner. [2]: The private and public documents of all users (including the owner). Default value: [2].
+                     * @param Permission The document access type. [0]: The private documents of the owner. [1]: The public documents of the owner. [0,1]: The private and public documents of the owner. [2]: The private and public documents of all users (including the owner). Default value: [2].
                      */
                     void SetPermission(const std::vector<uint64_t>& _permission);
 
@@ -191,18 +171,13 @@ Default value: [2].
                     bool m_pageHasBeenSet;
 
                     /**
-                     * The maximum number of records to return per page. The maximum value can be `1000`. The default value is `100`.
+                     * The maximum number of records to return per page. The maximum value can be 1000. The default value is 100.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * The document access type.
-[0]: The private documents of the owner.
-[1]: The public documents of the owner.
-[0,1]: The private and public documents of the owner.
-[2]: The private and public documents of all users (including the owner).
-Default value: [2].
+                     * The document access type. [0]: The private documents of the owner. [1]: The public documents of the owner. [0,1]: The private and public documents of the owner. [2]: The private and public documents of all users (including the owner). Default value: [2].
                      */
                     std::vector<uint64_t> m_permission;
                     bool m_permissionHasBeenSet;

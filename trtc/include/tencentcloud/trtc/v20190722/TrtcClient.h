@@ -166,6 +166,7 @@ If a recording file is being uploaded to VOD, the response parameter `StorageFil
 
                 /**
                  *This API is used to query your usage of TRTC’s On-Cloud MixTranscoding service.
+Note: This API is not available for applications whose SDKAppID starts with `14`.
 - If the period queried is one day or shorter, the statistics returned are on a five-minute basis. If the period queried is longer than one day, the statistics returned are on a daily basis.
 - The period queried per request cannot be longer than 31 days.
 - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
@@ -180,6 +181,7 @@ If a recording file is being uploaded to VOD, the response parameter `StorageFil
 
                 /**
                  *This API is used to query your TRTC recording usage.
+Note: This API is not available for applications whose SDKAppID starts with `14`.
 - If the period queried is one day or shorter, the statistics returned are on a five-minute basis. If the period queried is longer than one day, the statistics returned are on a daily basis.
 - The period queried per request cannot be longer than 31 days.
 - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
@@ -194,6 +196,7 @@ If a recording file is being uploaded to VOD, the response parameter `StorageFil
 
                 /**
                  *This API is used to query your usage of TRTC’s relay to CDN service.
+Note: This API is not available for applications whose SDKAppID starts with `14`.
 - If the period queried is one day or shorter, the statistics returned are on a five-minute basis. If the period queried is longer than one day, the statistics returned are on a daily basis.
 - The period queried per request cannot be longer than 31 days.
 - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.
@@ -208,6 +211,7 @@ If a recording file is being uploaded to VOD, the response parameter `StorageFil
 
                 /**
                  *This API is used to query your TRTC audio/video duration.
+Note: This API is not available for applications whose SDKAppID starts with `14`.
 - If the period queried is one day or shorter, the statistics returned are on a five-minute basis. If the period queried is longer than one day, the statistics returned are on a daily basis.
 - The period queried per request cannot be longer than 31 days.
 - If you query the statistics of the current day, the statistics returned may be inaccurate due to the delay in data collection.

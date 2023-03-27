@@ -99,14 +99,14 @@ namespace TencentCloud
                     bool FileContentHasBeenSet() const;
 
                     /**
-                     * 获取This field indicates the access URL of the image to be detected in PNG, JPG, JPEG, BMP, GIF, or WEBP format and of **up to 5 MB in size**. **A resolution of 256x256 or higher** is recommended. The image download time should be limited to 3 seconds; otherwise, a download timeout will be returned.<br>Note: **you must enter a value for either this field or `FileContent`**.
-                     * @return FileUrl This field indicates the access URL of the image to be detected in PNG, JPG, JPEG, BMP, GIF, or WEBP format and of **up to 5 MB in size**. **A resolution of 256x256 or higher** is recommended. The image download time should be limited to 3 seconds; otherwise, a download timeout will be returned.<br>Note: **you must enter a value for either this field or `FileContent`**.
+                     * 获取URL of the image to moderate. It supports PNG, JPG, JPEG, BMP, GIF AND WEBP files. The file **cannot exceed 5 MB** and the resolution should not below **256*246**. The default timeout period is 3 seconds. Note that **redirection URLs may be blocked by security policies**. In this case, an error message will return. For example, if an HTTP request gets the 302 code, the error `ResourceUnavailable.ImageDownloadError` is returned. <br>**Either `FileUrl` or `FileContent` must be specified. 
+                     * @return FileUrl URL of the image to moderate. It supports PNG, JPG, JPEG, BMP, GIF AND WEBP files. The file **cannot exceed 5 MB** and the resolution should not below **256*246**. The default timeout period is 3 seconds. Note that **redirection URLs may be blocked by security policies**. In this case, an error message will return. For example, if an HTTP request gets the 302 code, the error `ResourceUnavailable.ImageDownloadError` is returned. <br>**Either `FileUrl` or `FileContent` must be specified. 
                      */
                     std::string GetFileUrl() const;
 
                     /**
-                     * 设置This field indicates the access URL of the image to be detected in PNG, JPG, JPEG, BMP, GIF, or WEBP format and of **up to 5 MB in size**. **A resolution of 256x256 or higher** is recommended. The image download time should be limited to 3 seconds; otherwise, a download timeout will be returned.<br>Note: **you must enter a value for either this field or `FileContent`**.
-                     * @param FileUrl This field indicates the access URL of the image to be detected in PNG, JPG, JPEG, BMP, GIF, or WEBP format and of **up to 5 MB in size**. **A resolution of 256x256 or higher** is recommended. The image download time should be limited to 3 seconds; otherwise, a download timeout will be returned.<br>Note: **you must enter a value for either this field or `FileContent`**.
+                     * 设置URL of the image to moderate. It supports PNG, JPG, JPEG, BMP, GIF AND WEBP files. The file **cannot exceed 5 MB** and the resolution should not below **256*246**. The default timeout period is 3 seconds. Note that **redirection URLs may be blocked by security policies**. In this case, an error message will return. For example, if an HTTP request gets the 302 code, the error `ResourceUnavailable.ImageDownloadError` is returned. <br>**Either `FileUrl` or `FileContent` must be specified. 
+                     * @param FileUrl URL of the image to moderate. It supports PNG, JPG, JPEG, BMP, GIF AND WEBP files. The file **cannot exceed 5 MB** and the resolution should not below **256*246**. The default timeout period is 3 seconds. Note that **redirection URLs may be blocked by security policies**. In this case, an error message will return. For example, if an HTTP request gets the 302 code, the error `ResourceUnavailable.ImageDownloadError` is returned. <br>**Either `FileUrl` or `FileContent` must be specified. 
                      */
                     void SetFileUrl(const std::string& _fileUrl);
 
@@ -209,7 +209,7 @@ namespace TencentCloud
                     bool m_fileContentHasBeenSet;
 
                     /**
-                     * This field indicates the access URL of the image to be detected in PNG, JPG, JPEG, BMP, GIF, or WEBP format and of **up to 5 MB in size**. **A resolution of 256x256 or higher** is recommended. The image download time should be limited to 3 seconds; otherwise, a download timeout will be returned.<br>Note: **you must enter a value for either this field or `FileContent`**.
+                     * URL of the image to moderate. It supports PNG, JPG, JPEG, BMP, GIF AND WEBP files. The file **cannot exceed 5 MB** and the resolution should not below **256*246**. The default timeout period is 3 seconds. Note that **redirection URLs may be blocked by security policies**. In this case, an error message will return. For example, if an HTTP request gets the 302 code, the error `ResourceUnavailable.ImageDownloadError` is returned. <br>**Either `FileUrl` or `FileContent` must be specified. 
                      */
                     std::string m_fileUrl;
                     bool m_fileUrlHasBeenSet;

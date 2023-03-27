@@ -36,6 +36,7 @@ namespace TencentCloud
             {
                 /**
                 * Custom application content
+Used by actions: SetAppCustomContent.
                 */
                 class AppCustomContent : public AbstractModel
                 {

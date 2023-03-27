@@ -37,6 +37,8 @@
 #include <tencentcloud/cls/v20201016/model/CreateConfigResponse.h>
 #include <tencentcloud/cls/v20201016/model/CreateConsumerRequest.h>
 #include <tencentcloud/cls/v20201016/model/CreateConsumerResponse.h>
+#include <tencentcloud/cls/v20201016/model/CreateCosRechargeRequest.h>
+#include <tencentcloud/cls/v20201016/model/CreateCosRechargeResponse.h>
 #include <tencentcloud/cls/v20201016/model/CreateExportRequest.h>
 #include <tencentcloud/cls/v20201016/model/CreateExportResponse.h>
 #include <tencentcloud/cls/v20201016/model/CreateIndexRequest.h>
@@ -83,6 +85,8 @@
 #include <tencentcloud/cls/v20201016/model/DescribeConfigsResponse.h>
 #include <tencentcloud/cls/v20201016/model/DescribeConsumerRequest.h>
 #include <tencentcloud/cls/v20201016/model/DescribeConsumerResponse.h>
+#include <tencentcloud/cls/v20201016/model/DescribeCosRechargesRequest.h>
+#include <tencentcloud/cls/v20201016/model/DescribeCosRechargesResponse.h>
 #include <tencentcloud/cls/v20201016/model/DescribeExportsRequest.h>
 #include <tencentcloud/cls/v20201016/model/DescribeExportsResponse.h>
 #include <tencentcloud/cls/v20201016/model/DescribeIndexRequest.h>
@@ -119,6 +123,8 @@
 #include <tencentcloud/cls/v20201016/model/ModifyConfigResponse.h>
 #include <tencentcloud/cls/v20201016/model/ModifyConsumerRequest.h>
 #include <tencentcloud/cls/v20201016/model/ModifyConsumerResponse.h>
+#include <tencentcloud/cls/v20201016/model/ModifyCosRechargeRequest.h>
+#include <tencentcloud/cls/v20201016/model/ModifyCosRechargeResponse.h>
 #include <tencentcloud/cls/v20201016/model/ModifyIndexRequest.h>
 #include <tencentcloud/cls/v20201016/model/ModifyIndexResponse.h>
 #include <tencentcloud/cls/v20201016/model/ModifyLogsetRequest.h>
@@ -174,6 +180,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateConsumerResponse> CreateConsumerOutcome;
                 typedef std::future<CreateConsumerOutcome> CreateConsumerOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::CreateConsumerRequest&, CreateConsumerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateConsumerAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateCosRechargeResponse> CreateCosRechargeOutcome;
+                typedef std::future<CreateCosRechargeOutcome> CreateCosRechargeOutcomeCallable;
+                typedef std::function<void(const ClsClient*, const Model::CreateCosRechargeRequest&, CreateCosRechargeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateCosRechargeAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateExportResponse> CreateExportOutcome;
                 typedef std::future<CreateExportOutcome> CreateExportOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::CreateExportRequest&, CreateExportOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateExportAsyncHandler;
@@ -243,6 +252,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeConsumerResponse> DescribeConsumerOutcome;
                 typedef std::future<DescribeConsumerOutcome> DescribeConsumerOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::DescribeConsumerRequest&, DescribeConsumerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeConsumerAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCosRechargesResponse> DescribeCosRechargesOutcome;
+                typedef std::future<DescribeCosRechargesOutcome> DescribeCosRechargesOutcomeCallable;
+                typedef std::function<void(const ClsClient*, const Model::DescribeCosRechargesRequest&, DescribeCosRechargesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCosRechargesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeExportsResponse> DescribeExportsOutcome;
                 typedef std::future<DescribeExportsOutcome> DescribeExportsOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::DescribeExportsRequest&, DescribeExportsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeExportsAsyncHandler;
@@ -297,6 +309,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyConsumerResponse> ModifyConsumerOutcome;
                 typedef std::future<ModifyConsumerOutcome> ModifyConsumerOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::ModifyConsumerRequest&, ModifyConsumerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyConsumerAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyCosRechargeResponse> ModifyCosRechargeOutcome;
+                typedef std::future<ModifyCosRechargeOutcome> ModifyCosRechargeOutcomeCallable;
+                typedef std::function<void(const ClsClient*, const Model::ModifyCosRechargeRequest&, ModifyCosRechargeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCosRechargeAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyIndexResponse> ModifyIndexOutcome;
                 typedef std::future<ModifyIndexOutcome> ModifyIndexOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::ModifyIndexRequest&, ModifyIndexOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyIndexAsyncHandler;
@@ -394,6 +409,15 @@ namespace TencentCloud
                 CreateConsumerOutcomeCallable CreateConsumerCallable(const Model::CreateConsumerRequest& request);
 
                 /**
+                 *This API is used to create a COS import task.
+                 * @param req CreateCosRechargeRequest
+                 * @return CreateCosRechargeOutcome
+                 */
+                CreateCosRechargeOutcome CreateCosRecharge(const Model::CreateCosRechargeRequest &request);
+                void CreateCosRechargeAsync(const Model::CreateCosRechargeRequest& request, const CreateCosRechargeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateCosRechargeOutcomeCallable CreateCosRechargeCallable(const Model::CreateCosRechargeRequest& request);
+
+                /**
                  *This API is used to create a download task. To get the returned download address, call `DescribeExports` to view the task list. The `CosPath` parameter is also included for download address. For more information, visit https://intl.cloud.tencent.com/document/product/614/56449.?from_cn_redirect=1
                  * @param req CreateExportRequest
                  * @return CreateExportOutcome
@@ -430,7 +454,7 @@ namespace TencentCloud
                 CreateMachineGroupOutcomeCallable CreateMachineGroupCallable(const Model::CreateMachineGroupRequest& request);
 
                 /**
-                 *This API is used to create a shipping rule. Note: To use this API, you need to check whether you have configured the role and permission for COS shipping tasks. If not, see **Viewing and Configuring Shipping Authorization** at https://intl.cloud.tencent.com/document/product/614/71623.?from_cn_redirect=1
+                 *This API is used to create a task to ship to COS. Note: To use this API, you need to check whether you have configured the role and permission for shipping to COS. If not, see **Viewing and Configuring Shipping Authorization** at https://intl.cloud.tencent.com/document/product/614/71623.?from_cn_redirect=1
                  * @param req CreateShipperRequest
                  * @return CreateShipperOutcome
                  */
@@ -601,6 +625,15 @@ namespace TencentCloud
                 DescribeConsumerOutcomeCallable DescribeConsumerCallable(const Model::DescribeConsumerRequest& request);
 
                 /**
+                 *This API is used to get COS import configuration.
+                 * @param req DescribeCosRechargesRequest
+                 * @return DescribeCosRechargesOutcome
+                 */
+                DescribeCosRechargesOutcome DescribeCosRecharges(const Model::DescribeCosRechargesRequest &request);
+                void DescribeCosRechargesAsync(const Model::DescribeCosRechargesRequest& request, const DescribeCosRechargesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCosRechargesOutcomeCallable DescribeCosRechargesCallable(const Model::DescribeCosRechargesRequest& request);
+
+                /**
                  *This API is used to get the list of log download tasks.
                  * @param req DescribeExportsRequest
                  * @return DescribeExportsOutcome
@@ -691,7 +724,7 @@ namespace TencentCloud
                 DescribeShipperTasksOutcomeCallable DescribeShipperTasksCallable(const Model::DescribeShipperTasksRequest& request);
 
                 /**
-                 *This API is used to get the list of shipping rules.
+                 *This API is used to get the configuration of the task of shipping to COS.
                  * @param req DescribeShippersRequest
                  * @return DescribeShippersOutcome
                  */
@@ -700,7 +733,7 @@ namespace TencentCloud
                 DescribeShippersOutcomeCallable DescribeShippersCallable(const Model::DescribeShippersRequest& request);
 
                 /**
-                 * This API is used to get the list of log topics and supports pagination.
+                 *This API is used to get the list of log topics and supports pagination.
                  * @param req DescribeTopicsRequest
                  * @return DescribeTopicsOutcome
                  */
@@ -761,6 +794,15 @@ namespace TencentCloud
                 ModifyConsumerOutcome ModifyConsumer(const Model::ModifyConsumerRequest &request);
                 void ModifyConsumerAsync(const Model::ModifyConsumerRequest& request, const ModifyConsumerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyConsumerOutcomeCallable ModifyConsumerCallable(const Model::ModifyConsumerRequest& request);
+
+                /**
+                 *This API is used to modify a COS import task.
+                 * @param req ModifyCosRechargeRequest
+                 * @return ModifyCosRechargeOutcome
+                 */
+                ModifyCosRechargeOutcome ModifyCosRecharge(const Model::ModifyCosRechargeRequest &request);
+                void ModifyCosRechargeAsync(const Model::ModifyCosRechargeRequest& request, const ModifyCosRechargeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyCosRechargeOutcomeCallable ModifyCosRechargeCallable(const Model::ModifyCosRechargeRequest& request);
 
                 /**
                  *This API is used to modify the index configuration. It is subject to the default request frequency limit, and the number of concurrent requests to the same log topic cannot exceed 1, i.e., the index configuration of only one log topic can be modified at a time.

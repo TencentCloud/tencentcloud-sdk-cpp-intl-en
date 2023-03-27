@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool PageHasBeenSet() const;
 
                     /**
-                     * 获取The maximum number of records per page. The value of this parameter cannot exceed `1000`.
-                     * @return Limit The maximum number of records per page. The value of this parameter cannot exceed `1000`.
+                     * 获取The maximum number of records per page. The value of this parameter cannot exceed 1000.
+                     * @return Limit The maximum number of records per page. The value of this parameter cannot exceed 1000.
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置The maximum number of records per page. The value of this parameter cannot exceed `1000`.
-                     * @param Limit The maximum number of records per page. The value of this parameter cannot exceed `1000`.
+                     * 设置The maximum number of records per page. The value of this parameter cannot exceed 1000.
+                     * @param Limit The maximum number of records per page. The value of this parameter cannot exceed 1000.
                      */
                     void SetLimit(const uint64_t& _limit);
 
@@ -111,7 +111,7 @@ namespace TencentCloud
                     bool m_pageHasBeenSet;
 
                     /**
-                     * The maximum number of records per page. The value of this parameter cannot exceed `1000`.
+                     * The maximum number of records per page. The value of this parameter cannot exceed 1000.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;

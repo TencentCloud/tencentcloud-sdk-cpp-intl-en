@@ -47,14 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Tag key
-                     * @return Key Tag key
+                     * 获取The tag key.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Key The tag key.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置Tag key
-                     * @param Key Tag key
+                     * 设置The tag key.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Key The tag key.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetKey(const std::string& _key);
 
@@ -65,14 +69,18 @@ namespace TencentCloud
                     bool KeyHasBeenSet() const;
 
                     /**
-                     * 获取Tag value
-                     * @return Value Tag value
+                     * 获取The tag value.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Value The tag value.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置Tag value
-                     * @param Value Tag value
+                     * 设置The tag value.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Value The tag value.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetValue(const std::string& _value);
 
@@ -85,13 +93,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Tag key
+                     * The tag key.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;
 
                     /**
-                     * Tag value
+                     * The tag value.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;

@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
-                     * 获取The page to return records from. The default value is `1`.
-                     * @return Page The page to return records from. The default value is `1`.
+                     * 获取The page to return records from. The default value is 1.
+                     * @return Page The page to return records from. The default value is 1.
                      */
                     int64_t GetPage() const;
 
                     /**
-                     * 设置The page to return records from. The default value is `1`.
-                     * @param Page The page to return records from. The default value is `1`.
+                     * 设置The page to return records from. The default value is 1.
+                     * @param Page The page to return records from. The default value is 1.
                      */
                     void SetPage(const int64_t& _page);
 
@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool PageHasBeenSet() const;
 
                     /**
-                     * 获取The maximum number of records to return per page. The default value is `20`.
-                     * @return Limit The maximum number of records to return per page. The default value is `20`.
+                     * 获取The maximum number of records to return per page. The default value is 20.
+                     * @return Limit The maximum number of records to return per page. The default value is 20.
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置The maximum number of records to return per page. The default value is `20`.
-                     * @param Limit The maximum number of records to return per page. The default value is `20`.
+                     * 设置The maximum number of records to return per page. The default value is 20.
+                     * @param Limit The maximum number of records to return per page. The default value is 20.
                      */
                     void SetLimit(const int64_t& _limit);
 
@@ -105,13 +105,13 @@ namespace TencentCloud
                     bool m_sdkAppIdHasBeenSet;
 
                     /**
-                     * The page to return records from. The default value is `1`.
+                     * The page to return records from. The default value is 1.
                      */
                     int64_t m_page;
                     bool m_pageHasBeenSet;
 
                     /**
-                     * The maximum number of records to return per page. The default value is `20`.
+                     * The maximum number of records to return per page. The default value is 20.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

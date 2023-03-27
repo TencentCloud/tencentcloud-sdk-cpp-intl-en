@@ -75,6 +75,7 @@ namespace TencentCloud
 <li>`DescribeFileAttributesTask`: Getting file attributes</li>
 <li>`RebuildMedia`; Remastering audio/video</li>
 <li> `ReviewAudioVideo`: Moderation</li>
+<li>`ExtractTraceWatermark`: Digital watermark extraction</li>
                      * @return TaskType The task type. Valid values:
 <li>`Procedure`: Video processing</li>
 <li>`EditMedia`: Video editing</li>
@@ -88,6 +89,7 @@ namespace TencentCloud
 <li>`DescribeFileAttributesTask`: Getting file attributes</li>
 <li>`RebuildMedia`; Remastering audio/video</li>
 <li> `ReviewAudioVideo`: Moderation</li>
+<li>`ExtractTraceWatermark`: Digital watermark extraction</li>
                      */
                     std::string GetTaskType() const;
 
@@ -419,6 +421,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`DescribeFileAttributesTask`: Getting file attributes</li>
 <li>`RebuildMedia`; Remastering audio/video</li>
 <li> `ReviewAudioVideo`: Moderation</li>
+<li>`ExtractTraceWatermark`: Digital watermark extraction</li>
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;

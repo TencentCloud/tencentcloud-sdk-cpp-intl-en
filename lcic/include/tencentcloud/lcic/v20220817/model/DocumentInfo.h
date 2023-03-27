@@ -36,6 +36,7 @@ namespace TencentCloud
             {
                 /**
                 * Document Information.
+Used by actions: DescribeDocumentsByRoom.
                 */
                 class DocumentInfo : public AbstractModel
                 {
@@ -47,18 +48,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The document ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DocumentId The document ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The document ID. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DocumentId The document ID. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetDocumentId() const;
 
                     /**
-                     * 设置The document ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DocumentId The document ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The document ID. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param DocumentId The document ID. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetDocumentId(const std::string& _documentId);
 
@@ -69,18 +66,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DocumentIdHasBeenSet() const;
 
                     /**
-                     * 获取The document’s original URL.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DocumentUrl The document’s original URL.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The document’s original URL. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DocumentUrl The document’s original URL. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetDocumentUrl() const;
 
                     /**
-                     * 设置The document’s original URL.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DocumentUrl The document’s original URL.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The document’s original URL. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param DocumentUrl The document’s original URL. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetDocumentUrl(const std::string& _documentUrl);
 
@@ -91,18 +84,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DocumentUrlHasBeenSet() const;
 
                     /**
-                     * 获取The document title.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DocumentName The document title.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The document title. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DocumentName The document title. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetDocumentName() const;
 
                     /**
-                     * 设置The document title.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DocumentName The document title.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The document title. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param DocumentName The document title. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetDocumentName(const std::string& _documentName);
 
@@ -113,18 +102,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DocumentNameHasBeenSet() const;
 
                     /**
-                     * 获取The user ID of the document’s owner.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Owner The user ID of the document’s owner.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The user ID of the document’s owner. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Owner The user ID of the document’s owner. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetOwner() const;
 
                     /**
-                     * 设置The user ID of the document’s owner.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Owner The user ID of the document’s owner.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The user ID of the document’s owner. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Owner The user ID of the document’s owner. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetOwner(const std::string& _owner);
 
@@ -135,18 +120,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OwnerHasBeenSet() const;
 
                     /**
-                     * 获取The application ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SdkAppId The application ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The application ID. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SdkAppId The application ID. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
-                     * 设置The application ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SdkAppId The application ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The application ID. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param SdkAppId The application ID. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
 
@@ -157,18 +138,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
-                     * 获取The document access type. `0`: Private; `1`: Public.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Permission The document access type. `0`: Private; `1`: Public.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The document access type. 0: Private; 1: Public. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Permission The document access type. 0: Private; 1: Public. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetPermission() const;
 
                     /**
-                     * 设置The document access type. `0`: Private; `1`: Public.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Permission The document access type. `0`: Private; `1`: Public.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The document access type. 0: Private; 1: Public. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Permission The document access type. 0: Private; 1: Public. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetPermission(const uint64_t& _permission);
 
@@ -179,18 +156,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PermissionHasBeenSet() const;
 
                     /**
-                     * 获取The transcoding result. If the file is not transcoded, this parameter will be empty. If it is successfully transcoded, this parameter will be the URL of the transcoded file. If transcoding fails, this parameter will indicate the error code.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TranscodeResult The transcoding result. If the file is not transcoded, this parameter will be empty. If it is successfully transcoded, this parameter will be the URL of the transcoded file. If transcoding fails, this parameter will indicate the error code.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The transcoding result. If the file is not transcoded, this parameter will be empty. If it is successfully transcoded, this parameter will be the URL of the transcoded file. If transcoding fails, this parameter will indicate the error code. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TranscodeResult The transcoding result. If the file is not transcoded, this parameter will be empty. If it is successfully transcoded, this parameter will be the URL of the transcoded file. If transcoding fails, this parameter will indicate the error code. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetTranscodeResult() const;
 
                     /**
-                     * 设置The transcoding result. If the file is not transcoded, this parameter will be empty. If it is successfully transcoded, this parameter will be the URL of the transcoded file. If transcoding fails, this parameter will indicate the error code.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TranscodeResult The transcoding result. If the file is not transcoded, this parameter will be empty. If it is successfully transcoded, this parameter will be the URL of the transcoded file. If transcoding fails, this parameter will indicate the error code.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The transcoding result. If the file is not transcoded, this parameter will be empty. If it is successfully transcoded, this parameter will be the URL of the transcoded file. If transcoding fails, this parameter will indicate the error code. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param TranscodeResult The transcoding result. If the file is not transcoded, this parameter will be empty. If it is successfully transcoded, this parameter will be the URL of the transcoded file. If transcoding fails, this parameter will indicate the error code. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetTranscodeResult(const std::string& _transcodeResult);
 
@@ -201,18 +174,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TranscodeResultHasBeenSet() const;
 
                     /**
-                     * 获取The transcoding type.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TranscodeType The transcoding type.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The transcoding type. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TranscodeType The transcoding type. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetTranscodeType() const;
 
                     /**
-                     * 设置The transcoding type.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TranscodeType The transcoding type.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The transcoding type. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param TranscodeType The transcoding type. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetTranscodeType(const uint64_t& _transcodeType);
 
@@ -223,18 +192,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TranscodeTypeHasBeenSet() const;
 
                     /**
-                     * 获取The transcoding progress. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TranscodeProgress The transcoding progress. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The transcoding progress. Value range: 0-100. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TranscodeProgress The transcoding progress. Value range: 0-100. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetTranscodeProgress() const;
 
                     /**
-                     * 设置The transcoding progress. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TranscodeProgress The transcoding progress. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The transcoding progress. Value range: 0-100. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param TranscodeProgress The transcoding progress. Value range: 0-100. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetTranscodeProgress(const uint64_t& _transcodeProgress);
 
@@ -245,18 +210,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TranscodeProgressHasBeenSet() const;
 
                     /**
-                     * 获取The transcoding status. `0`: The file is not transcoded. `1`: The file is being transcoded. `2`: Transcoding failed. `3`: Transcoding is successful.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TranscodeState The transcoding status. `0`: The file is not transcoded. `1`: The file is being transcoded. `2`: Transcoding failed. `3`: Transcoding is successful.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The transcoding status. 0: The file is not transcoded. 1: The file is being transcoded. 2: Transcoding failed. 3: Transcoding is successful. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TranscodeState The transcoding status. 0: The file is not transcoded. 1: The file is being transcoded. 2: Transcoding failed. 3: Transcoding is successful. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetTranscodeState() const;
 
                     /**
-                     * 设置The transcoding status. `0`: The file is not transcoded. `1`: The file is being transcoded. `2`: Transcoding failed. `3`: Transcoding is successful.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TranscodeState The transcoding status. `0`: The file is not transcoded. `1`: The file is being transcoded. `2`: Transcoding failed. `3`: Transcoding is successful.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The transcoding status. 0: The file is not transcoded. 1: The file is being transcoded. 2: Transcoding failed. 3: Transcoding is successful. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param TranscodeState The transcoding status. 0: The file is not transcoded. 1: The file is being transcoded. 2: Transcoding failed. 3: Transcoding is successful. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetTranscodeState(const uint64_t& _transcodeState);
 
@@ -267,18 +228,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TranscodeStateHasBeenSet() const;
 
                     /**
-                     * 获取The error message for failed transcoding.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TranscodeInfo The error message for failed transcoding.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The error message for failed transcoding. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TranscodeInfo The error message for failed transcoding. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetTranscodeInfo() const;
 
                     /**
-                     * 设置The error message for failed transcoding.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TranscodeInfo The error message for failed transcoding.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The error message for failed transcoding. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param TranscodeInfo The error message for failed transcoding. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetTranscodeInfo(const std::string& _transcodeInfo);
 
@@ -289,18 +246,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TranscodeInfoHasBeenSet() const;
 
                     /**
-                     * 获取The document type.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DocumentType The document type.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The document type. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DocumentType The document type. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetDocumentType() const;
 
                     /**
-                     * 设置The document type.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DocumentType The document type.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The document type. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param DocumentType The document type. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetDocumentType(const std::string& _documentType);
 
@@ -311,18 +264,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DocumentTypeHasBeenSet() const;
 
                     /**
-                     * 获取The document size (bytes).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DocumentSize The document size (bytes).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The document size (bytes). Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DocumentSize The document size (bytes). Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetDocumentSize() const;
 
                     /**
-                     * 设置The document size (bytes).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DocumentSize The document size (bytes).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The document size (bytes). Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param DocumentSize The document size (bytes). Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetDocumentSize(const uint64_t& _documentSize);
 
@@ -333,18 +282,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DocumentSizeHasBeenSet() const;
 
                     /**
-                     * 获取The time (Unix timestamp) when the document was last updated.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UpdateTime The time (Unix timestamp) when the document was last updated.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The time (Unix timestamp) when the document was last updated. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return UpdateTime The time (Unix timestamp) when the document was last updated. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetUpdateTime() const;
 
                     /**
-                     * 设置The time (Unix timestamp) when the document was last updated.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param UpdateTime The time (Unix timestamp) when the document was last updated.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The time (Unix timestamp) when the document was last updated. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param UpdateTime The time (Unix timestamp) when the document was last updated. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetUpdateTime(const uint64_t& _updateTime);
 
@@ -357,99 +302,85 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The document ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The document ID. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_documentId;
                     bool m_documentIdHasBeenSet;
 
                     /**
-                     * The document’s original URL.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The document’s original URL. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_documentUrl;
                     bool m_documentUrlHasBeenSet;
 
                     /**
-                     * The document title.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The document title. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_documentName;
                     bool m_documentNameHasBeenSet;
 
                     /**
-                     * The user ID of the document’s owner.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The user ID of the document’s owner. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_owner;
                     bool m_ownerHasBeenSet;
 
                     /**
-                     * The application ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The application ID. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
 
                     /**
-                     * The document access type. `0`: Private; `1`: Public.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The document access type. 0: Private; 1: Public. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_permission;
                     bool m_permissionHasBeenSet;
 
                     /**
-                     * The transcoding result. If the file is not transcoded, this parameter will be empty. If it is successfully transcoded, this parameter will be the URL of the transcoded file. If transcoding fails, this parameter will indicate the error code.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The transcoding result. If the file is not transcoded, this parameter will be empty. If it is successfully transcoded, this parameter will be the URL of the transcoded file. If transcoding fails, this parameter will indicate the error code. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_transcodeResult;
                     bool m_transcodeResultHasBeenSet;
 
                     /**
-                     * The transcoding type.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The transcoding type. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_transcodeType;
                     bool m_transcodeTypeHasBeenSet;
 
                     /**
-                     * The transcoding progress. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The transcoding progress. Value range: 0-100. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_transcodeProgress;
                     bool m_transcodeProgressHasBeenSet;
 
                     /**
-                     * The transcoding status. `0`: The file is not transcoded. `1`: The file is being transcoded. `2`: Transcoding failed. `3`: Transcoding is successful.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The transcoding status. 0: The file is not transcoded. 1: The file is being transcoded. 2: Transcoding failed. 3: Transcoding is successful. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_transcodeState;
                     bool m_transcodeStateHasBeenSet;
 
                     /**
-                     * The error message for failed transcoding.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The error message for failed transcoding. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_transcodeInfo;
                     bool m_transcodeInfoHasBeenSet;
 
                     /**
-                     * The document type.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The document type. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_documentType;
                     bool m_documentTypeHasBeenSet;
 
                     /**
-                     * The document size (bytes).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The document size (bytes). Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_documentSize;
                     bool m_documentSizeHasBeenSet;
 
                     /**
-                     * The time (Unix timestamp) when the document was last updated.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The time (Unix timestamp) when the document was last updated. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_updateTime;
                     bool m_updateTimeHasBeenSet;

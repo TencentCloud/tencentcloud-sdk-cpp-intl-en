@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The information of the documents.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Documents The information of the documents.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The information of the documents. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Documents The information of the documents. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<DocumentInfo> GetDocuments() const;
 
@@ -73,8 +71,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The information of the documents.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The information of the documents. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<DocumentInfo> m_documents;
                     bool m_documentsHasBeenSet;

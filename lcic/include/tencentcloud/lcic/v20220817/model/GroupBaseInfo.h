@@ -36,6 +36,7 @@ namespace TencentCloud
             {
                 /**
                 * The information of the groups to create.
+Used by actions: BatchCreateGroupWithMembers.
                 */
                 class GroupBaseInfo : public AbstractModel
                 {
@@ -47,18 +48,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The group names.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return GroupName The group names.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The group names. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return GroupName The group names. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetGroupName() const;
 
                     /**
-                     * 设置The group names.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param GroupName The group names.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The group names. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param GroupName The group names. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetGroupName(const std::string& _groupName);
 
@@ -69,18 +66,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool GroupNameHasBeenSet() const;
 
                     /**
-                     * 获取The user ID of the teacher.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TeacherId The user ID of the teacher.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The user ID of the teacher. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TeacherId The user ID of the teacher. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetTeacherId() const;
 
                     /**
-                     * 设置The user ID of the teacher.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TeacherId The user ID of the teacher.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The user ID of the teacher. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param TeacherId The user ID of the teacher. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetTeacherId(const std::string& _teacherId);
 
@@ -93,15 +86,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The group names.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The group names. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_groupName;
                     bool m_groupNameHasBeenSet;
 
                     /**
-                     * The user ID of the teacher.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The user ID of the teacher. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_teacherId;
                     bool m_teacherIdHasBeenSet;

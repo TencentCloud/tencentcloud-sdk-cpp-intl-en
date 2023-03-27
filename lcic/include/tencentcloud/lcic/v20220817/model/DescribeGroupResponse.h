@@ -68,10 +68,8 @@ namespace TencentCloud
                     bool GroupNameHasBeenSet() const;
 
                     /**
-                     * 获取The user ID of the group’s teacher.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TeacherId The user ID of the group’s teacher.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The user ID of the group’s teacher. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TeacherId The user ID of the group’s teacher. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetTeacherId() const;
 
@@ -82,12 +80,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TeacherIdHasBeenSet() const;
 
                     /**
-                     * 获取The group type.
-`0`: Ordinary group.
-`1`: Merged group. If the group queried is a merged group, the IDs of the sub-groups will be returned.
-                     * @return GroupType The group type.
-`0`: Ordinary group.
-`1`: Merged group. If the group queried is a merged group, the IDs of the sub-groups will be returned.
+                     * 获取The group type. 0: Ordinary group. 1: Merged group. If the group queried is a merged group, the IDs of the sub-groups will be returned.
+                     * @return GroupType The group type. 0: Ordinary group. 1: Merged group. If the group queried is a merged group, the IDs of the sub-groups will be returned.
                      */
                     uint64_t GetGroupType() const;
 
@@ -98,10 +92,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool GroupTypeHasBeenSet() const;
 
                     /**
-                     * 获取The IDs of the sub-groups.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SubGroupIds The IDs of the sub-groups.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The IDs of the sub-groups. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SubGroupIds The IDs of the sub-groups. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> GetSubGroupIds() const;
 
@@ -126,23 +118,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_groupNameHasBeenSet;
 
                     /**
-                     * The user ID of the group’s teacher.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The user ID of the group’s teacher. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_teacherId;
                     bool m_teacherIdHasBeenSet;
 
                     /**
-                     * The group type.
-`0`: Ordinary group.
-`1`: Merged group. If the group queried is a merged group, the IDs of the sub-groups will be returned.
+                     * The group type. 0: Ordinary group. 1: Merged group. If the group queried is a merged group, the IDs of the sub-groups will be returned.
                      */
                     uint64_t m_groupType;
                     bool m_groupTypeHasBeenSet;
 
                     /**
-                     * The IDs of the sub-groups.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The IDs of the sub-groups. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_subGroupIds;
                     bool m_subGroupIdsHasBeenSet;

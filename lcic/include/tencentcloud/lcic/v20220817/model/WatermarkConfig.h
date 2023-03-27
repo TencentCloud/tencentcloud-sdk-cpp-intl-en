@@ -36,6 +36,7 @@ namespace TencentCloud
             {
                 /**
                 * Watermark settings.
+Used by actions: GetWatermark.
                 */
                 class WatermarkConfig : public AbstractModel
                 {
@@ -47,18 +48,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The URL of the watermark image.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Url The URL of the watermark image.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The URL of the watermark image. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Url The URL of the watermark image. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置The URL of the watermark image.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Url The URL of the watermark image.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The URL of the watermark image. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Url The URL of the watermark image. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetUrl(const std::string& _url);
 
@@ -69,18 +66,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取The watermark width, which is expressed as a percentage of the video width.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Width The watermark width, which is expressed as a percentage of the video width.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The watermark width, which is expressed as a percentage of the video width. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Width The watermark width, which is expressed as a percentage of the video width. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     double GetWidth() const;
 
                     /**
-                     * 设置The watermark width, which is expressed as a percentage of the video width.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Width The watermark width, which is expressed as a percentage of the video width.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The watermark width, which is expressed as a percentage of the video width. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Width The watermark width, which is expressed as a percentage of the video width. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetWidth(const double& _width);
 
@@ -91,18 +84,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取The watermark height, which is expressed as a percentage of the video height.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Height The watermark height, which is expressed as a percentage of the video height.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The watermark height, which is expressed as a percentage of the video height. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Height The watermark height, which is expressed as a percentage of the video height. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     double GetHeight() const;
 
                     /**
-                     * 设置The watermark height, which is expressed as a percentage of the video height.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Height The watermark height, which is expressed as a percentage of the video height.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The watermark height, which is expressed as a percentage of the video height. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Height The watermark height, which is expressed as a percentage of the video height. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetHeight(const double& _height);
 
@@ -113,18 +102,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取The horizontal offset of the watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle horizontally. Value range: 0-100.	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LocationX The horizontal offset of the watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle horizontally. Value range: 0-100.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The horizontal offset of the watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return LocationX The horizontal offset of the watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     double GetLocationX() const;
 
                     /**
-                     * 设置The horizontal offset of the watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle horizontally. Value range: 0-100.	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param LocationX The horizontal offset of the watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle horizontally. Value range: 0-100.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The horizontal offset of the watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param LocationX The horizontal offset of the watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetLocationX(const double& _locationX);
 
@@ -135,18 +120,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LocationXHasBeenSet() const;
 
                     /**
-                     * 获取The vertical offset of the watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle vertically. Value range: 0-100.	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LocationY The vertical offset of the watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle vertically. Value range: 0-100.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The vertical offset of the watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return LocationY The vertical offset of the watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     double GetLocationY() const;
 
                     /**
-                     * 设置The vertical offset of the watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle vertically. Value range: 0-100.	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param LocationY The vertical offset of the watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle vertically. Value range: 0-100.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The vertical offset of the watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param LocationY The vertical offset of the watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetLocationY(const double& _locationY);
 
@@ -159,36 +140,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The URL of the watermark image.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The URL of the watermark image. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * The watermark width, which is expressed as a percentage of the video width.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The watermark width, which is expressed as a percentage of the video width. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     double m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * The watermark height, which is expressed as a percentage of the video height.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The watermark height, which is expressed as a percentage of the video height. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     double m_height;
                     bool m_heightHasBeenSet;
 
                     /**
-                     * The horizontal offset of the watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle horizontally. Value range: 0-100.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The horizontal offset of the watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     double m_locationX;
                     bool m_locationXHasBeenSet;
 
                     /**
-                     * The vertical offset of the watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle vertically. Value range: 0-100.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The vertical offset of the watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     double m_locationY;
                     bool m_locationYHasBeenSet;

@@ -293,6 +293,50 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool LevelHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to support auto upgrade of cluster spec level
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return AutoUpgradeClusterLevel Whether to support auto upgrade of cluster spec level
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool GetAutoUpgradeClusterLevel() const;
+
+                    /**
+                     * 设置Whether to support auto upgrade of cluster spec level
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param AutoUpgradeClusterLevel Whether to support auto upgrade of cluster spec level
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetAutoUpgradeClusterLevel(const bool& _autoUpgradeClusterLevel);
+
+                    /**
+                     * 判断参数 AutoUpgradeClusterLevel 是否已赋值
+                     * @return AutoUpgradeClusterLevel 是否已赋值
+                     */
+                    bool AutoUpgradeClusterLevelHasBeenSet() const;
+
+                    /**
+                     * 获取Cluster billing mode. Valid values: `POSTPAID_BY_HOUR`, `PREPAID`
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return ChargeType Cluster billing mode. Valid values: `POSTPAID_BY_HOUR`, `PREPAID`
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetChargeType() const;
+
+                    /**
+                     * 设置Cluster billing mode. Valid values: `POSTPAID_BY_HOUR`, `PREPAID`
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param ChargeType Cluster billing mode. Valid values: `POSTPAID_BY_HOUR`, `PREPAID`
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetChargeType(const std::string& _chargeType);
+
+                    /**
+                     * 判断参数 ChargeType 是否已赋值
+                     * @return ChargeType 是否已赋值
+                     */
+                    bool ChargeTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -375,6 +419,20 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     std::string m_level;
                     bool m_levelHasBeenSet;
+
+                    /**
+                     * Whether to support auto upgrade of cluster spec level
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool m_autoUpgradeClusterLevel;
+                    bool m_autoUpgradeClusterLevelHasBeenSet;
+
+                    /**
+                     * Cluster billing mode. Valid values: `POSTPAID_BY_HOUR`, `PREPAID`
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_chargeType;
+                    bool m_chargeTypeHasBeenSet;
 
                 };
             }

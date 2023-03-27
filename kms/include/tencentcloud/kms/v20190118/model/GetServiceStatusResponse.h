@@ -149,6 +149,20 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool ExclusiveHSMEnabledHasBeenSet() const;
 
+                    /**
+                     * 获取KMS subscription information.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SubscriptionInfo KMS subscription information.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetSubscriptionInfo() const;
+
+                    /**
+                     * 判断参数 SubscriptionInfo 是否已赋值
+                     * @return SubscriptionInfo 是否已赋值
+                     */
+                    bool SubscriptionInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -203,6 +217,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool m_exclusiveHSMEnabled;
                     bool m_exclusiveHSMEnabledHasBeenSet;
+
+                    /**
+                     * KMS subscription information.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_subscriptionInfo;
+                    bool m_subscriptionInfoHasBeenSet;
 
                 };
             }

@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The information of the successfully registered users.	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Users The information of the successfully registered users.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The information of the successfully registered users. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Users The information of the successfully registered users. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<BatchUserInfo> GetUsers() const;
 
@@ -61,8 +59,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The information of the successfully registered users.	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The information of the successfully registered users. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<BatchUserInfo> m_users;
                     bool m_usersHasBeenSet;

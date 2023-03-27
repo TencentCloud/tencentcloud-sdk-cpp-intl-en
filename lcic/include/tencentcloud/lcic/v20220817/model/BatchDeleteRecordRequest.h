@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The room IDs.	
-                     * @return RoomIds The room IDs.	
+                     * 获取The room IDs.
+                     * @return RoomIds The room IDs.
                      */
                     std::vector<int64_t> GetRoomIds() const;
 
                     /**
-                     * 设置The room IDs.	
-                     * @param RoomIds The room IDs.	
+                     * 设置The room IDs.
+                     * @param RoomIds The room IDs.
                      */
                     void SetRoomIds(const std::vector<int64_t>& _roomIds);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool RoomIdsHasBeenSet() const;
 
                     /**
-                     * 获取The SDKAppID assigned by LCIC.	
-                     * @return SdkAppId The SDKAppID assigned by LCIC.	
+                     * 获取The SDKAppID assigned by LCIC.
+                     * @return SdkAppId The SDKAppID assigned by LCIC.
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
-                     * 设置The SDKAppID assigned by LCIC.	
-                     * @param SdkAppId The SDKAppID assigned by LCIC.	
+                     * 设置The SDKAppID assigned by LCIC.
+                     * @param SdkAppId The SDKAppID assigned by LCIC.
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
 
@@ -81,13 +81,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The room IDs.	
+                     * The room IDs.
                      */
                     std::vector<int64_t> m_roomIds;
                     bool m_roomIdsHasBeenSet;
 
                     /**
-                     * The SDKAppID assigned by LCIC.	
+                     * The SDKAppID assigned by LCIC.
                      */
                     uint64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;

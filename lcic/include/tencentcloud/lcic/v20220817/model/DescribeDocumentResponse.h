@@ -152,8 +152,8 @@ namespace TencentCloud
                     bool TranscodeProgressHasBeenSet() const;
 
                     /**
-                     * 获取The transcoding status. `0`: The file is not transcoded. `1`: The file is being transcoded. `2`: Transcoding failed. `3`: Transcoding is successful.
-                     * @return TranscodeState The transcoding status. `0`: The file is not transcoded. `1`: The file is being transcoded. `2`: Transcoding failed. `3`: Transcoding is successful.
+                     * 获取The transcoding status. 0: The file is not transcoded. 1: The file is being transcoded. 2: Transcoding failed. 3: Transcoding is successful.
+                     * @return TranscodeState The transcoding status. 0: The file is not transcoded. 1: The file is being transcoded. 2: Transcoding failed. 3: Transcoding is successful.
                      */
                     uint64_t GetTranscodeState() const;
 
@@ -268,7 +268,7 @@ namespace TencentCloud
                     bool m_transcodeProgressHasBeenSet;
 
                     /**
-                     * The transcoding status. `0`: The file is not transcoded. `1`: The file is being transcoded. `2`: Transcoding failed. `3`: Transcoding is successful.
+                     * The transcoding status. 0: The file is not transcoded. 1: The file is being transcoded. 2: Transcoding failed. 3: Transcoding is successful.
                      */
                     uint64_t m_transcodeState;
                     bool m_transcodeStateHasBeenSet;

@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/vod/v20180717/model/MediaSubStreamInfoItem.h>
 
 
 namespace TencentCloud
@@ -65,14 +66,22 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Container format. Valid values: hls, dash.
-                     * @return Package Container format. Valid values: hls, dash.
+                     * 获取The packaging format. Valid values:
+<li>`HLS`</li>
+<li>`DASH`</li>
+                     * @return Package The packaging format. Valid values:
+<li>`HLS`</li>
+<li>`DASH`</li>
                      */
                     std::string GetPackage() const;
 
                     /**
-                     * 设置Container format. Valid values: hls, dash.
-                     * @param Package Container format. Valid values: hls, dash.
+                     * 设置The packaging format. Valid values:
+<li>`HLS`</li>
+<li>`DASH`</li>
+                     * @param Package The packaging format. Valid values:
+<li>`HLS`</li>
+<li>`DASH`</li>
                      */
                     void SetPackage(const std::string& _package);
 
@@ -174,6 +183,24 @@ namespace TencentCloud
                      */
                     bool DigitalWatermarkTypeHasBeenSet() const;
 
+                    /**
+                     * 获取The information of the streams.
+                     * @return SubStreamSet The information of the streams.
+                     */
+                    std::vector<MediaSubStreamInfoItem> GetSubStreamSet() const;
+
+                    /**
+                     * 设置The information of the streams.
+                     * @param SubStreamSet The information of the streams.
+                     */
+                    void SetSubStreamSet(const std::vector<MediaSubStreamInfoItem>& _subStreamSet);
+
+                    /**
+                     * 判断参数 SubStreamSet 是否已赋值
+                     * @return SubStreamSet 是否已赋值
+                     */
+                    bool SubStreamSetHasBeenSet() const;
+
                 private:
 
                     /**
@@ -183,7 +210,9 @@ namespace TencentCloud
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Container format. Valid values: hls, dash.
+                     * The packaging format. Valid values:
+<li>`HLS`</li>
+<li>`DASH`</li>
                      */
                     std::string m_package;
                     bool m_packageHasBeenSet;
@@ -216,6 +245,12 @@ namespace TencentCloud
                      */
                     std::string m_digitalWatermarkType;
                     bool m_digitalWatermarkTypeHasBeenSet;
+
+                    /**
+                     * The information of the streams.
+                     */
+                    std::vector<MediaSubStreamInfoItem> m_subStreamSet;
+                    bool m_subStreamSetHasBeenSet;
 
                 };
             }

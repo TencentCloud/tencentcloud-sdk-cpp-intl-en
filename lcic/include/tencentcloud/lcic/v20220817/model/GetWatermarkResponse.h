@@ -47,10 +47,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The watermark settings for the teacher’s video.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TeacherLogo The watermark settings for the teacher’s video.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The watermark settings for the teacher’s video. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TeacherLogo The watermark settings for the teacher’s video. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     WatermarkConfig GetTeacherLogo() const;
 
@@ -61,10 +59,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TeacherLogoHasBeenSet() const;
 
                     /**
-                     * 获取The watermark settings for the whiteboard.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BoardLogo The watermark settings for the whiteboard.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The watermark settings for the whiteboard. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return BoardLogo The watermark settings for the whiteboard. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     WatermarkConfig GetBoardLogo() const;
 
@@ -75,10 +71,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BoardLogoHasBeenSet() const;
 
                     /**
-                     * 获取The background image.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BackgroundPicture The background image.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The background image. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return BackgroundPicture The background image. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     BackgroundPictureConfig GetBackgroundPicture() const;
 
@@ -89,10 +83,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BackgroundPictureHasBeenSet() const;
 
                     /**
-                     * 获取The watermark text.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Text The watermark text.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The watermark text. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Text The watermark text. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     TextMarkConfig GetText() const;
 
@@ -105,29 +97,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The watermark settings for the teacher’s video.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The watermark settings for the teacher’s video. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     WatermarkConfig m_teacherLogo;
                     bool m_teacherLogoHasBeenSet;
 
                     /**
-                     * The watermark settings for the whiteboard.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The watermark settings for the whiteboard. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     WatermarkConfig m_boardLogo;
                     bool m_boardLogoHasBeenSet;
 
                     /**
-                     * The background image.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The background image. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     BackgroundPictureConfig m_backgroundPicture;
                     bool m_backgroundPictureHasBeenSet;
 
                     /**
-                     * The watermark text.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The watermark text. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     TextMarkConfig m_text;
                     bool m_textHasBeenSet;

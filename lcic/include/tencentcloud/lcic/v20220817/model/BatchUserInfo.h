@@ -36,6 +36,7 @@ namespace TencentCloud
             {
                 /**
                 * The information of registered users.
+Used by actions: BatchRegister.
                 */
                 class BatchUserInfo : public AbstractModel
                 {
@@ -69,18 +70,14 @@ namespace TencentCloud
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
-                     * 获取The user ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UserId The user ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The user ID. Note: This field may return null, indicating that no valid values can be obtained
+                     * @return UserId The user ID. Note: This field may return null, indicating that no valid values can be obtained
                      */
                     std::string GetUserId() const;
 
                     /**
-                     * 设置The user ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param UserId The user ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The user ID. Note: This field may return null, indicating that no valid values can be obtained
+                     * @param UserId The user ID. Note: This field may return null, indicating that no valid values can be obtained
                      */
                     void SetUserId(const std::string& _userId);
 
@@ -91,18 +88,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UserIdHasBeenSet() const;
 
                     /**
-                     * 获取The user’s ID in your system. If the same request parameter is not specified, the value of this parameter will be the same as `UserId`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OriginId The user’s ID in your system. If the same request parameter is not specified, the value of this parameter will be the same as `UserId`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The user’s ID in your system. If the same request parameter is not specified, the value of this parameter will be the same as UserId. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return OriginId The user’s ID in your system. If the same request parameter is not specified, the value of this parameter will be the same as UserId. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetOriginId() const;
 
                     /**
-                     * 设置The user’s ID in your system. If the same request parameter is not specified, the value of this parameter will be the same as `UserId`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param OriginId The user’s ID in your system. If the same request parameter is not specified, the value of this parameter will be the same as `UserId`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The user’s ID in your system. If the same request parameter is not specified, the value of this parameter will be the same as UserId. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param OriginId The user’s ID in your system. If the same request parameter is not specified, the value of this parameter will be the same as UserId. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetOriginId(const std::string& _originId);
 
@@ -122,15 +115,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_sdkAppIdHasBeenSet;
 
                     /**
-                     * The user ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The user ID. Note: This field may return null, indicating that no valid values can be obtained
                      */
                     std::string m_userId;
                     bool m_userIdHasBeenSet;
 
                     /**
-                     * The user’s ID in your system. If the same request parameter is not specified, the value of this parameter will be the same as `UserId`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The user’s ID in your system. If the same request parameter is not specified, the value of this parameter will be the same as UserId. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_originId;
                     bool m_originIdHasBeenSet;

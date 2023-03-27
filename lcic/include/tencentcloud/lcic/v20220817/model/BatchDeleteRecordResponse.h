@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The IDs of the rooms whose recordings are deleted.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RoomIds The IDs of the rooms whose recordings are deleted.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The IDs of the rooms whose recordings are deleted. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RoomIds The IDs of the rooms whose recordings are deleted. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<int64_t> GetRoomIds() const;
 
@@ -60,8 +58,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The IDs of the rooms whose recordings are deleted.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The IDs of the rooms whose recordings are deleted. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<int64_t> m_roomIds;
                     bool m_roomIdsHasBeenSet;

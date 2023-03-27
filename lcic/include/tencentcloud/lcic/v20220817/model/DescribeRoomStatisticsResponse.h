@@ -93,10 +93,8 @@ namespace TencentCloud
                     bool MemberRecordsHasBeenSet() const;
 
                     /**
-                     * 获取The actual start time of the room, in Unix timestamp, accurate to seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RealStartTime The actual start time of the room, in Unix timestamp, accurate to seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The actual start time of the room, in Unix timestamp, accurate to seconds. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RealStartTime The actual start time of the room, in Unix timestamp, accurate to seconds. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetRealStartTime() const;
 
@@ -107,10 +105,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RealStartTimeHasBeenSet() const;
 
                     /**
-                     * 获取The actual end time of the room, in Unix timestamp, accurate to seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RealEndTime The actual end time of the room, in Unix timestamp, accurate to seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The actual end time of the room, in Unix timestamp, accurate to seconds. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RealEndTime The actual end time of the room, in Unix timestamp, accurate to seconds. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetRealEndTime() const;
 
@@ -121,8 +117,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RealEndTimeHasBeenSet() const;
 
                     /**
-                     * 获取The total number of room messages.
-                     * @return MessageCount The total number of room messages.
+                     * 获取The total message count of the room.
+                     * @return MessageCount The total message count of the room.
                      */
                     uint64_t GetMessageCount() const;
 
@@ -133,8 +129,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MessageCountHasBeenSet() const;
 
                     /**
-                     * 获取The total number of mics in the room.
-                     * @return MicCount The total number of mics in the room.
+                     * 获取The total number of mic-on students in the room.
+                     * @return MicCount The total number of mic-on students in the room.
                      */
                     uint64_t GetMicCount() const;
 
@@ -171,27 +167,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_memberRecordsHasBeenSet;
 
                     /**
-                     * The actual start time of the room, in Unix timestamp, accurate to seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The actual start time of the room, in Unix timestamp, accurate to seconds. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_realStartTime;
                     bool m_realStartTimeHasBeenSet;
 
                     /**
-                     * The actual end time of the room, in Unix timestamp, accurate to seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The actual end time of the room, in Unix timestamp, accurate to seconds. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_realEndTime;
                     bool m_realEndTimeHasBeenSet;
 
                     /**
-                     * The total number of room messages.
+                     * The total message count of the room.
                      */
                     uint64_t m_messageCount;
                     bool m_messageCountHasBeenSet;
 
                     /**
-                     * The total number of mics in the room.
+                     * The total number of mic-on students in the room.
                      */
                     uint64_t m_micCount;
                     bool m_micCountHasBeenSet;

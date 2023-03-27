@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool PageHasBeenSet() const;
 
                     /**
-                     * 获取The maximum number of records per page. The value of this parameter cannot exceed `1000` and is `20` by default.
-                     * @return Limit The maximum number of records per page. The value of this parameter cannot exceed `1000` and is `20` by default.
+                     * 获取The maximum number of records per page. The value of this parameter cannot exceed 1000 and is 20 by default.
+                     * @return Limit The maximum number of records per page. The value of this parameter cannot exceed 1000 and is 20 by default.
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置The maximum number of records per page. The value of this parameter cannot exceed `1000` and is `20` by default.
-                     * @param Limit The maximum number of records per page. The value of this parameter cannot exceed `1000` and is `20` by default.
+                     * 设置The maximum number of records per page. The value of this parameter cannot exceed 1000 and is 20 by default.
+                     * @param Limit The maximum number of records per page. The value of this parameter cannot exceed 1000 and is 20 by default.
                      */
                     void SetLimit(const uint64_t& _limit);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取The user ID of the teacher, which is used as the filter. This parameter and `MemberId` are mutually exclusive. If both are specified, only this parameter will take effect.
-                     * @return TeacherId The user ID of the teacher, which is used as the filter. This parameter and `MemberId` are mutually exclusive. If both are specified, only this parameter will take effect.
+                     * 获取The user ID of the teacher, which is used as the filter. This parameter and MemberId are mutually exclusive. If both are specified, only this parameter will take effect.
+                     * @return TeacherId The user ID of the teacher, which is used as the filter. This parameter and MemberId are mutually exclusive. If both are specified, only this parameter will take effect.
                      */
                     std::string GetTeacherId() const;
 
                     /**
-                     * 设置The user ID of the teacher, which is used as the filter. This parameter and `MemberId` are mutually exclusive. If both are specified, only this parameter will take effect.
-                     * @param TeacherId The user ID of the teacher, which is used as the filter. This parameter and `MemberId` are mutually exclusive. If both are specified, only this parameter will take effect.
+                     * 设置The user ID of the teacher, which is used as the filter. This parameter and MemberId are mutually exclusive. If both are specified, only this parameter will take effect.
+                     * @param TeacherId The user ID of the teacher, which is used as the filter. This parameter and MemberId are mutually exclusive. If both are specified, only this parameter will take effect.
                      */
                     void SetTeacherId(const std::string& _teacherId);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool TeacherIdHasBeenSet() const;
 
                     /**
-                     * 获取The user ID of a member, which is used as the filter. This parameter and `TeacherId` are mutually exclusive.
-                     * @return MemberId The user ID of a member, which is used as the filter. This parameter and `TeacherId` are mutually exclusive.
+                     * 获取The user ID of a member, which is used as the filter. This parameter and TeacherId are mutually exclusive.
+                     * @return MemberId The user ID of a member, which is used as the filter. This parameter and TeacherId are mutually exclusive.
                      */
                     std::string GetMemberId() const;
 
                     /**
-                     * 设置The user ID of a member, which is used as the filter. This parameter and `TeacherId` are mutually exclusive.
-                     * @param MemberId The user ID of a member, which is used as the filter. This parameter and `TeacherId` are mutually exclusive.
+                     * 设置The user ID of a member, which is used as the filter. This parameter and TeacherId are mutually exclusive.
+                     * @param MemberId The user ID of a member, which is used as the filter. This parameter and TeacherId are mutually exclusive.
                      */
                     void SetMemberId(const std::string& _memberId);
 
@@ -147,19 +147,19 @@ namespace TencentCloud
                     bool m_pageHasBeenSet;
 
                     /**
-                     * The maximum number of records per page. The value of this parameter cannot exceed `1000` and is `20` by default.
+                     * The maximum number of records per page. The value of this parameter cannot exceed 1000 and is 20 by default.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * The user ID of the teacher, which is used as the filter. This parameter and `MemberId` are mutually exclusive. If both are specified, only this parameter will take effect.
+                     * The user ID of the teacher, which is used as the filter. This parameter and MemberId are mutually exclusive. If both are specified, only this parameter will take effect.
                      */
                     std::string m_teacherId;
                     bool m_teacherIdHasBeenSet;
 
                     /**
-                     * The user ID of a member, which is used as the filter. This parameter and `TeacherId` are mutually exclusive.
+                     * The user ID of a member, which is used as the filter. This parameter and TeacherId are mutually exclusive.
                      */
                     std::string m_memberId;
                     bool m_memberIdHasBeenSet;

@@ -25,6 +25,7 @@
 #include <tencentcloud/ims/v20201229/model/ObjectResult.h>
 #include <tencentcloud/ims/v20201229/model/OcrResult.h>
 #include <tencentcloud/ims/v20201229/model/LibResult.h>
+#include <tencentcloud/ims/v20201229/model/RecognitionResult.h>
 
 
 namespace TencentCloud
@@ -84,8 +85,8 @@ namespace TencentCloud
                     bool SubLabelHasBeenSet() const;
 
                     /**
-                     * 获取This field is used to return the confidence under the current tag (Label). Value range: 0 (**the lowest confidence**)–100 (**the highest confidence**), where a higher value indicates that the text is more likely to fall into the category of the current returned tag; for example, *Porn 99* indicates that the text is highly likely to be pornographic, while *Porn 0* indicates that the text is not pornographic.
-                     * @return Score This field is used to return the confidence under the current tag (Label). Value range: 0 (**the lowest confidence**)–100 (**the highest confidence**), where a higher value indicates that the text is more likely to fall into the category of the current returned tag; for example, *Porn 99* indicates that the text is highly likely to be pornographic, while *Porn 0* indicates that the text is not pornographic.
+                     * 获取Confidence score of the under the current label. Value range: 0 (**the lowest confidence**) to 100 (**the highest confidence**). For example, *Porn 99* indicates that the image is highly likely to be pornographic, while *Porn 0* indicates that the image is not pornographic.
+                     * @return Score Confidence score of the under the current label. Value range: 0 (**the lowest confidence**) to 100 (**the highest confidence**). For example, *Porn 99* indicates that the image is highly likely to be pornographic, while *Porn 0* indicates that the image is not pornographic.
                      */
                     int64_t GetScore() const;
 
@@ -201,6 +202,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool FileMD5HasBeenSet() const;
 
+                    /**
+                     * 获取Image recognition result, including the hit tags, confidence and location.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return RecognitionResults Image recognition result, including the hit tags, confidence and location.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<RecognitionResult> GetRecognitionResults() const;
+
+                    /**
+                     * 判断参数 RecognitionResults 是否已赋值
+                     * @return RecognitionResults 是否已赋值
+                     */
+                    bool RecognitionResultsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -222,7 +237,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_subLabelHasBeenSet;
 
                     /**
-                     * This field is used to return the confidence under the current tag (Label). Value range: 0 (**the lowest confidence**)–100 (**the highest confidence**), where a higher value indicates that the text is more likely to fall into the category of the current returned tag; for example, *Porn 99* indicates that the text is highly likely to be pornographic, while *Porn 0* indicates that the text is not pornographic.
+                     * Confidence score of the under the current label. Value range: 0 (**the lowest confidence**) to 100 (**the highest confidence**). For example, *Porn 99* indicates that the image is highly likely to be pornographic, while *Porn 0* indicates that the image is not pornographic.
                      */
                     int64_t m_score;
                     bool m_scoreHasBeenSet;
@@ -279,6 +294,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_fileMD5;
                     bool m_fileMD5HasBeenSet;
+
+                    /**
+                     * Image recognition result, including the hit tags, confidence and location.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<RecognitionResult> m_recognitionResults;
+                    bool m_recognitionResultsHasBeenSet;
 
                 };
             }

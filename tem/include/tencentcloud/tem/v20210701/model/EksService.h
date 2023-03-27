@@ -400,6 +400,28 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool AllIpDoneHasBeenSet() const;
 
+                    /**
+                     * 获取CLB domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return ExternalDomain CLB domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetExternalDomain() const;
+
+                    /**
+                     * 设置CLB domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param ExternalDomain CLB domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetExternalDomain(const std::string& _externalDomain);
+
+                    /**
+                     * 判断参数 ExternalDomain 是否已赋值
+                     * @return ExternalDomain 是否已赋值
+                     */
+                    bool ExternalDomainHasBeenSet() const;
+
                 private:
 
                     /**
@@ -513,6 +535,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool m_allIpDone;
                     bool m_allIpDoneHasBeenSet;
+
+                    /**
+                     * CLB domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_externalDomain;
+                    bool m_externalDomainHasBeenSet;
 
                 };
             }

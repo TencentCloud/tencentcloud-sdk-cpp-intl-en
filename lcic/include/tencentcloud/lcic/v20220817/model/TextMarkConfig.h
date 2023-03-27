@@ -36,6 +36,7 @@ namespace TencentCloud
             {
                 /**
                 * The watermark text.
+Used by actions: GetWatermark.
                 */
                 class TextMarkConfig : public AbstractModel
                 {
@@ -47,18 +48,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The watermark text.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Text The watermark text.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The watermark text. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Text The watermark text. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetText() const;
 
                     /**
-                     * 设置The watermark text.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Text The watermark text.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The watermark text. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Text The watermark text. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetText(const std::string& _text);
 
@@ -69,18 +66,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TextHasBeenSet() const;
 
                     /**
-                     * 获取The watermark text color.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Color The watermark text color.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The watermark text color. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Color The watermark text color. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetColor() const;
 
                     /**
-                     * 设置The watermark text color.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Color The watermark text color.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The watermark text color. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Color The watermark text color. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetColor(const std::string& _color);
 
@@ -93,15 +86,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The watermark text.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The watermark text. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_text;
                     bool m_textHasBeenSet;
 
                     /**
-                     * The watermark text color.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The watermark text color. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_color;
                     bool m_colorHasBeenSet;

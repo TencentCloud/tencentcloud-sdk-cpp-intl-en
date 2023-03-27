@@ -96,6 +96,24 @@ namespace TencentCloud
                      */
                     bool VpcIdHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to skip adding the VPC IP range to `NonMasqueradeCIDRs` field of `ip-masq-agent-config`. Default value: `false`
+                     * @return SkipAddingNonMasqueradeCIDRs Whether to skip adding the VPC IP range to `NonMasqueradeCIDRs` field of `ip-masq-agent-config`. Default value: `false`
+                     */
+                    bool GetSkipAddingNonMasqueradeCIDRs() const;
+
+                    /**
+                     * 设置Whether to skip adding the VPC IP range to `NonMasqueradeCIDRs` field of `ip-masq-agent-config`. Default value: `false`
+                     * @param SkipAddingNonMasqueradeCIDRs Whether to skip adding the VPC IP range to `NonMasqueradeCIDRs` field of `ip-masq-agent-config`. Default value: `false`
+                     */
+                    void SetSkipAddingNonMasqueradeCIDRs(const bool& _skipAddingNonMasqueradeCIDRs);
+
+                    /**
+                     * 判断参数 SkipAddingNonMasqueradeCIDRs 是否已赋值
+                     * @return SkipAddingNonMasqueradeCIDRs 是否已赋值
+                     */
+                    bool SkipAddingNonMasqueradeCIDRsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -115,6 +133,12 @@ namespace TencentCloud
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
+
+                    /**
+                     * Whether to skip adding the VPC IP range to `NonMasqueradeCIDRs` field of `ip-masq-agent-config`. Default value: `false`
+                     */
+                    bool m_skipAddingNonMasqueradeCIDRs;
+                    bool m_skipAddingNonMasqueradeCIDRsHasBeenSet;
 
                 };
             }

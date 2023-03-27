@@ -57,10 +57,8 @@ namespace TencentCloud
                     bool TotalHasBeenSet() const;
 
                     /**
-                     * 获取The information of the groups.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return GroupInfos The information of the groups.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The information of the groups. Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return GroupInfos The information of the groups. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<GroupInfo> GetGroupInfos() const;
 
@@ -79,8 +77,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_totalHasBeenSet;
 
                     /**
-                     * The information of the groups.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The information of the groups. Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<GroupInfo> m_groupInfos;
                     bool m_groupInfosHasBeenSet;

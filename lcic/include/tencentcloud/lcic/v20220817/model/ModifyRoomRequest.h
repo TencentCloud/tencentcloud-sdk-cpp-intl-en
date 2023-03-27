@@ -151,14 +151,14 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取The resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD.
-                     * @return Resolution The resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD.
+                     * 获取The resolution. Valid values: 1: SD; 2: HD; 3: FHD.
+                     * @return Resolution The resolution. Valid values: 1: SD; 2: HD; 3: FHD.
                      */
                     uint64_t GetResolution() const;
 
                     /**
-                     * 设置The resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD.
-                     * @param Resolution The resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD.
+                     * 设置The resolution. Valid values: 1: SD; 2: HD; 3: FHD.
+                     * @param Resolution The resolution. Valid values: 1: SD; 2: HD; 3: FHD.
                      */
                     void SetResolution(const uint64_t& _resolution);
 
@@ -187,14 +187,14 @@ namespace TencentCloud
                     bool MaxMicNumberHasBeenSet() const;
 
                     /**
-                     * 获取Whether to automatically turn the mic on when a user enters the room. Valid values: `0`: No (default value); `1`: Yes.
-                     * @return AutoMic Whether to automatically turn the mic on when a user enters the room. Valid values: `0`: No (default value); `1`: Yes.
+                     * 获取Whether to automatically turn the mic on when a user enters the room. Valid values: 0: No (default value); 1: Yes.
+                     * @return AutoMic Whether to automatically turn the mic on when a user enters the room. Valid values: 0: No (default value); 1: Yes.
                      */
                     uint64_t GetAutoMic() const;
 
                     /**
-                     * 设置Whether to automatically turn the mic on when a user enters the room. Valid values: `0`: No (default value); `1`: Yes.
-                     * @param AutoMic Whether to automatically turn the mic on when a user enters the room. Valid values: `0`: No (default value); `1`: Yes.
+                     * 设置Whether to automatically turn the mic on when a user enters the room. Valid values: 0: No (default value); 1: Yes.
+                     * @param AutoMic Whether to automatically turn the mic on when a user enters the room. Valid values: 0: No (default value); 1: Yes.
                      */
                     void SetAutoMic(const uint64_t& _autoMic);
 
@@ -205,14 +205,14 @@ namespace TencentCloud
                     bool AutoMicHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the high audio quality mode. Valid values: `0`: No (default value); `1`: Yes.
-                     * @return AudioQuality Whether to enable the high audio quality mode. Valid values: `0`: No (default value); `1`: Yes.
+                     * 获取Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes.
+                     * @return AudioQuality Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes.
                      */
                     uint64_t GetAudioQuality() const;
 
                     /**
-                     * 设置Whether to enable the high audio quality mode. Valid values: `0`: No (default value); `1`: Yes.
-                     * @param AudioQuality Whether to enable the high audio quality mode. Valid values: `0`: No (default value); `1`: Yes.
+                     * 设置Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes.
+                     * @param AudioQuality Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes.
                      */
                     void SetAudioQuality(const uint64_t& _audioQuality);
 
@@ -223,14 +223,14 @@ namespace TencentCloud
                     bool AudioQualityHasBeenSet() const;
 
                     /**
-                     * 获取The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher.
-                     * @return SubType The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher.
+                     * 获取The room subtype. Valid values: videodoc: Document + Video; video: Video only; coteaching: Dual-teacher.
+                     * @return SubType The room subtype. Valid values: videodoc: Document + Video; video: Video only; coteaching: Dual-teacher.
                      */
                     std::string GetSubType() const;
 
                     /**
-                     * 设置The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher.
-                     * @param SubType The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher.
+                     * 设置The room subtype. Valid values: videodoc: Document + Video; video: Video only; coteaching: Dual-teacher.
+                     * @param SubType The room subtype. Valid values: videodoc: Document + Video; video: Video only; coteaching: Dual-teacher.
                      */
                     void SetSubType(const std::string& _subType);
 
@@ -241,14 +241,14 @@ namespace TencentCloud
                     bool SubTypeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to disable auto recording. Valid values: `0`: No (default); `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends.
-                     * @return DisableRecord Whether to disable auto recording. Valid values: `0`: No (default); `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends.
+                     * 获取Whether to disable auto recording. Valid values: 0: No (default); 1: Yes. If this parameter is 0, recording will start when the class starts and stops when the class ends.
+                     * @return DisableRecord Whether to disable auto recording. Valid values: 0: No (default); 1: Yes. If this parameter is 0, recording will start when the class starts and stops when the class ends.
                      */
                     uint64_t GetDisableRecord() const;
 
                     /**
-                     * 设置Whether to disable auto recording. Valid values: `0`: No (default); `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends.
-                     * @param DisableRecord Whether to disable auto recording. Valid values: `0`: No (default); `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends.
+                     * 设置Whether to disable auto recording. Valid values: 0: No (default); 1: Yes. If this parameter is 0, recording will start when the class starts and stops when the class ends.
+                     * @param DisableRecord Whether to disable auto recording. Valid values: 0: No (default); 1: Yes. If this parameter is 0, recording will start when the class starts and stops when the class ends.
                      */
                     void SetDisableRecord(const uint64_t& _disableRecord);
 
@@ -333,7 +333,7 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * The resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD.
+                     * The resolution. Valid values: 1: SD; 2: HD; 3: FHD.
                      */
                     uint64_t m_resolution;
                     bool m_resolutionHasBeenSet;
@@ -345,25 +345,25 @@ namespace TencentCloud
                     bool m_maxMicNumberHasBeenSet;
 
                     /**
-                     * Whether to automatically turn the mic on when a user enters the room. Valid values: `0`: No (default value); `1`: Yes.
+                     * Whether to automatically turn the mic on when a user enters the room. Valid values: 0: No (default value); 1: Yes.
                      */
                     uint64_t m_autoMic;
                     bool m_autoMicHasBeenSet;
 
                     /**
-                     * Whether to enable the high audio quality mode. Valid values: `0`: No (default value); `1`: Yes.
+                     * Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes.
                      */
                     uint64_t m_audioQuality;
                     bool m_audioQualityHasBeenSet;
 
                     /**
-                     * The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher.
+                     * The room subtype. Valid values: videodoc: Document + Video; video: Video only; coteaching: Dual-teacher.
                      */
                     std::string m_subType;
                     bool m_subTypeHasBeenSet;
 
                     /**
-                     * Whether to disable auto recording. Valid values: `0`: No (default); `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends.
+                     * Whether to disable auto recording. Valid values: 0: No (default); 1: Yes. If this parameter is 0, recording will start when the class starts and stops when the class ends.
                      */
                     uint64_t m_disableRecord;
                     bool m_disableRecordHasBeenSet;

@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The SDKAppID assigned by LCIC.	
-                     * @return SdkAppId The SDKAppID assigned by LCIC.	
+                     * 获取The SDKAppID assigned by LCIC.
+                     * @return SdkAppId The SDKAppID assigned by LCIC.
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
-                     * 设置The SDKAppID assigned by LCIC.	
-                     * @param SdkAppId The SDKAppID assigned by LCIC.	
+                     * 设置The SDKAppID assigned by LCIC.
+                     * @param SdkAppId The SDKAppID assigned by LCIC.
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool VideoUrlHasBeenSet() const;
 
                     /**
-                     * 获取The width of the whiteboard’s watermark, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is `0`.
-                     * @return BoardW The width of the whiteboard’s watermark, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is `0`.
+                     * 获取The width of the whiteboard’s watermark, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is 0.
+                     * @return BoardW The width of the whiteboard’s watermark, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is 0.
                      */
                     double GetBoardW() const;
 
                     /**
-                     * 设置The width of the whiteboard’s watermark, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is `0`.
-                     * @param BoardW The width of the whiteboard’s watermark, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is `0`.
+                     * 设置The width of the whiteboard’s watermark, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is 0.
+                     * @param BoardW The width of the whiteboard’s watermark, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is 0.
                      */
                     void SetBoardW(const double& _boardW);
 
@@ -133,14 +133,14 @@ namespace TencentCloud
                     bool BoardWHasBeenSet() const;
 
                     /**
-                     * 获取The height of the whiteboard’s watermark, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is `0`.
-                     * @return BoardH The height of the whiteboard’s watermark, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is `0`.
+                     * 获取The height of the whiteboard’s watermark, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is 0.
+                     * @return BoardH The height of the whiteboard’s watermark, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is 0.
                      */
                     double GetBoardH() const;
 
                     /**
-                     * 设置The height of the whiteboard’s watermark, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is `0`.
-                     * @param BoardH The height of the whiteboard’s watermark, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is `0`.
+                     * 设置The height of the whiteboard’s watermark, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is 0.
+                     * @param BoardH The height of the whiteboard’s watermark, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is 0.
                      */
                     void SetBoardH(const double& _boardH);
 
@@ -151,14 +151,14 @@ namespace TencentCloud
                     bool BoardHHasBeenSet() const;
 
                     /**
-                     * 获取The horizontal offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
-                     * @return BoardX The horizontal offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
+                     * 获取The horizontal offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
+                     * @return BoardX The horizontal offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
                      */
                     double GetBoardX() const;
 
                     /**
-                     * 设置The horizontal offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
-                     * @param BoardX The horizontal offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
+                     * 设置The horizontal offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
+                     * @param BoardX The horizontal offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
                      */
                     void SetBoardX(const double& _boardX);
 
@@ -169,14 +169,14 @@ namespace TencentCloud
                     bool BoardXHasBeenSet() const;
 
                     /**
-                     * 获取The vertical offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle vertically. Value range: 0-100.
-                     * @return BoardY The vertical offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle vertically. Value range: 0-100.
+                     * 获取The vertical offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100.
+                     * @return BoardY The vertical offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100.
                      */
                     double GetBoardY() const;
 
                     /**
-                     * 设置The vertical offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle vertically. Value range: 0-100.
-                     * @param BoardY The vertical offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle vertically. Value range: 0-100.
+                     * 设置The vertical offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100.
+                     * @param BoardY The vertical offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100.
                      */
                     void SetBoardY(const double& _boardY);
 
@@ -187,14 +187,14 @@ namespace TencentCloud
                     bool BoardYHasBeenSet() const;
 
                     /**
-                     * 获取The width of the watermark for the teacher’s video, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is `0`.
-                     * @return TeacherW The width of the watermark for the teacher’s video, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is `0`.
+                     * 获取The width of the watermark for the teacher’s video, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is 0.
+                     * @return TeacherW The width of the watermark for the teacher’s video, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is 0.
                      */
                     double GetTeacherW() const;
 
                     /**
-                     * 设置The width of the watermark for the teacher’s video, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is `0`.
-                     * @param TeacherW The width of the watermark for the teacher’s video, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is `0`.
+                     * 设置The width of the watermark for the teacher’s video, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is 0.
+                     * @param TeacherW The width of the watermark for the teacher’s video, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is 0.
                      */
                     void SetTeacherW(const double& _teacherW);
 
@@ -205,14 +205,14 @@ namespace TencentCloud
                     bool TeacherWHasBeenSet() const;
 
                     /**
-                     * 获取The height of the watermark for the teacher’s video, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is `0`.
-                     * @return TeacherH The height of the watermark for the teacher’s video, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is `0`.
+                     * 获取The height of the watermark for the teacher’s video, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is 0.
+                     * @return TeacherH The height of the watermark for the teacher’s video, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is 0.
                      */
                     double GetTeacherH() const;
 
                     /**
-                     * 设置The height of the watermark for the teacher’s video, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is `0`.
-                     * @param TeacherH The height of the watermark for the teacher’s video, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is `0`.
+                     * 设置The height of the watermark for the teacher’s video, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is 0.
+                     * @param TeacherH The height of the watermark for the teacher’s video, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is 0.
                      */
                     void SetTeacherH(const double& _teacherH);
 
@@ -223,14 +223,14 @@ namespace TencentCloud
                     bool TeacherHHasBeenSet() const;
 
                     /**
-                     * 获取The horizontal offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
-                     * @return TeacherX The horizontal offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
+                     * 获取The horizontal offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
+                     * @return TeacherX The horizontal offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
                      */
                     double GetTeacherX() const;
 
                     /**
-                     * 设置The horizontal offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
-                     * @param TeacherX The horizontal offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
+                     * 设置The horizontal offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
+                     * @param TeacherX The horizontal offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
                      */
                     void SetTeacherX(const double& _teacherX);
 
@@ -241,14 +241,14 @@ namespace TencentCloud
                     bool TeacherXHasBeenSet() const;
 
                     /**
-                     * 获取The vertical offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle vertically. Value range: 0-100.
-                     * @return TeacherY The vertical offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle vertically. Value range: 0-100.
+                     * 获取The vertical offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100.
+                     * @return TeacherY The vertical offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100.
                      */
                     double GetTeacherY() const;
 
                     /**
-                     * 设置The vertical offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle vertically. Value range: 0-100.
-                     * @param TeacherY The vertical offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle vertically. Value range: 0-100.
+                     * 设置The vertical offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100.
+                     * @param TeacherY The vertical offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100.
                      */
                     void SetTeacherY(const double& _teacherY);
 
@@ -297,7 +297,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The SDKAppID assigned by LCIC.	
+                     * The SDKAppID assigned by LCIC.
                      */
                     uint64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
@@ -321,49 +321,49 @@ namespace TencentCloud
                     bool m_videoUrlHasBeenSet;
 
                     /**
-                     * The width of the whiteboard’s watermark, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is `0`.
+                     * The width of the whiteboard’s watermark, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is 0.
                      */
                     double m_boardW;
                     bool m_boardWHasBeenSet;
 
                     /**
-                     * The height of the whiteboard’s watermark, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is `0`.
+                     * The height of the whiteboard’s watermark, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is 0.
                      */
                     double m_boardH;
                     bool m_boardHHasBeenSet;
 
                     /**
-                     * The horizontal offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
+                     * The horizontal offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
                      */
                     double m_boardX;
                     bool m_boardXHasBeenSet;
 
                     /**
-                     * The vertical offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle vertically. Value range: 0-100.
+                     * The vertical offset of the whiteboard’s watermark, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100.
                      */
                     double m_boardY;
                     bool m_boardYHasBeenSet;
 
                     /**
-                     * The width of the watermark for the teacher’s video, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is `0`.
+                     * The width of the watermark for the teacher’s video, which is expressed as a percentage of the video width. The value range is 0-100, and the default value is 0.
                      */
                     double m_teacherW;
                     bool m_teacherWHasBeenSet;
 
                     /**
-                     * The height of the watermark for the teacher’s video, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is `0`.
+                     * The height of the watermark for the teacher’s video, which is expressed as a percentage of the video height. The value range is 0-100, and the default value is 0.
                      */
                     double m_teacherH;
                     bool m_teacherHHasBeenSet;
 
                     /**
-                     * The horizontal offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
+                     * The horizontal offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle horizontally. Value range: 0-100.
                      */
                     double m_teacherX;
                     bool m_teacherXHasBeenSet;
 
                     /**
-                     * The vertical offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, `50` indicates that the watermark will appear in the middle vertically. Value range: 0-100.
+                     * The vertical offset of the watermark for the teacher’s video, which is expressed as a percentage of the video width. For example, 50 indicates that the watermark will appear in the middle vertically. Value range: 0-100.
                      */
                     double m_teacherY;
                     bool m_teacherYHasBeenSet;

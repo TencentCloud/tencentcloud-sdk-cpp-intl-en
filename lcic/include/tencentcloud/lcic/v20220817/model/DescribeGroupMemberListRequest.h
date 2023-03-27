@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
-                     * 获取The page to return records from. The default value is `1`.
-                     * @return Page The page to return records from. The default value is `1`.
+                     * 获取The page to return records from. The default value is 1.
+                     * @return Page The page to return records from. The default value is 1.
                      */
                     uint64_t GetPage() const;
 
                     /**
-                     * 设置The page to return records from. The default value is `1`.
-                     * @param Page The page to return records from. The default value is `1`.
+                     * 设置The page to return records from. The default value is 1.
+                     * @param Page The page to return records from. The default value is 1.
                      */
                     void SetPage(const uint64_t& _page);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool PageHasBeenSet() const;
 
                     /**
-                     * 获取The maximum number of records per page. The value of this parameter cannot exceed `1000` and is `20` by default.
-                     * @return Limit The maximum number of records per page. The value of this parameter cannot exceed `1000` and is `20` by default.
+                     * 获取The maximum number of records per page. The value of this parameter cannot exceed 1000 and is 20 by default.
+                     * @return Limit The maximum number of records per page. The value of this parameter cannot exceed 1000 and is 20 by default.
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置The maximum number of records per page. The value of this parameter cannot exceed `1000` and is `20` by default.
-                     * @param Limit The maximum number of records per page. The value of this parameter cannot exceed `1000` and is `20` by default.
+                     * 设置The maximum number of records per page. The value of this parameter cannot exceed 1000 and is 20 by default.
+                     * @param Limit The maximum number of records per page. The value of this parameter cannot exceed 1000 and is 20 by default.
                      */
                     void SetLimit(const uint64_t& _limit);
 
@@ -129,13 +129,13 @@ namespace TencentCloud
                     bool m_sdkAppIdHasBeenSet;
 
                     /**
-                     * The page to return records from. The default value is `1`.
+                     * The page to return records from. The default value is 1.
                      */
                     uint64_t m_page;
                     bool m_pageHasBeenSet;
 
                     /**
-                     * The maximum number of records per page. The value of this parameter cannot exceed `1000` and is `20` by default.
+                     * The maximum number of records per page. The value of this parameter cannot exceed 1000 and is 20 by default.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;

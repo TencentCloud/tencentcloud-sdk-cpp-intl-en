@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The SDKAppID assigned by LCIC.	
-                     * @return SdkAppId The SDKAppID assigned by LCIC.	
+                     * 获取The SDKAppID assigned by LCIC.
+                     * @return SdkAppId The SDKAppID assigned by LCIC.
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
-                     * 设置The SDKAppID assigned by LCIC.	
-                     * @param SdkAppId The SDKAppID assigned by LCIC.	
+                     * 设置The SDKAppID assigned by LCIC.
+                     * @param SdkAppId The SDKAppID assigned by LCIC.
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
 
@@ -63,7 +63,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The SDKAppID assigned by LCIC.	
+                     * The SDKAppID assigned by LCIC.
                      */
                     uint64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;

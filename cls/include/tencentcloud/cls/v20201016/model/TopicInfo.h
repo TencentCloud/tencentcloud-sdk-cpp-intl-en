@@ -349,6 +349,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool DescribesHasBeenSet() const;
 
+                    /**
+                     * 获取The lifecycle of hot storage when log transitioning is enabled. The value of `hotPeriod` is smaller than that of `Period`.
+The hot storage period is the value of `hotPeriod`, and the cold storage period is the value of `Period` minus the value of `hotPeriod`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return HotPeriod The lifecycle of hot storage when log transitioning is enabled. The value of `hotPeriod` is smaller than that of `Period`.
+The hot storage period is the value of `hotPeriod`, and the cold storage period is the value of `Period` minus the value of `hotPeriod`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetHotPeriod() const;
+
+                    /**
+                     * 设置The lifecycle of hot storage when log transitioning is enabled. The value of `hotPeriod` is smaller than that of `Period`.
+The hot storage period is the value of `hotPeriod`, and the cold storage period is the value of `Period` minus the value of `hotPeriod`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param HotPeriod The lifecycle of hot storage when log transitioning is enabled. The value of `hotPeriod` is smaller than that of `Period`.
+The hot storage period is the value of `hotPeriod`, and the cold storage period is the value of `Period` minus the value of `hotPeriod`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetHotPeriod(const uint64_t& _hotPeriod);
+
+                    /**
+                     * 判断参数 HotPeriod 是否已赋值
+                     * @return HotPeriod 是否已赋值
+                     */
+                    bool HotPeriodHasBeenSet() const;
+
                 private:
 
                     /**
@@ -448,6 +474,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_describes;
                     bool m_describesHasBeenSet;
+
+                    /**
+                     * The lifecycle of hot storage when log transitioning is enabled. The value of `hotPeriod` is smaller than that of `Period`.
+The hot storage period is the value of `hotPeriod`, and the cold storage period is the value of `Period` minus the value of `hotPeriod`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_hotPeriod;
+                    bool m_hotPeriodHasBeenSet;
 
                 };
             }

@@ -79,6 +79,8 @@
 #include <tencentcloud/lcic/v20220817/model/DescribeSdkAppIdUsersResponse.h>
 #include <tencentcloud/lcic/v20220817/model/DescribeUserRequest.h>
 #include <tencentcloud/lcic/v20220817/model/DescribeUserResponse.h>
+#include <tencentcloud/lcic/v20220817/model/GetRoomMessageRequest.h>
+#include <tencentcloud/lcic/v20220817/model/GetRoomMessageResponse.h>
 #include <tencentcloud/lcic/v20220817/model/GetWatermarkRequest.h>
 #include <tencentcloud/lcic/v20220817/model/GetWatermarkResponse.h>
 #include <tencentcloud/lcic/v20220817/model/LoginOriginIdRequest.h>
@@ -199,6 +201,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeUserResponse> DescribeUserOutcome;
                 typedef std::future<DescribeUserOutcome> DescribeUserOutcomeCallable;
                 typedef std::function<void(const LcicClient*, const Model::DescribeUserRequest&, DescribeUserOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUserAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetRoomMessageResponse> GetRoomMessageOutcome;
+                typedef std::future<GetRoomMessageOutcome> GetRoomMessageOutcomeCallable;
+                typedef std::function<void(const LcicClient*, const Model::GetRoomMessageRequest&, GetRoomMessageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetRoomMessageAsyncHandler;
                 typedef Outcome<Core::Error, Model::GetWatermarkResponse> GetWatermarkOutcome;
                 typedef std::future<GetWatermarkOutcome> GetWatermarkOutcomeCallable;
                 typedef std::function<void(const LcicClient*, const Model::GetWatermarkRequest&, GetWatermarkOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetWatermarkAsyncHandler;
@@ -237,6 +242,7 @@ namespace TencentCloud
 
                 /**
                  *This API is used to add users to a group.
+A maximum of 20 requests can be initiated per second for this API.
                  * @param req AddGroupMemberRequest
                  * @return AddGroupMemberOutcome
                  */
@@ -246,6 +252,7 @@ namespace TencentCloud
 
                 /**
                  *This API is used to add users to multiple groups at a time.
+A maximum of 20 requests can be initiated per second for this API.
                  * @param req BatchAddGroupMemberRequest
                  * @return BatchAddGroupMemberOutcome
                  */
@@ -255,6 +262,7 @@ namespace TencentCloud
 
                 /**
                  *This API is used to create multiple groups at a time.
+A maximum of 20 requests can be initiated per second for this API.
                  * @param req BatchCreateGroupWithMembersRequest
                  * @return BatchCreateGroupWithMembersOutcome
                  */
@@ -264,6 +272,7 @@ namespace TencentCloud
 
                 /**
                  *This API is used to create multiple rooms at a time.
+A maximum of 20 requests can be initiated per second for this API.
                  * @param req BatchCreateRoomRequest
                  * @return BatchCreateRoomOutcome
                  */
@@ -273,6 +282,7 @@ namespace TencentCloud
 
                 /**
                  *This API is used to remove users from multiple groups at a time.
+A maximum of 20 requests can be initiated per second for this API.
                  * @param req BatchDeleteGroupMemberRequest
                  * @return BatchDeleteGroupMemberOutcome
                  */
@@ -282,6 +292,7 @@ namespace TencentCloud
 
                 /**
                  *This API is used to delete the recordings of multiple rooms.
+A maximum of 20 requests can be initiated per second for this API.
                  * @param req BatchDeleteRecordRequest
                  * @return BatchDeleteRecordOutcome
                  */
@@ -291,6 +302,7 @@ namespace TencentCloud
 
                 /**
                  *This API is used to register multiple users (up to 1,000) at a time. If a user ID already exists, the existing one will be overwritten.
+A maximum of 20 requests can be initiated per second for this API.
                  * @param req BatchRegisterRequest
                  * @return BatchRegisterOutcome
                  */
@@ -317,7 +329,8 @@ namespace TencentCloud
                 CreateDocumentOutcomeCallable CreateDocumentCallable(const Model::CreateDocumentRequest& request);
 
                 /**
-                 *This API is used to create a group and specify its members.
+                 *his API is used to create a group and specify its members.
+A maximum of 20 requests can be initiated per second for this API.
                  * @param req CreateGroupWithMembersRequest
                  * @return CreateGroupWithMembersOutcome
                  */
@@ -327,6 +340,7 @@ namespace TencentCloud
 
                 /**
                  *This API is used to merge groups.
+A maximum of 20 requests can be initiated per second for this API.
                  * @param req CreateGroupWithSubGroupRequest
                  * @return CreateGroupWithSubGroupOutcome
                  */
@@ -336,6 +350,7 @@ namespace TencentCloud
 
                 /**
                  *This API is used to create a room.
+A maximum of 20 requests can be initiated per second for this API.
                  * @param req CreateRoomRequest
                  * @return CreateRoomOutcome
                  */
@@ -354,6 +369,7 @@ namespace TencentCloud
 
                 /**
                  *This API is used to delete a document.
+A maximum of 20 requests can be initiated per second for this API.
                  * @param req DeleteDocumentRequest
                  * @return DeleteDocumentOutcome
                  */
@@ -363,6 +379,7 @@ namespace TencentCloud
 
                 /**
                  *This API is used to delete one or multiple groups.
+A maximum of 20 requests can be initiated per second for this API.
                  * @param req DeleteGroupRequest
                  * @return DeleteGroupOutcome
                  */
@@ -372,6 +389,7 @@ namespace TencentCloud
 
                 /**
                  *This API is used to remove users from a group.
+A maximum of 20 requests can be initiated per second for this API.
                  * @param req DeleteGroupMemberRequest
                  * @return DeleteGroupMemberOutcome
                  */
@@ -381,6 +399,7 @@ namespace TencentCloud
 
                 /**
                  *This example shows you how to delete the recording files of a specific room.
+A maximum of 20 requests can be initiated per second for this API.
                  * @param req DeleteRecordRequest
                  * @return DeleteRecordOutcome
                  */
@@ -399,6 +418,7 @@ namespace TencentCloud
 
                 /**
                  *This API is used to get the user list of a room. This API will not work if a room has ended or expired.
+A maximum of 20 requests can be initiated per second for this API.
                  * @param req DescribeCurrentMemberListRequest
                  * @return DescribeCurrentMemberListOutcome
                  */
@@ -408,6 +428,7 @@ namespace TencentCloud
 
                 /**
                  *This API is used to get the information of a specific document.
+A maximum of 20 requests can be initiated per second for this API.
                  * @param req DescribeDocumentRequest
                  * @return DescribeDocumentOutcome
                  */
@@ -417,6 +438,7 @@ namespace TencentCloud
 
                 /**
                  *This API is used to get the document list of a specific room.
+A maximum of 20 requests can be initiated per second for this API.
                  * @param req DescribeDocumentsByRoomRequest
                  * @return DescribeDocumentsByRoomOutcome
                  */
@@ -426,6 +448,7 @@ namespace TencentCloud
 
                 /**
                  *This API is used to get the details of a group.
+A maximum of 20 requests can be initiated per second for this API.
                  * @param req DescribeGroupRequest
                  * @return DescribeGroupOutcome
                  */
@@ -435,6 +458,7 @@ namespace TencentCloud
 
                 /**
                  *This API is used to query groups.
+A maximum of 20 requests can be initiated per second for this API.
                  * @param req DescribeGroupListRequest
                  * @return DescribeGroupListOutcome
                  */
@@ -444,6 +468,7 @@ namespace TencentCloud
 
                 /**
                  *This API is used to get the members of a group.
+A maximum of 20 requests can be initiated per second for this API.
                  * @param req DescribeGroupMemberListRequest
                  * @return DescribeGroupMemberListOutcome
                  */
@@ -453,6 +478,7 @@ namespace TencentCloud
 
                 /**
                  *This API is used to get room information.
+A maximum of 20 requests can be initiated per second for this API.
                  * @param req DescribeRoomRequest
                  * @return DescribeRoomOutcome
                  */
@@ -462,6 +488,7 @@ namespace TencentCloud
 
                 /**
                  *This API is used to obtain the statistics of a room. It can be called only after the room is ended.
+A maximum of 20 requests can be initiated per second for this API.
                  * @param req DescribeRoomStatisticsRequest
                  * @return DescribeRoomStatisticsOutcome
                  */
@@ -471,6 +498,7 @@ namespace TencentCloud
 
                 /**
                  *This API is used to get the user list of a specific application.
+A maximum of 20 requests can be initiated per second for this API.
                  * @param req DescribeSdkAppIdUsersRequest
                  * @return DescribeSdkAppIdUsersOutcome
                  */
@@ -488,7 +516,17 @@ namespace TencentCloud
                 DescribeUserOutcomeCallable DescribeUserCallable(const Model::DescribeUserRequest& request);
 
                 /**
+                 *This API is used to get the message history of a room (room messages are retained for seven days).
+                 * @param req GetRoomMessageRequest
+                 * @return GetRoomMessageOutcome
+                 */
+                GetRoomMessageOutcome GetRoomMessage(const Model::GetRoomMessageRequest &request);
+                void GetRoomMessageAsync(const Model::GetRoomMessageRequest& request, const GetRoomMessageAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetRoomMessageOutcomeCallable GetRoomMessageCallable(const Model::GetRoomMessageRequest& request);
+
+                /**
                  *This API is used to get watermark settings.
+A maximum of 20 requests can be initiated per second for this API.
                  * @param req GetWatermarkRequest
                  * @return GetWatermarkOutcome
                  */
@@ -516,6 +554,7 @@ namespace TencentCloud
 
                 /**
                  *This API is used to modify an application.
+A maximum of 20 requests can be initiated per second for this API.
                  * @param req ModifyAppRequest
                  * @return ModifyAppOutcome
                  */
@@ -525,6 +564,7 @@ namespace TencentCloud
 
                 /**
                  *This API is used to modify a group.
+A maximum of 20 requests can be initiated per second for this API.
                  * @param req ModifyGroupRequest
                  * @return ModifyGroupOutcome
                  */
@@ -534,6 +574,7 @@ namespace TencentCloud
 
                 /**
                  *This API is used to modify a room.
+A maximum of 20 requests can be initiated per second for this API.
                  * @param req ModifyRoomRequest
                  * @return ModifyRoomOutcome
                  */
@@ -543,6 +584,7 @@ namespace TencentCloud
 
                 /**
                  *This API is used to modify a user profile such as the nickname and profile photo.
+A maximum of 20 requests can be initiated per second for this API.
                  * @param req ModifyUserProfileRequest
                  * @return ModifyUserProfileOutcome
                  */
@@ -570,6 +612,7 @@ namespace TencentCloud
 
                 /**
                  *This API is used to configure watermarks.
+A maximum of 20 requests can be initiated per second for this API.
                  * @param req SetWatermarkRequest
                  * @return SetWatermarkOutcome
                  */

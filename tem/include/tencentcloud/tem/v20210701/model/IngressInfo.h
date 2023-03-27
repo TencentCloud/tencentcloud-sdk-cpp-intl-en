@@ -300,6 +300,28 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool RewriteTypeHasBeenSet() const;
 
+                    /**
+                     * 获取CLB domain name
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return Domain CLB domain name
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetDomain() const;
+
+                    /**
+                     * 设置CLB domain name
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param Domain CLB domain name
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetDomain(const std::string& _domain);
+
+                    /**
+                     * 判断参数 Domain 是否已赋值
+                     * @return Domain 是否已赋值
+                     */
+                    bool DomainHasBeenSet() const;
+
                 private:
 
                     /**
@@ -382,6 +404,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     std::string m_rewriteType;
                     bool m_rewriteTypeHasBeenSet;
+
+                    /**
+                     * CLB domain name
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_domain;
+                    bool m_domainHasBeenSet;
 
                 };
             }
