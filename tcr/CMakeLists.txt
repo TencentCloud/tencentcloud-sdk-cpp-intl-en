@@ -71,7 +71,7 @@ set(tcr_public_header_model
   include/tencentcloud/tcr/v20190924/model/ModifyTagRetentionRuleResponse.h
   include/tencentcloud/tcr/v20190924/model/CreateTagRetentionRuleRequest.h
   include/tencentcloud/tcr/v20190924/model/WebhookTarget.h
-  include/tencentcloud/tcr/v20190924/model/DescribeInstanceStatusResponse.h
+  include/tencentcloud/tcr/v20190924/model/DeleteReplicationInstanceRequest.h
   include/tencentcloud/tcr/v20190924/model/DescribeGCJobsResponse.h
   include/tencentcloud/tcr/v20190924/model/ModifyInstanceTokenRequest.h
   include/tencentcloud/tcr/v20190924/model/CreateNamespaceResponse.h
@@ -82,10 +82,9 @@ set(tcr_public_header_model
   include/tencentcloud/tcr/v20190924/model/TcrImageInfo.h
   include/tencentcloud/tcr/v20190924/model/DescribeReplicationInstanceSyncStatusRequest.h
   include/tencentcloud/tcr/v20190924/model/DeleteInstanceResponse.h
-  include/tencentcloud/tcr/v20190924/model/DescribeInstanceAllRequest.h
   include/tencentcloud/tcr/v20190924/model/DescribeInstanceStatusRequest.h
   include/tencentcloud/tcr/v20190924/model/ModifyWebhookTriggerRequest.h
-  include/tencentcloud/tcr/v20190924/model/DeleteReplicationInstanceRequest.h
+  include/tencentcloud/tcr/v20190924/model/DescribeInstanceStatusResponse.h
   include/tencentcloud/tcr/v20190924/model/DeleteNamespaceResponse.h
   include/tencentcloud/tcr/v20190924/model/CreateSignatureRequest.h
   include/tencentcloud/tcr/v20190924/model/CreateSecurityPolicyResponse.h
@@ -115,7 +114,6 @@ set(tcr_public_header_model
   include/tencentcloud/tcr/v20190924/model/DescribeWebhookTriggerResponse.h
   include/tencentcloud/tcr/v20190924/model/DescribeImageManifestsRequest.h
   include/tencentcloud/tcr/v20190924/model/RegistryChargePrepaid.h
-  include/tencentcloud/tcr/v20190924/model/DeleteSecurityPolicyResponse.h
   include/tencentcloud/tcr/v20190924/model/TagSpecification.h
   include/tencentcloud/tcr/v20190924/model/CreateMultipleSecurityPolicyRequest.h
   include/tencentcloud/tcr/v20190924/model/KeyValueString.h
@@ -158,7 +156,7 @@ set(tcr_public_header_model
   include/tencentcloud/tcr/v20190924/model/DescribeTagRetentionRulesResponse.h
   include/tencentcloud/tcr/v20190924/model/DescribeRegionsRequest.h
   include/tencentcloud/tcr/v20190924/model/ManageExternalEndpointResponse.h
-  include/tencentcloud/tcr/v20190924/model/DescribeInstanceAllResponse.h
+  include/tencentcloud/tcr/v20190924/model/DeleteSecurityPolicyResponse.h
   include/tencentcloud/tcr/v20190924/model/CreateReplicationInstanceResponse.h
   include/tencentcloud/tcr/v20190924/model/CreateInstanceTokenRequest.h
   include/tencentcloud/tcr/v20190924/model/CreateInstanceCustomizedDomainResponse.h
@@ -250,7 +248,7 @@ set(tcr_src
   src/v20190924/model/ModifyTagRetentionRuleResponse.cpp
   src/v20190924/model/CreateTagRetentionRuleRequest.cpp
   src/v20190924/model/WebhookTarget.cpp
-  src/v20190924/model/DescribeInstanceStatusResponse.cpp
+  src/v20190924/model/DeleteReplicationInstanceRequest.cpp
   src/v20190924/model/DescribeGCJobsResponse.cpp
   src/v20190924/model/ModifyInstanceTokenRequest.cpp
   src/v20190924/model/CreateNamespaceResponse.cpp
@@ -261,10 +259,9 @@ set(tcr_src
   src/v20190924/model/TcrImageInfo.cpp
   src/v20190924/model/DescribeReplicationInstanceSyncStatusRequest.cpp
   src/v20190924/model/DeleteInstanceResponse.cpp
-  src/v20190924/model/DescribeInstanceAllRequest.cpp
   src/v20190924/model/DescribeInstanceStatusRequest.cpp
   src/v20190924/model/ModifyWebhookTriggerRequest.cpp
-  src/v20190924/model/DeleteReplicationInstanceRequest.cpp
+  src/v20190924/model/DescribeInstanceStatusResponse.cpp
   src/v20190924/model/DeleteNamespaceResponse.cpp
   src/v20190924/model/CreateSignatureRequest.cpp
   src/v20190924/model/CreateSecurityPolicyResponse.cpp
@@ -294,7 +291,6 @@ set(tcr_src
   src/v20190924/model/DescribeWebhookTriggerResponse.cpp
   src/v20190924/model/DescribeImageManifestsRequest.cpp
   src/v20190924/model/RegistryChargePrepaid.cpp
-  src/v20190924/model/DeleteSecurityPolicyResponse.cpp
   src/v20190924/model/TagSpecification.cpp
   src/v20190924/model/CreateMultipleSecurityPolicyRequest.cpp
   src/v20190924/model/KeyValueString.cpp
@@ -337,7 +333,7 @@ set(tcr_src
   src/v20190924/model/DescribeTagRetentionRulesResponse.cpp
   src/v20190924/model/DescribeRegionsRequest.cpp
   src/v20190924/model/ManageExternalEndpointResponse.cpp
-  src/v20190924/model/DescribeInstanceAllResponse.cpp
+  src/v20190924/model/DeleteSecurityPolicyResponse.cpp
   src/v20190924/model/CreateReplicationInstanceResponse.cpp
   src/v20190924/model/CreateInstanceTokenRequest.cpp
   src/v20190924/model/CreateInstanceCustomizedDomainResponse.cpp

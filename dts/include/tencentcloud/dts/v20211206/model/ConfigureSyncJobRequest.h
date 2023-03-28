@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/dts/v20211206/model/Objects.h>
 #include <tencentcloud/dts/v20211206/model/Endpoint.h>
+#include <tencentcloud/dts/v20211206/model/SyncDBEndpointInfos.h>
 #include <tencentcloud/dts/v20211206/model/Options.h>
 
 
@@ -208,6 +209,42 @@ namespace TencentCloud
                     bool SrcInfoHasBeenSet() const;
 
                     /**
+                     * 获取Source database information. This parameter is valid for multi-node databases, and the value of `SrcNodeType` must be `cluster`.
+                     * @return SrcInfos Source database information. This parameter is valid for multi-node databases, and the value of `SrcNodeType` must be `cluster`.
+                     */
+                    SyncDBEndpointInfos GetSrcInfos() const;
+
+                    /**
+                     * 设置Source database information. This parameter is valid for multi-node databases, and the value of `SrcNodeType` must be `cluster`.
+                     * @param SrcInfos Source database information. This parameter is valid for multi-node databases, and the value of `SrcNodeType` must be `cluster`.
+                     */
+                    void SetSrcInfos(const SyncDBEndpointInfos& _srcInfos);
+
+                    /**
+                     * 判断参数 SrcInfos 是否已赋值
+                     * @return SrcInfos 是否已赋值
+                     */
+                    bool SrcInfosHasBeenSet() const;
+
+                    /**
+                     * 获取Enumerated values: `single` (for single-node source database), `cluster` (for multi-node source database).
+                     * @return SrcNodeType Enumerated values: `single` (for single-node source database), `cluster` (for multi-node source database).
+                     */
+                    std::string GetSrcNodeType() const;
+
+                    /**
+                     * 设置Enumerated values: `single` (for single-node source database), `cluster` (for multi-node source database).
+                     * @param SrcNodeType Enumerated values: `single` (for single-node source database), `cluster` (for multi-node source database).
+                     */
+                    void SetSrcNodeType(const std::string& _srcNodeType);
+
+                    /**
+                     * 判断参数 SrcNodeType 是否已赋值
+                     * @return SrcNodeType 是否已赋值
+                     */
+                    bool SrcNodeTypeHasBeenSet() const;
+
+                    /**
                      * 获取Target database information. This parameter is used by single-node databases.
                      * @return DstInfo Target database information. This parameter is used by single-node databases.
                      */
@@ -224,6 +261,42 @@ namespace TencentCloud
                      * @return DstInfo 是否已赋值
                      */
                     bool DstInfoHasBeenSet() const;
+
+                    /**
+                     * 获取Target database information. This parameter is valid for multi-node databases, and the value of `DstNodeType` must be `cluster`.
+                     * @return DstInfos Target database information. This parameter is valid for multi-node databases, and the value of `DstNodeType` must be `cluster`.
+                     */
+                    SyncDBEndpointInfos GetDstInfos() const;
+
+                    /**
+                     * 设置Target database information. This parameter is valid for multi-node databases, and the value of `DstNodeType` must be `cluster`.
+                     * @param DstInfos Target database information. This parameter is valid for multi-node databases, and the value of `DstNodeType` must be `cluster`.
+                     */
+                    void SetDstInfos(const SyncDBEndpointInfos& _dstInfos);
+
+                    /**
+                     * 判断参数 DstInfos 是否已赋值
+                     * @return DstInfos 是否已赋值
+                     */
+                    bool DstInfosHasBeenSet() const;
+
+                    /**
+                     * 获取Enumerated values: `single` (for single-node target database), `cluster` (for multi-node target database).
+                     * @return DstNodeType Enumerated values: `single` (for single-node target database), `cluster` (for multi-node target database).
+                     */
+                    std::string GetDstNodeType() const;
+
+                    /**
+                     * 设置Enumerated values: `single` (for single-node target database), `cluster` (for multi-node target database).
+                     * @param DstNodeType Enumerated values: `single` (for single-node target database), `cluster` (for multi-node target database).
+                     */
+                    void SetDstNodeType(const std::string& _dstNodeType);
+
+                    /**
+                     * 判断参数 DstNodeType 是否已赋值
+                     * @return DstNodeType 是否已赋值
+                     */
+                    bool DstNodeTypeHasBeenSet() const;
 
                     /**
                      * 获取Sync task options
@@ -318,10 +391,34 @@ namespace TencentCloud
                     bool m_srcInfoHasBeenSet;
 
                     /**
+                     * Source database information. This parameter is valid for multi-node databases, and the value of `SrcNodeType` must be `cluster`.
+                     */
+                    SyncDBEndpointInfos m_srcInfos;
+                    bool m_srcInfosHasBeenSet;
+
+                    /**
+                     * Enumerated values: `single` (for single-node source database), `cluster` (for multi-node source database).
+                     */
+                    std::string m_srcNodeType;
+                    bool m_srcNodeTypeHasBeenSet;
+
+                    /**
                      * Target database information. This parameter is used by single-node databases.
                      */
                     Endpoint m_dstInfo;
                     bool m_dstInfoHasBeenSet;
+
+                    /**
+                     * Target database information. This parameter is valid for multi-node databases, and the value of `DstNodeType` must be `cluster`.
+                     */
+                    SyncDBEndpointInfos m_dstInfos;
+                    bool m_dstInfosHasBeenSet;
+
+                    /**
+                     * Enumerated values: `single` (for single-node target database), `cluster` (for multi-node target database).
+                     */
+                    std::string m_dstNodeType;
+                    bool m_dstNodeTypeHasBeenSet;
 
                     /**
                      * Sync task options

@@ -48,24 +48,6 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Additional data
-                     * @return Externals Additional data
-                     */
-                    Externals GetExternals() const;
-
-                    /**
-                     * 设置Additional data
-                     * @param Externals Additional data
-                     */
-                    void SetExternals(const Externals& _externals);
-
-                    /**
-                     * 判断参数 Externals 是否已赋值
-                     * @return Externals 是否已赋值
-                     */
-                    bool ExternalsHasBeenSet() const;
-
-                    /**
                      * 获取Timer name. Currently `TerminateInstances` is the only supported value.
                      * @return TimerAction Timer name. Currently `TerminateInstances` is the only supported value.
                      */
@@ -84,14 +66,14 @@ namespace TencentCloud
                     bool TimerActionHasBeenSet() const;
 
                     /**
-                     * 获取Execution time, which must be at least 5 minutes later than the current time. For example, 2018-5-29 11:26:40.
-                     * @return ActionTime Execution time, which must be at least 5 minutes later than the current time. For example, 2018-5-29 11:26:40.
+                     * 获取Execution time, which follows the ISO8601 standard and uses UTC time. It must be at least 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
+                     * @return ActionTime Execution time, which follows the ISO8601 standard and uses UTC time. It must be at least 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
                      */
                     std::string GetActionTime() const;
 
                     /**
-                     * 设置Execution time, which must be at least 5 minutes later than the current time. For example, 2018-5-29 11:26:40.
-                     * @param ActionTime Execution time, which must be at least 5 minutes later than the current time. For example, 2018-5-29 11:26:40.
+                     * 设置Execution time, which follows the ISO8601 standard and uses UTC time. It must be at least 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
+                     * @param ActionTime Execution time, which follows the ISO8601 standard and uses UTC time. It must be at least 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
                      */
                     void SetActionTime(const std::string& _actionTime);
 
@@ -101,13 +83,25 @@ namespace TencentCloud
                      */
                     bool ActionTimeHasBeenSet() const;
 
-                private:
+                    /**
+                     * 获取Additional data
+                     * @return Externals Additional data
+                     */
+                    Externals GetExternals() const;
 
                     /**
-                     * Additional data
+                     * 设置Additional data
+                     * @param Externals Additional data
                      */
-                    Externals m_externals;
-                    bool m_externalsHasBeenSet;
+                    void SetExternals(const Externals& _externals);
+
+                    /**
+                     * 判断参数 Externals 是否已赋值
+                     * @return Externals 是否已赋值
+                     */
+                    bool ExternalsHasBeenSet() const;
+
+                private:
 
                     /**
                      * Timer name. Currently `TerminateInstances` is the only supported value.
@@ -116,10 +110,16 @@ namespace TencentCloud
                     bool m_timerActionHasBeenSet;
 
                     /**
-                     * Execution time, which must be at least 5 minutes later than the current time. For example, 2018-5-29 11:26:40.
+                     * Execution time, which follows the ISO8601 standard and uses UTC time. It must be at least 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
                      */
                     std::string m_actionTime;
                     bool m_actionTimeHasBeenSet;
+
+                    /**
+                     * Additional data
+                     */
+                    Externals m_externals;
+                    bool m_externalsHasBeenSet;
 
                 };
             }

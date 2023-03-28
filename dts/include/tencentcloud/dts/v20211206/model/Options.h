@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/dts/v20211206/model/ConflictHandleOption.h>
 #include <tencentcloud/dts/v20211206/model/DdlOption.h>
+#include <tencentcloud/dts/v20211206/model/KafkaOption.h>
 
 
 namespace TencentCloud
@@ -202,6 +203,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool DdlOptionsHasBeenSet() const;
 
+                    /**
+                     * 获取Kafka sync options
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return KafkaOption Kafka sync options
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    KafkaOption GetKafkaOption() const;
+
+                    /**
+                     * 设置Kafka sync options
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param KafkaOption Kafka sync options
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetKafkaOption(const KafkaOption& _kafkaOption);
+
+                    /**
+                     * 判断参数 KafkaOption 是否已赋值
+                     * @return KafkaOption 是否已赋值
+                     */
+                    bool KafkaOptionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -252,6 +275,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<DdlOption> m_ddlOptions;
                     bool m_ddlOptionsHasBeenSet;
+
+                    /**
+                     * Kafka sync options
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    KafkaOption m_kafkaOption;
+                    bool m_kafkaOptionHasBeenSet;
 
                 };
             }

@@ -152,6 +152,24 @@ namespace TencentCloud
                      */
                     bool SyncTagHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable the COS Multi-AZ feature
+                     * @return EnableCosMAZ Whether to enable the COS Multi-AZ feature
+                     */
+                    bool GetEnableCosMAZ() const;
+
+                    /**
+                     * 设置Whether to enable the COS Multi-AZ feature
+                     * @param EnableCosMAZ Whether to enable the COS Multi-AZ feature
+                     */
+                    void SetEnableCosMAZ(const bool& _enableCosMAZ);
+
+                    /**
+                     * 判断参数 EnableCosMAZ 是否已赋值
+                     * @return EnableCosMAZ 是否已赋值
+                     */
+                    bool EnableCosMAZHasBeenSet() const;
+
                 private:
 
                     /**
@@ -189,6 +207,12 @@ namespace TencentCloud
                      */
                     bool m_syncTag;
                     bool m_syncTagHasBeenSet;
+
+                    /**
+                     * Whether to enable the COS Multi-AZ feature
+                     */
+                    bool m_enableCosMAZ;
+                    bool m_enableCosMAZHasBeenSet;
 
                 };
             }

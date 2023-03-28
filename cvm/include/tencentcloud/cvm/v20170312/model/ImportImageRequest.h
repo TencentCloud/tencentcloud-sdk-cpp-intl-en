@@ -235,6 +235,24 @@ Valid values:
                      */
                     bool LicenseTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Boot mode
+                     * @return BootMode Boot mode
+                     */
+                    std::string GetBootMode() const;
+
+                    /**
+                     * 设置Boot mode
+                     * @param BootMode Boot mode
+                     */
+                    void SetBootMode(const std::string& _bootMode);
+
+                    /**
+                     * 判断参数 BootMode 是否已赋值
+                     * @return BootMode 是否已赋值
+                     */
+                    bool BootModeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -299,6 +317,12 @@ Valid values:
                      */
                     std::string m_licenseType;
                     bool m_licenseTypeHasBeenSet;
+
+                    /**
+                     * Boot mode
+                     */
+                    std::string m_bootMode;
+                    bool m_bootModeHasBeenSet;
 
                 };
             }
