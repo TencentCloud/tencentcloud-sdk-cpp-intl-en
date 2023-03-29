@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cfs/v20190719/model/PGroup.h>
 #include <tencentcloud/cfs/v20190719/model/TagInfo.h>
+#include <tencentcloud/cfs/v20190719/model/TieringDetailInfo.h>
 
 
 namespace TencentCloud
@@ -408,6 +409,46 @@ namespace TencentCloud
                      */
                     bool TagsHasBeenSet() const;
 
+                    /**
+                     * 获取The lifecycle management status of a file system.
+                     * @return TieringState The lifecycle management status of a file system.
+                     */
+                    std::string GetTieringState() const;
+
+                    /**
+                     * 设置The lifecycle management status of a file system.
+                     * @param TieringState The lifecycle management status of a file system.
+                     */
+                    void SetTieringState(const std::string& _tieringState);
+
+                    /**
+                     * 判断参数 TieringState 是否已赋值
+                     * @return TieringState 是否已赋值
+                     */
+                    bool TieringStateHasBeenSet() const;
+
+                    /**
+                     * 获取The details about tiered storage.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TieringDetail The details about tiered storage.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    TieringDetailInfo GetTieringDetail() const;
+
+                    /**
+                     * 设置The details about tiered storage.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param TieringDetail The details about tiered storage.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetTieringDetail(const TieringDetailInfo& _tieringDetail);
+
+                    /**
+                     * 判断参数 TieringDetail 是否已赋值
+                     * @return TieringDetail 是否已赋值
+                     */
+                    bool TieringDetailHasBeenSet() const;
+
                 private:
 
                     /**
@@ -529,6 +570,19 @@ namespace TencentCloud
                      */
                     std::vector<TagInfo> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * The lifecycle management status of a file system.
+                     */
+                    std::string m_tieringState;
+                    bool m_tieringStateHasBeenSet;
+
+                    /**
+                     * The details about tiered storage.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    TieringDetailInfo m_tieringDetail;
+                    bool m_tieringDetailHasBeenSet;
 
                 };
             }

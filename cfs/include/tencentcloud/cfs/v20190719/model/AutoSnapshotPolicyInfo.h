@@ -120,14 +120,14 @@ namespace TencentCloud
                     bool FileSystemNumsHasBeenSet() const;
 
                     /**
-                     * 获取The day of the week on which to regularly back up the snapshot
-                     * @return DayOfWeek The day of the week on which to regularly back up the snapshot
+                     * 获取The specific day of the week on which to create a snapshot. This parameter is mutually exclusive with `DayOfMonth` and `IntervalDays`.
+                     * @return DayOfWeek The specific day of the week on which to create a snapshot. This parameter is mutually exclusive with `DayOfMonth` and `IntervalDays`.
                      */
                     std::string GetDayOfWeek() const;
 
                     /**
-                     * 设置The day of the week on which to regularly back up the snapshot
-                     * @param DayOfWeek The day of the week on which to regularly back up the snapshot
+                     * 设置The specific day of the week on which to create a snapshot. This parameter is mutually exclusive with `DayOfMonth` and `IntervalDays`.
+                     * @param DayOfWeek The specific day of the week on which to create a snapshot. This parameter is mutually exclusive with `DayOfMonth` and `IntervalDays`.
                      */
                     void SetDayOfWeek(const std::string& _dayOfWeek);
 
@@ -281,6 +281,50 @@ namespace TencentCloud
                      */
                     bool FileSystemsHasBeenSet() const;
 
+                    /**
+                     * 获取The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek` and `IntervalDays`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DayOfMonth The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek` and `IntervalDays`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetDayOfMonth() const;
+
+                    /**
+                     * 设置The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek` and `IntervalDays`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param DayOfMonth The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek` and `IntervalDays`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetDayOfMonth(const std::string& _dayOfMonth);
+
+                    /**
+                     * 判断参数 DayOfMonth 是否已赋值
+                     * @return DayOfMonth 是否已赋值
+                     */
+                    bool DayOfMonthHasBeenSet() const;
+
+                    /**
+                     * 获取The snapshot interval (1 to 365 days). This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IntervalDays The snapshot interval (1 to 365 days). This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetIntervalDays() const;
+
+                    /**
+                     * 设置The snapshot interval (1 to 365 days). This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param IntervalDays The snapshot interval (1 to 365 days). This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetIntervalDays(const uint64_t& _intervalDays);
+
+                    /**
+                     * 判断参数 IntervalDays 是否已赋值
+                     * @return IntervalDays 是否已赋值
+                     */
+                    bool IntervalDaysHasBeenSet() const;
+
                 private:
 
                     /**
@@ -308,7 +352,7 @@ namespace TencentCloud
                     bool m_fileSystemNumsHasBeenSet;
 
                     /**
-                     * The day of the week on which to regularly back up the snapshot
+                     * The specific day of the week on which to create a snapshot. This parameter is mutually exclusive with `DayOfMonth` and `IntervalDays`.
                      */
                     std::string m_dayOfWeek;
                     bool m_dayOfWeekHasBeenSet;
@@ -360,6 +404,20 @@ namespace TencentCloud
                      */
                     std::vector<FileSystemByPolicy> m_fileSystems;
                     bool m_fileSystemsHasBeenSet;
+
+                    /**
+                     * The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek` and `IntervalDays`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_dayOfMonth;
+                    bool m_dayOfMonthHasBeenSet;
+
+                    /**
+                     * The snapshot interval (1 to 365 days). This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_intervalDays;
+                    bool m_intervalDaysHasBeenSet;
 
                 };
             }

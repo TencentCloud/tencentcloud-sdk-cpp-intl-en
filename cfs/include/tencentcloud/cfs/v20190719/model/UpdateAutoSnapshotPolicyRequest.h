@@ -150,6 +150,42 @@ namespace TencentCloud
                      */
                     bool IsActivatedHasBeenSet() const;
 
+                    /**
+                     * 获取The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek`.
+                     * @return DayOfMonth The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek`.
+                     */
+                    std::string GetDayOfMonth() const;
+
+                    /**
+                     * 设置The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek`.
+                     * @param DayOfMonth The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek`.
+                     */
+                    void SetDayOfMonth(const std::string& _dayOfMonth);
+
+                    /**
+                     * 判断参数 DayOfMonth 是否已赋值
+                     * @return DayOfMonth 是否已赋值
+                     */
+                    bool DayOfMonthHasBeenSet() const;
+
+                    /**
+                     * 获取The snapshot interval. This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
+                     * @return IntervalDays The snapshot interval. This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
+                     */
+                    uint64_t GetIntervalDays() const;
+
+                    /**
+                     * 设置The snapshot interval. This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
+                     * @param IntervalDays The snapshot interval. This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
+                     */
+                    void SetIntervalDays(const uint64_t& _intervalDays);
+
+                    /**
+                     * 判断参数 IntervalDays 是否已赋值
+                     * @return IntervalDays 是否已赋值
+                     */
+                    bool IntervalDaysHasBeenSet() const;
+
                 private:
 
                     /**
@@ -187,6 +223,18 @@ namespace TencentCloud
                      */
                     uint64_t m_isActivated;
                     bool m_isActivatedHasBeenSet;
+
+                    /**
+                     * The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek`.
+                     */
+                    std::string m_dayOfMonth;
+                    bool m_dayOfMonthHasBeenSet;
+
+                    /**
+                     * The snapshot interval. This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
+                     */
+                    uint64_t m_intervalDays;
+                    bool m_intervalDaysHasBeenSet;
 
                 };
             }

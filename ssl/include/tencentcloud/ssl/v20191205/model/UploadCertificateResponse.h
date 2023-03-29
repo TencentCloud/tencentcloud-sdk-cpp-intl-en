@@ -55,6 +55,20 @@ namespace TencentCloud
                      */
                     bool CertificateIdHasBeenSet() const;
 
+                    /**
+                     * 获取The ID of the repeatedly uploaded certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RepeatCertId The ID of the repeatedly uploaded certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetRepeatCertId() const;
+
+                    /**
+                     * 判断参数 RepeatCertId 是否已赋值
+                     * @return RepeatCertId 是否已赋值
+                     */
+                    bool RepeatCertIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -62,6 +76,13 @@ namespace TencentCloud
                      */
                     std::string m_certificateId;
                     bool m_certificateIdHasBeenSet;
+
+                    /**
+                     * The ID of the repeatedly uploaded certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_repeatCertId;
+                    bool m_repeatCertIdHasBeenSet;
 
                 };
             }

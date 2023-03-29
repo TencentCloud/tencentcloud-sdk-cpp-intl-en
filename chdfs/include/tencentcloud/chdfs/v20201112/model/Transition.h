@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool DaysHasBeenSet() const;
 
                     /**
-                     * 获取Transition type (`1`: transition to ARCHIVE; `2`: delete; `3`: transition to STANDARD_IA)
-                     * @return Type Transition type (`1`: transition to ARCHIVE; `2`: delete; `3`: transition to STANDARD_IA)
+                     * 获取Transition type (`1`: ARCHIVE; `2`: Delete; `3`: STANDARD_IA; `4`: DEEP ARCHIVE; `5`: INTELLIGENT TIERING)
+                     * @return Type Transition type (`1`: ARCHIVE; `2`: Delete; `3`: STANDARD_IA; `4`: DEEP ARCHIVE; `5`: INTELLIGENT TIERING)
                      */
                     uint64_t GetType() const;
 
                     /**
-                     * 设置Transition type (`1`: transition to ARCHIVE; `2`: delete; `3`: transition to STANDARD_IA)
-                     * @param Type Transition type (`1`: transition to ARCHIVE; `2`: delete; `3`: transition to STANDARD_IA)
+                     * 设置Transition type (`1`: ARCHIVE; `2`: Delete; `3`: STANDARD_IA; `4`: DEEP ARCHIVE; `5`: INTELLIGENT TIERING)
+                     * @param Type Transition type (`1`: ARCHIVE; `2`: Delete; `3`: STANDARD_IA; `4`: DEEP ARCHIVE; `5`: INTELLIGENT TIERING)
                      */
                     void SetType(const uint64_t& _type);
 
@@ -91,7 +91,7 @@ namespace TencentCloud
                     bool m_daysHasBeenSet;
 
                     /**
-                     * Transition type (`1`: transition to ARCHIVE; `2`: delete; `3`: transition to STANDARD_IA)
+                     * Transition type (`1`: ARCHIVE; `2`: Delete; `3`: STANDARD_IA; `4`: DEEP ARCHIVE; `5`: INTELLIGENT TIERING)
                      */
                     uint64_t m_type;
                     bool m_typeHasBeenSet;

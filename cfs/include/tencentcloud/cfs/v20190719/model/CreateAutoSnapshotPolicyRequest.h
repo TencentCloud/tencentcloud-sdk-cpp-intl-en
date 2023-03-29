@@ -43,24 +43,6 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The day of the week on which to repeat the snapshot operation
-                     * @return DayOfWeek The day of the week on which to repeat the snapshot operation
-                     */
-                    std::string GetDayOfWeek() const;
-
-                    /**
-                     * 设置The day of the week on which to repeat the snapshot operation
-                     * @param DayOfWeek The day of the week on which to repeat the snapshot operation
-                     */
-                    void SetDayOfWeek(const std::string& _dayOfWeek);
-
-                    /**
-                     * 判断参数 DayOfWeek 是否已赋值
-                     * @return DayOfWeek 是否已赋值
-                     */
-                    bool DayOfWeekHasBeenSet() const;
-
-                    /**
                      * 获取The time point when to repeat the snapshot operation
                      * @return Hour The time point when to repeat the snapshot operation
                      */
@@ -97,6 +79,24 @@ namespace TencentCloud
                     bool PolicyNameHasBeenSet() const;
 
                     /**
+                     * 获取The day of the week on which to repeat the snapshot operation
+                     * @return DayOfWeek The day of the week on which to repeat the snapshot operation
+                     */
+                    std::string GetDayOfWeek() const;
+
+                    /**
+                     * 设置The day of the week on which to repeat the snapshot operation
+                     * @param DayOfWeek The day of the week on which to repeat the snapshot operation
+                     */
+                    void SetDayOfWeek(const std::string& _dayOfWeek);
+
+                    /**
+                     * 判断参数 DayOfWeek 是否已赋值
+                     * @return DayOfWeek 是否已赋值
+                     */
+                    bool DayOfWeekHasBeenSet() const;
+
+                    /**
                      * 获取Snapshot retention period
                      * @return AliveDays Snapshot retention period
                      */
@@ -114,13 +114,43 @@ namespace TencentCloud
                      */
                     bool AliveDaysHasBeenSet() const;
 
-                private:
+                    /**
+                     * 获取The specific day (day 1 to day 31) of the month on which to create a snapshot.
+                     * @return DayOfMonth The specific day (day 1 to day 31) of the month on which to create a snapshot.
+                     */
+                    std::string GetDayOfMonth() const;
 
                     /**
-                     * The day of the week on which to repeat the snapshot operation
+                     * 设置The specific day (day 1 to day 31) of the month on which to create a snapshot.
+                     * @param DayOfMonth The specific day (day 1 to day 31) of the month on which to create a snapshot.
                      */
-                    std::string m_dayOfWeek;
-                    bool m_dayOfWeekHasBeenSet;
+                    void SetDayOfMonth(const std::string& _dayOfMonth);
+
+                    /**
+                     * 判断参数 DayOfMonth 是否已赋值
+                     * @return DayOfMonth 是否已赋值
+                     */
+                    bool DayOfMonthHasBeenSet() const;
+
+                    /**
+                     * 获取The snapshot interval, in days.
+                     * @return IntervalDays The snapshot interval, in days.
+                     */
+                    uint64_t GetIntervalDays() const;
+
+                    /**
+                     * 设置The snapshot interval, in days.
+                     * @param IntervalDays The snapshot interval, in days.
+                     */
+                    void SetIntervalDays(const uint64_t& _intervalDays);
+
+                    /**
+                     * 判断参数 IntervalDays 是否已赋值
+                     * @return IntervalDays 是否已赋值
+                     */
+                    bool IntervalDaysHasBeenSet() const;
+
+                private:
 
                     /**
                      * The time point when to repeat the snapshot operation
@@ -135,10 +165,28 @@ namespace TencentCloud
                     bool m_policyNameHasBeenSet;
 
                     /**
+                     * The day of the week on which to repeat the snapshot operation
+                     */
+                    std::string m_dayOfWeek;
+                    bool m_dayOfWeekHasBeenSet;
+
+                    /**
                      * Snapshot retention period
                      */
                     uint64_t m_aliveDays;
                     bool m_aliveDaysHasBeenSet;
+
+                    /**
+                     * The specific day (day 1 to day 31) of the month on which to create a snapshot.
+                     */
+                    std::string m_dayOfMonth;
+                    bool m_dayOfMonthHasBeenSet;
+
+                    /**
+                     * The snapshot interval, in days.
+                     */
+                    uint64_t m_intervalDays;
+                    bool m_intervalDaysHasBeenSet;
 
                 };
             }

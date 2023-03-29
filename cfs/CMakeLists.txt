@@ -65,7 +65,7 @@ set(cfs_public_header_model
   include/tencentcloud/cfs/v20190719/model/CreateCfsFileSystemRequest.h
   include/tencentcloud/cfs/v20190719/model/DescribeMountTargetsRequest.h
   include/tencentcloud/cfs/v20190719/model/CreateCfsPGroupResponse.h
-  include/tencentcloud/cfs/v20190719/model/UpdateCfsFileSystemPGroupRequest.h
+  include/tencentcloud/cfs/v20190719/model/TieringDetailInfo.h
   include/tencentcloud/cfs/v20190719/model/PGroupRuleInfo.h
   include/tencentcloud/cfs/v20190719/model/UpdateCfsFileSystemNameResponse.h
   include/tencentcloud/cfs/v20190719/model/DescribeCfsServiceStatusRequest.h
@@ -79,6 +79,7 @@ set(cfs_public_header_model
   include/tencentcloud/cfs/v20190719/model/DescribeCfsServiceStatusResponse.h
   include/tencentcloud/cfs/v20190719/model/CreateCfsRuleResponse.h
   include/tencentcloud/cfs/v20190719/model/CreateAutoSnapshotPolicyResponse.h
+  include/tencentcloud/cfs/v20190719/model/UpdateCfsFileSystemPGroupRequest.h
   include/tencentcloud/cfs/v20190719/model/UpdateCfsFileSystemPGroupResponse.h
   include/tencentcloud/cfs/v20190719/model/TagInfo.h
   include/tencentcloud/cfs/v20190719/model/AvailableProtoStatus.h
@@ -150,7 +151,7 @@ set(cfs_src
   src/v20190719/model/CreateCfsFileSystemRequest.cpp
   src/v20190719/model/DescribeMountTargetsRequest.cpp
   src/v20190719/model/CreateCfsPGroupResponse.cpp
-  src/v20190719/model/UpdateCfsFileSystemPGroupRequest.cpp
+  src/v20190719/model/TieringDetailInfo.cpp
   src/v20190719/model/PGroupRuleInfo.cpp
   src/v20190719/model/UpdateCfsFileSystemNameResponse.cpp
   src/v20190719/model/DescribeCfsServiceStatusRequest.cpp
@@ -164,6 +165,7 @@ set(cfs_src
   src/v20190719/model/DescribeCfsServiceStatusResponse.cpp
   src/v20190719/model/CreateCfsRuleResponse.cpp
   src/v20190719/model/CreateAutoSnapshotPolicyResponse.cpp
+  src/v20190719/model/UpdateCfsFileSystemPGroupRequest.cpp
   src/v20190719/model/UpdateCfsFileSystemPGroupResponse.cpp
   src/v20190719/model/TagInfo.cpp
   src/v20190719/model/AvailableProtoStatus.cpp

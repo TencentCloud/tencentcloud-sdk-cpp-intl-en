@@ -112,6 +112,34 @@ Note: this field may return `null`, indicating that no valid value was found.
                      */
                     bool DegradeCapacityUsedHasBeenSet() const;
 
+                    /**
+                     * 获取COS DEEP ARCHIVE storage usage, in bytes
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DeepArchiveCapacityUsed COS DEEP ARCHIVE storage usage, in bytes
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetDeepArchiveCapacityUsed() const;
+
+                    /**
+                     * 判断参数 DeepArchiveCapacityUsed 是否已赋值
+                     * @return DeepArchiveCapacityUsed 是否已赋值
+                     */
+                    bool DeepArchiveCapacityUsedHasBeenSet() const;
+
+                    /**
+                     * 获取COS INTELLIGENT TIERING storage usage, in bytes
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IntelligentCapacityUsed COS INTELLIGENT TIERING storage usage, in bytes
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetIntelligentCapacityUsed() const;
+
+                    /**
+                     * 判断参数 IntelligentCapacityUsed 是否已赋值
+                     * @return IntelligentCapacityUsed 是否已赋值
+                     */
+                    bool IntelligentCapacityUsedHasBeenSet() const;
+
                 private:
 
                     /**
@@ -147,6 +175,20 @@ Note: this field may return `null`, indicating that no valid value was found.
                      */
                     uint64_t m_degradeCapacityUsed;
                     bool m_degradeCapacityUsedHasBeenSet;
+
+                    /**
+                     * COS DEEP ARCHIVE storage usage, in bytes
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_deepArchiveCapacityUsed;
+                    bool m_deepArchiveCapacityUsedHasBeenSet;
+
+                    /**
+                     * COS INTELLIGENT TIERING storage usage, in bytes
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_intelligentCapacityUsed;
+                    bool m_intelligentCapacityUsedHasBeenSet;
 
                 };
             }

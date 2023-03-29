@@ -156,6 +156,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     bool RenewOrderHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the certificate is a Chinese SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SMCert Whether the certificate is a Chinese SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetSMCert() const;
+
+                    /**
+                     * 设置Whether the certificate is a Chinese SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param SMCert Whether the certificate is a Chinese SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetSMCert(const int64_t& _sMCert);
+
+                    /**
+                     * 判断参数 SMCert 是否已赋值
+                     * @return SMCert 是否已赋值
+                     */
+                    bool SMCertHasBeenSet() const;
+
                 private:
 
                     /**
@@ -192,6 +214,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_renewOrder;
                     bool m_renewOrderHasBeenSet;
+
+                    /**
+                     * Whether the certificate is a Chinese SM certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_sMCert;
+                    bool m_sMCertHasBeenSet;
 
                 };
             }
