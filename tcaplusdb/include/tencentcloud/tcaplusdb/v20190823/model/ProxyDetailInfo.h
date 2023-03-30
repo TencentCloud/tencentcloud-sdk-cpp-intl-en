@@ -136,6 +136,28 @@ namespace TencentCloud
                      */
                     bool SlowProcessSpeedHasBeenSet() const;
 
+                    /**
+                     * 获取Version
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Version Version
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetVersion() const;
+
+                    /**
+                     * 设置Version
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Version Version
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetVersion(const std::string& _version);
+
+                    /**
+                     * 判断参数 Version 是否已赋值
+                     * @return Version 是否已赋值
+                     */
+                    bool VersionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -167,6 +189,13 @@ namespace TencentCloud
                      */
                     int64_t m_slowProcessSpeed;
                     bool m_slowProcessSpeedHasBeenSet;
+
+                    /**
+                     * Version
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_version;
+                    bool m_versionHasBeenSet;
 
                 };
             }

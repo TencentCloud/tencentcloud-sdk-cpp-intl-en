@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Instance network information
                 */
                 class InstanceNetInfo : public AbstractModel
                 {
@@ -47,14 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return InstanceGroupType 
+                     * 获取Network type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return InstanceGroupType Network type
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetInstanceGroupType() const;
 
                     /**
-                     * 设置
-                     * @param InstanceGroupType 
+                     * 设置Network type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param InstanceGroupType Network type
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetInstanceGroupType(const std::string& _instanceGroupType);
 
@@ -65,14 +69,18 @@ namespace TencentCloud
                     bool InstanceGroupTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceGroupId 
+                     * 获取Instance group ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return InstanceGroupId Instance group ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetInstanceGroupId() const;
 
                     /**
-                     * 设置
-                     * @param InstanceGroupId 
+                     * 设置Instance group ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param InstanceGroupId Instance group ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetInstanceGroupId(const std::string& _instanceGroupId);
 
@@ -83,14 +91,18 @@ namespace TencentCloud
                     bool InstanceGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VpcId 
+                     * 获取VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return VpcId VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置
-                     * @param VpcId 
+                     * 设置VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param VpcId VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetVpcId(const std::string& _vpcId);
 
@@ -101,14 +113,18 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubnetId 
+                     * 获取Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SubnetId Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置
-                     * @param SubnetId 
+                     * 设置Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param SubnetId Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
@@ -119,14 +135,18 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return NetType 
+                     * 获取Network type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return NetType Network type
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetNetType() const;
 
                     /**
-                     * 设置
-                     * @param NetType 
+                     * 设置Network type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param NetType Network type
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetNetType(const int64_t& _netType);
 
@@ -137,14 +157,18 @@ namespace TencentCloud
                     bool NetTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Vip 
+                     * 获取VPC IP
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Vip VPC IP
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetVip() const;
 
                     /**
-                     * 设置
-                     * @param Vip 
+                     * 设置VPC IP
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Vip VPC IP
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetVip(const std::string& _vip);
 
@@ -155,14 +179,18 @@ namespace TencentCloud
                     bool VipHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Vport 
+                     * 获取VPC port
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Vport VPC port
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetVport() const;
 
                     /**
-                     * 设置
-                     * @param Vport 
+                     * 设置VPC port
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Vport VPC port
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetVport(const int64_t& _vport);
 
@@ -173,14 +201,18 @@ namespace TencentCloud
                     bool VportHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return WanDomain 
+                     * 获取Public network domain name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return WanDomain Public network domain name
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetWanDomain() const;
 
                     /**
-                     * 设置
-                     * @param WanDomain 
+                     * 设置Public network domain name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param WanDomain Public network domain name
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetWanDomain(const std::string& _wanDomain);
 
@@ -209,14 +241,18 @@ namespace TencentCloud
                     bool WanIPHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return WanPort 
+                     * 获取Public network port
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return WanPort Public network port
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetWanPort() const;
 
                     /**
-                     * 设置
-                     * @param WanPort 
+                     * 设置Public network port
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param WanPort Public network port
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetWanPort(const int64_t& _wanPort);
 
@@ -227,14 +263,18 @@ namespace TencentCloud
                     bool WanPortHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return WanStatus 
+                     * 获取Public network status
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return WanStatus Public network status
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetWanStatus() const;
 
                     /**
-                     * 设置
-                     * @param WanStatus 
+                     * 设置Public network status
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param WanStatus Public network status
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetWanStatus(const std::string& _wanStatus);
 
@@ -247,49 +287,57 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Network type
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_instanceGroupType;
                     bool m_instanceGroupTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Instance group ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_instanceGroupId;
                     bool m_instanceGroupIdHasBeenSet;
 
                     /**
-                     * 
+                     * VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * 
+                     * Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * 
+                     * Network type
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_netType;
                     bool m_netTypeHasBeenSet;
 
                     /**
-                     * 
+                     * VPC IP
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_vip;
                     bool m_vipHasBeenSet;
 
                     /**
-                     * 
+                     * VPC port
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_vport;
                     bool m_vportHasBeenSet;
 
                     /**
-                     * 
+                     * Public network domain name
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_wanDomain;
                     bool m_wanDomainHasBeenSet;
@@ -301,13 +349,15 @@ namespace TencentCloud
                     bool m_wanIPHasBeenSet;
 
                     /**
-                     * 
+                     * Public network port
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_wanPort;
                     bool m_wanPortHasBeenSet;
 
                     /**
-                     * 
+                     * Public network status
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_wanStatus;
                     bool m_wanStatusHasBeenSet;

@@ -116,14 +116,14 @@ namespace TencentCloud
                     bool ReadOnlyCountHasBeenSet() const;
 
                     /**
-                     * 获取Instance group ID, which is used when you add an instance to an existing RO group. If this parameter is left empty, an RO group will be created. We recommend you not pass in this value on the current version.
-                     * @return InstanceGrpId Instance group ID, which is used when you add an instance to an existing RO group. If this parameter is left empty, an RO group will be created. We recommend you not pass in this value on the current version.
+                     * 获取Instance group ID, which will be used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created. But it is not recommended to pass in this parameter for the current version, as this version has been disused.
+                     * @return InstanceGrpId Instance group ID, which will be used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created. But it is not recommended to pass in this parameter for the current version, as this version has been disused.
                      */
                     std::string GetInstanceGrpId() const;
 
                     /**
-                     * 设置Instance group ID, which is used when you add an instance to an existing RO group. If this parameter is left empty, an RO group will be created. We recommend you not pass in this value on the current version.
-                     * @param InstanceGrpId Instance group ID, which is used when you add an instance to an existing RO group. If this parameter is left empty, an RO group will be created. We recommend you not pass in this value on the current version.
+                     * 设置Instance group ID, which will be used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created. But it is not recommended to pass in this parameter for the current version, as this version has been disused.
+                     * @param InstanceGrpId Instance group ID, which will be used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created. But it is not recommended to pass in this parameter for the current version, as this version has been disused.
                      */
                     void SetInstanceGrpId(const std::string& _instanceGrpId);
 
@@ -134,14 +134,14 @@ namespace TencentCloud
                     bool InstanceGrpIdHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID. This parameter has been disused.
-                     * @return VpcId VPC ID. This parameter has been disused.
+                     * 获取VPC ID
+                     * @return VpcId VPC ID
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置VPC ID. This parameter has been disused.
-                     * @param VpcId VPC ID. This parameter has been disused.
+                     * 设置VPC ID
+                     * @param VpcId VPC ID
                      */
                     void SetVpcId(const std::string& _vpcId);
 
@@ -152,14 +152,14 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Subnet ID. If `VpcId` is set, `SubnetId` is required. This parameter has been disused.
-                     * @return SubnetId Subnet ID. If `VpcId` is set, `SubnetId` is required. This parameter has been disused.
+                     * 获取Subnet ID. If `VpcId` is set, `SubnetId` is required.
+                     * @return SubnetId Subnet ID. If `VpcId` is set, `SubnetId` is required.
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置Subnet ID. If `VpcId` is set, `SubnetId` is required. This parameter has been disused.
-                     * @param SubnetId Subnet ID. If `VpcId` is set, `SubnetId` is required. This parameter has been disused.
+                     * 设置Subnet ID. If `VpcId` is set, `SubnetId` is required.
+                     * @param SubnetId Subnet ID. If `VpcId` is set, `SubnetId` is required.
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
@@ -317,6 +317,24 @@ namespace TencentCloud
                      */
                     bool InstanceParamsHasBeenSet() const;
 
+                    /**
+                     * 获取Security group ID. You can specify an security group when creating a read-only instance.
+                     * @return SecurityGroupIds Security group ID. You can specify an security group when creating a read-only instance.
+                     */
+                    std::vector<std::string> GetSecurityGroupIds() const;
+
+                    /**
+                     * 设置Security group ID. You can specify an security group when creating a read-only instance.
+                     * @param SecurityGroupIds Security group ID. You can specify an security group when creating a read-only instance.
+                     */
+                    void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
+
+                    /**
+                     * 判断参数 SecurityGroupIds 是否已赋值
+                     * @return SecurityGroupIds 是否已赋值
+                     */
+                    bool SecurityGroupIdsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -344,19 +362,19 @@ namespace TencentCloud
                     bool m_readOnlyCountHasBeenSet;
 
                     /**
-                     * Instance group ID, which is used when you add an instance to an existing RO group. If this parameter is left empty, an RO group will be created. We recommend you not pass in this value on the current version.
+                     * Instance group ID, which will be used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created. But it is not recommended to pass in this parameter for the current version, as this version has been disused.
                      */
                     std::string m_instanceGrpId;
                     bool m_instanceGrpIdHasBeenSet;
 
                     /**
-                     * VPC ID. This parameter has been disused.
+                     * VPC ID
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Subnet ID. If `VpcId` is set, `SubnetId` is required. This parameter has been disused.
+                     * Subnet ID. If `VpcId` is set, `SubnetId` is required.
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
@@ -409,6 +427,12 @@ namespace TencentCloud
                      */
                     std::vector<ModifyParamItem> m_instanceParams;
                     bool m_instanceParamsHasBeenSet;
+
+                    /**
+                     * Security group ID. You can specify an security group when creating a read-only instance.
+                     */
+                    std::vector<std::string> m_securityGroupIds;
+                    bool m_securityGroupIdsHasBeenSet;
 
                 };
             }

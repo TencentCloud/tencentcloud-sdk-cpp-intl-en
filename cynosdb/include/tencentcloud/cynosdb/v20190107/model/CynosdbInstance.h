@@ -968,14 +968,18 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool SlaveZonesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceNetInfo 
+                     * 获取Instance network information
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return InstanceNetInfo Instance network information
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::vector<InstanceNetInfo> GetInstanceNetInfo() const;
 
                     /**
-                     * 设置
-                     * @param InstanceNetInfo 
+                     * 设置Instance network information
+Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param InstanceNetInfo Instance network information
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     void SetInstanceNetInfo(const std::vector<InstanceNetInfo>& _instanceNetInfo);
 
@@ -1291,7 +1295,8 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_slaveZonesHasBeenSet;
 
                     /**
-                     * 
+                     * Instance network information
+Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::vector<InstanceNetInfo> m_instanceNetInfo;
                     bool m_instanceNetInfoHasBeenSet;

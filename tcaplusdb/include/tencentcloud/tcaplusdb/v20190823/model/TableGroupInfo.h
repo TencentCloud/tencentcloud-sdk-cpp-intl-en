@@ -136,6 +136,90 @@ namespace TencentCloud
                      */
                     bool TotalSizeHasBeenSet() const;
 
+                    /**
+                     * 获取The number of days before the backup files of the Txh tables expire and are deleted.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TxhBackupExpireDay The number of days before the backup files of the Txh tables expire and are deleted.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetTxhBackupExpireDay() const;
+
+                    /**
+                     * 设置The number of days before the backup files of the Txh tables expire and are deleted.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param TxhBackupExpireDay The number of days before the backup files of the Txh tables expire and are deleted.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetTxhBackupExpireDay(const uint64_t& _txhBackupExpireDay);
+
+                    /**
+                     * 判断参数 TxhBackupExpireDay 是否已赋值
+                     * @return TxhBackupExpireDay 是否已赋值
+                     */
+                    bool TxhBackupExpireDayHasBeenSet() const;
+
+                    /**
+                     * 获取Whether MySQL load rebalancing is enabled. Valid values: `0` (Disabled), `1` (Enabling), `2` (Enabled).
+                     * @return EnableMysql Whether MySQL load rebalancing is enabled. Valid values: `0` (Disabled), `1` (Enabling), `2` (Enabled).
+                     */
+                    uint64_t GetEnableMysql() const;
+
+                    /**
+                     * 设置Whether MySQL load rebalancing is enabled. Valid values: `0` (Disabled), `1` (Enabling), `2` (Enabled).
+                     * @param EnableMysql Whether MySQL load rebalancing is enabled. Valid values: `0` (Disabled), `1` (Enabling), `2` (Enabled).
+                     */
+                    void SetEnableMysql(const uint64_t& _enableMysql);
+
+                    /**
+                     * 判断参数 EnableMysql 是否已赋值
+                     * @return EnableMysql 是否已赋值
+                     */
+                    bool EnableMysqlHasBeenSet() const;
+
+                    /**
+                     * 获取MySQL load rebalancing vip
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MysqlConnIp MySQL load rebalancing vip
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetMysqlConnIp() const;
+
+                    /**
+                     * 设置MySQL load rebalancing vip
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param MysqlConnIp MySQL load rebalancing vip
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetMysqlConnIp(const std::string& _mysqlConnIp);
+
+                    /**
+                     * 判断参数 MysqlConnIp 是否已赋值
+                     * @return MysqlConnIp 是否已赋值
+                     */
+                    bool MysqlConnIpHasBeenSet() const;
+
+                    /**
+                     * 获取MySQL load rebalancing vport
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MysqlConnPort MySQL load rebalancing vport
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetMysqlConnPort() const;
+
+                    /**
+                     * 设置MySQL load rebalancing vport
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param MysqlConnPort MySQL load rebalancing vport
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetMysqlConnPort(const uint64_t& _mysqlConnPort);
+
+                    /**
+                     * 判断参数 MysqlConnPort 是否已赋值
+                     * @return MysqlConnPort 是否已赋值
+                     */
+                    bool MysqlConnPortHasBeenSet() const;
+
                 private:
 
                     /**
@@ -167,6 +251,33 @@ namespace TencentCloud
                      */
                     uint64_t m_totalSize;
                     bool m_totalSizeHasBeenSet;
+
+                    /**
+                     * The number of days before the backup files of the Txh tables expire and are deleted.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_txhBackupExpireDay;
+                    bool m_txhBackupExpireDayHasBeenSet;
+
+                    /**
+                     * Whether MySQL load rebalancing is enabled. Valid values: `0` (Disabled), `1` (Enabling), `2` (Enabled).
+                     */
+                    uint64_t m_enableMysql;
+                    bool m_enableMysqlHasBeenSet;
+
+                    /**
+                     * MySQL load rebalancing vip
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_mysqlConnIp;
+                    bool m_mysqlConnIpHasBeenSet;
+
+                    /**
+                     * MySQL load rebalancing vport
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_mysqlConnPort;
+                    bool m_mysqlConnPortHasBeenSet;
 
                 };
             }

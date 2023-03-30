@@ -33,6 +33,8 @@
 #include <tencentcloud/ckafka/v20190819/model/CreateAclResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/CreateConsumerRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/CreateConsumerResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/CreateDatahubTopicRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/CreateDatahubTopicResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/CreateInstancePostRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/CreateInstancePostResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/CreatePartitionRequest.h>
@@ -146,6 +148,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateConsumerResponse> CreateConsumerOutcome;
                 typedef std::future<CreateConsumerOutcome> CreateConsumerOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::CreateConsumerRequest&, CreateConsumerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateConsumerAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateDatahubTopicResponse> CreateDatahubTopicOutcome;
+                typedef std::future<CreateDatahubTopicOutcome> CreateDatahubTopicOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::CreateDatahubTopicRequest&, CreateDatahubTopicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDatahubTopicAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateInstancePostResponse> CreateInstancePostOutcome;
                 typedef std::future<CreateInstancePostOutcome> CreateInstancePostOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::CreateInstancePostRequest&, CreateInstancePostOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateInstancePostAsyncHandler;
@@ -319,6 +324,15 @@ namespace TencentCloud
                 CreateConsumerOutcome CreateConsumer(const Model::CreateConsumerRequest &request);
                 void CreateConsumerAsync(const Model::CreateConsumerRequest& request, const CreateConsumerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateConsumerOutcomeCallable CreateConsumerCallable(const Model::CreateConsumerRequest& request);
+
+                /**
+                 *This API is used to create a DataHub topic.
+                 * @param req CreateDatahubTopicRequest
+                 * @return CreateDatahubTopicOutcome
+                 */
+                CreateDatahubTopicOutcome CreateDatahubTopic(const Model::CreateDatahubTopicRequest &request);
+                void CreateDatahubTopicAsync(const Model::CreateDatahubTopicRequest& request, const CreateDatahubTopicAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateDatahubTopicOutcomeCallable CreateDatahubTopicCallable(const Model::CreateDatahubTopicRequest& request);
 
                 /**
                  *This API is used to create a pay-as-you-go instance.

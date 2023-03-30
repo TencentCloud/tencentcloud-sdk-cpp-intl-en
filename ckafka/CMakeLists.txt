@@ -58,6 +58,7 @@ set(ckafka_public_header_model
   include/tencentcloud/ckafka/v20190819/model/Tag.h
   include/tencentcloud/ckafka/v20190819/model/BatchModifyGroupOffsetsResponse.h
   include/tencentcloud/ckafka/v20190819/model/GroupResponse.h
+  include/tencentcloud/ckafka/v20190819/model/CreateDatahubTopicRequest.h
   include/tencentcloud/ckafka/v20190819/model/InstanceChargeParam.h
   include/tencentcloud/ckafka/v20190819/model/DescribeDatahubTopicResponse.h
   include/tencentcloud/ckafka/v20190819/model/DescribeTopicAttributesResponse.h
@@ -68,7 +69,7 @@ set(ckafka_public_header_model
   include/tencentcloud/ckafka/v20190819/model/ModifyInstanceAttributesConfig.h
   include/tencentcloud/ckafka/v20190819/model/OperateResponseData.h
   include/tencentcloud/ckafka/v20190819/model/CreateUserResponse.h
-  include/tencentcloud/ckafka/v20190819/model/ModifyInstanceAttributesResponse.h
+  include/tencentcloud/ckafka/v20190819/model/DescribeRouteRequest.h
   include/tencentcloud/ckafka/v20190819/model/CreatePartitionResponse.h
   include/tencentcloud/ckafka/v20190819/model/TopicSubscribeGroup.h
   include/tencentcloud/ckafka/v20190819/model/ClusterInfo.h
@@ -92,6 +93,7 @@ set(ckafka_public_header_model
   include/tencentcloud/ckafka/v20190819/model/DynamicRetentionTime.h
   include/tencentcloud/ckafka/v20190819/model/DescribeTopicSubscribeGroupRequest.h
   include/tencentcloud/ckafka/v20190819/model/DeleteInstancePreResponse.h
+  include/tencentcloud/ckafka/v20190819/model/DatahubTopicResp.h
   include/tencentcloud/ckafka/v20190819/model/FetchMessageByOffsetRequest.h
   include/tencentcloud/ckafka/v20190819/model/InquiryPublicNetworkParam.h
   include/tencentcloud/ckafka/v20190819/model/TopicInSyncReplicaInfo.h
@@ -125,6 +127,7 @@ set(ckafka_public_header_model
   include/tencentcloud/ckafka/v20190819/model/DescribeConsumerGroupRequest.h
   include/tencentcloud/ckafka/v20190819/model/VipEntity.h
   include/tencentcloud/ckafka/v20190819/model/DescribeTopicProduceConnectionResponse.h
+  include/tencentcloud/ckafka/v20190819/model/ModifyInstanceAttributesResponse.h
   include/tencentcloud/ckafka/v20190819/model/ConsumerGroupTopic.h
   include/tencentcloud/ckafka/v20190819/model/User.h
   include/tencentcloud/ckafka/v20190819/model/GroupOffsetPartition.h
@@ -146,7 +149,7 @@ set(ckafka_public_header_model
   include/tencentcloud/ckafka/v20190819/model/DescribeInstancesDetailRequest.h
   include/tencentcloud/ckafka/v20190819/model/CreateConsumerRequest.h
   include/tencentcloud/ckafka/v20190819/model/InquireCkafkaPriceResponse.h
-  include/tencentcloud/ckafka/v20190819/model/DescribeRouteRequest.h
+  include/tencentcloud/ckafka/v20190819/model/CreateDatahubTopicResponse.h
   include/tencentcloud/ckafka/v20190819/model/InquiryDiskParam.h
   include/tencentcloud/ckafka/v20190819/model/TopicInSyncReplicaResult.h
   include/tencentcloud/ckafka/v20190819/model/SendMessageResponse.h
@@ -232,6 +235,7 @@ set(ckafka_src
   src/v20190819/model/Tag.cpp
   src/v20190819/model/BatchModifyGroupOffsetsResponse.cpp
   src/v20190819/model/GroupResponse.cpp
+  src/v20190819/model/CreateDatahubTopicRequest.cpp
   src/v20190819/model/InstanceChargeParam.cpp
   src/v20190819/model/DescribeDatahubTopicResponse.cpp
   src/v20190819/model/DescribeTopicAttributesResponse.cpp
@@ -242,7 +246,7 @@ set(ckafka_src
   src/v20190819/model/ModifyInstanceAttributesConfig.cpp
   src/v20190819/model/OperateResponseData.cpp
   src/v20190819/model/CreateUserResponse.cpp
-  src/v20190819/model/ModifyInstanceAttributesResponse.cpp
+  src/v20190819/model/DescribeRouteRequest.cpp
   src/v20190819/model/CreatePartitionResponse.cpp
   src/v20190819/model/TopicSubscribeGroup.cpp
   src/v20190819/model/ClusterInfo.cpp
@@ -266,6 +270,7 @@ set(ckafka_src
   src/v20190819/model/DynamicRetentionTime.cpp
   src/v20190819/model/DescribeTopicSubscribeGroupRequest.cpp
   src/v20190819/model/DeleteInstancePreResponse.cpp
+  src/v20190819/model/DatahubTopicResp.cpp
   src/v20190819/model/FetchMessageByOffsetRequest.cpp
   src/v20190819/model/InquiryPublicNetworkParam.cpp
   src/v20190819/model/TopicInSyncReplicaInfo.cpp
@@ -299,6 +304,7 @@ set(ckafka_src
   src/v20190819/model/DescribeConsumerGroupRequest.cpp
   src/v20190819/model/VipEntity.cpp
   src/v20190819/model/DescribeTopicProduceConnectionResponse.cpp
+  src/v20190819/model/ModifyInstanceAttributesResponse.cpp
   src/v20190819/model/ConsumerGroupTopic.cpp
   src/v20190819/model/User.cpp
   src/v20190819/model/GroupOffsetPartition.cpp
@@ -320,7 +326,7 @@ set(ckafka_src
   src/v20190819/model/DescribeInstancesDetailRequest.cpp
   src/v20190819/model/CreateConsumerRequest.cpp
   src/v20190819/model/InquireCkafkaPriceResponse.cpp
-  src/v20190819/model/DescribeRouteRequest.cpp
+  src/v20190819/model/CreateDatahubTopicResponse.cpp
   src/v20190819/model/InquiryDiskParam.cpp
   src/v20190819/model/TopicInSyncReplicaResult.cpp
   src/v20190819/model/SendMessageResponse.cpp

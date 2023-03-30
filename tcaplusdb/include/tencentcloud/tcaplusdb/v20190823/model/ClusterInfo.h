@@ -328,18 +328,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ApiAccessIpv6HasBeenSet() const;
 
                     /**
-                     * 获取Cluster type
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return ClusterType Cluster type
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Cluster type. Valid values: `0` and `1` (shared cluster), `2` (dedicated cluster).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ClusterType Cluster type. Valid values: `0` and `1` (shared cluster), `2` (dedicated cluster).
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetClusterType() const;
 
                     /**
-                     * 设置Cluster type
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param ClusterType Cluster type
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Cluster type. Valid values: `0` and `1` (shared cluster), `2` (dedicated cluster).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ClusterType Cluster type. Valid values: `0` and `1` (shared cluster), `2` (dedicated cluster).
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetClusterType(const int64_t& _clusterType);
 
@@ -350,18 +350,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool ClusterTypeHasBeenSet() const;
 
                     /**
-                     * 获取Cluster status
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @return ClusterStatus Cluster status
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Cluster status. Valid values: `0` (Running), `1` (Isolated. This status is caused by overdue payments), `2` (To be repossessed. This status is caused when the cluster is actively deleted.),·`3` (To be released. The resources occupied by the table can be released in this status.), `4` (Modifying).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ClusterStatus Cluster status. Valid values: `0` (Running), `1` (Isolated. This status is caused by overdue payments), `2` (To be repossessed. This status is caused when the cluster is actively deleted.),·`3` (To be released. The resources occupied by the table can be released in this status.), `4` (Modifying).
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t GetClusterStatus() const;
 
                     /**
-                     * 设置Cluster status
-Note: this field may return `null`, indicating that no valid values can be obtained.
-                     * @param ClusterStatus Cluster status
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Cluster status. Valid values: `0` (Running), `1` (Isolated. This status is caused by overdue payments), `2` (To be repossessed. This status is caused when the cluster is actively deleted.),·`3` (To be released. The resources occupied by the table can be released in this status.), `4` (Modifying).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ClusterStatus Cluster status. Valid values: `0` (Running), `1` (Isolated. This status is caused by overdue payments), `2` (To be repossessed. This status is caused when the cluster is actively deleted.),·`3` (To be released. The resources occupied by the table can be released in this status.), `4` (Modifying).
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetClusterStatus(const int64_t& _clusterStatus);
 
@@ -631,6 +631,28 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool IsReadOnlyUlogBackupExpireDayHasBeenSet() const;
 
+                    /**
+                     * 获取restproxy Status
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RestProxyStatus restproxy Status
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetRestProxyStatus() const;
+
+                    /**
+                     * 设置restproxy Status
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param RestProxyStatus restproxy Status
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetRestProxyStatus(const int64_t& _restProxyStatus);
+
+                    /**
+                     * 判断参数 RestProxyStatus 是否已赋值
+                     * @return RestProxyStatus 是否已赋值
+                     */
+                    bool RestProxyStatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -726,15 +748,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool m_apiAccessIpv6HasBeenSet;
 
                     /**
-                     * Cluster type
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Cluster type. Valid values: `0` and `1` (shared cluster), `2` (dedicated cluster).
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_clusterType;
                     bool m_clusterTypeHasBeenSet;
 
                     /**
-                     * Cluster status
-Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * Cluster status. Valid values: `0` (Running), `1` (Isolated. This status is caused by overdue payments), `2` (To be repossessed. This status is caused when the cluster is actively deleted.),·`3` (To be released. The resources occupied by the table can be released in this status.), `4` (Modifying).
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_clusterStatus;
                     bool m_clusterStatusHasBeenSet;
@@ -821,6 +843,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     uint64_t m_isReadOnlyUlogBackupExpireDay;
                     bool m_isReadOnlyUlogBackupExpireDayHasBeenSet;
+
+                    /**
+                     * restproxy Status
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_restProxyStatus;
+                    bool m_restProxyStatusHasBeenSet;
 
                 };
             }
