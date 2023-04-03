@@ -101,14 +101,30 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取Availability status. Valid values: `UNAVAILABLE`, `AVAILABLE`, `SELLOUT`
-                     * @return ZoneState Availability status. Valid values: `UNAVAILABLE`, `AVAILABLE`, `SELLOUT`
+                     * 获取Availability status. Valid values:
+`UNAVAILABLE`.
+`AVAILABLE`.
+`SELLOUT`.
+`SUPPORTMODIFYONLY` (supports configuration adjustment).
+                     * @return ZoneState Availability status. Valid values:
+`UNAVAILABLE`.
+`AVAILABLE`.
+`SELLOUT`.
+`SUPPORTMODIFYONLY` (supports configuration adjustment).
                      */
                     std::string GetZoneState() const;
 
                     /**
-                     * 设置Availability status. Valid values: `UNAVAILABLE`, `AVAILABLE`, `SELLOUT`
-                     * @param ZoneState Availability status. Valid values: `UNAVAILABLE`, `AVAILABLE`, `SELLOUT`
+                     * 设置Availability status. Valid values:
+`UNAVAILABLE`.
+`AVAILABLE`.
+`SELLOUT`.
+`SUPPORTMODIFYONLY` (supports configuration adjustment).
+                     * @param ZoneState Availability status. Valid values:
+`UNAVAILABLE`.
+`AVAILABLE`.
+`SELLOUT`.
+`SUPPORTMODIFYONLY` (supports configuration adjustment).
                      */
                     void SetZoneState(const std::string& _zoneState);
 
@@ -179,7 +195,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * Availability status. Valid values: `UNAVAILABLE`, `AVAILABLE`, `SELLOUT`
+                     * Availability status. Valid values:
+`UNAVAILABLE`.
+`AVAILABLE`.
+`SELLOUT`.
+`SUPPORTMODIFYONLY` (supports configuration adjustment).
                      */
                     std::string m_zoneState;
                     bool m_zoneStateHasBeenSet;

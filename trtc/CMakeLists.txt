@@ -52,7 +52,7 @@ set(trtc_public_header_model
   include/tencentcloud/trtc/v20190722/model/VideoParams.h
   include/tencentcloud/trtc/v20190722/model/CreateCloudRecordingRequest.h
   include/tencentcloud/trtc/v20190722/model/DescribeMixTranscodingUsageRequest.h
-  include/tencentcloud/trtc/v20190722/model/WaterMark.h
+  include/tencentcloud/trtc/v20190722/model/DescribeTrtcRoomUsageResponse.h
   include/tencentcloud/trtc/v20190722/model/DeleteCloudRecordingResponse.h
   include/tencentcloud/trtc/v20190722/model/UpdatePublishCdnStreamResponse.h
   include/tencentcloud/trtc/v20190722/model/MixTranscodeParams.h
@@ -80,11 +80,13 @@ set(trtc_public_header_model
   include/tencentcloud/trtc/v20190722/model/McuPublishCdnParam.h
   include/tencentcloud/trtc/v20190722/model/SetUserBlockedByStrRoomIdRequest.h
   include/tencentcloud/trtc/v20190722/model/AudioParams.h
+  include/tencentcloud/trtc/v20190722/model/DescribeTrtcRoomUsageRequest.h
   include/tencentcloud/trtc/v20190722/model/McuWaterMarkImage.h
   include/tencentcloud/trtc/v20190722/model/StartPublishCdnStreamResponse.h
   include/tencentcloud/trtc/v20190722/model/SingleSubscribeParams.h
   include/tencentcloud/trtc/v20190722/model/McuWaterMarkParams.h
   include/tencentcloud/trtc/v20190722/model/TrtcUsage.h
+  include/tencentcloud/trtc/v20190722/model/WaterMark.h
   include/tencentcloud/trtc/v20190722/model/DismissRoomByStrRoomIdResponse.h
   include/tencentcloud/trtc/v20190722/model/ModifyCloudRecordingResponse.h
   include/tencentcloud/trtc/v20190722/model/DescribeRelayUsageResponse.h
@@ -126,7 +128,7 @@ set(trtc_src
   src/v20190722/model/VideoParams.cpp
   src/v20190722/model/CreateCloudRecordingRequest.cpp
   src/v20190722/model/DescribeMixTranscodingUsageRequest.cpp
-  src/v20190722/model/WaterMark.cpp
+  src/v20190722/model/DescribeTrtcRoomUsageResponse.cpp
   src/v20190722/model/DeleteCloudRecordingResponse.cpp
   src/v20190722/model/UpdatePublishCdnStreamResponse.cpp
   src/v20190722/model/MixTranscodeParams.cpp
@@ -154,11 +156,13 @@ set(trtc_src
   src/v20190722/model/McuPublishCdnParam.cpp
   src/v20190722/model/SetUserBlockedByStrRoomIdRequest.cpp
   src/v20190722/model/AudioParams.cpp
+  src/v20190722/model/DescribeTrtcRoomUsageRequest.cpp
   src/v20190722/model/McuWaterMarkImage.cpp
   src/v20190722/model/StartPublishCdnStreamResponse.cpp
   src/v20190722/model/SingleSubscribeParams.cpp
   src/v20190722/model/McuWaterMarkParams.cpp
   src/v20190722/model/TrtcUsage.cpp
+  src/v20190722/model/WaterMark.cpp
   src/v20190722/model/DismissRoomByStrRoomIdResponse.cpp
   src/v20190722/model/ModifyCloudRecordingResponse.cpp
   src/v20190722/model/DescribeRelayUsageResponse.cpp
