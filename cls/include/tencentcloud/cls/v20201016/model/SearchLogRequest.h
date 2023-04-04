@@ -276,6 +276,32 @@ Default value: `1`
                      */
                     bool SamplingRateHasBeenSet() const;
 
+                    /**
+                     * 获取Search syntax.
+`0` (default): Lucene; `1`: CQL.
+For more information, visit https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules.
+                     * @return SyntaxRule Search syntax.
+`0` (default): Lucene; `1`: CQL.
+For more information, visit https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules.
+                     */
+                    uint64_t GetSyntaxRule() const;
+
+                    /**
+                     * 设置Search syntax.
+`0` (default): Lucene; `1`: CQL.
+For more information, visit https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules.
+                     * @param SyntaxRule Search syntax.
+`0` (default): Lucene; `1`: CQL.
+For more information, visit https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules.
+                     */
+                    void SetSyntaxRule(const uint64_t& _syntaxRule);
+
+                    /**
+                     * 判断参数 SyntaxRule 是否已赋值
+                     * @return SyntaxRule 是否已赋值
+                     */
+                    bool SyntaxRuleHasBeenSet() const;
+
                 private:
 
                     /**
@@ -349,6 +375,14 @@ Default value: `1`
                      */
                     double m_samplingRate;
                     bool m_samplingRateHasBeenSet;
+
+                    /**
+                     * Search syntax.
+`0` (default): Lucene; `1`: CQL.
+For more information, visit https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules.
+                     */
+                    uint64_t m_syntaxRule;
+                    bool m_syntaxRuleHasBeenSet;
 
                 };
             }

@@ -68,8 +68,10 @@ namespace TencentCloud
                     bool GroupNameHasBeenSet() const;
 
                     /**
-                     * 获取The user ID of the group’s teacher. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TeacherId The user ID of the group’s teacher. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TeacherId 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetTeacherId() const;
 
@@ -92,8 +94,10 @@ namespace TencentCloud
                     bool GroupTypeHasBeenSet() const;
 
                     /**
-                     * 获取The IDs of the sub-groups. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SubGroupIds The IDs of the sub-groups. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SubGroupIds 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> GetSubGroupIds() const;
 
@@ -118,7 +122,8 @@ namespace TencentCloud
                     bool m_groupNameHasBeenSet;
 
                     /**
-                     * The user ID of the group’s teacher. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_teacherId;
                     bool m_teacherIdHasBeenSet;
@@ -130,7 +135,8 @@ namespace TencentCloud
                     bool m_groupTypeHasBeenSet;
 
                     /**
-                     * The IDs of the sub-groups. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_subGroupIds;
                     bool m_subGroupIdsHasBeenSet;

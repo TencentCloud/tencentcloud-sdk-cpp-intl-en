@@ -70,14 +70,18 @@ Used by actions: BatchRegister.
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
-                     * 获取The user ID. Note: This field may return null, indicating that no valid values can be obtained
-                     * @return UserId The user ID. Note: This field may return null, indicating that no valid values can be obtained
+                     * 获取
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return UserId 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetUserId() const;
 
                     /**
-                     * 设置The user ID. Note: This field may return null, indicating that no valid values can be obtained
-                     * @param UserId The user ID. Note: This field may return null, indicating that no valid values can be obtained
+                     * 设置
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param UserId 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetUserId(const std::string& _userId);
 
@@ -88,14 +92,18 @@ Used by actions: BatchRegister.
                     bool UserIdHasBeenSet() const;
 
                     /**
-                     * 获取The user’s ID in your system. If the same request parameter is not specified, the value of this parameter will be the same as UserId. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OriginId The user’s ID in your system. If the same request parameter is not specified, the value of this parameter will be the same as UserId. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return OriginId 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetOriginId() const;
 
                     /**
-                     * 设置The user’s ID in your system. If the same request parameter is not specified, the value of this parameter will be the same as UserId. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param OriginId The user’s ID in your system. If the same request parameter is not specified, the value of this parameter will be the same as UserId. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param OriginId 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetOriginId(const std::string& _originId);
 
@@ -115,13 +123,15 @@ Used by actions: BatchRegister.
                     bool m_sdkAppIdHasBeenSet;
 
                     /**
-                     * The user ID. Note: This field may return null, indicating that no valid values can be obtained
+                     * 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_userId;
                     bool m_userIdHasBeenSet;
 
                     /**
-                     * The user’s ID in your system. If the same request parameter is not specified, the value of this parameter will be the same as UserId. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_originId;
                     bool m_originIdHasBeenSet;

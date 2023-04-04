@@ -49,6 +49,8 @@
 #include <tencentcloud/lcic/v20220817/model/CreateRoomResponse.h>
 #include <tencentcloud/lcic/v20220817/model/CreateSupervisorRequest.h>
 #include <tencentcloud/lcic/v20220817/model/CreateSupervisorResponse.h>
+#include <tencentcloud/lcic/v20220817/model/DeleteAppCustomContentRequest.h>
+#include <tencentcloud/lcic/v20220817/model/DeleteAppCustomContentResponse.h>
 #include <tencentcloud/lcic/v20220817/model/DeleteDocumentRequest.h>
 #include <tencentcloud/lcic/v20220817/model/DeleteDocumentResponse.h>
 #include <tencentcloud/lcic/v20220817/model/DeleteGroupRequest.h>
@@ -61,6 +63,8 @@
 #include <tencentcloud/lcic/v20220817/model/DeleteRoomResponse.h>
 #include <tencentcloud/lcic/v20220817/model/DescribeCurrentMemberListRequest.h>
 #include <tencentcloud/lcic/v20220817/model/DescribeCurrentMemberListResponse.h>
+#include <tencentcloud/lcic/v20220817/model/DescribeDeveloperRequest.h>
+#include <tencentcloud/lcic/v20220817/model/DescribeDeveloperResponse.h>
 #include <tencentcloud/lcic/v20220817/model/DescribeDocumentRequest.h>
 #include <tencentcloud/lcic/v20220817/model/DescribeDocumentResponse.h>
 #include <tencentcloud/lcic/v20220817/model/DescribeDocumentsByRoomRequest.h>
@@ -79,6 +83,8 @@
 #include <tencentcloud/lcic/v20220817/model/DescribeSdkAppIdUsersResponse.h>
 #include <tencentcloud/lcic/v20220817/model/DescribeUserRequest.h>
 #include <tencentcloud/lcic/v20220817/model/DescribeUserResponse.h>
+#include <tencentcloud/lcic/v20220817/model/GetRoomEventRequest.h>
+#include <tencentcloud/lcic/v20220817/model/GetRoomEventResponse.h>
 #include <tencentcloud/lcic/v20220817/model/GetRoomMessageRequest.h>
 #include <tencentcloud/lcic/v20220817/model/GetRoomMessageResponse.h>
 #include <tencentcloud/lcic/v20220817/model/GetWatermarkRequest.h>
@@ -156,6 +162,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateSupervisorResponse> CreateSupervisorOutcome;
                 typedef std::future<CreateSupervisorOutcome> CreateSupervisorOutcomeCallable;
                 typedef std::function<void(const LcicClient*, const Model::CreateSupervisorRequest&, CreateSupervisorOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateSupervisorAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteAppCustomContentResponse> DeleteAppCustomContentOutcome;
+                typedef std::future<DeleteAppCustomContentOutcome> DeleteAppCustomContentOutcomeCallable;
+                typedef std::function<void(const LcicClient*, const Model::DeleteAppCustomContentRequest&, DeleteAppCustomContentOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteAppCustomContentAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteDocumentResponse> DeleteDocumentOutcome;
                 typedef std::future<DeleteDocumentOutcome> DeleteDocumentOutcomeCallable;
                 typedef std::function<void(const LcicClient*, const Model::DeleteDocumentRequest&, DeleteDocumentOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteDocumentAsyncHandler;
@@ -174,6 +183,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeCurrentMemberListResponse> DescribeCurrentMemberListOutcome;
                 typedef std::future<DescribeCurrentMemberListOutcome> DescribeCurrentMemberListOutcomeCallable;
                 typedef std::function<void(const LcicClient*, const Model::DescribeCurrentMemberListRequest&, DescribeCurrentMemberListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCurrentMemberListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDeveloperResponse> DescribeDeveloperOutcome;
+                typedef std::future<DescribeDeveloperOutcome> DescribeDeveloperOutcomeCallable;
+                typedef std::function<void(const LcicClient*, const Model::DescribeDeveloperRequest&, DescribeDeveloperOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDeveloperAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDocumentResponse> DescribeDocumentOutcome;
                 typedef std::future<DescribeDocumentOutcome> DescribeDocumentOutcomeCallable;
                 typedef std::function<void(const LcicClient*, const Model::DescribeDocumentRequest&, DescribeDocumentOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDocumentAsyncHandler;
@@ -201,6 +213,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeUserResponse> DescribeUserOutcome;
                 typedef std::future<DescribeUserOutcome> DescribeUserOutcomeCallable;
                 typedef std::function<void(const LcicClient*, const Model::DescribeUserRequest&, DescribeUserOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUserAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetRoomEventResponse> GetRoomEventOutcome;
+                typedef std::future<GetRoomEventOutcome> GetRoomEventOutcomeCallable;
+                typedef std::function<void(const LcicClient*, const Model::GetRoomEventRequest&, GetRoomEventOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetRoomEventAsyncHandler;
                 typedef Outcome<Core::Error, Model::GetRoomMessageResponse> GetRoomMessageOutcome;
                 typedef std::future<GetRoomMessageOutcome> GetRoomMessageOutcomeCallable;
                 typedef std::function<void(const LcicClient*, const Model::GetRoomMessageRequest&, GetRoomMessageOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetRoomMessageAsyncHandler;
@@ -272,7 +287,6 @@ A maximum of 20 requests can be initiated per second for this API.
 
                 /**
                  *This API is used to create multiple rooms at a time.
-A maximum of 20 requests can be initiated per second for this API.
                  * @param req BatchCreateRoomRequest
                  * @return BatchCreateRoomOutcome
                  */
@@ -368,6 +382,15 @@ A maximum of 20 requests can be initiated per second for this API.
                 CreateSupervisorOutcomeCallable CreateSupervisorCallable(const Model::CreateSupervisorRequest& request);
 
                 /**
+                 *This API is used to delete the custom elements. The `Scenes` parameter specifies the custom elements to delete. If `Scenes` is empty, all custom elements will be deleted.
+                 * @param req DeleteAppCustomContentRequest
+                 * @return DeleteAppCustomContentOutcome
+                 */
+                DeleteAppCustomContentOutcome DeleteAppCustomContent(const Model::DeleteAppCustomContentRequest &request);
+                void DeleteAppCustomContentAsync(const Model::DeleteAppCustomContentRequest& request, const DeleteAppCustomContentAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteAppCustomContentOutcomeCallable DeleteAppCustomContentCallable(const Model::DeleteAppCustomContentRequest& request);
+
+                /**
                  *This API is used to delete a document.
 A maximum of 20 requests can be initiated per second for this API.
                  * @param req DeleteDocumentRequest
@@ -425,6 +448,15 @@ A maximum of 20 requests can be initiated per second for this API.
                 DescribeCurrentMemberListOutcome DescribeCurrentMemberList(const Model::DescribeCurrentMemberListRequest &request);
                 void DescribeCurrentMemberListAsync(const Model::DescribeCurrentMemberListRequest& request, const DescribeCurrentMemberListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeCurrentMemberListOutcomeCallable DescribeCurrentMemberListCallable(const Model::DescribeCurrentMemberListRequest& request);
+
+                /**
+                 *This API is used to get the developer information.
+                 * @param req DescribeDeveloperRequest
+                 * @return DescribeDeveloperOutcome
+                 */
+                DescribeDeveloperOutcome DescribeDeveloper(const Model::DescribeDeveloperRequest &request);
+                void DescribeDeveloperAsync(const Model::DescribeDeveloperRequest& request, const DescribeDeveloperAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDeveloperOutcomeCallable DescribeDeveloperCallable(const Model::DescribeDeveloperRequest& request);
 
                 /**
                  *This API is used to get the information of a specific document.
@@ -514,6 +546,15 @@ A maximum of 20 requests can be initiated per second for this API.
                 DescribeUserOutcome DescribeUser(const Model::DescribeUserRequest &request);
                 void DescribeUserAsync(const Model::DescribeUserRequest& request, const DescribeUserAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeUserOutcomeCallable DescribeUserCallable(const Model::DescribeUserRequest& request);
+
+                /**
+                 *This API is used to get the events of a room. It only works within one hour after a class ends.
+                 * @param req GetRoomEventRequest
+                 * @return GetRoomEventOutcome
+                 */
+                GetRoomEventOutcome GetRoomEvent(const Model::GetRoomEventRequest &request);
+                void GetRoomEventAsync(const Model::GetRoomEventRequest& request, const GetRoomEventAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetRoomEventOutcomeCallable GetRoomEventCallable(const Model::GetRoomEventRequest& request);
 
                 /**
                  *This API is used to get the message history of a room (room messages are retained for seven days).

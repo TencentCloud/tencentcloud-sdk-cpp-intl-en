@@ -25,6 +25,8 @@
 #include <tencentcloud/core/AsyncCallerContext.h>
 #include <tencentcloud/cdb/v20170320/model/AddTimeWindowRequest.h>
 #include <tencentcloud/cdb/v20170320/model/AddTimeWindowResponse.h>
+#include <tencentcloud/cdb/v20170320/model/AnalyzeAuditLogsRequest.h>
+#include <tencentcloud/cdb/v20170320/model/AnalyzeAuditLogsResponse.h>
 #include <tencentcloud/cdb/v20170320/model/AssociateSecurityGroupsRequest.h>
 #include <tencentcloud/cdb/v20170320/model/AssociateSecurityGroupsResponse.h>
 #include <tencentcloud/cdb/v20170320/model/BalanceRoGroupLoadRequest.h>
@@ -282,6 +284,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::AddTimeWindowResponse> AddTimeWindowOutcome;
                 typedef std::future<AddTimeWindowOutcome> AddTimeWindowOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::AddTimeWindowRequest&, AddTimeWindowOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddTimeWindowAsyncHandler;
+                typedef Outcome<Core::Error, Model::AnalyzeAuditLogsResponse> AnalyzeAuditLogsOutcome;
+                typedef std::future<AnalyzeAuditLogsOutcome> AnalyzeAuditLogsOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::AnalyzeAuditLogsRequest&, AnalyzeAuditLogsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AnalyzeAuditLogsAsyncHandler;
                 typedef Outcome<Core::Error, Model::AssociateSecurityGroupsResponse> AssociateSecurityGroupsOutcome;
                 typedef std::future<AssociateSecurityGroupsOutcome> AssociateSecurityGroupsOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::AssociateSecurityGroupsRequest&, AssociateSecurityGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AssociateSecurityGroupsAsyncHandler;
@@ -653,6 +658,15 @@ namespace TencentCloud
                 AddTimeWindowOutcome AddTimeWindow(const Model::AddTimeWindowRequest &request);
                 void AddTimeWindowAsync(const Model::AddTimeWindowRequest& request, const AddTimeWindowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 AddTimeWindowOutcomeCallable AddTimeWindowCallable(const Model::AddTimeWindowRequest& request);
+
+                /**
+                 *This API is used to aggregate the audit logs filtered by different conditions and aggregate the statistics of the specified data rows.
+                 * @param req AnalyzeAuditLogsRequest
+                 * @return AnalyzeAuditLogsOutcome
+                 */
+                AnalyzeAuditLogsOutcome AnalyzeAuditLogs(const Model::AnalyzeAuditLogsRequest &request);
+                void AnalyzeAuditLogsAsync(const Model::AnalyzeAuditLogsRequest& request, const AnalyzeAuditLogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AnalyzeAuditLogsOutcomeCallable AnalyzeAuditLogsCallable(const Model::AnalyzeAuditLogsRequest& request);
 
                 /**
                  *This API (AssociateSecurityGroups) is used to bind security groups to instances in batches.
@@ -1318,6 +1332,8 @@ Note: the HTTP response packet will be very large if it contain a single large s
 
                 /**
                  *该接口不再维护，参考CreateDBInstance+API文档，在发货时即可完成初始化。
+
+This API was disused. You can refer to the CreateDBInstance API, and initialize the instance when creating it.
 
 This API is used to initialize a TencentDB instance, including initial password, default character set, and instance port number. But it is disused and not recommended. You can now set the instance information by using the parameter `Password`, `ParamList`, and `Port` respectively in the `CreateDBInstance` and `CreateDBInstanceHour` APIs.
                  * @param req InitDBInstancesRequest

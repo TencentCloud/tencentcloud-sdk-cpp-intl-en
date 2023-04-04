@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Offset.
-                     * @return Offset Offset.
+                     * 获取Offset, which is an integer multiple of the value of `Limit`. Default value: `0`.
+                     * @return Offset Offset, which is an integer multiple of the value of `Limit`. Default value: `0`.
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset.
-                     * @param Offset Offset.
+                     * 设置Offset, which is an integer multiple of the value of `Limit`. Default value: `0`.
+                     * @param Offset Offset, which is an integer multiple of the value of `Limit`. Default value: `0`.
                      */
                     void SetOffset(const uint64_t& _offset);
 
@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of returned results. Maximum value: `50`.
-                     * @return Limit Maximum number of returned results. Maximum value: `50`.
+                     * 获取Limit, which defaults to `10`. Value range: 1-50.
+                     * @return Limit Limit, which defaults to `10`. Value range: 1-50.
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Maximum number of returned results. Maximum value: `50`.
-                     * @param Limit Maximum number of returned results. Maximum value: `50`.
+                     * 设置Limit, which defaults to `10`. Value range: 1-50.
+                     * @param Limit Limit, which defaults to `10`. Value range: 1-50.
                      */
                     void SetLimit(const uint64_t& _limit);
 
@@ -153,13 +153,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Offset.
+                     * Offset, which is an integer multiple of the value of `Limit`. Default value: `0`.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Maximum number of returned results. Maximum value: `50`.
+                     * Limit, which defaults to `10`. Value range: 1-50.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;

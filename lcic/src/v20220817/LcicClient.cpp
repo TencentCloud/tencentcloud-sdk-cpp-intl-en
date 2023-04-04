@@ -599,6 +599,49 @@ LcicClient::CreateSupervisorOutcomeCallable LcicClient::CreateSupervisorCallable
     return task->get_future();
 }
 
+LcicClient::DeleteAppCustomContentOutcome LcicClient::DeleteAppCustomContent(const DeleteAppCustomContentRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteAppCustomContent");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteAppCustomContentResponse rsp = DeleteAppCustomContentResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteAppCustomContentOutcome(rsp);
+        else
+            return DeleteAppCustomContentOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteAppCustomContentOutcome(outcome.GetError());
+    }
+}
+
+void LcicClient::DeleteAppCustomContentAsync(const DeleteAppCustomContentRequest& request, const DeleteAppCustomContentAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteAppCustomContent(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+LcicClient::DeleteAppCustomContentOutcomeCallable LcicClient::DeleteAppCustomContentCallable(const DeleteAppCustomContentRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteAppCustomContentOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteAppCustomContent(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 LcicClient::DeleteDocumentOutcome LcicClient::DeleteDocument(const DeleteDocumentRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteDocument");
@@ -850,6 +893,49 @@ LcicClient::DescribeCurrentMemberListOutcomeCallable LcicClient::DescribeCurrent
         [this, request]()
         {
             return this->DescribeCurrentMemberList(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+LcicClient::DescribeDeveloperOutcome LcicClient::DescribeDeveloper(const DescribeDeveloperRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDeveloper");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDeveloperResponse rsp = DescribeDeveloperResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDeveloperOutcome(rsp);
+        else
+            return DescribeDeveloperOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDeveloperOutcome(outcome.GetError());
+    }
+}
+
+void LcicClient::DescribeDeveloperAsync(const DescribeDeveloperRequest& request, const DescribeDeveloperAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeDeveloper(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+LcicClient::DescribeDeveloperOutcomeCallable LcicClient::DescribeDeveloperCallable(const DescribeDeveloperRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeDeveloperOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeDeveloper(request);
         }
     );
 
@@ -1237,6 +1323,49 @@ LcicClient::DescribeUserOutcomeCallable LcicClient::DescribeUserCallable(const D
         [this, request]()
         {
             return this->DescribeUser(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+LcicClient::GetRoomEventOutcome LcicClient::GetRoomEvent(const GetRoomEventRequest &request)
+{
+    auto outcome = MakeRequest(request, "GetRoomEvent");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        GetRoomEventResponse rsp = GetRoomEventResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return GetRoomEventOutcome(rsp);
+        else
+            return GetRoomEventOutcome(o.GetError());
+    }
+    else
+    {
+        return GetRoomEventOutcome(outcome.GetError());
+    }
+}
+
+void LcicClient::GetRoomEventAsync(const GetRoomEventRequest& request, const GetRoomEventAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->GetRoomEvent(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+LcicClient::GetRoomEventOutcomeCallable LcicClient::GetRoomEventCallable(const GetRoomEventRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<GetRoomEventOutcome()>>(
+        [this, request]()
+        {
+            return this->GetRoomEvent(request);
         }
     );
 

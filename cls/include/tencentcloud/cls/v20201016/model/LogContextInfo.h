@@ -176,6 +176,50 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     bool HostNameHasBeenSet() const;
 
+                    /**
+                     * 获取Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return RawLog Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetRawLog() const;
+
+                    /**
+                     * 设置Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param RawLog Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetRawLog(const std::string& _rawLog);
+
+                    /**
+                     * 判断参数 RawLog 是否已赋值
+                     * @return RawLog 是否已赋值
+                     */
+                    bool RawLogHasBeenSet() const;
+
+                    /**
+                     * 获取The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IndexStatus The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetIndexStatus() const;
+
+                    /**
+                     * 设置The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param IndexStatus The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetIndexStatus(const std::string& _indexStatus);
+
+                    /**
+                     * 判断参数 IndexStatus 是否已赋值
+                     * @return IndexStatus 是否已赋值
+                     */
+                    bool IndexStatusHasBeenSet() const;
+
                 private:
 
                     /**
@@ -220,6 +264,20 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::string m_hostName;
                     bool m_hostNameHasBeenSet;
+
+                    /**
+                     * Raw log (this parameter has a value only when an exception occurred while creating indexes for logs).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_rawLog;
+                    bool m_rawLogHasBeenSet;
+
+                    /**
+                     * The cause of index creation exception (this parameter has a value only when an exception occurred while creating indexes for logs).
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_indexStatus;
+                    bool m_indexStatusHasBeenSet;
 
                 };
             }

@@ -155,14 +155,14 @@ Default value: `open`.
                     bool ResolutionAdaptiveHasBeenSet() const;
 
                     /**
-                     * 获取The maximum video width (or long side), in pixels. Value range: 0 and 128-8192.
+                     * 获取The maximum video width (or long side) in pixels. Value range: 0 and 128-4096.
 <li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
 <li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
 <li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
 <li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
 
 Default value: `0`.
-                     * @return Width The maximum video width (or long side), in pixels. Value range: 0 and 128-8192.
+                     * @return Width The maximum video width (or long side) in pixels. Value range: 0 and 128-4096.
 <li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
 <li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
 <li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
@@ -173,14 +173,14 @@ Default value: `0`.
                     int64_t GetWidth() const;
 
                     /**
-                     * 设置The maximum video width (or long side), in pixels. Value range: 0 and 128-8192.
+                     * 设置The maximum video width (or long side) in pixels. Value range: 0 and 128-4096.
 <li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
 <li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
 <li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
 <li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
 
 Default value: `0`.
-                     * @param Width The maximum video width (or long side), in pixels. Value range: 0 and 128-8192.
+                     * @param Width The maximum video width (or long side) in pixels. Value range: 0 and 128-4096.
 <li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
 <li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
 <li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
@@ -197,14 +197,14 @@ Default value: `0`.
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取The maximum video height (or short side), in pixels. Value range: 0 and 128-8192.
+                     * 获取The maximum video width (or short side) in pixels. Value range: 0 and [128, 4096].
 <li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
 <li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
 <li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
 <li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
 
 Default value: `0`.
-                     * @return Height The maximum video height (or short side), in pixels. Value range: 0 and 128-8192.
+                     * @return Height The maximum video width (or short side) in pixels. Value range: 0 and [128, 4096].
 <li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
 <li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
 <li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
@@ -215,14 +215,14 @@ Default value: `0`.
                     int64_t GetHeight() const;
 
                     /**
-                     * 设置The maximum video height (or short side), in pixels. Value range: 0 and 128-8192.
+                     * 设置The maximum video width (or short side) in pixels. Value range: 0 and [128, 4096].
 <li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
 <li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
 <li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
 <li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
 
 Default value: `0`.
-                     * @param Height The maximum video height (or short side), in pixels. Value range: 0 and 128-8192.
+                     * @param Height The maximum video width (or short side) in pixels. Value range: 0 and [128, 4096].
 <li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
 <li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
 <li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
@@ -330,7 +330,7 @@ Default value: `open`.
                     bool m_resolutionAdaptiveHasBeenSet;
 
                     /**
-                     * The maximum video width (or long side), in pixels. Value range: 0 and 128-8192.
+                     * The maximum video width (or long side) in pixels. Value range: 0 and 128-4096.
 <li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
 <li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
 <li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
@@ -342,7 +342,7 @@ Default value: `0`.
                     bool m_widthHasBeenSet;
 
                     /**
-                     * The maximum video height (or short side), in pixels. Value range: 0 and 128-8192.
+                     * The maximum video width (or short side) in pixels. Value range: 0 and [128, 4096].
 <li>If both `Width` and `Height` are `0`, the original resolution will be used.</li>
 <li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
 <li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>

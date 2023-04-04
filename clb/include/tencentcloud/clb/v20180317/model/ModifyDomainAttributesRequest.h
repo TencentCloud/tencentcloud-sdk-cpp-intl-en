@@ -171,6 +171,24 @@ namespace TencentCloud
                     bool DefaultServerHasBeenSet() const;
 
                     /**
+                     * 获取Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names.
+                     * @return Quic Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names.
+                     */
+                    bool GetQuic() const;
+
+                    /**
+                     * 设置Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names.
+                     * @param Quic Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names.
+                     */
+                    void SetQuic(const bool& _quic);
+
+                    /**
+                     * 判断参数 Quic 是否已赋值
+                     * @return Quic 是否已赋值
+                     */
+                    bool QuicHasBeenSet() const;
+
+                    /**
                      * 获取Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
                      * @return NewDefaultServerDomain Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
                      */
@@ -267,6 +285,12 @@ namespace TencentCloud
                      */
                     bool m_defaultServer;
                     bool m_defaultServerHasBeenSet;
+
+                    /**
+                     * Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names.
+                     */
+                    bool m_quic;
+                    bool m_quicHasBeenSet;
 
                     /**
                      * Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.

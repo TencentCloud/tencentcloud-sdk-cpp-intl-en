@@ -655,6 +655,24 @@ namespace TencentCloud
                      */
                     bool ProxyIdsHasBeenSet() const;
 
+                    /**
+                     * 获取Database engine type
+                     * @return EngineTypes Database engine type
+                     */
+                    std::vector<std::string> GetEngineTypes() const;
+
+                    /**
+                     * 设置Database engine type
+                     * @param EngineTypes Database engine type
+                     */
+                    void SetEngineTypes(const std::vector<std::string>& _engineTypes);
+
+                    /**
+                     * 判断参数 EngineTypes 是否已赋值
+                     * @return EngineTypes 是否已赋值
+                     */
+                    bool EngineTypesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -860,6 +878,12 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_proxyIds;
                     bool m_proxyIdsHasBeenSet;
+
+                    /**
+                     * Database engine type
+                     */
+                    std::vector<std::string> m_engineTypes;
+                    bool m_engineTypesHasBeenSet;
 
                 };
             }

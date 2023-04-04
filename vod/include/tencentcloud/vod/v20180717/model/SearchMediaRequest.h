@@ -521,6 +521,64 @@ namespace TencentCloud
                     bool StorageClassesHasBeenSet() const;
 
                     /**
+                     * 获取The file formats.
+<li>Array length limit: 10</li>
+                     * @return MediaTypes The file formats.
+<li>Array length limit: 10</li>
+                     */
+                    std::vector<std::string> GetMediaTypes() const;
+
+                    /**
+                     * 设置The file formats.
+<li>Array length limit: 10</li>
+                     * @param MediaTypes The file formats.
+<li>Array length limit: 10</li>
+                     */
+                    void SetMediaTypes(const std::vector<std::string>& _mediaTypes);
+
+                    /**
+                     * 判断参数 MediaTypes 是否已赋值
+                     * @return MediaTypes 是否已赋值
+                     */
+                    bool MediaTypesHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return Status 
+                     */
+                    std::vector<std::string> GetStatus() const;
+
+                    /**
+                     * 设置
+                     * @param Status 
+                     */
+                    void SetStatus(const std::vector<std::string>& _status);
+
+                    /**
+                     * 判断参数 Status 是否已赋值
+                     * @return Status 是否已赋值
+                     */
+                    bool StatusHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ReviewResults 
+                     */
+                    std::vector<std::string> GetReviewResults() const;
+
+                    /**
+                     * 设置
+                     * @param ReviewResults 
+                     */
+                    void SetReviewResults(const std::vector<std::string>& _reviewResults);
+
+                    /**
+                     * 判断参数 ReviewResults 是否已赋值
+                     * @return ReviewResults 是否已赋值
+                     */
+                    bool ReviewResultsHasBeenSet() const;
+
+                    /**
                      * 获取The TRTC application IDs. Any file that matches one of the application IDs will be returned.
 <li>Array length limit: 10</li>
                      * @return TrtcSdkAppIds The TRTC application IDs. Any file that matches one of the application IDs will be returned.
@@ -885,6 +943,25 @@ End time in the creation time range.
                      */
                     std::vector<std::string> m_storageClasses;
                     bool m_storageClassesHasBeenSet;
+
+                    /**
+                     * The file formats.
+<li>Array length limit: 10</li>
+                     */
+                    std::vector<std::string> m_mediaTypes;
+                    bool m_mediaTypesHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<std::string> m_status;
+                    bool m_statusHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<std::string> m_reviewResults;
+                    bool m_reviewResultsHasBeenSet;
 
                     /**
                      * The TRTC application IDs. Any file that matches one of the application IDs will be returned.

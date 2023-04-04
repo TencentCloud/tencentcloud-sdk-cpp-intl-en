@@ -158,17 +158,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BucketHasBeenSet() const;
 
                     /**
-                     * 获取COS bucket region.
+                     * 获取Region where the COS bucket is located.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BucketRegion COS bucket region.
+                     * @return BucketRegion Region where the COS bucket is located.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetBucketRegion() const;
 
                     /**
-                     * 设置COS bucket region.
+                     * 设置Region where the COS bucket is located.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param BucketRegion COS bucket region.
+                     * @param BucketRegion Region where the COS bucket is located.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetBucketRegion(const std::string& _bucketRegion);
@@ -419,7 +419,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_bucketHasBeenSet;
 
                     /**
-                     * COS bucket region.
+                     * Region where the COS bucket is located.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_bucketRegion;

@@ -67,20 +67,20 @@ namespace TencentCloud
                     /**
                      * 获取Separator of the full-text index. Each character represents a separator.
 Only symbols, \n\t\r, and escape character \ are supported.
-Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
+Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping. When debugging with API Explorer, use the JSON parameter input method to avoid repeated escaping of \n\t\r.
                      * @return Tokenizer Separator of the full-text index. Each character represents a separator.
 Only symbols, \n\t\r, and escape character \ are supported.
-Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
+Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping. When debugging with API Explorer, use the JSON parameter input method to avoid repeated escaping of \n\t\r.
                      */
                     std::string GetTokenizer() const;
 
                     /**
                      * 设置Separator of the full-text index. Each character represents a separator.
 Only symbols, \n\t\r, and escape character \ are supported.
-Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
+Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping. When debugging with API Explorer, use the JSON parameter input method to avoid repeated escaping of \n\t\r.
                      * @param Tokenizer Separator of the full-text index. Each character represents a separator.
 Only symbols, \n\t\r, and escape character \ are supported.
-Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
+Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping. When debugging with API Explorer, use the JSON parameter input method to avoid repeated escaping of \n\t\r.
                      */
                     void SetTokenizer(const std::string& _tokenizer);
 
@@ -123,7 +123,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     /**
                      * Separator of the full-text index. Each character represents a separator.
 Only symbols, \n\t\r, and escape character \ are supported.
-Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
+Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping. When debugging with API Explorer, use the JSON parameter input method to avoid repeated escaping of \n\t\r.
                      */
                     std::string m_tokenizer;
                     bool m_tokenizerHasBeenSet;

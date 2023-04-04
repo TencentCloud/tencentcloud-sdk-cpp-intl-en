@@ -56,8 +56,10 @@ namespace TencentCloud
                     bool TotalHasBeenSet() const;
 
                     /**
-                     * 获取The user IDs of the members. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MemberIds The user IDs of the members. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return MemberIds 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> GetMemberIds() const;
 
@@ -76,7 +78,8 @@ namespace TencentCloud
                     bool m_totalHasBeenSet;
 
                     /**
-                     * The user IDs of the members. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_memberIds;
                     bool m_memberIdsHasBeenSet;

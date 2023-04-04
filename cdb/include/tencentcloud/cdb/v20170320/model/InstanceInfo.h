@@ -906,6 +906,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool MaxDelayTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Instance disk type, which is returned only for the instances of cloud disk edition. Valid values: `CLOUD_SSD` (SSD), `CLOUD_HSSD` (Enhanced SSD).
+                     * @return DiskType Instance disk type, which is returned only for the instances of cloud disk edition. Valid values: `CLOUD_SSD` (SSD), `CLOUD_HSSD` (Enhanced SSD).
+                     */
+                    std::string GetDiskType() const;
+
+                    /**
+                     * 设置Instance disk type, which is returned only for the instances of cloud disk edition. Valid values: `CLOUD_SSD` (SSD), `CLOUD_HSSD` (Enhanced SSD).
+                     * @param DiskType Instance disk type, which is returned only for the instances of cloud disk edition. Valid values: `CLOUD_SSD` (SSD), `CLOUD_HSSD` (Enhanced SSD).
+                     */
+                    void SetDiskType(const std::string& _diskType);
+
+                    /**
+                     * 判断参数 DiskType 是否已赋值
+                     * @return DiskType 是否已赋值
+                     */
+                    bool DiskTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1188,6 +1206,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_maxDelayTime;
                     bool m_maxDelayTimeHasBeenSet;
+
+                    /**
+                     * Instance disk type, which is returned only for the instances of cloud disk edition. Valid values: `CLOUD_SSD` (SSD), `CLOUD_HSSD` (Enhanced SSD).
+                     */
+                    std::string m_diskType;
+                    bool m_diskTypeHasBeenSet;
 
                 };
             }

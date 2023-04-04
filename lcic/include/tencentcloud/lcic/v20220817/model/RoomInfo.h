@@ -48,14 +48,14 @@ Used by actions: BatchCreateRoom.
 
 
                     /**
-                     * 获取The room name. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Name The room name. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The room name.
+                     * @return Name The room name.
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置The room name. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Name The room name. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The room name.
+                     * @param Name The room name.
                      */
                     void SetName(const std::string& _name);
 
@@ -66,14 +66,14 @@ Used by actions: BatchCreateRoom.
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取The room start time (Unix timestamp). Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StartTime The room start time (Unix timestamp). Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The room start time (Unix timestamp).
+                     * @return StartTime The room start time (Unix timestamp).
                      */
                     uint64_t GetStartTime() const;
 
                     /**
-                     * 设置The room start time (Unix timestamp). Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param StartTime The room start time (Unix timestamp). Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The room start time (Unix timestamp).
+                     * @param StartTime The room start time (Unix timestamp).
                      */
                     void SetStartTime(const uint64_t& _startTime);
 
@@ -84,14 +84,14 @@ Used by actions: BatchCreateRoom.
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取The room end time (Unix timestamp). Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EndTime The room end time (Unix timestamp). Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The room end time (Unix timestamp).
+                     * @return EndTime The room end time (Unix timestamp).
                      */
                     uint64_t GetEndTime() const;
 
                     /**
-                     * 设置The room end time (Unix timestamp). Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param EndTime The room end time (Unix timestamp). Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The room end time (Unix timestamp).
+                     * @param EndTime The room end time (Unix timestamp).
                      */
                     void SetEndTime(const uint64_t& _endTime);
 
@@ -102,14 +102,14 @@ Used by actions: BatchCreateRoom.
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取The resolution. Valid values: 1: SD; 2: HD; 3: FHD. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Resolution The resolution. Valid values: 1: SD; 2: HD; 3: FHD. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD.
+                     * @return Resolution The resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD.
                      */
                     uint64_t GetResolution() const;
 
                     /**
-                     * 设置The resolution. Valid values: 1: SD; 2: HD; 3: FHD. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Resolution The resolution. Valid values: 1: SD; 2: HD; 3: FHD. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD.
+                     * @param Resolution The resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD.
                      */
                     void SetResolution(const uint64_t& _resolution);
 
@@ -120,14 +120,14 @@ Used by actions: BatchCreateRoom.
                     bool ResolutionHasBeenSet() const;
 
                     /**
-                     * 获取The maximum number of mic-on users (excluding the teacher). Value range: 0-16. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MaxMicNumber The maximum number of mic-on users (excluding the teacher). Value range: 0-16. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The maximum number of mic-on users (excluding the teacher). Value range: 0-16.
+                     * @return MaxMicNumber The maximum number of mic-on users (excluding the teacher). Value range: 0-16.
                      */
                     uint64_t GetMaxMicNumber() const;
 
                     /**
-                     * 设置The maximum number of mic-on users (excluding the teacher). Value range: 0-16. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MaxMicNumber The maximum number of mic-on users (excluding the teacher). Value range: 0-16. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The maximum number of mic-on users (excluding the teacher). Value range: 0-16.
+                     * @param MaxMicNumber The maximum number of mic-on users (excluding the teacher). Value range: 0-16.
                      */
                     void SetMaxMicNumber(const uint64_t& _maxMicNumber);
 
@@ -139,17 +139,13 @@ Used by actions: BatchCreateRoom.
 
                     /**
                      * 获取The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SubType The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetSubType() const;
 
                     /**
                      * 设置The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param SubType The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetSubType(const std::string& _subType);
 
@@ -160,14 +156,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SubTypeHasBeenSet() const;
 
                     /**
-                     * 获取The user ID of the teacher. User IDs are returned by the user registration APIs. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TeacherId The user ID of the teacher. User IDs are returned by the user registration APIs. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The user ID of the teacher. User IDs are returned by the user registration APIs.
+                     * @return TeacherId The user ID of the teacher. User IDs are returned by the user registration APIs.
                      */
                     std::string GetTeacherId() const;
 
                     /**
-                     * 设置The user ID of the teacher. User IDs are returned by the user registration APIs. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TeacherId The user ID of the teacher. User IDs are returned by the user registration APIs. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The user ID of the teacher. User IDs are returned by the user registration APIs.
+                     * @param TeacherId The user ID of the teacher. User IDs are returned by the user registration APIs.
                      */
                     void SetTeacherId(const std::string& _teacherId);
 
@@ -178,14 +174,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TeacherIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to automatically turn the mic on when a user enters the room. Valid values: 0: No (default value); 1: Yes. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AutoMic Whether to automatically turn the mic on when a user enters the room. Valid values: 0: No (default value); 1: Yes. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether to automatically turn the mic on when a user enters the room. Valid values: `0` (default): No; `1`: Yes.
+                     * @return AutoMic Whether to automatically turn the mic on when a user enters the room. Valid values: `0` (default): No; `1`: Yes.
                      */
                     uint64_t GetAutoMic() const;
 
                     /**
-                     * 设置Whether to automatically turn the mic on when a user enters the room. Valid values: 0: No (default value); 1: Yes. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AutoMic Whether to automatically turn the mic on when a user enters the room. Valid values: 0: No (default value); 1: Yes. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether to automatically turn the mic on when a user enters the room. Valid values: `0` (default): No; `1`: Yes.
+                     * @param AutoMic Whether to automatically turn the mic on when a user enters the room. Valid values: `0` (default): No; `1`: Yes.
                      */
                     void SetAutoMic(const uint64_t& _autoMic);
 
@@ -196,14 +192,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AutoMicHasBeenSet() const;
 
                     /**
-                     * 获取Whether to disconnect communication after audio/video permissions are revoked. Valid values: 0: Yes (default value); 1: No. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TurnOffMic Whether to disconnect communication after audio/video permissions are revoked. Valid values: 0: Yes (default value); 1: No. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether to disconnect communication after audio/video permissions are revoked. Valid values: `0` (default): Yes; `1`: No.
+                     * @return TurnOffMic Whether to disconnect communication after audio/video permissions are revoked. Valid values: `0` (default): Yes; `1`: No.
                      */
                     uint64_t GetTurnOffMic() const;
 
                     /**
-                     * 设置Whether to disconnect communication after audio/video permissions are revoked. Valid values: 0: Yes (default value); 1: No. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TurnOffMic Whether to disconnect communication after audio/video permissions are revoked. Valid values: 0: Yes (default value); 1: No. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether to disconnect communication after audio/video permissions are revoked. Valid values: `0` (default): Yes; `1`: No.
+                     * @param TurnOffMic Whether to disconnect communication after audio/video permissions are revoked. Valid values: `0` (default): Yes; `1`: No.
                      */
                     void SetTurnOffMic(const uint64_t& _turnOffMic);
 
@@ -214,14 +210,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TurnOffMicHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AudioQuality Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether to enable the high audio quality mode. Valid values: `0` (default): No; `1`: Yes.
+                     * @return AudioQuality Whether to enable the high audio quality mode. Valid values: `0` (default): No; `1`: Yes.
                      */
                     uint64_t GetAudioQuality() const;
 
                     /**
-                     * 设置Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AudioQuality Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether to enable the high audio quality mode. Valid values: `0` (default): No; `1`: Yes.
+                     * @param AudioQuality Whether to enable the high audio quality mode. Valid values: `0` (default): No; `1`: Yes.
                      */
                     void SetAudioQuality(const uint64_t& _audioQuality);
 
@@ -232,14 +228,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AudioQualityHasBeenSet() const;
 
                     /**
-                     * 获取Whether to disable auto recording. Valid values: 0: No (default); 1: Yes. If this parameter is 0, recording will start when the class starts and stops when the class ends. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DisableRecord Whether to disable auto recording. Valid values: 0: No (default); 1: Yes. If this parameter is 0, recording will start when the class starts and stops when the class ends. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether to disable auto recording. Valid values: `0` (default): No; `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends.
+                     * @return DisableRecord Whether to disable auto recording. Valid values: `0` (default): No; `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends.
                      */
                     uint64_t GetDisableRecord() const;
 
                     /**
-                     * 设置Whether to disable auto recording. Valid values: 0: No (default); 1: Yes. If this parameter is 0, recording will start when the class starts and stops when the class ends. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param DisableRecord Whether to disable auto recording. Valid values: 0: No (default); 1: Yes. If this parameter is 0, recording will start when the class starts and stops when the class ends. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether to disable auto recording. Valid values: `0` (default): No; `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends.
+                     * @param DisableRecord Whether to disable auto recording. Valid values: `0` (default): No; `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends.
                      */
                     void SetDisableRecord(const uint64_t& _disableRecord);
 
@@ -250,14 +246,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DisableRecordHasBeenSet() const;
 
                     /**
-                     * 获取The user IDs of the teacher assistants. User IDs are returned by the user registration APIs. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Assistants The user IDs of the teacher assistants. User IDs are returned by the user registration APIs. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The user IDs of the teacher assistants. User IDs are returned by the user registration APIs.
+                     * @return Assistants The user IDs of the teacher assistants. User IDs are returned by the user registration APIs.
                      */
                     std::vector<std::string> GetAssistants() const;
 
                     /**
-                     * 设置The user IDs of the teacher assistants. User IDs are returned by the user registration APIs. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Assistants The user IDs of the teacher assistants. User IDs are returned by the user registration APIs. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The user IDs of the teacher assistants. User IDs are returned by the user registration APIs.
+                     * @param Assistants The user IDs of the teacher assistants. User IDs are returned by the user registration APIs.
                      */
                     void SetAssistants(const std::vector<std::string>& _assistants);
 
@@ -268,14 +264,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AssistantsHasBeenSet() const;
 
                     /**
-                     * 获取The number of RTC users. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RTCAudienceNumber The number of RTC users. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The number of RTC users.
+                     * @return RTCAudienceNumber The number of RTC users.
                      */
                     uint64_t GetRTCAudienceNumber() const;
 
                     /**
-                     * 设置The number of RTC users. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RTCAudienceNumber The number of RTC users. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The number of RTC users.
+                     * @param RTCAudienceNumber The number of RTC users.
                      */
                     void SetRTCAudienceNumber(const uint64_t& _rTCAudienceNumber);
 
@@ -286,14 +282,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RTCAudienceNumberHasBeenSet() const;
 
                     /**
-                     * 获取The audience type. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AudienceType The audience type. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The audience type.
+                     * @return AudienceType The audience type.
                      */
                     uint64_t GetAudienceType() const;
 
                     /**
-                     * 设置The audience type. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param AudienceType The audience type. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The audience type.
+                     * @param AudienceType The audience type.
                      */
                     void SetAudienceType(const uint64_t& _audienceType);
 
@@ -304,14 +300,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AudienceTypeHasBeenSet() const;
 
                     /**
-                     * 获取The recording layout. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RecordLayout The recording layout. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The recording layout.
+                     * @return RecordLayout The recording layout.
                      */
                     uint64_t GetRecordLayout() const;
 
                     /**
-                     * 设置The recording layout. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param RecordLayout The recording layout. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The recording layout.
+                     * @param RecordLayout The recording layout.
                      */
                     void SetRecordLayout(const uint64_t& _recordLayout);
 
@@ -342,92 +338,91 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The room name. Note: This field may return null, indicating that no valid values can be obtained.
+                     * The room name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * The room start time (Unix timestamp). Note: This field may return null, indicating that no valid values can be obtained.
+                     * The room start time (Unix timestamp).
                      */
                     uint64_t m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * The room end time (Unix timestamp). Note: This field may return null, indicating that no valid values can be obtained.
+                     * The room end time (Unix timestamp).
                      */
                     uint64_t m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * The resolution. Valid values: 1: SD; 2: HD; 3: FHD. Note: This field may return null, indicating that no valid values can be obtained.
+                     * The resolution. Valid values: `1`: SD; `2`: HD; `3`: FHD.
                      */
                     uint64_t m_resolution;
                     bool m_resolutionHasBeenSet;
 
                     /**
-                     * The maximum number of mic-on users (excluding the teacher). Value range: 0-16. Note: This field may return null, indicating that no valid values can be obtained.
+                     * The maximum number of mic-on users (excluding the teacher). Value range: 0-16.
                      */
                     uint64_t m_maxMicNumber;
                     bool m_maxMicNumberHasBeenSet;
 
                     /**
                      * The room subtype. Valid values: `videodoc`: Document + Video; `video`: Video only; `coteaching`: Dual-teacher.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_subType;
                     bool m_subTypeHasBeenSet;
 
                     /**
-                     * The user ID of the teacher. User IDs are returned by the user registration APIs. Note: This field may return null, indicating that no valid values can be obtained.
+                     * The user ID of the teacher. User IDs are returned by the user registration APIs.
                      */
                     std::string m_teacherId;
                     bool m_teacherIdHasBeenSet;
 
                     /**
-                     * Whether to automatically turn the mic on when a user enters the room. Valid values: 0: No (default value); 1: Yes. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether to automatically turn the mic on when a user enters the room. Valid values: `0` (default): No; `1`: Yes.
                      */
                     uint64_t m_autoMic;
                     bool m_autoMicHasBeenSet;
 
                     /**
-                     * Whether to disconnect communication after audio/video permissions are revoked. Valid values: 0: Yes (default value); 1: No. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether to disconnect communication after audio/video permissions are revoked. Valid values: `0` (default): Yes; `1`: No.
                      */
                     uint64_t m_turnOffMic;
                     bool m_turnOffMicHasBeenSet;
 
                     /**
-                     * Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether to enable the high audio quality mode. Valid values: `0` (default): No; `1`: Yes.
                      */
                     uint64_t m_audioQuality;
                     bool m_audioQualityHasBeenSet;
 
                     /**
-                     * Whether to disable auto recording. Valid values: 0: No (default); 1: Yes. If this parameter is 0, recording will start when the class starts and stops when the class ends. Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether to disable auto recording. Valid values: `0` (default): No; `1`: Yes. If this parameter is `0`, recording will start when the class starts and stops when the class ends.
                      */
                     uint64_t m_disableRecord;
                     bool m_disableRecordHasBeenSet;
 
                     /**
-                     * The user IDs of the teacher assistants. User IDs are returned by the user registration APIs. Note: This field may return null, indicating that no valid values can be obtained.
+                     * The user IDs of the teacher assistants. User IDs are returned by the user registration APIs.
                      */
                     std::vector<std::string> m_assistants;
                     bool m_assistantsHasBeenSet;
 
                     /**
-                     * The number of RTC users. Note: This field may return null, indicating that no valid values can be obtained.
+                     * The number of RTC users.
                      */
                     uint64_t m_rTCAudienceNumber;
                     bool m_rTCAudienceNumberHasBeenSet;
 
                     /**
-                     * The audience type. Note: This field may return null, indicating that no valid values can be obtained.
+                     * The audience type.
                      */
                     uint64_t m_audienceType;
                     bool m_audienceTypeHasBeenSet;
 
                     /**
-                     * The recording layout. Note: This field may return null, indicating that no valid values can be obtained.
+                     * The recording layout.
                      */
                     uint64_t m_recordLayout;
                     bool m_recordLayoutHasBeenSet;

@@ -73,14 +73,14 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取The frame rate. Value range: (0, 60]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
-                     * @return Fps The frame rate. Value range: (0, 60]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
+                     * 获取The frame rate. Value range: (0, 100]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
+                     * @return Fps The frame rate. Value range: (0, 100]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
                      */
                     int64_t GetFps() const;
 
                     /**
-                     * 设置The frame rate. Value range: (0, 60]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
-                     * @param Fps The frame rate. Value range: (0, 60]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
+                     * 设置The frame rate. Value range: (0, 100]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
+                     * @param Fps The frame rate. Value range: (0, 100]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
                      */
                     void SetFps(const int64_t& _fps);
 
@@ -101,7 +101,7 @@ namespace TencentCloud
                     bool m_switchHasBeenSet;
 
                     /**
-                     * The frame rate. Value range: (0, 60]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
+                     * The frame rate. Value range: (0, 100]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
                      */
                     int64_t m_fps;
                     bool m_fpsHasBeenSet;

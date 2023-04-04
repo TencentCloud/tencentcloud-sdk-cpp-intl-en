@@ -22,7 +22,9 @@
 using namespace TencentCloud::Lcic::V20220817::Model;
 using namespace std;
 
-CreateSupervisorRequest::CreateSupervisorRequest()
+CreateSupervisorRequest::CreateSupervisorRequest() :
+    m_sdkAppIdHasBeenSet(false),
+    m_usersHasBeenSet(false)
 {
 }
 
@@ -33,6 +35,27 @@ string CreateSupervisorRequest::ToJsonString() const
     rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
 
 
+    if (m_sdkAppIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SdkAppId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_sdkAppId, allocator);
+    }
+
+    if (m_usersHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Users";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_users.begin(); itr != m_users.end(); ++itr)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
 
     rapidjson::StringBuffer buffer;
     rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
@@ -40,5 +63,37 @@ string CreateSupervisorRequest::ToJsonString() const
     return buffer.GetString();
 }
 
+
+uint64_t CreateSupervisorRequest::GetSdkAppId() const
+{
+    return m_sdkAppId;
+}
+
+void CreateSupervisorRequest::SetSdkAppId(const uint64_t& _sdkAppId)
+{
+    m_sdkAppId = _sdkAppId;
+    m_sdkAppIdHasBeenSet = true;
+}
+
+bool CreateSupervisorRequest::SdkAppIdHasBeenSet() const
+{
+    return m_sdkAppIdHasBeenSet;
+}
+
+vector<string> CreateSupervisorRequest::GetUsers() const
+{
+    return m_users;
+}
+
+void CreateSupervisorRequest::SetUsers(const vector<string>& _users)
+{
+    m_users = _users;
+    m_usersHasBeenSet = true;
+}
+
+bool CreateSupervisorRequest::UsersHasBeenSet() const
+{
+    return m_usersHasBeenSet;
+}
 
 

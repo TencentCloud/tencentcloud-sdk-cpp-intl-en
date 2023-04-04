@@ -69,17 +69,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IdentityIdHasBeenSet() const;
 
                     /**
-                     * 获取Identity role name.
+                     * 获取Role name of an identity
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IdentityRoleName Identity role name.
+                     * @return IdentityRoleName Role name of an identity
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetIdentityRoleName() const;
 
                     /**
-                     * 设置Identity role name.
+                     * 设置Role name of an identity
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IdentityRoleName Identity role name.
+                     * @param IdentityRoleName Role name of an identity
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetIdentityRoleName(const std::string& _identityRoleName);
@@ -91,17 +91,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IdentityRoleNameHasBeenSet() const;
 
                     /**
-                     * 获取Identity role alias.
+                     * 获取Role alias of an identity
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IdentityRoleAliasName Identity role alias.
+                     * @return IdentityRoleAliasName Role alias of an identity
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetIdentityRoleAliasName() const;
 
                     /**
-                     * 设置Identity role alias.
+                     * 设置Role alias of an identity
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param IdentityRoleAliasName Identity role alias.
+                     * @param IdentityRoleAliasName Role alias of an identity
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetIdentityRoleAliasName(const std::string& _identityRoleAliasName);
@@ -178,6 +178,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool UpdateTimeHasBeenSet() const;
 
+                    /**
+                     * 获取Identity type (`1`: Preset; `2`: Custom)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IdentityType Identity type (`1`: Preset; `2`: Custom)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetIdentityType() const;
+
+                    /**
+                     * 设置Identity type (`1`: Preset; `2`: Custom)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param IdentityType Identity type (`1`: Preset; `2`: Custom)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetIdentityType(const uint64_t& _identityType);
+
+                    /**
+                     * 判断参数 IdentityType 是否已赋值
+                     * @return IdentityType 是否已赋值
+                     */
+                    bool IdentityTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -188,14 +210,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_identityIdHasBeenSet;
 
                     /**
-                     * Identity role name.
+                     * Role name of an identity
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_identityRoleName;
                     bool m_identityRoleNameHasBeenSet;
 
                     /**
-                     * Identity role alias.
+                     * Role alias of an identity
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_identityRoleAliasName;
@@ -221,6 +243,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
+
+                    /**
+                     * Identity type (`1`: Preset; `2`: Custom)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_identityType;
+                    bool m_identityTypeHasBeenSet;
 
                 };
             }

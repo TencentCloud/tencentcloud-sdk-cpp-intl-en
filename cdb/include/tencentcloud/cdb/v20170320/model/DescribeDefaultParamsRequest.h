@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取MySQL version. Currently, the supported versions are ["5.1", "5.5", "5.6", "5.7"].
-                     * @return EngineVersion MySQL version. Currently, the supported versions are ["5.1", "5.5", "5.6", "5.7"].
+                     * 获取Engine version. Currently, the supported versions are `5.1`, `5.5`, `5.6`, `5.7`, and `8.0`.
+                     * @return EngineVersion Engine version. Currently, the supported versions are `5.1`, `5.5`, `5.6`, `5.7`, and `8.0`.
                      */
                     std::string GetEngineVersion() const;
 
                     /**
-                     * 设置MySQL version. Currently, the supported versions are ["5.1", "5.5", "5.6", "5.7"].
-                     * @param EngineVersion MySQL version. Currently, the supported versions are ["5.1", "5.5", "5.6", "5.7"].
+                     * 设置Engine version. Currently, the supported versions are `5.1`, `5.5`, `5.6`, `5.7`, and `8.0`.
+                     * @param EngineVersion Engine version. Currently, the supported versions are `5.1`, `5.5`, `5.6`, `5.7`, and `8.0`.
                      */
                     void SetEngineVersion(const std::string& _engineVersion);
 
@@ -78,10 +78,28 @@ namespace TencentCloud
                      */
                     bool TemplateTypeHasBeenSet() const;
 
+                    /**
+                     * 获取Parameter template engine. Default value: `InnoDB`.
+                     * @return EngineType Parameter template engine. Default value: `InnoDB`.
+                     */
+                    std::string GetEngineType() const;
+
+                    /**
+                     * 设置Parameter template engine. Default value: `InnoDB`.
+                     * @param EngineType Parameter template engine. Default value: `InnoDB`.
+                     */
+                    void SetEngineType(const std::string& _engineType);
+
+                    /**
+                     * 判断参数 EngineType 是否已赋值
+                     * @return EngineType 是否已赋值
+                     */
+                    bool EngineTypeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * MySQL version. Currently, the supported versions are ["5.1", "5.5", "5.6", "5.7"].
+                     * Engine version. Currently, the supported versions are `5.1`, `5.5`, `5.6`, `5.7`, and `8.0`.
                      */
                     std::string m_engineVersion;
                     bool m_engineVersionHasBeenSet;
@@ -91,6 +109,12 @@ namespace TencentCloud
                      */
                     std::string m_templateType;
                     bool m_templateTypeHasBeenSet;
+
+                    /**
+                     * Parameter template engine. Default value: `InnoDB`.
+                     */
+                    std::string m_engineType;
+                    bool m_engineTypeHasBeenSet;
 
                 };
             }

@@ -48,14 +48,18 @@ Used by actions: DescribeGroupList.
 
 
                     /**
-                     * 获取Group ID Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return GroupId Group ID Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return GroupId 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetGroupId() const;
 
                     /**
-                     * 设置Group ID Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param GroupId Group ID Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param GroupId 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetGroupId(const std::string& _groupId);
 
@@ -66,14 +70,18 @@ Used by actions: DescribeGroupList.
                     bool GroupIdHasBeenSet() const;
 
                     /**
-                     * 获取The group name. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return GroupName The group name. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return GroupName 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetGroupName() const;
 
                     /**
-                     * 设置The group name. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param GroupName The group name. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param GroupName 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetGroupName(const std::string& _groupName);
 
@@ -84,14 +92,18 @@ Used by actions: DescribeGroupList.
                     bool GroupNameHasBeenSet() const;
 
                     /**
-                     * 获取The user ID of the teacher. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TeacherId The user ID of the teacher. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return TeacherId 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetTeacherId() const;
 
                     /**
-                     * 设置The user ID of the teacher. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param TeacherId The user ID of the teacher. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param TeacherId 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetTeacherId(const std::string& _teacherId);
 
@@ -102,14 +114,18 @@ Used by actions: DescribeGroupList.
                     bool TeacherIdHasBeenSet() const;
 
                     /**
-                     * 获取The group type. 0: Ordinary group. 1: Merged group. If the group queried is a merged group, the IDs of the sub-groups will be returned. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return GroupType The group type. 0: Ordinary group. 1: Merged group. If the group queried is a merged group, the IDs of the sub-groups will be returned. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return GroupType 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t GetGroupType() const;
 
                     /**
-                     * 设置The group type. 0: Ordinary group. 1: Merged group. If the group queried is a merged group, the IDs of the sub-groups will be returned. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param GroupType The group type. 0: Ordinary group. 1: Merged group. If the group queried is a merged group, the IDs of the sub-groups will be returned. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param GroupType 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetGroupType(const uint64_t& _groupType);
 
@@ -120,14 +136,18 @@ Used by actions: DescribeGroupList.
                     bool GroupTypeHasBeenSet() const;
 
                     /**
-                     * 获取The IDs of the sub-groups. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SubGroupIds The IDs of the sub-groups. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SubGroupIds 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetSubGroupIds() const;
 
                     /**
-                     * 设置The IDs of the sub-groups. Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param SubGroupIds The IDs of the sub-groups. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param SubGroupIds 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetSubGroupIds(const std::string& _subGroupIds);
 
@@ -140,31 +160,36 @@ Used by actions: DescribeGroupList.
                 private:
 
                     /**
-                     * Group ID Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_groupId;
                     bool m_groupIdHasBeenSet;
 
                     /**
-                     * The group name. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_groupName;
                     bool m_groupNameHasBeenSet;
 
                     /**
-                     * The user ID of the teacher. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_teacherId;
                     bool m_teacherIdHasBeenSet;
 
                     /**
-                     * The group type. 0: Ordinary group. 1: Merged group. If the group queried is a merged group, the IDs of the sub-groups will be returned. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_groupType;
                     bool m_groupTypeHasBeenSet;
 
                     /**
-                     * The IDs of the sub-groups. Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_subGroupIds;
                     bool m_subGroupIdsHasBeenSet;

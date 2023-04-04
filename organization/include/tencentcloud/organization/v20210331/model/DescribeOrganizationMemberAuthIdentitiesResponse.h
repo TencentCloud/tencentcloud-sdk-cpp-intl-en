@@ -45,9 +45,9 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List.
+                     * 获取List of authorizable identities
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Items List.
+                     * @return Items List of authorizable identities
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<OrgMemberAuthIdentity> GetItems() const;
@@ -75,7 +75,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * List.
+                     * List of authorizable identities
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<OrgMemberAuthIdentity> m_items;
