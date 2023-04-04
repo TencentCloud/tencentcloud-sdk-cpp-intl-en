@@ -115,6 +115,8 @@
 #include <tencentcloud/redis/v20180412/model/DescribeProxySlowLogResponse.h>
 #include <tencentcloud/redis/v20180412/model/DescribeReplicationGroupRequest.h>
 #include <tencentcloud/redis/v20180412/model/DescribeReplicationGroupResponse.h>
+#include <tencentcloud/redis/v20180412/model/DescribeSSLStatusRequest.h>
+#include <tencentcloud/redis/v20180412/model/DescribeSSLStatusResponse.h>
 #include <tencentcloud/redis/v20180412/model/DescribeSlowLogRequest.h>
 #include <tencentcloud/redis/v20180412/model/DescribeSlowLogResponse.h>
 #include <tencentcloud/redis/v20180412/model/DescribeTaskInfoRequest.h>
@@ -341,6 +343,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeReplicationGroupResponse> DescribeReplicationGroupOutcome;
                 typedef std::future<DescribeReplicationGroupOutcome> DescribeReplicationGroupOutcomeCallable;
                 typedef std::function<void(const RedisClient*, const Model::DescribeReplicationGroupRequest&, DescribeReplicationGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeReplicationGroupAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeSSLStatusResponse> DescribeSSLStatusOutcome;
+                typedef std::future<DescribeSSLStatusOutcome> DescribeSSLStatusOutcomeCallable;
+                typedef std::function<void(const RedisClient*, const Model::DescribeSSLStatusRequest&, DescribeSSLStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSSLStatusAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeSlowLogResponse> DescribeSlowLogOutcome;
                 typedef std::future<DescribeSlowLogOutcome> DescribeSlowLogOutcomeCallable;
                 typedef std::function<void(const RedisClient*, const Model::DescribeSlowLogRequest&, DescribeSlowLogOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSlowLogAsyncHandler;
@@ -868,6 +873,15 @@ namespace TencentCloud
                 DescribeReplicationGroupOutcome DescribeReplicationGroup(const Model::DescribeReplicationGroupRequest &request);
                 void DescribeReplicationGroupAsync(const Model::DescribeReplicationGroupRequest& request, const DescribeReplicationGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeReplicationGroupOutcomeCallable DescribeReplicationGroupCallable(const Model::DescribeReplicationGroupRequest& request);
+
+                /**
+                 *This API is used to query SSL status.
+                 * @param req DescribeSSLStatusRequest
+                 * @return DescribeSSLStatusOutcome
+                 */
+                DescribeSSLStatusOutcome DescribeSSLStatus(const Model::DescribeSSLStatusRequest &request);
+                void DescribeSSLStatusAsync(const Model::DescribeSSLStatusRequest& request, const DescribeSSLStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeSSLStatusOutcomeCallable DescribeSSLStatusCallable(const Model::DescribeSSLStatusRequest& request);
 
                 /**
                  *This API is used to query the records of slow query.

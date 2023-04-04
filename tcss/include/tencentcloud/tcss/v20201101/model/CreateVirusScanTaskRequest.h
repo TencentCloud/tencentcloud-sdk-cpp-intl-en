@@ -168,6 +168,40 @@ namespace TencentCloud
                      */
                     bool ScanPathHasBeenSet() const;
 
+                    /**
+                     * 获取Path scanning mode: 
+`SCAN_PATH_ALL`: Scan all paths
+`SCAN_PATH_DEFAULT`: Scan the default path
+`SCAN_PATH_USER_DEFINE`: Scan the custom path
+
+                     * @return ScanPathMode Path scanning mode: 
+`SCAN_PATH_ALL`: Scan all paths
+`SCAN_PATH_DEFAULT`: Scan the default path
+`SCAN_PATH_USER_DEFINE`: Scan the custom path
+
+                     */
+                    std::string GetScanPathMode() const;
+
+                    /**
+                     * 设置Path scanning mode: 
+`SCAN_PATH_ALL`: Scan all paths
+`SCAN_PATH_DEFAULT`: Scan the default path
+`SCAN_PATH_USER_DEFINE`: Scan the custom path
+
+                     * @param ScanPathMode Path scanning mode: 
+`SCAN_PATH_ALL`: Scan all paths
+`SCAN_PATH_DEFAULT`: Scan the default path
+`SCAN_PATH_USER_DEFINE`: Scan the custom path
+
+                     */
+                    void SetScanPathMode(const std::string& _scanPathMode);
+
+                    /**
+                     * 判断参数 ScanPathMode 是否已赋值
+                     * @return ScanPathMode 是否已赋值
+                     */
+                    bool ScanPathModeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -211,6 +245,16 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_scanPath;
                     bool m_scanPathHasBeenSet;
+
+                    /**
+                     * Path scanning mode: 
+`SCAN_PATH_ALL`: Scan all paths
+`SCAN_PATH_DEFAULT`: Scan the default path
+`SCAN_PATH_USER_DEFINE`: Scan the custom path
+
+                     */
+                    std::string m_scanPathMode;
+                    bool m_scanPathModeHasBeenSet;
 
                 };
             }

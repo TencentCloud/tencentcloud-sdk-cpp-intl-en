@@ -29,7 +29,8 @@ CreateIntlDomainBatchRequest::CreateIntlDomainBatchRequest() :
     m_payModeHasBeenSet(false),
     m_autoRenewFlagHasBeenSet(false),
     m_transferProhibitionHasBeenSet(false),
-    m_updateProhibitionHasBeenSet(false)
+    m_updateProhibitionHasBeenSet(false),
+    m_customDnsHasBeenSet(false)
 {
 }
 
@@ -99,6 +100,19 @@ string CreateIntlDomainBatchRequest::ToJsonString() const
         string key = "UpdateProhibition";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_updateProhibition, allocator);
+    }
+
+    if (m_customDnsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CustomDns";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_customDns.begin(); itr != m_customDns.end(); ++itr)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
     }
 
 
@@ -219,6 +233,22 @@ void CreateIntlDomainBatchRequest::SetUpdateProhibition(const bool& _updateProhi
 bool CreateIntlDomainBatchRequest::UpdateProhibitionHasBeenSet() const
 {
     return m_updateProhibitionHasBeenSet;
+}
+
+vector<string> CreateIntlDomainBatchRequest::GetCustomDns() const
+{
+    return m_customDns;
+}
+
+void CreateIntlDomainBatchRequest::SetCustomDns(const vector<string>& _customDns)
+{
+    m_customDns = _customDns;
+    m_customDnsHasBeenSet = true;
+}
+
+bool CreateIntlDomainBatchRequest::CustomDnsHasBeenSet() const
+{
+    return m_customDnsHasBeenSet;
 }
 
 

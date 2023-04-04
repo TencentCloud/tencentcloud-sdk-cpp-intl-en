@@ -739,6 +739,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool CheckPlatformHasBeenSet() const;
 
+                    /**
+                     * 获取File accessed time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return FileAccessTime File accessed time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetFileAccessTime() const;
+
+                    /**
+                     * 判断参数 FileAccessTime 是否已赋值
+                     * @return FileAccessTime 是否已赋值
+                     */
+                    bool FileAccessTimeHasBeenSet() const;
+
+                    /**
+                     * 获取File modified time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return FileModifyTime File modified time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetFileModifyTime() const;
+
+                    /**
+                     * 判断参数 FileModifyTime 是否已赋值
+                     * @return FileModifyTime 是否已赋值
+                     */
+                    bool FileModifyTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1088,6 +1116,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<std::string> m_checkPlatform;
                     bool m_checkPlatformHasBeenSet;
+
+                    /**
+                     * File accessed time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_fileAccessTime;
+                    bool m_fileAccessTimeHasBeenSet;
+
+                    /**
+                     * File modified time
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_fileModifyTime;
+                    bool m_fileModifyTimeHasBeenSet;
 
                 };
             }

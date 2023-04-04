@@ -192,12 +192,14 @@ set(redis_public_header_model
   include/tencentcloud/redis/v20180412/model/InquiryPriceCreateInstanceRequest.h
   include/tencentcloud/redis/v20180412/model/UpgradeSmallVersionResponse.h
   include/tencentcloud/redis/v20180412/model/ModifyInstanceParamsRequest.h
+  include/tencentcloud/redis/v20180412/model/DescribeSSLStatusRequest.h
   include/tencentcloud/redis/v20180412/model/OpenSSLRequest.h
   include/tencentcloud/redis/v20180412/model/BackupDownloadInfo.h
   include/tencentcloud/redis/v20180412/model/BigKeyTypeInfo.h
   include/tencentcloud/redis/v20180412/model/DescribeInstanceNodeInfoRequest.h
   include/tencentcloud/redis/v20180412/model/DescribeMaintenanceWindowRequest.h
   include/tencentcloud/redis/v20180412/model/InstanceClusterNode.h
+  include/tencentcloud/redis/v20180412/model/DescribeSSLStatusResponse.h
   include/tencentcloud/redis/v20180412/model/DescribeTendisSlowLogRequest.h
   include/tencentcloud/redis/v20180412/model/DescribeProxySlowLogRequest.h
   include/tencentcloud/redis/v20180412/model/DescribeProxySlowLogResponse.h
@@ -411,12 +413,14 @@ set(redis_src
   src/v20180412/model/InquiryPriceCreateInstanceRequest.cpp
   src/v20180412/model/UpgradeSmallVersionResponse.cpp
   src/v20180412/model/ModifyInstanceParamsRequest.cpp
+  src/v20180412/model/DescribeSSLStatusRequest.cpp
   src/v20180412/model/OpenSSLRequest.cpp
   src/v20180412/model/BackupDownloadInfo.cpp
   src/v20180412/model/BigKeyTypeInfo.cpp
   src/v20180412/model/DescribeInstanceNodeInfoRequest.cpp
   src/v20180412/model/DescribeMaintenanceWindowRequest.cpp
   src/v20180412/model/InstanceClusterNode.cpp
+  src/v20180412/model/DescribeSSLStatusResponse.cpp
   src/v20180412/model/DescribeTendisSlowLogRequest.cpp
   src/v20180412/model/DescribeProxySlowLogRequest.cpp
   src/v20180412/model/DescribeProxySlowLogResponse.cpp

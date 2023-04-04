@@ -168,6 +168,24 @@ namespace TencentCloud
                      */
                     bool UpdateProhibitionHasBeenSet() const;
 
+                    /**
+                     * 获取The custom DNS servers
+                     * @return CustomDns The custom DNS servers
+                     */
+                    std::vector<std::string> GetCustomDns() const;
+
+                    /**
+                     * 设置The custom DNS servers
+                     * @param CustomDns The custom DNS servers
+                     */
+                    void SetCustomDns(const std::vector<std::string>& _customDns);
+
+                    /**
+                     * 判断参数 CustomDns 是否已赋值
+                     * @return CustomDns 是否已赋值
+                     */
+                    bool CustomDnsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -211,6 +229,12 @@ namespace TencentCloud
                      */
                     bool m_updateProhibition;
                     bool m_updateProhibitionHasBeenSet;
+
+                    /**
+                     * The custom DNS servers
+                     */
+                    std::vector<std::string> m_customDns;
+                    bool m_customDnsHasBeenSet;
 
                 };
             }
