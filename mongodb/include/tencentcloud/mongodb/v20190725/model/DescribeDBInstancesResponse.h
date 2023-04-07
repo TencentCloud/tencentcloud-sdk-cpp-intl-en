@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of eligible instances.
-                     * @return TotalCount Number of eligible instances.
+                     * 获取Number of eligible instances
+                     * @return TotalCount Number of eligible instances
                      */
                     uint64_t GetTotalCount() const;
 
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of eligible instances.
+                     * Number of eligible instances
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

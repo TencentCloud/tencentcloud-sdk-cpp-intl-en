@@ -44,14 +44,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
-                     * @return InstanceIds List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+                     * 获取List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB console page.
+                     * @return InstanceIds List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB console page.
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
-                     * @param InstanceIds List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+                     * 设置List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB console page.
+                     * @param InstanceIds List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB console page.
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
 
@@ -62,14 +62,14 @@ namespace TencentCloud
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Instance type. Valid values: 0 (all instances), 1 (promoted), 2 (temp), 3 (read-only), -1 (promoted + read-only + disaster recovery)
-                     * @return InstanceType Instance type. Valid values: 0 (all instances), 1 (promoted), 2 (temp), 3 (read-only), -1 (promoted + read-only + disaster recovery)
+                     * 获取Instance type. Valid values: <ul><li>`0`: All instances. </li><li>`1`: Regular instances. </li><li>`2`: Temp instances. </li><li>`3`: Read-only instances. </li><li>`-1`: Regular instances, read-only instances, disaster recovery instances.</li></ul>
+                     * @return InstanceType Instance type. Valid values: <ul><li>`0`: All instances. </li><li>`1`: Regular instances. </li><li>`2`: Temp instances. </li><li>`3`: Read-only instances. </li><li>`-1`: Regular instances, read-only instances, disaster recovery instances.</li></ul>
                      */
                     int64_t GetInstanceType() const;
 
                     /**
-                     * 设置Instance type. Valid values: 0 (all instances), 1 (promoted), 2 (temp), 3 (read-only), -1 (promoted + read-only + disaster recovery)
-                     * @param InstanceType Instance type. Valid values: 0 (all instances), 1 (promoted), 2 (temp), 3 (read-only), -1 (promoted + read-only + disaster recovery)
+                     * 设置Instance type. Valid values: <ul><li>`0`: All instances. </li><li>`1`: Regular instances. </li><li>`2`: Temp instances. </li><li>`3`: Read-only instances. </li><li>`-1`: Regular instances, read-only instances, disaster recovery instances.</li></ul>
+                     * @param InstanceType Instance type. Valid values: <ul><li>`0`: All instances. </li><li>`1`: Regular instances. </li><li>`2`: Temp instances. </li><li>`3`: Read-only instances. </li><li>`-1`: Regular instances, read-only instances, disaster recovery instances.</li></ul>
                      */
                     void SetInstanceType(const int64_t& _instanceType);
 
@@ -80,14 +80,14 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Cluster type. Valid values: 0 (replica set instance), 1 (sharding instance), -1 (all instances)
-                     * @return ClusterType Cluster type. Valid values: 0 (replica set instance), 1 (sharding instance), -1 (all instances)
+                     * 获取Cluster type. Valid values: <ul><li>`0`: Replica set instances. </li><li>`1`: Sharded cluster instances. </li><li>`-1`: All instances.</li></ul>
+                     * @return ClusterType Cluster type. Valid values: <ul><li>`0`: Replica set instances. </li><li>`1`: Sharded cluster instances. </li><li>`-1`: All instances.</li></ul>
                      */
                     int64_t GetClusterType() const;
 
                     /**
-                     * 设置Cluster type. Valid values: 0 (replica set instance), 1 (sharding instance), -1 (all instances)
-                     * @param ClusterType Cluster type. Valid values: 0 (replica set instance), 1 (sharding instance), -1 (all instances)
+                     * 设置Cluster type. Valid values: <ul><li>`0`: Replica set instances. </li><li>`1`: Sharded cluster instances. </li><li>`-1`: All instances.</li></ul>
+                     * @param ClusterType Cluster type. Valid values: <ul><li>`0`: Replica set instances. </li><li>`1`: Sharded cluster instances. </li><li>`-1`: All instances.</li></ul>
                      */
                     void SetClusterType(const int64_t& _clusterType);
 
@@ -98,14 +98,14 @@ namespace TencentCloud
                     bool ClusterTypeHasBeenSet() const;
 
                     /**
-                     * 获取Instance status. Valid values: `0` (to be initialized), `1` (executing task), `2` (running), `-2` (isolated monthly-subscribed instance), `-3` (isolated pay-as-you-go instance)
-                     * @return Status Instance status. Valid values: `0` (to be initialized), `1` (executing task), `2` (running), `-2` (isolated monthly-subscribed instance), `-3` (isolated pay-as-you-go instance)
+                     * 获取Instance status. Valid values: <ul><li>`0`: To be initialized. </li><li>`1`: In process. </li><li>`2`: Valid. </li><li>`-2`: Isolated (for monthly subscribed instances). </li><li>`-3`: Isolated (for pay-as-you-go instances).</li></ul>
+                     * @return Status Instance status. Valid values: <ul><li>`0`: To be initialized. </li><li>`1`: In process. </li><li>`2`: Valid. </li><li>`-2`: Isolated (for monthly subscribed instances). </li><li>`-3`: Isolated (for pay-as-you-go instances).</li></ul>
                      */
                     std::vector<int64_t> GetStatus() const;
 
                     /**
-                     * 设置Instance status. Valid values: `0` (to be initialized), `1` (executing task), `2` (running), `-2` (isolated monthly-subscribed instance), `-3` (isolated pay-as-you-go instance)
-                     * @param Status Instance status. Valid values: `0` (to be initialized), `1` (executing task), `2` (running), `-2` (isolated monthly-subscribed instance), `-3` (isolated pay-as-you-go instance)
+                     * 设置Instance status. Valid values: <ul><li>`0`: To be initialized. </li><li>`1`: In process. </li><li>`2`: Valid. </li><li>`-2`: Isolated (for monthly subscribed instances). </li><li>`-3`: Isolated (for pay-as-you-go instances).</li></ul>
+                     * @param Status Instance status. Valid values: <ul><li>`0`: To be initialized. </li><li>`1`: In process. </li><li>`2`: Valid. </li><li>`-2`: Isolated (for monthly subscribed instances). </li><li>`-3`: Isolated (for pay-as-you-go instances).</li></ul>
                      */
                     void SetStatus(const std::vector<int64_t>& _status);
 
@@ -116,14 +116,14 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID. This parameter can be left empty for the basic network
-                     * @return VpcId VPC ID. This parameter can be left empty for the basic network
+                     * 获取VPC ID. This parameter can be left empty for the classic network.
+                     * @return VpcId VPC ID. This parameter can be left empty for the classic network.
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置VPC ID. This parameter can be left empty for the basic network
-                     * @param VpcId VPC ID. This parameter can be left empty for the basic network
+                     * 设置VPC ID. This parameter can be left empty for the classic network.
+                     * @param VpcId VPC ID. This parameter can be left empty for the classic network.
                      */
                     void SetVpcId(const std::string& _vpcId);
 
@@ -134,14 +134,14 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Subnet ID of VPC. This parameter can be left empty for the basic network. If it is passed in as an input parameter, the corresponding VpcId must be set
-                     * @return SubnetId Subnet ID of VPC. This parameter can be left empty for the basic network. If it is passed in as an input parameter, the corresponding VpcId must be set
+                     * 获取Subnet ID of VPC. This parameter can be left empty for the classic network. If it is passed in as an input parameter, the corresponding VpcId must be set.
+                     * @return SubnetId Subnet ID of VPC. This parameter can be left empty for the classic network. If it is passed in as an input parameter, the corresponding VpcId must be set.
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置Subnet ID of VPC. This parameter can be left empty for the basic network. If it is passed in as an input parameter, the corresponding VpcId must be set
-                     * @param SubnetId Subnet ID of VPC. This parameter can be left empty for the basic network. If it is passed in as an input parameter, the corresponding VpcId must be set
+                     * 设置Subnet ID of VPC. This parameter can be left empty for the classic network. If it is passed in as an input parameter, the corresponding VpcId must be set.
+                     * @param SubnetId Subnet ID of VPC. This parameter can be left empty for the classic network. If it is passed in as an input parameter, the corresponding VpcId must be set.
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
@@ -170,14 +170,14 @@ namespace TencentCloud
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取Number of results to be returned for a single request. Valid values: 1-100. Default value: 20
-                     * @return Limit Number of results to be returned for a single request. Valid values: 1-100. Default value: 20
+                     * 获取Number of results returned per request. Default value: `20`. Value range: [1,100].
+                     * @return Limit Number of results returned per request. Default value: `20`. Value range: [1,100].
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of results to be returned for a single request. Valid values: 1-100. Default value: 20
-                     * @param Limit Number of results to be returned for a single request. Valid values: 1-100. Default value: 20
+                     * 设置Number of results returned per request. Default value: `20`. Value range: [1,100].
+                     * @param Limit Number of results returned per request. Default value: `20`. Value range: [1,100].
                      */
                     void SetLimit(const uint64_t& _limit);
 
@@ -188,14 +188,14 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Offset. Default value: 0
-                     * @return Offset Offset. Default value: 0
+                     * 获取Offset. Default value: `0`.
+                     * @return Offset Offset. Default value: `0`.
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset. Default value: 0
-                     * @param Offset Offset. Default value: 0
+                     * 设置Offset. Default value: `0`.
+                     * @param Offset Offset. Default value: `0`.
                      */
                     void SetOffset(const uint64_t& _offset);
 
@@ -206,14 +206,14 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Sort by field of the returned result set. Currently, supported values include "ProjectId", "InstanceName", and "CreateTime". The return results are sorted in ascending order by default.
-                     * @return OrderBy Sort by field of the returned result set. Currently, supported values include "ProjectId", "InstanceName", and "CreateTime". The return results are sorted in ascending order by default.
+                     * 获取Sort by field of the returned result set. Valid values: `ProjectId`, `InstanceName`, `CreateTime`. The return results are sorted in ascending order by default.
+                     * @return OrderBy Sort by field of the returned result set. Valid values: `ProjectId`, `InstanceName`, `CreateTime`. The return results are sorted in ascending order by default.
                      */
                     std::string GetOrderBy() const;
 
                     /**
-                     * 设置Sort by field of the returned result set. Currently, supported values include "ProjectId", "InstanceName", and "CreateTime". The return results are sorted in ascending order by default.
-                     * @param OrderBy Sort by field of the returned result set. Currently, supported values include "ProjectId", "InstanceName", and "CreateTime". The return results are sorted in ascending order by default.
+                     * 设置Sort by field of the returned result set. Valid values: `ProjectId`, `InstanceName`, `CreateTime`. The return results are sorted in ascending order by default.
+                     * @param OrderBy Sort by field of the returned result set. Valid values: `ProjectId`, `InstanceName`, `CreateTime`. The return results are sorted in ascending order by default.
                      */
                     void SetOrderBy(const std::string& _orderBy);
 
@@ -224,14 +224,14 @@ namespace TencentCloud
                     bool OrderByHasBeenSet() const;
 
                     /**
-                     * 获取Sorting method of the return result set. Currently, "ASC" or "DESC" is supported
-                     * @return OrderByType Sorting method of the return result set. Currently, "ASC" or "DESC" is supported
+                     * 获取Sorting method of the return result set. Valid values: `ASC`, `DESC`.
+                     * @return OrderByType Sorting method of the return result set. Valid values: `ASC`, `DESC`.
                      */
                     std::string GetOrderByType() const;
 
                     /**
-                     * 设置Sorting method of the return result set. Currently, "ASC" or "DESC" is supported
-                     * @param OrderByType Sorting method of the return result set. Currently, "ASC" or "DESC" is supported
+                     * 设置Sorting method of the return result set. Valid values: `ASC`, `DESC`.
+                     * @param OrderByType Sorting method of the return result set. Valid values: `ASC`, `DESC`.
                      */
                     void SetOrderByType(const std::string& _orderByType);
 
@@ -260,14 +260,14 @@ namespace TencentCloud
                     bool ProjectIdsHasBeenSet() const;
 
                     /**
-                     * 获取Search keyword, which can be instance ID, instance name, or complete IP
-                     * @return SearchKey Search keyword, which can be instance ID, instance name, or complete IP
+                     * 获取Search keyword, which can be instance ID, instance name, or complete IP.
+                     * @return SearchKey Search keyword, which can be instance ID, instance name, or complete IP.
                      */
                     std::string GetSearchKey() const;
 
                     /**
-                     * 设置Search keyword, which can be instance ID, instance name, or complete IP
-                     * @param SearchKey Search keyword, which can be instance ID, instance name, or complete IP
+                     * 设置Search keyword, which can be instance ID, instance name, or complete IP.
+                     * @param SearchKey Search keyword, which can be instance ID, instance name, or complete IP.
                      */
                     void SetSearchKey(const std::string& _searchKey);
 
@@ -281,13 +281,13 @@ namespace TencentCloud
                      * 获取Tag information
                      * @return Tags Tag information
                      */
-                    TagInfo GetTags() const;
+                    std::vector<TagInfo> GetTags() const;
 
                     /**
                      * 设置Tag information
                      * @param Tags Tag information
                      */
-                    void SetTags(const TagInfo& _tags);
+                    void SetTags(const std::vector<TagInfo>& _tags);
 
                     /**
                      * 判断参数 Tags 是否已赋值
@@ -298,37 +298,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
+                     * List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB console page.
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * Instance type. Valid values: 0 (all instances), 1 (promoted), 2 (temp), 3 (read-only), -1 (promoted + read-only + disaster recovery)
+                     * Instance type. Valid values: <ul><li>`0`: All instances. </li><li>`1`: Regular instances. </li><li>`2`: Temp instances. </li><li>`3`: Read-only instances. </li><li>`-1`: Regular instances, read-only instances, disaster recovery instances.</li></ul>
                      */
                     int64_t m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * Cluster type. Valid values: 0 (replica set instance), 1 (sharding instance), -1 (all instances)
+                     * Cluster type. Valid values: <ul><li>`0`: Replica set instances. </li><li>`1`: Sharded cluster instances. </li><li>`-1`: All instances.</li></ul>
                      */
                     int64_t m_clusterType;
                     bool m_clusterTypeHasBeenSet;
 
                     /**
-                     * Instance status. Valid values: `0` (to be initialized), `1` (executing task), `2` (running), `-2` (isolated monthly-subscribed instance), `-3` (isolated pay-as-you-go instance)
+                     * Instance status. Valid values: <ul><li>`0`: To be initialized. </li><li>`1`: In process. </li><li>`2`: Valid. </li><li>`-2`: Isolated (for monthly subscribed instances). </li><li>`-3`: Isolated (for pay-as-you-go instances).</li></ul>
                      */
                     std::vector<int64_t> m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * VPC ID. This parameter can be left empty for the basic network
+                     * VPC ID. This parameter can be left empty for the classic network.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Subnet ID of VPC. This parameter can be left empty for the basic network. If it is passed in as an input parameter, the corresponding VpcId must be set
+                     * Subnet ID of VPC. This parameter can be left empty for the classic network. If it is passed in as an input parameter, the corresponding VpcId must be set.
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
@@ -340,25 +340,25 @@ namespace TencentCloud
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * Number of results to be returned for a single request. Valid values: 1-100. Default value: 20
+                     * Number of results returned per request. Default value: `20`. Value range: [1,100].
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Offset. Default value: 0
+                     * Offset. Default value: `0`.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Sort by field of the returned result set. Currently, supported values include "ProjectId", "InstanceName", and "CreateTime". The return results are sorted in ascending order by default.
+                     * Sort by field of the returned result set. Valid values: `ProjectId`, `InstanceName`, `CreateTime`. The return results are sorted in ascending order by default.
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;
 
                     /**
-                     * Sorting method of the return result set. Currently, "ASC" or "DESC" is supported
+                     * Sorting method of the return result set. Valid values: `ASC`, `DESC`.
                      */
                     std::string m_orderByType;
                     bool m_orderByTypeHasBeenSet;
@@ -370,7 +370,7 @@ namespace TencentCloud
                     bool m_projectIdsHasBeenSet;
 
                     /**
-                     * Search keyword, which can be instance ID, instance name, or complete IP
+                     * Search keyword, which can be instance ID, instance name, or complete IP.
                      */
                     std::string m_searchKey;
                     bool m_searchKeyHasBeenSet;
@@ -378,7 +378,7 @@ namespace TencentCloud
                     /**
                      * Tag information
                      */
-                    TagInfo m_tags;
+                    std::vector<TagInfo> m_tags;
                     bool m_tagsHasBeenSet;
 
                 };

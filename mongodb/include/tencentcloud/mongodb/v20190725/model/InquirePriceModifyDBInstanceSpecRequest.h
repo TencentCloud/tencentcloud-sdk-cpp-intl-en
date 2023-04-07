@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed in the TencentDB Console.
-                     * @return InstanceId Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed in the TencentDB Console.
+                     * 获取Instance ID in the format of cmgo-p8vn****. It is the same as the instance ID displayed in the TencentDB console.
+                     * @return InstanceId Instance ID in the format of cmgo-p8vn****. It is the same as the instance ID displayed in the TencentDB console.
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed in the TencentDB Console.
-                     * @param InstanceId Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed in the TencentDB Console.
+                     * 设置Instance ID in the format of cmgo-p8vn****. It is the same as the instance ID displayed in the TencentDB console.
+                     * @param InstanceId Instance ID in the format of cmgo-p8vn****. It is the same as the instance ID displayed in the TencentDB console.
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool VolumeHasBeenSet() const;
 
                     /**
-                     * 获取Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged.
-                     * @return NodeNum Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged.
+                     * 获取Number of instance nodes. The number of nodes is left unchanged by default and cannot be changed currently.
+                     * @return NodeNum Number of instance nodes. The number of nodes is left unchanged by default and cannot be changed currently.
                      */
                     int64_t GetNodeNum() const;
 
                     /**
-                     * 设置Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged.
-                     * @param NodeNum Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged.
+                     * 设置Number of instance nodes. The number of nodes is left unchanged by default and cannot be changed currently.
+                     * @param NodeNum Number of instance nodes. The number of nodes is left unchanged by default and cannot be changed currently.
                      */
                     void SetNodeNum(const int64_t& _nodeNum);
 
@@ -115,14 +115,14 @@ namespace TencentCloud
                     bool NodeNumHasBeenSet() const;
 
                     /**
-                     * 获取Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged.
-                     * @return ReplicateSetNum Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged.
+                     * 获取Number of instance shards. The number of shards is left unchanged by default and cannot be changed currently.
+                     * @return ReplicateSetNum Number of instance shards. The number of shards is left unchanged by default and cannot be changed currently.
                      */
                     int64_t GetReplicateSetNum() const;
 
                     /**
-                     * 设置Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged.
-                     * @param ReplicateSetNum Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged.
+                     * 设置Number of instance shards. The number of shards is left unchanged by default and cannot be changed currently.
+                     * @param ReplicateSetNum Number of instance shards. The number of shards is left unchanged by default and cannot be changed currently.
                      */
                     void SetReplicateSetNum(const int64_t& _replicateSetNum);
 
@@ -135,7 +135,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed in the TencentDB Console.
+                     * Instance ID in the format of cmgo-p8vn****. It is the same as the instance ID displayed in the TencentDB console.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
@@ -153,13 +153,13 @@ namespace TencentCloud
                     bool m_volumeHasBeenSet;
 
                     /**
-                     * Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged.
+                     * Number of instance nodes. The number of nodes is left unchanged by default and cannot be changed currently.
                      */
                     int64_t m_nodeNum;
                     bool m_nodeNumHasBeenSet;
 
                     /**
-                     * Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged.
+                     * Number of instance shards. The number of shards is left unchanged by default and cannot be changed currently.
                      */
                     int64_t m_replicateSetNum;
                     bool m_replicateSetNumHasBeenSet;

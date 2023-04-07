@@ -151,14 +151,14 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Slow log format, which can be JSON. If this parameter is left empty, the slow log will be returned in its native format.
-                     * @return Format Slow log format, which can be JSON. If this parameter is left empty, the slow log will be returned in its native format.
+                     * 获取Return format of slow log. The original slow log format is returned by default, and the format can be set to JSON on versions 4.4 and later.
+                     * @return Format Return format of slow log. The original slow log format is returned by default, and the format can be set to JSON on versions 4.4 and later.
                      */
                     std::string GetFormat() const;
 
                     /**
-                     * 设置Slow log format, which can be JSON. If this parameter is left empty, the slow log will be returned in its native format.
-                     * @param Format Slow log format, which can be JSON. If this parameter is left empty, the slow log will be returned in its native format.
+                     * 设置Return format of slow log. The original slow log format is returned by default, and the format can be set to JSON on versions 4.4 and later.
+                     * @param Format Return format of slow log. The original slow log format is returned by default, and the format can be set to JSON on versions 4.4 and later.
                      */
                     void SetFormat(const std::string& _format);
 
@@ -207,7 +207,7 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Slow log format, which can be JSON. If this parameter is left empty, the slow log will be returned in its native format.
+                     * Return format of slow log. The original slow log format is returned by default, and the format can be set to JSON on versions 4.4 and later.
                      */
                     std::string m_format;
                     bool m_formatHasBeenSet;

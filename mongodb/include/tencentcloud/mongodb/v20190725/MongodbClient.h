@@ -344,7 +344,7 @@ namespace TencentCloud
                 InquirePriceCreateDBInstancesOutcomeCallable InquirePriceCreateDBInstancesCallable(const Model::InquirePriceCreateDBInstancesRequest& request);
 
                 /**
-                 *This API is used to query price of instance specification adjustment.
+                 *This API is used to query the price of instance specification adjustment.
                  * @param req InquirePriceModifyDBInstanceSpecRequest
                  * @return InquirePriceModifyDBInstanceSpecOutcome
                  */
