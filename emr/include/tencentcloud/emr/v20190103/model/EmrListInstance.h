@@ -646,6 +646,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool OutSideSoftInfoHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the current cluster supports external clients.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return IsSupportOutsideCluster Whether the current cluster supports external clients.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool GetIsSupportOutsideCluster() const;
+
+                    /**
+                     * 设置Whether the current cluster supports external clients.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param IsSupportOutsideCluster Whether the current cluster supports external clients.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetIsSupportOutsideCluster(const bool& _isSupportOutsideCluster);
+
+                    /**
+                     * 判断参数 IsSupportOutsideCluster 是否已赋值
+                     * @return IsSupportOutsideCluster 是否已赋值
+                     */
+                    bool IsSupportOutsideClusterHasBeenSet() const;
+
                 private:
 
                     /**
@@ -840,6 +862,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<SoftDependInfo> m_outSideSoftInfo;
                     bool m_outSideSoftInfoHasBeenSet;
+
+                    /**
+                     * Whether the current cluster supports external clients.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool m_isSupportOutsideCluster;
+                    bool m_isSupportOutsideClusterHasBeenSet;
 
                 };
             }

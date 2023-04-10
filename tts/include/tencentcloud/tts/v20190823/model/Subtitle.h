@@ -136,6 +136,28 @@ namespace TencentCloud
                      */
                     bool EndIndexHasBeenSet() const;
 
+                    /**
+                     * 获取The phonemes of the word.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Phoneme The phonemes of the word.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetPhoneme() const;
+
+                    /**
+                     * 设置The phonemes of the word.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Phoneme The phonemes of the word.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetPhoneme(const std::string& _phoneme);
+
+                    /**
+                     * 判断参数 Phoneme 是否已赋值
+                     * @return Phoneme 是否已赋值
+                     */
+                    bool PhonemeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -167,6 +189,13 @@ namespace TencentCloud
                      */
                     int64_t m_endIndex;
                     bool m_endIndexHasBeenSet;
+
+                    /**
+                     * The phonemes of the word.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_phoneme;
+                    bool m_phonemeHasBeenSet;
 
                 };
             }
