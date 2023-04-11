@@ -23,9 +23,11 @@ set(dlc_public_header_model
   include/tencentcloud/dlc/v20210125/model/DescribeTaskResultResponse.h
   include/tencentcloud/dlc/v20210125/model/DescribeTasksRequest.h
   include/tencentcloud/dlc/v20210125/model/CreateSparkAppTaskRequest.h
-  include/tencentcloud/dlc/v20210125/model/SuspendResumeDataEngineResponse.h
+  include/tencentcloud/dlc/v20210125/model/ModifySparkAppRequest.h
+  include/tencentcloud/dlc/v20210125/model/DescribeForbiddenTableProResponse.h
   include/tencentcloud/dlc/v20210125/model/KVPair.h
   include/tencentcloud/dlc/v20210125/model/TableBaseInfo.h
+  include/tencentcloud/dlc/v20210125/model/DescribeLakeFsDirSummaryRequest.h
   include/tencentcloud/dlc/v20210125/model/GenerateCreateMangedTableSqlResponse.h
   include/tencentcloud/dlc/v20210125/model/CreateInternalTableRequest.h
   include/tencentcloud/dlc/v20210125/model/Task.h
@@ -34,25 +36,35 @@ set(dlc_public_header_model
   include/tencentcloud/dlc/v20210125/model/CreateSparkAppTaskResponse.h
   include/tencentcloud/dlc/v20210125/model/CancelTaskRequest.h
   include/tencentcloud/dlc/v20210125/model/TaskResponseInfo.h
-  include/tencentcloud/dlc/v20210125/model/CreateTasksRequest.h
+  include/tencentcloud/dlc/v20210125/model/CreateSparkAppResponse.h
   include/tencentcloud/dlc/v20210125/model/CreateTaskResponse.h
   include/tencentcloud/dlc/v20210125/model/DeleteSparkAppResponse.h
   include/tencentcloud/dlc/v20210125/model/CreateResultDownloadResponse.h
-  include/tencentcloud/dlc/v20210125/model/CreateSparkAppResponse.h
+  include/tencentcloud/dlc/v20210125/model/CreateTasksRequest.h
   include/tencentcloud/dlc/v20210125/model/SuspendResumeDataEngineRequest.h
   include/tencentcloud/dlc/v20210125/model/TaskResultInfo.h
   include/tencentcloud/dlc/v20210125/model/DescribeSparkAppJobsResponse.h
-  include/tencentcloud/dlc/v20210125/model/TasksOverview.h
+  include/tencentcloud/dlc/v20210125/model/DescribeSparkAppTasksResponse.h
+  include/tencentcloud/dlc/v20210125/model/SuspendResumeDataEngineResponse.h
+  include/tencentcloud/dlc/v20210125/model/TagInfo.h
+  include/tencentcloud/dlc/v20210125/model/SwitchDataEngineRequest.h
+  include/tencentcloud/dlc/v20210125/model/DescribeEngineUsageInfoRequest.h
   include/tencentcloud/dlc/v20210125/model/DeleteSparkAppRequest.h
-  include/tencentcloud/dlc/v20210125/model/Execution.h
+  include/tencentcloud/dlc/v20210125/model/DescribeForbiddenTableProRequest.h
+  include/tencentcloud/dlc/v20210125/model/CreateDataEngineResponse.h
   include/tencentcloud/dlc/v20210125/model/DescribeSparkAppJobsRequest.h
+  include/tencentcloud/dlc/v20210125/model/UpdateRowFilterResponse.h
   include/tencentcloud/dlc/v20210125/model/CreateTasksResponse.h
   include/tencentcloud/dlc/v20210125/model/DescribeTasksResponse.h
+  include/tencentcloud/dlc/v20210125/model/TasksOverview.h
   include/tencentcloud/dlc/v20210125/model/CreateSparkAppRequest.h
-  include/tencentcloud/dlc/v20210125/model/DescribeSparkAppTasksResponse.h
+  include/tencentcloud/dlc/v20210125/model/CrontabResumeSuspendStrategy.h
   include/tencentcloud/dlc/v20210125/model/Column.h
   include/tencentcloud/dlc/v20210125/model/DescribeTaskResultRequest.h
+  include/tencentcloud/dlc/v20210125/model/UpdateRowFilterRequest.h
+  include/tencentcloud/dlc/v20210125/model/CreateDataEngineRequest.h
   include/tencentcloud/dlc/v20210125/model/Filter.h
+  include/tencentcloud/dlc/v20210125/model/DescribeLakeFsDirSummaryResponse.h
   include/tencentcloud/dlc/v20210125/model/CreateTaskRequest.h
   include/tencentcloud/dlc/v20210125/model/ModifySparkAppResponse.h
   include/tencentcloud/dlc/v20210125/model/CreateInternalTableResponse.h
@@ -63,13 +75,19 @@ set(dlc_public_header_model
   include/tencentcloud/dlc/v20210125/model/CancelTaskResponse.h
   include/tencentcloud/dlc/v20210125/model/DataGovernPolicy.h
   include/tencentcloud/dlc/v20210125/model/ModifyGovernEventRuleResponse.h
+  include/tencentcloud/dlc/v20210125/model/Execution.h
   include/tencentcloud/dlc/v20210125/model/SQLTask.h
+  include/tencentcloud/dlc/v20210125/model/DescribeLakeFsInfoRequest.h
   include/tencentcloud/dlc/v20210125/model/CreateResultDownloadRequest.h
   include/tencentcloud/dlc/v20210125/model/DescribeSparkAppJobResponse.h
-  include/tencentcloud/dlc/v20210125/model/ModifySparkAppRequest.h
+  include/tencentcloud/dlc/v20210125/model/DescribeEngineUsageInfoResponse.h
   include/tencentcloud/dlc/v20210125/model/StreamingStatistics.h
   include/tencentcloud/dlc/v20210125/model/ModifyGovernEventRuleRequest.h
+  include/tencentcloud/dlc/v20210125/model/Policy.h
+  include/tencentcloud/dlc/v20210125/model/SwitchDataEngineResponse.h
   include/tencentcloud/dlc/v20210125/model/TPartition.h
+  include/tencentcloud/dlc/v20210125/model/DescribeLakeFsInfoResponse.h
+  include/tencentcloud/dlc/v20210125/model/DataEngineConfigPair.h
   include/tencentcloud/dlc/v20210125/model/TColumn.h
   include/tencentcloud/dlc/v20210125/model/DescribeResultDownloadRequest.h
   )
@@ -80,9 +98,11 @@ set(dlc_src
   src/v20210125/model/DescribeTaskResultResponse.cpp
   src/v20210125/model/DescribeTasksRequest.cpp
   src/v20210125/model/CreateSparkAppTaskRequest.cpp
-  src/v20210125/model/SuspendResumeDataEngineResponse.cpp
+  src/v20210125/model/ModifySparkAppRequest.cpp
+  src/v20210125/model/DescribeForbiddenTableProResponse.cpp
   src/v20210125/model/KVPair.cpp
   src/v20210125/model/TableBaseInfo.cpp
+  src/v20210125/model/DescribeLakeFsDirSummaryRequest.cpp
   src/v20210125/model/GenerateCreateMangedTableSqlResponse.cpp
   src/v20210125/model/CreateInternalTableRequest.cpp
   src/v20210125/model/Task.cpp
@@ -91,25 +111,35 @@ set(dlc_src
   src/v20210125/model/CreateSparkAppTaskResponse.cpp
   src/v20210125/model/CancelTaskRequest.cpp
   src/v20210125/model/TaskResponseInfo.cpp
-  src/v20210125/model/CreateTasksRequest.cpp
+  src/v20210125/model/CreateSparkAppResponse.cpp
   src/v20210125/model/CreateTaskResponse.cpp
   src/v20210125/model/DeleteSparkAppResponse.cpp
   src/v20210125/model/CreateResultDownloadResponse.cpp
-  src/v20210125/model/CreateSparkAppResponse.cpp
+  src/v20210125/model/CreateTasksRequest.cpp
   src/v20210125/model/SuspendResumeDataEngineRequest.cpp
   src/v20210125/model/TaskResultInfo.cpp
   src/v20210125/model/DescribeSparkAppJobsResponse.cpp
-  src/v20210125/model/TasksOverview.cpp
+  src/v20210125/model/DescribeSparkAppTasksResponse.cpp
+  src/v20210125/model/SuspendResumeDataEngineResponse.cpp
+  src/v20210125/model/TagInfo.cpp
+  src/v20210125/model/SwitchDataEngineRequest.cpp
+  src/v20210125/model/DescribeEngineUsageInfoRequest.cpp
   src/v20210125/model/DeleteSparkAppRequest.cpp
-  src/v20210125/model/Execution.cpp
+  src/v20210125/model/DescribeForbiddenTableProRequest.cpp
+  src/v20210125/model/CreateDataEngineResponse.cpp
   src/v20210125/model/DescribeSparkAppJobsRequest.cpp
+  src/v20210125/model/UpdateRowFilterResponse.cpp
   src/v20210125/model/CreateTasksResponse.cpp
   src/v20210125/model/DescribeTasksResponse.cpp
+  src/v20210125/model/TasksOverview.cpp
   src/v20210125/model/CreateSparkAppRequest.cpp
-  src/v20210125/model/DescribeSparkAppTasksResponse.cpp
+  src/v20210125/model/CrontabResumeSuspendStrategy.cpp
   src/v20210125/model/Column.cpp
   src/v20210125/model/DescribeTaskResultRequest.cpp
+  src/v20210125/model/UpdateRowFilterRequest.cpp
+  src/v20210125/model/CreateDataEngineRequest.cpp
   src/v20210125/model/Filter.cpp
+  src/v20210125/model/DescribeLakeFsDirSummaryResponse.cpp
   src/v20210125/model/CreateTaskRequest.cpp
   src/v20210125/model/ModifySparkAppResponse.cpp
   src/v20210125/model/CreateInternalTableResponse.cpp
@@ -120,13 +150,19 @@ set(dlc_src
   src/v20210125/model/CancelTaskResponse.cpp
   src/v20210125/model/DataGovernPolicy.cpp
   src/v20210125/model/ModifyGovernEventRuleResponse.cpp
+  src/v20210125/model/Execution.cpp
   src/v20210125/model/SQLTask.cpp
+  src/v20210125/model/DescribeLakeFsInfoRequest.cpp
   src/v20210125/model/CreateResultDownloadRequest.cpp
   src/v20210125/model/DescribeSparkAppJobResponse.cpp
-  src/v20210125/model/ModifySparkAppRequest.cpp
+  src/v20210125/model/DescribeEngineUsageInfoResponse.cpp
   src/v20210125/model/StreamingStatistics.cpp
   src/v20210125/model/ModifyGovernEventRuleRequest.cpp
+  src/v20210125/model/Policy.cpp
+  src/v20210125/model/SwitchDataEngineResponse.cpp
   src/v20210125/model/TPartition.cpp
+  src/v20210125/model/DescribeLakeFsInfoResponse.cpp
+  src/v20210125/model/DataEngineConfigPair.cpp
   src/v20210125/model/TColumn.cpp
   src/v20210125/model/DescribeResultDownloadRequest.cpp
   )

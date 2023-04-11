@@ -25,6 +25,8 @@
 #include <tencentcloud/core/AsyncCallerContext.h>
 #include <tencentcloud/dlc/v20210125/model/CancelTaskRequest.h>
 #include <tencentcloud/dlc/v20210125/model/CancelTaskResponse.h>
+#include <tencentcloud/dlc/v20210125/model/CreateDataEngineRequest.h>
+#include <tencentcloud/dlc/v20210125/model/CreateDataEngineResponse.h>
 #include <tencentcloud/dlc/v20210125/model/CreateInternalTableRequest.h>
 #include <tencentcloud/dlc/v20210125/model/CreateInternalTableResponse.h>
 #include <tencentcloud/dlc/v20210125/model/CreateResultDownloadRequest.h>
@@ -39,6 +41,14 @@
 #include <tencentcloud/dlc/v20210125/model/CreateTasksResponse.h>
 #include <tencentcloud/dlc/v20210125/model/DeleteSparkAppRequest.h>
 #include <tencentcloud/dlc/v20210125/model/DeleteSparkAppResponse.h>
+#include <tencentcloud/dlc/v20210125/model/DescribeEngineUsageInfoRequest.h>
+#include <tencentcloud/dlc/v20210125/model/DescribeEngineUsageInfoResponse.h>
+#include <tencentcloud/dlc/v20210125/model/DescribeForbiddenTableProRequest.h>
+#include <tencentcloud/dlc/v20210125/model/DescribeForbiddenTableProResponse.h>
+#include <tencentcloud/dlc/v20210125/model/DescribeLakeFsDirSummaryRequest.h>
+#include <tencentcloud/dlc/v20210125/model/DescribeLakeFsDirSummaryResponse.h>
+#include <tencentcloud/dlc/v20210125/model/DescribeLakeFsInfoRequest.h>
+#include <tencentcloud/dlc/v20210125/model/DescribeLakeFsInfoResponse.h>
 #include <tencentcloud/dlc/v20210125/model/DescribeResultDownloadRequest.h>
 #include <tencentcloud/dlc/v20210125/model/DescribeResultDownloadResponse.h>
 #include <tencentcloud/dlc/v20210125/model/DescribeSparkAppJobRequest.h>
@@ -59,6 +69,10 @@
 #include <tencentcloud/dlc/v20210125/model/ModifySparkAppResponse.h>
 #include <tencentcloud/dlc/v20210125/model/SuspendResumeDataEngineRequest.h>
 #include <tencentcloud/dlc/v20210125/model/SuspendResumeDataEngineResponse.h>
+#include <tencentcloud/dlc/v20210125/model/SwitchDataEngineRequest.h>
+#include <tencentcloud/dlc/v20210125/model/SwitchDataEngineResponse.h>
+#include <tencentcloud/dlc/v20210125/model/UpdateRowFilterRequest.h>
+#include <tencentcloud/dlc/v20210125/model/UpdateRowFilterResponse.h>
 
 
 namespace TencentCloud
@@ -76,6 +90,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CancelTaskResponse> CancelTaskOutcome;
                 typedef std::future<CancelTaskOutcome> CancelTaskOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::CancelTaskRequest&, CancelTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CancelTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateDataEngineResponse> CreateDataEngineOutcome;
+                typedef std::future<CreateDataEngineOutcome> CreateDataEngineOutcomeCallable;
+                typedef std::function<void(const DlcClient*, const Model::CreateDataEngineRequest&, CreateDataEngineOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDataEngineAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateInternalTableResponse> CreateInternalTableOutcome;
                 typedef std::future<CreateInternalTableOutcome> CreateInternalTableOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::CreateInternalTableRequest&, CreateInternalTableOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateInternalTableAsyncHandler;
@@ -97,6 +114,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteSparkAppResponse> DeleteSparkAppOutcome;
                 typedef std::future<DeleteSparkAppOutcome> DeleteSparkAppOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::DeleteSparkAppRequest&, DeleteSparkAppOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteSparkAppAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeEngineUsageInfoResponse> DescribeEngineUsageInfoOutcome;
+                typedef std::future<DescribeEngineUsageInfoOutcome> DescribeEngineUsageInfoOutcomeCallable;
+                typedef std::function<void(const DlcClient*, const Model::DescribeEngineUsageInfoRequest&, DescribeEngineUsageInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeEngineUsageInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeForbiddenTableProResponse> DescribeForbiddenTableProOutcome;
+                typedef std::future<DescribeForbiddenTableProOutcome> DescribeForbiddenTableProOutcomeCallable;
+                typedef std::function<void(const DlcClient*, const Model::DescribeForbiddenTableProRequest&, DescribeForbiddenTableProOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeForbiddenTableProAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeLakeFsDirSummaryResponse> DescribeLakeFsDirSummaryOutcome;
+                typedef std::future<DescribeLakeFsDirSummaryOutcome> DescribeLakeFsDirSummaryOutcomeCallable;
+                typedef std::function<void(const DlcClient*, const Model::DescribeLakeFsDirSummaryRequest&, DescribeLakeFsDirSummaryOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLakeFsDirSummaryAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeLakeFsInfoResponse> DescribeLakeFsInfoOutcome;
+                typedef std::future<DescribeLakeFsInfoOutcome> DescribeLakeFsInfoOutcomeCallable;
+                typedef std::function<void(const DlcClient*, const Model::DescribeLakeFsInfoRequest&, DescribeLakeFsInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeLakeFsInfoAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeResultDownloadResponse> DescribeResultDownloadOutcome;
                 typedef std::future<DescribeResultDownloadOutcome> DescribeResultDownloadOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::DescribeResultDownloadRequest&, DescribeResultDownloadOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeResultDownloadAsyncHandler;
@@ -127,6 +156,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::SuspendResumeDataEngineResponse> SuspendResumeDataEngineOutcome;
                 typedef std::future<SuspendResumeDataEngineOutcome> SuspendResumeDataEngineOutcomeCallable;
                 typedef std::function<void(const DlcClient*, const Model::SuspendResumeDataEngineRequest&, SuspendResumeDataEngineOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SuspendResumeDataEngineAsyncHandler;
+                typedef Outcome<Core::Error, Model::SwitchDataEngineResponse> SwitchDataEngineOutcome;
+                typedef std::future<SwitchDataEngineOutcome> SwitchDataEngineOutcomeCallable;
+                typedef std::function<void(const DlcClient*, const Model::SwitchDataEngineRequest&, SwitchDataEngineOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SwitchDataEngineAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateRowFilterResponse> UpdateRowFilterOutcome;
+                typedef std::future<UpdateRowFilterOutcome> UpdateRowFilterOutcomeCallable;
+                typedef std::function<void(const DlcClient*, const Model::UpdateRowFilterRequest&, UpdateRowFilterOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateRowFilterAsyncHandler;
 
 
 
@@ -138,6 +173,15 @@ namespace TencentCloud
                 CancelTaskOutcome CancelTask(const Model::CancelTaskRequest &request);
                 void CancelTaskAsync(const Model::CancelTaskRequest& request, const CancelTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CancelTaskOutcomeCallable CancelTaskCallable(const Model::CancelTaskRequest& request);
+
+                /**
+                 *This API is used to create a data engine.
+                 * @param req CreateDataEngineRequest
+                 * @return CreateDataEngineOutcome
+                 */
+                CreateDataEngineOutcome CreateDataEngine(const Model::CreateDataEngineRequest &request);
+                void CreateDataEngineAsync(const Model::CreateDataEngineRequest& request, const CreateDataEngineAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateDataEngineOutcomeCallable CreateDataEngineCallable(const Model::CreateDataEngineRequest& request);
 
                 /**
                  *This API is used to create a managed internal table. It has been disused.
@@ -201,6 +245,42 @@ namespace TencentCloud
                 DeleteSparkAppOutcome DeleteSparkApp(const Model::DeleteSparkAppRequest &request);
                 void DeleteSparkAppAsync(const Model::DeleteSparkAppRequest& request, const DeleteSparkAppAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteSparkAppOutcomeCallable DeleteSparkAppCallable(const Model::DeleteSparkAppRequest& request);
+
+                /**
+                 *This API is used to query the resource usage of a data engine based on its ID.
+                 * @param req DescribeEngineUsageInfoRequest
+                 * @return DescribeEngineUsageInfoOutcome
+                 */
+                DescribeEngineUsageInfoOutcome DescribeEngineUsageInfo(const Model::DescribeEngineUsageInfoRequest &request);
+                void DescribeEngineUsageInfoAsync(const Model::DescribeEngineUsageInfoRequest& request, const DescribeEngineUsageInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeEngineUsageInfoOutcomeCallable DescribeEngineUsageInfoCallable(const Model::DescribeEngineUsageInfoRequest& request);
+
+                /**
+                 *This API is used to get the list of disabled table attributes.
+                 * @param req DescribeForbiddenTableProRequest
+                 * @return DescribeForbiddenTableProOutcome
+                 */
+                DescribeForbiddenTableProOutcome DescribeForbiddenTablePro(const Model::DescribeForbiddenTableProRequest &request);
+                void DescribeForbiddenTableProAsync(const Model::DescribeForbiddenTableProRequest& request, const DescribeForbiddenTableProAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeForbiddenTableProOutcomeCallable DescribeForbiddenTableProCallable(const Model::DescribeForbiddenTableProRequest& request);
+
+                /**
+                 *This API is used to query the summary of a specified directory in a managed storage.
+                 * @param req DescribeLakeFsDirSummaryRequest
+                 * @return DescribeLakeFsDirSummaryOutcome
+                 */
+                DescribeLakeFsDirSummaryOutcome DescribeLakeFsDirSummary(const Model::DescribeLakeFsDirSummaryRequest &request);
+                void DescribeLakeFsDirSummaryAsync(const Model::DescribeLakeFsDirSummaryRequest& request, const DescribeLakeFsDirSummaryAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeLakeFsDirSummaryOutcomeCallable DescribeLakeFsDirSummaryCallable(const Model::DescribeLakeFsDirSummaryRequest& request);
+
+                /**
+                 *This API is used to query managed storage information.
+                 * @param req DescribeLakeFsInfoRequest
+                 * @return DescribeLakeFsInfoOutcome
+                 */
+                DescribeLakeFsInfoOutcome DescribeLakeFsInfo(const Model::DescribeLakeFsInfoRequest &request);
+                void DescribeLakeFsInfoAsync(const Model::DescribeLakeFsInfoRequest& request, const DescribeLakeFsInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeLakeFsInfoOutcomeCallable DescribeLakeFsInfoCallable(const Model::DescribeLakeFsInfoRequest& request);
 
                 /**
                  *This API is used to get a query result download task.
@@ -291,6 +371,24 @@ namespace TencentCloud
                 SuspendResumeDataEngineOutcome SuspendResumeDataEngine(const Model::SuspendResumeDataEngineRequest &request);
                 void SuspendResumeDataEngineAsync(const Model::SuspendResumeDataEngineRequest& request, const SuspendResumeDataEngineAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 SuspendResumeDataEngineOutcomeCallable SuspendResumeDataEngineCallable(const Model::SuspendResumeDataEngineRequest& request);
+
+                /**
+                 *This API is used to switch between the primary and standby clusters.
+                 * @param req SwitchDataEngineRequest
+                 * @return SwitchDataEngineOutcome
+                 */
+                SwitchDataEngineOutcome SwitchDataEngine(const Model::SwitchDataEngineRequest &request);
+                void SwitchDataEngineAsync(const Model::SwitchDataEngineRequest& request, const SwitchDataEngineAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SwitchDataEngineOutcomeCallable SwitchDataEngineCallable(const Model::SwitchDataEngineRequest& request);
+
+                /**
+                 *This API is used to update row filters. Please note that it updates filters only but not catalogs, databases, or tables.
+                 * @param req UpdateRowFilterRequest
+                 * @return UpdateRowFilterOutcome
+                 */
+                UpdateRowFilterOutcome UpdateRowFilter(const Model::UpdateRowFilterRequest &request);
+                void UpdateRowFilterAsync(const Model::UpdateRowFilterRequest& request, const UpdateRowFilterAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateRowFilterOutcomeCallable UpdateRowFilterCallable(const Model::UpdateRowFilterRequest& request);
 
             };
         }
