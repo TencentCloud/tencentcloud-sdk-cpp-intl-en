@@ -721,6 +721,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool JobExecutorMaxNumbersHasBeenSet() const;
 
+                    /**
+                     * 获取The image version.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SparkImageVersion The image version.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetSparkImageVersion() const;
+
+                    /**
+                     * 设置The image version.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param SparkImageVersion The image version.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetSparkImageVersion(const std::string& _sparkImageVersion);
+
+                    /**
+                     * 判断参数 SparkImageVersion 是否已赋值
+                     * @return SparkImageVersion 是否已赋值
+                     */
+                    bool SparkImageVersionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -943,6 +965,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_jobExecutorMaxNumbers;
                     bool m_jobExecutorMaxNumbersHasBeenSet;
+
+                    /**
+                     * The image version.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_sparkImageVersion;
+                    bool m_sparkImageVersionHasBeenSet;
 
                 };
             }
