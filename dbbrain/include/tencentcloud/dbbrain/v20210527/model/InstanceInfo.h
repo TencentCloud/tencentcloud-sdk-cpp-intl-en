@@ -551,6 +551,68 @@ namespace TencentCloud
                      */
                     bool AuditRunningStatusHasBeenSet() const;
 
+                    /**
+                     * 获取Private VIP
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return InternalVip Private VIP
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetInternalVip() const;
+
+                    /**
+                     * 设置Private VIP
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param InternalVip Private VIP
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetInternalVip(const std::string& _internalVip);
+
+                    /**
+                     * 判断参数 InternalVip 是否已赋值
+                     * @return InternalVip 是否已赋值
+                     */
+                    bool InternalVipHasBeenSet() const;
+
+                    /**
+                     * 获取Private network port
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return InternalVport Private network port
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetInternalVport() const;
+
+                    /**
+                     * 设置Private network port
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param InternalVport Private network port
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetInternalVport(const int64_t& _internalVport);
+
+                    /**
+                     * 判断参数 InternalVport 是否已赋值
+                     * @return InternalVport 是否已赋值
+                     */
+                    bool InternalVportHasBeenSet() const;
+
+                    /**
+                     * 获取Creation time
+                     * @return CreateTime Creation time
+                     */
+                    std::string GetCreateTime() const;
+
+                    /**
+                     * 设置Creation time
+                     * @param CreateTime Creation time
+                     */
+                    void SetCreateTime(const std::string& _createTime);
+
+                    /**
+                     * 判断参数 CreateTime 是否已赋值
+                     * @return CreateTime 是否已赋值
+                     */
+                    bool CreateTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -720,6 +782,26 @@ namespace TencentCloud
                      */
                     std::string m_auditRunningStatus;
                     bool m_auditRunningStatusHasBeenSet;
+
+                    /**
+                     * Private VIP
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_internalVip;
+                    bool m_internalVipHasBeenSet;
+
+                    /**
+                     * Private network port
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_internalVport;
+                    bool m_internalVportHasBeenSet;
+
+                    /**
+                     * Creation time
+                     */
+                    std::string m_createTime;
+                    bool m_createTimeHasBeenSet;
 
                 };
             }

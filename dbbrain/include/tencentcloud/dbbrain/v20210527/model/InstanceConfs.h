@@ -82,6 +82,28 @@ namespace TencentCloud
                      */
                     bool OverviewDisplayHasBeenSet() const;
 
+                    /**
+                     * 获取Custom big key analysis separator for Redis only
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return KeyDelimiters Custom big key analysis separator for Redis only
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> GetKeyDelimiters() const;
+
+                    /**
+                     * 设置Custom big key analysis separator for Redis only
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param KeyDelimiters Custom big key analysis separator for Redis only
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetKeyDelimiters(const std::vector<std::string>& _keyDelimiters);
+
+                    /**
+                     * 判断参数 KeyDelimiters 是否已赋值
+                     * @return KeyDelimiters 是否已赋值
+                     */
+                    bool KeyDelimitersHasBeenSet() const;
+
                 private:
 
                     /**
@@ -95,6 +117,13 @@ namespace TencentCloud
                      */
                     std::string m_overviewDisplay;
                     bool m_overviewDisplayHasBeenSet;
+
+                    /**
+                     * Custom big key analysis separator for Redis only
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_keyDelimiters;
+                    bool m_keyDelimitersHasBeenSet;
 
                 };
             }
