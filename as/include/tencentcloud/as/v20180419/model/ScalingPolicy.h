@@ -84,6 +84,32 @@ namespace TencentCloud
                     bool AutoScalingPolicyIdHasBeenSet() const;
 
                     /**
+                     * 获取Scaling policy type. Valid values:
+- `SIMPLE`: A simple policy.
+- `TARGET_TRACKING`: A target tracking policy.
+                     * @return ScalingPolicyType Scaling policy type. Valid values:
+- `SIMPLE`: A simple policy.
+- `TARGET_TRACKING`: A target tracking policy.
+                     */
+                    std::string GetScalingPolicyType() const;
+
+                    /**
+                     * 设置Scaling policy type. Valid values:
+- `SIMPLE`: A simple policy.
+- `TARGET_TRACKING`: A target tracking policy.
+                     * @param ScalingPolicyType Scaling policy type. Valid values:
+- `SIMPLE`: A simple policy.
+- `TARGET_TRACKING`: A target tracking policy.
+                     */
+                    void SetScalingPolicyType(const std::string& _scalingPolicyType);
+
+                    /**
+                     * 判断参数 ScalingPolicyType 是否已赋值
+                     * @return ScalingPolicyType 是否已赋值
+                     */
+                    bool ScalingPolicyTypeHasBeenSet() const;
+
+                    /**
                      * 获取Alarm trigger policy name.
                      * @return ScalingPolicyName Alarm trigger policy name.
                      */
@@ -102,14 +128,14 @@ namespace TencentCloud
                     bool ScalingPolicyNameHasBeenSet() const;
 
                     /**
-                     * 获取The method to adjust the desired number of instances after the alarm is triggered. Value range: <br><li>CHANGE_IN_CAPACITY: Increase or decrease the desired number of instances </li><li>EXACT_CAPACITY: Adjust to the specified desired number of instances </li> <li>PERCENT_CHANGE_IN_CAPACITY: Adjust the desired number of instances by percentage </li>
-                     * @return AdjustmentType The method to adjust the desired number of instances after the alarm is triggered. Value range: <br><li>CHANGE_IN_CAPACITY: Increase or decrease the desired number of instances </li><li>EXACT_CAPACITY: Adjust to the specified desired number of instances </li> <li>PERCENT_CHANGE_IN_CAPACITY: Adjust the desired number of instances by percentage </li>
+                     * 获取The method to adjust the desired capacity after the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
+                     * @return AdjustmentType The method to adjust the desired capacity after the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
                      */
                     std::string GetAdjustmentType() const;
 
                     /**
-                     * 设置The method to adjust the desired number of instances after the alarm is triggered. Value range: <br><li>CHANGE_IN_CAPACITY: Increase or decrease the desired number of instances </li><li>EXACT_CAPACITY: Adjust to the specified desired number of instances </li> <li>PERCENT_CHANGE_IN_CAPACITY: Adjust the desired number of instances by percentage </li>
-                     * @param AdjustmentType The method to adjust the desired number of instances after the alarm is triggered. Value range: <br><li>CHANGE_IN_CAPACITY: Increase or decrease the desired number of instances </li><li>EXACT_CAPACITY: Adjust to the specified desired number of instances </li> <li>PERCENT_CHANGE_IN_CAPACITY: Adjust the desired number of instances by percentage </li>
+                     * 设置The method to adjust the desired capacity after the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
+                     * @param AdjustmentType The method to adjust the desired capacity after the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
                      */
                     void SetAdjustmentType(const std::string& _adjustmentType);
 
@@ -120,14 +146,14 @@ namespace TencentCloud
                     bool AdjustmentTypeHasBeenSet() const;
 
                     /**
-                     * 获取The adjusted value of desired number of instances after the alarm is triggered.
-                     * @return AdjustmentValue The adjusted value of desired number of instances after the alarm is triggered.
+                     * 获取The adjusted value of desired capacity after the alarm is triggered. This parameter is only applicable to a simple policy.
+                     * @return AdjustmentValue The adjusted value of desired capacity after the alarm is triggered. This parameter is only applicable to a simple policy.
                      */
                     int64_t GetAdjustmentValue() const;
 
                     /**
-                     * 设置The adjusted value of desired number of instances after the alarm is triggered.
-                     * @param AdjustmentValue The adjusted value of desired number of instances after the alarm is triggered.
+                     * 设置The adjusted value of desired capacity after the alarm is triggered. This parameter is only applicable to a simple policy.
+                     * @param AdjustmentValue The adjusted value of desired capacity after the alarm is triggered. This parameter is only applicable to a simple policy.
                      */
                     void SetAdjustmentValue(const int64_t& _adjustmentValue);
 
@@ -138,14 +164,14 @@ namespace TencentCloud
                     bool AdjustmentValueHasBeenSet() const;
 
                     /**
-                     * 获取Cooldown period.
-                     * @return Cooldown Cooldown period.
+                     * 获取Cooldown period. This parameter is only applicable to a simple policy.
+                     * @return Cooldown Cooldown period. This parameter is only applicable to a simple policy.
                      */
                     uint64_t GetCooldown() const;
 
                     /**
-                     * 设置Cooldown period.
-                     * @param Cooldown Cooldown period.
+                     * 设置Cooldown period. This parameter is only applicable to a simple policy.
+                     * @param Cooldown Cooldown period. This parameter is only applicable to a simple policy.
                      */
                     void SetCooldown(const uint64_t& _cooldown);
 
@@ -156,14 +182,14 @@ namespace TencentCloud
                     bool CooldownHasBeenSet() const;
 
                     /**
-                     * 获取Alarm monitoring metric.
-                     * @return MetricAlarm Alarm monitoring metric.
+                     * 获取Alarm monitoring metrics of a simple policy.
+                     * @return MetricAlarm Alarm monitoring metrics of a simple policy.
                      */
                     MetricAlarm GetMetricAlarm() const;
 
                     /**
-                     * 设置Alarm monitoring metric.
-                     * @param MetricAlarm Alarm monitoring metric.
+                     * 设置Alarm monitoring metrics of a simple policy.
+                     * @param MetricAlarm Alarm monitoring metrics of a simple policy.
                      */
                     void SetMetricAlarm(const MetricAlarm& _metricAlarm);
 
@@ -172,6 +198,116 @@ namespace TencentCloud
                      * @return MetricAlarm 是否已赋值
                      */
                     bool MetricAlarmHasBeenSet() const;
+
+                    /**
+                     * 获取Preset monitoring item. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Valid values: <br><li>ASG_AVG_CPU_UTILIZATION: Average CPU utilization</li><li>ASG_AVG_LAN_TRAFFIC_OUT: Average private bandwidth out</li><li>ASG_AVG_LAN_TRAFFIC_IN: Average private bandwidth in</li><li>ASG_AVG_WAN_TRAFFIC_OUT: Average public bandwidth out</li><li>ASG_AVG_WAN_TRAFFIC_IN: Average public bandwidth in</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return PredefinedMetricType Preset monitoring item. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Valid values: <br><li>ASG_AVG_CPU_UTILIZATION: Average CPU utilization</li><li>ASG_AVG_LAN_TRAFFIC_OUT: Average private bandwidth out</li><li>ASG_AVG_LAN_TRAFFIC_IN: Average private bandwidth in</li><li>ASG_AVG_WAN_TRAFFIC_OUT: Average public bandwidth out</li><li>ASG_AVG_WAN_TRAFFIC_IN: Average public bandwidth in</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetPredefinedMetricType() const;
+
+                    /**
+                     * 设置Preset monitoring item. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Valid values: <br><li>ASG_AVG_CPU_UTILIZATION: Average CPU utilization</li><li>ASG_AVG_LAN_TRAFFIC_OUT: Average private bandwidth out</li><li>ASG_AVG_LAN_TRAFFIC_IN: Average private bandwidth in</li><li>ASG_AVG_WAN_TRAFFIC_OUT: Average public bandwidth out</li><li>ASG_AVG_WAN_TRAFFIC_IN: Average public bandwidth in</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param PredefinedMetricType Preset monitoring item. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Valid values: <br><li>ASG_AVG_CPU_UTILIZATION: Average CPU utilization</li><li>ASG_AVG_LAN_TRAFFIC_OUT: Average private bandwidth out</li><li>ASG_AVG_LAN_TRAFFIC_IN: Average private bandwidth in</li><li>ASG_AVG_WAN_TRAFFIC_OUT: Average public bandwidth out</li><li>ASG_AVG_WAN_TRAFFIC_IN: Average public bandwidth in</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetPredefinedMetricType(const std::string& _predefinedMetricType);
+
+                    /**
+                     * 判断参数 PredefinedMetricType 是否已赋值
+                     * @return PredefinedMetricType 是否已赋值
+                     */
+                    bool PredefinedMetricTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Target value. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value ranges: <br><li>`ASG_AVG_CPU_UTILIZATION` (in %): [1, 100)</li><li>`ASG_AVG_LAN_TRAFFIC_OUT` (in Mbps): >0</li><li>`ASG_AVG_LAN_TRAFFIC_IN` (in Mbps): >0</li><li>`ASG_AVG_WAN_TRAFFIC_OUT` (in Mbps): >0</li><li>`ASG_AVG_WAN_TRAFFIC_IN` (in Mbps): >0</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return TargetValue Target value. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value ranges: <br><li>`ASG_AVG_CPU_UTILIZATION` (in %): [1, 100)</li><li>`ASG_AVG_LAN_TRAFFIC_OUT` (in Mbps): >0</li><li>`ASG_AVG_LAN_TRAFFIC_IN` (in Mbps): >0</li><li>`ASG_AVG_WAN_TRAFFIC_OUT` (in Mbps): >0</li><li>`ASG_AVG_WAN_TRAFFIC_IN` (in Mbps): >0</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetTargetValue() const;
+
+                    /**
+                     * 设置Target value. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value ranges: <br><li>`ASG_AVG_CPU_UTILIZATION` (in %): [1, 100)</li><li>`ASG_AVG_LAN_TRAFFIC_OUT` (in Mbps): >0</li><li>`ASG_AVG_LAN_TRAFFIC_IN` (in Mbps): >0</li><li>`ASG_AVG_WAN_TRAFFIC_OUT` (in Mbps): >0</li><li>`ASG_AVG_WAN_TRAFFIC_IN` (in Mbps): >0</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param TargetValue Target value. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value ranges: <br><li>`ASG_AVG_CPU_UTILIZATION` (in %): [1, 100)</li><li>`ASG_AVG_LAN_TRAFFIC_OUT` (in Mbps): >0</li><li>`ASG_AVG_LAN_TRAFFIC_IN` (in Mbps): >0</li><li>`ASG_AVG_WAN_TRAFFIC_OUT` (in Mbps): >0</li><li>`ASG_AVG_WAN_TRAFFIC_IN` (in Mbps): >0</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetTargetValue(const uint64_t& _targetValue);
+
+                    /**
+                     * 判断参数 TargetValue 是否已赋值
+                     * @return TargetValue 是否已赋值
+                     */
+                    bool TargetValueHasBeenSet() const;
+
+                    /**
+                     * 获取Instance warm-up period (in seconds). It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value range: 0-3600.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return EstimatedInstanceWarmup Instance warm-up period (in seconds). It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value range: 0-3600.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetEstimatedInstanceWarmup() const;
+
+                    /**
+                     * 设置Instance warm-up period (in seconds). It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value range: 0-3600.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param EstimatedInstanceWarmup Instance warm-up period (in seconds). It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value range: 0-3600.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetEstimatedInstanceWarmup(const uint64_t& _estimatedInstanceWarmup);
+
+                    /**
+                     * 判断参数 EstimatedInstanceWarmup 是否已赋值
+                     * @return EstimatedInstanceWarmup 是否已赋值
+                     */
+                    bool EstimatedInstanceWarmupHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to disable scale-in. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Valid values: <br><li>`true`: Scaling in is not allowed.</li><li>`false`: Allows both scale-out and scale-in</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return DisableScaleIn Whether to disable scale-in. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Valid values: <br><li>`true`: Scaling in is not allowed.</li><li>`false`: Allows both scale-out and scale-in</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool GetDisableScaleIn() const;
+
+                    /**
+                     * 设置Whether to disable scale-in. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Valid values: <br><li>`true`: Scaling in is not allowed.</li><li>`false`: Allows both scale-out and scale-in</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param DisableScaleIn Whether to disable scale-in. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Valid values: <br><li>`true`: Scaling in is not allowed.</li><li>`false`: Allows both scale-out and scale-in</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetDisableScaleIn(const bool& _disableScaleIn);
+
+                    /**
+                     * 判断参数 DisableScaleIn 是否已赋值
+                     * @return DisableScaleIn 是否已赋值
+                     */
+                    bool DisableScaleInHasBeenSet() const;
+
+                    /**
+                     * 获取List of alarm monitoring metrics. This parameter is only applicable to a target tracking policy.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return MetricAlarms List of alarm monitoring metrics. This parameter is only applicable to a target tracking policy.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<MetricAlarm> GetMetricAlarms() const;
+
+                    /**
+                     * 设置List of alarm monitoring metrics. This parameter is only applicable to a target tracking policy.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param MetricAlarms List of alarm monitoring metrics. This parameter is only applicable to a target tracking policy.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetMetricAlarms(const std::vector<MetricAlarm>& _metricAlarms);
+
+                    /**
+                     * 判断参数 MetricAlarms 是否已赋值
+                     * @return MetricAlarms 是否已赋值
+                     */
+                    bool MetricAlarmsHasBeenSet() const;
 
                     /**
                      * 获取Notification group ID, which is the set of user group IDs.
@@ -206,34 +342,77 @@ namespace TencentCloud
                     bool m_autoScalingPolicyIdHasBeenSet;
 
                     /**
+                     * Scaling policy type. Valid values:
+- `SIMPLE`: A simple policy.
+- `TARGET_TRACKING`: A target tracking policy.
+                     */
+                    std::string m_scalingPolicyType;
+                    bool m_scalingPolicyTypeHasBeenSet;
+
+                    /**
                      * Alarm trigger policy name.
                      */
                     std::string m_scalingPolicyName;
                     bool m_scalingPolicyNameHasBeenSet;
 
                     /**
-                     * The method to adjust the desired number of instances after the alarm is triggered. Value range: <br><li>CHANGE_IN_CAPACITY: Increase or decrease the desired number of instances </li><li>EXACT_CAPACITY: Adjust to the specified desired number of instances </li> <li>PERCENT_CHANGE_IN_CAPACITY: Adjust the desired number of instances by percentage </li>
+                     * The method to adjust the desired capacity after the alarm is triggered. It’s only available when `ScalingPolicyType` is `Simple`. Valid values: <br><li>`CHANGE_IN_CAPACITY`: Increase or decrease the desired capacity </li><li>`EXACT_CAPACITY`: Adjust to the specified desired capacity </li> <li>`PERCENT_CHANGE_IN_CAPACITY`: Adjust the desired capacity by percentage </li>
                      */
                     std::string m_adjustmentType;
                     bool m_adjustmentTypeHasBeenSet;
 
                     /**
-                     * The adjusted value of desired number of instances after the alarm is triggered.
+                     * The adjusted value of desired capacity after the alarm is triggered. This parameter is only applicable to a simple policy.
                      */
                     int64_t m_adjustmentValue;
                     bool m_adjustmentValueHasBeenSet;
 
                     /**
-                     * Cooldown period.
+                     * Cooldown period. This parameter is only applicable to a simple policy.
                      */
                     uint64_t m_cooldown;
                     bool m_cooldownHasBeenSet;
 
                     /**
-                     * Alarm monitoring metric.
+                     * Alarm monitoring metrics of a simple policy.
                      */
                     MetricAlarm m_metricAlarm;
                     bool m_metricAlarmHasBeenSet;
+
+                    /**
+                     * Preset monitoring item. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Valid values: <br><li>ASG_AVG_CPU_UTILIZATION: Average CPU utilization</li><li>ASG_AVG_LAN_TRAFFIC_OUT: Average private bandwidth out</li><li>ASG_AVG_LAN_TRAFFIC_IN: Average private bandwidth in</li><li>ASG_AVG_WAN_TRAFFIC_OUT: Average public bandwidth out</li><li>ASG_AVG_WAN_TRAFFIC_IN: Average public bandwidth in</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_predefinedMetricType;
+                    bool m_predefinedMetricTypeHasBeenSet;
+
+                    /**
+                     * Target value. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value ranges: <br><li>`ASG_AVG_CPU_UTILIZATION` (in %): [1, 100)</li><li>`ASG_AVG_LAN_TRAFFIC_OUT` (in Mbps): >0</li><li>`ASG_AVG_LAN_TRAFFIC_IN` (in Mbps): >0</li><li>`ASG_AVG_WAN_TRAFFIC_OUT` (in Mbps): >0</li><li>`ASG_AVG_WAN_TRAFFIC_IN` (in Mbps): >0</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_targetValue;
+                    bool m_targetValueHasBeenSet;
+
+                    /**
+                     * Instance warm-up period (in seconds). It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Value range: 0-3600.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_estimatedInstanceWarmup;
+                    bool m_estimatedInstanceWarmupHasBeenSet;
+
+                    /**
+                     * Whether to disable scale-in. It’s only available when `ScalingPolicyType` is `TARGET_TRACKING`. Valid values: <br><li>`true`: Scaling in is not allowed.</li><li>`false`: Allows both scale-out and scale-in</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool m_disableScaleIn;
+                    bool m_disableScaleInHasBeenSet;
+
+                    /**
+                     * List of alarm monitoring metrics. This parameter is only applicable to a target tracking policy.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<MetricAlarm> m_metricAlarms;
+                    bool m_metricAlarmsHasBeenSet;
 
                     /**
                      * Notification group ID, which is the set of user group IDs.

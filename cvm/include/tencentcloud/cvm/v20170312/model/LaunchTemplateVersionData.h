@@ -563,6 +563,48 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool TagSpecificationHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable termination protection. Valid values:
+
+TRUE: Termination protection is enabled.
+FALSE: Termination protection is disabled.
+
+Default value: `FALSE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return DisableApiTermination Whether to enable termination protection. Valid values:
+
+TRUE: Termination protection is enabled.
+FALSE: Termination protection is disabled.
+
+Default value: `FALSE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool GetDisableApiTermination() const;
+
+                    /**
+                     * 设置Whether to enable termination protection. Valid values:
+
+TRUE: Termination protection is enabled.
+FALSE: Termination protection is disabled.
+
+Default value: `FALSE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param DisableApiTermination Whether to enable termination protection. Valid values:
+
+TRUE: Termination protection is enabled.
+FALSE: Termination protection is disabled.
+
+Default value: `FALSE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetDisableApiTermination(const bool& _disableApiTermination);
+
+                    /**
+                     * 判断参数 DisableApiTermination 是否已赋值
+                     * @return DisableApiTermination 是否已赋值
+                     */
+                    bool DisableApiTerminationHasBeenSet() const;
+
                 private:
 
                     /**
@@ -725,6 +767,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     std::vector<TagSpecification> m_tagSpecification;
                     bool m_tagSpecificationHasBeenSet;
+
+                    /**
+                     * Whether to enable termination protection. Valid values:
+
+TRUE: Termination protection is enabled.
+FALSE: Termination protection is disabled.
+
+Default value: `FALSE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool m_disableApiTermination;
+                    bool m_disableApiTerminationHasBeenSet;
 
                 };
             }

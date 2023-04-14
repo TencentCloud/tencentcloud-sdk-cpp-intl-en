@@ -47,6 +47,28 @@ namespace TencentCloud
 
 
                     /**
+                     * 获取Use TKE default issuer and jwksuri
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return UseTKEDefault Use TKE default issuer and jwksuri
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool GetUseTKEDefault() const;
+
+                    /**
+                     * 设置Use TKE default issuer and jwksuri
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param UseTKEDefault Use TKE default issuer and jwksuri
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetUseTKEDefault(const bool& _useTKEDefault);
+
+                    /**
+                     * 判断参数 UseTKEDefault 是否已赋值
+                     * @return UseTKEDefault 是否已赋值
+                     */
+                    bool UseTKEDefaultHasBeenSet() const;
+
+                    /**
                      * 获取service-account-issuer
 Note: this field may return `null`, indicating that no valid values can be obtained.
                      * @return Issuer service-account-issuer
@@ -113,6 +135,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                     bool AutoCreateDiscoveryAnonymousAuthHasBeenSet() const;
 
                 private:
+
+                    /**
+                     * Use TKE default issuer and jwksuri
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    bool m_useTKEDefault;
+                    bool m_useTKEDefaultHasBeenSet;
 
                     /**
                      * service-account-issuer

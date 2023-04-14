@@ -43,14 +43,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Alarm-based scaling policy ID
-                     * @return AutoScalingPolicyId Alarm-based scaling policy ID
+                     * 获取Auto-scaling policy ID. This parameter is not available to a target tracking policy.
+                     * @return AutoScalingPolicyId Auto-scaling policy ID. This parameter is not available to a target tracking policy.
                      */
                     std::string GetAutoScalingPolicyId() const;
 
                     /**
-                     * 设置Alarm-based scaling policy ID
-                     * @param AutoScalingPolicyId Alarm-based scaling policy ID
+                     * 设置Auto-scaling policy ID. This parameter is not available to a target tracking policy.
+                     * @param AutoScalingPolicyId Auto-scaling policy ID. This parameter is not available to a target tracking policy.
                      */
                     void SetAutoScalingPolicyId(const std::string& _autoScalingPolicyId);
 
@@ -99,7 +99,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Alarm-based scaling policy ID
+                     * Auto-scaling policy ID. This parameter is not available to a target tracking policy.
                      */
                     std::string m_autoScalingPolicyId;
                     bool m_autoScalingPolicyIdHasBeenSet;

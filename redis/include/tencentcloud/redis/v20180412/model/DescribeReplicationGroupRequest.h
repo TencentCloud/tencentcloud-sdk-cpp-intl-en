@@ -97,14 +97,14 @@ namespace TencentCloud
                     bool GroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Keyword for fuzzy search, which can be an instance name or instance ID.
-                     * @return SearchKey Keyword for fuzzy search, which can be an instance name or instance ID.
+                     * 获取Key words for fuzzy query, which can be set as the ID or name of a replication group.
+                     * @return SearchKey Key words for fuzzy query, which can be set as the ID or name of a replication group.
                      */
                     std::string GetSearchKey() const;
 
                     /**
-                     * 设置Keyword for fuzzy search, which can be an instance name or instance ID.
-                     * @param SearchKey Keyword for fuzzy search, which can be an instance name or instance ID.
+                     * 设置Key words for fuzzy query, which can be set as the ID or name of a replication group.
+                     * @param SearchKey Key words for fuzzy query, which can be set as the ID or name of a replication group.
                      */
                     void SetSearchKey(const std::string& _searchKey);
 
@@ -135,7 +135,7 @@ namespace TencentCloud
                     bool m_groupIdHasBeenSet;
 
                     /**
-                     * Keyword for fuzzy search, which can be an instance name or instance ID.
+                     * Key words for fuzzy query, which can be set as the ID or name of a replication group.
                      */
                     std::string m_searchKey;
                     bool m_searchKeyHasBeenSet;

@@ -289,26 +289,26 @@ namespace TencentCloud
                     bool ZonesHasBeenSet() const;
 
                     /**
-                     * 获取Retry policy. Value range: IMMEDIATE_RETRY, INCREMENTAL_INTERVALS, and NO_RETRY. Default value: IMMEDIATE_RETRY.
-<br><li> IMMEDIATE_RETRY: Retrying immediately in a short period of time and stopping after a number of consecutive failures (5).
-<br><li> INCREMENTAL_INTERVALS: Retrying at incremental intervals, i.e., as the number of consecutive failures increases, the retry interval gradually increases, ranging from one second to one day.
-<br><li> NO_RETRY: No retry until a user call or alarm message is received again.
-                     * @return RetryPolicy Retry policy. Value range: IMMEDIATE_RETRY, INCREMENTAL_INTERVALS, and NO_RETRY. Default value: IMMEDIATE_RETRY.
-<br><li> IMMEDIATE_RETRY: Retrying immediately in a short period of time and stopping after a number of consecutive failures (5).
-<br><li> INCREMENTAL_INTERVALS: Retrying at incremental intervals, i.e., as the number of consecutive failures increases, the retry interval gradually increases, ranging from one second to one day.
-<br><li> NO_RETRY: No retry until a user call or alarm message is received again.
+                     * 获取Retry policy. Valid values: `IMMEDIATE_RETRY` (default), `INCREMENTAL_INTERVALS`, `NO_RETRY`. A partially successful scaling is judged as a failed one.
+<br><li>`IMMEDIATE_RETRY`: Retry immediately. Stop retrying after five consecutive failures.
+<br><li>`INCREMENTAL_INTERVALS`: Retry at incremental intervals. As the number of consecutive failures increases, the retry interval gradually increases, ranging from seconds to one day.
+<br><li>`NO_RETRY`: Do not retry. Actions are taken when the next call or alarm message comes.
+                     * @return RetryPolicy Retry policy. Valid values: `IMMEDIATE_RETRY` (default), `INCREMENTAL_INTERVALS`, `NO_RETRY`. A partially successful scaling is judged as a failed one.
+<br><li>`IMMEDIATE_RETRY`: Retry immediately. Stop retrying after five consecutive failures.
+<br><li>`INCREMENTAL_INTERVALS`: Retry at incremental intervals. As the number of consecutive failures increases, the retry interval gradually increases, ranging from seconds to one day.
+<br><li>`NO_RETRY`: Do not retry. Actions are taken when the next call or alarm message comes.
                      */
                     std::string GetRetryPolicy() const;
 
                     /**
-                     * 设置Retry policy. Value range: IMMEDIATE_RETRY, INCREMENTAL_INTERVALS, and NO_RETRY. Default value: IMMEDIATE_RETRY.
-<br><li> IMMEDIATE_RETRY: Retrying immediately in a short period of time and stopping after a number of consecutive failures (5).
-<br><li> INCREMENTAL_INTERVALS: Retrying at incremental intervals, i.e., as the number of consecutive failures increases, the retry interval gradually increases, ranging from one second to one day.
-<br><li> NO_RETRY: No retry until a user call or alarm message is received again.
-                     * @param RetryPolicy Retry policy. Value range: IMMEDIATE_RETRY, INCREMENTAL_INTERVALS, and NO_RETRY. Default value: IMMEDIATE_RETRY.
-<br><li> IMMEDIATE_RETRY: Retrying immediately in a short period of time and stopping after a number of consecutive failures (5).
-<br><li> INCREMENTAL_INTERVALS: Retrying at incremental intervals, i.e., as the number of consecutive failures increases, the retry interval gradually increases, ranging from one second to one day.
-<br><li> NO_RETRY: No retry until a user call or alarm message is received again.
+                     * 设置Retry policy. Valid values: `IMMEDIATE_RETRY` (default), `INCREMENTAL_INTERVALS`, `NO_RETRY`. A partially successful scaling is judged as a failed one.
+<br><li>`IMMEDIATE_RETRY`: Retry immediately. Stop retrying after five consecutive failures.
+<br><li>`INCREMENTAL_INTERVALS`: Retry at incremental intervals. As the number of consecutive failures increases, the retry interval gradually increases, ranging from seconds to one day.
+<br><li>`NO_RETRY`: Do not retry. Actions are taken when the next call or alarm message comes.
+                     * @param RetryPolicy Retry policy. Valid values: `IMMEDIATE_RETRY` (default), `INCREMENTAL_INTERVALS`, `NO_RETRY`. A partially successful scaling is judged as a failed one.
+<br><li>`IMMEDIATE_RETRY`: Retry immediately. Stop retrying after five consecutive failures.
+<br><li>`INCREMENTAL_INTERVALS`: Retry at incremental intervals. As the number of consecutive failures increases, the retry interval gradually increases, ranging from seconds to one day.
+<br><li>`NO_RETRY`: Do not retry. Actions are taken when the next call or alarm message comes.
                      */
                     void SetRetryPolicy(const std::string& _retryPolicy);
 
@@ -657,10 +657,10 @@ Default value: `False`.
                     bool m_zonesHasBeenSet;
 
                     /**
-                     * Retry policy. Value range: IMMEDIATE_RETRY, INCREMENTAL_INTERVALS, and NO_RETRY. Default value: IMMEDIATE_RETRY.
-<br><li> IMMEDIATE_RETRY: Retrying immediately in a short period of time and stopping after a number of consecutive failures (5).
-<br><li> INCREMENTAL_INTERVALS: Retrying at incremental intervals, i.e., as the number of consecutive failures increases, the retry interval gradually increases, ranging from one second to one day.
-<br><li> NO_RETRY: No retry until a user call or alarm message is received again.
+                     * Retry policy. Valid values: `IMMEDIATE_RETRY` (default), `INCREMENTAL_INTERVALS`, `NO_RETRY`. A partially successful scaling is judged as a failed one.
+<br><li>`IMMEDIATE_RETRY`: Retry immediately. Stop retrying after five consecutive failures.
+<br><li>`INCREMENTAL_INTERVALS`: Retry at incremental intervals. As the number of consecutive failures increases, the retry interval gradually increases, ranging from seconds to one day.
+<br><li>`NO_RETRY`: Do not retry. Actions are taken when the next call or alarm message comes.
                      */
                     std::string m_retryPolicy;
                     bool m_retryPolicyHasBeenSet;

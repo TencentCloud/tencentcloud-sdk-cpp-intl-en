@@ -229,14 +229,14 @@ namespace TencentCloud
                     bool TagSpecificationHasBeenSet() const;
 
                     /**
-                     * 获取Cluster status (`Running`, `Creating`, `Idling` or `Abnormal`)
-                     * @return ClusterStatus Cluster status (`Running`, `Creating`, `Idling` or `Abnormal`)
+                     * 获取Cluster status. Values: `Trading` (Preparing), `Creating`, `Running`, `Deleting`, `Idling` (Idle), `Recovering`, `Scaling`, `Upgrading` (Upgrading the cluster), `WaittingForConnect` (Pending registration), `Pause` (Cluster upgrade paused), `NodeUpgrading` (Upgrading the node), `RuntimeUpgrading` (Upgrading the node runtime), `MasterScaling` (Scaling Master), `ClusterLevelUpgrading` (Adjusting cluster specification level), `ResourceIsolate` (Isolating), `ResourceIsolated` (Isolated), `ResourceReverse` (Overdue payment made. Recovering the cluster), and `Abnormal`.
+                     * @return ClusterStatus Cluster status. Values: `Trading` (Preparing), `Creating`, `Running`, `Deleting`, `Idling` (Idle), `Recovering`, `Scaling`, `Upgrading` (Upgrading the cluster), `WaittingForConnect` (Pending registration), `Pause` (Cluster upgrade paused), `NodeUpgrading` (Upgrading the node), `RuntimeUpgrading` (Upgrading the node runtime), `MasterScaling` (Scaling Master), `ClusterLevelUpgrading` (Adjusting cluster specification level), `ResourceIsolate` (Isolating), `ResourceIsolated` (Isolated), `ResourceReverse` (Overdue payment made. Recovering the cluster), and `Abnormal`.
                      */
                     std::string GetClusterStatus() const;
 
                     /**
-                     * 设置Cluster status (`Running`, `Creating`, `Idling` or `Abnormal`)
-                     * @param ClusterStatus Cluster status (`Running`, `Creating`, `Idling` or `Abnormal`)
+                     * 设置Cluster status. Values: `Trading` (Preparing), `Creating`, `Running`, `Deleting`, `Idling` (Idle), `Recovering`, `Scaling`, `Upgrading` (Upgrading the cluster), `WaittingForConnect` (Pending registration), `Pause` (Cluster upgrade paused), `NodeUpgrading` (Upgrading the node), `RuntimeUpgrading` (Upgrading the node runtime), `MasterScaling` (Scaling Master), `ClusterLevelUpgrading` (Adjusting cluster specification level), `ResourceIsolate` (Isolating), `ResourceIsolated` (Isolated), `ResourceReverse` (Overdue payment made. Recovering the cluster), and `Abnormal`.
+                     * @param ClusterStatus Cluster status. Values: `Trading` (Preparing), `Creating`, `Running`, `Deleting`, `Idling` (Idle), `Recovering`, `Scaling`, `Upgrading` (Upgrading the cluster), `WaittingForConnect` (Pending registration), `Pause` (Cluster upgrade paused), `NodeUpgrading` (Upgrading the node), `RuntimeUpgrading` (Upgrading the node runtime), `MasterScaling` (Scaling Master), `ClusterLevelUpgrading` (Adjusting cluster specification level), `ResourceIsolate` (Isolating), `ResourceIsolated` (Isolated), `ResourceReverse` (Overdue payment made. Recovering the cluster), and `Abnormal`.
                      */
                     void SetClusterStatus(const std::string& _clusterStatus);
 
@@ -502,6 +502,28 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool RuntimeVersionHasBeenSet() const;
 
+                    /**
+                     * 获取Number of current etcd in the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return ClusterEtcdNodeNum Number of current etcd in the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t GetClusterEtcdNodeNum() const;
+
+                    /**
+                     * 设置Number of current etcd in the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param ClusterEtcdNodeNum Number of current etcd in the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetClusterEtcdNodeNum(const uint64_t& _clusterEtcdNodeNum);
+
+                    /**
+                     * 判断参数 ClusterEtcdNodeNum 是否已赋值
+                     * @return ClusterEtcdNodeNum 是否已赋值
+                     */
+                    bool ClusterEtcdNodeNumHasBeenSet() const;
+
                 private:
 
                     /**
@@ -565,7 +587,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_tagSpecificationHasBeenSet;
 
                     /**
-                     * Cluster status (`Running`, `Creating`, `Idling` or `Abnormal`)
+                     * Cluster status. Values: `Trading` (Preparing), `Creating`, `Running`, `Deleting`, `Idling` (Idle), `Recovering`, `Scaling`, `Upgrading` (Upgrading the cluster), `WaittingForConnect` (Pending registration), `Pause` (Cluster upgrade paused), `NodeUpgrading` (Upgrading the node), `RuntimeUpgrading` (Upgrading the node runtime), `MasterScaling` (Scaling Master), `ClusterLevelUpgrading` (Adjusting cluster specification level), `ResourceIsolate` (Isolating), `ResourceIsolated` (Isolated), `ResourceReverse` (Overdue payment made. Recovering the cluster), and `Abnormal`.
                      */
                     std::string m_clusterStatus;
                     bool m_clusterStatusHasBeenSet;
@@ -651,6 +673,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     std::string m_runtimeVersion;
                     bool m_runtimeVersionHasBeenSet;
+
+                    /**
+                     * Number of current etcd in the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    uint64_t m_clusterEtcdNodeNum;
+                    bool m_clusterEtcdNodeNumHasBeenSet;
 
                 };
             }

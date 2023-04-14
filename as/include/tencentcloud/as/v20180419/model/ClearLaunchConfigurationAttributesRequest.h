@@ -126,6 +126,28 @@ Setting it to `true` will clear the instance name settings, which means that CVM
                      */
                     bool ClearInstanceNameSettingsHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to clear placement group information. This parameter is optional. Default value: `false`.
+`True` means clearing placement group information. After that, no placement groups are specified for CVMs created based on the information.
+                     * @return ClearDisasterRecoverGroupIds Whether to clear placement group information. This parameter is optional. Default value: `false`.
+`True` means clearing placement group information. After that, no placement groups are specified for CVMs created based on the information.
+                     */
+                    bool GetClearDisasterRecoverGroupIds() const;
+
+                    /**
+                     * 设置Whether to clear placement group information. This parameter is optional. Default value: `false`.
+`True` means clearing placement group information. After that, no placement groups are specified for CVMs created based on the information.
+                     * @param ClearDisasterRecoverGroupIds Whether to clear placement group information. This parameter is optional. Default value: `false`.
+`True` means clearing placement group information. After that, no placement groups are specified for CVMs created based on the information.
+                     */
+                    void SetClearDisasterRecoverGroupIds(const bool& _clearDisasterRecoverGroupIds);
+
+                    /**
+                     * 判断参数 ClearDisasterRecoverGroupIds 是否已赋值
+                     * @return ClearDisasterRecoverGroupIds 是否已赋值
+                     */
+                    bool ClearDisasterRecoverGroupIdsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -154,6 +176,13 @@ Setting it to `true` will clear the instance name settings, which means that CVM
                      */
                     bool m_clearInstanceNameSettings;
                     bool m_clearInstanceNameSettingsHasBeenSet;
+
+                    /**
+                     * Whether to clear placement group information. This parameter is optional. Default value: `false`.
+`True` means clearing placement group information. After that, no placement groups are specified for CVMs created based on the information.
+                     */
+                    bool m_clearDisasterRecoverGroupIds;
+                    bool m_clearDisasterRecoverGroupIdsHasBeenSet;
 
                 };
             }

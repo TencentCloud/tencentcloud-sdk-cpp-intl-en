@@ -542,6 +542,24 @@ Note: This field is default to empty
                      */
                     bool IPv6InternetAccessibleHasBeenSet() const;
 
+                    /**
+                     * 获取Placement group ID. Only one is allowed.
+                     * @return DisasterRecoverGroupIds Placement group ID. Only one is allowed.
+                     */
+                    std::vector<std::string> GetDisasterRecoverGroupIds() const;
+
+                    /**
+                     * 设置Placement group ID. Only one is allowed.
+                     * @param DisasterRecoverGroupIds Placement group ID. Only one is allowed.
+                     */
+                    void SetDisasterRecoverGroupIds(const std::vector<std::string>& _disasterRecoverGroupIds);
+
+                    /**
+                     * 判断参数 DisasterRecoverGroupIds 是否已赋值
+                     * @return DisasterRecoverGroupIds 是否已赋值
+                     */
+                    bool DisasterRecoverGroupIdsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -701,6 +719,12 @@ Note: This field is default to empty
                      */
                     IPv6InternetAccessible m_iPv6InternetAccessible;
                     bool m_iPv6InternetAccessibleHasBeenSet;
+
+                    /**
+                     * Placement group ID. Only one is allowed.
+                     */
+                    std::vector<std::string> m_disasterRecoverGroupIds;
+                    bool m_disasterRecoverGroupIdsHasBeenSet;
 
                 };
             }

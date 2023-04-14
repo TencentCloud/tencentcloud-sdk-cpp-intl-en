@@ -120,65 +120,89 @@ namespace TencentCloud
 
                     /**
                      * 获取Lifecycle status. Valid values:<br>
-<li>IN_SERVICE: the instance is running.
-<li>CREATING: the instance is being created.
-<li>CREATION_FAILED: the instance fails to be created.
-<li>TERMINATING: the instance is being terminated.
-<li>TERMINATION_FAILED: the instance fails to be terminated.
-<li>ATTACHING: the instance is being bound.
-<li>DETACHING: the instance is being unbound.
-<li>ATTACHING_LB: the instance is being bound to an LB.<li>DETACHING_LB: the instance is being unbound from an LB.
-<li>STARTING: the instance is being started.
-<li>START_FAILED: the instance fails to be started.
-<li>STOPPING: the instance is being stopped.
-<li>STOP_FAILED: the instance fails to be stopped.
-<li>STOPPED: the instance is stopped.
+<li>`IN_SERVICE`: The instance is running.
+<li>`CREATING`: The instance is being created.
+<li>`CREATION_FAILED`: The instance fails to be created.
+<li>`TERMINATING`: The instance is being terminated.
+<li>`TERMINATION_FAILED`: The instance fails to be terminated.
+<li>`ATTACHING`: The instance is being bound.
+<li>`ATTACH_FAILED`: The instance fails to be bound.
+<li>`DETACHING`: The instance is being unbound.
+<li>`DETACH_FAILED`: The instance fails to be unbound.
+<li>`ATTACHING_LB`: The LB is being bound.
+<li>DETACHING_LB: The LB is being unbound.
+<li>`MODIFYING_LB`: The LB is being modified.
+<li>`STARTING`: The instance is being started up.
+<li>`START_FAILED`: The instance fails to be started up.
+<li>`STOPPING`: The instance is being shut down.
+<li>`STOP_FAILED`: The instance fails to be shut down.
+<li>`STOPPED`: The instance is shut down.
+<li>`IN_LAUNCHING_HOOK`: The lifecycle hook is being scaled out.
+<li>`IN_TERMINATING_HOOK`: The lifecycle hook is being scaled in.
                      * @return LifeCycleState Lifecycle status. Valid values:<br>
-<li>IN_SERVICE: the instance is running.
-<li>CREATING: the instance is being created.
-<li>CREATION_FAILED: the instance fails to be created.
-<li>TERMINATING: the instance is being terminated.
-<li>TERMINATION_FAILED: the instance fails to be terminated.
-<li>ATTACHING: the instance is being bound.
-<li>DETACHING: the instance is being unbound.
-<li>ATTACHING_LB: the instance is being bound to an LB.<li>DETACHING_LB: the instance is being unbound from an LB.
-<li>STARTING: the instance is being started.
-<li>START_FAILED: the instance fails to be started.
-<li>STOPPING: the instance is being stopped.
-<li>STOP_FAILED: the instance fails to be stopped.
-<li>STOPPED: the instance is stopped.
+<li>`IN_SERVICE`: The instance is running.
+<li>`CREATING`: The instance is being created.
+<li>`CREATION_FAILED`: The instance fails to be created.
+<li>`TERMINATING`: The instance is being terminated.
+<li>`TERMINATION_FAILED`: The instance fails to be terminated.
+<li>`ATTACHING`: The instance is being bound.
+<li>`ATTACH_FAILED`: The instance fails to be bound.
+<li>`DETACHING`: The instance is being unbound.
+<li>`DETACH_FAILED`: The instance fails to be unbound.
+<li>`ATTACHING_LB`: The LB is being bound.
+<li>DETACHING_LB: The LB is being unbound.
+<li>`MODIFYING_LB`: The LB is being modified.
+<li>`STARTING`: The instance is being started up.
+<li>`START_FAILED`: The instance fails to be started up.
+<li>`STOPPING`: The instance is being shut down.
+<li>`STOP_FAILED`: The instance fails to be shut down.
+<li>`STOPPED`: The instance is shut down.
+<li>`IN_LAUNCHING_HOOK`: The lifecycle hook is being scaled out.
+<li>`IN_TERMINATING_HOOK`: The lifecycle hook is being scaled in.
                      */
                     std::string GetLifeCycleState() const;
 
                     /**
                      * 设置Lifecycle status. Valid values:<br>
-<li>IN_SERVICE: the instance is running.
-<li>CREATING: the instance is being created.
-<li>CREATION_FAILED: the instance fails to be created.
-<li>TERMINATING: the instance is being terminated.
-<li>TERMINATION_FAILED: the instance fails to be terminated.
-<li>ATTACHING: the instance is being bound.
-<li>DETACHING: the instance is being unbound.
-<li>ATTACHING_LB: the instance is being bound to an LB.<li>DETACHING_LB: the instance is being unbound from an LB.
-<li>STARTING: the instance is being started.
-<li>START_FAILED: the instance fails to be started.
-<li>STOPPING: the instance is being stopped.
-<li>STOP_FAILED: the instance fails to be stopped.
-<li>STOPPED: the instance is stopped.
+<li>`IN_SERVICE`: The instance is running.
+<li>`CREATING`: The instance is being created.
+<li>`CREATION_FAILED`: The instance fails to be created.
+<li>`TERMINATING`: The instance is being terminated.
+<li>`TERMINATION_FAILED`: The instance fails to be terminated.
+<li>`ATTACHING`: The instance is being bound.
+<li>`ATTACH_FAILED`: The instance fails to be bound.
+<li>`DETACHING`: The instance is being unbound.
+<li>`DETACH_FAILED`: The instance fails to be unbound.
+<li>`ATTACHING_LB`: The LB is being bound.
+<li>DETACHING_LB: The LB is being unbound.
+<li>`MODIFYING_LB`: The LB is being modified.
+<li>`STARTING`: The instance is being started up.
+<li>`START_FAILED`: The instance fails to be started up.
+<li>`STOPPING`: The instance is being shut down.
+<li>`STOP_FAILED`: The instance fails to be shut down.
+<li>`STOPPED`: The instance is shut down.
+<li>`IN_LAUNCHING_HOOK`: The lifecycle hook is being scaled out.
+<li>`IN_TERMINATING_HOOK`: The lifecycle hook is being scaled in.
                      * @param LifeCycleState Lifecycle status. Valid values:<br>
-<li>IN_SERVICE: the instance is running.
-<li>CREATING: the instance is being created.
-<li>CREATION_FAILED: the instance fails to be created.
-<li>TERMINATING: the instance is being terminated.
-<li>TERMINATION_FAILED: the instance fails to be terminated.
-<li>ATTACHING: the instance is being bound.
-<li>DETACHING: the instance is being unbound.
-<li>ATTACHING_LB: the instance is being bound to an LB.<li>DETACHING_LB: the instance is being unbound from an LB.
-<li>STARTING: the instance is being started.
-<li>START_FAILED: the instance fails to be started.
-<li>STOPPING: the instance is being stopped.
-<li>STOP_FAILED: the instance fails to be stopped.
-<li>STOPPED: the instance is stopped.
+<li>`IN_SERVICE`: The instance is running.
+<li>`CREATING`: The instance is being created.
+<li>`CREATION_FAILED`: The instance fails to be created.
+<li>`TERMINATING`: The instance is being terminated.
+<li>`TERMINATION_FAILED`: The instance fails to be terminated.
+<li>`ATTACHING`: The instance is being bound.
+<li>`ATTACH_FAILED`: The instance fails to be bound.
+<li>`DETACHING`: The instance is being unbound.
+<li>`DETACH_FAILED`: The instance fails to be unbound.
+<li>`ATTACHING_LB`: The LB is being bound.
+<li>DETACHING_LB: The LB is being unbound.
+<li>`MODIFYING_LB`: The LB is being modified.
+<li>`STARTING`: The instance is being started up.
+<li>`START_FAILED`: The instance fails to be started up.
+<li>`STOPPING`: The instance is being shut down.
+<li>`STOP_FAILED`: The instance fails to be shut down.
+<li>`STOPPED`: The instance is shut down.
+<li>`IN_LAUNCHING_HOOK`: The lifecycle hook is being scaled out.
+<li>`IN_TERMINATING_HOOK`: The lifecycle hook is being scaled in.
                      */
                     void SetLifeCycleState(const std::string& _lifeCycleState);
 
@@ -332,6 +356,62 @@ namespace TencentCloud
                      */
                     bool AutoScalingGroupNameHasBeenSet() const;
 
+                    /**
+                     * 获取Warming up status. Valid values:
+<li>`WAITING_ENTER_WARMUP`: The instance is waiting to be warmed up.
+<li>`NO_NEED_WARMUP`: Warming up is not required.
+<li>`IN_WARMUP`: The instance is being warmed up.
+<li>`AFTER_WARMUP`: Warming up is completed.
+                     * @return WarmupStatus Warming up status. Valid values:
+<li>`WAITING_ENTER_WARMUP`: The instance is waiting to be warmed up.
+<li>`NO_NEED_WARMUP`: Warming up is not required.
+<li>`IN_WARMUP`: The instance is being warmed up.
+<li>`AFTER_WARMUP`: Warming up is completed.
+                     */
+                    std::string GetWarmupStatus() const;
+
+                    /**
+                     * 设置Warming up status. Valid values:
+<li>`WAITING_ENTER_WARMUP`: The instance is waiting to be warmed up.
+<li>`NO_NEED_WARMUP`: Warming up is not required.
+<li>`IN_WARMUP`: The instance is being warmed up.
+<li>`AFTER_WARMUP`: Warming up is completed.
+                     * @param WarmupStatus Warming up status. Valid values:
+<li>`WAITING_ENTER_WARMUP`: The instance is waiting to be warmed up.
+<li>`NO_NEED_WARMUP`: Warming up is not required.
+<li>`IN_WARMUP`: The instance is being warmed up.
+<li>`AFTER_WARMUP`: Warming up is completed.
+                     */
+                    void SetWarmupStatus(const std::string& _warmupStatus);
+
+                    /**
+                     * 判断参数 WarmupStatus 是否已赋值
+                     * @return WarmupStatus 是否已赋值
+                     */
+                    bool WarmupStatusHasBeenSet() const;
+
+                    /**
+                     * 获取Placement group ID. Only one is allowed.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return DisasterRecoverGroupIds Placement group ID. Only one is allowed.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> GetDisasterRecoverGroupIds() const;
+
+                    /**
+                     * 设置Placement group ID. Only one is allowed.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param DisasterRecoverGroupIds Placement group ID. Only one is allowed.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetDisasterRecoverGroupIds(const std::vector<std::string>& _disasterRecoverGroupIds);
+
+                    /**
+                     * 判断参数 DisasterRecoverGroupIds 是否已赋值
+                     * @return DisasterRecoverGroupIds 是否已赋值
+                     */
+                    bool DisasterRecoverGroupIdsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -360,19 +440,25 @@ namespace TencentCloud
 
                     /**
                      * Lifecycle status. Valid values:<br>
-<li>IN_SERVICE: the instance is running.
-<li>CREATING: the instance is being created.
-<li>CREATION_FAILED: the instance fails to be created.
-<li>TERMINATING: the instance is being terminated.
-<li>TERMINATION_FAILED: the instance fails to be terminated.
-<li>ATTACHING: the instance is being bound.
-<li>DETACHING: the instance is being unbound.
-<li>ATTACHING_LB: the instance is being bound to an LB.<li>DETACHING_LB: the instance is being unbound from an LB.
-<li>STARTING: the instance is being started.
-<li>START_FAILED: the instance fails to be started.
-<li>STOPPING: the instance is being stopped.
-<li>STOP_FAILED: the instance fails to be stopped.
-<li>STOPPED: the instance is stopped.
+<li>`IN_SERVICE`: The instance is running.
+<li>`CREATING`: The instance is being created.
+<li>`CREATION_FAILED`: The instance fails to be created.
+<li>`TERMINATING`: The instance is being terminated.
+<li>`TERMINATION_FAILED`: The instance fails to be terminated.
+<li>`ATTACHING`: The instance is being bound.
+<li>`ATTACH_FAILED`: The instance fails to be bound.
+<li>`DETACHING`: The instance is being unbound.
+<li>`DETACH_FAILED`: The instance fails to be unbound.
+<li>`ATTACHING_LB`: The LB is being bound.
+<li>DETACHING_LB: The LB is being unbound.
+<li>`MODIFYING_LB`: The LB is being modified.
+<li>`STARTING`: The instance is being started up.
+<li>`START_FAILED`: The instance fails to be started up.
+<li>`STOPPING`: The instance is being shut down.
+<li>`STOP_FAILED`: The instance fails to be shut down.
+<li>`STOPPED`: The instance is shut down.
+<li>`IN_LAUNCHING_HOOK`: The lifecycle hook is being scaled out.
+<li>`IN_TERMINATING_HOOK`: The lifecycle hook is being scaled in.
                      */
                     std::string m_lifeCycleState;
                     bool m_lifeCycleStateHasBeenSet;
@@ -424,6 +510,23 @@ namespace TencentCloud
                      */
                     std::string m_autoScalingGroupName;
                     bool m_autoScalingGroupNameHasBeenSet;
+
+                    /**
+                     * Warming up status. Valid values:
+<li>`WAITING_ENTER_WARMUP`: The instance is waiting to be warmed up.
+<li>`NO_NEED_WARMUP`: Warming up is not required.
+<li>`IN_WARMUP`: The instance is being warmed up.
+<li>`AFTER_WARMUP`: Warming up is completed.
+                     */
+                    std::string m_warmupStatus;
+                    bool m_warmupStatusHasBeenSet;
+
+                    /**
+                     * Placement group ID. Only one is allowed.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_disasterRecoverGroupIds;
+                    bool m_disasterRecoverGroupIdsHasBeenSet;
 
                 };
             }

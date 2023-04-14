@@ -77,17 +77,17 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool InternetChargeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Maximum outbound bandwidth of the public network, in Mbps. <br>The default value is 0, and no public network bandwidth is allocated to IPv6. The maximum bandwidth varies with the model, availability zone and billing mode. For more information, see [Public Network Bandwidth Cap](https://intl.cloud.tencent.com/document/product/213/12523?from_cn_redirect=1).
+                     * 获取Outbound bandwidth cap of the public network (in Mbps). <br>It defaults to `0`, which indicates no public network bandwidth is allocated to IPv6. The value range of bandwidth caps varies with the model, availability zone and billing mode. For more information, see [Public Network Bandwidth Cap](https://intl.cloud.tencent.com/document/product/213/12523?from_cn_redirect=1).
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return InternetMaxBandwidthOut Maximum outbound bandwidth of the public network, in Mbps. <br>The default value is 0, and no public network bandwidth is allocated to IPv6. The maximum bandwidth varies with the model, availability zone and billing mode. For more information, see [Public Network Bandwidth Cap](https://intl.cloud.tencent.com/document/product/213/12523?from_cn_redirect=1).
+                     * @return InternetMaxBandwidthOut Outbound bandwidth cap of the public network (in Mbps). <br>It defaults to `0`, which indicates no public network bandwidth is allocated to IPv6. The value range of bandwidth caps varies with the model, availability zone and billing mode. For more information, see [Public Network Bandwidth Cap](https://intl.cloud.tencent.com/document/product/213/12523?from_cn_redirect=1).
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     uint64_t GetInternetMaxBandwidthOut() const;
 
                     /**
-                     * 设置Maximum outbound bandwidth of the public network, in Mbps. <br>The default value is 0, and no public network bandwidth is allocated to IPv6. The maximum bandwidth varies with the model, availability zone and billing mode. For more information, see [Public Network Bandwidth Cap](https://intl.cloud.tencent.com/document/product/213/12523?from_cn_redirect=1).
+                     * 设置Outbound bandwidth cap of the public network (in Mbps). <br>It defaults to `0`, which indicates no public network bandwidth is allocated to IPv6. The value range of bandwidth caps varies with the model, availability zone and billing mode. For more information, see [Public Network Bandwidth Cap](https://intl.cloud.tencent.com/document/product/213/12523?from_cn_redirect=1).
 Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param InternetMaxBandwidthOut Maximum outbound bandwidth of the public network, in Mbps. <br>The default value is 0, and no public network bandwidth is allocated to IPv6. The maximum bandwidth varies with the model, availability zone and billing mode. For more information, see [Public Network Bandwidth Cap](https://intl.cloud.tencent.com/document/product/213/12523?from_cn_redirect=1).
+                     * @param InternetMaxBandwidthOut Outbound bandwidth cap of the public network (in Mbps). <br>It defaults to `0`, which indicates no public network bandwidth is allocated to IPv6. The value range of bandwidth caps varies with the model, availability zone and billing mode. For more information, see [Public Network Bandwidth Cap](https://intl.cloud.tencent.com/document/product/213/12523?from_cn_redirect=1).
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetInternetMaxBandwidthOut(const uint64_t& _internetMaxBandwidthOut);
@@ -132,7 +132,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_internetChargeTypeHasBeenSet;
 
                     /**
-                     * Maximum outbound bandwidth of the public network, in Mbps. <br>The default value is 0, and no public network bandwidth is allocated to IPv6. The maximum bandwidth varies with the model, availability zone and billing mode. For more information, see [Public Network Bandwidth Cap](https://intl.cloud.tencent.com/document/product/213/12523?from_cn_redirect=1).
+                     * Outbound bandwidth cap of the public network (in Mbps). <br>It defaults to `0`, which indicates no public network bandwidth is allocated to IPv6. The value range of bandwidth caps varies with the model, availability zone and billing mode. For more information, see [Public Network Bandwidth Cap](https://intl.cloud.tencent.com/document/product/213/12523?from_cn_redirect=1).
 Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     uint64_t m_internetMaxBandwidthOut;

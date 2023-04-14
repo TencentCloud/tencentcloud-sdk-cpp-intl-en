@@ -48,14 +48,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Timer name. Currently `TerminateInstances` is the only supported value.
-                     * @return TimerAction Timer name. Currently `TerminateInstances` is the only supported value.
+                     * 获取Timer action. Valid value: `TerminateInstances`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return TimerAction Timer action. Valid value: `TerminateInstances`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetTimerAction() const;
 
                     /**
-                     * 设置Timer name. Currently `TerminateInstances` is the only supported value.
-                     * @param TimerAction Timer name. Currently `TerminateInstances` is the only supported value.
+                     * 设置Timer action. Valid value: `TerminateInstances`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param TimerAction Timer action. Valid value: `TerminateInstances`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetTimerAction(const std::string& _timerAction);
 
@@ -66,14 +70,18 @@ namespace TencentCloud
                     bool TimerActionHasBeenSet() const;
 
                     /**
-                     * 获取Execution time, which follows the ISO8601 standard and uses UTC time. It must be at least 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
-                     * @return ActionTime Execution time, which follows the ISO8601 standard and uses UTC time. It must be at least 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
+                     * 获取Action time, which follows the ISO8601 standard and uses UTC time. It must be 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return ActionTime Action time, which follows the ISO8601 standard and uses UTC time. It must be 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string GetActionTime() const;
 
                     /**
-                     * 设置Execution time, which follows the ISO8601 standard and uses UTC time. It must be at least 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
-                     * @param ActionTime Execution time, which follows the ISO8601 standard and uses UTC time. It must be at least 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
+                     * 设置Action time, which follows the ISO8601 standard and uses UTC time. It must be 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param ActionTime Action time, which follows the ISO8601 standard and uses UTC time. It must be 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetActionTime(const std::string& _actionTime);
 
@@ -84,14 +92,18 @@ namespace TencentCloud
                     bool ActionTimeHasBeenSet() const;
 
                     /**
-                     * 获取Additional data
-                     * @return Externals Additional data
+                     * 获取Extended data
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Externals Extended data
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     Externals GetExternals() const;
 
                     /**
-                     * 设置Additional data
-                     * @param Externals Additional data
+                     * 设置Extended data
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param Externals Extended data
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetExternals(const Externals& _externals);
 
@@ -104,19 +116,22 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Timer name. Currently `TerminateInstances` is the only supported value.
+                     * Timer action. Valid value: `TerminateInstances`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_timerAction;
                     bool m_timerActionHasBeenSet;
 
                     /**
-                     * Execution time, which follows the ISO8601 standard and uses UTC time. It must be at least 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
+                     * Action time, which follows the ISO8601 standard and uses UTC time. It must be 5 minutes later than the current time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 2018-05-29T11:26:40Z.
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     std::string m_actionTime;
                     bool m_actionTimeHasBeenSet;
 
                     /**
-                     * Additional data
+                     * Extended data
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     Externals m_externals;
                     bool m_externalsHasBeenSet;

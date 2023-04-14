@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Certificate download address
-                     * @return CertDownloadUrl Certificate download address
+                     * 获取Download address for SSL certificate
+                     * @return CertDownloadUrl Download address for SSL certificate
                      */
                     std::string GetCertDownloadUrl() const;
 
@@ -68,8 +68,12 @@ namespace TencentCloud
                     bool UrlExpiredTimeHasBeenSet() const;
 
                     /**
-                     * 获取SSL configuration status of an instance. Valid values: `true` (enable), `false` (disable).
-                     * @return SSLConfig SSL configuration status of an instance. Valid values: `true` (enable), `false` (disable).
+                     * 获取Whether the SSL is enabled for the identified instance.
+- `true`: Enabled
+- `false`: Disabled
+                     * @return SSLConfig Whether the SSL is enabled for the identified instance.
+- `true`: Enabled
+- `false`: Disabled
                      */
                     bool GetSSLConfig() const;
 
@@ -80,8 +84,12 @@ namespace TencentCloud
                     bool SSLConfigHasBeenSet() const;
 
                     /**
-                     * 获取Whether the instance supports SSL. Valid values: `true` (Yes. When minor version is upgraded.), `false` (No).
-                     * @return FeatureSupport Whether the instance supports SSL. Valid values: `true` (Yes. When minor version is upgraded.), `false` (No).
+                     * 获取Whether SSL is supported for the identified instance.
+-`true`: Supported
+-`false`: Not supported
+                     * @return FeatureSupport Whether SSL is supported for the identified instance.
+-`true`: Supported
+-`false`: Not supported
                      */
                     bool GetFeatureSupport() const;
 
@@ -92,8 +100,12 @@ namespace TencentCloud
                     bool FeatureSupportHasBeenSet() const;
 
                     /**
-                     * 获取SSL configuration status. Valid values: `1`(Configuring), `2` (Configured).
-                     * @return Status SSL configuration status. Valid values: `1`(Configuring), `2` (Configured).
+                     * 获取Status of SSL configuration
+- `1`: Configuring
+- `2`: Configured successfully
+                     * @return Status Status of SSL configuration
+- `1`: Configuring
+- `2`: Configured successfully
                      */
                     int64_t GetStatus() const;
 
@@ -106,7 +118,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Certificate download address
+                     * Download address for SSL certificate
                      */
                     std::string m_certDownloadUrl;
                     bool m_certDownloadUrlHasBeenSet;
@@ -118,19 +130,25 @@ namespace TencentCloud
                     bool m_urlExpiredTimeHasBeenSet;
 
                     /**
-                     * SSL configuration status of an instance. Valid values: `true` (enable), `false` (disable).
+                     * Whether the SSL is enabled for the identified instance.
+- `true`: Enabled
+- `false`: Disabled
                      */
                     bool m_sSLConfig;
                     bool m_sSLConfigHasBeenSet;
 
                     /**
-                     * Whether the instance supports SSL. Valid values: `true` (Yes. When minor version is upgraded.), `false` (No).
+                     * Whether SSL is supported for the identified instance.
+-`true`: Supported
+-`false`: Not supported
                      */
                     bool m_featureSupport;
                     bool m_featureSupportHasBeenSet;
 
                     /**
-                     * SSL configuration status. Valid values: `1`(Configuring), `2` (Configured).
+                     * Status of SSL configuration
+- `1`: Configuring
+- `2`: Configured successfully
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;

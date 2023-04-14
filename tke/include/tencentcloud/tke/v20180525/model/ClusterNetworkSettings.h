@@ -304,6 +304,32 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     bool Ipv6ServiceCIDRHasBeenSet() const;
 
+                    /**
+                     * 获取Cluster Cilium Mode configuration
+- clusterIP
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @return CiliumMode Cluster Cilium Mode configuration
+- clusterIP
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string GetCiliumMode() const;
+
+                    /**
+                     * 设置Cluster Cilium Mode configuration
+- clusterIP
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     * @param CiliumMode Cluster Cilium Mode configuration
+- clusterIP
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    void SetCiliumMode(const std::string& _ciliumMode);
+
+                    /**
+                     * 判断参数 CiliumMode 是否已赋值
+                     * @return CiliumMode 是否已赋值
+                     */
+                    bool CiliumModeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -389,6 +415,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                      */
                     std::string m_ipv6ServiceCIDR;
                     bool m_ipv6ServiceCIDRHasBeenSet;
+
+                    /**
+                     * Cluster Cilium Mode configuration
+- clusterIP
+Note: This field may return `null`, indicating that no valid value can be obtained.
+                     */
+                    std::string m_ciliumMode;
+                    bool m_ciliumModeHasBeenSet;
 
                 };
             }

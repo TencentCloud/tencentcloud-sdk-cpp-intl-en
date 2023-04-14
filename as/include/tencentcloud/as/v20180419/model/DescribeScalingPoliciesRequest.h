@@ -62,30 +62,34 @@ namespace TencentCloud
                     bool AutoScalingPolicyIdsHasBeenSet() const;
 
                     /**
-                     * 获取Filter.
-<li> auto-scaling-policy-id - String - Required: No - (Filter) Filter by alarm policy ID.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
-<li> scaling-policy-name - String - Required: No - (Filter) Filter by alarm policy name.</li>
-The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. This parameter does not support specifying both `AutoScalingPolicyIds` and `Filters` at the same time.
-                     * @return Filters Filter.
-<li> auto-scaling-policy-id - String - Required: No - (Filter) Filter by alarm policy ID.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
-<li> scaling-policy-name - String - Required: No - (Filter) Filter by alarm policy name.</li>
-The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. This parameter does not support specifying both `AutoScalingPolicyIds` and `Filters` at the same time.
+                     * 获取Filters.
+<li> `auto-scaling-policy-id` - String - Optional - Filter by the alarm policy ID.</li>
+<li> `auto-scaling-group-id` - String - Optional - Filter by the scaling group ID.</li>
+<li> `scaling-policy-name` - String - Optional - Filter by the alarm policy name.</li>
+<li> `scaling-policy-type` - String - Optional - Filter by the alarm policy type. Valid values: `SIMPLE`, `TARGET_TRACKING`.</li>
+The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. You cannot specify `AutoScalingPolicyIds` and `Filters` at the same time.
+                     * @return Filters Filters.
+<li> `auto-scaling-policy-id` - String - Optional - Filter by the alarm policy ID.</li>
+<li> `auto-scaling-group-id` - String - Optional - Filter by the scaling group ID.</li>
+<li> `scaling-policy-name` - String - Optional - Filter by the alarm policy name.</li>
+<li> `scaling-policy-type` - String - Optional - Filter by the alarm policy type. Valid values: `SIMPLE`, `TARGET_TRACKING`.</li>
+The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. You cannot specify `AutoScalingPolicyIds` and `Filters` at the same time.
                      */
                     std::vector<Filter> GetFilters() const;
 
                     /**
-                     * 设置Filter.
-<li> auto-scaling-policy-id - String - Required: No - (Filter) Filter by alarm policy ID.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
-<li> scaling-policy-name - String - Required: No - (Filter) Filter by alarm policy name.</li>
-The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. This parameter does not support specifying both `AutoScalingPolicyIds` and `Filters` at the same time.
-                     * @param Filters Filter.
-<li> auto-scaling-policy-id - String - Required: No - (Filter) Filter by alarm policy ID.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
-<li> scaling-policy-name - String - Required: No - (Filter) Filter by alarm policy name.</li>
-The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. This parameter does not support specifying both `AutoScalingPolicyIds` and `Filters` at the same time.
+                     * 设置Filters.
+<li> `auto-scaling-policy-id` - String - Optional - Filter by the alarm policy ID.</li>
+<li> `auto-scaling-group-id` - String - Optional - Filter by the scaling group ID.</li>
+<li> `scaling-policy-name` - String - Optional - Filter by the alarm policy name.</li>
+<li> `scaling-policy-type` - String - Optional - Filter by the alarm policy type. Valid values: `SIMPLE`, `TARGET_TRACKING`.</li>
+The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. You cannot specify `AutoScalingPolicyIds` and `Filters` at the same time.
+                     * @param Filters Filters.
+<li> `auto-scaling-policy-id` - String - Optional - Filter by the alarm policy ID.</li>
+<li> `auto-scaling-group-id` - String - Optional - Filter by the scaling group ID.</li>
+<li> `scaling-policy-name` - String - Optional - Filter by the alarm policy name.</li>
+<li> `scaling-policy-type` - String - Optional - Filter by the alarm policy type. Valid values: `SIMPLE`, `TARGET_TRACKING`.</li>
+The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. You cannot specify `AutoScalingPolicyIds` and `Filters` at the same time.
                      */
                     void SetFilters(const std::vector<Filter>& _filters);
 
@@ -140,11 +144,12 @@ The maximum number of `Filters` per request is 10. The upper limit for `Filter.V
                     bool m_autoScalingPolicyIdsHasBeenSet;
 
                     /**
-                     * Filter.
-<li> auto-scaling-policy-id - String - Required: No - (Filter) Filter by alarm policy ID.</li>
-<li> auto-scaling-group-id - String - Required: No - (Filter) Filter by auto scaling group ID.</li>
-<li> scaling-policy-name - String - Required: No - (Filter) Filter by alarm policy name.</li>
-The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. This parameter does not support specifying both `AutoScalingPolicyIds` and `Filters` at the same time.
+                     * Filters.
+<li> `auto-scaling-policy-id` - String - Optional - Filter by the alarm policy ID.</li>
+<li> `auto-scaling-group-id` - String - Optional - Filter by the scaling group ID.</li>
+<li> `scaling-policy-name` - String - Optional - Filter by the alarm policy name.</li>
+<li> `scaling-policy-type` - String - Optional - Filter by the alarm policy type. Valid values: `SIMPLE`, `TARGET_TRACKING`.</li>
+The maximum number of `Filters` per request is 10. The upper limit for `Filter.Values` is 5. You cannot specify `AutoScalingPolicyIds` and `Filters` at the same time.
                      */
                     std::vector<Filter> m_filters;
                     bool m_filtersHasBeenSet;

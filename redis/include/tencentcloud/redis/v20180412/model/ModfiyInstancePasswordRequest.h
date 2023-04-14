@@ -79,14 +79,26 @@ namespace TencentCloud
                     bool OldPasswordHasBeenSet() const;
 
                     /**
-                     * 获取New password of an instance
-                     * @return Password New password of an instance
+                     * 获取New instance password, which has the following requirements:
+- It must contain 8-30 characters, preferably 12 or more.
+- It cannot start with a slash (/)
+- It must contain two of the following three types: lowercase letters, uppercase letters, and symbols (()~!@#$%^&*-+=_|{}[]:;<>,.?/)
+                     * @return Password New instance password, which has the following requirements:
+- It must contain 8-30 characters, preferably 12 or more.
+- It cannot start with a slash (/)
+- It must contain two of the following three types: lowercase letters, uppercase letters, and symbols (()~!@#$%^&*-+=_|{}[]:;<>,.?/)
                      */
                     std::string GetPassword() const;
 
                     /**
-                     * 设置New password of an instance
-                     * @param Password New password of an instance
+                     * 设置New instance password, which has the following requirements:
+- It must contain 8-30 characters, preferably 12 or more.
+- It cannot start with a slash (/)
+- It must contain two of the following three types: lowercase letters, uppercase letters, and symbols (()~!@#$%^&*-+=_|{}[]:;<>,.?/)
+                     * @param Password New instance password, which has the following requirements:
+- It must contain 8-30 characters, preferably 12 or more.
+- It cannot start with a slash (/)
+- It must contain two of the following three types: lowercase letters, uppercase letters, and symbols (()~!@#$%^&*-+=_|{}[]:;<>,.?/)
                      */
                     void SetPassword(const std::string& _password);
 
@@ -111,7 +123,10 @@ namespace TencentCloud
                     bool m_oldPasswordHasBeenSet;
 
                     /**
-                     * New password of an instance
+                     * New instance password, which has the following requirements:
+- It must contain 8-30 characters, preferably 12 or more.
+- It cannot start with a slash (/)
+- It must contain two of the following three types: lowercase letters, uppercase letters, and symbols (()~!@#$%^&*-+=_|{}[]:;<>,.?/)
                      */
                     std::string m_password;
                     bool m_passwordHasBeenSet;

@@ -235,14 +235,14 @@ The array length of `InstanceAdvancedSettingsOverride` should be the same as the
                     bool InstanceAdvancedSettingsOverridesHasBeenSet() const;
 
                     /**
-                     * 获取Node image (it is required when creating a node)
-                     * @return ImageId Node image (it is required when creating a node)
+                     * 获取Node image
+                     * @return ImageId Node image
                      */
                     std::string GetImageId() const;
 
                     /**
-                     * 设置Node image (it is required when creating a node)
-                     * @param ImageId Node image (it is required when creating a node)
+                     * 设置Node image
+                     * @param ImageId Node image
                      */
                     void SetImageId(const std::string& _imageId);
 
@@ -317,7 +317,7 @@ The array length of `InstanceAdvancedSettingsOverride` should be the same as the
                     bool m_instanceAdvancedSettingsOverridesHasBeenSet;
 
                     /**
-                     * Node image (it is required when creating a node)
+                     * Node image
                      */
                     std::string m_imageId;
                     bool m_imageIdHasBeenSet;

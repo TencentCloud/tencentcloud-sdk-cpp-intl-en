@@ -66,14 +66,86 @@ namespace TencentCloud
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan
-                     * @return RegionId Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan
+                     * 获取Region ID
+- `1`: Guangzhou 
+- `4`: Shanghai 
+- `5`: Hong Kong (China) 
+- `6`: Toronto 
+- `7`: Shanghai Finance 
+- `8`: Beijing 
+- `9`: Singapore
+- `11`: Shenzhen Finance
+- `15`: Silicon Valley (West US)
+- `16`: Chengdu 
+- `17`: Germany 
+- `18`: South Korea 
+- `19`: Chongqing 
+- `21`: India 
+- `22`: Virginia (East US)
+- `23`: Thailand 
+- `24`: Russia 
+- `25`: Japan
+                     * @return RegionId Region ID
+- `1`: Guangzhou 
+- `4`: Shanghai 
+- `5`: Hong Kong (China) 
+- `6`: Toronto 
+- `7`: Shanghai Finance 
+- `8`: Beijing 
+- `9`: Singapore
+- `11`: Shenzhen Finance
+- `15`: Silicon Valley (West US)
+- `16`: Chengdu 
+- `17`: Germany 
+- `18`: South Korea 
+- `19`: Chongqing 
+- `21`: India 
+- `22`: Virginia (East US)
+- `23`: Thailand 
+- `24`: Russia 
+- `25`: Japan
                      */
                     int64_t GetRegionId() const;
 
                     /**
-                     * 设置Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan
-                     * @param RegionId Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan
+                     * 设置Region ID
+- `1`: Guangzhou 
+- `4`: Shanghai 
+- `5`: Hong Kong (China) 
+- `6`: Toronto 
+- `7`: Shanghai Finance 
+- `8`: Beijing 
+- `9`: Singapore
+- `11`: Shenzhen Finance
+- `15`: Silicon Valley (West US)
+- `16`: Chengdu 
+- `17`: Germany 
+- `18`: South Korea 
+- `19`: Chongqing 
+- `21`: India 
+- `22`: Virginia (East US)
+- `23`: Thailand 
+- `24`: Russia 
+- `25`: Japan
+                     * @param RegionId Region ID
+- `1`: Guangzhou 
+- `4`: Shanghai 
+- `5`: Hong Kong (China) 
+- `6`: Toronto 
+- `7`: Shanghai Finance 
+- `8`: Beijing 
+- `9`: Singapore
+- `11`: Shenzhen Finance
+- `15`: Silicon Valley (West US)
+- `16`: Chengdu 
+- `17`: Germany 
+- `18`: South Korea 
+- `19`: Chongqing 
+- `21`: India 
+- `22`: Virginia (East US)
+- `23`: Thailand 
+- `24`: Russia 
+- `25`: Japan
                      */
                     void SetRegionId(const int64_t& _regionId);
 
@@ -84,14 +156,14 @@ namespace TencentCloud
                     bool RegionIdHasBeenSet() const;
 
                     /**
-                     * 获取Replication group info
-                     * @return GroupId Replication group info
+                     * 获取Replication group ID
+                     * @return GroupId Replication group ID
                      */
                     std::string GetGroupId() const;
 
                     /**
-                     * 设置Replication group info
-                     * @param GroupId Replication group info
+                     * 设置Replication group ID
+                     * @param GroupId Replication group ID
                      */
                     void SetGroupId(const std::string& _groupId);
 
@@ -103,17 +175,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Replication group name
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return GroupName Replication group name
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetGroupName() const;
 
                     /**
                      * 设置Replication group name
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param GroupName Replication group name
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetGroupName(const std::string& _groupName);
 
@@ -124,14 +196,34 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool GroupNameHasBeenSet() const;
 
                     /**
-                     * 获取Replication group status. Valid values: 37 (Associating replication group), 38 (Reconnecting to replication group), 51 (Disassociating the replication group), 52 (Switching primary instance in the replication group), 53 (Modifying roles)
-                     * @return Status Replication group status. Valid values: 37 (Associating replication group), 38 (Reconnecting to replication group), 51 (Disassociating the replication group), 52 (Switching primary instance in the replication group), 53 (Modifying roles)
+                     * 获取Status of replication group
+- `37`: Associating replication group
+- `38`: Reconnecting to replication group
+- `51`: Disassociating replication group
+- `52`: Switching with master instance in replication group
+- `53`: Modifying the roles
+                     * @return Status Status of replication group
+- `37`: Associating replication group
+- `38`: Reconnecting to replication group
+- `51`: Disassociating replication group
+- `52`: Switching with master instance in replication group
+- `53`: Modifying the roles
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Replication group status. Valid values: 37 (Associating replication group), 38 (Reconnecting to replication group), 51 (Disassociating the replication group), 52 (Switching primary instance in the replication group), 53 (Modifying roles)
-                     * @param Status Replication group status. Valid values: 37 (Associating replication group), 38 (Reconnecting to replication group), 51 (Disassociating the replication group), 52 (Switching primary instance in the replication group), 53 (Modifying roles)
+                     * 设置Status of replication group
+- `37`: Associating replication group
+- `38`: Reconnecting to replication group
+- `51`: Disassociating replication group
+- `52`: Switching with master instance in replication group
+- `53`: Modifying the roles
+                     * @param Status Status of replication group
+- `37`: Associating replication group
+- `38`: Reconnecting to replication group
+- `51`: Disassociating replication group
+- `52`: Switching with master instance in replication group
+- `53`: Modifying the roles
                      */
                     void SetStatus(const int64_t& _status);
 
@@ -160,18 +252,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool InstanceCountHasBeenSet() const;
 
                     /**
-                     * 获取Instances in replication group
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @return Instances Instances in replication group
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 获取Instance information in replication groups
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Instances Instance information in replication groups
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<Instances> GetInstances() const;
 
                     /**
-                     * 设置Instances in replication group
-Note: This field may return `null`, indicating that no valid values can be obtained.
-                     * @param Instances Instances in replication group
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * 设置Instance information in replication groups
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Instances Instance information in replication groups
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetInstances(const std::vector<Instances>& _instances);
 
@@ -183,17 +275,17 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
                     /**
                      * 获取Remarks
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Remark Remarks
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetRemark() const;
 
                     /**
                      * 设置Remarks
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param Remark Remarks
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetRemark(const std::string& _remark);
 
@@ -212,26 +304,49 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * Region ID. 1: Guangzhou; 4: Shanghai; 5: Hong Kong (China); 6: Toronto; 7: Shanghai Finance; 8: Beijing; 9: Singapore; 11: Shenzhen Finance; 15: West US (Silicon Valley); 16: Chengdu; 17: Germany; 18: South Korea; 19: Chongqing; 21: India; 22: East US (Virginia); 23: Thailand; 24: Russia; 25: Japan
+                     * Region ID
+- `1`: Guangzhou 
+- `4`: Shanghai 
+- `5`: Hong Kong (China) 
+- `6`: Toronto 
+- `7`: Shanghai Finance 
+- `8`: Beijing 
+- `9`: Singapore
+- `11`: Shenzhen Finance
+- `15`: Silicon Valley (West US)
+- `16`: Chengdu 
+- `17`: Germany 
+- `18`: South Korea 
+- `19`: Chongqing 
+- `21`: India 
+- `22`: Virginia (East US)
+- `23`: Thailand 
+- `24`: Russia 
+- `25`: Japan
                      */
                     int64_t m_regionId;
                     bool m_regionIdHasBeenSet;
 
                     /**
-                     * Replication group info
+                     * Replication group ID
                      */
                     std::string m_groupId;
                     bool m_groupIdHasBeenSet;
 
                     /**
                      * Replication group name
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_groupName;
                     bool m_groupNameHasBeenSet;
 
                     /**
-                     * Replication group status. Valid values: 37 (Associating replication group), 38 (Reconnecting to replication group), 51 (Disassociating the replication group), 52 (Switching primary instance in the replication group), 53 (Modifying roles)
+                     * Status of replication group
+- `37`: Associating replication group
+- `38`: Reconnecting to replication group
+- `51`: Disassociating replication group
+- `52`: Switching with master instance in replication group
+- `53`: Modifying the roles
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
@@ -243,15 +358,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                     bool m_instanceCountHasBeenSet;
 
                     /**
-                     * Instances in replication group
-Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * Instance information in replication groups
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<Instances> m_instances;
                     bool m_instancesHasBeenSet;
 
                     /**
                      * Remarks
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
