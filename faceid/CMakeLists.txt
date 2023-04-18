@@ -20,6 +20,7 @@ set(faceid_public_header
 
 set(faceid_public_header_model
   include/tencentcloud/faceid/v20180301/model/GetLivenessResultResponse.h
+  include/tencentcloud/faceid/v20180301/model/GetFaceIdTokenIntlResponse.h
   include/tencentcloud/faceid/v20180301/model/GetSdkVerificationResultResponse.h
   include/tencentcloud/faceid/v20180301/model/VerificationDetail.h
   include/tencentcloud/faceid/v20180301/model/LivenessCompareResponse.h
@@ -29,6 +30,7 @@ set(faceid_public_header_model
   include/tencentcloud/faceid/v20180301/model/ApplyWebVerificationTokenResponse.h
   include/tencentcloud/faceid/v20180301/model/GetWebVerificationResultRequest.h
   include/tencentcloud/faceid/v20180301/model/FileInfo.h
+  include/tencentcloud/faceid/v20180301/model/GetFaceIdResultIntlRequest.h
   include/tencentcloud/faceid/v20180301/model/ApplySdkVerificationTokenRequest.h
   include/tencentcloud/faceid/v20180301/model/GenerateReflectSequenceRequest.h
   include/tencentcloud/faceid/v20180301/model/DetectReflectLivenessAndCompareResponse.h
@@ -39,17 +41,20 @@ set(faceid_public_header_model
   include/tencentcloud/faceid/v20180301/model/GetLivenessResultRequest.h
   include/tencentcloud/faceid/v20180301/model/ApplySdkVerificationTokenResponse.h
   include/tencentcloud/faceid/v20180301/model/CreateUploadUrlRequest.h
+  include/tencentcloud/faceid/v20180301/model/GetFaceIdTokenIntlRequest.h
   include/tencentcloud/faceid/v20180301/model/GetWebVerificationResultResponse.h
   include/tencentcloud/faceid/v20180301/model/GetSdkVerificationResultRequest.h
   include/tencentcloud/faceid/v20180301/model/ApplyLivenessTokenRequest.h
   include/tencentcloud/faceid/v20180301/model/GenerateReflectSequenceResponse.h
   include/tencentcloud/faceid/v20180301/model/LivenessCompareRequest.h
+  include/tencentcloud/faceid/v20180301/model/GetFaceIdResultIntlResponse.h
   include/tencentcloud/faceid/v20180301/model/CompareResult.h
   )
 
 set(faceid_src
   src/v20180301/FaceidClient.cpp
   src/v20180301/model/GetLivenessResultResponse.cpp
+  src/v20180301/model/GetFaceIdTokenIntlResponse.cpp
   src/v20180301/model/GetSdkVerificationResultResponse.cpp
   src/v20180301/model/VerificationDetail.cpp
   src/v20180301/model/LivenessCompareResponse.cpp
@@ -59,6 +64,7 @@ set(faceid_src
   src/v20180301/model/ApplyWebVerificationTokenResponse.cpp
   src/v20180301/model/GetWebVerificationResultRequest.cpp
   src/v20180301/model/FileInfo.cpp
+  src/v20180301/model/GetFaceIdResultIntlRequest.cpp
   src/v20180301/model/ApplySdkVerificationTokenRequest.cpp
   src/v20180301/model/GenerateReflectSequenceRequest.cpp
   src/v20180301/model/DetectReflectLivenessAndCompareResponse.cpp
@@ -69,11 +75,13 @@ set(faceid_src
   src/v20180301/model/GetLivenessResultRequest.cpp
   src/v20180301/model/ApplySdkVerificationTokenResponse.cpp
   src/v20180301/model/CreateUploadUrlRequest.cpp
+  src/v20180301/model/GetFaceIdTokenIntlRequest.cpp
   src/v20180301/model/GetWebVerificationResultResponse.cpp
   src/v20180301/model/GetSdkVerificationResultRequest.cpp
   src/v20180301/model/ApplyLivenessTokenRequest.cpp
   src/v20180301/model/GenerateReflectSequenceResponse.cpp
   src/v20180301/model/LivenessCompareRequest.cpp
+  src/v20180301/model/GetFaceIdResultIntlResponse.cpp
   src/v20180301/model/CompareResult.cpp
   )
 

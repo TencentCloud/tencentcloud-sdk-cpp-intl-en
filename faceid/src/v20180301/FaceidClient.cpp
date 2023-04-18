@@ -298,6 +298,92 @@ FaceidClient::GenerateReflectSequenceOutcomeCallable FaceidClient::GenerateRefle
     return task->get_future();
 }
 
+FaceidClient::GetFaceIdResultIntlOutcome FaceidClient::GetFaceIdResultIntl(const GetFaceIdResultIntlRequest &request)
+{
+    auto outcome = MakeRequest(request, "GetFaceIdResultIntl");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        GetFaceIdResultIntlResponse rsp = GetFaceIdResultIntlResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return GetFaceIdResultIntlOutcome(rsp);
+        else
+            return GetFaceIdResultIntlOutcome(o.GetError());
+    }
+    else
+    {
+        return GetFaceIdResultIntlOutcome(outcome.GetError());
+    }
+}
+
+void FaceidClient::GetFaceIdResultIntlAsync(const GetFaceIdResultIntlRequest& request, const GetFaceIdResultIntlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->GetFaceIdResultIntl(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+FaceidClient::GetFaceIdResultIntlOutcomeCallable FaceidClient::GetFaceIdResultIntlCallable(const GetFaceIdResultIntlRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<GetFaceIdResultIntlOutcome()>>(
+        [this, request]()
+        {
+            return this->GetFaceIdResultIntl(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+FaceidClient::GetFaceIdTokenIntlOutcome FaceidClient::GetFaceIdTokenIntl(const GetFaceIdTokenIntlRequest &request)
+{
+    auto outcome = MakeRequest(request, "GetFaceIdTokenIntl");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        GetFaceIdTokenIntlResponse rsp = GetFaceIdTokenIntlResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return GetFaceIdTokenIntlOutcome(rsp);
+        else
+            return GetFaceIdTokenIntlOutcome(o.GetError());
+    }
+    else
+    {
+        return GetFaceIdTokenIntlOutcome(outcome.GetError());
+    }
+}
+
+void FaceidClient::GetFaceIdTokenIntlAsync(const GetFaceIdTokenIntlRequest& request, const GetFaceIdTokenIntlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->GetFaceIdTokenIntl(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+FaceidClient::GetFaceIdTokenIntlOutcomeCallable FaceidClient::GetFaceIdTokenIntlCallable(const GetFaceIdTokenIntlRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<GetFaceIdTokenIntlOutcome()>>(
+        [this, request]()
+        {
+            return this->GetFaceIdTokenIntl(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 FaceidClient::GetLivenessResultOutcome FaceidClient::GetLivenessResult(const GetLivenessResultRequest &request)
 {
     auto outcome = MakeRequest(request, "GetLivenessResult");

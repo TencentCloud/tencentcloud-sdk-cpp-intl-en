@@ -35,6 +35,10 @@
 #include <tencentcloud/faceid/v20180301/model/DetectReflectLivenessAndCompareResponse.h>
 #include <tencentcloud/faceid/v20180301/model/GenerateReflectSequenceRequest.h>
 #include <tencentcloud/faceid/v20180301/model/GenerateReflectSequenceResponse.h>
+#include <tencentcloud/faceid/v20180301/model/GetFaceIdResultIntlRequest.h>
+#include <tencentcloud/faceid/v20180301/model/GetFaceIdResultIntlResponse.h>
+#include <tencentcloud/faceid/v20180301/model/GetFaceIdTokenIntlRequest.h>
+#include <tencentcloud/faceid/v20180301/model/GetFaceIdTokenIntlResponse.h>
 #include <tencentcloud/faceid/v20180301/model/GetLivenessResultRequest.h>
 #include <tencentcloud/faceid/v20180301/model/GetLivenessResultResponse.h>
 #include <tencentcloud/faceid/v20180301/model/GetSdkVerificationResultRequest.h>
@@ -77,6 +81,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::GenerateReflectSequenceResponse> GenerateReflectSequenceOutcome;
                 typedef std::future<GenerateReflectSequenceOutcome> GenerateReflectSequenceOutcomeCallable;
                 typedef std::function<void(const FaceidClient*, const Model::GenerateReflectSequenceRequest&, GenerateReflectSequenceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GenerateReflectSequenceAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetFaceIdResultIntlResponse> GetFaceIdResultIntlOutcome;
+                typedef std::future<GetFaceIdResultIntlOutcome> GetFaceIdResultIntlOutcomeCallable;
+                typedef std::function<void(const FaceidClient*, const Model::GetFaceIdResultIntlRequest&, GetFaceIdResultIntlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetFaceIdResultIntlAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetFaceIdTokenIntlResponse> GetFaceIdTokenIntlOutcome;
+                typedef std::future<GetFaceIdTokenIntlOutcome> GetFaceIdTokenIntlOutcomeCallable;
+                typedef std::function<void(const FaceidClient*, const Model::GetFaceIdTokenIntlRequest&, GetFaceIdTokenIntlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetFaceIdTokenIntlAsyncHandler;
                 typedef Outcome<Core::Error, Model::GetLivenessResultResponse> GetLivenessResultOutcome;
                 typedef std::future<GetLivenessResultOutcome> GetLivenessResultOutcomeCallable;
                 typedef std::function<void(const FaceidClient*, const Model::GetLivenessResultRequest&, GetLivenessResultOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetLivenessResultAsyncHandler;
@@ -151,6 +161,24 @@ The data generated with the SDK must be stored in COS, and the region of the COS
                 GenerateReflectSequenceOutcome GenerateReflectSequence(const Model::GenerateReflectSequenceRequest &request);
                 void GenerateReflectSequenceAsync(const Model::GenerateReflectSequenceRequest& request, const GenerateReflectSequenceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 GenerateReflectSequenceOutcomeCallable GenerateReflectSequenceCallable(const Model::GenerateReflectSequenceRequest& request);
+
+                /**
+                 *This API is used to get the verification result with the corresponding SDK token after the identity verification process is completed. The SDK token is valid for two hours (2*3,600s) after generation and can be called multiple times.
+                 * @param req GetFaceIdResultIntlRequest
+                 * @return GetFaceIdResultIntlOutcome
+                 */
+                GetFaceIdResultIntlOutcome GetFaceIdResultIntl(const Model::GetFaceIdResultIntlRequest &request);
+                void GetFaceIdResultIntlAsync(const Model::GetFaceIdResultIntlRequest& request, const GetFaceIdResultIntlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetFaceIdResultIntlOutcomeCallable GetFaceIdResultIntlCallable(const Model::GetFaceIdResultIntlRequest& request);
+
+                /**
+                 *This API is used to apply for an SDK token before calling the liveness detection and face comparison SDK each time. The SDK token is used throughout the identity verification process and to get the verification result after the verification is completed. A token is valid for one identity verification process only.
+                 * @param req GetFaceIdTokenIntlRequest
+                 * @return GetFaceIdTokenIntlOutcome
+                 */
+                GetFaceIdTokenIntlOutcome GetFaceIdTokenIntl(const Model::GetFaceIdTokenIntlRequest &request);
+                void GetFaceIdTokenIntlAsync(const Model::GetFaceIdTokenIntlRequest& request, const GetFaceIdTokenIntlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetFaceIdTokenIntlOutcomeCallable GetFaceIdTokenIntlCallable(const Model::GetFaceIdTokenIntlRequest& request);
 
                 /**
                  *This API is used to get the verification result with the corresponding token (SdkToken) after the liveness detection is completed. The token is valid for two hours after issuance and can be called multiple times.

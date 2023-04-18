@@ -57,6 +57,10 @@
 #include <tencentcloud/emr/v20190103/model/ScaleOutClusterResponse.h>
 #include <tencentcloud/emr/v20190103/model/ScaleOutInstanceRequest.h>
 #include <tencentcloud/emr/v20190103/model/ScaleOutInstanceResponse.h>
+#include <tencentcloud/emr/v20190103/model/StartStopServiceOrMonitorRequest.h>
+#include <tencentcloud/emr/v20190103/model/StartStopServiceOrMonitorResponse.h>
+#include <tencentcloud/emr/v20190103/model/TerminateClusterNodesRequest.h>
+#include <tencentcloud/emr/v20190103/model/TerminateClusterNodesResponse.h>
 #include <tencentcloud/emr/v20190103/model/TerminateInstanceRequest.h>
 #include <tencentcloud/emr/v20190103/model/TerminateInstanceResponse.h>
 #include <tencentcloud/emr/v20190103/model/TerminateTasksRequest.h>
@@ -126,6 +130,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ScaleOutInstanceResponse> ScaleOutInstanceOutcome;
                 typedef std::future<ScaleOutInstanceOutcome> ScaleOutInstanceOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::ScaleOutInstanceRequest&, ScaleOutInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ScaleOutInstanceAsyncHandler;
+                typedef Outcome<Core::Error, Model::StartStopServiceOrMonitorResponse> StartStopServiceOrMonitorOutcome;
+                typedef std::future<StartStopServiceOrMonitorOutcome> StartStopServiceOrMonitorOutcomeCallable;
+                typedef std::function<void(const EmrClient*, const Model::StartStopServiceOrMonitorRequest&, StartStopServiceOrMonitorOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StartStopServiceOrMonitorAsyncHandler;
+                typedef Outcome<Core::Error, Model::TerminateClusterNodesResponse> TerminateClusterNodesOutcome;
+                typedef std::future<TerminateClusterNodesOutcome> TerminateClusterNodesOutcomeCallable;
+                typedef std::function<void(const EmrClient*, const Model::TerminateClusterNodesRequest&, TerminateClusterNodesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TerminateClusterNodesAsyncHandler;
                 typedef Outcome<Core::Error, Model::TerminateInstanceResponse> TerminateInstanceOutcome;
                 typedef std::future<TerminateInstanceOutcome> TerminateInstanceOutcomeCallable;
                 typedef std::function<void(const EmrClient*, const Model::TerminateInstanceRequest&, TerminateInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TerminateInstanceAsyncHandler;
@@ -289,6 +299,24 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
                 ScaleOutInstanceOutcome ScaleOutInstance(const Model::ScaleOutInstanceRequest &request);
                 void ScaleOutInstanceAsync(const Model::ScaleOutInstanceRequest& request, const ScaleOutInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ScaleOutInstanceOutcomeCallable ScaleOutInstanceCallable(const Model::ScaleOutInstanceRequest& request);
+
+                /**
+                 *This API is used to start or stop the monitor or services.
+                 * @param req StartStopServiceOrMonitorRequest
+                 * @return StartStopServiceOrMonitorOutcome
+                 */
+                StartStopServiceOrMonitorOutcome StartStopServiceOrMonitor(const Model::StartStopServiceOrMonitorRequest &request);
+                void StartStopServiceOrMonitorAsync(const Model::StartStopServiceOrMonitorRequest& request, const StartStopServiceOrMonitorAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                StartStopServiceOrMonitorOutcomeCallable StartStopServiceOrMonitorCallable(const Model::StartStopServiceOrMonitorRequest& request);
+
+                /**
+                 *This API is used to terminate cluster nodes.
+                 * @param req TerminateClusterNodesRequest
+                 * @return TerminateClusterNodesOutcome
+                 */
+                TerminateClusterNodesOutcome TerminateClusterNodes(const Model::TerminateClusterNodesRequest &request);
+                void TerminateClusterNodesAsync(const Model::TerminateClusterNodesRequest& request, const TerminateClusterNodesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                TerminateClusterNodesOutcomeCallable TerminateClusterNodesCallable(const Model::TerminateClusterNodesRequest& request);
 
                 /**
                  *This API is used to terminate EMR instances. It is only supported in the official paid edition of EMR.
