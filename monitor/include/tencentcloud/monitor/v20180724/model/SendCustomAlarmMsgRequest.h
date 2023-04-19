@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool ModuleHasBeenSet() const;
 
                     /**
-                     * 获取Message policy ID, which is configured on the custom message page of Cloud Monitor.
-                     * @return PolicyId Message policy ID, which is configured on the custom message page of Cloud Monitor.
+                     * 获取Message policy ID, which is configured on the custom message page.
+                     * @return PolicyId Message policy ID, which is configured on the custom message page.
                      */
                     std::string GetPolicyId() const;
 
                     /**
-                     * 设置Message policy ID, which is configured on the custom message page of Cloud Monitor.
-                     * @param PolicyId Message policy ID, which is configured on the custom message page of Cloud Monitor.
+                     * 设置Message policy ID, which is configured on the custom message page.
+                     * @param PolicyId Message policy ID, which is configured on the custom message page.
                      */
                     void SetPolicyId(const std::string& _policyId);
 
@@ -105,7 +105,7 @@ namespace TencentCloud
                     bool m_moduleHasBeenSet;
 
                     /**
-                     * Message policy ID, which is configured on the custom message page of Cloud Monitor.
+                     * Message policy ID, which is configured on the custom message page.
                      */
                     std::string m_policyId;
                     bool m_policyIdHasBeenSet;

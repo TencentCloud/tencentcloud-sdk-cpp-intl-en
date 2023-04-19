@@ -255,14 +255,14 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Database engine version. Valid values: `8.0.18`, `10.1.9`, `5.7.17`. Default value: `5.7.17`.
-                     * @return DbVersionId Database engine version. Valid values: `8.0.18`, `10.1.9`, `5.7.17`. Default value: `5.7.17`.
+                     * 获取Database engine version. Valid values: `5.7`, `8.0`, `10.0`, `10.1`.
+                     * @return DbVersionId Database engine version. Valid values: `5.7`, `8.0`, `10.0`, `10.1`.
                      */
                     std::string GetDbVersionId() const;
 
                     /**
-                     * 设置Database engine version. Valid values: `8.0.18`, `10.1.9`, `5.7.17`. Default value: `5.7.17`.
-                     * @param DbVersionId Database engine version. Valid values: `8.0.18`, `10.1.9`, `5.7.17`. Default value: `5.7.17`.
+                     * 设置Database engine version. Valid values: `5.7`, `8.0`, `10.0`, `10.1`.
+                     * @param DbVersionId Database engine version. Valid values: `5.7`, `8.0`, `10.0`, `10.1`.
                      */
                     void SetDbVersionId(const std::string& _dbVersionId);
 
@@ -488,7 +488,7 @@ namespace TencentCloud
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Database engine version. Valid values: `8.0.18`, `10.1.9`, `5.7.17`. Default value: `5.7.17`.
+                     * Database engine version. Valid values: `5.7`, `8.0`, `10.0`, `10.1`.
                      */
                     std::string m_dbVersionId;
                     bool m_dbVersionIdHasBeenSet;

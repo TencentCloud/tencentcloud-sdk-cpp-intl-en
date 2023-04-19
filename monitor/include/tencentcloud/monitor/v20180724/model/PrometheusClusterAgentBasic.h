@@ -192,6 +192,24 @@ namespace TencentCloud
                      */
                     bool NotScrapeHasBeenSet() const;
 
+                    /**
+                     * 获取Whether to enable the default recording rule
+                     * @return OpenDefaultRecord Whether to enable the default recording rule
+                     */
+                    bool GetOpenDefaultRecord() const;
+
+                    /**
+                     * 设置Whether to enable the default recording rule
+                     * @param OpenDefaultRecord Whether to enable the default recording rule
+                     */
+                    void SetOpenDefaultRecord(const bool& _openDefaultRecord);
+
+                    /**
+                     * 判断参数 OpenDefaultRecord 是否已赋值
+                     * @return OpenDefaultRecord 是否已赋值
+                     */
+                    bool OpenDefaultRecordHasBeenSet() const;
+
                 private:
 
                     /**
@@ -241,6 +259,12 @@ namespace TencentCloud
                      */
                     bool m_notScrape;
                     bool m_notScrapeHasBeenSet;
+
+                    /**
+                     * Whether to enable the default recording rule
+                     */
+                    bool m_openDefaultRecord;
+                    bool m_openDefaultRecordHasBeenSet;
 
                 };
             }

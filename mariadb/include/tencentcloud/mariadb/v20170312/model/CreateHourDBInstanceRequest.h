@@ -189,18 +189,14 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Database engine version. Valid values: 10.0.10, 10.1.9, 5.7.17.
-If this parameter is left empty, `10.1.9` will be used.
-                     * @return DbVersionId Database engine version. Valid values: 10.0.10, 10.1.9, 5.7.17.
-If this parameter is left empty, `10.1.9` will be used.
+                     * 获取Database engine version. Valid values: `5.7`, `8.0`, `10.0`, `10.1`.
+                     * @return DbVersionId Database engine version. Valid values: `5.7`, `8.0`, `10.0`, `10.1`.
                      */
                     std::string GetDbVersionId() const;
 
                     /**
-                     * 设置Database engine version. Valid values: 10.0.10, 10.1.9, 5.7.17.
-If this parameter is left empty, `10.1.9` will be used.
-                     * @param DbVersionId Database engine version. Valid values: 10.0.10, 10.1.9, 5.7.17.
-If this parameter is left empty, `10.1.9` will be used.
+                     * 设置Database engine version. Valid values: `5.7`, `8.0`, `10.0`, `10.1`.
+                     * @param DbVersionId Database engine version. Valid values: `5.7`, `8.0`, `10.0`, `10.1`.
                      */
                     void SetDbVersionId(const std::string& _dbVersionId);
 
@@ -431,8 +427,7 @@ If this parameter is left empty, `10.1.9` will be used.
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * Database engine version. Valid values: 10.0.10, 10.1.9, 5.7.17.
-If this parameter is left empty, `10.1.9` will be used.
+                     * Database engine version. Valid values: `5.7`, `8.0`, `10.0`, `10.1`.
                      */
                     std::string m_dbVersionId;
                     bool m_dbVersionIdHasBeenSet;
