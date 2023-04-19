@@ -47,6 +47,8 @@
 #include <tencentcloud/dcdb/v20180411/model/DescribeAccountPrivilegesResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeAccountsRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeAccountsResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/DescribeBackupFilesRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/DescribeBackupFilesResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeDBLogFilesRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeDBLogFilesResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeDBParametersRequest.h>
@@ -57,6 +59,8 @@
 #include <tencentcloud/dcdb/v20180411/model/DescribeDBSlowLogsResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeDBSyncModeRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeDBSyncModeResponse.h>
+#include <tencentcloud/dcdb/v20180411/model/DescribeDCDBInstanceDetailRequest.h>
+#include <tencentcloud/dcdb/v20180411/model/DescribeDCDBInstanceDetailResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeDCDBInstanceNodeInfoRequest.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeDCDBInstanceNodeInfoResponse.h>
 #include <tencentcloud/dcdb/v20180411/model/DescribeDCDBInstancesRequest.h>
@@ -177,6 +181,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeAccountsResponse> DescribeAccountsOutcome;
                 typedef std::future<DescribeAccountsOutcome> DescribeAccountsOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::DescribeAccountsRequest&, DescribeAccountsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccountsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBackupFilesResponse> DescribeBackupFilesOutcome;
+                typedef std::future<DescribeBackupFilesOutcome> DescribeBackupFilesOutcomeCallable;
+                typedef std::function<void(const DcdbClient*, const Model::DescribeBackupFilesRequest&, DescribeBackupFilesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBackupFilesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDBLogFilesResponse> DescribeDBLogFilesOutcome;
                 typedef std::future<DescribeDBLogFilesOutcome> DescribeDBLogFilesOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::DescribeDBLogFilesRequest&, DescribeDBLogFilesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBLogFilesAsyncHandler;
@@ -192,6 +199,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeDBSyncModeResponse> DescribeDBSyncModeOutcome;
                 typedef std::future<DescribeDBSyncModeOutcome> DescribeDBSyncModeOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::DescribeDBSyncModeRequest&, DescribeDBSyncModeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBSyncModeAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDCDBInstanceDetailResponse> DescribeDCDBInstanceDetailOutcome;
+                typedef std::future<DescribeDCDBInstanceDetailOutcome> DescribeDCDBInstanceDetailOutcomeCallable;
+                typedef std::function<void(const DcdbClient*, const Model::DescribeDCDBInstanceDetailRequest&, DescribeDCDBInstanceDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDCDBInstanceDetailAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDCDBInstanceNodeInfoResponse> DescribeDCDBInstanceNodeInfoOutcome;
                 typedef std::future<DescribeDCDBInstanceNodeInfoOutcome> DescribeDCDBInstanceNodeInfoOutcomeCallable;
                 typedef std::function<void(const DcdbClient*, const Model::DescribeDCDBInstanceNodeInfoRequest&, DescribeDCDBInstanceNodeInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDCDBInstanceNodeInfoAsyncHandler;
@@ -411,6 +421,15 @@ Note: Accounts with the same username but different hosts are considered as diff
                 DescribeAccountsOutcomeCallable DescribeAccountsCallable(const Model::DescribeAccountsRequest& request);
 
                 /**
+                 *This API is used to query the list of backup files.
+                 * @param req DescribeBackupFilesRequest
+                 * @return DescribeBackupFilesOutcome
+                 */
+                DescribeBackupFilesOutcome DescribeBackupFiles(const Model::DescribeBackupFilesRequest &request);
+                void DescribeBackupFilesAsync(const Model::DescribeBackupFilesRequest& request, const DescribeBackupFilesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBackupFilesOutcomeCallable DescribeBackupFilesCallable(const Model::DescribeBackupFilesRequest& request);
+
+                /**
                  *This API is used to get the list of various logs of a database, including cold backups, binlogs, errlogs, and slowlogs.
                  * @param req DescribeDBLogFilesRequest
                  * @return DescribeDBLogFilesOutcome
@@ -454,6 +473,15 @@ Note: Accounts with the same username but different hosts are considered as diff
                 DescribeDBSyncModeOutcome DescribeDBSyncMode(const Model::DescribeDBSyncModeRequest &request);
                 void DescribeDBSyncModeAsync(const Model::DescribeDBSyncModeRequest& request, const DescribeDBSyncModeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeDBSyncModeOutcomeCallable DescribeDBSyncModeCallable(const Model::DescribeDBSyncModeRequest& request);
+
+                /**
+                 *This API is used to get the details of a TDSQL instance.
+                 * @param req DescribeDCDBInstanceDetailRequest
+                 * @return DescribeDCDBInstanceDetailOutcome
+                 */
+                DescribeDCDBInstanceDetailOutcome DescribeDCDBInstanceDetail(const Model::DescribeDCDBInstanceDetailRequest &request);
+                void DescribeDCDBInstanceDetailAsync(const Model::DescribeDCDBInstanceDetailRequest& request, const DescribeDCDBInstanceDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDCDBInstanceDetailOutcomeCallable DescribeDCDBInstanceDetailCallable(const Model::DescribeDCDBInstanceDetailRequest& request);
 
                 /**
                  *This API is used to query the information of instance nodes.

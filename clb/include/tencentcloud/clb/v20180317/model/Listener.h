@@ -522,6 +522,28 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     bool MaxCpsHasBeenSet() const;
 
+                    /**
+                     * 获取Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return IdleConnectTimeout Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetIdleConnectTimeout() const;
+
+                    /**
+                     * 设置Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param IdleConnectTimeout Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetIdleConnectTimeout(const int64_t& _idleConnectTimeout);
+
+                    /**
+                     * 判断参数 IdleConnectTimeout 是否已赋值
+                     * @return IdleConnectTimeout 是否已赋值
+                     */
+                    bool IdleConnectTimeoutHasBeenSet() const;
+
                 private:
 
                     /**
@@ -674,6 +696,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                      */
                     int64_t m_maxCps;
                     bool m_maxCpsHasBeenSet;
+
+                    /**
+                     * Connection idle timeout period (in seconds). It’s only available to TCP listeners. Value range: 300-900 for shared and dedicated instances; 300-2000 for LCU-supported CLB instances. It defaults to 900.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_idleConnectTimeout;
+                    bool m_idleConnectTimeoutHasBeenSet;
 
                 };
             }

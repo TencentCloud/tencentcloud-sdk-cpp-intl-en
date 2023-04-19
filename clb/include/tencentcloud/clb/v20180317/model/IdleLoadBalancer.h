@@ -176,6 +176,28 @@ namespace TencentCloud
                      */
                     bool ForwardHasBeenSet() const;
 
+                    /**
+                     * 获取The load balancing hostname.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return Domain The load balancing hostname.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string GetDomain() const;
+
+                    /**
+                     * 设置The load balancing hostname.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param Domain The load balancing hostname.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetDomain(const std::string& _domain);
+
+                    /**
+                     * 判断参数 Domain 是否已赋值
+                     * @return Domain 是否已赋值
+                     */
+                    bool DomainHasBeenSet() const;
+
                 private:
 
                     /**
@@ -220,6 +242,13 @@ namespace TencentCloud
                      */
                     uint64_t m_forward;
                     bool m_forwardHasBeenSet;
+
+                    /**
+                     * The load balancing hostname.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    std::string m_domain;
+                    bool m_domainHasBeenSet;
 
                 };
             }

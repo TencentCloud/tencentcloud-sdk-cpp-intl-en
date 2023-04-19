@@ -31,6 +31,8 @@
 #include <tencentcloud/ckafka/v20190819/model/BatchModifyTopicAttributesResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/CreateAclRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/CreateAclResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/CreateAclRuleRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/CreateAclRuleResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/CreateConsumerRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/CreateConsumerResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/CreateDatahubTopicRequest.h>
@@ -61,6 +63,8 @@
 #include <tencentcloud/ckafka/v20190819/model/DeleteUserResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeACLRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeACLResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/DescribeAclRuleRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/DescribeAclRuleResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeAppInfoRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeAppInfoResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeCkafkaZoneRequest.h>
@@ -107,6 +111,10 @@
 #include <tencentcloud/ckafka/v20190819/model/FetchMessageListByOffsetResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/InquireCkafkaPriceRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/InquireCkafkaPriceResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/ModifyAclRuleRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/ModifyAclRuleResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/ModifyDatahubTopicRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/ModifyDatahubTopicResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/ModifyGroupOffsetsRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/ModifyGroupOffsetsResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/ModifyInstanceAttributesRequest.h>
@@ -145,6 +153,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateAclResponse> CreateAclOutcome;
                 typedef std::future<CreateAclOutcome> CreateAclOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::CreateAclRequest&, CreateAclOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAclAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateAclRuleResponse> CreateAclRuleOutcome;
+                typedef std::future<CreateAclRuleOutcome> CreateAclRuleOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::CreateAclRuleRequest&, CreateAclRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAclRuleAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateConsumerResponse> CreateConsumerOutcome;
                 typedef std::future<CreateConsumerOutcome> CreateConsumerOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::CreateConsumerRequest&, CreateConsumerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateConsumerAsyncHandler;
@@ -190,6 +201,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeACLResponse> DescribeACLOutcome;
                 typedef std::future<DescribeACLOutcome> DescribeACLOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DescribeACLRequest&, DescribeACLOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeACLAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAclRuleResponse> DescribeAclRuleOutcome;
+                typedef std::future<DescribeAclRuleOutcome> DescribeAclRuleOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::DescribeAclRuleRequest&, DescribeAclRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAclRuleAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAppInfoResponse> DescribeAppInfoOutcome;
                 typedef std::future<DescribeAppInfoOutcome> DescribeAppInfoOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DescribeAppInfoRequest&, DescribeAppInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAppInfoAsyncHandler;
@@ -259,6 +273,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::InquireCkafkaPriceResponse> InquireCkafkaPriceOutcome;
                 typedef std::future<InquireCkafkaPriceOutcome> InquireCkafkaPriceOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::InquireCkafkaPriceRequest&, InquireCkafkaPriceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InquireCkafkaPriceAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyAclRuleResponse> ModifyAclRuleOutcome;
+                typedef std::future<ModifyAclRuleOutcome> ModifyAclRuleOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::ModifyAclRuleRequest&, ModifyAclRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAclRuleAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyDatahubTopicResponse> ModifyDatahubTopicOutcome;
+                typedef std::future<ModifyDatahubTopicOutcome> ModifyDatahubTopicOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::ModifyDatahubTopicRequest&, ModifyDatahubTopicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDatahubTopicAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyGroupOffsetsResponse> ModifyGroupOffsetsOutcome;
                 typedef std::future<ModifyGroupOffsetsOutcome> ModifyGroupOffsetsOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::ModifyGroupOffsetsRequest&, ModifyGroupOffsetsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyGroupOffsetsAsyncHandler;
@@ -315,6 +335,15 @@ namespace TencentCloud
                 CreateAclOutcome CreateAcl(const Model::CreateAclRequest &request);
                 void CreateAclAsync(const Model::CreateAclRequest& request, const CreateAclAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateAclOutcomeCallable CreateAclCallable(const Model::CreateAclRequest& request);
+
+                /**
+                 *This API shows you how to create an ACL rule.
+                 * @param req CreateAclRuleRequest
+                 * @return CreateAclRuleOutcome
+                 */
+                CreateAclRuleOutcome CreateAclRule(const Model::CreateAclRuleRequest &request);
+                void CreateAclRuleAsync(const Model::CreateAclRuleRequest& request, const CreateAclRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateAclRuleOutcomeCallable CreateAclRuleCallable(const Model::CreateAclRuleRequest& request);
 
                 /**
                  *This API is used to create a consumer group.
@@ -450,6 +479,15 @@ namespace TencentCloud
                 DescribeACLOutcome DescribeACL(const Model::DescribeACLRequest &request);
                 void DescribeACLAsync(const Model::DescribeACLRequest& request, const DescribeACLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeACLOutcomeCallable DescribeACLCallable(const Model::DescribeACLRequest& request);
+
+                /**
+                 *This API is used to query the ACL rule list.
+                 * @param req DescribeAclRuleRequest
+                 * @return DescribeAclRuleOutcome
+                 */
+                DescribeAclRuleOutcome DescribeAclRule(const Model::DescribeAclRuleRequest &request);
+                void DescribeAclRuleAsync(const Model::DescribeAclRuleRequest& request, const DescribeAclRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAclRuleOutcomeCallable DescribeAclRuleCallable(const Model::DescribeAclRuleRequest& request);
 
                 /**
                  *This API is used to query the user list.
@@ -659,6 +697,24 @@ This API is used to get the list of topics in a CKafka instance of a user.
                 InquireCkafkaPriceOutcome InquireCkafkaPrice(const Model::InquireCkafkaPriceRequest &request);
                 void InquireCkafkaPriceAsync(const Model::InquireCkafkaPriceRequest& request, const InquireCkafkaPriceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 InquireCkafkaPriceOutcomeCallable InquireCkafkaPriceCallable(const Model::InquireCkafkaPriceRequest& request);
+
+                /**
+                 *This API is used to modify an ACL policy, and currently only supports specifying whether to apply the preset rule to new topics.
+                 * @param req ModifyAclRuleRequest
+                 * @return ModifyAclRuleOutcome
+                 */
+                ModifyAclRuleOutcome ModifyAclRule(const Model::ModifyAclRuleRequest &request);
+                void ModifyAclRuleAsync(const Model::ModifyAclRuleRequest& request, const ModifyAclRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyAclRuleOutcomeCallable ModifyAclRuleCallable(const Model::ModifyAclRuleRequest& request);
+
+                /**
+                 *This API is used to modify the DataHub topic attributes.
+                 * @param req ModifyDatahubTopicRequest
+                 * @return ModifyDatahubTopicOutcome
+                 */
+                ModifyDatahubTopicOutcome ModifyDatahubTopic(const Model::ModifyDatahubTopicRequest &request);
+                void ModifyDatahubTopicAsync(const Model::ModifyDatahubTopicRequest& request, const ModifyDatahubTopicAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyDatahubTopicOutcomeCallable ModifyDatahubTopicCallable(const Model::ModifyDatahubTopicRequest& request);
 
                 /**
                  *This API is used to set the consumer group (Groups) offset.
