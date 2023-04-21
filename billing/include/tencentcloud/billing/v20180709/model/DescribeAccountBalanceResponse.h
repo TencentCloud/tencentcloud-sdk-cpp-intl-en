@@ -164,8 +164,8 @@ namespace TencentCloud
                     bool IsCreditLimitedHasBeenSet() const;
 
                     /**
-                     * 获取Credit limit. Credit limit－available credit balance = consumption amount
-                     * @return CreditAmount Credit limit. Credit limit－available credit balance = consumption amount
+                     * 获取Credit limit in cents. Credit limit－available credit balance = consumption amount
+                     * @return CreditAmount Credit limit in cents. Credit limit－available credit balance = consumption amount
                      */
                     double GetCreditAmount() const;
 
@@ -262,7 +262,7 @@ namespace TencentCloud
                     bool m_isCreditLimitedHasBeenSet;
 
                     /**
-                     * Credit limit. Credit limit－available credit balance = consumption amount
+                     * Credit limit in cents. Credit limit－available credit balance = consumption amount
                      */
                     double m_creditAmount;
                     bool m_creditAmountHasBeenSet;

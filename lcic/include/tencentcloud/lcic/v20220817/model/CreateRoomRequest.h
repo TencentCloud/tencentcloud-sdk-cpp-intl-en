@@ -205,6 +205,24 @@ namespace TencentCloud
                     bool AutoMicHasBeenSet() const;
 
                     /**
+                     * 获取Whether to disconnect communication after audio/video permissions are revoked. Valid values: `0` (default): Yes; `1`: No.
+                     * @return TurnOffMic Whether to disconnect communication after audio/video permissions are revoked. Valid values: `0` (default): Yes; `1`: No.
+                     */
+                    uint64_t GetTurnOffMic() const;
+
+                    /**
+                     * 设置Whether to disconnect communication after audio/video permissions are revoked. Valid values: `0` (default): Yes; `1`: No.
+                     * @param TurnOffMic Whether to disconnect communication after audio/video permissions are revoked. Valid values: `0` (default): Yes; `1`: No.
+                     */
+                    void SetTurnOffMic(const uint64_t& _turnOffMic);
+
+                    /**
+                     * 判断参数 TurnOffMic 是否已赋值
+                     * @return TurnOffMic 是否已赋值
+                     */
+                    bool TurnOffMicHasBeenSet() const;
+
+                    /**
                      * 获取Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes.
                      * @return AudioQuality Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes.
                      */
@@ -257,6 +275,42 @@ namespace TencentCloud
                      * @return Assistants 是否已赋值
                      */
                     bool AssistantsHasBeenSet() const;
+
+                    /**
+                     * 获取The number of RTC users.
+                     * @return RTCAudienceNumber The number of RTC users.
+                     */
+                    uint64_t GetRTCAudienceNumber() const;
+
+                    /**
+                     * 设置The number of RTC users.
+                     * @param RTCAudienceNumber The number of RTC users.
+                     */
+                    void SetRTCAudienceNumber(const uint64_t& _rTCAudienceNumber);
+
+                    /**
+                     * 判断参数 RTCAudienceNumber 是否已赋值
+                     * @return RTCAudienceNumber 是否已赋值
+                     */
+                    bool RTCAudienceNumberHasBeenSet() const;
+
+                    /**
+                     * 获取The audience type.
+                     * @return AudienceType The audience type.
+                     */
+                    uint64_t GetAudienceType() const;
+
+                    /**
+                     * 设置The audience type.
+                     * @param AudienceType The audience type.
+                     */
+                    void SetAudienceType(const uint64_t& _audienceType);
+
+                    /**
+                     * 判断参数 AudienceType 是否已赋值
+                     * @return AudienceType 是否已赋值
+                     */
+                    bool AudienceTypeHasBeenSet() const;
 
                     /**
                      * 获取Recording layout
@@ -351,6 +405,12 @@ namespace TencentCloud
                     bool m_autoMicHasBeenSet;
 
                     /**
+                     * Whether to disconnect communication after audio/video permissions are revoked. Valid values: `0` (default): Yes; `1`: No.
+                     */
+                    uint64_t m_turnOffMic;
+                    bool m_turnOffMicHasBeenSet;
+
+                    /**
                      * Whether to enable the high audio quality mode. Valid values: 0: No (default value); 1: Yes.
                      */
                     uint64_t m_audioQuality;
@@ -367,6 +427,18 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_assistants;
                     bool m_assistantsHasBeenSet;
+
+                    /**
+                     * The number of RTC users.
+                     */
+                    uint64_t m_rTCAudienceNumber;
+                    bool m_rTCAudienceNumberHasBeenSet;
+
+                    /**
+                     * The audience type.
+                     */
+                    uint64_t m_audienceType;
+                    bool m_audienceTypeHasBeenSet;
 
                     /**
                      * Recording layout

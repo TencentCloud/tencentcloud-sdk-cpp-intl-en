@@ -69,14 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool KeyHasBeenSet() const;
 
                     /**
-                     * 获取Number of keys in the statistic report
-                     * @return Count Number of keys in the statistic report
+                     * 获取Number of occurrences of the key value
+                     * @return Count Number of occurrences of the key value
                      */
                     uint64_t GetCount() const;
 
                     /**
-                     * 设置Number of keys in the statistic report
-                     * @param Count Number of keys in the statistic report
+                     * 设置Number of occurrences of the key value
+                     * @param Count Number of occurrences of the key value
                      */
                     void SetCount(const uint64_t& _count);
 
@@ -96,7 +96,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_keyHasBeenSet;
 
                     /**
-                     * Number of keys in the statistic report
+                     * Number of occurrences of the key value
                      */
                     uint64_t m_count;
                     bool m_countHasBeenSet;

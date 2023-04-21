@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return DeveloperId 
+                     * 获取The developer ID.
+                     * @return DeveloperId The developer ID.
                      */
                     std::string GetDeveloperId() const;
 
@@ -58,7 +58,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * The developer ID.
                      */
                     std::string m_developerId;
                     bool m_developerIdHasBeenSet;

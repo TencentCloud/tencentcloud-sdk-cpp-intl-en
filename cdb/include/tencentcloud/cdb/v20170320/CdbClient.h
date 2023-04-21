@@ -958,7 +958,9 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
                 DescribeBinlogsOutcomeCallable DescribeBinlogsCallable(const Model::DescribeBinlogsRequest& request);
 
                 /**
-                 *This API is used to query database proxy. It will be deprecated and replaced by the `QueryCDBProxy` API.
+                 *接口已经废弃，请使用+DescribeCdbProxyInfo+进行替换。
+
+This API is used to query database proxy. It will be deprecated and replaced by the `QueryCDBProxy` API.
                  * @param req DescribeCDBProxyRequest
                  * @return DescribeCDBProxyOutcome
                  */
@@ -1186,7 +1188,9 @@ Note: the HTTP response packet will be very large if it contain a single large e
                 DescribeProjectSecurityGroupsOutcomeCallable DescribeProjectSecurityGroupsCallable(const Model::DescribeProjectSecurityGroupsRequest& request);
 
                 /**
-                 *This API is used to query the connection pool configuration of database proxy.
+                 *当前接口已经废弃，请使用+DescribeCdbProxyInfo+替代。
+
+This API is used to query the connection pool configuration of database proxy.
                  * @param req DescribeProxyConnectionPoolConfRequest
                  * @return DescribeProxyConnectionPoolConfOutcome
                  */
@@ -1428,7 +1432,9 @@ Note that when modifying account permissions, you need to pass in the full permi
                 ModifyBackupEncryptionStatusOutcomeCallable ModifyBackupEncryptionStatusCallable(const Model::ModifyBackupEncryptionStatusRequest& request);
 
                 /**
-                 *This API is used to configure the connection pool of database proxy. You can use the `DescribeProxyConnectionPoolConf` API to query the supported connection pool configurations.
+                 *当前接口已经废弃，请使用+AdjustCdbProxyAddress+进行替代。
+
+This API is used to configure the connection pool of database proxy. You can use the `DescribeProxyConnectionPoolConf` API to query the supported connection pool configurations.
                  * @param req ModifyCDBProxyConnectionPoolRequest
                  * @return ModifyCDBProxyConnectionPoolOutcome
                  */
@@ -1437,7 +1443,9 @@ Note that when modifying account permissions, you need to pass in the full permi
                 ModifyCDBProxyConnectionPoolOutcomeCallable ModifyCDBProxyConnectionPoolCallable(const Model::ModifyCDBProxyConnectionPoolRequest& request);
 
                 /**
-                 *This API is used to modify the description of database proxy.
+                 *当前接口已经废弃，请使用+ModifyCdbProxyAddressDesc+进行替代。
+
+This API is used to modify the description of database proxy.
                  * @param req ModifyCDBProxyDescRequest
                  * @return ModifyCDBProxyDescOutcome
                  */
@@ -1446,7 +1454,9 @@ Note that when modifying account permissions, you need to pass in the full permi
                 ModifyCDBProxyDescOutcomeCallable ModifyCDBProxyDescCallable(const Model::ModifyCDBProxyDescRequest& request);
 
                 /**
-                 *This API is used to modify the VIP or port of database proxy.
+                 *当前接口已经废弃，请使用+ModifyCdbProxyAddressVipAndVPort+进行替代。
+
+This API is used to modify the VIP or port of database proxy.
                  * @param req ModifyCDBProxyVipVPortRequest
                  * @return ModifyCDBProxyVipVPortOutcome
                  */
@@ -1633,7 +1643,9 @@ Note that before enabling public network access, you need to first [initialize t
                 OpenWanServiceOutcomeCallable OpenWanServiceCallable(const Model::OpenWanServiceRequest& request);
 
                 /**
-                 *This API is used to query the proxy details.
+                 *当前接口已经废弃，请使用+DescribeCdbProxyInfo+进行替代。
+
+This API is used to query the proxy details.
                  * @param req QueryCDBProxyRequest
                  * @return QueryCDBProxyOutcome
                  */
