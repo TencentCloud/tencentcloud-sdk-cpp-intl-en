@@ -141,17 +141,17 @@ Note: You need to pass in the full list of subtasks even if you want to change o
                     bool OutputStorageHasBeenSet() const;
 
                     /**
-                     * 获取The directory to save the output file.
+                     * 获取The directory to save the media processing output file, which must start and end with `/`.
 Note: If this parameter is left empty, the current `OutputDir` value will be invalidated.
-                     * @return OutputDir The directory to save the output file.
+                     * @return OutputDir The directory to save the media processing output file, which must start and end with `/`.
 Note: If this parameter is left empty, the current `OutputDir` value will be invalidated.
                      */
                     std::string GetOutputDir() const;
 
                     /**
-                     * 设置The directory to save the output file.
+                     * 设置The directory to save the media processing output file, which must start and end with `/`.
 Note: If this parameter is left empty, the current `OutputDir` value will be invalidated.
-                     * @param OutputDir The directory to save the output file.
+                     * @param OutputDir The directory to save the media processing output file, which must start and end with `/`.
 Note: If this parameter is left empty, the current `OutputDir` value will be invalidated.
                      */
                     void SetOutputDir(const std::string& _outputDir);
@@ -214,7 +214,7 @@ Note: You need to pass in the full list of subtasks even if you want to change o
                     bool m_outputStorageHasBeenSet;
 
                     /**
-                     * The directory to save the output file.
+                     * The directory to save the media processing output file, which must start and end with `/`.
 Note: If this parameter is left empty, the current `OutputDir` value will be invalidated.
                      */
                     std::string m_outputDir;

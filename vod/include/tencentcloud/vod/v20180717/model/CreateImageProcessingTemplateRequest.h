@@ -45,17 +45,17 @@ namespace TencentCloud
 
                     /**
                      * 获取An array of image processing operations. The operations will be performed in the specified order.
-<li>Length limit: 3.</li>
+<li>Length limit: 10.</li>
                      * @return Operations An array of image processing operations. The operations will be performed in the specified order.
-<li>Length limit: 3.</li>
+<li>Length limit: 10.</li>
                      */
                     std::vector<ImageOperation> GetOperations() const;
 
                     /**
                      * 设置An array of image processing operations. The operations will be performed in the specified order.
-<li>Length limit: 3.</li>
+<li>Length limit: 10.</li>
                      * @param Operations An array of image processing operations. The operations will be performed in the specified order.
-<li>Length limit: 3.</li>
+<li>Length limit: 10.</li>
                      */
                     void SetOperations(const std::vector<ImageOperation>& _operations);
 
@@ -123,7 +123,7 @@ namespace TencentCloud
 
                     /**
                      * An array of image processing operations. The operations will be performed in the specified order.
-<li>Length limit: 3.</li>
+<li>Length limit: 10.</li>
                      */
                     std::vector<ImageOperation> m_operations;
                     bool m_operationsHasBeenSet;

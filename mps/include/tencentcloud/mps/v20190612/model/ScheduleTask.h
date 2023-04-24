@@ -94,6 +94,42 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
+                     * 获取If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
+                     * @return ErrCode If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
+                     */
+                    int64_t GetErrCode() const;
+
+                    /**
+                     * 设置If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
+                     * @param ErrCode If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
+                     */
+                    void SetErrCode(const int64_t& _errCode);
+
+                    /**
+                     * 判断参数 ErrCode 是否已赋值
+                     * @return ErrCode 是否已赋值
+                     */
+                    bool ErrCodeHasBeenSet() const;
+
+                    /**
+                     * 获取If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
+                     * @return Message If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
+                     */
+                    std::string GetMessage() const;
+
+                    /**
+                     * 设置If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
+                     * @param Message If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
+                     */
+                    void SetMessage(const std::string& _message);
+
+                    /**
+                     * 判断参数 Message 是否已赋值
+                     * @return Message 是否已赋值
+                     */
+                    bool MessageHasBeenSet() const;
+
+                    /**
                      * 获取The information of the file processed.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InputInfo The information of the file processed.
@@ -174,6 +210,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
+
+                    /**
+                     * If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
+                     */
+                    int64_t m_errCode;
+                    bool m_errCodeHasBeenSet;
+
+                    /**
+                     * If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
+                     */
+                    std::string m_message;
+                    bool m_messageHasBeenSet;
 
                     /**
                      * The information of the file processed.

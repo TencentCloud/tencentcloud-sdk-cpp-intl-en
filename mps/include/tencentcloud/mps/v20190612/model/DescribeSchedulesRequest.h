@@ -61,14 +61,44 @@ namespace TencentCloud
                     bool ScheduleIdsHasBeenSet() const;
 
                     /**
+                     * 获取The trigger type. Valid values:
+<li>`CosFileUpload`: The scheme is triggered when a file is uploaded to Tencent Cloud Object Storage (COS).</li>
+<li>`AwsS3FileUpload`: The scheme is triggered when a file is uploaded to AWS S3.</li>
+If you do not specify this parameter or leave it empty, all schemes will be returned regardless of the trigger type.
+                     * @return TriggerType The trigger type. Valid values:
+<li>`CosFileUpload`: The scheme is triggered when a file is uploaded to Tencent Cloud Object Storage (COS).</li>
+<li>`AwsS3FileUpload`: The scheme is triggered when a file is uploaded to AWS S3.</li>
+If you do not specify this parameter or leave it empty, all schemes will be returned regardless of the trigger type.
+                     */
+                    std::string GetTriggerType() const;
+
+                    /**
+                     * 设置The trigger type. Valid values:
+<li>`CosFileUpload`: The scheme is triggered when a file is uploaded to Tencent Cloud Object Storage (COS).</li>
+<li>`AwsS3FileUpload`: The scheme is triggered when a file is uploaded to AWS S3.</li>
+If you do not specify this parameter or leave it empty, all schemes will be returned regardless of the trigger type.
+                     * @param TriggerType The trigger type. Valid values:
+<li>`CosFileUpload`: The scheme is triggered when a file is uploaded to Tencent Cloud Object Storage (COS).</li>
+<li>`AwsS3FileUpload`: The scheme is triggered when a file is uploaded to AWS S3.</li>
+If you do not specify this parameter or leave it empty, all schemes will be returned regardless of the trigger type.
+                     */
+                    void SetTriggerType(const std::string& _triggerType);
+
+                    /**
+                     * 判断参数 TriggerType 是否已赋值
+                     * @return TriggerType 是否已赋值
+                     */
+                    bool TriggerTypeHasBeenSet() const;
+
+                    /**
                      * 获取The scheme status. Valid values:
 <li>`Enabled`</li>
 <li>`Disabled`</li>
-If you do not specify this parameter, schemes in both statuses will be returned.
+If you do not specify this parameter, all schemes will be returned regardless of the status.
                      * @return Status The scheme status. Valid values:
 <li>`Enabled`</li>
 <li>`Disabled`</li>
-If you do not specify this parameter, schemes in both statuses will be returned.
+If you do not specify this parameter, all schemes will be returned regardless of the status.
                      */
                     std::string GetStatus() const;
 
@@ -76,11 +106,11 @@ If you do not specify this parameter, schemes in both statuses will be returned.
                      * 设置The scheme status. Valid values:
 <li>`Enabled`</li>
 <li>`Disabled`</li>
-If you do not specify this parameter, schemes in both statuses will be returned.
+If you do not specify this parameter, all schemes will be returned regardless of the status.
                      * @param Status The scheme status. Valid values:
 <li>`Enabled`</li>
 <li>`Disabled`</li>
-If you do not specify this parameter, schemes in both statuses will be returned.
+If you do not specify this parameter, all schemes will be returned regardless of the status.
                      */
                     void SetStatus(const std::string& _status);
 
@@ -135,10 +165,19 @@ If you do not specify this parameter, schemes in both statuses will be returned.
                     bool m_scheduleIdsHasBeenSet;
 
                     /**
+                     * The trigger type. Valid values:
+<li>`CosFileUpload`: The scheme is triggered when a file is uploaded to Tencent Cloud Object Storage (COS).</li>
+<li>`AwsS3FileUpload`: The scheme is triggered when a file is uploaded to AWS S3.</li>
+If you do not specify this parameter or leave it empty, all schemes will be returned regardless of the trigger type.
+                     */
+                    std::string m_triggerType;
+                    bool m_triggerTypeHasBeenSet;
+
+                    /**
                      * The scheme status. Valid values:
 <li>`Enabled`</li>
 <li>`Disabled`</li>
-If you do not specify this parameter, schemes in both statuses will be returned.
+If you do not specify this parameter, all schemes will be returned regardless of the status.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

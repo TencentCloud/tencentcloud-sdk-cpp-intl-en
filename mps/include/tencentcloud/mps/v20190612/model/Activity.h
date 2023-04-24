@@ -60,6 +60,7 @@ namespace TencentCloud
 <li>`action-image-sprite`: Image sprite generation.</li>
 <li>`action-snapshotByTimeOffset`: Time point screencapturing.</li>
 <li>`action-adaptive-substream`: Adaptive bitrate streaming.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ActivityType The subtask type.
 <li>`input`: The start.</li>
 <li>`output`: The end.</li>
@@ -72,6 +73,7 @@ namespace TencentCloud
 <li>`action-image-sprite`: Image sprite generation.</li>
 <li>`action-snapshotByTimeOffset`: Time point screencapturing.</li>
 <li>`action-adaptive-substream`: Adaptive bitrate streaming.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetActivityType() const;
 
@@ -88,6 +90,7 @@ namespace TencentCloud
 <li>`action-image-sprite`: Image sprite generation.</li>
 <li>`action-snapshotByTimeOffset`: Time point screencapturing.</li>
 <li>`action-adaptive-substream`: Adaptive bitrate streaming.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param ActivityType The subtask type.
 <li>`input`: The start.</li>
 <li>`output`: The end.</li>
@@ -100,6 +103,7 @@ namespace TencentCloud
 <li>`action-image-sprite`: Image sprite generation.</li>
 <li>`action-snapshotByTimeOffset`: Time point screencapturing.</li>
 <li>`action-adaptive-substream`: Adaptive bitrate streaming.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetActivityType(const std::string& _activityType);
 
@@ -111,13 +115,17 @@ namespace TencentCloud
 
                     /**
                      * 获取The indexes of the subsequent actions.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ReardriveIndex The indexes of the subsequent actions.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<int64_t> GetReardriveIndex() const;
 
                     /**
                      * 设置The indexes of the subsequent actions.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param ReardriveIndex The indexes of the subsequent actions.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetReardriveIndex(const std::vector<int64_t>& _reardriveIndex);
 
@@ -129,13 +137,17 @@ namespace TencentCloud
 
                     /**
                      * 获取The parameters of a subtask.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ActivityPara The parameters of a subtask.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ActivityPara GetActivityPara() const;
 
                     /**
                      * 设置The parameters of a subtask.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param ActivityPara The parameters of a subtask.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetActivityPara(const ActivityPara& _activityPara);
 
@@ -160,18 +172,21 @@ namespace TencentCloud
 <li>`action-image-sprite`: Image sprite generation.</li>
 <li>`action-snapshotByTimeOffset`: Time point screencapturing.</li>
 <li>`action-adaptive-substream`: Adaptive bitrate streaming.</li>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_activityType;
                     bool m_activityTypeHasBeenSet;
 
                     /**
                      * The indexes of the subsequent actions.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<int64_t> m_reardriveIndex;
                     bool m_reardriveIndexHasBeenSet;
 
                     /**
                      * The parameters of a subtask.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ActivityPara m_activityPara;
                     bool m_activityParaHasBeenSet;

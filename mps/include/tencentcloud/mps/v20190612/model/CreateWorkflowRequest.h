@@ -104,14 +104,18 @@ namespace TencentCloud
                     bool OutputStorageHasBeenSet() const;
 
                     /**
-                     * 获取The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the output file will be saved to the same directory where the source file is located.
-                     * @return OutputDir The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the output file will be saved to the same directory where the source file is located.
+                     * 获取The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
+If you do not specify this, the file will be saved to the trigger directory.
+                     * @return OutputDir The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
+If you do not specify this, the file will be saved to the trigger directory.
                      */
                     std::string GetOutputDir() const;
 
                     /**
-                     * 设置The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the output file will be saved to the same directory where the source file is located.
-                     * @param OutputDir The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the output file will be saved to the same directory where the source file is located.
+                     * 设置The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
+If you do not specify this, the file will be saved to the trigger directory.
+                     * @param OutputDir The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
+If you do not specify this, the file will be saved to the trigger directory.
                      */
                     void SetOutputDir(const std::string& _outputDir);
 
@@ -250,7 +254,8 @@ namespace TencentCloud
                     bool m_outputStorageHasBeenSet;
 
                     /**
-                     * The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the output file will be saved to the same directory where the source file is located.
+                     * The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
+If you do not specify this, the file will be saved to the trigger directory.
                      */
                     std::string m_outputDir;
                     bool m_outputDirHasBeenSet;

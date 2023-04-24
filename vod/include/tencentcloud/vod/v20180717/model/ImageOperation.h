@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/vod/v20180717/model/ImageScale.h>
 #include <tencentcloud/vod/v20180717/model/ImageCenterCut.h>
+#include <tencentcloud/vod/v20180717/model/ImageBlur.h>
 
 
 namespace TencentCloud
@@ -110,6 +111,24 @@ namespace TencentCloud
                      */
                     bool CenterCutHasBeenSet() const;
 
+                    /**
+                     * 获取Image blurring. This parameter is valid only if `Type` is `Blur`.
+                     * @return Blur Image blurring. This parameter is valid only if `Type` is `Blur`.
+                     */
+                    ImageBlur GetBlur() const;
+
+                    /**
+                     * 设置Image blurring. This parameter is valid only if `Type` is `Blur`.
+                     * @param Blur Image blurring. This parameter is valid only if `Type` is `Blur`.
+                     */
+                    void SetBlur(const ImageBlur& _blur);
+
+                    /**
+                     * 判断参数 Blur 是否已赋值
+                     * @return Blur 是否已赋值
+                     */
+                    bool BlurHasBeenSet() const;
+
                 private:
 
                     /**
@@ -131,6 +150,12 @@ namespace TencentCloud
                      */
                     ImageCenterCut m_centerCut;
                     bool m_centerCutHasBeenSet;
+
+                    /**
+                     * Image blurring. This parameter is valid only if `Type` is `Blur`.
+                     */
+                    ImageBlur m_blur;
+                    bool m_blurHasBeenSet;
 
                 };
             }

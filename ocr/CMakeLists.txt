@@ -19,49 +19,71 @@ set(ocr_public_header
   )
 
 set(ocr_public_header_model
+  include/tencentcloud/ocr/v20181119/model/DetectedWords.h
+  include/tencentcloud/ocr/v20181119/model/TextDetectionResult.h
+  include/tencentcloud/ocr/v20181119/model/HKIDCardOCRRequest.h
+  include/tencentcloud/ocr/v20181119/model/GeneralAccurateOCRResponse.h
+  include/tencentcloud/ocr/v20181119/model/TextTable.h
+  include/tencentcloud/ocr/v20181119/model/RecognizePhilippinesDrivingLicenseOCRRequest.h
+  include/tencentcloud/ocr/v20181119/model/MLIDPassportOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/GeneralAccurateOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/GeneralBasicOCRResponse.h
-  include/tencentcloud/ocr/v20181119/model/DetectedWords.h
-  include/tencentcloud/ocr/v20181119/model/TextTable.h
+  include/tencentcloud/ocr/v20181119/model/RecognizePhilippinesDrivingLicenseOCRResponse.h
+  include/tencentcloud/ocr/v20181119/model/BankCardOCRRequest.h
+  include/tencentcloud/ocr/v20181119/model/RecognizePhilippinesSssIDOCRRequest.h
+  include/tencentcloud/ocr/v20181119/model/TextDetection.h
+  include/tencentcloud/ocr/v20181119/model/HKIDCardOCRResponse.h
+  include/tencentcloud/ocr/v20181119/model/MLIDPassportOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/MLIDCardOCRRequest.h
-  include/tencentcloud/ocr/v20181119/model/TableOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/TableOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/DetectedWordCoordPoint.h
-  include/tencentcloud/ocr/v20181119/model/BankCardOCRRequest.h
   include/tencentcloud/ocr/v20181119/model/Coord.h
-  include/tencentcloud/ocr/v20181119/model/HKIDCardOCRRequest.h
+  include/tencentcloud/ocr/v20181119/model/RecognizePhilippinesSssIDOCRResponse.h
+  include/tencentcloud/ocr/v20181119/model/RecognizeIndonesiaIDCardOCRRequest.h
+  include/tencentcloud/ocr/v20181119/model/RecognizeIndonesiaIDCardOCRResponse.h
+  include/tencentcloud/ocr/v20181119/model/MLIDCardOCRResponse.h
+  include/tencentcloud/ocr/v20181119/model/RecognizePhilippinesTinIDOCRRequest.h
+  include/tencentcloud/ocr/v20181119/model/RecognizePhilippinesVoteIDOCRRequest.h
+  include/tencentcloud/ocr/v20181119/model/TableOCRRequest.h
+  include/tencentcloud/ocr/v20181119/model/RecognizePhilippinesVoteIDOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/BankCardOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/ItemCoord.h
-  include/tencentcloud/ocr/v20181119/model/MLIDPassportOCRResponse.h
-  include/tencentcloud/ocr/v20181119/model/GeneralAccurateOCRResponse.h
-  include/tencentcloud/ocr/v20181119/model/TextDetection.h
-  include/tencentcloud/ocr/v20181119/model/MLIDPassportOCRRequest.h
-  include/tencentcloud/ocr/v20181119/model/HKIDCardOCRResponse.h
-  include/tencentcloud/ocr/v20181119/model/MLIDCardOCRResponse.h
+  include/tencentcloud/ocr/v20181119/model/RecognizePhilippinesTinIDOCRResponse.h
   include/tencentcloud/ocr/v20181119/model/GeneralBasicOCRRequest.h
   )
 
 set(ocr_src
   src/v20181119/OcrClient.cpp
+  src/v20181119/model/DetectedWords.cpp
+  src/v20181119/model/TextDetectionResult.cpp
+  src/v20181119/model/HKIDCardOCRRequest.cpp
+  src/v20181119/model/GeneralAccurateOCRResponse.cpp
+  src/v20181119/model/TextTable.cpp
+  src/v20181119/model/RecognizePhilippinesDrivingLicenseOCRRequest.cpp
+  src/v20181119/model/MLIDPassportOCRRequest.cpp
   src/v20181119/model/GeneralAccurateOCRRequest.cpp
   src/v20181119/model/GeneralBasicOCRResponse.cpp
-  src/v20181119/model/DetectedWords.cpp
-  src/v20181119/model/TextTable.cpp
+  src/v20181119/model/RecognizePhilippinesDrivingLicenseOCRResponse.cpp
+  src/v20181119/model/BankCardOCRRequest.cpp
+  src/v20181119/model/RecognizePhilippinesSssIDOCRRequest.cpp
+  src/v20181119/model/TextDetection.cpp
+  src/v20181119/model/HKIDCardOCRResponse.cpp
+  src/v20181119/model/MLIDPassportOCRResponse.cpp
   src/v20181119/model/MLIDCardOCRRequest.cpp
-  src/v20181119/model/TableOCRRequest.cpp
   src/v20181119/model/TableOCRResponse.cpp
   src/v20181119/model/DetectedWordCoordPoint.cpp
-  src/v20181119/model/BankCardOCRRequest.cpp
   src/v20181119/model/Coord.cpp
-  src/v20181119/model/HKIDCardOCRRequest.cpp
+  src/v20181119/model/RecognizePhilippinesSssIDOCRResponse.cpp
+  src/v20181119/model/RecognizeIndonesiaIDCardOCRRequest.cpp
+  src/v20181119/model/RecognizeIndonesiaIDCardOCRResponse.cpp
+  src/v20181119/model/MLIDCardOCRResponse.cpp
+  src/v20181119/model/RecognizePhilippinesTinIDOCRRequest.cpp
+  src/v20181119/model/RecognizePhilippinesVoteIDOCRRequest.cpp
+  src/v20181119/model/TableOCRRequest.cpp
+  src/v20181119/model/RecognizePhilippinesVoteIDOCRResponse.cpp
   src/v20181119/model/BankCardOCRResponse.cpp
   src/v20181119/model/ItemCoord.cpp
-  src/v20181119/model/MLIDPassportOCRResponse.cpp
-  src/v20181119/model/GeneralAccurateOCRResponse.cpp
-  src/v20181119/model/TextDetection.cpp
-  src/v20181119/model/MLIDPassportOCRRequest.cpp
-  src/v20181119/model/HKIDCardOCRResponse.cpp
-  src/v20181119/model/MLIDCardOCRResponse.cpp
+  src/v20181119/model/RecognizePhilippinesTinIDOCRResponse.cpp
   src/v20181119/model/GeneralBasicOCRRequest.cpp
   )
 

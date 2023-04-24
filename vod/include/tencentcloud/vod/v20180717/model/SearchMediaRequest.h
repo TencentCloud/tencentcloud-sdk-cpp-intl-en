@@ -543,14 +543,26 @@ namespace TencentCloud
                     bool MediaTypesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取The file statuses.
+<li>`Normal`</li>
+<li>`SystemForbidden` (blocked by VOD)</li>
+<li>`Forbidden` (blocked by you)</li>
+                     * @return Status The file statuses.
+<li>`Normal`</li>
+<li>`SystemForbidden` (blocked by VOD)</li>
+<li>`Forbidden` (blocked by you)</li>
                      */
                     std::vector<std::string> GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param Status 
+                     * 设置The file statuses.
+<li>`Normal`</li>
+<li>`SystemForbidden` (blocked by VOD)</li>
+<li>`Forbidden` (blocked by you)</li>
+                     * @param Status The file statuses.
+<li>`Normal`</li>
+<li>`SystemForbidden` (blocked by VOD)</li>
+<li>`Forbidden` (blocked by you)</li>
                      */
                     void SetStatus(const std::vector<std::string>& _status);
 
@@ -561,14 +573,30 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ReviewResults 
+                     * 获取The types of moderation result.
+<li>`pass`</li>
+<li>`review` (the content may be non-compliant and needs to be reviewed)</li>
+<li>`block` (the content is non-compliant and should be blocked)</li>
+<li>`notModerated` (the file hasn't been moderated yet)</li>
+                     * @return ReviewResults The types of moderation result.
+<li>`pass`</li>
+<li>`review` (the content may be non-compliant and needs to be reviewed)</li>
+<li>`block` (the content is non-compliant and should be blocked)</li>
+<li>`notModerated` (the file hasn't been moderated yet)</li>
                      */
                     std::vector<std::string> GetReviewResults() const;
 
                     /**
-                     * 设置
-                     * @param ReviewResults 
+                     * 设置The types of moderation result.
+<li>`pass`</li>
+<li>`review` (the content may be non-compliant and needs to be reviewed)</li>
+<li>`block` (the content is non-compliant and should be blocked)</li>
+<li>`notModerated` (the file hasn't been moderated yet)</li>
+                     * @param ReviewResults The types of moderation result.
+<li>`pass`</li>
+<li>`review` (the content may be non-compliant and needs to be reviewed)</li>
+<li>`block` (the content is non-compliant and should be blocked)</li>
+<li>`notModerated` (the file hasn't been moderated yet)</li>
                      */
                     void SetReviewResults(const std::vector<std::string>& _reviewResults);
 
@@ -952,13 +980,20 @@ End time in the creation time range.
                     bool m_mediaTypesHasBeenSet;
 
                     /**
-                     * 
+                     * The file statuses.
+<li>`Normal`</li>
+<li>`SystemForbidden` (blocked by VOD)</li>
+<li>`Forbidden` (blocked by you)</li>
                      */
                     std::vector<std::string> m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * 
+                     * The types of moderation result.
+<li>`pass`</li>
+<li>`review` (the content may be non-compliant and needs to be reviewed)</li>
+<li>`block` (the content is non-compliant and should be blocked)</li>
+<li>`notModerated` (the file hasn't been moderated yet)</li>
                      */
                     std::vector<std::string> m_reviewResults;
                     bool m_reviewResultsHasBeenSet;

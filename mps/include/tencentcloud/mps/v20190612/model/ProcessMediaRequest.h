@@ -27,6 +27,7 @@
 #include <tencentcloud/mps/v20190612/model/AiContentReviewTaskInput.h>
 #include <tencentcloud/mps/v20190612/model/AiAnalysisTaskInput.h>
 #include <tencentcloud/mps/v20190612/model/AiRecognitionTaskInput.h>
+#include <tencentcloud/mps/v20190612/model/AiQualityControlTaskInput.h>
 #include <tencentcloud/mps/v20190612/model/TaskNotifyConfig.h>
 
 
@@ -86,14 +87,18 @@ namespace TencentCloud
                     bool OutputStorageHasBeenSet() const;
 
                     /**
-                     * 获取The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be saved to the directory in `InputInfo`.
-                     * @return OutputDir The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be saved to the directory in `InputInfo`.
+                     * 获取The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
+If you do not specify this parameter, the file will be saved to the directory specified in `InputInfo`.
+                     * @return OutputDir The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
+If you do not specify this parameter, the file will be saved to the directory specified in `InputInfo`.
                      */
                     std::string GetOutputDir() const;
 
                     /**
-                     * 设置The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be saved to the directory in `InputInfo`.
-                     * @param OutputDir The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be saved to the directory in `InputInfo`.
+                     * 设置The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
+If you do not specify this parameter, the file will be saved to the directory specified in `InputInfo`.
+                     * @param OutputDir The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
+If you do not specify this parameter, the file will be saved to the directory specified in `InputInfo`.
                      */
                     void SetOutputDir(const std::string& _outputDir);
 
@@ -102,6 +107,48 @@ namespace TencentCloud
                      * @return OutputDir 是否已赋值
                      */
                     bool OutputDirHasBeenSet() const;
+
+                    /**
+                     * 获取The scheme ID.
+Note 1: About `OutputStorage` and `OutputDir`
+<li>If an output storage and directory are specified for a subtask of the scheme, those output settings will be applied.</li>
+<li>If an output storage and directory are not specified for the subtasks of a scheme, the output parameters passed in the `ProcessMedia` API will be applied.</li>
+Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
+
+Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
+                     * @return ScheduleId The scheme ID.
+Note 1: About `OutputStorage` and `OutputDir`
+<li>If an output storage and directory are specified for a subtask of the scheme, those output settings will be applied.</li>
+<li>If an output storage and directory are not specified for the subtasks of a scheme, the output parameters passed in the `ProcessMedia` API will be applied.</li>
+Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
+
+Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
+                     */
+                    int64_t GetScheduleId() const;
+
+                    /**
+                     * 设置The scheme ID.
+Note 1: About `OutputStorage` and `OutputDir`
+<li>If an output storage and directory are specified for a subtask of the scheme, those output settings will be applied.</li>
+<li>If an output storage and directory are not specified for the subtasks of a scheme, the output parameters passed in the `ProcessMedia` API will be applied.</li>
+Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
+
+Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
+                     * @param ScheduleId The scheme ID.
+Note 1: About `OutputStorage` and `OutputDir`
+<li>If an output storage and directory are specified for a subtask of the scheme, those output settings will be applied.</li>
+<li>If an output storage and directory are not specified for the subtasks of a scheme, the output parameters passed in the `ProcessMedia` API will be applied.</li>
+Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
+
+Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
+                     */
+                    void SetScheduleId(const int64_t& _scheduleId);
+
+                    /**
+                     * 判断参数 ScheduleId 是否已赋值
+                     * @return ScheduleId 是否已赋值
+                     */
+                    bool ScheduleIdHasBeenSet() const;
 
                     /**
                      * 获取The media processing parameters to use.
@@ -176,6 +223,24 @@ namespace TencentCloud
                     bool AiRecognitionTaskHasBeenSet() const;
 
                     /**
+                     * 获取The parameters of a quality control task.
+                     * @return AiQualityControlTask The parameters of a quality control task.
+                     */
+                    AiQualityControlTaskInput GetAiQualityControlTask() const;
+
+                    /**
+                     * 设置The parameters of a quality control task.
+                     * @param AiQualityControlTask The parameters of a quality control task.
+                     */
+                    void SetAiQualityControlTask(const AiQualityControlTaskInput& _aiQualityControlTask);
+
+                    /**
+                     * 判断参数 AiQualityControlTask 是否已赋值
+                     * @return AiQualityControlTask 是否已赋值
+                     */
+                    bool AiQualityControlTaskHasBeenSet() const;
+
+                    /**
                      * 获取Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
                      * @return TaskNotifyConfig Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
                      */
@@ -248,48 +313,6 @@ namespace TencentCloud
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取The scheme ID.
-Note 1: About `OutputStorage` and `OutputDir`
-<li>If an output storage and directory are specified for a subtask of the scheme, those output settings will be applied.</li>
-<li>If an output storage and directory are not specified for the subtasks of a scheme, the output parameters passed in the `ProcessMedia` API will be applied.</li>
-Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
-
-Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
-                     * @return ScheduleId The scheme ID.
-Note 1: About `OutputStorage` and `OutputDir`
-<li>If an output storage and directory are specified for a subtask of the scheme, those output settings will be applied.</li>
-<li>If an output storage and directory are not specified for the subtasks of a scheme, the output parameters passed in the `ProcessMedia` API will be applied.</li>
-Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
-
-Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
-                     */
-                    int64_t GetScheduleId() const;
-
-                    /**
-                     * 设置The scheme ID.
-Note 1: About `OutputStorage` and `OutputDir`
-<li>If an output storage and directory are specified for a subtask of the scheme, those output settings will be applied.</li>
-<li>If an output storage and directory are not specified for the subtasks of a scheme, the output parameters passed in the `ProcessMedia` API will be applied.</li>
-Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
-
-Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
-                     * @param ScheduleId The scheme ID.
-Note 1: About `OutputStorage` and `OutputDir`
-<li>If an output storage and directory are specified for a subtask of the scheme, those output settings will be applied.</li>
-<li>If an output storage and directory are not specified for the subtasks of a scheme, the output parameters passed in the `ProcessMedia` API will be applied.</li>
-Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
-
-Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
-                     */
-                    void SetScheduleId(const int64_t& _scheduleId);
-
-                    /**
-                     * 判断参数 ScheduleId 是否已赋值
-                     * @return ScheduleId 是否已赋值
-                     */
-                    bool ScheduleIdHasBeenSet() const;
-
-                    /**
                      * 获取The task type.
 <li> `Online` (default): A task that is executed immediately.</li>
 <li> `Offline`: A task that is executed when the system is idle (within three days by default).</li>
@@ -330,10 +353,23 @@ Note 3: The trigger configured for a scheme is for automatically starting a sche
                     bool m_outputStorageHasBeenSet;
 
                     /**
-                     * The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be saved to the directory in `InputInfo`.
+                     * The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
+If you do not specify this parameter, the file will be saved to the directory specified in `InputInfo`.
                      */
                     std::string m_outputDir;
                     bool m_outputDirHasBeenSet;
+
+                    /**
+                     * The scheme ID.
+Note 1: About `OutputStorage` and `OutputDir`
+<li>If an output storage and directory are specified for a subtask of the scheme, those output settings will be applied.</li>
+<li>If an output storage and directory are not specified for the subtasks of a scheme, the output parameters passed in the `ProcessMedia` API will be applied.</li>
+Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
+
+Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
+                     */
+                    int64_t m_scheduleId;
+                    bool m_scheduleIdHasBeenSet;
 
                     /**
                      * The media processing parameters to use.
@@ -360,6 +396,12 @@ Note 3: The trigger configured for a scheme is for automatically starting a sche
                     bool m_aiRecognitionTaskHasBeenSet;
 
                     /**
+                     * The parameters of a quality control task.
+                     */
+                    AiQualityControlTaskInput m_aiQualityControlTask;
+                    bool m_aiQualityControlTaskHasBeenSet;
+
+                    /**
                      * Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
                      */
                     TaskNotifyConfig m_taskNotifyConfig;
@@ -382,18 +424,6 @@ Note 3: The trigger configured for a scheme is for automatically starting a sche
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;
-
-                    /**
-                     * The scheme ID.
-Note 1: About `OutputStorage` and `OutputDir`
-<li>If an output storage and directory are specified for a subtask of the scheme, those output settings will be applied.</li>
-<li>If an output storage and directory are not specified for the subtasks of a scheme, the output parameters passed in the `ProcessMedia` API will be applied.</li>
-Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
-
-Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
-                     */
-                    int64_t m_scheduleId;
-                    bool m_scheduleIdHasBeenSet;
 
                     /**
                      * The task type.

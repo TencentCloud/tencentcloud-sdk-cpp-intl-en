@@ -35,6 +35,16 @@
 #include <tencentcloud/ocr/v20181119/model/MLIDCardOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/MLIDPassportOCRRequest.h>
 #include <tencentcloud/ocr/v20181119/model/MLIDPassportOCRResponse.h>
+#include <tencentcloud/ocr/v20181119/model/RecognizeIndonesiaIDCardOCRRequest.h>
+#include <tencentcloud/ocr/v20181119/model/RecognizeIndonesiaIDCardOCRResponse.h>
+#include <tencentcloud/ocr/v20181119/model/RecognizePhilippinesDrivingLicenseOCRRequest.h>
+#include <tencentcloud/ocr/v20181119/model/RecognizePhilippinesDrivingLicenseOCRResponse.h>
+#include <tencentcloud/ocr/v20181119/model/RecognizePhilippinesSssIDOCRRequest.h>
+#include <tencentcloud/ocr/v20181119/model/RecognizePhilippinesSssIDOCRResponse.h>
+#include <tencentcloud/ocr/v20181119/model/RecognizePhilippinesTinIDOCRRequest.h>
+#include <tencentcloud/ocr/v20181119/model/RecognizePhilippinesTinIDOCRResponse.h>
+#include <tencentcloud/ocr/v20181119/model/RecognizePhilippinesVoteIDOCRRequest.h>
+#include <tencentcloud/ocr/v20181119/model/RecognizePhilippinesVoteIDOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/TableOCRRequest.h>
 #include <tencentcloud/ocr/v20181119/model/TableOCRResponse.h>
 
@@ -69,6 +79,21 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::MLIDPassportOCRResponse> MLIDPassportOCROutcome;
                 typedef std::future<MLIDPassportOCROutcome> MLIDPassportOCROutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::MLIDPassportOCRRequest&, MLIDPassportOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> MLIDPassportOCRAsyncHandler;
+                typedef Outcome<Core::Error, Model::RecognizeIndonesiaIDCardOCRResponse> RecognizeIndonesiaIDCardOCROutcome;
+                typedef std::future<RecognizeIndonesiaIDCardOCROutcome> RecognizeIndonesiaIDCardOCROutcomeCallable;
+                typedef std::function<void(const OcrClient*, const Model::RecognizeIndonesiaIDCardOCRRequest&, RecognizeIndonesiaIDCardOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecognizeIndonesiaIDCardOCRAsyncHandler;
+                typedef Outcome<Core::Error, Model::RecognizePhilippinesDrivingLicenseOCRResponse> RecognizePhilippinesDrivingLicenseOCROutcome;
+                typedef std::future<RecognizePhilippinesDrivingLicenseOCROutcome> RecognizePhilippinesDrivingLicenseOCROutcomeCallable;
+                typedef std::function<void(const OcrClient*, const Model::RecognizePhilippinesDrivingLicenseOCRRequest&, RecognizePhilippinesDrivingLicenseOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecognizePhilippinesDrivingLicenseOCRAsyncHandler;
+                typedef Outcome<Core::Error, Model::RecognizePhilippinesSssIDOCRResponse> RecognizePhilippinesSssIDOCROutcome;
+                typedef std::future<RecognizePhilippinesSssIDOCROutcome> RecognizePhilippinesSssIDOCROutcomeCallable;
+                typedef std::function<void(const OcrClient*, const Model::RecognizePhilippinesSssIDOCRRequest&, RecognizePhilippinesSssIDOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecognizePhilippinesSssIDOCRAsyncHandler;
+                typedef Outcome<Core::Error, Model::RecognizePhilippinesTinIDOCRResponse> RecognizePhilippinesTinIDOCROutcome;
+                typedef std::future<RecognizePhilippinesTinIDOCROutcome> RecognizePhilippinesTinIDOCROutcomeCallable;
+                typedef std::function<void(const OcrClient*, const Model::RecognizePhilippinesTinIDOCRRequest&, RecognizePhilippinesTinIDOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecognizePhilippinesTinIDOCRAsyncHandler;
+                typedef Outcome<Core::Error, Model::RecognizePhilippinesVoteIDOCRResponse> RecognizePhilippinesVoteIDOCROutcome;
+                typedef std::future<RecognizePhilippinesVoteIDOCROutcome> RecognizePhilippinesVoteIDOCROutcomeCallable;
+                typedef std::function<void(const OcrClient*, const Model::RecognizePhilippinesVoteIDOCRRequest&, RecognizePhilippinesVoteIDOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> RecognizePhilippinesVoteIDOCRAsyncHandler;
                 typedef Outcome<Core::Error, Model::TableOCRResponse> TableOCROutcome;
                 typedef std::future<TableOCROutcome> TableOCROutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::TableOCRRequest&, TableOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> TableOCRAsyncHandler;
@@ -149,6 +174,55 @@ This API is not fully available for the time being. For more information, please
                 MLIDPassportOCROutcome MLIDPassportOCR(const Model::MLIDPassportOCRRequest &request);
                 void MLIDPassportOCRAsync(const Model::MLIDPassportOCRRequest& request, const MLIDPassportOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 MLIDPassportOCROutcomeCallable MLIDPassportOCRCallable(const Model::MLIDPassportOCRRequest& request);
+
+                /**
+                 *This API is used to recognize an Indonesian identity card.
+
+The API request rate is limited to 20 requests/sec by default.
+                 * @param req RecognizeIndonesiaIDCardOCRRequest
+                 * @return RecognizeIndonesiaIDCardOCROutcome
+                 */
+                RecognizeIndonesiaIDCardOCROutcome RecognizeIndonesiaIDCardOCR(const Model::RecognizeIndonesiaIDCardOCRRequest &request);
+                void RecognizeIndonesiaIDCardOCRAsync(const Model::RecognizeIndonesiaIDCardOCRRequest& request, const RecognizeIndonesiaIDCardOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RecognizeIndonesiaIDCardOCROutcomeCallable RecognizeIndonesiaIDCardOCRCallable(const Model::RecognizeIndonesiaIDCardOCRRequest& request);
+
+                /**
+                 *This API is used to recognize a Philippine driver's license.
+                 * @param req RecognizePhilippinesDrivingLicenseOCRRequest
+                 * @return RecognizePhilippinesDrivingLicenseOCROutcome
+                 */
+                RecognizePhilippinesDrivingLicenseOCROutcome RecognizePhilippinesDrivingLicenseOCR(const Model::RecognizePhilippinesDrivingLicenseOCRRequest &request);
+                void RecognizePhilippinesDrivingLicenseOCRAsync(const Model::RecognizePhilippinesDrivingLicenseOCRRequest& request, const RecognizePhilippinesDrivingLicenseOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RecognizePhilippinesDrivingLicenseOCROutcomeCallable RecognizePhilippinesDrivingLicenseOCRCallable(const Model::RecognizePhilippinesDrivingLicenseOCRRequest& request);
+
+                /**
+                 *This API is used to recognize a Philippine SSSID/UMID card.
+                 * @param req RecognizePhilippinesSssIDOCRRequest
+                 * @return RecognizePhilippinesSssIDOCROutcome
+                 */
+                RecognizePhilippinesSssIDOCROutcome RecognizePhilippinesSssIDOCR(const Model::RecognizePhilippinesSssIDOCRRequest &request);
+                void RecognizePhilippinesSssIDOCRAsync(const Model::RecognizePhilippinesSssIDOCRRequest& request, const RecognizePhilippinesSssIDOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RecognizePhilippinesSssIDOCROutcomeCallable RecognizePhilippinesSssIDOCRCallable(const Model::RecognizePhilippinesSssIDOCRRequest& request);
+
+                /**
+                 *This API is used to recognize a Philippine TIN ID card.
+                 * @param req RecognizePhilippinesTinIDOCRRequest
+                 * @return RecognizePhilippinesTinIDOCROutcome
+                 */
+                RecognizePhilippinesTinIDOCROutcome RecognizePhilippinesTinIDOCR(const Model::RecognizePhilippinesTinIDOCRRequest &request);
+                void RecognizePhilippinesTinIDOCRAsync(const Model::RecognizePhilippinesTinIDOCRRequest& request, const RecognizePhilippinesTinIDOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RecognizePhilippinesTinIDOCROutcomeCallable RecognizePhilippinesTinIDOCRCallable(const Model::RecognizePhilippinesTinIDOCRRequest& request);
+
+                /**
+                 *This API is used to recognize a Philippine voters ID card. It can recognize fields such as first name, family name, date of birth, civil status, citizenship, address, precinct, and voter's identification number (VIN).
+
+The API request rate is limited to 20 requests/sec by default.
+                 * @param req RecognizePhilippinesVoteIDOCRRequest
+                 * @return RecognizePhilippinesVoteIDOCROutcome
+                 */
+                RecognizePhilippinesVoteIDOCROutcome RecognizePhilippinesVoteIDOCR(const Model::RecognizePhilippinesVoteIDOCRRequest &request);
+                void RecognizePhilippinesVoteIDOCRAsync(const Model::RecognizePhilippinesVoteIDOCRRequest& request, const RecognizePhilippinesVoteIDOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RecognizePhilippinesVoteIDOCROutcomeCallable RecognizePhilippinesVoteIDOCRCallable(const Model::RecognizePhilippinesVoteIDOCRRequest& request);
 
                 /**
                  *This API is used to detect and recognize Chinese and English forms in images. It can return the text content of each cell and save the recognition result as Excel.

@@ -298,6 +298,221 @@ OcrClient::MLIDPassportOCROutcomeCallable OcrClient::MLIDPassportOCRCallable(con
     return task->get_future();
 }
 
+OcrClient::RecognizeIndonesiaIDCardOCROutcome OcrClient::RecognizeIndonesiaIDCardOCR(const RecognizeIndonesiaIDCardOCRRequest &request)
+{
+    auto outcome = MakeRequest(request, "RecognizeIndonesiaIDCardOCR");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RecognizeIndonesiaIDCardOCRResponse rsp = RecognizeIndonesiaIDCardOCRResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RecognizeIndonesiaIDCardOCROutcome(rsp);
+        else
+            return RecognizeIndonesiaIDCardOCROutcome(o.GetError());
+    }
+    else
+    {
+        return RecognizeIndonesiaIDCardOCROutcome(outcome.GetError());
+    }
+}
+
+void OcrClient::RecognizeIndonesiaIDCardOCRAsync(const RecognizeIndonesiaIDCardOCRRequest& request, const RecognizeIndonesiaIDCardOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->RecognizeIndonesiaIDCardOCR(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OcrClient::RecognizeIndonesiaIDCardOCROutcomeCallable OcrClient::RecognizeIndonesiaIDCardOCRCallable(const RecognizeIndonesiaIDCardOCRRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<RecognizeIndonesiaIDCardOCROutcome()>>(
+        [this, request]()
+        {
+            return this->RecognizeIndonesiaIDCardOCR(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+OcrClient::RecognizePhilippinesDrivingLicenseOCROutcome OcrClient::RecognizePhilippinesDrivingLicenseOCR(const RecognizePhilippinesDrivingLicenseOCRRequest &request)
+{
+    auto outcome = MakeRequest(request, "RecognizePhilippinesDrivingLicenseOCR");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RecognizePhilippinesDrivingLicenseOCRResponse rsp = RecognizePhilippinesDrivingLicenseOCRResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RecognizePhilippinesDrivingLicenseOCROutcome(rsp);
+        else
+            return RecognizePhilippinesDrivingLicenseOCROutcome(o.GetError());
+    }
+    else
+    {
+        return RecognizePhilippinesDrivingLicenseOCROutcome(outcome.GetError());
+    }
+}
+
+void OcrClient::RecognizePhilippinesDrivingLicenseOCRAsync(const RecognizePhilippinesDrivingLicenseOCRRequest& request, const RecognizePhilippinesDrivingLicenseOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->RecognizePhilippinesDrivingLicenseOCR(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OcrClient::RecognizePhilippinesDrivingLicenseOCROutcomeCallable OcrClient::RecognizePhilippinesDrivingLicenseOCRCallable(const RecognizePhilippinesDrivingLicenseOCRRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<RecognizePhilippinesDrivingLicenseOCROutcome()>>(
+        [this, request]()
+        {
+            return this->RecognizePhilippinesDrivingLicenseOCR(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+OcrClient::RecognizePhilippinesSssIDOCROutcome OcrClient::RecognizePhilippinesSssIDOCR(const RecognizePhilippinesSssIDOCRRequest &request)
+{
+    auto outcome = MakeRequest(request, "RecognizePhilippinesSssIDOCR");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RecognizePhilippinesSssIDOCRResponse rsp = RecognizePhilippinesSssIDOCRResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RecognizePhilippinesSssIDOCROutcome(rsp);
+        else
+            return RecognizePhilippinesSssIDOCROutcome(o.GetError());
+    }
+    else
+    {
+        return RecognizePhilippinesSssIDOCROutcome(outcome.GetError());
+    }
+}
+
+void OcrClient::RecognizePhilippinesSssIDOCRAsync(const RecognizePhilippinesSssIDOCRRequest& request, const RecognizePhilippinesSssIDOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->RecognizePhilippinesSssIDOCR(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OcrClient::RecognizePhilippinesSssIDOCROutcomeCallable OcrClient::RecognizePhilippinesSssIDOCRCallable(const RecognizePhilippinesSssIDOCRRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<RecognizePhilippinesSssIDOCROutcome()>>(
+        [this, request]()
+        {
+            return this->RecognizePhilippinesSssIDOCR(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+OcrClient::RecognizePhilippinesTinIDOCROutcome OcrClient::RecognizePhilippinesTinIDOCR(const RecognizePhilippinesTinIDOCRRequest &request)
+{
+    auto outcome = MakeRequest(request, "RecognizePhilippinesTinIDOCR");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RecognizePhilippinesTinIDOCRResponse rsp = RecognizePhilippinesTinIDOCRResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RecognizePhilippinesTinIDOCROutcome(rsp);
+        else
+            return RecognizePhilippinesTinIDOCROutcome(o.GetError());
+    }
+    else
+    {
+        return RecognizePhilippinesTinIDOCROutcome(outcome.GetError());
+    }
+}
+
+void OcrClient::RecognizePhilippinesTinIDOCRAsync(const RecognizePhilippinesTinIDOCRRequest& request, const RecognizePhilippinesTinIDOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->RecognizePhilippinesTinIDOCR(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OcrClient::RecognizePhilippinesTinIDOCROutcomeCallable OcrClient::RecognizePhilippinesTinIDOCRCallable(const RecognizePhilippinesTinIDOCRRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<RecognizePhilippinesTinIDOCROutcome()>>(
+        [this, request]()
+        {
+            return this->RecognizePhilippinesTinIDOCR(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+OcrClient::RecognizePhilippinesVoteIDOCROutcome OcrClient::RecognizePhilippinesVoteIDOCR(const RecognizePhilippinesVoteIDOCRRequest &request)
+{
+    auto outcome = MakeRequest(request, "RecognizePhilippinesVoteIDOCR");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RecognizePhilippinesVoteIDOCRResponse rsp = RecognizePhilippinesVoteIDOCRResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RecognizePhilippinesVoteIDOCROutcome(rsp);
+        else
+            return RecognizePhilippinesVoteIDOCROutcome(o.GetError());
+    }
+    else
+    {
+        return RecognizePhilippinesVoteIDOCROutcome(outcome.GetError());
+    }
+}
+
+void OcrClient::RecognizePhilippinesVoteIDOCRAsync(const RecognizePhilippinesVoteIDOCRRequest& request, const RecognizePhilippinesVoteIDOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->RecognizePhilippinesVoteIDOCR(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+OcrClient::RecognizePhilippinesVoteIDOCROutcomeCallable OcrClient::RecognizePhilippinesVoteIDOCRCallable(const RecognizePhilippinesVoteIDOCRRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<RecognizePhilippinesVoteIDOCROutcome()>>(
+        [this, request]()
+        {
+            return this->RecognizePhilippinesVoteIDOCR(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 OcrClient::TableOCROutcome OcrClient::TableOCR(const TableOCRRequest &request)
 {
     auto outcome = MakeRequest(request, "TableOCR");

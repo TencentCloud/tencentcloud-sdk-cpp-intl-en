@@ -53,6 +53,8 @@
 #include <tencentcloud/vod/v20180717/model/CreatePersonSampleResponse.h>
 #include <tencentcloud/vod/v20180717/model/CreateProcedureTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/CreateProcedureTemplateResponse.h>
+#include <tencentcloud/vod/v20180717/model/CreateRebuildMediaTemplateRequest.h>
+#include <tencentcloud/vod/v20180717/model/CreateRebuildMediaTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/CreateReviewTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/CreateReviewTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/CreateRoundPlayRequest.h>
@@ -97,6 +99,8 @@
 #include <tencentcloud/vod/v20180717/model/DeletePersonSampleResponse.h>
 #include <tencentcloud/vod/v20180717/model/DeleteProcedureTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/DeleteProcedureTemplateResponse.h>
+#include <tencentcloud/vod/v20180717/model/DeleteRebuildMediaTemplateRequest.h>
+#include <tencentcloud/vod/v20180717/model/DeleteRebuildMediaTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/DeleteReviewTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/DeleteReviewTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/DeleteRoundPlayRequest.h>
@@ -159,6 +163,8 @@
 #include <tencentcloud/vod/v20180717/model/DescribePersonSamplesResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeProcedureTemplatesRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeProcedureTemplatesResponse.h>
+#include <tencentcloud/vod/v20180717/model/DescribeRebuildMediaTemplatesRequest.h>
+#include <tencentcloud/vod/v20180717/model/DescribeRebuildMediaTemplatesResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeReviewDetailsRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeReviewDetailsResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeReviewTemplatesRequest.h>
@@ -223,6 +229,8 @@
 #include <tencentcloud/vod/v20180717/model/ModifyMediaStorageClassResponse.h>
 #include <tencentcloud/vod/v20180717/model/ModifyPersonSampleRequest.h>
 #include <tencentcloud/vod/v20180717/model/ModifyPersonSampleResponse.h>
+#include <tencentcloud/vod/v20180717/model/ModifyRebuildMediaTemplateRequest.h>
+#include <tencentcloud/vod/v20180717/model/ModifyRebuildMediaTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/ModifyReviewTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/ModifyReviewTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/ModifyRoundPlayRequest.h>
@@ -263,6 +271,8 @@
 #include <tencentcloud/vod/v20180717/model/PushUrlCacheResponse.h>
 #include <tencentcloud/vod/v20180717/model/RebuildMediaRequest.h>
 #include <tencentcloud/vod/v20180717/model/RebuildMediaResponse.h>
+#include <tencentcloud/vod/v20180717/model/RebuildMediaByTemplateRequest.h>
+#include <tencentcloud/vod/v20180717/model/RebuildMediaByTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/RefreshUrlCacheRequest.h>
 #include <tencentcloud/vod/v20180717/model/RefreshUrlCacheResponse.h>
 #include <tencentcloud/vod/v20180717/model/RemoveWatermarkRequest.h>
@@ -340,6 +350,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateProcedureTemplateResponse> CreateProcedureTemplateOutcome;
                 typedef std::future<CreateProcedureTemplateOutcome> CreateProcedureTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CreateProcedureTemplateRequest&, CreateProcedureTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateProcedureTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateRebuildMediaTemplateResponse> CreateRebuildMediaTemplateOutcome;
+                typedef std::future<CreateRebuildMediaTemplateOutcome> CreateRebuildMediaTemplateOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::CreateRebuildMediaTemplateRequest&, CreateRebuildMediaTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRebuildMediaTemplateAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateReviewTemplateResponse> CreateReviewTemplateOutcome;
                 typedef std::future<CreateReviewTemplateOutcome> CreateReviewTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CreateReviewTemplateRequest&, CreateReviewTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateReviewTemplateAsyncHandler;
@@ -406,6 +419,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteProcedureTemplateResponse> DeleteProcedureTemplateOutcome;
                 typedef std::future<DeleteProcedureTemplateOutcome> DeleteProcedureTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DeleteProcedureTemplateRequest&, DeleteProcedureTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteProcedureTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteRebuildMediaTemplateResponse> DeleteRebuildMediaTemplateOutcome;
+                typedef std::future<DeleteRebuildMediaTemplateOutcome> DeleteRebuildMediaTemplateOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::DeleteRebuildMediaTemplateRequest&, DeleteRebuildMediaTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRebuildMediaTemplateAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteReviewTemplateResponse> DeleteReviewTemplateOutcome;
                 typedef std::future<DeleteReviewTemplateOutcome> DeleteReviewTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DeleteReviewTemplateRequest&, DeleteReviewTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteReviewTemplateAsyncHandler;
@@ -499,6 +515,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeProcedureTemplatesResponse> DescribeProcedureTemplatesOutcome;
                 typedef std::future<DescribeProcedureTemplatesOutcome> DescribeProcedureTemplatesOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeProcedureTemplatesRequest&, DescribeProcedureTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeProcedureTemplatesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeRebuildMediaTemplatesResponse> DescribeRebuildMediaTemplatesOutcome;
+                typedef std::future<DescribeRebuildMediaTemplatesOutcome> DescribeRebuildMediaTemplatesOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::DescribeRebuildMediaTemplatesRequest&, DescribeRebuildMediaTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRebuildMediaTemplatesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeReviewDetailsResponse> DescribeReviewDetailsOutcome;
                 typedef std::future<DescribeReviewDetailsOutcome> DescribeReviewDetailsOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeReviewDetailsRequest&, DescribeReviewDetailsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeReviewDetailsAsyncHandler;
@@ -595,6 +614,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyPersonSampleResponse> ModifyPersonSampleOutcome;
                 typedef std::future<ModifyPersonSampleOutcome> ModifyPersonSampleOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ModifyPersonSampleRequest&, ModifyPersonSampleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyPersonSampleAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyRebuildMediaTemplateResponse> ModifyRebuildMediaTemplateOutcome;
+                typedef std::future<ModifyRebuildMediaTemplateOutcome> ModifyRebuildMediaTemplateOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::ModifyRebuildMediaTemplateRequest&, ModifyRebuildMediaTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyRebuildMediaTemplateAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyReviewTemplateResponse> ModifyReviewTemplateOutcome;
                 typedef std::future<ModifyReviewTemplateOutcome> ModifyReviewTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::ModifyReviewTemplateRequest&, ModifyReviewTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyReviewTemplateAsyncHandler;
@@ -655,6 +677,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::RebuildMediaResponse> RebuildMediaOutcome;
                 typedef std::future<RebuildMediaOutcome> RebuildMediaOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::RebuildMediaRequest&, RebuildMediaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RebuildMediaAsyncHandler;
+                typedef Outcome<Core::Error, Model::RebuildMediaByTemplateResponse> RebuildMediaByTemplateOutcome;
+                typedef std::future<RebuildMediaByTemplateOutcome> RebuildMediaByTemplateOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::RebuildMediaByTemplateRequest&, RebuildMediaByTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RebuildMediaByTemplateAsyncHandler;
                 typedef Outcome<Core::Error, Model::RefreshUrlCacheResponse> RefreshUrlCacheOutcome;
                 typedef std::future<RefreshUrlCacheOutcome> RefreshUrlCacheOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::RefreshUrlCacheRequest&, RefreshUrlCacheOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RefreshUrlCacheAsyncHandler;
@@ -803,7 +828,7 @@ This API is used to create a custom audio/video moderation template. Up to 50 te
                 CreateContentReviewTemplateOutcomeCallable CreateContentReviewTemplateCallable(const Model::CreateContentReviewTemplateRequest& request);
 
                 /**
-                 *This API is used to create a custom image processing template. You can create up to 16 templates, and each template can contain up to three operations, for example, cropping, scaling, and cropping again.
+                 *This API is used to create a custom image processing template. A template can include at most 10 operations, for example, crop-scale-crop-blur-scale-crop-scale-crop-blur-scale. You can have up to 16 image processing templates.
                  * @param req CreateImageProcessingTemplateRequest
                  * @return CreateImageProcessingTemplateOutcome
                  */
@@ -837,6 +862,15 @@ This API is used to create a custom audio/video moderation template. Up to 50 te
                 CreateProcedureTemplateOutcome CreateProcedureTemplate(const Model::CreateProcedureTemplateRequest &request);
                 void CreateProcedureTemplateAsync(const Model::CreateProcedureTemplateRequest& request, const CreateProcedureTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateProcedureTemplateOutcomeCallable CreateProcedureTemplateCallable(const Model::CreateProcedureTemplateRequest& request);
+
+                /**
+                 *This API is used to create a remaster template.
+                 * @param req CreateRebuildMediaTemplateRequest
+                 * @return CreateRebuildMediaTemplateOutcome
+                 */
+                CreateRebuildMediaTemplateOutcome CreateRebuildMediaTemplate(const Model::CreateRebuildMediaTemplateRequest &request);
+                void CreateRebuildMediaTemplateAsync(const Model::CreateRebuildMediaTemplateRequest& request, const CreateRebuildMediaTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateRebuildMediaTemplateOutcomeCallable CreateRebuildMediaTemplateCallable(const Model::CreateRebuildMediaTemplateRequest& request);
 
                 /**
                  *This API is used to create a custom moderation template. Up to 50 templates can be created in total.
@@ -1048,6 +1082,15 @@ This API is used to delete a custom audio/video moderation template.
                 DeleteProcedureTemplateOutcome DeleteProcedureTemplate(const Model::DeleteProcedureTemplateRequest &request);
                 void DeleteProcedureTemplateAsync(const Model::DeleteProcedureTemplateRequest& request, const DeleteProcedureTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteProcedureTemplateOutcomeCallable DeleteProcedureTemplateCallable(const Model::DeleteProcedureTemplateRequest& request);
+
+                /**
+                 *This API is used to delete a remaster template.
+                 * @param req DeleteRebuildMediaTemplateRequest
+                 * @return DeleteRebuildMediaTemplateOutcome
+                 */
+                DeleteRebuildMediaTemplateOutcome DeleteRebuildMediaTemplate(const Model::DeleteRebuildMediaTemplateRequest &request);
+                void DeleteRebuildMediaTemplateAsync(const Model::DeleteRebuildMediaTemplateRequest& request, const DeleteRebuildMediaTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteRebuildMediaTemplateOutcomeCallable DeleteRebuildMediaTemplateCallable(const Model::DeleteRebuildMediaTemplateRequest& request);
 
                 /**
                  *This API is used to delete a custom moderation template.
@@ -1379,6 +1422,15 @@ This API is used to get the information of custom and [preset](https://intl.clou
                 DescribeProcedureTemplatesOutcome DescribeProcedureTemplates(const Model::DescribeProcedureTemplatesRequest &request);
                 void DescribeProcedureTemplatesAsync(const Model::DescribeProcedureTemplatesRequest& request, const DescribeProcedureTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeProcedureTemplatesOutcomeCallable DescribeProcedureTemplatesCallable(const Model::DescribeProcedureTemplatesRequest& request);
+
+                /**
+                 *This API is used to query remaster templates.
+                 * @param req DescribeRebuildMediaTemplatesRequest
+                 * @return DescribeRebuildMediaTemplatesOutcome
+                 */
+                DescribeRebuildMediaTemplatesOutcome DescribeRebuildMediaTemplates(const Model::DescribeRebuildMediaTemplatesRequest &request);
+                void DescribeRebuildMediaTemplatesAsync(const Model::DescribeRebuildMediaTemplatesRequest& request, const DescribeRebuildMediaTemplatesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeRebuildMediaTemplatesOutcomeCallable DescribeRebuildMediaTemplatesCallable(const Model::DescribeRebuildMediaTemplatesRequest& request);
 
                 /**
                  *<b>This API is disused and replaced by [DescribeMediaProcessUsageData](https://intl.cloud.tencent.com/document/product/266/41464?from_cn_redirect=1).</b>
@@ -1723,6 +1775,15 @@ If the current storage class is DEEP ARCHIVE, it can be changed to the following
                 ModifyPersonSampleOutcomeCallable ModifyPersonSampleCallable(const Model::ModifyPersonSampleRequest& request);
 
                 /**
+                 *This API is used to modify a remaster template.
+                 * @param req ModifyRebuildMediaTemplateRequest
+                 * @return ModifyRebuildMediaTemplateOutcome
+                 */
+                ModifyRebuildMediaTemplateOutcome ModifyRebuildMediaTemplate(const Model::ModifyRebuildMediaTemplateRequest &request);
+                void ModifyRebuildMediaTemplateAsync(const Model::ModifyRebuildMediaTemplateRequest& request, const ModifyRebuildMediaTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyRebuildMediaTemplateOutcomeCallable ModifyRebuildMediaTemplateCallable(const Model::ModifyRebuildMediaTemplateRequest& request);
+
+                /**
                  *This API is used to modify a custom moderation template.
 > The templates can only be used by the APIs [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) and [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1).
                  * @param req ModifyReviewTemplateRequest
@@ -1933,6 +1994,15 @@ If event notifications are used, the event type for moderation tasks is [ReviewA
                 RebuildMediaOutcomeCallable RebuildMediaCallable(const Model::RebuildMediaRequest& request);
 
                 /**
+                 *This API is used to start a remaster task using a template.
+                 * @param req RebuildMediaByTemplateRequest
+                 * @return RebuildMediaByTemplateOutcome
+                 */
+                RebuildMediaByTemplateOutcome RebuildMediaByTemplate(const Model::RebuildMediaByTemplateRequest &request);
+                void RebuildMediaByTemplateAsync(const Model::RebuildMediaByTemplateRequest& request, const RebuildMediaByTemplateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RebuildMediaByTemplateOutcomeCallable RebuildMediaByTemplateCallable(const Model::RebuildMediaByTemplateRequest& request);
+
+                /**
                  *1. This API is used to purge URLs.
 2. The URL domain names must have already been registered with VOD.
 3. Up to 20 URLs can be specified in one request.
@@ -2001,6 +2071,8 @@ If event notifications are used, the event type is [ReviewAudioVideoComplete](ht
 - Specify the types (`Categories`) of media files. Any file that matches one of the types will be returned. There are three file types: `Video`, `Audio`, and `Image`. If `Categories` is set to `Video` and `Audio`, all audio and video files will be returned.
 - Specify the source types (`SourceTypes`). Any file that matches one of the source types specified will be returned. For example, if you set `SourceTypes` to `Record` (live recording) and `Upload` (upload), all recording files and uploaded files will be returned.
 - Specify the file formats (`MediaTypes`), such as MP4, AVI, and MP3. All files in the specified formats will be returned. For example, if you set `MediaTypes` to MP4 and MP3, all files in these two formats will be returned.
+- Specify the file statuses (`Status`). Files in the specified statuses will be returned. Valid values: `Normal`, `SystemForbidden` (blocked by VOD), `Forbidden` (blocked by you). If you set `Status` to `Normal` and `Forbidden`, files in either status will be returned.
+- Specify the types of moderation results (`ReviewResults`). Files that have the specified types of moderation results will be returned. Valid values include `pass`, `block`, and more. If you set `ReviewResults` to `pass` and `block`, files whose moderation result is "pass" or "block" will be returned.
 - Specify the stream IDs (`StreamIds`) of live recording files.
 - Specify a time range for search by file creation time.
 - Specify the TRTC application IDs.

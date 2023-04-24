@@ -30,6 +30,7 @@
 #include <tencentcloud/mps/v20190612/model/AiContentReviewResult.h>
 #include <tencentcloud/mps/v20190612/model/AiAnalysisResult.h>
 #include <tencentcloud/mps/v20190612/model/AiRecognitionResult.h>
+#include <tencentcloud/mps/v20190612/model/ScheduleQualityControlTaskResult.h>
 
 
 namespace TencentCloud
@@ -248,6 +249,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool AiRecognitionResultSetHasBeenSet() const;
 
+                    /**
+                     * 获取The execution status and result of a quality control task.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AiQualityControlTaskResult The execution status and result of a quality control task.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    ScheduleQualityControlTaskResult GetAiQualityControlTaskResult() const;
+
+                    /**
+                     * 设置The execution status and result of a quality control task.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param AiQualityControlTaskResult The execution status and result of a quality control task.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetAiQualityControlTaskResult(const ScheduleQualityControlTaskResult& _aiQualityControlTaskResult);
+
+                    /**
+                     * 判断参数 AiQualityControlTaskResult 是否已赋值
+                     * @return AiQualityControlTaskResult 是否已赋值
+                     */
+                    bool AiQualityControlTaskResultHasBeenSet() const;
+
                 private:
 
                     /**
@@ -313,6 +336,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<AiRecognitionResult> m_aiRecognitionResultSet;
                     bool m_aiRecognitionResultSetHasBeenSet;
+
+                    /**
+                     * The execution status and result of a quality control task.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    ScheduleQualityControlTaskResult m_aiQualityControlTaskResult;
+                    bool m_aiQualityControlTaskResultHasBeenSet;
 
                 };
             }

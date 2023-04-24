@@ -28,6 +28,7 @@
 #include <tencentcloud/mps/v20190612/model/AiAnalysisTaskCoverResult.h>
 #include <tencentcloud/mps/v20190612/model/AiAnalysisTaskTagResult.h>
 #include <tencentcloud/mps/v20190612/model/AiAnalysisTaskFrameTagResult.h>
+#include <tencentcloud/mps/v20190612/model/AiAnalysisTaskHighlightResult.h>
 
 
 namespace TencentCloud
@@ -160,6 +161,28 @@ namespace TencentCloud
                      */
                     bool FrameTagTaskHasBeenSet() const;
 
+                    /**
+                     * 获取The result of a highlight generation task. This parameter is valid if `Type` is `Highlight`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return HighlightTask The result of a highlight generation task. This parameter is valid if `Type` is `Highlight`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    AiAnalysisTaskHighlightResult GetHighlightTask() const;
+
+                    /**
+                     * 设置The result of a highlight generation task. This parameter is valid if `Type` is `Highlight`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param HighlightTask The result of a highlight generation task. This parameter is valid if `Type` is `Highlight`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetHighlightTask(const AiAnalysisTaskHighlightResult& _highlightTask);
+
+                    /**
+                     * 判断参数 HighlightTask 是否已赋值
+                     * @return HighlightTask 是否已赋值
+                     */
+                    bool HighlightTaskHasBeenSet() const;
+
                 private:
 
                     /**
@@ -196,6 +219,13 @@ namespace TencentCloud
                      */
                     AiAnalysisTaskFrameTagResult m_frameTagTask;
                     bool m_frameTagTaskHasBeenSet;
+
+                    /**
+                     * The result of a highlight generation task. This parameter is valid if `Type` is `Highlight`.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    AiAnalysisTaskHighlightResult m_highlightTask;
+                    bool m_highlightTaskHasBeenSet;
 
                 };
             }

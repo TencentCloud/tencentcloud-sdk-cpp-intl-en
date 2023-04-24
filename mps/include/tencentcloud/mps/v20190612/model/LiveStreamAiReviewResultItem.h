@@ -51,30 +51,30 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The type of the moderation result. Valid values:
+                     * 获取The type of moderation result. Valid values:
 <li>ImagePorn</li>
 <li>ImageTerrorism</li>
 <li>ImagePolitical</li>
-<li>PornVoice (pornographic content in speech)</li>
-                     * @return Type The type of the moderation result. Valid values:
+<li>VoicePorn</li>
+                     * @return Type The type of moderation result. Valid values:
 <li>ImagePorn</li>
 <li>ImageTerrorism</li>
 <li>ImagePolitical</li>
-<li>PornVoice (pornographic content in speech)</li>
+<li>VoicePorn</li>
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The type of the moderation result. Valid values:
+                     * 设置The type of moderation result. Valid values:
 <li>ImagePorn</li>
 <li>ImageTerrorism</li>
 <li>ImagePolitical</li>
-<li>PornVoice (pornographic content in speech)</li>
-                     * @param Type The type of the moderation result. Valid values:
+<li>VoicePorn</li>
+                     * @param Type The type of moderation result. Valid values:
 <li>ImagePorn</li>
 <li>ImageTerrorism</li>
 <li>ImagePolitical</li>
-<li>PornVoice (pornographic content in speech)</li>
+<li>VoicePorn</li>
                      */
                     void SetType(const std::string& _type);
 
@@ -139,14 +139,14 @@ namespace TencentCloud
                     bool ImagePoliticalResultSetHasBeenSet() const;
 
                     /**
-                     * 获取Result of porn information detection in speech, which is valid when `Type` is `PornVoice`.
-                     * @return VoicePornResultSet Result of porn information detection in speech, which is valid when `Type` is `PornVoice`.
+                     * 获取The result for moderation of pornographic content in audio. This parameter is valid if `Type` is `VoicePorn`.
+                     * @return VoicePornResultSet The result for moderation of pornographic content in audio. This parameter is valid if `Type` is `VoicePorn`.
                      */
                     std::vector<LiveStreamAiReviewVoicePornResult> GetVoicePornResultSet() const;
 
                     /**
-                     * 设置Result of porn information detection in speech, which is valid when `Type` is `PornVoice`.
-                     * @param VoicePornResultSet Result of porn information detection in speech, which is valid when `Type` is `PornVoice`.
+                     * 设置The result for moderation of pornographic content in audio. This parameter is valid if `Type` is `VoicePorn`.
+                     * @param VoicePornResultSet The result for moderation of pornographic content in audio. This parameter is valid if `Type` is `VoicePorn`.
                      */
                     void SetVoicePornResultSet(const std::vector<LiveStreamAiReviewVoicePornResult>& _voicePornResultSet);
 
@@ -159,11 +159,11 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The type of the moderation result. Valid values:
+                     * The type of moderation result. Valid values:
 <li>ImagePorn</li>
 <li>ImageTerrorism</li>
 <li>ImagePolitical</li>
-<li>PornVoice (pornographic content in speech)</li>
+<li>VoicePorn</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -187,7 +187,7 @@ namespace TencentCloud
                     bool m_imagePoliticalResultSetHasBeenSet;
 
                     /**
-                     * Result of porn information detection in speech, which is valid when `Type` is `PornVoice`.
+                     * The result for moderation of pornographic content in audio. This parameter is valid if `Type` is `VoicePorn`.
                      */
                     std::vector<LiveStreamAiReviewVoicePornResult> m_voicePornResultSet;
                     bool m_voicePornResultSetHasBeenSet;

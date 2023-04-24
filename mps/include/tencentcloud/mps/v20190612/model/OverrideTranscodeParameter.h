@@ -28,6 +28,7 @@
 #include <tencentcloud/mps/v20190612/model/AudioTemplateInfoForUpdate.h>
 #include <tencentcloud/mps/v20190612/model/TEHDConfigForUpdate.h>
 #include <tencentcloud/mps/v20190612/model/SubtitleTemplate.h>
+#include <tencentcloud/mps/v20190612/model/MediaInputInfo.h>
 
 
 namespace TencentCloud
@@ -192,6 +193,28 @@ namespace TencentCloud
                      */
                     bool SubtitleTemplateHasBeenSet() const;
 
+                    /**
+                     * 获取The information of the external audio track to add.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AddonAudioStream The information of the external audio track to add.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<MediaInputInfo> GetAddonAudioStream() const;
+
+                    /**
+                     * 设置The information of the external audio track to add.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param AddonAudioStream The information of the external audio track to add.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetAddonAudioStream(const std::vector<MediaInputInfo>& _addonAudioStream);
+
+                    /**
+                     * 判断参数 AddonAudioStream 是否已赋值
+                     * @return AddonAudioStream 是否已赋值
+                     */
+                    bool AddonAudioStreamHasBeenSet() const;
+
                 private:
 
                     /**
@@ -239,6 +262,13 @@ namespace TencentCloud
                      */
                     SubtitleTemplate m_subtitleTemplate;
                     bool m_subtitleTemplateHasBeenSet;
+
+                    /**
+                     * The information of the external audio track to add.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<MediaInputInfo> m_addonAudioStream;
+                    bool m_addonAudioStreamHasBeenSet;
 
                 };
             }

@@ -65,6 +65,28 @@ For more information about supported extensions, see [Media types](https://intl.
                     bool MediaUrlHasBeenSet() const;
 
                     /**
+                     * 获取The file format (extension). For information about supported extensions, see [Media Types](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
+If you do not specify this parameter or pass in an empty string, the file obtained will have the same extension as `MediaUrl`.
+                     * @return MediaType The file format (extension). For information about supported extensions, see [Media Types](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
+If you do not specify this parameter or pass in an empty string, the file obtained will have the same extension as `MediaUrl`.
+                     */
+                    std::string GetMediaType() const;
+
+                    /**
+                     * 设置The file format (extension). For information about supported extensions, see [Media Types](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
+If you do not specify this parameter or pass in an empty string, the file obtained will have the same extension as `MediaUrl`.
+                     * @param MediaType The file format (extension). For information about supported extensions, see [Media Types](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
+If you do not specify this parameter or pass in an empty string, the file obtained will have the same extension as `MediaUrl`.
+                     */
+                    void SetMediaType(const std::string& _mediaType);
+
+                    /**
+                     * 判断参数 MediaType 是否已赋值
+                     * @return MediaType 是否已赋值
+                     */
+                    bool MediaTypeHasBeenSet() const;
+
+                    /**
                      * 获取<b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
                      * @return SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
                      */
@@ -278,6 +300,13 @@ For more information about supported extensions, see [Media types](https://intl.
                      */
                     std::string m_mediaUrl;
                     bool m_mediaUrlHasBeenSet;
+
+                    /**
+                     * The file format (extension). For information about supported extensions, see [Media Types](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B).
+If you do not specify this parameter or pass in an empty string, the file obtained will have the same extension as `MediaUrl`.
+                     */
+                    std::string m_mediaType;
+                    bool m_mediaTypeHasBeenSet;
 
                     /**
                      * <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
