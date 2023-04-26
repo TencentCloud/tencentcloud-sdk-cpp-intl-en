@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool ParamNameHasBeenSet() const;
 
                     /**
-                     * 获取Value before modification
-                     * @return PreValue Value before modification
+                     * 获取The value of the parameter before modification
+                     * @return PreValue The value of the parameter before modification
                      */
                     std::string GetPreValue() const;
 
                     /**
-                     * 设置Value before modification
-                     * @param PreValue Value before modification
+                     * 设置The value of the parameter before modification
+                     * @param PreValue The value of the parameter before modification
                      */
                     void SetPreValue(const std::string& _preValue);
 
@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool PreValueHasBeenSet() const;
 
                     /**
-                     * 获取Value after modification
-                     * @return NewValue Value after modification
+                     * 获取The value of the parameter after modification
+                     * @return NewValue The value of the parameter after modification
                      */
                     std::string GetNewValue() const;
 
                     /**
-                     * 设置Value after modification
-                     * @param NewValue Value after modification
+                     * 设置The value of the parameter after modification
+                     * @param NewValue The value of the parameter after modification
                      */
                     void SetNewValue(const std::string& _newValue);
 
@@ -101,14 +101,26 @@ namespace TencentCloud
                     bool NewValueHasBeenSet() const;
 
                     /**
-                     * 获取Status. 1: modifying the parameter configuration; 2: modified the parameter configuration successfully; 3: failed to modify the parameter configuration
-                     * @return Status Status. 1: modifying the parameter configuration; 2: modified the parameter configuration successfully; 3: failed to modify the parameter configuration
+                     * 获取Parameter configuration status
+- `1`: The parameter configuration is being modified.
+- `2`: The parameter configuration has been modified successfully.
+- `3`: Failed to modify the parameter configuration.
+                     * @return Status Parameter configuration status
+- `1`: The parameter configuration is being modified.
+- `2`: The parameter configuration has been modified successfully.
+- `3`: Failed to modify the parameter configuration.
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Status. 1: modifying the parameter configuration; 2: modified the parameter configuration successfully; 3: failed to modify the parameter configuration
-                     * @param Status Status. 1: modifying the parameter configuration; 2: modified the parameter configuration successfully; 3: failed to modify the parameter configuration
+                     * 设置Parameter configuration status
+- `1`: The parameter configuration is being modified.
+- `2`: The parameter configuration has been modified successfully.
+- `3`: Failed to modify the parameter configuration.
+                     * @param Status Parameter configuration status
+- `1`: The parameter configuration is being modified.
+- `2`: The parameter configuration has been modified successfully.
+- `3`: Failed to modify the parameter configuration.
                      */
                     void SetStatus(const int64_t& _status);
 
@@ -145,19 +157,22 @@ namespace TencentCloud
                     bool m_paramNameHasBeenSet;
 
                     /**
-                     * Value before modification
+                     * The value of the parameter before modification
                      */
                     std::string m_preValue;
                     bool m_preValueHasBeenSet;
 
                     /**
-                     * Value after modification
+                     * The value of the parameter after modification
                      */
                     std::string m_newValue;
                     bool m_newValueHasBeenSet;
 
                     /**
-                     * Status. 1: modifying the parameter configuration; 2: modified the parameter configuration successfully; 3: failed to modify the parameter configuration
+                     * Parameter configuration status
+- `1`: The parameter configuration is being modified.
+- `2`: The parameter configuration has been modified successfully.
+- `3`: Failed to modify the parameter configuration.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;

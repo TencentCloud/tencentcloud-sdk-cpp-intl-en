@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取User AppID
-                     * @return AppId User AppID
+                     * 获取User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
+                     * @return AppId User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
                      */
                     int64_t GetAppId() const;
 
                     /**
-                     * 设置User AppID
-                     * @param AppId User AppID
+                     * 设置User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
+                     * @param AppId User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
                      */
                     void SetAppId(const int64_t& _appId);
 
@@ -361,14 +361,54 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool GrocerySysIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance type. <ul><li>`1`: Redis 2.8 Memory Edition (Cluster Architecture). </li><li>`2`: Redis 2.8 Memory Edition (Standard Architecture). </li><li>`3`: CKV 3.2 Memory Edition (Standard Architecture). </li><li>`4`: CKV 3.2 Memory Edition (Cluster Architecture). </li><li>`5`: Redis 2.8 Standalone Edition. </li><li>`6`: Redis 4.0 Memory Edition (Standard Architecture). </li><li>`7`: Redis 4.0 Memory Edition (Cluster Architecture). </li><li>`8`: Redis 5.0 Memory Edition (Standard Architecture). </li><li>`9`: Redis 5.0 Memory Edition (Cluster Architecture). </li></ul>
-                     * @return ProductType Instance type. <ul><li>`1`: Redis 2.8 Memory Edition (Cluster Architecture). </li><li>`2`: Redis 2.8 Memory Edition (Standard Architecture). </li><li>`3`: CKV 3.2 Memory Edition (Standard Architecture). </li><li>`4`: CKV 3.2 Memory Edition (Cluster Architecture). </li><li>`5`: Redis 2.8 Standalone Edition. </li><li>`6`: Redis 4.0 Memory Edition (Standard Architecture). </li><li>`7`: Redis 4.0 Memory Edition (Cluster Architecture). </li><li>`8`: Redis 5.0 Memory Edition (Standard Architecture). </li><li>`9`: Redis 5.0 Memory Edition (Cluster Architecture). </li></ul>
+                     * 获取Instance type
+- `2`: Redis 2.8 Memory Edition (Standard Architecture).
+- `3`: CKV 3.2 Memory Edition (Standard Architecture).
+- `4`: CKV 3.2 Memory Edition (Cluster Architecture)
+- `5`: Redis 2.8 Memory Edition (Standalone)
+- `6`: Redis 4.0 Memory Edition (Standard Architecture).
+- `7`: Redis 4.0 Memory Edition (Cluster Architecture)
+- `8`: Redis 5.0 Memory Edition (Standard Architecture).
+- `9`: Redis 5.0 Memory Edition (Cluster Architecture)
+- `15`: Redis 6.2 Memory Edition (Standard Architecture).
+- `16`: Redis 6.2 Memory Edition (Cluster Architecture)
+                     * @return ProductType Instance type
+- `2`: Redis 2.8 Memory Edition (Standard Architecture).
+- `3`: CKV 3.2 Memory Edition (Standard Architecture).
+- `4`: CKV 3.2 Memory Edition (Cluster Architecture)
+- `5`: Redis 2.8 Memory Edition (Standalone)
+- `6`: Redis 4.0 Memory Edition (Standard Architecture).
+- `7`: Redis 4.0 Memory Edition (Cluster Architecture)
+- `8`: Redis 5.0 Memory Edition (Standard Architecture).
+- `9`: Redis 5.0 Memory Edition (Cluster Architecture)
+- `15`: Redis 6.2 Memory Edition (Standard Architecture).
+- `16`: Redis 6.2 Memory Edition (Cluster Architecture)
                      */
                     int64_t GetProductType() const;
 
                     /**
-                     * 设置Instance type. <ul><li>`1`: Redis 2.8 Memory Edition (Cluster Architecture). </li><li>`2`: Redis 2.8 Memory Edition (Standard Architecture). </li><li>`3`: CKV 3.2 Memory Edition (Standard Architecture). </li><li>`4`: CKV 3.2 Memory Edition (Cluster Architecture). </li><li>`5`: Redis 2.8 Standalone Edition. </li><li>`6`: Redis 4.0 Memory Edition (Standard Architecture). </li><li>`7`: Redis 4.0 Memory Edition (Cluster Architecture). </li><li>`8`: Redis 5.0 Memory Edition (Standard Architecture). </li><li>`9`: Redis 5.0 Memory Edition (Cluster Architecture). </li></ul>
-                     * @param ProductType Instance type. <ul><li>`1`: Redis 2.8 Memory Edition (Cluster Architecture). </li><li>`2`: Redis 2.8 Memory Edition (Standard Architecture). </li><li>`3`: CKV 3.2 Memory Edition (Standard Architecture). </li><li>`4`: CKV 3.2 Memory Edition (Cluster Architecture). </li><li>`5`: Redis 2.8 Standalone Edition. </li><li>`6`: Redis 4.0 Memory Edition (Standard Architecture). </li><li>`7`: Redis 4.0 Memory Edition (Cluster Architecture). </li><li>`8`: Redis 5.0 Memory Edition (Standard Architecture). </li><li>`9`: Redis 5.0 Memory Edition (Cluster Architecture). </li></ul>
+                     * 设置Instance type
+- `2`: Redis 2.8 Memory Edition (Standard Architecture).
+- `3`: CKV 3.2 Memory Edition (Standard Architecture).
+- `4`: CKV 3.2 Memory Edition (Cluster Architecture)
+- `5`: Redis 2.8 Memory Edition (Standalone)
+- `6`: Redis 4.0 Memory Edition (Standard Architecture).
+- `7`: Redis 4.0 Memory Edition (Cluster Architecture)
+- `8`: Redis 5.0 Memory Edition (Standard Architecture).
+- `9`: Redis 5.0 Memory Edition (Cluster Architecture)
+- `15`: Redis 6.2 Memory Edition (Standard Architecture).
+- `16`: Redis 6.2 Memory Edition (Cluster Architecture)
+                     * @param ProductType Instance type
+- `2`: Redis 2.8 Memory Edition (Standard Architecture).
+- `3`: CKV 3.2 Memory Edition (Standard Architecture).
+- `4`: CKV 3.2 Memory Edition (Cluster Architecture)
+- `5`: Redis 2.8 Memory Edition (Standalone)
+- `6`: Redis 4.0 Memory Edition (Standard Architecture).
+- `7`: Redis 4.0 Memory Edition (Cluster Architecture)
+- `8`: Redis 5.0 Memory Edition (Standard Architecture).
+- `9`: Redis 5.0 Memory Edition (Cluster Architecture)
+- `15`: Redis 6.2 Memory Edition (Standard Architecture).
+- `16`: Redis 6.2 Memory Edition (Cluster Architecture)
                      */
                     void SetProductType(const int64_t& _productType);
 
@@ -417,7 +457,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * User AppID
+                     * User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
                      */
                     int64_t m_appId;
                     bool m_appIdHasBeenSet;
@@ -521,7 +561,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_grocerySysIdHasBeenSet;
 
                     /**
-                     * Instance type. <ul><li>`1`: Redis 2.8 Memory Edition (Cluster Architecture). </li><li>`2`: Redis 2.8 Memory Edition (Standard Architecture). </li><li>`3`: CKV 3.2 Memory Edition (Standard Architecture). </li><li>`4`: CKV 3.2 Memory Edition (Cluster Architecture). </li><li>`5`: Redis 2.8 Standalone Edition. </li><li>`6`: Redis 4.0 Memory Edition (Standard Architecture). </li><li>`7`: Redis 4.0 Memory Edition (Cluster Architecture). </li><li>`8`: Redis 5.0 Memory Edition (Standard Architecture). </li><li>`9`: Redis 5.0 Memory Edition (Cluster Architecture). </li></ul>
+                     * Instance type
+- `2`: Redis 2.8 Memory Edition (Standard Architecture).
+- `3`: CKV 3.2 Memory Edition (Standard Architecture).
+- `4`: CKV 3.2 Memory Edition (Cluster Architecture)
+- `5`: Redis 2.8 Memory Edition (Standalone)
+- `6`: Redis 4.0 Memory Edition (Standard Architecture).
+- `7`: Redis 4.0 Memory Edition (Cluster Architecture)
+- `8`: Redis 5.0 Memory Edition (Standard Architecture).
+- `9`: Redis 5.0 Memory Edition (Cluster Architecture)
+- `15`: Redis 6.2 Memory Edition (Standard Architecture).
+- `16`: Redis 6.2 Memory Edition (Cluster Architecture)
                      */
                     int64_t m_productType;
                     bool m_productTypeHasBeenSet;

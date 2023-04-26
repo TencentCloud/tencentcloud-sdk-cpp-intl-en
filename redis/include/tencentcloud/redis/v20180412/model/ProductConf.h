@@ -47,14 +47,54 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Product type. Valid values: `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture), `10` (Redis 4.0 Hybrid Storage Edition (Tendis)).
-                     * @return Type Product type. Valid values: `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture), `10` (Redis 4.0 Hybrid Storage Edition (Tendis)).
+                     * 获取Product type
+- `2`: Redis 2.8 Memory Edition (Standard Architecture).
+- `3`: CKV 3.2 Memory Edition (Standard Architecture).
+- `4`: CKV 3.2 Memory Edition (Cluster Architecture).
+- `5`: Redis 2.8 Memory Edition (Standalone).
+- `6`: Redis 4.0 Memory Edition (Standard Architecture).
+- `7`: Redis 4.0 Memory Edition (Cluster Architecture).
+- `8`: Redis 5.0 Memory Edition (Standard Architecture).
+- `9`: Redis 5.0 Memory Edition (Cluster Architecture).
+- `15`: Redis 6.2 Memory Edition (Standard Architecture).
+- `16`: Redis 6.2 Memory Edition (Cluster Architecture).
+                     * @return Type Product type
+- `2`: Redis 2.8 Memory Edition (Standard Architecture).
+- `3`: CKV 3.2 Memory Edition (Standard Architecture).
+- `4`: CKV 3.2 Memory Edition (Cluster Architecture).
+- `5`: Redis 2.8 Memory Edition (Standalone).
+- `6`: Redis 4.0 Memory Edition (Standard Architecture).
+- `7`: Redis 4.0 Memory Edition (Cluster Architecture).
+- `8`: Redis 5.0 Memory Edition (Standard Architecture).
+- `9`: Redis 5.0 Memory Edition (Cluster Architecture).
+- `15`: Redis 6.2 Memory Edition (Standard Architecture).
+- `16`: Redis 6.2 Memory Edition (Cluster Architecture).
                      */
                     int64_t GetType() const;
 
                     /**
-                     * 设置Product type. Valid values: `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture), `10` (Redis 4.0 Hybrid Storage Edition (Tendis)).
-                     * @param Type Product type. Valid values: `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture), `10` (Redis 4.0 Hybrid Storage Edition (Tendis)).
+                     * 设置Product type
+- `2`: Redis 2.8 Memory Edition (Standard Architecture).
+- `3`: CKV 3.2 Memory Edition (Standard Architecture).
+- `4`: CKV 3.2 Memory Edition (Cluster Architecture).
+- `5`: Redis 2.8 Memory Edition (Standalone).
+- `6`: Redis 4.0 Memory Edition (Standard Architecture).
+- `7`: Redis 4.0 Memory Edition (Cluster Architecture).
+- `8`: Redis 5.0 Memory Edition (Standard Architecture).
+- `9`: Redis 5.0 Memory Edition (Cluster Architecture).
+- `15`: Redis 6.2 Memory Edition (Standard Architecture).
+- `16`: Redis 6.2 Memory Edition (Cluster Architecture).
+                     * @param Type Product type
+- `2`: Redis 2.8 Memory Edition (Standard Architecture).
+- `3`: CKV 3.2 Memory Edition (Standard Architecture).
+- `4`: CKV 3.2 Memory Edition (Cluster Architecture).
+- `5`: Redis 2.8 Memory Edition (Standalone).
+- `6`: Redis 4.0 Memory Edition (Standard Architecture).
+- `7`: Redis 4.0 Memory Edition (Cluster Architecture).
+- `8`: Redis 5.0 Memory Edition (Standard Architecture).
+- `9`: Redis 5.0 Memory Edition (Cluster Architecture).
+- `15`: Redis 6.2 Memory Edition (Standard Architecture).
+- `16`: Redis 6.2 Memory Edition (Cluster Architecture).
                      */
                     void SetType(const int64_t& _type);
 
@@ -65,14 +105,14 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Product name: Redis Master-Replica Edition, CKV Master-Replica Edition, CKV Cluster Edition, Redis Standalone Edition, Redis Cluster Edition, Tendis Hybrid Storage Edition
-                     * @return TypeName Product name: Redis Master-Replica Edition, CKV Master-Replica Edition, CKV Cluster Edition, Redis Standalone Edition, Redis Cluster Edition, Tendis Hybrid Storage Edition
+                     * 获取Product names, including Redis Master-Replica Edition, Redis Standalone Edition, Redis 4.0 Cluster Edition, CKV Master-Replica Edition, and CKV Standalone Edition.
+                     * @return TypeName Product names, including Redis Master-Replica Edition, Redis Standalone Edition, Redis 4.0 Cluster Edition, CKV Master-Replica Edition, and CKV Standalone Edition.
                      */
                     std::string GetTypeName() const;
 
                     /**
-                     * 设置Product name: Redis Master-Replica Edition, CKV Master-Replica Edition, CKV Cluster Edition, Redis Standalone Edition, Redis Cluster Edition, Tendis Hybrid Storage Edition
-                     * @param TypeName Product name: Redis Master-Replica Edition, CKV Master-Replica Edition, CKV Cluster Edition, Redis Standalone Edition, Redis Cluster Edition, Tendis Hybrid Storage Edition
+                     * 设置Product names, including Redis Master-Replica Edition, Redis Standalone Edition, Redis 4.0 Cluster Edition, CKV Master-Replica Edition, and CKV Standalone Edition.
+                     * @param TypeName Product names, including Redis Master-Replica Edition, Redis Standalone Edition, Redis 4.0 Cluster Edition, CKV Master-Replica Edition, and CKV Standalone Edition.
                      */
                     void SetTypeName(const std::string& _typeName);
 
@@ -120,13 +160,21 @@ namespace TencentCloud
 
                     /**
                      * 获取Whether a product is sold out
+- `true`: Sold out.
+- `false`: Not sold out.
                      * @return Saleout Whether a product is sold out
+- `true`: Sold out.
+- `false`: Not sold out.
                      */
                     bool GetSaleout() const;
 
                     /**
                      * 设置Whether a product is sold out
+- `true`: Sold out.
+- `false`: Not sold out.
                      * @param Saleout Whether a product is sold out
+- `true`: Sold out.
+- `false`: Not sold out.
                      */
                     void SetSaleout(const bool& _saleout);
 
@@ -137,14 +185,14 @@ namespace TencentCloud
                     bool SaleoutHasBeenSet() const;
 
                     /**
-                     * 获取Product engine: Tencent Cloud CKV or Redis community edition
-                     * @return Engine Product engine: Tencent Cloud CKV or Redis community edition
+                     * 获取Product engines, including Tencent Cloud CKV and Redis Community Edition.
+                     * @return Engine Product engines, including Tencent Cloud CKV and Redis Community Edition.
                      */
                     std::string GetEngine() const;
 
                     /**
-                     * 设置Product engine: Tencent Cloud CKV or Redis community edition
-                     * @param Engine Product engine: Tencent Cloud CKV or Redis community edition
+                     * 设置Product engines, including Tencent Cloud CKV and Redis Community Edition.
+                     * @param Engine Product engines, including Tencent Cloud CKV and Redis Community Edition.
                      */
                     void SetEngine(const std::string& _engine);
 
@@ -155,14 +203,14 @@ namespace TencentCloud
                     bool EngineHasBeenSet() const;
 
                     /**
-                     * 获取Compatible version: Redis 2.8, Redis 3.2, or Redis 4.0
-                     * @return Version Compatible version: Redis 2.8, Redis 3.2, or Redis 4.0
+                     * 获取Compatible versions, including Redis 2.8, 3.2, 4.0, 5.0, and 6.2.
+                     * @return Version Compatible versions, including Redis 2.8, 3.2, 4.0, 5.0, and 6.2.
                      */
                     std::string GetVersion() const;
 
                     /**
-                     * 设置Compatible version: Redis 2.8, Redis 3.2, or Redis 4.0
-                     * @param Version Compatible version: Redis 2.8, Redis 3.2, or Redis 4.0
+                     * 设置Compatible versions, including Redis 2.8, 3.2, 4.0, 5.0, and 6.2.
+                     * @param Version Compatible versions, including Redis 2.8, 3.2, 4.0, 5.0, and 6.2.
                      */
                     void SetVersion(const std::string& _version);
 
@@ -209,14 +257,14 @@ namespace TencentCloud
                     bool ShardSizeHasBeenSet() const;
 
                     /**
-                     * 获取Number of replicas
-                     * @return ReplicaNum Number of replicas
+                     * 获取Quantity of replicas
+                     * @return ReplicaNum Quantity of replicas
                      */
                     std::vector<std::string> GetReplicaNum() const;
 
                     /**
-                     * 设置Number of replicas
-                     * @param ReplicaNum Number of replicas
+                     * 设置Quantity of replicas
+                     * @param ReplicaNum Quantity of replicas
                      */
                     void SetReplicaNum(const std::vector<std::string>& _replicaNum);
 
@@ -227,14 +275,14 @@ namespace TencentCloud
                     bool ReplicaNumHasBeenSet() const;
 
                     /**
-                     * 获取Number of shards
-                     * @return ShardNum Number of shards
+                     * 获取Quantity of shards
+                     * @return ShardNum Quantity of shards
                      */
                     std::vector<std::string> GetShardNum() const;
 
                     /**
-                     * 设置Number of shards
-                     * @param ShardNum Number of shards
+                     * 设置Quantity of shards
+                     * @param ShardNum Quantity of shards
                      */
                     void SetShardNum(const std::vector<std::string>& _shardNum);
 
@@ -245,14 +293,22 @@ namespace TencentCloud
                     bool ShardNumHasBeenSet() const;
 
                     /**
-                     * 获取Supported billing method. 1: monthly subscription; 0: pay-as-you-go
-                     * @return PayMode Supported billing method. 1: monthly subscription; 0: pay-as-you-go
+                     * 获取Supported billing modes
+- `1`: Monthly subscription.
+- `0`: Pay-as-you-go.
+                     * @return PayMode Supported billing modes
+- `1`: Monthly subscription.
+- `0`: Pay-as-you-go.
                      */
                     std::string GetPayMode() const;
 
                     /**
-                     * 设置Supported billing method. 1: monthly subscription; 0: pay-as-you-go
-                     * @param PayMode Supported billing method. 1: monthly subscription; 0: pay-as-you-go
+                     * 设置Supported billing modes
+- `1`: Monthly subscription.
+- `0`: Pay-as-you-go.
+                     * @param PayMode Supported billing modes
+- `1`: Monthly subscription.
+- `0`: Pay-as-you-go.
                      */
                     void SetPayMode(const std::string& _payMode);
 
@@ -264,13 +320,21 @@ namespace TencentCloud
 
                     /**
                      * 获取Whether to support read-only replicas
+- `true`: Supported.
+-`false`: Not supported.
                      * @return EnableRepicaReadOnly Whether to support read-only replicas
+- `true`: Supported.
+-`false`: Not supported.
                      */
                     bool GetEnableRepicaReadOnly() const;
 
                     /**
                      * 设置Whether to support read-only replicas
+- `true`: Supported.
+-`false`: Not supported.
                      * @param EnableRepicaReadOnly Whether to support read-only replicas
+- `true`: Supported.
+-`false`: Not supported.
                      */
                     void SetEnableRepicaReadOnly(const bool& _enableRepicaReadOnly);
 
@@ -283,13 +347,23 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Product type. Valid values: `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture), `10` (Redis 4.0 Hybrid Storage Edition (Tendis)).
+                     * Product type
+- `2`: Redis 2.8 Memory Edition (Standard Architecture).
+- `3`: CKV 3.2 Memory Edition (Standard Architecture).
+- `4`: CKV 3.2 Memory Edition (Cluster Architecture).
+- `5`: Redis 2.8 Memory Edition (Standalone).
+- `6`: Redis 4.0 Memory Edition (Standard Architecture).
+- `7`: Redis 4.0 Memory Edition (Cluster Architecture).
+- `8`: Redis 5.0 Memory Edition (Standard Architecture).
+- `9`: Redis 5.0 Memory Edition (Cluster Architecture).
+- `15`: Redis 6.2 Memory Edition (Standard Architecture).
+- `16`: Redis 6.2 Memory Edition (Cluster Architecture).
                      */
                     int64_t m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Product name: Redis Master-Replica Edition, CKV Master-Replica Edition, CKV Cluster Edition, Redis Standalone Edition, Redis Cluster Edition, Tendis Hybrid Storage Edition
+                     * Product names, including Redis Master-Replica Edition, Redis Standalone Edition, Redis 4.0 Cluster Edition, CKV Master-Replica Edition, and CKV Standalone Edition.
                      */
                     std::string m_typeName;
                     bool m_typeNameHasBeenSet;
@@ -308,18 +382,20 @@ namespace TencentCloud
 
                     /**
                      * Whether a product is sold out
+- `true`: Sold out.
+- `false`: Not sold out.
                      */
                     bool m_saleout;
                     bool m_saleoutHasBeenSet;
 
                     /**
-                     * Product engine: Tencent Cloud CKV or Redis community edition
+                     * Product engines, including Tencent Cloud CKV and Redis Community Edition.
                      */
                     std::string m_engine;
                     bool m_engineHasBeenSet;
 
                     /**
-                     * Compatible version: Redis 2.8, Redis 3.2, or Redis 4.0
+                     * Compatible versions, including Redis 2.8, 3.2, 4.0, 5.0, and 6.2.
                      */
                     std::string m_version;
                     bool m_versionHasBeenSet;
@@ -337,25 +413,29 @@ namespace TencentCloud
                     bool m_shardSizeHasBeenSet;
 
                     /**
-                     * Number of replicas
+                     * Quantity of replicas
                      */
                     std::vector<std::string> m_replicaNum;
                     bool m_replicaNumHasBeenSet;
 
                     /**
-                     * Number of shards
+                     * Quantity of shards
                      */
                     std::vector<std::string> m_shardNum;
                     bool m_shardNumHasBeenSet;
 
                     /**
-                     * Supported billing method. 1: monthly subscription; 0: pay-as-you-go
+                     * Supported billing modes
+- `1`: Monthly subscription.
+- `0`: Pay-as-you-go.
                      */
                     std::string m_payMode;
                     bool m_payModeHasBeenSet;
 
                     /**
                      * Whether to support read-only replicas
+- `true`: Supported.
+-`false`: Not supported.
                      */
                     bool m_enableRepicaReadOnly;
                     bool m_enableRepicaReadOnlyHasBeenSet;

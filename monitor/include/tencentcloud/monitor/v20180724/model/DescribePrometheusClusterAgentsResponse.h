@@ -68,6 +68,18 @@ namespace TencentCloud
                      */
                     bool TotalHasBeenSet() const;
 
+                    /**
+                     * 获取Whether the TMP instance is associated with the cluster for the first time. If so, you need to configure recording rules for it. This also applies if it has no default recording rule.
+                     * @return IsFirstBind Whether the TMP instance is associated with the cluster for the first time. If so, you need to configure recording rules for it. This also applies if it has no default recording rule.
+                     */
+                    bool GetIsFirstBind() const;
+
+                    /**
+                     * 判断参数 IsFirstBind 是否已赋值
+                     * @return IsFirstBind 是否已赋值
+                     */
+                    bool IsFirstBindHasBeenSet() const;
+
                 private:
 
                     /**
@@ -81,6 +93,12 @@ namespace TencentCloud
                      */
                     uint64_t m_total;
                     bool m_totalHasBeenSet;
+
+                    /**
+                     * Whether the TMP instance is associated with the cluster for the first time. If so, you need to configure recording rules for it. This also applies if it has no default recording rule.
+                     */
+                    bool m_isFirstBind;
+                    bool m_isFirstBindHasBeenSet;
 
                 };
             }

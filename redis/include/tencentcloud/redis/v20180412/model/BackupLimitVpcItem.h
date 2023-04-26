@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * VPC information of the custom backup file download address.
+                * The VPC that corresponds to the configured download address of the backup file
                 */
                 class BackupLimitVpcItem : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Region of the VPC of the custom backup file download address.
-                     * @return Region Region of the VPC of the custom backup file download address.
+                     * 获取The region of the VPC that corresponds to the download address of the backup file
+                     * @return Region The region of the VPC that corresponds to the download address of the backup file
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Region of the VPC of the custom backup file download address.
-                     * @param Region Region of the VPC of the custom backup file download address.
+                     * 设置The region of the VPC that corresponds to the download address of the backup file
+                     * @param Region The region of the VPC that corresponds to the download address of the backup file
                      */
                     void SetRegion(const std::string& _region);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取VPC list of the custom backup file download address.
-                     * @return VpcList VPC list of the custom backup file download address.
+                     * 获取The list of VPCs that correspond to the download addresses of the backup files
+                     * @return VpcList The list of VPCs that correspond to the download addresses of the backup files
                      */
                     std::vector<std::string> GetVpcList() const;
 
                     /**
-                     * 设置VPC list of the custom backup file download address.
-                     * @param VpcList VPC list of the custom backup file download address.
+                     * 设置The list of VPCs that correspond to the download addresses of the backup files
+                     * @param VpcList The list of VPCs that correspond to the download addresses of the backup files
                      */
                     void SetVpcList(const std::vector<std::string>& _vpcList);
 
@@ -85,13 +85,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Region of the VPC of the custom backup file download address.
+                     * The region of the VPC that corresponds to the download address of the backup file
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * VPC list of the custom backup file download address.
+                     * The list of VPCs that correspond to the download addresses of the backup files
                      */
                     std::vector<std::string> m_vpcList;
                     bool m_vpcListHasBeenSet;

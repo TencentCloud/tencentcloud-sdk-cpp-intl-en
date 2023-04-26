@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Shard node name
-                     * @return ShardName Shard node name
+                     * 获取The name of a shard node
+                     * @return ShardName The name of a shard node
                      */
                     std::string GetShardName() const;
 
                     /**
-                     * 设置Shard node name
-                     * @param ShardName Shard node name
+                     * 设置The name of a shard node
+                     * @param ShardName The name of a shard node
                      */
                     void SetShardName(const std::string& _shardName);
 
@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool ShardNameHasBeenSet() const;
 
                     /**
-                     * 获取Shard node ID
-                     * @return ShardId Shard node ID
+                     * 获取The serial number of a shard node
+                     * @return ShardId The serial number of a shard node
                      */
                     std::string GetShardId() const;
 
                     /**
-                     * 设置Shard node ID
-                     * @param ShardId Shard node ID
+                     * 设置The serial number of a shard node
+                     * @param ShardId The serial number of a shard node
                      */
                     void SetShardId(const std::string& _shardId);
 
@@ -83,14 +83,22 @@ namespace TencentCloud
                     bool ShardIdHasBeenSet() const;
 
                     /**
-                     * 获取Role
-                     * @return Role Role
+                     * 获取The role of a shard node
+- `0`: Master node.
+- `1`: Replica node.
+                     * @return Role The role of a shard node
+- `0`: Master node.
+- `1`: Replica node.
                      */
                     int64_t GetRole() const;
 
                     /**
-                     * 设置Role
-                     * @param Role Role
+                     * 设置The role of a shard node
+- `0`: Master node.
+- `1`: Replica node.
+                     * @param Role The role of a shard node
+- `0`: Master node.
+- `1`: Replica node.
                      */
                     void SetRole(const int64_t& _role);
 
@@ -137,14 +145,14 @@ namespace TencentCloud
                     bool SlotsHasBeenSet() const;
 
                     /**
-                     * 获取Storage capacity
-                     * @return Storage Storage capacity
+                     * 获取Used Capacity
+                     * @return Storage Used Capacity
                      */
                     int64_t GetStorage() const;
 
                     /**
-                     * 设置Storage capacity
-                     * @param Storage Storage capacity
+                     * 设置Used Capacity
+                     * @param Storage Used Capacity
                      */
                     void SetStorage(const int64_t& _storage);
 
@@ -173,14 +181,14 @@ namespace TencentCloud
                     bool StorageSlopeHasBeenSet() const;
 
                     /**
-                     * 获取ID of the runtime node of the instance
-                     * @return Runid ID of the runtime node of the instance
+                     * 获取Instance runtime node ID
+                     * @return Runid Instance runtime node ID
                      */
                     std::string GetRunid() const;
 
                     /**
-                     * 设置ID of the runtime node of the instance
-                     * @param Runid ID of the runtime node of the instance
+                     * 设置Instance runtime node ID
+                     * @param Runid Instance runtime node ID
                      */
                     void SetRunid(const std::string& _runid);
 
@@ -191,14 +199,22 @@ namespace TencentCloud
                     bool RunidHasBeenSet() const;
 
                     /**
-                     * 获取Service status. 0: down; 1: on
-                     * @return Connected Service status. 0: down; 1: on
+                     * 获取Service status
+- `0`: Down.
+- `1`: On.
+                     * @return Connected Service status
+- `0`: Down.
+- `1`: On.
                      */
                     int64_t GetConnected() const;
 
                     /**
-                     * 设置Service status. 0: down; 1: on
-                     * @param Connected Service status. 0: down; 1: on
+                     * 设置Service status
+- `0`: Down.
+- `1`: On.
+                     * @param Connected Service status
+- `0`: Down.
+- `1`: On.
                      */
                     void SetConnected(const int64_t& _connected);
 
@@ -211,19 +227,21 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Shard node name
+                     * The name of a shard node
                      */
                     std::string m_shardName;
                     bool m_shardNameHasBeenSet;
 
                     /**
-                     * Shard node ID
+                     * The serial number of a shard node
                      */
                     std::string m_shardId;
                     bool m_shardIdHasBeenSet;
 
                     /**
-                     * Role
+                     * The role of a shard node
+- `0`: Master node.
+- `1`: Replica node.
                      */
                     int64_t m_role;
                     bool m_roleHasBeenSet;
@@ -241,7 +259,7 @@ namespace TencentCloud
                     bool m_slotsHasBeenSet;
 
                     /**
-                     * Storage capacity
+                     * Used Capacity
                      */
                     int64_t m_storage;
                     bool m_storageHasBeenSet;
@@ -253,13 +271,15 @@ namespace TencentCloud
                     bool m_storageSlopeHasBeenSet;
 
                     /**
-                     * ID of the runtime node of the instance
+                     * Instance runtime node ID
                      */
                     std::string m_runid;
                     bool m_runidHasBeenSet;
 
                     /**
-                     * Service status. 0: down; 1: on
+                     * Service status
+- `0`: Down.
+- `1`: On.
                      */
                     int64_t m_connected;
                     bool m_connectedHasBeenSet;

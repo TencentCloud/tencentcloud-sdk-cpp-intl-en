@@ -100,6 +100,42 @@ namespace TencentCloud
                      */
                     bool ValueHasBeenSet() const;
 
+                    /**
+                     * 获取Filter name
+                     * @return Name Filter name
+                     */
+                    std::string GetName() const;
+
+                    /**
+                     * 设置Filter name
+                     * @param Name Filter name
+                     */
+                    void SetName(const std::string& _name);
+
+                    /**
+                     * 判断参数 Name 是否已赋值
+                     * @return Name 是否已赋值
+                     */
+                    bool NameHasBeenSet() const;
+
+                    /**
+                     * 获取Filter value range
+                     * @return Values Filter value range
+                     */
+                    std::vector<std::string> GetValues() const;
+
+                    /**
+                     * 设置Filter value range
+                     * @param Values Filter value range
+                     */
+                    void SetValues(const std::vector<std::string>& _values);
+
+                    /**
+                     * 判断参数 Values 是否已赋值
+                     * @return Values 是否已赋值
+                     */
+                    bool ValuesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -119,6 +155,18 @@ namespace TencentCloud
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;
+
+                    /**
+                     * Filter name
+                     */
+                    std::string m_name;
+                    bool m_nameHasBeenSet;
+
+                    /**
+                     * Filter value range
+                     */
+                    std::vector<std::string> m_values;
+                    bool m_valuesHasBeenSet;
 
                 };
             }

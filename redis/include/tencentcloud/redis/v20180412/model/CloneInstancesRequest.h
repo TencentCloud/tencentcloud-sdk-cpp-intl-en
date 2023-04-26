@@ -45,14 +45,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of the current instance
-                     * @return InstanceId ID of the current instance
+                     * 获取The ID of the source instance to be cloned, such as "crs-xjhsdj****". Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+                     * @return InstanceId The ID of the source instance to be cloned, such as "crs-xjhsdj****". Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置ID of the current instance
-                     * @param InstanceId ID of the current instance
+                     * 设置The ID of the source instance to be cloned, such as "crs-xjhsdj****". Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
+                     * @param InstanceId The ID of the source instance to be cloned, such as "crs-xjhsdj****". Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
                      */
                     void SetInstanceId(const std::string& _instanceId);
 
@@ -63,14 +63,22 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Number of instance to be cloned each time. You can purchase up to 100 monthly subscribed instances or up to 30 pay-as-you-go instances at a time. You can purchase up to 100 instances in each region.
-                     * @return GoodsNum Number of instance to be cloned each time. You can purchase up to 100 monthly subscribed instances or up to 30 pay-as-you-go instances at a time. You can purchase up to 100 instances in each region.
+                     * 获取The number of clone instances at a time
+- The maximum number of monthly subscribed instances is 100 for each purchase.
+- The maximum number of pay-as-you-go instances is 30 for each purchase.
+                     * @return GoodsNum The number of clone instances at a time
+- The maximum number of monthly subscribed instances is 100 for each purchase.
+- The maximum number of pay-as-you-go instances is 30 for each purchase.
                      */
                     uint64_t GetGoodsNum() const;
 
                     /**
-                     * 设置Number of instance to be cloned each time. You can purchase up to 100 monthly subscribed instances or up to 30 pay-as-you-go instances at a time. You can purchase up to 100 instances in each region.
-                     * @param GoodsNum Number of instance to be cloned each time. You can purchase up to 100 monthly subscribed instances or up to 30 pay-as-you-go instances at a time. You can purchase up to 100 instances in each region.
+                     * 设置The number of clone instances at a time
+- The maximum number of monthly subscribed instances is 100 for each purchase.
+- The maximum number of pay-as-you-go instances is 30 for each purchase.
+                     * @param GoodsNum The number of clone instances at a time
+- The maximum number of monthly subscribed instances is 100 for each purchase.
+- The maximum number of pay-as-you-go instances is 30 for each purchase.
                      */
                     void SetGoodsNum(const uint64_t& _goodsNum);
 
@@ -189,14 +197,14 @@ namespace TencentCloud
                     bool NoAuthHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID. If this parameter is not passed in, the classic network will be selected by default.
-                     * @return VpcId VPC ID. If this parameter is not passed in, the classic network will be selected by default.
+                     * 获取The VPC ID of the clone instance. If this parameter is not passed in, the classic network will be selected by default.
+                     * @return VpcId The VPC ID of the clone instance. If this parameter is not passed in, the classic network will be selected by default.
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置VPC ID. If this parameter is not passed in, the classic network will be selected by default.
-                     * @param VpcId VPC ID. If this parameter is not passed in, the classic network will be selected by default.
+                     * 设置The VPC ID of the clone instance. If this parameter is not passed in, the classic network will be selected by default.
+                     * @param VpcId The VPC ID of the clone instance. If this parameter is not passed in, the classic network will be selected by default.
                      */
                     void SetVpcId(const std::string& _vpcId);
 
@@ -207,14 +215,14 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取VPC subnet ID, which is not required for the classic network.
-                     * @return SubnetId VPC subnet ID, which is not required for the classic network.
+                     * 获取The VPC subnet ID to which the clone instance belongs, which is not required for the classic network.
+                     * @return SubnetId The VPC subnet ID to which the clone instance belongs, which is not required for the classic network.
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置VPC subnet ID, which is not required for the classic network.
-                     * @param SubnetId VPC subnet ID, which is not required for the classic network.
+                     * 设置The VPC subnet ID to which the clone instance belongs, which is not required for the classic network.
+                     * @param SubnetId The VPC subnet ID to which the clone instance belongs, which is not required for the classic network.
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
@@ -261,14 +269,14 @@ namespace TencentCloud
                     bool PasswordHasBeenSet() const;
 
                     /**
-                     * 获取The auto-renewal flag. Valid values <ul><li>`0`: Manual renewal (default) </li><li>`1`: Auto-renewal. </li><li>`2`: Not auto-renewal (set by user)</ul>
-                     * @return AutoRenew The auto-renewal flag. Valid values <ul><li>`0`: Manual renewal (default) </li><li>`1`: Auto-renewal. </li><li>`2`: Not auto-renewal (set by user)</ul>
+                     * 获取The auto-renewal flag. Valid values <ul><li>`0`: Manual renewal (default). </li><li>`1`: Auto-renewal. </li><li>`2`: Not auto-renewal (set by user).</ul>
+                     * @return AutoRenew The auto-renewal flag. Valid values <ul><li>`0`: Manual renewal (default). </li><li>`1`: Auto-renewal. </li><li>`2`: Not auto-renewal (set by user).</ul>
                      */
                     uint64_t GetAutoRenew() const;
 
                     /**
-                     * 设置The auto-renewal flag. Valid values <ul><li>`0`: Manual renewal (default) </li><li>`1`: Auto-renewal. </li><li>`2`: Not auto-renewal (set by user)</ul>
-                     * @param AutoRenew The auto-renewal flag. Valid values <ul><li>`0`: Manual renewal (default) </li><li>`1`: Auto-renewal. </li><li>`2`: Not auto-renewal (set by user)</ul>
+                     * 设置The auto-renewal flag. Valid values <ul><li>`0`: Manual renewal (default). </li><li>`1`: Auto-renewal. </li><li>`2`: Not auto-renewal (set by user).</ul>
+                     * @param AutoRenew The auto-renewal flag. Valid values <ul><li>`0`: Manual renewal (default). </li><li>`1`: Auto-renewal. </li><li>`2`: Not auto-renewal (set by user).</ul>
                      */
                     void SetAutoRenew(const uint64_t& _autoRenew);
 
@@ -315,14 +323,14 @@ namespace TencentCloud
                     bool NodeSetHasBeenSet() const;
 
                     /**
-                     * 获取Project ID, which can be obtained in <b>Account Center</b> > <b>Project Management</b> in the upper-right corner in the console.
-                     * @return ProjectId Project ID, which can be obtained in <b>Account Center</b> > <b>Project Management</b> in the upper-right corner in the console.
+                     * 获取Project ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and find the project ID in <b>Account Center</b> > <b>Project Management</b> in the top-right corner.
+                     * @return ProjectId Project ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and find the project ID in <b>Account Center</b> > <b>Project Management</b> in the top-right corner.
                      */
                     int64_t GetProjectId() const;
 
                     /**
-                     * 设置Project ID, which can be obtained in <b>Account Center</b> > <b>Project Management</b> in the upper-right corner in the console.
-                     * @param ProjectId Project ID, which can be obtained in <b>Account Center</b> > <b>Project Management</b> in the upper-right corner in the console.
+                     * 设置Project ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and find the project ID in <b>Account Center</b> > <b>Project Management</b> in the top-right corner.
+                     * @param ProjectId Project ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and find the project ID in <b>Account Center</b> > <b>Project Management</b> in the top-right corner.
                      */
                     void SetProjectId(const int64_t& _projectId);
 
@@ -351,14 +359,22 @@ namespace TencentCloud
                     bool ResourceTagsHasBeenSet() const;
 
                     /**
-                     * 获取The ID of a parameter template to be applied to the clone instance, which can be obtained on <b>Parameter Template</b> page in the console. If this parameter is not configured, the default parameter template will be applied.
-                     * @return TemplateId The ID of a parameter template to be applied to the clone instance, which can be obtained on <b>Parameter Template</b> page in the console. If this parameter is not configured, the default parameter template will be applied.
+                     * 获取The parameter template ID associated with the clone instance
+- If this parameter is not configured, the system will automatically adapt the corresponding default template based on the selected compatible version and architecture.
+- You can query the parameter template list of the instance to get the template ID through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
+                     * @return TemplateId The parameter template ID associated with the clone instance
+- If this parameter is not configured, the system will automatically adapt the corresponding default template based on the selected compatible version and architecture.
+- You can query the parameter template list of the instance to get the template ID through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
                      */
                     std::string GetTemplateId() const;
 
                     /**
-                     * 设置The ID of a parameter template to be applied to the clone instance, which can be obtained on <b>Parameter Template</b> page in the console. If this parameter is not configured, the default parameter template will be applied.
-                     * @param TemplateId The ID of a parameter template to be applied to the clone instance, which can be obtained on <b>Parameter Template</b> page in the console. If this parameter is not configured, the default parameter template will be applied.
+                     * 设置The parameter template ID associated with the clone instance
+- If this parameter is not configured, the system will automatically adapt the corresponding default template based on the selected compatible version and architecture.
+- You can query the parameter template list of the instance to get the template ID through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
+                     * @param TemplateId The parameter template ID associated with the clone instance
+- If this parameter is not configured, the system will automatically adapt the corresponding default template based on the selected compatible version and architecture.
+- You can query the parameter template list of the instance to get the template ID through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
                      */
                     void SetTemplateId(const std::string& _templateId);
 
@@ -369,14 +385,14 @@ namespace TencentCloud
                     bool TemplateIdHasBeenSet() const;
 
                     /**
-                     * 获取Alarm policy ID of the specified clone instance, which can be obtained on <b>Cloud Monitor</b> > <b>Alarm Configuration</b> > <b>Alarm Policy</b> in the console.
-                     * @return AlarmPolicyList Alarm policy ID of the specified clone instance, which can be obtained on <b>Cloud Monitor</b> > <b>Alarm Configuration</b> > <b>Alarm Policy</b> in the console.
+                     * 获取The alarm policy ID of the instance to be cloned. Log in to the [Tencent Cloud Observable Platform console](https://console.cloud.tencent.com/monitor/alarm2/policy), and get the policy ID in <b>Alarm Management</b> > <b>Policy Management</b>.
+                     * @return AlarmPolicyList The alarm policy ID of the instance to be cloned. Log in to the [Tencent Cloud Observable Platform console](https://console.cloud.tencent.com/monitor/alarm2/policy), and get the policy ID in <b>Alarm Management</b> > <b>Policy Management</b>.
                      */
                     std::vector<std::string> GetAlarmPolicyList() const;
 
                     /**
-                     * 设置Alarm policy ID of the specified clone instance, which can be obtained on <b>Cloud Monitor</b> > <b>Alarm Configuration</b> > <b>Alarm Policy</b> in the console.
-                     * @param AlarmPolicyList Alarm policy ID of the specified clone instance, which can be obtained on <b>Cloud Monitor</b> > <b>Alarm Configuration</b> > <b>Alarm Policy</b> in the console.
+                     * 设置The alarm policy ID of the instance to be cloned. Log in to the [Tencent Cloud Observable Platform console](https://console.cloud.tencent.com/monitor/alarm2/policy), and get the policy ID in <b>Alarm Management</b> > <b>Policy Management</b>.
+                     * @param AlarmPolicyList The alarm policy ID of the instance to be cloned. Log in to the [Tencent Cloud Observable Platform console](https://console.cloud.tencent.com/monitor/alarm2/policy), and get the policy ID in <b>Alarm Management</b> > <b>Policy Management</b>.
                      */
                     void SetAlarmPolicyList(const std::vector<std::string>& _alarmPolicyList);
 
@@ -389,13 +405,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of the current instance
+                     * The ID of the source instance to be cloned, such as "crs-xjhsdj****". Log in to the [Redis console](https://console.cloud.tencent.com/redis) and copy the instance ID in the instance list.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Number of instance to be cloned each time. You can purchase up to 100 monthly subscribed instances or up to 30 pay-as-you-go instances at a time. You can purchase up to 100 instances in each region.
+                     * The number of clone instances at a time
+- The maximum number of monthly subscribed instances is 100 for each purchase.
+- The maximum number of pay-as-you-go instances is 30 for each purchase.
                      */
                     uint64_t m_goodsNum;
                     bool m_goodsNumHasBeenSet;
@@ -437,13 +455,13 @@ namespace TencentCloud
                     bool m_noAuthHasBeenSet;
 
                     /**
-                     * VPC ID. If this parameter is not passed in, the classic network will be selected by default.
+                     * The VPC ID of the clone instance. If this parameter is not passed in, the classic network will be selected by default.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * VPC subnet ID, which is not required for the classic network.
+                     * The VPC subnet ID to which the clone instance belongs, which is not required for the classic network.
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
@@ -461,7 +479,7 @@ namespace TencentCloud
                     bool m_passwordHasBeenSet;
 
                     /**
-                     * The auto-renewal flag. Valid values <ul><li>`0`: Manual renewal (default) </li><li>`1`: Auto-renewal. </li><li>`2`: Not auto-renewal (set by user)</ul>
+                     * The auto-renewal flag. Valid values <ul><li>`0`: Manual renewal (default). </li><li>`1`: Auto-renewal. </li><li>`2`: Not auto-renewal (set by user).</ul>
                      */
                     uint64_t m_autoRenew;
                     bool m_autoRenewHasBeenSet;
@@ -479,7 +497,7 @@ namespace TencentCloud
                     bool m_nodeSetHasBeenSet;
 
                     /**
-                     * Project ID, which can be obtained in <b>Account Center</b> > <b>Project Management</b> in the upper-right corner in the console.
+                     * Project ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis#/), and find the project ID in <b>Account Center</b> > <b>Project Management</b> in the top-right corner.
                      */
                     int64_t m_projectId;
                     bool m_projectIdHasBeenSet;
@@ -491,13 +509,15 @@ namespace TencentCloud
                     bool m_resourceTagsHasBeenSet;
 
                     /**
-                     * The ID of a parameter template to be applied to the clone instance, which can be obtained on <b>Parameter Template</b> page in the console. If this parameter is not configured, the default parameter template will be applied.
+                     * The parameter template ID associated with the clone instance
+- If this parameter is not configured, the system will automatically adapt the corresponding default template based on the selected compatible version and architecture.
+- You can query the parameter template list of the instance to get the template ID through the [DescribeParamTemplates](https://intl.cloud.tencent.com/document/product/239/58750?from_cn_redirect=1) API.
                      */
                     std::string m_templateId;
                     bool m_templateIdHasBeenSet;
 
                     /**
-                     * Alarm policy ID of the specified clone instance, which can be obtained on <b>Cloud Monitor</b> > <b>Alarm Configuration</b> > <b>Alarm Policy</b> in the console.
+                     * The alarm policy ID of the instance to be cloned. Log in to the [Tencent Cloud Observable Platform console](https://console.cloud.tencent.com/monitor/alarm2/policy), and get the policy ID in <b>Alarm Management</b> > <b>Policy Management</b>.
                      */
                     std::vector<std::string> m_alarmPolicyList;
                     bool m_alarmPolicyListHasBeenSet;

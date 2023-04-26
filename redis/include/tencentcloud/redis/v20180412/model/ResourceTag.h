@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool TagKeyHasBeenSet() const;
 
                     /**
-                     * 获取Tag value
-                     * @return TagValue Tag value
+                     * 获取The value corresponding to the tag key
+                     * @return TagValue The value corresponding to the tag key
                      */
                     std::string GetTagValue() const;
 
                     /**
-                     * 设置Tag value
-                     * @param TagValue Tag value
+                     * 设置The value corresponding to the tag key
+                     * @param TagValue The value corresponding to the tag key
                      */
                     void SetTagValue(const std::string& _tagValue);
 
@@ -91,7 +91,7 @@ namespace TencentCloud
                     bool m_tagKeyHasBeenSet;
 
                     /**
-                     * Tag value
+                     * The value corresponding to the tag key
                      */
                     std::string m_tagValue;
                     bool m_tagValueHasBeenSet;

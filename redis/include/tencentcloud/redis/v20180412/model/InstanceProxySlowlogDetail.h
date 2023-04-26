@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Duration of the slow query in ms.
-                     * @return Duration Duration of the slow query in ms.
+                     * 获取Slow query duration in milliseconds
+                     * @return Duration Slow query duration in milliseconds
                      */
                     int64_t GetDuration() const;
 
                     /**
-                     * 设置Duration of the slow query in ms.
-                     * @param Duration Duration of the slow query in ms.
+                     * 设置Slow query duration in milliseconds
+                     * @param Duration Slow query duration in milliseconds
                      */
                     void SetDuration(const int64_t& _duration);
 
@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool ClientHasBeenSet() const;
 
                     /**
-                     * 获取Command
-                     * @return Command Command
+                     * 获取Slow query command
+                     * @return Command Slow query command
                      */
                     std::string GetCommand() const;
 
                     /**
-                     * 设置Command
-                     * @param Command Command
+                     * 设置Slow query command
+                     * @param Command Slow query command
                      */
                     void SetCommand(const std::string& _command);
 
@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool CommandHasBeenSet() const;
 
                     /**
-                     * 获取Command line details
-                     * @return CommandLine Command line details
+                     * 获取Detailed command line information of slow query
+                     * @return CommandLine Detailed command line information of slow query
                      */
                     std::string GetCommandLine() const;
 
                     /**
-                     * 设置Command line details
-                     * @param CommandLine Command line details
+                     * 设置Detailed command line information of slow query
+                     * @param CommandLine Detailed command line information of slow query
                      */
                     void SetCommandLine(const std::string& _commandLine);
 
@@ -139,7 +139,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Duration of the slow query in ms.
+                     * Slow query duration in milliseconds
                      */
                     int64_t m_duration;
                     bool m_durationHasBeenSet;
@@ -151,13 +151,13 @@ namespace TencentCloud
                     bool m_clientHasBeenSet;
 
                     /**
-                     * Command
+                     * Slow query command
                      */
                     std::string m_command;
                     bool m_commandHasBeenSet;
 
                     /**
-                     * Command line details
+                     * Detailed command line information of slow query
                      */
                     std::string m_commandLine;
                     bool m_commandLineHasBeenSet;

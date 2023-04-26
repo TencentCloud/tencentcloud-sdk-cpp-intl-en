@@ -86,14 +86,18 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取User AppID
-                     * @return Appid User AppID
+                     * 获取User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
+
+                     * @return Appid User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
+
                      */
                     int64_t GetAppid() const;
 
                     /**
-                     * 设置User AppID
-                     * @param Appid User AppID
+                     * 设置User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
+
+                     * @param Appid User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
+
                      */
                     void SetAppid(const int64_t& _appid);
 
@@ -248,14 +252,14 @@ namespace TencentCloud
                     bool PortHasBeenSet() const;
 
                     /**
-                     * 获取Instance creation time
-                     * @return Createtime Instance creation time
+                     * 获取Instance creation time in the format of "2020-01-15 10:20:00"
+                     * @return Createtime Instance creation time in the format of "2020-01-15 10:20:00"
                      */
                     std::string GetCreatetime() const;
 
                     /**
-                     * 设置Instance creation time
-                     * @param Createtime Instance creation time
+                     * 设置Instance creation time in the format of "2020-01-15 10:20:00"
+                     * @param Createtime Instance creation time in the format of "2020-01-15 10:20:00"
                      */
                     void SetCreatetime(const std::string& _createtime);
 
@@ -266,14 +270,14 @@ namespace TencentCloud
                     bool CreatetimeHasBeenSet() const;
 
                     /**
-                     * 获取Instance capacity in MB
-                     * @return Size Instance capacity in MB
+                     * 获取Instance memory capacity in MB (1 MB = 1024 KB)
+                     * @return Size Instance memory capacity in MB (1 MB = 1024 KB)
                      */
                     double GetSize() const;
 
                     /**
-                     * 设置Instance capacity in MB
-                     * @param Size Instance capacity in MB
+                     * 设置Instance memory capacity in MB (1 MB = 1024 KB)
+                     * @param Size Instance memory capacity in MB (1 MB = 1024 KB)
                      */
                     void SetSize(const double& _size);
 
@@ -284,14 +288,14 @@ namespace TencentCloud
                     bool SizeHasBeenSet() const;
 
                     /**
-                     * 获取This field has been disused. You can use the [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
-                     * @return SizeUsed This field has been disused. You can use the [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
+                     * 获取This field has been disused. You can use the TCOP’s [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
+                     * @return SizeUsed This field has been disused. You can use the TCOP’s [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
                      */
                     double GetSizeUsed() const;
 
                     /**
-                     * 设置This field has been disused. You can use the [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
-                     * @param SizeUsed This field has been disused. You can use the [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
+                     * 设置This field has been disused. You can use the TCOP’s [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
+                     * @param SizeUsed This field has been disused. You can use the TCOP’s [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
                      */
                     void SetSizeUsed(const double& _sizeUsed);
 
@@ -302,14 +306,54 @@ namespace TencentCloud
                     bool SizeUsedHasBeenSet() const;
 
                     /**
-                     * 获取Instance type. <ul><li>`1`: Redis 2.8 memory edition in cluster architecture. </li><li>`2`: Redis 2.8 memory edition in standard architecture. </li><li>`3`: CKV 3.2 memory edition in standard architecture. </li><li>`4`: CKV 3.2 memory edition in cluster architecture. </li><li>`5`: Redis 2.8 memory edition in standalone architecture. </li></li><li>`6`: Redis 4.0 memory edition in standard architecture. </li></li><li>`7`: Redis 4.0 memory edition in cluster architecture. </li></li><li>`8`: Redis 5.0 memory edition in standard architecture. </li></li><li>`9`: Redis 5.0 memory edition in cluster architecture. </li></ul>
-                     * @return Type Instance type. <ul><li>`1`: Redis 2.8 memory edition in cluster architecture. </li><li>`2`: Redis 2.8 memory edition in standard architecture. </li><li>`3`: CKV 3.2 memory edition in standard architecture. </li><li>`4`: CKV 3.2 memory edition in cluster architecture. </li><li>`5`: Redis 2.8 memory edition in standalone architecture. </li></li><li>`6`: Redis 4.0 memory edition in standard architecture. </li></li><li>`7`: Redis 4.0 memory edition in cluster architecture. </li></li><li>`8`: Redis 5.0 memory edition in standard architecture. </li></li><li>`9`: Redis 5.0 memory edition in cluster architecture. </li></ul>
+                     * 获取Instance type
+- `2`: Redis 2.8 Memory Edition (Standard Architecture).
+- `3`: CKV 3.2 Memory Edition (Standard Architecture).
+- `4`: CKV 3.2 Memory Edition (Cluster Architecture).
+- `5`: Redis 2.8 Memory Edition (Standalone).
+- `6`: Redis 4.0 Memory Edition (Standard Architecture).
+- `7`: Redis 4.0 Memory Edition (Cluster Architecture).
+- `8`: Redis 5.0 Memory Edition (Standard Architecture).
+- `9`: Redis 5.0 Memory Edition (Cluster Architecture).
+- `15`: Redis 6.2 Memory Edition (Standard Architecture).
+- `16`: Redis 6.2 Memory Edition (Cluster Architecture).
+                     * @return Type Instance type
+- `2`: Redis 2.8 Memory Edition (Standard Architecture).
+- `3`: CKV 3.2 Memory Edition (Standard Architecture).
+- `4`: CKV 3.2 Memory Edition (Cluster Architecture).
+- `5`: Redis 2.8 Memory Edition (Standalone).
+- `6`: Redis 4.0 Memory Edition (Standard Architecture).
+- `7`: Redis 4.0 Memory Edition (Cluster Architecture).
+- `8`: Redis 5.0 Memory Edition (Standard Architecture).
+- `9`: Redis 5.0 Memory Edition (Cluster Architecture).
+- `15`: Redis 6.2 Memory Edition (Standard Architecture).
+- `16`: Redis 6.2 Memory Edition (Cluster Architecture).
                      */
                     int64_t GetType() const;
 
                     /**
-                     * 设置Instance type. <ul><li>`1`: Redis 2.8 memory edition in cluster architecture. </li><li>`2`: Redis 2.8 memory edition in standard architecture. </li><li>`3`: CKV 3.2 memory edition in standard architecture. </li><li>`4`: CKV 3.2 memory edition in cluster architecture. </li><li>`5`: Redis 2.8 memory edition in standalone architecture. </li></li><li>`6`: Redis 4.0 memory edition in standard architecture. </li></li><li>`7`: Redis 4.0 memory edition in cluster architecture. </li></li><li>`8`: Redis 5.0 memory edition in standard architecture. </li></li><li>`9`: Redis 5.0 memory edition in cluster architecture. </li></ul>
-                     * @param Type Instance type. <ul><li>`1`: Redis 2.8 memory edition in cluster architecture. </li><li>`2`: Redis 2.8 memory edition in standard architecture. </li><li>`3`: CKV 3.2 memory edition in standard architecture. </li><li>`4`: CKV 3.2 memory edition in cluster architecture. </li><li>`5`: Redis 2.8 memory edition in standalone architecture. </li></li><li>`6`: Redis 4.0 memory edition in standard architecture. </li></li><li>`7`: Redis 4.0 memory edition in cluster architecture. </li></li><li>`8`: Redis 5.0 memory edition in standard architecture. </li></li><li>`9`: Redis 5.0 memory edition in cluster architecture. </li></ul>
+                     * 设置Instance type
+- `2`: Redis 2.8 Memory Edition (Standard Architecture).
+- `3`: CKV 3.2 Memory Edition (Standard Architecture).
+- `4`: CKV 3.2 Memory Edition (Cluster Architecture).
+- `5`: Redis 2.8 Memory Edition (Standalone).
+- `6`: Redis 4.0 Memory Edition (Standard Architecture).
+- `7`: Redis 4.0 Memory Edition (Cluster Architecture).
+- `8`: Redis 5.0 Memory Edition (Standard Architecture).
+- `9`: Redis 5.0 Memory Edition (Cluster Architecture).
+- `15`: Redis 6.2 Memory Edition (Standard Architecture).
+- `16`: Redis 6.2 Memory Edition (Cluster Architecture).
+                     * @param Type Instance type
+- `2`: Redis 2.8 Memory Edition (Standard Architecture).
+- `3`: CKV 3.2 Memory Edition (Standard Architecture).
+- `4`: CKV 3.2 Memory Edition (Cluster Architecture).
+- `5`: Redis 2.8 Memory Edition (Standalone).
+- `6`: Redis 4.0 Memory Edition (Standard Architecture).
+- `7`: Redis 4.0 Memory Edition (Cluster Architecture).
+- `8`: Redis 5.0 Memory Edition (Standard Architecture).
+- `9`: Redis 5.0 Memory Edition (Cluster Architecture).
+- `15`: Redis 6.2 Memory Edition (Standard Architecture).
+- `16`: Redis 6.2 Memory Edition (Cluster Architecture).
                      */
                     void SetType(const int64_t& _type);
 
@@ -338,14 +382,14 @@ namespace TencentCloud
                     bool AutoRenewFlagHasBeenSet() const;
 
                     /**
-                     * 获取Instance expiration time
-                     * @return DeadlineTime Instance expiration time
+                     * 获取The time when a monthly subscribed instance expires
+                     * @return DeadlineTime The time when a monthly subscribed instance expires
                      */
                     std::string GetDeadlineTime() const;
 
                     /**
-                     * 设置Instance expiration time
-                     * @param DeadlineTime Instance expiration time
+                     * 设置The time when a monthly subscribed instance expires
+                     * @param DeadlineTime The time when a monthly subscribed instance expires
                      */
                     void SetDeadlineTime(const std::string& _deadlineTime);
 
@@ -464,14 +508,14 @@ namespace TencentCloud
                     bool InstanceTitleHasBeenSet() const;
 
                     /**
-                     * 获取Scheduled deactivation time
-                     * @return OfflineTime Scheduled deactivation time
+                     * 获取The default termination time for isolated instances in the format of "2020-02-15 10:20:00". By default, a pay-as-you-go instance will be terminated after two hours of isolation, and a monthly subscribed instance will be terminated after seven days by default.
+                     * @return OfflineTime The default termination time for isolated instances in the format of "2020-02-15 10:20:00". By default, a pay-as-you-go instance will be terminated after two hours of isolation, and a monthly subscribed instance will be terminated after seven days by default.
                      */
                     std::string GetOfflineTime() const;
 
                     /**
-                     * 设置Scheduled deactivation time
-                     * @param OfflineTime Scheduled deactivation time
+                     * 设置The default termination time for isolated instances in the format of "2020-02-15 10:20:00". By default, a pay-as-you-go instance will be terminated after two hours of isolation, and a monthly subscribed instance will be terminated after seven days by default.
+                     * @param OfflineTime The default termination time for isolated instances in the format of "2020-02-15 10:20:00". By default, a pay-as-you-go instance will be terminated after two hours of isolation, and a monthly subscribed instance will be terminated after seven days by default.
                      */
                     void SetOfflineTime(const std::string& _offlineTime);
 
@@ -608,14 +652,14 @@ namespace TencentCloud
                     bool PriceIdHasBeenSet() const;
 
                     /**
-                     * 获取Isolation time
-                     * @return CloseTime Isolation time
+                     * 获取The time when an instance start to be isolated
+                     * @return CloseTime The time when an instance start to be isolated
                      */
                     std::string GetCloseTime() const;
 
                     /**
-                     * 设置Isolation time
-                     * @param CloseTime Isolation time
+                     * 设置The time when an instance start to be isolated
+                     * @param CloseTime The time when an instance start to be isolated
                      */
                     void SetCloseTime(const std::string& _closeTime);
 
@@ -886,17 +930,17 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool DiskSizeHasBeenSet() const;
 
                     /**
-                     * 获取Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity. </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
+                     * 获取Monitoring granularity. <ul><li>`1m`: Monitoring at one-minute granularity. This granularity has been disused. For more information, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li><li>`5s`: Monitoring at five-second granularity.</li></ul>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MonitorVersion Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity. </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
+                     * @return MonitorVersion Monitoring granularity. <ul><li>`1m`: Monitoring at one-minute granularity. This granularity has been disused. For more information, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li><li>`5s`: Monitoring at five-second granularity.</li></ul>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetMonitorVersion() const;
 
                     /**
-                     * 设置Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity. </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
+                     * 设置Monitoring granularity. <ul><li>`1m`: Monitoring at one-minute granularity. This granularity has been disused. For more information, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li><li>`5s`: Monitoring at five-second granularity.</li></ul>
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param MonitorVersion Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity. </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
+                     * @param MonitorVersion Monitoring granularity. <ul><li>`1m`: Monitoring at one-minute granularity. This granularity has been disused. For more information, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li><li>`5s`: Monitoring at five-second granularity.</li></ul>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetMonitorVersion(const std::string& _monitorVersion);
@@ -1018,18 +1062,18 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool WanAddressHasBeenSet() const;
 
                     /**
-                     * 获取Polaris service address
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return PolarisServer Polaris service address
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Polaris service address, which is for internal use.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return PolarisServer Polaris service address, which is for internal use.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetPolarisServer() const;
 
                     /**
-                     * 设置Polaris service address
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param PolarisServer Polaris service address
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Polaris service address, which is for internal use.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param PolarisServer Polaris service address, which is for internal use.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetPolarisServer(const std::string& _polarisServer);
 
@@ -1142,7 +1186,8 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * User AppID
+                     * User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
+
                      */
                     int64_t m_appid;
                     bool m_appidHasBeenSet;
@@ -1196,25 +1241,35 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_portHasBeenSet;
 
                     /**
-                     * Instance creation time
+                     * Instance creation time in the format of "2020-01-15 10:20:00"
                      */
                     std::string m_createtime;
                     bool m_createtimeHasBeenSet;
 
                     /**
-                     * Instance capacity in MB
+                     * Instance memory capacity in MB (1 MB = 1024 KB)
                      */
                     double m_size;
                     bool m_sizeHasBeenSet;
 
                     /**
-                     * This field has been disused. You can use the [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
+                     * This field has been disused. You can use the TCOP’s [GetMonitorData](https://intl.cloud.tencent.com/document/product/248/31014?from_cn_redirect=1) API to query the capacity used by the instance.
                      */
                     double m_sizeUsed;
                     bool m_sizeUsedHasBeenSet;
 
                     /**
-                     * Instance type. <ul><li>`1`: Redis 2.8 memory edition in cluster architecture. </li><li>`2`: Redis 2.8 memory edition in standard architecture. </li><li>`3`: CKV 3.2 memory edition in standard architecture. </li><li>`4`: CKV 3.2 memory edition in cluster architecture. </li><li>`5`: Redis 2.8 memory edition in standalone architecture. </li></li><li>`6`: Redis 4.0 memory edition in standard architecture. </li></li><li>`7`: Redis 4.0 memory edition in cluster architecture. </li></li><li>`8`: Redis 5.0 memory edition in standard architecture. </li></li><li>`9`: Redis 5.0 memory edition in cluster architecture. </li></ul>
+                     * Instance type
+- `2`: Redis 2.8 Memory Edition (Standard Architecture).
+- `3`: CKV 3.2 Memory Edition (Standard Architecture).
+- `4`: CKV 3.2 Memory Edition (Cluster Architecture).
+- `5`: Redis 2.8 Memory Edition (Standalone).
+- `6`: Redis 4.0 Memory Edition (Standard Architecture).
+- `7`: Redis 4.0 Memory Edition (Cluster Architecture).
+- `8`: Redis 5.0 Memory Edition (Standard Architecture).
+- `9`: Redis 5.0 Memory Edition (Cluster Architecture).
+- `15`: Redis 6.2 Memory Edition (Standard Architecture).
+- `16`: Redis 6.2 Memory Edition (Cluster Architecture).
                      */
                     int64_t m_type;
                     bool m_typeHasBeenSet;
@@ -1226,7 +1281,7 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_autoRenewFlagHasBeenSet;
 
                     /**
-                     * Instance expiration time
+                     * The time when a monthly subscribed instance expires
                      */
                     std::string m_deadlineTime;
                     bool m_deadlineTimeHasBeenSet;
@@ -1268,7 +1323,7 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_instanceTitleHasBeenSet;
 
                     /**
-                     * Scheduled deactivation time
+                     * The default termination time for isolated instances in the format of "2020-02-15 10:20:00". By default, a pay-as-you-go instance will be terminated after two hours of isolation, and a monthly subscribed instance will be terminated after seven days by default.
                      */
                     std::string m_offlineTime;
                     bool m_offlineTimeHasBeenSet;
@@ -1316,7 +1371,7 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_priceIdHasBeenSet;
 
                     /**
-                     * Isolation time
+                     * The time when an instance start to be isolated
                      */
                     std::string m_closeTime;
                     bool m_closeTimeHasBeenSet;
@@ -1405,7 +1460,7 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_diskSizeHasBeenSet;
 
                     /**
-                     * Monitoring granularity type. <ul><li>`1m`: Monitoring at 1-minute granularity. </li><li>`5s`: Monitoring at 5-second granularity. </li></ul>
+                     * Monitoring granularity. <ul><li>`1m`: Monitoring at one-minute granularity. This granularity has been disused. For more information, see [1-Minute Granularity Will Be Disused](https://www.tencentcloud.com/document/product/239/50440).</li><li>`5s`: Monitoring at five-second granularity.</li></ul>
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_monitorVersion;
@@ -1447,8 +1502,8 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_wanAddressHasBeenSet;
 
                     /**
-                     * Polaris service address
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Polaris service address, which is for internal use.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_polarisServer;
                     bool m_polarisServerHasBeenSet;

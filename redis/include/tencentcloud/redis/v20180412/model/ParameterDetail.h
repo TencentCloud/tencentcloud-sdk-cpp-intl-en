@@ -65,14 +65,14 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Data type of the parameter
-                     * @return ParamType Data type of the parameter
+                     * 获取Parameter Type
+                     * @return ParamType Parameter Type
                      */
                     std::string GetParamType() const;
 
                     /**
-                     * 设置Data type of the parameter
-                     * @param ParamType Data type of the parameter
+                     * 设置Parameter Type
+                     * @param ParamType Parameter Type
                      */
                     void SetParamType(const std::string& _paramType);
 
@@ -119,14 +119,14 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Current value
-                     * @return CurrentValue Current value
+                     * 获取Current value of the parameter
+                     * @return CurrentValue Current value of the parameter
                      */
                     std::string GetCurrentValue() const;
 
                     /**
-                     * 设置Current value
-                     * @param CurrentValue Current value
+                     * 设置Current value of the parameter
+                     * @param CurrentValue Current value of the parameter
                      */
                     void SetCurrentValue(const std::string& _currentValue);
 
@@ -137,14 +137,22 @@ namespace TencentCloud
                     bool CurrentValueHasBeenSet() const;
 
                     /**
-                     * 获取Whether the database needs to be restarted for the modified parameter to take effect. Valid values: 0 (no); 1 (yes).
-                     * @return NeedReboot Whether the database needs to be restarted for the modified parameter to take effect. Valid values: 0 (no); 1 (yes).
+                     * 获取Whether to restart the database for the modified parameters to take effect
+- `0`: No restart.
+- `1`: Restart required.
+                     * @return NeedReboot Whether to restart the database for the modified parameters to take effect
+- `0`: No restart.
+- `1`: Restart required.
                      */
                     int64_t GetNeedReboot() const;
 
                     /**
-                     * 设置Whether the database needs to be restarted for the modified parameter to take effect. Valid values: 0 (no); 1 (yes).
-                     * @param NeedReboot Whether the database needs to be restarted for the modified parameter to take effect. Valid values: 0 (no); 1 (yes).
+                     * 设置Whether to restart the database for the modified parameters to take effect
+- `0`: No restart.
+- `1`: Restart required.
+                     * @param NeedReboot Whether to restart the database for the modified parameters to take effect
+- `0`: No restart.
+- `1`: Restart required.
                      */
                     void SetNeedReboot(const int64_t& _needReboot);
 
@@ -199,17 +207,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MinHasBeenSet() const;
 
                     /**
-                     * 获取Enumerated values of the parameter. It is null if the parameter is non-enumerated.
+                     * 获取Enumerated values of the parameter. It is null if the parameter is non-enumerated
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EnumValue Enumerated values of the parameter. It is null if the parameter is non-enumerated.
+                     * @return EnumValue Enumerated values of the parameter. It is null if the parameter is non-enumerated
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> GetEnumValue() const;
 
                     /**
-                     * 设置Enumerated values of the parameter. It is null if the parameter is non-enumerated.
+                     * 设置Enumerated values of the parameter. It is null if the parameter is non-enumerated
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param EnumValue Enumerated values of the parameter. It is null if the parameter is non-enumerated.
+                     * @param EnumValue Enumerated values of the parameter. It is null if the parameter is non-enumerated
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetEnumValue(const std::vector<std::string>& _enumValue);
@@ -229,7 +237,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Data type of the parameter
+                     * Parameter Type
                      */
                     std::string m_paramType;
                     bool m_paramTypeHasBeenSet;
@@ -247,13 +255,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Current value
+                     * Current value of the parameter
                      */
                     std::string m_currentValue;
                     bool m_currentValueHasBeenSet;
 
                     /**
-                     * Whether the database needs to be restarted for the modified parameter to take effect. Valid values: 0 (no); 1 (yes).
+                     * Whether to restart the database for the modified parameters to take effect
+- `0`: No restart.
+- `1`: Restart required.
                      */
                     int64_t m_needReboot;
                     bool m_needRebootHasBeenSet;
@@ -273,7 +283,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_minHasBeenSet;
 
                     /**
-                     * Enumerated values of the parameter. It is null if the parameter is non-enumerated.
+                     * Enumerated values of the parameter. It is null if the parameter is non-enumerated
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_enumValue;

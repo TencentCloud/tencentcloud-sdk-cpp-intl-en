@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of instance parameters
-                     * @return TotalCount Number of instance parameters
+                     * 获取Quantity of parameters in the parameter template
+                     * @return TotalCount Quantity of parameters in the parameter template
                      */
                     int64_t GetTotalCount() const;
 
@@ -81,8 +81,28 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Instance type. Valid values: `1` (Redis 2.8 Memory Edition in cluster architecture), `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture)
-                     * @return ProductType Instance type. Valid values: `1` (Redis 2.8 Memory Edition in cluster architecture), `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture)
+                     * 获取Product type
+- `2`: Redis 2.8 Memory Edition (Standard Architecture).
+- `3`: CKV 3.2 Memory Edition (Standard Architecture).
+- `4`: CKV 3.2 Memory Edition (Cluster Architecture).
+- `5`: Redis 2.8 Memory Edition (Standalone).
+- `6`: Redis 4.0 Memory Edition (Standard Architecture).
+- `7`: Redis 4.0 Memory Edition (Cluster Architecture).
+- `8`: Redis 5.0 Memory Edition (Standard Architecture).
+- `9`: Redis 5.0 Memory Edition (Cluster Architecture).
+- `15`: Redis 6.2 Memory Edition (Standard Architecture).
+- `16`: Redis 6.2 Memory Edition (Cluster Architecture).
+                     * @return ProductType Product type
+- `2`: Redis 2.8 Memory Edition (Standard Architecture).
+- `3`: CKV 3.2 Memory Edition (Standard Architecture).
+- `4`: CKV 3.2 Memory Edition (Cluster Architecture).
+- `5`: Redis 2.8 Memory Edition (Standalone).
+- `6`: Redis 4.0 Memory Edition (Standard Architecture).
+- `7`: Redis 4.0 Memory Edition (Cluster Architecture).
+- `8`: Redis 5.0 Memory Edition (Standard Architecture).
+- `9`: Redis 5.0 Memory Edition (Cluster Architecture).
+- `15`: Redis 6.2 Memory Edition (Standard Architecture).
+- `16`: Redis 6.2 Memory Edition (Cluster Architecture).
                      */
                     uint64_t GetProductType() const;
 
@@ -105,8 +125,8 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Parameter details
-                     * @return Items Parameter details
+                     * 获取Parameter details, including parameter name, current value, default value, maximum value, minimum value, enumeration value and other information.
+                     * @return Items Parameter details, including parameter name, current value, default value, maximum value, minimum value, enumeration value and other information.
                      */
                     std::vector<ParameterDetail> GetItems() const;
 
@@ -119,7 +139,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of instance parameters
+                     * Quantity of parameters in the parameter template
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
@@ -137,7 +157,17 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Instance type. Valid values: `1` (Redis 2.8 Memory Edition in cluster architecture), `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `5` (Redis 2.8 Memory Edition in standalone architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture)
+                     * Product type
+- `2`: Redis 2.8 Memory Edition (Standard Architecture).
+- `3`: CKV 3.2 Memory Edition (Standard Architecture).
+- `4`: CKV 3.2 Memory Edition (Cluster Architecture).
+- `5`: Redis 2.8 Memory Edition (Standalone).
+- `6`: Redis 4.0 Memory Edition (Standard Architecture).
+- `7`: Redis 4.0 Memory Edition (Cluster Architecture).
+- `8`: Redis 5.0 Memory Edition (Standard Architecture).
+- `9`: Redis 5.0 Memory Edition (Cluster Architecture).
+- `15`: Redis 6.2 Memory Edition (Standard Architecture).
+- `16`: Redis 6.2 Memory Edition (Cluster Architecture).
                      */
                     uint64_t m_productType;
                     bool m_productTypeHasBeenSet;
@@ -149,7 +179,7 @@ namespace TencentCloud
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Parameter details
+                     * Parameter details, including parameter name, current value, default value, maximum value, minimum value, enumeration value and other information.
                      */
                     std::vector<ParameterDetail> m_items;
                     bool m_itemsHasBeenSet;

@@ -27,6 +27,12 @@
 #include <tencentcloud/intlpartnersmgt/v20220928/model/AllocateCustomerCreditResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/CreateAccountRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/CreateAccountResponse.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillSummaryByPayModeRequest.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillSummaryByPayModeResponse.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillSummaryByProductRequest.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillSummaryByProductResponse.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillSummaryByRegionRequest.h>
+#include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeBillSummaryByRegionResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillDetailRequest.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillDetailResponse.h>
 #include <tencentcloud/intlpartnersmgt/v20220928/model/DescribeCustomerBillSummaryRequest.h>
@@ -69,6 +75,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateAccountResponse> CreateAccountOutcome;
                 typedef std::future<CreateAccountOutcome> CreateAccountOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::CreateAccountRequest&, CreateAccountOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAccountAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBillSummaryByPayModeResponse> DescribeBillSummaryByPayModeOutcome;
+                typedef std::future<DescribeBillSummaryByPayModeOutcome> DescribeBillSummaryByPayModeOutcomeCallable;
+                typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeBillSummaryByPayModeRequest&, DescribeBillSummaryByPayModeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBillSummaryByPayModeAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBillSummaryByProductResponse> DescribeBillSummaryByProductOutcome;
+                typedef std::future<DescribeBillSummaryByProductOutcome> DescribeBillSummaryByProductOutcomeCallable;
+                typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeBillSummaryByProductRequest&, DescribeBillSummaryByProductOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBillSummaryByProductAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBillSummaryByRegionResponse> DescribeBillSummaryByRegionOutcome;
+                typedef std::future<DescribeBillSummaryByRegionOutcome> DescribeBillSummaryByRegionOutcomeCallable;
+                typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeBillSummaryByRegionRequest&, DescribeBillSummaryByRegionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBillSummaryByRegionAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeCustomerBillDetailResponse> DescribeCustomerBillDetailOutcome;
                 typedef std::future<DescribeCustomerBillDetailOutcome> DescribeCustomerBillDetailOutcomeCallable;
                 typedef std::function<void(const IntlpartnersmgtClient*, const Model::DescribeCustomerBillDetailRequest&, DescribeCustomerBillDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCustomerBillDetailAsyncHandler;
@@ -130,6 +145,33 @@ Notes:<br>
                 CreateAccountOutcome CreateAccount(const Model::CreateAccountRequest &request);
                 void CreateAccountAsync(const Model::CreateAccountRequest& request, const CreateAccountAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateAccountOutcomeCallable CreateAccountCallable(const Model::CreateAccountRequest& request);
+
+                /**
+                 *This API is used to obtain the total amount of customer bills by payment mode.
+                 * @param req DescribeBillSummaryByPayModeRequest
+                 * @return DescribeBillSummaryByPayModeOutcome
+                 */
+                DescribeBillSummaryByPayModeOutcome DescribeBillSummaryByPayMode(const Model::DescribeBillSummaryByPayModeRequest &request);
+                void DescribeBillSummaryByPayModeAsync(const Model::DescribeBillSummaryByPayModeRequest& request, const DescribeBillSummaryByPayModeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBillSummaryByPayModeOutcomeCallable DescribeBillSummaryByPayModeCallable(const Model::DescribeBillSummaryByPayModeRequest& request);
+
+                /**
+                 *This API is used to obtain the total amount of customer bills by product.
+                 * @param req DescribeBillSummaryByProductRequest
+                 * @return DescribeBillSummaryByProductOutcome
+                 */
+                DescribeBillSummaryByProductOutcome DescribeBillSummaryByProduct(const Model::DescribeBillSummaryByProductRequest &request);
+                void DescribeBillSummaryByProductAsync(const Model::DescribeBillSummaryByProductRequest& request, const DescribeBillSummaryByProductAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBillSummaryByProductOutcomeCallable DescribeBillSummaryByProductCallable(const Model::DescribeBillSummaryByProductRequest& request);
+
+                /**
+                 *This API is used to obtain the total amount of customer bills by region.
+                 * @param req DescribeBillSummaryByRegionRequest
+                 * @return DescribeBillSummaryByRegionOutcome
+                 */
+                DescribeBillSummaryByRegionOutcome DescribeBillSummaryByRegion(const Model::DescribeBillSummaryByRegionRequest &request);
+                void DescribeBillSummaryByRegionAsync(const Model::DescribeBillSummaryByRegionRequest& request, const DescribeBillSummaryByRegionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBillSummaryByRegionOutcomeCallable DescribeBillSummaryByRegionCallable(const Model::DescribeBillSummaryByRegionRequest& request);
 
                 /**
                  *This API is used to query the customer bill details.

@@ -83,14 +83,14 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取User ID
-                     * @return AppId User ID
+                     * 获取User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
+                     * @return AppId User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
                      */
                     int64_t GetAppId() const;
 
                     /**
-                     * 设置User ID
-                     * @param AppId User ID
+                     * 设置User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
+                     * @param AppId User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
                      */
                     void SetAppId(const int64_t& _appId);
 
@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance project ID
-                     * @return ProjectId Instance project ID
+                     * 获取Project ID of the instance
+                     * @return ProjectId Project ID of the instance
                      */
                     int64_t GetProjectId() const;
 
                     /**
-                     * 设置Instance project ID
-                     * @param ProjectId Instance project ID
+                     * 设置Project ID of the instance
+                     * @param ProjectId Project ID of the instance
                      */
                     void SetProjectId(const int64_t& _projectId);
 
@@ -155,14 +155,14 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Instance network ID
-                     * @return VpcId Instance network ID
+                     * 获取Instance VPC ID
+                     * @return VpcId Instance VPC ID
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置Instance network ID
-                     * @param VpcId Instance network ID
+                     * 设置Instance VPC ID
+                     * @param VpcId Instance VPC ID
                      */
                     void SetVpcId(const std::string& _vpcId);
 
@@ -173,14 +173,14 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Subnet ID
-                     * @return SubnetId Subnet ID
+                     * 获取VPC subnet ID
+                     * @return SubnetId VPC subnet ID
                      */
                     std::string GetSubnetId() const;
 
                     /**
-                     * 设置Subnet ID
-                     * @param SubnetId Subnet ID
+                     * 设置VPC subnet ID
+                     * @param SubnetId VPC subnet ID
                      */
                     void SetSubnetId(const std::string& _subnetId);
 
@@ -191,14 +191,34 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance status. 1: task running; 2: instance running; -2: instance isolated; -3: instance being eliminated; -4: instance eliminated
-                     * @return Status Instance status. 1: task running; 2: instance running; -2: instance isolated; -3: instance being eliminated; -4: instance eliminated
+                     * 获取Instance status information
+- `1`: Task running.
+- `2`: Instance running.
+- `-2`: Instance isolated.
+- `-3`: Instance being eliminated.
+- `-4`: Instance eliminated.
+                     * @return Status Instance status information
+- `1`: Task running.
+- `2`: Instance running.
+- `-2`: Instance isolated.
+- `-3`: Instance being eliminated.
+- `-4`: Instance eliminated.
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Instance status. 1: task running; 2: instance running; -2: instance isolated; -3: instance being eliminated; -4: instance eliminated
-                     * @param Status Instance status. 1: task running; 2: instance running; -2: instance isolated; -3: instance being eliminated; -4: instance eliminated
+                     * 设置Instance status information
+- `1`: Task running.
+- `2`: Instance running.
+- `-2`: Instance isolated.
+- `-3`: Instance being eliminated.
+- `-4`: Instance eliminated.
+                     * @param Status Instance status information
+- `1`: Task running.
+- `2`: Instance running.
+- `-2`: Instance isolated.
+- `-3`: Instance being eliminated.
+- `-4`: Instance eliminated.
                      */
                     void SetStatus(const std::string& _status);
 
@@ -209,14 +229,14 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Instance network IP
-                     * @return Vips Instance network IP
+                     * 获取Private network IP address of an instance
+                     * @return Vips Private network IP address of an instance
                      */
                     std::vector<std::string> GetVips() const;
 
                     /**
-                     * 设置Instance network IP
-                     * @param Vips Instance network IP
+                     * 设置Private network IP address of an instance
+                     * @param Vips Private network IP address of an instance
                      */
                     void SetVips(const std::vector<std::string>& _vips);
 
@@ -263,14 +283,22 @@ namespace TencentCloud
                     bool CreatetimeHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode. 0: pay-as-you-go; 1: monthly subscription
-                     * @return PayMode Billing mode. 0: pay-as-you-go; 1: monthly subscription
+                     * 获取Billing type
+- `0`: Pay-as-you-go.
+- `1`: Monthly subscription.
+                     * @return PayMode Billing type
+- `0`: Pay-as-you-go.
+- `1`: Monthly subscription.
                      */
                     int64_t GetPayMode() const;
 
                     /**
-                     * 设置Billing mode. 0: pay-as-you-go; 1: monthly subscription
-                     * @param PayMode Billing mode. 0: pay-as-you-go; 1: monthly subscription
+                     * 设置Billing type
+- `0`: Pay-as-you-go.
+- `1`: Monthly subscription.
+                     * @param PayMode Billing type
+- `0`: Pay-as-you-go.
+- `1`: Monthly subscription.
                      */
                     void SetPayMode(const int64_t& _payMode);
 
@@ -281,14 +309,22 @@ namespace TencentCloud
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取Network type. Valid values: 0 (classic network); 1 (VPC).
-                     * @return NetType Network type. Valid values: 0 (classic network); 1 (VPC).
+                     * 获取Network Type
+- `0`: Classic network.
+- `1`: VPC.
+                     * @return NetType Network Type
+- `0`: Classic network.
+- `1`: VPC.
                      */
                     int64_t GetNetType() const;
 
                     /**
-                     * 设置Network type. Valid values: 0 (classic network); 1 (VPC).
-                     * @param NetType Network type. Valid values: 0 (classic network); 1 (VPC).
+                     * 设置Network Type
+- `0`: Classic network.
+- `1`: VPC.
+                     * @param NetType Network Type
+- `0`: Classic network.
+- `1`: VPC.
                      */
                     void SetNetType(const int64_t& _netType);
 
@@ -313,13 +349,13 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * User ID
+                     * User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
                      */
                     int64_t m_appId;
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * Instance project ID
+                     * Project ID of the instance
                      */
                     int64_t m_projectId;
                     bool m_projectIdHasBeenSet;
@@ -337,25 +373,30 @@ namespace TencentCloud
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Instance network ID
+                     * Instance VPC ID
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * Subnet ID
+                     * VPC subnet ID
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * Instance status. 1: task running; 2: instance running; -2: instance isolated; -3: instance being eliminated; -4: instance eliminated
+                     * Instance status information
+- `1`: Task running.
+- `2`: Instance running.
+- `-2`: Instance isolated.
+- `-3`: Instance being eliminated.
+- `-4`: Instance eliminated.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Instance network IP
+                     * Private network IP address of an instance
                      */
                     std::vector<std::string> m_vips;
                     bool m_vipsHasBeenSet;
@@ -373,13 +414,17 @@ namespace TencentCloud
                     bool m_createtimeHasBeenSet;
 
                     /**
-                     * Billing mode. 0: pay-as-you-go; 1: monthly subscription
+                     * Billing type
+- `0`: Pay-as-you-go.
+- `1`: Monthly subscription.
                      */
                     int64_t m_payMode;
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * Network type. Valid values: 0 (classic network); 1 (VPC).
+                     * Network Type
+- `0`: Classic network.
+- `1`: VPC.
                      */
                     int64_t m_netType;
                     bool m_netTypeHasBeenSet;

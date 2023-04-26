@@ -126,6 +126,135 @@ IntlpartnersmgtClient::CreateAccountOutcomeCallable IntlpartnersmgtClient::Creat
     return task->get_future();
 }
 
+IntlpartnersmgtClient::DescribeBillSummaryByPayModeOutcome IntlpartnersmgtClient::DescribeBillSummaryByPayMode(const DescribeBillSummaryByPayModeRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeBillSummaryByPayMode");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeBillSummaryByPayModeResponse rsp = DescribeBillSummaryByPayModeResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeBillSummaryByPayModeOutcome(rsp);
+        else
+            return DescribeBillSummaryByPayModeOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeBillSummaryByPayModeOutcome(outcome.GetError());
+    }
+}
+
+void IntlpartnersmgtClient::DescribeBillSummaryByPayModeAsync(const DescribeBillSummaryByPayModeRequest& request, const DescribeBillSummaryByPayModeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeBillSummaryByPayMode(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+IntlpartnersmgtClient::DescribeBillSummaryByPayModeOutcomeCallable IntlpartnersmgtClient::DescribeBillSummaryByPayModeCallable(const DescribeBillSummaryByPayModeRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeBillSummaryByPayModeOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeBillSummaryByPayMode(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+IntlpartnersmgtClient::DescribeBillSummaryByProductOutcome IntlpartnersmgtClient::DescribeBillSummaryByProduct(const DescribeBillSummaryByProductRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeBillSummaryByProduct");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeBillSummaryByProductResponse rsp = DescribeBillSummaryByProductResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeBillSummaryByProductOutcome(rsp);
+        else
+            return DescribeBillSummaryByProductOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeBillSummaryByProductOutcome(outcome.GetError());
+    }
+}
+
+void IntlpartnersmgtClient::DescribeBillSummaryByProductAsync(const DescribeBillSummaryByProductRequest& request, const DescribeBillSummaryByProductAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeBillSummaryByProduct(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+IntlpartnersmgtClient::DescribeBillSummaryByProductOutcomeCallable IntlpartnersmgtClient::DescribeBillSummaryByProductCallable(const DescribeBillSummaryByProductRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeBillSummaryByProductOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeBillSummaryByProduct(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+IntlpartnersmgtClient::DescribeBillSummaryByRegionOutcome IntlpartnersmgtClient::DescribeBillSummaryByRegion(const DescribeBillSummaryByRegionRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeBillSummaryByRegion");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeBillSummaryByRegionResponse rsp = DescribeBillSummaryByRegionResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeBillSummaryByRegionOutcome(rsp);
+        else
+            return DescribeBillSummaryByRegionOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeBillSummaryByRegionOutcome(outcome.GetError());
+    }
+}
+
+void IntlpartnersmgtClient::DescribeBillSummaryByRegionAsync(const DescribeBillSummaryByRegionRequest& request, const DescribeBillSummaryByRegionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeBillSummaryByRegion(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+IntlpartnersmgtClient::DescribeBillSummaryByRegionOutcomeCallable IntlpartnersmgtClient::DescribeBillSummaryByRegionCallable(const DescribeBillSummaryByRegionRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeBillSummaryByRegionOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeBillSummaryByRegion(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 IntlpartnersmgtClient::DescribeCustomerBillDetailOutcome IntlpartnersmgtClient::DescribeCustomerBillDetail(const DescribeCustomerBillDetailRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeCustomerBillDetail");

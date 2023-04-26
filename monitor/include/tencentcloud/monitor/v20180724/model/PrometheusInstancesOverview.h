@@ -340,6 +340,50 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool BoundNormalHasBeenSet() const;
 
+                    /**
+                     * 获取Resource pack status (`0`: Unavailable; `1`: Available)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ResourcePackageStatus Resource pack status (`0`: Unavailable; `1`: Available)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetResourcePackageStatus() const;
+
+                    /**
+                     * 设置Resource pack status (`0`: Unavailable; `1`: Available)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ResourcePackageStatus Resource pack status (`0`: Unavailable; `1`: Available)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetResourcePackageStatus(const int64_t& _resourcePackageStatus);
+
+                    /**
+                     * 判断参数 ResourcePackageStatus 是否已赋值
+                     * @return ResourcePackageStatus 是否已赋值
+                     */
+                    bool ResourcePackageStatusHasBeenSet() const;
+
+                    /**
+                     * 获取Resource pack specification name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return ResourcePackageSpecName Resource pack specification name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetResourcePackageSpecName() const;
+
+                    /**
+                     * 设置Resource pack specification name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param ResourcePackageSpecName Resource pack specification name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetResourcePackageSpecName(const std::string& _resourcePackageSpecName);
+
+                    /**
+                     * 判断参数 ResourcePackageSpecName 是否已赋值
+                     * @return ResourcePackageSpecName 是否已赋值
+                     */
+                    bool ResourcePackageSpecNameHasBeenSet() const;
+
                 private:
 
                     /**
@@ -437,6 +481,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     int64_t m_boundNormal;
                     bool m_boundNormalHasBeenSet;
+
+                    /**
+                     * Resource pack status (`0`: Unavailable; `1`: Available)
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_resourcePackageStatus;
+                    bool m_resourcePackageStatusHasBeenSet;
+
+                    /**
+                     * Resource pack specification name
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_resourcePackageSpecName;
+                    bool m_resourcePackageSpecNameHasBeenSet;
 
                 };
             }

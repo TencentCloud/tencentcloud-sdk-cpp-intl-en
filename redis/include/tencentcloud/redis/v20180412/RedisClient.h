@@ -59,6 +59,8 @@
 #include <tencentcloud/redis/v20180412/model/DescribeBackupDownloadRestrictionResponse.h>
 #include <tencentcloud/redis/v20180412/model/DescribeBackupUrlRequest.h>
 #include <tencentcloud/redis/v20180412/model/DescribeBackupUrlResponse.h>
+#include <tencentcloud/redis/v20180412/model/DescribeBandwidthRangeRequest.h>
+#include <tencentcloud/redis/v20180412/model/DescribeBandwidthRangeResponse.h>
 #include <tencentcloud/redis/v20180412/model/DescribeCommonDBInstancesRequest.h>
 #include <tencentcloud/redis/v20180412/model/DescribeCommonDBInstancesResponse.h>
 #include <tencentcloud/redis/v20180412/model/DescribeDBSecurityGroupsRequest.h>
@@ -171,6 +173,8 @@
 #include <tencentcloud/redis/v20180412/model/OpenSSLResponse.h>
 #include <tencentcloud/redis/v20180412/model/ReleaseWanAddressRequest.h>
 #include <tencentcloud/redis/v20180412/model/ReleaseWanAddressResponse.h>
+#include <tencentcloud/redis/v20180412/model/RemoveReplicationInstanceRequest.h>
+#include <tencentcloud/redis/v20180412/model/RemoveReplicationInstanceResponse.h>
 #include <tencentcloud/redis/v20180412/model/RenewInstanceRequest.h>
 #include <tencentcloud/redis/v20180412/model/RenewInstanceResponse.h>
 #include <tencentcloud/redis/v20180412/model/ResetPasswordRequest.h>
@@ -261,6 +265,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeBackupUrlResponse> DescribeBackupUrlOutcome;
                 typedef std::future<DescribeBackupUrlOutcome> DescribeBackupUrlOutcomeCallable;
                 typedef std::function<void(const RedisClient*, const Model::DescribeBackupUrlRequest&, DescribeBackupUrlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBackupUrlAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBandwidthRangeResponse> DescribeBandwidthRangeOutcome;
+                typedef std::future<DescribeBandwidthRangeOutcome> DescribeBandwidthRangeOutcomeCallable;
+                typedef std::function<void(const RedisClient*, const Model::DescribeBandwidthRangeRequest&, DescribeBandwidthRangeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBandwidthRangeAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeCommonDBInstancesResponse> DescribeCommonDBInstancesOutcome;
                 typedef std::future<DescribeCommonDBInstancesOutcome> DescribeCommonDBInstancesOutcomeCallable;
                 typedef std::function<void(const RedisClient*, const Model::DescribeCommonDBInstancesRequest&, DescribeCommonDBInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCommonDBInstancesAsyncHandler;
@@ -429,6 +436,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ReleaseWanAddressResponse> ReleaseWanAddressOutcome;
                 typedef std::future<ReleaseWanAddressOutcome> ReleaseWanAddressOutcomeCallable;
                 typedef std::function<void(const RedisClient*, const Model::ReleaseWanAddressRequest&, ReleaseWanAddressOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ReleaseWanAddressAsyncHandler;
+                typedef Outcome<Core::Error, Model::RemoveReplicationInstanceResponse> RemoveReplicationInstanceOutcome;
+                typedef std::future<RemoveReplicationInstanceOutcome> RemoveReplicationInstanceOutcomeCallable;
+                typedef std::function<void(const RedisClient*, const Model::RemoveReplicationInstanceRequest&, RemoveReplicationInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RemoveReplicationInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::RenewInstanceResponse> RenewInstanceOutcome;
                 typedef std::future<RenewInstanceOutcome> RenewInstanceOutcomeCallable;
                 typedef std::function<void(const RedisClient*, const Model::RenewInstanceRequest&, RenewInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RenewInstanceAsyncHandler;
@@ -538,7 +548,7 @@ namespace TencentCloud
                 ClearInstanceOutcomeCallable ClearInstanceCallable(const Model::ClearInstanceRequest& request);
 
                 /**
-                 *This API is used to clone a complete instance based on the current instance backup file.
+                 *This API is used to clone a complete new instance based on the current instance backup file.
                  * @param req CloneInstancesRequest
                  * @return CloneInstancesOutcome
                  */
@@ -565,7 +575,7 @@ namespace TencentCloud
                 CreateInstanceAccountOutcomeCallable CreateInstanceAccountCallable(const Model::CreateInstanceAccountRequest& request);
 
                 /**
-                 *This API is used to create a Redis instance.
+                 *This API is used to create an TencentDB or Redis instance.
                  * @param req CreateInstancesRequest
                  * @return CreateInstancesOutcome
                  */
@@ -626,6 +636,15 @@ namespace TencentCloud
                 DescribeBackupUrlOutcome DescribeBackupUrl(const Model::DescribeBackupUrlRequest &request);
                 void DescribeBackupUrlAsync(const Model::DescribeBackupUrlRequest& request, const DescribeBackupUrlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeBackupUrlOutcomeCallable DescribeBackupUrlCallable(const Model::DescribeBackupUrlRequest& request);
+
+                /**
+                 *This API is used to query the information of instance bandwidth.
+                 * @param req DescribeBandwidthRangeRequest
+                 * @return DescribeBandwidthRangeOutcome
+                 */
+                DescribeBandwidthRangeOutcome DescribeBandwidthRange(const Model::DescribeBandwidthRangeRequest &request);
+                void DescribeBandwidthRangeAsync(const Model::DescribeBandwidthRangeRequest& request, const DescribeBandwidthRangeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBandwidthRangeOutcomeCallable DescribeBandwidthRangeCallable(const Model::DescribeBandwidthRangeRequest& request);
 
                 /**
                  *This API has been disused. It was used to query the list of Redis instance information.
@@ -826,7 +845,7 @@ namespace TencentCloud
                 DescribeMaintenanceWindowOutcomeCallable DescribeMaintenanceWindowCallable(const Model::DescribeMaintenanceWindowRequest& request);
 
                 /**
-                 *This API is used to query the parameter template details.
+                 *This API is used to query the details of a parameter template.
                  * @param req DescribeParamTemplateInfoRequest
                  * @return DescribeParamTemplateInfoOutcome
                  */
@@ -1130,6 +1149,15 @@ namespace TencentCloud
                 ReleaseWanAddressOutcome ReleaseWanAddress(const Model::ReleaseWanAddressRequest &request);
                 void ReleaseWanAddressAsync(const Model::ReleaseWanAddressRequest& request, const ReleaseWanAddressAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ReleaseWanAddressOutcomeCallable ReleaseWanAddressCallable(const Model::ReleaseWanAddressRequest& request);
+
+                /**
+                 *This API is used to remove a member from a replication group.
+                 * @param req RemoveReplicationInstanceRequest
+                 * @return RemoveReplicationInstanceOutcome
+                 */
+                RemoveReplicationInstanceOutcome RemoveReplicationInstance(const Model::RemoveReplicationInstanceRequest &request);
+                void RemoveReplicationInstanceAsync(const Model::RemoveReplicationInstanceRequest& request, const RemoveReplicationInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RemoveReplicationInstanceOutcomeCallable RemoveReplicationInstanceCallable(const Model::RemoveReplicationInstanceRequest& request);
 
                 /**
                  *This API is used to renew an instance.

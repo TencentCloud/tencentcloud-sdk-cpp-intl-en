@@ -48,14 +48,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取User App ID
-                     * @return AppId User App ID
+                     * 获取User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
+                     * @return AppId User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
                      */
                     int64_t GetAppId() const;
 
                     /**
-                     * 设置User App ID
-                     * @param AppId User App ID
+                     * 设置User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
+                     * @param AppId User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
                      */
                     void SetAppId(const int64_t& _appId);
 
@@ -156,14 +156,14 @@ namespace TencentCloud
                     bool RegionIdHasBeenSet() const;
 
                     /**
-                     * 获取Replication group ID
-                     * @return GroupId Replication group ID
+                     * 获取Replication group ID in the format of "crs-rpl-deind****"
+                     * @return GroupId Replication group ID in the format of "crs-rpl-deind****"
                      */
                     std::string GetGroupId() const;
 
                     /**
-                     * 设置Replication group ID
-                     * @param GroupId Replication group ID
+                     * 设置Replication group ID in the format of "crs-rpl-deind****"
+                     * @param GroupId Replication group ID in the format of "crs-rpl-deind****"
                      */
                     void SetGroupId(const std::string& _groupId);
 
@@ -298,7 +298,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * User App ID
+                     * User APPID, which is the unique application ID that matches an account. Some Tencent Cloud products use this APPID.
                      */
                     int64_t m_appId;
                     bool m_appIdHasBeenSet;
@@ -328,7 +328,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_regionIdHasBeenSet;
 
                     /**
-                     * Replication group ID
+                     * Replication group ID in the format of "crs-rpl-deind****"
                      */
                     std::string m_groupId;
                     bool m_groupIdHasBeenSet;
