@@ -162,6 +162,20 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     bool ColumnsHasBeenSet() const;
 
+                    /**
+                     * 获取Sample rate used in this statistical analysis
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SamplingRate Sample rate used in this statistical analysis
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    double GetSamplingRate() const;
+
+                    /**
+                     * 判断参数 SamplingRate 是否已赋值
+                     * @return SamplingRate 是否已赋值
+                     */
+                    bool SamplingRateHasBeenSet() const;
+
                 private:
 
                     /**
@@ -221,6 +235,13 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::vector<Column> m_columns;
                     bool m_columnsHasBeenSet;
+
+                    /**
+                     * Sample rate used in this statistical analysis
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    double m_samplingRate;
+                    bool m_samplingRateHasBeenSet;
 
                 };
             }

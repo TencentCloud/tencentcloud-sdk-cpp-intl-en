@@ -24,6 +24,7 @@ set(dbbrain_public_header_model
   include/tencentcloud/dbbrain/v20210527/model/HealthReportTask.h
   include/tencentcloud/dbbrain/v20210527/model/CreateDBDiagReportTaskRequest.h
   include/tencentcloud/dbbrain/v20210527/model/TableSpaceTimeSeries.h
+  include/tencentcloud/dbbrain/v20210527/model/DescribeSlowLogsRequest.h
   include/tencentcloud/dbbrain/v20210527/model/DescribeTopSpaceTablesRequest.h
   include/tencentcloud/dbbrain/v20210527/model/ScoreItem.h
   include/tencentcloud/dbbrain/v20210527/model/InstanceConfs.h
@@ -46,7 +47,9 @@ set(dbbrain_public_header_model
   include/tencentcloud/dbbrain/v20210527/model/ContactItem.h
   include/tencentcloud/dbbrain/v20210527/model/DescribeDBSpaceStatusRequest.h
   include/tencentcloud/dbbrain/v20210527/model/TimeSlice.h
+  include/tencentcloud/dbbrain/v20210527/model/DeleteDBDiagReportTasksRequest.h
   include/tencentcloud/dbbrain/v20210527/model/ModifyDiagDBInstanceConfRequest.h
+  include/tencentcloud/dbbrain/v20210527/model/DescribeSlowLogsResponse.h
   include/tencentcloud/dbbrain/v20210527/model/DescribeSecurityAuditLogDownloadUrlsRequest.h
   include/tencentcloud/dbbrain/v20210527/model/CreateDBDiagReportTaskResponse.h
   include/tencentcloud/dbbrain/v20210527/model/ProcessStatistic.h
@@ -59,6 +62,7 @@ set(dbbrain_public_header_model
   include/tencentcloud/dbbrain/v20210527/model/DescribeDBDiagEventsRequest.h
   include/tencentcloud/dbbrain/v20210527/model/CreateDBDiagReportUrlResponse.h
   include/tencentcloud/dbbrain/v20210527/model/CreateKillTaskRequest.h
+  include/tencentcloud/dbbrain/v20210527/model/DeleteDBDiagReportTasksResponse.h
   include/tencentcloud/dbbrain/v20210527/model/DescribeProxyProcessStatisticsResponse.h
   include/tencentcloud/dbbrain/v20210527/model/SlowLogHost.h
   include/tencentcloud/dbbrain/v20210527/model/CreateMailProfileRequest.h
@@ -115,6 +119,7 @@ set(dbbrain_public_header_model
   include/tencentcloud/dbbrain/v20210527/model/DescribeTopSpaceTableTimeSeriesRequest.h
   include/tencentcloud/dbbrain/v20210527/model/DescribeDBDiagReportTasksRequest.h
   include/tencentcloud/dbbrain/v20210527/model/MonitorMetricSeriesData.h
+  include/tencentcloud/dbbrain/v20210527/model/SlowLogInfoItem.h
   include/tencentcloud/dbbrain/v20210527/model/SecLogExportTaskInfo.h
   include/tencentcloud/dbbrain/v20210527/model/DescribeHealthScoreResponse.h
   include/tencentcloud/dbbrain/v20210527/model/ScoreDetail.h
@@ -207,6 +212,7 @@ set(dbbrain_src
   src/v20210527/model/HealthReportTask.cpp
   src/v20210527/model/CreateDBDiagReportTaskRequest.cpp
   src/v20210527/model/TableSpaceTimeSeries.cpp
+  src/v20210527/model/DescribeSlowLogsRequest.cpp
   src/v20210527/model/DescribeTopSpaceTablesRequest.cpp
   src/v20210527/model/ScoreItem.cpp
   src/v20210527/model/InstanceConfs.cpp
@@ -229,7 +235,9 @@ set(dbbrain_src
   src/v20210527/model/ContactItem.cpp
   src/v20210527/model/DescribeDBSpaceStatusRequest.cpp
   src/v20210527/model/TimeSlice.cpp
+  src/v20210527/model/DeleteDBDiagReportTasksRequest.cpp
   src/v20210527/model/ModifyDiagDBInstanceConfRequest.cpp
+  src/v20210527/model/DescribeSlowLogsResponse.cpp
   src/v20210527/model/DescribeSecurityAuditLogDownloadUrlsRequest.cpp
   src/v20210527/model/CreateDBDiagReportTaskResponse.cpp
   src/v20210527/model/ProcessStatistic.cpp
@@ -242,6 +250,7 @@ set(dbbrain_src
   src/v20210527/model/DescribeDBDiagEventsRequest.cpp
   src/v20210527/model/CreateDBDiagReportUrlResponse.cpp
   src/v20210527/model/CreateKillTaskRequest.cpp
+  src/v20210527/model/DeleteDBDiagReportTasksResponse.cpp
   src/v20210527/model/DescribeProxyProcessStatisticsResponse.cpp
   src/v20210527/model/SlowLogHost.cpp
   src/v20210527/model/CreateMailProfileRequest.cpp
@@ -298,6 +307,7 @@ set(dbbrain_src
   src/v20210527/model/DescribeTopSpaceTableTimeSeriesRequest.cpp
   src/v20210527/model/DescribeDBDiagReportTasksRequest.cpp
   src/v20210527/model/MonitorMetricSeriesData.cpp
+  src/v20210527/model/SlowLogInfoItem.cpp
   src/v20210527/model/SecLogExportTaskInfo.cpp
   src/v20210527/model/DescribeHealthScoreResponse.cpp
   src/v20210527/model/ScoreDetail.cpp

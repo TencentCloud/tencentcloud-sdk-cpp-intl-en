@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Basic information of the cluster associated with a CM-integrated TMP instance.
+                * Basic information of the cluster associated with a Tencent Cloud Observability Platform (TCOP)-integrated TMP instance.
                 */
                 class PrometheusClusterAgentBasic : public AbstractModel
                 {

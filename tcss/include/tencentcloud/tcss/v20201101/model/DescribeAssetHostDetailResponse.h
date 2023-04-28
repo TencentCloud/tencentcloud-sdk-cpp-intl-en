@@ -46,8 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取CWPP UUID
-                     * @return UUID CWPP UUID
+                     * 获取TCSS UUID
+                     * @return UUID TCSS UUID
                      */
                     std::string GetUUID() const;
 
@@ -360,7 +360,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * CWPP UUID
+                     * TCSS UUID
                      */
                     std::string m_uUID;
                     bool m_uUIDHasBeenSet;

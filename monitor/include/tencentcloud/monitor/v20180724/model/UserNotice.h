@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Cloud Monitor alarm notification template - user notification details
+                * Alarm notification template – user notification details
                 */
                 class UserNotice : public AbstractModel
                 {

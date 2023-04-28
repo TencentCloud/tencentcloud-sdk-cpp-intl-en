@@ -25,6 +25,8 @@
 #include <tencentcloud/core/AsyncCallerContext.h>
 #include <tencentcloud/cdn/v20180606/model/AddCLSTopicDomainsRequest.h>
 #include <tencentcloud/cdn/v20180606/model/AddCLSTopicDomainsResponse.h>
+#include <tencentcloud/cdn/v20180606/model/AddCdnDomainRequest.h>
+#include <tencentcloud/cdn/v20180606/model/AddCdnDomainResponse.h>
 #include <tencentcloud/cdn/v20180606/model/CreateClsLogTopicRequest.h>
 #include <tencentcloud/cdn/v20180606/model/CreateClsLogTopicResponse.h>
 #include <tencentcloud/cdn/v20180606/model/CreateScdnFailedLogTaskRequest.h>
@@ -124,6 +126,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::AddCLSTopicDomainsResponse> AddCLSTopicDomainsOutcome;
                 typedef std::future<AddCLSTopicDomainsOutcome> AddCLSTopicDomainsOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::AddCLSTopicDomainsRequest&, AddCLSTopicDomainsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddCLSTopicDomainsAsyncHandler;
+                typedef Outcome<Core::Error, Model::AddCdnDomainResponse> AddCdnDomainOutcome;
+                typedef std::future<AddCdnDomainOutcome> AddCdnDomainOutcomeCallable;
+                typedef std::function<void(const CdnClient*, const Model::AddCdnDomainRequest&, AddCdnDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddCdnDomainAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateClsLogTopicResponse> CreateClsLogTopicOutcome;
                 typedef std::future<CreateClsLogTopicOutcome> CreateClsLogTopicOutcomeCallable;
                 typedef std::function<void(const CdnClient*, const Model::CreateClsLogTopicRequest&, CreateClsLogTopicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateClsLogTopicAsyncHandler;
@@ -258,6 +263,15 @@ namespace TencentCloud
                 AddCLSTopicDomainsOutcome AddCLSTopicDomains(const Model::AddCLSTopicDomainsRequest &request);
                 void AddCLSTopicDomainsAsync(const Model::AddCLSTopicDomainsRequest& request, const AddCLSTopicDomainsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 AddCLSTopicDomainsOutcomeCallable AddCLSTopicDomainsCallable(const Model::AddCLSTopicDomainsRequest& request);
+
+                /**
+                 *This API is used to add a CDN acceleration domain name. Up to 100 domain names can be added per minute.
+                 * @param req AddCdnDomainRequest
+                 * @return AddCdnDomainOutcome
+                 */
+                AddCdnDomainOutcome AddCdnDomain(const Model::AddCdnDomainRequest &request);
+                void AddCdnDomainAsync(const Model::AddCdnDomainRequest& request, const AddCdnDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AddCdnDomainOutcomeCallable AddCdnDomainCallable(const Model::AddCdnDomainRequest& request);
 
                 /**
                  *This API is used to create a log topic. Up to 10 log topics can be created under one logset.

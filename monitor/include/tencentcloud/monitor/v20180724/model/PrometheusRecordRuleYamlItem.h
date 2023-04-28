@@ -144,6 +144,72 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ClusterIdHasBeenSet() const;
 
+                    /**
+                     * 获取Status
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Status Status
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetStatus() const;
+
+                    /**
+                     * 设置Status
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Status Status
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetStatus(const int64_t& _status);
+
+                    /**
+                     * 判断参数 Status 是否已赋值
+                     * @return Status 是否已赋值
+                     */
+                    bool StatusHasBeenSet() const;
+
+                    /**
+                     * 获取id
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Id id
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetId() const;
+
+                    /**
+                     * 设置id
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Id id
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetId(const std::string& _id);
+
+                    /**
+                     * 判断参数 Id 是否已赋值
+                     * @return Id 是否已赋值
+                     */
+                    bool IdHasBeenSet() const;
+
+                    /**
+                     * 获取Number of rules
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Count Number of rules
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetCount() const;
+
+                    /**
+                     * 设置Number of rules
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Count Number of rules
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetCount(const int64_t& _count);
+
+                    /**
+                     * 判断参数 Count 是否已赋值
+                     * @return Count 是否已赋值
+                     */
+                    bool CountHasBeenSet() const;
+
                 private:
 
                     /**
@@ -177,6 +243,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
+
+                    /**
+                     * Status
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_status;
+                    bool m_statusHasBeenSet;
+
+                    /**
+                     * id
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_id;
+                    bool m_idHasBeenSet;
+
+                    /**
+                     * Number of rules
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_count;
+                    bool m_countHasBeenSet;
 
                 };
             }

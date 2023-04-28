@@ -384,6 +384,49 @@ DbbrainClient::CreateSecurityAuditLogExportTaskOutcomeCallable DbbrainClient::Cr
     return task->get_future();
 }
 
+DbbrainClient::DeleteDBDiagReportTasksOutcome DbbrainClient::DeleteDBDiagReportTasks(const DeleteDBDiagReportTasksRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteDBDiagReportTasks");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteDBDiagReportTasksResponse rsp = DeleteDBDiagReportTasksResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteDBDiagReportTasksOutcome(rsp);
+        else
+            return DeleteDBDiagReportTasksOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteDBDiagReportTasksOutcome(outcome.GetError());
+    }
+}
+
+void DbbrainClient::DeleteDBDiagReportTasksAsync(const DeleteDBDiagReportTasksRequest& request, const DeleteDBDiagReportTasksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DeleteDBDiagReportTasks(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DbbrainClient::DeleteDBDiagReportTasksOutcomeCallable DbbrainClient::DeleteDBDiagReportTasksCallable(const DeleteDBDiagReportTasksRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DeleteDBDiagReportTasksOutcome()>>(
+        [this, request]()
+        {
+            return this->DeleteDBDiagReportTasks(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 DbbrainClient::DeleteSecurityAuditLogExportTasksOutcome DbbrainClient::DeleteSecurityAuditLogExportTasks(const DeleteSecurityAuditLogExportTasksRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteSecurityAuditLogExportTasks");
@@ -1237,6 +1280,49 @@ DbbrainClient::DescribeSlowLogUserHostStatsOutcomeCallable DbbrainClient::Descri
         [this, request]()
         {
             return this->DescribeSlowLogUserHostStats(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
+DbbrainClient::DescribeSlowLogsOutcome DbbrainClient::DescribeSlowLogs(const DescribeSlowLogsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeSlowLogs");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeSlowLogsResponse rsp = DescribeSlowLogsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeSlowLogsOutcome(rsp);
+        else
+            return DescribeSlowLogsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeSlowLogsOutcome(outcome.GetError());
+    }
+}
+
+void DbbrainClient::DescribeSlowLogsAsync(const DescribeSlowLogsRequest& request, const DescribeSlowLogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->DescribeSlowLogs(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+DbbrainClient::DescribeSlowLogsOutcomeCallable DbbrainClient::DescribeSlowLogsCallable(const DescribeSlowLogsRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<DescribeSlowLogsOutcome()>>(
+        [this, request]()
+        {
+            return this->DescribeSlowLogs(request);
         }
     );
 

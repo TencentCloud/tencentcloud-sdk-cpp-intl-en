@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * When it’s not enabled, HTTPS requests are blocked.
+                * HTTPS. When it’s disabled, HTTPS requests are blocked.
                 */
                 class HttpsBilling : public AbstractModel
                 {
@@ -47,14 +47,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取HTTPS Service
-                     * @return Switch HTTPS Service
+                     * 获取HTTPS (enabled by default), which will incur charges.
+                     * @return Switch HTTPS (enabled by default), which will incur charges.
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置HTTPS Service
-                     * @param Switch HTTPS Service
+                     * 设置HTTPS (enabled by default), which will incur charges.
+                     * @param Switch HTTPS (enabled by default), which will incur charges.
                      */
                     void SetSwitch(const std::string& _switch);
 
@@ -67,7 +67,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * HTTPS Service
+                     * HTTPS (enabled by default), which will incur charges.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

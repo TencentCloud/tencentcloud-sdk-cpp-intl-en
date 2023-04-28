@@ -496,6 +496,28 @@ Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     bool ProjectIdHasBeenSet() const;
 
+                    /**
+                     * 获取Price attribute
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return PriceInfo Price attribute
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> GetPriceInfo() const;
+
+                    /**
+                     * 设置Price attribute
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param PriceInfo Price attribute
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetPriceInfo(const std::vector<std::string>& _priceInfo);
+
+                    /**
+                     * 判断参数 PriceInfo 是否已赋值
+                     * @return PriceInfo 是否已赋值
+                     */
+                    bool PriceInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -645,6 +667,13 @@ Note: This field may return `null`, indicating that no valid value can be found.
                      */
                     int64_t m_projectId;
                     bool m_projectIdHasBeenSet;
+
+                    /**
+                     * Price attribute
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_priceInfo;
+                    bool m_priceInfoHasBeenSet;
 
                 };
             }

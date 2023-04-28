@@ -74,6 +74,7 @@
 #include <tencentcloud/cdn/v20180606/model/HwPrivateAccess.h>
 #include <tencentcloud/cdn/v20180606/model/QnPrivateAccess.h>
 #include <tencentcloud/cdn/v20180606/model/HttpsBilling.h>
+#include <tencentcloud/cdn/v20180606/model/OthersPrivateAccess.h>
 
 
 namespace TencentCloud
@@ -176,11 +177,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      * 获取Acceleration service status
 `rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
 `processing`: Deploying
+`closing`: Disabling
 `online`: Enabled
 `offline`: Disabled
                      * @return Status Acceleration service status
 `rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
 `processing`: Deploying
+`closing`: Disabling
 `online`: Enabled
 `offline`: Disabled
                      */
@@ -190,11 +193,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      * 设置Acceleration service status
 `rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
 `processing`: Deploying
+`closing`: Disabling
 `online`: Enabled
 `offline`: Disabled
                      * @param Status Acceleration service status
 `rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
 `processing`: Deploying
+`closing`: Disabling
 `online`: Enabled
 `offline`: Disabled
                      */
@@ -1573,18 +1578,18 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool QnPrivateAccessHasBeenSet() const;
 
                     /**
-                     * 获取HTTPS service
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HttpsBilling HTTPS service
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取HTTPS (enabled by default)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @return HttpsBilling HTTPS (enabled by default)
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     HttpsBilling GetHttpsBilling() const;
 
                     /**
-                     * 设置HTTPS service
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param HttpsBilling HTTPS service
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置HTTPS (enabled by default)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+                     * @param HttpsBilling HTTPS (enabled by default)
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetHttpsBilling(const HttpsBilling& _httpsBilling);
 
@@ -1593,6 +1598,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * @return HttpsBilling 是否已赋值
                      */
                     bool HttpsBillingHasBeenSet() const;
+
+                    /**
+                     * 获取Origin-pull authentication for other origins
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return OthersPrivateAccess Origin-pull authentication for other origins
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    OthersPrivateAccess GetOthersPrivateAccess() const;
+
+                    /**
+                     * 设置Origin-pull authentication for other origins
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param OthersPrivateAccess Origin-pull authentication for other origins
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    void SetOthersPrivateAccess(const OthersPrivateAccess& _othersPrivateAccess);
+
+                    /**
+                     * 判断参数 OthersPrivateAccess 是否已赋值
+                     * @return OthersPrivateAccess 是否已赋值
+                     */
+                    bool OthersPrivateAccessHasBeenSet() const;
 
                 private:
 
@@ -1625,6 +1652,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                      * Acceleration service status
 `rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
 `processing`: Deploying
+`closing`: Disabling
 `online`: Enabled
 `offline`: Disabled
                      */
@@ -2062,11 +2090,18 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_qnPrivateAccessHasBeenSet;
 
                     /**
-                     * HTTPS service
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * HTTPS (enabled by default)
+Note: This field may return `null`, indicating that no valid values can be obtained.
                      */
                     HttpsBilling m_httpsBilling;
                     bool m_httpsBillingHasBeenSet;
+
+                    /**
+                     * Origin-pull authentication for other origins
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     */
+                    OthersPrivateAccess m_othersPrivateAccess;
+                    bool m_othersPrivateAccessHasBeenSet;
 
                 };
             }

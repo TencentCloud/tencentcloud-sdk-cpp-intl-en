@@ -187,6 +187,64 @@ namespace TencentCloud
                      */
                     bool PeriodHasBeenSet() const;
 
+                    /**
+                     * 获取Log topic description
+                     * @return Describes Log topic description
+                     */
+                    std::string GetDescribes() const;
+
+                    /**
+                     * 设置Log topic description
+                     * @param Describes Log topic description
+                     */
+                    void SetDescribes(const std::string& _describes);
+
+                    /**
+                     * 判断参数 Describes 是否已赋值
+                     * @return Describes 是否已赋值
+                     */
+                    bool DescribesHasBeenSet() const;
+
+                    /**
+                     * 获取`0`: Disable log transitioning.
+A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`.
+                     * @return HotPeriod `0`: Disable log transitioning.
+A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`.
+                     */
+                    uint64_t GetHotPeriod() const;
+
+                    /**
+                     * 设置`0`: Disable log transitioning.
+A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`.
+                     * @param HotPeriod `0`: Disable log transitioning.
+A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`.
+                     */
+                    void SetHotPeriod(const uint64_t& _hotPeriod);
+
+                    /**
+                     * 判断参数 HotPeriod 是否已赋值
+                     * @return HotPeriod 是否已赋值
+                     */
+                    bool HotPeriodHasBeenSet() const;
+
+                    /**
+                     * 获取Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
+                     * @return IsWebTracking Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
+                     */
+                    bool GetIsWebTracking() const;
+
+                    /**
+                     * 设置Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
+                     * @param IsWebTracking Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
+                     */
+                    void SetIsWebTracking(const bool& _isWebTracking);
+
+                    /**
+                     * 判断参数 IsWebTracking 是否已赋值
+                     * @return IsWebTracking 是否已赋值
+                     */
+                    bool IsWebTrackingHasBeenSet() const;
+
                 private:
 
                     /**
@@ -236,6 +294,25 @@ namespace TencentCloud
                      */
                     int64_t m_period;
                     bool m_periodHasBeenSet;
+
+                    /**
+                     * Log topic description
+                     */
+                    std::string m_describes;
+                    bool m_describesHasBeenSet;
+
+                    /**
+                     * `0`: Disable log transitioning.
+A value other than `0`: The number of STANDARD storage days after log transitioning is enabled (valid only if `StorageType` is `hot`). Note: `HotPeriod` should be greater than or equal to `7` and less than `Period`.
+                     */
+                    uint64_t m_hotPeriod;
+                    bool m_hotPeriodHasBeenSet;
+
+                    /**
+                     * Whether to enable web tracking. Valid values: `false` (disable); `true` (enable)
+                     */
+                    bool m_isWebTracking;
+                    bool m_isWebTrackingHasBeenSet;
 
                 };
             }

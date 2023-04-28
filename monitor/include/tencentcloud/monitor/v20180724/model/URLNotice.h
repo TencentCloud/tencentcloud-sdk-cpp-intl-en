@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Cloud Monitor alarm notification template - callback notification details
+                * Alarm notification template – callback notification details
                 */
                 class URLNotice : public AbstractModel
                 {

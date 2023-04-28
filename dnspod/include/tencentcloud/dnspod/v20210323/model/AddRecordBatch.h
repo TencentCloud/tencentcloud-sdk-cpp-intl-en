@@ -137,18 +137,14 @@ namespace TencentCloud
                     bool RecordLineIdHasBeenSet() const;
 
                     /**
-                     * 获取Record weight (not supported).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Weight Record weight (not supported).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The record weight (not supported).
+                     * @return Weight The record weight (not supported).
                      */
                     uint64_t GetWeight() const;
 
                     /**
-                     * 设置Record weight (not supported).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param Weight Record weight (not supported).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The record weight (not supported).
+                     * @param Weight The record weight (not supported).
                      */
                     void SetWeight(const uint64_t& _weight);
 
@@ -263,8 +259,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_recordLineIdHasBeenSet;
 
                     /**
-                     * Record weight (not supported).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * The record weight (not supported).
                      */
                     uint64_t m_weight;
                     bool m_weightHasBeenSet;

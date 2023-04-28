@@ -25,6 +25,7 @@ set(cdn_public_header_model
   include/tencentcloud/cdn/v20180606/model/Revalidate.h
   include/tencentcloud/cdn/v20180606/model/ResourceData.h
   include/tencentcloud/cdn/v20180606/model/UrlRecord.h
+  include/tencentcloud/cdn/v20180606/model/OthersPrivateAccess.h
   include/tencentcloud/cdn/v20180606/model/DescribePushQuotaResponse.h
   include/tencentcloud/cdn/v20180606/model/DescribePurgeQuotaResponse.h
   include/tencentcloud/cdn/v20180606/model/ScdnSevenLayerRules.h
@@ -95,6 +96,7 @@ set(cdn_public_header_model
   include/tencentcloud/cdn/v20180606/model/ListClsLogTopicsResponse.h
   include/tencentcloud/cdn/v20180606/model/RemoteAuthenticationRule.h
   include/tencentcloud/cdn/v20180606/model/OverseaConfig.h
+  include/tencentcloud/cdn/v20180606/model/AddCdnDomainRequest.h
   include/tencentcloud/cdn/v20180606/model/UserAgentFilterRule.h
   include/tencentcloud/cdn/v20180606/model/UpdateDomainConfigRequest.h
   include/tencentcloud/cdn/v20180606/model/Tag.h
@@ -122,6 +124,7 @@ set(cdn_public_header_model
   include/tencentcloud/cdn/v20180606/model/DescribePushTasksResponse.h
   include/tencentcloud/cdn/v20180606/model/ResourceOriginData.h
   include/tencentcloud/cdn/v20180606/model/IpStatus.h
+  include/tencentcloud/cdn/v20180606/model/AddCdnDomainResponse.h
   include/tencentcloud/cdn/v20180606/model/DomainAreaConfig.h
   include/tencentcloud/cdn/v20180606/model/ServerCert.h
   include/tencentcloud/cdn/v20180606/model/AccessControlRule.h
@@ -272,6 +275,7 @@ set(cdn_src
   src/v20180606/model/Revalidate.cpp
   src/v20180606/model/ResourceData.cpp
   src/v20180606/model/UrlRecord.cpp
+  src/v20180606/model/OthersPrivateAccess.cpp
   src/v20180606/model/DescribePushQuotaResponse.cpp
   src/v20180606/model/DescribePurgeQuotaResponse.cpp
   src/v20180606/model/ScdnSevenLayerRules.cpp
@@ -342,6 +346,7 @@ set(cdn_src
   src/v20180606/model/ListClsLogTopicsResponse.cpp
   src/v20180606/model/RemoteAuthenticationRule.cpp
   src/v20180606/model/OverseaConfig.cpp
+  src/v20180606/model/AddCdnDomainRequest.cpp
   src/v20180606/model/UserAgentFilterRule.cpp
   src/v20180606/model/UpdateDomainConfigRequest.cpp
   src/v20180606/model/Tag.cpp
@@ -369,6 +374,7 @@ set(cdn_src
   src/v20180606/model/DescribePushTasksResponse.cpp
   src/v20180606/model/ResourceOriginData.cpp
   src/v20180606/model/IpStatus.cpp
+  src/v20180606/model/AddCdnDomainResponse.cpp
   src/v20180606/model/DomainAreaConfig.cpp
   src/v20180606/model/ServerCert.cpp
   src/v20180606/model/AccessControlRule.cpp

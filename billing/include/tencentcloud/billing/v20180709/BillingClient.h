@@ -114,7 +114,7 @@ namespace TencentCloud
                 DescribeBillDetailOutcomeCallable DescribeBillDetailCallable(const Model::DescribeBillDetailRequest& request);
 
                 /**
-                 *This API is used to query bill resources summary. 
+                 *This API is used to query bill resources summary.
                  * @param req DescribeBillResourceSummaryRequest
                  * @return DescribeBillResourceSummaryOutcome
                  */

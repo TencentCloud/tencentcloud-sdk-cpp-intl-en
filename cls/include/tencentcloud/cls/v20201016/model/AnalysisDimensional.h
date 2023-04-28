@@ -49,13 +49,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Analysis name
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Name Analysis name
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetName() const;
 
                     /**
                      * 设置Analysis name
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param Name Analysis name
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetName(const std::string& _name);
 
@@ -66,14 +70,18 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Type of data being analyzed. Valid values: `query`; `field`; `original`
-                     * @return Type Type of data being analyzed. Valid values: `query`; `field`; `original`
+                     * 获取Type of data being analyzed. Valid values: `query`, `field`, `original`
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Type Type of data being analyzed. Valid values: `query`, `field`, `original`
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Type of data being analyzed. Valid values: `query`; `field`; `original`
-                     * @param Type Type of data being analyzed. Valid values: `query`; `field`; `original`
+                     * 设置Type of data being analyzed. Valid values: `query`, `field`, `original`
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Type Type of data being analyzed. Valid values: `query`, `field`, `original`
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetType(const std::string& _type);
 
@@ -85,13 +93,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Analysis content
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Content Analysis content
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string GetContent() const;
 
                     /**
                      * 设置Analysis content
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param Content Analysis content
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetContent(const std::string& _content);
 
@@ -103,13 +115,17 @@ namespace TencentCloud
 
                     /**
                      * 获取Configuration
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ConfigInfo Configuration
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<AlarmAnalysisConfig> GetConfigInfo() const;
 
                     /**
                      * 设置Configuration
+Note: This field may return null, indicating that no valid values can be obtained.
                      * @param ConfigInfo Configuration
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     void SetConfigInfo(const std::vector<AlarmAnalysisConfig>& _configInfo);
 
@@ -123,24 +139,28 @@ namespace TencentCloud
 
                     /**
                      * Analysis name
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Type of data being analyzed. Valid values: `query`; `field`; `original`
+                     * Type of data being analyzed. Valid values: `query`, `field`, `original`
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
                      * Analysis content
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_content;
                     bool m_contentHasBeenSet;
 
                     /**
                      * Configuration
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<AlarmAnalysisConfig> m_configInfo;
                     bool m_configInfoHasBeenSet;

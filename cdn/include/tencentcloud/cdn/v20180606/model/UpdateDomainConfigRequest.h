@@ -63,6 +63,7 @@
 #include <tencentcloud/cdn/v20180606/model/ShareCname.h>
 #include <tencentcloud/cdn/v20180606/model/HwPrivateAccess.h>
 #include <tencentcloud/cdn/v20180606/model/QnPrivateAccess.h>
+#include <tencentcloud/cdn/v20180606/model/OthersPrivateAccess.h>
 #include <tencentcloud/cdn/v20180606/model/HttpsBilling.h>
 
 
@@ -964,14 +965,32 @@ After switching to global acceleration, configurations of the domain name will b
                     bool QnPrivateAccessHasBeenSet() const;
 
                     /**
-                     * 获取HTTPS service
-                     * @return HttpsBilling HTTPS service
+                     * 获取Origin-pull authentication for other origins
+                     * @return OthersPrivateAccess Origin-pull authentication for other origins
+                     */
+                    OthersPrivateAccess GetOthersPrivateAccess() const;
+
+                    /**
+                     * 设置Origin-pull authentication for other origins
+                     * @param OthersPrivateAccess Origin-pull authentication for other origins
+                     */
+                    void SetOthersPrivateAccess(const OthersPrivateAccess& _othersPrivateAccess);
+
+                    /**
+                     * 判断参数 OthersPrivateAccess 是否已赋值
+                     * @return OthersPrivateAccess 是否已赋值
+                     */
+                    bool OthersPrivateAccessHasBeenSet() const;
+
+                    /**
+                     * 获取HTTPS, which is a paid service. You can check the product document and Billing Overview for more information.
+                     * @return HttpsBilling HTTPS, which is a paid service. You can check the product document and Billing Overview for more information.
                      */
                     HttpsBilling GetHttpsBilling() const;
 
                     /**
-                     * 设置HTTPS service
-                     * @param HttpsBilling HTTPS service
+                     * 设置HTTPS, which is a paid service. You can check the product document and Billing Overview for more information.
+                     * @param HttpsBilling HTTPS, which is a paid service. You can check the product document and Billing Overview for more information.
                      */
                     void SetHttpsBilling(const HttpsBilling& _httpsBilling);
 
@@ -1274,7 +1293,13 @@ After switching to global acceleration, configurations of the domain name will b
                     bool m_qnPrivateAccessHasBeenSet;
 
                     /**
-                     * HTTPS service
+                     * Origin-pull authentication for other origins
+                     */
+                    OthersPrivateAccess m_othersPrivateAccess;
+                    bool m_othersPrivateAccessHasBeenSet;
+
+                    /**
+                     * HTTPS, which is a paid service. You can check the product document and Billing Overview for more information.
                      */
                     HttpsBilling m_httpsBilling;
                     bool m_httpsBillingHasBeenSet;

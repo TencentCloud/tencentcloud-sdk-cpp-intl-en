@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/monitor/v20180724/model/Targets.h>
 
 
 namespace TencentCloud
@@ -104,6 +105,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool TemplateIdHasBeenSet() const;
 
+                    /**
+                     * 获取Number of targets
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Targets Number of targets
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    Targets GetTargets() const;
+
+                    /**
+                     * 设置Number of targets
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Targets Number of targets
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetTargets(const Targets& _targets);
+
+                    /**
+                     * 判断参数 Targets 是否已赋值
+                     * @return Targets 是否已赋值
+                     */
+                    bool TargetsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -124,6 +147,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_templateId;
                     bool m_templateIdHasBeenSet;
+
+                    /**
+                     * Number of targets
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    Targets m_targets;
+                    bool m_targetsHasBeenSet;
 
                 };
             }

@@ -98,6 +98,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool RawJobsHasBeenSet() const;
 
+                    /**
+                     * 获取List of probes and the corresponding targets information
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Probes List of probes and the corresponding targets information
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<PrometheusConfigItem> GetProbes() const;
+
+                    /**
+                     * 判断参数 Probes 是否已赋值
+                     * @return Probes 是否已赋值
+                     */
+                    bool ProbesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -126,6 +140,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<PrometheusConfigItem> m_rawJobs;
                     bool m_rawJobsHasBeenSet;
+
+                    /**
+                     * List of probes and the corresponding targets information
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<PrometheusConfigItem> m_probes;
+                    bool m_probesHasBeenSet;
 
                 };
             }

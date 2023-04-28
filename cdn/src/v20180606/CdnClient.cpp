@@ -83,6 +83,49 @@ CdnClient::AddCLSTopicDomainsOutcomeCallable CdnClient::AddCLSTopicDomainsCallab
     return task->get_future();
 }
 
+CdnClient::AddCdnDomainOutcome CdnClient::AddCdnDomain(const AddCdnDomainRequest &request)
+{
+    auto outcome = MakeRequest(request, "AddCdnDomain");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AddCdnDomainResponse rsp = AddCdnDomainResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AddCdnDomainOutcome(rsp);
+        else
+            return AddCdnDomainOutcome(o.GetError());
+    }
+    else
+    {
+        return AddCdnDomainOutcome(outcome.GetError());
+    }
+}
+
+void CdnClient::AddCdnDomainAsync(const AddCdnDomainRequest& request, const AddCdnDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->AddCdnDomain(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+CdnClient::AddCdnDomainOutcomeCallable CdnClient::AddCdnDomainCallable(const AddCdnDomainRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<AddCdnDomainOutcome()>>(
+        [this, request]()
+        {
+            return this->AddCdnDomain(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 CdnClient::CreateClsLogTopicOutcome CdnClient::CreateClsLogTopic(const CreateClsLogTopicRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateClsLogTopic");

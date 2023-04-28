@@ -27,6 +27,7 @@
 #include <tencentcloud/cls/v20201016/model/FullTextInfo.h>
 #include <tencentcloud/cls/v20201016/model/RuleKeyValueInfo.h>
 #include <tencentcloud/cls/v20201016/model/RuleTagInfo.h>
+#include <tencentcloud/cls/v20201016/model/DynamicIndex.h>
 
 
 namespace TencentCloud
@@ -39,7 +40,6 @@ namespace TencentCloud
             {
                 /**
                 * Index rule. At least one of the `FullText`, `KeyValue`, and `Tag` parameters must be valid.
-
                 */
                 class RuleInfo : public AbstractModel
                 {
@@ -116,6 +116,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool TagHasBeenSet() const;
 
+                    /**
+                     * 获取Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return DynamicIndex Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    DynamicIndex GetDynamicIndex() const;
+
+                    /**
+                     * 设置Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param DynamicIndex Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetDynamicIndex(const DynamicIndex& _dynamicIndex);
+
+                    /**
+                     * 判断参数 DynamicIndex 是否已赋值
+                     * @return DynamicIndex 是否已赋值
+                     */
+                    bool DynamicIndexHasBeenSet() const;
+
                 private:
 
                     /**
@@ -138,6 +160,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     RuleTagInfo m_tag;
                     bool m_tagHasBeenSet;
+
+                    /**
+                     * Dynamic index configuration. If the configuration is empty, dynamic indexing is not enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    DynamicIndex m_dynamicIndex;
+                    bool m_dynamicIndexHasBeenSet;
 
                 };
             }

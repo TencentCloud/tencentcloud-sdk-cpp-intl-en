@@ -60,6 +60,24 @@ namespace TencentCloud
                      */
                     bool TimeoutHasBeenSet() const;
 
+                    /**
+                     * 获取Bucket type. Valid values: `1`: (Web, which is the default value), `2` (Application).
+                     * @return FileType Bucket type. Valid values: `1`: (Web, which is the default value), `2` (Application).
+                     */
+                    int64_t GetFileType() const;
+
+                    /**
+                     * 设置Bucket type. Valid values: `1`: (Web, which is the default value), `2` (Application).
+                     * @param FileType Bucket type. Valid values: `1`: (Web, which is the default value), `2` (Application).
+                     */
+                    void SetFileType(const int64_t& _fileType);
+
+                    /**
+                     * 判断参数 FileType 是否已赋值
+                     * @return FileType 是否已赋值
+                     */
+                    bool FileTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -67,6 +85,12 @@ namespace TencentCloud
                      */
                     int64_t m_timeout;
                     bool m_timeoutHasBeenSet;
+
+                    /**
+                     * Bucket type. Valid values: `1`: (Web, which is the default value), `2` (Application).
+                     */
+                    int64_t m_fileType;
+                    bool m_fileTypeHasBeenSet;
 
                 };
             }

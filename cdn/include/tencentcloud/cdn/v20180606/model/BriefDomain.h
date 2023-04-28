@@ -123,12 +123,14 @@ namespace TencentCloud
                      * 获取Acceleration service status
 `rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
 `processing`: Deploying
-`online`: Activated
+`closing`: Disabling
+`online`: Enabled
 `offline`: Disabled
                      * @return Status Acceleration service status
 `rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
 `processing`: Deploying
-`online`: Activated
+`closing`: Disabling
+`online`: Enabled
 `offline`: Disabled
                      */
                     std::string GetStatus() const;
@@ -137,12 +139,14 @@ namespace TencentCloud
                      * 设置Acceleration service status
 `rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
 `processing`: Deploying
-`online`: Activated
+`closing`: Disabling
+`online`: Enabled
 `offline`: Disabled
                      * @param Status Acceleration service status
 `rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
 `processing`: Deploying
-`online`: Activated
+`closing`: Disabling
+`online`: Enabled
 `offline`: Disabled
                      */
                     void SetStatus(const std::string& _status);
@@ -435,7 +439,8 @@ global: Locked globally
                      * Acceleration service status
 `rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
 `processing`: Deploying
-`online`: Activated
+`closing`: Disabling
+`online`: Enabled
 `offline`: Disabled
                      */
                     std::string m_status;

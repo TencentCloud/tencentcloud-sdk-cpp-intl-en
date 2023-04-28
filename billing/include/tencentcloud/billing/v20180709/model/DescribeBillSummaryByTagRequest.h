@@ -79,14 +79,14 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Cost allocation tag key
-                     * @return TagKey Cost allocation tag key
+                     * 获取Cost allocation tag key, which can be customized.
+                     * @return TagKey Cost allocation tag key, which can be customized.
                      */
                     std::string GetTagKey() const;
 
                     /**
-                     * 设置Cost allocation tag key
-                     * @param TagKey Cost allocation tag key
+                     * 设置Cost allocation tag key, which can be customized.
+                     * @param TagKey Cost allocation tag key, which can be customized.
                      */
                     void SetTagKey(const std::string& _tagKey);
 
@@ -147,7 +147,7 @@ namespace TencentCloud
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Cost allocation tag key
+                     * Cost allocation tag key, which can be customized.
                      */
                     std::string m_tagKey;
                     bool m_tagKeyHasBeenSet;

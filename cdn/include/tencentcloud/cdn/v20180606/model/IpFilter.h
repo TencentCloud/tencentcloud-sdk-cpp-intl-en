@@ -156,18 +156,18 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool FilterRulesHasBeenSet() const;
 
                     /**
-                     * 获取[Unavailable soon] The code returned when the IP blocklist/allowlist verification fails.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ReturnCode [Unavailable soon] The code returned when the IP blocklist/allowlist verification fails.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取(Disused) Expected HTTP code to return when the IP allowlist/blocklist verification fails. <br><font color=red>The 514 code is used instead.</font>
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @return ReturnCode (Disused) Expected HTTP code to return when the IP allowlist/blocklist verification fails. <br><font color=red>The 514 code is used instead.</font>
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     int64_t GetReturnCode() const;
 
                     /**
-                     * 设置[Unavailable soon] The code returned when the IP blocklist/allowlist verification fails.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param ReturnCode [Unavailable soon] The code returned when the IP blocklist/allowlist verification fails.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置(Disused) Expected HTTP code to return when the IP allowlist/blocklist verification fails. <br><font color=red>The 514 code is used instead.</font>
+Note: this field may return `null`, indicating that no valid values can be obtained.
+                     * @param ReturnCode (Disused) Expected HTTP code to return when the IP allowlist/blocklist verification fails. <br><font color=red>The 514 code is used instead.</font>
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     void SetReturnCode(const int64_t& _returnCode);
 
@@ -213,8 +213,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                     bool m_filterRulesHasBeenSet;
 
                     /**
-                     * [Unavailable soon] The code returned when the IP blocklist/allowlist verification fails.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * (Disused) Expected HTTP code to return when the IP allowlist/blocklist verification fails. <br><font color=red>The 514 code is used instead.</font>
+Note: this field may return `null`, indicating that no valid values can be obtained.
                      */
                     int64_t m_returnCode;
                     bool m_returnCodeHasBeenSet;

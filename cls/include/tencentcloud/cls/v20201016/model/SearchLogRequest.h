@@ -277,22 +277,22 @@ Default value: `1`
                     bool SamplingRateHasBeenSet() const;
 
                     /**
-                     * 获取Search syntax.
+                     * 获取Search syntax
 `0` (default): Lucene; `1`: CQL.
-For more information, visit https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules.
-                     * @return SyntaxRule Search syntax.
+For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Syntax Rules</a>
+                     * @return SyntaxRule Search syntax
 `0` (default): Lucene; `1`: CQL.
-For more information, visit https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules.
+For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Syntax Rules</a>
                      */
                     uint64_t GetSyntaxRule() const;
 
                     /**
-                     * 设置Search syntax.
+                     * 设置Search syntax
 `0` (default): Lucene; `1`: CQL.
-For more information, visit https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules.
-                     * @param SyntaxRule Search syntax.
+For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Syntax Rules</a>
+                     * @param SyntaxRule Search syntax
 `0` (default): Lucene; `1`: CQL.
-For more information, visit https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules.
+For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Syntax Rules</a>
                      */
                     void SetSyntaxRule(const uint64_t& _syntaxRule);
 
@@ -377,9 +377,9 @@ Default value: `1`
                     bool m_samplingRateHasBeenSet;
 
                     /**
-                     * Search syntax.
+                     * Search syntax
 `0` (default): Lucene; `1`: CQL.
-For more information, visit https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules.
+For more information, see <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1#RetrievesConditionalRules" target="_blank">Syntax Rules</a>
                      */
                     uint64_t m_syntaxRule;
                     bool m_syntaxRuleHasBeenSet;

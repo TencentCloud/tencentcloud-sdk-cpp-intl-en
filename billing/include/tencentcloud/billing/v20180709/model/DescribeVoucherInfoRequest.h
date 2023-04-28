@@ -187,14 +187,14 @@ namespace TencentCloud
                     bool VoucherNameHasBeenSet() const;
 
                     /**
-                     * 获取The start time of the promotional campaign.
-                     * @return TimeFrom The start time of the promotional campaign.
+                     * 获取The start date of the voucher issuance, such as `2021-01-01`.
+                     * @return TimeFrom The start date of the voucher issuance, such as `2021-01-01`.
                      */
                     std::string GetTimeFrom() const;
 
                     /**
-                     * 设置The start time of the promotional campaign.
-                     * @param TimeFrom The start time of the promotional campaign.
+                     * 设置The start date of the voucher issuance, such as `2021-01-01`.
+                     * @param TimeFrom The start date of the voucher issuance, such as `2021-01-01`.
                      */
                     void SetTimeFrom(const std::string& _timeFrom);
 
@@ -205,14 +205,14 @@ namespace TencentCloud
                     bool TimeFromHasBeenSet() const;
 
                     /**
-                     * 获取The end time of the promotional campaign.
-                     * @return TimeTo The end time of the promotional campaign.
+                     * 获取The end date of the voucher issuance, such as `2021-01-01`.
+                     * @return TimeTo The end date of the voucher issuance, such as `2021-01-01`.
                      */
                     std::string GetTimeTo() const;
 
                     /**
-                     * 设置The end time of the promotional campaign.
-                     * @param TimeTo The end time of the promotional campaign.
+                     * 设置The end date of the voucher issuance, such as `2021-01-01`.
+                     * @param TimeTo The end date of the voucher issuance, such as `2021-01-01`.
                      */
                     void SetTimeTo(const std::string& _timeTo);
 
@@ -363,13 +363,13 @@ namespace TencentCloud
                     bool m_voucherNameHasBeenSet;
 
                     /**
-                     * The start time of the promotional campaign.
+                     * The start date of the voucher issuance, such as `2021-01-01`.
                      */
                     std::string m_timeFrom;
                     bool m_timeFromHasBeenSet;
 
                     /**
-                     * The end time of the promotional campaign.
+                     * The end date of the voucher issuance, such as `2021-01-01`.
                      */
                     std::string m_timeTo;
                     bool m_timeToHasBeenSet;

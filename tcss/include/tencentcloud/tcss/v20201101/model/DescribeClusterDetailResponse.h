@@ -331,6 +331,18 @@ namespace TencentCloud
                      */
                     bool IngressCountHasBeenSet() const;
 
+                    /**
+                     * 获取IPs of the primary nodes
+                     * @return MasterIps IPs of the primary nodes
+                     */
+                    std::string GetMasterIps() const;
+
+                    /**
+                     * 判断参数 MasterIps 是否已赋值
+                     * @return MasterIps 是否已赋值
+                     */
+                    bool MasterIpsHasBeenSet() const;
+
                 private:
 
                     /**
@@ -476,6 +488,12 @@ namespace TencentCloud
                      */
                     uint64_t m_ingressCount;
                     bool m_ingressCountHasBeenSet;
+
+                    /**
+                     * IPs of the primary nodes
+                     */
+                    std::string m_masterIps;
+                    bool m_masterIpsHasBeenSet;
 
                 };
             }

@@ -163,6 +163,18 @@ namespace TencentCloud
                      */
                     bool FailedClusterCountHasBeenSet() const;
 
+                    /**
+                     * 获取Number of clusters not imported
+                     * @return NotImportedClusterCount Number of clusters not imported
+                     */
+                    uint64_t GetNotImportedClusterCount() const;
+
+                    /**
+                     * 判断参数 NotImportedClusterCount 是否已赋值
+                     * @return NotImportedClusterCount 是否已赋值
+                     */
+                    bool NotImportedClusterCountHasBeenSet() const;
+
                 private:
 
                     /**
@@ -224,6 +236,12 @@ namespace TencentCloud
                      */
                     uint64_t m_failedClusterCount;
                     bool m_failedClusterCountHasBeenSet;
+
+                    /**
+                     * Number of clusters not imported
+                     */
+                    uint64_t m_notImportedClusterCount;
+                    bool m_notImportedClusterCountHasBeenSet;
 
                 };
             }

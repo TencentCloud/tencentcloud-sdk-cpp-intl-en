@@ -101,14 +101,14 @@ namespace TencentCloud
                     bool DosageEndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Sub-product name
-                     * @return SubProductCodeName Sub-product name
+                     * 获取Subproduct name
+                     * @return SubProductCodeName Subproduct name
                      */
                     std::string GetSubProductCodeName() const;
 
                     /**
-                     * 设置Sub-product name
-                     * @param SubProductCodeName Sub-product name
+                     * 设置Subproduct name
+                     * @param SubProductCodeName Subproduct name
                      */
                     void SetSubProductCodeName(const std::string& _subProductCodeName);
 
@@ -193,7 +193,7 @@ namespace TencentCloud
                     bool m_dosageEndTimeHasBeenSet;
 
                     /**
-                     * Sub-product name
+                     * Subproduct name
                      */
                     std::string m_subProductCodeName;
                     bool m_subProductCodeNameHasBeenSet;
