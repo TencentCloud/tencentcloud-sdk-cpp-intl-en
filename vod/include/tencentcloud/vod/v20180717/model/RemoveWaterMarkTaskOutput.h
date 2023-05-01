@@ -48,14 +48,14 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The file ID of the video.
-                     * @return FileId The file ID of the video.
+                     * 获取The file ID.
+                     * @return FileId The file ID.
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置The file ID of the video.
-                     * @param FileId The file ID of the video.
+                     * 设置The file ID.
+                     * @param FileId The file ID.
                      */
                     void SetFileId(const std::string& _fileId);
 
@@ -64,6 +64,60 @@ namespace TencentCloud
                      * @return FileId 是否已赋值
                      */
                     bool FileIdHasBeenSet() const;
+
+                    /**
+                     * 获取The file type, such as MP4 or MP3.
+                     * @return FileType The file type, such as MP4 or MP3.
+                     */
+                    std::string GetFileType() const;
+
+                    /**
+                     * 设置The file type, such as MP4 or MP3.
+                     * @param FileType The file type, such as MP4 or MP3.
+                     */
+                    void SetFileType(const std::string& _fileType);
+
+                    /**
+                     * 判断参数 FileType 是否已赋值
+                     * @return FileType 是否已赋值
+                     */
+                    bool FileTypeHasBeenSet() const;
+
+                    /**
+                     * 获取The playback URL of the output file.
+                     * @return FileUrl The playback URL of the output file.
+                     */
+                    std::string GetFileUrl() const;
+
+                    /**
+                     * 设置The playback URL of the output file.
+                     * @param FileUrl The playback URL of the output file.
+                     */
+                    void SetFileUrl(const std::string& _fileUrl);
+
+                    /**
+                     * 判断参数 FileUrl 是否已赋值
+                     * @return FileUrl 是否已赋值
+                     */
+                    bool FileUrlHasBeenSet() const;
+
+                    /**
+                     * 获取The filename, which can be up to 64 characters long.
+                     * @return MediaName The filename, which can be up to 64 characters long.
+                     */
+                    std::string GetMediaName() const;
+
+                    /**
+                     * 设置The filename, which can be up to 64 characters long.
+                     * @param MediaName The filename, which can be up to 64 characters long.
+                     */
+                    void SetMediaName(const std::string& _mediaName);
+
+                    /**
+                     * 判断参数 MediaName 是否已赋值
+                     * @return MediaName 是否已赋值
+                     */
+                    bool MediaNameHasBeenSet() const;
 
                     /**
                      * 获取The metadata of the video, including size, duration, video stream information, and audio stream information.
@@ -86,10 +140,28 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The file ID of the video.
+                     * The file ID.
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
+
+                    /**
+                     * The file type, such as MP4 or MP3.
+                     */
+                    std::string m_fileType;
+                    bool m_fileTypeHasBeenSet;
+
+                    /**
+                     * The playback URL of the output file.
+                     */
+                    std::string m_fileUrl;
+                    bool m_fileUrlHasBeenSet;
+
+                    /**
+                     * The filename, which can be up to 64 characters long.
+                     */
+                    std::string m_mediaName;
+                    bool m_mediaNameHasBeenSet;
 
                     /**
                      * The metadata of the video, including size, duration, video stream information, and audio stream information.

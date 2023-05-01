@@ -63,6 +63,8 @@
 #include <tencentcloud/live/v20180801/model/CreateLiveWatermarkRuleResponse.h>
 #include <tencentcloud/live/v20180801/model/CreateRecordTaskRequest.h>
 #include <tencentcloud/live/v20180801/model/CreateRecordTaskResponse.h>
+#include <tencentcloud/live/v20180801/model/CreateScreenshotTaskRequest.h>
+#include <tencentcloud/live/v20180801/model/CreateScreenshotTaskResponse.h>
 #include <tencentcloud/live/v20180801/model/DeleteLiveCallbackRuleRequest.h>
 #include <tencentcloud/live/v20180801/model/DeleteLiveCallbackRuleResponse.h>
 #include <tencentcloud/live/v20180801/model/DeleteLiveCallbackTemplateRequest.h>
@@ -321,6 +323,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateRecordTaskResponse> CreateRecordTaskOutcome;
                 typedef std::future<CreateRecordTaskOutcome> CreateRecordTaskOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::CreateRecordTaskRequest&, CreateRecordTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateRecordTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateScreenshotTaskResponse> CreateScreenshotTaskOutcome;
+                typedef std::future<CreateScreenshotTaskOutcome> CreateScreenshotTaskOutcomeCallable;
+                typedef std::function<void(const LiveClient*, const Model::CreateScreenshotTaskRequest&, CreateScreenshotTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateScreenshotTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteLiveCallbackRuleResponse> DeleteLiveCallbackRuleOutcome;
                 typedef std::future<DeleteLiveCallbackRuleOutcome> DeleteLiveCallbackRuleOutcomeCallable;
                 typedef std::function<void(const LiveClient*, const Model::DeleteLiveCallbackRuleRequest&, DeleteLiveCallbackRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteLiveCallbackRuleAsyncHandler;
@@ -781,8 +786,8 @@ Note: only one screencapturing template can be associated with one domain name.
                 CreateLiveTimeShiftTemplateOutcomeCallable CreateLiveTimeShiftTemplateCallable(const Model::CreateLiveTimeShiftTemplateRequest& request);
 
                 /**
-                 *To create a transcoding rule, you need to first call the [CreateLiveTranscodeTemplate](https://intl.cloud.tencent.com/document/product/267/32646?from_cn_redirect=1) API to create a transcoding template and bind the returned template ID to the stream.
-<br>Transcoding-related document: [LVB Remuxing and Transcoding](https://intl.cloud.tencent.com/document/product/267/32736?from_cn_redirect=1).
+                 *This API is used to create a transcoding rule that binds a template ID to a stream. Up to 50 transcoding rules can be created in total. Before you call this API, you need to first call [CreateLiveTranscodeTemplate](https://intl.cloud.tencent.com/document/product/267/32646?from_cn_redirect=1) to get the template ID.
+<br>Related document: [Live Remuxing and Transcoding](https://intl.cloud.tencent.com/document/product/267/32736?from_cn_redirect=1).
                  * @param req CreateLiveTranscodeRuleRequest
                  * @return CreateLiveTranscodeRuleOutcome
                  */
@@ -826,6 +831,21 @@ Note: only one screencapturing template can be associated with one domain name.
                 CreateRecordTaskOutcome CreateRecordTask(const Model::CreateRecordTaskRequest &request);
                 void CreateRecordTaskAsync(const Model::CreateRecordTaskRequest& request, const CreateRecordTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateRecordTaskOutcomeCallable CreateRecordTaskCallable(const Model::CreateRecordTaskRequest& request);
+
+                /**
+                 *This API is used to create a screencapturing task that has a specific start and end time and takes screenshots according to the template configured.
+- Note
+1. If the stream is interrupted, screencapturing will stop. However, the task will still be valid before the specified end time, and screencapturing will be performed as required after the stream is resumed.
+2. Avoid creating screencapturing tasks with overlapping time periods. The system will execute at most three screencapturing tasks on the same stream at a time.
+3. Task records are only kept for three months.
+4. The new screencapturing APIs (CreateScreenshotTask/StopScreenshotTask/DeleteScreenshotTask) are not compatible with the legacy ones (CreateLiveInstantSnapshot/StopLiveInstantSnapshot). Do not mix them when you call APIs to manage screencapturing tasks.
+5. If you create a screencapturing task and publish the stream at the same time, the task may fail to be executed at the specified time. After creating a screencapturing task, we recommend you wait at least three seconds before publishing the stream.
+                 * @param req CreateScreenshotTaskRequest
+                 * @return CreateScreenshotTaskOutcome
+                 */
+                CreateScreenshotTaskOutcome CreateScreenshotTask(const Model::CreateScreenshotTaskRequest &request);
+                void CreateScreenshotTaskAsync(const Model::CreateScreenshotTaskRequest& request, const CreateScreenshotTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateScreenshotTaskOutcomeCallable CreateScreenshotTaskCallable(const Model::CreateScreenshotTaskRequest& request);
 
                 /**
                  *This API is used to delete a callback rule.
@@ -1529,7 +1549,11 @@ Note: If you call this API to pause an inactive stream, the request will be cons
                 ForbidLiveDomainOutcomeCallable ForbidLiveDomainCallable(const Model::ForbidLiveDomainRequest& request);
 
                 /**
-                 *This API is used to forbid the push of a specific stream. You can preset a time point to resume the stream.
+                 *This API is used to disable a stream. You can set a time to resume the stream.
+Note:
+1. As long as the correct stream name is passed in, the stream will be disabled successfully.
+2. If you want a stream to be disabled only if the push domain, push path, and stream name match, please submit a ticket.
+3. If you have configured domain groups, you must pass in the correct push domain in order to disable a stream.
                  * @param req ForbidLiveStreamRequest
                  * @return ForbidLiveStreamOutcome
                  */
@@ -1623,7 +1647,7 @@ Referer information is included in HTTP requests. After you enable referer confi
                 ModifyLiveSnapshotTemplateOutcomeCallable ModifyLiveSnapshotTemplateCallable(const Model::ModifyLiveSnapshotTemplateRequest& request);
 
                 /**
-                 *This API is used to modify a standby stream template.
+                 *This API is used to modify a time shifting template.
                  * @param req ModifyLiveTimeShiftTemplateRequest
                  * @return ModifyLiveTimeShiftTemplateOutcome
                  */

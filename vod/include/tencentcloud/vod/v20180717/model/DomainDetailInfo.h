@@ -28,6 +28,7 @@
 #include <tencentcloud/vod/v20180717/model/DomainHTTPSConfig.h>
 #include <tencentcloud/vod/v20180717/model/UrlSignatureAuthPolicy.h>
 #include <tencentcloud/vod/v20180717/model/RefererAuthPolicy.h>
+#include <tencentcloud/vod/v20180717/model/DomainQUICConfig.h>
 
 
 namespace TencentCloud
@@ -208,6 +209,28 @@ Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     bool CreateTimeHasBeenSet() const;
 
+                    /**
+                     * 获取The QUIC configuration for the domain.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return QUICConfig The QUIC configuration for the domain.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    DomainQUICConfig GetQUICConfig() const;
+
+                    /**
+                     * 设置The QUIC configuration for the domain.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param QUICConfig The QUIC configuration for the domain.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetQUICConfig(const DomainQUICConfig& _qUICConfig);
+
+                    /**
+                     * 判断参数 QUICConfig 是否已赋值
+                     * @return QUICConfig 是否已赋值
+                     */
+                    bool QUICConfigHasBeenSet() const;
+
                 private:
 
                     /**
@@ -259,6 +282,13 @@ Note: this field may return `null`, indicating that no valid value is obtained.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
+
+                    /**
+                     * The QUIC configuration for the domain.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    DomainQUICConfig m_qUICConfig;
+                    bool m_qUICConfigHasBeenSet;
 
                 };
             }

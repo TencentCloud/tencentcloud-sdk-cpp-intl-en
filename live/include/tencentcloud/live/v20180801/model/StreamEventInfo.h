@@ -181,14 +181,18 @@ In UTC format, such as 2019-01-07T15:00:00Z.
                     bool DurationHasBeenSet() const;
 
                     /**
-                     * 获取Host IP.
-                     * @return ClientIp Host IP.
+                     * 获取The IP address of the host.
+If the stream is published from a private network, this parameter will be `-`.
+                     * @return ClientIp The IP address of the host.
+If the stream is published from a private network, this parameter will be `-`.
                      */
                     std::string GetClientIp() const;
 
                     /**
-                     * 设置Host IP.
-                     * @param ClientIp Host IP.
+                     * 设置The IP address of the host.
+If the stream is published from a private network, this parameter will be `-`.
+                     * @param ClientIp The IP address of the host.
+If the stream is published from a private network, this parameter will be `-`.
                      */
                     void SetClientIp(const std::string& _clientIp);
 
@@ -263,7 +267,8 @@ In UTC format, such as 2019-01-07T15:00:00Z.
                     bool m_durationHasBeenSet;
 
                     /**
-                     * Host IP.
+                     * The IP address of the host.
+If the stream is published from a private network, this parameter will be `-`.
                      */
                     std::string m_clientIp;
                     bool m_clientIpHasBeenSet;

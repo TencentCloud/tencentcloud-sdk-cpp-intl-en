@@ -900,6 +900,49 @@ LiveClient::CreateRecordTaskOutcomeCallable LiveClient::CreateRecordTaskCallable
     return task->get_future();
 }
 
+LiveClient::CreateScreenshotTaskOutcome LiveClient::CreateScreenshotTask(const CreateScreenshotTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateScreenshotTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateScreenshotTaskResponse rsp = CreateScreenshotTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateScreenshotTaskOutcome(rsp);
+        else
+            return CreateScreenshotTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateScreenshotTaskOutcome(outcome.GetError());
+    }
+}
+
+void LiveClient::CreateScreenshotTaskAsync(const CreateScreenshotTaskRequest& request, const CreateScreenshotTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    auto fn = [this, request, handler, context]()
+    {
+        handler(this, request, this->CreateScreenshotTask(request), context);
+    };
+
+    Executor::GetInstance()->Submit(new Runnable(fn));
+}
+
+LiveClient::CreateScreenshotTaskOutcomeCallable LiveClient::CreateScreenshotTaskCallable(const CreateScreenshotTaskRequest &request)
+{
+    auto task = std::make_shared<std::packaged_task<CreateScreenshotTaskOutcome()>>(
+        [this, request]()
+        {
+            return this->CreateScreenshotTask(request);
+        }
+    );
+
+    Executor::GetInstance()->Submit(new Runnable([task]() { (*task)(); }));
+    return task->get_future();
+}
+
 LiveClient::DeleteLiveCallbackRuleOutcome LiveClient::DeleteLiveCallbackRule(const DeleteLiveCallbackRuleRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteLiveCallbackRule");

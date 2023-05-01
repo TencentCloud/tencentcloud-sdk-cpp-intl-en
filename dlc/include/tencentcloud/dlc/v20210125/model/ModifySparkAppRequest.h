@@ -528,6 +528,24 @@ namespace TencentCloud
                      */
                     bool AppExecutorMaxNumbersHasBeenSet() const;
 
+                    /**
+                     * 获取The associated Data Lake Compute query script.
+                     * @return SessionId The associated Data Lake Compute query script.
+                     */
+                    std::string GetSessionId() const;
+
+                    /**
+                     * 设置The associated Data Lake Compute query script.
+                     * @param SessionId The associated Data Lake Compute query script.
+                     */
+                    void SetSessionId(const std::string& _sessionId);
+
+                    /**
+                     * 判断参数 SessionId 是否已赋值
+                     * @return SessionId 是否已赋值
+                     */
+                    bool SessionIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -691,6 +709,12 @@ namespace TencentCloud
                      */
                     int64_t m_appExecutorMaxNumbers;
                     bool m_appExecutorMaxNumbersHasBeenSet;
+
+                    /**
+                     * The associated Data Lake Compute query script.
+                     */
+                    std::string m_sessionId;
+                    bool m_sessionIdHasBeenSet;
 
                 };
             }

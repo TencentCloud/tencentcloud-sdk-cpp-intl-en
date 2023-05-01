@@ -248,6 +248,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool PushExceptionNotifyUrlHasBeenSet() const;
 
+                    /**
+                     * 获取The audio/video moderation callback URL.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return AudioAuditNotifyUrl The audio/video moderation callback URL.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetAudioAuditNotifyUrl() const;
+
+                    /**
+                     * 设置The audio/video moderation callback URL.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param AudioAuditNotifyUrl The audio/video moderation callback URL.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetAudioAuditNotifyUrl(const std::string& _audioAuditNotifyUrl);
+
+                    /**
+                     * 判断参数 AudioAuditNotifyUrl 是否已赋值
+                     * @return AudioAuditNotifyUrl 是否已赋值
+                     */
+                    bool AudioAuditNotifyUrlHasBeenSet() const;
+
                 private:
 
                     /**
@@ -316,6 +338,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_pushExceptionNotifyUrl;
                     bool m_pushExceptionNotifyUrlHasBeenSet;
+
+                    /**
+                     * The audio/video moderation callback URL.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_audioAuditNotifyUrl;
+                    bool m_audioAuditNotifyUrlHasBeenSet;
 
                 };
             }

@@ -335,6 +335,86 @@ Used by actions: DescribeCurrentMemberList, DescribeRoomStatistics.
                      */
                     bool PerMemberMessageCountHasBeenSet() const;
 
+                    /**
+                     * 获取The user role. `0`: Student; `1`: Teacher; `2`: Teaching Assistant; `3`: Spectator.
+                     * @return Role The user role. `0`: Student; `1`: Teacher; `2`: Teaching Assistant; `3`: Spectator.
+                     */
+                    uint64_t GetRole() const;
+
+                    /**
+                     * 设置The user role. `0`: Student; `1`: Teacher; `2`: Teaching Assistant; `3`: Spectator.
+                     * @param Role The user role. `0`: Student; `1`: Teacher; `2`: Teaching Assistant; `3`: Spectator.
+                     */
+                    void SetRole(const uint64_t& _role);
+
+                    /**
+                     * 判断参数 Role 是否已赋值
+                     * @return Role 是否已赋值
+                     */
+                    bool RoleHasBeenSet() const;
+
+                    /**
+                     * 获取The class number.
+                     * @return GroupId The class number.
+                     */
+                    std::string GetGroupId() const;
+
+                    /**
+                     * 设置The class number.
+                     * @param GroupId The class number.
+                     */
+                    void SetGroupId(const std::string& _groupId);
+
+                    /**
+                     * 判断参数 GroupId 是否已赋值
+                     * @return GroupId 是否已赋值
+                     */
+                    bool GroupIdHasBeenSet() const;
+
+                    /**
+                     * 获取The sub-class number.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SubGroupId The sub-class number.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> GetSubGroupId() const;
+
+                    /**
+                     * 设置The sub-class number.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param SubGroupId The sub-class number.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetSubGroupId(const std::vector<std::string>& _subGroupId);
+
+                    /**
+                     * 判断参数 SubGroupId 是否已赋值
+                     * @return SubGroupId 是否已赋值
+                     */
+                    bool SubGroupIdHasBeenSet() const;
+
+                    /**
+                     * 获取Whether the user is on the stage.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Stage Whether the user is on the stage.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t GetStage() const;
+
+                    /**
+                     * 设置Whether the user is on the stage.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param Stage Whether the user is on the stage.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetStage(const int64_t& _stage);
+
+                    /**
+                     * 判断参数 Stage 是否已赋值
+                     * @return Stage 是否已赋值
+                     */
+                    bool StageHasBeenSet() const;
+
                 private:
 
                     /**
@@ -432,6 +512,32 @@ Used by actions: DescribeCurrentMemberList, DescribeRoomStatistics.
                      */
                     int64_t m_perMemberMessageCount;
                     bool m_perMemberMessageCountHasBeenSet;
+
+                    /**
+                     * The user role. `0`: Student; `1`: Teacher; `2`: Teaching Assistant; `3`: Spectator.
+                     */
+                    uint64_t m_role;
+                    bool m_roleHasBeenSet;
+
+                    /**
+                     * The class number.
+                     */
+                    std::string m_groupId;
+                    bool m_groupIdHasBeenSet;
+
+                    /**
+                     * The sub-class number.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::vector<std::string> m_subGroupId;
+                    bool m_subGroupIdHasBeenSet;
+
+                    /**
+                     * Whether the user is on the stage.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    int64_t m_stage;
+                    bool m_stageHasBeenSet;
 
                 };
             }

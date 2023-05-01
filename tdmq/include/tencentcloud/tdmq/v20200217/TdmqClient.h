@@ -113,6 +113,10 @@
 #include <tencentcloud/tdmq/v20200217/model/DescribePublisherSummaryResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribePublishersRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribePublishersResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribePulsarProInstanceDetailRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribePulsarProInstanceDetailResponse.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribePulsarProInstancesRequest.h>
+#include <tencentcloud/tdmq/v20200217/model/DescribePulsarProInstancesResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRabbitMQNodeListRequest.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRabbitMQNodeListResponse.h>
 #include <tencentcloud/tdmq/v20200217/model/DescribeRabbitMQVipInstancesRequest.h>
@@ -330,6 +334,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribePublishersResponse> DescribePublishersOutcome;
                 typedef std::future<DescribePublishersOutcome> DescribePublishersOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DescribePublishersRequest&, DescribePublishersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePublishersAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribePulsarProInstanceDetailResponse> DescribePulsarProInstanceDetailOutcome;
+                typedef std::future<DescribePulsarProInstanceDetailOutcome> DescribePulsarProInstanceDetailOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::DescribePulsarProInstanceDetailRequest&, DescribePulsarProInstanceDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePulsarProInstanceDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribePulsarProInstancesResponse> DescribePulsarProInstancesOutcome;
+                typedef std::future<DescribePulsarProInstancesOutcome> DescribePulsarProInstancesOutcomeCallable;
+                typedef std::function<void(const TdmqClient*, const Model::DescribePulsarProInstancesRequest&, DescribePulsarProInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePulsarProInstancesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeRabbitMQNodeListResponse> DescribeRabbitMQNodeListOutcome;
                 typedef std::future<DescribeRabbitMQNodeListOutcome> DescribeRabbitMQNodeListOutcomeCallable;
                 typedef std::function<void(const TdmqClient*, const Model::DescribeRabbitMQNodeListRequest&, DescribeRabbitMQNodeListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeRabbitMQNodeListAsyncHandler;
@@ -839,6 +849,24 @@ namespace TencentCloud
                 DescribePublishersOutcome DescribePublishers(const Model::DescribePublishersRequest &request);
                 void DescribePublishersAsync(const Model::DescribePublishersRequest& request, const DescribePublishersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribePublishersOutcomeCallable DescribePublishersCallable(const Model::DescribePublishersRequest& request);
+
+                /**
+                 *This API is used to obtain the information of a TDMQ for Pulsar pro cluster instance.
+                 * @param req DescribePulsarProInstanceDetailRequest
+                 * @return DescribePulsarProInstanceDetailOutcome
+                 */
+                DescribePulsarProInstanceDetailOutcome DescribePulsarProInstanceDetail(const Model::DescribePulsarProInstanceDetailRequest &request);
+                void DescribePulsarProInstanceDetailAsync(const Model::DescribePulsarProInstanceDetailRequest& request, const DescribePulsarProInstanceDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribePulsarProInstanceDetailOutcomeCallable DescribePulsarProInstanceDetailCallable(const Model::DescribePulsarProInstanceDetailRequest& request);
+
+                /**
+                 *This API is used to query the list of the purchased TDMQ for Pulsar pro instances.
+                 * @param req DescribePulsarProInstancesRequest
+                 * @return DescribePulsarProInstancesOutcome
+                 */
+                DescribePulsarProInstancesOutcome DescribePulsarProInstances(const Model::DescribePulsarProInstancesRequest &request);
+                void DescribePulsarProInstancesAsync(const Model::DescribePulsarProInstancesRequest& request, const DescribePulsarProInstancesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribePulsarProInstancesOutcomeCallable DescribePulsarProInstancesCallable(const Model::DescribePulsarProInstancesRequest& request);
 
                 /**
                  *This API is used to query the list of TDMQ for RabbitMQ exclusive cluster nodes.

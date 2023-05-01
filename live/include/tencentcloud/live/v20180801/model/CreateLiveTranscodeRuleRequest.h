@@ -61,14 +61,14 @@ namespace TencentCloud
                     bool DomainNameHasBeenSet() const;
 
                     /**
-                     * 获取Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. If you only bind a domain name, leave this parameter empty.
-                     * @return AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. If you only bind a domain name, leave this parameter empty.
+                     * 获取The push path, which is the same as `AppName` in the push and playback addresses and is `live` by default. If you only want to bind the template to a domain, pass in an empty string.
+                     * @return AppName The push path, which is the same as `AppName` in the push and playback addresses and is `live` by default. If you only want to bind the template to a domain, pass in an empty string.
                      */
                     std::string GetAppName() const;
 
                     /**
-                     * 设置Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. If you only bind a domain name, leave this parameter empty.
-                     * @param AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. If you only bind a domain name, leave this parameter empty.
+                     * 设置The push path, which is the same as `AppName` in the push and playback addresses and is `live` by default. If you only want to bind the template to a domain, pass in an empty string.
+                     * @param AppName The push path, which is the same as `AppName` in the push and playback addresses and is `live` by default. If you only want to bind the template to a domain, pass in an empty string.
                      */
                     void SetAppName(const std::string& _appName);
 
@@ -123,7 +123,7 @@ namespace TencentCloud
                     bool m_domainNameHasBeenSet;
 
                     /**
-                     * Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default. If you only bind a domain name, leave this parameter empty.
+                     * The push path, which is the same as `AppName` in the push and playback addresses and is `live` by default. If you only want to bind the template to a domain, pass in an empty string.
                      */
                     std::string m_appName;
                     bool m_appNameHasBeenSet;

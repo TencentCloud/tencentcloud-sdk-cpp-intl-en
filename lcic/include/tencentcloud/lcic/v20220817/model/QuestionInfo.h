@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The details of a quiz question.
+                * A quiz question in a room.
                 */
                 class QuestionInfo : public AbstractModel
                 {

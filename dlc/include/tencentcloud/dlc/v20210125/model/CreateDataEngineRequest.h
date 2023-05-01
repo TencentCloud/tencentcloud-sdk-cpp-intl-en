@@ -532,14 +532,14 @@ namespace TencentCloud
                     bool MainClusterNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ElasticSwitch 
+                     * 获取Whether to enable the scaling feature for a monthly subscribed Spark job cluster.
+                     * @return ElasticSwitch Whether to enable the scaling feature for a monthly subscribed Spark job cluster.
                      */
                     bool GetElasticSwitch() const;
 
                     /**
-                     * 设置
-                     * @param ElasticSwitch 
+                     * 设置Whether to enable the scaling feature for a monthly subscribed Spark job cluster.
+                     * @param ElasticSwitch Whether to enable the scaling feature for a monthly subscribed Spark job cluster.
                      */
                     void SetElasticSwitch(const bool& _elasticSwitch);
 
@@ -550,14 +550,14 @@ namespace TencentCloud
                     bool ElasticSwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ElasticLimit 
+                     * 获取The upper limit (in CUs) for scaling of the monthly subscribed Spark job cluster.
+                     * @return ElasticLimit The upper limit (in CUs) for scaling of the monthly subscribed Spark job cluster.
                      */
                     int64_t GetElasticLimit() const;
 
                     /**
-                     * 设置
-                     * @param ElasticLimit 
+                     * 设置The upper limit (in CUs) for scaling of the monthly subscribed Spark job cluster.
+                     * @param ElasticLimit The upper limit (in CUs) for scaling of the monthly subscribed Spark job cluster.
                      */
                     void SetElasticLimit(const int64_t& _elasticLimit);
 
@@ -732,13 +732,13 @@ namespace TencentCloud
                     bool m_mainClusterNameHasBeenSet;
 
                     /**
-                     * 
+                     * Whether to enable the scaling feature for a monthly subscribed Spark job cluster.
                      */
                     bool m_elasticSwitch;
                     bool m_elasticSwitchHasBeenSet;
 
                     /**
-                     * 
+                     * The upper limit (in CUs) for scaling of the monthly subscribed Spark job cluster.
                      */
                     int64_t m_elasticLimit;
                     bool m_elasticLimitHasBeenSet;

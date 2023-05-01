@@ -56,7 +56,10 @@ SparkJobInfo::SparkJobInfo() :
     m_taskNumHasBeenSet(false),
     m_dataEngineStatusHasBeenSet(false),
     m_jobExecutorMaxNumbersHasBeenSet(false),
-    m_sparkImageVersionHasBeenSet(false)
+    m_sparkImageVersionHasBeenSet(false),
+    m_sessionIdHasBeenSet(false),
+    m_dataEngineClusterTypeHasBeenSet(false),
+    m_dataEngineImageVersionHasBeenSet(false)
 {
 }
 
@@ -432,6 +435,36 @@ CoreInternalOutcome SparkJobInfo::Deserialize(const rapidjson::Value &value)
         m_sparkImageVersionHasBeenSet = true;
     }
 
+    if (value.HasMember("SessionId") && !value["SessionId"].IsNull())
+    {
+        if (!value["SessionId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `SparkJobInfo.SessionId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_sessionId = string(value["SessionId"].GetString());
+        m_sessionIdHasBeenSet = true;
+    }
+
+    if (value.HasMember("DataEngineClusterType") && !value["DataEngineClusterType"].IsNull())
+    {
+        if (!value["DataEngineClusterType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `SparkJobInfo.DataEngineClusterType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_dataEngineClusterType = string(value["DataEngineClusterType"].GetString());
+        m_dataEngineClusterTypeHasBeenSet = true;
+    }
+
+    if (value.HasMember("DataEngineImageVersion") && !value["DataEngineImageVersion"].IsNull())
+    {
+        if (!value["DataEngineImageVersion"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `SparkJobInfo.DataEngineImageVersion` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_dataEngineImageVersion = string(value["DataEngineImageVersion"].GetString());
+        m_dataEngineImageVersionHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -726,6 +759,30 @@ void SparkJobInfo::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Al
         string key = "SparkImageVersion";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_sparkImageVersion.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_sessionIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SessionId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_sessionId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_dataEngineClusterTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DataEngineClusterType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_dataEngineClusterType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_dataEngineImageVersionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "DataEngineImageVersion";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_dataEngineImageVersion.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -1305,5 +1362,53 @@ void SparkJobInfo::SetSparkImageVersion(const string& _sparkImageVersion)
 bool SparkJobInfo::SparkImageVersionHasBeenSet() const
 {
     return m_sparkImageVersionHasBeenSet;
+}
+
+string SparkJobInfo::GetSessionId() const
+{
+    return m_sessionId;
+}
+
+void SparkJobInfo::SetSessionId(const string& _sessionId)
+{
+    m_sessionId = _sessionId;
+    m_sessionIdHasBeenSet = true;
+}
+
+bool SparkJobInfo::SessionIdHasBeenSet() const
+{
+    return m_sessionIdHasBeenSet;
+}
+
+string SparkJobInfo::GetDataEngineClusterType() const
+{
+    return m_dataEngineClusterType;
+}
+
+void SparkJobInfo::SetDataEngineClusterType(const string& _dataEngineClusterType)
+{
+    m_dataEngineClusterType = _dataEngineClusterType;
+    m_dataEngineClusterTypeHasBeenSet = true;
+}
+
+bool SparkJobInfo::DataEngineClusterTypeHasBeenSet() const
+{
+    return m_dataEngineClusterTypeHasBeenSet;
+}
+
+string SparkJobInfo::GetDataEngineImageVersion() const
+{
+    return m_dataEngineImageVersion;
+}
+
+void SparkJobInfo::SetDataEngineImageVersion(const string& _dataEngineImageVersion)
+{
+    m_dataEngineImageVersion = _dataEngineImageVersion;
+    m_dataEngineImageVersionHasBeenSet = true;
+}
+
+bool SparkJobInfo::DataEngineImageVersionHasBeenSet() const
+{
+    return m_dataEngineImageVersionHasBeenSet;
 }
 

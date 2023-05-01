@@ -98,14 +98,14 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Update start time
-                     * @return StartTime Update start time
+                     * 获取The update start time in the format of yyyy-mm-dd HH:MM:SS.
+                     * @return StartTime The update start time in the format of yyyy-mm-dd HH:MM:SS.
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Update start time
-                     * @param StartTime Update start time
+                     * 设置The update start time in the format of yyyy-mm-dd HH:MM:SS.
+                     * @param StartTime The update start time in the format of yyyy-mm-dd HH:MM:SS.
                      */
                     void SetStartTime(const std::string& _startTime);
 
@@ -116,14 +116,14 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Update end time
-                     * @return EndTime Update end time
+                     * 获取The update end time in the format of yyyy-mm-dd HH:MM:SS.
+                     * @return EndTime The update end time in the format of yyyy-mm-dd HH:MM:SS.
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置Update end time
-                     * @param EndTime Update end time
+                     * 设置The update end time in the format of yyyy-mm-dd HH:MM:SS.
+                     * @param EndTime The update end time in the format of yyyy-mm-dd HH:MM:SS.
                      */
                     void SetEndTime(const std::string& _endTime);
 
@@ -134,14 +134,14 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Query list offset
-                     * @return Offset Query list offset
+                     * 获取The query list offset, which defaults to 0.
+                     * @return Offset The query list offset, which defaults to 0.
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Query list offset
-                     * @param Offset Query list offset
+                     * 设置The query list offset, which defaults to 0.
+                     * @param Offset The query list offset, which defaults to 0.
                      */
                     void SetOffset(const int64_t& _offset);
 
@@ -152,14 +152,14 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Query list limit
-                     * @return Limit Query list limit
+                     * 获取The maximum number of queries allowed in the list, which defaults to 100.
+                     * @return Limit The maximum number of queries allowed in the list, which defaults to 100.
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Query list limit
-                     * @param Limit Query list limit
+                     * 设置The maximum number of queries allowed in the list, which defaults to 100.
+                     * @param Limit The maximum number of queries allowed in the list, which defaults to 100.
                      */
                     void SetLimit(const int64_t& _limit);
 
@@ -190,25 +190,25 @@ namespace TencentCloud
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Update start time
+                     * The update start time in the format of yyyy-mm-dd HH:MM:SS.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Update end time
+                     * The update end time in the format of yyyy-mm-dd HH:MM:SS.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Query list offset
+                     * The query list offset, which defaults to 0.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Query list limit
+                     * The maximum number of queries allowed in the list, which defaults to 100.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

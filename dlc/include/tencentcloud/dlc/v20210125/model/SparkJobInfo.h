@@ -743,6 +743,64 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool SparkImageVersionHasBeenSet() const;
 
+                    /**
+                     * 获取The ID of the associated Data Lake Compute query script.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return SessionId The ID of the associated Data Lake Compute query script.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string GetSessionId() const;
+
+                    /**
+                     * 设置The ID of the associated Data Lake Compute query script.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param SessionId The ID of the associated Data Lake Compute query script.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    void SetSessionId(const std::string& _sessionId);
+
+                    /**
+                     * 判断参数 SessionId 是否已赋值
+                     * @return SessionId 是否已赋值
+                     */
+                    bool SessionIdHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return DataEngineClusterType 
+                     */
+                    std::string GetDataEngineClusterType() const;
+
+                    /**
+                     * 设置
+                     * @param DataEngineClusterType 
+                     */
+                    void SetDataEngineClusterType(const std::string& _dataEngineClusterType);
+
+                    /**
+                     * 判断参数 DataEngineClusterType 是否已赋值
+                     * @return DataEngineClusterType 是否已赋值
+                     */
+                    bool DataEngineClusterTypeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return DataEngineImageVersion 
+                     */
+                    std::string GetDataEngineImageVersion() const;
+
+                    /**
+                     * 设置
+                     * @param DataEngineImageVersion 
+                     */
+                    void SetDataEngineImageVersion(const std::string& _dataEngineImageVersion);
+
+                    /**
+                     * 判断参数 DataEngineImageVersion 是否已赋值
+                     * @return DataEngineImageVersion 是否已赋值
+                     */
+                    bool DataEngineImageVersionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -972,6 +1030,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_sparkImageVersion;
                     bool m_sparkImageVersionHasBeenSet;
+
+                    /**
+                     * The ID of the associated Data Lake Compute query script.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    std::string m_sessionId;
+                    bool m_sessionIdHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_dataEngineClusterType;
+                    bool m_dataEngineClusterTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_dataEngineImageVersion;
+                    bool m_dataEngineImageVersionHasBeenSet;
 
                 };
             }
